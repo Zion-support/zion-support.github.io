@@ -19,8 +19,6 @@
         if (conflictFiles.trim()) {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
 
-
-
             // Resolve conflicts by accepting our version;            // Resolve conflicts by accepting our version;
 
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);                    console.log(`Resolving conflicts in: ${file}`);

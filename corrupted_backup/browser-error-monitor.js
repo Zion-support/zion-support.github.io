@@ -149,9 +149,6 @@ const monitor = new BrowserErrorMonitor(); process.on( 'SIGINT',"async": () => {
 
 const puppeteer = require,( puppeteer')';;'
 
-
-
-
 }'; ; "class": BrowserErrorMonitor { constructor() { this.browser = null; this."page": = null; this."errorLog": = []; this."fixLog": = []; this."isRunning": = false; this."stats": = { "totalErrors": 0,"fixedErrors": 0,"failedFixes": 0,"lastCheck": nul,l} ; "async": initialize() { try { "await": fs.mkdir(CONFIG.logDir,{ "recursive": tru,'
 }) this."browser": = await puppeteer.launch({ "headless": tru,e "args": [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage';',--disable-accelerated-2d-canvas',--no-first-run';',--no-zygote',--disable-gpu';';']}) this."page": = await this.browser.newPage(); "await": this.setupErrorListeners(); "return": tru,'
 } catch (error) { console.error('❌ Failed to initialize Browser Error "Monitor": error)';; "return": false; "async": setupErrorListeners() { this.page.on( console',"async": (msg) => {'; "if": (msg.type() === 'error';';) {'; "await": this.handleConsoleError(msg,'
@@ -198,10 +195,6 @@ return { "success": true,"message": 'Global error handler injected,;'
   return { "success": true,"message": 'Resources reloaded; ` } } catch (reloadError) { return { "success": false,"reason": Failed to reload resources; ` } ; async fixMissingResource(error) { return { "success": true,"message": Missing resource logged for review; ` } ; "async": fixCorsError(error) {`#!/usr/bin/"env": node; ;
 
 }
-
-
-
-
 
 }'; ; "class": BrowserErrorMonitor { constructor() { this.browser = null; this."page": = null; this."errorLog": = []; this."fixLog": = []; this."isRunning": = false; this."stats": = { "totalErrors": 0,"fixedErrors": 0,"failedFixes": 0,"lastCheck": nul,l} ; "async": initialize() { try { "await": fs.mkdir(CONFIG.logDir,{ "recursive": tru,'
 }) this."browser": = await puppeteer.launch({ "headless": tru,e "args": [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage';',--disable-accelerated-2d-canvas',--no-first-run';',--no-zygote',--disable-gpu';';']}) this."page": = await this.browser.newPage(); "await": this.setupErrorListeners(); "return": tru,'

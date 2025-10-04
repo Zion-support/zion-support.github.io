@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI 2026: Post-Singularity Enterprise Transformation - The Ultimate Business Revolution',
   description: 'Discover how post-singularity AI is revolutionizing enterprise operations with 99.99% automation, universal intelligence, and infinite scalability. Transform your business with Zion Tech Group\'s breakthrough technologies.',
   keywords: 'post-singularity AI, enterprise transformation, universal intelligence, autonomous operations, business revolution, AI 2026',

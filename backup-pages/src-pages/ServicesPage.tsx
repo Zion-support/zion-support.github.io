@@ -127,7 +127,6 @@ return: a.price - b.price'      case;';
                 </select>
               </div>
 
-
               {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
             </div>
           </motion.div>

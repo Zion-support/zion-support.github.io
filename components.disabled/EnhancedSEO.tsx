@@ -51,9 +51,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   ': 'ContactPoint,              telephone:,
   +1-555-ZION-TECH', contactType: 'customer service,
 
-
   'https: //linkedin.com/company/zion-tech-group, ,
   https: //github.com/zion-tech-group ]})}}      /></Head>
   )}
-
 

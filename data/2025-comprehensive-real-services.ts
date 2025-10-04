@@ -29,7 +29,6 @@
     trial_days: 60;
     setup_time: '4 - 6 weeks';
 
-
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';

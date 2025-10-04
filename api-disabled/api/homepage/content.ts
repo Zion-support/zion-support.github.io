@@ -9,8 +9,6 @@ async function fetchFromGitHub() {
 
       "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
 
-
-
     );
     if (!response && response.ok) return null;
     const data = await response && response.json();
@@ -38,10 +36,8 @@ if (return null) {
   }
 }
 
-
   if (req && req.method !== "GET") {
     return res && res.status(405).json({ error: "Method not allowed" });
-
 
   }
 }
@@ -63,9 +59,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json(null)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Internal error' })
-
-
-
 
   }
   }
@@ -96,13 +89,9 @@ return res.status (405).json ({ error: "Method not allowed" });
     // fall back to remote;
   }
 
-
-
   if (remote) return res && res.status(200).json(remote);
   return res && res.status(200).json(null);
 }
-
-
 
   const remote = await fetchFromGitHub ();
   if (return res.status (200).json (remote)) {
@@ -110,8 +99,4 @@ return res.status (405).json ({ error: "Method not allowed" });
 }
   return res.status (200).json (null);
 }
-
-
-
-
 

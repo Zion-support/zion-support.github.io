@@ -5,7 +5,6 @@ import, Header, from "../componen, t, s/Head, e, r";";
 import, Footer, from "../componen, t, s/Foot, e, r";";
 // Fallback, form, in environments, without, the enhanced, componen, t
   const, ContactFormComponen, t: Rea, c, t.FC = () => nu, l, l
-=======
 const, ContactFormComponen, t: Rea, c, t.FC = () => nu, l, l;
 export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
   const, contactInf, o = [
@@ -34,7 +33,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
       detai, l, s: "Within, 24, hours"
       descripti, o, n: "We, respond, to all, inquiries, quickly"
     }
-=======
       ic, o, n: <Mail, className="w-6 h-6" />,";
       tit, l, e: "Email, U, s",";
       detai, l, s: "hel, l, o@ziontechgro, u, p.c, o, m",";
@@ -80,7 +78,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
       val, u, e: "24/7"
       lab, e, l: "Support, Availabl, e"
     }
-=======
       ic, o, n: <Users, className="w-8 h-8" />,";
       val, u, e: "5, 0, 0+",";
       lab, e, l: "Happy, Client, s",";
@@ -122,7 +119,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gr, a, y-100, dar, k: fr, o, m-gr, a, y-900, da, r
   k:to-gr, a, y-8, 0, 0">"
-=======
           content="conta, c, t, AI, consultin, g, technology, solution, s, cloud, service, s, digital, transformatio, n"
          />
         <me, t, a 
@@ -160,7 +156,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
               Get, in, Touch;
             </h1>
             <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-whi, t, e/90, m, b-8, ma, x-w-3xl, m, x-au, t, o">"
-=======
           <div, className="container, m, x-auto, p, x-6, tex, t-center, relative, z-10">";
             <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, tex, t-sm, fon, t-medium, m, b-6">";
               <MessageSquare, className="w-4 h-4, m, r-2" />";
@@ -184,7 +179,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
                 Multiple, Ways, to Reach, U, s;
               </h2>
               <p, className="te, x, t-lg, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
         <section, className="py-16, b, g-white, dar, k: bg-gr, a, y-8, 0, 0">";
           <div, className="container, m, x-auto, p, x-6">";
             <div, className="text-center mb-12">";
@@ -197,7 +191,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">"
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">";
               {contactIn, f, o.m, a, p((in, f, o, ind, e, x) => (
@@ -216,7 +209,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
                     {in, f, o.detai, l, s}
                   </p>
                   <p, className="te, x, t-sm, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
                   <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-2">";
                     {in, f, o.tit, l, e}
                   </h3>
@@ -239,7 +231,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
                 Start, Your, Project Tod, a, y;
               </h2>
               <p, className="te, x, t-xl, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">"
-=======
         <section, className="py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0">";
           <div, className="container, m, x-auto, p, x-6">";
             <div, className="text-center mb-12">";
@@ -267,7 +258,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
               </p>
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8">"
-=======
             <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8">";
               {sta, t, s.m, a, p((st, a, t, ind, e, x) => (
                 <d, i, v
@@ -294,7 +284,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
                 Frequently, Asked, Questions;
               </h2>
               <p, className="te, x, t-lg, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
         <section, className="py-20, b, g-white, dar, k: bg-gr, a, y-8, 0, 0">";
           <div, className="container, m, x-auto, p, x-6">";
             <div, className="text-center mb-12">";
@@ -327,7 +316,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
                   answ, e, r:
                     "We, specialize, in AI/ML, cloud, computin, g, cybersecuri, t, y, quantum, computin, g, and, modern, web technologies, like, React, No, d, e.js, and, Pytho, n."
                 }
-=======
                   questi, o, n: "How, quickly, can you, start, my proje, c, t?",";
                   answ, e, r: "We, typically, begin new, projects, within 1-2, weeks, of contract, signin, g. Rush, projects, can be, accommodated, with additional, plannin, g.",";
                 }
@@ -353,7 +341,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
                     {f, a, q.questi, o, n}
                   </h3>
                   <p, className="te, x, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
                   <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-3">";
                     {f, a, q.questi, o, n}
                   </h3>
@@ -374,7 +361,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
                 Ready, to, Get Start, e, d?
               </d, i, v>
               <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6">"
-=======
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, t, o-bl, u, e-9, 0, 0">";
           <div, className="container, m, x-auto, p, x-6, tex, t-cent, e, r">";
             <div, className="m, a, x-w-4xl, m, x-au, t, o">";
@@ -392,7 +378,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
               </p>
               <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="#conta, c, t-fo, r, m"
@@ -400,7 +385,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
   r: shad, o, w-lg, transitio, n-all, duratio, n-3, 0, 0"
                 >
                   <MessageSquare, className="w-5 h-5, m, r-2  />
-=======
                   <MessageSquare, className="w-5 h-5, m, r-2" />";
                   Start, Your, Project;
                 </a>
@@ -410,7 +394,6 @@ export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
   r:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-3, 0, 0"
                 >
                   <Phone, className="w-5 h-5, m, r-2  />
-=======
                   <Phone, className="w-5 h-5, m, r-2" />";
                   Call, Us, Now;
                 </a>

@@ -1,17 +1,4 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
 const generateSuggestion = async () => {;
-
-
 

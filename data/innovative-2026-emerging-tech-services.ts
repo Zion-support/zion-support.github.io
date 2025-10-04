@@ -573,7 +573,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     },
   ];
 
-
 export const getPopularEmergingTechServices = () => {;
 
   return innovative2026EmergingTechServices.filter(service => service.popular);
@@ -971,16 +970,13 @@ export const getEmergingTechServicesByCategory = (category: string) =>
 )
 };
 
-
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => 
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => 
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
 
-
 };
-
 
 };
 reviews: 30;
@@ -1003,9 +999,6 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
   });
-
-
-
 
 };
 };

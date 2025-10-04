@@ -1,6 +1,5 @@
   id: string;
 
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;

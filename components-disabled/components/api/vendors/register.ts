@@ -5,7 +5,6 @@
     return res && res.status(405).json({ "error": 'Method not allowed' });'
     }
 
-
       }
       slug;
       name;
@@ -14,7 +13,6 @@
       about;
       "verificationDocs": Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       "caseStudies": Array && Array.isArray(caseStudies) ? caseStudies : []});
-
 
       }
       slug,

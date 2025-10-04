@@ -1,7 +1,5 @@
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -16,7 +14,6 @@ export default async function handler(
   const usingPlaceholder =
 
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-
 
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
       "placeholder-key";
@@ -44,8 +41,6 @@ if ( {) {
 }
       return res.status (200).json ({
 
-
-
         total_signups: 12,
         total_visits: 180,
         total_profile_completions: 7,
@@ -55,27 +50,20 @@ if ( {) {
 
         currency: "USD",
 
-
       });
 
-
     }
-
-
 
       total_signups,
       total_visits,
       total_profile_completions,
       total_job_creations,
 
-
-
       conversion_rate: total_signups
         ? total_profile_completions / total_signups
         : 0
       payout_amount: total_profile_completions * 50
       currency: "USD"
-
 
     return res.status(500).json({ error: e?.message })
 
@@ -100,13 +88,10 @@ if ( {) {
   }
 }
 
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
   }
 }
-
-
 

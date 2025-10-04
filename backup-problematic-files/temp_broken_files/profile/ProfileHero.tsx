@@ -7,18 +7,13 @@ interface ProfileHeroProps {;
   name: string;,;
   title: string;,;
 
-
   aiScore?:number,;"
   profileType:'service' | 'talent';
 }
 
-
   profileType;)
 } ProfileHeroProps) {;
   return (;
-
-
-
 
             <img;
               src={coverImageUrl}
@@ -27,22 +22,6 @@ interface ProfileHeroProps {;
               loading="lazy";"
             />;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   coverImageUrl ? (<img src= {;
   coverImageUrl ;
-
 

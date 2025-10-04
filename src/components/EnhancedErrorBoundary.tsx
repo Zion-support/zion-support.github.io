@@ -3,7 +3,6 @@ impo, r, t {
 } fr, o, m "luci, d, e-rea, c, t";
 interface, Prop, s {
   childr, e, n: ReactNo, d, e
-=======
 } fr, o, m "luci, d, e-rea, c, t";';
 interface, Prop, s {
   childr, e, n: ReactNo, d, e;
@@ -26,7 +25,6 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
       err, o, r: nu, l, l
       errorIn, f, o: nu, l, l
       error, I, d: '};
-=======
       error, I, d: ''
     };
   }
@@ -45,7 +43,6 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
     // Log, error, to console, in, development
   if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
       conso, l, e.err, o, r('Error, Boundary, caught an, erro, r: ', err, o, r, errorIn, f, o);'
-=======
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
       conso, l, e.err, o, r('Error, Boundary, caught an, erro, r: ', err, o, r, errorIn, f, o);';
     }
@@ -78,7 +75,6 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
     //   head, e, r
   s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n' }
     //   bo, d, y: JS, O, N.stringi, f, y(errorRepo, r, t)
-=======
     // For, no, w, we'll, just, log it';
     conso, l, e.err, o, r('Error, Repor, t: ', errorRepo, r, t);';
     // In, productio, n, send, to, error reporting, servic, e: // fet, c, h('/a, p, i/erro, r, s', {';
@@ -96,7 +92,6 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
     if (!session, I, d) {
       session, I, d = `sessio, n, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;`;`
       sessionStora, g, e.setIt, e, m('session, I, d', session, I, d);
-=======
       sessionStora, g, e.setIt, e, m('session, I, d', session, I, d);';
     }
     return, sessionI, d;
@@ -107,7 +102,6 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
       err, o, r: nu, l, l
       errorIn, f, o: nu, l, l
       error, I, d: '});
-=======
       error, I, d: ''
     });
   };
@@ -133,7 +127,6 @@ Error, Messag, e: ${th, i, s.sta, t, e.err, o, r?.messa, g, e}
 U, R, L: ${wind, o, w.locati, o, n.hr, e, f}
 Timesta, m, p: ${new, Dat, e().toISOStri, n, g()}
 Please, describe, what you, were, doing when, this, error occurr, e, d: [Your, description, here]
-=======
 UR
   L: ${wind, o, w.locati, o, n.hr, e, f}
 Timesta, m, p: ${new, Dat, e().toISOStri, n, g()}
@@ -160,7 +153,6 @@ ${th, i, s.sta, t, e.err, o, r?.sta, c, k}
               </h1>
               <p, className="te, x, t-gr, a, y-600, m, b-4">
                 We're, sorr, y, but, something, unexpected happen, e, d. Our, team, has been, notifie, d ;
-=======
         <div, className="m, i, n-h-screen, b, g-gr, a, y-50, flex, items-center, justif, y-center, p, x-4">";
           <div, className="m, a, x-w-2x, l, w-full, b, g-white, rounde, d-lg, shado, w-l, g, p-8, tex, t-cent, e, r">";
             <div, className="mb-6">";
@@ -183,7 +175,6 @@ ${th, i, s.sta, t, e.err, o, r?.sta, c, k}
               </p>
             </d, i, v>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-3, justif, y-cent, e, r">"
-=======
             <div, className="bg-gr, a, y-100, rounde, d-l, g, p-4, m, b-6, tex, t-le, f, t">";
               <h3, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Error, Detail, s: </h3>";
               <p, className="te, x, t-sm, tex, t-gr, a, y-600, m, b-2">";
@@ -200,7 +191,6 @@ ${th, i, s.sta, t, e.err, o, r?.sta, c, k}
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
               >
                 <RefreshCw, className="w-4 h-4, m, r-2  />
-=======
                 <RefreshCw, className="w-4 h-4, m, r-2" />";
                 Try, Agai, n;
               </butt, o, n>
@@ -209,7 +199,6 @@ ${th, i, s.sta, t, e.err, o, r?.sta, c, k}
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gr, a, y-600, tex, t-white, rounde, d-lg, hove, r: bg-gr, a, y-700, transitio, n-colo, r, s"
               >
                 <Home, className="w-4 h-4, m, r-2  />
-=======
                 <Home, className="w-4 h-4, m, r-2" />";
                 Go, Hom, e;
               </butt, o, n>
@@ -218,7 +207,6 @@ ${th, i, s.sta, t, e.err, o, r?.sta, c, k}
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, border, border-gr, a, y-300, tex, t-gr, a, y-700, rounde, d-lg, hove, r: bg-gr, a, y-50, transitio, n-colo, r, s"
               >
                 <RefreshCw, className="w-4 h-4, m, r-2  />
-=======
                 <RefreshCw, className="w-4 h-4, m, r-2" />";
                 Reload, Pag, e;
               </butt, o, n>
@@ -232,7 +220,6 @@ ${th, i, s.sta, t, e.err, o, r?.sta, c, k}
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, tex, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-700, transitio, n-colo, r, s"
               >
                 <Mail, className="w-4 h-4, m, r-2  />
-=======
                 <Mail, className="w-4 h-4, m, r-2" />";
                 Report, Erro, r;
               </butt, o, n>
@@ -241,7 +228,6 @@ ${th, i, s.sta, t, e.err, o, r?.sta, c, k}
 proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && th, i, s.sta, t, e.errorIn, f, o && (;
 <details, className="mt-6, tex, t-le, f, t">
 <summary, className="curs, o, r-pointer, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, hove, r: te, x, t-gr, a, y-9, 0, 0">
-=======
 proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t' && th, i, s.sta, t, e.errorIn, f, o && (';
 <details, className="mt-6, tex, t-le, f, t">";
 <summary, className="curs, o, r-pointer, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, hov, e

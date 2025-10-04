@@ -10,7 +10,6 @@ export, default, function PlatformRoiScorecards, V, 2(): Rea, c, t.J, S, X.Eleme
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Platform, ROI, Scorecards v2</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Proving, Value, in Wee, k, s</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="K, P, I-linked, developer, scorecards, golden, path, s, and, adoption, funnels that, quantify, platform ROI, in, 4–8, week, s." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-platfo, r, m-r, o, i-scorecar, d, s-v2" />";
       </Helmet>

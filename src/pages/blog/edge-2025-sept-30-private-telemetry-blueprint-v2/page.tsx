@@ -9,7 +9,6 @@
           </h1>
           <p, className="te, x, t-gr, a, y-600, m, b-6">
             Ship, useful, analytics without, collecting, PII using, scoped, IDs, local, redactio, n;
-=======
     <main, className="m, i, n-h-screen, b, g-white, tex, t-gr, a, y-9, 0, 0">";
       <section, className="container, m, x-auto, p, x-6, p, y-16">";
         <div, className="m, a, x-w-3, x, l">";

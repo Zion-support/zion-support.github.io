@@ -1,6 +1,5 @@
 
 
-
 import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
 import { Input } from "@/components/ui/input";
@@ -11,7 +10,6 @@ import { useRouter } from "next/router";
 import { slugify } from "@/lib/slugify";
 import { debounce } from "lodash";
 import { logInfo, logWarn } from '@/utils/productionLogger';
-
 
   value;
   onChange;
@@ -237,7 +235,6 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
             onClick={() => onChange('')}
             aria-label="Clear search"
 }
-
 
       </div>
       

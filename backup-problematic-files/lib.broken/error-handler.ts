@@ -27,4 +27,3 @@ export const errorHandler = ("err": ApiError, "req": NextApiRequest, "res": Next
     "error": {""
       message: process && process.env.NODE_ENV === 'production' ? 'Internal Server Error' : message,
 
-

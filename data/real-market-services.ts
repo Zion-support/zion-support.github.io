@@ -20,18 +20,12 @@ const contact =
 
 export const realMarketServices: RealMarketService[] = [;
 
-
-
-
-
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }
 ;
 export const realMarketServices: RealMarketService[] = [;
-
-
 
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -71,7 +65,6 @@ export const realMarketServices: RealMarketService[] = [;
 const contact = 
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-
 
 export const realMarketServices: RealMarketService[] = [
   {  mobile: '+1 302 464 0950';
@@ -120,7 +113,6 @@ export const realMarketServices: RealMarketService[] = [;
     realService: true
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
 
-
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
       'PII redaction and secrets filtering',
@@ -139,7 +131,6 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '🧠',
 
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
-
 
     integrations: [
       'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
@@ -207,7 +198,6 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;
       'OpenTelemetry auto - instrumentation',
 
-  
       'Golden signals dashboards',
       'Error budgets and SLO templates',
       'Jaeger / Tempo tracing ready',
@@ -706,7 +696,6 @@ export const realMarketServices: RealMarketService[] = [;
     contactInfo: contact,
     realImplementation: true,
 
-
     implementationDetails:
 
     color: 'from - sky - 600 to - indigo - 700',
@@ -753,7 +742,6 @@ export const realMarketServices: RealMarketService[] = [;
       'HTTP / TLS and OCSP checks',
       'Slack / Email alerts',
 
-  
       'Public status pages',
       'Weekly compliance reports',
     ],
@@ -1454,8 +1442,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 9,
   },
-  
-  
+
     id: 'data - quality - sla - monitor',
     name: 'Data Quality & Freshness SLAs',
     tagline: 'Track freshness, nulls, and schema drift with alerting and SLOs',
@@ -1465,7 +1452,6 @@ export const realMarketServices: RealMarketService[] = [;
       'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
     features: [;
 
-  
       'Freshness and volume checks',
       'Null / outlier thresholds',
       'Schema drift detection',
@@ -2016,7 +2002,6 @@ export const realMarketServices: RealMarketService[] = [;
     growthRate: '20% YoY',
     variant: 'ai-futuristic' as any,
 
-
     contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -2493,7 +2478,6 @@ export const realMarketServices: RealMarketService[] = [;
     growthRate: '10% YoY',
     variant: 'analytics-futuristic' as any,
 
-
     contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2586,7 +2570,6 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$3B marketing AI',
     growthRate: '24% YoY',
     variant: 'ai-futuristic' as any,
-
 
     contactInfo: 
       mobile: '+1 302 464 0950'
@@ -2833,12 +2816,9 @@ export const realMarketServices: RealMarketService[] = [;
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
     reviews: 36
 
-
     reviews: 36
-
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4636,7 +4616,6 @@ export const realMarketServices: RealMarketService[] = [;
     customers: 88,;
     rating: 4.6;
     reviews: 36;
-
 
   }
 ];

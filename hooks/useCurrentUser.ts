@@ -1,6 +1,5 @@
 import useSWR from 'swr';
 
-
 export function useCurrentUser() 
 export function useCurrentUser() {;
 
@@ -29,9 +28,7 @@ function useCurrentUser()
 
     error
 
-
     error,
-
 
     mutate}
 

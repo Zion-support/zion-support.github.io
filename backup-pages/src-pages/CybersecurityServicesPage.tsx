@@ -293,7 +293,6 @@ function: SecurityServiceCard(...args: any[]): any:  {
     return matchesSearch && matchesSubcategory && matchesPrice})
   const getPricingModelIcon = (model: anystring) => {
 
-
   }
       case,
   monthly': return;';

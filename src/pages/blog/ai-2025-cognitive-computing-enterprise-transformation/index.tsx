@@ -1,6 +1,5 @@
 import React from "react";
 import, Header, from "../../../componen, t, s/Head, e, r";
-=======
 import React from "react";';
 import, Header, from "../../../componen, t, s/Head, e, r";';
 const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
@@ -13,7 +12,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
           content="Discover, cognitive, computing systems, that, understand, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI." /><me, t, a
   na, m, e="keywor, d, s" 
           content="cognitive, computin, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-cogniti, v, e-computi, n, g-enterpri, s, e-transformati, o, n/>"
-=======
           content="cognitive, computin, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n" 
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-cogniti, v, e-computi, n, g-enterpri, s, e-transformati, o, n" />";
@@ -54,7 +52,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                 Leading, organizations, are achievi, n, g <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.5% decision, accurac, y</sp, a, n>
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0"> $1.2B+ in, annual, value</sp, a, n>, a, n, d;
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0"> 92% faster, proble, m-solvi, n, g</sp, a, n> by, deploying, cognitive AI, platforms, that understa, n, d, reas, o, n, and, learn, like huma, n, s.
-=======
         <div, className="relative, p, t-24, p, b-16, overflo, w-hidd, e, n">";
           <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]" />";
           <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -105,7 +102,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"
             <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"
-=======
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="grid, gri, d-co, l, s-2 m
@@ -156,7 +152,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                 <li, className="flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0">
                   <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0  />
                   <sp, a, n><strong, className="te, x, t-whi, t, e">Explain, decision, s</stro, n, g> with, transparent, logic</sp, a, n>
-=======
         <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-16">";
           <div, className="prose, pros, e-lg, pros, e-invert, ma, x-w-no, n, e">";
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-12">";
@@ -190,7 +185,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
               <secti, o, n>
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">
                   <Sparkles, className="w-8 h-8, tex, t-yell, o, w-4, 0, 0  />
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <Sparkles, className="w-8 h-8, tex, t-yell, o, w-4, 0, 0" />";
                   Core, Capabilitie, s;
@@ -204,7 +198,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                         "Semantic, comprehension, of unstructured, tex, t"
                         "Intent, recognition, with 98.7% accura, c, y"
                         "Mul, t, i-language, support, for global, operation, s"
-=======
                       tit, l, e: "Natural, Language, Understanding",";
                       ic, o, n: "💬",";
                       featur, e, s: [
@@ -221,7 +214,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                         "Inference, over, complex knowledge, graph, s"
                         "Causal, relationship, understanding"
                         "Analogical, reasoning, for novel, situation, s"
-=======
                       tit, l, e: "Knowledge, Reasonin, g",";
                       ic, o, n: "🧠",";
                       featur, e, s: [
@@ -238,7 +230,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                         "Adaptive, models, that improve, over, time"
                         "Transfer, learning, across domai, n, s"
                         "F, e, w-shot, learning, for new, scenario, s"
-=======
                       tit, l, e: "Continuous, Learnin, g",";
                       ic, o, n: "📈",";
                       featur, e, s: [
@@ -255,7 +246,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                         "Transparent, decision, pathways"
                         "Confidence, scoring, for recommendatio, n, s"
                         "Audit, trails, for complian, c, e"
-=======
                       tit, l, e: "Explainable, Intelligenc, e",";
                       ic, o, n: "🔍",";
                       featur, e, s: [
@@ -269,7 +259,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                     <div, ke, y={i, d, x} classNa, m, e="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l">"
                       <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3">
                         <span, className="te, x, t-3, x, l">{capabili, t, y.ic, o, n}</sp, a, n>
-=======
                     <div, ke, y={i, d, x} classNa, m, e="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l">";
                       <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3">";
                         <span, className="te, x, t-3, x, l">{capabili, t, y.ic, o, n}</sp, a, n>";
@@ -290,7 +279,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
               <secti, o, n>
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">
                   <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
                   Enterprise, Application, s;
@@ -330,7 +318,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                   ].m, a, p((a, p, p, i, d, x) => (
                     <div, ke, y={i, d, x} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l">"
                       <div, className="flex, item, s-start, justif, y-between, m, b-4">
-=======
                       tit, l, e: "Intelligent, Decision, Support",";
                       indust, r, y: "Financial, Service, s",";
                       impa, c, t: {
@@ -368,7 +355,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                           <p, className="te, x, t-sm, tex, t-purp, l, e-3, 0, 0">{a, p, p.indust, r, y} Use, Cas, e</p>";
                         </d, i, v>
                         <Award, className="w-8 h-8, tex, t-yell, o, w-4, 0, 0  />
-=======
                         <Award, className="w-8 h-8, tex, t-yell, o, w-4, 0, 0" />";
                       </d, i, v>
                       <div, className="grid, gri, d-co, l, s-2, ga, p-3">";
@@ -413,7 +399,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
   4: Optimizati, o, n","
                       durati, o, n: "Months, 1, 3+","
                       investme, n, t: "$5-1, 0, M/ye, a, r","
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Implementation, Roadma, p</h2>";
                 <div, className="spa, c, e-y-4">";
                   {[
@@ -480,7 +465,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                       <li, className="flex, justif, y-betwe, e, n"><sp, a, n>Risk, reductio, n: </sp, a, n><span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$45, 0, M</sp, a, n></li>"
                       <li, className="flex, justif, y-betwe, e, n"><sp, a, n>CX, improvemen, t: </sp, a, n><span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$38, 0, M</sp, a, n></li>"
                       <li, className="flex, justif, y-between, p, t-2, borde, r-t, borde, r-gre, e, n-5, 0, 0/30"><span, className="fo, n, t-bo, l, d">Total, Valu, e: </sp, a, n><span, className="fo, n, t-bold, tex, t-xl, tex, t-gre, e, n-3, 0, 0">$2.8, 7, B</sp, a, n></li>"
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">R, O, I & Business, Cas, e</h2>";
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
                   <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, t, o-oran, g, e-9, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6">";
@@ -529,7 +513,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">Transform, Your, Enterprise with, Cognitive, AI</h2>
             <p, className="te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o">
               Zion, Tech, Group's, Cognitive, Computing Platform, enables, rapid deployment, of, human-like, AI, intelligence. ;
-=======
           <div, className="mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">Transform, Your, Enterprise with, Cognitive, AI</h2>";
             <p, className="te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o">";
@@ -544,7 +527,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
               >
                 Schedule, Assessmen, t;
                 <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <ArrowRight, className="ml-2 w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </Li, n, k>
               <Li, n, k
@@ -560,7 +542,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
           <div, className="mt-16">
             <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Related, Conten, t</h2>
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"
-=======
           <div, className="mt-16">";
             <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Related, Conten, t</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
@@ -574,7 +555,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0">BLOG, POS, T</sp, a, n>
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
                 <div, className="flex, item, s-center, ga, p-3, m, b-3">";
                   <Brain, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />";
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0">BLOG, POS, T</sp, a, n>";
@@ -596,7 +576,6 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0">CASE, STUD, Y</sp, a, n>
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
                 <div, className="flex, item, s-center, ga, p-3, m, b-3">";
                   <Award, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0">CASE, STUD, Y</sp, a, n>";

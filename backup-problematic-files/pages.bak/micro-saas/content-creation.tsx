@@ -29,14 +29,10 @@ interface Content-creationProps {
 
 }
 
-
 }
 }
 }
 }
-
-
-
 
   className?: string;
 

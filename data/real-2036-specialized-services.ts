@@ -3,8 +3,6 @@ export type Real2036SpecializedService =
   tagline: string, description: string,
   category: string, price: string,
 
-
-
 export type Real2036SpecializedService = 
   id: string;
   name: string;
@@ -22,7 +20,6 @@ export type Real2036SpecializedService =
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
-
 
       'Space systems'
       'Safety protocols'
@@ -567,7 +564,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
   }
 ];
-
 
 export type Real2036SpecializedService = {;
   }

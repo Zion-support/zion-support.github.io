@@ -11,7 +11,6 @@ export, default, function GenAIE2EEvalPipelin, e, s(): Rea, c, t.J, S, X.Eleme, 
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">E2E, Eval, Pipelines — K, P, I‑Linked, Gate, s</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Design, eval, pipelines tied, to, outcomes with, cos, t/quality, budget, s, canari, e, s, and, rollback, triggers.</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="Eval, pipelines, wired to, KPIs, with budge, t, s, canari, e, s, and, instant, rollback hoo, k, s." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-e, 2, e-ev, a, l-pipelin, e, s" />";
       </Helmet>

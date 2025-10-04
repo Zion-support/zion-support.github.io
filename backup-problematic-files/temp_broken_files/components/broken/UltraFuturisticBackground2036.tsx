@@ -364,11 +364,9 @@ export default function UltraFuturisticBackground2036({
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
 
-
       }
       window.removeEventListener('resize', resizeCanvas)
     }
-
 
       }
       window.removeEventListener('resize', resizeCanvas)

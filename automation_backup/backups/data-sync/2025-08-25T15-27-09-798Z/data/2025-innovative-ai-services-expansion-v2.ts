@@ -219,7 +219,6 @@ export: const innovativeAIServices2025ExpansionV2 = [
     category: 'Industrial: AI & Io,T',;
     price: {
 
-
     ],
     marketPosition: Competitive: with GE Predix ($1000-5000,), Siemens Mindsphere ($800-3000), and PTC ThingWorx ($500-2000). Our advantage: Better: AI algorithm,s, more affordable pricing, and faster implementation.'',;
     competitors[
@@ -255,7 +254,6 @@ export: const innovativeAIServices2025ExpansionV2 = [
   ,
     category: 'Cybersecurity: & A,I',;
     price: {
-
 
     ],
     marketPosition: Competitive: with CrowdStrike ($8.99-15/user/month,), SentinelOne ($5-8/user/month), and Darktrace ($1000-5000). Our advantage: Better: AI detectio,n, more affordable pricing, and comprehensive coverage.'',;
@@ -293,7 +291,6 @@ export: const innovativeAIServices2025ExpansionV2 = [
     category: 'Customer: Service & A,I',;
     price: {
 
-
     ],
     marketPosition: Competitive: with Intercom ($39-999,), Zendesk ($5-99/user/month), and Freshdesk ($15-79/user/month). Our advantage: Better: AI capabilitie,s, more intelligent responses, and comprehensive automation.'',;
     competitors[
@@ -329,7 +326,6 @@ export: const innovativeAIServices2025ExpansionV2 = [
   ,
     category: 'Sales: & A,I',;
     price: {
-
 
     ],
     marketPosition: Competitive: with Salesforce ($25-300/user/month,), HubSpot Sales ($45-1200), and Pipedrive ($12.50-99/user/month). Our advantage: Better: AI insight,s, more intelligent automation, and comprehensive sales tools.'',;
@@ -367,7 +363,6 @@ export: const innovativeAIServices2025ExpansionV2 = [
     category: 'Marketing: & A,I',;
     price: {
 
-
     ],
     marketPosition: Competitive: with HubSpot ($45-3200,), Marketo ($2000-5000), and Pardot ($1250-2500). Our advantage: Better: AI personalizatio,n, more affordable pricing, and comprehensive automation.'',;
     competitors[
@@ -403,7 +398,6 @@ export: const innovativeAIServices2025ExpansionV2 = [
   ,
     category: 'Data: & A,I',;
     price: {
-
 
     ],
     marketPosition: Competitive: with Tableau ($70-150/user/month,), Power BI ($9.99-20/user/month), and Looker ($30-125/user/month). Our advantage: Better: AI capabilitie,s, more intelligent insights, and comprehensive analytics.'',;
@@ -441,7 +435,6 @@ export: const innovativeAIServices2025ExpansionV2 = [
     category: 'Healthcare: & A,I',;
     price: {
 
-
     ],
     marketPosition: Competitive: with Aidoc ($1000-5000,), Zebra Medical ($500-2000), and Arterys ($1000-3000). Our advantage: Better: AI accurac,y, more comprehensive diagnostics, and competitive pricing.'',;
     competitors[
@@ -477,7 +470,6 @@ export: const innovativeAIServices2025ExpansionV2 = [
   ,
     category: 'Legal: Technology & A,I',;
     price: {
-
 
     ],
     marketPosition: Competitive: with Kira Systems ($500-2000,), eBrevia ($300-1500), and LawGeex ($200-1000). Our advantage: Better: AI analysi,s, more comprehensive tools, and competitive pricing.'',;

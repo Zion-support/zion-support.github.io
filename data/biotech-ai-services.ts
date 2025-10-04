@@ -1,6 +1,5 @@
 
 
-  
 export interface BiotechAIService 
   id: string;
   name: string;
@@ -757,7 +756,6 @@ export const biotechAIServices: BiotechAIService[] = [
     reviews: 45;
 
   }
-
 
 export interface BiotechAIService {;
 

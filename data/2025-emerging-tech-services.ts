@@ -1,6 +1,5 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
-
 export const emergingTechServices2025: MicroSaasService[] = [
   // Quantum Computing Services
   
@@ -538,7 +537,6 @@ export const emergingTechServices2025: EmergingTechService[] = [;
 
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
 };
-
 
 export const getEmergingTechServicesByCategory = (category: string) => 
   return emergingTechServices2025 && emergingTechServices2025.filter(

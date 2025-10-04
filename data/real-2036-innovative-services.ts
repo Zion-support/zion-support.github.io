@@ -3,8 +3,6 @@ export type Real2036InnovativeService =
   tagline: string, description: string,
   category: string, price: string,
 
-
-
 export type Real2036InnovativeService = 
   id: string;
   name: string;
@@ -37,7 +35,6 @@ export type Real2036InnovativeService =
       'Custom dashboard builder',
       'Mobile - responsive interface',
     ],
-
 
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
     launch_date: '2036 - 01 - 20',

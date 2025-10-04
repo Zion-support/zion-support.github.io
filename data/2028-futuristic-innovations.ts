@@ -17,7 +17,6 @@ export interface FuturisticInnovation2028
     mobile: string;
     email: string;
 
-
     address: string;
   };
 
@@ -37,12 +36,6 @@ export interface FuturisticInnovation2028 {;
     address: string;
   }
 }
-
-
-
-
-
-
 
     address: string;
   }
@@ -76,8 +69,6 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
     },
   },
 ];      mobile: "+1 302 464 0950";
-
-
 
     id: "2028-futuristic-innovation",
     name: "2028 Futuristic Innovation Platform",

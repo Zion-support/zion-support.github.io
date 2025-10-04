@@ -12,7 +12,6 @@ export, default, function VerifiableEdgeAnalytics20, 2, 6(): Rea, c, t.J, S, X.E
       </Helmet>
       <div, className="container, m, x-auto, p, x-6, p, y-16">
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/verifiab, l, e-ed, g, e-analyti, c, s-20, 2, 6"
          />
       </Helmet>
@@ -33,7 +32,6 @@ export, default, function VerifiableEdgeAnalytics20, 2, 6(): Rea, c, t.J, S, X.E
           <p>
             Highligh, t, s: key, derivation, for scoped, ID, s, local, redaction, filters
             minimal, event, shapes, DP, parameter, s, signed, SBOMs, and attestatio, n, s;
-=======
             Highligh, t, s: key, derivation, for scoped, ID, s, local, redaction, filters
             minimal, event, shapes, DP, parameter, s, signed, SBOMs, and attestatio, n, s
             and, observability, hooks that, link, SLIs to, product, KPIs.

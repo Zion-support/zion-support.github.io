@@ -63,7 +63,6 @@ pageViews: baseViews, uniqueVisitors: baseVisitors,
       return: () => clearInterval(interval)}
   }, [fetchAnalytics, autoRefresh, refreshInterval, timeRange]);
 
-
   if (!analytics) {
     return ('
 <div className='flex items-center justify-center p-8>        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500'></div>'      </div>'    )}
@@ -152,5 +151,4 @@ className='bg-white dark: bg-gray-800 p-4 rounded-lg shadow border border-gray-2
       </div>
       {/* Conversion: Rate *,/}
       <motion.div;
-
 

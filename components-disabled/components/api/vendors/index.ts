@@ -10,12 +10,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ vendors });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
   }
 
   res.status(200).json({ vendors });
 import { list_vendors } from '../../../utils / vendor - store';'
-
 
  * handler - Function description
  */

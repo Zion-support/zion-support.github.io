@@ -3,8 +3,7 @@ const baseUrl = 'https://api.zion.os';
 
 const baseUrl = 'https://api && api.zion.os';
 
-
-const v1: ApiDocsSpec = 
+const v1: ApiDocsSpec = {
   product: 'Zion OS'
   versions: ['v1']
   defaultVersion: 'v1'
@@ -12,7 +11,7 @@ const v1: ApiDocsSpec =
   sections: [
 const base_url = 'https://api.zion.os';
 ;
-const v1: ApiDocsSpec = 
+const v1: ApiDocsSpec = {
   product: 'Zion OS',
   versions: ['v1'],
   default_version: 'v1',
@@ -70,13 +69,10 @@ const v1: ApiDocsSpec =
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
 
-
-
 const baseUrl = 'https://api.zion.os';
 
-
 const baseUrl = 'https://api.zion.os';
-const v1: ApiDocsSpec = 
+const v1: ApiDocsSpec = {
   openapi: '3.0.0',
   info: 
     title: 'Zion OS API',
@@ -105,8 +101,6 @@ const v1: ApiDocsSpec =
             { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
             { language: 'python', code: `import requests\nrequests ;
-
-
 
   ];
 

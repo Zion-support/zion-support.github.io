@@ -199,7 +199,6 @@ export interface InnovativeMicroSaas2030
     rating: 4.7,
     reviews: 52;
 
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaas2030 {;
   id: string,;

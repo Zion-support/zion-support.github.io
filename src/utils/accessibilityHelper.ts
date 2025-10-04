@@ -12,7 +12,6 @@ private, firstFocusableElemen, t?: HTMLEleme, n, t;
 private, lastFocusableElemen, t?: HTMLEleme, n, t;
 private, previouslyFocusedElemen, t?: HTMLEleme, n, t;
 construct, o, r(eleme, n, t: HTMLEleme, n, t) {
-=======
 private, elemen, t: HTMLEleme, n, t;
 private, focusableElement, s: HTMLEleme, n, t[] = [];
 private, firstFocusableElemen, t?: HTMLEleme, n, t;
@@ -32,7 +31,6 @@ th, i, s.updateFocusableElemen, t, s();
       'sele, c, t:n, o, t([disabl, e, d])'
       '[tabind, e, x]:n, o, t([tabind, e, x="-1"])'
     ].jo, i, n(', ');
-=======
       'a[hr, e, f]',';
       'butt, o, n: n, o, t([disabl, e, d])',';
       'textar, e, a: n, o, t([disabl, e, d])',';
@@ -59,7 +57,6 @@ th, i, s.updateFocusableElemen, t, s();
   }
   deactiva, t, e() {
     docume, n, t.removeEventListen, e, r('keydo, w, n', th, i, s.handleKeyDo, w, n);
-=======
     docume, n, t.removeEventListen, e, r('keydo, w, n', th, i, s.handleKeyDo, w, n);';
     // Restore, focu, s
   if (th, i, s.previouslyFocusedEleme, n, t) {
@@ -68,7 +65,6 @@ th, i, s.updateFocusableElemen, t, s();
   }
   private, handleKeyDow, n = (eve, n, t: KeyboardEve, n, t) => {
     if (eve, n, t.k, e, y !== 'T, a, b') retu, r, n;
-=======
     if (eve, n, t.k, e, y !== 'T, a, b') retu, r, n;';
     if (eve, n, t.shiftK, e, y) {
       // Shi, f, t + T, a, b
@@ -97,7 +93,6 @@ export, function, announceToScreenReader(
   announceme, n, t.setAttribu, t, e('ar, i, a-li, v, e', priori, t, y);
   announceme, n, t.setAttribu, t, e('ar, i, a-atom, i, c', 'tr, u, e');
   announceme, n, t.classNa, m, e = 'sr-on, l, y';
-=======
   priori, t, y: 'poli, t, e' | 'asserti, v, e' = 'poli, t, e'
 ): vo, i, d {
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
@@ -128,7 +123,6 @@ if (typeof, windo, w === 'undefin, e, d') return, fals, e;';
 return (
 wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').match, e, s ||
 wind, o, w.matchMed, i, a('(-ms-hi, g, h-contra, s, t: acti, v, e)').match, e, s;
-=======
 wind, o, w.matchMed, i, a('(prefe, r, s-contr, a, s
   t: hi, g, h)').match, e, s ||,';
 wind, o, w.matchMed, i, a('(-ms-hi, g, h-contra, s, t: acti, v, e)').match, e, s,';
@@ -139,7 +133,6 @@ wind, o, w.matchMed, i, a('(-ms-hi, g, h-contra, s, t: acti, v, e)').match, e, s
  */
 let, idCounte, r = 0;
 export, function, generateAriaId(pref, i, x = 'ar, i, a'): stri, n, g {;
-=======
 export, function, generateAriaId(pref, i, x = 'ar, i, a'): stri, n, g {';
   retu, r, n `${pref, i, x}-${++idCount, e, r}`;`;`
 }
@@ -151,7 +144,6 @@ export, function, setupSkipLinks(): vo, i, d {
   const, skipLin, k = docume, n, t.querySelect, o, r<HTMLAnchorEleme, n, t>('a.sk, i, p-li, n, k');
   if (!skipLi, n, k) retu, r, n;
   skipLi, n, k.addEventListen, e, r('cli, c, k', (eve, n, t) => {;
-=======
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
   const, skipLin, k = docume, n, t.querySelect, o, r<HTMLAnchorEleme, n, t>('a.sk, i, p-li, n, k');';
   if (!skipLi, n, k) retu, r, n;
@@ -165,7 +157,6 @@ export, function, setupSkipLinks(): vo, i, d {
       targ, e, t.foc, u, s();
       targ, e, t.addEventListen, e, r(
         'bl, u, r'
-=======
         'bl, u, r',';
         () => {
           targ, e, t.removeAttribu, t, e('tabind, e, x');';
@@ -229,7 +220,6 @@ function, hexToRg, b(h, e, x: stri, n, g): { r: numb, e, r; g: numb, e, r;
         r: parseI, n, t(resu, l, t[1], 16)
         g: parseI, n, t(resu, l, t[2], 16)
         b: parseI, n, t(resu, l, t[3], 16)
-=======
         b: parseI, n, t(resu, l, t[3], 16)
       }
     : nu, l, l;
@@ -244,7 +234,6 @@ export, function, createLoadingAnnouncement(messa, g, e = 'Loadi, n, g...'): vo,
   load, e, r.setAttribu, t, e('ar, i, a-li, v, e', 'poli, t, e');
   load, e, r.setAttribu, t, e('ar, i, a-lab, e, l', messa, g, e);
   load, e, r.classNa, m, e = 'sr-on, l, y';
-=======
 export, function, createLoadingAnnouncement(messa, g, e = 'Loadi, n, g...'): vo, i, d {';
   if (typeof, documen, t === 'undefin, e, d') return, nul, l;';
   const, loade, r = docume, n, t.createEleme, n, t('d, i, v');';
@@ -268,7 +257,6 @@ iss, u, e
   }
   const, heading, s = Arr, a, y.fr, o, m(docume, n, t.querySelectorA, l, l('h1, h2, h3, h4, h5, h6'));
   const, issue, s: stri, n, g[] = []
-=======
   if (typeof, documen, t === 'undefin, e, d') {';
     retu, r, n { val, i, d: tr, u, e, issu, e, s: [] };
   }
@@ -290,7 +278,6 @@ iss, u, e
   retu, r, n {
     val, i, d: issu, e, s.leng, t, h === 0
     issu, e, s;
-=======
     val, i, d: issu, e, s.leng, t, h === 0
     issu, e, s
   };
@@ -315,7 +302,6 @@ export, const, KeyboardNavigation = {
     return, even, t.k, e, y === th, i, s.KE, Y, S.ENT, E, R || eve, n, t.k, e, y === th, i, s.KE, Y, S.SPA, C, E;
   }
   isArrowK, e, y(eve, n, t: KeyboardEve, n, t): boole, a, n {
-=======
     EN, T, E
   R: 'Ent, e, r',';
     SPA, C, E: ' ',';
@@ -340,7 +326,6 @@ export, const, KeyboardNavigation = {
     ].includ, e, s(eve, n, t.k, e, y);
   }
   handleActionK, e, y(eve, n, t: KeyboardEve, n, t, callba, c, k: () => vo, i, d) {
-=======
   }
   handleActionK, e, y(eve, n, t: KeyboardEve, n, t, callba, c, k: () => vo, i, d) {
     if (th, i, s.isActionK, e, y(eve, n, t)) {
@@ -366,7 +351,6 @@ export, function, makeKeyboardAccessible(
   }
   // Handle, keyboard, events
   eleme, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {;
-=======
   if (!eleme, n, t.hasAttribu, t, e('tabind, e, x')) {';
     eleme, n, t.setAttribu, t, e('tabind, e, x', '0');';
   }
@@ -384,13 +368,11 @@ export, function, makeKeyboardAccessible(
  */
 export, function, initializeAccessibility(): vo, i, d {
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;
-=======
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
   // Setup, skip, links
   setupSkipLin, k, s();
   // Log, validation, results in, developmen, t
   if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
-=======
   if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
     setTimeo, u, t(() => {
       const, headingValidatio, n = validateHeadingHierarc, h, y();

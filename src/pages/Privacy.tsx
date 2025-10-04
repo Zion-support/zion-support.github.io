@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
@@ -17,7 +16,6 @@ const, Privac, y: Rea, c, t.FC = () => {
           <div, className="prose, pros, e-lg, ma, x-w-no, n, e">
             <h1, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-8">Privacy, Polic, y</h1>
             <p, className="te, x, t-lg, tex, t-gr, a, y-600, m, b-8">
-=======
         <meta name="descripti, o, n" content="Privacy, Policy, for Zion, Tech, Group - How, we, collect, u, s, e, and, protect, your personal, informatio, n." />";
         <meta name="robo, t, s" content="ind, e, x, foll, o, w" />";
       </Helmet>
@@ -34,7 +32,6 @@ const, Privac, y: Rea, c, t.FC = () => {
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Information, We, Collect</h2>
                 <p, className="te, x, t-gr, a, y-600, m, b-4">
                   We, collect, information you, provide, directly to, u, s, such, as, when you, create, an accou, n, t;
-=======
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Information, We, Collect</h2>";
                 <p, className="te, x, t-gr, a, y-600, m, b-4">";
                   We, collect, information you, provide, directly to, u, s, such, as, when you, create, an accou, n, t
@@ -52,7 +49,6 @@ const, Privac, y: Rea, c, t.FC = () => {
                 <p, className="te, x, t-gr, a, y-600, m, b-4">
                   We, use, the information, we, collect to: </p>
                 <ul, className="li, s, t-disc, lis, t-inside, tex, t-gr, a, y-600, spac, e-y-2">
-=======
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">How, We, Use Your, Informatio, n</h2>";
                 <p, className="te, x, t-gr, a, y-600, m, b-4">";
                   We, use, the information, we, collect to: </p>
@@ -91,7 +87,6 @@ const, Privac, y: Rea, c, t.FC = () => {
                   If, you, have any, questions, about this, Privacy, Policy, please, contact, us at: </p>
                 <div, className="bg-gr, a, y-5, 0, p-4, rounde, d-lg">
                   <p, className="te, x, t-gr, a, y-6, 0, 0">
-=======
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Contact, U, s</h2>";
                 <p, className="te, x, t-gr, a, y-600, m, b-4">";
                   If, you, have any, questions, about this, Privacy, Policy, please, contact, us at: </p>

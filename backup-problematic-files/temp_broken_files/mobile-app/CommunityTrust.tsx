@@ -25,10 +25,6 @@ import React from "react";""
               <div className="text-left">{stat.label}</div>;")
             </div>;          ))}
 
-
-
-
-
 :temp_broken_files/mobile-app/CommunityTrust.tsx
 
 }</div>) ) ;

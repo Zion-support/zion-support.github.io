@@ -1,6 +1,5 @@
 
 
-
   try {
     const tx = feature;
       ? burnForFeature (user_id, feature, metadata);
@@ -9,7 +8,4 @@
   } catch (err: any) {
 
 }
-
-
-
 

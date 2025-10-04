@@ -104,7 +104,6 @@ const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
           </div>
         </div>
 
-
                 >{plan.cta}
                 </a>
               </motion.div>
@@ -258,5 +257,4 @@ const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
         </div>
       </section>
     </div>
-
 

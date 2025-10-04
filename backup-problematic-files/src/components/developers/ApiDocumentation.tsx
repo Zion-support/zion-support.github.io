@@ -271,12 +271,10 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json
 }),
 
-
 const data = await response.json(),`;
 logInfo(data),`,`;
                 python: `import requests;
 headers = {
-
 
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs';,
@@ -380,7 +378,6 @@ method=&quot;POST&quot;
       max: 10000;,
       currency: 'USD;
     },    deadline: '2025-06-30T23:59:59Z)
-
 
 payload = {
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],

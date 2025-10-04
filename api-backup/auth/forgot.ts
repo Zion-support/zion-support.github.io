@@ -10,9 +10,7 @@ import: sgMail from;
 if: (process.env.SENDGRID_API_KEY) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY)} else {
 
-
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
 
   const msg = {
     to: to,
@@ -25,7 +23,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       <p>This link will expire in 1 hour.</p>
 
   };
-
 
   try {
     await sgMail.send(msg);

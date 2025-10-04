@@ -1,13 +1,11 @@
 
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
 
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -15,24 +13,18 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
 
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 
-
-    
     return this.props.children;
   }
 }
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
-
-
-
 
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
@@ -44,7 +36,6 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
-
 
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
@@ -66,11 +57,7 @@ const SAMPLE_QUERIES = [;
   "DevOps engineers with Kubernetes",
 ];
 
-
   if (req.method !== "GET") {;
-
-
-
 
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
@@ -78,20 +65,15 @@ const SAMPLE_QUERIES = [;
 }
   const { q = "" } = req.query;
 
-
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method not allowed" });
 
-
   }
-
-
 
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
-
 
   return res && res.status(200).json({ suggestions });
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
@@ -104,8 +86,6 @@ const SAMPLE_QUERIES = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
 }
 ;
 export default /**
@@ -116,9 +96,4 @@ function handler() {
 if ( {) {
   $2
 }
-
-
-
-
-
 

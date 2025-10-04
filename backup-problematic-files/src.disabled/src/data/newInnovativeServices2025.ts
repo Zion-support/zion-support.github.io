@@ -14,6 +14,4 @@ export default function NewInnovativeServices2025({ }: NewInnovativeServices2025
 
 }
 
-
-
 }

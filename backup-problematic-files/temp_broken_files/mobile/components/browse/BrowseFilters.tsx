@@ -22,7 +22,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
         <div className="text-left">;"
 </div>
 
-
 "
               <Button variant="outline" size="sm" className="text-left">;"
                 <Filter className="text-left" /> ;"
@@ -67,7 +66,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                 )}
                   <Label>Location;
 
-
                       <SelectValue placeholder="Select location" />;"
                     <SelectContent>;
                       <SelectItem value="remote">Remote;""
@@ -110,5 +108,4 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                 onClick={() => removeFilter(filter)} ;
 
   const [activeFilters, setActiveFilters] = useState<string[]> ([]);
-
 

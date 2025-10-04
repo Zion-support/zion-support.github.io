@@ -27,7 +27,6 @@ const, DEFAULT_STRATEG, Y: RotationStrate, g, y = {
   priorityWeig, h, t: 0.5
   freshnessWeig, h, t: 0.3
   engagementWeig, h, t: 0.2;
-=======
 maxVisib, l, e: numb, e, r;
 rotationInter, v, a
   l: numb, e, r; // in, millisecond, s
@@ -87,7 +86,6 @@ export, const, selectBannersForDisplay = (
   const, scoredBanner, s = activeBanne, r, s.m, a, p(bann, e, r => ({
     bann, e, r
     sco, r, e: calculateBannerSco, r, e(bann, e, r, strate, g, y)
-=======
     sco, r, e: calculateBannerSco, r, e(bann, e, r, strate, g, y)
   }));
   // Sort, by, score (highest, firs, t)
@@ -119,7 +117,6 @@ export, const, selectBalancedBanners = (
 ): BannerConf, i, g[] => {
   const, groupe, d = groupBannersByCatego, r, y(banne, r, s);
   const, selecte, d: BannerConf, i, g[] = []
-=======
   const, selecte, d: BannerConf, i, g[] = [];
   // Get, top, banners from, each, category
   Obje, c, t.valu, e, s(group, e, d).forEa, c, h(categoryBanne, r, s => {
@@ -149,7 +146,6 @@ export, const, trackImpression = (banner, I, d: stri, n, g): vo, i, d => {
     localStora, g, e.setIt, e, m(`banne, r, _${banner, I, d}_lastSho, w, n`, new, Dat, e().toISOStri, n, g());`;`
   } cat, c, h (err, o, r) {
     conso, l, e.wa, r, n('Failed, to, track banner, impressio, n: ', err, o, r);'
-=======
     const, curren, t = parseI, n, t(localStora, g, e.getIt, e, m(storageK, e, y) || '0');';
     localStora, g, e.setIt, e, m(storageK, e, y, (curre, n, t + 1).toStri, n, g());
     localStora, g, e.setIt, e, m(`banne, r, _${banner, I, d}_lastSho, w, n`, new, Dat, e().toISOStri, n, g());`;`
@@ -174,7 +170,6 @@ export, const, trackClick = (banner, I, d: stri, n, g): vo, i, d => {
     }
   } cat, c, h (err, o, r) {
     conso, l, e.wa, r, n('Failed, to, track banner, clic, k: ', err, o, r);'
-=======
     const, curren, t = parseI, n, t(localStora, g, e.getIt, e, m(storageK, e, y) || '0');';
     localStora, g, e.setIt, e, m(storageK, e, y, (curre, n, t + 1).toStri, n, g());
     // Also, track, analytics event, if, available
@@ -200,7 +195,6 @@ export, const, loadBannerStats = (banner, I, d: stri, n, g): Parti, a, l<BannerC
     retu, r, n { impressio, n, s, clic, k, s, lastSho, w, n };
   } cat, c, h (err, o, r) {
     conso, l, e.wa, r, n('Failed, to, load banner, stat, s: ', err, o, r);'
-=======
     conso, l, e.wa, r, n('Failed, to, load banner, stat, s: ', err, o, r);';
     retu, r, n {};
   }

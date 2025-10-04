@@ -2,20 +2,13 @@
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase();
 
-
   const lower = text.toLowerCase ();
   const reasons: string[] = [];
   vagueScammyJobPhrases.for_each (phrase => {
 
-
-
-
 ;
 
-
-
 // Fraud detection heuristics utilities
-
 
 :utils/fraud/heuristics.ts
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
@@ -158,8 +151,4 @@ main:utils/fraud/heuristics.ts
 :utils/fraud/heuristics.ts
 
 }
-
-
-
-
 

@@ -11,7 +11,6 @@ export, const, generateSitemap = () => {
     '/bl, o, g/ai-autonomo, u, s-thre, a, t-respon, s, e-20, 2, 5'
     '/bl, o, g/ai-prom, p, t-engineeri, n, g-maste, r, y-20, 2, 5'
     '/bl, o, g/ai-synthet, i, c-da, t, a-generati, o, n-20, 2, 5'
-=======
   const, baseUr, l = 'htt, p, s: //ziontechgro, u, p.c, o, m';';
   const, page, s = [
     { u, r, l: '/', priori, t, y: 1.0, changefr, e, q: 'dai, l, y' },';
@@ -30,7 +29,6 @@ export, const, generateSitemap = () => {
       u, r, l: po, s, t
       priori, t, y: 0.8
       changefr, e, q: 'week, l, y'
-=======
       ur
   l: po, s, t
       priori, t, y: 0.8
@@ -39,7 +37,6 @@ export, const, generateSitemap = () => {
   });
   const, xm, l = `<?xml, versio, n="1.0" encodi, n, g="U, T, F-8"?>";`;`
 <urlset, xmln, s="ht, t, p: //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">"
-=======
 <urlset, xmln, s="ht, t, p: //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">";
 ${pag, e, s.m, a, p(pa, g, e => `  <u, r, l>`;`
     <l, o, c>${baseU, r, l}${pa, g, e.u, r, l}</l, o, c>

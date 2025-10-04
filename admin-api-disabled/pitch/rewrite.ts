@@ -1,7 +1,5 @@
 
 
-
-
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`
@@ -12,15 +10,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`
         model: 'gpt-4o-mini'
         messages: [
 
-
-
-
     } catch (err) {
       // keep original if AI fails;
     }
-
-
-
-
-
 

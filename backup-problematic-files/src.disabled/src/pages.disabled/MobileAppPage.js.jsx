@@ -1,6 +1,5 @@
 
 
-
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }

@@ -1,7 +1,5 @@
 
 
-
-  
 export type InnovativeMicroSaas = 
 export type InnovativeMicroSaas = {;
   id: string;
@@ -29,7 +27,6 @@ export type InnovativeMicroSaas = {;
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
-  
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -92,7 +89,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     category: 'Financial Technology',
     pricing: { starter: '$59 / mo' },
     features: [;
-
 
       'OCR ingestion',
       'Matching heuristics',
@@ -227,7 +223,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true
 	}
 ];
-
 
 name: string;
 description: string;

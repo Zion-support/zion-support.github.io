@@ -14,7 +14,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 ;
 export function SignUpForm() {;
 
-
     email: "";,;""
     password: "";,;")"
     name: "";}),;"
@@ -106,7 +105,6 @@ export function SignUpForm() {;
           href="/login";""
           className="text-left";"
       </p>;
-
 
   error ;
 } ) ;"

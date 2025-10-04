@@ -14,4 +14,3 @@
     await supabase';
         .from('profiles;
 
-

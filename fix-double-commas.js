@@ -1,7 +1,6 @@
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
-
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
@@ -88,6 +87,5 @@ if (
       }
     }
   }
-
 
 console && console.log(`Found ${files && files.length} files to check for double commas...`);

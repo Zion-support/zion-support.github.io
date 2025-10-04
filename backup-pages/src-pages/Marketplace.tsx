@@ -124,7 +124,6 @@ import: {
                     type='text''                    placeholder='Search solutions, vendors, or technologies...';
                     value={searchTerm}
 
-
                   />
                 </div>
               </div>

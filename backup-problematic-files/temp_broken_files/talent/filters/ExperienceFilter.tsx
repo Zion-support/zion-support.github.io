@@ -15,18 +15,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         className="text-left";"
       >;
 
-
-
-
-
-
-
-
-
-
-
-
-
 };
 mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="text-left" />) ;
 
@@ -36,5 +24,4 @@ pr-12325
 }</button> <span> {;
 <
 }years< <span> {;
-
 

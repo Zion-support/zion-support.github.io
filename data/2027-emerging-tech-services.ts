@@ -13,9 +13,6 @@
   roi: string;
   link: string;
 
-
-  
-  
     id: 'neuromorphic-computing'
     name: 'Neuromorphic Computing Platform'
     description:
@@ -494,7 +491,6 @@
     ],
     target_audience: [;
 
-
       'Semiconductor companies',
       'Battery manufacturers',
       'Aerospace companies',
@@ -617,7 +613,6 @@
   roi: string, link: string,
   tags: string[]
 }
-
 
     id: 'quantum-climate-modeling'
     name: 'Quantum Climate Modeling Platform'

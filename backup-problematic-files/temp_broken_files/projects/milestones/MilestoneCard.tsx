@@ -17,9 +17,6 @@ interface MilestoneCardProps {;
 </void>
   onReject?:(id:string) => Promise<void>;
 
-
-
-
     <Card>;
 
       <CardHeader className="text-left">;"
@@ -28,20 +25,11 @@ interface MilestoneCardProps {;
 </div>
           <div>;
 
-
-
-
             {isUnderDispute && disputeStatus && (;
 
               <DisputeStatusBadge status={disputeStatus} />;
 
           </div>;
-
-
-
-
-
-
 
             <RaiseDisputeButton ;
               projectId={projectId} ;
@@ -49,14 +37,6 @@ interface MilestoneCardProps {;
               variant="ghost";""
               size="sm";"
             />;
-
-
-
-
-
-
-
-
 
 onApprove?: (id: string) => Promise<void>;
 onReject?: (id: string) => Promise<void> ;
@@ -66,5 +46,4 @@ case 'rejected': ;"}return (<Card> <CardHeader className="text-left" > <div clas
   disputeStatus ;"}/>) ";"}</div> </div>  </div>  <CardFooter className="text-left" > <div> {';
 
   status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
-
 

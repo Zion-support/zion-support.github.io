@@ -1,7 +1,5 @@
 
 
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
@@ -12,9 +10,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-
-
 }
-
-
 

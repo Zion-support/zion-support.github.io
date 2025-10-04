@@ -24,7 +24,6 @@ export, default, function October2025LatestTechAdvancementsBann, e, r(): vo, i, 
           Cutti, n, g-Edge, Technology, Stack;
         </h2>
         <p, className="te, x, t-2xl, m, d: te, x, t-3xl, tex, t-center, tex, t-gr, a, y-300, m, b-16, ma, x-w-5xl, m, x-auto, fon, t-lig, h, t">"
-=======
         <h2, className="te, x, t-6xl, m, d: te, x, t-8xl, fon, t-black, tex, t-center, m, b-8, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
           Cutti, n, g-Edge, Technology, Stack;
         </h2>
@@ -35,7 +34,6 @@ export, default, function October2025LatestTechAdvancementsBann, e, r(): vo, i, 
         </p>
         {/* Content, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {/* Car, d, 1 - Neuromorphic, Computin, g */}
           <Li, n, k
@@ -48,7 +46,6 @@ export, default, function October2025LatestTechAdvancementsBann, e, r(): vo, i, 
                 🧠 Bra, i, n-Inspired, A, I;
               </sp, a, n>
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">";
                 Neuromorphic, Computing, Revolution;
               </h3>
@@ -74,7 +71,6 @@ export, default, function October2025LatestTechAdvancementsBann, e, r(): vo, i, 
                 🔮 Priva, c, y-First, A, I;
               </sp, a, n>
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                 Synthetic, Data, Generation Maste, r, y;
               </h3>
@@ -100,7 +96,6 @@ export, default, function October2025LatestTechAdvancementsBann, e, r(): vo, i, 
                 🛡️ Autonomous, Defens, e;
               </sp, a, n>
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-r, e, d-400, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-r, e, d-400, transitio, n-colo, r, s">";
                 AI-Powered, Cybersecurity, Mesh;
               </h3>
@@ -119,7 +114,6 @@ export, default, function October2025LatestTechAdvancementsBann, e, r(): vo, i, 
         {/* Stats, Ba, r */}
         <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, vi, a-cy, a, n-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-indi, g, o-5, 0, 0/30, m, b-12">
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">"
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, vi, a-cy, a, n-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-indi, g, o-5, 0, 0/30, m, b-12">";
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">";
             <d, i, v>
@@ -146,7 +140,6 @@ export, default, function October2025LatestTechAdvancementsBann, e, r(): vo, i, 
             <div, className="te, x, t-purp, l, e-400, fon, t-bold, m, b-2">🏭 Manufacturi, n, g</d, i, v>
             <div, className="te, x, t-white, tex, t-lg, fon, t-bold, m, b-2">15,000, Neuromorphic, Edge Devic, e, s</d, i, v>
             <div, className="te, x, t-gr, a, y-400, tex, t-sm">97% energy, cost, reduction, 99.9% quality, detection, accuracy</d, i, v>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-16">";
           <div, className="bg-purp, l, e-9, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30">";
             <div, className="te, x, t-purp, l, e-400, fon, t-bold, m, b-2">🏭 Manufacturi, n, g</d, i, v>";

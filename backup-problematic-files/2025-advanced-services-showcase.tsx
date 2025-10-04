@@ -91,8 +91,6 @@ const getServiceFeatures = (service: any) => {
   return []
 },
 
-
-
 export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),

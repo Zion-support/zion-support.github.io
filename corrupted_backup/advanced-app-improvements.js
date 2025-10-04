@@ -44,7 +44,6 @@ export class HealthChecker {
     const healthy = allResults.filter(r => r.status === 'healthy').length;
     const total = allResults.length;
 
-    
     return {
   // TODO: Implement
       healthy,
@@ -70,7 +69,6 @@ export class PerformanceMonitor {
       console.warn(\`Timer "\${name}" was not started\`);"
       return;
 
-
     const duration = performance.now() - metric.start;
 
     metric.duration = duration;
@@ -82,7 +80,6 @@ export class PerformanceMonitor {
     this.thresholds.set(name, threshold);
 
   getMetrics() {
-
 
     for (const [name, metric] of this.metrics) {
       const threshold = this.thresholds.get(name);
@@ -270,7 +267,6 @@ export class MemoryCache {
     this.delete(oldestKey);
   }
 
-
 }
 
 export const memoryCache = new MemoryCache();
@@ -306,7 +302,6 @@ export class RateLimiter {
 
     const windowStart = now - this.windowMs;
 
-    
     if (!this.requests.has(identifier)) {
       this.requests.set(identifier, []);
     
@@ -324,7 +319,6 @@ export class RateLimiter {
 
     const userRequests = this.requests.get(identifier) || [];
 
-    
     return Math.max(0, this.maxRequests - recentRequests.length);
     'api/response-cache.js': `// Response caching middleware;
 export class ResponseCache {
@@ -334,9 +328,6 @@ export class ResponseCache {
   generateKey(req) {`;
     return \`\${req.method}:\${req.url}:\${JSON.stringify(req.query)}\`;
 
-
-
-
     if (Date.now() > item.expiry) {
 
     return item.data;
@@ -344,7 +335,6 @@ export class ResponseCache {
   set(key, data, ttl = this.defaultTTL) {
       data,)
       expiry: Date.now() + ttl;
-
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
 

@@ -302,7 +302,6 @@ import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
@@ -357,7 +356,6 @@ const features = [;
     icon: ArrowRight,;
     title: 'Data Visualization',;
     description: 'Interactive charts, graphs, and visual data representations';
-
 
 export default function DataAnalyticsPage() {;
 const benefits = [;

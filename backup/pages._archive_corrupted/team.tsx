@@ -36,7 +36,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 }
   )}}
 
-
 interface TeamProps {
   // Add props here as needed
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -50,12 +49,10 @@ export default function Team({}: TeamProps) {
   );
 }
 
-
 }
 }
 
   );}
 
 }
-
 

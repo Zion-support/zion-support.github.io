@@ -25,9 +25,6 @@ return (;
     </footer>);
 ;
 
-
-
-
                   San Francisco, CA 94105
                 <
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';'

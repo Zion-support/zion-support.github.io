@@ -3,9 +3,6 @@ import { useEffect, useMemo, useRef, useState } from 'react';'
 import { useRouter } from 'next/router';'
 export default function GlobalSearchBar() {;
 
-
-
-
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
 
@@ -65,7 +62,6 @@ type='button''
           className='inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200''
           aria-label='Voice search''
 
-
     const run = async () => {
       }
       }
@@ -79,10 +75,8 @@ fetch ('/api / telemetry / search', {'
     }).catch (() => {});
     router.push (`/search?q=${encodeURIComponent (query)}`);`    set_open (false);  }
 
-
   $2
 }
-
 
 ;
   const start_voice = () =>: any {

@@ -22,7 +22,6 @@ const, BannerCarouse, l: Rea, c, t.FC = () => {
     {
       tit, l, e: "Enterprise, IT, Services","
       descripti, o, n: "Comprehensive, IT, solutions for, enterprise, needs","
-=======
       tit, l, e: "AI-Powered, Business, Solutions",";
       descripti, o, n: "Transform, your, business with, cuttin, g-edge, AI, technology",";
       li, n, k: "/servic, e, s/ai-servic, e, s"

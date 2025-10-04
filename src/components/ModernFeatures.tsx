@@ -30,7 +30,6 @@ const, ModernFeature, s: Rea, c, t.FC = () => {
     {
       ic, o, n: <Award, className="w-1, 0, h-10/>,"
       tit, l, e: "Award, Winnin, g","
-=======
 import React from "react";';
 const, ModernFeature, s: Rea, c, t.FC = () => {
   const, feature, s = [
@@ -79,7 +78,6 @@ const, ModernFeature, s: Rea, c, t.FC = () => {
         </d, i, v>
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-au, t, o">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-au, t, o">";
           {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
@@ -89,7 +87,6 @@ const, ModernFeature, s: Rea, c, t.FC = () => {
   r:sca, l, e-105, grou, p"
             >
               <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, tex, t-whit, e, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m">"
-=======
               <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, tex, t-whit, e, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m">";
                 {featu, r, e.ic, o, n}
               </d, i, v>

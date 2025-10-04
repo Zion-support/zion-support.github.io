@@ -1,9 +1,5 @@
 
 
-
-
-
-
   isMobileFilterOpen;)
 } FilterSidebarProps) {;
   return (;
@@ -30,24 +26,10 @@
         expanded={expandedSections.skills} ;)"
         toggleSection={() => toggleSection('skills')}
 
-
-
-
-
-
-
-
-
-
-
-
-
         <Button ;
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
 
     </>;
-
-
 
 isMobileFilterOpen ;)
 }: FilterSidebarProps) {;
@@ -56,24 +38,15 @@ isMobileFilterOpen ;)
 }toggleSection= {;)"
   () => toggleSection ('skills') ;
 
-
-
   expandedSections.availability ;
 }toggleSection= {';
   () => toggleSection ('availability') ;
 
-
-
   expandedSections.region ;
   () => toggleSection ('region') ;
-
-
 
   expandedSections.experience ;
   () => toggleSection ('experience') ;
 
-
-
   expandedSections.price ;
-
 

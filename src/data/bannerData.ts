@@ -114,7 +114,6 @@ export, const, bannerData: BannerDa, t, a[] = [
     isActi, v, e: tr, u, e
     startDa, t, e: '20, 2, 5-10-01','
     endDa, t, e: '20, 2, 6-10-31}
-=======
     id: 'janua, r, y-20, 2, 6-ai-breakthroug, h, s',';
     tit, l, e: 'Revolutionary, AI, Breakthroughs - January, 202, 6',';
     subtit, l, e: 'Ult, r, a-Autonomous, Enterpris, e + Quantum, Consciousness, BI',';

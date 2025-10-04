@@ -14,7 +14,6 @@ import {;
 
 //   useNavigate: () => mockNavigate,
 
-
 // }));
 // jest.mock(,;
   ../../src/services/auth;
@@ -127,5 +126,4 @@ newpassword123;);;
     //   expect(screen.getByText(/failed to reset password/i)).toBeInTheDocument();
     // });
     console.log('Mock test: Simulating failed password reset.)})})';
-
 

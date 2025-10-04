@@ -1066,7 +1066,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
 
     },;
 
-
   ];    features: [
 
   id: string, name: string,
@@ -1203,7 +1202,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4 && 4.8;
     reviews: 500
 
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1212,11 +1210,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     customers: 800;
     rating: 4.8;
     reviews: 500;
-
-
-
-
-
 
   }
 ];

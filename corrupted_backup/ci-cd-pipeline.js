@@ -120,7 +120,6 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
       console.log("📝 "Commit": ${this.pipelineLog.commit}");"
       // Define pipeline stages;
 
-
           "name": 'Source Code Checkout',
           "description": 'Checkout source code from repository',
           "critical": true,""

@@ -1,7 +1,5 @@
 
 
-
-
 import { Sparkles } from 'lucide-react';
 
 ;
@@ -19,7 +17,6 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
     if (skills.length === 0 || yearsExperience <= 0) {;
       return,;
 
-
       const result = await getTalentRateSuggestion(params),;
       setSuggestion(result),;
 
@@ -27,14 +24,10 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
       setIsLoading(false),;
   },;
 
-
       // Track this suggestion application;
 
       if (user && user.id) {;
         trackPricingSuggestion({;
-
-
-
 
         }),;
   return (;"
@@ -51,8 +44,4 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
 "
             <Sparkles className="text-left" /> Optimize Rate with AI;"
       </div>;
-
-
-
-
 

@@ -4,18 +4,7 @@ import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
-
-
-
-
-
-
-
-
-
-
   searchQuery,;)
-
 
     <Tabs defaultValue="featured" className="text-left">;"
 "
@@ -25,25 +14,7 @@ import { Button } from '@/components/ui/button';
           className="text-left";"
         >;
 
-
-
-
-
-
-
-
-
-
-
-
-
         </div>;
-
-
-
-
-
-
 
         <div className="text-left">;"
               key={country.country}              country={country}
@@ -60,16 +31,10 @@ import { Button } from '@/components/ui/button';
                   <PaginationNext;`;
                     href={`?page=${currentPage + 1}`}
 
-
-
-
   ),;}
  <TabsTrigger value="featured" className="text-left" > Featured Countries </TabsTrigger> <TabsTrigger value="all" className="text-left" > All Countries </TabsTrigger> </TabsList> <TabsContent value="featured" className="text-left" > <div className="text-left" > <h2 className="text-left" > Featured Service Locations </h2> <p className="text-left" > Browse our most popular service destinations </p> </div> .filter ( (country) => popularCountries.includes (country.country) ) .map ( (country) => (<CountryServiceCard key= {;
-
-
 
 }isPopular= {;)"
   true ;"}/>) ) ";"}</div>  <TabsContent value="all" className="text-left" > <div className="text-left" > <div className="text-left" > <Search className="text-left" /> <Input /> </div> </div> <CountryServiceCard key= {;"
 }</div> <PaginationContent> <PaginationItem> <PaginationPrevious href= {;
-
 

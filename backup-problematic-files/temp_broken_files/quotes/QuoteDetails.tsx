@@ -1,26 +1,14 @@
 
 
-
-
-
-
-
-
 ;
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null;,;
   isOpen: boolean;,;
 
-
   const formatDate = (dateString?:string) => {;"
-
-
 
       <DialogContent className="text-left">;"
         <DialogHeader>;
-
-
-
 
                   <span>{quote.requester_name}<;
                 </div>;"
@@ -29,7 +17,4 @@ interface QuoteDetailsProps {;
 }< <QuoteStatusBadge status= {;"
   quote.status ;"}/> formatDate (quote.created at) ";"}  <Separator className="text-left" /> <div className="text-left" > <Card> </div> </div>   <Card> </div> </div>   </div> {";"  quote.project description && (<> <h4 className="text-left" >Additional Details</h4> <p >{;"
 )
-
-
-
 

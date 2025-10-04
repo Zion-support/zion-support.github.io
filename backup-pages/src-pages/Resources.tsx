@@ -162,7 +162,6 @@
               </motion.div>) ) }
           </div>
 
-
                 return()                  <motion.article;
                     key: = {resource.id}
                     initial = {

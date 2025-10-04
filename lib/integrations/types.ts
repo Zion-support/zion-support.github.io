@@ -49,7 +49,6 @@ export interface ZapierEvent {;
   type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
   timestamp: number;
 
-
   payload: Record < string, any>;
 ;
 
@@ -77,7 +76,6 @@ export interface IntegrationsState {;
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-
 
 export interface SyncLogEntry 
   id: string, timestamp: number,
@@ -111,7 +109,6 @@ export interface IntegrationsState {;
   overrides: ManualOverride[];
   lastError?: string | null
 }
-
 
   events: ZapierEvent[];  events: ZapierEvent[];
 }

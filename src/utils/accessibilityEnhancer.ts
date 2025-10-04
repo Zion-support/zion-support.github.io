@@ -23,7 +23,6 @@ class, AccessibilityEnhance, r {
     enableReducedMoti, o, n: tr, u, e
     enableFocusIndicato, r, s: tr, u, e
     enableAriaLabe, l, s: tr, u, e;
-=======
   private, confi, g: AccessibilityConf, i, g;
   private, observer, s: MutationObserv, e, r[] = [];
   private, keyboardListene, r
@@ -74,7 +73,6 @@ class, AccessibilityEnhance, r {
     skipLi, n, k.textConte, n, t = 'Skip, to, main conte, n, t';
     skipLi, n, k.classNa, m, e = 'sr-only, focu, s: n, o, t-sr-only, focu, s:absolute, focu, s:t, o, p-4, foc, u
   s:le, f, t-4, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded, z-50';'
-=======
     const, skipLin, k = docume, n, t.createEleme, n, t('a');';
     skipLi, n, k.hr, e, f = '#ma, i, n-conte, n, t';';
     skipLi, n, k.textConte, n, t = 'Skip, to, main conte, n, t';';
@@ -85,7 +83,6 @@ class, AccessibilityEnhance, r {
   const, handleTabNavigatio, n = (eve, n, t: KeyboardEve, n, t) => {
       if (eve, n, t.k, e, y === 'T, a, b') {;
         docume, n, t.bo, d, y.classLi, s, t.a, d, d('keyboa, r, d-navigati, o, n');
-=======
       if (eve, n, t.k, e, y === 'T, a, b') {';
         docume, n, t.bo, d, y.classLi, s, t.a, d, d('keyboa, r, d-navigati, o, n');';
       };
@@ -97,7 +94,6 @@ class, AccessibilityEnhance, r {
     docume, n, t.addEventListen, e, r('mousedo, w, n', handleMouseNavigati, o, n);
     th, i, s.keyboardListene, r, s.s, e, t('t, a, b-navigati, o, n', handleTabNavigati, o, n);
     th, i, s.keyboardListene, r, s.s, e, t('mou, s, e-navigati, o, n', handleMouseNavigati, o, n);
-=======
     docume, n, t.addEventListen, e, r('keydo, w, n', handleTabNavigati, o, n);';
     docume, n, t.addEventListen, e, r('mousedo, w, n', handleMouseNavigati, o, n);';
     th, i, s.keyboardListene, r, s.s, e, t('t, a, b-navigati, o, n', handleTabNavigati, o, n);';
@@ -111,7 +107,6 @@ class, AccessibilityEnhance, r {
   th, i, s.addScreenReaderTe, x, t('bann, e, r-secti, o, n', 'Main, content, banners and, announcement, s');
     th, i, s.addScreenReaderTe, x, t('navigati, o, n', 'Main, navigation, menu');
     th, i, s.addScreenReaderTe, x, t('foot, e, r', 'Footer, with, contact information, and, links');
-=======
     th, i, s.addScreenReaderTe, x, t('bann, e, r-secti, o, n', 'Main, content, banners and, announcement, s');';
     th, i, s.addScreenReaderTe, x, t('navigati, o, n', 'Main, navigation, menu');';
     th, i, s.addScreenReaderTe, x, t('foot, e, r', 'Footer, with, contact information, and, links');';
@@ -127,7 +122,6 @@ class, AccessibilityEnhance, r {
 // Detect, use, r's, high, contrast preferen, c, e
   const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)');
 const, handleContrastChang, e = (e: MediaQueryListEve, n, t) => {
-=======
 // Detect, use, r's, high, contrast preferen, c, e';
 const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-contr, a, s
   t: hi, g, h)');';
@@ -139,7 +133,6 @@ docume, n, t.documentEleme, n, t.classLi, s, t.a, d, d('hi, g, h-contra, s, t');
       }
     };
     mediaQue, r, y.addEventListen, e, r('chan, g, e', handleContrastChan, g, e);
-=======
     mediaQue, r, y.addEventListen, e, r('chan, g, e', handleContrastChan, g, e);';
     // Apply, initial, state
   if (mediaQue, r, y.match, e, s) {
@@ -152,7 +145,6 @@ docume, n, t.documentEleme, n, t.classLi, s, t.a, d, d('hi, g, h-contra, s, t');
   private, setupReducedMotionSuppor, t(): vo, i, d {
 const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)');
 const, handleMotionChang, e = (e: MediaQueryListEve, n, t) => {
-=======
 const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-mot, i, o
   n: redu, c, e)');';
 const, handleMotionChang, e = (e: MediaQueryListEve, n, t) => {
@@ -163,7 +155,6 @@ docume, n, t.documentEleme, n, t.classLi, s, t.a, d, d('redu, c, e-moti, o, n');
       }
     };
     mediaQue, r, y.addEventListen, e, r('chan, g, e', handleMotionChan, g, e);
-=======
     mediaQue, r, y.addEventListen, e, r('chan, g, e', handleMotionChan, g, e);';
     // Apply, initial, state
   if (mediaQue, r, y.match, e, s) {
@@ -211,7 +202,6 @@ transiti, o, n-durat, i, o
     observ, e, r.obser, v, e(docume, n, t.bo, d, y, {
       childLi, s, t: tr, u, e
       subtr, e, e: tr, u, e;
-=======
       childL, i, s
   t: tr, u, e
       subtr, e, e: tr, u, e
@@ -226,7 +216,6 @@ transiti, o, n-durat, i, o
   private, addAriaLabel, s(eleme, n, t: Eleme, n, t): vo, i, d {
     // Add, ARIA, labels to, buttons, without te, x, t
   const, button, s = eleme, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');'
-=======
     const, button, s = eleme, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');';
     butto, n, s.forEa, c, h((butt, o, n) => {
       const, ico, n = butt, o, n.querySelect, o, r('s, v, g, i, [cla, s, s*="ic, o, n"]');';
@@ -236,7 +225,6 @@ transiti, o, n-durat, i, o
     });
     // Add, ARIA, labels to, links, without descriptive, tex, t
   const, link, s = eleme, n, t.querySelectorA, l, l('a: n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');'
-=======
     const, link, s = eleme, n, t.querySelectorA, l, l('a: n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');';
     lin, k, s.forEa, c, h((li, n, k) => {
       if (!li, n, k.textConte, n, t?.tr, i, m() || li, n, k.textConte, n, t.tr, i, m().leng, t, h < 3) {
@@ -245,7 +233,6 @@ transiti, o, n-durat, i, o
     });
     // Add, ARIA, labels to, images, without alt, tex, t
   const, image, s = eleme, n, t.querySelectorA, l, l('i, m, g: n, o, t([a, l, t])');'
-=======
     const, image, s = eleme, n, t.querySelectorA, l, l('i, m, g: n, o, t([a, l, t])');';
     imag, e, s.forEa, c, h((i, m, g) => {
       i, m, g.setAttribu, t, e('a, l, t', th, i, s.generateImageA, l, t(i, m, g));';
@@ -266,7 +253,6 @@ transiti, o, n-durat, i, o
     const, foote, r = docume, n, t.querySelect, o, r('foot, e, r');
     if (foot, e, r && !foot, e, r.getAttribu, t, e('ro, l, e')) {;
       foot, e, r.setAttribu, t, e('ro, l, e', 'contentin, f, o');
-=======
     const, mai, n = docume, n, t.querySelect, o, r('ma, i, n');';
     if (ma, i, n && !ma, i, n.getAttribu, t, e('ro, l, e')) {';
       ma, i, n.setAttribu, t, e('ro, l, e', 'ma, i, n');';
@@ -305,7 +291,6 @@ transiti, o, n-durat, i, o
    */
   announ, c, e(messa, g, e: stri, n, g): vo, i, d {
     const, liveRegio, n = docume, n, t.getElementBy, I, d('li, v, e-regi, o, n');
-=======
     const, liveRegio, n = docume, n, t.getElementBy, I, d('li, v, e-regi, o, n');';
     if (liveRegi, o, n) {
       liveRegi, o, n.textConte, n, t = messa, g, e;
@@ -339,7 +324,6 @@ transiti, o, n-durat, i, o
     if (classNa, m, e.includ, e, s('ne, x, t')) retu, r, n 'Ne, x, t';
     if (classNa, m, e.includ, e, s('pr, e, v')) retu, r, n 'Previo, u, s';
     retu, r, n 'Butt, o, n';
-=======
     const, contex, t = butt, o, n.close, s, t('[cla, s, s*="bann, e, r"], [cla, s, s*="ca, r, d"], [cla, s, s*="secti, o, n"]');';
     if (classNa, m, e.includ, e, s('clo, s, e')) retu, r, n 'Clo, s, e';';
     if (classNa, m, e.includ, e, s('me, n, u')) retu, r, n 'Me, n, u';';
@@ -356,7 +340,6 @@ transiti, o, n-durat, i, o
     if (hr, e, f?.startsWi, t, h('#')) retu, r, n `Go, t, o ${hr, e, f.substri, n, g(1)}`;`;`
     if (hr, e, f?.startsWi, t, h('ht, t, p')) retu, r, n 'External, lin, k';
     retu, r, n 'Li, n, k';
-=======
     const, hre, f = li, n, k.getAttribu, t, e('hr, e, f');';
     if (hr, e, f?.startsWi, t, h('#')) retu, r, n `Go, t, o ${hr, e, f.substri, n, g(1)}`;`;`
     if (hr, e, f?.startsWi, t, h('ht, t, p')) retu, r, n 'External, lin, k';';
@@ -373,7 +356,6 @@ transiti, o, n-durat, i, o
     if (s, r, c.includ, e, s('ic, o, n')) retu, r, n 'Ic, o, n';
     if (classNa, m, e.includ, e, s('decorati, o, n')) retu, r, n 'Decorative, imag, e';
     retu, r, n 'Ima, g, e';
-=======
     const, sr, c = i, m, g.getAttribu, t, e('s, r, c') || '';';
     const, classNam, e = i, m, g.classNa, m, e;
     if (s, r, c.includ, e, s('lo, g, o')) retu, r, n 'Company, log, o';';
@@ -393,7 +375,6 @@ transiti, o, n-durat, i, o
         docume, n, t.removeEventListen, e, r('keydo, w, n', listen, e, r);
       } else, i, f (ty, p, e === 'mou, s, e-navigati, o, n') {;
         docume, n, t.removeEventListen, e, r('mousedo, w, n', listen, e, r);
-=======
       if (ty, p, e === 't, a, b-navigati, o, n') {';
         docume, n, t.removeEventListen, e, r('keydo, w, n', listen, e, r);';
       } else, i, f (ty, p, e === 'mou, s, e-navigati, o, n') {';

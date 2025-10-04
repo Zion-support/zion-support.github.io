@@ -1,11 +1,7 @@
 
 
-
 export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   return (;
-
-
-
 
         <span>;
 <
@@ -16,5 +12,4 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
 }talent$ {;"
   resultCount !== 1 ? 's' :  ;')`;
 }`) ;
-
 

@@ -77,7 +77,6 @@ export, const, octoberUltimateEnterpriseContent = [
       te, x, t: "Explore, Conversational, AI Platfo, r, m"
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-conversation, a, l-ai-enterpri, s, e-transformati, o, n-platfo, r, m"
       bad, g, e: "FEATUR, E, D"
-=======
     i
   d: "adapti, v, e-mul, t, i-clo, u, d-intelligen, c, e-20, 2, 5",";
     tit, l, e: "🚀 NE

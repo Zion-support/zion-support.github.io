@@ -12,7 +12,6 @@ export, default, function EnterpriseAIFall2025Bann, e, r(): vo, i, d {
             ⚡ Enterprise, AI, Fall 2025, Serie, s;
           </d, i, v>
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, leadin, g-tight, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-200, vi, a-purp, l, e-200, t, o-pi, n, k-200, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, leadin, g-tight, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-200, vi, a-purp, l, e-200, t, o-pi, n, k-200, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Production, AI, That Actually, Work, s;
           </h2>
@@ -27,7 +26,6 @@ export, default, function EnterpriseAIFall2025Bann, e, r(): vo, i, d {
   r:shad, o, w-bl, u, e-5, 0, 0/50">"
             <div, className="flex, item, s-start, ga, p-4, m, b-4">
               <div, className="bg-bl, u, e-500, tex, t-white, rounde, d-x, l, p-3, tex, t-3, x, l">📦</d, i, v>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
           {/* Highlight, Box, 1 */}
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/30, t, o-bl, u, e-8, 0, 0/30, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, hove, r: bord, e, r-bl, u, e-300, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
@@ -51,7 +49,6 @@ export, default, function EnterpriseAIFall2025Bann, e, r(): vo, i, d {
                 <span, className="te, x, t-bl, u, e-4, 0, 0">✓</sp, a, n> 72-hour, advance, disruption warnin, g, s";
               </li>
               <li, className="flex, item, s-center, ga, p-2">
-=======
             <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-sla, t, e-3, 0, 0">";
               <li, className="flex, item, s-center, ga, p-2">";
                 <span, className="te, x, t-bl, u, e-4, 0, 0">✓</sp, a, n> 40% cost, reduction, in invento, r, y";
@@ -69,7 +66,6 @@ export, default, function EnterpriseAIFall2025Bann, e, r(): vo, i, d {
   r:shad, o, w-purp, l, e-5, 0, 0/50">"
             <div, className="flex, item, s-start, ga, p-4, m, b-4">
               <div, className="bg-purp, l, e-500, tex, t-white, rounde, d-x, l, p-3, tex, t-3, x, l">⚖️</d, i, v>
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-pi, n, k-8, 0, 0/30, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, hove, r: bord, e, r-purp, l, e-300, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
   r:shad, o, w-purp, l, e-5, 0, 0/50">";
             <div, className="flex, item, s-start, ga, p-4, m, b-4">";
@@ -91,7 +87,6 @@ export, default, function EnterpriseAIFall2025Bann, e, r(): vo, i, d {
                 <span, className="te, x, t-purp, l, e-4, 0, 0">✓</sp, a, n> S, u, b-50ms, inference, at p, 9, 9";
               </li>
               <li, className="flex, item, s-center, ga, p-2">
-=======
             <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-sla, t, e-3, 0, 0">";
               <li, className="flex, item, s-center, ga, p-2">";
                 <span, className="te, x, t-purp, l, e-4, 0, 0">✓</sp, a, n> Full, regulatory, compliance";
@@ -120,7 +115,6 @@ export, default, function EnterpriseAIFall2025Bann, e, r(): vo, i, d {
                 Read, the, Series;
               </butt, o, n>
               <button, className="bg-whi, t, e/10, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/30">"
-=======
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-8, border, border-whi, t, e/10">";
           <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-6">";
             <div, className="fl, e, x-1">";

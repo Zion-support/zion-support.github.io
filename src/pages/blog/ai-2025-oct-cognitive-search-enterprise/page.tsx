@@ -8,7 +8,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
           content="Transform, enterprise, knowledge discovery, with, AI-powered, cognitive, search. Achieve, 9, 7% answer, accurac, y, 12x, faster, information retriev, a, l, and, unloc, k $12, 4, M+ in, productivity, gains across, your, organization." /><me, t, a
   na, m, e="keywor, d, s"
           content="cognitive, searc, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-cogniti, v, e-sear, c, h-enterpri, s, e/>"
-=======
           content="cognitive, searc, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s"
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-cogniti, v, e-sear, c, h-enterpri, s, e" />";
@@ -21,7 +20,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
   r: te, x, t-indi, g, o-300, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="mr-2 h-4 w-4  />
-=======
             <ArrowLeft, className="mr-2 h-4 w-4" />";
             Back, to, Blog;
           </Li, n, k>
@@ -33,7 +31,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
               <span, className="te, x, t-gr, a, y-4, 0, 0">Octobe, r, 1, 20, 2, 5</sp, a, n>";
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t">";
               Cognitive, Enterprise, Searc
   h: Unlocking, Institutional, Knowledge at, Scal, e
@@ -59,7 +56,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
                 </li>
                 <li, className="flex, item, s-start, ga, p-3">
                   <TrendingUp, className="h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0  />
-=======
           <div, className="prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e">";
             <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-indi, g, o-5, 0, 0/20, rounde, d-x, l, p-8, m, b-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, flex, items-center, ga, p-3">";
@@ -99,7 +95,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-indi, g, o-5, 0, 0/20">
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0">1. Semantic, Understanding, Layer</h3>
                 <p, className="te, x, t-gr, a, y-300, m, b-4">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Cognitive, Search, Architecture</h2>";
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-indi, g, o-5, 0, 0/20">";
@@ -158,7 +153,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
                 <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-indi, g, o-5, 0, 0/30">
                   <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-indi, g, o-3, 0, 0">Professional, Services, Firm</h3>
                   <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Enterprise, Deployment, Success</h2>";
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
@@ -189,7 +183,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
                   <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-indi, g, o-3, 0, 0">Multimodal, Searc, h</h3>
                   <p, className="te, x, t-gr, a, y-3, 0, 0">
                     Search, across, text, imag, e, s, vide, o, s, and, audio, with unified, interface, s. Find, charts, in presentatio, n, s;
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Advanced, Capabilitie, s</h2>";
               <div, className="spa, c, e-y-6">";
@@ -211,7 +204,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
                   <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-pi, n, k-3, 0, 0">Enterprise, Securit, y & Complian, c, e</h3>
                   <p, className="te, x, t-gr, a, y-3, 0, 0">
                     R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails ;
-=======
                 <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-pi, n, k-5, 0, 0">";
                   <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-pi, n, k-3, 0, 0">Enterprise, Securit, y & Complian, c, e</h3>";
                   <p, className="te, x, t-gr, a, y-3, 0, 0">";
@@ -226,7 +218,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
               <p, className="te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">";
                 Organizations, that, effectively leverage, institutional, knowledge make, better, decisions fast, e, r. Cognitive, searc, h
   doe, s, n't, just, save ti, m, e—it, fundamentally, changes wh, a, t's, possibl, e. Sales, teams, close deals, with, perfect informati, o, n ;
-=======
                 doe, s, n't, just, save ti, m, e—it, fundamentally, changes wh, a, t's, possibl, e. Sales, teams, close deals, with, perfect informati, o, n ';
                 about, past, similar engagemen, t, s. Engineers, solve, problems by, finding, solutions from, across, the organizati, o, n. 
                 Leaders, make, data-driven, decisions, with comprehensive, contex, t.
@@ -248,7 +239,6 @@ export, default, function CognitiveSearchEnterprise20, 2, 5(): vo, i, d {
               >
                 Start, Your, Knowledge Transformati, o, n;
                 <Brain, className="ml-2 h-5 w-5  />
-=======
                 <Brain, className="ml-2 h-5 w-5" />";
               </Li, n, k>
             </d, i, v>

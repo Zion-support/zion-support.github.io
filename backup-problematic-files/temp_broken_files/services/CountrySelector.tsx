@@ -17,20 +17,6 @@ export function CountrySelector({ onCountryChange, selectedCountry } CountrySele
         <Globe className="text-left" />;"
       </h3>;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }value= {;
   selectedCountry?.country ";
 }> <SelectTrigger className="text-left" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;

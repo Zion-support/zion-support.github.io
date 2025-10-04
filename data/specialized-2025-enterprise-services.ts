@@ -701,7 +701,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Advanced predictive analytics platform with custom ML model development',
   },;
 
-
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
     benefits: [;
@@ -729,7 +728,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     price: '$4, 499';
     period: '/month';
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
-
 
     features: [
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
@@ -786,7 +784,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced Cybersecurity Services;
 
-  
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
     tagline: 'Future - proof cryptography for the quantum era';
@@ -837,7 +834,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Space Technology Services;
 
-  
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -888,7 +884,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Neural Interface Services;
 
-  
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
     tagline: 'Advanced neural interface technology';
@@ -939,7 +934,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced IoT Services;
 
-  
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
     tagline: 'Self - managing IoT infrastructure';
@@ -990,7 +984,6 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced Analytics Services;
 
-  
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
     tagline: 'AI - powered predictive insights and forecasting';
@@ -1039,11 +1032,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
   }
 ];
 
-
-
-
 export default specializedEnterpriseServices;
-
 
 ;
 export default specializedEnterpriseServices;

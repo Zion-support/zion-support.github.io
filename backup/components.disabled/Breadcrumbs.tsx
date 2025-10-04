@@ -48,7 +48,6 @@ export default function Breadcrumbs(): any {
                   href={crumb.href}
                   style={ 'color': '#2563eb', 'textDecoration': 'none' }
 
-                
       </ol>{' '}
     </nav>
   );

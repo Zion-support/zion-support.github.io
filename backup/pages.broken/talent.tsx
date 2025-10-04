@@ -8,13 +8,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
-
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
-
 
       "Knowledge of cloud deployment and DevOps"
     ],
@@ -22,13 +20,11 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   },
   {
 
-
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
-
 
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
@@ -36,13 +32,11 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   },
   {
 
-
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
-
 
       "Strong portfolio demonstrating design skills"
     ],
@@ -50,14 +44,10 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
   }
 ];
 
-
-
-
   "Client success focus"
 ];
 export default function TalentPage() {
   return (
-
 
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
@@ -65,7 +55,6 @@ export default function TalentPage() {
         {/* Hero Section */}
         <section className="text-left">
           <div className="text-left">
-
 
               className="text-left"
             >
@@ -156,7 +145,6 @@ export default function TalentPage() {
         {/* Values Section */}
         <section className="text-left">
           <div className="text-left">
-
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -385,7 +373,6 @@ export default function TalentPage() {
         {/* Job Openings Section */}
         <section id="openings" className="text-left">
           <div className="text-left">
-
 
             >
               <h2 className="text-left">

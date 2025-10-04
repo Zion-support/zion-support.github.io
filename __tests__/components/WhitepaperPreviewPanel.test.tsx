@@ -7,7 +7,6 @@ interface MockPieProps {;
    value: number }>;
   children?: React.ReactNode;
 
-
     render(
       <WhitepaperPreviewPanel: sections={[]}
         distributionChartData={[]}

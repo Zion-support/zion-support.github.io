@@ -128,5 +128,3 @@ function mockRes(): MockApiResponse
         message: ;
   'Network error. Please try again.'})})})});
 
-
-

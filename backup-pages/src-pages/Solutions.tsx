@@ -160,7 +160,6 @@
     g:grid-cols-3 gap-8'>
             {solutionCategories.map((category, index) => {
 
-
               return()                <motion.div;
                   key: = {category.id}
                   initial = {
@@ -171,7 +170,6 @@
                 </motion.div>) })}          </div>
         </div>
 
-
               return()                <motion.div;
                   key: = {industry.industry}
                   initial = {
@@ -180,7 +178,6 @@
                   </div>
                 </motion.div>) })}          </div>
         </div>
-
 
               return()                <motion.div;
                   key: = {solution.id}

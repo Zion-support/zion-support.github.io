@@ -1,6 +1,5 @@
 
 
-
   if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
@@ -27,8 +26,6 @@ if ( {) {
   $2
 }
 
-
-
   try {
     const system = `You generate conversion - focused, SEO - optimized landing pages in HTML. Include:;
 - A compelling H1;
@@ -36,8 +33,6 @@ if ( {) {
 - Short paragraphs, bullet lists;
 - Strong call - to - action for Zion Marketplace;
 Do not include <html>, <body>, or scripts.`;
-
-
 
         { role: "system", content: system }
         { role: "user", content: user }
@@ -54,12 +49,8 @@ body_html: content,
         region: region || undefined,
         service: service || undefined,
 
-
         faq}})
   } catch (e) {
-
-
-
 
     // FAQ generation
     const faqResp = await openai.chat.completions.create({
@@ -67,10 +58,8 @@ body_html: content,
       messages: [
         { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
 
-
       temperature: 0.5
     });
-
 
     let faq: Array<{ q: string, a: string }> = [];
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
@@ -85,6 +74,4 @@ body_html: content,
 
   }
 }
-
-
 

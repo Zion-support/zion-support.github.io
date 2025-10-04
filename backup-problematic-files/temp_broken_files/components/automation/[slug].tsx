@@ -8,16 +8,10 @@
       <h1 className=&quot;text-xl font-semibold mb-4&quot;>{title}</h1>
       {!data ? (
 
-
         <pre className=&quot;text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto&quot;>{JSON.stringify(data, null, 2)}</pre>      )}
     </EnhancedLayout>
   )
 },
 
 export default AutomationDetail,
-
-
-
-
-
 

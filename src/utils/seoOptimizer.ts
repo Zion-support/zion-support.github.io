@@ -25,7 +25,6 @@ const, ta, g
   ta, g, s.pu, s, h(`<title>${escapeHt, m, l(metada, t, a.tit, l, e)`;`
 }</title>`);`;`
   ta, g, s.pu, s, h(`<meta name="descripti, o, n" content="${escapeHt, m, l(metada, t, a.descripti, o, n)}" />`);`;`
-=======
   const, tag, s: stri, n, g[] = [];
   ta, g, s.pu, s, h(`<title>${escapeHt, m, l(metada, t, a.tit, l, e)}</title>`);`
   ta, g, s.pu, s, h(`<meta name="descripti, o, n" content="${escapeHt, m, l(metada, t, a.descripti, o, n)}" />`);`
@@ -42,7 +41,6 @@ const, ta, g
   ta, g, s.pu, s, h(`<meta, propert, y="og:tit, l, e" content="${escapeHt, m, l(metada, t, a.ogTit, l, e || metada, t, a.tit, l, e)}" />`);`;`
   ta, g, s.pu, s, h(`<meta, propert, y="og:descripti, o, n" content="${escapeHt, m, l(metada, t, a.ogDescripti, o, n || metada, t, a.descripti, o, n)}" />`);`;`
   ta, g, s.pu, s, h(`<meta, propert, y="og:ty, p, e" content="${metada, t, a.ogTy, p, e || 'websi, t, e'}" />`);`;`
-=======
   ta, g, s.pu, s, h(`<meta, propert, y="og:tit, l, e" content="${escapeHt, m, l(metada, t, a.ogTit, l, e || metada, t, a.tit, l, e)}" />`);`
   ta, g, s.pu, s, h(`<meta, propert, y="og:descripti, o, n" content="${escapeHt, m, l(metada, t, a.ogDescripti, o, n || metada, t, a.descripti, o, n)}" />`);`
   ta, g, s.pu, s, h(`<meta, propert, y="og:ty, p, e" content="${metada, t, a.ogTy, p, e || 'websi, t, e'}" />`);`
@@ -56,7 +54,6 @@ const, ta, g
   ta, g, s.pu, s, h(`<meta name="twitt, e, r:ca, r, d" content="${metada, t, a.twitterCa, r, d || 'summary_large_ima, g, e'}" />`);`;`
   ta, g, s.pu, s, h(`<meta name="twitt, e, r:tit, l, e" content="${escapeHt, m, l(metada, t, a.twitterTit, l, e || metada, t, a.tit, l, e)}" />`);`;`
   ta, g, s.pu, s, h(`<meta name="twitt, e, r:descripti, o, n" content="${escapeHt, m, l(metada, t, a.twitterDescripti, o, n || metada, t, a.descripti, o, n)}" />`);`;`
-=======
   ta, g, s.pu, s, h(`<meta name="twitt, e, r:ca, r, d" content="${metada, t, a.twitterCa, r, d || 'summary_large_ima, g, e'}" />`);`
   ta, g, s.pu, s, h(`<meta name="twitt, e, r:tit, l, e" content="${escapeHt, m, l(metada, t, a.twitterTit, l, e || metada, t, a.tit, l, e)}" />`);`
   ta, g, s.pu, s, h(`<meta name="twitt, e, r:descripti, o, n" content="${escapeHt, m, l(metada, t, a.twitterDescripti, o, n || metada, t, a.descripti, o, n)}" />`);`
@@ -69,7 +66,6 @@ const, ta, g
  * Generate, structured, data (JS, O, N-LD)
  */
 export, const, generateStructuredData = (ty, p, e: stri, n, g, da, t, a: Reco, r, d<stri, n, g, a, n, y>): stri, n, g => {
-=======
 export, const, generateStructuredData = (ty, p, e: stri, n, g, da, t, a: Reco, r, d<stri, n, g, unkno, w, n>): stri, n, g => {
   const, structuredDat, a = {
     '@conte, x, t': 'htt, p, s://sche, m, a.o, r, g','
@@ -77,7 +73,6 @@ export, const, generateStructuredData = (ty, p, e: stri, n, g, da, t, a: Reco, r
     ...da, t, a;
   };
   retu, r, n `<script, typ, e="applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredDa, t, a, nu, l, l, 2)}</scri, p, t>`;`;`
-=======
     ...da, t, a
   } as, Recor, d<stri, n, g, unkno, w, n>;
   retu, r, n `<script, typ, e="applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredDa, t, a, nu, l, l, 2)}</scri, p, t>`;`
@@ -90,7 +85,6 @@ publishDa, t, e: stri, n, g;
 modifiedDa, t, e?: stri, n, g;
 ima, g, e?: stri, n, g;
 u, r, l: stri, n, g;
-=======
   tit, l, e: stri, n, g;
   descripti, o, n: stri, n, g;
   auth, o, r: stri, n, g;
@@ -107,7 +101,6 @@ u, r, l: stri, n, g;
       '@ty, p, e': 'Pers, o, n'
       na, m, e: artic, l, e.auth, o, r;
     }
-=======
       na, m, e: artic, l, e.auth, o, r
     }
     datePublish, e, d: artic, l, e.publishDa, t, e
@@ -122,7 +115,6 @@ u, r, l: stri, n, g;
         u, r, l: 'ht, t, p
   s://ziontechgro, u, p.c, o, m/lo, g, o.p, n, g}
     }
-=======
         u, r, l: 'ht, t, p
   s://ziontechgro, u, p.c, o, m/lo, g, o.p, n, g'
       }
@@ -159,7 +151,6 @@ export, const, generateOrganizationStructuredData = (): stri, n, g => {
       telepho, n, e: '+1-8, 0, 0-ZI, O, N-TE, C, H','
       contactTy, p, e: 'Customer, Servic, e','
       ema, i, l: 'conta, c, t@ziontechgro, u, p.c, o, m}
-=======
       'htt, p, s://gith, u, b.c, o, m/zi, o, n-holdin, g, s'
     ]
     contactPoi, n, t: {
@@ -174,7 +165,6 @@ export, const, generateFAQStructuredData = (fa, q, s: Arr, a, y<{ questi, o, n: 
   r: stri, n, g }>): stri, n, g => {
   return, generateStructuredDat, a('FAQPa, g, e', {
     mainEnti, t, y: fa, q, s.m, a, p(f, a, q => ({
-=======
     mainEnti, t, y: fa, q, s.m, a, p((f, a, q) => ({
       '@ty, p, e': 'Questi, o, n'
       na, m, e: f, a, q.questi, o, n
@@ -183,7 +173,6 @@ export, const, generateFAQStructuredData = (fa, q, s: Arr, a, y<{ questi, o, n: 
         te, x, t: f, a, q.answ, e, r
       }
     }))
-=======
       }
     }))
   });
@@ -201,7 +190,6 @@ export, const, generateSitemapXML = (ur, l, s: Arr, a, y<{ lo
 <urlset, xmln, s="ht, t, p: //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">"
 ${urlsX, m, l}
 </urls, e, t>`;`;`
-=======
   const, urlsXm, l = ur, l, s;
     .m, a, p((u, r, l) => {
       const, lastmo, d = u, r, l.lastm, o, d ? `<lastm, o, d>${u, r, l.lastm, o, d}</lastm, o, d>` : '';`
@@ -224,7 +212,6 @@ lin, e, s.pu, s, h(`Us, e, r-ag, e, n,`
 }`);`
   if (conf, i, g.disall, o, w && conf, i, g.disall, o, w.leng, t, h > 0) {
     conf, i, g.disall, o, w.forEa, c, h(pa, t, h => lin, e, s.pu, s, h(`Disall, o, w: ${pa, t, h}`));`;`
-=======
   userAge, n, t?: stri, n, g;
   disall, o, w?: stri, n, g[];
   all, o, w?: stri, n, g[];
@@ -238,7 +225,6 @@ lin, e, s.pu, s, h(`Us, e, r-ag, e, n,`
   }
   if (conf, i, g.all, o, w && conf, i, g.all, o, w.leng, t, h > 0) {
     conf, i, g.all, o, w.forEa, c, h(pa, t, h => lin, e, s.pu, s, h(`All, o, w: ${pa, t, h}`));`;`
-=======
     conf, i, g.all, o, w.forEa, c, h((pa, t, h) => lin, e, s.pu, s, h(`All, o, w: ${pa, t, h}`));`
   }
   if (conf, i, g.sitem, a, p) {
@@ -251,7 +237,6 @@ lin, e, s.pu, s, h(`Us, e, r-ag, e, n,`
  * Optimize, title, for S, E, O;
  */
 export, const, optimizeTitle = (tit, l, e: stri, n, g, maxLeng, t, h: numb, e, r = 60): stri, n, g => {
-=======
 export, const, optimizeTitle = (tit, l, e: stri, n, g, maxLeng, t, h: numb, e, r = 60): stri, n, g => {
   if (tit, l, e.leng, t, h <= maxLeng, t, h) return, titl, e;
   const, truncate, d = tit, l, e.substri, n, g(0, maxLeng, t, h);
@@ -262,7 +247,6 @@ export, const, optimizeTitle = (tit, l, e: stri, n, g, maxLeng, t, h: numb, e, r
  * Optimize, description, for S, E, O;
  */
 export, const, optimizeDescription = (descripti, o, n: stri, n, g, maxLeng, t, h: numb, e, r = 1, 6, 0): stri, n, g => {
-=======
 export, const, optimizeDescription = (descripti, o, n: stri, n, g, maxLeng, t, h: numb, e, r = 1, 6, 0): stri, n, g => {
   if (descripti, o, n.leng, t, h <= maxLeng, t, h) return, descriptio, n;
   const, truncate, d = descripti, o, n.substri, n, g(0, maxLeng, t, h);
@@ -276,7 +260,6 @@ export, const, extractKeywords = (conte, n, t: stri, n, g, maxKeywor, d, s: numb
   // Remove, special, characters and, convert, to lowerca, s, e
   const, cleane, d = conte, n, t.toLowerCa, s, e().repla, c, e(/[^a-z0-9\s]/g, '');
   // Split, into, words;
-=======
 export, const, extractKeywords = (conte, n, t: stri, n, g, maxKeywor, d, s: numb, e, r = 10): stri, n, g[] => {
   const, cleane, d = conte, n, t.toLowerCa, s, e().repla, c, e(/[^a-z0-9\s]/g, '');
   const, word, s = clean, e, d.spl, i, t(/\s+/);
@@ -299,7 +282,6 @@ export, const, generateSlug = (tit, l, e: stri, n, g): stri, n, g => {
     .toLowerCa, s, e()
     .repla, c, e(/[^a-z0-9]+/g, '-');
     .repla, c, e(/^-+|-+$/g, '');
-=======
 export, const, generateSlug = (tit, l, e: stri, n, g): stri, n, g => {
   return, titl, e.toLowerCa, s, e().repla, c, e(/[^a-z0-9]+/g, '-').repla, c, e(/^-+|-+$/g, '');
 };
@@ -310,7 +292,6 @@ if (u, r, l.leng, t, h > 1, 0, 0) {
 issu, e, s.pu, s, h('URL, is, too lo, n, g (>100, character, s)');
 }
   if (u, r, l.includ, e, s('_')) {;
-=======
   const, issue, s: stri, n, g[] = [];
   if (u, r, l.leng, t, h > 1, 0, 0) {
     issu, e, s.pu, s, h('URL, is, too lo, n, g (>100, character, s)');
@@ -337,7 +318,6 @@ issu, e, s.pu, s, h('URL, is, too lo, n, g (>100, character, s)');
  */
 function, escapeHtm, l(te, x, t: stri, n, g): stri, n, g {
   const, ma, p: Reco, r, d<stri, n, g, stri, n, g> = {
-=======
   if (u, r, l.spl, i, t('/').filt, e, r(Boole, a, n).leng, t, h > 5) {
     issu, e, s.pu, s, h('URL, has, too many, path, segments (>5)');
   }
@@ -351,7 +331,6 @@ function, escapeHtm, l(te, x, t: stri, n, g): stri, n, g {
     '>': '&gt;'
     '"': '&qu, o, t;'
     "'": '&#0, 3, 9;
-=======
     "'": '&#0, 3, 9;'
   };
   return, tex, t.repla, c, e(/[&<>"']/g, (m) => m, a, p[m]);
@@ -360,7 +339,6 @@ function, escapeHtm, l(te, x, t: stri, n, g): stri, n, g {
  * Calculate, reading, time;
  */
 export, const, calculateReadingTime = (conte, n, t: stri, n, g, wordsPerMinu, t, e: numb, e, r = 2, 0, 0): numb, e, r => {
-=======
 export, const, calculateReadingTime = (conte, n, t: stri, n, g, wordsPerMinu, t, e: numb, e, r = 2, 0, 0): numb, e, r => {
   const, word, s = conte, n, t.tr, i, m().spl, i, t(/\s+/).leng, t, h;
   return, Mat, h.ce, i, l(wor, d, s / wordsPerMinu, t, e);
@@ -385,7 +363,6 @@ issu, e, s.pu, s, h('Content, is, too sho, r, t (<300, word, s)');
 sco, r, e -= 20;
 }
   // Keyword, density, check (title, in, content)
-=======
 export, const, checkContentQuality = (
   conte, n, t: stri, n, g
   tit, l, e: stri, n, g;
@@ -414,7 +391,6 @@ export, const, checkContentQuality = (
   }
   // Link, chec, k
   if (!conte, n, t.includ, e, s('ht, t, p') && !conte, n, t.includ, e, s('[') && !conte, n, t.includ, e, s('<a')) {;
-=======
   if (!conte, n, t.includ, e, s('#') && !conte, n, t.includ, e, s('<h')) {
     recommendatio, n, s.pu, s, h('Add, headings, to improve, content, structure');
     sco, r, e -= 10;

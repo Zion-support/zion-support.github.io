@@ -1,16 +1,9 @@
 
 
-
-
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
-
-
-
-
-
 
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
@@ -21,8 +14,6 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
 
 }
   } catch (error) {
@@ -82,8 +73,4 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
-
 

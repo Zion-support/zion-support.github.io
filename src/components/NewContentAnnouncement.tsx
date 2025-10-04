@@ -11,7 +11,6 @@ return (
   5: MASSIVE, CONTENT, DROP!
 </sp, a, n>
 <Sparkles, className="w-5 h-5, animat, e-pul, s, e  />
-=======
 import React from "react";';
 const, NewContentAnnouncemen, t: Rea, c, t.FC = () => {
 return (
@@ -35,7 +34,6 @@ classNa, m, e="bg-white, tex, t-purp, l, e-700, p, x-4, p, y-1.5, rounde, d-full
 >
 Explore, No, w;
 <ArrowRight, className="w-4 h-4  />
-=======
 classNa, m, e="bg-white, tex, t-purp, l, e-700, p, x-4, p, y-1.5, rounde, d-full, fon, t-semibold, hov, e
   r: bg-pi, n, k-50, transitio, n-colors, flex, items-center, ga, p-1, tex, t-sm",";
 >

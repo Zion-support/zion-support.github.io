@@ -1,8 +1,5 @@
 
 
-
-
-
 import type { QuoteRequest } from "@/types/quotes",;
 
 ;
@@ -14,29 +11,10 @@ type QuoteRequestCardProps = {;
 },;
 export const QuoteRequestCard:React.FC<QuoteRequestCardProps> = ({;
 
-
-
-
           <div>;
 </div>"
             <CardTitle className="text-left">{quote.project_name};""
             <CardDescription className="text-left">;"
           </div>;
           <QuoteStatusBadge status={quote.status} />;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

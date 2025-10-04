@@ -93,7 +93,6 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
     },"realImplementation": true,"implementationDetails":,System integration, AI model deployment, and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42"
 ];
 
-
 export const "serviceCategories2025": string[] = Array.from(new Set(cuttingEdgeInnovativeServices2025;
       .map((s) => s.category).filter((v): v is string = > Boolean(v)))).sort()export;
   const getServicesByCategory2025 = ("category": string) => {if (!category || category ===;

@@ -24,7 +24,6 @@ const Footer: React.FC = () => {
             </p>
             {/* Contact Info */}
 
-
               </div>
             </div>
             {/* Social Links */}

@@ -1,13 +1,7 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8302
 const PROD_DOMAIN = process.env.PROD_DOMAIN || 'https://ziontechgroup.com';
-=======
 const PROD_DOMAIN = 'https://ziontechgroup.com';
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -16,10 +10,6 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8302
 
   const { productId, userId } = req.body || {};
   if (!productId || !userId) {
@@ -50,8 +40,6 @@ async function handler(req, res) {
   }
 }
 
-=======
-
   const { productId, userId } = req.body || {};
 
   try {
@@ -70,5 +58,4 @@ async function handler(req, res) {
   }
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
 export default withErrorLogging(handler);

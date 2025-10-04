@@ -45,7 +45,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
             </sp, a, n>
           </d, i, v>
           <h2, className="te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4">"
-=======
       id: 1
       tit, l, e: "Distributed, Tracing, for Microservic, e, s",";
       descripti, o, n: "99.99% observabili, t, y, 87% faster, MTT, R, $8.2M, saving, s",";
@@ -99,7 +98,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
         </d, i, v>
         {/* Articles, Gri, d */}
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">"
-=======
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
@@ -119,7 +117,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
                   </d, i, v>
                   {/* Tit, l, e */}
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-=======
                     <Icon, className="h-6 w-6, tex, t-whi, t, e" />";
                   </d, i, v>
                   {/* Tit, l, e */}
@@ -145,7 +142,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
                   <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
                     <sp, a, n>Read, Full, Guide</sp, a, n>
                     <ArrowRight, className="h-4 w-4  />
-=======
                   <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
                     <sp, a, n>Read, Full, Guide</sp, a, n>
                     <ArrowRight, className="h-4 w-4" />";
@@ -158,7 +154,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
         {/* CTA, Sectio, n */}
         <div, className="te, x, t-cent, e, r">
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">"
-=======
         <div, className="te, x, t-cent, e, r">";
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">";
             <Li, n, k
@@ -168,7 +163,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
             >
               <sp, a, n>Explore, All, Articles</sp, a, n>
               <ArrowRight, className="h-5 w-5  />
-=======
               <ArrowRight, className="h-5 w-5" />";
             </Li, n, k>
             <Li, n, k
@@ -184,7 +178,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
           <div, className="round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4">
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">99.99%</d, i, v>
             <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Observability, Coverag, e</d, i, v>
-=======
         <div, className="mt-12, grid, grid-co, l, s-2, ga, p-4, s, m: gr, i, d-co, l, s-4, tex, t-cent, e, r">";
           <div, className="round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4">";
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">99.99%</d, i, v>";

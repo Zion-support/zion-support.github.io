@@ -46,7 +46,6 @@ export, function, generateBlogPostSchema(po, s, t: BlogPostS, E, O): vo, i, d {
     keywor, d, s: po, s, t.keywor, d, s
     articleSecti, o, n: po, s, t.catego, r, y
     timeRequir, e, d: po, s, t.readTi, m, e;
-=======
   const, baseUr, l = 'ht, t, p
   s: //ziontechgro, u, p.c, o, m';';
   retu, r, n {
@@ -96,7 +95,6 @@ export, function, generateOpenGraphTags(po, s, t: BlogPostS, E, O): vo, i, d {
     'artic, l, e:auth, o, r': po, s, t.auth, o, r
     'artic, l, e:secti, o, n': po, s, t.catego, r, y
     'artic, l, e: t, a, g': po, s, t.keywor, d, s;
-=======
   const, baseUr, l = 'ht, t, p
   s: //ziontechgro, u, p.c, o, m';';
   retu, r, n {
@@ -124,7 +122,6 @@ export, function, generateTwitterCardTags(po, s, t: BlogPostS, E, O): vo, i, d {
     'twitt, e, r:descripti, o, n': po, s, t.descripti, o, n
     'twitt, e, r:ima, g, e': po, s, t.ima, g, e || `${baseU, r, l}/og-ima, g, e.p, n, g`,`
     'twitt, e, r: creat, o, r': '@ZionTechGro, u, p'
-=======
   const, baseUr, l = 'ht, t, p
   s: //ziontechgro, u, p.c, o, m';';
   retu, r, n {
@@ -152,7 +149,6 @@ export, function, generateCompleteSEO(po, s, t: BlogPostS, E, O): vo, i, d {
   s://ziontechgro, u, p.c, o, m/bl, o, g/${po, s, t.sl, u, g}`,`
       robo, t, s: 'ind, e, x, foll, o, w'
     }
-=======
     sche, m, a: generateBlogPostSche, m, a(po, s, t)
     openGra, p, h: generateOpenGraphTa, g, s(po, s, t)
     twitterCa, r, d: generateTwitterCardTa, g, s(po, s, t)
@@ -200,7 +196,6 @@ export, const, breakthroughBlogPosts: BlogPostS, E, O[] = [
     sl, u, g: 'ai-20, 2, 5-o, c, t-01-intellige, n, t-automati, o, n-orchestrati, o, n-platfo, r, m'
     readTi, m, e: '28, mi, n'
   }
-=======
     tit, l, e: 'Neural, Architecture, Evolution 20, 2, 5 — Se, l, f-Designing, AI, Models Breakthrou, g, h',';
     descripti, o, n: 'Revolutionary, neural, architecture search, achieving, 10,000x, faster, model desi, g, n, 97% accuracy, improvemen, t, a, n, d $25M, annual, savings through, autonomous, AI model, evolution, and optimizati, o, n.',';
     keywor, d, s: 'neural, architecture, search, Auto, M, L, model, optimizatio, n, AI, evolutio, n, se, l, f-designing, A, I, neural, network, s, enterprise, A, I, model, performanc, e',';

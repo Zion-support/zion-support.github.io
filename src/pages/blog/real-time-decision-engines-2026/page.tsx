@@ -12,7 +12,6 @@ export, default, function RealTimeDecisionEngines20, 2, 6(): Rea, c, t.J, S, X.E
       </Helmet>
       <div, className="container, m, x-auto, p, x-6, p, y-16">
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/re, a, l-ti, m, e-decisi, o, n-engin, e, s-20, 2, 6"
          />
       </Helmet>
@@ -26,7 +25,6 @@ export, default, function RealTimeDecisionEngines20, 2, 6(): Rea, c, t.J, S, X.E
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
           <p>
             Blueprint, for, ultra‑low, latency, decision engin, e, s: persistent, warm, pools;
-=======
             Blueprint, for, ultra‑low, latency, decision engi, n, e
   s: persistent, warm, pools
             cache, hierarchie, s, and, predictive, prefetching to, meet, sub‑millisecond, SLO, s.

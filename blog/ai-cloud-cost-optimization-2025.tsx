@@ -144,8 +144,6 @@ export default function AICloudCostOptimization2025() {
   );
 }
 
-
-
 export const metadata = {
   title: 'AI Cloud Cost Optimization: Reduce Spending by 80% | Zion Tech Group',
   description: 'Proven strategies to cut AI cloud costs by 80% without compromising performance. Complete guide to FinOps, intelligent resource management, and cost optimization.',

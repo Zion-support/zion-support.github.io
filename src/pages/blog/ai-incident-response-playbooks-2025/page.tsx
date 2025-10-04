@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, AIIncidentResponsePlaybooks202, 5: Rea, c, t.FC = () => {
   return (
@@ -17,7 +16,6 @@ const, AIIncidentResponsePlaybooks202, 5: Rea, c, t.FC = () => {
             AI, Incident, Response Playboo, k, s: Contain, i, n &lt;60s, with, Confidence
           </h1>
           <p, className="te, x, t-xl, tex, t-gr, a, y-600, leadin, g-relax, e, d">
-=======
           <h1, className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
             AI, Incident, Response Playbo, o, k
   s: Contain, i, n &lt;60s, with, Confidence
@@ -55,7 +53,6 @@ const, AIIncidentResponsePlaybooks202, 5: Rea, c, t.FC = () => {
     - e, m, i
   t: time_to_conta, i, n;
 `}`
-=======
           <pre, className="te, x, t-sm, overflo, w-x-au, t, o">";
 {`playbo, o, k: n, a, m,`
   e: conta, i, n-compromis, e, d-credenti, a, l,`;`
@@ -94,7 +91,6 @@ const, AIIncidentResponsePlaybooks202, 5: Rea, c, t.FC = () => {
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4">
             <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s">Talk, to, an Expe, r, t</a>"
             <a, titl, e="Internal, lin, k" hr, e, f="/servic, e, s/ai-autonomo, u, s-operatio, n, s" classNa, m, e="border, borde, r-gr, a, y-600, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-800, transitio, n-colo, r, s">Explore, Service, s</a>"
-=======
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4">";
             <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s">Talk, to, an Expe, r, t</a>";
             <a, titl, e="Internal, lin, k" hr, e, f="/servic, e, s/ai-autonomo, u, s-operatio, n, s" classNa, m, e="border, borde, r-gr, a, y-600, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hov, e

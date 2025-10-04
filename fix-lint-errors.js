@@ -61,8 +61,6 @@ async function $1() {,
 ;
 // Main function;
 
-
-
   return fixed}
 // Main function;
 async function $1() {// Get all TypeScript/JavaScript files;

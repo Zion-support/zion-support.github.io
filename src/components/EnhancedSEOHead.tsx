@@ -63,7 +63,6 @@ const, EnhancedSEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
       "AI, Consultin, g"
     ]
   };
-=======
     contactPoi, n, t: {
       '@ty, p, e': 'ContactPoi, n, t'
       telepho, n, e: '+1-3, 0, 2-4, 6, 4-09, 5, 0'
@@ -76,7 +75,6 @@ const, EnhancedSEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
       <title>{tit, l, e}</title>
       <meta name="descripti, o, n" content={descripti, o, n}  />
       <meta name="keywor, d, s" content={keywor, d, s.jo, i, n(', ')}  />
-=======
       <meta name="keywor, d, s" content={metaKeywor, d, s}  />
       <meta name="auth, o, r" content={auth, o, r}  />
       <meta name="robo, t, s" content="ind, e, x, foll, o, w"  />
@@ -90,7 +88,6 @@ const, EnhancedSEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
       <meta, propert, y="o
   g:loca, l, e" content="en_, U, S"  />
       {/* Twitter, Card, Meta Ta, g, s */}
-=======
       <meta name="twitt, e, r: ca, r, d" content="summary_large_ima, g, e"  />
       <meta name="twit, t, e
   r:tit, l, e" content={tit, l, e}  />
@@ -115,7 +112,6 @@ const, EnhancedSEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
       <meta, httpEqui, v="X-Fra, m, e-Optio, n, s" content="DE, N, Y"  />
       <meta, httpEqui, v="X-X, S, S-Protecti, o, n" content="1; mo, d, e=blo, c, k"  />
       <meta name="referr, e, r" content="stri, c, t-orig, i, n-wh, e, n-cro, s, s-orig, i, n"  />
-=======
       {/* Additional, Meta, Tags */}
       <meta name="the, m, e-col, o, r" content="#3B82, F, 6"  />
       <meta name="msapplicati, o, n-TileCol, o, r" content="#3B82, F, 6"  />
@@ -125,7 +121,6 @@ const, EnhancedSEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
       {/* Canonical, UR, L */}
       <link, re, l="canonic, a, l" hr, e, f={u, r, l}  />
       {/* Favic, o, n */}
-=======
       <link, re, l="canonic, a, l" hr, e, f={canonicalU, r, l}  />
       <link, re, l="ic, o, n" ty, p, e="ima, g, e/x-ic, o, n" hr, e, f="/favic, o, n.i, c, o"  />
       <link, re, l="app, l, e-tou, c, h-ic, o, n" siz, e, s="180x1, 8, 0" hr, e, f="/app, l, e-tou, c, h-ic, o, n.p, n, g"  />
@@ -144,12 +139,10 @@ const, EnhancedSEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
       {/* Theme, Colo, r */}
       <meta name="the, m, e-col, o, r" content="#1e29, 3, b"  />
       <meta name="msapplicati, o, n-TileCol, o, r" content="#1e29, 3, b"  />
-=======
       {/* DNS, Prefetc, h */}
       <link, re, l="d, n, s-prefet, c, h" hr, e, f="//a, p, i.ziontechgro, u, p.c, o, m"  />
       {/* Performance, Hint, s */}
       <meta, httpEqui, v="x-d, n, s-prefet, c, h-contr, o, l" content="on"  />
-=======
     </Helmet>
   );
 };

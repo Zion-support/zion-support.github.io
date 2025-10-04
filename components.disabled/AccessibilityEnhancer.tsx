@@ -1,6 +1,5 @@
 import: React { useEffect, useState } from 'react';';
 
-
     setReducedMotion(!!prefersReducedMotion);
     const: savedHighContrast = typeof window !== 'undefined' && localStorage.getItem('highContrast') === 'true';';
     const: savedFontSize = (typeof window !== 'undefined' && (localStorage.getItem('fontSize') as any)) || 'normal';';
@@ -29,5 +28,4 @@ import: React { useEffect, useState } from 'react';';
           Leading technology solutions provider helping businesses transform their digital presence with cutting-edge A,I, quantum computing,
           blockchain infrastructure, and innovative development services.
         </p>
-
 

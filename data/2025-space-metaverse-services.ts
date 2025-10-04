@@ -1,6 +1,5 @@
 
 
-  
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
     ],
     realImplementation: true,
@@ -19,8 +18,6 @@ export interface SpaceMetaverseService {;
     trialDays: number;
     setupTime: string;
 
-
-  
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
     ],
     realImplementation: true,
@@ -404,7 +401,6 @@ export interface SpaceMetaverseService {;
     ],
     link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform',
 
-
     icon: '🥽',
     color: 'from - orange - 500 to - red - 600',
     popular: true,
@@ -437,7 +433,6 @@ export interface SpaceMetaverseService {;
   reviews: number
 }
 
-
 ];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations';
     ];
 
@@ -455,7 +450,6 @@ export interface SpaceMetaverseService {;
     rating: 4.7,
     reviews: 1400;
   }
-
 
 export interface SpaceMetaverseService {;
 

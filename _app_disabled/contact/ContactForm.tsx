@@ -47,7 +47,6 @@
               </div>
             </div>
 
-
             <div>
               <label htmlFor="budget" className="text-left">
                 Project Budget

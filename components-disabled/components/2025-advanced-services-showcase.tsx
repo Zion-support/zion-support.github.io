@@ -446,7 +446,6 @@ if ()
 
                     <ServiceList key={service.id} service={service} />
 
-            
         <div className="text-left">"
           <div className="text-left">"
             <h2 className="text-left">"
@@ -520,6 +519,5 @@ if ()
         </motion.div>;
     </div>);        </div>;
     </div>);"
-
 
     </div>"`;

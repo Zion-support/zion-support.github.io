@@ -1572,8 +1572,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4 && 4.7;
     reviews: 24
 
-
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -1661,9 +1659,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4.7;
     reviews: 24;
-
-
-
 
   }
 ];

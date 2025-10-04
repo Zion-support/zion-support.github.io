@@ -52,8 +52,6 @@ export default function SitemapPage() {;
 import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="text-left"> <h1 className="text-left">Sitemap</h1> <ul className="text-left"> {routes.map((r) => ( <li key={r.href}> <Link href={r.href} className="text-left">{r.name}</Link> </li> ))} </ul> </main> )}
 import React from 'react'; import Link from 'next/link'; const routes = [ { name: 'Home',href: '/' },{ name: 'Solutions',href: '/solutions' },{ name: 'Services',href: '/services' },{ name: 'Pricing',href: '/pricing' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Blog',href: '/blog' },{ name: 'Contact',href: '/contact' },{ name: 'Docs',href: '/docs' },{ name: 'Privacy',href: '/privacy' },{ name: 'Terms',href: '/terms' },{ name: 'Cookies',href: '/cookies' },]; export default function SitemapPage() { return ( <main className="text-left"> <h1 className="text-left">Sitemap</h1> <ul className="text-left"> {routes && routes.map((r) => ( <li key={r && r.href}> <Link href={r && r.href} className="text-left">{r && r.name}</Link> </li> ))} </ul> </main> )}
 
-
-
 const routes = [{ "name": 'Home', "href": '/' },
   { "name": 'Solutions', "href": '/solutions' },
   { "name": 'Services', "href": '/services' },
@@ -82,7 +80,6 @@ export default function SitemapPage() {
       </ul>
     </main>
   );
-
 
 }
 

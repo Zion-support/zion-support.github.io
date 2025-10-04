@@ -1,23 +1,11 @@
 
 
-
-
-
-
-
-
-
           <div className="text-left">;"
 </div>
-
-
-
-
 
   isEditing ? (<Textarea value= {;
   editedDescription ;)
 }</div>) ;
 
 }</CardContent> {;
-
 

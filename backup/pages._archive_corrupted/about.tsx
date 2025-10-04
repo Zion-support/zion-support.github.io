@@ -5,15 +5,8 @@
     { \number\": \'5+\, \"label\: \Years Experience\' },
     { \number\": \'24/7\, \"label\: \Support Available\' }
 
-
-
-
   ];
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
-
-
-
-
 
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="text-left">
@@ -27,17 +20,12 @@
                   <value.icon className=\"h-8 w-8\" />
         </div>
 
-
-
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="text-left">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="text-left">
-
 
         </div>
-
-
 
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="text-left">;

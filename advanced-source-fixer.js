@@ -30,7 +30,6 @@ class AdvancedSourceFixer {
       const fullPath = path && path.join(dir, item);
       const stat = fs && fs.statSync(fullPath);
 
-
       if (
         stat && stat.isDirectory() &&
         !item && item.startsWith(".") &&

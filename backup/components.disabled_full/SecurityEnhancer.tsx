@@ -1,7 +1,5 @@
 
 
-
-
 const 'SecurityEnhancer': React.FC = () => {
   useEffect(() => {
     const csp = ' default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: style-src 'self' 'unsafe-inline' https: font-src 'self' https: img-src 'self' data: https: blob:; connect-src 'self' https: frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; ';
@@ -114,21 +112,6 @@ pr-12325
   return null;
 };
 export default SecurityEnhancer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </script>
 

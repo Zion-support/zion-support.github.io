@@ -1,8 +1,6 @@
 
   return res.status(200).json({
 
-
-
     instanceId: state.config.instanceId,
 
     lastSyncedAt: state.lastSyncedAt,
@@ -10,8 +8,4 @@
     scope: requestedScope
   });
 }
-
-
-
-
 

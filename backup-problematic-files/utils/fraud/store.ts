@@ -21,20 +21,7 @@ function ensureFiles() {;
   if (!fs.existsSync(privacyPath)) fs.writeFileSync(privacyPath, JSON.stringify({}));
 }
 
-
-
-
-
-
 export interface MonthlyReport {;
 
-
-
-
 export const getFraudStore = () => fraudStore;
-
-
-
-
-
 

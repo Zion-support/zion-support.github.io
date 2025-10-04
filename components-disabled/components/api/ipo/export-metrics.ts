@@ -7,7 +7,6 @@ const rows = [;
 
     ['MetricValueTrend%'];'
 
-
 const rows = [;
     ['MetricValueTrend%'];'
 

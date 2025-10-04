@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
@@ -50,7 +49,6 @@ const, Tea, m: Rea, c, t.FC = () => {
       ima, g, e: '/imag, e, s/te, a, m/li, s, a-thomps, o, n.j, p, g','
       linked, i, n: 'ht, t, p
   s://linked, i, n.c, o, m/in/li, s, a-thomps, o, n-cs}
-=======
       na, m, e: 'Kleber, Santo, s',';
       ro, l, e: 'C, E, O & Found, e, r',';
       b, i, o: 'Visionary, leader, with 15+ years, in, AI and, enterprise, technology',';
@@ -116,7 +114,6 @@ const, Tea, m: Rea, c, t.FC = () => {
       tit, l, e: 'Collaborati, o, n','
       descripti, o, n: 'Great, results, come from, great, teams working, togethe, r','
       ic, o, n: '🤝}
-=======
       tit, l, e: 'Innovation, Firs, t',';
       descripti, o, n: 'We, push, the boundaries, of, what\'s, possible, with AI, and, technology',';
       ic, o, n: '🚀'
@@ -142,7 +139,6 @@ const, Tea, m: Rea, c, t.FC = () => {
       <Helmet>
         <title>Our, Tea, m - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Meet, the, talented team, of, AI exper, t, s, enginee, r, s, and, innovators, behind Zion, Tech, Group's, cuttin, g-edge, solution, s." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/te, a, m/>"
-=======
         <meta name="descripti, o, n" content="Meet, the, talented team, of, AI exper, t, s, enginee, r, s, and, innovators, behind Zion, Tech, Group's, cuttin, g-edge, solution, s." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/te, a, m" />";
       </Helmet>
@@ -158,7 +154,6 @@ const, Tea, m: Rea, c, t.FC = () => {
               <p, className="te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o">
                 The, brilliant, minds behind, Zion, Tech Gro, u, p's, innovative, AI and, IT, solutions. ;
                 We're, passionate, about transforming, businesses, through technolo, g, y.;
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-cent, e, r">";
@@ -178,7 +173,6 @@ const, Tea, m: Rea, c, t.FC = () => {
   g:px-8, p, y-16">"
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"
-=======
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-16">";
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
@@ -208,7 +202,6 @@ const, Tea, m: Rea, c, t.FC = () => {
                   >
                     <svg, className="w-4 h-4, m, r-1" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
                       <path, fillRul, e="eveno, d, d" d="M, 1, 6.338, 1, 6.338H, 1, 3.67V, 1, 2.16, c, 0-.9, 9, 5-.0, 1, 7-2.2, 7, 7-1.3, 8, 7-2.2, 7, 7-1.3, 9, 0-1.60, 1, 1.0, 8, 6-1.60, 1, 2.207, v, 4.248, H, 8.01, 4, v-8.59, h, 2.559, v, 1.17, 4, h.03, 7, c.3, 5, 6-.67, 5, 1.2, 2, 7-1.38, 7, 2.5, 2, 6-1.38, 7, 2.703, 0, 3.20, 3, 1.77, 8, 3.20, 3, 4.092, v, 4.711z, M, 5.00, 5, 6.575, a, 1.54, 8, 1.548, 0, 11-.0, 0, 3-3.09, 6, 1.54, 8, 1.548, 0, 01.00, 3, 3.096, z, m-1.33, 7, 9.763, H, 6.3, 4, v-8.59, H, 3.667, v, 8.59zM, 1, 7.668, 1H, 2.328, C, 1.595, 1, 1 1.581, 1, 2.298v, 1, 5.403C1, 1, 8.41, 8, 1.595, 19, 2.328, 19h1, 5.3, 4, c.734, 0, 1.3, 3, 2-.58, 2, 1.3, 3, 2-1.299, V, 2.298C1, 9, 1.581, 1, 8.402, 1, 17.668, 1, z" clipRu, l, e="eveno, d, d  />
-=======
                     <svg, className="w-4 h-4, m, r-1" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";
                       <path, fillRul, e="eveno, d, d" d="M, 1, 6.338, 1, 6.338H, 1, 3.67V, 1, 2.16, c, 0-.9, 9, 5-.0, 1, 7-2.2, 7, 7-1.3, 8, 7-2.2, 7, 7-1.3, 9, 0-1.60, 1, 1.0, 8, 6-1.60, 1, 2.207, v, 4.248, H, 8.01, 4, v-8.59, h, 2.559, v, 1.17, 4, h.03, 7, c.3, 5, 6-.67, 5, 1.2, 2, 7-1.38, 7, 2.5, 2, 6-1.38, 7, 2.703, 0, 3.20, 3, 1.77, 8, 3.20, 3, 4.092, v, 4.711z, M, 5.00, 5, 6.575, a, 1.54, 8, 1.548, 0, 11-.0, 0, 3-3.09, 6, 1.54, 8, 1.548, 0, 01.00, 3, 3.096, z, m-1.33, 7, 9.763, H, 6.3, 4, v-8.59, H, 3.667, v, 8.59zM, 1, 7.668, 1H, 2.328, C, 1.595, 1, 1 1.581, 1, 2.298v, 1, 5.403C1, 1, 8.41, 8, 1.595, 19, 2.328, 19h1, 5.3, 4, c.734, 0, 1.3, 3, 2-.58, 2, 1.3, 3, 2-1.299, V, 2.298C1, 9, 1.581, 1, 8.402, 1, 17.668, 1, z" clipRu, l, e="eveno, d, d" />";
                     </s, v, g>
@@ -225,7 +218,6 @@ const, Tea, m: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="text-center mb-12">
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <div, className="bg-white, p, y-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="text-center mb-12">";
@@ -238,7 +230,6 @@ const, Tea, m: Rea, c, t.FC = () => {
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">"
-=======
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">";
               {valu, e, s.m, a, p((val, u, e, ind, e, x) => (
@@ -264,7 +255,6 @@ const, Tea, m: Rea, c, t.FC = () => {
             </h2>
             <p, className="te, x, t-xl, tex, t-purp, l, e-100, m, b-8">
               We're, always, looking for, talented, individuals who, share, our passion, for, AI and, innovatio, n.;
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, p, y-16">";
           <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
             <h2, className="te, x, t-3xl, fon, t-bold, m, b-4">";

@@ -879,7 +879,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4 && 4.7;
     reviews: 20
 
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -888,11 +887,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42;
     rating: 4.7;
     reviews: 20;
-
-
-
-
-
 
   }
 ];

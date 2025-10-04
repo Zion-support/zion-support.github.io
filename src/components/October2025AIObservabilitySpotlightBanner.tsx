@@ -18,7 +18,6 @@ export, default, function October2025AIObservabilitySpotlightBann, e, r(): vo, i
         </d, i, v>
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, b-8">
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"
-=======
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, b-8">";
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";
             <d, i, v>
@@ -44,7 +43,6 @@ export, default, function October2025AIObservabilitySpotlightBann, e, r(): vo, i
           <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-6, rounde, d-xl, border, border-cy, a, n-5, 0, 0/50">
             <h4, className="te, x, t-2xl, fon, t-bold, m, b-4">🎯 Core, Capabilitie, s</h4>
             <ul, className="spa, c, e-y-2">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8">";
           <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-6, rounde, d-xl, border, border-cy, a, n-5, 0, 0/50">";
             <h4, className="te, x, t-2xl, fon, t-bold, m, b-4">🎯 Core, Capabilitie, s</h4>";

@@ -184,7 +184,6 @@ echo "Pre-commit checks completed";
     fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2));
     console.log('Git workflow report generated')}
 
-
 }
 
 if() { const workflow = new GitWorkflow();
@@ -218,7 +217,6 @@ module.exports = GitWorkflow";
     // Report generation;
     this.generateFinalReport();
     this.log('✅ Comprehensive Automation System Completed', 'SUCCESS') }
-
 
 }
 

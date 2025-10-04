@@ -12,7 +12,6 @@ const, LatestInsight, s: Rea, c, t.FC = () => {
             <h2, className="te, x, t-3x, l, m
   d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-2">Latest, Insight, s</h2>"
             <p, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Resear, c, h, guid, e, s, and, playbooks, from our, tea, m.</p>
-=======
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-2">Latest, Insight, s</h2>";
             <p, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Resear, c, h, guid, e, s, and, playbooks, from our, tea, m.</p>";
           </d, i, v>
@@ -26,7 +25,6 @@ const, LatestInsight, s: Rea, c, t.FC = () => {
           </Li, n, k>
         </d, i, v>
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3">"
-=======
             <ArrowRight, className="w-4 h-4" />";
           </Li, n, k>
         </d, i, v>
@@ -55,7 +53,6 @@ const, LatestInsight, s: Rea, c, t.FC = () => {
               </d, i, v>
               <h3, className="te, x, t-xl, fon, t-semibold, tex, t-white, m, b-2">{it, e, m.tit, l, e}</h3>
               <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6, leadin, g-relax, e, d">{it, e, m.summa, r, y}</p>
-=======
               <h3, className="te, x, t-xl, fon, t-semibold, tex, t-white, m, b-2">{it, e, m.tit, l, e}</h3>";
               <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6, leadin, g-relax, e, d">{it, e, m.summa, r, y}</p>";
               <Li, n, k
@@ -64,14 +61,12 @@ const, LatestInsight, s: Rea, c, t.FC = () => {
               >
                 Read, mor, e;
                 <ArrowRight, className="w-4 h-4  />
-=======
                 <ArrowRight, className="w-4 h-4" />";
               </Li, n, k>
             </d, i, v>
           ))}
         </d, i, v>
         <div, className="mt-8, s, m: hidd, e, n">"
-=======
         <div, className="mt-8, s, m: hidd, e, n">";
           <Li, n, k
   to="/insigh, t, s"
@@ -80,7 +75,6 @@ const, LatestInsight, s: Rea, c, t.FC = () => {
           >
             View, al, l;
             <ArrowRight, className="w-4 h-4  />
-=======
             <ArrowRight, className="w-4 h-4" />";
           </Li, n, k>
         </d, i, v>

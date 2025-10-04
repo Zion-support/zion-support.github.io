@@ -11,7 +11,6 @@ export, default, function GenAICostOptimization, V, 4(): Rea, c, t.J, S, X.Eleme
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Cost, Optimization v4</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Tier, Routin, g • Semantic, Cache, s • Distillati, o, n • Ev, a, l-Gated, Fallback, s</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="Tiered, routin, g, semantic, cache, s, selective, distillatio, n, and, eva, l-gated, fallbacks, to slash, cost, while preserving, UX, KPIs." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-co, s, t-optimizati, o, n-v4" />";
       </Helmet>

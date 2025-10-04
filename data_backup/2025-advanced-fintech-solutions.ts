@@ -1,7 +1,6 @@
 
   id: string;
 
-
   realImplementation: boolean;
   'Alternative: data analysis'',;
   'Machine: learning models'',;

@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 interface, NewServicesPromoBannerProp, s {
 varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
@@ -11,7 +10,6 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
   varia, n, t = 'defau, l, t'
   showCou, n, t = 3
   featuredOn, l, y = tr, u, e;
-=======
 const, NewServicesPromoBann, e
   r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'defau, l, t',';
@@ -32,7 +30,6 @@ const, NewServicesPromoBann, e
               <span, className="fo, n, t-bo, l, d">NEW, SERVICES, LAUNCHED</sp, a, n>
             </d, i, v>
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
-=======
   if (varia, n, t === 'showca, s, e') {';
     return (
       <div, className={`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3x, l, p-8, m, d:p-12, tex, t-whi, t, e ${classNa, m, e}`}>`;`
@@ -51,7 +48,6 @@ const, NewServicesPromoBann, e
           </d, i, v>
           <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
             {servic, e, s.m, a, p((servi, c, e) => (
               <d, i, v
@@ -63,7 +59,6 @@ const, NewServicesPromoBann, e
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">
                   <Star, className="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0  />
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.catego, r, y}</sp, a, n>
-=======
                 <div, className="te, x, t-4xl, m, b-4">{servi, c, e.ic, o, n}</d, i, v>";
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";
                   <Star, className="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" />";
@@ -76,7 +71,6 @@ const, NewServicesPromoBann, e
                     <div, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2">
                       <Zap, className="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1  />
                       <span, className="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}</sp, a, n>
-=======
                     <div, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2">";
                       <Zap, className="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" />";
                       <span, className="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}</sp, a, n>";
@@ -91,7 +85,6 @@ const, NewServicesPromoBann, e
                   >
                     Learn, Mor, e;
                     <ArrowRight, className="w-4 h-4  />
-=======
                     <ArrowRight, className="w-4 h-4" />";
                   </Li, n, k>
                 </d, i, v>
@@ -106,7 +99,6 @@ const, NewServicesPromoBann, e
             >
               View, All, Services;
               <ArrowRight, className="w-6 h-6  />
-=======
               <ArrowRight, className="w-6 h-6" />";
             </Li, n, k>
           </d, i, v>
@@ -120,7 +112,6 @@ const, NewServicesPromoBann, e
         <div, className="flex, item, s-center, ga, p-3, m, b-6">
           <Rocket, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  />
           <h2, className="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>
-=======
   if (varia, n, t === 'premi, u, m') {';
     return (
       <div, className={`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>`;`
@@ -139,7 +130,6 @@ const, NewServicesPromoBann, e
               <p, className="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
               <div, className="mb-4">
                 <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}</sp, a, n>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
           {servic, e, s.m, a, p((servi, c, e) => (
             <div, ke, y={servi, c, e.id} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">";
@@ -154,7 +144,6 @@ const, NewServicesPromoBann, e
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-2, 0, 0"
               >
                 Learn, Mor, e <ArrowRight, className="w-4 h-4  />
-=======
                 Learn, Mor, e <ArrowRight, className="w-4 h-4" />";
               </Li, n, k>
             </d, i, v>
@@ -176,7 +165,6 @@ const, NewServicesPromoBann, e
           </Li, n, k>
         </d, i, v>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
-=======
   if (varia, n, t === 'gr, i, d') {';
     return (
       <div, className={`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}>`;`
@@ -200,7 +188,6 @@ const, NewServicesPromoBann, e
             >
               <div, className="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</d, i, v>
               <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0">"
-=======
               <div, className="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</d, i, v>";
               <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0">";
                 {servi, c, e.na, m, e}
@@ -227,7 +214,6 @@ const, NewServicesPromoBann, e
             <h4, className="fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}</h4>
             <p, className="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
             <Link, t, o={servi, c, e.li, n, k} classNa, m, e="te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">"
-=======
       <div, className="flex, item, s-center, ga, p-3, m, b-4">";
         <Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />";
         <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Services, Just Launch, e, d</h3>";

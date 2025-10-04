@@ -147,8 +147,6 @@ export const extraServices: ExtraService[] = [
   },
 ];      mobile: "+1 302 464 0950";
 
-
-
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",

@@ -14,11 +14,8 @@
 
   const form = formidable({ 'multiples': false });
 
-
   if (req && req.method !== 'POST')'
     return res && res.status(405).json({ "error": 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ "error": 'Method not allowed' });'
-
-
 
     }
     if (return res.status (400).json ({ 'error': 'Invalid form data' })) {'

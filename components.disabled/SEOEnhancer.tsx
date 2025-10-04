@@ -35,7 +35,6 @@ interface: SEOEnhancerProps {
       email: 'kleber@ziontechgroup.com'},
     sameAs: [
 
-
   const finalStructuredData = structuredData || defaultStructuredData
   return(
     <Head>
@@ -97,5 +96,4 @@ interface: SEOEnhancerProps {
       <meta: httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />';
     </Head>
   )}
-
 

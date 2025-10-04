@@ -15,6 +15,5 @@
         results && results.push({ path: ep, status: resp && resp.status, ms });
       } catch (e) {
 
-
     if (owner && repo && token) {
 

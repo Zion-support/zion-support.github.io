@@ -1,8 +1,5 @@
 
 
-
-
-
   try {
     const {
       target_institution,
@@ -11,8 +8,6 @@
       budgetOrResolution,
       supporting_multiverses = [],
       title = "Zion DAO Proposal",
-
-
 
     const userPrompt =
 
@@ -24,7 +19,6 @@
       model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
 
-
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: user_prompt },
       ],
@@ -32,9 +26,6 @@
     });
     const contentMarkdown =
       completion && completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
-
-
-
 
     const meta = createProposal({
       title
@@ -47,16 +38,13 @@
       language
     });
 
-
     return res && res.status(200).json({ meta, markdown: contentMarkdown });
-
 
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
 }
-
 
       supporting_multiverses,
       content_markdown,
@@ -86,15 +74,11 @@ return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
 
-
   }
 }
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
-
-
 

@@ -39,11 +39,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
             </div>;          ))}
         </div>;
 
-
-
 :temp_broken_files/talent/filters/AvailabilityFilter.tsx
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
-
-
 

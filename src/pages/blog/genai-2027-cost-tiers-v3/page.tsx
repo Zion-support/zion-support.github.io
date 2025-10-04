@@ -12,7 +12,6 @@ return (
 <h1, className="te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4">GenAI, 202, 7: Cost, Tiers, v3 — 40–70% Savin, g, s</h1>
 <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Quality, tier, s • Semantic, cache, s • Policy, test, s</p>
 <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
 <title>GenAI, 20, 2
   7: Cost, Tiers, v3 — 40–70% Savin, g, s</title>
 <meta name="descripti, o, n" content="Quality, tier, s + semantic, cache, s + policy, tests, for predictable, spend, and stable, U, X." />";

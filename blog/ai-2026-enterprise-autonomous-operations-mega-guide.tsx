@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI 2026 Enterprise Autonomous Operations Mega Guide: Complete Implementation Blueprint',
   description: 'The definitive guide to implementing AI-powered autonomous operations in enterprise environments, featuring 98% automation rates and $3B+ value generation strategies.',
   keywords: 'enterprise AI, autonomous operations, automation guide, AI implementation, business transformation',

@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
   const, blogPost, s = [
@@ -117,7 +116,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'ETHI, C, S','
       ta, g, s: ['AI, Ethic, s', 'Governan, c, e', 'Responsible, A, I', 'Complian, c, e']'
-=======
       tit, l, e: 'The, Complete, Guide to, AI, Revolution 2, 0, 2
   6: From, Concept, to Implementati, o, n',';
       sl, u, g: 'comple, t, e-gui, d, e-ai-revoluti, o, n-20, 2, 6',';
@@ -236,7 +234,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
     { val, u, e: '2M+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-6 h-6" /> }
     { val, u, e: '4.8', lab, e, l: 'Average, Ratin, g', ic, o, n: <Star, className="w-6 h-6" /> }
     { val, u, e: '1, 5, 0+', lab, e, l: 'Expert, Author, s', ic, o, n: <Brain, className="w-6 h-6" /> }
-=======
     { val, u, e: '5, 0, 0+', lab, e, l: 'Published, Article, s', ic, o, n: <Award, className="w-6 h-6" /> },";
     { val, u, e: '2M+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-6 h-6" /> },";
     { val, u, e: '4.8', lab, e, l: 'Average, Ratin, g', ic, o, n: <Star, className="w-6 h-6" /> },";
@@ -249,7 +246,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -266,7 +262,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
             <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e  />
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">"
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">";
             <Sparkles, className="w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e" />";
@@ -284,7 +279,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
           </p>
           {/* Blog, Stat, s */}
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">"
-=======
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">";
             {blogSta, t, s.m, a, p((st, a, t, ind, e, x) => (
               <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">";
@@ -304,7 +298,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
         {/* Featured, Blog, Posts */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {blogPos, t, s.m, a, p((po, s, t, ind, e, x) => (
@@ -326,7 +319,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
                     {po, s, t.trendi, n, g && (
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">
                         <TrendingUp, className="w-3 h-3  />
-=======
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">";
                         <TrendingUp, className="w-3 h-3" />";
                         <sp, a, n>TRENDI, N, G</sp, a, n>
@@ -345,7 +337,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">";
                   {po, s, t.tit, l, e}
                 </h3>
@@ -371,7 +362,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
                   </sp, a, n>
                   <span, className="flex, item, s-center, ga, p-1">
                     <Eye, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
-=======
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">";
                   <span, className="flex, item, s-center, ga, p-2">";
                     <Clock, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />";
@@ -390,7 +380,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
                   <div, className="flex, item, s-center, ga, p-1">
                     <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t  />
                     <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm">{po, s, t.rati, n, g}</sp, a, n>
-=======
                   <div, className="flex, item, s-center, ga, p-1">";
                     <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm">{po, s, t.rati, n, g}</sp, a, n>";
@@ -404,7 +393,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Read, Articl, e</sp, a, n>
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </a>
               </d, i, v>
@@ -417,7 +405,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
               <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
               <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-bl, u, e-5, 0, 0/20, m, b-16">";
           <div, className="te, x, t-cent, e, r">";
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">";
@@ -434,7 +421,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
   and, premium, content from, industry, experts. Join, 100, K+ subscribe, r, s.
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">"
-=======
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">";
               Subscribe, to, our newsletter, and, get early, access, to new, article, s, exclusive, insight, s
               and, premium, content from, industry, experts. Join, 100, K+ subscribe, r, s.
@@ -449,7 +435,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
   r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">"
                 <sp, a, n>Subscri, b, e</sp, a, n>
                 <ArrowRight, className="w-5 h-5  />
-=======
               <button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
   r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">";
                 <sp, a, n>Subscri, b, e</sp, a, n>
@@ -473,7 +458,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
                 Find, insights, that matter, to, your business, and, stay ahead, of, the competiti, o, n.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
@@ -481,7 +465,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
   r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, className="w-5 h-5  />
-=======
                   <Sparkles, className="w-5 h-5" />";
                   <sp, a, n>Browse, All, Articles</sp, a, n>
                 </a>
@@ -492,7 +475,6 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Request, Custom, Content</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </a>
               </d, i, v>

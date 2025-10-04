@@ -1,9 +1,5 @@
 
 
-
-
-
-
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
@@ -21,7 +17,6 @@ res.setHeader('AllowPOST')
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
 
-
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
@@ -37,7 +32,4 @@ res.setHeader('AllowPOST')
     writeJson(usersPath, users);
 
     return res.status(200).json({ ok: true, user })
-
-
-
 

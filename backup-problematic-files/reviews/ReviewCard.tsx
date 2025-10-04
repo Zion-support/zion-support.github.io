@@ -7,8 +7,6 @@
         </button>
       </div>
 
-
-
         )}
         {typeof review && review.categories?.qualityOfWork === 'number' && (;
           <span className="text-left">Quality: {review && review.categories.qualityOfWork}★<;
@@ -17,9 +15,7 @@
           <span className="text-left">Timeliness: {review && review.categories.timeliness}★<;
         )}
 
-
 export default ReviewCard;
-
 
 > Report abuse </button> </div>);
 }</div> </div>) }

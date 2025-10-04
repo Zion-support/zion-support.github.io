@@ -124,7 +124,6 @@ export default function AIContentGenerator(...args[]):  {
                   transition = {
   { duration: 0.6,
 
-
                 </motion.div>
               ));
             </div>
@@ -156,7 +155,6 @@ export default function AIContentGenerator(...args[]):  {
   delay: index: * 0.,1}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                     plan.popular,
-
 
                   </button>
                 </motion.div>

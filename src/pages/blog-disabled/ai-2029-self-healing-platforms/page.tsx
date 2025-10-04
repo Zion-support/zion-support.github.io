@@ -11,7 +11,6 @@ export, default, function AI2029SelfHealingPlatfor, m, s(): Rea, c, t.J, S, X.El
   9: Se, l, f‑Healing, Platform, s</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Budgeted, Action, s • Live, Canarie, s • Instant, Rollbac, k</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="Poli, c, y‑tested, playbook, s, budgeted, action, s, and, live, canaries that, aut, o‑contain, incidents, in under, a, minute." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 9-se, l, f-heali, n, g-platfor, m, s" />";
       </Helmet>

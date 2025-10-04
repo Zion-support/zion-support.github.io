@@ -1,8 +1,5 @@
 
 
-
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -12,29 +9,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const project = getProject(projectId);
   if (!project) {
 
-
-
   }
 
   if (req && req.method === "POST") {
 
-
     if (!isClient(project, user)) {
-
-
 
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
 
-
-
-
-
 }
-
-
-
-
 

@@ -8,7 +8,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 export default function handler() {
   }
 
-
  * handler - Function description
  */
 function handler() {

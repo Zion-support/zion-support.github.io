@@ -10,9 +10,6 @@ function isRateLimited(ip: string): boolean {
   const bucket = ipToRequests[ip] || { timestamps: [] };
   // Drop old timestamps
 
-
-
-
   if (!limited) {
     bucket.timestamps.push(now);
   }

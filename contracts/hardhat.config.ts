@@ -12,7 +12,7 @@ const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || '';
 
 const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : [];
 
-const config: HardhatUserConfig = 
+const config: HardhatUserConfig = {
   solidity: 
     version: '0.8.24',
     settings: 

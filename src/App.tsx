@@ -18,7 +18,6 @@ const pageTransition = {
   duration: 0.4
 };
 
-
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const AboutPage = React.lazy(() => import('./pages/About'));

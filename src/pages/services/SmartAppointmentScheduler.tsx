@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 impo, r, t {
 } fr, o, m "luci, d, e-rea, c, t";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
@@ -15,7 +14,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
       <Helmet>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /></Helmet>
-=======
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">";
@@ -30,7 +28,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
             </h1>
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">
               Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;
-=======
           <div, className="te, x, t-center, m, b-16">";
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">";
               <Users, className="w-1, 0, h-10, tex, t-whi, t, e" />";
@@ -48,7 +45,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               </d, i, v>
               <p, className="te, x, t-gr, a, y-600, m, b-6">Perfect, for, hospitals, clini, c, s, and, private, practices looking, to, modernize their, appointment, system.</p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <p, className="te, x, t-gr, a, y-600, m, b-6">Perfect, for, hospitals, clini, c, s, and, private, practices looking, to, modernize their, appointment, system.</p>";
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a
@@ -75,7 +71,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
-=======
           <section, className="mb-16">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
@@ -90,7 +85,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  />
-=======
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
                   <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0" />";
@@ -101,7 +95,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  />
-=======
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
                   <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" />";
@@ -112,7 +105,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0  />
-=======
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
                   <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0" />";
@@ -123,7 +115,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  />
-=======
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
                   <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" />";
@@ -134,7 +125,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <Shield, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />
-=======
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
                   <Shield, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" />";
@@ -166,7 +156,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
                   </li>
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
-=======
           <section, className="mb-16">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
@@ -224,7 +213,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
                   </li>
                   <li, className="flex, item, s-cent, e, r">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  />
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Medium, Practic, e</h3>";
                 <div, className="te, x, t-3xl, fon, t-bold, m, b-6">$1, 4, 9/mon, t, h</d, i, v>";
                 <ul, className="spa, c, e-y-3, m, b-8">";
@@ -278,7 +266,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
                   </li>
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
-=======
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8">";
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Enterpri, s, e</h3>";
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">Cust, o, m</d, i, v>";
@@ -321,7 +308,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
                 Contact, us, today for, a, free consultation, and, to discuss, your, appointment scheduling, need, s.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a
   hr, e, f="te

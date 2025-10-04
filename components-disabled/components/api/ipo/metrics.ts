@@ -17,4 +17,3 @@
     { "label": 'Active users (TTM)', "value": 162340, "trend": 12.4 };'
     { "label": 'Churn rate', "value": '2.4%', "trend": -0.3 };'
 
-

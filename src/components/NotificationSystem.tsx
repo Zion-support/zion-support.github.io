@@ -14,7 +14,6 @@ lab, e, l: stri, n, g;
 act, i, o
   n: () => vo, i, d;
 varia, n, t?: 'prima, r, y' | 'seconda, r, y';
-=======
 } fr, o, m "luci, d, e-rea, c, t";';
 interface, Notificatio, n {
 id: stri, n, g;
@@ -41,7 +40,6 @@ const, NotificationSyste, m: Rea, c, t.FC<NotificationSystemPro, p, s> = ({
   notificatio, n, s
   onRemo, v, e
   positi, o, n = 't, o, p-rig, h, t'
-=======
   onRemo, v, e
   positi, o, n = 't, o, p-rig, h, t',';
   maxNotificatio, n, s = 5;
@@ -80,7 +78,6 @@ ca, s, e 'warni, n, g':
 retu, r, n 'bg-yell, o, w-50, borde, r-yell, o, w-200, tex, t-yell, o, w-8, 0, 0';
 ca, s, e 'in, f, o':
 defau, l, t: retu, r, n 'bg-bl, u, e-50, borde, r-bl, u, e-200, tex, t-bl, u, e-8, 0, 0';
-=======
   const, getIco, n = (ty, p, e: Notificati, o, n['ty, p, e']) => {';
 swit, c, h (ty, p, e) {
 ca, s, e 'succe, s, s':';
@@ -123,7 +120,6 @@ ca, s, e 'bott, o, m-rig, h, t':
 retu, r, n 'bott, o, m-4, righ, t-4';
 ca, s, e 't, o, p-rig, h, t':
 defau, l, t: retu, r, n 't, o, p-4, righ, t-4';
-=======
 ca, s, e 't, o, p-le, f, t':';
 retu, r, n 't, o, p-4, lef, t-4';';
 ca, s, e 't, o, p-cent, e, r':';
@@ -162,7 +158,6 @@ retu, r, n 't, o, p-4, righ, t-4';';
       sca, l, e: 0.8
       transiti, o, n: {
         durati, o, n: 0.2;
-=======
       opac, i, t
   y: 0
       y: positi, o, n.includ, e, s('t, o, p') ? -50 : 50,';
@@ -192,7 +187,6 @@ retu, r, n 't, o, p-4, righ, t-4';';
   return (
     <div, className={`fix, e, d ${getPositionClass, e, s()} z-50, spac, e-y-3, ma, x-w-s, m, w-fu, l, l`}>`;`
       <AnimatePresence, mod, e="popLayo, u, t">
-=======
       <AnimatePresence, mod, e="popLayo, u, t">";
         {displayNotificatio, n, s.m, a, p((notificati, o, n) => (
           <moti, o, n.d, i, v
@@ -232,7 +226,6 @@ retu, r, n 't, o, p-4, righ, t-4';';
 te, x, t-xs, fon, t-medium, p, x-3, p, y-1, rounde, d-md, transitio, n-colo, r, s;
 ${acti, o, n.varia, n, t === 'prima, r, y'
 ? 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'
-=======
 ? 'bg-bl, u, e-600, tex, t-white, hov, e
   r: bg-bl, u, e-7, 0, 0',';
 : 'bg-gr, a, y-200, tex, t-gr, a, y-800, hove, r:bg-gr, a, y-3, 0, 0'
@@ -254,7 +247,6 @@ ${acti, o, n.varia, n, t === 'prima, r, y'
                   ar, i, a-lab, e, l="Close, notificatio, n"
                 >
                   <X, className="w-4 h-4  />
-=======
                   <X, className="w-4 h-4" />";
                 </butt, o, n>
               )}
@@ -267,7 +259,6 @@ ${acti, o, n.varia, n, t === 'prima, r, y'
                   initi, a, l={{ wid, t, h: '1, 0, 0%' }};
                   anima, t, e={{ wid, t, h: '0%' }};
                   transiti, o, n={{ durati, o, n: notificati, o, n.durati, o, n / 10, 0, 0, ea, s, e: 'line, a, r' }};
-=======
                   initi, a, l={{ wid, t, h: '1, 0, 0%' }}';
                   anima, t, e={{ wid, t, h: '0%' }}';
                   transiti, o, n={{ durati, o, n: notificati, o, n.durati, o, n / 10, 0, 0, ea, s, e: 'line, a, r' }}';  />

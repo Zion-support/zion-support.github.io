@@ -76,7 +76,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Process, minin, g', 'RPA, integratio, n', 'Machine, learning, models', 'Re, a, l-time, monitorin, g', 'Custom, workflow, s']
       prici, n, g: 'Custom, pricin, g'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Z, a, p
       col, o, r: 'fr, o, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'
       li, n, k: '/servic, e, s/ai-workfl, o, w-automati, o, n'
@@ -88,7 +87,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['24/7, availabilit, y', '95% accuracy, rat, e', 'Multilingual, suppor, t', 'CRM, integratio, n', 'Voi, c, e & te, x, t']
       prici, n, g: 'Starting, a, t $1, 9, 9/mon, t, h'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: B, o, t
       col, o, r: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0'
       li, n, k: '/servic, e, s/ai-virtu, a, l-assista, n, t'
@@ -100,7 +98,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['94% prediction, accurac, y', 'Re, a, l-time, forecastin, g', 'Customer, lifetime, value', 'Revenue, forecastin, g', 'Risk, assessmen, t']
       prici, n, g: 'Starting, a, t $2, 9, 9/mon, t, h'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: BarChar, t, 3
       col, o, r: 'fr, o, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0'
       li, n, k: '/servic, e, s/ai-predicti, v, e-analyti, c, s'
@@ -112,7 +109,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['96% conversation, accurac, y', '1, 5, 0+ languag, e, s', 'Mul, t, i-modal, suppor, t', 'Re, a, l-time, processin, g', 'Enterprise, securit, y']
       prici, n, g: 'Starting, a, t $3, 9, 9/mon, t, h'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: MessageCirc, l, e
       col, o, r: 'fr, o, m-viol, e, t-600, t, o-pi, n, k-6, 0, 0'
       li, n, k: '/servic, e, s/conversation, a, l-ai'
@@ -124,7 +120,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Predictive, analytic, s', 'Automated, reportin, g', 'Re, a, l-time, dashboard, s', 'Data, visualizatio, n', 'ML, model, s']
       prici, n, g: 'Starting, a, t $2, 9, 9/mon, t, h'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: BarChar, t, 3
       col, o, r: 'fr, o, m-gre, e, n-600, t, o-te, a, l-6, 0, 0'
       li, n, k: '/servic, e, s/ai-da, t, a-analyti, c, s'
@@ -136,7 +131,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['S, u, b-10ms, response, times', 'Offline, capabilit, y', '90% latency, reductio, n', 'Unlimited, scal, e', 'Re, a, l-time, analytic, s']
       prici, n, g: 'Starting, a, t $1,9, 9, 9/mon, t, h'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: C, p, u
       col, o, r: 'fr, o, m-te, a, l-600, t, o-bl, u, e-6, 0, 0'
       li, n, k: '/servic, e, s/ed, g, e-computi, n, g-ai'
@@ -148,7 +142,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['99% accura, c, y', 'OCR, technolog, y', 'NLP, processin, g', 'Document, classificatio, n', 'Data, extractio, n']
       prici, n, g: 'Starting, a, t $1, 4, 9/mon, t, h'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: FileTe, x, t
       col, o, r: 'fr, o, m-indi, g, o-600, t, o-bl, u, e-6, 0, 0'
       li, n, k: '/servic, e, s/ai-docume, n, t-processi, n, g'
@@ -160,7 +153,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Re, a, l-time, learnin, g', 'Adaptive, algorithm, s', 'Performance, optimizatio, n', 'Se, l, f-healing, system, s', 'Continuous, improvemen, t']
       prici, n, g: 'Custom, pricin, g'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Bra, i, n
       col, o, r: 'fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0'
       li, n, k: '/servic, e, s/ai-cogniti, v, e-automati, o, n'
@@ -172,7 +164,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Re, a, l-time, threat, detection', 'Behavioral, analysi, s', 'Automated, respons, e', 'Threat, intelligenc, e', 'Compliance, monitorin, g']
       prici, n, g: 'Starting, a, t $3, 9, 9/mon, t, h'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Shie, l, d
       col, o, r: 'fr, o, m-r, e, d-600, t, o-oran, g, e-6, 0, 0'
       li, n, k: '/servic, e, s/ai-cybersecuri, t, y'
@@ -186,7 +177,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Zero, downtime, migration', 'Mul, t, i-cloud, suppor, t', 'Cost, optimizatio, n', 'Security, complianc, e', '24/7, suppor, t']
       prici, n, g: 'Starting, a, t $5,0, 0, 0'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Clo, u, d
       col, o, r: 'fr, o, m-bl, u, e-600, t, o-cy, a, n-6, 0, 0'
       li, n, k: '/servic, e, s/clo, u, d-migrati, o, n'
@@ -198,7 +188,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['CI/CD, pipeline, s', 'Infrastructure, as, code', 'Automated, testin, g', 'Monitori, n, g & alerti, n, g', 'Security, scannin, g']
       prici, n, g: 'Starting, a, t $3,0, 0, 0/mon, t, h'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Settin, g, s
       col, o, r: 'fr, o, m-gre, e, n-600, t, o-emera, l, d-6, 0, 0'
       li, n, k: '/servic, e, s/devo, p, s-automati, o, n'
@@ -210,7 +199,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Performance, tunin, g', 'Backup, strategie, s', 'Data, securit, y', 'Complian, c, e', 'Monitori, n, g']
       prici, n, g: 'Starting, a, t $2,5, 0, 0'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Databa, s, e
       col, o, r: 'fr, o, m-purp, l, e-600, t, o-viol, e, t-6, 0, 0'
       li, n, k: '/servic, e, s/databa, s, e-optimizati, o, n'
@@ -222,7 +210,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Nati, v, e & cro, s, s-platfo, r, m', 'Modern, framework, s', 'App, store, optimization', 'Performance, optimizatio, n', 'Maintenan, c, e']
       prici, n, g: 'Starting, a, t $15,0, 0, 0'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Smartpho, n, e
       col, o, r: 'fr, o, m-pi, n, k-600, t, o-ro, s, e-6, 0, 0'
       li, n, k: '/servic, e, s/mobi, l, e-a, p, p-developme, n, t'
@@ -234,7 +221,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Quantum, algorithm, s', 'Cryptograp, h, y', 'Optimization, problem, s', 'Simulati, o, n', 'Resear, c, h & developme, n, t']
       prici, n, g: 'Custom, pricin, g'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: C, p, u
       col, o, r: 'fr, o, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0'
       li, n, k: '/servic, e, s/quant, u, m-computi, n, g'
@@ -246,7 +232,6 @@ const, ComprehensiveService, s: Rea, c, t.FC = () => {
       featur, e, s: ['Smart, contract, s', 'DeFi, solution, s', 'NFT, platform, s', 'Blockchain, infrastructur, e', 'Token, developmen, t']
       prici, n, g: 'Starting, a, t $10,0, 0, 0'
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Lo, c, k
       col, o, r: 'fr, o, m-yell, o, w-600, t, o-oran, g, e-6, 0, 0'
       li, n, k: '/servic, e, s/blockcha, i, n-we, b, 3'

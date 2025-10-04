@@ -19,7 +19,6 @@ metri, c, s: {
 performan, c, e: stri, n, g
 savin, g, s: stri, n, g
 accura, c, y: stri, n, g
-=======
 id: stri, n, g;
 sl, u, g?: stri, n, g;
 tit, l, e: stri, n, g;
@@ -187,7 +186,6 @@ export, const, breakthroughContent2025: BreakthroughConte, n, t[] = [
       savin, g, s: "$2.8B, protecte, d"
       accura, c, y: "Zero, breache, s"
       r, o, i: "1,8, 4, 7%"
-=======
     id: "ai-quant, u, m-neur, a, l-fusi, o, n-20, 2, 5",";
     sl, u, g: "ai-quant, u, m-neur, a, l-fusi, o, n-20, 2, 5",";
     tit, l, e: "AI, Quantu, m-Neural, Fusion, 202

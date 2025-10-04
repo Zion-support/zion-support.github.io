@@ -135,9 +135,6 @@
     setupTime: 'Same day',
     category: 'Developer Tools',
 
-
-
-
     category: 'Developer Tools',
     useCases: [
       'Landing page surveys'
@@ -199,7 +196,6 @@
       'Feedback / NPS post - event forms',
       'Budget tracker and P & L exports',
 
-  
       'Embeddable agendas and live updates',
     ],
     popular: true,
@@ -510,7 +506,6 @@
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
     features: [;
 
-
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -548,7 +543,6 @@
     reviews: 16,
 
   },;
-
 
 ];	
 const contact = 
@@ -1010,7 +1004,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 	}
 ];
 
-
   id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
@@ -1419,7 +1412,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 }
 		rating: 4.4
 		reviews: 16
-
 
 import { RealMarketService } from './real-market-services',;
 const contact = {;
@@ -1835,7 +1827,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		customers: 36,;
 		rating: 4.4;
 		reviews: 16;
-
 
 	}
 ];

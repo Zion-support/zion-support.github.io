@@ -17,7 +17,6 @@ export interface EmergingTechService2028
     mobile: string;
     email: string;
 
-
     address: string;
   };
 
@@ -37,12 +36,6 @@ export interface EmergingTechService2028 {;
     address: string;
   }
 }
-
-
-
-
-
-
 
     address: string;
   }
@@ -76,8 +69,6 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
     },
   },
 ];      mobile: "+1 302 464 0950";
-
-
 
     id: "2028-emerging-tech-service",
     name: "2028 Emerging Tech Service Platform",

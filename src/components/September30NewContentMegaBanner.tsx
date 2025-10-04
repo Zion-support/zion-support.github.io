@@ -38,7 +38,6 @@ const, September30NewContentMegaBanne, r = () => {
       ic, o, n: GraduationC, a, p
       li, n, k: "/bl, o, g/ai-personaliz, e, d-educati, o, n-revoluti, o, n-20, 2, 5","
       catego, r, y: "EdTech, A, I","
-=======
       tit, l, e: "AI, Neural, Coding Breakthrou, g, h",";
       descripti, o, n: "Programming, at, the speed, of, thought with, 9, 9.7% accura, c, y",";
       ic, o, n: Bra, i, n
@@ -92,7 +91,6 @@ const, September30NewContentMegaBanne, r = () => {
             <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e  />
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
     <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">";
       {/* Animated, backgroun, d */}
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e"></d, i, v>";
@@ -115,7 +113,6 @@ const, September30NewContentMegaBanne, r = () => {
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">";
           {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
@@ -132,7 +129,6 @@ const, September30NewContentMegaBanne, r = () => {
                 <div, className="fl, e, x-1">
                   <div, className="te, x, t-xs, fon, t-semibold, tex, t-cy, a, n-300, m, b-2">{artic, l, e.catego, r, y}</d, i, v>
                   <h3, className="te, x, t-lg, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
-=======
               <div, className="flex, item, s-start, ga, p-4">";
                 <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-60, 0, p-3, rounde, d-xl, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m">";
                   <artic, l, e.icon, className="w-6 h-6" />";
@@ -162,7 +158,6 @@ const, September30NewContentMegaBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-400, fon, t-semibo, l, d">
               Explore, No, w;
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <Sparkles, className="w-1, 2, h-12, tex, t-yell, o, w-400, m, b-4, grou, p-hov, e, r: sca, l, e-125, transitio, n-transfo, r, m" />";
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">View, All, Articles</h3>";
             <p, className="te, x, t-sm, tex, t-yell, o, w-200, m, b-4">2, 0, 0+ groundbreaking, insight, s</p>";
@@ -176,7 +171,6 @@ const, September30NewContentMegaBanne, r = () => {
         {/* Stats, Banne, r */}
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8">
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r">"
-=======
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8">";
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r">";
             <d, i, v>
@@ -203,7 +197,6 @@ const, September30NewContentMegaBanne, r = () => {
         </d, i, v>
         {/* CTA, Button, s */}
         <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
-=======
         <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">";
           <Li, n, k
   to="/bl, o, g"
@@ -213,7 +206,6 @@ const, September30NewContentMegaBanne, r = () => {
             <Brain, className="w-6 h-6, grou, p-hov, e, r: rota, t, e-12, transitio, n-transfo, r, m/>"
             Explore, All, Breakthroughs;
             <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <Brain, className="w-6 h-6, grou, p-hov, e, r: rota, t, e-12, transitio, n-transfo, r, m" />";
             Explore, All, Breakthroughs;
             <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -224,7 +216,6 @@ const, September30NewContentMegaBanne, r = () => {
   r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3"
           >
             <Sparkles, className="w-5 h-5  />
-=======
             <Sparkles, className="w-5 h-5" />";
             Get, Started, Today;
           </Li, n, k>

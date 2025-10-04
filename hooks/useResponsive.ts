@@ -5,10 +5,6 @@ interface ResponsiveState
   orientation: 'landscape' | 'portrait';';
   isMobile: boolean}
 
-
-
-
-
   useEffect(() => 
     const updateDimensions = () => 
       const width = window.innerWidth})};

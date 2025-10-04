@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI 2026: Autonomous Consciousness Enterprise Systems - The Future of Business Operations',
   description: 'Discover autonomous consciousness enterprise systems that operate with true AI consciousness, self-awareness, and autonomous decision-making. Transform your business with Zion Tech Group\'s revolutionary technologies.',
   keywords: 'autonomous consciousness, enterprise systems, AI consciousness, self-aware AI, autonomous operations, business automation, AI 2026',

@@ -1,6 +1,5 @@
 
 
-  
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -138,7 +137,6 @@
 
   },;
 
-
 ];	
 		period: '/month'
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
@@ -257,7 +255,6 @@
 	}
 ];
 
-
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';
@@ -364,7 +361,6 @@
 }
 		rating: 4.5
 		reviews: 9
-
 
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
@@ -478,7 +474,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 18,;
 		rating: 4.5;
 		reviews: 9;
-
 
 	}
 ];

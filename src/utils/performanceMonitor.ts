@@ -13,7 +13,6 @@ class, PerformanceMonito, r {
   private, metric, s: PerformanceMetri, c, s = {};
   private, listener, s: ((metr, i, c
   s: PerformanceMetri, c, s) => vo, i, d)[] = []
-=======
   private, listener, s: ((metr, i, c
   s: PerformanceMetri, c, s) => vo, i, d)[] = [];
   construct, o, r() {
@@ -23,31 +22,26 @@ class, PerformanceMonito, r {
     // Cumulative, Layout, Shift
   onC, L, S((metr, i, c: Metr, i, c) => {
       th, i, s.updateMetr, i, c('c, l, s', metr, i, c.val, u, e);
-=======
       th, i, s.updateMetr, i, c('c, l, s', metr, i, c.val, u, e);';
     });
     // Interaction, to, Next Pai, n, t (replaces, FI, D)
     onI, N, P((metr, i, c: Metr, i, c) => {
       th, i, s.updateMetr, i, c('f, i, d', metr, i, c.val, u, e);
-=======
       th, i, s.updateMetr, i, c('f, i, d', metr, i, c.val, u, e);';
     });
     // First, Contentful, Paint
   onF, C, P((metr, i, c: Metr, i, c) => {
       th, i, s.updateMetr, i, c('f, c, p', metr, i, c.val, u, e);
-=======
       th, i, s.updateMetr, i, c('f, c, p', metr, i, c.val, u, e);';
     });
     // Largest, Contentful, Paint
   onL, C, P((metr, i, c: Metr, i, c) => {
       th, i, s.updateMetr, i, c('l, c, p', metr, i, c.val, u, e);
-=======
       th, i, s.updateMetr, i, c('l, c, p', metr, i, c.val, u, e);';
     });
     // Time, to, First By, t, e
   onTT, F, B((metr, i, c: Metr, i, c) => {
       th, i, s.updateMetr, i, c('tt, f, b', metr, i, c.val, u, e);
-=======
       th, i, s.updateMetr, i, c('tt, f, b', metr, i, c.val, u, e);';
     });
   }
@@ -80,7 +74,6 @@ class, PerformanceMonito, r {
    */
   logMetri, c, s() {
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
-=======
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
       conso, l, e.tab, l, e(th, i, s.metri, c, s);
     }
@@ -93,7 +86,6 @@ class, PerformanceMonito, r {
       t, r, y {
         // Send, to, Google Analytic, s, 4 (if, availabl, e)
         if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {;
-=======
     if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {';
       t, r, y {
         // Send, to, Google Analytic, s, 4 (if, availabl, e)
@@ -103,7 +95,6 @@ class, PerformanceMonito, r {
   Obje, c, t.entri, e, s(th, i, s.metri, c, s).forEa, c, h(([k, e, y, val, u, e]) => {
             if (val, u, e !== undefin, e, d) {
               gt, a, g('eve, n, t', 'web_vita, l, s', {;
-=======
               gt, a, g('eve, n, t', 'web_vita, l, s', {';
                 metric_na, m, e: k, e, y.toUpperCa, s, e()
                 metric_val, u, e: Ma, t, h.rou, n, d(val, u, e)
@@ -113,7 +104,6 @@ class, PerformanceMonito, r {
           });
           // Send, overall, performance sco, r, e
   gt, a, g('eve, n, t', 'performance_sco, r, e', {;
-=======
           gt, a, g('eve, n, t', 'performance_sco, r, e', {';
             sco, r, e: th, i, s.getPerformanceSco, r, e()
             timesta, m, p: Da, t, e.n, o, w()
@@ -134,7 +124,6 @@ class, PerformanceMonito, r {
                 timesta, m, p: Da, t, e.n, o, w()
                 u, r, l: wind, o, w.locati, o, n.hr, e, f
                 userAge, n, t: navigat, o, r.userAge, n, t;
-=======
             met, h, o
   d: 'PO, S, T',';
             heade, r, s: {
@@ -155,7 +144,6 @@ class, PerformanceMonito, r {
         conso, l, e.l, o, g('Performance, metrics, sent to, analytic, s: ', th, i, s.metri, c, s);'
       } cat, c, h (err, o, r) {
         conso, l, e.err, o, r('Failed, to, send performance, metrics, to analyti, c, s: ', err, o, r);'
-=======
         conso, l, e.l, o, g('Performance, metrics, sent to, analytic, s: ', th, i, s.metri, c, s);';
       } cat, c, h (err, o, r) {
         conso, l, e.err, o, r('Failed, to, send performance, metrics, to analyti, c, s: ', err, o, r);';
@@ -178,7 +166,6 @@ return, valu, e <= 18, 0, 0 ? 'go, o, d' : val, u, e <= 30, 0, 0 ? 'nee, d, s-im
 ca, s, e 'tt, f, b':
 return, valu, e <= 6, 0, 0 ? 'go, o, d' : val, u, e <= 15, 0, 0 ? 'nee, d, s-improveme, n, t' : 'po, o, r';
 defau, l, t: retu, r, n 'unkno, w, n';
-=======
 ca, s, e 'c, l, s':';
 return, valu, e <= 0.1 ? 'go, o, d' : val, u, e <= 0.25 ? 'nee, d, s-improveme, n, t' : 'po, o, r';';
 ca, s, e 'f, i, d':';
@@ -204,7 +191,6 @@ retu, r, n 'unkno, w, n';';
       return, measur, e ? measu, r, e.durati, o, n : nu, l, l;
     } cat, c, h (err, o, r) {
       conso, l, e.err, o, r('Error, measuring, performance: ', err, o, r);'
-=======
       conso, l, e.err, o, r('Error, measuring, performance: ', err, o, r);';
       return, nul, l;
     }
@@ -217,7 +203,6 @@ retu, r, n 'unkno, w, n';';
       performan, c, e.ma, r, k(na, m, e);
     } cat, c, h (err, o, r) {
       conso, l, e.err, o, r('Error, marking, performance: ', err, o, r);'
-=======
       conso, l, e.err, o, r('Error, marking, performance: ', err, o, r);';
     }
   }
@@ -242,7 +227,6 @@ retu, r, n 'unkno, w, n';';
   if (typeof, windo, w !== 'undefin, e, d' && proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {;
   // Send, metrics, after page, loa, d
   wind, o, w.addEventListen, e, r('lo, a, d', () => {;
-=======
 if (typeof, windo, w !== 'undefin, e, d' && proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {';
   // Send, metrics, after page, loa, d
   wind, o, w.addEventListen, e, r('lo, a, d', () => {';

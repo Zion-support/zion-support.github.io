@@ -1,8 +1,5 @@
 
 
-
-
-
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
@@ -11,14 +8,10 @@ import {
   getMessages,
   sendMessage,;
 
-
-
 } from "../../../utils/messaging/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
   if (!user) return;
-
-
 
   if (req && req.method === "GET") {
     const { id } = req && req.query;
@@ -31,8 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     const messages = getMessages(id);
 
-
-
       conversationId,
       recipientId,
     res.status(200).json({ conversation, messages })
@@ -41,8 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' });
     const { conversation, message } = sendMessage({
       conversationId,
-
-
 
     const { id } = req.query;
     if (return res.status ($1).json ({ $2 })) {
@@ -67,8 +56,6 @@ if ( {) {
       link_url,
       attachmentBase64,
 
-
-
       body,
       link_url,
       attachmentBase64,
@@ -77,9 +64,6 @@ if ( {) {
 
       context,
     });
-
-
-
 
   } catch (error) {
     console.error("Error:", error);
@@ -98,9 +82,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-
   }
 }
-
-
 

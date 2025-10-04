@@ -8,10 +8,7 @@ interface TalentCardSaveButtonProps {;
   isAuthenticated:boolean;
 }
 
-
-
   isAuthenticated;)
-
 
       }),;
 
@@ -30,11 +27,7 @@ pr-12325
 
       return,;
 
-
-
   description:localIsSaved ;
-
-
 
     <button ;"
       className="text-left";"
@@ -45,16 +38,6 @@ pr-12325
           localIsSaved ? "fill-red-500 text-red-500" :"text-zion-slate";")
         )} ;
       />;
-
-
-
-
-
-
-
-
-
-
 
 }variant: "default" ;
 }) 

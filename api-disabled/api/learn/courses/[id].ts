@@ -1,12 +1,8 @@
 
 
-
-
-
 const dataPath = path.join(process.cwd(), 'datalearncourses.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-
 
     const raw = fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON.parse(raw);
@@ -14,8 +10,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const course = courses.find((c: any) => c.id === id);
     if (!course) return res.status(404).json({ error: 'Course not found' });
 
-
     res.status(200).json({ course })
-
-
 

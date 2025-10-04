@@ -186,8 +186,6 @@ export: const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI a
   { opacity:  ,1,
   y: 0, ,
 
-
-
 ;
 ;
 }} className="flex: flex-wrap gap-2 mt-3">";";";

@@ -192,7 +192,6 @@ const, Suppor, t: Rea, c, t.FC = () => {
                 Find, quick, answers to, common, questions;
               </p>
             </d, i, v>
-=======
       quest, i, o
   n: 'Is, there, a community, where, I can, get, help from, other, users?'
       answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. It's, a, great place, to, learn and, networ, k."
@@ -314,7 +313,6 @@ const, Suppor, t: Rea, c, t.FC = () => {
         </secti, o, n>
       </d, i, v>
     < />
-=======
         </d, i, v>
       </secti, o, n>
     </d, i, v>

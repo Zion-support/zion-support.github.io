@@ -11,9 +11,7 @@ import Link from "next/link";"
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
 
-
 const "DataPipelineEngineeringChat": NextPage = () => {
-
 
   return (<div>;
 }
@@ -22,13 +20,7 @@ return (;
       <Head>;
         <title > DataPipelineEngineeringChat - Zion Tech Solutions</title>;
 
-
   return (<div>;
       <Head>;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
-
-
-
-
-
 

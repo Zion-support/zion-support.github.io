@@ -14,7 +14,6 @@ export, default, function PostBySl, u, g(): Rea, c, t.J, S, X.Eleme, n, t {
         published, A, t: fromLate, s, t.da, t, e
         readTi, m, e: fromLate, s, t.readTi, m, e
         auth, o, r: fromLate, s, t.auth, o, r;
-=======
         s, l, u
   g: fromLate, s, t.sl, u, g
         tit, l, e: fromLate, s, t.tit, l, e
@@ -35,7 +34,6 @@ export, default, function PostBySl, u, g(): Rea, c, t.J, S, X.Eleme, n, t {
         published, A, t: fromBlogPos, t, s.da, t, e
         readTi, m, e: fromBlogPos, t, s.readTi, m, e
         auth, o, r: fromBlogPos, t, s.auth, o, r;
-=======
         s, l, u
   g: fromBlogPos, t, s.sl, u, g
         tit, l, e: fromBlogPos, t, s.tit, l, e
@@ -56,7 +54,6 @@ export, default, function PostBySl, u, g(): Rea, c, t.J, S, X.Eleme, n, t {
         published, A, t: fromPos, t, s.published, A, t
         readTi, m, e: fromPos, t, s.readTi, m, e
         auth, o, r: "Zion, Tech, Group Te, a, m"
-=======
         s, l, u
   g: fromPos, t, s.sl, u, g
         tit, l, e: fromPos, t, s.tit, l, e
@@ -79,7 +76,6 @@ return (
 <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">The, post, you are, looking, for does, not, exist or, has, been mov, e, d.</p>
 <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-zi, o, n-cyan, hove, r: underline, inlin, e-flex, item, s-center, ga, p-2">
 <ArrowLeft, className="w-4 h-4"  />
-=======
 <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whit, e, p-8">";
 <div, className="m, a, x-w-3xl, m, x-auto, p, t-20">";
 <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Article, not, found</h1>";
@@ -102,7 +98,6 @@ Back, to, Blog;
         <meta, propert, y="og:tit, l, e" content={artic, l, e.tit, l, e}  />
         <meta, propert, y="og:descripti, o, n" content={artic, l, e.descripti, o, n}  />
         <meta, propert, y="og:ty, p, e" content="artic, l, e" />
-=======
         <meta name="descripti, o, n" content={artic, l, e.descripti, o, n} />";
         <meta, propert, y="og:tit, l, e" content={artic, l, e.tit, l, e} />";
         <meta, propert, y="og:descripti, o, n" content={artic, l, e.descripti, o, n} />";
@@ -119,7 +114,6 @@ Back, to, Blog;
           <article, className="mt-8, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, d: p-12, border, border-whi, t, e/20">"
             <div, className="mb-6">
               <span, className="inli, n, e-block, p, x-3, p, y-1, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, rounde, d-full, border, border-zi, o, n-cy, a, n/30">
-=======
         <div, className="m, a, x-w-4xl, m, x-auto, p, x-6, p, y-24">";
           <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, inlin, e-flex, item, s-center, ga, p-2, transitio, n-colo, r, s">";
             <ArrowLeft, className="w-4 h-4" />";
@@ -133,7 +127,6 @@ Back, to, Blog;
               </sp, a, n>
             </d, i, v>
             <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
-=======
             <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
               {artic, l, e.tit, l, e}
             </h1>
@@ -152,7 +145,6 @@ Back, to, Blog;
               {artic, l, e.readTi, m, e && (
                 <span, className="flex, item, s-center, ga, p-1">
                   <Clock, className="w-4 h-4  />
-=======
               <span, className="flex, item, s-center, ga, p-1">";
                 <Calendar, className="w-4 h-4" />";
                 {new, Dat, e(artic, l, e.published, A, t).toLocaleDateStri, n, g('en-US', { ';
@@ -174,7 +166,6 @@ Back, to, Blog;
               </p>
               <div, className="bg-zi, o, n-bl, u, e/20, border, border-zi, o, n-bl, u, e/30, rounde, d-x, l, p-6, m, y-8">
                 <p, className="te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-0">
-=======
               <div, className="bg-zi, o, n-bl, u, e/20, border, border-zi, o, n-bl, u, e/30, rounde, d-x, l, p-6, m, y-8">";
                 <p, className="te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-0">";
                   💡 <stro, n, g>Coming, Soo, n: </stro, n, g> Full, article, content will, be, available short, l, y. 

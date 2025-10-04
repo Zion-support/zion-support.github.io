@@ -7,7 +7,6 @@ interface Participant {;
   id: string;,;
   name: string;,;
 
-
   roomId: string;,;
   participants?:Participant[],;
   onLeave?:() => void,;
@@ -21,29 +20,6 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
     return `${hrs > 0 ? `${hrs} ` :}${mins < 10 && hrs > 0 ? '0' :}${mins} ${secs < 10 ? '0' :}${secs}`,;
   },;
 ;)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             onClick={handleToggleVideo}"
             aria-label={isVideoEnabled ? 'Disable camera' :'Enable camera'}
@@ -60,9 +36,6 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
 
             {isAudioOnly ? <VolumeX /> :<Volume2 />}
 
-
-
-
 }export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
  </div>  {;)"
@@ -74,5 +47,4 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
   isVideoEnabled ? <Video /> : <VideoOff /> ;
 
   isScreenSharing ? <ScreenShareOff /> : <ScreenShare /> ;
-
 

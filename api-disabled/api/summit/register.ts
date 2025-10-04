@@ -1,14 +1,9 @@
 
 
-
-
   }
   try {
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 
   try {;
 
@@ -16,9 +11,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     if (!name || !email || !role || !country) {
 
       return res && res.status(400).json({ error: "Missing required fields" });
-
-
-
 
     }
     const { data, error } = await supabase
@@ -37,8 +29,6 @@ if ( {) {
       .insert ([;
         {
 
-
-
           name,
           email,
           role,
@@ -48,24 +38,16 @@ if ( {) {
           created_at: new Date().toISOString()}])
       .select('*')
 
-
-
       .single();
     if (error) {
-
 
     return res && res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
 
-
   }
 
 }
 
-
-
-
   }
 }
-
 

@@ -9,7 +9,6 @@ interface CertificationsListProps {;
   onDelete:(id:string) => void;
 }
 
-
     <div className="text-left">;"
 </div>"
       <h3 className="text-left">Added Certifications</h3>;""
@@ -23,9 +22,6 @@ interface CertificationsListProps {;
                     <>  Expires:{typeof cert.expiration_date === 'string' ;
                       ? cert.expiration_date ;)
                       :format(cert.expiration_date, 'MMM yyyy')}
-
-
-
 
                   onClick={() => onEdit(cert)}
                   <Edit className="text-left" />;"

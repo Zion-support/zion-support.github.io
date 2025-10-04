@@ -26,8 +26,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/Transla
       <div className="text-left">
         {targets.map((lng) => (
 
-
-
-
-
-

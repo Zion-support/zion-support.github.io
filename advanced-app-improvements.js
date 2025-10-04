@@ -9,7 +9,6 @@ function createAdvancedMonitoring() {
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
 
-
     createAdvancedMonitoring();
 
 if (require.main === module) {

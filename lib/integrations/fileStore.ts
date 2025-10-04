@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
 
-
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void 
@@ -21,8 +20,8 @@ function ensureDataDir (): void {}
   if () {) {}
   $2;
 }
-    const initial: IntegrationsState = 
-      connections: [],
+    const initial: IntegrationsState = {
+  connections: [],
       logs: [],
       overrides: [],
       events: []
@@ -36,10 +35,7 @@ function ensureDataDir (): void {}
   }
 }
 
-
-
 export function readState(): IntegrationsState {;
-
 
   ensureDataDir();
   const current = readState();
@@ -62,7 +58,6 @@ export function read_state (): IntegrationsState
 }
 
 export function writeState(
-
 
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
@@ -90,7 +85,6 @@ export function write_state (
     fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8"));
   return current;
 }
-
 
 export function writeState(
   mutator: (state: IntegrationsState) => void

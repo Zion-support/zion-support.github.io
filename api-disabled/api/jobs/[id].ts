@@ -1,33 +1,21 @@
 
 
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 
-
-
-
 const FILE = "jobs && jobs.json";
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const FILE = "jobs.json";
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
-
-
-
 
   if (idx === -1) {
   }
@@ -92,8 +80,6 @@ export default function handler(req, res) {
     return;
   }
 
-
-
   if (req && req.method === "GET") {
     res && res.status(200).json({ job: jobs[idx] });
     return;
@@ -107,11 +93,9 @@ export default function handler(req, res) {
     const isOwner = userEmail && userEmail === job && job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {
 
-
       return;
     }
     const {
-
 
       title,
       description,
@@ -121,8 +105,6 @@ export default function handler(req, res) {
       budgetMaxUsd,
       deliveryDeadlineIso,
       status,
-
-
 
       res.status(403).json({ error: 'Forbidden' });
       return
@@ -138,8 +120,6 @@ export default function handler(req, res) {
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
-
-
 
     } = req.body || {}
     // Check condition
@@ -189,15 +169,10 @@ if (job.status = status as Job["status"]) {
   res.status (405).end ("Method Not Allowed");
 }
 
-
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
-
 

@@ -1,7 +1,5 @@
 
 
-
-
       ok: true,
       query: q,
       parsed,
@@ -9,16 +7,12 @@
       didYouMean,
       counts: {
 
-
-
       },
       results
 
     });
 
   } catch (e: any) {
-
-
 
   }
 }
@@ -35,7 +29,4 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
 

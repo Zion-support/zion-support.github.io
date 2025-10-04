@@ -1,6 +1,5 @@
 
 
-  
     id: 'customer - feedback - intelligence',
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
@@ -10,7 +9,6 @@
       'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
     features: [;
 
-  
       'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
@@ -925,8 +923,6 @@
 		reviews: 6
 	}
 ];
-
-
 
 const contact = 
 	mobile: '+1 302 464 0950',

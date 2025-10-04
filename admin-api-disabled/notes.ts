@@ -8,24 +8,17 @@
   createdAt: number;
 };
 
-
 const notesStore: Note[] = [];
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
-
-
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   if (req.method === 'GET') {
 
-
-
   }
   if (req.method === 'POST') {
-
 
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
@@ -47,8 +40,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
-
-
-
-
 

@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, October2025QuantumEdgeFusionBanne, r: Rea, c, t.FC = () => {
   return (
@@ -13,7 +12,6 @@ const, October2025QuantumEdgeFusionBanne, r: Rea, c, t.FC = () => {
       {/* Animated, Backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(6,1, 8, 2,2, 1, 2,0.3),rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0))]  />
-=======
       <div, className="absolute, inse, t-0, opacit, y-20">";
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(6,1, 8, 2,2, 1, 2,0.3),rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0))]" />";
       </d, i, v>
@@ -33,7 +31,6 @@ const, October2025QuantumEdgeFusionBanne, r: Rea, c, t.FC = () => {
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">"
           <d, i, v>
             <h2, className="te, x, t-4xl, l, g: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
-=======
           <span, className="te, x, t-2, x, l">⚛️⚡</sp, a, n>";
           <span, className="te, x, t-cy, a, n-200, fon, t-semibold, tex, t-sm">QUANTUM, BREAKTHROUG, H: OCTOBE, R, 1, 20, 2, 5</sp, a, n>";
           <span, className="te, x, t-2, x, l">🔬💎</sp, a, n>";
@@ -49,7 +46,6 @@ const, October2025QuantumEdgeFusionBanne, r: Rea, c, t.FC = () => {
               </sp, a, n>
             </h2>
             <p, className="te, x, t-cy, a, n-100, tex, t-lg, m, b-6, leadin, g-relax, e, d">
-=======
             <p, className="te, x, t-cy, a, n-100, tex, t-lg, m, b-6, leadin, g-relax, e, d">";
               Revolutionary, quantu, m-enhanced, edge, computing delive, r, s <strong, className="te, x, t-whi, t, e">s, u, b-microsecond, intelligenc, e</stro, n, g> wi, t, h ";
               <strong, className="te, x, t-whi, t, e"> $12.4B, in, enterprise val, u, e</stro, n, g> acro, s, s <strong, className="te, x, t-whi, t, e">50,0, 0, 0+ edge, node, s</stro, n, g> operati, n, g ";
@@ -101,7 +97,6 @@ const, October2025QuantumEdgeFusionBanne, r: Rea, c, t.FC = () => {
   anima, t, e={{
                   sca, l, e: [1, 1.05, 1]
                   rota, t, e: [0, -5, 0]
-=======
           <div, className="hidden, l, g: blo, c, k">";
             <div, className="relati, v, e">";
               <moti, o, n.d, i, v
@@ -133,7 +128,6 @@ const, October2025QuantumEdgeFusionBanne, r: Rea, c, t.FC = () => {
                   </li>
                   <li, className="flex, item, s-start, ga, p-3">
                     <span, className="te, x, t-2, x, l">💰</sp, a, n>
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Quantum, Advantage, s: </h3>";
                 <ul, className="spa, c, e-y-3, tex, t-cy, a, n-1, 0, 0">";
                   <li, className="flex, item, s-start, ga, p-3">";
@@ -167,7 +161,6 @@ const, October2025QuantumEdgeFusionBanne, r: Rea, c, t.FC = () => {
         >
           <p, className="te, x, t-cy, a, n-200, tex, t-sm">
             🏆 <strong, className="te, x, t-whi, t, e">QUANTUM, COMPUTING, BREAKTHROUGH: </stro, n, g> 1, 2, 7-Qubit, Processors, at Ed, g, e | Fortune, 100, Success Sto, r, y"
-=======
           <p, className="te, x, t-cy, a, n-200, tex, t-sm">";
             🏆 <strong, className="te, x, t-whi, t, e">QUANTUM, COMPUTING, BREAKTHROUGH: </stro, n, g> 1, 2, 7-Qubit, Processors, at Ed, g, e | Fortune, 100, Success Sto, r, y";
           </p>

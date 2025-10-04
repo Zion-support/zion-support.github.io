@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI 2026: Quantum Neural Consensus Breakthrough - Revolutionary Multi-Agent Intelligence',
   description: 'Discover the groundbreaking Quantum Neural Consensus system that achieves 99.97% decision accuracy across distributed AI agents, revolutionizing enterprise automation and autonomous operations.',
   keywords: 'quantum neural consensus, multi-agent AI, distributed intelligence, enterprise automation, AI 2026',

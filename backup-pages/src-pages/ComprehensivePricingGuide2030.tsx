@@ -1,6 +1,5 @@
 
 
-
     ...innovativeAIServices2030,
     ...innovativeCybersecurityServices2030,
     ...innovativeCloudDevOpsServices2030];
@@ -190,7 +189,6 @@ features[';Basic AI features',
 
             </p>
 
-
                 description: 'Round-the-clock support included in all plans. No additional support fees.'
             ].map ( (benefit, index) => (
               <motion.div;
@@ -309,5 +307,4 @@ features[';Basic AI features',
           </div>
         </div>
       </section>
-
 

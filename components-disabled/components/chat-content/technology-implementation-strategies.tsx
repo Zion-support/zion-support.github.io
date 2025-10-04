@@ -14,8 +14,6 @@
 
   );
 
-
-
 export default function TechnologyImplementationStrategiesPage() {
   return (
 
@@ -50,7 +48,6 @@ return (
     </div>;
 
   );
-
 
   );
 export default function TechnologyImplementationStrategiesPage() {

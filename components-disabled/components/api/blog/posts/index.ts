@@ -8,7 +8,6 @@ return res.status(200).json({ "items": posts.slice(o, o + l), "total": posts.len
     if (tag && typeof tag === 'string') posts = posts && posts.filter((p) => (p && p.tags || []).includes(tag));'
     if (author && typeof author === 'string') posts = posts && posts.filter((p) => p && p.author === author);'
 
-
     if (!body.title || !body.slug || !body.author || !body.publishDate) {
       }
       return res.status(400).json({ "error": 'Missing required fields' });'
@@ -120,7 +119,6 @@ if () return) {
   $2
 }
 
-
   $2
 }
 return res.status (409).json ({ "error": 'Slug already exists' });'
@@ -143,7 +141,6 @@ const "post": BlogPost = {
       "body": body.body || '','
       "status": body.status || 'draft','
       "metrics": { "views": 0, "likes": 0, "shares": 0 },
-
 
   }
 

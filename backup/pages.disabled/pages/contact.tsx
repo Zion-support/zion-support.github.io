@@ -1,8 +1,5 @@
 
 
-
-
-
 import React, { useState } from 'react;
 import Head from next/head';
 import Link from 'next/link;
@@ -17,27 +14,16 @@ import {
   MessageCircle,
   Globe,
 
-
-
-
   const contactInfo = [{
-
-
 
 const "Contact: NextPage = () => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
-
-
-
-
-
   return (
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-
 
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
@@ -233,40 +219,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </p>
           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
         </section>
       </div>
     </>
   );
 }
-
-
-
-
 

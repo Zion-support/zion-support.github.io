@@ -6,10 +6,7 @@ export const Jest.setup = () => {
   return null;
 };
 
-
-
 // Mock global objects that might not be available in test environment
-
 
     matches: false,
     media: query,
@@ -51,7 +48,6 @@ global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() 
 const originalConsoleError = console && console.error;
 const originalConsoleWarn = console && console.warn;
 
-
 beforeAll(() => {
   console && console.error = (...args: any[]) => {
     if (
@@ -71,7 +67,6 @@ beforeAll(() => {
     ) {
       return;
     }
-
 
 });
 afterAll(() => {
@@ -93,6 +88,4 @@ after_all (() => {
 
   console.warn = originalConsoleWarn;
 });
-
-
 

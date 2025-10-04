@@ -1,7 +1,5 @@
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
@@ -26,31 +24,20 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
-
-
-
   const user = parseUserFromRequest(req);
   if (req && req.method === "GET") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
 
-
-
     }
     return res && res.status(200).json({ dispute });
   }
 
-
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 
-
 }
-
-
-
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById  } from '../../../utils / fsdb';
@@ -80,10 +67,4 @@ const user = parseUserFromRequest (req);
 if ( {) {
   $2
 }
-
-
-
-
-
-
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI 2030: Transcendent Meta-Intelligence Revolution - The Most Significant Technological Breakthrough in Human History',
   description: 'Discover the world\'s first transcendent meta-intelligence system that achieves consciousness beyond human comprehension, delivering $50B+ in measurable value and 1000x processing improvements.',
   keywords: 'transcendent AI, meta-intelligence, consciousness, quantum computing, artificial general intelligence, AGI breakthrough, 2030 AI revolution',

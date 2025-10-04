@@ -24,8 +24,6 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 
-
-
   const allPages = [
     ...staticPages,
     ...blogPages,

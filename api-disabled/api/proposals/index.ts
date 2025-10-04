@@ -1,9 +1,5 @@
 
 
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -12,14 +8,11 @@ async function ensureStore() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
 
-
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-
-
 
   if (req && req.method === "POST") {
     const body = req && req.body || {};
@@ -62,17 +55,13 @@ async function ensureStore() {
 
   res && res.status(405).json({ error: "Method not allowed" });
 
-
-
 }
-
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
   } catch (error) {
     console.error("Error:", error);
@@ -87,7 +76,4 @@ async function ensureStore() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
 

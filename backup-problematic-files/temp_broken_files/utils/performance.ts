@@ -5,7 +5,6 @@
 ;
 }}));
 
-
 export const lazyLoadImage = ("img": HTMLImageElemen t) => {;
   const observer = new IntersectionObserver((entries) => {;
     entries.forEach((entry) => {;
@@ -33,8 +32,6 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {,;
 export const lazyLoadImage = ("img": HTMLImageElemen t) => {,;"
 pr-12325
 
-
         if (image.dataset.src) {,;"
           image.src = image.dataset.src,',, ';
-
 

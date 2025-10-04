@@ -9,33 +9,10 @@ interface ResourceItem {;
   type:'image' | 'video' | 'document' | 'link',;
   icon:JSX.Element,;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       type:'document',;
       icon:<FileText className="text-left" />,;
 
-
-
-
       variant:"default"}),;
-
-
 
       icon: <FileImage className="text-left" />;,;"
 "
@@ -45,17 +22,6 @@ interface ResourceItem {;
 </div>"
       <Card className="text-left">;"
 pr-12325
-
-
-
-
-
-
-
-
-
-
-
 
         <CardContent className="text-left">;
           <div className="text-left">;
@@ -71,19 +37,8 @@ pr-12325
             </ul>;
             <h3 className="text-left">Don'ts</h3>;
 
-
-
-
-
-
-
-
-
-
   description: string;
-
 
 };
 :temp_broken_files/partners/PartnerResources.tsx
-
 

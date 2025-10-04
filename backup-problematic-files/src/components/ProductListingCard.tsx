@@ -147,7 +147,6 @@ pr-12325
                 className="text-left";"
               >;
 
-
 //Import next/image const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';
   if (!imageError) {';
   //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg');

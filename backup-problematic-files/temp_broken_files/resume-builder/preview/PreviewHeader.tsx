@@ -1,12 +1,9 @@
 
 
-
-
 ;
 interface PreviewHeaderProps {;
   resume: Resume;,;
   onBack:() => void;}
-
 
         .print-section {;
           position: absolute;,;
@@ -20,7 +17,6 @@ interface PreviewHeaderProps {;
     document.head.appendChild(style),;
     // Trigger print dialog;
     window.print(),;
-
 
   return (;`;
     <div className={`flex ${isMobile ? 'flex-col' :'justify-between'} items-${isMobile ? 'stretch' :'center'} gap-3`}>;
@@ -38,10 +34,6 @@ interface PreviewHeaderProps {;
 
           onClick={handleBrowserPrint} ;
 
-
-
-
   isMobile ? 'flex-col' : 'justify-between' ;
 }items-$ {';
-
 

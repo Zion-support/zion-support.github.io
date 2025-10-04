@@ -1,8 +1,5 @@
 
 
-
-
-
 export const advancedMicroSaasExpansion2025V2 = [
   
     name: 'AI Content Factory Pro',
@@ -773,7 +770,6 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
-
 
   }
 ];

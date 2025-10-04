@@ -6,4 +6,3 @@ import: EnhancedFooter from './layout/EnhancedFooter';';
 interface: LayoutProps {
   children: React.ReactNode;
 
-

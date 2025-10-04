@@ -1,7 +1,5 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
-
-  
     id: 'enterprise - api - governance - platform',
     name: 'Enterprise API Governance Platform',
     tagline:;
@@ -267,7 +265,6 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
   },;
 
-
 ];	
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
@@ -289,7 +286,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     price: '$799', period: '/month',
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
     features: [
-
 
 ];	
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
@@ -486,7 +482,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 	}
 ];
 
-
   id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
   tagline: 'Automated data governance, compliance, and quality management for enterprise data';
@@ -673,7 +668,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 }
 		rating: 4.8
 		reviews: 38
-
 
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
@@ -867,7 +861,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		customers: 56,;
 		rating: 4.8;
 		reviews: 38;
-
 
 	}
 ];

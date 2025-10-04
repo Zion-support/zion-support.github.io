@@ -24,7 +24,6 @@ export, default, function October2025CuttingEdgeRevolutionBann, e, r(): vo, i, d
           Ne, x, t-Generation, AI, Platforms;
         </h2>
         <p, className="te, x, t-2xl, m, d: te, x, t-3xl, tex, t-center, tex, t-gr, a, y-300, m, b-16, ma, x-w-5xl, m, x-auto, fon, t-lig, h, t">"
-=======
         <h2, className="te, x, t-6xl, m, d: te, x, t-8xl, fon, t-black, tex, t-center, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
           Ne, x, t-Generation, AI, Platforms;
         </h2>
@@ -35,7 +34,6 @@ export, default, function October2025CuttingEdgeRevolutionBann, e, r(): vo, i, d
         </p>
         {/* Content, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {/* Car, d, 1 - Cognitive, Security, Mesh */}
           <Li, n, k
@@ -52,7 +50,6 @@ export, default, function October2025CuttingEdgeRevolutionBann, e, r(): vo, i, d
               </h3>
               <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
                 Revolutionary, zer, o-trust, AI, defense with, 9, 9.99% threat, detectio, n, &lt;50ms, autonomous, response;
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colo, r, s">";
                 Cognitive, Security, Mesh;
               </h3>
@@ -82,7 +79,6 @@ export, default, function October2025CuttingEdgeRevolutionBann, e, r(): vo, i, d
               </h3>
               <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
                 Re, a, l-time, A, I-driven, personalization, delivering 2, 8, 4% conversion, lif, t, &lt;10ms, latenc, y;
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">";
                 Hyp, e, r-Personalization, Engine, s;
               </h3>
@@ -112,7 +108,6 @@ export, default, function October2025CuttingEdgeRevolutionBann, e, r(): vo, i, d
               </h3>
               <p, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-6">
                 AI-powered, cloud, cost optimization, achieving, 78% cost, reductio, n, 96% automati, o, n;
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                 Autonomous, FinOps, Platform;
               </h3>
@@ -131,7 +126,6 @@ export, default, function October2025CuttingEdgeRevolutionBann, e, r(): vo, i, d
         {/* Stats, Ba, r */}
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, m, b-12">
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">"
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, m, b-12">";
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">";
             <d, i, v>

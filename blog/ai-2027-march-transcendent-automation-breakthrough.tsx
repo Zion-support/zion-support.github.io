@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI 2027 March Transcendent Automation Breakthrough - Zion Tech Group',
   description: 'Discover the revolutionary March 2027 AI breakthrough featuring transcendent automation, infinite intelligence, and $750B+ enterprise transformation through conscious computing.',
   keywords: 'AI 2027, March breakthrough, transcendent automation, infinite intelligence, conscious computing, enterprise AI, $750B ROI',

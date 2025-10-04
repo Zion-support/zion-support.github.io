@@ -3,16 +3,11 @@
 import { AppPlatform } from "./MetadataManager",;
 import { toast } from "sonner",;
 
-
-
   id: string;,;
   url: string;,;
   file:File;
 },;
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform ;}) => {;
-
-
-
 
   const handleFileSelect = (e:React.ChangeEvent<HTMLInputElement>) => {;
 
@@ -32,9 +27,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform ;
     setScreenshots(prev => {;)
       const filtered = prev.filter(screenshot => screenshot.id !== id),;
 
-
-
-
   const handleDrop = (e:React.DragEvent) => {;
     if (e.dataTransfer.files) {;
       addScreenshots(Array.from(e.dataTransfer.files));
@@ -51,7 +43,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform ;
               ? "border-zion-cyan bg-zion-cyan/10" ;""
               :"border-zion-purple/30";"`;
 
-
 </div>"
           <Upload className="text-left" />;"
           <p className="text-left">Drag & drop screenshots here</p>;"
@@ -65,9 +56,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform ;
             variant="outline" ;")
             onClick={() => fileInputRef.current?.click()}
 
-
-
-
               <img;
                 src={screenshot.url}"
                 alt="App screenshot";""
@@ -80,9 +68,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform ;
               >;
                 <Trash2 className="text-left" />;
 
-
-
-
 };
 pr-12325
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({;
@@ -90,15 +75,11 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({;
 
   const [screenshots,  setScreenshots] = useState<Screenshot[]> ([]);
 
-
-
 :temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ScreenshotManager.tsx
 
-
 };
 <CardHeader> <CardTitle className="text-left" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {;"  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";"  isDragging > <Upload className="text-left" /> <p className="text-left" >Drag & drop screenshots here</p> <input > <Plus className="text-left" /> Select Files </Button> </div> > <Trash2 className="text-left" /> </button> </div>) ) ;
 }</div> </CardContent> </Card>) ;
-
 

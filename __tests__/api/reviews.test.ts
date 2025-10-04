@@ -29,8 +29,8 @@ interface ErrorResponse
     (prismaMock.user.findUnique as jest.Mock).mockReset();
     (prismaMock.$disconnect as jest.Mock).mockReset() // This is not typically called in handlers;
 
-      const mockPrismaUser: PrismaUser = 
-        createdAt: new Date(),
+      const mockPrismaUser: PrismaUser = {
+  createdAt: new Date(),
         updatedAt: new Date(),
         avatarUrl: null,
         bio: null,
@@ -74,8 +74,6 @@ interface ErrorResponse
       const: { req, res } = createMocks(
         method:,
   POST;
-
-
 
       await reviewsHandler(
         req as NextApiRequest,
@@ -154,8 +152,8 @@ interface ErrorResponse
 
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
 
-      const mockSupabaseSessionNoEmail: Session = 
-        user: { id: 'supaUserId', email: undefined } as SupabaseUser,
+      const mockSupabaseSessionNoEmail: Session = {
+  user: { id: 'supaUserId', email: undefined } as SupabaseUser,
         access_token: 'token',
         refresh_token: 'ref',
         expires_in: 3600,
@@ -178,8 +176,8 @@ interface ErrorResponse
     it(,
   should fail if user not found in Prisma database (404);
   ', async () => 
-      const mockSupabaseSession: Session = 
-          email:,
+      const mockSupabaseSession: Session = {
+  email:,
   unknown@example.com;
   '} as SupabaseUser,
         access_token: 'token,
@@ -189,11 +187,8 @@ interface ErrorResponse
         error: null});
       (prismaMock.user.findUnique as jest.Mock).mockResolvedValue(null);
 
-
       const { req, res } = createMocks(
           rating: 5,
-
-
 
       await reviewsHandler(
         req as NextApiRequest
@@ -215,9 +210,6 @@ interface ErrorResponse
         req as NextApiRequest
 
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
-
-
-
 
       await productReviewsHandler(
         req as NextApiRequest,

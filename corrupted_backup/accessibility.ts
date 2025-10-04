@@ -81,7 +81,6 @@ export const accessibilityUtils = {
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-
     const handleTabKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
 
@@ -109,9 +108,7 @@ export const accessibilityUtils = {
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
 
-    
     setTimeout(() => document.body.removeChild(announcement), 1000);
-
 
   // Skip links;
   createSkipLink: (targetId: string, text: string = 'Skip to main content') => {
@@ -139,7 +136,6 @@ export const accessibilityUtils = {
       skipLink.style.top = '-40px';
     
     return skipLink;
-
 
 export default accessibilityUtils;
 export default accessibilityUtils;

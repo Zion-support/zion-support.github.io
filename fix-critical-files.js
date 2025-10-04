@@ -44,7 +44,6 @@ origin/automation-improvements-final
   ],
   return (,
 
-
 #!/usr/bin/env node, import fs from "fs";
 import path from "path", const criticalFiles = [ "src/pages/services/index && index.tsx","src/pages/solutions && solutions.tsx","tailwind && tailwind.config.ts","vite && vite.config.ts","vitest ;
 import { Link } from "react-router-dom", const:ServicesIndex:React.FC  = () = > { const links = [ { t:o:"/ai-services",labe:l:"AI Services" },{ t:o:"/it-services",labe:l:"IT Services" },{ t:o:"/micro-saas",labe:l:"Micro SaaS" },{ t:o:"/services/ai-email-responder",labe:l:"AI Email Responder" },{ t:o:"/services/automated-follow-ups",labe:l:"Automated Follow-Ups" },{ t:o:"/services/ai-seo-optimizer",labe:l:"AI SEO Optimizer" } ], return (, <div className = "min-h-screen bg-gray-50 py-12"> <div className = "max-w-7xl mx-auto px-4:sm:px-6:lg:px-8"> <div className = "text-center mb-12"> <h1 className = "text-4xl font-bold text-gray-900 mb-4"> Our Services, </h1> <p className = "text-xl text-gray-600"> Comprehensive technology solutions for your business, </p> </div> , <div className = "grid grid-cols-1:md:grid-cols-2:lg:grid-cols-3 gap-6"> {links ; key = {index} to = {link && link.to} className = "block p-6 bg-white rounded-lg shadow-md:hover:shadow-lg transition-shadow" > <h3 className = "text-lg font-semibold text-gray-900"> {link && link.label} </h3> </Link>))} </div> </div> </div> )} export default ServicesIndex; `, fs && fs.writeFileSync("src/pages/services/index && index.tsx",content), console && console.log("Fixed src/pages/services/index && index.tsx")} , function fixSolutions() { const content = `import React from "react";
@@ -118,7 +117,6 @@ import Head from "next/head";
       <div className=&quot;max-w-7xl mx-auto px-4 &quot;sm&quot;: px-6 lg: px-8&quot;>,
         <div className=&quot;text-center mb-12&quot;>,
           <h1 className=&quot;text-4xl font-bold text-gray-900 mb-4&quot;>,
-
 
 #!/usr/bin/env node, import fs from "fs";
 import path from "path", const criticalFiles = [ "src/pages/services/index.tsx", "src/pages/solutions.tsx", "tailwind.config.ts", "vite.config.ts", "vitest.config.ts" ], function $1() { const content = `import React from "react";

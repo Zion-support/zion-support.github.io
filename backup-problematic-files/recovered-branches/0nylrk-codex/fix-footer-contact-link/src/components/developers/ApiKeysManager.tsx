@@ -163,13 +163,9 @@ export function ApiKeysManager() {;
         open={showDeleteConfirm !== null} ;
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
 
-
             <AlertDialogTitle>Revoke API Key?;"
 
-
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
-
-
 
 const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null> (null);
 const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null> (null);

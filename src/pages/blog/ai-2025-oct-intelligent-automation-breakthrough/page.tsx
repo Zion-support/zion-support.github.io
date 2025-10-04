@@ -14,7 +14,6 @@
           <h1, className="te, x, t-4xl, fon, t-bold, m, b-4">Intelligent, Automation, Breakthrough 20, 2, 5</h1>
           <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">
             Go, beyond, scripts with, agents, that pl, a, n, execu, t, e, and, recover, safely. Learn, production, patterns for, approval, s;
-=======
           content="Shift, from, manual tickets, to, outcome‑driven, automation, with safe, agent, runbooks, budge, t, s, and, instant, rollback."
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-intellige, n, t-automati, o, n-breakthrou, g, h" />";
@@ -40,7 +39,6 @@
             </p>
             <div, className="mt-8">
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>"
-=======
             <div, className="mt-8">";
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>";
             </d, i, v>

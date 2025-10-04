@@ -7,10 +7,6 @@ import React from "react";
 describe("AppMinimal", () => {
   it("renders without crashing", () => {
     render(<AppMinimal />);
-<<<<<<< HEAD
-    expect(screen.getByText(/zion/i)).toBeInTheDocument();
-=======
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
   });
 });

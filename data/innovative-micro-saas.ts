@@ -1,6 +1,5 @@
 
 
-  
   id: string;
   name: string;
   tagline: string;
@@ -145,7 +144,6 @@
       'AI - powered sentiment analysis',
       'Multi - channel feedback collection',
 
-  
       'Automatic categorization',
       'Trend identification',
       'Real - time alerts',
@@ -235,7 +233,6 @@
     features: [;
       'AI - powered scheduling',
 
-  
       'Content generation suggestions',
       'Multi - platform support',
       'Analytics and insights',
@@ -467,7 +464,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600;
 
   }
-
 
 export interface InnovativeMicroSaas {;
 

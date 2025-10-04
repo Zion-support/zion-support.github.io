@@ -18,7 +18,6 @@ const { slug } = req.query as { slug?: string }
 }
 return res && res.status(201).json({ 'ok': true });
 
-
     .end('Method Not Allowed');    return res && res.status(201).json({ 'ok': true });'
     .end('Method Not Allowed');    return res && res.status(201).json({ "ok": true });'
 export default async function handler() {
@@ -29,8 +28,6 @@ export default async function handler() {
 const { slug } = req.query as { slug?: string };
     return res.status(200).json({ slug, 'reviews': [], 'average': null, 'count': 0 });
 return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');'
-
-
 
     }
     const { slug } = req.query as { slug?: string }
@@ -58,7 +55,6 @@ if ( {) {
   $2
 
     .end ('Method Not Allowed');    return res.status (201).json ({ 'ok': true });'
-
 
     }
     }
@@ -91,5 +87,4 @@ return res;
     return res.status(200).json({ slug, 'reviews': [], 'average': null, 'count': 0 });
     return res.status(200).json({ slug, 'reviews': [], 'average': null, 'count': 0 });
   if (req.method === 'POST') {'
-
 

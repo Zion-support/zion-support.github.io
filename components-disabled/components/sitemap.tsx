@@ -118,7 +118,6 @@ return (;
     <div className="text-left"sm":px-6 "lg":px-8">"
       <Head>
 
-
 export default /**
  * SitemapPage - Function description
  */
@@ -140,7 +139,6 @@ function SitemapPage() {
 return (;
     <div className="text-left"sm":px - 6 "lg":px - 8">;"
       <Head>;
-
 
         </ul>;
       </div>;

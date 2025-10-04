@@ -12,7 +12,6 @@ export, default, function AIAutonomousRoadmaps20, 2, 7(): Rea, c, t.J, S, X.Elem
   7: Autonomous, Roadmaps, that Prove, RO, I</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Be, t, s → KP, I, s → budge, t, s → rollba, c, k</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="Outco, m, e‑led, bet, s, KPI, scorecard, s, budge, t, s, and, rollbac, k — a, practical, 2027 roadmap, syste, m." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 7-autonomo, u, s-roadma, p, s" />";
       </Helmet>

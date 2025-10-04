@@ -1,7 +1,6 @@
 
   id: string;
 
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -24,7 +23,6 @@
       'Social media optimization',
       'API access for developers'
 
-
     popular: true,
 
     icon:,
@@ -36,7 +34,6 @@
     setupTime: '30 minutes',
     category: 'AI & Content Creation',
     realService: true,
-
 
     contactInfo: {
 
@@ -75,7 +72,6 @@
   // AI-Powered Cybersecurity Platform
   {
 
-
     popular: true,
 
     icon:,
@@ -88,7 +84,6 @@
   1 day',
     category: 'Cybersecurity,
     realService: true,
-
 
     contactInfo: {
 
@@ -127,7 +122,6 @@
   // Blockchain AI Platform
   {
 
-
     popular: true,
 
     icon:,
@@ -145,7 +139,6 @@
   2 weeks',
     category: 'Biotech & AI,
     realService: true,
-
 
     contactInfo: {
 
@@ -186,5 +179,4 @@
 
   }
 ];
-
 

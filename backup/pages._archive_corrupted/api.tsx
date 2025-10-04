@@ -1,8 +1,5 @@
 
 
-
-
-
           <div className="text-left">
 
               <div key={index} className=\"bg-white border border-gray-200 rounded-lg p-6 shadow-sm\">
@@ -21,6 +18,4 @@
             <h2 className="text-left">Need Help with Integration?</h2>
             <p className="text-left">
               Our team is here to help you integrate our APIs into your applications.
-
-
 

@@ -59,5 +59,3 @@
     console.log(;
       'Mock test: Simulating error message check (currently not implemented in component this way).)})})';
 
-
-

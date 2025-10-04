@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
   return (
@@ -28,7 +27,6 @@ const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
             <div, className="te, x, t-5xl, m, b-4, grou, p-hov, e, r: anima, t, e-sp, i, n">⚛️</d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Quantum, Computin, g</h3>
             <p, className="te, x, t-gr, a, y-400, tex, t-sm, m, b-4">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-16">";
           {/* Quantum, Computin, g */}
@@ -47,7 +45,6 @@ const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
             <div, className="te, x, t-5xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">🔍</d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">AutoML, Evolutio, n</h3>
             <p, className="te, x, t-gr, a, y-400, tex, t-sm, m, b-4">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
             <div, className="te, x, t-5xl, m, b-4, grou, p-ho, v, e
   r: anima, t, e-pul, s, e">🔍</d, i, v>";
@@ -63,7 +60,6 @@ const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
             <div, className="te, x, t-5xl, m, b-4, grou, p-hov, e, r: anima, t, e-boun, c, e">📱</d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Edge, AI, Revolution</h3>
             <p, className="te, x, t-gr, a, y-400, tex, t-sm, m, b-4">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
             <div, className="te, x, t-5xl, m, b-4, grou, p-ho, v, e
   r: anima, t, e-boun, c, e">📱</d, i, v>";
@@ -79,7 +75,6 @@ const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
             <div, className="te, x, t-5xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">🔮</d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Explainable, A, I</h3>
             <p, className="te, x, t-gr, a, y-400, tex, t-sm, m, b-4">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
             <div, className="te, x, t-5xl, m, b-4, grou, p-ho, v, e
   r: anima, t, e-pul, s, e">🔮</d, i, v>";
@@ -93,7 +88,6 @@ const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
         {/* Featured, Innovatio, n */}
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/20, m, b-16">
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">"
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/20, m, b-16">";
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">";
             <d, i, v>
@@ -105,7 +99,6 @@ const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
               </h3>
               <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">
                 The, worl, d's, first, AI system, that, thinks about, thinkin, g. Our, Met, a-Cognitive, AI, can reason, about, its own, reasoning, processes;
-=======
               <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">";
                 The, worl, d's, first, AI system, that, thinks about, thinkin, g. Our, Met, a-Cognitive, AI, can reason, about, its own, reasoning, processes, ';
                 identify, knowledge, gaps, and, autonomously, improve its, decisio, n-making, capabilitie, s.
@@ -149,7 +142,6 @@ const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
             <div, className="te, x, t-5xl, m, b-4">🏭</d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Manufacturi, n, g</h3>
             <div, className="te, x, t-4xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, tex, t-cent, e, r">";
             <div, className="te, x, t-5xl, m, b-4">🏭</d, i, v>";
@@ -194,7 +186,6 @@ const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => {
             Join, the, elite group, of, enterprises already, transforming, their operations, with, our breakthrough, AI, technologies.
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
             <a, titl, e="Internal, lin, k" 
               hr, e, f="/conta, c, t" 

@@ -4,5 +4,3 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
 export default function GovernancePulsePage() {
 
-
-

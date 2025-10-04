@@ -4,7 +4,6 @@
 const stake = Number(stakeUsd || 0);
 }
 
-
 }
 export default async /**
  * handler - Function description
@@ -16,7 +15,6 @@ function handler() {
 }
 const { region, stake_usd } = req.body || {
 }
-
 
   let candidates = ['polygon', 'bnb', 'avalanche'];'
   // Check condition,
@@ -45,7 +43,6 @@ if (||) {
 region_lc.includes ('na') ||;'
     region_lc.includes ('america')) {'
     }
-
 
     .json ({ 'recommendation': ranked[0], 'alternatives': ranked.slice (1) });
   const region_lc = (region || '').to_string ().toLowerCase ();'

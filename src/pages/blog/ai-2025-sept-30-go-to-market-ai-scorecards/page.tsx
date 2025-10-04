@@ -5,7 +5,6 @@
       <section, className="container, m, x-auto, p, x-6, p, y-16">
         <div, className="m, a, x-w-3, x, l">
           <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4">"
-=======
     <main, className="m, i, n-h-screen, b, g-white, tex, t-gr, a, y-9, 0, 0">";
       <section, className="container, m, x-auto, p, x-6, p, y-16">";
         <div, className="m, a, x-w-3, x, l">";

@@ -14,7 +14,6 @@ const TestimonialsSection = dynamic(() => import('./TestimonialsSection'),{'; 'l
 
 </p>'
 
-
 </p>'
 
 '

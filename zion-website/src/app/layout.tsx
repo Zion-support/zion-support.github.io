@@ -8,8 +8,8 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = 
-	title: 'Zion Tech Group - Leading AI and Technology Solutions',
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
 	description:
 		'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
 	keywords: [
@@ -48,8 +48,8 @@ export const metadata: Metadata =
 	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'),
 }
 
-export const viewport: Viewport = 
-	width: 'device-width',
+export const viewport: Viewport = {
+  width: 'device-width',
 	initialScale: 1,
 	themeColor: '#000000',
 }

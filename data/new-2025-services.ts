@@ -1788,7 +1788,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     reviews: 6,
   },
 
-
     id: 'llm-safety-observability-suite', name: 'LLM Safety & Observability Suite',
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
     price: '$129', period: '/month',
@@ -2255,13 +2254,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
 ;
 
-
-
-
 ;
-
-
-
 
 ;
       'Model and dataset registry'
@@ -3027,8 +3020,5 @@ reviews: 6,
 ];
 
 ;
-
-
-
 
 ];

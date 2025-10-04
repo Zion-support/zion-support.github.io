@@ -31,7 +31,6 @@ export interface NextGenerationAIService {;
     email: string;
     address: string;
 
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -625,10 +624,8 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-
 
     },
     realImplementation: true,

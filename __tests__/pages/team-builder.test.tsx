@@ -30,7 +30,6 @@ describe('TeamBuilderPage;
     // for now, it consistently returns a user.;
     jest;
 
-
   ', () => 
     render(<TeamBuilderPage />);
     expect(screen.getByText('Team Builder;
@@ -95,8 +94,6 @@ describe('TeamBuilderPage;
 
       recommendationSummary: 1 PM, 1 Dev,
 
-
-
           weeklyHours: 40,
           matchedTalent: []}],
       totalEstimatedRate: { mi,
@@ -154,6 +151,4 @@ describe('TeamBuilderPage;
   ' { name: /Get Team Recommendation/i });';
     await waitFor(() => {;
       expect(toast.error).toHaveBeenCalledWith('AI failed miserably')})})})';
-
-
 

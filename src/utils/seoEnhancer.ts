@@ -14,7 +14,6 @@ publishDa, t, e?: stri, n, g;
 modifiedDa, t, e?: stri, n, g;
 ty, p, e?: 'websi, t, e' | 'artic, l, e' | 'produ, c, t';
 loca, l, e?: stri, n, g;
-=======
   tit, l, e: stri, n, g;
   descript, i, o
   n: stri, n, g;
@@ -35,13 +34,11 @@ export, function, generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<stri, 
     // Basic, met, a
   tit, l, e: conf, i, g.tit, l, e
     descripti, o, n: conf, i, g.descripti, o, n
-=======
     // Open, Grap, h;
     'og:tit, l, e': conf, i, g.tit, l, e
     'og:descripti, o, n': conf, i, g.descripti, o, n
     'og:ty, p, e': conf, i, g.ty, p, e || 'websi, t, e'
     'og:loca, l, e': conf, i, g.loca, l, e || 'en_, U, S'
-=======
     // Twitter, Car, d;
     'twitt, e, r:ca, r, d': 'summary_large_ima, g, e'
     'twitt, e, r:tit, l, e': conf, i, g.tit, l, e
@@ -59,7 +56,6 @@ me, t, a['og: ima, g, e'] = conf, i, g.ogIma, g, e;
 me, t, a['twit, t, e
   r:ima, g, e'] = conf, i, g.ogIma, g, e;
 }
-=======
     me, t, a['og: ima, g, e'] = conf, i, g.ogIma, g, e;
     me, t, a['twit, t, e
   r:ima, g, e'] = conf, i, g.ogIma, g, e;
@@ -120,7 +116,6 @@ u, r, l: stri, n, g;
 lastm, o, d?: stri, n, g;
 changefr, e, q?: 'alwa, y, s' | 'hour, l, y' | 'dai, l, y' | 'week, l, y' | 'month, l, y' | 'year, l, y' | 'nev, e, r';
 priori, t, y?: numb, e, r;
-=======
   u, r, l: stri, n, g;
   lastm, o, d?: stri, n, g;
   changefr, e, q?: 'alwa, y, s' | 'hour, l, y' | 'dai, l, y' | 'week, l, y' | 'month, l, y' | 'year, l, y' | 'nev, e, r';
@@ -184,5 +179,4 @@ export, function, optimizeDescription(descripti, o, n: stri, n, g, maxLeng, t, h
   return, truncate, d.substri, n, g(0, lastSpa, c, e) + '...';
 }
 ;
-=======
 }

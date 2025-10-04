@@ -1,8 +1,6 @@
 export type EnterpriseITSolution = 
     starter: string; // e.g. "$2, 999 / mo";
 
-
-
 export type EnterpriseITSolution = 
     starter: string; // e.g. "$2, 999 / mo";
 
@@ -26,9 +24,7 @@ export type EnterpriseITSolution =
     professional?: string;
     enterprise?: string;
 
-
   };
-
 
   category:;
   features: string[];
@@ -126,7 +122,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     ],
     integrations: ['Okta', 'Azure AD', 'Cloudflare Zero Trust'],
 
-
     use_cases: ['Secure remote work', 'Lateral movement prevention'],
     link: 'https://ziontechgroup.com / services / zero - trust - network - architecture',
     real_service: true,
@@ -143,7 +138,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$3, 499 / mo' },
     features: [;
       'Self - service templates',
-
 
     useCases: ['Secure remote work', 'Lateral movement prevention'],
     link: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
@@ -165,7 +159,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     ],
     integrations: ['GitHub', 'ArgoCD', 'Backstage'],
 
-
     use_cases: ['Developer productivity', 'Standardized delivery'],
     link: 'https://ziontechgroup.com / services / platform - engineering - foundation',
     real_service: true,
@@ -182,7 +175,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Data & Analytics',
     pricing: { starter: '$5, 999 / mo' },
     features: [;
-
 
     useCases: ['Developer productivity', 'Standardized delivery'],
     link: 'https://ziontechgroup.com/services/platform-engineering-foundation',
@@ -219,7 +211,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Cloud Services',
     pricing: { starter: '$2, 999 / mo' },
     features: [;
-
 
     useCases: ['Faster analytics', 'Federated governance'],
     link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
@@ -258,7 +249,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     features: [;
       'Detections - as - code',
 
-
     useCases: ['Datacenter exit', 'Hybrid cloud enablement'],
     link: 'https://ziontechgroup.com/services/cloud-landing-zone',
     realService: true,
@@ -294,7 +284,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$1, 999 / mo' },
     features: [;
 
-
     useCases: ['Compliance readiness', 'Breaches prevention'],
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
     realService: true,
@@ -329,7 +318,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     category: 'Cloud Services',
     pricing: { starter: '$2, 499 / mo' },
     features: [;
-
 
       'Budget guardrails',
       'Anomaly alerts',
@@ -396,7 +384,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     real_service: true,
     launch_date: '2025 - 11 - 01',
 
-  
       'Golden pipelines',
       'RBAC and policy packs',
       'Cost guardrails',
@@ -446,8 +433,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     ],
     integrations: ['Okta', 'Azure AD', 'Google Workspace'],
 
-
-
 }];	id: string;
 	name: string;
 
@@ -457,8 +442,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 	tagline?: string;
 	description: string;
-
-
 
 	tagline?: string;
 	description: string;
@@ -473,7 +456,6 @@ export type EnterpriseITSolution =
 		starter: string, // e && e.g. "$2,999/mo"
 		professional?: string;
 		enterprise?: string
-
 
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
@@ -491,7 +473,6 @@ export type EnterpriseITSolution =
 	features: string[],
 	integrations?: string[],
 	useCases?: string[],
-
 
 	link: string, // canonical internal link under /services/*
 	realService?: boolean;
@@ -518,7 +499,6 @@ export type EnterpriseITSolution =
 		rating: 4 && 4.8
 	};
 
-	
 		id: 'enterprise-data-mesh';
 		name: 'Enterprise Data Mesh'
 		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.';

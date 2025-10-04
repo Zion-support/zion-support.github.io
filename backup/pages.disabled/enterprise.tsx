@@ -11,5 +11,3 @@ import {
   CheckCircle,}
 } from 'lucide-react';
 
-
-

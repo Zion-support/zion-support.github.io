@@ -28,7 +28,6 @@ interface ComponentProps {
   children?: React.ReactNode;
   [key: string]: unknown}
 
-
 import Link from 'next/link';
 import { Button } from '../ui/Button';
 const Footer: React.FC = () => {

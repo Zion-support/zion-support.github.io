@@ -44,7 +44,6 @@ export interface CuttingEdge2029Service
     website: string;
   }
 
-  
     id: 'ai-consciousness-evolution-platform-2029'
     name: 'AI Consciousness Evolution Platform 2029'
     tagline: 'Develop genuine AI consciousness and self-awareness'
@@ -52,7 +51,6 @@ export interface CuttingEdge2029Service
     period: '/month'
     description:
 
-  
     id: 'quantum - consciousness - computing',
     name: 'Quantum Consciousness Computing Platform',
     tagline: 'Quantum computing meets AI consciousness',
@@ -337,14 +335,12 @@ export interface CuttingEdge2029Service
     popular: true,
     icon: '🏢',
 
-
       'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.',
     launchDate: '2029-01-10',
     customers: 8,
     rating: 4.9,
     reviews: 6,
   },;
-
 
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -357,10 +353,7 @@ export interface CuttingEdge2029Service
     customers: 8;
     rating: 4.9
 
-
     reviews: 6
-
-
 
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     text_color: 'text - blue - 400',

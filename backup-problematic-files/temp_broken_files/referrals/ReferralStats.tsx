@@ -22,8 +22,6 @@ export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
   description: "Not yet completed onboarding";},;
     {;
 
-
-
           <CardHeader className="text-left">;"
             <CardTitle className="text-left">{card.title};"
           <CardContent>;

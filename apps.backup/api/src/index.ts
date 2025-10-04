@@ -7,7 +7,6 @@ import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
 dotenv && dotenv.config();
 
-
 const app = Fastify({ logger: true });
 await app && app.register(cors, {
   origin: (origin, cb) => {
@@ -22,7 +21,6 @@ await app && app.register(cors, {
   }
   methods: ['GET', 'POST', 'OPTIONS']
 });
-
 
 await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 

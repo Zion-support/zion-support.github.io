@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { servicesCatalog } from '../../data/services';
 
-
 const "Sidebar": React.FC = () => {
     <aside className=\"hidden lg:block w-72 shrink-0\" />
 const \"Sidebar\": React.FC = () => {

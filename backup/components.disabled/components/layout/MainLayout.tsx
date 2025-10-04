@@ -48,7 +48,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 export default MainLayout;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-
 interface MainLayoutProps {
   children: React.ReactNode;
   title?: string;

@@ -125,18 +125,12 @@ const backupPath = findBestBackup(pagePath);
       }
     }
 
-
-
-    
-
-
     // Create a backup of the current corrupted file
 
     const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`
     fs.writeFileSync(corruptedBackupPath, currentContent)
     // Restore the page;
     fs.writeFileSync(pagePath, backupContent)
-
 
       corruptedBackup: corruptedBackupPath
 '),
@@ -177,7 +171,6 @@ if ( {) {
     return {;
       restored: true,;
       backupUsed: backupPath,;
-
 
     }
   } catch (error) {}`
@@ -230,7 +223,6 @@ function fixSpecificPages() {
       }
       console.log(`⚠️  Page not "found": ${pagePath}`)`      results.failed++
 
- 
 },
   // // // console.log('🚀 Starting targeted page restoration...'),'
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),`  for (const pagePath of corruptedPages) {
@@ -257,7 +249,6 @@ function fixSpecificPages() {
 
     }
 
-
     console.log(`\n🔍 Checking: ${pagePath}`)
     const result = restorePage(pagePath)
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
@@ -265,11 +256,9 @@ function fixSpecificPages() {
     console.log(`\n🔍 Checking: ${pagePath}`),
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
 
-
     const result = restorePage(pagePath),
     const result = restorePage(pagePath),
     const result = restorePage(pagePath),
-
 
     if (result.restored) {
       results.restored++,
@@ -429,7 +418,6 @@ if ({
   fixSpecificPages()
 }
 
-
 // Function to fix specific corrupted pages;
 /**
  * fixSpecificPages - Function description
@@ -518,7 +506,6 @@ module.exports = {;
 
 };
 
-
 module.exports = {
 
   restore_page,
@@ -526,9 +513,7 @@ module.exports = {
 
   findBestBackup;
 
-
 };
-
 
 main
 

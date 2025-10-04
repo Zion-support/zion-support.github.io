@@ -6,8 +6,6 @@ import { services, getServicesByCategory } from '../../data/services';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
-
-
   return (
     <MainLayout;
 title=\"Expanded Services Catalog - Zion Tech Group\"

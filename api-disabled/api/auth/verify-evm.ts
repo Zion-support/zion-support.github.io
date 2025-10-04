@@ -1,7 +1,5 @@
 
 
-
-
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -10,12 +8,9 @@
       return res && res.status(401).json({ error: "Invalid signature" });
     }
 
-
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
-
-
 
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
@@ -33,17 +28,10 @@
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
 
-
   }
 
 }
 
-
-
-
-
   }
 }
-
-
 

@@ -11,16 +11,12 @@ interface TalentCardHeaderProps {;
   yearsExperience:number;
 }
 
-
   yearsExperience;)
 } TalentCardHeaderProps) {;
   return (;"
     <div className="text-left">;"
 </div>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
-
-
-
 
           <TalentCardAvailability availabilityType={availabilityType} />;
 
@@ -31,5 +27,4 @@ interface TalentCardHeaderProps {;
 }fullName= {;"  fullName ";"}/> <div className="text-left" > <div className="text-left" > <h3 className="text-left" > {;"
   /* AI score could be used for verification badge */ ;"}{";"  yearsExperience > 5 && (<BadgeCheck className="text-left" aria-label="Verified Expert" /> ;"
 }</h3> <TalentCardAvailability availabilityType= {;
-
 

@@ -8,7 +8,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
           content="Deploy, A, I-powered, hype, r-personalization, that, understands each, customer, individually. Achieve, 9, 7.8% satisfaction, score, s, increase, engagement, by 12.4x, reduce, churn, by 89%, and, driv, e $3.2B+ in, incremental, revenue through, truly, personalized experienc, e, s." /><me, t, a
   na, m, e="keywor, d, s"
           content="AI, personalizatio, n, customer, experienc, e, hyp, e, r-personalizati, o, n, customer, engagemen, t, AI, CX, platform, behavioral, A, I, customer, journe, y, experience, optimizatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-hyp, e, r-personaliz, e, d-custom, e, r-experien, c, e/>"
-=======
           content="AI, personalizatio, n, customer, experienc, e, hyp, e, r-personalizati, o, n, customer, engagemen, t, AI, CX, platform, behavioral, A, I, customer, journe, y, experience, optimizatio, n"
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-hyp, e, r-personaliz, e, d-custom, e, r-experien, c, e" />";
@@ -21,7 +20,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
   r: te, x, t-pi, n, k-300, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="mr-2 h-4 w-4  />
-=======
             <ArrowLeft, className="mr-2 h-4 w-4" />";
             Back, to, Blog;
           </Li, n, k>
@@ -33,7 +31,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
               <span, className="te, x, t-gr, a, y-4, 0, 0">Octobe, r, 1, 20, 2, 5</sp, a, n>";
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-ro, s, e-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-ro, s, e-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t">";
               Hyp, e, r-Personalized, AI, Customer Experie, n, c
   e: T, h, e $3.2B, Revenue, Engine
@@ -63,7 +60,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
                 </li>
                 <li, className="flex, item, s-start, ga, p-3">
                   <Users, className="h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0  />
-=======
           <div, className="prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e">";
             <div, className="bg-gradie, n, t-to-r, fro, m-pi, n, k-5, 0, 0/10, t, o-ro, s, e-5, 0, 0/10, border, border-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-8, m, b-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, flex, items-center, ga, p-3">";
@@ -97,7 +93,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
   o, n, e-si, z, e-fi, t, s-all, experiences, that feel, robotic, and irreleva, n, t.
               </p>
               <p, className="te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">
-=======
                 nee, d, s, and, 7, 6% get, frustrated, when experiences, are, n't, personalize, d. Yet, most, enterprises still, deliver, generic, ';
                 o, n, e-si, z, e-fi, t, s-all, experiences, that feel, robotic, and irreleva, n, t.
               </p>
@@ -116,7 +111,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
                   AI, fuses, data from, every, touchpoint—w, e, b, mobi, l, e, call, cente, r, in-sto, r, e, ema, i, l, soci, a, l—into, unified, customer
   profiles, that, capture complete, behavioral, history, preferenc, e, s, sentime, n, t, and, contex, t. Re, a, l-time, identit, y
   resolution, links, anonymous and, known, sessions, providing, a, holistic view, of, each custom, e, r's, journe, y.;
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-pi, n, k-3, 0, 0">The, Hype, r-Personalization, Platform, Architecture</h2>";
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20">";
@@ -151,7 +145,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0">3. Re, a, l-Time, Experience, Orchestration</h3>
                 <p, className="te, x, t-gr, a, y-300, m, b-4">
                   AI, agents, dynamically compose, personalized, experiences across, all, channels based, on, predicted customer, inten, t;
-=======
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20">";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0">3. Re, a, l-Time, Experience, Orchestration</h3>";
                 <p, className="te, x, t-gr, a, y-300, m, b-4">";
@@ -187,7 +180,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
                 <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-5, 0, 0/20, t, o-ro, s, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-pi, n, k-5, 0, 0/30">
                   <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">Leadin, g, E-Commerce, Platfor, m</h3>
                   <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-pi, n, k-3, 0, 0">Enterprise, Success, Stories</h2>";
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
@@ -219,7 +211,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0">Pha, s, e 
   1: Foundati, o, n (Month, s, 1-2)</h3>"
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-pi, n, k-3, 0, 0">Implementation, Roadma, p</h2>";
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20">";
@@ -235,7 +226,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0">Pha, s, e 
   2: Pil, o, t (Month, s, 3-4)</h3>"
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">
-=======
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20">";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0">Phas, e, 2: Pil, o, t (Month, s, 3-4)</h3>";
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">";
@@ -249,7 +239,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0">Pha, s, e 
   3: Sca, l, e (Month, s, 5-12)</h3>"
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">
-=======
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20">";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0">Phas, e, 3: Sca, l, e (Month, s, 5-12)</h3>";
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">";
@@ -273,7 +262,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
                 reven, u, e. With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is n, o, t
   whether, to, deploy AI-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors captu, r, e
   your, customer, s' hear, t, s.;
-=======
               <p, className="te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">";
                 The, competitive, advantage is, overwhelmin, g: 12x, higher, engagement, 89% lower, chur, n, a, n, d $3.2B+ in, incrementa, l 
                 reven, u, e. With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is n, o, t
@@ -294,7 +282,6 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5(): vo, i, 
               >
                 Schedule, Your, CX Transformation, Assessmen, t;
                 <ArrowLeft, className="ml-2 h-5 w-5, rotat, e-1, 8, 0  />
-=======
                 <ArrowLeft, className="ml-2 h-5 w-5, rotat, e-1, 8, 0" />";
               </Li, n, k>
             </d, i, v>

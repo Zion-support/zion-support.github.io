@@ -2,8 +2,6 @@
 
 const 'ReviewForm': React.FC<Props> = ({ initial   ,;
 
-
-
 const [text, set_text] = useState ('');
   }
   'initial': Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;'
@@ -11,18 +9,11 @@ const [text, set_text] = useState ('');
 const 'ReviewForm': React.FC < Props> = ({ initial   ,;
 }) => {
 
-
-
   }
-
-
-
-
 
 const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');'
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');'
-
 
 return (;
 const data = await res.json ();

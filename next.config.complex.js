@@ -12,7 +12,6 @@ const next_config = {
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
 
-
   },
   
   // Output configuration

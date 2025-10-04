@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
   description:z.string().optional(),;
   technologies:z.string().optional(),;
   image_url:z.string().optional(),;
@@ -21,12 +15,6 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
     resolver: zodResolver(projectSchema);,;
     defaultValues:{;
 
-
-
-
-
-
-
         technologies:data.technologies ? ;
           data.technologies.split().map(tech => tech.trim()) :[],;
         image_url: data.image_url;,;
@@ -34,16 +22,10 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
         demo_url: data.demo_url || undefined;,;
         pdf_url: data.pdf_url;},;
 
-
-
-
-
 )
       <form onSubmit={form.handleSubmit(onSubmit)} className="text-left">;"
 </form>
         <FormField;
-
-
 
 "
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;"
@@ -60,29 +42,6 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
 
         ;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </Button>;
 
         </div>;
@@ -95,7 +54,4 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
           <Button type="submit" disabled={isLoading}>;"
             {isLoading && <Loader2 className="text-left" />}"
 </Loader2>
-
-
-
 

@@ -5,7 +5,6 @@ interface AboutProps {
 }
   className?: string;
 
-
 const About: React.FC<AboutProps> = ({ className ;}) => {
 
     <div className={className || }>

@@ -2,7 +2,6 @@ import React from 'react';
 
 import * as React from 'react';
 
-
 interface BlogProps {
   // Add props here as needed
 }
@@ -16,7 +15,6 @@ interface BlogProps {
   // Add props here as needed
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
 
 interface BlogProps {
   // Add props here as needed

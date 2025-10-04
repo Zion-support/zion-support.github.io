@@ -6,10 +6,7 @@ import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
 
-
-
 const FILE = "jobs && jobs.json";
-
 
 export default async function handler(
 
@@ -20,9 +17,6 @@ export default async function handler(
 
   if (!rateLimit(req, res)) return;
 
-
-
-
   if (req && req.method === "GET") {
 
     const jobs = readJsonFile<Job[]>(FILE, []);
@@ -30,7 +24,6 @@ export default async function handler(
     return;
 
   }
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4, as, uuidv4  } from './uuid';
@@ -60,8 +53,6 @@ if ( {) {
   $2
 }
 
-
-
     const {
       title
       description
@@ -85,7 +76,6 @@ if ( {) {
     }
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
 
-
     if (!job && job.category) {
       const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
 
@@ -97,7 +87,6 @@ if ( {) {
             s && s.includes("langchain") ||
             s && s.includes("rag"),
 
-
         )
       )
         job && job.category = "LLM App";
@@ -105,11 +94,9 @@ if ( {) {
         skills && skills.some(
           (s) =>
 
-
             s && s.includes("aws") ||
             s && s.includes("kubernetes") ||
             s && s.includes("terraform"),
-
 
         )
       )
@@ -124,16 +111,11 @@ if ( {) {
     return;
   }
 
-
-
     }
 
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
-
-
-
 
     res.status(201).json({ job });
     return
@@ -153,19 +135,12 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-
-
   }
-
 
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 
-
-
 }
-
-
 
       client_email,
     } = req.body || {}
@@ -232,13 +207,8 @@ if (=>) {
   res.status (405).end ("Method Not Allowed");
 }
 
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
-
 

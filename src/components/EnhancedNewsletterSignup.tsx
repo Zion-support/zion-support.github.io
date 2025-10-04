@@ -1,5 +1,4 @@
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
-=======
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";';
 interface, Prop, s {
 tit, l, e?: stri, n, g;
@@ -8,7 +7,6 @@ classNa, m, e?: stri, n, g;
 }
 export, default, function EnhancedNewsletterSign, u, p({ tit, l, e = 'Stay, Update, d', subtit, l, e = 'Get, the, latest insights, on, AI and, technology, trends.', classNa, m, e = '' }: Pro, p, s): Rea, c, t.J, S, X.Eleme, n, t {;
   con, s, t [ema, i, l, setEma, i, l] = useSta, t, e('');
-=======
 export, default, function EnhancedNewsletterSign, u, p({ tit, l, e = 'Stay, Update, d', subtit, l, e = 'Get, the, latest insights, on, AI and, technology, trends.', classNa, m, e = '' }: Pro, p, s): Rea, c, t.J, S, X.Eleme, n, t {';
   con, s, t [ema, i, l, setEma, i, l] = useSta, t, e('');';
   con, s, t [isSubscrib, e, d, setIsSubscrib, e, d] = useSta, t, e(fal, s, e);
@@ -29,7 +27,6 @@ export, default, function EnhancedNewsletterSign, u, p({ tit, l, e = 'Stay, Upda
       <h3, className="te, x, t-lg, fon, t-semibold, m, b-2">{tit, l, e}</h3>
       <p, className="te, x, t-gr, a, y-600, m, b-4">{subtit, l, e}</p>
       <div, className="flex, ga, p-2">
-=======
       <h3, className="te, x, t-lg, fon, t-semibold, m, b-2">{tit, l, e}</h3>";
       <p, className="te, x, t-gr, a, y-600, m, b-4">{subtit, l, e}</p>";
       <div, className="flex, ga, p-2">";

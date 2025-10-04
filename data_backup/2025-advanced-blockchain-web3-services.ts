@@ -1,7 +1,6 @@
 export: interface AdvancedBlockchainWeb3Service {
   id: string;
 
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;

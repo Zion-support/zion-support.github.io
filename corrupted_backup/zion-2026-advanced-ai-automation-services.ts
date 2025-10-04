@@ -79,9 +79,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
     ],"popular": true,"icon": '🚛',"color": 'from-blue-600 to-green-700',"textColor": 'text-blue-400',"link": '"https"://ziontechgroup.com/ai-autonomous-transportation-logistics-platform-2026',"marketPosition": 'Competitive with Uber Freight ($0.15/mile), Convoy ($0.12/mile), and Transfix ($0.14/mile). Our "advantage": Full autonomy, AI optimization, and predictive logistics strategies.',"targetAudience": 'Transportation companies, Logistics providers, Delivery services, Fleet operators, Supply chain teams',"trialDays": 45,"setupTime": '3 weeks',"category": 'Transportation & Logistics',"realService": true,technology['OpenAI GPT-4', 'Anthropic Claude', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Kubernetes', 'IoT'],integrations['Uber Freight', 'Convoy', 'Transfix', 'Slack', 'Microsoft Teams', 'GPS systems', 'Fleet management platforms'],useCases['Autonomous transportation', 'Route optimization', 'Fleet management', 'Logistics optimization', 'Delivery scheduling', 'Cost optimization'],"roi": 'Average customer sees 900% ROI within 18 months through autonomous transportation operations and logistics optimization.',competitors['Uber Freight', 'Convoy', 'Transfix', 'C.H. Robinson', 'XPO Logistics'],"marketSize": '$27.3B market',"growthRate": '320% annual growth',"variant": 'ai-logistics',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Full-stack autonomous transportation platform with AI logistics engine, route optimization, fleet management, and enterprise transportation integration.',"launchDate": '2026-02-10',"customers": 1400,"rating": 4.9,"reviews": 720"
 ];
 
-
 }
-
 
 export default zion2026AdvancedAIAutomationServices}}
 

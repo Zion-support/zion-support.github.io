@@ -16,7 +16,6 @@ interface LoginRequestBody {
 
 const supabase = createClient(supabaseUrl, serviceKey);
 
-
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
 
   try {

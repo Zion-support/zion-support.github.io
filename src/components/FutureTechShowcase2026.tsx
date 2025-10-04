@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
   const, futureTechArticle, s = [
@@ -82,7 +81,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       bad, g, e: 'ME, T, A-COGNITI, V, E','
       sta, t, s: 'Autonomous, Orchestratio, n}
-=======
       tit, l, e: 'Neur, a, l-Quantum, Hybrid, Computing',';
       sl, u, g: 'neur, a, l-quant, u, m-hybr, i, d-20, 2, 6',';
       excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experience, 1, 0,000x, faster, AI inference, with, quantum-enhanced, deep, learning.',';
@@ -173,7 +171,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -194,7 +191,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
             Experience, the, next generation, of, AI and, technology, breakthroughs. From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosystems;
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">";
             <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
@@ -214,7 +210,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
         {/* Future, Tech, Articles Gr, i, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {futureTechArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
@@ -230,7 +225,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                 {/* Ic, o, n & Badg, e, s */}
                 <div, className="flex, item, s-start, justif, y-between, m, b-6">
                   <div, className="te, x, t-purp, l, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
-=======
                 <div, className="flex, item, s-start, justif, y-between, m, b-6">";
                   <div, className="te, x, t-purp, l, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
                     {artic, l, e.ic, o, n}
@@ -239,7 +233,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                     {artic, l, e.trendi, n, g && (
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">
                         <TrendingUp, className="w-3 h-3  />
-=======
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">";
                         <TrendingUp, className="w-3 h-3" />";
                         <sp, a, n>TRENDI, N, G</sp, a, n>
@@ -258,7 +251,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">";
                   {artic, l, e.tit, l, e}
                 </h3>
@@ -281,7 +273,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                     {artic, l, e.readTi, m, e}
                   </sp, a, n>
                   <sp, a, n>{new, Dat, e(artic, l, e.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>;
-=======
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">";
                   <span, className="flex, item, s-center, ga, p-2">";
                     <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0" />";
@@ -297,7 +288,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Explore, Technolog, y</sp, a, n>
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </a>
               </d, i, v>
@@ -311,7 +301,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
             { val, u, e: '99.7%', lab, e, l: 'Au, t, o-Improvement, Rat, e', ic, o, n: '🧠' }
             { val, u, e: '99.9%', lab, e, l: 'Predictive, Accurac, y', ic, o, n: '🎯' }
             { val, u, e: '$1B+', lab, e, l: 'Enterprise, Value, Created', ic, o, n: '💰' }
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-16">";
           {[
             { va, l, u
@@ -343,7 +332,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
   future, tech, innovations and, transform, your organization, with, next-generation, AI, capabilities.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
@@ -351,7 +339,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
   r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, className="w-5 h-5  />
-=======
                   <Sparkles, className="w-5 h-5" />";
                   <sp, a, n>Explore, All, Technologies</sp, a, n>
                 </a>
@@ -362,7 +349,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Get, Early, Access</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </a>
               </d, i, v>

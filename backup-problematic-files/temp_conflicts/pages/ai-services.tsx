@@ -7,27 +7,9 @@ import SEO from '../components/SEO';
 const aiServices = [;
   {;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     icon:<Shield className="text-left" />,;
     href:'/ai-ethics-governance-framework',;
     features:['Ethical GuidelinesGovernance Framework', 'Compliance Monitoring'];
-
-
-
 
         <title>AI Services | Zion Tech Group</title>;"
         <meta name="description" content="LLM apps, RAG, MLOps, and AI research enablement with transparent pricing and measurable outcomes." />;"

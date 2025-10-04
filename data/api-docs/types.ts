@@ -49,10 +49,8 @@ export interface EndpointSpec {;
 
   versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
 
-
 export interface SectionSpec 
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
-
 
 export interface SectionSpec {;
 
@@ -88,7 +86,6 @@ export interface ApiDocsSpec {;
   default_version: string;
   sections: SectionSpec[];
 
-
 export type Visibility = 'public' | 'partner' | 'internal';
 export interface CodeSample 
   language: 'curl' | 'javascript' | 'python'
@@ -121,16 +118,13 @@ export interface EndpointSpec
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
 
-
   lastUpdatedIso: string
 
 }
 
   lastUpdatedIso: string
 
-
 }
-
 
 }
 }
@@ -141,10 +135,6 @@ export interface EndpointSpec
 
   lastUpdatedIso: string;
 }
-
-
-
-
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
@@ -198,9 +188,6 @@ export interface ApiDocsSpec {;
   sections: SectionSpec[];
   lastUpdatedIso: string;
 }
-
-
-
 
   lastUpdatedIso: string;
 }

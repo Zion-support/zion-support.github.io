@@ -17,7 +17,6 @@ interface Event {
   target: EventTarget | null;
 type EventListener = (event: Event) => void;
 
-
 interface EventTarget {
   // TODO: Implement
   addEventListener (type: string, listener: EventListener): void;
@@ -67,7 +66,6 @@ if ( {) {
 
         }
 
-
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {
@@ -76,8 +74,6 @@ if ( {) {
     } catch (error) {
       if (onError) {
         onError(error as Error);
-
-
 
       }
     }
@@ -92,13 +88,9 @@ if ( {) {
 
   }, [handleMessage]);
 
-
-
 }
 
 }
-
-
 
 }
 
@@ -117,8 +109,6 @@ if ( {) {
 }
 
 }
-
-
 
 }
 

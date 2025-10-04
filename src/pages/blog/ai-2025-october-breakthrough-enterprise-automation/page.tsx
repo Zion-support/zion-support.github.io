@@ -22,7 +22,6 @@ const, EnterpriseAutomation202, 5 = () => {
             </d, i, v>
             <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
               AI-Powered, Enterprise, Automation 20, 2, 5: <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
         <meta name="descripti, o, n" content="Transform, your, enterprise with, AI, automation in, 202, 5. Complete, guide, covering implementation, strategie, s, ROI, optimizatio, n, and, rea, l-world, case, studies for, 40, 0%+ efficiency, gain, s." />";
         <meta, propert, y="og: tit, l, e" content="AI-Powered, Enterprise, Automation 20, 2, 5: Complete, Implementation, Guide" />";
         <meta, propert, y="o
@@ -65,7 +64,6 @@ const, EnterpriseAutomation202, 5 = () => {
                   <p, className="te, x, t-white, tex, t-lg, leadin, g-relax, e, d">
                     Enterprise, AI, automation is, no, longer a, future, aspiration—it's, a, present necessi, t, y. Companies, implementin, g
   comprehensive, AI, automation strategies, are, seeing <stro, n, g>4, 0, 0-6, 0, 0% efficiency, gain, s</stro, n, g>
-=======
             <p, className="te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, leadin, g-relax, e, d">";
               Transform, your, enterprise with, cuttin, g-edge, AI, automation. Learn, proven, strategies for, 40, 0%+ efficiency, gain, s
               implementation, framework, s, and, rea, l-world, case, studies from, Fortune, 500 compani, e, s.
@@ -91,7 +89,6 @@ const, EnterpriseAutomation202, 5 = () => {
                   <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6, tex, t-cent, e, r">
                     <div, className="te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-400, m, b-2">4, 0, 0%+</d, i, v>
                     <div, className="te, x, t-white, tex, t-sm">Efficiency, Gain, s</d, i, v>
-=======
                 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
                   <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6, tex, t-cent, e, r">";
                     <div, className="te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-400, m, b-2">4, 0, 0%+</d, i, v>";
@@ -134,7 +131,6 @@ const, EnterpriseAutomation202, 5 = () => {
                     <li, className="flex, item, s-sta, r, t">
                       <CheckCircle, className="w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0  />
                       <span, className="te, x, t-whi, t, e">Cost, Optimizatio, n: 70% reduction, in, AI infrastructure, cost, s</sp, a, n>"
-=======
               <section, className="mb-12">";
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, Automation Revoluti, o, n: Why, 2025, Changes Everythi, n, g</h2>";
                 <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6, leadin, g-relax, e, d">";
@@ -176,7 +172,6 @@ const, EnterpriseAutomation202, 5 = () => {
                   </p>
                   <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
                   <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                     <Li, n, k
   to="/conta, c, t"
@@ -185,7 +180,6 @@ const, EnterpriseAutomation202, 5 = () => {
                     >
                       Start, Your, Transformation;
                       <ArrowRight, className="w-5 h-5  />
-=======
                       <ArrowRight, className="w-5 h-5" />";
                     </Li, n, k>
                     <Li, n, k

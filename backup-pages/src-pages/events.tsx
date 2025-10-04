@@ -72,7 +72,6 @@ return matchesType && matchesCategory && matchesStatus && matchesSearch})return 
                     type='text''                    placeholder='Search events...';
                     value={searchTerm}
 
-
                   />
                 </div>
               </div>

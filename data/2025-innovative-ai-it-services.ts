@@ -1,6 +1,5 @@
 
 
-  
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-orchestrator',
@@ -846,7 +845,6 @@
     ],
     link: 'https://ziontechgroup.com / ai - healthcare - diagnostic',
 
-
     icon: '🏥',
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
@@ -878,7 +876,6 @@
   reviews: number
 }
 
-
 ];      'Medical imaging analysis_disease diagnosis_treatment planning_patient monitoring_drug discovery_clinical research';
     ];
 
@@ -900,7 +897,6 @@
     rating: 4.9,
     reviews: 189;
   }
-
 
 export interface InnovativeAIService {;
 

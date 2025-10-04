@@ -1,7 +1,5 @@
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -12,7 +10,6 @@ export default async function handler(
 
   try {
 
-
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { match } = req && req.body as {
@@ -20,21 +17,14 @@ export default async function handler(
   };
   if (!match) return res && res.status(400).json({ error: "Missing match payload" });
 
-
   // record Zapier event
-
-
 
     s && s.events.push({
       id: eventId,
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
 
-
-
   });
-
-
 
   // log to connected CRMs as a note;
   const state = readState();
@@ -51,17 +41,10 @@ export default async function handler(
   }
 }
 
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
 }
-
-
-
 

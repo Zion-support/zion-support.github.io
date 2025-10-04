@@ -35,7 +35,6 @@ export default function Button({
     return (
       <Link href={href} className={classes}>
 
-      
     <button onClick={onClick} className={classes}>
 </button>
     </button>)`;

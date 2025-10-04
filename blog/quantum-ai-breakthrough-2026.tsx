@@ -28,7 +28,6 @@ export default function QuantumAIBreakthrough2026() {
   );
 }
 
-
 import Head from 'next/head';
 
 export default function QuantumAIBreakthrough2026() {

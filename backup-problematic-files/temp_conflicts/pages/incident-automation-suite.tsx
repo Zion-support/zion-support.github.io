@@ -7,12 +7,3 @@
   return (
     <UltraAdvancedFuturisticBackground>
 
-
-
-
-
-
-
-
-
-

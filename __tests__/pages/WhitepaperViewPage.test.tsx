@@ -7,7 +7,6 @@ import OriginalWhitepaperViewPage from '@/pages/WhitepaperViewPage' // Renamed f
 import { supabase } from @/lib/supabaseClient';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel;
 
-
   '),
   useParams: jest.fn(),
   Link: jest.fn(
@@ -34,7 +33,6 @@ jest.mock('@/pages/WhitepaperViewPage;
       // This setup is a bit complex due to mocking a hook used internally by the component being tested.;
       // It;
 
-
       return <ActualPageDefault {...props} />
     })
     useAuth: jest.fn(), // Mock useAuth here so it can be spied on/controlled per test}
@@ -44,7 +42,6 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 const mockUseParams = useParams as jest.Mock;
 const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
 // Get a reference to the mocked useAuth from the mocked module;
-
 
   beforeEach(() => 
     mockSupabaseInvoke.mockReset();
@@ -80,7 +77,6 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
       expect(screen.getByTestId(
   'mock-preview-panel')).toBeInTheDocument());'
     // Check props passed to the mocked WhitepaperPreviewPanel
-
 
     expect(mockPreviewPanel).toHaveBeenCalledWith(
       expect.objectContaining(
@@ -129,12 +125,10 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
       expect(screen.getByText(/Private: \(Admin View\)/i)).toBeInTheDocument()})
     test(
 
-
       await waitFor(() =>
         expect(screen.getByTestId(
   'mock-preview-panel')).toBeInTheDocument();'
 
       expect(mockPreviewPanel).toHaveBeenCalledWith(
-
 
 )))))))

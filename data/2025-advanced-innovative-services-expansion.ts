@@ -1138,9 +1138,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
-
-
-
     ];
     popular: true, icon: '🤖',
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
@@ -2036,7 +2033,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
   }
 ];
-
 
   }
 ];

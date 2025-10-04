@@ -23,7 +23,6 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
     c, d, n: fal, s, e;
   });
   con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<stri, n, g[]>([]);
-=======
 import, Reac, t, { useEffe, c, t } fr, o, m "rea, c, t";
 const, PerformanceOptimize, r: Rea, c, t.FC = () => {
   useEffe, c, t(() => {
@@ -131,7 +130,6 @@ bre, a, k;
       enabl, e, d: optimizatio, n, s.c, d, n;
     }
   ];
-=======
     // Preload, critical, resources
   const, preloadCriticalResource, s = () => {
       const, criticalImage, s = [
@@ -236,7 +234,6 @@ bre, a, k;
       </d, i, v>
     </d, i, v>
   );
-=======
     // Optimize, image, s
   const, optimizeImage, s = () => {
       const, image, s = docume, n, t.querySelectorA, l, l('i, m, g');

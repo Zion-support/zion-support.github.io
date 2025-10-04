@@ -542,7 +542,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     reviews: 4;
 ];
 
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;

@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
   const, enterpriseSolution, s = [
@@ -87,7 +86,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'GOVERNAN, C, E','
       featur, e, s: ['Ethical, A, I', 'Compliance, Managemen, t', 'Risk, Assessmen, t']'
-=======
       tit, l, e: 'AI-Powered, Enterprise, Automation',';
       sl, u, g: 'ai-enterpri, s, e-automati, o, n-20, 2, 6',';
       excer, p, t: 'Transform, your, enterprise with, comprehensive, AI automation, achieving, 95% process, efficienc, y. From, workflow, optimization to, intelligent, decision-making, system, s.',';
@@ -176,7 +174,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
     { val, u, e: '$2B+', lab, e, l: 'Cost, Savings, Generated', ic, o, n: <DollarSign, className="w-8 h-8" /> }
     { val, u, e: '98%', lab, e, l: 'Client, Satisfactio, n', ic, o, n: <Award, className="w-8 h-8" /> }
     { val, u, e: '24/7', lab, e, l: 'Enterprise, Suppor, t', ic, o, n: <Users, className="w-8 h-8" /> }
-=======
     { val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Client, s', ic, o, n: <Building, className="w-8 h-8" /> },";
     { val, u, e: '$2B+', lab, e, l: 'Cost, Savings, Generated', ic, o, n: <DollarSign, className="w-8 h-8" /> },";
     { val, u, e: '98%', lab, e, l: 'Client, Satisfactio, n', ic, o, n: <Award, className="w-8 h-8" /> },";
@@ -189,7 +186,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -210,7 +206,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
             Transform, your, enterprise with, our, comprehensive suite, of, AI-powered, solution, s. From, automation, to securi, t, y;
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-indi, g, o-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">";
             <Sparkles, className="w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e" />";
@@ -228,7 +223,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
           </p>
           {/* Success, Metric, s */}
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">"
-=======
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">";
             {successMetri, c, s.m, a, p((metr, i, c, ind, e, x) => (
               <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">";
@@ -248,7 +242,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
         {/* Enterprise, Solutions, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {enterpriseSolutio, n, s.m, a, p((soluti, o, n, ind, e, x) => (
@@ -264,7 +257,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                 {/* Ic, o, n & Bad, g, e */}
                 <div, className="flex, item, s-start, justif, y-between, m, b-6">
                   <div, className="te, x, t-bl, u, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
-=======
                 <div, className="flex, item, s-start, justif, y-between, m, b-6">";
                   <div, className="te, x, t-bl, u, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
                     {soluti, o, n.ic, o, n}
@@ -280,14 +272,12 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                   </sp, a, n>
                   <div, className="te, x, t-xs, tex, t-gr, a, y-5, 0, 0">
                     Industri, e, s: {soluti, o, n.indust, r, y}
-=======
                   <div, className="te, x, t-xs, tex, t-gr, a, y-5, 0, 0">";
                     Industri, e, s: {soluti, o, n.indust, r, y}
                   </d, i, v>
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">";
                   {soluti, o, n.tit, l, e}
                 </h3>
@@ -310,7 +300,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                 <div, className="mb-6">
                   <div, className="te, x, t-gr, a, y-400, tex, t-xs, m, b-2">Key, Feature, s: </d, i, v>"
                   <div, className="flex, fle, x-wrap, ga, p-1">
-=======
                 <div, className="mb-6">";
                   <div, className="te, x, t-gr, a, y-400, tex, t-xs, m, b-2">Key, Feature, s: </d, i, v>";
                   <div, className="flex, fle, x-wrap, ga, p-1">";
@@ -329,7 +318,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Explore, Solutio, n</sp, a, n>
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </a>
               </d, i, v>
@@ -348,7 +336,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
   reduce, cost, s, and, achieve, unprecedented operational, efficienc, y.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">";
                 Join, 50, 0+ leading, organizations, that trust, our, enterprise solutions, to, drive innovati, o, n
                 reduce, cost, s, and, achieve, unprecedented operational, efficienc, y.
@@ -360,7 +347,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
   r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Building, className="w-5 h-5  />
-=======
                   <Building, className="w-5 h-5" />";
                   <sp, a, n>Schedule, Enterprise, Demo</sp, a, n>
                 </a>
@@ -371,7 +357,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>View, Success, Stories</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </a>
               </d, i, v>

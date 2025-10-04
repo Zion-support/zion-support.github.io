@@ -35,7 +35,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
       highlig, h, t: "MEGA, SUCCES, S","
       impa, c, t: "$10B, Revenu, e","
       ty, p, e: "ca, s, e-stu, d, y","
-=======
 import React from "react";';
 const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
   const, revolutionaryConten, t = [
@@ -83,7 +82,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -95,7 +93,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8">
             <Sparkles, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0  />
             <span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8">";
             <Sparkles, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0" />";
@@ -107,7 +104,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
             Revolutionary, AI, Breakthroughs: The, Future, is He, r, e
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d">
-=======
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Revolutionary, AI, Breakthrough
   s: The, Future, is He, r, e
@@ -118,7 +114,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
         </d, i, v>
         {/* Content, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {revolutionaryConte, n, t.m, a, p((conte, n, t, ind, e, x) => (
             <d, i, v
@@ -142,7 +137,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
                   {conte, n, t.catego, r, y}
                 </sp, a, n>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-=======
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
                   {conte, n, t.tit, l, e}
                 </h3>
@@ -156,7 +150,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
                   <Target, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
                   <span, className="te, x, t-gre, e, n-400, fon, t-bold, tex, t-sm">
                     Impa, c, t: {conte, n, t.impa, c, t}
-=======
               <div, className="mb-6">";
                 <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l">";
                   <Target, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -173,7 +166,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
               >
                 {conte, n, t.ty, p, e === 'bl, o, g' ? 'Read, Articl, e' : 'View, Case, Study'};
                 <ArrowRight, className="w-4 h-4  />
-=======
                 {conte, n, t.ty, p, e === 'bl, o, g' ? 'Read, Articl, e' : 'View, Case, Study'}';
                 <ArrowRight, className="w-4 h-4" />";
               </Li, n, k>
@@ -190,7 +182,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
           ].m, a, p((st, a, t, ind, e, x) => (
             <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r">
               <div, className="te, x, t-3xl, m, b-2">{st, a, t.ic, o, n}</d, i, v>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12">";
           {[
             { va, l, u
@@ -220,7 +211,6 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
               Join, the, Fortune 500, companies, already transforming, their, operations with, Zion, Tech Gro, u, p's, breakthrough, AI solutio, n, s.;
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <p, className="te, x, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o">";
               Join, the, Fortune 500, companies, already transforming, their, operations with, Zion, Tech Gro, u, p's, breakthrough, AI solutio, n, s.';
             </p>

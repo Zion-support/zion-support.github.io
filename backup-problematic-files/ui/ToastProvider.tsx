@@ -1,18 +1,13 @@
 
 
-
-
   addToast: (toast: Omit<Toast, 'id'>) => string;
 
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
 
-
-
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {;
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
-
 
 const ToastContext = createContext<ToastContextValue | undefined>(undefined)
 
@@ -26,17 +21,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
 
-
-
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
-
-
-
-
-
-
 
               key={t.id}
 
@@ -45,16 +32,12 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               exit={{ opacity: 0, coordinate_y: 8, scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 400, damping: 30 }}
 
-
-
                 </div>
                 <button onClick={() => removeToast(t.id)} className="text-left">×</button>
-
 
               </div>
             </motion.div>
           ))}
-
 
 export /**
  * use_toast - Function description
@@ -64,9 +47,6 @@ function use_toast() {
   if (throw new Error ('use_toast must be used within ToastProvider')) {
   $2
 }
-
-
-
 
   return ctx;
 }

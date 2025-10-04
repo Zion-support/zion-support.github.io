@@ -1,6 +1,5 @@
 
 
-  
   id: string;
   name: string;
   tagline: string;
@@ -429,7 +428,6 @@ export const advancedITServices: AdvancedITService[] = [;
     features: [;
       'AI - powered automation',
 
-
       'Intelligent testing',
       'Predictive monitoring',
       'Performance optimization',
@@ -442,7 +440,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '⚡',
-
 
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
@@ -505,7 +502,6 @@ export const advancedITServices: AdvancedITService[] = [;
       'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
     features: [;
 
-
       'Enterprise blockchain networks',
       'Smart contract development',
       'Token management',
@@ -559,7 +555,6 @@ export const advancedITServices: AdvancedITService[] = [;
       'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
     features: [;
 
-
       'Quantum computing integration',
       'AI - powered optimization',
       'Advanced security',
@@ -573,7 +568,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🏢',
-
 
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
@@ -639,7 +633,6 @@ export const advancedITServices: AdvancedITService[] = [;
       'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.',
     features: [;
 
-
       'AI threat detection',
       'Real - time monitoring',
       'Automated response',
@@ -653,7 +646,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🔒',
-
 
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
@@ -719,7 +711,6 @@ export const advancedITServices: AdvancedITService[] = [;
       'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.',
     features: [;
 
-
       'Quantum encryption',
       'AI - powered analytics',
       'Real - time monitoring',
@@ -733,7 +724,6 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '📱',
-
 
     color: 'from - green - 600 to - teal - 700',
     text_color: 'text - green - 400',
@@ -849,7 +839,6 @@ export const advancedITServices: AdvancedITService[] = [;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
     launchDate: '2024-10-01';
     customers: 89;
-
 
     rating: 4 && 4.8,
     reviews: 45

@@ -1,14 +1,11 @@
 
 
-
  </div> </div> </div>) }
 
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
 
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
 </div>
-
-
 
 <
           <StarRating;
@@ -22,12 +19,4 @@ export default ReviewSummary;      <div>
 </div>"
           <span className="text-left">{summary.averageRating.toFixed(1)}<"
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
-
-
-
-
-
-
-
-
 

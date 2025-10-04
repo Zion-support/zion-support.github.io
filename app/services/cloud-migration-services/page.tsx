@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'Cloud Migration Services | Zion Tech Group - AWS, Azure, Google Cloud',
   description: 'Expert cloud migration services to AWS, Azure, and Google Cloud. Zero-downtime migration with cost optimization and 24/7 support.',
   keywords: 'cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration',

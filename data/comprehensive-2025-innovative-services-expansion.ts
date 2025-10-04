@@ -42,7 +42,6 @@
   reviews: number;
   benefits: string[];
 
-
   marketAdvantage: string
   capabilities: string[],
   market_advantage: string;
@@ -54,7 +53,6 @@ const contact =
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
-
 
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
@@ -200,7 +198,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // DevOps & Infrastructure Services;
 
-  
     id: 'ai - powered - devops - automation';
     name: 'AI - Powered DevOps Automation';
     tagline: 'Intelligent DevOps automation and optimization';
@@ -262,7 +259,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Edge Computing Services;
 
-  
     id: 'iot - edge - intelligence - platform';
     name: 'IoT Edge Intelligence Platform';
     tagline: 'Intelligent IoT edge computing and analytics';
@@ -324,7 +320,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Healthcare AI Services;
 
-  
     id: 'ai - medical - imaging - analysis';
     name: 'AI Medical Imaging Analysis';
 
@@ -388,7 +383,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Financial Technology Services;
 
-  
     id: 'ai - financial - risk - management';
     name: 'AI Financial Risk Management';
 
@@ -451,7 +445,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Education Technology Services;
 
-  
     id: 'ai - personalized - learning - platform';
     name: 'AI Personalized Learning Platform';
     tagline: 'Adaptive learning powered by artificial intelligence';
@@ -514,7 +507,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Supply Chain & Logistics Services;
 
-  
     id: 'ai - supply - chain - optimization';
     name: 'AI Supply Chain Optimization';
 
@@ -577,7 +569,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ;
   // Energy & Sustainability Services;
 
-  
     id: 'ai - energy - optimization - platform';
     name: 'AI Energy Optimization Platform';
 
@@ -630,8 +621,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     benefits: [;
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking';
     ];
-
-
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveInnovativeService {;

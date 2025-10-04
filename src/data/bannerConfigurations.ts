@@ -1,5 +1,4 @@
 impo, r, t { BannerConf, i, g } fr, o, m "../componen, t, s/UnifiedBannerSyst, e, m";
-=======
 impo, r, t {
 BannerConf, i, g;
 } fr, o, m "../componen, t, s/UnifiedBannerSyst, e, m";';
@@ -93,7 +92,6 @@ BannerConf, i, g;
     backgroundCol, o, r: '#0891, b, 2','
     textCol, o, r: '#ffff, f, f','
     animati, o, n: 'sca, l, e','
-=======
     id: 'ai-revoluti, o, n-20, 2, 6',';
     tit, l, e: 'AI, Revolution, 2026',';
     subtit, l, e: 'Ne, x, t-Generation, Autonomous, Systems',';
@@ -193,7 +191,6 @@ BannerConf, i, g;
   { id: 'cogniti, v, e', na, m, e: 'Cognitive, System, s', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'cogniti, v, e').leng, t, h }
   { id: 'ed, g, e', na, m, e: 'Edge, Computin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'ed, g, e').leng, t, h }
   { id: 'securi, t, y', na, m, e: 'Securi, t, y', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'securi, t, y').leng, t, h }
-=======
   { id: 'a, l, l', na, m, e: 'All, Categorie, s', cou, n, t: bannerConfiguratio, n, s.leng, t, h },';
   { id: 'ai', na, m, e: 'AI & Machine, Learnin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'ai').leng, t, h },';
   { id: 'quant, u, m', na, m, e: 'Quantum, Computin, g', cou, n, t: bannerConfiguratio, n, s.filt, e, r(b => b.catego, r, y === 'quant, u, m').leng, t, h },';
@@ -205,7 +202,6 @@ BannerConf, i, g;
 // Utility, functions, for banner, managemen, t
   export, const, getBannersByCategory = (catego, r, y: stri, n, g): BannerConf, i, g[] => {
   if (catego, r, y === 'a, l, l') return, bannerConfiguration, s;
-=======
   if (catego, r, y === 'a, l, l') return, bannerConfiguration, s;';
   return, bannerConfiguration, s.filt, e, r(bann, e, r => bann, e, r.catego, r, y === catego, r, y);
 };

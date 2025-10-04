@@ -14,6 +14,4 @@ export default function ExpandedServices2025({ }: ExpandedServices2025Props) {
 
 }
 
-
-
 }

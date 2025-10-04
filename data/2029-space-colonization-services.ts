@@ -10,7 +10,6 @@ export interface SpaceColonization2029Service
     period: '/month'
     description:
 
-  
       'Real-time interplanetary communication',
     id: 'interplanetary - communication - network',
     name: 'Interplanetary Communication Network',
@@ -274,7 +273,6 @@ export interface SpaceColonization2029Service
       'Multi - source energy harvesting',
       'AI - powered energy optimization',
 
-
       'Advanced energy storage',
       'Power distribution systems',
       'Energy efficiency monitoring',
@@ -287,14 +285,12 @@ export interface SpaceColonization2029Service
     popular: true,
     icon: '⚡',
 
-
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',
     customers: 18,
     rating: 4.8,
     reviews: 52,
   },;
-
 
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -307,10 +303,7 @@ export interface SpaceColonization2029Service
     customers: 18;
     rating: 4.8
 
-
     reviews: 52
-
-
 
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',

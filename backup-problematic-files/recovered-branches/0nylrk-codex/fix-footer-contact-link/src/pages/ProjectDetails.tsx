@@ -1,8 +1,5 @@
 
 
-
-
-
   AlertDialogTitle,;"
   AlertDialogTrigger} from "@/components/ui/alert-dialog",;""
 import { Avatar } from "@/components/ui/avatar";""
@@ -13,10 +10,6 @@ import { supabase } from "@/integrations/supabase/client";""
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";"
       const { data, error } = await supabase;
         .from("project_notes");
-
-
-
-
 
 case "offer accepted": return <Badge className="text-left">Offer Accepted;""
 case "changes requested": return <Badge variant="secondary">Changes Requested;""

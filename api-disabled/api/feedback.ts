@@ -1,15 +1,9 @@
 
 
-
-
-
 import {
   saveFeedbackFallback,
   FeedbackRecord,
 } from "../../utils/feedback/store";
-
-
-
 
 import {
   saveFeedbackFallback
@@ -79,8 +73,6 @@ if ( {) {
           client_email: FIREBASE_CLIENT_EMAIL,
           private_key: (FIREBASE_PRIVATE_KEY || "").replace (/\\n / g, "\n"),
 
-
-
         }),
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -116,10 +108,8 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
       });
     }
 
-
     const db = admin.firestore ();
     await db.collection ("interaction_feedback").doc (doc.id).set (doc);
-
 
     return true;
   } catch (e) {
@@ -127,10 +117,8 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
   }
 }
 
-
   if (req && req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req && req.body || {};
-
 
   const r = Number(rating);
   if (!r |r < 1 |r > 5) return bad(res, "rating must be 1-5");
@@ -138,15 +126,10 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
     kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
   const user = {
 
-
-
     id: (req && req.headers["x-demo-user-id"] as string) || undefined,
     role: (req && req.headers["x-demo-user-role"] as string) || undefined,
     talentSlug: (req && req.headers["x-demo-talent-slug"] as string) || undefined,
   };
-
-
-
 
   const doc: FeedbackRecord = {
     id: uuidv4()
@@ -161,10 +144,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
   if (!wrote) saveFeedbackFallback(doc);
   return ok(res, { id: doc && doc.id });
 }
-
-
-
-
 
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
@@ -234,13 +213,11 @@ async function tryWriteToFirestore(req, res) {
   try {
     const admin = require("firebase-admin"),
 
-
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
-
 
   if (req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req.body || {};
@@ -282,7 +259,4 @@ async function tryWriteToFirestore(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
 

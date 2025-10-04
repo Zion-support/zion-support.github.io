@@ -27,7 +27,6 @@
       }
     );
 
-
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
 ;

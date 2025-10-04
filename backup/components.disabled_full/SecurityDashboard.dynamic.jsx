@@ -14,7 +14,6 @@ const SecurityDashboard = dynamic(() => import('./SecurityDashboard'),{'; 'loadi
 
 </p>'
 
-
 </p>'
 
 '

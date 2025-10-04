@@ -11,7 +11,6 @@ import { TeamInvite } from '@/types';
     select: jest.fn().mockReturnThis(),
     single: jest.fn()}}));
 
-
   // Define mockInsert separately to allow chaining;
   const mockSingle = jest.fn();
   const mockSelect = jest.fn().mockReturnThis();
@@ -89,5 +88,4 @@ import { TeamInvite } from '@/types';
 
     expect(mockSelect).toHaveBeenCalled();
     expect(mockSingle).toHaveBeenCalled()})});
-
 

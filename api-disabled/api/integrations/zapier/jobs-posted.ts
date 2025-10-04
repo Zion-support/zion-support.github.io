@@ -1,7 +1,5 @@
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,16 +13,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const events = state && state.events.filter(
     (e) => e && e.type === "zion && zion.job.posted" && e && e.timestamp > sinceTs,
 
-
   );
   res && res.status(200).json({ events });
 }
-
-
-
-
-
-
 
   const { since } = req.query as { since?: string }
   const state = readState();
@@ -34,10 +25,4 @@ const events = state && state.events.filter(
   );
   res && res.status(200).json({ events });
 }
-
-
-
-
-
-
 

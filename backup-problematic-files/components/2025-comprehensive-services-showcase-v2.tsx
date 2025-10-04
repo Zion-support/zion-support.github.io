@@ -155,7 +155,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-left";
@@ -176,7 +175,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-left";
@@ -184,7 +182,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-
 
           >
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.

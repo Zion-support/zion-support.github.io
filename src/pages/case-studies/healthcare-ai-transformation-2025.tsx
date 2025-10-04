@@ -1,6 +1,5 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 import, Header, from "../../componen, t, s/Head, e, r";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";";
@@ -18,7 +17,6 @@ const, HealthcareAITransformatio, n = () => {
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k">";
         <Head, e, r   />
         <article, className="container, m, x-auto, p, x-6, p, y-20">
-=======
         <article, className="container, m, x-auto, p, x-6, p, y-20">";
           {/* Back, Lin, k */};
           <Li, n, k
@@ -26,7 +24,6 @@ const, HealthcareAITransformatio, n = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
             <ArrowLeft, className="w-4 h-4, m, r-2" />";
             Back, to, Case Studi, e, s;
           </Li, n, k>
@@ -43,7 +40,6 @@ const, HealthcareAITransformatio, n = () => {
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
               Healthcare, AI, Transformation: <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, vi, a-pi, n, k-400, t, o-bl, u, e-400, m, t-2">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
               Healthcare, AI, Transformatio
   n: <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, vi, a-pi, n, k-400, t, o-bl, u, e-400, m, t-2">";
@@ -60,7 +56,6 @@ const, HealthcareAITransformatio, n = () => {
               <div, className="bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r">
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2">$12, 4, M</d, i, v>
                 <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">Annual, Cost, Savings</d, i, v>
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6">";
               <div, className="bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r">";
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2">$12, 4, M</d, i, v>";
@@ -124,7 +119,6 @@ const, HealthcareAITransformatio, n = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <span, className="te, x, t-r, e, d-400, m, t-1">•</sp, a, n>
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">🏥 Client, Profil, e</h2>";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30">";
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
@@ -204,7 +198,6 @@ const, HealthcareAITransformatio, n = () => {
                     </li>
                     <li, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
                 <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">";
@@ -234,7 +227,6 @@ const, HealthcareAITransformatio, n = () => {
                 <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">
                     <Zap, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
-=======
                 <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">";
                     <Zap, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
@@ -255,7 +247,6 @@ const, HealthcareAITransformatio, n = () => {
                     </li>
                     <li, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <ul, className="spa, c, e-y-2, tex, t-sm">";
                     <li, className="flex, item, s-center, ga, p-2">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -274,7 +265,6 @@ const, HealthcareAITransformatio, n = () => {
                 <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">
                     <Target, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">";
                     <Target, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
@@ -295,7 +285,6 @@ const, HealthcareAITransformatio, n = () => {
                     </li>
                     <li, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <ul, className="spa, c, e-y-2, tex, t-sm">";
                     <li, className="flex, item, s-center, ga, p-2">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -314,7 +303,6 @@ const, HealthcareAITransformatio, n = () => {
                 <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-r, e, d-5, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">
                     <Users, className="w-6 h-6, tex, t-r, e, d-4, 0, 0  />
-=======
                 <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-r, e, d-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">";
                     <Users, className="w-6 h-6, tex, t-r, e, d-4, 0, 0" />";
@@ -335,7 +323,6 @@ const, HealthcareAITransformatio, n = () => {
                     </li>
                     <li, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <ul, className="spa, c, e-y-2, tex, t-sm">";
                     <li, className="flex, item, s-center, ga, p-2">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -363,7 +350,6 @@ const, HealthcareAITransformatio, n = () => {
                     <div, className="te, x, t-5xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2">$12, 4, M</d, i, v>
                     <div, className="te, x, t-lg, tex, t-white, fon, t-semibold, m, b-1">Total, Saving, s</d, i, v>
                     <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">14.3% cost, reductio, n</d, i, v>
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">📊 Transformational, Result, s</h2>";
               <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/40, m, b-8">";
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">💰 Financial, Impac, t (Annu, a, l)</h3>";
@@ -391,7 +377,6 @@ const, HealthcareAITransformatio, n = () => {
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4">⚡ Operational, Efficienc, y</h3>
                   <ul, className="spa, c, e-y-3">
                     <li, className="flex, justif, y-betwe, e, n">
-=======
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4">⚡ Operational, Efficienc, y</h3>";
@@ -452,7 +437,6 @@ const, HealthcareAITransformatio, n = () => {
                 <p, className="te, x, t-2xl, tex, t-white, fon, t-semibold, italic, mb-6">
                   "This, AI, transformation has, been, nothing short, of, revolutionary for, our, network. ";
                   We're, providing, better ca, r, e, faster, servic, e, and, spendin, g $124M, less, per ye, a, r. ;
-=======
             <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, rounde, d-2x, l, p-10, borde, r-2, borde, r-bl, u, e-5, 0, 0/40">";
               <div, className="te, x, t-center, m, b-6">";
                 <div, className="te, x, t-6xl, m, b-4">💬</d, i, v>";
@@ -471,7 +455,6 @@ const, HealthcareAITransformatio, n = () => {
             <section, className="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-r, e, d-5, 0, 0/40, tex, t-cent, e, r">
               <Heart, className="w-1, 6, h-16, tex, t-r, e, d-400, m, x-auto, m, b-6  />
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-6">
-=======
             <section, className="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-r, e, d-5, 0, 0/40, tex, t-cent, e, r">";
               <Heart, className="w-1, 6, h-16, tex, t-r, e, d-400, m, x-auto, m, b-6" />";
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-6">";
@@ -483,7 +466,6 @@ const, HealthcareAITransformatio, n = () => {
   your, organizatio, n.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <Li, n, k
   to="/conta, c, t"
@@ -491,7 +473,6 @@ const, HealthcareAITransformatio, n = () => {
   r:sca, l, e-105, shado, w-lg"
                 >
                   <Heart, className="w-5 h-5  />
-=======
                   <Heart, className="w-5 h-5" />";
                   Schedule, Healthcare, AI Consultati, o, n;
                 </Li, n, k>
@@ -501,7 +482,6 @@ const, HealthcareAITransformatio, n = () => {
   r:sca, l, e-1, 0, 5"
                 >
                   <TrendingUp, className="w-5 h-5  />
-=======
                   <TrendingUp, className="w-5 h-5" />";
                   View, More, Success Stori, e, s;
                 </Li, n, k>

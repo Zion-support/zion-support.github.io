@@ -1,27 +1,17 @@
 
 
-
-
-
-
-
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
 ;
 // Define schema for form validation;
 
-
-
 </typeof>
-
 
     resolver: zodResolver(educationSchema);,;
     defaultValues:{;
 
       location:''}}),;
-
-
 
 )
       <form onSubmit={form.handleSubmit(handleSubmit)} className="text-left">;"
@@ -34,17 +24,4 @@ import { Education } from '@/types/resume';
 "
                   <Input placeholder="University of California, MIT, etc." {...field} />;"
                 <FormMessage />;
-
-
-
-
-
-
-
-
-
-
-
-
-
 

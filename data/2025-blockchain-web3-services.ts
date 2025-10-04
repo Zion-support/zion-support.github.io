@@ -1,6 +1,5 @@
 
 
-  
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
     ],
     realImplementation: true,
@@ -19,7 +18,6 @@ export interface BlockchainWeb3Service {;
     trialDays: number;
     setupTime: string;
 
-  
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
     ],
     realImplementation: true,
@@ -478,7 +476,6 @@ export interface BlockchainWeb3Service {;
   reviews: number
 }
 
-
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
     ];
 
@@ -498,7 +495,6 @@ export interface BlockchainWeb3Service {;
     rating: 4.6,
     reviews: 18000;
   }
-
 
 export interface BlockchainWeb3Service {;
 

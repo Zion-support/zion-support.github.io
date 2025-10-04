@@ -333,7 +333,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     popular: false,
     icon: '📋',
 
-
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
@@ -389,12 +388,10 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
     realImplementation: true;
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
-
 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -444,7 +441,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4.5
     rating: 4 && 4.5,
     reviews: 52
-
 
     realImplementation: true;
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
@@ -537,9 +533,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89;
     rating: 4.5,
     reviews: 52;
-
-
-
 
   }
 ];  }

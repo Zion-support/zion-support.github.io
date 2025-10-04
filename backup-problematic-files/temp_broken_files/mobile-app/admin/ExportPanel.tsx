@@ -6,12 +6,6 @@ interface ExportPanelProps {;
 }
 ;
 
-
-
-
-
-
-
     <Card className="text-left">;
 
       <CardHeader>;
@@ -21,8 +15,4 @@ interface ExportPanelProps {;
         <div className="text-left">;"
 </div>
           <div>;
-
-
-
-
 

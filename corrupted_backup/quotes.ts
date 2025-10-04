@@ -40,10 +40,8 @@
   benefits: string[];
   capabilities: string[];
 
-
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
-
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -563,9 +561,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
   }
 ];
-
-
-
 
   }
 ];

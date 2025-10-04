@@ -159,8 +159,6 @@ export default function AIDataPrivacyCompliance2025() {
   );
 }
 
-
-
 export const metadata = {
   title: 'AI Data Privacy & Compliance: Enterprise Framework 2025 | Zion Tech Group',
   description: 'Complete enterprise guide to AI data privacy and regulatory compliance. Achieve GDPR, CCPA, and AI Act compliance while maintaining 99.99% data protection.',

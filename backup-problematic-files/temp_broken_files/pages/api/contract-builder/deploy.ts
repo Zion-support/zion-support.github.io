@@ -62,7 +62,6 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
 
   const { bytecode, constructorArgs } = req.body || {},
 
-
   if (!bytecode || !constructorArgs) {
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }

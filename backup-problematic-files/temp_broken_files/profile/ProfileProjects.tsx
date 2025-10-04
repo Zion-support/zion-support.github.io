@@ -2,8 +2,6 @@
 
 import { FileText } from 'lucide-react';
 
-
-
 export function ProfileProjects({ projects } ProfileProjectsProps) {;
   return (;
     <div className="text-left">;"
@@ -15,14 +13,4 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
                   className="text-left";""
                   loading="lazy";"
                 />;
-
-
-
-
-
-
-
-
-
-
 

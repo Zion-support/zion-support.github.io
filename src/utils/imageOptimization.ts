@@ -28,7 +28,6 @@ export, const, generateSrcSet = (
   return, breakpoint, s;
     .m, a, p(wid, t, h => `${getOptimizedU, r, l(baseS, r, c, { wid, t, h })} ${wid, t, h}w`)`;`
     .jo, i, n(', ');
-=======
     .jo, i, n(', ');';
 };
 /**
@@ -41,7 +40,6 @@ export, const, generateSizes = (
     mobi, l, e: '100, v, w'
     tabl, e, t: '50, v, w'
     deskt, o, p: '33, v, w'
-=======
     mob, i, l
   e: '100, v, w',';
     tabl, e, t: '50, v, w',';
@@ -53,7 +51,6 @@ export, const, generateSizes = (
     `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tabl, e, t}`,`
     siz, e, s.deskt, o, p;
   ].jo, i, n(', ');
-=======
     `(m, a, x-wid, t, h: 640, p, x) ${siz, e, s.mobi, l, e}`,`;`
     `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tabl, e, t}`,`;`
     siz, e, s.deskt, o, p
@@ -64,14 +61,12 @@ export, const, generateSizes = (
  */
 export, const, getOptimizedUrl = (
   s, r, c: stri, n, g
-=======
   s, r, c: stri, n, g
   optio, n, s: {
 wid, t, h?: numb, e, r;
 heig, h, t?: numb, e, r;
 quali, t, y?: numb, e, r;
 form, a, t?: 'we, b, p' | 'av, i, f' | 'j, p, g' | 'p, n, g';
-=======
 form, a, t?: 'we, b, p' | 'av, i, f' | 'j, p, g' | 'p, n, g';';
 } = {}
 ): stri, n, g => {
@@ -81,7 +76,6 @@ form, a, t?: 'we, b, p' | 'av, i, f' | 'j, p, g' | 'p, n, g';';
   if (optio, n, s.heig, h, t) para, m, s.appe, n, d('h', optio, n, s.heig, h, t.toStri, n, g());
   if (optio, n, s.quali, t, y) para, m, s.appe, n, d('q', optio, n, s.quali, t, y.toStri, n, g());
   if (optio, n, s.form, a, t) para, m, s.appe, n, d('fm', optio, n, s.form, a, t);
-=======
   if (optio, n, s.wid, t, h) para, m, s.appe, n, d('w', optio, n, s.wid, t, h.toStri, n, g());';
   if (optio, n, s.heig, h, t) para, m, s.appe, n, d('h', optio, n, s.heig, h, t.toStri, n, g());';
   if (optio, n, s.quali, t, y) para, m, s.appe, n, d('q', optio, n, s.quali, t, y.toStri, n, g());';
@@ -94,7 +88,6 @@ form, a, t?: 'we, b, p' | 'av, i, f' | 'j, p, g' | 'p, n, g';';
  */
 export, const, lazyLoadImage = (i, m, g: HTMLImageEleme, n, t): vo, i, d => {
   if ('IntersectionObserv, e, r' in, windo, w) {;
-=======
   if ('IntersectionObserv, e, r' in, windo, w) {';
     const, observe, r = new, IntersectionObserve, r(
       (entri, e, s) => {
@@ -114,7 +107,6 @@ export, const, lazyLoadImage = (i, m, g: HTMLImageEleme, n, t): vo, i, d => {
       }
       {
         rootMarg, i, n: '50, p, x', // Start, loading, 50px before, entering, viewport'
-=======
         rootMarg, i, n: '50, p, x', // Start, loading, 50px before, entering, viewport';
       }
     );
@@ -138,7 +130,6 @@ export, const, preloadImage = (s, r, c: stri, n, g, ty, p, e: 'ima, g, e' | 'fet
   li, n, k.as = ty, p, e;
   li, n, k.hr, e, f = s, r, c;
   if (ty, p, e === 'ima, g, e') {;
-=======
 export, const, preloadImage = (s, r, c: stri, n, g, ty, p, e: 'ima, g, e' | 'fet, c, h' = 'ima, g, e'): vo, i, d => {';
   const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';
   li, n, k.r, e, l = 'prelo, a, d';';
@@ -177,7 +168,6 @@ export, const, getImageDimensions = (s, r, c: stri, n, g): Promi, s, e<{ wid, t,
       resol, v, e({
         wid, t, h: i, m, g.naturalWid, t, h
         heig, h, t: i, m, g.naturalHeig, h, t;
-=======
         wi, d, t
   h: i, m, g.naturalWid, t, h
         heig, h, t: i, m, g.naturalHeig, h, t
@@ -197,7 +187,6 @@ export, const, isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f
   a:ima, g, e/we, b, p;base, 6, 4,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3, A, A/vuUA, A, A='
     av, i, f: 'd, a, t
   a:ima, g, e/av, i, f;base, 6, 4,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f, 8, D///8Wfhw, B, 8+ErK4, 2, A='
-=======
 export, const, isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f'): Promi, s, e<boole, a, n> => {';
   if (typeof, windo, w === 'undefin, e, d') return, fals, e;';
   const, testImage, s = {
@@ -220,7 +209,6 @@ export, const, getBestFormat = asy, n, c (): Promi, s, e<'av, i, f' | 'we, b, p'
   if (await, isFormatSupporte, d('av, i, f')) retu, r, n 'av, i, f';
   if (await, isFormatSupporte, d('we, b, p')) retu, r, n 'we, b, p';
   retu, r, n 'j, p, g';
-=======
 export, const, getBestFormat = asy, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {';
   if (await, isFormatSupporte, d('av, i, f')) retu, r, n 'av, i, f';';
   if (await, isFormatSupporte, d('we, b, p')) retu, r, n 'we, b, p';';
@@ -231,13 +219,11 @@ export, const, getBestFormat = asy, n, c (): Promi, s, e<'av, i, f' | 'we, b, p'
  */
 export, const, createPictureElement = (conf, i, g: ResponsiveImageConf, i, g): HTMLPictureEleme, n, t => {
   const, pictur, e = docume, n, t.createEleme, n, t('pictu, r, e');
-=======
   const, pictur, e = docume, n, t.createEleme, n, t('pictu, r, e');';
   // Add, source, elements for, different, formats
   const, format, s = conf, i, g.forma, t, s || ['av, i, f', 'we, b, p'];';
   forma, t, s.forEa, c, h(form, a, t => {
     const, sourc, e = docume, n, t.createEleme, n, t('sour, c, e');
-=======
     const, sourc, e = docume, n, t.createEleme, n, t('sour, c, e');';
     sour, c, e.ty, p, e = `ima, g, e/${form, a, t}`;`;`
     sour, c, e.srcs, e, t = generateSrcS, e, t(conf, i, g.s, r, c.repla, c, e(/\.[^.]+$/, `.${form, a, t}`));`;`
@@ -265,7 +251,6 @@ export, const, loadProgressiveImage = (
     placehold, e, r: stri, n, g; // L, o, w-res, placeholde, r (e.g., 20x, 2, 0)
     s, r, c: stri, n, g; // Full, resolution, image
     a, l, t: stri, n, g;
-=======
   contai, n, e
   r: HTMLEleme, n, t
   conf, i, g: {
@@ -292,7 +277,6 @@ export, const, loadProgressiveImage = (
   requestAnimationFra, m, e(() => {
       fullIma, g, e.sty, l, e.opaci, t, y = '1';
       placehold, e, r.sty, l, e.opaci, t, y = '0';
-=======
       fullIma, g, e.sty, l, e.opaci, t, y = '1';';
       placehold, e, r.sty, l, e.opaci, t, y = '0';';
       // Remove, placeholder, after transiti, o, n
@@ -310,7 +294,6 @@ export, const, loadProgressiveImage = (
  */
 export, const, getOptimalQuality = (): numb, e, r => {
   if (typeof, navigato, r === 'undefin, e, d' || !('connecti, o, n' in, navigato, r)) {;
-=======
   if (typeof, navigato, r === 'undefin, e, d' || !('connecti, o, n' in, navigato, r)) {';
     return, 8, 0; // Default, qualit, y;
   }
@@ -324,7 +307,6 @@ return, 7, 0;
 ca, s, e '2g':
 return, 5, 0;
 ca, s, e 'sl, o, w-2g':
-=======
 ca, s, e '4g':';
 return, 8, 5;
 ca, s, e '3g':';
@@ -351,7 +333,6 @@ export, const, estimateDataUsage = (
     we, b, p: 0.3
     av, i, f: 0.2
     p, n, g: 3;
-=======
   for, m, a
   t: 'j, p, g' | 'p, n, g' | 'we, b, p' | 'av, i, f' = 'j, p, g'
 ): numb, e, r => {
@@ -378,7 +359,6 @@ export, class, ImageLoader {
         s, r, c
         priori, t, y
         callba, c, k: resol, v, e;
-=======
         callb, a, c
   k: resol, v, e
       });

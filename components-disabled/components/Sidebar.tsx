@@ -7,19 +7,13 @@ import { useRouter } from 'next/router';'
 import {
   }
 
-
 const quickLinks = [;
     { "name": 'Free Consultation', "href": '/consultation','
     { "name": 'Free Consultation', "href": '/consultation','
 
-
 const "Sidebar": React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
 
-
-
   }
-
-
 
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
@@ -27,11 +21,9 @@ const navigation = {
     'Services': ['
         { "name": 'AI Services', "href": '/ai-services','
 
-
 const quickLinks = [;
       { "name": 'About Us', "href": '/about','
       { "name": 'About Us', "href": '/about','
-
 
   const navigation = {'Services': [;'
       { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
@@ -40,18 +32,11 @@ const quickLinks = [;
 },{ "name": 'Cybersecurity', "href": '/services / cybersecurity', "icon": Shield,'
 },{ "name": 'Performance Optimization', "href": '/services / performance', "icon": Zap,'
 
-
 const navigation = {'Services': [;'
       { "name": 'AI Services', "href": '/ai-services','
       { "name": 'AI Services', "href": '/ai-services','
 
-
 const "Sidebar": React.FC < SidebarProps> = ({ is_open, on_close    }) => {
-
-
-
-
-
 
 const navigation = {
     'Services': [;'
@@ -61,11 +46,9 @@ const navigation = {
     'Services': [;'
       { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
 
-
 const quick_links = [;
     { "name": 'About Us', "href": '/about','
     { "name": 'About Us', "href": '/about','
-
 
 import React, { useState, useEffect } from 'react';'
 import Link from 'next/link';'
@@ -74,7 +57,6 @@ import {
   }
   }
   }
-
 
 const navigation = {
   'Services': ['

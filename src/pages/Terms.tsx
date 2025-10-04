@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
@@ -17,7 +16,6 @@ const, Term, s: Rea, c, t.FC = () => {
           <div, className="prose, pros, e-lg, ma, x-w-no, n, e">
             <h1, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-8">Terms, of, Service</h1>
             <p, className="te, x, t-lg, tex, t-gr, a, y-600, m, b-8">
-=======
         <meta name="descripti, o, n" content="Terms, of, Service for, Zion, Tech Gro, u, p - Our, terms, and conditions, for, using our, service, s." />";
         <meta name="robo, t, s" content="ind, e, x, foll, o, w" />";
       </Helmet>
@@ -34,7 +32,6 @@ const, Term, s: Rea, c, t.FC = () => {
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Acceptance, of, Terms</h2>
                 <p, className="te, x, t-gr, a, y-600, m, b-4">
                   By, accessing, and using, Zion, Tech Gro, u, p's, service, s, you, accept, and agree, to, be bou, n, d ;
-=======
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Acceptance, of, Terms</h2>";
                 <p, className="te, x, t-gr, a, y-600, m, b-4">";
                   By, accessing, and using, Zion, Tech Gro, u, p's, service, s, you, accept, and agree, to, be bou, n, d ';
@@ -50,7 +47,6 @@ const, Term, s: Rea, c, t.FC = () => {
                 <p, className="te, x, t-gr, a, y-600, m, b-4">
                   This, is, the grant, of, a licen, s, e, not, a, transfer of, titl, e, and, under, this license, you, may n, o, t: </p>
                 <ul, className="li, s, t-disc, lis, t-inside, tex, t-gr, a, y-600, spac, e-y-2">
-=======
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Use, Licens, e</h2>";
                 <p, className="te, x, t-gr, a, y-600, m, b-4">";
                   Permission, is, granted to, temporarily, download one, copy, of the, materials, on Zion, Tech, Group's ';
@@ -77,7 +73,6 @@ const, Term, s: Rea, c, t.FC = () => {
                 <p, className="te, x, t-gr, a, y-600, m, b-4">
                   Users, are, responsible f, o, r: </p>
                 <ul, className="li, s, t-disc, lis, t-inside, tex, t-gr, a, y-600, spac, e-y-2">
-=======
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">User, Responsibilitie, s</h2>";
                 <p, className="te, x, t-gr, a, y-600, m, b-4">";
                   Users, are, responsible f, o, r: </p>
@@ -101,7 +96,6 @@ const, Term, s: Rea, c, t.FC = () => {
                   In, no, event shall, Zion, Tech Group, or, its suppliers, be, liable for, any, damages;
                   (includi, n, g, without, limitatio, n, damages, for, loss of, data, or prof, i, t, or, due, to busine, s, s
   interrupti, o, n) arising, out, of the, use, or inability, to, use the, materials, on Zion, Tech, Group's ;
-=======
                   interrupti, o, n) arising, out, of the, use, or inability, to, use the, materials, on Zion, Tech, Group's ';
                   websi, t, e, even, if, Zion Tech, Group, or an, authorized, representative has, been, notified oral, l, y
   or, in, writing of, the, possibility of, such, damage.
@@ -121,7 +115,6 @@ const, Term, s: Rea, c, t.FC = () => {
                   If, you, have any, questions, about these, Terms, of Servi, c, e, please, contact, us at: </p>
                 <div, className="bg-gr, a, y-5, 0, p-4, rounde, d-lg">
                   <p, className="te, x, t-gr, a, y-6, 0, 0">
-=======
                 <h2, className="te, x, t-2xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Contact, Informatio, n</h2>";
                 <p, className="te, x, t-gr, a, y-600, m, b-4">";
                   If, you, have any, questions, about these, Terms, of Servi, c, e, please, contact, us at: </p>

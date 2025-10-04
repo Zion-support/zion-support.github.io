@@ -10,8 +10,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
   fallback = <div className="text-left">Loading...</div>,"
     <Suspense fallback={fallback}>
 
-    
-
   fallback = <LoadingSpinner /> 
 
     <Suspense fallback={fallback}>;

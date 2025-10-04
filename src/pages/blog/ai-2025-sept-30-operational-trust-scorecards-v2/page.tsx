@@ -2,7 +2,6 @@ export, default, function Pa, g, e(): vo, i, d {
   return (
     <div, className="container, m, x-auto, p, x-6, p, y-12">
       <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">"
-=======
     <div, className="container, m, x-auto, p, x-6, p, y-12">";
       <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
         Operational, Trust, Scorecards v2 — From, SLIs, to Business, KPI, s;
@@ -18,7 +17,6 @@ export, default, function Pa, g, e(): vo, i, d {
       </d, i, v>
       <div, className="mt-8">
         <Link, t, o="/" classNa, m, e="te, x, t-indi, g, o-700, fon, t-medium, hove, r: te, x, t-indi, g, o-8, 0, 0">← Back, to, Home</Li, n, k>"
-=======
       <div, className="mt-8">";
         <Link, t, o="/" classNa, m, e="te, x, t-indi, g, o-700, fon, t-medium, hove, r: te, x, t-indi, g, o-8, 0, 0">← Back, to, Home</Li, n, k>";
       </d, i, v>

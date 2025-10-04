@@ -1,25 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }googlePlayUrl= {;
   googlePlayUrl ";
 }/> </div> <div className="text-left"> <Link href=" /open-app"> <Button variant=" outline"size=" lg"className="text-left"> Open App <ArrowRight size= {;

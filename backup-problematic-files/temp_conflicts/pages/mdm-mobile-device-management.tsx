@@ -7,12 +7,8 @@ import {
   // TODO: Implement
 }
 
-
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-
-
-
 
       <Head>
 
@@ -55,15 +51,9 @@ export default function QuantumInternetSecurityPage() {
 </div>
                 <div>
 
-
-
-
                   <span>{service.contactInfo.mobile}<
-
-
 
 }
 ;
 :backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
-
 

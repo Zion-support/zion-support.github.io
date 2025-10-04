@@ -30,7 +30,6 @@ export interface InnovativeAIService
     email: string;
     address: string;
 
-  
       'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99 && 99.99% safety record.',
     features: [
     id: 'autonomous - vehicle - ai - platform',
@@ -803,7 +802,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Advanced quantum AI logistics platform for supply chain optimization, route planning, and inventory management with unprecedented efficiency.',
     features: [;
 
-
       'Quantum AI optimization',
       'Supply chain analytics',
       'Route optimization',
@@ -817,7 +815,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     ],
     popular: true,
     icon: '📦',
-
 
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',

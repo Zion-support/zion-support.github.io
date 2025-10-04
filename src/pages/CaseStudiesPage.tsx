@@ -22,7 +22,6 @@ const, CaseStudiesPag, e: Rea, c, t.FC = () => {
       }
       ima, g, e: '/a, p, i/placehold, e, r/6, 0, 0/4, 0, 0'
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-6, 0, 0'
-=======
         valueCrea, t, e
   d: '$8.2B'
       }
@@ -45,7 +44,6 @@ const, CaseStudiesPag, e: Rea, c, t.FC = () => {
       }
       ima, g, e: '/a, p, i/placehold, e, r/6, 0, 0/4, 0, 0'
       col, o, r: 'fr, o, m-gre, e, n-500, t, o-te, a, l-6, 0, 0'
-=======
         valueCrea, t, e
   d: '$1, 2, B'
       }
@@ -68,7 +66,6 @@ const, CaseStudiesPag, e: Rea, c, t.FC = () => {
       }
       ima, g, e: '/a, p, i/placehold, e, r/6, 0, 0/4, 0, 0'
       col, o, r: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-6, 0, 0'
-=======
         valueCrea, t, e
   d: '$18.4B'
       }
@@ -91,7 +88,6 @@ const, CaseStudiesPag, e: Rea, c, t.FC = () => {
       }
       ima, g, e: '/a, p, i/placehold, e, r/6, 0, 0/4, 0, 0'
       col, o, r: 'fr, o, m-indi, g, o-500, t, o-bl, u, e-6, 0, 0'
-=======
         valueCrea, t, e
   d: '$4.7B'
       }
@@ -114,7 +110,6 @@ const, CaseStudiesPag, e: Rea, c, t.FC = () => {
       }
       ima, g, e: '/a, p, i/placehold, e, r/6, 0, 0/4, 0, 0'
       col, o, r: 'fr, o, m-yell, o, w-500, t, o-oran, g, e-6, 0, 0'
-=======
         valueCrea, t, e
   d: '$6.2B'
       }
@@ -137,7 +132,6 @@ const, CaseStudiesPag, e: Rea, c, t.FC = () => {
       }
       ima, g, e: '/a, p, i/placehold, e, r/6, 0, 0/4, 0, 0'
       col, o, r: 'fr, o, m-r, e, d-500, t, o-pi, n, k-6, 0, 0'
-=======
         valueCrea, t, e
   d: '$47.3M'
       }
@@ -150,7 +144,6 @@ const, CaseStudiesPag, e: Rea, c, t.FC = () => {
     { val, u, e: '$2, 1, 1.7B', lab, e, l: 'Total, Value, Created' }
     { val, u, e: '99.97%', lab, e, l: 'Average, Success, Rate' }
     { val, u, e: '1,8, 4, 0%', lab, e, l: 'Average, RO, I' }
-=======
     { val, u, e: '1,8, 4, 0%', lab, e, l: 'Average, RO, I' }
   ];
   return (

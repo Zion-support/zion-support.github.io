@@ -34,7 +34,6 @@ const, EnhancedPromotionalBanne, r: Rea, c, t.FC<EnhancedPromotionalBannerPro, p
             <div, className="fl, e, x-1, mi, n-w-0">
               <h3, className="fo, n, t-bold, tex, t-lg">{bann, e, r.tit, l, e}</h3>
               <p, className="te, x, t-sm, opacit, y-90">{bann, e, r.descripti, o, n}</p>
-=======
 bann, e, r: BannerTy, p, e;
 classNa, m, e?: stri, n, g;
 }
@@ -65,7 +64,6 @@ const, EnhancedPromotionalBanne, r: Rea, c, t.FC<EnhancedPromotionalBannerPro, p
           >
             {bann, e, r.ctaTe, x, t}
             <ArrowRight, className="w-4 h-4  />
-=======
             <ArrowRight, className="w-4 h-4" />";
           </Li, n, k>
         </d, i, v>

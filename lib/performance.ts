@@ -46,8 +46,8 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
  * Send metric to analytics endpoint
  */
 function sendToAnalytics(metric: Metric): void 
-  const performanceMetric: PerformanceMetric = 
-    name: metric.name,
+  const performanceMetric: PerformanceMetric = {
+  name: metric.name,
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,

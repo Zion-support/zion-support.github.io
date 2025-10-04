@@ -93,8 +93,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Future capabilities",
       "Advanced features",
 
-
-
 export interface EmergingTechBreakthrough2029 {;
 
       "Expert insights"

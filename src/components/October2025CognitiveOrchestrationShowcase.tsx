@@ -10,7 +10,6 @@ return (
 </d, i, v>
 <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
 Cognitive, Orchestratio, n: The, Future, of Enterprise, A, I;
-=======
 import React from "react";';
 const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {
 return (
@@ -35,7 +34,6 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7B, in, value with, 
   r:shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>
-=======
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,";
 {/* Blog, Post, Card */
 }
@@ -68,7 +66,6 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7B, in, value with, 
   r:shad, o, w-emera, l, d-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">💰 SUCCESS, STOR, Y</sp, a, n>
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e
   r:shad, o, w-emera, l, d-5, 0, 0/50">";
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">";
@@ -98,7 +95,6 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7B, in, value with, 
   r:shad, o, w-purp, l, e-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">🚀 PLATFORM, SERVIC, E</sp, a, n>
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">";
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">";
               <span, className="fo, n, t-bold, tex, t-sm">🚀 PLATFORM, SERVIC, E</sp, a, n>";
@@ -132,7 +128,6 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7B, in, value with, 
             Schedule, your, free assessment, and, discover how, Cognitive, Orchestration can, transform, your enterpri, s, e;
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
             <a, titl, e="Internal, lin, k"
               hr, e, f="te

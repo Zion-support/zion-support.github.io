@@ -28,10 +28,7 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),;
     const result = await fn(client),;
 
-
-
     await client.query('COMMIT');
-
 
     await client.query('COMMIT');
     await client.query('COMMIT');

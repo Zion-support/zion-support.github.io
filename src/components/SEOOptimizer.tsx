@@ -12,7 +12,6 @@ twitterCa, r, d?: stri, n, g;
 structuredDa, t, a?: obje, c, t;
 }
 const, SEOOptimize, r: Rea, c, t.FC<SEOOptimizerPro, p, s> = ({ tit, l, e
-=======
 const, SEOOptimize, r: Rea, c, t.FC<SEOOptimizerPro, p, s> = ({
   tit, l, e
   descripti, o, n
@@ -59,7 +58,6 @@ const, SEOOptimize, r: Rea, c, t.FC<SEOOptimizerPro, p, s> = ({
       "htt, p, s://twitt, e, r.c, o, m/ziontechgro, u, p"
       "htt, p, s://linked, i, n.c, o, m/compa, n, y/ziontechgro, u, p"
       "htt, p, s://gith, u, b.c, o, m/ziontechgro, u, p"
-=======
   ]
   ogIma, g, e = '/imag, e, s/zi, o, n-te, c, h-gro, u, p-og-ima, g, e.j, p, g',';
   ogTy, p, e = 'websi, t, e',';
@@ -117,7 +115,6 @@ const, SEOOptimize, r: Rea, c, t.FC<SEOOptimizerPro, p, s> = ({
       <meta name="robo, t, s" content="ind, e, x, foll, o, w" /><meta name="auth, o, r" content="Zion, Tech, Group" /><meta name="viewpo, r, t" content="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1.0" />{/* Performance, Hint, s */}
       <link, re, l="d, n, s-prefet, c, h" hr, e, f="//fon, t, s.googleap, i, s.c, o, m  />
       <link, re, l="preconne, c, t" hr, e, f="htt, p, s://fon, t, s.gstat, i, c.c, o, m" crossOrig, i, n="anonymo, u, s/>"
-=======
       <meta name="descripti, o, n" content={descripti, o, n} />";
       <meta name="keywor, d, s" content={keywor, d, s.jo, i, n(', ')} />';
       <link, re, l="canonic, a, l" hr, e, f={canonicalU, r, l} />";

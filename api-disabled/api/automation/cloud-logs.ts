@@ -1,7 +1,5 @@
 
 
-
-
       } catch {
         // ignore;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -43,8 +41,6 @@ return results;
   }
 }
 
-
-
 export default async /**
  * handler - Function description
  */
@@ -69,22 +65,13 @@ if ( {) {
         }),
         return res.status (200).json ({ logs });
 
-
       }
     }
   } catch {
     // fall through to GitHub;
   }
 
-
-
-
-
-
   return res.status(200).json({ logs: remote });
 
 };
-
-
-
 

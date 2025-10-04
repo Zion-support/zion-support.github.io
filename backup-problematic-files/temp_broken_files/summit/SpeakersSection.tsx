@@ -56,5 +56,3 @@ export function SpeakersSection() {;
                   </a>;                )}
               </div>;
 
-
-

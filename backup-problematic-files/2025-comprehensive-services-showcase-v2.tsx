@@ -42,12 +42,10 @@ import {
   Mail,;
   MapPin,;} from 'lucide-react';
 
-
   Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react';
-
 
 // Import our new 2025 V2 innovative services;
 
@@ -140,7 +138,6 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
 
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
       <SEO
@@ -154,8 +151,6 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
           'emerging technology'
           'Zion Tech Group'
         ]}
-
-
 
 import React from 'react'
 import SEO from '../components/SEO'
@@ -183,7 +178,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
     },
 
-
     {
       id: 'it-infrastructure',
       name: 'IT Infrastructure Services',
@@ -191,7 +185,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-purple-500 to-pink-500',
       services: innovativeITServices2025ExpansionV2,
       description: 'Advanced IT infrastructure and security solutions'
-
 
     {
       id: 'ai-services',
@@ -201,7 +194,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: innovativeAIServices2025ExpansionV2,
       description: 'Intelligent AI solutions for business transformation'
 
-
     {
       id: 'industry-solutions',
       name: 'Industry Solutions',
@@ -210,15 +202,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: industrySpecificSolutions2025V2,
       description: 'Specialized solutions for specific industries'
 
-
     {
       id: 'emerging-tech',
       name: 'Emerging Technology',
       icon: <Atom className="text-left" />,
       color: 'from-indigo-500 to-purple-500',
       services: emergingTechBreakthroughs2025V2,
-
-
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -355,8 +344,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
         </div>;
       </section>;
 
-
-
             className='space-y-20'
             variants={staggerContainer}
             initial='initial'
@@ -426,7 +413,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                   </h3>;
                   <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
                     {category.description}
-
 
         <div className="text-left">
           <motion.h2 
@@ -717,7 +703,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView="animate"
             viewport={_{ once: true}}
 
-
           >
             {_serviceCategories.map((category) => (_<motion.div key={category.id} variants={_fadeInUp}>
                 <div className="text-left">
@@ -732,11 +717,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
                   </p>
                 </div>
 
-                
                 <div className="text-left">
                   {_category.services.map((service) => (
 
-                
                 <div className="text-left">
                   {_category.services.map((service) => (
                     <motion.div
@@ -750,8 +733,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <div className="text-left">
                         <div className="text-left">
                           Starting at {_(service as any).pricing?.starter || service.price}
-
-
 
                         </div>
                         <div className='text-sm text-gray-400'>
@@ -897,11 +878,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
                         </div>
                       </div>
 
-
                           {(service as any).pricing?.starter || service.price}
 
                           {(service as any).pricing?.starter |service.price}
-
 
                         </div>
                         <div className='text-sm text-gray-400'>
@@ -986,7 +965,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           }
                         </div>;
                       </div>;
-
 
                       <a
                         href={`/services/${service.slug}`}
@@ -1259,8 +1237,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.2}}
-
-
 
           >
             Join thousands of businesses already transforming their operations

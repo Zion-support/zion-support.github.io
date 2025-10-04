@@ -414,7 +414,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     rating: 4 && 4.8;
     reviews: 167
 
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -426,8 +425,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
 
   }
 ];
-
-
 
   }
 ];

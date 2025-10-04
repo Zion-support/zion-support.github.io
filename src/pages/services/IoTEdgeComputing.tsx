@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 impo, r, t { Netwo, r, k } fr, o, m "luci, d, e-rea, c, t";
 import, Header, from "../../componen, t, s/Head, e, r";
 import, Footer, from "../../componen, t, s/Foot, e, r";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
@@ -20,7 +19,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
   n: C, p, u
       tit, l, e: "Edge, AI, Processing","
       descripti, o, n: "Re, a, l-time, AI, inference at, the, edge with, optimized, models for, lo, w-latency, decision, making.","
-=======
       tit, l, e: "Edge, AI, Processing",";
       descripti, o, n: "Re, a, l-time, AI, inference at, the, edge with, optimized, models for, lo, w-latency, decision, making.",";
       benef, i, t: "95% latency, reductio, n"
@@ -29,7 +27,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       ic, o, n: Netwo, r, k
       tit, l, e: "5G, Integratio, n","
       descripti, o, n: "Seamless, 5G, connectivity with, edge, computing for, ultr, a-low, latency, applications.","
-=======
       tit, l, e: "5G, Integratio, n",";
       descripti, o, n: "Seamless, 5G, connectivity with, edge, computing for, ultr, a-low, latency, applications.",";
       benef, i, t: "S, u, b-millisecond, response, times"
@@ -38,7 +35,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       ic, o, n: Shie, l, d
       tit, l, e: "Edge, Securit, y","
       descripti, o, n: "Advanced, security, protocols for, edge, devices with, encrypted, communication and, threat, detection.","
-=======
       tit, l, e: "Edge, Securit, y",";
       descripti, o, n: "Advanced, security, protocols for, edge, devices with, encrypted, communication and, threat, detection.",";
       benef, i, t: "Ze, r, o-trust, architectur, e"
@@ -47,7 +43,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       ic, o, n: Databa, s, e
       tit, l, e: "Data, Synchronizatio, n","
       descripti, o, n: "Intelligent, data, synchronization between, edge, devices and, cloud, with conflict, resolutio, n.","
-=======
       tit, l, e: "Data, Synchronizatio, n",";
       descripti, o, n: "Intelligent, data, synchronization between, edge, devices and, cloud, with conflict, resolutio, n.",";
       benef, i, t: "99.9% data, consistenc, y"
@@ -56,7 +51,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       ic, o, n: Z, a, p
       tit, l, e: "Re, a, l-time, Analytic, s","
       descripti, o, n: "Stream, processing, and analytics, at, the edge, for, immediate insights, and, actions.","
-=======
       tit, l, e: "Re, a, l-time, Analytic, s",";
       descripti, o, n: "Stream, processing, and analytics, at, the edge, for, immediate insights, and, actions.",";
       benef, i, t: "Re, a, l-time, decision, making"
@@ -65,7 +59,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       ic, o, n: Glo, b, e
       tit, l, e: "Global, Connectivit, y","
       descripti, o, n: "Worldwide, IoT, device management, with, regional compliance, and, data sovereign, t, y.","
-=======
       tit, l, e: "Global, Connectivit, y",";
       descripti, o, n: "Worldwide, IoT, device management, with, regional compliance, and, data sovereign, t, y.",";
       benef, i, t: "Global, deployment, ready"
@@ -130,7 +123,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
         "On-premise, edge, infrastructure"
       ]
       popul, a, r: fal, s, e;
-=======
       n, a, m
   e: "Developme, n, t",";
       pri, c, e: "$5,0, 0, 0",";
@@ -196,7 +188,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       na, m, e: "Robert, Ki, m","
       ro, l, e: "C, T, O, Smart, Manufacturing, Corp","
       conte, n, t: "Zi, o, n's, IoT, edge computing, solution, reduced our, production, line latency, by, 98%. Re, a, l-time, quality, control now, catches, defects instant, l, y, saving, u, s $2M, annuall, y.","
-=======
       na, m, e: "Robert, Ki, m",";
       ro, l, e: "C, T, O, Smart, Manufacturing, Corp",";
       conte, n, t: "Zi, o, n's, IoT, edge computing, solution, reduced our, production, line latency, by, 98%. Re, a, l-time, quality, control now, catches, defects instant, l, y, saving, u, s $2M, annuall, y.",";
@@ -207,7 +198,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       na, m, e: "Sarah, William, s","
       ro, l, e: "VP, Technolog, y, Smart, City, Initiative","
       conte, n, t: "The, edge, AI processing, for, traffic management, reduced, congestion by, 3, 5% and, emergency, response times, by, 50%. The, system, pays for, itself, every quart, e, r.","
-=======
       na, m, e: "Sarah, William, s",";
       ro, l, e: "VP, Technolog, y, Smart, City, Initiative",";
       conte, n, t: "The, edge, AI processing, for, traffic management, reduced, congestion by, 3, 5% and, emergency, response times, by, 50%. The, system, pays for, itself, every quart, e, r.",";
@@ -218,7 +208,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       na, m, e: "Dr. Michael, Che, n","
       ro, l, e: "Head, of, R&D, Healthcare, Io, T","
       conte, n, t: "Patient, monitoring, with edge, computing, ensures re, a, l-time, alerts, reach medical, staff, instantly. We've, prevented, 15 critical, incidents, this year, alon, e.","
-=======
       na, m, e: "Dr. Michael, Che, n",";
       ro, l, e: "Head, of, R&D, Healthcare, Io, T",";
       conte, n, t: "Patient, monitoring, with edge, computing, ensures re, a, l-time, alerts, reach medical, staff, instantly. We've, prevented, 15 critical, incidents, this year, alon, e.",";
@@ -254,7 +243,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       descripti, o, n: "Customer, behavior, analysis, inventory, managemen, t, and, personalized, experiences.","
       metri, c, s: "60% inventory, efficiency, gain","
       benefi, t, s: ["Customer, analytic, s", "Inventory, optimizatio, n", "Personalized, experience, s"]"
-=======
       tit, l, e: "Smart, Manufacturin, g",";
       ic, o, n: C, p, u
       descripti, o, n: "Re, a, l-time, quality, control, predictive, maintenanc, e, and, automated, optimization on, production, lines.",";
@@ -290,7 +278,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
     { na, m, e: "Transportati, o, n", devic, e, s: "Fleet, trackin, g, traffic, sensor, s, autonomous, vehicle, s" }
     { na, m, e: "Ener, g, y", devic, e, s: "Smart, meter, s, grid, sensor, s, renewable, energ, y" }
     { na, m, e: "Agricultu, r, e", devic, e, s: "Soil, sensor, s, weather, station, s, irrigation, system, s" }
-=======
     { na, m, e: "Manufacturi, n, g", devic, e, s: "Industrial, sensor, s, PL, C, s, roboti, c, s" },";
     { na, m, e: "Healthca, r, e", devic, e, s: "Patient, monitor, s, medical, device, s, wearabl, e, s" },";
     { na, m, e: "Reta, i, l", devic, e, s: "POS, system, s, inventory, sensor, s, customer, analytic, s" },";
@@ -305,7 +292,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
         <me, t, a
   na, m, e="descripti, o, n"
           content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y." /><meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g/>"
-=======
           content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y."
          />
         <meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" />";
@@ -326,7 +312,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
   5G, integratio, n, and, global, connectivity for, smart, connected syste, m, s.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
         <section, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-900, vi, a-oran, g, e-800, t, o-r, e, d-900, tex, t-white, p, y-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-cent, e, r">";
@@ -345,7 +330,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
   r: bg-oran, g, e-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   <Phone, className="w-5 h-5, m, r-2  />
-=======
                   <Phone, className="w-5 h-5, m, r-2" />";
                   Schedule, Dem, o;
                 </a>
@@ -356,7 +340,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
                 >
                   View, Pricin, g;
                   <ArrowRight, className="w-5 h-5, m, l-2  />
-=======
                   <ArrowRight, className="w-5 h-5, m, l-2" />";
                 </a>
               </d, i, v>
@@ -369,7 +352,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="text-center mb-12">";
@@ -385,7 +367,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">
                   <Zap, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";
               <div, className="te, x, t-cent, e, r">";
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">";
@@ -397,7 +378,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">
                   <Network, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
-=======
               <div, className="te, x, t-cent, e, r">";
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";
                   <Network, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
@@ -408,7 +388,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
                   <Shield, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
-=======
               <div, className="te, x, t-cent, e, r">";
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";
                   <Shield, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
@@ -419,7 +398,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
                   <Globe, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  />
-=======
               <div, className="te, x, t-cent, e, r">";
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";
                   <Globe, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />";
@@ -436,7 +414,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -455,7 +432,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
@@ -473,7 +449,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                           <CheckCircle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
-=======
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
                           <CheckCircle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0" />";
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
@@ -492,7 +467,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -516,7 +490,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
                     <div, className="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
@@ -544,7 +517,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -563,7 +535,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
                   <div, className="te, x, t-gr, a, y-6, 0, 0">
                     <p, className="fo, n, t-semibold, m, b-2">Supported, Device, s: </p>"
                     <p, className="te, x, t-sm">{indust, r, y.devic, e, s}</p>
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {industri, e, s.m, a, p((indust, r, y, ind, e, x) => (
@@ -584,7 +555,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -597,7 +567,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
             </d, i, v>
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-oran, g, e-500, relativ, e' : ''}`}>`;`
@@ -621,7 +590,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
                         <CheckCircle, className="w-5 h-5, tex, t-oran, g, e-500, m, r-3, fle, x-shri, n, k-0  />
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
-=======
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
                         <CheckCircle, className="w-5 h-5, tex, t-oran, g, e-500, m, r-3, fle, x-shri, n, k-0" />";
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
@@ -634,7 +602,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
 `w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-oran, g, e-600, tex, t-white, hove, r: bg-oran, g, e-7, 0, 0'
-=======
 ? 'bg-oran, g, e-600, tex, t-white, hov, e
   r: bg-oran, g, e-7, 0, 0',';
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'
@@ -653,7 +620,6 @@ pl, a, n.popul, a, r;
               >
                 Contact, our, IoT Specialis, t, s;
                 <ArrowRight, className="w-4 h-4, m, l-1  />
-=======
                 <ArrowRight, className="w-4 h-4, m, l-1" />";
               </a>
             </d, i, v>
@@ -665,7 +631,6 @@ pl, a, n.popul, a, r;
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -678,14 +643,12 @@ pl, a, n.popul, a, r;
             </d, i, v>
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
-=======
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
                   </d, i, v>
@@ -707,7 +670,6 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-=======
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-oran, g, e-900, vi, a-oran, g, e-800, t, o-r, e, d-900, tex, t-whi, t, e">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">";
@@ -718,7 +680,6 @@ pl, a, n.popul, a, r;
               Join, hundreds, of companies, already, using our, IoT, and edge, computing, solutions to, create, intelligent, connected, system, s.
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a
   hr, e, f="/conta, c, t"
@@ -726,7 +687,6 @@ pl, a, n.popul, a, r;
   r: bg-oran, g, e-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 <Phone, className="w-5 h-5, m, r-2  />
-=======
                 <Phone, className="w-5 h-5, m, r-2" />";
                 Schedule, Free, Consultation;
               </a>
@@ -737,7 +697,6 @@ pl, a, n.popul, a, r;
               >
                 View, Success, Stories;
                 <ArrowRight, className="w-5 h-5, m, l-2  />
-=======
                 <ArrowRight, className="w-5 h-5, m, l-2" />";
               </a>
             </d, i, v>

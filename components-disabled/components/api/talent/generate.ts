@@ -5,9 +5,6 @@
       "response_format": { "type": 'json_object' }'
       "temperature": 0.6});
 
-
-
-
       "title": parsed.title || title || 'Professional','
       "category": parsed.category || null,
       "summary": parsed.summary || '','

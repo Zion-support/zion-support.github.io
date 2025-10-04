@@ -30,7 +30,6 @@ const, PerformanceOptimizationBanne, r = () => {
       <div, className="flex, item, s-center, ga, p-3, m, b-4">
         <Clock, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0  />
         <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0">⚡ Performan, c, e & Optimization, Improvement, s</h3>
-=======
       tit, l, e: 'Lightning, Fast, Loading',';
       descripti, o, n: 'Optimized, bundle, size with, code, splitting and, lazy, loading',';
       improveme, n, t: '87% fast, e, r',';
@@ -73,7 +72,6 @@ const, PerformanceOptimizationBanne, r = () => {
         {optimizatio, n, s.m, a, p((o, p, t, ind, e, x) => (
           <div, ke, y={ind, e, x} classNa, m, e={`bg-gradie, n, t-to-br ${o, p, t.col, o, r} round, e, d-l, g, p-4, tex, t-whi, t, e`}>`;`
             <div, className="flex, item, s-center, ga, p-3, m, b-3">
-=======
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-4">";
         {optimizatio, n, s.m, a, p((o, p, t, ind, e, x) => (
@@ -86,7 +84,6 @@ const, PerformanceOptimizationBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-2">
               <Star, className="w-4 h-4, fil, l-yell, o, w-400, tex, t-yell, o, w-4, 0, 0  />
               <span, className="te, x, t-xs, fon, t-semibo, l, d">{o, p, t.improveme, n, t}</sp, a, n>
-=======
             <p, className="te, x, t-xs, opacit, y-90, m, b-2">{o, p, t.descripti, o, n}</p>";
             <div, className="flex, item, s-center, ga, p-2">";
               <Star, className="w-4 h-4, fil, l-yell, o, w-400, tex, t-yell, o, w-4, 0, 0" />";
@@ -99,7 +96,6 @@ const, PerformanceOptimizationBanne, r = () => {
         <div, className="flex, item, s-center, ga, p-2, m, b-2">
           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
           <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">All, Optimizations, Active</sp, a, n>
-=======
       <div, className="mt-6 p-4, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-lg, border, border-gre, e, n-4, 0, 0/30">";
         <div, className="flex, item, s-center, ga, p-2, m, b-2">";
           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";

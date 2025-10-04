@@ -6,7 +6,6 @@ describe('AIChatbotSystem'
   it('displays correct content'
   it('handles user interactions'
 
-
 import AIChatbotSystem from './AIChatbotSystem;
 describe('AIChatbotSystem', () => {;
   it('renders without crashing', () => {;

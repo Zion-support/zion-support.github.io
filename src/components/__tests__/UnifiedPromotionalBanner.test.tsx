@@ -1,7 +1,6 @@
 import React from "react";
 impo, r, t '@testi, n, g-libra, r, y/je, s, t-d, o, m';
 import, UnifiedPromotionalBanner, from "../UnifiedPromotionalBann, e, r";
-=======
 import React from "react";';
 impo, r, t '@testi, n, g-libra, r, y/je, s, t-d, o, m';';
 import, UnifiedPromotionalBanner, from "../UnifiedPromotionalBann, e, r";';
@@ -18,7 +17,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {;
     ctaLi, n, k: '/te, s, t-li, n, k};
   descri, b, e('Core, Functionalit, y', () => {;
     it('renders, with, required pro, p, s', () => {;
-=======
 descri, b, e('UnifiedPromotionalBann, e, r', () => {';
   const, defaultProp, s: UnifiedPromotionalBannerPro, p, s = {
     tit, l, e: 'Test, Banner, Title',';
@@ -38,7 +36,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       expe, c, t(scre, e, n.getByTe, x, t('Click, Her, e')).toBeInTheDocume, n, t();';
     });
     it('renders, CTA, button with, correct, link', () => {;
-=======
     it('renders, CTA, button with, correct, link', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
@@ -52,7 +49,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} classNa, m, e="cust, o, m-cla, s, s  />
-=======
     it('applies, custom, className', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
@@ -68,7 +64,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="defau, l, t  />
-=======
   descri, b, e('Varian, t, s', () => {';
     it('renders, default, variant correct, l, y', () => {';
       con, s, t { contain, e, r } = rend, e, r(
@@ -83,7 +78,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="compa, c, t  />
-=======
     it('renders, compact, variant correct, l, y', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
@@ -97,7 +91,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="premi, u, m  />
-=======
     it('renders, premium, variant correct, l, y', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
@@ -111,7 +104,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="he, r, o  />
-=======
     it('renders, hero, variant correct, l, y', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
@@ -125,7 +117,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t="me, g, a  />
-=======
     it('renders, mega, variant correct, l, y', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
@@ -138,7 +129,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
   });
   descri, b, e('Them, e, s', () => {;
     const, theme, s = ['bl, u, e', 'purp, l, e', 'gre, e, n', 'oran, g, e', 'r, e, d', 'cy, a, n', 'gradie, n, t'] as, cons, t;
-=======
   descri, b, e('Them, e, s', () => {';
     const, theme, s = ['bl, u, e', 'purp, l, e', 'gre, e, n', 'oran, g, e', 'r, e, d', 'cy, a, n', 'gradie, n, t'] as, cons, t;';
     them, e, s.forEa, c, h(the, m, e => {
@@ -170,7 +160,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
         li, n, k: '/it, e, m-3}
     ];
     it('renders, featured, items when, provide, d', () => {;
-=======
   descri, b, e('Featured, Item, s', () => {';
     const, featuredItem, s = [
       {
@@ -201,7 +190,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       expe, c, t(scre, e, n.getByTe, x, t('Ite, m, 3')).toBeInTheDocume, n, t();';
     });
     it('respects, showCount, prop', () => {;
-=======
     it('respects, showCount, prop', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
@@ -215,7 +203,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       expe, c, t(scre, e, n.queryByTe, x, t('Ite, m, 3')).n, o, t.toBeInTheDocume, n, t();';
     });
     it('displa, y, s "more, item, s" link, when, items exceed, showCoun, t', () => {;
-=======
     it('displa, y, s "more, item, s" link, when, items exceed, showCoun, t', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
@@ -227,7 +214,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       expe, c, t(scre, e, n.getByTe, x, t('+1, more, breakthrough')).toBeInTheDocume, n, t();';
     });
     it('renders, metrics, when provid, e, d', () => {;
-=======
     it('renders, metrics, when provid, e, d', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
@@ -237,7 +223,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       expe, c, t(scre, e, n.getByTe, x, t('99% succe, s, s')).toBeInTheDocume, n, t();';
     });
     it('renders, categories, in upperca, s, e', () => {;
-=======
     it('renders, categories, in upperca, s, e', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
@@ -252,7 +237,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="N, E, W  />
-=======
   descri, b, e('Badge, and, Date', () => {';
     it('renders, badge, when provid, e, d', () => {';
       rend, e, r(
@@ -266,7 +250,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} da, t, e="Octobe, r, 1, 20, 2, 5  />
-=======
     it('renders, date, when provid, e, d', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
@@ -276,7 +259,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       expe, c, t(scre, e, n.getByTe, x, t('Octobe, r, 1, 20, 2, 5')).toBeInTheDocume, n, t();';
     });
     it('renders, both, badge and, date, when provid, e, d', () => {;
-=======
     it('renders, both, badge and, date, when provid, e, d', () => {';
       rend, e, r(
         <RouterWrapp, e, r>
@@ -294,7 +276,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="sparkl, e, s  />
-=======
   descri, b, e('Ico, n, s', () => {';
     it('renders, sparkles, icon', () => {';
       con, s, t { contain, e, r } = rend, e, r(
@@ -310,7 +291,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="z, a, p  />
-=======
     it('renders, zap, icon', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
@@ -324,7 +304,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e="Te, s, t" ic, o, n="no, n, e  />
-=======
     it('does, not, render icon, when, set to, non, e', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
@@ -338,7 +317,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
   });
   descri, b, e('Animati, o, n', () => {;
     it('applies, animation, classes by, defaul, t', () => {;
-=======
   descri, b, e('Animati, o, n', () => {';
     it('applies, animation, classes by, defaul, t', () => {';
       con, s, t { contain, e, r } = rend, e, r(
@@ -350,7 +328,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       expe, c, t(bann, e, r).toHaveCla, s, s('transiti, o, n-a, l, l', 'durati, o, n-3, 0, 0');';
     });
     it('removes, animation, classes when, animated, is fal, s, e', () => {;
-=======
     it('removes, animation, classes when, animated, is fal, s, e', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>
@@ -363,7 +340,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
   });
   descri, b, e('Accessibili, t, y', () => {;
     it('has, accessible, links', () => {;
-=======
       expe, c, t(bann, e, r).n, o, t.toHaveCla, s, s('hov, e, r: sca, l, e-[1.01]');';
     });
   });
@@ -383,7 +359,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
           tit, l, e: 'Test, Ite, m','
           catego, r, y: 'Test, Categor, y','
           li, n, k: '/te, s, t}
-=======
     it('featured, item, links are, accessibl, e', () => {';
       const, featuredItem, s = [
         {
@@ -403,7 +378,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
   });
   descri, b, e('Edge, Case, s', () => {;
     it('handles, empty, featured items, arra, y', () => {;
-=======
   descri, b, e('Edge, Case, s', () => {';
     it('handles, empty, featured items, arra, y', () => {';
       rend, e, r(
@@ -419,7 +393,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
           tit, l, e: 'Ite, m, 1','
           catego, r, y: 'Categor, y, 1','
           li, n, k: '/it, e, m-1}
-=======
     it('handles, showCount, greater than, items, length', () => {';
       const, featuredItem, s = [
         {
@@ -440,7 +413,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
     });
     it('handles, very, long titles, gracefull, y', () => {;
       const, longTitl, e = 'A'.repe, a, t(2, 0, 0);
-=======
     it('handles, very, long titles, gracefull, y', () => {';
       const, longTitl, e = 'A'.repe, a, t(2, 0, 0);';
       rend, e, r(
@@ -451,7 +423,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {';
       expe, c, t(scre, e, n.getByTe, x, t(longTit, l, e)).toBeInTheDocume, n, t();
     });
     it('handles, missing, optional pro, p, s', () => {;
-=======
     it('handles, missing, optional pro, p, s', () => {';
       con, s, t { contain, e, r } = rend, e, r(
         <RouterWrapp, e, r>

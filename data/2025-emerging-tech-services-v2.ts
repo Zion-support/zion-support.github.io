@@ -1,6 +1,5 @@
 
 
-  
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
     realImplementation: true,
@@ -14,7 +13,6 @@
     monthly: number;
     yearly: number;
     currency: string;
-
 
   features: string[];
   benefits: string[];
@@ -555,7 +553,6 @@
   reviews: number, marketSize: string,
   growthRate: string
 }
-
 
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
     ];

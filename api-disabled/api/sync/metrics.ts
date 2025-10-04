@@ -1,9 +1,5 @@
 
 
-
-
-
-
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -13,12 +9,5 @@
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
 
-
-
-
-
       const p = e.payload as any,
-
-
-
 

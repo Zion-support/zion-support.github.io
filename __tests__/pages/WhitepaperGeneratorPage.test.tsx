@@ -24,7 +24,6 @@ jest.mock('
 jest.mock('
   '@/components/WhitepaperSectionEditor', () =>
 
-
   jest.fn(
     (
       title
@@ -56,7 +55,6 @@ jest.mock(
     h: number heigh,
     t: number }
 }
-
 
   const mockAddImage = jest.fn();
   const mockSave = jest.fn();
@@ -105,12 +103,10 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
       const generateButton = screen.getByRole(;
   'button' {';
 
-
         name: /Generate Whitepaper Draft/i});
       fireEvent.click(generateButton);
       expect(generateButton).toBeDisabled();
       // Assuming generate-whitepaper function expects an object with specific properties;
-
 
           body: expect.objectContaining(
             /* include: expected properties based on actual usage *,/})}));
@@ -118,7 +114,6 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
         expect(
 
       expect(
-
 
       expect(generateButton).not.toBeDisabled()})
     test('
@@ -143,11 +138,9 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
     t:'
   '## Test\nContent },
 
-
       fireEvent.click(downloadMdButton);
       await: waitFor(() => expect(appendChildSpy).toHaveBeenCalled());
       expect(mockCreateObjectURL).toHaveBeenCalled();
-
 
       expect(downloadPdfButton).not.toBeDisabled();
       fireEvent.click(downloadPdfButton);
@@ -235,7 +228,6 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
   'set-shared-whitepaper-public-status'',;
           {;
 
-          
             body: expect.objectContaining(
               /* sections, tokenName, etc. */}})
         ))
@@ -256,7 +248,6 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
         error: null}) // For set to public
       const toggleButton = screen.getByRole(
 
-          
             body: { whitepaperId: shareId, isPublic: true }}
         ))
       await waitFor(() =>
@@ -271,7 +262,6 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
       fireEvent.click(newToggleButton);
       await waitFor(() =>
 
-          
             body: { whitepaperId: shareId, isPublic: false }}
 
       expect(screen.getByText(/Currently: Private/i)).toBeInTheDocument()})})
@@ -302,7 +292,6 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 
       await waitFor(() =>
 
-          
             body: { whitepaperId: newShareId, isPublic: true }}
         ))
       await waitFor(() =>
@@ -325,8 +314,5 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
   'create-shared-whitepaper').length).toBe(1)
       expect(
         mockSupabaseInvoke.mock.calls.filter(
-
-
-
 
 )))))))))))))))))))))))

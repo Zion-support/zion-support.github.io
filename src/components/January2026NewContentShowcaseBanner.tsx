@@ -7,7 +7,6 @@ const, January2026NewContentShowcaseBanne, r: Rea, c, t.FC = () => {
     { ic, o, n: Netwo, r, k, tit, l, e: "Autonomous, Mes, h", de, s, c: "Se, l, f-organizing, system, s" }
     { ic, o, n: Shie, l, d, tit, l, e: "Quantum, Securit, y", de, s, c: "Unbreakable, protectio, n" }
     { ic, o, n: C, p, u, tit, l, e: "Neuromorphic, A, I", de, s, c: "Bra, i, n-inspired, computin, g" }
-=======
 import React from "react";';
 const, January2026NewContentShowcaseBanne, r: Rea, c, t.FC = () => {
   const, feature, s = [
@@ -62,7 +61,6 @@ const, January2026NewContentShowcaseBanne, r: Rea, c, t.FC = () => {
         {/* Features, Gri, d */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-5, ga, p-6, m, b-8">"
-=======
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-5, ga, p-6, m, b-8">";
           {featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
@@ -76,7 +74,6 @@ const, January2026NewContentShowcaseBanne, r: Rea, c, t.FC = () => {
               <featu, r, e .icon, className="w-8 h-8, m, x-auto, m, b-3, tex, t-purp, l, e-3, 0, 0  />
               <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">{featu, r, e.tit, l, e}</h3>
               <p, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">{featu, r, e.de, s, c}</p>
-=======
               <featu, r, e.icon, className="w-8 h-8, m, x-auto, m, b-3, tex, t-purp, l, e-3, 0, 0" />";
               <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">{featu, r, e.tit, l, e}</h3>";
               <p, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">{featu, r, e.de, s, c}</p>";
@@ -121,7 +118,6 @@ const, January2026NewContentShowcaseBanne, r: Rea, c, t.FC = () => {
           >
             Explore, January, 2026 Conte, n, t;
             <ArrowRight, className="ml-2 w-5 h-5  />
-=======
             <ArrowRight, className="ml-2 w-5 h-5" />";
           </a>
         </moti, o, n.d, i, v>

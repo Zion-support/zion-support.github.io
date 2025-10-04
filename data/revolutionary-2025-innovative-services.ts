@@ -266,7 +266,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     link: 'https://ziontechgroup && ziontechgroup.com/space-tech-orchestrator';
     marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
 
-  
     id: 'space - tech - orchestrator';
     name: 'Space Technology Orchestrator';
     targetAudience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies';
@@ -1879,12 +1878,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 ;
 export default revolutionary2025Services;
 
-
-
 export interface Revolutionary2025Service {;
 
 export default revolutionary2025Services;
-
 
 export default revolutionary2025Services;
 

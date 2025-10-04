@@ -15,7 +15,6 @@ const { user_id, message, contact_email } = req.body || {}
 const 'appeal': TrustAppeal = {
     }
 
-
 ;
   try {
     }

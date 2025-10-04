@@ -12,7 +12,6 @@ export, default, function AgentSafetyScorecar, d, s(): Rea, c, t.J, S, X.Eleme, 
   5: Agent, Safety, Scorecards</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Design, scorecards, for agents, with, KPI-linked, budget, s, canari, e, s, and, deterministic, rollback.</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="KP, I, s, budge, t, s, and, rollback, triggers that, keep, autonomous agents, safe, at spe, e, d." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-02-age, n, t-safe, t, y-scorecar, d, s" />";
       </Helmet>

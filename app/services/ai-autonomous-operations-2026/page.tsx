@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'Autonomous AI Operations Services 2026 | Zion Tech Group',
   description: 'Deploy self-managing, self-healing AI systems that operate autonomously. Reduce downtime, optimize performance, and achieve 95% automation.',
   keywords: 'autonomous AI, self-healing systems, enterprise automation, AI operations, intelligent automation',

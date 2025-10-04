@@ -12,7 +12,6 @@ const system = `You are ZionGPT, an elite podcast host who interviews builders, 
 Return a strict JSON object with 'keys': title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;`
     const episode = {      return res && res.status(500).json({ 'error': 'Failed to generate structured content' });'
 
-
  * ensure_storage - Function description
  */
 function ensure_storage() {
@@ -26,7 +25,6 @@ if ()) {
 }
 fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');'
 ;
-
 
     const episode = {
       }
@@ -51,7 +49,6 @@ invitee
     try {
       }
 
-
         .json ({ 'error': 'Failed to generate structured content' });    '
 const episode = {      return res.status (500).json ({ 'error': 'Failed to generate structured content' });'
     
@@ -69,14 +66,11 @@ const episode = {      return res.status (500).json ({ "error": 'Failed to gener
     
       }
 
-
       }
       return res.status(500).json({ "error": 'Failed to generate structured content' });'
       }
       id,
       "createdAt": new Date().toISOString(),
-
-
 
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || ,
@@ -109,5 +103,4 @@ const episode = {
 }
 
 const episode = {
-
 

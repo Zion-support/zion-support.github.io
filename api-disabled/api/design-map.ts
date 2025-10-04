@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
 import {
   getZionDesignMap,
   buildTokenSet,
@@ -13,19 +11,12 @@ export default async function handler(
 ) {
   try {
 
-
-
-
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
 
-
-
   }
 }
-
-
 

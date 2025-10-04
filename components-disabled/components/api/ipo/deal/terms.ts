@@ -15,7 +15,6 @@ const terms = readJsonFile ('deal / terms.json', {'
     'discount': '20%','
     'lead_investor': 'TBD'});'
 
-
   res.status(200).json(terms);export default function handler() {;
   }
   if (!requireSuperadminApi(req, res)) return;

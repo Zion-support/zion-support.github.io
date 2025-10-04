@@ -83,7 +83,6 @@ construct, o, r(con, f, i
   private, setupKeyboardNavigatio, n(): vo, i, d {
     if (!th, i, s.conf, i, g.enableKeyboardNavigati, o, n) retu, r, n;
     docume, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {;
-=======
     docume, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {';
       // Skip, links, and form, element, s
   if (eve, n, t.target, instanceof, HTMLAnchorElement || 
@@ -94,14 +93,12 @@ construct, o, r(con, f, i
       }
       // Handle, arrow, key navigati, o, n
   if (eve, n, t.k, e, y === 'ArrowDo, w, n' || eve, n, t.k, e, y === 'Arrow, U, p') {;
-=======
       if (eve, n, t.k, e, y === 'ArrowDo, w, n' || eve, n, t.k, e, y === 'Arrow, U, p') {';
         eve, n, t.preventDefau, l, t();
         th, i, s.navigateWithArro, w, s(eve, n, t.k, e, y === 'ArrowDo, w, n' ? 1 : -1);';
       }
       // Handle, tab, navigation
   if (eve, n, t.k, e, y === 'T, a, b') {;
-=======
       if (eve, n, t.k, e, y === 'T, a, b') {';
         th, i, s.enhanceTabNavigati, o, n(eve, n, t);
       }
@@ -153,7 +150,6 @@ construct, o, r(con, f, i
     const, input, s = docume, n, t.querySelectorA, l, l('inp, u, t, textar, e, a, sele, c, t');';
     inpu, t, s.forEa, c, h((inp, u, t) => {
       if (!inp, u, t.getAttribu, t, e('ar, i, a-lab, e, l') && !inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y')) {;
-=======
       if (!inp, u, t.getAttribu, t, e('ar, i, a-lab, e, l') && !inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y')) {';
         const, labe, l = docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${inp, u, t.id}"]`);`;`
         if (lab, e, l) {
@@ -168,7 +164,6 @@ construct, o, r(con, f, i
     skipLin, k, s.innerHT, M, L = ``
       <a, hre, f="#ma, i, n-conte, n, t" cla, s, s="sk, i, p-li, n, k">Skip, to, main conte, n, t</a>
       <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a>
-=======
       <a, hre, f="#ma, i, n-conte, n, t" cla, s, s="sk, i, p-li, n, k">Skip, to, main conte, n, t</a>";
       <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a>";
     `;`;`
@@ -182,7 +177,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');
 }
     // Listen, for, changes in, contrast, preference
   wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').addEventListen, e, r('chan, g, e', (e) => {'
-=======
 if (wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').match, e, s) {,';
 docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');';
 }
@@ -203,7 +197,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');';
     });
     docume, n, t.addEventListen, e, r('focuso, u, t', (eve, n, t) => {;
       (eve, n, t.target, as, HTMLElement).classLi, s, t.remo, v, e('foc, u, s-visib, l, e');
-=======
     docume, n, t.addEventListen, e, r('focus, i, n', (eve, n, t) => {';
       (eve, n, t.target, as, HTMLElement).classLi, s, t.a, d, d('foc, u, s-visib, l, e');';
     });
@@ -215,7 +208,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');';
     if (!th, i, s.conf, i, g.enableARIALabe, l, s) retu, r, n;
     // Add, ARIA, labels to, interactive, elements
   const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-lab, e, l])');'
-=======
     const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-lab, e, l])');';
     butto, n, s.forEa, c, h((butt, o, n) => {
       if (!butt, o, n.textConte, n, t?.tr, i, m()) {
@@ -224,7 +216,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');';
     });
     // Add, ARIA, labels to, image, s
   const, image, s = docume, n, t.querySelectorA, l, l('i, m, g: n, o, t([a, l, t])');'
-=======
     const, image, s = docume, n, t.querySelectorA, l, l('i, m, g: n, o, t([a, l, t])');';
     imag, e, s.forEa, c, h((i, m, g) => {
       i, m, g.setAttribu, t, e('a, l, t', 'Ima, g, e');';
@@ -239,7 +230,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');';
     if (!th, i, s.conf, i, g.enableTextScali, n, g) retu, r, n;
     // Support, for, text scali, n, g
   docume, n, t.bo, d, y.sty, l, e.fontSi, z, e = '1, 0, 0%';
-=======
     docume, n, t.bo, d, y.sty, l, e.fontSi, z, e = '1, 0, 0%';';
     // Listen, for, text scaling, change, s
   const, observe, r = new, ResizeObserve, r(() => {
@@ -255,7 +245,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');
 }
     // Listen, for, changes in, motion, preference
   wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').addEventListen, e, r('chan, g, e', (e) => {'
-=======
 if (wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').match, e, s) {,';
 docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
 }
@@ -273,7 +262,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
     // Add, voice, control suppo, r, t
   docume, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {;
       if (eve, n, t.ctrlK, e, y && eve, n, t.k, e, y === 'v') {;
-=======
     docume, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {';
       if (eve, n, t.ctrlK, e, y && eve, n, t.k, e, y === 'v') {';
         th, i, s.activateVoiceContr, o, l();
@@ -302,7 +290,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
       'textar, e, a: n, o, t([disabl, e, d])','
       '[tabind, e, x]:n, o, t([tabind, e, x="-1"])'
     ].jo, i, n(', ');
-=======
       'a[hr, e, f]',';
       'butt, o, n: n, o, t([disabl, e, d])',';
       'inp, u, t: n, o, t([disabl, e, d])',';
@@ -320,7 +307,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
     // Update, text, scaling based, on, user preferenc, e, s
   const, fontSiz, e = wind, o, w.getComputedSty, l, e(docume, n, t.bo, d, y).fontSi, z, e;
     conso, l, e.l, o, g('Text, scaling, updated: ', fontSi, z, e);'
-=======
     conso, l, e.l, o, g('Text, scaling, updated: ', fontSi, z, e);';
   }
   private, activateVoiceContro, l(): vo, i, d {
@@ -347,7 +333,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
       accessibleElemen, t, s: focusableElemen, t, s.leng, t, h + ariaLabe, l, s.leng, t, h
       issuesFou, n, d: 0
       sco, r, e: 0;
-=======
     const, ariaLabel, s = docume, n, t.querySelectorA, l, l('[ar, i, a-lab, e, l], [ar, i, a-labelled, b, y]');';
     const, heading, s = docume, n, t.querySelectorA, l, l('h1, h2, h3, h4, h5, h6');';
     const, image, s = docume, n, t.querySelectorA, l, l('i, m, g');';
@@ -393,7 +378,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
   }
   public, announc, e(messa, g, e: stri, n, g): vo, i, d {
     const, announcemen, t = docume, n, t.getElementBy, I, d('announcemen, t, s');
-=======
     const, announcemen, t = docume, n, t.getElementBy, I, d('announcemen, t, s');';
     if (announceme, n, t) {
       announceme, n, t.textConte, n, t = messa, g, e;
@@ -406,7 +390,6 @@ docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
 const, metric, s = th, i, s.analyzeAccessibili, t, y();
 retu, r, n ``
 Enhanced, Accessibility, Report: 
-=======
 Enhanced, Accessibility, Report: - Overall, Sco, r
   e: ${metri, c, s.overallSco, r, e;
 }/1, 0, 0;
@@ -423,7 +406,6 @@ Enhanced, Accessibility, Report: - Overall, Sco, r
   export, const, enhancedAccessibility = new, EnhancedAccessibilit, y();
 // Au, t, o-initialize, in, browser environme, n, t
   if (typeof, windo, w !== 'undefin, e, d') {;
-=======
 if (typeof, windo, w !== 'undefin, e, d') {';
   enhancedAccessibili, t, y.initiali, z, e();
 }

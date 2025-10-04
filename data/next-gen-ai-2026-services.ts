@@ -65,11 +65,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 
 ],
 
-
-
 ],
-
-
 
 ],
       mobile: "+1 302 464 0950",
@@ -89,7 +85,5 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 ];
 
 ],
-
-
 
 ],

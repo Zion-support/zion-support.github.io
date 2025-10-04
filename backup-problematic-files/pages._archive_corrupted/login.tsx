@@ -1,6 +1,5 @@
 
 
-
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -26,14 +25,12 @@ pr-12325
     })
 };
 
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
 
     console.log('Login attempt:', formData)
 };
-
 
   return (
         <div className=max-w-md w-full space-y-8">
@@ -112,9 +109,6 @@ pr-12325
     </Layout>
   );
 }
-
-
-
 
 import React, { useState } from 'react'
 import dynamic from 'next/dynamic'
@@ -339,7 +333,6 @@ const "LoginPage": React.FC = () => {
                     </motion.div>
                   ))}
 
-
                 </div>
                 <div className="text-left">
                   <h3 className=text-lg font-semibold text-gray-900 mb-2>
@@ -373,13 +366,7 @@ const "LoginPage": React.FC = () => {
 }
 export default LoginPage
 
-
 import React,{ useState } from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Mail,Lock,Eye,EyeOff,ArrowRight,CheckCircle,Star,Users,Clock,Globe,Zap,Shield } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false }) const LoginPage: React.FC = () => { const [formData,setFormData] = useState({ email: '',password: '' }) const [showPassword,setShowPassword] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value })) } const handleSubmit = async (e: React.FormEvent) => { e.preventDefault() setIsLoading(true) setTimeout(() => { setIsLoading(false) },2000) } const features = [ { icon: <Shield className="text-left" />,title: 'Secure Access',description: 'Enterprise-grade security for your account' },{ icon: <Zap className="text-left" />,title: 'Fast Performance',description: 'Lightning-fast access to all services' },{ icon: <Globe className="text-left" />,title: 'Global Access',description: 'Access your account from anywhere in the world' } ] return ( <> <SEO title="Login - Zion Tech Group" description="Secure login to access your Zion Tech Group account and services." keywords="login,account,access,Zion Tech Group" canonical="https: /> <PageTransition> <main className="text-left"> <div className="text-left"> <div className="text-left"> {} <motion.div initial={{ opacity: 0,x: -20 }} animate={{ opacity: 1,x: 0 }} transition={{ duration: 0.6 }} className="text-left" > <div className="text-left"> <h1 className="text-left"> Welcome Back </h1> <p className="text-left"> Sign in to your Zion Tech Group account </p> </div> <form onSubmit={handleSubmit} className="text-left"> <div> <label htmlFor="email" className="text-left"> Email Address </label> <div className="text-left"> <div className="text-left"> <Mail className="text-left" /> </div> <input id="email" name="email" type="email" required value={formData.email} onChange={handleInputChange} className="text-left" placeholder="Enter your email" /> </div> </div> <div> <label htmlFor="password" className="text-left"> Password </label> <div className="text-left"> <div className="text-left"> <Lock className="text-left" /> </div> <input id="password" name="password" type={showPassword ? 'text' : 'password'} required value={formData.password} onChange={handleInputChange} className="text-left" placeholder="Enter your password" /> <button type="button" className="text-left" onClick={() => setShowPassword(!showPassword)} > {showPassword ? ( <EyeOff className="text-left" /> ) : ( <Eye className="text-left" /> )} </button> </div> </div> <div className="text-left"> <div className="text-left"> <input id="remember-me" name="remember-me" type="checkbox" className="text-left" /> <label htmlFor="remember-me" className="text-left"> Remember me </label> </div> <div className="text-left"> <a href="#" className="text-left"> Forgot your password? </a> </div> </div> <motion.button type="submit" disabled={isLoading} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="text-left" > {isLoading ? ( <> <div className="text-left"></div> Signing in... </> ) : ( <> <ArrowRight className="text-left" /> Sign In </> )} </motion.button> </form> <div className="text-left"> <p className="text-left"> Don't have an account?{' '} <a href="/register" className="text-left"> Sign up here </a> </p> </div> </motion.div> {} <motion.div initial={{ opacity: 0,x: 2 0 }} animate={{ opacity: 1,x: 0 }} transition={{ duration: 0.6,delay: 0.2 }} className="text-left" > <div> <h2 className="text-left"> Why Choose Zion Tech Group? </h2> <p className="text-left"> Access cutting-edge AI services,IT solutions,and micro SaaS development tools. </p> </div> <div className="text-left"> {features.map((feature,index) => ( <motion.div key={index} initial={{ opacity: 0,y: 2 0 }} animate={{ opacity: 1,y: 0 }} transition={{ duration: 0.6,delay: inde x * 0.1 }} className="text-left" > <div className="text-left"> {feature.icon} </div> <div> <h3 className="text-left"> {feature.title} </h3> <p className="text-left"> {feature.description} </p> </div> </motion.div> ))} </div> <div className="text-left"> <h3 className="text-left"> Need Help? </h3> <p className="text-left"> Contact our support team for assistance with your account. </p> <div className="text-left"> <a href="tel:+13024640950" className="text-left" > Call: +1 302 464 0950 </a> <a href="mailto: klebe r@ziontechgroup.com" className="text-left" > Email Support </a> </div> </div> </motion.div> </div> </div> </main> </PageTransition> </> ) } export default LoginPage
-
-
-
-
-
 
 :backup-problematic-files/pages._archive_corrupted/login.tsx
 

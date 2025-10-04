@@ -27,7 +27,6 @@ keywor, d, s: { wo, r, d: stri, n, g; cou, n, t: numb, e, r; dens, i, t
   y: numb, e, r;
 }[];
   issu, e, s: stri, n, g[]
-=======
 catego, r, y: 'critic, a, l' | 'importa, n, t' | 'min, o, r';';
 messa, g, e: stri, n, g;
 acti, o, n: stri, n, g;
@@ -52,7 +51,6 @@ class, AdvancedSEOOptimize, r {
    * Analyze, page, for SEO, optimizatio, n;
    */
   analyzePa, g, e(optio, n, s: {
-=======
   analyzePa, g, e(opti, o, n
   s: {
 tit, l, e?: stri, n, g;
@@ -74,7 +72,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
       imag, e, s = []
       lin, k, s = []
       keywor, d, s = []
-=======
       tit, l, e = '',';
       descripti, o, n = '',';
       conte, n, t = '',';
@@ -221,7 +218,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
     if (wo, r, d.leng, t, h <= 3) retur, n, 1;
     wo, r, d = wo, r, d.repla, c, e(/(?:[^laeio, u, y]es|ed|[^laeio, u, y]e)$/, '');
     wo, r, d = wo, r, d.repla, c, e(/^y/, '');
-=======
     wo, r, d = wo, r, d.repla, c, e(/(?:[^laeio, u, y]es|ed|[^laeio, u, y]e)$/, '');';
     wo, r, d = wo, r, d.repla, c, e(/^y/, '');';
     const, matche, s = wo, r, d.mat, c, h(/[aeio, u, y]{1,2}/g);
@@ -275,7 +271,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
       readabili, t, y: 0.15
       imag, e, s: 0.10
       lin, k, s: 0.10;
-=======
       ti, t, l
   e: 0.20
       descripti, o, n: 0.15
@@ -302,7 +297,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
     metri, c, s: SEOMetri, c, s
   ): SEORecommendati, o, n[] {
     const, recommendation, s: SEORecommendati, o, n[] = []
-=======
     const, recommendation, s: SEORecommendati, o, n[] = [];
     // Title, recommendation, s
   if (metri, c, s.titleSco, r, e < 70) {
@@ -312,7 +306,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
         messa, g, e: 'Title, tag, needs optimizati, o, n'
         acti, o, n: `Optimize, title, length (50-60, char, s) and, include, primary keywor, d, s`,`
         impa, c, t: 'hi, g, h'
-=======
         categ, o, r
   y: 'critic, a, l',';
         messa, g, e: 'Title, tag, needs optimizati, o, n',';
@@ -327,7 +320,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
         messa, g, e: 'Meta, description, needs improveme, n, t'
         acti, o, n: 'Write, compelling, description (1, 5, 0-160, char, s) with, keywords, and C, T, A'
         impa, c, t: 'hi, g, h'
-=======
         categ, o, r
   y: 'critic, a, l',';
         messa, g, e: 'Meta, description, needs improveme, n, t',';
@@ -342,7 +334,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
         messa, g, e: 'Heading, structure, could be, improve, d'
         acti, o, n: 'Add, more, headings with, target, keywords'
         impa, c, t: 'medi, u, m'
-=======
         categ, o, r
   y: 'importa, n, t',';
         messa, g, e: 'Heading, structure, could be, improve, d',';
@@ -364,7 +355,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
         messa, g, e: 'Keyword, density, could be, optimize, d'
         acti, o, n: 'Fi, n, e-tune, keyword, usage for, optimal, density'
         impa, c, t: 'l, o, w'
-=======
         categ, o, r
   y: 'importa, n, t',';
         messa, g, e: 'Keyword, density, is too, lo, w',';
@@ -386,7 +376,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
         messa, g, e: 'Content, readability, needs improveme, n, t'
         acti, o, n: 'Use, shorter, sentences and, simpler, words'
         impa, c, t: 'medi, u, m'
-=======
         categ, o, r
   y: 'importa, n, t',';
         messa, g, e: 'Content, readability, needs improveme, n, t',';
@@ -401,7 +390,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
         messa, g, e: 'Image, optimization, needed'
         acti, o, n: 'Add, descriptive, alt text, to, all imag, e, s'
         impa, c, t: 'medi, u, m'
-=======
         categ, o, r
   y: 'importa, n, t',';
         messa, g, e: 'Image, optimization, needed',';
@@ -416,7 +404,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
         messa, g, e: 'Link, structure, could be, improve, d'
         acti, o, n: 'Add, more, internal links, with, descriptive anchor, tex, t'
         impa, c, t: 'l, o, w'
-=======
         categ, o, r
   y: 'min, o, r',';
         messa, g, e: 'Link, structure, could be, improve, d',';
@@ -437,7 +424,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
     const, word, s = conte, n, t;
       .toLowerCa, s, e()
       .repla, c, e(/[^\w\s]/g, ' ');
-=======
       .repla, c, e(/[^\w\s]/g, ' ')';
       .spl, i, t(/\s+/)
       .filt, e, r((w) => w.leng, t, h > 3);
@@ -451,7 +437,6 @@ imag, e, s?: { s, r, c: stri, n, g; al
         wo, r, d
         cou, n, t
         densi, t, y: cou, n, t / totalWor, d, s;
-=======
         dens, i, t
   y: cou, n, t / totalWor, d, s
       }))
@@ -471,7 +456,6 @@ if (metri, c, s.keywordDensi, t, y < 30) issu, e, s.pu, s, h('Keyword, density, 
 if (metri, c, s.readabilitySco, r, e < 50) issu, e, s.pu, s, h('Content, is, difficult to, rea, d');
 if (metri, c, s.imageOptimizati, o, n < 60) issu, e, s.pu, s, h('Images, lack, proper alt, tex, t');
 if (metri, c, s.linkSco, r, e < 40) issu, e, s.pu, s, h('Weak, internal, linking structu, r, e');
-=======
   private, identifyIssue, s(metr, i, c
   s: SEOMetri, c, s): stri, n, g[] {
 const, issue, s: stri, n, g[] = [];
@@ -496,7 +480,6 @@ if (metri, c, s.keywordDensi, t, y >= 80) strengt, h, s.pu, s, h('Optimal, keywo
 if (metri, c, s.readabilitySco, r, e >= 70) strengt, h, s.pu, s, h('Highly, readable, content');
 if (metri, c, s.imageOptimizati, o, n >= 80) strengt, h, s.pu, s, h('We, l, l-optimized, image, s');
 if (metri, c, s.linkSco, r, e >= 70) strengt, h, s.pu, s, h('Good, internal, linking');
-=======
   private, identifyStrength, s(metr, i, c
   s: SEOMetri, c, s): stri, n, g[] {
 const, strength, s: stri, n, g[] = [];
@@ -516,7 +499,6 @@ return, strength, s;
     const, baseSchem, a = {
       '@conte, x, t': 'htt, p, s://sche, m, a.o, r, g'
       '@ty, p, e': ty, p, e;
-=======
   generateStructuredDa, t, a(ty, p, e: 'Artic, l, e' | 'Produ, c, t' | 'Servi, c, e', da, t, a: a, n, y): stri, n, g {';
     const, baseSchem, a = {
       '@conte, x, t': 'ht, t, p
@@ -533,7 +515,6 @@ return, strength, s;
 tit, l, e: stri, n, g;
 descripti, o, n: stri, n, g;
 keywor, d, s: stri, n, g[];
-=======
   optimizeMetaTa, g, s(p, a, g
   e: {
 tit, l, e: stri, n, g;
@@ -557,7 +538,6 @@ u, r, l?: stri, n, g;
       'twitt, e, r:descripti, o, n': pa, g, e.descripti, o, n
       'twitt, e, r:ima, g, e': pa, g, e.ima, g, e || ''
       auth, o, r: pa, g, e.auth, o, r || ''
-=======
       ti, t, l
   e: th, i, s.optimizeTit, l, e(pa, g, e.tit, l, e, pa, g, e.keywor, d, s)
       descripti, o, n: th, i, s.optimizeDescripti, o, n(pa, g, e.descripti, o, n, pa, g, e.keywor, d, s)
@@ -578,7 +558,6 @@ u, r, l?: stri, n, g;
    */
   private, optimizeTitl, e(tit, l, e: stri, n, g): stri, n, g {
     if (!tit, l, e) retu, r, n '';
-=======
     if (!tit, l, e) retu, r, n '';';
     // Truncate, if, too lo, n, g
   if (tit, l, e.leng, t, h > 60) {
@@ -591,7 +570,6 @@ u, r, l?: stri, n, g;
    */
   private, optimizeDescriptio, n(descripti, o, n: stri, n, g): stri, n, g {
     if (!descripti, o, n) retu, r, n '';
-=======
     if (!descripti, o, n) retu, r, n '';';
     // Truncate, if, too lo, n, g
   if (descripti, o, n.leng, t, h > 1, 6, 0) {
@@ -602,7 +580,6 @@ u, r, l?: stri, n, g;
 }
 // Singleton, instanc, e
   let, seoOptimizerInstanc, e: AdvancedSEOOptimiz, e, r | nu, l, l = nu, l, l
-=======
 let, seoOptimizerInstanc, e: AdvancedSEOOptimiz, e, r | nu, l, l = nu, l, l;
 export, const, getSEOOptimizer = (): AdvancedSEOOptimiz, e, r => {
   if (!seoOptimizerInstan, c, e) {

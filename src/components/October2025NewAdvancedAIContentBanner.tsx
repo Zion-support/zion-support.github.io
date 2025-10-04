@@ -8,7 +8,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
       </d, i, v>
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, p, y-8">"
-=======
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, p, y-8">";
         {/* Header, Sectio, n */}
@@ -40,7 +39,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2">
               <Shield, className="w-5 h-5  />
-=======
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4">";
             <Sparkles, className="w-5 h-5, animat, e-pul, s, e" />";
             OCTOBER, 2025, BREAKTHROUGH;
@@ -70,7 +68,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
         </moti, o, n.d, i, v>
         {/* Content, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* Federated, A, I */}
           <moti, o, n.d, i, v
@@ -87,7 +84,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">
                     <Brain, className="w-6 h-6, tex, t-whi, t, e  />
-=======
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l">";
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">";
@@ -102,7 +98,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                   Advanced, Federated, AI Enterprise, Revolutio, n;
                 </h3>
                 <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">
-=======
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
                   Advanced, Federated, AI Enterprise, Revolutio, n;
                 </h3>
@@ -126,7 +121,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
                   <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
                   <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -150,7 +144,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">
                     <Database, className="w-6 h-6, tex, t-whi, t, e  />
-=======
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l">";
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">";
@@ -165,7 +158,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                   Synthetic, Data, Generation Enterprise, Breakthroug, h;
                 </h3>
                 <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">
-=======
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
                   Synthetic, Data, Generation Enterprise, Breakthroug, h;
                 </h3>
@@ -189,7 +181,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 <div, className="mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
                   <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <div, className="mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
                   <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -213,7 +204,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">
                     <Shield, className="w-6 h-6, tex, t-whi, t, e  />
-=======
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">";
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";
                   <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">";
@@ -228,7 +218,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
                 <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">
-=======
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
@@ -252,7 +241,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
                   <sp, a, n>Ensure, AI, Compliance</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
                   <sp, a, n>Ensure, AI, Compliance</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -276,7 +264,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
           >
             <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>
             <ArrowRight, className="w-5 h-5  />
-=======
             <ArrowRight, className="w-5 h-5" />";
           </Li, n, k>
           <p, className="mt-4, tex, t-bl, u, e-200, tex, t-sm">";

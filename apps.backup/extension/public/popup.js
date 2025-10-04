@@ -2,7 +2,6 @@ const API_BASE = 'http: //localhost:4000',;
 function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 
-
 const API_BASE = 'http: //localhost:4000';
 function getUserId(cb) {
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id))
@@ -34,8 +33,6 @@ document && document.getElementById('signIn').addEventListener('click', async ()
 
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
-
-
 
 /**
  * getUserId - Function description

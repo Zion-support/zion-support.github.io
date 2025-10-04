@@ -1,18 +1,6 @@
 import React, { useMemo, useState } from 'react';
 
-
-
-
-
-
   const coverPreview = useMemo_(() => {
-
-
-
-
-
-
-
 
         </div>
       </div>
@@ -83,11 +71,9 @@ URL.revokeObjectURL(url);
 
   return (
 
-
           </select>
           <button className="btn btn-sm btn-primary onClick={handleExportPdf} disabled={busy}>
             <Download className=w-4 h-4 mr-1" /> PDF
-
 
           </button>
 
@@ -100,26 +86,16 @@ URL.revokeObjectURL(url);
             <FileType className=w-4 h-4 mr-1' /> EPUB
           </button>
 
-
-
-
           </h2>
-
-
-
-
-
 
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
             </label>
 
-
             <label className=&quot;space-y-1&quot;>
 
               <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
                 placeholder=&quot;9781234567897&quot;
-
 
               />
             </label>
@@ -130,7 +106,6 @@ URL.revokeObjectURL(url);
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}
 
-
               />
             </label>
             <label className="text-left">
@@ -139,7 +114,6 @@ URL.revokeObjectURL(url);
                 className="text-left"
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}
-
 
               />
             </label>
@@ -153,20 +127,12 @@ URL.revokeObjectURL(url);
               ))}
             <div className='grid grid-cols-3 gap-2'>
 
-
-
-
             <div key={idx} className="text-left">
               <div className="text-left">{ch.title}</div>
               <textarea
                 className="text-left"
                 value={ch.content}
                 onChange={(e) => {
-
-
-
-
-
 
                 value={ch.content}
                 onChange={(e) => {
@@ -188,33 +154,21 @@ URL.revokeObjectURL(url);
                 }}
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 
-
-
-
-
-
-
-
                     text: e.target.value;,
                   };
                   setProject({
                     ...project,
                     visuals: { ...project.visuals;, quoteCallouts },
 
-
-
               <input
                 className="text-left"
                 value={q.attribution ?? ''}
                 onChange={(e) => {
 
-
-
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
-
 
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })                }}
                 placeholder=&quot;Attribution&quot;

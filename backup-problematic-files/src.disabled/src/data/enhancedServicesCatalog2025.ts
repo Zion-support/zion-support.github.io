@@ -14,6 +14,4 @@ export default function EnhancedServicesCatalog2025({ }: EnhancedServicesCatalog
 
 }
 
-
-
 }

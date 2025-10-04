@@ -42,7 +42,6 @@ export default defineConfig({;
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
-
     supportFile: 'cypress/support/e2e.ts';
       });export default defineConfig(
   e2e: 
@@ -50,7 +49,6 @@ export default defineConfig({;
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
-
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
   reporterOptions: 
@@ -62,7 +60,6 @@ export default defineConfig({;
     toConsole: true
   }
 });
-
 
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts';
@@ -89,7 +86,6 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-
 
       });
     }

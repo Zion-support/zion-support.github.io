@@ -1,7 +1,5 @@
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
 import { tagOperatorSession } from "../../../utils/operator";
@@ -17,7 +15,6 @@ export default async function handler(
     reason?: string;
     tag?: string;
 
-
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_json, write_json  } from '../../../utils / fs_db';
 import { tagOperatorSession  } from '../../../utils / operator';
@@ -31,5 +28,4 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
-
 

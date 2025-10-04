@@ -31,5 +31,3 @@ interface ErrorResponse
   // - prisma.user.update to update the password and clear reset token fields
   // - (Potentially) supabase.auth.admin.updateUserById if Supabase auth password also needs update
 
-
-

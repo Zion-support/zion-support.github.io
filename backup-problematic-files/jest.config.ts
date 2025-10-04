@@ -4,7 +4,6 @@ import nextJest from 'next/jest.js';
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 
-
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -20,7 +19,6 @@ import type { Config } from "jest";
 import nextJest from "next/jest.js";
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
-
 
   coverageThreshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
@@ -101,7 +99,6 @@ const config: Config = {
   ],
 
   coverageThreshold: {
-
 
   coverageThreshold: {
 import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);

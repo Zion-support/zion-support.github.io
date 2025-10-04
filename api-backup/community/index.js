@@ -67,4 +67,3 @@
         filtered = mockPosts.filter(p => p.categoryId === category)}
     const paged = filtered.slice(off, off + lim);
 
-

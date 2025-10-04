@@ -1,9 +1,7 @@
 
 const {;
 
-
 const getRelativeTime = () => {;
-
 
 }` ;
 

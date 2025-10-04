@@ -165,8 +165,6 @@ export function ApiKeysManager() {;
 
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
 
-
-
 const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null> (null);
 const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null> (null);
 //Create key form state //Load keys on mount await createApiKey (keyName, selectedScopes);

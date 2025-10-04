@@ -11,4 +11,3 @@ import: { getCLS, getFID, getFCP, getLCP, getTTFB } from;
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics)}, []);
 
-

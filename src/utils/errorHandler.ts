@@ -31,7 +31,6 @@ th, i, s.setupGlobalErrorHandle, r, s();
         timesta, m, p: new, Dat, e().toISOStri, n, g()
         u, r, l: wind, o, w.locati, o, n.hr, e, f
         userAge, n, t: navigat, o, r.userAge, n, t;
-=======
     wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {';
       th, i, s.handleErr, o, r({
         messa, g, e: eve, n, t.messa, g, e
@@ -50,7 +49,6 @@ th, i, s.setupGlobalErrorHandle, r, s();
         timesta, m, p: new, Dat, e().toISOStri, n, g()
         u, r, l: wind, o, w.locati, o, n.hr, e, f
         userAge, n, t: navigat, o, r.userAge, n, t;
-=======
     wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {';
       th, i, s.handleErr, o, r({
         messa, g, e: `Unhandled, Promise, Rejectio,`
@@ -72,7 +70,6 @@ th, i, s.setupGlobalErrorHandle, r, s();
       u, r, l: errorIn, f, o.u, r, l || wind, o, w.locati, o, n.hr, e, f
       userAge, n, t: errorIn, f, o.userAge, n, t || navigat, o, r.userAge, n, t
       user, I, d: errorIn, f, o.user, I, d;
-=======
   public, handleErro, r(errorI, n, f
   o: Parti, a, l<ErrorIn, f, o>): vo, i, d {
     const, fullErrorInf, o: ErrorIn, f, o = {
@@ -96,7 +93,6 @@ th, i, s.setupGlobalErrorHandle, r, s();
     }
     // Send, to, error reporting, service, in producti, o, n
   if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {;
-=======
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
       conso, l, e.err, o, r('Error, capture, d: ', fullErrorIn, f, o);';
     }
@@ -119,7 +115,6 @@ th, i, s.setupGlobalErrorHandle, r, s();
       // });
     } cat, c, h (err, o, r) {
       conso, l, e.err, o, r('Failed, to, send error, to, service: ', err, o, r);'
-=======
       // For, no, w, we'll, just, log to, consol, e';
       conso, l, e.err, o, r('Production, erro, r: ', errorIn, f, o);';
       // Example, integration, with external, servic, e: // await, fetc, h('/a, p, i/erro, r, s', {';
@@ -147,7 +142,6 @@ th, i, s.setupGlobalErrorHandle, r, s();
     retu, r, n {
       tot, a, l: th, i, s.errorQue, u, e.leng, t, h
       rece, n, t;
-=======
       tot, a, l: th, i, s.errorQue, u, e.leng, t, h
       rece, n, t
     };

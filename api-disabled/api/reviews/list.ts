@@ -1,20 +1,15 @@
 
 
-
-
     }
     if (!targetType |!targetId) {
 
-
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
-
 
     }
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
-
 
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
@@ -27,15 +22,9 @@
       if (r.removed || !r.approved) return false;
       const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
 
-
-
-
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
-
-
-
 
           x && x.projectId === r && r.projectId &&
           x && x.fromRole !== r && r.fromRole &&
@@ -43,15 +32,9 @@
           x && x.approved &&
           !x && x.removed,
 
-
-
-
       );
       return counterpart_exists;
     });
-
-
-
 
       .map((r) => {
         let authorName = r && r.fromId;
@@ -61,16 +44,10 @@
         }
         if (r && r.anonymous) authorName = "Anonymous";
 
-
-
-
     const summary: ReviewsSummary = {
       average_rating,
       total_reviews,
       totalCompletedProjects,
-
-
-
 
   } catch (error: any) {
 
@@ -79,9 +56,6 @@
       .json ({ error: "Internal server error", details: error?.message });
   }
 
-
-
   }
 }
-
 

@@ -48,9 +48,6 @@ const 'Navigation': React.FC = () => {
   ];
   const handleDropdownToggle = (itemName: string) => {
 
-
-
-
   const navigation = [{ 'name': 'Services', 'href': '/services', 'hasDropdown': 'true' },
     { 'name': 'Solutions', 'href': '/solutions', 'hasDropdown': 'true' },
     { 'name': 'About', 'href': '/about' },

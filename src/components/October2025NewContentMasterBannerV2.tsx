@@ -20,7 +20,6 @@ export, default, function October2025NewContentMasterBanner, V, 2(): vo, i, d {
             Revolutionary, AI, Solutions Just, Launche, d;
           </h2>
           <p, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-100, m, b-6">"
-=======
       <div, className="relativ, e, z-1, 0, p-8, m, d: p-12">";
         {/* Head, e, r */}
         <div, className="te, x, t-center, m, b-8">";
@@ -64,7 +63,6 @@ export, default, function October2025NewContentMasterBanner, V, 2(): vo, i, d {
             <div, className="bg-purp, l, e-9, 0, 0/40, rounde, d-l, g, p-4, m, b-4, border, border-purp, l, e-5, 0, 0/30">
               <p, className="te, x, t-purp, l, e-200, tex, t-sm, fon, t-semibold, m, b-2">Fortune, 50, Success: </p>"
               <p, className="te, x, t-purp, l, e-100, tex, t-lg">$14.7B, business, impact • 25,0, 0, 0+ AI, agent, s</p>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
           {/* Cognitive, Hyperautomatio, n */}
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xl, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">";
@@ -123,7 +121,6 @@ export, default, function October2025NewContentMasterBanner, V, 2(): vo, i, d {
             <div, className="bg-bl, u, e-9, 0, 0/40, rounde, d-l, g, p-4, m, b-4, border, border-bl, u, e-5, 0, 0/30">
               <p, className="te, x, t-bl, u, e-200, tex, t-sm, fon, t-semibold, m, b-2">Fortune, 100, Success: </p>"
               <p, className="te, x, t-bl, u, e-100, tex, t-lg">47M, customer, s • 92% satisfacti, o, n • 72, countrie, s</p>
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xl, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">";
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <Star, className="w-8 h-8, tex, t-bl, u, e-300, animat, e-pul, s, e" />";
@@ -163,7 +160,6 @@ export, default, function October2025NewContentMasterBanner, V, 2(): vo, i, d {
             Combined, Innovation, Impact;
           </h3>
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-6">"
-=======
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-6">";
             <d, i, v>
               <div, className="te, x, t-4xl, fon, t-black, tex, t-oran, g, e-300, m, b-2">$61.3B</d, i, v>";
@@ -189,7 +185,6 @@ export, default, function October2025NewContentMasterBanner, V, 2(): vo, i, d {
             <Sparkles, className="w-6 h-6, animat, e-sp, i, n-sl, o, w  />
             <sp, a, n>Enterpri, s, e-Proven, AI, Innovation</sp, a, n>
             <Rocket, className="w-6 h-6, animat, e-pul, s, e  />
-=======
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-ro, s, e-500, tex, t-white, fon, t-black, tex, t-lg, p, x-8, p, y-4, rounde, d-xl, shado, w-lg, borde, r-2, borde, r-whi, t, e/20">";
             <Sparkles, className="w-6 h-6, animat, e-sp, i, n-sl, o, w" />";
             <sp, a, n>Enterpri, s, e-Proven, AI, Innovation</sp, a, n>

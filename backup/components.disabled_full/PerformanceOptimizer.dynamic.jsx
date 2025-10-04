@@ -14,7 +14,6 @@ const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'),{'; 
 
 </p>'
 
-
 </p>'
 
 '

@@ -11,7 +11,6 @@ interface AIEnhancementButtonProps {;
   className?:string;
 }
 
-
   buttonText = "Enhance with AI",;"
   className;)
 } AIEnhancementButtonProps) {;
@@ -19,7 +18,6 @@ interface AIEnhancementButtonProps {;
   const [error, setError] = useState<string | null>(null),;
 </string>
     if (!currentContent || currentContent.trim().length < 10) {;"
-
 
       type="button";""
       variant="ghost";""
@@ -32,5 +30,4 @@ interface AIEnhancementButtonProps {;
         <Sparkles className="text-left" />;
       )}
       <span className="text-left">{buttonText}<;
-
 

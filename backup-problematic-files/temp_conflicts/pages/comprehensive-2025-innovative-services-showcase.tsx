@@ -4,7 +4,6 @@ import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
-
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 ;
 const Comprehensive2025InnovativeServicesShowcase:React.FC = () => {;
@@ -19,12 +18,9 @@ const Comprehensive2025InnovativeServicesShowcase:React.FC = () => {;
     { name: 'AI & Creativity';, icon: Palette;, color: 'from-pink-500 to-rose-500' ;},;
     { name: 'AI & Robotics';, icon: Database;, color: 'from-emerald-500 to-green-500' ;}']
 
-
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
 
-
   'Neuroscience & BCI';']
-
 
 // Helper function to get service pricing;
 const getServicePricing = (service:any) => {;
@@ -32,9 +28,6 @@ const getServicePricing = (service:any) => {;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,;`;
   if (service.price?.monthly) return `$${service.price.monthly}/month`,;
   return 'Contact for pricing',;
-
-
-
 
   return ;
 export default function Comprehensive2025InnovativeServicesShowcase() {;
@@ -47,10 +40,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
     .filter(service => {;)
       const serviceName = (service as any).title || (service as any).name || ,;
 
-
       const aName = (a as any).title || (a as any).name || ,;
       const bName = (b as any).title || (b as any).name || ,;
-
 
       }
     }),;
@@ -131,8 +122,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                 <div className="text-left"></div>;""
                 <div className="text-left">Future Possibilities</div>;"
               </div>;
-
-
 
                   key={category.name}
                   transition={{ duration: 0.6;, delay: index * 0.1 ;}}

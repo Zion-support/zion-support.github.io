@@ -125,7 +125,6 @@ pr-12325
                     className="text-left";"
                     {...field}
 
-
               ;"
           <div className="text-left">;"
               name="due_date";"
@@ -134,7 +133,6 @@ pr-12325
                   <Popover>;
 
                     <PopoverTrigger asChild>;
-
 
                         <Button;"
                           variant="outline";""
@@ -150,7 +148,6 @@ pr-12325
                         selected={field.value}
                         onSelect={field.onChange}
                         disabled={(date) => date < new Date()}
-
 
                 ;              )}
               name="amount";"

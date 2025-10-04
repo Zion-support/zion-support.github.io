@@ -45,8 +45,6 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     
     // Check for common disposable email domains,
 
-
-
                       placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net"                      rows={8}
                       className=&quot;w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none&quot;
                     />
@@ -104,8 +102,6 @@ onClick={validateEmails}
                     <Button,
 onClick={clearResults}
                       variant=&quot;outline&quot;
-
-
 
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
@@ -213,7 +209,6 @@ key={index}`;
                       </div>
                           Score: {result.score}
 
-
                       {result.issues.length > 0 && (
 
                         <div className=&quot;text-sm&quot;>
@@ -247,11 +242,7 @@ key={index}`;
                   <div className=&quot;text - 6xl mb - 4&quot;>📧</div>;
                   <p className=&quot;text - gray - 400 & quot;>;
 
-
-
 ;
-
-
 
 }
       <section className="text-left">
@@ -287,7 +278,6 @@ href=&quot;/pricing&quot;
       </section>
     </>
   )}
-
 
 :components/email-validator.tsx
 ;

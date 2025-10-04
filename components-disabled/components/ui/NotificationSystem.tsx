@@ -36,7 +36,6 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-
   const addNotification = (notification: Omit<Notification, 'id'>) => {
 
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>

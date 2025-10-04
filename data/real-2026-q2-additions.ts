@@ -1,7 +1,5 @@
 
 
-
-
 export const real2026Q2Additions = [
   
       'Jira',
@@ -328,8 +326,6 @@ export const real2026Q2Additions = [
     ]
     useCases: [
 
-
-
 export const real2026Q2Additions = [
   
       'Jira',
@@ -380,7 +376,6 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
 
-
       'Training data augmentation',
       'Privacy - preserving analytics',
       'Test data generation',
@@ -397,8 +392,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
 
   },
-  
-  
+
     id: 'ecommerce - returns - orchestrator',
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
@@ -415,7 +409,6 @@ export const real2026Q2Additions = [
     ],
     use_cases: [;
 
-  
       'DTC brands returns automation',
       'Marketplace return SLAs',
       'Reduce WISMO support',
@@ -432,8 +425,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
 
   },
-  
-  
+
 export const real2026Q2Additions = [
   
     id: 'ai - synthetic - data - factory',
@@ -1027,7 +1019,6 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
 
-
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
@@ -1065,14 +1056,12 @@ export const real2026Q2Additions = [
   }
 ];
 
-
     period: '/device / month';
     trial_days: 14;
     setup_time: 'Fast';
     market_position: 'Cost - effective RMM for partners and IT teams';
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops';
-
 
 export const real2026Q2Additions = [;
   {;
@@ -1276,7 +1265,6 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-
 
   }
 ];

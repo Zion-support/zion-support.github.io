@@ -3,7 +3,6 @@ import, Reac, t, { Suspen, s, e, la, z, y, ComponentTy, p, e } fr, o, m "rea, c,
   const, LoadingSpinne, r: Rea, c, t.FC = () => (
   <div, className="flex, item, s-center, justif, y-cente, r, p-8">
     <div, className="anima, t, e-spin, rounde, d-ful, l, h-8 w-8, borde, r-b-2, borde, r-bl, u, e-6, 0, 0"></d, i, v>
-=======
 import, Reac, t, { Suspen, s, e, la, z, y, ComponentTy, p, e } fr, o, m "rea, c, t";';
 // Loading, componen, t
   const, LoadingSpinne, r: Rea, c, t.FC = () => (
@@ -28,7 +27,6 @@ import, Reac, t, { Suspen, s, e, la, z, y, ComponentTy, p, e } fr, o, m "rea, c,
 export, const, LazyBanner = withLazyLoadi, n, g(
   () => impo, r, t('../componen, t, s/BannerCarous, e, l')
   () => <div, className="h-64, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, animat, e-pulse, rounde, d-lg"  />
-=======
   () => impo, r, t('../componen, t, s/BannerCarous, e, l'),';
   () => <div, className="h-64, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, animat, e-pulse, rounde, d-lg" />";
 );
@@ -42,7 +40,6 @@ export, const, LazyFeaturedServices = withLazyLoadi, n, g(
   () => <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-3, ga, p-4">
     {[1, 2, 3].m, a, p(i => (
       <div, ke, y={i} classNa, m, e="h-48, b, g-gr, a, y-100, animat, e-pulse, rounde, d-lg  />
-=======
   () => impo, r, t('../componen, t, s/ContentShowca, s, e'),';
   () => <div, className="h-96, b, g-gr, a, y-100, animat, e-pulse, rounde, d-lg" />";
 );

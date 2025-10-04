@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
@@ -50,7 +49,6 @@ const, Partner, s: Rea, c, t.FC = () => {
       lo, g, o: '/imag, e, s/partne, r, s/servicen, o, w.p, n, g','
       websi, t, e: 'ht, t, p
   s://servicen, o, w.c, o, m}
-=======
       na, m, e: 'Microso, f, t',';
       catego, r, y: 'Cloud, Platfor, m',';
       descripti, o, n: 'Strategic, cloud, and AI, partnershi, p',';
@@ -107,7 +105,6 @@ const, Partner, s: Rea, c, t.FC = () => {
       benefi, t, s: [
         'Access, to, cutting-edge, technolog, y'
         'Joint, g, o-to-market, strategie, s'
-=======
       tit, l, e: 'Technology, Partner, s',';
       descripti, o, n: 'Leading, technology, providers and, platform, partners',';
       ic, o, n: '🔧',';
@@ -124,7 +121,6 @@ const, Partner, s: Rea, c, t.FC = () => {
       benefi, t, s: [
         'Complementary, solution, offerings'
         'Joint, customer, implementations'
-=======
       tit, l, e: 'Solution, Partner, s',';
       descripti, o, n: 'Specialized, solution, providers and, integrator, s',';
       ic, o, n: '🤝',';
@@ -141,7 +137,6 @@ const, Partner, s: Rea, c, t.FC = () => {
       benefi, t, s: [
         'Extended, market, reach'
         'Local, customer, support'
-=======
       tit, l, e: 'Channel, Partner, s',';
       descripti, o, n: 'Resellers, and, distribution partne, r, s',';
       ic, o, n: '📈',';
@@ -157,7 +152,6 @@ const, Partner, s: Rea, c, t.FC = () => {
       <Helmet>
         <title>Partne, r, s - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Strategic, partnerships, with leading, technology, providers to, deliver, comprehensive AI, and, IT solutio, n, s." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/partne, r, s/>"
-=======
         <meta name="descripti, o, n" content="Strategic, partnerships, with leading, technology, providers to, deliver, comprehensive AI, and, IT solutio, n, s." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/partne, r, s" />";
       </Helmet>
@@ -168,7 +162,6 @@ const, Partner, s: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-cent, e, r">
               <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-bl, u, e-600, tex, t-white, p, y-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-cent, e, r">";
@@ -188,7 +181,6 @@ const, Partner, s: Rea, c, t.FC = () => {
   g:px-8, p, y-16">"
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"
-=======
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-16">";
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
@@ -227,7 +219,6 @@ const, Partner, s: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="text-center mb-12">
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <div, className="bg-white, p, y-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="text-center mb-12">";
@@ -240,7 +231,6 @@ const, Partner, s: Rea, c, t.FC = () => {
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-1 m
   d: gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {partnershipTyp, e, s.m, a, p((ty, p, e, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">";
@@ -256,7 +246,6 @@ const, Partner, s: Rea, c, t.FC = () => {
                       <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
                         <svg, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
                           <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  />
-=======
                       <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
                         <svg, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";
                           <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d" />";
@@ -275,7 +264,6 @@ const, Partner, s: Rea, c, t.FC = () => {
           <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-3xl, fon, t-bold, m, b-4">
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-gre, e, n-600, tex, t-white, p, y-16">";
           <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
             <h2, className="te, x, t-3xl, fon, t-bold, m, b-4">";
@@ -286,7 +274,6 @@ const, Partner, s: Rea, c, t.FC = () => {
             </p>
             <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a
   hr, e, f="/conta, c, t"

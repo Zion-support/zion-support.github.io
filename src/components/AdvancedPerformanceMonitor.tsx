@@ -32,7 +32,6 @@ const, AdvancedPerformanceMonito, r: Rea, c, t.FC = () => {
     i, n, p: 0
     bundleSi, z, e: 0
     loadTi, m, e: 0;
-=======
     fc
   p: 0
     l, c, p: 0
@@ -71,7 +70,6 @@ const, AdvancedPerformanceMonito, r: Rea, c, t.FC = () => {
     if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';
     if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';
     retu, r, n 'po, o, r';
-=======
     if (!thresho, l, d) retu, r, n 'unkno, w, n';';
     if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';';
     if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';';
@@ -83,7 +81,6 @@ ca, s, e 'go, o, d': retu, r, n 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0'
 ca, s, e 'nee, d, s-improveme, n, t': retu, r, n 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';
 ca, s, e 'po, o, r': retu, r, n 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';
 defau, l, t: retu, r, n 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0';
-=======
 ca, s, e 'go, o, d': retu, r, n 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';';
 ca, s, e 'nee, d, s-improveme, n, t': retu, r, n 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';';
 ca, s, e 'po, o, r': retu, r, n 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';';
@@ -116,7 +113,6 @@ defa, u, l
       const, loadTim, e = navigati, o, n ? navigati, o, n.loadEventE, n, d - navigati, o, n.fetchSta, r, t : 0;
       // Estimate, bundle, size (simulat, e, d)
       const, bundleSiz, e = docume, n, t.querySelectorA, l, l('scri, p, t').leng, t, h * 500, 0, 0;
-=======
       const, bundleSiz, e = docume, n, t.querySelectorA, l, l('scri, p, t').leng, t, h * 500, 0, 0;';
       const, newMetric, s: PerformanceMetri, c, s = {
         f, c, p: vita, l, s.f, c, p || 0
@@ -138,7 +134,6 @@ defa, u, l
           newAler, t, s.pu, s, h({
             id: `${k, e, y}-${Da, t, e.n, o, w()}`,`;`
             ty, p, e: 'err, o, r','
-=======
       const, newAlert, s: PerformanceAle, r, t[] = [];
       Obje, c, t.entri, e, s(newMetri, c, s).forEa, c, h(([k, e, y, val, u, e]) => {
         const, statu, s = getMetricStat, u, s(k, e, y, val, u, e);
@@ -156,7 +151,6 @@ defa, u, l
           newAler, t, s.pu, s, h({
             id: `${k, e, y}-${Da, t, e.n, o, w()}`,`;`
             ty, p, e: 'warni, n, g','
-=======
             thresho, l, d: threshol, d, s[key, as, keyof typeof, threshold, s].po, o, r
           });
         } else, i, f (stat, u, s === 'nee, d, s-improveme, n, t') {';
@@ -168,7 +162,6 @@ defa, u, l
             metr, i, c: k, e, y
             val, u, e
             thresho, l, d: threshol, d, s[key, as, keyof typeof, threshold, s].po, o, r;
-=======
             thresh, o, l
   d: threshol, d, s[key, as, keyof typeof, threshold, s].po, o, r
           });
@@ -179,7 +172,6 @@ defa, u, l
       }
     } cat, c, h (err, o, r) {
       conso, l, e.err, o, r('Error, collecting, performance metri, c, s: ', err, o, r);'
-=======
       conso, l, e.err, o, r('Error, collecting, performance metri, c, s: ', err, o, r);';
     }
   }, [getMetricStat, u, s]);
@@ -206,7 +198,6 @@ retu, r, n `${(val, u, e / 10, 2, 4).toFix, e, d(1)`
         retu, r, n `${val, u, e}ms`;`
       defau, l, t:
         return, valu, e.toStri, n, g();
-=======
 ca, s, e 'c, l, s':';
 return, valu, e.toFix, e, d(3);
 ca, s, e 'bundleSi, z, e':';
@@ -231,7 +222,6 @@ retu, r, n `${(val, u, e / 10, 2, 4).toFix, e, d(1)`;`
       histo, r, y
       aler, t, s
       timesta, m, p: new, Dat, e().toISOStri, n, g()
-=======
       timest, a, m
   p: new, Dat, e().toISOStri, n, g()
     };
@@ -259,7 +249,6 @@ isMonitori, n, g;
 }`}`;`
           >
             {isMonitori, n, g ? 'Stop, Monitorin, g' : 'Start, Monitorin, g'};
-=======
 ? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0',';
 : 'bg-gre, e, n-600, tex, t-white, hove, r:bg-gre, e, n-7, 0, 0'
 }`}`;`
@@ -305,7 +294,6 @@ isMonitori, n, g;
 ale, r, t.ty, p, e === 'err, o, r'
 ? 'bg-r, e, d-50, borde, r-r, e, d-400, tex, t-r, e, d-8, 0, 0'
 : ale, r, t.ty, p, e === 'warni, n, g'
-=======
 : ale, r, t.ty, p, e === 'warni, n, g',';
 ? 'bg-yell, o, w-50, borde, r-yell, o, w-400, tex, t-yell, o, w-8, 0, 0'
 : 'bg-bl, u, e-50, borde, r-bl, u, e-400, tex, t-bl, u, e-8, 0, 0'
@@ -342,7 +330,6 @@ ale, r, t.ty, p, e === 'err, o, r'
                 <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, uppercase, text-sm">{k, e, y}</h4>
                 <span, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-medi, u, m ${getMetricCol, o, r(stat, u, s)}`}>`;`
                   {stat, u, s.repla, c, e('-', ' ')};
-=======
       <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-4, m, b-6">";
         {Obje, c, t.entri, e, s(metri, c, s).m, a, p(([k, e, y, val, u, e]) => {
@@ -366,7 +353,6 @@ ale, r, t.ty, p, e === 'err, o, r'
 stat, u, s === 'go, o, d'
 ? 'bg-gre, e, n-5, 0, 0'
 : stat, u, s === 'nee, d, s-improveme, n, t'
-=======
 : stat, u, s === 'nee, d, s-improveme, n, t',';
 ? 'bg-yell, o, w-5, 0, 0'
 : 'bg-r, e, d-5, 0, 0'
@@ -376,7 +362,6 @@ stat, u, s === 'go, o, d'
                         (val, u, e / (threshol, d, s[key, as, keyof typeof, threshold, s]?.po, o, r || 1)) * 1, 0, 0
   1, 0, 0;
                       )}%`}}`
-=======
                       wid, t, h: `${Ma, t, h.m, i, n(,`;`
                         (val, u, e / (threshol, d, s[key, as, keyof typeof, threshold, s]?.po, o, r || 1)) * 1, 0, 0
                         1, 0, 0;
@@ -400,7 +385,6 @@ stat, u, s === 'go, o, d'
                   sty, l, e={{
                     heig, h, t: `${(ent, r, y.l, c, p / 40, 0, 0) * 2, 0, 0}px`,`
                     minHeig, h, t: '4, p, x'
-=======
                     hei, g, h
   t: `${(ent, r, y.l, c, p / 40, 0, 0) * 2, 0, 0}px`,`;`
                     minHeig, h, t: '4, p, x',';
@@ -422,7 +406,6 @@ stat, u, s === 'go, o, d'
           {
 metri, c, s.l, c, p > threshol, d, s.l, c, p.po, o, r && (
 <li>• Optimize, Largest, Contentful Pai, n, t: Consider, image, optimization and, critical, CSS</li>
-=======
 <li>• Optimize, Largest, Contentful Pa, i, n
   t: Consider, image, optimization and, critical, CSS</li>
 )
@@ -430,7 +413,6 @@ metri, c, s.l, c, p > threshol, d, s.l, c, p.po, o, r && (
           {
 metri, c, s.f, c, p > threshol, d, s.f, c, p.po, o, r && (
 <li>• Improve, First, Contentful Pai, n, t: Reduce, rende, r-blocking, resource, s</li>
-=======
 <li>• Improve, First, Contentful Pa, i, n
   t: Reduce, rende, r-blocking, resource, s</li>
 )
@@ -438,7 +420,6 @@ metri, c, s.f, c, p > threshol, d, s.f, c, p.po, o, r && (
           {
 metri, c, s.c, l, s > threshol, d, s.c, l, s.po, o, r && (
 <li>• Reduce, Cumulative, Layout Shi, f, t: Add, dimensions, to images, and, ads</li>
-=======
 <li>• Reduce, Cumulative, Layout Sh, i, f
   t: Add, dimensions, to images, and, ads</li>
 )
@@ -446,7 +427,6 @@ metri, c, s.c, l, s > threshol, d, s.c, l, s.po, o, r && (
           {
 metri, c, s.bundleSi, z, e > threshol, d, s.bundleSi, z, e.po, o, r && (
 <li>• Reduce, bundle, size: Implement, code, splitting and, tree, shaking</li>
-=======
 <li>• Reduce, bundle, siz
   e: Implement, code, splitting and, tree, shaking</li>
 )

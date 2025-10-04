@@ -14,7 +14,6 @@ import: { useParams } from;
           }
           setProfile(mockProfile);
 
-
         setLoading(false)}
     }
     if: (id) {

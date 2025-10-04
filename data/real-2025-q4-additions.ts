@@ -19,7 +19,6 @@ export interface Q4Service
   setup_time?: string;
   category: string;
 
-
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -99,7 +98,6 @@ const contact =
     features: [;
       'Multi - speaker diarization',
 
-
     customers: 120,
     rating: 4.7,
     reviews: 48,
@@ -123,12 +121,10 @@ const contact =
     popular: false,
     icon: '🎧',
 
-
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / services / podcast - transcription - studio',
     market_position:;
-
 
       'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
     target_audience: 'Podcasters, media teams, agencies',
@@ -230,7 +226,6 @@ const contact =
     real_service: true,
     technology: ['Next.js', 'SQLite / Postgres', 'Twilio'],
 
-
     integrations: ['Gmail', 'Outlook', 'Stripe'],
     use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
     roi: 'Increase follow - through and close rates 10–20% via reminders.',
@@ -256,7 +251,6 @@ const contact =
     description:;
       'Plug - and - play returns workflows with label generation, RMA approvals, and status tracking for Shopify / WooCommerce.',
     features: [;
-
 
     technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
     integrations: ['Gmail', 'Outlook', 'Stripe'],
@@ -317,7 +311,6 @@ const contact =
     category: 'Developer Tools',
     real_service: true,
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
-
 
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
     use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
@@ -400,7 +393,6 @@ const contact =
     real_service: true,
     technology: ['Next.js', 'Node.js', 'PostgreSQL'],
 
-
     integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
@@ -429,7 +421,6 @@ export const real2025Q4Additions = [;
       'Production - ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high - stakes workflows.',
     features: [;
 
-
       'Document sync and chunking pipelines',
       'Metadata and policy guardrails',
       'Evals and drift tracking',
@@ -439,7 +430,6 @@ export const real2025Q4Additions = [;
     ],
     popular: true,
     icon: '🧠',
-
 
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
@@ -463,7 +453,6 @@ export const real2025Q4Additions = [;
     real_implementation: true,
     implementation_details:;
 
-
       'Pipelines, policies, eval harness, cost and latency budgets.',
     launch_date: '2025 - 03 - 01',
     customers: 18,
@@ -479,7 +468,6 @@ export const real2025Q4Additions = [;
     description:;
       'Low - latency personalization rules and ML scoring at the edge with audience definitions, A / B tests, and analytics.',
     features: [;
-
 
       'Audience builder and traits',
       'Edge functions and KV cache',
@@ -1691,12 +1679,10 @@ export const real2025Q4Additions = [
   }
 ];
 
-
     rating: 4 && 4.6,
     reviews: 9
   }
 ];
-
 
 const contact = 
   mobile: '+1 302 464 0950',

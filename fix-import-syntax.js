@@ -14,7 +14,6 @@ function fixImportSyntax(filePath) {
       return match.replace(imports, fixedImports);
     });
 
-
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
@@ -24,8 +23,6 @@ function fixImportSyntax(filePath) {
       return match && match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
-
-
 
     // Fix function parameter syntax errors
     content = content.replace(
@@ -103,5 +100,4 @@ function fixImportSyntax() {
           continue;
         }
         traverse(fullPath);
-
 

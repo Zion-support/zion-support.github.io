@@ -1,14 +1,11 @@
     }
 
-
-
             <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>;
           ;
           <Link href='/incubator'>;
 
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
 </a>
-
 
     const params = new URLSearchParams();
     if (filters.sector) params.set('sector', filters.sector);'

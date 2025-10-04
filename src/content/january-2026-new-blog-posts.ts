@@ -21,7 +21,6 @@ export, const, newJanuary2026BlogPosts: BlogPo, s, t[] = [
     excer, p, t: "Complete, business, process automation, achieving, 95% automation, rates, with 10x, efficiency, improvements a, n, d $2.8B, success, stories."
     conte, n, t: `,`
 # AI, Hyperautomation, Platform 20, 2, 6: E, n, d-to-End, Business, Automation;
-=======
     i
   d: "ai-20, 2, 6-janua, r, y-hyperautomati, o, n-platfo, r, m",";
     tit, l, e: "⚙️ AI, Hyperautomation, Platform 2, 0, 2
@@ -126,7 +125,6 @@ The, future, of business, operations, is he, r, e. Our, AI, Hyperautomation Plat
     readTi, m, e: 14
     catego, r, y: "Business, Automatio, n","
     ta, g, s: ["hyperautomati, o, n", "AI", "business, proces, s", "efficien, c, y", "transformati, o, n"],"
-=======
 The, age, of hyperautomation, has, begun. The, question, isn't, whether, to automa, t, e - it's, how, quickly you, can, transform your, busines, s.';
 *"We're, not, just automating, task, s; we're, transforming, entire business, ecosystem, s."* - Sarah, Johnso, n, Chief, Automation, Officer";
     `,`;`
@@ -145,7 +143,6 @@ The, age, of hyperautomation, has, begun. The, question, isn't, whether, to auto
     excer, p, t: "Quant, u, m-resistant, security, systems protecti, n, g $2.8B, in, assets with, 9, 9.99% threat, prevention, and zero, security, breaches across, enterprise, networks."
     conte, n, t: `,`
 # Quant, u, m-Safe, Security, 2026: Unbreakable, Enterprise, Protection;
-=======
     i
   d: "ai-20, 2, 6-janua, r, y-quant, u, m-securi, t, y-breakthrou, g, h",";
     tit, l, e: "🔐 Quant, u, m-Safe, Security, 202
@@ -159,7 +156,6 @@ As, quantum, computing advanc, e, s, traditional, encryption, methods become, vu
 - **RSA, Encryptio, n**: Vulnerable, to, Shor's, algorith, m;
 - **Elliptic, Curve, Cryptography**: Quantum, attack, susceptible;
 - **Symmetric, Key, Systems**: Grov, e, r's, algorithm, reduces securi, t, y;
-=======
 - **RSA, Encryptio, n**: Vulnerable, to, Shor's, algorith, m';
 - **Elliptic, Curve, Cryptography**: Quantum, attack, susceptible;
 - **Symmetric, Key, Systems**: Grov, e, r's, algorithm, reduces securi, t, y';
@@ -268,7 +264,6 @@ As, quantum, computing advanc, e, s, traditional, encryption, methods become, vu
     readTi, m, e: 16
     catego, r, y: "Cybersecuri, t, y","
     ta, g, s: ["quantum, securit, y", "encrypti, o, n", "cybersecuri, t, y", "protecti, o, n", "complian, c, e"],"
-=======
 The, quantum, era is, comin, g. The, question, isn't, whether, your security, will, be compromis, e, d - it's, whether, you'll, be, ready.';
 *"In, the, quantum e, r, a, security, is, n't, just, about protecting, toda, y's, dat, a; it's, about, securing tomorr, o, w's, secret, s."* - Dr. Michael, Che, n, Chief, Security, Officer";
     `,`;`
@@ -287,7 +282,6 @@ The, quantum, era is, comin, g. The, question, isn't, whether, your security, wi
     excer, p, t: "Revolutionary, integration, of blockchain, and, AI creating, trustless, intelligence systems, with, decentralized governance, an, d $1.2B, enterprise, value creati, o, n."
     conte, n, t: `,`
 # Blockcha, i, n-AI, Integration, 2026: Trustless, Intelligence, Revolution;
-=======
     i
   d: "ai-20, 2, 6-janua, r, y-blockcha, i, n-integrati, o, n",";
     tit, l, e: "⛓️ Blockcha, i, n-AI, Integration, 202
@@ -424,7 +418,6 @@ The, convergence, of blockchain, and, artificial intelligence, represents, the m
     readTi, m, e: 17
     catego, r, y: "Blockchain, Technolog, y","
     ta, g, s: ["blockcha, i, n", "AI, integratio, n", "decentraliz, e, d", "trustle, s, s", "innovati, o, n"],"
-=======
     auth, o, r: "Dr. Sarah, Rodrigue, z, Chief, Blockchain, Architect",";
     published, A, t: "20, 2, 6-01-26",";
     readTi, m, e: 17

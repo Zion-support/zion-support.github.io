@@ -185,12 +185,10 @@ class SmartGitAutomator {
   // TODO: Implement
       const conflicts = [];
 
-
       if (status.includes('UU')) {
         const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {
         }).split('\n').filter(Boolean);`;
         this.log(`🔧 Resolving conflicts in ${conflictedFiles.length} files`);
-
 
         for (const file of conflictedFiles) {
           const resolution = await this.intelligentConflictResolution(file);
@@ -224,7 +222,6 @@ class SmartGitAutomator {
   // TODO: Implement
       const content = fs.readFileSync(filePath, 'utf8');
         return { type: 'none', success: true };
-
 
       // Simple conflict resolution strategies;
       const strategies = [

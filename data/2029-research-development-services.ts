@@ -382,7 +382,6 @@
     price: '$6, 999 / month',    features: [;
       'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools';
 
-
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';
@@ -524,7 +523,6 @@
 
     }
   }
-
 
 export interface ResearchDevelopmentService2029 {;
 

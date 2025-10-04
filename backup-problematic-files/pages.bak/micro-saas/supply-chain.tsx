@@ -29,14 +29,10 @@ interface Supply-chainProps {
 
 }
 
-
 }
 }
 }
 }
-
-
-
 
   className?: string;
 

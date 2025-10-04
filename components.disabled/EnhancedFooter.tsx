@@ -2,7 +2,6 @@ import: React from 'react';';
 import: Link from 'next/link';';
 import: { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';';
 
-
               </div>
             </div>
           </div>
@@ -23,5 +22,4 @@ import: { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucid
         </div>
       </div>
     </footer>
-
 

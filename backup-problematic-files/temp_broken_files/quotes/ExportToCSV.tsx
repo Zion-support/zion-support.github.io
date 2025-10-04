@@ -12,10 +12,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
     // Define CSV Headers;
     const headers = [;"
 
-
       'StatusCreated Date';']
     ],;
-
 
           :quote.budget_min ;`;
             ? `$${quote.budget_min}` ;)
@@ -24,7 +22,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       quote.status,;
       new Date(quote.created_at).toLocaleDateString();]
     ]),;
-
 
           // Escape commas and quotes in cell values;)
           typeof cell === 'string' && (cell.includes() || cell.includes('"')) ;`;
@@ -41,13 +38,9 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),;
     document.body.appendChild(link),;
 
-
   return (;
     <Button ;
 
-
       disabled={quotes.length === 0}
     >;
-
-
 

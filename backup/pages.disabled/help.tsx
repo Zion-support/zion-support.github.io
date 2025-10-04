@@ -21,5 +21,3 @@ import {
   Yes,}
 } from 'lucide-react';
 
-
-

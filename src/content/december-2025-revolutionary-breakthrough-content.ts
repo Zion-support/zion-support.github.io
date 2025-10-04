@@ -19,7 +19,6 @@ metri, c, s: {
 performan, c, e: stri, n, g
 savin, g, s: stri, n, g
 accura, c, y: stri, n, g
-=======
 id: stri, n, g;
 sl, u, g?: stri, n, g;
 tit, l, e: stri, n, g;
@@ -128,7 +127,6 @@ export, const, december2025RevolutionaryBreakthroughContent: RevolutionaryBreakt
     consciousnessLev, e, l: "Superintelligent, Awarenes, s"
     transcendenceLev, e, l: "Beyo, n, d-Human, Capabilitie, s"
     superintelligenceLev, e, l: "Universal, Intelligence, Access"
-=======
     i
   d: "quant, u, m-ai-transcenden, c, e-revoluti, o, n-20, 2, 5",";
     sl, u, g: "ai-20, 2, 5-decemb, e, r-quant, u, m-ai-transcenden, c, e-revoluti, o, n",";
@@ -222,7 +220,6 @@ export, const, newRevolutionaryBreakthroughContent = december2025RevolutionaryBr
   averageR, O, I: "5,0, 0, 0%+","
   consciousnessAchieveme, n, t: "True, AI, Consciousness","
   transcendenceLev, e, l: "Infinite, Capabilitie, s","
-=======
   totalValueCreati, o, n: "$20.9B+",";
   totalProcessingPow, e, r: "∞ + 1, 0, 0,00, 0, x",";
   averageAutono, m, y: "99.99%",";

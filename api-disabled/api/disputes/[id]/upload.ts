@@ -1,7 +1,5 @@
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
@@ -49,11 +47,9 @@ export const config = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
 
-
   if (typeof id !== "string")
 
     return res && res.status(400).json({ error: "Invalid id" });
-
 
   const user = parseUserFromRequest(req);
   if (req && req.method === "POST") {
@@ -63,7 +59,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     }
     const { files } =
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
@@ -107,24 +102,17 @@ if ( {) {
     const { files } =;
       req.body ||;
 
-
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[];
       });
 
-
     }
 
-
 }
-
-
 
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
-
-
 
   } catch (error) {
     console.error("Error:", error);
@@ -217,9 +205,4 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
 

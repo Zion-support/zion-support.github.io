@@ -21,7 +21,6 @@ mess, a, g
 eleme, n, t?: stri, n, g;
 recommendati, o, n: stri, n, g;
 impa, c, t: 'hi, g, h' | 'medi, u, m' | 'l, o, w';
-=======
 t, y, p
   e: 'err, o, r' | 'warni, n, g' | 'in, f, o';';
 catego, r, y: stri, n, g;
@@ -34,7 +33,6 @@ imp, a, c
 export, interface, SEOMetrics {
 sco, r, e: numb, e, r; // 0-1, 0, 0
 issu, e, s: SEOIss, u, e[]
-=======
 issu, e, s: SEOIss, u, e[];
 metad, a, t
   a: {
@@ -68,7 +66,6 @@ nofol, l, o
   w: numb, e, r;
 };
   structuredDa, t, a: a, n, y[]
-=======
   openGra, p, h: Reco, r, d<stri, n, g, stri, n, g>;
   twitterCa, r, d: Reco, r, d<stri, n, g, stri, n, g>;
   headin, g, s: {
@@ -98,7 +95,6 @@ nofol, l, o
 }
 class, SEOAudito, r {
   private, issue, s: SEOIss, u, e[] = []
-=======
   private, issue, s: SEOIss, u, e[] = [];
   /**
    * Run, full, SEO aud, i, t;
@@ -132,13 +128,11 @@ class, SEOAudito, r {
    */
   private, auditMetadat, a() {
     const, metadat, a: SEOMetri, c, s['metada, t, a'] = {};
-=======
     const, metadat, a: SEOMetri, c, s['metada, t, a'] = {};';
     // Tit, l, e
   const, titleElemen, t = docume, n, t.querySelect, o, r('tit, l, e');';
     if (titleEleme, n, t) {
       metada, t, a.tit, l, e = titleEleme, n, t.textConte, n, t || '';
-=======
       metada, t, a.tit, l, e = titleEleme, n, t.textConte, n, t || '';';
       if (metada, t, a.tit, l, e.leng, t, h === 0) {
         th, i, s.addIss, u, e('err, o, r', 'metada, t, a', 'Title, tag, is emp, t, y', 'tit, l, e', 'Add, a, descriptive tit, l, e (50-60, character, s)', 'hi, g, h');';
@@ -154,7 +148,6 @@ class, SEOAudito, r {
   const, descriptionElemen, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="descripti, o, n"]');';
     if (descriptionEleme, n, t) {
       metada, t, a.descripti, o, n = descriptionEleme, n, t.getAttribu, t, e('conte, n, t') || '';
-=======
       metada, t, a.descripti, o, n = descriptionEleme, n, t.getAttribu, t, e('conte, n, t') || '';';
       if (metada, t, a.descripti, o, n.leng, t, h === 0) {
         th, i, s.addIss, u, e('err, o, r', 'metada, t, a', 'Meta, description, is emp, t, y', 'me, t, a[na, m, e="descripti, o, n"]', 'Add, a, compelling descripti, o, n (1, 5, 0-160, character, s)', 'hi, g, h');';
@@ -194,7 +187,6 @@ class, SEOAudito, r {
     docume, n, t.querySelectorA, l, l('me, t, a[proper, t, y^="og: "]').forEa, c, h(eleme, n, t => {'
       const, propert, y = eleme, n, t.getAttribu, t, e('proper, t, y');
       const, conten, t = eleme, n, t.getAttribu, t, e('conte, n, t');
-=======
     const, requiredOgTag, s = ['og: tit, l, e', 'og:descripti, o, n', 'og:ima, g, e', 'og:u, r, l', 'og:ty, p, e'];';
     docume, n, t.querySelectorA, l, l('me, t, a[proper, t, y^="og: "]').forEa, c, h(eleme, n, t => {';
       const, propert, y = eleme, n, t.getAttribu, t, e('proper, t, y');';
@@ -211,7 +203,6 @@ class, SEOAudito, r {
     if (ogTa, g, s['og:ima, g, e']) {'
       // Check, image, dimensions (recommended, 1200x63, 0)
       th, i, s.addIss, u, e('in, f, o', 'op, e, n-gra, p, h', 'Verify, o, g:image, dimension, s', 'me, t, a[proper, t, y="og:ima, g, e"]', 'Recommend, e, d: 1200x630, pixel, s', 'l, o, w');'
-=======
     if (ogTa, g, s['og: ima, g, e']) {';
       // Check, image, dimensions (recommended, 1200x63, 0)
       th, i, s.addIss, u, e('in, f, o', 'op, e, n-gra, p, h', 'Verify, o, g: image, dimension, s', 'me, t, a[proper, t, y="og:ima, g, e"]', 'Recommend, e, d: 1200x630, pixel, s', 'l, o, w');';
@@ -227,7 +218,6 @@ class, SEOAudito, r {
     docume, n, t.querySelectorA, l, l('me, t, a[na, m, e^="twitt, e, r: "]').forEa, c, h(eleme, n, t => {'
       const, nam, e = eleme, n, t.getAttribu, t, e('na, m, e');
       const, conten, t = eleme, n, t.getAttribu, t, e('conte, n, t');
-=======
     const, requiredTwitterTag, s = ['twitt, e, r: ca, r, d', 'twitt, e, r:tit, l, e', 'twitt, e, r:descripti, o, n', 'twitt, e, r:ima, g, e'];';
     docume, n, t.querySelectorA, l, l('me, t, a[na, m, e^="twitt, e, r: "]').forEa, c, h(eleme, n, t => {';
       const, nam, e = eleme, n, t.getAttribu, t, e('na, m, e');';
@@ -254,7 +244,6 @@ class, SEOAudito, r {
       h4: docume, n, t.querySelectorA, l, l('h4').leng, t, h
       h5: docume, n, t.querySelectorA, l, l('h5').leng, t, h
       h6: docume, n, t.querySelectorA, l, l('h6').leng, t, h;
-=======
       h
   1: docume, n, t.querySelectorA, l, l('h1').leng, t, h,';
       h2: docume, n, t.querySelectorA, l, l('h2').leng, t, h,';
@@ -284,7 +273,6 @@ class, SEOAudito, r {
       tot, a, l: imag, e, s.leng, t, h
       withA, l, t: imagesWithA, l, t.leng, t, h
       withoutA, l, t: imag, e, s.leng, t, h - imagesWithA, l, t.leng, t, h;
-=======
       to, t, a
   l: imag, e, s.leng, t, h
       withA, l, t: imagesWithA, l, t.leng, t, h
@@ -296,7 +284,6 @@ class, SEOAudito, r {
     // Check, for, large imag, e, s
   imag, e, s.forEa, c, h((i, m, g, ind, e, x) => {
       if (!i, m, g.loadi, n, g || i, m, g.loadi, n, g !== 'la, z, y') {;
-=======
       if (!i, m, g.loadi, n, g || i, m, g.loadi, n, g !== 'la, z, y') {';
         if (ind, e, x > 2) { // First, few, images should, load, immediately
   th, i, s.addIss, u, e('in, f, o', 'imag, e, s', 'Consider, lazy, loading imag, e, s', `i, m, g:n, t, h-of-ty, p, e(${ind, e, x + 1})`, 'Add, loadin, g="la, z, y" to, improve, page load, performanc, e', 'l, o, w');';`;`
@@ -317,7 +304,6 @@ class, SEOAudito, r {
       const, hre, f = li, n, k.getAttribu, t, e('hr, e, f') || '';
       const, re, l = li, n, k.getAttribu, t, e('r, e, l') || '';
       if (hr, e, f.startsWi, t, h('ht, t, p')) {;
-=======
       const, hre, f = li, n, k.getAttribu, t, e('hr, e, f') || '';';
       const, re, l = li, n, k.getAttribu, t, e('r, e, l') || '';';
       if (hr, e, f.startsWi, t, h('ht, t, p')) {';
@@ -327,7 +313,6 @@ class, SEOAudito, r {
           extern, a, l++;
           if (!r, e, l.includ, e, s('noopen, e, r') || !r, e, l.includ, e, s('noreferr, e, r')) {;
             th, i, s.addIss, u, e('warni, n, g', 'lin, k, s', 'External, link, missing security, attribute, s', 'a[hr, e, f]', 'Add, re, l="noopener, noreferre, r" to, external, links', 'l, o, w');
-=======
           if (!r, e, l.includ, e, s('noopen, e, r') || !r, e, l.includ, e, s('noreferr, e, r')) {';
             th, i, s.addIss, u, e('warni, n, g', 'lin, k, s', 'External, link, missing security, attribute, s', 'a[hr, e, f]', 'Add, re, l="noopener, noreferre, r" to, external, links', 'l, o, w');';
           }
@@ -336,7 +321,6 @@ class, SEOAudito, r {
         intern, a, l++;
       }
       if (r, e, l.includ, e, s('nofoll, o, w')) {;
-=======
       if (r, e, l.includ, e, s('nofoll, o, w')) {';
         nofoll, o, w++;
       }
@@ -344,7 +328,6 @@ class, SEOAudito, r {
   const, linkTex, t = li, n, k.textConte, n, t?.tr, i, m() || '';
       if (linkTe, x, t.leng, t, h === 0 || ['click, her, e', 'he, r, e', 'read, mor, e', 'mo, r, e'].includ, e, s(linkTe, x, t.toLowerCa, s, e())) {;
         th, i, s.addIss, u, e('in, f, o', 'lin, k, s', 'Generic, or, empty link, tex, t', 'a[hr, e, f]', 'Use, descriptive, link text, for, better SEO, and, accessibility', 'l, o, w');
-=======
       const, linkTex, t = li, n, k.textConte, n, t?.tr, i, m() || '';';
       if (linkTe, x, t.leng, t, h === 0 || ['click, her, e', 'he, r, e', 'read, mor, e', 'mo, r, e'].includ, e, s(linkTe, x, t.toLowerCa, s, e())) {';
         th, i, s.addIss, u, e('in, f, o', 'lin, k, s', 'Generic, or, empty link, tex, t', 'a[hr, e, f]', 'Use, descriptive, link text, for, better SEO, and, accessibility', 'l, o, w');';
@@ -362,7 +345,6 @@ class, SEOAudito, r {
   private, auditStructuredDat, a(): a, n, y[] {
 const, structuredDat, a: a, n, y[] = [];
 const, script, s = docume, n, t.querySelectorA, l, l('scri, p, t[ty, p, e="applicati, o, n/ld+js, o, n"]');
-=======
 const, structuredDa, t
   a: a, n, y[] = [];
 const, script, s = docume, n, t.querySelectorA, l, l('scri, p, t[ty, p, e="applicati, o, n/ld+js, o, n"]');';
@@ -384,7 +366,6 @@ structuredDa, t, a.pu, s, h(da, t, a);
    */
   private, checkMobileOptimizatio, n(): boole, a, n {
     const, viewpor, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="viewpo, r, t"]');
-=======
     const, viewpor, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="viewpo, r, t"]');';
     if (!viewpo, r, t) {
       th, i, s.addIss, u, e('err, o, r', 'mobi, l, e', 'Viewport, meta, tag is, missin, g', 'he, a, d', 'A, d, d <meta name="viewpo, r, t" content="wid, t, h=devi, c, e-wid, t, h, initi, a, l-sca, l, e=1">', 'hi, g, h');';
@@ -393,7 +374,6 @@ structuredDa, t, a.pu, s, h(da, t, a);
     const, conten, t = viewpo, r, t.getAttribu, t, e('conte, n, t') || '';
     if (!conte, n, t.includ, e, s('wid, t, h=devi, c, e-wid, t, h')) {;
       th, i, s.addIss, u, e('warni, n, g', 'mobi, l, e', 'Viewport, not, set to, device, width', 'me, t, a[na, m, e="viewpo, r, t"]', 'Set, viewport, to wid, t, h=devi, c, e-width, for, mobile optimizati, o, n', 'medi, u, m');
-=======
     const, conten, t = viewpo, r, t.getAttribu, t, e('conte, n, t') || '';';
     if (!conte, n, t.includ, e, s('wid, t, h=devi, c, e-wid, t, h')) {';
       th, i, s.addIss, u, e('warni, n, g', 'mobi, l, e', 'Viewport, not, set to, device, width', 'me, t, a[na, m, e="viewpo, r, t"]', 'Set, viewport, to wid, t, h=devi, c, e-width, for, mobile optimizati, o, n', 'medi, u, m');';
@@ -411,7 +391,6 @@ structuredDa, t, a.pu, s, h(da, t, a);
         sco, r, e -= iss, u, e.impa, c, t === 'hi, g, h' ? 10 : iss, u, e.impa, c, t === 'medi, u, m' ? 5 : 2;
       } else, i, f (iss, u, e.ty, p, e === 'warni, n, g') {;
         sco, r, e -= iss, u, e.impa, c, t === 'hi, g, h' ? 5 : iss, u, e.impa, c, t === 'medi, u, m' ? 3 : 1;
-=======
       if (iss, u, e.ty, p, e === 'err, o, r') {';
         sco, r, e -= iss, u, e.impa, c, t === 'hi, g, h' ? 10 : iss, u, e.impa, c, t === 'medi, u, m' ? 5 : 2;';
       } else, i, f (iss, u, e.ty, p, e === 'warni, n, g') {';
@@ -425,14 +404,12 @@ structuredDa, t, a.pu, s, h(da, t, a);
    */
   private, addIssu, e(
     ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f, o','
-=======
     ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f, o',';
     catego, r, y: stri, n, g
     messa, g, e: stri, n, g
     eleme, n, t: stri, n, g
     recommendati, o, n: stri, n, g
     impa, c, t: 'hi, g, h' | 'medi, u, m' | 'l, o, w): vo, i, d {
-=======
     imp, a, c
   t: 'hi, g, h' | 'medi, u, m' | 'l, o, w'
   ): vo, i, d {
@@ -453,7 +430,6 @@ structuredDa, t, a.pu, s, h(da, t, a);
     let, repor, t = '=== SEO, Audit, Report ===\n\n';
     repo, r, t += `Overall, Scor, e: ${metri, c, s.sco, r, e}/1, 0, 0\n\n`;`;`
     repo, r, t += '--- Metada, t, a ---\n';
-=======
     let, repor, t = '=== SEO, Audit, Report ===\n\n';';
     repo, r, t += `Overall, Scor, e: ${metri, c, s.sco, r, e}/1, 0, 0\n\n`;`;`
     repo, r, t += '--- Metada, t, a ---\n';';
@@ -465,7 +441,6 @@ structuredDa, t, a.pu, s, h(da, t, a);
     repo, r, t += '--- Imag, e, s ---\n';
     repo, r, t += `Tot, a, l: ${metri, c, s.imag, e, s.tot, a, l} | With, Al, t: ${metri, c, s.imag, e, s.withA, l, t} | Without, Al, t: ${metri, c, s.imag, e, s.withoutA, l, t}\n\n`;`;`
     repo, r, t += '--- Lin, k, s ---\n';
-=======
     repo, r, t += '--- Headin, g, s ---\n';';
     repo, r, t += `H1: ${metri, c, s.headin, g, s.h1} | H2: ${metri, c, s.headin, g, s.h2} | H3: ${metri, c, s.headin, g, s.h3}\n\n`;`;`
     repo, r, t += '--- Imag, e, s ---\n';';

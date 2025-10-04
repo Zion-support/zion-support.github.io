@@ -1,7 +1,5 @@
 
 
-
-
     }
     const supabase = getServerSupabase()
     const { data, error } = await supabase
@@ -9,23 +7,11 @@
       .select('ip_address, created_at')
       .eq('partner_code', code)
 
-
-
-
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
-
-
-
-
   }
 }
-
-
-
-
-
 

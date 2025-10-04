@@ -11,28 +11,11 @@ interface PricingSuggestionBoxProps {;
 }
 export const PricingSuggestionBox:React.FC<PricingSuggestionBoxProps> = ({;
 
-
-
-
-
-
-
-
-
         <div className="text-left">;"
           <Info className="text-left" />;"
           <p>{suggestion.explanation}</p>;
 
         <div className="text-left">;
-
-
-
-
-
-
-
-
-
 
 }- $ {;
   suggestion.maxRate.toFixed (0) ";

@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 }
 
-
 export default function AiAutonomousDevOpsPlatform() {;
   return (
 
@@ -72,7 +71,6 @@ pr-12325
       </div>
     </>
   );
-
 
 }
 

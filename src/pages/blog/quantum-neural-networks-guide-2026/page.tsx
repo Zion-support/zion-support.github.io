@@ -18,7 +18,6 @@ export, default, function QuantumNeuralNetworksGuide20, 2, 6(): Rea, c, t.J, S, 
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
           <p>
             Learn, the, production blueprint, for, quantum‑neural, hybrid, s: circuit, c, o‑desi, g, n, batchi, n, g;
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/quant, u, m-neur, a, l-networ, k, s-gui, d, e-20, 2, 6"
          />
       </Helmet>

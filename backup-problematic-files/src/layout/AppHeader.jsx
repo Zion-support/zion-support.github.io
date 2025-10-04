@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
 
-
 export function AppHeader() {
 
   return (
@@ -22,8 +21,6 @@ export function AppHeader() {
     </header>
   );
 }
-
-
 
 export function AppHeader() {;
     return (<header className="bg-white shadow-sm border-b border-gray-200">";

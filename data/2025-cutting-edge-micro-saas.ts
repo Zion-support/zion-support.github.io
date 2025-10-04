@@ -1,7 +1,5 @@
 
 
-
-
 export const cuttingEdgeMicroSaasServices2025 = [
   
       'Basel III',
@@ -13,18 +11,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
 
   },;
 
-
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
 
-
 ;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-
-
-
-
 
 export const cuttingEdgeMicroSaasServices2025 = [
   
@@ -496,10 +488,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
 
-
 ;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-
 
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
@@ -706,7 +696,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],;
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
-
 
   }
 ];

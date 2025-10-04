@@ -52,11 +52,8 @@ const contact =
 
     },;
 
-
   ];
 
-
-    
       id: 'ai-business-intelligence-suite'
       name: 'AI Business Intelligence Suite'
       tagline:
@@ -998,7 +995,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
     const price = parseInt(service.price.replace('$', ''));
 };
 
-
   return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => 
     const price = parseInt(service && service.price.replace('$', ''));
   return innovativeMicroSaasServices2026.filter(service => 
@@ -1008,10 +1004,8 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 
 };
 
-
   })
 }
-
 
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
@@ -1031,8 +1025,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
-
-
 
 };
 

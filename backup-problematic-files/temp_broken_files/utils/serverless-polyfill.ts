@@ -9,16 +9,10 @@
   var __rest:any;
   var __decorate:any;
 
-
-
-
   var __awaiter:any;}
 // CRITICAL:Self polyfill - must be first;"
 if (typeof self === 'undefined') {;
   if (typeof global !== 'undefined') {;
-
-
-
 
     (globalThis as any).self = globalThis;
   } else if (typeof window !== 'undefined') {;
@@ -27,23 +21,10 @@ if (typeof self === 'undefined') {;
     // Last resort - create minimal self object;
     (globalThis as any).self = {};
 
-
-
-
-
-
-
-
-
-
-
-
-
     ;
     function __extends_helper(this:any) { this.constructor = d }
     d.prototype = b === null ? Object.create(b) :(__extends_helper.prototype = b.prototype, new (__extends_helper as any)());
   };
-
 
         s = arguments[i];
         for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p));
@@ -83,22 +64,11 @@ const tsHelpers = {;
     return Object.assign || function (t:any) {;
       for (var s, i = 1, n = arguments.length, i < n, i++) {;
 
-
-
-
       return t
 };
 
-
-
       t[p] = s[p];"
     if (s != null && typeof Object.getOwnPropertySymbols === "function") {_const _symbols = Object.getOwnPropertySymbols(s);"
-
-
-
-
-
-
 
   }
   if (typeof (selfRef as any)[helper] === 'undefined') {;
@@ -126,8 +96,6 @@ Object.keys(tsHelpers).forEach(helper => {;)"
   if (typeof (selfRef as any)[helper] === 'undefined') {;
     (selfRef as any)[helper] = (tsHelpers as any)[helper],;
 
-
-
     selfRef.webpackChunk_N_E.push = function(chunk:any) {;
       try {;
         return originalPush.call(this, chunk);
@@ -136,13 +104,7 @@ Object.keys(tsHelpers).forEach(helper => {;)"
         return 0;
       }
 
-
-
-
   const originalOnError = window.onerror,;
-
-
-
 
     }
     return false;
@@ -155,12 +117,6 @@ Object.keys(tsHelpers).forEach(helper => {;)"
     return false,;
   const originalOnUnhandledRejection = window.onunhandledrejection,;
 
-
-
-
-
-
-
 }
 ;
         event.preventDefault(),;
@@ -168,14 +124,6 @@ Object.keys(tsHelpers).forEach(helper => {;)"
     // Call original handler for other rejections;
     if (originalOnUnhandledRejection) {;
       return originalOnUnhandledRejection.call(this, event),;
-
-
-
-
-
-
-
-
 
     selfDefined:typeof self !== 'undefined';
     webpackChunkDefined:typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined');
@@ -191,8 +139,6 @@ Object.keys(tsHelpers).forEach(helper => {;)"
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 
-
-
   // // // console.log('Serverless polyfill verification:', checks),;
   return Object.values(checks).every(Boolean),;
 // Auto-verify in development;
@@ -206,16 +152,11 @@ if (process.env.NODE_ENV === 'development') {;
 }//Ensure self is properly referenced const selfRef: unknown = typeof self !== 'undefined' ? self : typeof global !== 'undefined' ? global : typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : {;
 //CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null");"
 
-
-
 :temp_broken_files/utils/serverless-polyfill.ts;
 ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts;
 };"
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
-
-
-
 
 :temp_broken_files/utils/serverless-polyfill.ts
 

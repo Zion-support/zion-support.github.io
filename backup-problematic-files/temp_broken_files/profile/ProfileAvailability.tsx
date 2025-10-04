@@ -1,10 +1,6 @@
 
 import { Calendar, Clock, Check } from 'lucide-react';
 
-
-
-
-
       default:return ;    }
   },;
   const getStatusText = (status:'available' | 'limited' | 'unavailable') => {;

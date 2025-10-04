@@ -12,7 +12,6 @@ export, default, function AICausalEvalsBlueprint20, 2, 5(): Rea, c, t.J, S, X.El
       </Helmet>
       <div, className="container, m, x-auto, p, x-6, p, y-16">
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-caus, a, l-eva, l, s-bluepri, n, t"
          />
       </Helmet>
@@ -33,7 +32,6 @@ export, default, function AICausalEvalsBlueprint20, 2, 5(): Rea, c, t.J, S, X.El
           </p>
           <p>
             You, will, learn how, t, o: (1) map, SLIs, to KPIs, with, explicit budge, t, s;
-=======
             You, will, learn ho, w, t
   o: (1) map, SLIs, to KPIs, with, explicit budge, t, s
             (2) run, policy, tests in, CI, with signed, attestation, s, a, n, d (3) depl, o, y

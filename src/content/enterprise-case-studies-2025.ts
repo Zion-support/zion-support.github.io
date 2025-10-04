@@ -22,7 +22,6 @@ r, o, i: stri, n, g;
   featur, e, d: boole, a, n
   da, t, e: stri, n, g
   auth, o, r: stri, n, g
-=======
 id: stri, n, g;
 sl, u, g?: stri, n, g;
 tit, l, e: stri, n, g;
@@ -221,7 +220,6 @@ export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
     ima, g, e: "/imag, e, s/logisti, c, s-autonomo, u, s-fle, e, t.j, p, g"
     newBad, g, e: tr, u, e
     trendi, n, g: tr, u, e;
-=======
     i
   d: "fortu, n, e-5, 0, 0-ai-transformati, o, n",";
     sl, u, g: "fortu, n, e-5, 0, 0-ai-transformati, o, n",";

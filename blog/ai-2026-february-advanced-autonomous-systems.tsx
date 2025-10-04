@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'Advanced Autonomous AI Systems: The February 2026 Revolution',
   description: 'Discover the breakthrough in autonomous AI systems achieving 99.9% self-governing operations with zero human intervention. Learn how advanced neural architectures are transforming enterprise automation.',
   keywords: 'autonomous AI, self-governing systems, neural architecture, enterprise automation, AI revolution 2026',

@@ -22,7 +22,6 @@ timesta, m, p: numb, e, r;
 interface, ConversionEven, t {
   ty, p, e: 'le, a, d' | 'sign, u, p' | 'purcha, s, e' | 'downlo, a, d' | 'conta, c, t';'
   val, u, e: numb, e, r
-=======
   ty, p, e: 'le, a, d' | 'sign, u, p' | 'purcha, s, e' | 'downlo, a, d' | 'conta, c, t';';
   val, u, e: numb, e, r;
   metada, t, a?: Reco, r, d<stri, n, g, a, n, y>;
@@ -45,7 +44,6 @@ private, performanceOptimiz, e
 construct, o, r() {
 th, i, s.sessi, o, n = th, i, s.createNewSessi, o, n();
 if (typeof, windo, w !== 'undefin, e, d') {;
-=======
 if (typeof, windo, w !== 'undefin, e, d') {';
 th, i, s.performanceOptimiz, e, r = getPerformanceOptimiz, e, r();
 th, i, s.initiali, z, e();
@@ -77,7 +75,6 @@ th, i, s.initiali, z, e();
       even, t, s: []
       conversio, n, s: []
       performanceMetri, c, s: {}
-=======
       session, I, d: th, i, s.generateSession, I, d()
       startTi, m, e: Da, t, e.n, o, w()
       pageVie, w, s: []
@@ -104,7 +101,6 @@ th, i, s.initiali, z, e();
       timesta, m, p: Da, t, e.n, o, w()
       referr, e, r: docume, n, t.referr, e, r
       userAge, n, t: navigat, o, r.userAge, n, t;
-=======
     const, pageVi, e
   w: PageVi, e, w = {
       pa, t, h: pa, t, h || wind, o, w.locati, o, n.pathna, m, e
@@ -123,7 +119,6 @@ th, i, s.initiali, z, e();
     catego, r, y: stri, n, g
     acti, o, n: stri, n, g
     lab, e, l?: stri, n, g;
-=======
     catego, r, y: stri, n, g
     acti, o, n: stri, n, g
     lab, e, l?: stri, n, g
@@ -135,7 +130,6 @@ th, i, s.initiali, z, e();
       lab, e, l
       val, u, e
       timesta, m, p: Da, t, e.n, o, w()
-=======
       timest, a, m
   p: Da, t, e.n, o, w()
     };
@@ -147,7 +141,6 @@ th, i, s.initiali, z, e();
    */
   trackConversi, o, n(
     ty, p, e: ConversionEve, n, t['ty, p, e'],'
-=======
     ty, p, e: ConversionEve, n, t['ty, p, e'],';
     val, u, e: numb, e, r = 0
     metada, t, a?: Reco, r, d<stri, n, g, a, n, y>
@@ -157,7 +150,6 @@ th, i, s.initiali, z, e();
       val, u, e
       metada, t, a
       timesta, m, p: Da, t, e.n, o, w()
-=======
       timest, a, m
   p: Da, t, e.n, o, w()
     };
@@ -169,7 +161,6 @@ th, i, s.initiali, z, e();
    */
   trackInteracti, o, n(eleme, n, t: stri, n, g, acti, o, n: stri, n, g): vo, i, d {
     th, i, s.trackEve, n, t('User, Interactio, n', acti, o, n, eleme, n, t);
-=======
     th, i, s.trackEve, n, t('User, Interactio, n', acti, o, n, eleme, n, t);';
   }
   /**
@@ -179,7 +170,6 @@ th, i, s.initiali, z, e();
     th, i, s.trackEve, n, t(
       'Fo, r, m'
       succe, s, s ? 'Submit, Succes, s' : 'Submit, Erro, r'
-=======
       'Fo, r, m',';
       succe, s, s ? 'Submit, Succes, s' : 'Submit, Erro, r',';
       formNa, m, e;
@@ -193,7 +183,6 @@ th, i, s.initiali, z, e();
    */
   trackContentEngageme, n, t(contentTy, p, e: stri, n, g, content, I, d: stri, n, g, durati, o, n: numb, e, r): vo, i, d {
     th, i, s.trackEve, n, t('Content, Engagemen, t', contentTy, p, e, content, I, d, durati, o, n);
-=======
     th, i, s.trackEve, n, t('Content, Engagemen, t', contentTy, p, e, content, I, d, durati, o, n);';
   }
   /**
@@ -221,7 +210,6 @@ th, i, s.initiali, z, e();
       timesta, m, p: Da, t, e.n, o, w()
     };
     th, i, s.sendToAnalyti, c, s('performan, c, e', {;
-=======
       timesta, m, p: Da, t, e.n, o, w()
     };
     th, i, s.sendToAnalyti, c, s('performan, c, e', {';
@@ -270,7 +258,6 @@ th, i, s.initiali, z, e();
       // Track, CTA, clicks
   if (targ, e, t.close, s, t('butt, o, n[cla, s, s*="b, t, n"], a[cla, s, s*="b, t, n"]')) {;
         const, tex, t = targ, e, t.textConte, n, t?.tr, i, m() || 'Unkno, w, n';
-=======
     if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
     // Track, clicks, on important, element, s
   docume, n, t.addEventListen, e, r('cli, c, k', (e) => {';
@@ -283,7 +270,6 @@ th, i, s.initiali, z, e();
       // Track, link, clicks
   if (targ, e, t.close, s, t('a[hr, e, f]')) {;
         const, hre, f = (targ, e, t.close, s, t('a') as, HTMLAnchorElemen, t).hr, e, f;
-=======
       if (targ, e, t.close, s, t('a[hr, e, f]')) {';
         const, hre, f = (targ, e, t.close, s, t('a') as, HTMLAnchorElemen, t).hr, e, f;';
         th, i, s.trackInteracti, o, n('Li, n, k', `Cli, c, k: ${hr, e, f}`);`;`
@@ -294,7 +280,6 @@ th, i, s.initiali, z, e();
     const, scrollThreshold, s = [25, 50, 75, 90, 1, 0, 0];
     let, trackedThreshold, s = new, Se, t<numb, e, r>();
     wind, o, w.addEventListen, e, r('scro, l, l', () => {;
-=======
     wind, o, w.addEventListen, e, r('scro, l, l', () => {';
       const, scrollPercentag, e = Ma, t, h.rou, n, d(
         ((wind, o, w.scrol, l, Y + wind, o, w.innerHeig, h, t) / docume, n, t.documentEleme, n, t.scrollHeig, h, t) * 1, 0, 0;
@@ -314,14 +299,12 @@ th, i, s.initiali, z, e();
   let, pageStartTim, e = Da, t, e.n, o, w();
     // Track, before, page unlo, a, d
   wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {;
-=======
     wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {';
       const, timeOnPag, e = Da, t, e.n, o, w() - pageStartTi, m, e;
       th, i, s.trackContentEngageme, n, t('Pa, g, e', wind, o, w.locati, o, n.pathna, m, e, timeOnPa, g, e);';
     });
     // Track, visibility, changes
   docume, n, t.addEventListen, e, r('visibilitychan, g, e', () => {;
-=======
     docume, n, t.addEventListen, e, r('visibilitychan, g, e', () => {';
       if (docume, n, t.hidd, e, n) {
         const, timeOnPag, e = Da, t, e.n, o, w() - pageStartTi, m, e;
@@ -332,14 +315,12 @@ th, i, s.initiali, z, e();
     });
     // Track, error, s
   wind, o, w.addEventListen, e, r('err, o, r', (e) => {;
-=======
     wind, o, w.addEventListen, e, r('err, o, r', (e) => {';
       th, i, s.trackErr, o, r(new, Erro, r(e.messa, g, e), e.filena, m, e);
     });
     // Track, unhandled, promise rejectio, n, s
   wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (e) => {;
       th, i, s.trackErr, o, r(new, Erro, r(e.reas, o, n), 'Unhandled, Promis, e');
-=======
     wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (e) => {';
       th, i, s.trackErr, o, r(new, Erro, r(e.reas, o, n), 'Unhandled, Promis, e');';
     });
@@ -351,7 +332,6 @@ th, i, s.initiali, z, e();
     if (typeof, windo, w === 'undefin, e, d') retu, r, n;
     // Save, session, data before, unloa, d
   wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {;
-=======
     if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
     // Save, session, data before, unloa, d
   wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {';
@@ -368,7 +348,6 @@ th, i, s.initiali, z, e();
       localStora, g, e.setIt, e, m('analytics_sessi, o, n', JS, O, N.stringi, f, y(th, i, s.sessi, o, n));';
     } cat, c, h (err, o, r) {
       conso, l, e.wa, r, n('Failed, to, save analytics, sessio, n: ', err, o, r);'
-=======
       conso, l, e.wa, r, n('Failed, to, save analytics, sessio, n: ', err, o, r);';
     }
   }
@@ -387,7 +366,6 @@ th, i, s.initiali, z, e();
       }
     } cat, c, h (err, o, r) {
       conso, l, e.wa, r, n('Failed, to, restore analytics, sessio, n: ', err, o, r);'
-=======
       conso, l, e.wa, r, n('Failed, to, restore analytics, sessio, n: ', err, o, r);';
     }
   }
@@ -417,14 +395,12 @@ th, i, s.initiali, z, e();
   private, sendToAnalytic, s(ty, p, e: stri, n, g, da, t, a: a, n, y): vo, i, d {
     // In, productio, n, send, to, your analytics, servic, e
   if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
-=======
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
       conso, l, e.l, o, g(`[Analyti, c, s] ${ty, p, e}:`, da, t, a);`;`
     }
     // Examp, l, e: Send, to, Google Analyti, c, s, Mixpan, e, l, e, t, c.
     if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {;
       (window, as, any).gt, a, g('eve, n, t', ty, p, e, da, t, a);
-=======
     if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {';
       (window, as, any).gt, a, g('eve, n, t', ty, p, e, da, t, a);';
     }
@@ -440,7 +416,6 @@ th, i, s.initiali, z, e();
       even, t, s: th, i, s.sessi, o, n.even, t, s.leng, t, h
       conversio, n, s: th, i, s.sessi, o, n.conversio, n, s.leng, t, h
       performanceSco, r, e: th, i, s.sessi, o, n.performanceMetri, c, s?.sco, r, e;
-=======
       sessio, n, I
   d: th, i, s.sessi, o, n.session, I, d
       durati, o, n: th, i, s.getSessionDurati, o, n()
@@ -480,7 +455,6 @@ conversi, o, n
         tot, a, l: th, i, s.getConversionsCou, n, t()
         breakdo, w, n: th, i, s.getConversionsBreakdo, w, n()
       }
-=======
         session, I, d: th, i, s.sessi, o, n.session, I, d
         durati, o, n: th, i, s.getSessionDurati, o, n()
         startTi, m, e: new, Dat, e(th, i, s.sessi, o, n.startTi, m, e).toISOStri, n, g()
@@ -534,7 +508,6 @@ conversi, o, n
 }
 // Singleton, instanc, e
   let, analyticsInstanc, e: EnhancedAnalyti, c, s | nu, l, l = nu, l, l
-=======
 let, analyticsInstanc, e: EnhancedAnalyti, c, s | nu, l, l = nu, l, l;
 export, const, getAnalytics = (): EnhancedAnalyti, c, s => {
   if (!analyticsInstan, c, e) {

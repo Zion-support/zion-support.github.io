@@ -1,6 +1,5 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 import, Header, from "../../../componen, t, s/Head, e, r";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";";
@@ -18,7 +17,6 @@ const, AdaptiveLearningPlatform, s = () => {
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k">";
         <Head, e, r   />
         <article, className="container, m, x-auto, p, x-6, p, y-20">
-=======
         <article, className="container, m, x-auto, p, x-6, p, y-20">";
           {/* Back, Lin, k */};
           <Li, n, k
@@ -26,7 +24,6 @@ const, AdaptiveLearningPlatform, s = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
             <ArrowLeft, className="w-4 h-4, m, r-2" />";
             Back, to, Blog;
           </Li, n, k>
@@ -40,7 +37,6 @@ const, AdaptiveLearningPlatform, s = () => {
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
               AI-Powered, Adaptive, Learning Platforms, 202, 5: <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-4, 0, 0">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
               AI-Powered, Adaptive, Learning Platforms, 20, 2
   5: <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-4, 0, 0">";
@@ -54,7 +50,6 @@ const, AdaptiveLearningPlatform, s = () => {
             <div, className="flex, item, s-center, ga, p-6, m, t-8, tex, t-zi, o, n-sla, t, e-lig, h, t">
               <div, className="flex, item, s-center, ga, p-2">
                 <GraduationCap, className="w-5 h-5, tex, t-zi, o, n-cy, a, n  />
-=======
             <div, className="flex, item, s-center, ga, p-6, m, t-8, tex, t-zi, o, n-sla, t, e-lig, h, t">";
               <div, className="flex, item, s-center, ga, p-2">";
                 <GraduationCap, className="w-5 h-5, tex, t-zi, o, n-cy, a, n" />";
@@ -73,7 +68,6 @@ const, AdaptiveLearningPlatform, s = () => {
                 <div, className="te, x, t-cent, e, r">
                   <div, className="te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2">92%</d, i, v>
                   <div, className="te, x, t-sm">Course, Completio, n</d, i, v>
-=======
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30">";
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">📊 Adaptive, Learning, Impact</h2>";
               <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6">";
@@ -105,7 +99,6 @@ const, AdaptiveLearningPlatform, s = () => {
               </p>
               <p, className="te, x, t-lg, leadin, g-relaxed, m, b-4">
                 By, personalizing, learning paths, in, real-time, based, on individual, performanc, e, learning, style, s;
-=======
               <p, className="te, x, t-lg, leadin, g-relaxed, m, b-4">";
                 By, personalizing, learning paths, in, real-time, based, on individual, performanc, e, learning, style, s
                 and, career, goals, adaptive, platforms, achieve 92% completion, rate, s—a, 4x, improvement ov, e, r
@@ -123,7 +116,6 @@ const, AdaptiveLearningPlatform, s = () => {
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">🧠 How, AI, Adaptive Learning, Work, s</h2>";
               <div, className="spa, c, e-y-6">";
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30">";
@@ -138,7 +130,6 @@ const, AdaptiveLearningPlatform, s = () => {
                   </p>
                   <div, className="bg-bl, u, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-bl, u, e-5, 0, 0/30">
                     <strong, className="te, x, t-bl, u, e-4, 0, 0">Technolo, g, y: </stro, n, g> G, P, T-4, for, natural langua, g, e "
-=======
                   <div, className="bg-bl, u, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-bl, u, e-5, 0, 0/30">";
                     <strong, className="te, x, t-bl, u, e-4, 0, 0">Technolo, g, y: </stro, n, g> G, P, T-4, for, natural langua, g, e ";
                     assessmen, t, s, computer, vision, for practical, skill, evaluation, psychometric, analysis, for
@@ -148,7 +139,6 @@ const, AdaptiveLearningPlatform, s = () => {
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2">";
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";
@@ -161,7 +151,6 @@ const, AdaptiveLearningPlatform, s = () => {
                   </p>
                   <div, className="bg-cy, a, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-cy, a, n-5, 0, 0/30">
                     <strong, className="te, x, t-cy, a, n-4, 0, 0">Resu, l, t: </stro, n, g> 67% reduction, in, time-to-competen, c, y "
-=======
                   <div, className="bg-cy, a, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-cy, a, n-5, 0, 0/30">";
                     <strong, className="te, x, t-cy, a, n-4, 0, 0">Resu, l, t: </stro, n, g> 67% reduction, in, time-to-competen, c, y ";
                     while, improving, knowledge retention, by, 89%.
@@ -170,7 +159,6 @@ const, AdaptiveLearningPlatform, s = () => {
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2">";
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";
@@ -183,7 +171,6 @@ const, AdaptiveLearningPlatform, s = () => {
                   </p>
                   <div, className="bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0/30">
                     <strong, className="te, x, t-purp, l, e-4, 0, 0">Innovati, o, n: </stro, n, g> G, P, T-4, generates, role-specif, i, c "
-=======
                     to, the, learner's, rol, e, indust, r, y, and, experience, level. Interactive, simulations, adapt ';
                     to, individual, skill leve, l, s.
                   </p>
@@ -195,7 +182,6 @@ const, AdaptiveLearningPlatform, s = () => {
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2">";
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";
@@ -208,7 +194,6 @@ const, AdaptiveLearningPlatform, s = () => {
                   </p>
                   <div, className="bg-gre, e, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-gre, e, n-5, 0, 0/30">
                     <strong, className="te, x, t-gre, e, n-4, 0, 0">Impa, c, t: </stro, n, g> 92% course, completion, rate vs. "
-=======
                   <div, className="bg-gre, e, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-gre, e, n-5, 0, 0/30">";
                     <strong, className="te, x, t-gre, e, n-4, 0, 0">Impa, c, t: </stro, n, g> 92% course, completion, rate vs. ";
                     23% industry, average, through predictive, interventio, n.
@@ -233,7 +218,6 @@ const, AdaptiveLearningPlatform, s = () => {
                     </d, i, v>
                     <div, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">🎯 Enterprise, Use, Cases</h2>";
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
                 <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30">";
@@ -266,7 +250,6 @@ const, AdaptiveLearningPlatform, s = () => {
                     </d, i, v>
                     <div, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <div, className="te, x, t-sm, spac, e-y-1">";
                     <div, className="flex, item, s-center, ga, p-2">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -291,7 +274,6 @@ const, AdaptiveLearningPlatform, s = () => {
                     </d, i, v>
                     <div, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Compliance, Trainin, g</h3>";
                   <p, className="mb-3">";
@@ -322,7 +304,6 @@ const, AdaptiveLearningPlatform, s = () => {
                     </d, i, v>
                     <div, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <div, className="te, x, t-sm, spac, e-y-1">";
                     <div, className="flex, item, s-center, ga, p-2">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -363,7 +344,6 @@ const, AdaptiveLearningPlatform, s = () => {
                       <li, className="flex, justif, y-between, borde, r-t, borde, r-whi, t, e/20, p, t-2, m, t-2">
                         <stro, n, g>First, Year, Total: </stro, n, g>
                         <strong, className="te, x, t-whi, t, e">$60, 0, K</stro, n, g>
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">💰 Enterprise, ROI, Analysis</h2>";
               <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-gre, e, n-5, 0, 0/30">";
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
@@ -402,7 +382,6 @@ const, AdaptiveLearningPlatform, s = () => {
                       <li, className="flex, justif, y-betwe, e, n">
                         <sp, a, n>Faster, tim, e-to-productivi, t, y: </sp, a, n>
                         <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">$1.8M</sp, a, n>
-=======
                       <li, className="flex, justif, y-betwe, e, n">";
                         <sp, a, n>Faster, tim, e-to-productivi, t, y: </sp, a, n>
                         <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d">$1.8M</sp, a, n>";
@@ -418,7 +397,6 @@ const, AdaptiveLearningPlatform, s = () => {
                       <li, className="flex, justif, y-between, borde, r-t, borde, r-whi, t, e/20, p, t-2, m, t-2">
                         <stro, n, g>Total, Valu, e: </stro, n, g>
                         <strong, className="te, x, t-gre, e, n-4, 0, 0">$7.6M</stro, n, g>
-=======
                       <li, className="flex, justif, y-between, borde, r-t, borde, r-whi, t, e/20, p, t-2, m, t-2">";
                         <stro, n, g>Total, Valu, e: </stro, n, g>
                         <strong, className="te, x, t-gre, e, n-4, 0, 0">$7.6M</stro, n, g>";
@@ -429,7 +407,6 @@ const, AdaptiveLearningPlatform, s = () => {
                 <div, className="mt-8, tex, t-cent, e, r">
                   <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">1,1, 6, 7% ROI, in, Year 1</d, i, v>
                   <div, className="te, x, t-sm, m, t-2">Payback, perio, d: 1.2, month, s • $7.0M, net, value</d, i, v>"
-=======
                 <div, className="mt-8, tex, t-cent, e, r">";
                   <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">1,1, 6, 7% ROI, in, Year 1</d, i, v>";
                   <div, className="te, x, t-sm, m, t-2">Payback, perio, d: 1.2, month, s • $7.0M, net, value</d, i, v>";
@@ -443,7 +420,6 @@ const, AdaptiveLearningPlatform, s = () => {
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-4, 0, 0">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Mont, h, 1: Foundati, o, n & Pil, o, t</h3>"
                   <ul, className="spa, c, e-y-2, m, l-4, tex, t-sm">
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">🚀 90-Day, Implementation, Plan</h2>";
               <div, className="spa, c, e-y-4">";
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-4, 0, 0">";
@@ -459,7 +435,6 @@ const, AdaptiveLearningPlatform, s = () => {
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Mon, t, h 
   2: Expansi, o, n & Refineme, n, t</h3>"
                   <ul, className="spa, c, e-y-2, m, l-4, tex, t-sm">
-=======
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-4, 0, 0">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Mont, h, 2: Expansi, o, n & Refineme, n, t</h3>";
                   <ul, className="spa, c, e-y-2, m, l-4, tex, t-sm">";
@@ -473,7 +448,6 @@ const, AdaptiveLearningPlatform, s = () => {
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Mon, t, h 
   3: Full, Deploymen, t</h3>"
                   <ul, className="spa, c, e-y-2, m, l-4, tex, t-sm">
-=======
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-gre, e, n-4, 0, 0">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Mont, h, 3: Full, Deploymen, t</h3>";
                   <ul, className="spa, c, e-y-2, m, l-4, tex, t-sm">";
@@ -495,7 +469,6 @@ const, AdaptiveLearningPlatform, s = () => {
                 in, value, creation. Start, your, adaptive learning, journey, today.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <Li, n, k
   to="/conta, c, t"
@@ -503,7 +476,6 @@ const, AdaptiveLearningPlatform, s = () => {
   r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
                 >
                   <Target, className="w-5 h-5  />
-=======
                   <Target, className="w-5 h-5" />";
                   Request, Dem, o;
                 </Li, n, k>

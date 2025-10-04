@@ -1,6 +1,5 @@
 
 
-  
       'Quantum-secured space communication',
     id: 'quantum - space - communications',
     name: 'Quantum Space Communications',
@@ -1211,7 +1210,6 @@ export const emergingTechServices: EmergingTechService[] = [;
     reviews: 28;
 
   }
-
 
 export interface EmergingTechService {;
 

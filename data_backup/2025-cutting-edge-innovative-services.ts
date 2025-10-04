@@ -1,6 +1,5 @@
   id: string;
 
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -672,5 +671,4 @@
     customers: 1,8,
     rating: 4.,7,
     reviews: 42];
-
 

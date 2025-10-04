@@ -34,8 +34,6 @@ interface ComponentProps {
   children?: React.ReactNode;
   [key: string]: unknown}
 
-
-
 declare global {
   interface Window {
 :components.disabled/components/AnalyticsManager.tsx

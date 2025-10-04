@@ -2,7 +2,6 @@ import: React { useState } from 'react';';
 import: Link from 'next/link';';
 import: { Menu, X, ChevronDown } from 'lucide-react';';
 
-
                 <span className='text-white font-bold text-xl'>Z<
               </div>'
               <div className='text-xl font-bold text-gray-800'>Zion Tech Group</div>
@@ -51,5 +50,4 @@ import: { Menu, X, ChevronDown } from 'lucide-react';';
       </div>
     </nav>
   )}
-
 

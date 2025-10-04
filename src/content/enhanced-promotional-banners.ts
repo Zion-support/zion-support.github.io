@@ -715,7 +715,6 @@ export, const, enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     featur, e, d: tr, u, e
     priori, t, y: 2
     startDa, t, e: '20, 2, 5-10-03}
-=======
     id: 'o, c, t-01-autonomo, u, s-busine, s, s-o, p, s-20, 2, 5',';
     tit, l, e: '🚀 JUST, RELEAS, E
   D: Autonomous, Business, Operations Platfo, r, m — $650M, Value, Creation, 85% Cost, Reduction, in 90, Day, s!',';
@@ -1479,7 +1478,6 @@ export, const, enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     featur, e, d: tr, u, e
     priori, t, y: 2
     startDa, t, e: '20, 2, 5-10-01}
-=======
     id: 'o, c, t-08-val, u, e-realizati, o, n-20, 2, 5',';
     tit, l, e: '🚀 NEW, TOD, A
   Y: Enterprise, AI, Value Realizati, o, n — 90, Days, to Outcom, e, s',';
@@ -1578,7 +1576,6 @@ export, const, enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     featur, e, d: tr, u, e
     priori, t, y: 3
     startDa, t, e: '20, 2, 5-10-08}
-=======
     id: 'o, c, t-08-20, 2, 5-n, e, w-conte, n, t-dr, o, p',';
     tit, l, e: '🚀 NEW, TODA, Y (Oc, t, 8): Governed, Agent, s, Edge, Private, Analytics, Cache, Strata, v5',';
     descripti, o, n: 'Budge, t, s + SLIs, for, 10k+ agen, t, s, ze, r, o‑PII, analytics, under 100, m, s, and, cache, tiers that, cut, cost 60–85%.',';
@@ -1653,7 +1650,6 @@ export, const, enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     featur, e, d: tr, u, e
     priori, t, y: 1
     startDa, t, e: '20, 2, 5-10-07}
-=======
     id: 'o, c, t-07-autonomo, u, s-platfor, m, s-r, o, i',';
     tit, l, e: '🚀 NEW, TOD, A
   Y: Autonomous, Platform, s — 3–6x, ROI, in 90, Day, s',';
@@ -1690,7 +1686,6 @@ export, const, enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-05-enterpri, s, e-agen, t, s-scorecar, d, s-v2','
   varia, n, t: 'succe, s, s','
   ic, o, n: '🛡️','
-=======
   id: 'o, c, t-05-govern, e, d-autono, m, y-20, 2, 5',';
   tit, l, e: '🛡️ NE
   W: Governed, Autonom, y — KPI, Scorecard, s, Budge, t, s, Instant, Rollbac, k',';
@@ -1712,7 +1707,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-05-ed, g, e-priva, t, e-experimen, t, s-v5','
   varia, n, t: 'in, f, o','
   ic, o, n: '⚡','
-=======
   id: 'o, c, t-05-ed, g, e-experimen, t, s-v5',';
   tit, l, e: '⚡ NE
   W: Edge, Private, Experiments v5 — Ze, r, o‑PI, I, A/B <100, m, s',';
@@ -1734,7 +1728,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-05-cac, h, e-stra, t, a-v4','
   varia, n, t: 'succe, s, s','
   ic, o, n: '🧠','
-=======
   id: 'o, c, t-05-cac, h, e-stra, t, a-v4',';
   tit, l, e: '🧠 NE
   W: Cache, Strata, v4 — 60–85% Co, s, t ↓, Tighter, P9, 5',';
@@ -1756,7 +1749,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g','
   varia, n, t: 'succe, s, s','
   ic, o, n: '🚀','
-=======
   id: 'sept, 3, 0-fre, s, h-conte, n, t-20, 2, 5',';
   tit, l, e: '🚀 Fresh, Dr, o
   p: Governance, Guardrail, s, Edge, Inferenc, e, Agent, Observabilit, y',';
@@ -1779,7 +1771,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-enterpri, s, e-ai-platfor, m, s','
   varia, n, t: 'succe, s, s','
   ic, o, n: '🏗️','
-=======
   id: 'o, c, t-01-enterpri, s, e-platfor, m, s-20, 2, 5',';
   tit, l, e: '🏗️ NE
   W: Enterprise, AI, Platforms — SL, A, s, Guardrai, l, s, Proven, RO, I',';
@@ -1801,7 +1792,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-intellige, n, t-automati, o, n-breakthrou, g, h','
   varia, n, t: 'in, f, o','
   ic, o, n: '🤖','
-=======
   id: 'o, c, t-01-intellige, n, t-automati, o, n-20, 2, 5',';
   tit, l, e: '🤖 NE
   W: Intelligent, Automatio, n — From, Tickets, to Outcom, e, s',';
@@ -1824,7 +1814,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g','
   varia, n, t: 'succe, s, s','
   ic, o, n: '✨','
-=======
   id: 'sept, 3, 0-autonomo, u, s-eu, a, i-ed, g, e-20, 2, 5',';
   tit, l, e: '🔥 Ne
   w: Autonomous, Infr, a, EU, AI, Act Playbo, o, k, Edge, RAG, Cold‑Star, t, s',';
@@ -1847,7 +1836,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g','
   varia, n, t: 'succe, s, s','
   ic, o, n: '🎉','
-=======
   id: 'o, c, t-01-20, 2, 5-breakthrou, g, h-conte, n, t-me, g, a-laun, c, h',';
   tit, l, e: '🎉 MEGA, BREAKTHROU, G
   H: 6, Revolutionary, AI Solutions, Just, Released!',';
@@ -1869,7 +1857,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/ai-power, e, d-digit, a, l-tw, i, n-manufacturi, n, g-20, 2, 5','
   varia, n, t: 'succe, s, s','
   ic, o, n: '🏭','
-=======
   id: 'digit, a, l-tw, i, n-manufacturi, n, g-o, c, t-20, 2, 5',';
   tit, l, e: '🏭 NE
   W: AI-Powered, Digital, Twins - 92% Defect, Reductio, n, $320M, Saving, s',';
@@ -1891,7 +1878,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/hyp, e, r-personalizati, o, n-re, a, l-ti, m, e-ai-20, 2, 5','
   varia, n, t: 'in, f, o','
   ic, o, n: '🎯','
-=======
   id: 'hyp, e, r-personalizati, o, n-o, c, t-20, 2, 5',';
   tit, l, e: '🎯 NE
   W: Hyp, e, r-Personalization, A, I - 8x, Conversion, Rates, 94% Satisfacti, o, n',';
@@ -1913,7 +1899,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/autonomo, u, s-netwo, r, k-operatio, n, s-20, 2, 5','
   varia, n, t: 'warni, n, g','
   ic, o, n: '🌐','
-=======
   id: 'autonomo, u, s-netwo, r, k-o, p, s-o, c, t-20, 2, 5',';
   tit, l, e: '🌐 NE
   W: Autonomous, Network, Operations - 99.9, 9, 9% Uptime, Guarantee, d',';
@@ -1935,7 +1920,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/cogniti, v, e-proce, s, s-mini, n, g-automati, o, n-20, 2, 5','
   varia, n, t: 'succe, s, s','
   ic, o, n: '🔍','
-=======
   id: 'cogniti, v, e-proce, s, s-mini, n, g-o, c, t-20, 2, 5',';
   tit, l, e: '🔍 NE
   W: Cognitive, Process, Mining - 73% Cost, Saving, s, 6x, Faster, Execution',';
@@ -1957,7 +1941,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/ai-augment, e, d-decisi, o, n-intelligen, c, e-20, 2, 5','
   varia, n, t: 'in, f, o','
   ic, o, n: '🧠','
-=======
   id: 'decisi, o, n-intelligen, c, e-o, c, t-20, 2, 5',';
   tit, l, e: '🧠 NE
   W: AI-Augmented, Decision, Intelligence - 10x, Faste, r, 97% Accura, c, y',';
@@ -1979,7 +1962,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   ctaLi, n, k: '/bl, o, g/intellige, n, t-docume, n, t-understandi, n, g-20, 2, 5','
   varia, n, t: 'succe, s, s','
   ic, o, n: '📄','
-=======
   id: 'intellige, n, t-docume, n, t-understandi, n, g-o, c, t-20, 2, 5',';
   tit, l, e: '📄 NE
   W: Intelligent, Document, AI - Process, 1, M+ Documents, Daily, at 99.2% Accura, c, y',';
@@ -2051,7 +2033,6 @@ export, const, getFeaturedBanners = (): EnhancedPromotionalBann, e, r[] => {
     featur, e, d: tr, u, e
     priori, t, y: 3
     startDa, t, e: '20, 2, 5-10-06}
-=======
     id: 'o, c, t-06-20, 2, 5-n, e, w-conte, n, t-dr, o, p',';
     tit, l, e: '🚀 NEW, TODA, Y (Oc, t, 6): Feature, Store, s, Policy, Tests, v3, Evaluator, Gate, s',';
     descripti, o, n: 'Millisecond, features, at 1, 0, M+ R, P, S, producti, o, n-predictive, policy, tests, and, evaluato, r-driven, release, s.',';

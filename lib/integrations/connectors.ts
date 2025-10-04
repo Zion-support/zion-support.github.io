@@ -5,8 +5,8 @@ export async function simulateAction<T = any>(
   action: string,
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry, result: T }> 
-  const log: SyncLogEntry = 
-    id: uuidv4(),
+  const log: SyncLogEntry = {
+  id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',

@@ -47,7 +47,6 @@ const SecurityHeaders: React.FC = () => {
 export default SecurityHeaders;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-
   useEffect(() => {
     // Add security headers via meta tags
         { name: referrer', content: 'strict-origin-when-cross-origin },

@@ -3,11 +3,9 @@ interface UseLocalStorageProps
   // Add props here as needed
 }
 
-
 interface UseLocalStorageProps 
   // Add props here as needed
 }
-
 
 };
 
@@ -130,17 +128,11 @@ export default function UseLocalStorage({ }: UseLocalStorageProps)
 };
 };
 
-
 };
 
-
-
 }
 
-
 }
-
-
 
 }
 }

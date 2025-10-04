@@ -53,7 +53,6 @@ const contact =
 
     },;
 
-
   ];    features: [
 
 export interface InnovativeMicroSaasService 
@@ -617,7 +616,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     period: '/month',
     description: 'Cutting-edge platform that combines AI, robotics, and IoT to create autonomous supply chain operations, from warehouse automation to last-mile delivery.',
     features: [
-
 
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'

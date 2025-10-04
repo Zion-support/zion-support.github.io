@@ -4,7 +4,6 @@ const, October2025NewBreakthroughBanne, r = () => {
     '🧠': Bra, i, n
     '💰': DollarSi, g, n
     '🎨': E, y, e;
-=======
     '🧠': Bra, i, n,';
     '💰': DollarSi, g, n,';
     '🎨': E, y, e';
@@ -16,7 +15,6 @@ const, October2025NewBreakthroughBanne, r = () => {
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
         <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, opacit, y-30">";
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
@@ -33,7 +31,6 @@ const, October2025NewBreakthroughBanne, r = () => {
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30">";
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
@@ -57,7 +54,6 @@ const, October2025NewBreakthroughBanne, r = () => {
         </d, i, v>
         {/* Content, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
@@ -71,7 +67,6 @@ const, October2025NewBreakthroughBanne, r = () => {
                 <div, className="flex, item, s-start, ga, p-4, m, b-6">
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`
                     <Icon, className="w-8 h-8, tex, t-whi, t, e  />
-=======
                 <div, className="flex, item, s-start, ga, p-4, m, b-6">";
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`
                     <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
@@ -81,7 +76,6 @@ const, October2025NewBreakthroughBanne, r = () => {
                       {conte, n, t.catego, r, y}
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colors, leadin, g-tig, h, t">"
-=======
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colors, leadin, g-tig, h, t">";
                       {conte, n, t.tit, l, e}
                     </h3>
@@ -97,7 +91,6 @@ const, October2025NewBreakthroughBanne, r = () => {
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>
                       <div, className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m">
                         {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()};
-=======
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">";
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>";
                       <div, className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m">";
@@ -112,7 +105,6 @@ const, October2025NewBreakthroughBanne, r = () => {
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0">
                       <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
                       <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>
-=======
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0">";
                       <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
                       <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>";
@@ -122,7 +114,6 @@ const, October2025NewBreakthroughBanne, r = () => {
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   Read, Full, Guide;
                   <ArrowRight, className="w-5 h-5  />
-=======
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   Read, Full, Guide;
                   <ArrowRight, className="w-5 h-5" />";
@@ -136,7 +127,6 @@ const, October2025NewBreakthroughBanne, r = () => {
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">
             <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0  />
             <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l">";
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">";
             <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0" />";
@@ -158,7 +148,6 @@ const, October2025NewBreakthroughBanne, r = () => {
               <Target, className="w-6 h-6  />
               Get, Free, Enterprise Assessme, n, t;
               <ArrowRight, className="w-6 h-6  />
-=======
               <Target, className="w-6 h-6" />";
               Get, Free, Enterprise Assessme, n, t;
               <ArrowRight, className="w-6 h-6" />";
@@ -169,7 +158,6 @@ const, October2025NewBreakthroughBanne, r = () => {
             >
               Explore, All, Articles;
               <ArrowRight, className="w-6 h-6  />
-=======
               <ArrowRight, className="w-6 h-6" />";
             </Li, n, k>
           </d, i, v>
@@ -179,7 +167,6 @@ const, October2025NewBreakthroughBanne, r = () => {
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2">{sta, t, s.totalMarketVal, u, e}</d, i, v>
             <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Market, Opportunit, y</d, i, v>
-=======
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6">";
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2">{sta, t, s.totalMarketVal, u, e}</d, i, v>";
@@ -211,7 +198,6 @@ const, October2025NewBreakthroughBanne, r = () => {
           <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">
             {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I'
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (
-=======
         <div, className="mt-12, tex, t-cent, e, r">";
           <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">";
             {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I', ';

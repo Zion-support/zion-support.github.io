@@ -6,7 +6,6 @@ const, AccessibilityEnhance, r: Rea, c, t.FC<PropsWithChildr, e, n> = ({ childr,
       if (eve, n, t.k, e, y === 'T, a, b') {
         docume, n, t.bo, d, y.classLi, s, t.a, d, d('keyboa, r, d-navigati, o, n');
       }
-=======
 const, AccessibilityEnhance, r: Rea, c, t.FC = () => {
 useEffe, c, t(() => {
 // Skip, link, functionality

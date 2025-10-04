@@ -1,19 +1,15 @@
 
 
-
 import type { NextPage } from next;
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
 import type { NextPage } from 'next';
 
-
-
     'Blockchain'
   ];
 
         </div>
-
 
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -23,7 +19,6 @@ import type { NextPage } from 'next';
                 key={product.title}
                 className=\"bg-white rounded-lg shadow-lg overflow-hidden \"hover\": shadow-xl transition-shadow\";
 
-
                   <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                   <h3 className="text-left">
                   <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
@@ -32,13 +27,7 @@ import type { NextPage } from 'next';
                   <h3 className="text-left">
                     {product.title}
 
-
-
-
-
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\></div>
-
-
 
                     <Link;
                   <div className="text-left">;
@@ -50,9 +39,6 @@ import type { NextPage } from 'next';
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">
-
-
-
 
                   <p className=\text-gray-600\">{plan.description}</p>
 
@@ -73,6 +59,4 @@ export default function ProductsIndex() { return ( <div className = "relative mi
 }
 
 export default Products;
-
-
 

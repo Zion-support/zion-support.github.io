@@ -1,14 +1,6 @@
 
 
-
-
-
-
-
 import { Notification, NotificationType } from '@/context/notifications',;
-
-
-
 
   onDismiss:(id:string) => Promise<void>;
 export const NotificationItem:React.FC<NotificationItemProps> = ({;
@@ -48,10 +40,6 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 size="icon";""
                 className="text-left";"
                 onClick={(e) => {;
-
-
-
-
 
               </Button>;
             </TooltipTrigger>;

@@ -1,7 +1,5 @@
 
 
-
-
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }
   try {
@@ -11,8 +9,6 @@
       data: bytecode + data.slice(2)
       // gas and value are intentionally left for client to estimate via MetaMask
 
-
-
     return res.status(200).json({ abi, tx })
   } catch (e: any) {
     return res.status(400).json({ error: e?.message |'Failed to prepare deployment tx' })
@@ -20,14 +16,7 @@
 
 }
 
-
-
-
   }
 
 }
-
-
-
-
 

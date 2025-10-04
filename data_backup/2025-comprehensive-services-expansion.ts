@@ -1,6 +1,5 @@
   id: string;
 
-
   realImplementation: boolean;
     implementationDetails:,
   AI-powered: analysis engine with custom rule sets and integration APIs.'',;

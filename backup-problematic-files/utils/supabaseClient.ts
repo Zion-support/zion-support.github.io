@@ -7,7 +7,6 @@ const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.e
 
 export type ZionSupabase = SupabaseClient | undefined,
 
-
 let browserClient: SupabaseClient | undefined
 
 export function getSupabaseClient(): ZionSupabase {

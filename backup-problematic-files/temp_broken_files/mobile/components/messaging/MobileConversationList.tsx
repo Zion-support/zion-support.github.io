@@ -16,7 +16,6 @@ interface Conversation {;
   timestamp: string;,;
   unreadCount: number;,;
 
-
   conversations: Conversation[];,;
   activeConversation?:string,;
   onSelectConversation:(id:string) => void;
@@ -81,5 +80,4 @@ export function MobileConversationList({;
 }) ;"
 }onClick={;"  () => onSelectConversation (conversation.id) ";"}> <div className="text-left"> <Avatar> <AvatarImage src= {;"
 }/> <AvatarFallback >{;
-
 

@@ -28,4 +28,3 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones;, pay
   totalPayment ;
 }</p> </div> <div> </p> </div> <div> </p> </div> </div> </CardContent> </Card>) ;
 
-

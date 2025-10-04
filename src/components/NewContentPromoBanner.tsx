@@ -1,6 +1,5 @@
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
 impo, r, t { CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t";
-=======
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";';
 impo, r, t {
 CheckCirc, l, e;
@@ -22,7 +21,6 @@ const, NewContentPromoBanne, r: Rea, c, t.FC = () => {
     }
     {
       ic, o, n: <Star, className="w-5 h-5/>,"
-=======
       ic, o, n: <TrendingUp, className="w-5 h-5" />,";
       te, x, t: "AI-Powered, Analytic, s"
     }
@@ -52,7 +50,6 @@ const, NewContentPromoBanne, r: Rea, c, t.FC = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
               <span, className="bg-yell, o, w-300, tex, t-bl, u, e-900, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d">
-=======
       <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10">";
         <div, className="flex, item, s-center, justif, y-betwe, e, n">";
           <div, className="fl, e, x-1">";
@@ -63,7 +60,6 @@ const, NewContentPromoBanne, r: Rea, c, t.FC = () => {
               </sp, a, n>
             </d, i, v>
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4">"
-=======
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4">";
               Revolutionary, AI, Breakthroughs 20, 2, 6;
             </h2>
@@ -76,7 +72,6 @@ const, NewContentPromoBanne, r: Rea, c, t.FC = () => {
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, ga, p-2, tex, t-bl, u, e-1, 0, 0">
                   <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0  />
                   <span, className="te, x, t-sm">{featu, r, e.te, x, t}</sp, a, n>
-=======
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, ga, p-2, tex, t-bl, u, e-1, 0, 0">";
                   <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
                   <span, className="te, x, t-sm">{featu, r, e.te, x, t}</sp, a, n>";
@@ -90,7 +85,6 @@ const, NewContentPromoBanne, r: Rea, c, t.FC = () => {
               </butt, o, n>
               <button, className="bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-white, hov, e
   r:te, x, t-bl, u, e-600, transitio, n-colo, r, s">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";
               <button, className="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, flex, items-center, ga, p-2">";
                 Explore, Conten, t;
@@ -107,7 +101,6 @@ const, NewContentPromoBanne, r: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="te, x, t-4xl, fon, t-bold, m, b-2">20, 2, 6</d, i, v>
                 <div, className="te, x, t-lg, tex, t-bl, u, e-1, 0, 0">AI, Revolutio, n</d, i, v>
-=======
           <div, className="hidden, l, g: block, m, l-8">";
             <div, className="w-6, 4, h-64, b, g-whi, t, e/10, rounde, d-full, flex, items-center, justif, y-center, backdro, p-bl, u, r-sm">";
               <div, className="te, x, t-cent, e, r">";
@@ -126,7 +119,6 @@ const, NewContentPromoBanne, r: Rea, c, t.FC = () => {
       >
         <svg, className="w-6 h-6" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
           <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6, 18L18, 6M6 6l12, 1, 2  />
-=======
         <svg, className="w-6 h-6" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">";
           <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6, 18L18, 6M6 6l12, 1, 2" />";
         </s, v, g>

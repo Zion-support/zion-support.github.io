@@ -11,9 +11,6 @@ onClick={() => setIsMenuOpen(!isMenuOpen)}
   )
 },
 
-
-
-
 const Header = () => {
   }
   const [isMenuOpen, setIsMenuOpen] = useState(false);

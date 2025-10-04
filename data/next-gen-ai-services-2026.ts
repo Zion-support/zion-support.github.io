@@ -34,7 +34,6 @@ export interface NextGenAIService2026
   customers: number;
   rating: number;
 
-
   reviews: number;    mobile: string
     email: string
     address: string
@@ -87,14 +86,10 @@ export interface NextGenAIService2026
     email: string
     address: string
 
-
-
   contactInfo: 
     mobile: string,
     email: string,
     address: string,
-
-
 
     website: string
   }
@@ -113,7 +108,6 @@ export interface NextGenAIService2026
   rating: number,
   reviews: number;
 }
-
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   
@@ -147,7 +141,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     icon: '🧠💙',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
-
 
     marketPosition:
       'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',
@@ -234,18 +227,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
     competitors: ['AffectivaRealeyesEmotientNoldus'],
 
-
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
 
-
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4 && 4.9,
     reviews: 89
-
 
   },
     growth_rate: '150% annual growth',
@@ -268,7 +258,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     tagline: 'Predict equipment failures before they happen',
     price: '$899',
     period: '/month',
-
 
     features: [
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians'
@@ -339,12 +328,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
     competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
 
-
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4 && 4.7,
     reviews: 156
-
 
   },
     reviews: 156,  },    implementationDetails: 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',
@@ -363,12 +350,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     price: '$599',
     period: '/month',
 
-
     popular: false,
     icon: '🎯✨',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
-
 
     marketPosition:
       'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.'
@@ -469,18 +454,15 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.',
     competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'],
 
-
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
 
-
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4 && 4.6,
     reviews: 203
-
 
   },
     growth_rate: '140% annual growth',
@@ -504,12 +486,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     price: '$399',
     period: '/month',
 
-
     popular: false,
     icon: '🎤🎭',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
-
 
     marketPosition:
       'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',
@@ -522,7 +502,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     setupTime: '1 day',
     category: 'AI & Voice Technology',
     realService: true,
-
 
     technology: [
       'Python',
@@ -559,12 +538,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     use_cases: ['Podcast production_marketing videos_e - learning content_audiobook narration'],
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
 
-
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4 && 4.8,
     reviews: 312
-
 
   },
     competitors: ['ElevenLabsPlay.ht_resemble AIDescript'],
@@ -588,7 +565,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     tagline: 'Automate code reviews and improve code quality',
     price: '$299',
     period: '/month',
-
 
     features: [
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics'
@@ -655,12 +631,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
     competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],
 
-
     growthRate: '110% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-
 
     customers: 203,
     rating: 4 && 4.7,
@@ -702,13 +676,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     description: 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',
     features: [
 
-
     popular: true,
     icon: '🧠💙',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-emotional-intelligence',
-
 
     targetAudience: 'Customer service platforms, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',
     trialDays: 21,
@@ -716,12 +688,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     category: 'AI & Emotional Intelligence',
     realService: true,
 
-
     integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
     useCases: ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'],
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
     competitors: ['AffectivaRealeyesEmotientNoldus'],
-
 
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
@@ -732,8 +702,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 45,
     rating: 4.9,
 
-
-  
     id: 'ai-predictive-maintenance-platform',
     name: 'AI Predictive Maintenance Platform',
     tagline: 'Predict equipment failures before they happen',
@@ -742,13 +710,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     description: 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',
     features: [
 
-
     popular: true,
     icon: '⚙️🔮',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
-
 
     targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',
     trialDays: 30,
@@ -756,12 +722,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     category: 'AI & Industrial IoT',
     realService: true,
 
-
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
     useCases: ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
     competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
-
 
     growthRate: '120% annual growth',
     variant: 'ai-futuristic',
@@ -772,8 +736,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 78,
     rating: 4.7,
 
-
-  
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
     tagline: 'Deliver hyper-personalized content experiences',
@@ -782,13 +744,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     description: 'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',
     features: [
 
-
     popular: false,
     icon: '🎯✨',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-content-personalization',
-
 
     targetAudience: 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',
     trialDays: 14,
@@ -796,12 +756,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     category: 'AI & Personalization',
     realService: true,
 
-
     integrations: ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],
     useCases: ['Product recommendationsContent personalizationEmail marketingWebsite optimization'],
     roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.',
     competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'],
-
 
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
@@ -812,8 +770,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 92,
     rating: 4.6,
 
-
-  
     id: 'ai-voice-cloning-platform',
     name: 'AI Voice Cloning Platform',
     tagline: 'Create natural-sounding voice clones for content creation',
@@ -822,13 +778,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     description: 'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.',
     features: [
 
-
     popular: false,
     icon: '🎤🎭',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-voice-cloning',
-
 
     targetAudience: 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',
     trialDays: 7,
@@ -836,12 +790,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     category: 'AI & Voice Technology',
     realService: true,
 
-
     integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
     useCases: ['Podcast productionMarketing videosE-learning contentAudiobook narration'],
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
     competitors: ['ElevenLabsPlay.htResemble AIDescript'],
-
 
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -852,8 +804,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 156,
     rating: 4.8,
 
-
-  
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
     tagline: 'Automate code reviews and improve code quality',
@@ -861,7 +811,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: '/month',
     description: 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',
     features: [
-
 
       'Automated code quality analysis',
       'Security vulnerability detection',
@@ -885,7 +834,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-code-review',
 
-
     marketPosition:
       'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
     targetAudience:
@@ -899,7 +847,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2-3 days',
     category: 'AI & Development',
     realService: true,
-
 
     technology: [
       'Python',
@@ -933,14 +880,12 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
     competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],
 
-
     growthRate: '110% annual growth',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
     customers: 203,
     rating: 4.7,
-
 
     reviews: 445,
   },

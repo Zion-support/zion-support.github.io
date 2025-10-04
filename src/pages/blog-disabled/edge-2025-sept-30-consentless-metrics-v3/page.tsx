@@ -10,7 +10,6 @@ export, default, function ConsentlessMetrics, V, 3(): Rea, c, t.J, S, X.Eleme, n
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Consentless, Metrics, v3</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Ze, r, o‑PII, Signals, under 100, m, s</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="Scoped, ID, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, privac, y‑preserving, analytics, worldwide." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-se, p, t-30-consentle, s, s-metri, c, s-v3" />";
       </Helmet>

@@ -145,7 +145,6 @@ import: {
     return categoryData ? categoryData.color :,
   from-gray-500 to-slate-600'}
 
-
     if: (price <= 3000) return;
   'medium';';
     return;
@@ -211,7 +210,6 @@ import: {
               </div>
             </div>
           </motion.div>
-
 
               />
             </div>

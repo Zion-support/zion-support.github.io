@@ -10,7 +10,6 @@ catego, r, y: stri, n, g;
 priori, t, y: numb, e, r;
 val, u, e?: numb, e, r; // Business, value, in billio, n, s
   r, o, i?: numb, e, r; // ROI, percentag, e;
-=======
 id: stri, n, g;
 tit, l, e: stri, n, g;
 da, t, e: Da, t, e;
@@ -37,7 +36,6 @@ const, DEFAULT_CONFI, G: PrioritizationConf, i, g = {
   engagementWeig, h, t: 0.25
   priorityWeig, h, t: 0.2
   categoryBalan, c, e: tr, u, e;
-=======
 const, DEFAULT_CONF, I
   G: PrioritizationConf, i, g = {
   recencyWeig, h, t: 0.3
@@ -134,7 +132,6 @@ export, const, prioritizeContent = (
   const, scoredItem, s = ite, m, s.m, a, p(it, e, m => ({
     it, e, m
     sco, r, e: calculateContentSco, r, e(it, e, m, conf, i, g)
-=======
     sco, r, e: calculateContentSco, r, e(it, e, m, conf, i, g)
   }));
   scoredIte, m, s.so, r, t((a, b) => b.sco, r, e - a.sco, r, e);
@@ -163,7 +160,6 @@ export, const, prioritizeWithBalance = (
   });
   // Rou, n, d-robin, selection, from categori, e, s
   const, resul, t: ContentIt, e, m[] = []
-=======
   const, resul, t: ContentIt, e, m[] = [];
   const, categorie, s = Obje, c, t.ke, y, s(prioritizedByCatego, r, y);
   const, categoryIndic, e
@@ -175,7 +171,6 @@ export, const, prioritizeWithBalance = (
       const, categoryItem, s = prioritizedByCatego, r, y[catego, r, y];
       const, currentInde, x = categoryIndic, e, s[catego, r, y];
       // Check, if, we've, exhausted, this category, or, hit category, limi, t;
-=======
       // Check, if, we've, exhausted, this category, or, hit category, limi, t';
       const, categoryCoun, t = resu, l, t.filt, e, r(it, e, m => it, e, m.catego, r, y === catego, r, y).leng, t, h;
       if (currentInd, e, x >= categoryIte, m, s.leng, t, h || categoryCou, n, t >= maxPerCatego, r, y) {
@@ -187,7 +182,6 @@ export, const, prioritizeWithBalance = (
       if (resu, l, t.leng, t, h >= totalM, a, x) bre, a, k;
     }
     // If, no, items were, added, in this, roun, d, we're, don, e;
-=======
     // If, no, items were, added, in this, roun, d, we're, don, e';
     if (!addedInRou, n, d) bre, a, k;
   }
@@ -243,7 +237,6 @@ export, const, getTrendingContent = (
     engagementWeig, h, t: 0.5, // High, weight, on engagement, for, trending
     priorityWeig, h, t: 0.1
     categoryBalan, c, e: fal, s, e;
-=======
     recencyWei, g, h
   t: 0.2
     valueWeig, h, t: 0.2
@@ -265,7 +258,6 @@ export, const, getEvergreenContent = (
     engagementWeig, h, t: 0.5, // High, weight, on engageme, n, t
     priorityWeig, h, t: 0.1
     categoryBalan, c, e: fal, s, e;
-=======
     valueWei, g, h
   t: 0.3
     engagementWeig, h, t: 0.5, // High, weight, on engageme, n, t
@@ -282,7 +274,6 @@ export, const, createMixedFeed = (
 trendingCou, n, t: numb, e, r;
 newCou, n, t: numb, e, r;
 evergreenCou, n, t: numb, e, r;
-=======
   it, e, m
   s: ContentIt, e, m[]
   conf, i, g: {
@@ -314,7 +305,6 @@ al
   // Combine, all, with deduplicati, o, n
   const, allId, s = new, Se, t<stri, n, g>();
   const, al, l: ContentIt, e, m[] = []
-=======
   const, al, l: ContentIt, e, m[] = [];
   [...trendi, n, g, ...newConte, n, t, ...evergre, e, n].forEa, c, h(it, e, m => {
     if (!allI, d, s.h, a, s(it, e, m.id) && a, l, l.leng, t, h < conf, i, g.totalM, a, x) {

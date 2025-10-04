@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import * as React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import {
@@ -19,12 +18,9 @@ import {
   Settings
 } from 'lucide-react';
 
-
-
 interface AccessibilityProps {
   className?: string;
 }
-
 
 const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
   return (

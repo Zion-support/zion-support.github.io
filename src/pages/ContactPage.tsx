@@ -11,7 +11,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
     pho, n, e: '','
     servi, c, e: '','
     messa, g, e: '});
-=======
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";';
 import { Helmet } from "react-helmet-async";';
 import, EnhancedContactForm, from "../componen, t, s/EnhancedContactFo, r, m";';
@@ -28,7 +27,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
     e.preventDefau, l, t();
     // Handle, form, submission
   conso, l, e.l, o, g('Form, submitte, d: ', formDa, t, a);'
-=======
     conso, l, e.l, o, g('Form, submitte, d: ', formDa, t, a);';
   };
   const, handleChang, e = (e: Rea, c, t.ChangeEve, n, t<HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t | HTMLSelectEleme, n, t>) => {
@@ -46,7 +44,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
         <div, className="max-w-6xl mx-auto">
           <div, className="text-center mb-12">
             <h1, className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
-=======
         <meta name="descripti, o, n" content="Get, in, touch with, Zion, Tech Group, for, AI and, IT, solutions. Contact, our, experts for, consultation, and suppo, r, t." />";
       </Helmet>
       <div, className="container mx-auto px-4 py-8">";
@@ -68,7 +65,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
               <div, className="spa, c, e-y-6">
                 <div, className="flex, item, s-sta, r, t">
                   <div, className="te, x, t-2xl, m, r-4">📧</d, i, v>
-=======
           <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, ga, p-12">";
             {/* Contact, Informatio, n */}
             <d, i, v>
@@ -88,7 +84,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Pho, n, e</h3>
                     <p, className="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>
                     <p, className="te, x, t-gr, a, y-6, 0, 0">M, o, n-F, r, i: 9, A, M-6PM, ES, T</p>"
-=======
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Pho, n, e</h3>";
                     <p, className="te, x, t-gr, a, y-6, 0, 0">+1 (5, 5, 5) 1, 2, 3-45, 6, 7</p>";
                     <p, className="te, x, t-gr, a, y-6, 0, 0">M, o, n-F, r, i: 9, A, M-6PM, ES, T</p>";
@@ -114,7 +109,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
                     <p, className="te, x, t-gr, a, y-6, 0, 0">Saturd, a, y: 10:00, A, M - 
   4:00, P, M</p>"
                     <p, className="te, x, t-gr, a, y-6, 0, 0">Sund, a, y: Clos, e, d</p>"
-=======
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Business, Hour, s</h3>";
                     <p, className="te, x, t-gr, a, y-6, 0, 0">Mond, a, y - Frid, a, y: 9:00, A, M - 6:00, P, M</p>";
                     <p, className="te, x, t-gr, a, y-6, 0, 0">Saturd, a, y: 10:00, A, M - 4:00, P, M</p>";
@@ -130,7 +124,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
                   <div, className="bg-bl, u, e-5, 0, p-4, rounde, d-lg">
                     <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2">AI, Solution, s</h4>
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">Machine, Learnin, g & Automati, o, n</p>
-=======
               <div, className="mt-12">";
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">Our, Service, s</h3>";
                 <div, className="grid, gri, d-co, l, s-1, s, m: gr, i, d-co, l, s-2, ga, p-4">";
@@ -167,7 +160,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8">"
               <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-md">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">
-=======
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8">";
               <div, className="bg-whit, e, p-6, rounde, d-lg, shado, w-md">";
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">";
@@ -185,7 +177,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
                 </h3>
                 <p, className="te, x, t-gr, a, y-6, 0, 0">
                   Y, e, s, we, offer, comprehensive support, packages, including maintenan, c, e;
-=======
                 <p, className="te, x, t-gr, a, y-6, 0, 0">";
                   Y, e, s, we, offer, comprehensive support, packages, including maintenan, c, e
                   updat, e, s, and, 2, 4/7, technical, assistance for, critical, systems.
@@ -197,7 +188,6 @@ const, ContactPag, e: Rea, c, t.FC = () => {
                 </h3>
                 <p, className="te, x, t-gr, a, y-6, 0, 0">
                   We, serve, clients across, various, industries including, healthcar, e;
-=======
                 <p, className="te, x, t-gr, a, y-6, 0, 0">";
                   We, serve, clients across, various, industries including, healthcar, e
                   finan, c, e, manufacturi, n, g, reta, i, l, and, technology, sectors.

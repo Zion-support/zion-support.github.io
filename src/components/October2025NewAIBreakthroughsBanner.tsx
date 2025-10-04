@@ -24,7 +24,6 @@ export, default, function October2025NewAIBreakthroughsBann, e, r(): vo, i, d {
           Revolutionary, AI, Innovations;
         </h2>
         <p, className="te, x, t-2xl, m, d: te, x, t-3xl, tex, t-center, tex, t-gr, a, y-300, m, b-16, ma, x-w-5xl, m, x-auto, fon, t-lig, h, t">"
-=======
         <h2, className="te, x, t-6xl, m, d: te, x, t-8xl, fon, t-black, tex, t-center, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
           Revolutionary, AI, Innovations;
         </h2>
@@ -35,7 +34,6 @@ export, default, function October2025NewAIBreakthroughsBann, e, r(): vo, i, d {
         </p>
         {/* Content, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {/* Car, d, 1 */}
           <Li, n, k
@@ -48,7 +46,6 @@ export, default, function October2025NewAIBreakthroughsBann, e, r(): vo, i, d {
                 🎯 Mul, t, i-Agent, System, s;
               </sp, a, n>
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                 Agentic, Orchestration, Platform;
               </h3>
@@ -74,7 +71,6 @@ export, default, function October2025NewAIBreakthroughsBann, e, r(): vo, i, d {
                 🧠 Neural, A, I;
               </sp, a, n>
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">";
                 Neural, Reasoning, Engines;
               </h3>
@@ -100,7 +96,6 @@ export, default, function October2025NewAIBreakthroughsBann, e, r(): vo, i, d {
                 🏗️ Enterprise, Platfor, m;
               </sp, a, n>
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-400, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-400, transitio, n-colo, r, s">";
                 Enterprise, AI, Fabric;
               </h3>
@@ -119,7 +114,6 @@ export, default, function October2025NewAIBreakthroughsBann, e, r(): vo, i, d {
         {/* Stats, Ba, r */}
         <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, m, b-12">
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">"
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, m, b-12">";
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">";
             <d, i, v>

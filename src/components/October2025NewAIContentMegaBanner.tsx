@@ -11,7 +11,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
         <div, className="flex, item, s-center, ga, p-3, m, b-6">
           <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-cy, a, n-500, rounde, d-xl">
             <Sparkles, className="w-8 h-8, tex, t-whi, t, e  />
-=======
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2xl, shado, w-2xl, border, border-purp, l, e-5, 0, 0/30, m, y-12">";
       {/* Animated, background, effect */};
       <div, className="absolute, inse, t-0, opacit, y-20">";
@@ -32,7 +31,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
               <span, className="te, x, t-purp, l, e-300, tex, t-sm, fon, t-semibo, l, d">Octobe, r, 1, 20, 2, 5</sp, a, n>";
             </d, i, v>
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-whi, t, e">"
-=======
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-whi, t, e">";
               Latest, AI, Revolutio
   n: 3, Breakthrough, Guides
@@ -40,14 +38,12 @@ const, October2025NewAIContentMegaBanne, r = () => {
           </d, i, v>
         </d, i, v>
         <p, className="te, x, t-xl, tex, t-gr, a, y-200, m, b-8, ma, x-w-3, x, l">
-=======
         <p, className="te, x, t-xl, tex, t-gr, a, y-200, m, b-8, ma, x-w-3, x, l">";
           Discover, the, cutting-edge, strategies, powering <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, fon, t-bo, l, d">$13.7B, in, enterprise AI, deployment, s</sp, a, n>. ";
           Master, enterprise, AI agen, t, s, LLM, securit, y, and, vector, databases with, proven, frameworks from, Fortune, 500 leade, r, s.
         </p>
         {/* Three, featured, articles */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-=======
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* Articl, e, 1 */}
           <Li, n, k
@@ -58,7 +54,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Bot, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Bot, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
@@ -67,7 +62,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
               Enterprise, AI, Agents Revoluti, o, n;
             </h3>
@@ -77,7 +71,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">
               <span, className="flex, item, s-center, ga, p-1">
                 <TrendingUp, className="w-3 h-3  />
-=======
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";
               <span, className="flex, item, s-center, ga, p-1">";
                 <TrendingUp, className="w-3 h-3" />";
@@ -90,7 +83,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
   r: te, x, t-purp, l, e-3, 0, 0">"
               Read, Full, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-3, 0, 0">";
               Read, Full, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -106,7 +98,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-2, b, g-r, e, d-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Shield, className="w-6 h-6, tex, t-r, e, d-4, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-2, b, g-r, e, d-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Shield, className="w-6 h-6, tex, t-r, e, d-4, 0, 0" />";
@@ -115,7 +106,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-r, e, d-300, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-r, e, d-300, transitio, n-colo, r, s">";
               LLM, Securit, y & Defen, s, e;
             </h3>
@@ -125,7 +115,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">
               <span, className="flex, item, s-center, ga, p-1">
                 <Shield, className="w-3 h-3  />
-=======
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";
               <span, className="flex, item, s-center, ga, p-1">";
                 <Shield, className="w-3 h-3" />";
@@ -138,7 +127,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
   r: te, x, t-r, e, d-3, 0, 0">"
               Read, Security, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-r, e, d-3, 0, 0">";
               Read, Security, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -154,7 +142,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-2, b, g-cy, a, n-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Database, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-2, b, g-cy, a, n-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Database, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />";
@@ -163,7 +150,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">";
               Vector, Database, s & R, A, G;
             </h3>
@@ -173,7 +159,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">
               <span, className="flex, item, s-center, ga, p-1">
                 <Database, className="w-3 h-3  />
-=======
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";
               <span, className="flex, item, s-center, ga, p-1">";
                 <Database, className="w-3 h-3" />";
@@ -186,7 +171,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
   r: te, x, t-cy, a, n-3, 0, 0">"
               Read, Implementation, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-cy, a, n-3, 0, 0">";
               Read, Implementation, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -200,7 +184,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             <d, i, v>
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2">
                 Combined, Enterprise, Value: <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-4, 0, 0">$13.7, Billio, n</sp, a, n>"
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6">";
           <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-4">";
             <d, i, v>
@@ -218,7 +201,6 @@ const, October2025NewAIContentMegaBanne, r = () => {
             >
               Explore, All, Insights;
               <ArrowRight, className="w-5 h-5  />
-=======
               <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>

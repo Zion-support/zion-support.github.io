@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, Users, Zap, TrendingUp } from 'lucide-react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'Complete Guide to Implementing Autonomous Business Processes in 2026 | Zion Tech Group',
   description: 'Comprehensive step-by-step guide to implementing AI-powered autonomous business processes in your organization with proven methodologies and best practices.',
   keywords: 'autonomous business processes, implementation guide, AI automation, business transformation, process optimization',

@@ -42,7 +42,6 @@ export interface EnterpriseIt2026ServiceV2
     website: string;
   }
 
-  
 export interface EnterpriseIT2026ServiceV2 
   id: string, name: string,
   tagline: string, price: string,

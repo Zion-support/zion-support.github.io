@@ -476,6 +476,3 @@ const PricingGuide: React.FC = () = /> {const pricingFactors = [;
     </div>;
   )}export default PricingGuide;
 
-
-
-

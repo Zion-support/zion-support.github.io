@@ -1,5 +1,4 @@
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
-=======
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
 interface, NewArticlesPromoBannerProp, s {
 varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featur, e, d' | 'compa, c, t';
@@ -13,7 +12,6 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
   showCou, n, t = 3
   autoRota, t, e = fal, s, e
   rotationInterv, a, l = 50, 0, 0;
-=======
 const, NewArticlesPromoBann, e
   r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({
   varia, n, t = 'defau, l, t',';
@@ -38,7 +36,6 @@ const, NewArticlesPromoBann, e
         <div, className="flex, item, s-center, justif, y-betwe, e, n">
           <div, className="flex, item, s-center, ga, p-3">
             <BookOpen, className="w-6 h-6, tex, t-whi, t, e  />
-=======
   if (varia, n, t === 'compa, c, t') {';
     return (
       <div, className={`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>`;`
@@ -71,7 +68,6 @@ const, NewArticlesPromoBann, e
             <h2, className="te, x, t-3xl, fon, t-bo, l, d">Breakthrough, Articles, Just Publish, e, d</h2>
           </d, i, v>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
-=======
   if (varia, n, t === 'premi, u, m') {';
     return (
       <div, className={`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>`;`
@@ -90,7 +86,6 @@ const, NewArticlesPromoBann, e
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">
                   <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-3, 0, 0  />
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.catego, r, y}</sp, a, n>
-=======
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";
                   <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-3, 0, 0" />";
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.catego, r, y}</sp, a, n>";
@@ -104,7 +99,6 @@ const, NewArticlesPromoBann, e
                     classNa, m, e="te, x, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-200, flex, items-center, ga, p-1"
                   >
                     Re, a, d <ArrowRight, className="w-4 h-4  />
-=======
                     Re, a, d <ArrowRight, className="w-4 h-4" />";
                   </Li, n, k>
                 </d, i, v>
@@ -119,7 +113,6 @@ const, NewArticlesPromoBann, e
             >
               View, All, Articles;
               <ArrowRight, className="w-5 h-5  />
-=======
               <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
@@ -135,7 +128,6 @@ const, NewArticlesPromoBann, e
             <div, className="flex, item, s-center, ga, p-3">
               <BookOpen, className="w-8 h-8, tex, t-whi, t, e  />
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s</h2>
-=======
   if (varia, n, t === 'featur, e, d') {';
     return (
       <div, className={`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>`;`
@@ -153,7 +145,6 @@ const, NewArticlesPromoBann, e
         <div, className="p-8">
           <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6">"
-=======
         <div, className="p-8">";
           <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6">";
@@ -181,7 +172,6 @@ const, NewArticlesPromoBann, e
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm">
                   <span, className="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTi, m, e}</sp, a, n>
                   <ArrowRight, className="w-4 h-4, tex, t-indi, g, o-600, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <h4, className="fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s">";
                   {artic, l, e.tit, l, e}
                 </h4>
@@ -210,7 +200,6 @@ const, NewArticlesPromoBann, e
             <div, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-2">{artic, l, e.catego, r, y}</d, i, v>
             <h4, className="fo, n, t-semibold, m, b-2">{artic, l, e.tit, l, e}</h4>
             <Link, t, o={artic, l, e.li, n, k} classNa, m, e="te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">"
-=======
       <div, className="flex, item, s-center, ga, p-3, m, b-4">";
         <Sparkles, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />";
         <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Articles, Available</h3>";

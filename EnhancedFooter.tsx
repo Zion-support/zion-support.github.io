@@ -1,15 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
-
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-=======
-
 const EnhancedFooter: React.FC = () => {
   const current_year = new Date().getFullYear();
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
   
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },
@@ -37,54 +28,6 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
-<<<<<<< HEAD
-  const resources = [
-    { name: 'Documentation', href: '/resources/documentation' },
-    { name: 'API Reference', href: '/resources/api' },
-    { name: 'Support Center', href: '/support' },
-    { name: 'Privacy Policy', href: '/legal/privacy' },
-    { name: 'Terms of Service', href: '/legal/terms' },
-  ];
-
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div className="text-xl font-bold">Zion Tech Group</div>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.
-            </p>
-            <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {services.slice(0, 6).map((service) => (
-                <li key={service.name}>
-                  <Link to={service.href} className="text-gray-300 hover:text-white transition-colors">
-                    {service.name}
-                  </Link>
-=======
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -101,90 +44,44 @@ const EnhancedFooter: React.FC = () => {
                   >
                     {service.name}
                   </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
                 </li>
               ))}
             </ul>
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Products */}
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
               {products.map((product) => (
                 <li key={product.name}>
-<<<<<<< HEAD
-                  <Link to={product.href} className="text-gray-300 hover:text-white transition-colors">
-                    {product.name}
-                  </Link>
-=======
                   <a
                     href={product.href}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {product.name}
                   </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
                 </li>
               ))}
             </ul>
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Company */}
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
-<<<<<<< HEAD
-                  <Link to={item.href} className="text-gray-300 hover:text-white transition-colors">
-                    {item.name}
-                  </Link>
-=======
                   <a
                     href={item.href}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {item.name}
                   </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
-        </div>
-
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">info@ziontechgroup.com</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (555) 123-4567</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Address</p>
-                <p className="text-white">123 Tech Street, Innovation City</p>
-              </div>
-=======
-
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
@@ -193,35 +90,14 @@ const EnhancedFooter: React.FC = () => {
               <p>Advanced AI & IT Solutions</p>
               <p>Email: info@ziontechgroup.com</p>
               <p>Phone: +1 (555) 123-4567</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/legal/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/legal/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/legal/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
-          </div>
-=======
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {current_year} Zion Tech Group. All rights reserved.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
         </div>
       </div>
     </footer>

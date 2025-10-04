@@ -25,7 +25,6 @@ export, enum, ErrorCategory {
   USER_INP, U, T = 'user_inp, u, t'
   PERMISSI, O, N = 'permissi, o, n'
   UNKNO, W, N = 'unkno, w, n'
-=======
   L, O, W = 'l, o, w',';
   MEDI, U, M = 'medi, u, m',';
   HI, G, H = 'hi, g, h',';
@@ -68,7 +67,6 @@ class, ErrorTracke, r {
   private, maxError, s = 1, 0, 0;
   private, listener, s: ((er, r, o
   r: TrackedErr, o, r) => vo, i, d)[] = []
-=======
   private, error, s: TrackedErr, o, r[] = [];
   private, maxError, s = 1, 0, 0;
   private, listener, s: ((err, o, r: TrackedErr, o, r) => vo, i, d)[] = [];
@@ -92,7 +90,6 @@ class, ErrorTracke, r {
       conte, x, t: th, i, s.enrichConte, x, t(conte, x, t)
       userAge, n, t: navigat, o, r.userAge, n, t
       resolv, e, d: fal, s, e;
-=======
       mess, a, g
   e: typeof, erro, r === 'stri, n, g' ? err, o, r : err, o, r.messa, g, e,';
       sta, c, k: typeof, erro, r === 'stri, n, g' ? undefin, e, d : err, o, r.sta, c, k,';
@@ -116,7 +113,6 @@ class, ErrorTracke, r {
     }
     // Send, to, external service, in, production
   if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {;
-=======
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
       conso, l, e.err, o, r('[ErrorTrack, e, r]', trackedErr, o, r);';
     }
@@ -134,7 +130,6 @@ class, ErrorTracke, r {
     u, r, l: stri, n, g
     meth, o, d: stri, n, g
     stat, u, s?: numb, e, r;
-=======
     err, o, r: Err, o, r
     u, r, l: stri, n, g
     meth, o, d: stri, n, g
@@ -149,7 +144,6 @@ class, ErrorTracke, r {
         ...conte, x, t
   metada, t, a: {
           ...conte, x, t.metada, t, a;
-=======
         ...conte, x, t
         metada, t, a: {
           ...conte, x, t.metada, t, a
@@ -167,7 +161,6 @@ class, ErrorTracke, r {
     err, o, r: Err, o, r
     componentNa, m, e: stri, n, g
     pro, p, s?: Reco, r, d<stri, n, g, a, n, y>
-=======
     err, o, r: Err, o, r
     componentNa, m, e: stri, n, g
     pro, p, s?: Reco, r, d<stri, n, g, a, n, y>
@@ -184,7 +177,6 @@ class, ErrorTracke, r {
           ...conte, x, t.metada, t, a
   pro, p, s;
         }
-=======
         ...conte, x, t
         compone, n, t: componentNa, m, e
         metada, t, a: {
@@ -266,7 +258,6 @@ class, ErrorTracke, r {
       bySeveri, t, y
       byCatego, r, y
       lastErr, o, r: th, i, s.erro, r, s[th, i, s.erro, r, s.leng, t, h - 1]
-=======
       lastEr, r, o
   r: th, i, s.erro, r, s[th, i, s.erro, r, s.leng, t, h - 1]
     };
@@ -292,7 +283,6 @@ class, ErrorTracke, r {
         }
         timesta, m, p: new, Dat, e().toISOStri, n, g()
       }
-=======
       ...conte, x, t
       rou, t, e: conte, x, t.rou, t, e || wind, o, w.locati, o, n.pathna, m, e
       metada, t, a: {
@@ -314,7 +304,6 @@ class, ErrorTracke, r {
         listen, e, r(err, o, r);
       } cat, c, h (e, r, r) {
         conso, l, e.err, o, r('Error, in, error listen, e, r: ', e, r, r);'
-=======
         conso, l, e.err, o, r('Error, in, error listen, e, r: ', e, r, r);';
       }
     });
@@ -333,7 +322,6 @@ class, ErrorTracke, r {
   y: err, o, r.catego, r, y;
     //     }
     //     ext, r, a: err, o, r.conte, x, t;
-=======
     //     le, v, e
   l: err, o, r.severi, t, y
     //     ta, g, s: {
@@ -352,7 +340,6 @@ class, ErrorTracke, r {
         bo, d, y: JS, O, N.stringi, f, y(err, o, r)
       }).cat, c, h(e, r, r => {
         conso, l, e.err, o, r('Failed, to, send error, to, monitoring servi, c, e: ', e, r, r);'
-=======
         meth, o, d: 'PO, S, T',';
         heade, r, s: {
           'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n',';
@@ -377,7 +364,6 @@ export, function, handleComponentError(
 ): vo, i, d {
   errorTrack, e, r.trackRenderErr, o, r(err, o, r, componentNa, m, e, {
     componentSta, c, k: errorIn, f, o.componentSta, c, k;
-=======
     componentSt, a, c
   k: errorIn, f, o.componentSta, c, k
   });
@@ -388,7 +374,6 @@ export, function, handleComponentError(
 export, function, setupGlobalErrorHandling(): vo, i, d {
   // Handle, unhandled, promise rejectio, n, s
   wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {;
-=======
   wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {';
     errorTrack, e, r.trackErr, o, r(
       new, Erro, r(eve, n, t.reas, o, n)
@@ -399,7 +384,6 @@ export, function, setupGlobalErrorHandling(): vo, i, d {
           ty, p, e: 'unhandledRejecti, o, n'
           promi, s, e: eve, n, t.promi, s, e;
         }
-=======
           ty, p, e: 'unhandledRejecti, o, n',';
           promi, s, e: eve, n, t.promi, s, e
         }
@@ -408,7 +392,6 @@ export, function, setupGlobalErrorHandling(): vo, i, d {
   });
   // Handle, global, errors
   wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {;
-=======
   wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {';
     errorTrack, e, r.trackErr, o, r(
       eve, n, t.err, o, r || new, Erro, r(eve, n, t.messa, g, e)
@@ -420,7 +403,6 @@ export, function, setupGlobalErrorHandling(): vo, i, d {
           line, n, o: eve, n, t.line, n, o
           col, n, o: eve, n, t.col, n, o;
         }
-=======
           filena, m, e: eve, n, t.filena, m, e
           line, n, o: eve, n, t.line, n, o
           col, n, o: eve, n, t.col, n, o

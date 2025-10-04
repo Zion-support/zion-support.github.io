@@ -129,8 +129,6 @@ const HealthDashboard:React.FC = () => {;
         </TabsContent>;
       </Tabs>;
 
-
-
 return (<Badge variant= {;
   variant ;"
 }className="text-left" > {;"

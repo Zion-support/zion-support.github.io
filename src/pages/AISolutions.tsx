@@ -200,7 +200,6 @@ const, AISolution, s: Rea, c, t.FC = () => {
             </h2>
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o">
               Let, our, AI experts, help, you implement, the, right solutions, to, drive innovation, and, growth.
-=======
   const, industrySolution, s = [
     {
       ti, t, l
@@ -293,7 +292,6 @@ const, AISolution, s: Rea, c, t.FC = () => {
         </secti, o, n>
       </d, i, v>
     < />
-=======
                 classNa, m, e="bg-white, tex, t-bl, u, e-600, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s"
               >
                 Get, Starte, d;

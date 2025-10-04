@@ -12,9 +12,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
 
     <Card className="text-left">;
 
-
-
-
             <FormField;
               control={control}"
               name="appTitle";"
@@ -30,18 +27,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
 
                   <FormDescription>;
 
-
-
-
-
-
-
-
-
-
-
-
-
             <div>;
 </div>"
               <FormLabel htmlFor="keywords">Keywords;"
@@ -55,12 +40,5 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
                       type="button";"
                       onClick={() => removeKeyword(keyword)}
 
-
-
-
-
-
-
   form: UseFormReturn<AppMetadataValues> ;
-
 

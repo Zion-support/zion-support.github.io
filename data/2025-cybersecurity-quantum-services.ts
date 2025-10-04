@@ -1,6 +1,5 @@
 
 
-  
 export interface CybersecurityQuantumService 
 export interface CybersecurityQuantumService {;
   id: string;
@@ -15,8 +14,6 @@ export interface CybersecurityQuantumService {;
     trialDays: number;
     setupTime: string;
 
-
-  
     id: 'quantum - resistant - encryption - platform',
     name: 'Quantum - Resistant Encryption Platform',
     tagline: 'Future - proof security with post - quantum cryptography',
@@ -100,7 +97,6 @@ export interface CybersecurityQuantumService {;
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
     realImplementation: true,
-
 
     implementationDetails:
       'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
@@ -523,7 +519,6 @@ export interface CybersecurityQuantumService {;
   reviews: number
 }
 
-
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
     ];
 
@@ -543,7 +538,6 @@ export interface CybersecurityQuantumService {;
     rating: 4.8,
     reviews: 1900;
   }
-
 
 export interface CybersecurityQuantumService {;
 

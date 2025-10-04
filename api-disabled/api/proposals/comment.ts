@@ -40,12 +40,8 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 
-
   await ensure();
   if (req && req.method === "GET") {
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
-
-
-
 

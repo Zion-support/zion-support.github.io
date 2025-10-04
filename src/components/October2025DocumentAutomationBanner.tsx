@@ -14,7 +14,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             <FileText, className="w-4 h-4, m, r-2  />
             NEW, RELEAS, E - OCTOBE, R, 1, 20, 2, 5;
             <FileText, className="w-4 h-4, m, l-2  />
-=======
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10">";
@@ -43,7 +42,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             Discover, how, leading enterprises, achiev, e <span, className="fo, n, t-bold, tex, t-whi, t, e">94% faster, processin, g</sp, a, n>
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 99.2% accura, c, y</sp, a, n>, a, n, d;
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> $47M, annual, savings</sp, a, n> through, intelligent, document automati, o, n;
-=======
         <div, className="te, x, t-center, m, b-6">";
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, m, b-3">";
             📄 Intelligent, Document, Automation Revoluti, o, n;
@@ -83,7 +81,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             <TrendingUp, className="w-8 h-8, tex, t-indi, g, o-300, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">3, 4, 0%</d, i, v>
             <div, className="te, x, t-sm, tex, t-indi, g, o-2, 0, 0">ROI, Year, 1</d, i, v>
-=======
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">";
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5">";
             <Zap, className="w-8 h-8, tex, t-indi, g, o-300, m, x-auto, m, b-2" />";
@@ -117,7 +114,6 @@ const, October2025DocumentAutomationBanne, r = () => {
                 COMPREHENSIVE, IMPLEMENTATION, GUIDE;
               </d, i, v>
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-=======
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6">";
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
             {/* Blog, Pos, t */}
@@ -141,7 +137,6 @@ const, October2025DocumentAutomationBanne, r = () => {
               >
                 Read, Complete, Guide;
                 <ArrowRight, className="w-4 h-4, m, l-2  />
-=======
                 <ArrowRight, className="w-4 h-4, m, l-2" />";
               </Li, n, k>
             </d, i, v>
@@ -156,7 +151,6 @@ const, October2025DocumentAutomationBanne, r = () => {
               </h3>
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, m, b-4">
                 Real, transformatio, n: Ho, w, a $18B, insurance, company achiev, e, d $47M, annual, savings;
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/50, t, o-pi, n, k-8, 0, 0/50, rounde, d-l, g, p-5, border, border-purp, l, e-4, 0, 0/40">";
               <div, className="te, x, t-purp, l, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r">";
                 <FileText, className="w-4 h-4, m, r-2" />";
@@ -178,7 +172,6 @@ const, October2025DocumentAutomationBanne, r = () => {
               >
                 Read, Success, Story;
                 <ArrowRight, className="w-4 h-4, m, l-2  />
-=======
                 <ArrowRight, className="w-4 h-4, m, l-2" />";
               </Li, n, k>
             </d, i, v>
@@ -192,7 +185,6 @@ const, October2025DocumentAutomationBanne, r = () => {
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-indi, g, o-1, 0, 0">"
             <div, className="flex, item, s-sta, r, t">
               <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0  />
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-indi, g, o-1, 0, 0">";
             <div, className="flex, item, s-sta, r, t">";
               <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
@@ -203,7 +195,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-sta, r, t">
               <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
               <d, i, v>
@@ -213,7 +204,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-sta, r, t">
               <CheckCircle, className="w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <CheckCircle, className="w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
               <d, i, v>
@@ -223,7 +213,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-sta, r, t">
               <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
               <d, i, v>
@@ -233,7 +222,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-sta, r, t">
               <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
               <d, i, v>
@@ -243,7 +231,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-sta, r, t">
               <CheckCircle, className="w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <CheckCircle, className="w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0" />";
               <d, i, v>
@@ -262,7 +249,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             <div, className="bg-indi, g, o-8, 0, 0/30, rounde, d-l, g, p-4, border, border-indi, g, o-4, 0, 0/20">
               <div, className="fo, n, t-bold, tex, t-white, m, b-2">Financial, Service, s</d, i, v>
               <div, className="te, x, t-indi, g, o-2, 0, 0">Loan, app, s, KYC, doc, s → 92% fast, e, r, $23M, saving, s</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm">";
             <div, className="bg-indi, g, o-8, 0, 0/30, rounde, d-l, g, p-4, border, border-indi, g, o-4, 0, 0/20">";
               <div, className="fo, n, t-bold, tex, t-white, m, b-2">Financial, Service, s</d, i, v>";
@@ -296,7 +282,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             Fortune, 500, Insurance Company, Result, s;
           </h3>
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">"
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";
             <d, i, v>
               <div, className="te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1">2.4M</d, i, v>";
@@ -326,7 +311,6 @@ const, October2025DocumentAutomationBanne, r = () => {
   3, 4, 0% ROI, and, eliminate 90% of, manual, processing;
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
             <Li, n, k
   to="/conta, c, t"
@@ -335,7 +319,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             >
               Schedule, Assessmen, t;
               <ArrowRight, className="w-5 h-5, m, l-2  />
-=======
               <ArrowRight, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
             <Li, n, k
@@ -344,7 +327,6 @@ const, October2025DocumentAutomationBanne, r = () => {
             >
               Explore, All, Solutions;
               <ArrowRight, className="w-5 h-5, m, l-2  />
-=======
               <ArrowRight, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
           </d, i, v>

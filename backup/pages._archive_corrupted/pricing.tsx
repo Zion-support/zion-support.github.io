@@ -531,7 +531,6 @@ export default function PricingPage() {;
 
 export default PricingPage;
 
-
 }
 
 export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
@@ -556,10 +555,6 @@ export default PricingPage;
 
 };
 export default PricingPage;
-
-
-
-
 
 };
 export default PricingPage;

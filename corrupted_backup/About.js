@@ -97,15 +97,12 @@ const milestones = [;
         </div>
       </section>
 
-
               Join Our Team
             </Link>
           </div>
         </div>
       </section>
     </div>
-
-
 
 // Icon components,
 const Innovation = ({className}: {className ?  : string}) => (

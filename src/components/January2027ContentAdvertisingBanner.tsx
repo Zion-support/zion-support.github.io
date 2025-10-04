@@ -12,7 +12,6 @@ export, default, function January2027ContentAdvertisingBann, e, r(): vo, i, d {
         </h3>
         <p, className="te, x, t-viol, e, t-200, tex, t-lg, m, b-6, ma, x-w-4xl, m, x-au, t, o">
           Discover, the, most advanced, AI, technologies reshaping, enterprise, operations: 1000x, energy, efficiency with, neuromorphic, computing;
-=======
         <h3, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">";
           Revolutionary, AI, Breakthrough
   s: Neuromorphic, Edge, Computing & Quantum, AI, Security
@@ -35,7 +34,6 @@ export, default, function January2027ContentAdvertisingBann, e, r(): vo, i, d {
               <div, className="te, x, t-4xl, m, b-3">🧠</d, i, v>
               <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Neuromorphic, Edge, Computing</h4>
               <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">1000x, energy, efficiency, s, u, b-microsecond, latenc, y, $2.3B, saving, s</p>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, ma, x-w-5xl, m, x-auto, m, b-8">";
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hov, e
   r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
@@ -66,7 +64,6 @@ export, default, function January2027ContentAdvertisingBann, e, r(): vo, i, d {
               <div, className="te, x, t-4xl, m, b-3">🔐</d, i, v>
               <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Quantum, AI, Security</h4>
               <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">Quant, u, m-resistant, A, I, $847B, protectio, n, NI, S, T-approv, e, d</p>
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
             <div, className="te, x, t-center, m, b-4">";
               <div, className="te, x, t-4xl, m, b-3">🔐</d, i, v>";
@@ -95,7 +92,6 @@ export, default, function January2027ContentAdvertisingBann, e, r(): vo, i, d {
               <div, className="te, x, t-4xl, m, b-3">💰</d, i, v>
               <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Fortune, 500, Success</h4>
               <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">320, facilitie, s, 78% downtime, reductio, n, $2.3B, saving, s</p>
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
             <div, className="te, x, t-center, m, b-4">";
               <div, className="te, x, t-4xl, m, b-3">💰</d, i, v>";
@@ -121,7 +117,6 @@ export, default, function January2027ContentAdvertisingBann, e, r(): vo, i, d {
           </d, i, v>
         </d, i, v>
         <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
         <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
           <a, titl, e="Internal, lin, k"
             hr, e, f="/conta, c, t"

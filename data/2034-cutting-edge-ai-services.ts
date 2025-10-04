@@ -20,8 +20,6 @@
   launchDate?: string;
   realService?: boolean;
 
-
-  
 }
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   
@@ -50,7 +48,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Business Management',
     pricing: { starter: '$79 / mo' },
     features: [;
-
 
       'PRD templates',
       'Story generation',
@@ -172,7 +169,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		realService: true
 	}
 ];
-
 
 name: string;
 description: string;

@@ -12,7 +12,6 @@ exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
 
-
 exports && exports.handler = async function() {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |''
@@ -37,5 +36,4 @@ function extractLinks(html, base) {
     .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
     .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),
   return Array.from(new Set(links))
-
 

@@ -1,7 +1,5 @@
 
 
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
@@ -10,15 +8,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-
-
       peers: state.config.peers,
       scope: state.config.scope,
       opt_in: state.config.opt_in,
       paused: state.config.paused,
-
-
-
-
-
 

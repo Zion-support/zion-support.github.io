@@ -44,7 +44,6 @@ export interface InnovativeNewService2025
     website: string;
   }
 
-  
       'Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Compliance monitoring',
     ],
     roi: 'Financial institutions report 800% ROI through improved trading performance and reduced risk exposure.',
@@ -282,7 +281,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     launchDate: '2025-01-08', customers: 12,
     rating: 4.9,
     reviews: 6;
-
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
@@ -546,7 +544,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     customers: 12,;
     rating: 4.9;
     reviews: 6;
-
 
   }
 ];

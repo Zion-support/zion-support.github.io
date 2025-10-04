@@ -1,8 +1,5 @@
 
 
-
-
-
 export const advancedITInfrastructureExpansion2025V2 = [
   
     name: 'Autonomous DevOps Platform',
@@ -646,7 +643,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
 
   },;
-
 
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]

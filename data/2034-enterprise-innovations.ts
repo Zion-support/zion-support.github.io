@@ -23,8 +23,6 @@
   uptime: string;
   contact: string;
 
-
-  
     id: 'ai - autonomous - devops - platform',
     name: 'AI Autonomous DevOps Platform',
     description:;
@@ -59,9 +57,6 @@
     ],
     technology: [;
 
-
-
-  
       'Advanced AI algorithms',
       'Machine learning systems',
       'Automation frameworks',
@@ -380,7 +375,6 @@
     ],
     technology: [;
 
-
       'Advanced AI algorithms',
       'IoT sensors',
       'Machine learning systems',
@@ -459,7 +453,6 @@
   uptime: string, contact: string,
   website: string
 }
-
 
     security: ['AI-powered security', 'Physical security', 'Access controls'],
     scalability: 'Unlimited data center management',

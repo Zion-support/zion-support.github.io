@@ -11,7 +11,6 @@ export, default, function OctoberNovember2025ContentBann, e, r(): vo, i, d {
           </h2>
           <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-50, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d">
             Producti, o, n-ready, frameworks, for AI, supply, chains, mul, t, i-agent, system, s, governan, c, e;
-=======
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, leadin, g-tight, m, b-6">";
             Latest, Enterprise, AI Strategi, e, s;
           </h2>
@@ -27,7 +26,6 @@ export, default, function OctoberNovember2025ContentBann, e, r(): vo, i, d {
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20">"
             <div, className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6, m, t-12">";
           {/* Articl, e, 1 */}
@@ -51,7 +49,6 @@ export, default, function OctoberNovember2025ContentBann, e, r(): vo, i, d {
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20">"
             <div, className="te, x, t-purp, l, e-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e">
-=======
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20">";
             <div, className="te, x, t-purp, l, e-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e">";
@@ -72,7 +69,6 @@ export, default, function OctoberNovember2025ContentBann, e, r(): vo, i, d {
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20">"
             <div, className="te, x, t-pi, n, k-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e">
-=======
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20">";
             <div, className="te, x, t-pi, n, k-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e">";
@@ -93,7 +89,6 @@ export, default, function OctoberNovember2025ContentBann, e, r(): vo, i, d {
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20">"
             <div, className="te, x, t-oran, g, e-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e">
-=======
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20">";
             <div, className="te, x, t-oran, g, e-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e">";
               November, 202, 5;
@@ -102,7 +97,6 @@ export, default, function OctoberNovember2025ContentBann, e, r(): vo, i, d {
               Re, a, l-Time, AI, Inference;
             </h3>
             <p, className="te, x, t-oran, g, e-100, m, b-4, tex, t-sm, leadin, g-relax, e, d">
-=======
             <p, className="te, x, t-oran, g, e-100, m, b-4, tex, t-sm, leadin, g-relax, e, d">";
               S, u, b-50ms, inference, at sc, a, l
   e: quantizati, o, n, edge, deploymen, t, cachi, n, g, and, hardware, acceleration
@@ -115,7 +109,6 @@ export, default, function OctoberNovember2025ContentBann, e, r(): vo, i, d {
         </d, i, v>
         <div, className="te, x, t-center, m, t-12">
           <div, className="inli, n, e-block, b, g-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, hove, r: bg-bl, u, e-50, transitio, n-colors, curso, r-pointer, shado, w-xl">"
-=======
         <div, className="te, x, t-center, m, t-12">";
           <div, className="inli, n, e-block, b, g-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, hove, r: bg-bl, u, e-50, transitio, n-colors, curso, r-pointer, shado, w-xl">";
             Explore, All, Latest Insigh, t, s →

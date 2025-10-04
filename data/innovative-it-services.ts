@@ -1,6 +1,5 @@
 
 
-  
 export interface InnovativeITService 
   id: string;
   name: string;
@@ -553,7 +552,6 @@ export const innovativeITServices: InnovativeITService[] = [
     reviews: 1250;
 
   }
-
 
 export interface InnovativeITService {;
 

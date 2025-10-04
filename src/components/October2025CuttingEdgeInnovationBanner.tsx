@@ -7,7 +7,6 @@ export, default, function October2025CuttingEdgeInnovationBann, e, r(): vo, i, d
           backgroundIma, g, e: `line, a, r-gradie, n, t(rg, b, a(1, 3, 9, 92, 2, 4, 6, 0.1) 1, p, x, transparent, 1p, x),`
                            line, a, r-gradie, n, t(90d, e, g, rg, b, a(1, 3, 9, 92, 2, 4, 6, 0.1) 1, p, x, transparent, 1p, x)`,`
           backgroundSi, z, e: '50px, 50p, x'
-=======
       <div, className="absolute, inse, t-0, opacit, y-20">";
         <div, className="absolute, inse, t-0" sty, l, e={{";
           backgroundIm, a, g
@@ -30,7 +29,6 @@ export, default, function October2025CuttingEdgeInnovationBann, e, r(): vo, i, d
             </h2>
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
               Explore, breakthrough, technologies that, are, redefining enterprise, A, I: intelligent, orchestratio, n;
-=======
             <h2, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-ro, s, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
               Cutti, n, g-Edge, AI, Innovations;
             </h2>
@@ -45,7 +43,6 @@ export, default, function October2025CuttingEdgeInnovationBann, e, r(): vo, i, d
             <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30">
               <div, className="flex, item, s-start, ga, p-4">
                 <div, className="te, x, t-5, x, l">🎯</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
             <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30">";
               <div, className="flex, item, s-start, ga, p-4">";
@@ -87,7 +84,6 @@ export, default, function October2025CuttingEdgeInnovationBann, e, r(): vo, i, d
                 <div, className="fl, e, x-1">
                   <h3, className="te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-400, m, b-3">Enterprise, AI, Fabric</h3>
                   <p, className="te, x, t-gr, a, y-300, m, b-4">
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/10, t, o-te, a, l-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-emera, l, d-5, 0, 0/30, m, d: c, o, l-sp, a, n-2">";
               <div, className="flex, item, s-start, ga, p-4">";
                 <div, className="te, x, t-5, x, l">🏗️</d, i, v>";

@@ -648,7 +648,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4 && 4.7;
     reviews: 21
 
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -657,11 +656,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43;
     rating: 4.7;
     reviews: 21;
-
-
-
-
-
 
   }
 ];

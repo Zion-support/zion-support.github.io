@@ -13,7 +13,6 @@ jest.mock(;
   useCart: jest.fn()}));
 // Revised mock for use-toast to avoid ReferenceError;
 
-
   const testProductId =;
   'pro-camera-x1000';';
   const originalSampleEquipment = JSON.parse(JSON.stringify(SAMPLE_EQUIPMENT));
@@ -61,6 +60,4 @@ jest.mock(;
       `1× ${product.name} added`)
     expect(mockNavigate).not.toHaveBeenCalledWith(
       expect.stringContaining(
-
-
 

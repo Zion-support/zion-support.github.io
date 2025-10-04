@@ -120,7 +120,6 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 export default ModernLayout;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-
 import { Helmet } from 'react-helmet-async;
 import ModernHeader from ./ModernHeader';
 import ModernFooter from './ModernFooter;

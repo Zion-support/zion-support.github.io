@@ -1176,8 +1176,6 @@
     features: [;
       'Policy packs for CIS / NIST',
 
-
-  
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
@@ -1211,7 +1209,6 @@
     implementation_details:;
       'Policy engine plus cloud / K8s scanners and fix generators.',
     launch_date: '2025 - 01 - 05',
-
 
     customers: 18,
     rating: 4 && 4.6,
@@ -1321,8 +1318,6 @@
     features: [;
       'Auto - segmentation and cohorts',
 
-
-  
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
@@ -1369,8 +1364,6 @@
     features: [;
       'Multi - channel widgets',
 
-
-  
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
@@ -1460,8 +1453,6 @@
     features: [;
       'Field - level encryption',
 
-
-  
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
@@ -1508,8 +1499,6 @@
     features: [;
       'Graph - based anomaly detection',
 
-
-  
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
@@ -1777,8 +1766,6 @@
     features: [;
       'Auto - instrumentation',
 
-
-  
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
@@ -1945,7 +1932,6 @@
     reviews: 3,
   },
 
-
     id: 'llm-observability-suite', name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199', period: '/month',
@@ -1973,12 +1959,6 @@
 
 ;
 
-
-
-
-
-
-  
     id: 'ai-sales-email-copilot'
     name: 'AI Sales Email Copilot'
     tagline: 'Personalized multi-touch outbound with real-time enrichment'
@@ -2835,5 +2815,4 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     reviews: 3;
   }
 ];
-
 

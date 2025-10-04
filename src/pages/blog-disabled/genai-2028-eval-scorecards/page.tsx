@@ -11,7 +11,6 @@ export, default, function GenAIEvalScorecards20, 2, 8(): Rea, c, t.J, S, X.Eleme
   8: Eval, Scorecard, s</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Signed, Attestation, s • Golden, Task, s • Budgeted, Guardrail, s</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="Signed, attestation, s, golden, task, s, and, budge, t‑linked, guardrails, for reliable, GenAI, in producti, o, n." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 8-ev, a, l-scorecar, d, s" />";
       </Helmet>

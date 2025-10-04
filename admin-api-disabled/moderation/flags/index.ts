@@ -1,8 +1,6 @@
 
 
-
     const filtered = flags.filter(f =>
-
 
       (!status || f.status === status) &&
       (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
@@ -13,7 +11,6 @@
     return res.status(200).json({ flags: filtered });
   }
 
-
   }
   if (req.method === 'POST') {
 
@@ -23,6 +20,4 @@
       const flag = await createFlag(init);
       return res.status(201).json({ flag });
     } catch (e: any) {
-
-
 

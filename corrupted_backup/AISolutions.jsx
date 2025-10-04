@@ -165,7 +165,6 @@ type='checkbox'
                         </span>
                       </li>
 
-
               </div>
         </div>
         {loading && <div>Loading...</div>}
@@ -336,7 +335,6 @@ className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
     </EnhancedLayout>
   );
 }
-
 
       </div>
     </EnhancedLayout>

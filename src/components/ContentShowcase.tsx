@@ -18,7 +18,6 @@ const, ContentShowcas, e: Rea, c, t.FC = () => {
       tit, l, e: "Cloud, Migration, Guide","
       descripti, o, n: "Comprehensive, guide, to successful, cloud, migration strategi, e, s","
       catego, r, y: "IT, Service, s","
-=======
 import React from "react";';
 const, ContentShowcas, e: Rea, c, t.FC = () => {
   const, contentItem, s = [
@@ -58,7 +57,6 @@ const, ContentShowcas, e: Rea, c, t.FC = () => {
             <div, className="flex, justif, y-between, item, s-cent, e, r">
               <span, className="te, x, t-sm, tex, t-gr, a, y-5, 0, 0">{it, e, m.readTi, m, e}</sp, a, n>
               <a, hre, f="/bl, o, g" classNa, m, e="te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-semibo, l, d">"
-=======
       <h2, className="te, x, t-3xl, fon, t-bold, m, b-8, tex, t-cent, e, r">Featured, Conten, t</h2>";
       <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6">";
         {contentIte, m, s.m, a, p((it, e, m, ind, e, x) => (

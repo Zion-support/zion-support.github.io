@@ -17,7 +17,6 @@ export interface InnovativeMicroSaas2029
     mobile: string;
     email: string;
 
-
     address: string;
   };
 
@@ -37,12 +36,6 @@ export interface InnovativeMicroSaas2029 {;
     address: string;
   }
 }
-
-
-
-
-
-
 
     address: string;
   }
@@ -76,8 +69,6 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
     },
   },
 ];      mobile: "+1 302 464 0950";
-
-
 
     id: "2029-innovative-micro-saas",
     name: "2029 Innovative Micro SAAS Platform",

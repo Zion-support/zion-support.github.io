@@ -5,15 +5,9 @@ import nodemailer from "nodemailer";
 import crypto from "crypto";
 import {
 
-
-
-
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
-
-
-
 
 } from "../../../utils/data/proposals";
 async function submitByEmail(
@@ -23,14 +17,10 @@ async function submitByEmail(
   attachments: any[] = []
 ) {
 
-
-
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
-
-
 
   const host = process && process.env.EMAIL_HOST;
   const port = Number(process && process.env.EMAIL_PORT || 587);
@@ -61,8 +51,6 @@ function submitByEmail() {
 }
   const transporter = nodemailer.create_transport ({
 
-
-
     host,
     port,
     secure: port === 465,
@@ -72,14 +60,10 @@ function submitByEmail() {
     if (!id) return res && res.status($1).json({ $2 });
   const from = process.env.EMAIL_FROM || user;
 
-
-
     }
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
-
-
 
       ensRecordHash = `0x${hash}`;
       update_artifacts (id, { ensRecordHash });
@@ -90,7 +74,6 @@ function submitByEmail() {
   } catch (error: any) {
     return res
       .status(500)
-
 
       .json({ error: error?.message |"Submission failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -139,7 +122,6 @@ export default async function handler(req, res) {
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
 
-
   }
 
 }
@@ -161,9 +143,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
 
   const from = process.env.EMAIL_FROM || user;
 
@@ -196,9 +175,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-
   }
 }
-
-
 

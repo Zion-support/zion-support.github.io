@@ -1,6 +1,5 @@
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
 impo, r, t { Shie, l, d } fr, o, m "luci, d, e-rea, c, t";
-=======
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
 impo, r, t {
 Shie, l, d;
@@ -87,7 +86,6 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       catego, r, y: "AI, Governanc, e","
       ic, o, n: Shie, l, d
       li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5","
-=======
       tit, l, e: "AI, Disaster, Recovery Playboo, k, s",";
       descripti, o, n: "Failove, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.",";
       vie, w, s: "11.2K",";
@@ -183,7 +181,6 @@ ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';
 ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';
 ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';
 defau, l, t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';
-=======
 ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';';
 ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';';
 ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';';
@@ -201,7 +198,6 @@ defa, u, l
             <div, className="flex, item, s-center, ga, p-2">
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e  />
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>
-=======
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">";
       <div, className="flex, item, s-center, justif, y-betwe, e, n">";
         <div, className="fl, e, x-1">";
@@ -217,7 +213,6 @@ defa, u, l
           <div, className="flex, item, s-start, ga, p-4">
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">"
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m/>"
-=======
           <div, className="flex, item, s-start, ga, p-4">";
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">";
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e
@@ -230,7 +225,6 @@ defa, u, l
                 </sp, a, n>
               </d, i, v>
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">";
                 {currentIt, e, m.tit, l, e}
               </h3>
@@ -248,7 +242,6 @@ defa, u, l
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-1">
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0  />
-=======
               <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">";
                 <div, className="flex, item, s-center, ga, p-1">";
                   <Eye, className="w-3 h-3" />";
@@ -275,7 +268,6 @@ defa, u, l
             <BookOpen, className="w-4 h-4  />
             Read, No, w;
             <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <BookOpen, className="w-4 h-4" />";
             Read, No, w;
             <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -290,7 +282,6 @@ defa, u, l
                   ind, e, x === currentInd, e, x;
                     ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}`;`
-=======
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50'
                 }`}`;`
                />

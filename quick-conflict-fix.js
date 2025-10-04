@@ -11,15 +11,13 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has conflicts
-    if (!content.includes('<<<<<<< HEAD')) {
-      return false;
+    if (!content.includes('      return false;
     }
     
     console.log(`Fixing: ${filePath}`);
     
     // Remove conflict markers and choose the better version
-    const sections = content.split(/<<<<<<< HEAD|=======|>>>>>>> origin\/[^\n]*/);
-    
+    const sections = content.split(/    
     if (sections.length >= 3) {
       // Take the first section (before HEAD) + the better of the two conflict sections
       let fixedContent = sections[0];
@@ -77,8 +75,7 @@ function fixAllConflicts() {
       console.log('✅ No merge conflicts found in git status');
       
       // Try to find files with conflict markers
-      const findResult = execSync('find . -name "*.ts" -o -name "*.tsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true', { encoding: 'utf8' });
-      const markerFiles = findResult.trim().split('\n').filter(f => f.length > 0 && !f.includes('.backup.'));
+      const findResult = execSync('find . -name "*.ts" -o -name "*.tsx" | xargs grep -l "      const markerFiles = findResult.trim().split('\n').filter(f => f.length > 0 && !f.includes('.backup.'));
       
       if (markerFiles.length === 0) {
         console.log('✅ No files with conflict markers found');

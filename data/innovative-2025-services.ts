@@ -536,7 +536,6 @@ export const innovative2025Services: Innovative2025Service[] = [
       'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.',
     features: [;
 
-
       'AI market analysis',
       'Algorithmic trading',
       'Portfolio optimization',
@@ -546,7 +545,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     ],
     popular: true,
     icon: '📈',
-
 
       'Production financial AI platform with real-time trading and comprehensive risk management.',
     launchDate: '2025-01-15',
@@ -627,7 +625,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     rating: 4 && 4.8,
 
     reviews: 32
-
 
   }
 ];

@@ -34,4 +34,3 @@
 
   browserName: webkit',        ...devices['iPhone 12']}
 
-

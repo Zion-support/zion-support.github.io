@@ -28,8 +28,6 @@ interface ComponentProps {
   children?: React.ReactNode;
   [key: string]: unknown}
 
-
-
 interface PerformanceMetrics {
   fcp?: number;
    lcp?: number;

@@ -7,8 +7,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-
-
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -41,7 +39,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
-
 
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,

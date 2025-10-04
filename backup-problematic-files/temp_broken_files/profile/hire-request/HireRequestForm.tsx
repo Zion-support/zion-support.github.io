@@ -1,26 +1,20 @@
 
 
-
-
-
 ;
 export interface HireRequestFormProps {;
   talent: TalentProfile;,;
   onClose: () => void;,;
-
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess } HireRequestFormProps) {;
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
     talent, ;
     onClose: onSubmitSuccess || onClose;, ;
 
-
 )"
       <form onSubmit={form.handleSubmit(onSubmit)} className="text-left">;"
 </form>"
         <div className="text-left">;"
 </div>
-
 
 "
           <BudgetFields form={form} talent={talent} />;
@@ -33,11 +27,4 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             onClick={onClose}"
             className="text-left";"
               'Submit Request';
-
-
-
-
-
-
-
 

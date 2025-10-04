@@ -1,24 +1,11 @@
 
 
-
-
-
-
-
-
     ;
-
-
-
-
 
       className="text-left";"
       onClick={handleViewProfile}
       tabIndex={0}
     >;
-
-
-
 
                 <img;
                   src={talent.profile_picture_url}
@@ -56,12 +43,6 @@
                 <;"
                 <span className="text-left">;"
                 <;              )}
-
-
-
-
-
-
 
 //Also call the onViewProfile callback if provided </div>) ;
 }</div> <span >{;

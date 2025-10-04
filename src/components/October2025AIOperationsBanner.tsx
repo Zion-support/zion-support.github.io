@@ -22,7 +22,6 @@ const, October2025AIOperationsBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
       ic, o, n: Activi, t, y
       sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I","
-=======
       tit, l, e: "AI-Powered, DevSecOps, Automation",";
       descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n",";
@@ -50,7 +49,6 @@ const, October2025AIOperationsBanne, r = () => {
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
   g:px-8, relative, overflow-hidd, e, n">"
-=======
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l
   g:px-8, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}
@@ -68,7 +66,6 @@ const, October2025AIOperationsBanne, r = () => {
             </sp, a, n>
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4">";
             <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e" />";
@@ -85,7 +82,6 @@ const, October2025AIOperationsBanne, r = () => {
         </d, i, v>
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {
             const, Ico, n = artic, l, e.ic, o, n;
@@ -106,7 +102,6 @@ const, October2025AIOperationsBanne, r = () => {
                   </d, i, v>
                   {/* Tit, l, e */}
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-=======
                     <Icon, className="w-6 h-6, tex, t-whi, t, e" />";
                   </d, i, v>
                   {/* Tit, l, e */}
@@ -127,7 +122,6 @@ const, October2025AIOperationsBanne, r = () => {
                   <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>
                     <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                   <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>";
                     <ArrowRight, className="w-4 h-4, grou, p-ho, v, e
@@ -141,7 +135,6 @@ const, October2025AIOperationsBanne, r = () => {
         {/* Bottom, CT, A */}
         <div, className="te, x, t-cent, e, r">
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">"
-=======
         <div, className="te, x, t-cent, e, r">";
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">";
             <Li, n, k
@@ -151,7 +144,6 @@ const, October2025AIOperationsBanne, r = () => {
             >
               <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
             <Li, n, k
@@ -165,7 +157,6 @@ const, October2025AIOperationsBanne, r = () => {
         </d, i, v>
         {/* Trust, Indicator, s */}
         <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"
-=======
         <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";
           <d, i, v>
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.2%</d, i, v>";

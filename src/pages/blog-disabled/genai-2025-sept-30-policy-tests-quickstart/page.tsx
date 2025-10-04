@@ -12,7 +12,6 @@ export, default, function PolicyTestsQuickstart20, 2, 5(): Rea, c, t.J, S, X.Ele
   5: Policy, Tests, Quickstart</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">K, P, I‑linked, CI, checks that, keep, teams fast, and, safe.</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="Lightweight, CI, policy tests, wired, to KPIs, to, ship faster, without, regressions." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-se, p, t-30-poli, c, y-tes, t, s-quicksta, r, t" />";
       </Helmet>

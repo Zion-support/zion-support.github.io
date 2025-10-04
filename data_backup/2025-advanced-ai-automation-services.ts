@@ -1,7 +1,6 @@
 
   id: string;
 
-
   realImplementation: boolean;
     id: 'ai-autonomous-marketing-optimization',
     name: 'AI Autonomous Marketing Optimization',

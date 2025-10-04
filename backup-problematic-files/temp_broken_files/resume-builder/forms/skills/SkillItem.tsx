@@ -1,8 +1,6 @@
 
 import { SkillItemProps } from './types',;
 
-
-
       variant="secondary";""
       className="text-left";"
     >;
@@ -14,10 +12,7 @@ import { SkillItemProps } from './types',;
         className="text-left";"
         onClick={() => onDelete(skill.id!, category)}
 
-
       >;
         <Trash2 className="text-left" />;
       </Button>;
-
-
 

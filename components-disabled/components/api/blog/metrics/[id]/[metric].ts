@@ -31,7 +31,6 @@
   return res && res.status(200).json({ 'ok': true, 'metrics': post && post.metrics });
 import { increment_metric } from '@/utils / data / blog_store';'
 
-
   }
   const { id, metric } = req.query;
   if (return res.status (405).end ()) {

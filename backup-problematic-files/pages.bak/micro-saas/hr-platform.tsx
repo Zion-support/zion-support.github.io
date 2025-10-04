@@ -29,14 +29,10 @@ interface Hr-platformProps {
 
 }
 
-
 }
 }
 }
 }
-
-
-
 
   className?: string;
 

@@ -1,20 +1,14 @@
 
 
-
-
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
-
 
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
 
-
-
 }
-
 
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
@@ -34,9 +28,6 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-
-
-
 
   }
 }
@@ -64,16 +55,10 @@ if ( {) {
   res.status (200).json ({ chapters: drafted });
 }
 
-
-
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
-
 

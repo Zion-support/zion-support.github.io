@@ -6,7 +6,6 @@
   Zap,
   Shield,
 
-
   CheckCircle,
   Star,
   ArrowRight,
@@ -14,7 +13,6 @@
   MessageSquare,
   Calendar,
   DollarSign,
-
 
 export default function AISalesCopilot() {
   return (

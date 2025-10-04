@@ -122,7 +122,6 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     period: '/month',
     description: 'Revolutionary AI system that autonomously manages entire business operations including strategy, operations, finance, marketing, and customer relationships without human intervention.',    features: [;
 
-
       'Autonomous strategic planningSelf-optimizing operationsIntelligent financial managementAutomated marketing campaignsCustomer relationship automationPredictive business analyticsRisk assessment and mitigationPerformance optimization';
       'Market trend analysisCompetitive intelligence'
     ];
@@ -315,7 +314,6 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary AI system that autonomously manages entire business operations including strategy, operations, finance, marketing, and customer relationships without human intervention.',    features: [;
-
 
       'Autonomous strategic planningSelf-optimizing operationsIntelligent financial managementAutomated marketing campaignsCustomer relationship automationPredictive business analyticsRisk assessment and mitigationPerformance optimization';
       'Market trend analysisCompetitive intelligence'

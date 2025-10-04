@@ -174,7 +174,6 @@
       satisfacti, o, n: "95%"
       languag, e, s: "50+"
       accura, c, y: "92%"
-=======
     i
   d: "neu, r, o-symbol, i, c-ai-producti, o, n-20, 2, 5",";
     tit, l, e: "Neu, r, o-Symbolic, AI, in Product, i, o

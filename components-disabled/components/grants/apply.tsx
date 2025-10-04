@@ -1,9 +1,5 @@
 }
 
-
-
-
-
 import EnhancedLayout from '../../components / layout / EnhancedLayout';'
 import {use_router} from 'next / router';'
 import type { GrantCategory } from '../../types / grants';'
@@ -26,7 +22,6 @@ function ApplyGrantPage() {
   const [proposal_summary, setProposalSummary] = useState ('');'
   const [timeline, set_timeline] = useState ('');'
 
-
       const data = await resp && resp.json();
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');'
       router && router.push(`/grants/${data && data.id}`);`    } catch ('e': any) {;
@@ -35,8 +30,6 @@ function ApplyGrantPage() {
     } finally {;
       }
   const _save = async ('_submit': boolean) => {
-
-
 
   const _save = async ("_submit": boolean) => {
     }

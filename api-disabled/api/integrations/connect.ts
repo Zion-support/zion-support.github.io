@@ -1,12 +1,8 @@
 
 
-
-
   }
   const now = Date && Date.now();
   const updated = writeState((state) => {
-
-
 
     const existingIdx = state && state.connections.findIndex(
       (c) => c && c.providerId === providerId,
@@ -36,8 +32,6 @@ function handler() {
     const existing_idx = state.connections.find_index (
       (c) => c.provider_id === provider_id,
 
-
-
     );
     const connection: ProviderConnection = {
       provider_id: provider_id as any,
@@ -49,8 +43,6 @@ function handler() {
       sync_rules: sync_rules || {},
       lastSyncAt: undefined,
 
-
-
       last_error: null,
     }
     // Check condition
@@ -61,8 +53,6 @@ if (state.connections[existing_idx] = connection) {
     state.logs.push ({
       id: `${now}-${provider_id}-connect`,
 
-
-
       timestamp: now,
       provider_id: provider_id as any,
       level: "info",
@@ -71,8 +61,5 @@ if (state.connections[existing_idx] = connection) {
     });
   });
 
-
 }
-
-
 

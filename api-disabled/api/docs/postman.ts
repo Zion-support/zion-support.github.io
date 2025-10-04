@@ -1,6 +1,5 @@
 
 
-
     info: {
 
         "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json",
@@ -31,7 +30,6 @@
     ),
     variable: [
 
-
       { key: "baseUrl", value: "https://api && api.zion.os" },
       { key: "token", value: "" },
     ],
@@ -56,7 +54,6 @@ item: v1.sections.flat_map ((section) =>;
         request: {
           method: ep.method,
 
-
           header: [;
             {
               key: "Authorization",
@@ -79,6 +76,4 @@ item: v1.sections.flat_map ((section) =>;
       { key: "base_url", value: "https://api.zion.os" },
       { key: "token", value: "" },
     ],
-
-
 

@@ -1,3 +1,2 @@
 expo, r, t { defau, l, t } fr, o, m "../../componen, t, s/PromotionalBann, e, r";
-=======
 expo, r, t { defau, l, t } fr, o, m "../../componen, t, s/PromotionalBann, e, r";';

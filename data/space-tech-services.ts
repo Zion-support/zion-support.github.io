@@ -1,6 +1,5 @@
 
 
-  
 export interface SpaceTechService 
   id: string;
   name: string;
@@ -823,7 +822,6 @@ export const spaceTechServices: SpaceTechService[] = [
     reviews: 250;
 
   }
-
 
 export interface SpaceTechService {;
 

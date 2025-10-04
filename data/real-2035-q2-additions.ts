@@ -120,7 +120,6 @@
       'Real - time analytics',
       'CSV / Sheets export',
 
-  
       'Webhooks + API',
     ],
     popular: false,
@@ -1014,9 +1013,6 @@
     reviews: 3,
   },
 
-
-
-  
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -1131,8 +1127,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
-  
-  
+
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro'
     tagline: 'Index recommendations and controlled PR rollouts'
@@ -1516,7 +1511,6 @@
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.',
     features: [;
 
-
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -1553,9 +1547,6 @@
     reviews: 3,
   },
 
-
-
-  
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -1699,7 +1690,6 @@
     description:;
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
 
-
     features: [
 
     id: 'api - breaking - change - watcher',
@@ -1746,8 +1736,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
-  
-  
+
     id: 'synthetic - journey - monitor',
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
@@ -3062,7 +3051,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	}
 ];
 
-
   id: 'ai - email - responder';
   name: 'AI Email Responder',
   tagline: 'Autonomous email triage, drafting, and follow - ups for sales and support';
@@ -4052,7 +4040,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 }
 		rating: 4.6
 		reviews: 6
-
 
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
@@ -5049,7 +5036,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 24,;
 		rating: 4.6;
 		reviews: 6;
-
 
 	}
 ];

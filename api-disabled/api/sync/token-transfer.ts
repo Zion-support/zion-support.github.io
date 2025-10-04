@@ -1,8 +1,5 @@
 
 
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { signPayload } from "../../../utils/sync/signature";
@@ -16,11 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
-
   };
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
-
 
   }
   if (!txId |!token |typeof amount !== "number" |!fromSubnet |!toSubnet) {
@@ -28,8 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const version = nextVersionFor(state, txId)
   const event = {
-
-
 
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string,
@@ -39,10 +32,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     toSubnet: string,
     timestamp?: number
   },
-
-
-
-
 
   await Promise.all(
     state.config.peers
@@ -107,14 +96,11 @@ if (headers["x - zion - signature"] = sig, ) {
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
 
-
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
 
 }
-
-
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
@@ -231,8 +217,4 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
-
 

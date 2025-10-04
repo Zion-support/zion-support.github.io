@@ -1,7 +1,5 @@
 
 
-
-
 ;
 interface TalentProfileProps {;
   profile: TalentProfileType;,;
@@ -13,7 +11,6 @@ export function TalentProfile({ ;
   onRequestHire,;
   onMessageTalent;)
 
-
   const availability: Availability = {;,"
   status:profile.availability_type === 'full_time' ? 'available' :;
             profile.availability_type === 'part_time' ? 'limited' :'unavailable',;
@@ -23,8 +20,6 @@ export function TalentProfile({ ;
   const skillsArray = profile.skills?.map(skill => ({;
     name: skill;,;
     level:3 // Default level since we don't have this data;')
-
-
 
     date:new Date().toISOString() // Default date since we don't have this data;
   return (;

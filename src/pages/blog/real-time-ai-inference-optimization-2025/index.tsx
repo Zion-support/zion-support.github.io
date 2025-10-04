@@ -20,7 +20,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
         <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-cy, a, n-600, p, y-16">
           <div, className="absolute, inse, t-0, b, g-bla, c, k/20"></d, i, v>
           <div, className="container, m, x-auto, p, x-6, relative, z-10">
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/re, a, l-ti, m, e-ai-inferen, c, e-optimizati, o, n-20, 2, 5"
          />
       </Helmet>
@@ -34,7 +33,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
               classNa, m, e="inli, n, e-flex, item, s-center, tex, t-whi, t, e/90, hove, r: te, x, t-white, m, b-8, transitio, n-colo, r, s"
             >
               <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
               <ArrowLeft, className="w-4 h-4, m, r-2" />";
               Back, to, Blog;
             </Li, n, k>
@@ -64,7 +62,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                 </d, i, v>
                 <div, className="flex, item, s-cent, e, r">
                   <TrendingUp, className="w-5 h-5, m, r-2  />
-=======
               <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
                 Re, a, l-Time, AI, Inference Optimizat, i, o
   n: Achieving, Su, b-50ms, Latency, at Sca, l, e
@@ -93,7 +90,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
             <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, borde, r-l-4, borde, r-indi, g, o-50, 0, p-6, rounde, d-r-lg, m, b-12">
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-cent, e, r">
                 <Zap, className="w-6 h-6, m, r-2, tex, t-yell, o, w-4, 0, 0  />
-=======
             <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, borde, r-l-4, borde, r-indi, g, o-50, 0, p-6, rounde, d-r-lg, m, b-12">";
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-cent, e, r">";
                 <Zap, className="w-6 h-6, m, r-2, tex, t-yell, o, w-4, 0, 0" />";
@@ -116,7 +112,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                   <h3, className="te, x, t-xl, fon, t-semibold, tex, t-white, m, b-3">1. Model, Loading, Overhead</h3>
                   <p, className="te, x, t-gr, a, y-300, m, b-4">
                     Co, l, d-start, latency, from loading, large, models (7B+ paramete, r, s) can, exceed, 10 secon, d, s;
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r">";
                 <Gauge, className="w-8 h-8, m, r-3, tex, t-r, e, d-4, 0, 0" />";
@@ -181,7 +176,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
             <section, className="mb-12">
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r">
                 <Cpu, className="w-8 h-8, m, r-3, tex, t-purp, l, e-4, 0, 0  />
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r">";
                 <Cpu, className="w-8 h-8, m, r-3, tex, t-purp, l, e-4, 0, 0" />";
@@ -200,7 +194,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                   <div, className="bg-sla, t, e-9, 0, 0/5, 0, p-5, rounde, d-lg, border, border-sla, t, e-600, m, b-4">
                     <p, className="te, x, t-sm, tex, t-emera, l, d-400, fon, t-semibold, m, b-3">Quantization, Strateg, y: </p>"
                     <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0">
-=======
                   <div, className="bg-sla, t, e-9, 0, 0/5, 0, p-5, rounde, d-lg, border, border-sla, t, e-600, m, b-4">";
                     <p, className="te, x, t-sm, tex, t-emera, l, d-400, fon, t-semibold, m, b-3">Quantization, Strateg, y: </p>";
                     <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0">";
@@ -211,7 +204,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                   </d, i, v>
                   <div, className="bg-bl, u, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/30, rounded, p-4">
                     <p, className="te, x, t-bl, u, e-300, tex, t-sm">
-=======
                   <div, className="bg-bl, u, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/30, rounded, p-4">";
                     <p, className="te, x, t-bl, u, e-300, tex, t-sm">";
                       <stro, n, g>Real, Resul, t: </stro, n, g> Lla, m, a-70B, quantized, to INT4, runs, on single, A10, 0 (vs, 4x, A100 for, FP1, 6)
@@ -232,7 +224,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                     <div, className="bg-sla, t, e-9, 0, 0/5, 0, p-4, rounded, border bord, e, r-sla, t, e-6, 0, 0">
                       <p, className="te, x, t-cy, a, n-400, fon, t-semibold, m, b-2">NVIDIA, GPU, s</p>
                       <ul, className="te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1">
-=======
                   <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4">";
                     <div, className="bg-sla, t, e-9, 0, 0/5, 0, p-4, rounded, border bord, e, r-sla, t, e-6, 0, 0">";
                       <p, className="te, x, t-cy, a, n-400, fon, t-semibold, m, b-2">NVIDIA, GPU, s</p>";
@@ -272,7 +263,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                 <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-800, t, o-sla, t, e-90, 0, p-6, rounde, d-lg, border, border-sla, t, e-7, 0, 0">
                   <h3, className="te, x, t-2xl, fon, t-semibold, tex, t-white, m, b-4, flex, items-cent, e, r">
                     <Database, className="w-6 h-6, m, r-3, tex, t-emera, l, d-4, 0, 0  />
-=======
                 <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-800, t, o-sla, t, e-90, 0, p-6, rounde, d-lg, border, border-sla, t, e-7, 0, 0">";
                   <h3, className="te, x, t-2xl, fon, t-semibold, tex, t-white, m, b-4, flex, items-cent, e, r">";
                     <Database, className="w-6 h-6, m, r-3, tex, t-emera, l, d-4, 0, 0" />";
@@ -287,7 +277,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                       <d, i, v>
                         <p, className="te, x, t-white, fon, t-medi, u, m">L1: In-Memory, Cach, e (Red, i, s)</p>"
                         <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">
-=======
                   <div, className="bg-sla, t, e-9, 0, 0/5, 0, p-5, rounde, d-lg, border, border-sla, t, e-6, 0, 0">";
                     <p, className="te, x, t-emera, l, d-400, fon, t-semibold, m, b-3">Mul, t, i-Tier, Caching, Strategy: </p>";
                     <div, className="spa, c, e-y-3">";
@@ -301,7 +290,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                       <d, i, v>
                         <p, className="te, x, t-white, fon, t-medi, u, m">L2: Vector, Similarity, Cache (Pineco, n, e/Weavia, t, e)</p>"
                         <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">
-=======
                         <p, className="te, x, t-white, fon, t-medi, u, m">L2: Vector, Similarity, Cache (Pineco, n, e/Weavia, t, e)</p>";
                         <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";
                           Semantic, search, with 0.95+ cosine, similarity, threshold. 10-30ms, looku, p. TT
@@ -311,7 +299,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                       <d, i, v>
                         <p, className="te, x, t-white, fon, t-medi, u, m">L3: Model, Inferenc, e (Fallba, c, k)</p>"
                         <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">
-=======
                         <p, className="te, x, t-white, fon, t-medi, u, m">L3: Model, Inferenc, e (Fallba, c, k)</p>";
                         <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";
                           Full, model, execution for, cache, misses. Result, added, to L1, and, L2.
@@ -327,7 +314,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
               <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30">
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Measured, Performance, Improvements</h2>
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"
-=======
             <section, className="mb-12">";
               <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30">";
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Measured, Performance, Improvements</h2>";
@@ -366,7 +352,6 @@ const, RealTimeAIInferenceOptimization202, 5 = () => {
                 >
                   Get, Performance, Audit;
                   <ArrowLeft, className="w-5 h-5, m, l-2, rotat, e-1, 8, 0  />
-=======
                   <ArrowLeft, className="w-5 h-5, m, l-2, rotat, e-1, 8, 0" />";
                 </Li, n, k>
               </d, i, v>

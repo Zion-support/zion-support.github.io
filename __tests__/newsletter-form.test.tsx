@@ -31,6 +31,4 @@ test(
     expect(toastHook.toast.success).toHaveBeenCalledWith(
   '¡Gracias por suscribirte!')})})'
 
-
-
 )

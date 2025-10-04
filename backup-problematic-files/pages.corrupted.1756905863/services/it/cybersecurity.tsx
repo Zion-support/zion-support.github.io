@@ -1,14 +1,9 @@
 
 
-
-
-
   // Add props here as needed
 
 }
 }
-
-
 
 export default function Cybersecurity({ }: CybersecurityProps) {
   return (
@@ -17,10 +12,4 @@ export default function Cybersecurity({ }: CybersecurityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
-
-
-
 

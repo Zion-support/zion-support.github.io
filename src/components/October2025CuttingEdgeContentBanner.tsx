@@ -1,5 +1,4 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';
@@ -31,7 +30,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-6, 0, 0","
       ic, o, n: <TrendingUp, className="w-6 h-6/>,"
       metri, c, s: ["3, 4, 0% Reven, u, e", "S, u, b-50ms, Latenc, y", "10, 0, M+ Use, r, s"]"
-=======
       tit, l, e: "Ne, x, t-Gen, Autonomous, Orchestration — Se, l, f-Healing, Systems, at Sca, l, e",";
       subtit, l, e: "99.99% Upti, m, e, 85% Cost, Reductio, n, Ze, r, o-Touch, Operation, s",";
       catego, r, y: "Autonomous, System, s",";
@@ -73,7 +71,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">
             <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e  />
             <span, className="te, x, t-sm, fon, t-semibold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-4, 0, 0">
-=======
         <div, className="te, x, t-center, m, b-10">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">";
             <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e" />";
@@ -88,7 +85,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
             🚀 <span, className="fo, n, t-semibold, tex, t-purp, l, e-3, 0, 0">Master, autonomous, systems</sp, a, n> with, sel, f-healing, capabilitie, s;
             <span, className="fo, n, t-semibold, tex, t-cy, a, n-3, 0, 0"> unlock, 10x, LLM performan, c, e</sp, a, n> with, advanced, prompting, a, n, d;
             <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!
-=======
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";
             3, Gam, e-Changing, Enterprise, AI Breakthroug, h, s;
           </h2>
@@ -100,7 +96,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
         </d, i, v>
         {/* Featured, Articles, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
             <Li, n, k
@@ -114,7 +109,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
               <div, className="relativ, e, p-6">";
                 {/* Icon, and, Category */}
                 <div, className="flex, item, s-center, justif, y-between, m, b-4">
-=======
                 <div, className="flex, item, s-center, justif, y-between, m, b-4">";
                   <div, className={`p-3, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} te, x, t-white, shado, w-lg`}>`;`
                     {artic, l, e.ic, o, n}
@@ -126,7 +120,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e
   r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">"
-=======
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2, grou, p-hov, e, r: te, x, t-transparent, grou, p-hov, e, r:bg-cl, i, p-text, grou, p-hov, e, r:bg-gradie, n, t-to-r, grou, p-hov, e, r:fr, o, m-purp, l, e-400, grou, p-ho, v, e
   r:to-cy, a, n-400, transitio, n-all, duratio, n-3, 0, 0">";
                   {artic, l, e.tit, l, e}
@@ -150,7 +143,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
                   Read, Full, Article;
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                   Read, Full, Article;
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
@@ -163,7 +155,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
         {/* CTA, Sectio, n */}
         <div, className="te, x, t-cent, e, r">
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-=======
         <div, className="te, x, t-cent, e, r">";
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";
             <Li, n, k
@@ -174,7 +165,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
               <span, className="flex, item, s-center, ga, p-2">";
                 Explore, All, Latest Conte, n, t;
                 <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </sp, a, n>
             </Li, n, k>
@@ -190,7 +180,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
         {/* Additional, Inf, o */}
         <div, className="mt-8, tex, t-cent, e, r">
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">
-=======
         <div, className="mt-8, tex, t-cent, e, r">";
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";
             💡 <span, className="te, x, t-gr, a, y-300, fon, t-semibo, l, d">Join, 5, 0,0, 0, 0+ AI, leader, s</sp, a, n> who, get, weekly insights, on, enterprise AI, implementatio, n";
@@ -211,7 +200,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {
         }
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s
-=======
           animati, o, n: blob, 7s, infinite;
         }
         .animati, o, n-del, a, y-20, 0, 0 {

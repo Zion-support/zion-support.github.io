@@ -5,7 +5,6 @@
 const { data, error } = await supabase;
       .from('email_signups');'
 
-
   if (!email || typeof email !== 'string')'
     return res.status(400).send('Invalid email');export default async function handler() {;'
   }
@@ -31,7 +30,6 @@ const { data, error } = await supabase;
 const { data, error } = await supabase;
       .from('email_signups');'
 
-
   if (
     return res.status (400).send ('Invalid email')) {'
   $2
@@ -49,7 +47,6 @@ const { email } = req.body || {}
   $2
 }
 try {
-
 
   $2
 }

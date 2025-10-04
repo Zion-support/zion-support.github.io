@@ -12,7 +12,6 @@ n, e, w: numb, e, r;
 tot, a, l: numb, e, r;
 aver, a, g
   e: numb, e, r;
-=======
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
 impo, r, t {
 moti, o, n;
@@ -47,7 +46,6 @@ topPag, e, s: Arr, a, y<{ pa, g, e: stri, n, g; vie, w, s: numb, e, r; bounceR, 
 averageLoadTi, m, e: numb, e, r;
 bounceRa, t, e: numb, e, r;
 conversionRa, t, e: numb, e, r;
-=======
 averageLoadTi, m, e: numb, e, r;
 bounceRa, t, e: numb, e, r;
 conversionRa, t, e: numb, e, r;
@@ -62,7 +60,6 @@ engagementSc, o, r
   };
   realTi, m, e: {
 activeUse, r, s: numb, e, r;
-=======
 activeUse, r, s: numb, e, r;
 currentPag, e, s: Arr, a, y<{ pa, g, e: stri, n, g; us, e, r
   s: numb, e, r;
@@ -148,7 +145,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
           { sour, c, e: 'Linked, I, n', use, r, s: Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 5) + 2 }
         ]
       }
-=======
     const, baseMultiplie, r = ran, g, e === '2, 4, h' ? 1 : ran, g, e === '7d' ? 7 : ran, g, e === '3, 0, d' ? 30 : 90;';
     retu, r, n {
       visito, r, s: {
@@ -236,7 +232,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
   const, formatNumbe, r = (n, u, m: numb, e, r) => {
     if (n, u, m >= 10000, 0, 0) return (n, u, m / 10000, 0, 0).toFix, e, d(1) + 'M';
     if (n, u, m >= 10, 0, 0) return (n, u, m / 10, 0, 0).toFix, e, d(1) + 'K';
-=======
     if (n, u, m >= 10000, 0, 0) return (n, u, m / 10000, 0, 0).toFix, e, d(1) + 'M';';
     if (n, u, m >= 10, 0, 0) return (n, u, m / 10, 0, 0).toFix, e, d(1) + 'K';';
     return, nu, m.toStri, n, g();
@@ -245,7 +240,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
     if (curre, n, t > previo, u, s) retu, r, n <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-6, 0, 0/>;";
     if (curre, n, t < previo, u, s) retu, r, n <TrendingDown, className="w-4 h-4, tex, t-r, e, d-6, 0, 0/>;";
     retu, r, n <Activity, className="w-4 h-4, tex, t-gr, a, y-6, 0, 0/>;";
-=======
     if (curre, n, t > previo, u, s) retu, r, n <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-6, 0, 0" />;";
     if (curre, n, t < previo, u, s) retu, r, n <TrendingDown, className="w-4 h-4, tex, t-r, e, d-6, 0, 0" />;";
     retu, r, n <Activity, className="w-4 h-4, tex, t-gr, a, y-6, 0, 0" />;";
@@ -272,7 +266,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
         <d, i, v>
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">
             <BarChart3, className="w-6 h-6  />
-=======
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";
             <BarChart3, className="w-6 h-6" />";
             Analytics, Dashboar, d;
@@ -295,7 +288,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
   g:gr, i, d-co, l, s-4, ga, p-4, m, b-6">"
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">
           <div, className="flex, justif, y-between, item, s-cent, e, r">
-=======
       <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-4, m, b-6">";
         <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";
@@ -305,7 +297,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
               <p, className="te, x, t-2xl, fon, t-bo, l, d">{formatNumb, e, r(da, t, a.visito, r, s.tot, a, l)}</p>";
             </d, i, v>
             <Users, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0  />
-=======
             <Users, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0" />";
           </d, i, v>
         </d, i, v>
@@ -316,7 +307,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
               <p, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-7, 0, 0">{formatNumb, e, r(da, t, a.pageVie, w, s.tot, a, l)}</p>";
             </d, i, v>
             <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0  />
-=======
             <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0" />";
           </d, i, v>
         </d, i, v>
@@ -327,7 +317,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
               <p, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-7, 0, 0">{(da, t, a.performan, c, e.bounceRa, t, e * 1, 0, 0).toFix, e, d(1)}%</p>";
             </d, i, v>
             <MousePointer, className="w-6 h-6, tex, t-purp, l, e-5, 0, 0  />
-=======
             <MousePointer, className="w-6 h-6, tex, t-purp, l, e-5, 0, 0" />";
           </d, i, v>
         </d, i, v>
@@ -335,14 +324,12 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
           <div, className="flex, justif, y-between, item, s-cent, e, r">";
             <d, i, v>
               <p, className="te, x, t-oran, g, e-600, tex, t-sm">A, v, g. Load, Tim, e</p>
-=======
               <p, className="te, x, t-oran, g, e-600, tex, t-sm">A, v, g. Load, Tim, e</p>";
               <p, className={`te, x, t-2xl, fon, t-bo, l, d ${getPerformanceCol, o, r(da, t, a.performan, c, e.averageLoadTi, m, e, { go, o, d: 2, po, o, r: 4 })}`}>`;`
                 {da, t, a.performan, c, e.averageLoadTi, m, e.toFix, e, d(1)}s;
               </p>
             </d, i, v>
             <Clock, className="w-6 h-6, tex, t-oran, g, e-5, 0, 0  />
-=======
             <Clock, className="w-6 h-6, tex, t-oran, g, e-5, 0, 0" />";
           </d, i, v>
         </d, i, v>
@@ -360,7 +347,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
           </d, i, v>
         </d, i, v>
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-4">"
-=======
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-4">";
           <d, i, v>
             <h4, className="fo, n, t-medium, m, b-2">Current, Page, s</h4>";
@@ -391,7 +377,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
         <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4">
           <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Traffic, Source, s</h3>
           <div, className="spa, c, e-y-3">
-=======
       <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
         <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4">";
           <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Traffic, Source, s</h3>";
@@ -420,7 +405,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
                   {devi, c, e.devi, c, e === 'Mobi, l, e' && <Smartphone, className="w-4 h-4, tex, t-gr, a, y-6, 0, 0/>}";
                   {devi, c, e.devi, c, e === 'Tabl, e, t' && <Monitor, className="w-4 h-4, tex, t-gr, a, y-6, 0, 0/>}";
                   <span, className="fo, n, t-medi, u, m">{devi, c, e.devi, c, e}</sp, a, n>
-=======
               <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, justif, y-betwe, e, n">";
                 <div, className="flex, item, s-center, ga, p-3">";
                   {devi, c, e.devi, c, e === 'Deskt, o, p' && <Monitor, className="w-4 h-4, tex, t-gr, a, y-6, 0, 0" />}";
@@ -466,7 +450,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
           <div, className="flex, item, s-center, ga, p-2, m, b-2">
             <Target, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0  />
             <h4, className="fo, n, t-semibold, tex, t-bl, u, e-9, 0, 0">Conversion, Rat, e</h4>
-=======
       <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">";
         <div, className="bg-bl, u, e-50, rounde, d-l, g, p-4">";
           <div, className="flex, item, s-center, ga, p-2, m, b-2">";
@@ -479,7 +462,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
           <div, className="flex, item, s-center, ga, p-2, m, b-2">
             <Activity, className="w-5 h-5, tex, t-gre, e, n-6, 0, 0  />
             <h4, className="fo, n, t-semibold, tex, t-gre, e, n-9, 0, 0">Engagement, Scor, e</h4>
-=======
         <div, className="bg-gre, e, n-50, rounde, d-l, g, p-4">";
           <div, className="flex, item, s-center, ga, p-2, m, b-2">";
             <Activity, className="w-5 h-5, tex, t-gre, e, n-6, 0, 0" />";
@@ -491,7 +473,6 @@ const, AnalyticsDashboar, d: Rea, c, t.FC = () => {
           <div, className="flex, item, s-center, ga, p-2, m, b-2">
             <BarChart3, className="w-5 h-5, tex, t-purp, l, e-6, 0, 0  />
             <h4, className="fo, n, t-semibold, tex, t-purp, l, e-9, 0, 0">Pages, per, Session</h4>
-=======
         <div, className="bg-purp, l, e-50, rounde, d-l, g, p-4">";
           <div, className="flex, item, s-center, ga, p-2, m, b-2">";
             <BarChart3, className="w-5 h-5, tex, t-purp, l, e-6, 0, 0" />";

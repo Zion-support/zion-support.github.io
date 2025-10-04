@@ -1019,10 +1019,6 @@ import * as React from 'react'; import Head from 'next/head'; import Link from '
 };
 export default Blog;
 
-
-
-
-
       description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
     >
       {/* Hero Section */}

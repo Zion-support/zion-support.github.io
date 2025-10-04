@@ -233,7 +233,6 @@ export default function Services() {;
 							</div>;
 						</div>;
 
-
 							</div>;
 							<div className='bg-green-50 p-4 rounded-lg'>;
 								<h3 className='font-semibold text-green-900 mb-2'>IT Infrastructure</h3>;

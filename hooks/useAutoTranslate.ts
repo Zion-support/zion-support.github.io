@@ -17,7 +17,6 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
-
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -26,7 +25,6 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   useEffect(() => 
     if (!text || targets && targets.length === 0) 
       setTranslations({});
-
 
       setTranslations({});
       return

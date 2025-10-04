@@ -302,7 +302,6 @@ import Layout from '../../components/Layout';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)

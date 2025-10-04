@@ -1,32 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-
 function load(): Record<string, KycProfile> {
   try {
 
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw)
 
-
-
   } catch {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
 
-
-
-
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
-
-
-
-
 
   // Compute simple risk score
   let riskScore = 10; // base low risk
@@ -39,8 +27,5 @@ function load(): Record<string, KycProfile> {
   profile && profile.status = 'submitted';
   const now = new Date().toISOString();
 
-
-
 }
-
 

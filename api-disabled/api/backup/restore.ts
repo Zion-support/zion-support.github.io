@@ -1,14 +1,9 @@
 
 
-
-
     return res.status(200).json(data)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Restore failed' })
   }
 
 }
-
-
-
 

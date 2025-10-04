@@ -1,19 +1,10 @@
 
 
-
-
-
-
 };import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
 
   categories?: {;
-
-
-
-
-
 
     communication?: number;
     qualityOfWork?: number;
@@ -61,8 +52,6 @@ type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
 
-
-
     wouldWorkWithAgain?: boolean;
   }
   anonymous?: boolean;
@@ -102,8 +91,6 @@ function handle_submit() {
           categories: {
 communication
 
-
-
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     setSubmitting(true);
@@ -133,14 +120,4 @@ communication
     } catch (err: any) {;
       setMessage(err && err.message);
     } finally {;
-
-
-
-
-
-
-
-
-
-
 

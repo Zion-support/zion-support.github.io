@@ -14,7 +14,6 @@ const EnhancedErrorBoundary = dynamic(() => import('./EnhancedErrorBoundary'),{'
 
 </p>'
 
-
 </p>'
 
 '

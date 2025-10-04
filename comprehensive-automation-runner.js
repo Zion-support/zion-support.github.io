@@ -67,8 +67,6 @@ class ComprehensiveAutomationRunner {
       walkDir(srcDir)}
     return files}
 
-
-
 ;#!/usr/bin/env node const { execSync,spawn } = require('child_process'); const fs = require('fs') const path = require('path') class ComprehensiveAutomationRunner { constructor() { this.logDir = path.join(__dirname,'automation','logs'); this.ensureLogDir(); this.startTime = Date.now()this.results = { syntaxFixes: 0; buildSuccess: false; testsPassed: 0; optimizations: 0; errors: []}} ensureLogDir() { if () { fs.mkdirSync(this.logDir,{ recursive: true })} } log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message) { ) { fs.mkdirSync(this.logDir,{ recursive: true })} } log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}};`; console.log(logMessage); const logFile = path.join(this.logDir,'comprehensive-automation.log';); fs.appendFileSync(logFile,logMessage + '\n')} async runCommand() { this.log(`🔧 ${description }`); try { const result = execSync(command,{ encoding: 'utf8',stdio: 'pip;e;'; timeout: timeout })this.log(`✅ ${description} completed successfully`); return { success: true output: result }} catch(error) { this.log(`❌ ${description } failed: ${error.message}`,'ERROR'); this.results.errors.push({ command; description; error: error.message }); return { success: false error: error.message }} } async runSyntaxFixes() { this.log('🔧 Starting comprehensive syntax error fixing...')const syntaxTasks = [{ command: 'npm run lint:fi;x;',
   description: 'ESLint Auto-fi,x',},{ command: 'npm run format',
   description: 'Prettier Code Formattin,g',},{ command: 'npm run type-check',

@@ -15,7 +15,6 @@ interface BrowseItem {;
   location?:string,;
   badges: string[];,;
 
-
   items: BrowseItem[];,;"
   type: "jobs" | "talents";,;"
   onViewDetails:(id:string) => void;
@@ -71,7 +70,6 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
 subtitle: string;,
   description: string;
 
-
                 View Details <ChevronRight className="text-left" />;"
 pr-12325
   const [savedItems, setSavedItems] = useState<string[]> ([]);
@@ -82,5 +80,4 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
 <
 }< </div>) ;
 }<span >{;
-
 

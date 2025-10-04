@@ -1,13 +1,7 @@
 
 
-
-
-
   }
   try {
-
-
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
@@ -35,47 +29,33 @@ if ( {) {
         from_role: "client" | "talent";
         from_id: string;
 
-
-
         rating: number;
         text: string;
         categories?: Review["categories"];
         anonymous?: boolean;
 
-
       };
-
-
-
 
     }
     const project = await findProjectById(projectId);
     if (!project) {
 
-
       });
     }
-
-
 
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
 
-
         error: "You have already submitted a review for this project",
       });
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
-
-
 
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 
     }
 
       .json({ message: "Review submitted", reviewId: review && review.id });
-
-
 
   } catch (error: any) {
     return res
@@ -100,7 +80,6 @@ const now = new Date ().toISOString ();
       rating,
       text: String (text).trim (),
       categories,
-
 
       reported: false, reports: [],
 

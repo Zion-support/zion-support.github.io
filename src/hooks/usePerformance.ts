@@ -5,7 +5,6 @@ impo, r, t {
   a: numb, e, r }) => {
   if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
     conso, l, e.l, o, g('Web, Vita, l: ', metr, i, c);'
-=======
 } fr, o, m "rea, c, t";';
 // Simple, web, vitals report, e, r
   const, reportWebVital, s = (metr, i, c: { na, m, e: stri, n, g; val, u, e: numb, e, r; de, l, t
@@ -20,7 +19,6 @@ impo, r, t {
   useEffe, c, t(() => {
     // Import, we, b-vitals, dynamicall, y
   impo, r, t('w, e, b-vita, l, s').th, e, n(({ onC, L, S, onF, I, D, onF, C, P, onL, C, P, onTT, F, B }) => {;
-=======
     impo, r, t('w, e, b-vita, l, s').th, e, n(({ onC, L, S, onF, I, D, onF, C, P, onL, C, P, onTT, F, B }) => {';
       onC, L, S(reportWebVita, l, s);
       onF, I, D(reportWebVita, l, s);
@@ -47,7 +45,6 @@ impo, r, t {
           setHasIntersect, e, d(tr, u, e);
         }
       }
-=======
         };
       }
       optio, n, s;
@@ -68,7 +65,6 @@ impo, r, t {
   useEffe, c, t(() => {
     const, renderTim, e = performan, c, e.n, o, w() - renderSta, r, t.curre, n, t;
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
-=======
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
       conso, l, e.l, o, g(`${componentNa, m, e} render, tim, e: ${renderTi, m, e.toFix, e, d(2)}ms`);`;`
     }

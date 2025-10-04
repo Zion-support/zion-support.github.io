@@ -52,7 +52,6 @@ function Badge() {const badgeVariants = cva('inline-flex items-center rounded-fu
 
 export { Badge, badgeVariants }
 
-
 interface BadgeProps {
   children: React.ReactNode;
   variant?: 'default' | 'secondary' | 'destructive' | 'outline';

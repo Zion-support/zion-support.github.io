@@ -59,7 +59,6 @@ class ErrorBoundary extends React.Component {
 
 export default function HomePage() {;
 
-
 export default function HomePage() {
 
 export default function HomePage() {
@@ -117,7 +116,6 @@ export default function HomePage() {
       </main>
     </>
   );
-
 
 }
 

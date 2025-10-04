@@ -20,18 +20,12 @@ const contact =
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
-
-
-
-
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }
 ;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
-
-
 
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -72,7 +66,6 @@ const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -81,8 +74,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 };
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-  
-  
+
       'AI-powered crop monitoring',
   website: 'https://ziontechgroup.com';
 }
@@ -373,8 +365,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
 
-
-
       'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
     launchDate: '2025-02-02',
     market_size: '$9.3B+ vertical farming market',
@@ -390,7 +380,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     reviews: 89,
 
   },;
-
 
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
 
@@ -553,10 +542,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   }
 ];
 
-
     rating: 4.6
     reviews: 89
-
 
 ];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';
@@ -587,8 +574,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     customers: 123;
     rating: 4.6,
     reviews: 89;
-
-
 
   }
 ];

@@ -9,33 +9,12 @@ interface ChatMessageProps {;
   timestamp:Date;
 }
 
-
-
-
-
-
-
-
-
-
             />;
 "
             <AvatarFallback className="text-left">Z;"
           </>;)
 
-
-
-
-
-
-
-
-
-
-
     urlRegex,;"
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
-
-
 

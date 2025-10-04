@@ -16,7 +16,6 @@ export, const, lazyWithRetry = <T, extends, ComponentType<a, n, y>>(
   return, laz, y(() =>
     new, Promis, e<{ defau, l, t: T }>((resol, v, e, reje, c, t) => {
 const, attemptImpor, t = asy, n, c (retriesLe, f, t: numb, e, r) => {
-=======
 const, attemptImpor, t = asy, n, c (retriesL, e, f
   t: numb, e, r) => {
 t, r, y {
@@ -41,7 +40,6 @@ resol, v, e(modu, l, e);
 /**
  * Preload, a, lazy compone, n, t;
  * Useful, for, prefetching components, before, they're, neede, d;
-=======
  * Useful, for, prefetching components, before, they're, neede, d';
  */
 export, const, preloadComponent = (
@@ -49,7 +47,6 @@ export, const, preloadComponent = (
 ): Promi, s, e<vo, i, d> => {
   return, importFun, c().th, e, n(() => {}).cat, c, h((err, o, r) => {
     conso, l, e.err, o, r('Failed, to, preload compone, n, t: ', err, o, r);'
-=======
     conso, l, e.err, o, r('Failed, to, preload compone, n, t: ', err, o, r);';
   });
 };
@@ -65,7 +62,6 @@ export, const, createLazyRoute = <T, extends, ComponentType<a, n, y>>(
   retu, r, n {
     Compone, n, t: LazyCompone, n, t
     prelo, a, d: () => preloadCompone, n, t(importFu, n, c)
-=======
     Compon, e, n
   t: LazyCompone, n, t
     prelo, a, d: () => preloadCompone, n, t(importFu, n, c)
@@ -80,7 +76,6 @@ export, const, useLazyLoadOnVisible = (
   optio, n, s?: IntersectionObserverIn, i, t;
 ): (() => vo, i, d) => {
   if (typeof, windo, w === 'undefin, e, d') return () => {};
-=======
   if (typeof, windo, w === 'undefin, e, d') return () => {};';
   const, observe, r = new, IntersectionObserve, r(
     (entri, e, s) => {
@@ -95,7 +90,6 @@ export, const, useLazyLoadOnVisible = (
       rootMarg, i, n: '50, p, x'
       thresho, l, d: 0.01
       ...optio, n, s;
-=======
       rootMarg, i, n: '50, p, x',';
       thresho, l, d: 0.01
       ...optio, n, s
@@ -115,7 +109,6 @@ export, const, logBundleSize = (componentNa, m, e: stri, n, g): vo, i, d => {
   const, entrie, s = performan, c, e.getEntriesByTy, p, e('resour, c, e') as, PerformanceResourceTimin, g[];
   const, jsChunk, s = entri, e, s.filt, e, r(
     (ent, r, y) => ent, r, y.na, m, e.includ, e, s('.js') && ent, r, y.na, m, e.includ, e, s('chu, n, k');
-=======
   if (proce, s, s.e, n, v.NODE_E, N, V !== 'developme, n, t') retu, r, n;';
   const, entrie, s = performan, c, e.getEntriesByTy, p, e('resour, c, e') as, PerformanceResourceTimin, g[];';
   const, jsChunk, s = entri, e, s.filt, e, r(
@@ -136,7 +129,6 @@ const, preloadQueu, e: Arr, a, y<() => Promi, s, e<a, n, y>> = [];
 let, isPreloadin, g = fal, s, e;
 const, getConnectionSpee, d = (): 'sl, o, w' | 'fa, s, t' | 'unkno, w, n' => {
 if (typeof, navigato, r === 'undefin, e, d') retu, r, n 'unkno, w, n';
-=======
 const, getConnectionSpee, d = (): 'sl, o, w' | 'fa, s, t' | 'unkno, w, n' => {,';
 if (typeof, navigato, r === 'undefin, e, d') retu, r, n 'unkno, w, n';';
 const, connectio, n = (navigator, as, any).connecti, o, n;
@@ -161,7 +153,6 @@ return, effectiveTyp, e === '4g' || effectiveTy, p, e === '5g' ? 'fa, s, t' : 's
   await, new, Promise((resol, v, e) => setTimeo, u, t(resol, v, e, 1, 0, 0));
         } cat, c, h (err, o, r) {
           conso, l, e.err, o, r('Preload, erro, r: ', err, o, r);'
-=======
           conso, l, e.err, o, r('Preload, erro, r: ', err, o, r);';
         }
       }
@@ -174,14 +165,12 @@ a, d, d: (importF, u, n
 preloadQue, u, e.pu, s, h(importFu, n, c);
 // Start, processing, after id, l, e
   if (typeof, requestIdleCallbac, k !== 'undefin, e, d') {;
-=======
 if (typeof, requestIdleCallbac, k !== 'undefin, e, d') {';
 requestIdleCallba, c, k(() => processQue, u, e());
 } el, s, e {
         setTimeo, u, t(() => processQue, u, e(), 0);
       }
     }
-=======
     }
     cle, a, r: () => {
       preloadQue, u, e.leng, t, h = 0;

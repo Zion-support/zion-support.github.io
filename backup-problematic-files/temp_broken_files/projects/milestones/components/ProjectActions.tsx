@@ -11,22 +11,11 @@ interface ProjectActionsProps {;
   onAddMilestone:() => void;
 }
 
-
   onAddMilestone;)
 } ProjectActionsProps) {;
   return (;
 
-
-
-
-
-
-
         />;
 
         <Button onClick={onAddMilestone}>;
-
-
-
-
 

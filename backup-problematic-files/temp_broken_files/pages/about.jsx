@@ -17,8 +17,6 @@ ursor/automate-test-improve-and-merge-code-646c;
               </p>
             </div>
 
-
-
                 To be the global leader in technology transformation, helping businesses 
                 harness the power of AI, cloud computing, and digital innovation to create 
                 a more connected and efficient world.
@@ -46,7 +44,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                 Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
 
-
                 to excellence, innovation, and client success continues to drive everything we do.
 
                 Today, we're proud to have helped over 150+ businesses transform
@@ -55,8 +52,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                 client success continues to drive everything we do.
 
               </p>
-
-
 
             </div>
           </div>
@@ -76,7 +71,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 
                 <p className=text-gray-600">
 
-
                   We believe in building long-term relationships with our clients, working as 
                   an extension of their team to achieve shared success.
                 </p>
@@ -85,13 +79,11 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <h3 className="text-xl font-semibold text-gray-800 mb-3>Excellence</h3>
                 <p className=text-gray-600">
 
-
                   We believe in building long-term relationships with our
                   clients, working as an extension of their team to achieve
                   shared success.
                 </p>
               </div>
-
 
                 <p className=text-gray-600">
 
@@ -294,7 +286,6 @@ pr-12325
   );
 
 }
-
 
 export default About;
 export default About;

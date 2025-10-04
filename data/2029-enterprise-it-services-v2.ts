@@ -425,7 +425,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
 
-
     compliance: ['SOC 2ISO 27001ITILCOBIT']
     scalability: 'Enterprise-grade, multi-tenant support';
     roi: '450% within 18 months'

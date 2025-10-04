@@ -1,14 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
 const dataPath = path && path.join(process && process.cwd(), 'data', 'learn', 'courses && courses.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 
     const raw = fs && fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON && JSON.parse(raw);
-
 
     const { category, level, isFree } = req && req.query;
     const filtered = courses && courses.filter((c: any) => {
@@ -20,7 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const freeVal = isFree === 'true' || isFree === true;
         if (c.isFree !== freeVal) return false
 
-
       }
       return true;
     });
@@ -28,9 +24,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
-
-
-
-
-
 

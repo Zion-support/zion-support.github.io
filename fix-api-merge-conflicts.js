@@ -25,7 +25,6 @@ const fixMergeConflicts = (filePath) => {
     // Remove merge conflict markers and keep the main branch content;
     content = content.replace(/
 
-    
     // Remove merge conflict markers and keep the main branch content
     content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)[^\n]+\n?/g, '$1');
     
@@ -41,7 +40,6 @@ const fixMergeConflicts = (filePath) => {
     // Clean up any remaining conflict markers;
 pr-12325
 
-    
     // Fix common syntax issues;)
     content = content.replace(/,\s*;/g, ';'); // Remove trailing commas before semicolons;
     content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;'); // Fix import statements;
@@ -51,8 +49,6 @@ pr-12325
   } catch (error) {`;
     console.log(`❌ Failed to fix: ${filePath} - ${error.message}`);
     return false;
-
-
 
 const main = () => {
   const conflictedFiles = findConflictedFiles();
@@ -70,7 +66,5 @@ const main = () => {
       fixed++;
   });
   console.log(`\n🎉 Fixed ${fixed}/${conflictedFiles.length} files`);
-
-
 
 main();`;

@@ -38,7 +38,6 @@ reas, o, n
 class, ContentRecommendationEngin, e {
   private, contentCatalo, g: ContentIt, e, m[] = []
   private, userProfile, s: M, a, p<stri, n, g, UserProfi, l, e> = new, Ma, p()
-=======
   private, contentCatalo, g: ContentIt, e, m[] = [];
   private, userProfil, e
   s: M, a, p<stri, n, g, UserProfi, l, e> = new, Ma, p();
@@ -54,14 +53,12 @@ class, ContentRecommendationEngin, e {
    */
   getRecommendatio, n, s(
     user, I, d: stri, n, g
-=======
     user, I, d: stri, n, g
     optio, n, s: {
 lim, i, t?: numb, e, r;
 excludeView, e, d?: boole, a, n;
 catego, r, y?: stri, n, g;
 ty, p, e?: ContentIt, e, m['ty, p, e'];
-=======
 ty, p, e?: ContentIt, e, m['ty, p, e'];';
 } = {}
   ): RecommendationResu, l, t[] {
@@ -98,7 +95,6 @@ ty, p, e?: ContentIt, e, m['ty, p, e'];';
         conte, n, t
         sco, r, e: r, e, c.sco, r, e
         reaso, n, s: r, e, c.reaso, n, s;
-=======
         sc, o, r
   e: r, e, c.sco, r, e
         reaso, n, s: r, e, c.reaso, n, s
@@ -111,7 +107,6 @@ ty, p, e?: ContentIt, e, m['ty, p, e'];';
   private, scoreConten, t(conte, n, t: ContentIt, e, m, profi, l, e: UserProfi, l, e): RecommendationSco, r, e {
     let, scor, e = 0;
     const, reason, s: stri, n, g[] = []
-=======
     const, reason, s: stri, n, g[] = [];
     // Interest, matchin, g
   const, interestMatche, s = conte, n, t.ta, g, s.filt, e, r((t, a, g) =>
@@ -168,7 +163,6 @@ ty, p, e?: ContentIt, e, m['ty, p, e'];';
       content, I, d: conte, n, t.id
       sco, r, e: Ma, t, h.m, i, n(sco, r, e, 1, 0, 0)
       reaso, n, s;
-=======
       content, I, d: conte, n, t.id
       sco, r, e: Ma, t, h.m, i, n(sco, r, e, 1, 0, 0)
       reaso, n, s
@@ -185,7 +179,6 @@ ty, p, e?: ContentIt, e, m['ty, p, e'];';
         preferredCategori, e, s: []
         readingLev, e, l: 'intermedia, t, e'
         engageme, n, t: 0.5;
-=======
         intere, s, t
   s: []
         viewedConte, n, t: []
@@ -201,7 +194,6 @@ ty, p, e?: ContentIt, e, m['ty, p, e'];';
    */
   updateUserProfi, l, e(
     user, I, d: stri, n, g
-=======
     user, I, d: stri, n, g
     upda, t, e: {
 viewedConte, n, t?: stri, n, g;
@@ -243,7 +235,6 @@ engageme, n, t?: numb, e, r;
       .m, a, p((it, e, m) => ({
         conte, n, t: it, e, m
         sco, r, e: th, i, s.calculateSimilari, t, y(sour, c, e, it, e, m)
-=======
         conte, n, t: it, e, m
         sco, r, e: th, i, s.calculateSimilari, t, y(sour, c, e, it, e, m)
       }))
@@ -294,7 +285,6 @@ engageme, n, t?: numb, e, r;
    * Get, content, by ty, p, e;
    */
   getByTy, p, e(ty, p, e: ContentIt, e, m['ty, p, e'], lim, i, t: numb, e, r = 10): ContentIt, e, m[] {'
-=======
   getByTy, p, e(ty, p, e: ContentIt, e, m['ty, p, e'], lim, i, t: numb, e, r = 10): ContentIt, e, m[] {';
     return, thi, s.contentCatal, o, g;
       .filt, e, r((c) => c.ty, p, e === ty, p, e)
@@ -309,7 +299,6 @@ engageme, n, t?: numb, e, r;
       .m, a, p((it, e, m) => ({
         conte, n, t: it, e, m
         relevan, c, e: th, i, s.calculateRelevan, c, e(it, e, m, lowerQue, r, y)
-=======
         conte, n, t: it, e, m
         relevan, c, e: th, i, s.calculateRelevan, c, e(it, e, m, lowerQue, r, y)
       }))
@@ -351,7 +340,6 @@ engageme, n, t?: numb, e, r;
       'infrastructu, r, e'
       'kubernet, e, s'
       'microservic, e, s'
-=======
   private, estimateComplexit, y(conte, n, t: ContentIt, e, m): 'beginn, e, r' | 'intermedia, t, e' | 'advanc, e, d' {';
     // Simple, heuristic, based on, tags, and tit, l, e
   const, technicalTerm, s = [
@@ -393,7 +381,6 @@ engageme, n, t?: numb, e, r;
     const, recen, t = th, i, s.getRecentConte, n, t(5);
     // Interleave, recommendation, s, trendi, n, g, and, recen, t
   const, fee, d: ContentIt, e, m[] = []
-=======
     const, fee, d: ContentIt, e, m[] = [];
     const, maxItem, s = Ma, t, h.m, a, x(recommendatio, n, s.leng, t, h, trendi, n, g.leng, t, h, rece, n, t.leng, t, h);
     f, o, r (le, t, i = 0; i < maxIte, m, s && fe, e, d.leng, t, h < lim, i, t; i++) {
@@ -439,14 +426,12 @@ engageme, n, t?: numb, e, r;
   if (conte, n, t) {
       th, i, s.updateUserProfi, l, e(user, I, d, {
         catego, r, y: conte, n, t.catego, r, y;
-=======
         categ, o, r
   y: conte, n, t.catego, r, y
       });
       conte, n, t.ta, g, s.forEa, c, h((t, a, g) => {
         th, i, s.updateUserProfi, l, e(user, I, d, {
           intere, s, t: t, a, g;
-=======
           inter, e, s
   t: t, a, g
         });
@@ -468,7 +453,6 @@ engageme, n, t?: numb, e, r;
   getContentSta, t, s(content, I, d: stri, n, g): {
 vie, w, s: numb, e, r;
 conversio, n, s: numb, e, r;
-=======
   getContentSta, t, s(conten, t, I
   d: stri, n, g): {
 vie, w, s: numb, e, r;
@@ -498,7 +482,6 @@ conversionR, a, t
         preferredCategori, e, s: []
         readingLev, e, l: 'intermedia, t, e'
         engageme, n, t: 0.5;
-=======
         intere, s, t
   s: []
         viewedConte, n, t: []
@@ -533,7 +516,6 @@ profil, e, s: { [use, r, I
     retu, r, n {
       catal, o, g: [...th, i, s.contentCatal, o, g]
       profil, e, s: Obje, c, t.fromEntri, e, s(th, i, s.userProfil, e, s)
-=======
       cata, l, o
   g: [...th, i, s.contentCatal, o, g]
       profil, e, s: Obje, c, t.fromEntri, e, s(th, i, s.userProfil, e, s)
@@ -542,7 +524,6 @@ profil, e, s: { [use, r, I
 }
 // Singleton, instanc, e
   let, recommendationEngineInstanc, e: ContentRecommendationEngi, n, e | nu, l, l = nu, l, l
-=======
 let, recommendationEngineInstanc, e: ContentRecommendationEngi, n, e | nu, l, l = nu, l, l;
 export, const, getRecommendationEngine = (): ContentRecommendationEngi, n, e => {
   if (!recommendationEngineInstan, c, e) {

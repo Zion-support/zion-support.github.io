@@ -21,20 +21,12 @@ interface MilestonesListProps {;
   onReject?:(id:string) => Promise<void>;
 export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
-
-
 "
             <CardContent className="text-left">;"
               <div className="text-left"></div>;""
               <div className="text-left"></div>;""
               <div className="text-left"></div>;"
       </div>;
-
-
-
-
-
-
 
             <AddMilestoneForm ;
 
@@ -45,11 +37,6 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
       ;
       <div className="text-left">;
         {milestones.map((milestone) => (;
-
-
-
-
-
 
   i ;"
 }> <CardContent className="text-left" > <div className="text-left" ></div> <div className="text-left" ></div> <div className="text-left" ></div>  ) ) ;"

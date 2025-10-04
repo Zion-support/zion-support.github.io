@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 }
 
-
 export default function MicroCrm() {;
   return (
 
@@ -73,7 +72,6 @@ pr-12325
       </div>
     </>
   );
-
 
 }
 

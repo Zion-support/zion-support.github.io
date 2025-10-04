@@ -13,7 +13,6 @@ const, AutonomousBusinessOperation, s = () => {
         {/* Hero, Sectio, n */};
         <section, className="relative, p, y-24, overflo, w-hidd, e, n">
           <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20"></d, i, v>
-=======
           content="autonomous, business, operations, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e"
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/autonomo, u, s-busine, s, s-operatio, n, s" />";
@@ -32,7 +31,6 @@ const, AutonomousBusinessOperation, s = () => {
             <div, className="flex, justif, y-center, m, b-8">
               <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e">
                 <Rocket, className="w-5 h-5, m, r-2  />
-=======
             <div, className="flex, justif, y-center, m, b-8">";
               <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e">";
                 <Rocket, className="w-5 h-5, m, r-2" />";
@@ -44,7 +42,6 @@ const, AutonomousBusinessOperation, s = () => {
                 Autonomous, Business, Operations Platfo, r, m;
               </h1>
               <p, className="te, x, t-2xl, m, d: te, x, t-3xl, tex, t-bl, u, e-200, m, b-8, fon, t-semibo, l, d">"
-=======
             <div, className="m, a, x-w-5xl, m, x-auto, tex, t-cent, e, r">";
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
                 Autonomous, Business, Operations Platfo, r, m;
@@ -61,7 +58,6 @@ const, AutonomousBusinessOperation, s = () => {
                 <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/30, t, o-emera, l, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-gre, e, n-4, 0, 0/50">
                   <div, className="te, x, t-5xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2">85%</d, i, v>
                   <div, className="te, x, t-gre, e, n-100, fon, t-semibo, l, d">Cost, Reductio, n</d, i, v>
-=======
               <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12">";
                 <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/30, t, o-emera, l, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-gre, e, n-4, 0, 0/50">";
                   <div, className="te, x, t-5xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2">85%</d, i, v>";
@@ -82,7 +78,6 @@ const, AutonomousBusinessOperation, s = () => {
               </d, i, v>
               {/* CTA, Button, s */}
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <Li, n, k
   to="/conta, c, t"
@@ -92,7 +87,6 @@ const, AutonomousBusinessOperation, s = () => {
                   <Rocket, className="w-6 h-6  />
                   Start, Free, Consultation;
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <Rocket, className="w-6 h-6" />";
                   Start, Free, Consultation;
                   <ArrowRight, className="w-5 h-5" />";
@@ -127,7 +121,6 @@ const, AutonomousBusinessOperation, s = () => {
               <div, className="flex, item, s-center, ga, p-2">
                 <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
                 <span, className="fo, n, t-semibo, l, d">99.97% Uptime, SL, A</sp, a, n>
-=======
         <section, className="py-12, b, g-bla, c, k/20">";
           <div, className="container, m, x-auto, p, x-6">";
             <div, className="flex, fle, x-wrap, justif, y-center, item, s-center, ga, p-8, tex, t-bl, u, e-2, 0, 0">";
@@ -155,7 +148,6 @@ const, AutonomousBusinessOperation, s = () => {
           <div, className="te, x, t-center, m, b-16">
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
               Wh, a, t's, Included, in Your, Platfor, m;
-=======
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">";
           <div, className="te, x, t-center, m, b-16">";
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
@@ -172,7 +164,6 @@ const, AutonomousBusinessOperation, s = () => {
   r:sca, l, e-1, 0, 5">"
               <div, className="bg-bl, u, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-bl, u, e-4, 0, 0/30">
                 <Zap, className="w-8 h-8, tex, t-bl, u, e-3, 0, 0  />
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
             {/* Featur, e, 1 */}
@@ -202,7 +193,6 @@ const, AutonomousBusinessOperation, s = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <CheckCircle, className="w-4 h-4, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <ul, className="spa, c, e-y-2, tex, t-bl, u, e-200, tex, t-sm">";
                 <li, className="flex, item, s-start, ga, p-2">";
                   <CheckCircle, className="w-4 h-4, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0" />";
@@ -227,7 +217,6 @@ const, AutonomousBusinessOperation, s = () => {
   r:sca, l, e-1, 0, 5">"
               <div, className="bg-purp, l, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-purp, l, e-4, 0, 0/30">
                 <TrendingUp, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0  />
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, hove, r: bord, e, r-purp, l, e-4, 0, 0/80, transitio, n-all, hov, e
   r:sca, l, e-1, 0, 5">";
               <div, className="bg-purp, l, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-purp, l, e-4, 0, 0/30">";
@@ -254,7 +243,6 @@ const, AutonomousBusinessOperation, s = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <CheckCircle, className="w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <ul, className="spa, c, e-y-2, tex, t-purp, l, e-200, tex, t-sm">";
                 <li, className="flex, item, s-start, ga, p-2">";
                   <CheckCircle, className="w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0" />";
@@ -279,7 +267,6 @@ const, AutonomousBusinessOperation, s = () => {
   r:sca, l, e-1, 0, 5">"
               <div, className="bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-4, 0, 0/30">
                 <Shield, className="w-8 h-8, tex, t-gre, e, n-3, 0, 0  />
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, hove, r: bord, e, r-gre, e, n-4, 0, 0/80, transitio, n-all, hov, e
   r:sca, l, e-1, 0, 5">";
               <div, className="bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-4, 0, 0/30">";
@@ -306,7 +293,6 @@ const, AutonomousBusinessOperation, s = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <ul, className="spa, c, e-y-2, tex, t-gre, e, n-200, tex, t-sm">";
                 <li, className="flex, item, s-start, ga, p-2">";
                   <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0" />";
@@ -331,7 +317,6 @@ const, AutonomousBusinessOperation, s = () => {
   r:sca, l, e-1, 0, 5">"
               <div, className="bg-oran, g, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-oran, g, e-4, 0, 0/30">
                 <Users, className="w-8 h-8, tex, t-oran, g, e-3, 0, 0  />
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-oran, g, e-4, 0, 0/50, hove, r: bord, e, r-oran, g, e-4, 0, 0/80, transitio, n-all, hov, e
   r:sca, l, e-1, 0, 5">";
               <div, className="bg-oran, g, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-oran, g, e-4, 0, 0/30">";
@@ -358,7 +343,6 @@ const, AutonomousBusinessOperation, s = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <CheckCircle, className="w-4 h-4, tex, t-oran, g, e-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <ul, className="spa, c, e-y-2, tex, t-oran, g, e-200, tex, t-sm">";
                 <li, className="flex, item, s-start, ga, p-2">";
                   <CheckCircle, className="w-4 h-4, tex, t-oran, g, e-400, m, t-1, fle, x-shri, n, k-0" />";
@@ -383,7 +367,6 @@ const, AutonomousBusinessOperation, s = () => {
   r:sca, l, e-1, 0, 5">"
               <div, className="bg-cy, a, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-cy, a, n-4, 0, 0/30">
                 <Clock, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-4, 0, 0/50, hove, r: bord, e, r-cy, a, n-4, 0, 0/80, transitio, n-all, hov, e
   r:sca, l, e-1, 0, 5">";
               <div, className="bg-cy, a, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-cy, a, n-4, 0, 0/30">";
@@ -410,7 +393,6 @@ const, AutonomousBusinessOperation, s = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <CheckCircle, className="w-4 h-4, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <ul, className="spa, c, e-y-2, tex, t-cy, a, n-200, tex, t-sm">";
                 <li, className="flex, item, s-start, ga, p-2">";
                   <CheckCircle, className="w-4 h-4, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0" />";
@@ -435,7 +417,6 @@ const, AutonomousBusinessOperation, s = () => {
   r:sca, l, e-1, 0, 5">"
               <div, className="bg-indi, g, o-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-indi, g, o-4, 0, 0/30">
                 <DollarSign, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-indi, g, o-4, 0, 0/50, hove, r: bord, e, r-indi, g, o-4, 0, 0/80, transitio, n-all, hov, e
   r:sca, l, e-1, 0, 5">";
               <div, className="bg-indi, g, o-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-indi, g, o-4, 0, 0/30">";
@@ -462,7 +443,6 @@ const, AutonomousBusinessOperation, s = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <CheckCircle, className="w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <p, className="te, x, t-indi, g, o-100, m, b-4">";
                 We're, so, confident in, our, platform that, we, guarantee 3, 0, 0% ROI, within, 18 mont, h, s, or, your, money ba, c, k.';
               </p>
@@ -491,7 +471,6 @@ const, AutonomousBusinessOperation, s = () => {
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">
           <div, className="te, x, t-center, m, b-16">
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-=======
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">";
           <div, className="te, x, t-center, m, b-16">";
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
@@ -524,7 +503,6 @@ const, AutonomousBusinessOperation, s = () => {
                     </d, i, v>
                     <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0">
                       <CheckCircle, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
-=======
                   <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm">";
                     <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0">";
                       <CheckCircle, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />";
@@ -564,7 +542,6 @@ const, AutonomousBusinessOperation, s = () => {
                     </d, i, v>
                     <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-2, 0, 0">
                       <CheckCircle, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0  />
-=======
                   <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm">";
                     <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-2, 0, 0">";
                       <CheckCircle, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0" />";
@@ -604,7 +581,6 @@ const, AutonomousBusinessOperation, s = () => {
                     </d, i, v>
                     <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm">";
                     <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -628,7 +604,6 @@ const, AutonomousBusinessOperation, s = () => {
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">
           <div, className="te, x, t-center, m, b-16">
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-=======
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">";
           <div, className="te, x, t-center, m, b-16">";
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
@@ -640,7 +615,6 @@ const, AutonomousBusinessOperation, s = () => {
           </d, i, v>
           <div, className="gri, d, m
   d: gr, i, d-co, l, s-2, ga, p-8, ma, x-w-4xl, m, x-au, t, o">"
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, ma, x-w-4xl, m, x-au, t, o">";
             {/* Investme, n, t */}
             <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50">";
@@ -664,7 +638,6 @@ const, AutonomousBusinessOperation, s = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <ul, className="spa, c, e-y-3, tex, t-bl, u, e-1, 0, 0">";
                 <li, className="flex, item, s-start, ga, p-2">";
                   <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0" />";
@@ -706,7 +679,6 @@ const, AutonomousBusinessOperation, s = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <ul, className="spa, c, e-y-3, tex, t-gre, e, n-1, 0, 0">";
                 <li, className="flex, item, s-start, ga, p-2">";
                   <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0" />";
@@ -738,7 +710,6 @@ const, AutonomousBusinessOperation, s = () => {
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">
           <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r">
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
-=======
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">";
           <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r">";
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">";
@@ -754,7 +725,6 @@ const, AutonomousBusinessOperation, s = () => {
             >
               Read, Complete, Case Stu, d, y;
               <ArrowRight, className="w-5 h-5  />
-=======
               <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
@@ -763,7 +733,6 @@ const, AutonomousBusinessOperation, s = () => {
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">
           <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r">
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6">"
-=======
         <section, className="container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l">";
           <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r">";
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6">";
@@ -774,7 +743,6 @@ const, AutonomousBusinessOperation, s = () => {
             </p>
             <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8">";
               <Li, n, k
   to="/conta, c, t"
@@ -784,7 +752,6 @@ const, AutonomousBusinessOperation, s = () => {
                 <Rocket, className="w-5 h-5  />
                 Schedule, Free, Consultation;
                 <ArrowRight, className="w-5 h-5  />
-=======
                 <Rocket, className="w-5 h-5" />";
                 Schedule, Free, Consultation;
                 <ArrowRight, className="w-5 h-5" />";

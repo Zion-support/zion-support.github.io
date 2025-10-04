@@ -29,7 +29,6 @@
     email: string;
     address: string;
 
-
   }
 
 ;

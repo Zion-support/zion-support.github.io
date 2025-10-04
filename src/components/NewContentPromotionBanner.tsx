@@ -1,5 +1,4 @@
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
-=======
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";';
 interface, NewContentPromotionBannerProp, s {
 varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
@@ -19,7 +18,6 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
   ctaLi, n, k = "/bl, o, g"
   dismissib, l, e = tr, u, e
   classNa, m, e = ""
-=======
 const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p, s> = ({
   varia, n, t = 'in, f, o',';
   tit, l, e = "🚀 NEW, CONTEN, T: Fresh, Insight, s & Expert, Guide, s",";
@@ -49,7 +47,6 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
     err, o, r: "te, x, t-r, e, d-4, 0, 0"
     defau, l, t: "te, x, t-bl, u, e-4, 0, 0"
     premi, u, m: "te, x, t-purp, l, e-3, 0, 0"
-=======
     i, n, f
   o: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-1, 0, 0",";
     succe, s, s: "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, borde, r-gre, e, n-4, 0, 0/30, tex, t-gre, e, n-1, 0, 0",";
@@ -87,7 +84,6 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
               <div, className="flex, item, s-center, ga, p-1">
                 <TrendingUp, className={`w-4 h-4 ${iconClass, e, s[varia, n, t]} anima, t, e-boun, c, e`} />`;`
                 <span, className="te, x, t-xs, opacit, y-75">Trendi, n, g</sp, a, n>
-=======
       <div, className="relativ, e, z-10">";
         <div, className="flex, item, s-start, justif, y-betwe, e, n">";
           <div, className="fl, e, x-1">";
@@ -115,7 +111,6 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">
                   <BookOpen, className="w-3 h-3  />
                   <span, className="te, x, t-xs, fon, t-medi, u, m">Data, Engineerin, g</sp, a, n>
-=======
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">";
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">";
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">";
@@ -128,7 +123,6 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">
                   <Zap, className="w-3 h-3  />
                   <span, className="te, x, t-xs, fon, t-medi, u, m">Platform, Engineerin, g</sp, a, n>
-=======
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">";
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">";
                   <Zap, className="w-3 h-3" />";
@@ -140,7 +134,6 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">
                   <Sparkles, className="w-3 h-3  />
                   <span, className="te, x, t-xs, fon, t-medi, u, m">Gen, A, I</sp, a, n>
-=======
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">";
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">";
                   <Sparkles, className="w-3 h-3" />";
@@ -156,7 +149,6 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
             >
               {ctaTe, x, t}
               <ArrowRight, className="w-4 h-4  />
-=======
               <ArrowRight, className="w-4 h-4" />";
             </Li, n, k>
           </d, i, v>
@@ -167,7 +159,6 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
               ar, i, a-lab, e, l="Dismiss, banne, r"
             >
               <X, className="w-5 h-5, opacit, y-75, hove, r: opaci, t, y-1, 0, 0/>"
-=======
               <X, className="w-5 h-5, opacit, y-75, hove, r: opaci, t, y-1, 0, 0" />";
             </butt, o, n>
           )}

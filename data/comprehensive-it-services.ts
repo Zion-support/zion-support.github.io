@@ -1,6 +1,5 @@
 
 
-  
 export interface ComprehensiveITService 
   id: string;
   name: string;
@@ -33,7 +32,6 @@ export interface ComprehensiveITService
     email: string;
     address: string;
 
-  
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next - generation quantum - powered cloud infrastructure',
@@ -1271,7 +1269,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     reviews: 156;
 
   }
-
 
 export interface ComprehensiveITService {;
 

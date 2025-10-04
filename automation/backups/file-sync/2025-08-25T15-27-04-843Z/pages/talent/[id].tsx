@@ -5,7 +5,6 @@ import: { useParams } from;
 interface: TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>}
 
-
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const: fetchProfile = async () => {
@@ -25,7 +24,6 @@ interface: TalentProfileWithSocial extends TalentProfile {
   https: //github.com/talen,t}
           }
           setProfile(mockProfile);
-
 
         setLoading(false)}
     }

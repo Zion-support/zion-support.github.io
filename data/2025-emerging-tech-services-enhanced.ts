@@ -42,7 +42,6 @@ export interface EmergingTechService
     website: string;
   }
 
-  
       'Virtual experiences, Gaming, Education, Social interaction, Entertainment',
     ],
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
@@ -600,7 +599,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
     reviews: 11;
-
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
@@ -1260,7 +1258,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     customers: 18,;
     rating: 4.8;
     reviews: 11;
-
 
   }
 ];

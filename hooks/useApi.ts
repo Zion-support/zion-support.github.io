@@ -32,12 +32,7 @@ setLoading(false)}
 }
 }
 
-
-
-
 };import { useState, useEffect } from 'react';
-
-
 
 interface ApiState<T> 
 }import { useState, useEffect } from 'react';
@@ -62,7 +57,6 @@ export function use_api < T>(url: string, options?: RequestInit)
     data: null,
     loading: true,
     error: null,;
-
 
 export function useApi<T>(url: string, options?: RequestInit) 
   const [state, setState] = useState<ApiState<T>>(
@@ -145,7 +139,6 @@ export default function UseApi({ }: UseApiProps)
     </div>
   );
 
-
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -153,7 +146,6 @@ interface ApiState<T>
   data: T | null, loading: boolean,
   error: string | null,
 origin/automation-improvements-final
-
 
 interface ApiState<T> 
   data: T | null, loading: boolean,
@@ -187,16 +179,12 @@ export function useApi<T>(
     }
   }, [fetchData, options.immediate]);
 
-
     fetchData();
   }, [url, options]);
 
   return state;
 
 }
-
-
-
 
 }
 

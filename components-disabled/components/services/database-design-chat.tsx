@@ -8,7 +8,6 @@
 }
 return (;
 
-
   return (<div>;
       <Head>;
         <title > DatabaseDesignChat - Zion Tech Solutions</title>;

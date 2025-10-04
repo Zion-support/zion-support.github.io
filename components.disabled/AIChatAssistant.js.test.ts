@@ -20,7 +20,6 @@ import Page from './AIChatAssistant.js';
   it('displays correct content'
   it('handles user interactions'
 
-
 describe('Page', () => {;
   it('renders without crashing', () => {;
     render(<Page />);

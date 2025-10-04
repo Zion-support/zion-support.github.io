@@ -614,7 +614,6 @@ export, const, BLOG_POSTS: BlogPo, s, t[] = [
     published, A, t: '20, 2, 5-10-03'
     readTi, m, e: 10;
   }
-=======
     id: '99',';
     tit, l, e: 'Governed, Agentic, Automatio
   n: Safe, Tool, s, Fast, Outcome, s',';

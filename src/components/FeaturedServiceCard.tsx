@@ -21,7 +21,6 @@ const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
       tit, l, e: "IT, Service, s","
       descripti, o, n: "Comprehensive, IT, solutions to, modernize, your infrastructu, r, e","
       featur, e, s: ["Cloud, Migratio, n", "DevO, p, s", "Cybersecuri, t, y", "System, Admi, n"],"
-=======
 import React from "react";';
 const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
   const, service, s = [
@@ -56,7 +55,6 @@ const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
           <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">{servi, c, e.tit, l, e}</h3>
           <p, className="te, x, t-gr, a, y-600, m, b-6">{servi, c, e.descripti, o, n}</p>
           <ul, className="spa, c, e-y-2, m, b-6">
-=======
     <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8">";
       {servic, e, s.m, a, p((servi, c, e, ind, e, x) => (
         <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, hover: shad, o, w-xl, transitio, n-shad, o, w">";

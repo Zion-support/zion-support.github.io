@@ -6,7 +6,6 @@ const, October2025FreshContentBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0"></d, i, v>
-=======
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";
@@ -27,7 +26,6 @@ const, October2025FreshContentBanne, r = () => {
           </h2>
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">
             Fresh, insights, on DevSecOps, automatio, n, multimodal, customer, experience, autonomous, networkin, g;
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">";
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
@@ -44,7 +42,6 @@ const, October2025FreshContentBanne, r = () => {
         </d, i, v>
         {/* Featured, Articles, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-10">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - DevSecO, p, s */}
           <Li, n, k
@@ -55,7 +52,6 @@ const, October2025FreshContentBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Shield, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Shield, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0" />";
@@ -66,7 +62,6 @@ const, October2025FreshContentBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">";
               AI-Powered, DevSecOp, s & Continuous, Compliance, Automation 20, 2, 5;
             </h3>
@@ -81,7 +76,6 @@ const, October2025FreshContentBanne, r = () => {
                 <sp, a, n>$12M, avg, savings</sp, a, n>
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -94,7 +88,6 @@ const, October2025FreshContentBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-ro, s, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-ro, s, e-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Users, className="w-8 h-8, tex, t-ro, s, e-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-ro, s, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-ro, s, e-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Users, className="w-8 h-8, tex, t-ro, s, e-3, 0, 0" />";
@@ -105,7 +98,6 @@ const, October2025FreshContentBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-ro, s, e-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-ro, s, e-200, transitio, n-colo, r, s">";
               Re, a, l-Time, Multimodal, AI for, Enterprise, Customer Experience, 202, 5;
             </h3>
@@ -120,7 +112,6 @@ const, October2025FreshContentBanne, r = () => {
                 <sp, a, n>$18M, revenue, lift</sp, a, n>
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-ro, s, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-ro, s, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -133,7 +124,6 @@ const, October2025FreshContentBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-cy, a, n-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Network, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-cy, a, n-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Network, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" />";
@@ -148,7 +138,6 @@ const, October2025FreshContentBanne, r = () => {
             </h3>
             <p, className="te, x, t-bl, u, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
               Transform, network, management with, autonomous, SD-WAN, that, optimizes routi, n, g, predicts, failure, s;
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">";
               Autonomous, Network, Operations with, A, I-Driven, S, D-WAN, 202, 5;
             </h3>
@@ -163,7 +152,6 @@ const, October2025FreshContentBanne, r = () => {
                 <sp, a, n>$8.4M, saving, s</sp, a, n>
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -176,7 +164,6 @@ const, October2025FreshContentBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-viol, e, t-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-viol, e, t-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Lightbulb, className="w-8 h-8, tex, t-viol, e, t-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-viol, e, t-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-viol, e, t-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Lightbulb, className="w-8 h-8, tex, t-viol, e, t-3, 0, 0" />";
@@ -187,7 +174,6 @@ const, October2025FreshContentBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">";
               Advanced, Prompt, Engineering & Cha, i, n-of-Thought, Reasoning, 2025;
             </h3>
@@ -202,7 +188,6 @@ const, October2025FreshContentBanne, r = () => {
                 <sp, a, n>$22M, productivit, y</sp, a, n>
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -216,7 +201,6 @@ const, October2025FreshContentBanne, r = () => {
           >
             <sp, a, n>Read, All, Latest Articl, e, s</sp, a, n>
             <ArrowRight, className="w-6 h-6  />
-=======
             <ArrowRight, className="w-6 h-6" />";
           </Li, n, k>
           <p, className="te, x, t-purp, l, e-2, 0, 0/70, tex, t-sm, m, t-4">";
@@ -227,7 +211,6 @@ const, October2025FreshContentBanne, r = () => {
         <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">"
           <div, className="te, x, t-cent, e, r">
             <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, m, b-1">
-=======
         <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">";
           <div, className="te, x, t-cent, e, r">";
             <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, m, b-1">";

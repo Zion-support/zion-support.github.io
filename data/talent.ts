@@ -17,7 +17,6 @@ export type TalentProfile =
 // Stub talent data - placeholder for missing functionality
 export const TALENT_PROFILES = [
 
-  
     slug: 'ava-chen',
     name: 'Ava Chen',
     title: 'Senior LLM Engineer',

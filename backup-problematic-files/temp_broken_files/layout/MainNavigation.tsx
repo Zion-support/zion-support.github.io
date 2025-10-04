@@ -1,22 +1,8 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
           </ul>;"
           <div className="text-left">;"
 </div>
-
 
   Heart, MessageSquare, CreditCard,   ShoppingCart, Wallet ;"
  } from "lucide-react";"
@@ -60,11 +46,4 @@ const [loginOpen, setLoginOpen] = useState (false);
 const { ;
   count ;
  } = useFavorites ();
-
-
-
-
-
-
-
 

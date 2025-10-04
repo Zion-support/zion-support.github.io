@@ -8,7 +8,6 @@ const features = [;
     'Rotating proxies and geo targeting','
     'Webhook callbacks and REST API',;'
 
-
 }
 const features = [;
     'Parallel Playwright/Puppeteer execution','
@@ -16,7 +15,6 @@ const features = [;
     ''Artifacts': HAR, traces, screenshots, videos','
     'Rotating proxies and geo targeting','
     'Webhook callbacks and REST API',;'
-
 
 }
 const features = [;
@@ -26,11 +24,9 @@ const features = [;
     'Rotating proxies and geo targeting','
     'Webhook callbacks and REST API''
 
-
 const features = [;
   'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate 'limitsArtifacts': HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API''
   'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate "limitsArtifacts": HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API''
-
 
 }
 
@@ -54,7 +50,6 @@ export default function BrowserAutomationCloudPage() {
 import React from 'react','
 import SEO from '../components/SEO';'
 
-
 }
 
 export default function BrowserAutomationCloudPage() {
@@ -66,7 +61,6 @@ const features = [;
     'Rotating proxies and geo targeting','
     'Webhook callbacks and REST API','
 ];
-
 
 const features = [;
     'Parallel Playwright/Puppeteer execution''

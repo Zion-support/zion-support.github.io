@@ -1013,9 +1013,6 @@ export const real2036AIServices = [;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
 
-
-
-
 export const real2036AIServices = [
   
       'Autonomous vehicles',
@@ -1238,7 +1235,6 @@ export const real2036AIServices = [;
     useCases: [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
-
 
   }
 ];

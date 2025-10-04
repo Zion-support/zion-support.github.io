@@ -21,7 +21,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-
 import Head from 'next/head';
 import Link from 'next/link';
 import Button from '../components/ui/Button';
@@ -69,8 +68,6 @@ const "NotFound": React.FC = () => {;
     { "name": 'Privacy Policy', "url": '/privacy', "icon": Shield }
   ];
   return (
-
-
 
     <>;
       <Head>;

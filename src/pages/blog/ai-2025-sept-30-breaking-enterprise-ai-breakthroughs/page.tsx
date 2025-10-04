@@ -14,7 +14,6 @@ export, default, function BreakingEnterpriseAIBreakthroughs20, 2, 5(): Rea, c, t
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
           <p>
             Explore, eight, enterprise‑ready, patterns, you can, deploy, now: runtime, rollbac, k, K, P, I‑linked, scorecard, s;
-=======
         <meta name="descripti, o, n" content="8, productio, n‑ready, pattern, s: rollba, c, k, scorecar, d, s, consentless, analytic, s, and, mor, e." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-breaki, n, g-enterpri, s, e-ai-breakthroug, h, s" />";
       </Helmet>

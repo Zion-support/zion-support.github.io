@@ -65,7 +65,6 @@ export function usePerformanceMetrics() {
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
 
-
 main:hooks/usePerformanceMetrics.ts
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
       setMetrics({

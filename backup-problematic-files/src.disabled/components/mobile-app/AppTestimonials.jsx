@@ -31,5 +31,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <p>This component is under development.</p>
     </div>
 
-
 export default AppTestimonials;

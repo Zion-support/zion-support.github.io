@@ -1,7 +1,5 @@
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -15,12 +13,9 @@ export default async function handler(
 
   }
 
-
-
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
-
 
   }
   const store = getFraudStore();
@@ -43,10 +38,6 @@ export default async function handler(
   return res && res.status(200).json({ success: true, action: adminAction });
 
 }
-
-
-
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
@@ -91,8 +82,6 @@ if ( {) {
   return res.status (200).json ({ success: true, action: admin_action });
 }
 
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -117,9 +106,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
 

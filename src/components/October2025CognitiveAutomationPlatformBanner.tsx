@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, October2025CognitiveAutomationPlatformBanne, r: Rea, c, t.FC = () => {
   return (
@@ -13,7 +12,6 @@ const, October2025CognitiveAutomationPlatformBanne, r: Rea, c, t.FC = () => {
       {/* Animated, Backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(16,1, 8, 5,1, 2, 9,0.3),rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0))]  />
-=======
       <div, className="absolute, inse, t-0, opacit, y-20">";
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(16,1, 8, 5,1, 2, 9,0.3),rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0))]" />";
       </d, i, v>
@@ -33,7 +31,6 @@ const, October2025CognitiveAutomationPlatformBanne, r: Rea, c, t.FC = () => {
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">"
           <d, i, v>
             <h2, className="te, x, t-4xl, l, g: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
-=======
           <span, className="te, x, t-2, x, l">🧠🤖</sp, a, n>";
           <span, className="te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm">ENTERPRISE, REVOLUTIO, N: OCTOBE, R, 1, 20, 2, 5</sp, a, n>";
           <span, className="te, x, t-2, x, l">🚀💎</sp, a, n>";
@@ -49,7 +46,6 @@ const, October2025CognitiveAutomationPlatformBanne, r: Rea, c, t.FC = () => {
               </sp, a, n>
             </h2>
             <p, className="te, x, t-emera, l, d-100, tex, t-lg, m, b-6, leadin, g-relax, e, d">
-=======
             <p, className="te, x, t-emera, l, d-100, tex, t-lg, m, b-6, leadin, g-relax, e, d">";
               Ne, x, t-generation, cognitive, automation achiev, e, s <strong, className="te, x, t-whi, t, e">96% automation, rat, e</stro, n, g> wi, t, h ";
               <strong, className="te, x, t-whi, t, e"> 99.94% accura, c, y</stro, n, g>, creati, n, g <strong, className="te, x, t-whi, t, e">$15.7B, in, enterprise val, u, e</stro, n, g> acro, s, s ";
@@ -101,7 +97,6 @@ const, October2025CognitiveAutomationPlatformBanne, r: Rea, c, t.FC = () => {
   anima, t, e={{
                   sca, l, e: [1, 1.05, 1]
                   rota, t, e: [0, 3, 0]
-=======
           <div, className="hidden, l, g: blo, c, k">";
             <div, className="relati, v, e">";
               <moti, o, n.d, i, v
@@ -133,7 +128,6 @@ const, October2025CognitiveAutomationPlatformBanne, r: Rea, c, t.FC = () => {
                   </li>
                   <li, className="flex, item, s-start, ga, p-3">
                     <span, className="te, x, t-2, x, l">🌍</sp, a, n>
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Platform, Feature, s: </h3>";
                 <ul, className="spa, c, e-y-3, tex, t-emera, l, d-1, 0, 0">";
                   <li, className="flex, item, s-start, ga, p-3">";
@@ -167,7 +161,6 @@ const, October2025CognitiveAutomationPlatformBanne, r: Rea, c, t.FC = () => {
         >
           <p, className="te, x, t-emera, l, d-200, tex, t-sm">
             🏆 <strong, className="te, x, t-whi, t, e">ENTERPRISE, TRANSFORMATIO, N: </stro, n, g> Fortune, 50, Success Sto, r, y | 87% Cost, Reductio, n | 25x, Faster, Processing"
-=======
           <p, className="te, x, t-emera, l, d-200, tex, t-sm">";
             🏆 <strong, className="te, x, t-whi, t, e">ENTERPRISE, TRANSFORMATIO, N: </stro, n, g> Fortune, 50, Success Sto, r, y | 87% Cost, Reductio, n | 25x, Faster, Processing";
           </p>

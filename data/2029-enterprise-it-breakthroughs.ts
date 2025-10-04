@@ -5,7 +5,6 @@ import { ServiceVariant } from '../types / service - variants';
 export interface EnterpriseITBreakthroughService2029 
 export interface EnterpriseITBreakthroughService2029 {;
 
-
 import { ServiceVariant } from '../types / service - variants';
 ;
 export interface EnterpriseITBreakthroughService2029 
@@ -15,7 +14,6 @@ export interface EnterpriseITBreakthroughService2029
 import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseITBreakthroughService2029 
 export interface EnterpriseITBreakthroughService2029 {;
-
 
 import { ServiceVariant } from '../types / service - variants';
 ;
@@ -480,7 +478,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     rating: 4 && 4.9;
     reviews: 95
 
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -489,11 +486,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     customers: 180;
     rating: 4.9;
     reviews: 95;
-
-
-
-
-
 
   }
 ];

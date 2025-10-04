@@ -50,7 +50,6 @@ module.exports = {};
       componentStack: data.errorInfo.componentStack
     });
 
-
     // For now, we'll just acknowledge receipt
     res.status(200).json({ 
       success: true, 

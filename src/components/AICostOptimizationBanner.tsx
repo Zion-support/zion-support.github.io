@@ -1,7 +1,6 @@
 import React from "react";';
 impo, r, t {
 } fr, o, m "luci, d, e-rea, c, t";
-=======
 } fr, o, m "luci, d, e-rea, c, t";';
 const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
   const, costOptimizationConten, t = [
@@ -61,7 +60,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
       ic, o, n: '📊','
       metri, c, s: { va, l, u
   e: '$50, 0, M+', lab, e, l: 'Total, Saving, s' };
-=======
       tit, l, e: 'AI, Cost, Optimization Breakthro, u, g
   h: Cut, Spending, by 90%',';
       sl, u, g: 'ai-co, s, t-optimizati, o, n-breakthrou, g, h-20, 2, 6',';
@@ -124,7 +122,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-gre, e, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-te, a, l-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-gre, e, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -141,7 +138,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
             <TrendingDown, className="w-6 h-6, tex, t-emera, l, d-400, animat, e-pul, s, e  />
           </d, i, v>
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, vi, a-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">"
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">";
             <DollarSign, className="w-6 h-6, tex, t-gre, e, n-400, animat, e-pul, s, e" />";
@@ -168,7 +164,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
               <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">"
                 <div, className="te, x, t-4xl, m, b-3">{st, a, t.ic, o, n}</d, i, v>
                 <div, className="te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">";
             {[
               { va, l, u
@@ -192,7 +187,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
         {/* Featured, Content, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o">";
           {costOptimizationConte, n, t.m, a, p((conte, n, t, ind, e, x) => (
@@ -205,14 +199,12 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
               {/* Card, glow, effect */}
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-gre, e, n-5, 0, 0/0, vi, a-emera, l, d-5, 0, 0/0, t, o-te, a, l-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-gre, e, n-5, 0, 0/10, grou, p-hov, e, r:v, i, a-emera, l, d-5, 0, 0/10, grou, p-ho, v, e
   r:to-te, a, l-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0"></d, i, v>"
-=======
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-gre, e, n-5, 0, 0/0, vi, a-emera, l, d-5, 0, 0/0, t, o-te, a, l-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-gre, e, n-5, 0, 0/10, grou, p-hov, e, r:v, i, a-emera, l, d-5, 0, 0/10, grou, p-ho, v, e
   r:to-te, a, l-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0"></d, i, v>";
               <div, className="relativ, e, p-8">";
                 {/* Ic, o, n & Badg, e, s */}
                 <div, className="flex, item, s-start, justif, y-between, m, b-6">
                   <div, className="te, x, t-6xl, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
-=======
                 <div, className="flex, item, s-start, justif, y-between, m, b-6">";
                   <div, className="te, x, t-6xl, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
                     {conte, n, t.ic, o, n}
@@ -221,7 +213,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
                     {conte, n, t.trendi, n, g && (
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">
                         <TrendingDown, className="w-3 h-3  />
-=======
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">";
                         <TrendingDown, className="w-3 h-3" />";
                         <sp, a, n>SA, V, E</sp, a, n>
@@ -240,7 +231,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-gre, e, n-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">"
-=======
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-gre, e, n-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">";
                   {conte, n, t.tit, l, e}
                 </h3>
@@ -268,7 +258,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
                     {conte, n, t.readTi, m, e}
                   </sp, a, n>
                   <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c' })}</sp, a, n>;
-=======
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">";
                   <span, className="flex, item, s-center, ga, p-2">";
                     <Zap, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -284,7 +273,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Read, Optimization, Guide</sp, a, n>
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </Li, n, k>
               </d, i, v>
@@ -303,7 +291,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
   optimization, strategie, s. Get, your, free cost, optimization, audit tod, a, y.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/conta, c, t"
@@ -311,7 +298,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
   r:shad, o, w-gre, e, n-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <DollarSign, className="w-5 h-5  />
-=======
                   <DollarSign, className="w-5 h-5" />";
                   <sp, a, n>Get, Free, Cost Aud, i, t</sp, a, n>
                 </a>
@@ -322,7 +308,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Ca, l, l +1, 302, 464 09, 5, 0</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </a>
               </d, i, v>
@@ -336,7 +321,6 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
             { val, u, e: '5, 0, 0+', lab, e, l: 'Companies, Optimize, d' }
             { val, u, e: '90%', lab, e, l: 'Average, Cost, Reduction' }
             { val, u, e: '99.9%', lab, e, l: 'Accuracy, Maintaine, d' }
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8, m, t-20">";
           {[
             { va, l, u

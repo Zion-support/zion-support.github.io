@@ -77,8 +77,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     return null;
   }
 
-
-
       }
     } catch (err) {;
       logErrorToProduction('Failed to report error:', { data:err });

@@ -18,7 +18,6 @@ F, C, P?: numb, e, r; // First, Contentful, Paint
  */
 export, const, prefetchResources = (ur, l, s: stri, n, g[]): vo, i, d => {
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;
-=======
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
   ur, l, s.forEa, c, h(u, r, l => {
     const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';
@@ -32,7 +31,6 @@ export, const, prefetchResources = (ur, l, s: stri, n, g[]): vo, i, d => {
  */
 export, const, preconnectDomains = (domai, n, s: stri, n, g[]): vo, i, d => {
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;
-=======
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
   domai, n, s.forEa, c, h(doma, i, n => {
     const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';
@@ -48,7 +46,6 @@ export, const, preconnectDomains = (domai, n, s: stri, n, g[]): vo, i, d => {
 export, const, lazyLoadImages = (): vo, i, d => {
   if (typeof, windo, w === 'undefin, e, d') retu, r, n;
   if (!('IntersectionObserv, e, r' in, windo, w)) retu, r, n;
-=======
   if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
   if (!('IntersectionObserv, e, r' in, windo, w)) retu, r, n;';
   const, imageObserve, r = new, IntersectionObserve, r((entri, e, s) => {
@@ -68,7 +65,6 @@ export, const, lazyLoadImages = (): vo, i, d => {
     thresho, l, d: 0.01
   });
   docume, n, t.querySelectorA, l, l('i, m, g[da, t, a-s, r, c]').forEa, c, h(i, m, g => {;
-=======
     rootMarg, i, n: '50px, 0p, x',';
     thresho, l, d: 0.01
   });
@@ -86,7 +82,6 @@ export, function, debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
 ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
 let, timeou, t: Node, J, S.Timeo, u, t | nu, l, l = nu, l, l;
 return, function, executedFunction(...ar, g, s: Paramete, r, s<T>) {
-=======
 export, function, debounce<T, extend, s (...a, r, g
   s: a, n, y[]) => a, n, y>(
   fu, n, c: T
@@ -111,7 +106,6 @@ export, function, throttle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
   lim, i, t: numb, e, r
 ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
   let, inThrottl, e: boole, a, n
-=======
   let, inThrottl, e: boole, a, n;
   return, function, executedFunction(...a, r, g
   s: Paramete, r, s<T>) {
@@ -132,7 +126,6 @@ export, const, measurePageLoad = (): WebVitalsMetri, c, s | nu, l, l => {
   retu, r, n {
     F, C, P: navigati, o, n?.responseSta, r, t - navigati, o, n?.fetchSta, r, t
     TT, F, B: perfDa, t, a.responseSta, r, t - perfDa, t, a.navigationSta, r, t;
-=======
   if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) return, nul, l;';
   const, perfDat, a = wind, o, w.performan, c, e.timi, n, g;
   const, navigatio, n = wind, o, w.performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as, PerformanceNavigationTimin, g;';
@@ -155,7 +148,6 @@ export, const, reportWebVitals = (metri, c, s: WebVitalsMetri, c, s): vo, i, d =
           val, u, e: Ma, t, h.rou, n, d(val, u, e)
           event_catego, r, y: 'Web, Vital, s'
           non_interacti, o, n: tr, u, e;
-=======
   conso, l, e.l, o, g('Web, Vita, l
   s: ', metri, c, s);';
   // Send, to, analytics servi, c, e
@@ -177,7 +169,6 @@ export, const, reportWebVitals = (metri, c, s: WebVitalsMetri, c, s): vo, i, d =
 export, const, shouldUseWebP = (): boole, a, n => {
   if (typeof, windo, w === 'undefin, e, d') return, fals, e;
   const, canva, s = docume, n, t.createEleme, n, t('canv, a, s');
-=======
   if (typeof, windo, w === 'undefin, e, d') return, fals, e;';
   const, canva, s = docume, n, t.createEleme, n, t('canv, a, s');';
   canv, a, s.wid, t, h = canv, a, s.heig, h, t = 1;
@@ -190,7 +181,6 @@ export, const, getConnectionQuality = (): 'sl, o, w' | 'medi, u, m' | 'fa, s, t'
   if (typeof, navigato, r === 'undefin, e, d') retu, r, n 'medi, u, m';
   const, connectio, n = (navigator, as, any).connecti, o, n || (navigator, as, any).mozConnecti, o, n || (navigator, as, any).webkitConnecti, o, n;
   if (!connecti, o, n) retu, r, n 'medi, u, m';
-=======
 export, const, getConnectionQuality = (): 'sl, o, w' | 'medi, u, m' | 'fa, s, t' => {';
   if (typeof, navigato, r === 'undefin, e, d') retu, r, n 'medi, u, m';';
   const, connectio, n = (navigator, as, any).connecti, o, n || (navigator, as, any).mozConnecti, o, n || (navigator, as, any).webkitConnecti, o, n;
@@ -207,7 +197,6 @@ export, const, shouldLoadHeavyAssets = (): boole, a, n => {
   const, qualit, y = getConnectionQuali, t, y();
   const, saveDat, a = typeof, navigato, r !== 'undefin, e, d' && (navigator, as, any).connecti, o, n?.saveDa, t, a;
   return, qualit, y === 'fa, s, t' && !saveDa, t, a;
-=======
   const, saveDat, a = typeof, navigato, r !== 'undefin, e, d' && (navigator, as, any).connecti, o, n?.saveDa, t, a;';
   return, qualit, y === 'fa, s, t' && !saveDa, t, a;';
 };
@@ -220,7 +209,6 @@ export, const, requestIdleCallback = (callba, c, k: IdleRequestCallba, c, k): nu
     return, windo, w.requestIdleCallba, c, k(callba, c, k);
   }
   // Fallback, for, browsers that, do, n't, support, requestIdleCallback;
-=======
   if (typeof, windo, w === 'undefin, e, d') retur, n, 0;';
   if ('requestIdleCallba, c, k' in, windo, w) {';
     return, windo, w.requestIdleCallba, c, k(callba, c, k);
@@ -240,7 +228,6 @@ export, const, requestIdleCallback = (callba, c, k: IdleRequestCallba, c, k): nu
 export, const, cancelIdleCallback = (id: numb, e, r): vo, i, d => {
   if (typeof, windo, w === 'undefin, e, d') retu, r, n;
   if ('cancelIdleCallba, c, k' in, windo, w) {;
-=======
   if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
   if ('cancelIdleCallba, c, k' in, windo, w) {';
     wind, o, w.cancelIdleCallba, c, k(id);
@@ -256,7 +243,6 @@ export, const, preloadRoute = (rou, t, e: stri, n, g): vo, i, d => {
   const, lin, k = docume, n, t.createEleme, n, t('li, n, k');
   li, n, k.r, e, l = 'prefet, c, h';
   li, n, k.as = 'scri, p, t';
-=======
   if (typeof, documen, t === 'undefin, e, d') retu, r, n;';
   const, lin, k = docume, n, t.createEleme, n, t('li, n, k');';
   li, n, k.r, e, l = 'prefet, c, h';';
@@ -270,7 +256,6 @@ export, const, preloadRoute = (rou, t, e: stri, n, g): vo, i, d => {
 export, const, monitorLongTasks = (callba, c, k: (entr, i, e
   s: PerformanceEntryLi, s, t) => vo, i, d): PerformanceObserv, e, r | nu, l, l => {
   if (typeof, windo, w === 'undefin, e, d' || !('PerformanceObserv, e, r' in, windo, w)) return, nul, l;
-=======
   if (typeof, windo, w === 'undefin, e, d' || !('PerformanceObserv, e, r' in, windo, w)) return, nul, l;';
   t, r, y {
     const, observe, r = new, PerformanceObserve, r((li, s, t) => {
@@ -280,7 +265,6 @@ export, const, monitorLongTasks = (callba, c, k: (entr, i, e
     return, observe, r;
   } cat, c, h (e) {
     conso, l, e.wa, r, n('Long, task, monitoring not, supporte, d: ', e);'
-=======
     conso, l, e.wa, r, n('Long, task, monitoring not, supporte, d: ', e);';
     return, nul, l;
   }
@@ -291,7 +275,6 @@ export, const, monitorLongTasks = (callba, c, k: (entr, i, e
 export, const, cacheStaticAssets = asy, n, c (ur, l, s: stri, n, g[]): Promi, s, e<vo, i, d> => {
   if (typeof, cache, s === 'undefin, e, d') retu, r, n;
   const, cach, e = await, cache, s.op, e, n('stat, i, c-asse, t, s-v1');
-=======
   if (typeof, cache, s === 'undefin, e, d') retu, r, n;';
   const, cach, e = await, cache, s.op, e, n('stat, i, c-asse, t, s-v1');';
   await, cach, e.addA, l, l(ur, l, s);
@@ -301,7 +284,6 @@ export, const, cacheStaticAssets = asy, n, c (ur, l, s: stri, n, g[]): Promi, s,
  */
 export, const, clearOldCaches = asy, n, c (currentVersi, o, n: stri, n, g): Promi, s, e<vo, i, d> => {
   if (typeof, cache, s === 'undefin, e, d') retu, r, n;
-=======
   if (typeof, cache, s === 'undefin, e, d') retu, r, n;';
   const, cacheName, s = await, cache, s.ke, y, s();
   await, Promis, e.a, l, l(
@@ -326,7 +308,6 @@ violati, o, n
 } => {
   const, violation, s: stri, n, g[] = []
   if (typeof, windo, w === 'undefin, e, d' || !wind, o, w.performan, c, e) {;
-=======
 export, const, checkPerformanceBudget = (budg, e, t: PerformanceBudg, e, t): {
 pass, e, d: boole, a, n;
 violati, o, n

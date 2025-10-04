@@ -6,8 +6,6 @@
 
 let prisma: PrismaClient;
 
-
-
   let req: ReturnType<typeof createRequest>
   let res: ReturnType<typeof createResponse>
   beforeEach(() => 
@@ -45,7 +43,6 @@ let prisma: PrismaClient;
       // findMany will be called with IDs from filteredMockRawResults
       const expectedProductIds = filteredMockRawResults.map(p => p.id);
       (prisma.product.findMany as jest.Mock).mockImplementation(
-
 
       // 2. Create mock request and response;
       const: { req, res } = createMocks(

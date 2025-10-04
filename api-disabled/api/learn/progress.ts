@@ -1,8 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 
@@ -12,7 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const { userId = 'demo-user' } = req && req.query;
 
       const user = users[userId as string];
-
 
   }
 

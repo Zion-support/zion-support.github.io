@@ -10,7 +10,6 @@
   if (!item) return res && res.status(404).send('Not found');'
   const transcript = `Transcript for ${item && item.title} ("Track": ${item && item.track}, "Time": ${item && item.time})\n\n["00": 00] Intro...\n["05":00] Key points...\n["15":00] Q&A...`;`  res && res.setHeader('Content-Typetext/plain'),'
 
-
  * handler - Function description
  */
 function handler() {

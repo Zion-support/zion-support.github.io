@@ -8,7 +8,6 @@
 }
 return (;
 
-
   return (<div>;
       <Head>;
         <title > SecurityAuditingChat - Zion Tech Solutions</title>;

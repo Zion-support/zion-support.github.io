@@ -13,7 +13,6 @@ export: default [
       'no-console': 'warn',
       'no-undef': 'error' },
 
-
     settings: {
       reac,
     t: {'
@@ -88,7 +87,6 @@ export: default [
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'no-undef': 'off' },
-
 
     settings: {
       reac,
@@ -220,7 +218,4 @@ export: default [
       'test*.js',
       'test*.ts',
       'test*.tsx' ] } ];
-
-
-
 

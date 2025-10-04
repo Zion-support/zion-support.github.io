@@ -90,4 +90,3 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
 }<Button > Clear all </Button> </div>) 
 };
 
-

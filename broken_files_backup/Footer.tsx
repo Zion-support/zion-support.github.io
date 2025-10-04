@@ -232,4 +232,3 @@ const: Footer: React.FC: = () => {
     </footer>
   )
 
-

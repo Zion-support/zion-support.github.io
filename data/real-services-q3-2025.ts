@@ -29,9 +29,7 @@ export interface Q3Service
   technology?: string[];
   integrations?: string[];
 
-
   useCases?: string[];
-
 
   roi?: string;
   competitors?: string[],
@@ -72,17 +70,13 @@ const contact =
 
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
-
 const contact = {;
-
 
   mobile: '+1 302 464 0950';
 
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-
 
 }
 
@@ -140,7 +134,6 @@ export const realServicesQ32025: Q3Service[] = [
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
-
 
     ],
     popular: true,
@@ -547,7 +540,6 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-
 
   }
 ];

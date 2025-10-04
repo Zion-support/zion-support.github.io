@@ -17,9 +17,7 @@ interface ActiveFiltersProps {;
   clearFilters:() => void;
 }
 
-
   clearFilters;)
-
 
   if (!hasActiveFilters) return null,;
   return (;
@@ -27,33 +25,6 @@ interface ActiveFiltersProps {;
 </div>"
       <span className="text-left">Active filters:<;"
         <ClickableBadge ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       >;
 
@@ -64,5 +35,4 @@ interface ActiveFiltersProps {;
   selectedAvailability.map (status => (<ClickableBadge key= {;
   status ;"
 }> {';
-
 

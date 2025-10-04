@@ -6,9 +6,7 @@ import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
 
-
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
-
 
   if (
     !id |
@@ -17,16 +15,9 @@ import {
     typeof fileName !== "string"
   ) {
 
-
-
-
   }
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
-
-
-
-
 

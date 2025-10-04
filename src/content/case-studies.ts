@@ -167,7 +167,6 @@ export, const, caseStudies: CaseStu, d, y[] = [
     technologi, e, s: ["R, A, G", "Vector, D, B", "TypeScri, p, t", "Open, A, I", "ClickHou, s, e"]
     durati, o, n: "10, week, s"
     imageU, r, l: "/imag, e, s/ca, s, e-studi, e, s/enterpri, s, e-r, a, g.j, p, g"
-=======
     i
   d: "glob, a, l-ener, g, y-digit, a, l-tw, i, n-85, 0, m",";
     tit, l, e: "Global, Energy, Corporatio

@@ -1,7 +1,6 @@
 import React from "react";
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 impo, r, t { Sparkl, e, s } fr, o, m "luci, d, e-rea, c, t";
-=======
 import React from "react";';
 impo, r, t {
 Li, n, k;
@@ -34,7 +33,6 @@ const, NewContentShowcase202, 5: Rea, c, t.FC = () => {
       tit, l, e: "⚙️ AI, Predictive, Maintenance","
       descripti, o, n: "85% downtime, reduction, with 98% prediction, accurac, y","
       li, n, k: "/servic, e, s/ai-predicti, v, e-maintenan, c, e","
-=======
       tit, l, e: "🎭 Multimodal, AI, Revolution",";
       descripti, o, n: "Unified, visio, n-langua, g, e-audio, processing, with 98% accura, c, y",";
       li, n, k: "/bl, o, g/multimod, a, l-ai-revoluti, o, n-20, 2, 5",";
@@ -67,7 +65,6 @@ const, NewContentShowcase202, 5: Rea, c, t.FC = () => {
             <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e  />
             <h2, className="te, x, t-4xl, fon, t-bo, l, d">2025, Breakthrough, Content</h2>
             <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-=======
     <section, className="py-16, b, g-gr, a, y-900, tex, t-whi, t, e">";
       <div, className="container, m, x-auto, p, x-6">";
         <div, className="text-center mb-12">";
@@ -82,7 +79,6 @@ const, NewContentShowcase202, 5: Rea, c, t.FC = () => {
         </d, i, v>
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6">";
           {highligh, t, s.m, a, p((it, e, m, ind, e, x) => (
@@ -94,7 +90,6 @@ const, NewContentShowcase202, 5: Rea, c, t.FC = () => {
               <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${it, e, m.col, o, r} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-20, transitio, n-opaci, t, y`}></d, i, v>`;`
               <h3, className="te, x, t-xl, fon, t-bold, m, b-3, relative, z-10">{it, e, m.tit, l, e}</h3>
               <p, className="te, x, t-gr, a, y-300, tex, t-sm, relative, z-10">{it, e, m.descripti, o, n}</p>
-=======
               <h3, className="te, x, t-xl, fon, t-bold, m, b-3, relative, z-10">{it, e, m.tit, l, e}</h3>";
               <p, className="te, x, t-gr, a, y-300, tex, t-sm, relative, z-10">{it, e, m.descripti, o, n}</p>";
             </Li, n, k>

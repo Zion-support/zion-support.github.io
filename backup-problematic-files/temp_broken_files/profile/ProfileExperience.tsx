@@ -1,8 +1,6 @@
 
 import { Briefcase } from 'lucide-react';
 
-
-
 export function ProfileExperience({ experience } ProfileExperienceProps) {;
   return (;
     <div className="text-left">;"
@@ -15,9 +13,6 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
                 <Briefcase className="text-left" />;"
               </div>;
             <div>;
-
-
-
 
   experience.map ( (exp) => (<div key= {;
   exp.id ";

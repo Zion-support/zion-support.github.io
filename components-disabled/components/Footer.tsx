@@ -119,9 +119,6 @@ export default function Footer() {
                 <span>+1 302 464 0950<
                 <Mail className="text-left" />"
                 <span>kleber@ziontechgroup.com<"
-          
-
-
 
                 <span>kleber@ziontechgroup.com<
         <div className="text-left">"

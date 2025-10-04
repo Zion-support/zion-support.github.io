@@ -1,6 +1,5 @@
 
 
-
   id: string;
   name: string;
   tagline: string;
@@ -41,10 +40,8 @@
   benefits: string[];
   capabilities: string[];
 
-
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
-
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
@@ -518,9 +515,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
 
-
   }
 ];
-
-
 

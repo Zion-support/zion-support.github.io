@@ -1,11 +1,6 @@
 
 
-
-
-
-
         <section className=\"py-20 bg-white\">
-
 
     { number": '50+, "label: Happy Clients' }
     { number": '99.9%, "label: Uptime Guarantee' }
@@ -15,9 +10,6 @@
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
             <div className=\"text-center mb-16\">
               <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">
-
-
-
 
               ))}
             </div>
@@ -52,14 +44,12 @@
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600\">
 
-
                     <li key={featureIndex} className=\"flex items-center gap-x-2\">
                       <CheckCircle className=\"h-4 w-4 text-blue-600\"  />
                       <span className=\"text-sm text-gray-700\">{feature}<
                     </li>
                   ))}
                 </ul>
-
 
                 </ul>
                 <div className=\"flex items-center justify-between mb-4\">
@@ -74,7 +64,6 @@
                 </div>
               </p>
             </div>
-
 
               </p>
             </div>
@@ -95,21 +84,10 @@
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
 
-
-
                 <div className="text-left">
-
 
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
-
-
-
-
-
-
-
-
 
                 </div>
                   <Phone className="text-left" />
@@ -118,14 +96,9 @@
                 <p className=\"text-gray-600 mb-4\">Call us for immediate assistance</p>
                 <a href=\"tel:+13024640950\" className=\"text-blue-600 font-semibold hover:text-blue-700 transition-colors\">
 
-
-
                   <Mail className="text-left" />
 
-
-
                   <Mail className="text-left" />
-
 
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\>Email</h3>
                 <p className=\text-gray-600 mb-4\">Send us a message anytime</p>
@@ -136,7 +109,4 @@
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600 mb-4\">Visit our headquarters</p>
                 <address className=\"text-blue-600 font-semibold not-italic\">
-
-
-
 

@@ -1,7 +1,6 @@
 export: interface AdvancedCybersecurityService {
   id: string;
 
-
   realImplementation: boolean;
     id: 'quantum-resistant-encryption-suite',
     name: 'Quantum-Resistant Encryption Suite',

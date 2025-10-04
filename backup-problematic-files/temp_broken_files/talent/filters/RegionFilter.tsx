@@ -42,11 +42,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
             </div>;          ))}
         </div>;
 
-
-
 :temp_broken_files/talent/filters/RegionFilter.tsx
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
-
-
 

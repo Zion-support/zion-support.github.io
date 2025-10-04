@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />;

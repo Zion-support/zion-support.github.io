@@ -1,25 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>;
           <div className=\text-center mt-16\">;
             <h2 className=\"text-3xl font-bold text-gray-900 mb-4\>Ready to Get Started?</h2>;
@@ -32,8 +12,6 @@
             <div className=\flex flex-col sm:flex-row gap-4 justify-center\">;
               <Link
 
-
                 href=\"/contact\
                 className=\bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\">;
-
 

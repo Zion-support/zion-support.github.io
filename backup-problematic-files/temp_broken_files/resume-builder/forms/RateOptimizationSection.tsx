@@ -1,7 +1,5 @@
 
 
-
-
   FormMessage;"
 } from "@/components/ui/form",;""
 import { Input } from "@/components/ui/input";""
@@ -10,23 +8,14 @@ import { Card, CardContent } from "@/components/ui/card";"
 ;
 interface RateOptimizationSectionProps {;
 
-
-
-
 export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({;
 "
     <div className="text-left">;"
 </div>
       <FormField;
 
-
-
-
                 {...field}
               />;
-
-
-
 
       <Card>;
         <CardContent className="text-left">;"

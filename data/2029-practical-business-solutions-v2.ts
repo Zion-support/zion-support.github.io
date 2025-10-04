@@ -656,15 +656,11 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 }
   return practicalBusinessSolutions2029.filter(service => service.popular);
 
-
 };
 
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => 
   return practicalBusinessSolutions2029.filter(service => service.category === category)
 };
-
-
-
 
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => 
   return practicalBusinessSolutions2029.filter(service => {;
@@ -1195,10 +1191,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 ];
 
-
-
 export const getPopularPracticalBusinessSolutions2029 = () => {;
-
 
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
@@ -2489,10 +2482,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     return price >= minPrice && price <= maxPrice;
   });
 
-
-
 };
-
 
 };
 };

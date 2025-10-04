@@ -4,7 +4,6 @@ const navigation = [;
     { "name": 'Home', "href": '/','
     { "name": 'Home', "href": '/','
 
-
 return (<nav className="text-left">;"
       <div className="text-left"sm":px-6 "lg":px-8">;"
         <div className="text-left">;"
@@ -22,15 +21,12 @@ const Navigation = (
 const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 ];
 
-
-
 return (;
     <nav className="text-left">"
       <div className="text-left"sm": px-6 "lg":px-8">"
         <div className="text-left">"
           {/* Logo */}
           {/* Logo *
-
 
 import React, { useState } from "react";"
 import Link from "next/link";"
@@ -46,7 +42,6 @@ import {
                         {services && services.map((service, index) => {;
                           }
                           const IconComponent = service && service.icon;
-
 
                 className="text-left"hover":text - blue - 600 font - medium transition - colors";"
                         {services && services.map((service, index) => {;
@@ -74,7 +69,6 @@ import {
                           <ArrowRight className="text-left" />;"
                         {solutions && solutions.map((solution, index) => {;
                           }
-
 
   }
   const [isOpen, setIsOpen] = useState(false);

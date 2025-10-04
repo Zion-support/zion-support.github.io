@@ -1,11 +1,7 @@
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
-
-
 
 const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
@@ -112,13 +108,10 @@ export default async function handler(req, res) {
   }
 }
 
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
   }
 }
-
-
 

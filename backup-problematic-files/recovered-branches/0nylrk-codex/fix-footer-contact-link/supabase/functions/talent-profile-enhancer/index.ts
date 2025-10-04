@@ -137,7 +137,6 @@ interface TalentProfileData {_name: string;
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )    }
 
-
     // Create a request to OpenAI API
 
     return new Response(

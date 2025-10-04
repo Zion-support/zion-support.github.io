@@ -14,7 +14,6 @@ export, default, function GenAICostOptimizationBluepri, n, t(): Rea, c, t.J, S, 
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Cost, Optimization Bluepri, n, t</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Tie, r, s, Cach, e, s, Budge, t, s</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-co, s, t-optimizati, o, n-bluepri, n, t"
          />
       </Helmet>

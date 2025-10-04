@@ -37,14 +37,10 @@
         role="button"
         tabIndex={0}
 
-
         <span>Focusable Element<
       </AccessibilityEnhancer>
 
-
-
   focus: ring-,2,
-
 
     const element = screen.getByRole('button');
     expect(element).toHaveClass(
@@ -52,7 +48,6 @@
       'focus:ring-2',
       'focus:ring-blue-500'
     )});
-
 
   it('disables focus when not focusable', () => 
     render(

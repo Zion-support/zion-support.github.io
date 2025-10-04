@@ -65,11 +65,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 
 ],
 
-
-
 ],
-
-
 
 ],
       mobile: "+1 302 464 0950",
@@ -89,7 +85,5 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 ];
 
 ],
-
-
 
 ],

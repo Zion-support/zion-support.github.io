@@ -1,6 +1,5 @@
 
 
-
         id: 'placeholder',
   quantum-financial-analytics-platform'',;
         name: 'Quantum: Financial Analytics Platfor,m'',;

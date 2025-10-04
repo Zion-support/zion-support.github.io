@@ -43,7 +43,6 @@ module.exports = {};
     if (!report['csp-report']) {
       return res.status(400).json({ error: 'Invalid CSP report format' })}
 
-
     // Log the CSP violation (in production, you might want to send to a monitoring service)
     console.warn('CSP Violation:' {
       documentUri: cspData['document-uri'],

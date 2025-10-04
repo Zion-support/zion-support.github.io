@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
-
 import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
@@ -20,11 +19,9 @@ export default function EnhancedServicesShowcase() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),;
 </string>
 
-
     mobile: '+1 302 464 0950';,;
     email: 'kleber@ziontechgroup.com';,;
     address: '364 E Main St STE 1008 Middletown DE 19709';,;
-
 
     { id: 'all';, name: 'All Services';, icon: '';, count: allServices.length ;},;
     { id: 'next-gen-ai';, name: 'ArrowRight-Gen AI';, icon: '';, count: nextGenerationAIServices.length ;},;
@@ -42,13 +39,11 @@ export default function EnhancedServicesShowcase() {;
     { id: 'customers';, name: 'Customer Count' ;},;
     { id: 'popularity';, name: 'Popularity' ;}
 
-
     hidden: { opacity:0 ;},;
     visible:{;
       opacity: 1;,;
       transition:{;
         staggerChildren: 0.1;,;
-
 
     hidden: { opacity:0;, y: 30 ;},;
     visible:{;
@@ -56,7 +51,6 @@ export default function EnhancedServicesShowcase() {;
       y: 0;,;
       transition:{;
         duration: 0.6;,;
-
 
       title: ' ArrowRight-Generation AI Services';,,
   description: 'Revolutionary AI platforms that push the boundaries of what\'s possible';,;
@@ -73,7 +67,6 @@ export default function EnhancedServicesShowcase() {;
       title: ' Innovative Micro SaaS Solutions';,,
   description: 'Creative and practical SaaS tools for every business need';,;
       services: innovativeMicroSaasV2Services.slice(0;, 3),;
-
 
     <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">;"
 "
@@ -173,7 +166,6 @@ pr-12325
                     onChange={(e) => setSelectedCategory(e.target.value)}
 </select>
 
-
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                       <option key={option.id} value={option.id}>;
@@ -265,7 +257,6 @@ pr-12325
                   href="/pricing";""
                   <DollarSign className="text-left" />;"
         </section>;
-
 
       {children}
     </button>;

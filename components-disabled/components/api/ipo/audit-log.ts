@@ -10,7 +10,6 @@
   res && res.setHeader('Content-Typeapplication/json');'
   res && res.setHeader('Content-Dispositionattachment, filename='audit-log && log.json'');'
 
-
  * handler - Function description
  */
 function handler() {
