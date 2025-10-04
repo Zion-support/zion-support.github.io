@@ -1,9 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
+=======
+
+const EnhancedFooter: React.FC = () => {
+  const current_year = new Date().getFullYear();
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
   
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },
@@ -31,6 +37,7 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
+<<<<<<< HEAD
   const resources = [
     { name: 'Documentation', href: '/resources/documentation' },
     { name: 'API Reference', href: '/resources/api' },
@@ -77,36 +84,81 @@ const EnhancedFooter: React.FC = () => {
                   <Link to={service.href} className="text-gray-300 hover:text-white transition-colors">
                     {service.name}
                   </Link>
+=======
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.name}
+                  </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
                 </li>
               ))}
             </ul>
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* Products */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
               {products.map((product) => (
                 <li key={product.name}>
+<<<<<<< HEAD
                   <Link to={product.href} className="text-gray-300 hover:text-white transition-colors">
                     {product.name}
                   </Link>
+=======
+                  <a
+                    href={product.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {product.name}
+                  </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
                 </li>
               ))}
             </ul>
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* Company */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
+<<<<<<< HEAD
                   <Link to={item.href} className="text-gray-300 hover:text-white transition-colors">
                     {item.name}
                   </Link>
+=======
+                  <a
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8">
@@ -131,10 +183,22 @@ const EnhancedFooter: React.FC = () => {
                 <p className="text-sm text-gray-400">Address</p>
                 <p className="text-white">123 Tech Street, Innovation City</p>
               </div>
+=======
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>Zion Tech Group</p>
+              <p>Advanced AI & IT Solutions</p>
+              <p>Email: info@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
@@ -152,6 +216,12 @@ const EnhancedFooter: React.FC = () => {
               </Link>
             </div>
           </div>
+=======
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © {current_year} Zion Tech Group. All rights reserved.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
         </div>
       </div>
     </footer>

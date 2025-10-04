@@ -1,6 +1,10 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
+<<<<<<< HEAD
 const PROD_DOMAIN = process.env.PROD_DOMAIN || 'https://ziontechgroup.com';
+=======
+const PROD_DOMAIN = 'https://ziontechgroup.com';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -9,6 +13,7 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
+<<<<<<< HEAD
 
   const { productId, userId } = req.body || {};
   if (!productId || !userId) {
@@ -39,4 +44,25 @@ async function handler(req, res) {
   }
 }
 
+=======
+
+  const { productId, userId } = req.body || {};
+
+  try {
+    // Create checkout session logic here
+    const session = {
+      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
+      url: `${PROD_DOMAIN}/checkout/success`,
+      productId,
+      userId
+    };
+
+    res.status(200).json({ session });
+  } catch (err) {
+    console.error('Checkout session error:', err);
+    res.status(500).json({ error: err.message });
+  }
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
 export default withErrorLogging(handler);

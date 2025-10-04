@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
 
 interface ModernNavigationProps {
   className?: string;
@@ -24,6 +28,7 @@ export default function ModernNavigation({
   };
 
   return (
+<<<<<<< HEAD
     <nav className={`bg-white shadow-sm ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -77,5 +82,11 @@ export default function ModernNavigation({
         )}
       </div>
     </nav>
+=======
+    <div className={className}>
+      <h1>ModernNavigation</h1>
+      <p>This component is currently under development.</p>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0588
   );
 }
