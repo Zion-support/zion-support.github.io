@@ -88,7 +88,7 @@ class AdvancedPerformanceOptimizer {
       // First Input Delay
       const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry & { processingStart: number }) => {
           this.metrics.firstInputDelay =
             entry.processingStart - entry.startTime;
           this.logMetric('FID', this.metrics.firstInputDelay);
@@ -101,7 +101,7 @@ class AdvancedPerformanceOptimizer {
       const clsObserver = new PerformanceObserver(list => {
         let clsValue = 0;
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry & { hadRecentInput: boolean; value: number }) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }

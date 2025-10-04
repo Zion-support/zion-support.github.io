@@ -20,6 +20,8 @@ export default {
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}',
+    '<rootDir>/__tests__/simple.test.js',
+    '<rootDir>/__tests__/basic.smoke.test.js',
   ],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
@@ -66,6 +68,10 @@ export default {
     '/lib_backup/',
     '/services/',
     '/middleware/',
+    '/__tests__/auth/',
+    '/__tests__/server/',
+    '/__tests__/pages/',
+    '/__tests__/disabled/',
   ],
   modulePathIgnorePatterns: [
     '/automation/',

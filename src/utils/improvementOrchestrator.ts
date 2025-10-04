@@ -576,9 +576,7 @@ class ImprovementOrchestrator {
   /**
    * Execute security improvement
    */
-  private async executeSecurityImprovement(
-    _action: ImprovementAction,
-  ): Promise<void> {
+  private async executeSecurityImprovement(action: ImprovementAction): Promise<void> {
     // Simulate security improvement execution
     console.log('🔒 Executing security improvements...');
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -598,9 +596,7 @@ class ImprovementOrchestrator {
   /**
    * Execute documentation improvement
    */
-  private async executeDocumentationImprovement(
-    _action: ImprovementAction,
-  ): Promise<void> {
+  private async executeDocumentationImprovement(action: ImprovementAction): Promise<void> {
     // Simulate documentation improvement execution
     console.log('📚 Executing documentation improvements...');
     await new Promise(resolve => setTimeout(resolve, 1000));
