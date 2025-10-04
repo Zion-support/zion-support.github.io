@@ -16,13 +16,13 @@ import { documentationGenerator } from './documentationGenerator';
 export async function runAllImprovements(): Promise<void> {
   try {
     console.log('🚀 Starting comprehensive improvement process...');
-
+    
     // Initialize the improvement orchestrator
     await improvementOrchestrator.initialize();
-
+    
     // Run comprehensive analysis
     const report = await improvementOrchestrator.runImprovementAnalysis();
-
+    
     console.log('📊 Improvement Analysis Results:');
     console.log(`Overall Score: ${report.overallScore}/100`);
     console.log(`Performance: ${report.performance.score}/100`);
@@ -30,22 +30,21 @@ export async function runAllImprovements(): Promise<void> {
     console.log(`Security: ${report.security.score}/100`);
     console.log(`Testing: ${report.testing.score}/100`);
     console.log(`Documentation: ${report.documentation.score}/100`);
-
+    
     // Execute high-priority improvements
-    const highPriorityActions = report.improvements.filter(
-      a => a.priority === 'critical' || a.priority === 'high',
-    );
-
+    const highPriorityActions = report.improvements.filter(a => a.priority === 'critical' || a.priority === 'high');
+    
     for (const action of highPriorityActions) {
       console.log(`🔄 Executing: ${action.description}`);
       await improvementOrchestrator.executeImprovementAction(action.id);
     }
-
+    
     console.log('✅ All improvements completed successfully!');
-
+    
     // Generate final report
     const finalReport = await improvementOrchestrator.runImprovementAnalysis();
     console.log(`🎯 Final Overall Score: ${finalReport.overallScore}/100`);
+    
   } catch (error) {
     console.error('❌ Improvement process failed:', error);
     throw error;
@@ -82,9 +81,7 @@ export async function runTestingImprovements(): Promise<void> {
   console.log('🧪 Running testing improvements...');
   const results = testingFramework.getResults();
   const report = testingFramework.generateReport(results);
-  console.log(
-    `Testing Score: ${report.summary.passed}/${report.summary.total} tests passed`,
-  );
+  console.log(`Testing Score: ${report.summary.passed}/${report.summary.total} tests passed`);
   console.log(`Coverage: ${report.coverage.statements}%`);
 }
 

@@ -22,15 +22,7 @@ interface TestingConfig {
 
 interface TestSuite {
   name: string;
-  type:
-    | 'unit'
-    | 'integration'
-    | 'e2e'
-    | 'performance'
-    | 'accessibility'
-    | 'security'
-    | 'visual'
-    | 'mutation';
+  type: 'unit' | 'integration' | 'e2e' | 'performance' | 'accessibility' | 'security' | 'visual' | 'mutation';
   tests: TestCase[];
   setup?: () => Promise<void>;
   teardown?: () => Promise<void>;
@@ -164,10 +156,10 @@ class AdvancedTestingFramework implements TestRunner {
    */
   async runSuite(suite: TestSuite): Promise<TestResult[]> {
     const results: TestResult[] = [];
-
+    
     try {
       console.log(`🧪 Running test suite: ${suite.name}`);
-
+      
       // Setup
       if (suite.setup) {
         await suite.setup();
@@ -235,12 +227,9 @@ class AdvancedTestingFramework implements TestRunner {
       // Run test with timeout
       await Promise.race([
         test.test(),
-        new Promise((_, reject) =>
-          setTimeout(
-            () => reject(new Error('Test timeout')),
-            test.timeout || this.config.testTimeout,
-          ),
-        ),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Test timeout')), test.timeout || this.config.testTimeout)
+        )
       ]);
 
       // After each
@@ -315,7 +304,10 @@ class AdvancedTestingFramework implements TestRunner {
       branches: 80,
       functions: 90,
       lines: 87,
-      uncovered: ['src/utils/legacy.ts', 'src/components/OldComponent.tsx'],
+      uncovered: [
+        'src/utils/legacy.ts',
+        'src/components/OldComponent.tsx',
+      ],
     };
   }
 
@@ -336,9 +328,7 @@ class AdvancedTestingFramework implements TestRunner {
   /**
    * Generate accessibility report
    */
-  private generateAccessibilityReport(
-    results: TestResult[],
-  ): AccessibilityReport {
+  private generateAccessibilityReport(results: TestResult[]): AccessibilityReport {
     const violations: AccessibilityViolation[] = [
       {
         rule: 'color-contrast',
@@ -555,7 +545,7 @@ export const createTestCase = (
   name: string,
   description: string,
   test: () => Promise<void>,
-  options: Partial<TestCase> = {},
+  options: Partial<TestCase> = {}
 ): TestCase => ({
   name,
   description,
@@ -570,13 +560,13 @@ export const createTestCase = (
 
 // Mock utilities
 export const mockFunction = <T extends (...args: any[]) => any>(
-  implementation?: T,
+  implementation?: T
 ): any => {
   return jest.fn(implementation);
 };
 
 export const mockObject = <T extends Record<string, any>>(
-  partial: Partial<T>,
+  partial: Partial<T>
 ): T => {
   return partial as T;
 };
@@ -590,9 +580,7 @@ export const expect = {
   },
   toEqual: (actual: any, expected: any) => {
     if (JSON.stringify(actual) !== JSON.stringify(expected)) {
-      throw new Error(
-        `Expected ${JSON.stringify(expected)}, but got ${JSON.stringify(actual)}`,
-      );
+      throw new Error(`Expected ${JSON.stringify(expected)}, but got ${JSON.stringify(actual)}`);
     }
   },
   toBeTruthy: (actual: any) => {
@@ -611,9 +599,7 @@ export const expect = {
       throw new Error('Expected function to throw, but it did not');
     } catch (error) {
       if (expectedError && !error.message.includes(expectedError)) {
-        throw new Error(
-          `Expected error to contain "${expectedError}", but got "${error.message}"`,
-        );
+        throw new Error(`Expected error to contain "${expectedError}", but got "${error.message}"`);
       }
     }
   },

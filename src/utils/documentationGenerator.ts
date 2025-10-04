@@ -240,9 +240,7 @@ class DocumentationGenerator {
   /**
    * Analyze a component for documentation
    */
-  private async analyzeComponent(
-    name: string,
-  ): Promise<ComponentDocumentation> {
+  private async analyzeComponent(name: string): Promise<ComponentDocumentation> {
     // Simulate component analysis
     return {
       name,
@@ -332,11 +330,7 @@ class DocumentationGenerator {
   /**
    * Analyze an API for documentation
    */
-  private async analyzeAPI(api: {
-    endpoint: string;
-    method: string;
-    description: string;
-  }): Promise<APIDocumentation> {
+  private async analyzeAPI(api: { endpoint: string; method: string; description: string }): Promise<APIDocumentation> {
     return {
       endpoint: api.endpoint,
       method: api.method as any,
@@ -384,21 +378,14 @@ class DocumentationGenerator {
     console.log('🏗️ Generating architecture documentation...');
 
     this.architecture = {
-      overview:
-        'The application follows a modern React architecture with TypeScript, Vite, and Tailwind CSS.',
+      overview: 'The application follows a modern React architecture with TypeScript, Vite, and Tailwind CSS.',
       components: Array.from(this.components.values()),
-      dataFlow:
-        'Data flows from parent components to children through props, with state management handled by React hooks.',
-      deployment:
-        'The application is deployed using Vite build process and can be hosted on any static hosting service.',
-      scaling:
-        'The application can be scaled horizontally by deploying multiple instances behind a load balancer.',
-      monitoring:
-        'Performance monitoring is implemented using Web Vitals and custom performance metrics.',
-      security:
-        'Security is enforced through Content Security Policy, HTTPS, and input validation.',
-      performance:
-        'Performance is optimized through code splitting, lazy loading, and bundle optimization.',
+      dataFlow: 'Data flows from parent components to children through props, with state management handled by React hooks.',
+      deployment: 'The application is deployed using Vite build process and can be hosted on any static hosting service.',
+      scaling: 'The application can be scaled horizontally by deploying multiple instances behind a load balancer.',
+      monitoring: 'Performance monitoring is implemented using Web Vitals and custom performance metrics.',
+      security: 'Security is enforced through Content Security Policy, HTTPS, and input validation.',
+      performance: 'Performance is optimized through code splitting, lazy loading, and bundle optimization.',
       diagrams: [
         {
           name: 'Application Architecture',
@@ -468,13 +455,11 @@ class DocumentationGenerator {
     const userGuides = [
       {
         title: 'Getting Started',
-        content:
-          'Welcome to the application! This guide will help you get started.',
+        content: 'Welcome to the application! This guide will help you get started.',
       },
       {
         title: 'Features Overview',
-        content:
-          'Learn about the key features and capabilities of the application.',
+        content: 'Learn about the key features and capabilities of the application.',
       },
       {
         title: 'Troubleshooting',
@@ -525,13 +510,11 @@ class DocumentationGenerator {
         issues: [
           {
             problem: 'TypeScript compilation errors',
-            solution:
-              'Run `pnpm run type-check` to identify and fix type issues',
+            solution: 'Run `pnpm run type-check` to identify and fix type issues',
           },
           {
             problem: 'Linting errors',
-            solution:
-              'Run `pnpm run lint:fix` to automatically fix linting issues',
+            solution: 'Run `pnpm run lint:fix` to automatically fix linting issues',
           },
         ],
       },
@@ -544,8 +527,7 @@ class DocumentationGenerator {
           },
           {
             problem: 'Performance issues',
-            solution:
-              'Use React DevTools Profiler to identify performance bottlenecks',
+            solution: 'Use React DevTools Profiler to identify performance bottlenecks',
           },
         ],
       },
@@ -605,10 +587,7 @@ class DocumentationGenerator {
     const documentedComponents = this.components.size; // All components are documented
     const totalAPIs = this.apis.size;
     const documentedAPIs = this.apis.size; // All APIs are documented
-    const coverage =
-      ((documentedComponents + documentedAPIs) /
-        (totalComponents + totalAPIs)) *
-      100;
+    const coverage = ((documentedComponents + documentedAPIs) / (totalComponents + totalAPIs)) * 100;
 
     return {
       summary: {
@@ -635,9 +614,7 @@ class DocumentationGenerator {
   /**
    * Export documentation in specified format
    */
-  async exportDocumentation(
-    format: 'markdown' | 'html' | 'json',
-  ): Promise<string> {
+  async exportDocumentation(format: 'markdown' | 'html' | 'json'): Promise<string> {
     switch (format) {
       case 'markdown':
         return this.exportToMarkdown();
@@ -704,16 +681,12 @@ class DocumentationGenerator {
    * Export to JSON format
    */
   private exportToJSON(): string {
-    return JSON.stringify(
-      {
-        components: Object.fromEntries(this.components),
-        apis: Object.fromEntries(this.apis),
-        architecture: this.architecture,
-        reports: this.reports,
-      },
-      null,
-      2,
-    );
+    return JSON.stringify({
+      components: Object.fromEntries(this.components),
+      apis: Object.fromEntries(this.apis),
+      architecture: this.architecture,
+      reports: this.reports,
+    }, null, 2);
   }
 
   /**

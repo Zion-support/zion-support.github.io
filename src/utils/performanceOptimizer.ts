@@ -152,13 +152,11 @@ class PerformanceOptimizer {
   private async initializeWebVitals(): Promise<void> {
     try {
       const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals');
-
+      
       const handleMetric = (metric: any) => {
         if (Math.random() > this.config.sampleRate) return;
-
-        this.metrics.webVitals[
-          metric.name.toLowerCase() as keyof typeof this.metrics.webVitals
-        ] = metric.value;
+        
+        this.metrics.webVitals[metric.name.toLowerCase() as keyof typeof this.metrics.webVitals] = metric.value;
         this.checkThresholds(metric.name.toLowerCase(), metric.value);
       };
 
@@ -179,9 +177,9 @@ class PerformanceOptimizer {
     if (!('PerformanceObserver' in window)) return;
 
     try {
-      const observer = new PerformanceObserver(list => {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
             this.metrics.resources.push(entry as PerformanceResourceTiming);
           }
@@ -228,8 +226,7 @@ class PerformanceOptimizer {
         saveData: connection.saveData,
       };
 
-      this.metrics.device.connectionType =
-        connection.effectiveType || 'unknown';
+      this.metrics.device.connectionType = connection.effectiveType || 'unknown';
       this.metrics.device.connectionSpeed = connection.downlink || 0;
     } catch (error) {
       console.warn('Network monitoring not available:', error);
@@ -271,12 +268,9 @@ class PerformanceOptimizer {
    * Check performance thresholds
    */
   private checkThresholds(metric: string, value: number): void {
-    const threshold =
-      this.config.thresholds[metric as keyof typeof this.config.thresholds];
+    const threshold = this.config.thresholds[metric as keyof typeof this.config.thresholds];
     if (threshold && value > threshold) {
-      console.warn(
-        `⚠️ Performance threshold exceeded: ${metric} = ${value} (threshold: ${threshold})`,
-      );
+      console.warn(`⚠️ Performance threshold exceeded: ${metric} = ${value} (threshold: ${threshold})`);
     }
   }
 
@@ -321,8 +315,7 @@ class PerformanceOptimizer {
     // Web Vitals scoring
     Object.entries(webVitals).forEach(([metric, value]) => {
       if (value !== undefined) {
-        const threshold =
-          this.config.thresholds[metric as keyof typeof this.config.thresholds];
+        const threshold = this.config.thresholds[metric as keyof typeof this.config.thresholds];
         if (threshold) {
           const ratio = value / threshold;
           if (ratio > 1) {
@@ -358,36 +351,26 @@ class PerformanceOptimizer {
 
     // Web Vitals recommendations
     if (webVitals.cls && webVitals.cls > this.config.thresholds.cls) {
-      recommendations.push(
-        'Optimize layout shifts by setting explicit dimensions for images and dynamic content',
-      );
+      recommendations.push('Optimize layout shifts by setting explicit dimensions for images and dynamic content');
     }
     if (webVitals.lcp && webVitals.lcp > this.config.thresholds.lcp) {
-      recommendations.push(
-        'Optimize Largest Contentful Paint by preloading critical resources and optimizing images',
-      );
+      recommendations.push('Optimize Largest Contentful Paint by preloading critical resources and optimizing images');
     }
     if (webVitals.fcp && webVitals.fcp > this.config.thresholds.fcp) {
-      recommendations.push(
-        'Reduce First Contentful Paint by minimizing render-blocking resources',
-      );
+      recommendations.push('Reduce First Contentful Paint by minimizing render-blocking resources');
     }
 
     // Resource recommendations
     if (resources.length > 0) {
       const largeResources = resources.filter(r => r.transferSize > 100000);
       if (largeResources.length > 0) {
-        recommendations.push(
-          `Optimize ${largeResources.length} large resources (>100KB) for better loading performance`,
-        );
+        recommendations.push(`Optimize ${largeResources.length} large resources (>100KB) for better loading performance`);
       }
     }
 
     // Memory recommendations
     if (memory && memory.usedJSHeapSize / memory.jsHeapSizeLimit > 0.7) {
-      recommendations.push(
-        'High memory usage detected - consider implementing memory cleanup strategies',
-      );
+      recommendations.push('High memory usage detected - consider implementing memory cleanup strategies');
     }
 
     return recommendations;

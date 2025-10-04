@@ -33,15 +33,7 @@ interface SecurityReport {
 
 interface SecurityVulnerability {
   id: string;
-  type:
-    | 'XSS'
-    | 'CSRF'
-    | 'SQL_INJECTION'
-    | 'AUTHENTICATION'
-    | 'AUTHORIZATION'
-    | 'DATA_EXPOSURE'
-    | 'INSECURE_COMMUNICATION'
-    | 'INSECURE_STORAGE';
+  type: 'XSS' | 'CSRF' | 'SQL_INJECTION' | 'AUTHENTICATION' | 'AUTHORIZATION' | 'DATA_EXPOSURE' | 'INSECURE_COMMUNICATION' | 'INSECURE_STORAGE';
   severity: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
   description: string;
   location: string;
@@ -184,10 +176,7 @@ class SecurityEnhancer {
       }
 
       this.isInitialized = true;
-      this.logSecurityEvent(
-        'SECURITY_INITIALIZED',
-        'Security enhancer initialized successfully',
-      );
+      this.logSecurityEvent('SECURITY_INITIALIZED', 'Security enhancer initialized successfully');
       console.log('🔒 Security Enhancer initialized successfully');
     } catch (error) {
       console.error('❌ Failed to initialize Security Enhancer:', error);
@@ -242,10 +231,7 @@ class SecurityEnhancer {
       // Monitor for XSS attempts
       this.monitorXSSAttempts();
 
-      this.logSecurityEvent(
-        'XSS_PROTECTION_INITIALIZED',
-        'XSS protection initialized',
-      );
+      this.logSecurityEvent('XSS_PROTECTION_INITIALIZED', 'XSS protection initialized');
     } catch (error) {
       console.warn('XSS protection initialization failed:', error);
     }
@@ -263,10 +249,7 @@ class SecurityEnhancer {
       // Add token to all forms
       this.addCSRFTokenToForms(csrfToken);
 
-      this.logSecurityEvent(
-        'CSRF_PROTECTION_INITIALIZED',
-        'CSRF protection initialized',
-      );
+      this.logSecurityEvent('CSRF_PROTECTION_INITIALIZED', 'CSRF protection initialized');
     } catch (error) {
       console.warn('CSRF protection initialization failed:', error);
     }
@@ -283,10 +266,7 @@ class SecurityEnhancer {
       // Monitor input changes
       this.monitorInputChanges();
 
-      this.logSecurityEvent(
-        'INPUT_VALIDATION_INITIALIZED',
-        'Input validation initialized',
-      );
+      this.logSecurityEvent('INPUT_VALIDATION_INITIALIZED', 'Input validation initialized');
     } catch (error) {
       console.warn('Input validation initialization failed:', error);
     }
@@ -306,10 +286,7 @@ class SecurityEnhancer {
       // Monitor for brute force attempts
       this.monitorBruteForceAttempts();
 
-      this.logSecurityEvent(
-        'THREAT_DETECTION_INITIALIZED',
-        'Threat detection initialized',
-      );
+      this.logSecurityEvent('THREAT_DETECTION_INITIALIZED', 'Threat detection initialized');
     } catch (error) {
       console.warn('Threat detection initialization failed:', error);
     }
@@ -321,10 +298,7 @@ class SecurityEnhancer {
   private initializeAuditLogging(): void {
     try {
       // Log security events
-      this.logSecurityEvent(
-        'AUDIT_LOGGING_INITIALIZED',
-        'Audit logging initialized',
-      );
+      this.logSecurityEvent('AUDIT_LOGGING_INITIALIZED', 'Audit logging initialized');
     } catch (error) {
       console.warn('Audit logging initialization failed:', error);
     }
@@ -338,10 +312,7 @@ class SecurityEnhancer {
     scripts.forEach(script => {
       if (script.src && !this.isAllowedSource(script.src)) {
         script.remove();
-        this.logSecurityEvent(
-          'XSS_BLOCKED',
-          `Blocked script from: ${script.src}`,
-        );
+        this.logSecurityEvent('XSS_BLOCKED', `Blocked script from: ${script.src}`);
       }
     });
   }
@@ -357,10 +328,7 @@ class SecurityEnhancer {
           if (node.nodeType === Node.TEXT_NODE) {
             const text = node.textContent || '';
             if (this.containsMaliciousPattern(text)) {
-              this.logSecurityEvent(
-                'XSS_ATTEMPT_DETECTED',
-                `XSS attempt detected: ${text.substring(0, 100)}`,
-              );
+              this.logSecurityEvent('XSS_ATTEMPT_DETECTED', `XSS attempt detected: ${text.substring(0, 100)}`);
               this.blockMaliciousContent(node);
             }
           }
@@ -380,9 +348,7 @@ class SecurityEnhancer {
   private generateCSRFToken(): string {
     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(
-      '',
-    );
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
 
   /**
@@ -405,15 +371,12 @@ class SecurityEnhancer {
   private addInputValidationToForms(): void {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
-      form.addEventListener('submit', event => {
+      form.addEventListener('submit', (event) => {
         const inputs = form.querySelectorAll('input, textarea, select');
         inputs.forEach(input => {
           if (!this.validateInput(input as HTMLInputElement)) {
             event.preventDefault();
-            this.logSecurityEvent(
-              'INVALID_INPUT_BLOCKED',
-              `Invalid input blocked: ${(input as HTMLInputElement).name}`,
-            );
+            this.logSecurityEvent('INVALID_INPUT_BLOCKED', `Invalid input blocked: ${(input as HTMLInputElement).name}`);
           }
         });
       });
@@ -424,13 +387,10 @@ class SecurityEnhancer {
    * Monitor input changes
    */
   private monitorInputChanges(): void {
-    document.addEventListener('input', event => {
+    document.addEventListener('input', (event) => {
       const target = event.target as HTMLInputElement;
       if (target && this.containsMaliciousPattern(target.value)) {
-        this.logSecurityEvent(
-          'MALICIOUS_INPUT_DETECTED',
-          `Malicious input detected: ${target.value.substring(0, 100)}`,
-        );
+        this.logSecurityEvent('MALICIOUS_INPUT_DETECTED', `Malicious input detected: ${target.value.substring(0, 100)}`);
         target.value = this.sanitizeInput(target.value);
       }
     });
@@ -450,10 +410,7 @@ class SecurityEnhancer {
         clickCount++;
         if (clickCount > 10) {
           this.threatDetection.suspiciousActivity = true;
-          this.logSecurityEvent(
-            'SUSPICIOUS_ACTIVITY_DETECTED',
-            'Rapid clicking detected',
-          );
+          this.logSecurityEvent('SUSPICIOUS_ACTIVITY_DETECTED', 'Rapid clicking detected');
         }
       } else {
         clickCount = 0;
@@ -493,10 +450,7 @@ class SecurityEnhancer {
     setInterval(() => {
       if (failedAttempts > maxAttempts) {
         this.threatDetection.bruteForceAttempts = failedAttempts;
-        this.logSecurityEvent(
-          'BRUTE_FORCE_DETECTED',
-          `Brute force attempt detected: ${failedAttempts} attempts`,
-        );
+        this.logSecurityEvent('BRUTE_FORCE_DETECTED', `Brute force attempt detected: ${failedAttempts} attempts`);
       }
       failedAttempts = 0; // Reset counter
     }, timeWindow);
@@ -531,8 +485,8 @@ class SecurityEnhancer {
    * Check if content contains malicious patterns
    */
   private containsMaliciousPattern(content: string): boolean {
-    return this.config.blockedPatterns.some(pattern =>
-      content.toLowerCase().includes(pattern.toLowerCase()),
+    return this.config.blockedPatterns.some(pattern => 
+      content.toLowerCase().includes(pattern.toLowerCase())
     );
   }
 
@@ -562,10 +516,8 @@ class SecurityEnhancer {
   private isAllowedSource(src: string): boolean {
     try {
       const url = new URL(src);
-      return this.config.allowedOrigins.some(
-        origin =>
-          url.origin === origin ||
-          url.hostname.endsWith(origin.replace('https://', '')),
+      return this.config.allowedOrigins.some(origin => 
+        url.origin === origin || url.hostname.endsWith(origin.replace('https://', ''))
       );
     } catch {
       return false;
@@ -578,10 +530,8 @@ class SecurityEnhancer {
   private isBlockedURL(url: string): boolean {
     try {
       const urlObj = new URL(url);
-      return !this.config.allowedOrigins.some(
-        origin =>
-          urlObj.origin === origin ||
-          urlObj.hostname.endsWith(origin.replace('https://', '')),
+      return !this.config.allowedOrigins.some(origin => 
+        urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
       );
     } catch {
       return true; // Block invalid URLs
@@ -647,10 +597,7 @@ class SecurityEnhancer {
     const vulnerabilities = this.scanForVulnerabilities();
     const compliance = this.checkCompliance();
     const threatLevel = this.assessThreatLevel();
-    const overallScore = this.calculateSecurityScore(
-      vulnerabilities,
-      compliance,
-    );
+    const overallScore = this.calculateSecurityScore(vulnerabilities, compliance);
 
     return {
       overallScore,
@@ -706,10 +653,7 @@ class SecurityEnhancer {
       owasp: { score: 85, violations: ['Missing CSP', 'Insecure headers'] },
       pci: { score: 90, violations: ['Data encryption'] },
       gdpr: { score: 80, violations: ['Data retention', 'Consent management'] },
-      iso27001: {
-        score: 75,
-        violations: ['Access control', 'Incident response'],
-      },
+      iso27001: { score: 75, violations: ['Access control', 'Incident response'] },
     };
   }
 
@@ -717,10 +661,7 @@ class SecurityEnhancer {
    * Assess threat level
    */
   private assessThreatLevel(): 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL' {
-    if (
-      this.threatDetection.suspiciousActivity ||
-      this.threatDetection.bruteForceAttempts > 5
-    ) {
+    if (this.threatDetection.suspiciousActivity || this.threatDetection.bruteForceAttempts > 5) {
       return 'HIGH';
     }
     if (this.threatDetection.blockedRequests > 10) {
@@ -732,27 +673,16 @@ class SecurityEnhancer {
   /**
    * Calculate security score
    */
-  private calculateSecurityScore(
-    vulnerabilities: SecurityVulnerability[],
-    compliance: ComplianceStatus,
-  ): number {
+  private calculateSecurityScore(vulnerabilities: SecurityVulnerability[], compliance: ComplianceStatus): number {
     let score = 100;
 
     // Deduct for vulnerabilities
     vulnerabilities.forEach(vuln => {
       switch (vuln.severity) {
-        case 'CRITICAL':
-          score -= 25;
-          break;
-        case 'HIGH':
-          score -= 15;
-          break;
-        case 'MEDIUM':
-          score -= 10;
-          break;
-        case 'LOW':
-          score -= 5;
-          break;
+        case 'CRITICAL': score -= 25; break;
+        case 'HIGH': score -= 15; break;
+        case 'MEDIUM': score -= 10; break;
+        case 'LOW': score -= 5; break;
       }
     });
 
@@ -767,9 +697,7 @@ class SecurityEnhancer {
   /**
    * Generate security recommendations
    */
-  private generateSecurityRecommendations(
-    vulnerabilities: SecurityVulnerability[],
-  ): string[] {
+  private generateSecurityRecommendations(vulnerabilities: SecurityVulnerability[]): string[] {
     const recommendations: string[] = [];
 
     vulnerabilities.forEach(vuln => {
@@ -782,7 +710,7 @@ class SecurityEnhancer {
       'Enable automated vulnerability scanning',
       'Implement proper logging and monitoring',
       'Regular security training for developers',
-      'Implement incident response procedures',
+      'Implement incident response procedures'
     );
 
     return [...new Set(recommendations)]; // Remove duplicates
@@ -816,12 +744,5 @@ interface SecurityEvent {
 export const securityEnhancer = new SecurityEnhancer();
 
 // Export types and class for advanced usage
-export type {
-  SecurityConfig,
-  SecurityReport,
-  SecurityVulnerability,
-  ComplianceStatus,
-  ThreatDetection,
-  SecurityEvent,
-};
+export type { SecurityConfig, SecurityReport, SecurityVulnerability, ComplianceStatus, ThreatDetection, SecurityEvent };
 export { SecurityEnhancer };

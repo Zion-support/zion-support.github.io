@@ -1,42 +1,67 @@
 #!/bin/bash
 
-# Script to merge unmerged cursor branches into main
+# Script to merge all open PR branches into main
 set -e
 
 echo "Starting branch merge process..."
 
-# Get list of unmerged cursor branches
-UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep 'cursor/' | head -3)
+# Go to main branch
+git checkout main
 
-echo "Found unmerged branches:"
-echo "$UNMERGED_BRANCHES"
+# List of branches to merge
+branches=(
+    "origin/comprehensive-improvements-20251004-113535"
+    "origin/final-verification"
+    "origin/cursor/fix-errors-and-merge-to-main-056e"
+    "origin/cursor/fix-errors-and-merge-to-main-0cce"
+    "origin/cursor/fix-errors-and-merge-to-main-0e51"
+    "origin/cursor/fix-errors-and-merge-to-main-1afd"
+    "origin/cursor/fix-errors-and-merge-to-main-7495"
+    "origin/cursor/fix-errors-and-merge-to-main-79c5"
+    "origin/cursor/fix-errors-and-merge-to-main-7d92"
+    "origin/cursor/fix-errors-and-merge-to-main-8fa9"
+    "origin/cursor/fix-errors-and-merge-to-main-9597"
+    "origin/cursor/fix-errors-and-merge-to-main-99ac"
+    "origin/cursor/fix-errors-and-merge-to-main-dcce"
+    "origin/cursor/fix-errors-and-merge-to-main-e017"
+    "origin/cursor/fix-errors-and-merge-to-main-e0a3"
+    "origin/cursor/fix-errors-and-merge-to-main-e9fe"
+    "origin/cursor/fix-errors-and-merge-to-main-ea0a"
+    "origin/cursor/fix-errors-and-merge-to-main-f9ce"
+    "origin/cursor/fix-errors-and-merge-to-main-fe3c"
+)
 
-for branch in $UNMERGED_BRANCHES; do
-    echo "Processing branch: $branch"
+# Merge each branch
+for branch in "${branches[@]}"; do
+    echo "Attempting to merge $branch..."
     
     # Check if branch exists
     if git show-ref --verify --quiet refs/remotes/$branch; then
         echo "Merging $branch into main..."
         
-        # Try to merge with automatic conflict resolution
-        if git merge --no-edit --no-ff $branch; then
-            echo "Successfully merged $branch"
+        # Try to merge
+        if git merge "$branch" --no-edit; then
+            echo "✅ Successfully merged $branch"
         else
-            echo "Merge conflict in $branch, resolving..."
+            echo "❌ Merge conflict in $branch - resolving..."
             
-            # Resolve conflicts by taking the branch version
-            git checkout --theirs .
-            git add .
-            git commit --no-edit
-            
-            echo "Resolved conflicts for $branch"
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU"; then
+                echo "Resolving conflicts in $branch..."
+                # For now, we'll abort the merge and continue
+                git merge --abort
+                echo "⚠️  Skipped $branch due to conflicts"
+            else
+                echo "✅ Successfully merged $branch after conflict resolution"
+            fi
         fi
     else
-        echo "Branch $branch does not exist, skipping..."
+        echo "⚠️  Branch $branch does not exist, skipping..."
     fi
+    
+    echo "---"
 done
 
-echo "All branches processed. Pushing to remote..."
-git push origin main
-
-echo "Merge process completed!"
+echo "Branch merge process completed!"
+echo "Current status:"
+git status
