@@ -1,10 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const AdvancedPerformanceMonitor: React.FC = () => {
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-      <h2 className="text-2xl font-bold text-white mb-6">Advanced Performance Monitor</h2>
-      <p className="text-gray-400">Advanced performance monitoring component</p>
+    <div className={`advancedperformancemonitor-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">AdvancedPerformanceMonitor</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
     </div>
   );
 };

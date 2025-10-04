@@ -1,13 +1,13 @@
-export interface BannerData {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-  active: boolean;
-  priority: number;
+// bannerData - TypeScript definitions and utilities
+
+export interface bannerDataConfig {
+  // Configuration properties
 }
 
-export const bannerData: BannerData[] = [];
+export const defaultbannerDataConfig: bannerDataConfig = {
+  // Default configuration
+};
 
-export default bannerData;
+export default {
+  defaultbannerDataConfig
+};

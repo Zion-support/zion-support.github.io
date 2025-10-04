@@ -2,14 +2,23 @@ import React from 'react';
 
 interface SEOProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function SEO({ className = '' }: SEOProps) {
+const SEO: React.FC<SEOProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
-      <h3 className='text-lg font-semibold text-blue-800'>SEO</h3>
-      <p className='text-blue-600'>This component is under development.</p>
+    <div className={`seo-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">SEO</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
     </div>
   );
-}
-import React from 'react'; interface SEOProps { className?: string; } ' export default function SEO({ className = '' }: SEOProps) { return ( <div className={`bg-blue-100 p-4 rounded-lg ${className}`}> <h3 className="text-lg font-semibold text-blue-800" >SEO</h3> <p className="text-blue-600" >This component is under development.</p> </div> ); }'
+};
+
+export default SEO;

@@ -1,13 +1,13 @@
-export interface BannerConfiguration {
-  id: string;
-  title: string;
-  type: string;
-  position: string;
-  content: string;
-  active: boolean;
-  priority: number;
+// bannerConfigurations - TypeScript definitions and utilities
+
+export interface bannerConfigurationsConfig {
+  // Configuration properties
 }
 
-export const bannerConfigurations: BannerConfiguration[] = [];
+export const defaultbannerConfigurationsConfig: bannerConfigurationsConfig = {
+  // Default configuration
+};
 
-export default bannerConfigurations;
+export default {
+  defaultbannerConfigurationsConfig
+};

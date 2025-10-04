@@ -1,10 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const LazyLoader: React.FC = () => {
+interface LazyLoaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LazyLoader: React.FC<LazyLoaderProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-      <h2 className="text-2xl font-bold text-white mb-6">LazyLoader</h2>
-      <p className="text-gray-400">LazyLoader component</p>
+    <div className={`lazyloader-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">LazyLoader</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
     </div>
   );
 };

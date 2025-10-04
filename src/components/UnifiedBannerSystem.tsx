@@ -1,10 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const UnifiedBannerSystem: React.FC = () => {
+interface UnifiedBannerSystemProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const UnifiedBannerSystem: React.FC<UnifiedBannerSystemProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-      <h2 className="text-2xl font-bold text-white mb-6">UnifiedBannerSystem</h2>
-      <p className="text-gray-400">UnifiedBannerSystem component</p>
+    <div className={`unifiedbannersystem-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">UnifiedBannerSystem</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
     </div>
   );
 };
