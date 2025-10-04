@@ -44,15 +44,15 @@ export function countWords(text: string): number {
 export function analyzeContent(html: string): ContentMetrics {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
-  
+
   const textContent = doc.body.textContent || '';
   const wordCount = countWords(textContent);
   const readingTime = calculateReadingTime(textContent);
-  
+
   const headings = doc.querySelectorAll('h1, h2, h3, h4, h5, h6');
   const images = doc.querySelectorAll('img');
   const links = doc.querySelectorAll('a');
-  
+
   const seoScore = calculateSEOScore({
     wordCount,
     headingCount: headings.length,
@@ -61,7 +61,7 @@ export function analyzeContent(html: string): ContentMetrics {
     hasH1: doc.querySelectorAll('h1').length > 0,
     hasMetaDescription: doc.querySelector('meta[name="description"]') !== null,
   });
-  
+
   return {
     readingTime,
     wordCount,
@@ -84,27 +84,27 @@ function calculateSEOScore(factors: {
   hasMetaDescription: boolean;
 }): number {
   let score = 0;
-  
+
   // Word count (0-30 points)
   if (factors.wordCount >= 300) score += 30;
   else if (factors.wordCount >= 200) score += 20;
   else if (factors.wordCount >= 100) score += 10;
-  
+
   // Headings (0-20 points)
   if (factors.hasH1) score += 10;
   if (factors.headingCount >= 3) score += 10;
-  
+
   // Images with proper alt text (0-20 points)
   if (factors.imageCount > 0) score += 20;
-  
+
   // Internal and external links (0-15 points)
   if (factors.linkCount >= 5) score += 15;
   else if (factors.linkCount >= 3) score += 10;
   else if (factors.linkCount >= 1) score += 5;
-  
+
   // Meta description (0-15 points)
   if (factors.hasMetaDescription) score += 15;
-  
+
   return Math.min(score, 100);
 }
 
@@ -114,7 +114,7 @@ function calculateSEOScore(factors: {
 export function generateSEORecommendations(
   html: string,
   currentTitle?: string,
-  currentDescription?: string
+  currentDescription?: string,
 ): SEORecommendations {
   const recommendations: SEORecommendations = {
     title: [],
@@ -124,27 +124,33 @@ export function generateSEORecommendations(
     links: [],
     content: [],
   };
-  
+
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   const metrics = analyzeContent(html);
-  
+
   // Title recommendations
   if (!currentTitle || currentTitle.length < 30) {
     recommendations.title.push('Title should be at least 30 characters');
   }
   if (currentTitle && currentTitle.length > 60) {
-    recommendations.title.push('Title should be less than 60 characters for optimal display');
+    recommendations.title.push(
+      'Title should be less than 60 characters for optimal display',
+    );
   }
-  
+
   // Description recommendations
   if (!currentDescription || currentDescription.length < 120) {
-    recommendations.description.push('Meta description should be at least 120 characters');
+    recommendations.description.push(
+      'Meta description should be at least 120 characters',
+    );
   }
   if (currentDescription && currentDescription.length > 160) {
-    recommendations.description.push('Meta description should be less than 160 characters');
+    recommendations.description.push(
+      'Meta description should be less than 160 characters',
+    );
   }
-  
+
   // Heading recommendations
   const h1Count = doc.querySelectorAll('h1').length;
   if (h1Count === 0) {
@@ -152,11 +158,13 @@ export function generateSEORecommendations(
   } else if (h1Count > 1) {
     recommendations.headings.push('Use only one H1 heading per page');
   }
-  
+
   if (metrics.headingCount < 3) {
-    recommendations.headings.push('Add more headings (H2, H3) to structure your content');
+    recommendations.headings.push(
+      'Add more headings (H2, H3) to structure your content',
+    );
   }
-  
+
   // Image recommendations
   const images = doc.querySelectorAll('img');
   images.forEach((img, index) => {
@@ -167,28 +175,36 @@ export function generateSEORecommendations(
       recommendations.images.push(`Image ${index + 1} should use lazy loading`);
     }
   });
-  
+
   // Link recommendations
   if (metrics.linkCount < 3) {
-    recommendations.links.push('Add more internal and external links to improve SEO');
+    recommendations.links.push(
+      'Add more internal and external links to improve SEO',
+    );
   }
-  
+
   const externalLinks = doc.querySelectorAll('a[href^="http"]');
-  externalLinks.forEach((link) => {
+  externalLinks.forEach(link => {
     if (!link.getAttribute('rel')?.includes('noopener')) {
-      recommendations.links.push('External links should include rel="noopener noreferrer"');
+      recommendations.links.push(
+        'External links should include rel="noopener noreferrer"',
+      );
     }
   });
-  
+
   // Content recommendations
   if (metrics.wordCount < 300) {
-    recommendations.content.push('Add more content (aim for at least 300 words)');
+    recommendations.content.push(
+      'Add more content (aim for at least 300 words)',
+    );
   }
-  
+
   if (metrics.seoScore < 70) {
-    recommendations.content.push('Overall SEO score is low. Implement the recommendations above.');
+    recommendations.content.push(
+      'Overall SEO score is low. Implement the recommendations above.',
+    );
   }
-  
+
   return recommendations;
 }
 
@@ -198,25 +214,25 @@ export function generateSEORecommendations(
 export function optimizeImageTags(html: string): string {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
-  
+
   const images = doc.querySelectorAll('img');
-  images.forEach((img) => {
+  images.forEach(img => {
     // Add lazy loading
     if (!img.getAttribute('loading')) {
       img.setAttribute('loading', 'lazy');
     }
-    
+
     // Add decoding hint
     if (!img.getAttribute('decoding')) {
       img.setAttribute('decoding', 'async');
     }
-    
+
     // Ensure alt text exists
     if (!img.getAttribute('alt')) {
       img.setAttribute('alt', 'Image');
     }
   });
-  
+
   return doc.documentElement.outerHTML;
 }
 
@@ -239,30 +255,30 @@ export function generateStructuredData(data: {
     headline: data.title,
     description: data.description,
   };
-  
+
   if (data.image) {
     structuredData.image = data.image;
   }
-  
+
   if (data.author) {
     structuredData.author = {
       '@type': 'Person',
       name: data.author,
     };
   }
-  
+
   if (data.datePublished) {
     structuredData.datePublished = data.datePublished;
   }
-  
+
   if (data.dateModified) {
     structuredData.dateModified = data.dateModified;
   }
-  
+
   if (data.url) {
     structuredData.url = data.url;
   }
-  
+
   return JSON.stringify(structuredData);
 }
 
@@ -272,24 +288,59 @@ export function generateStructuredData(data: {
 export function extractKeywords(text: string, count: number = 10): string[] {
   // Remove common stop words
   const stopWords = new Set([
-    'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i',
-    'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at',
-    'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she',
-    'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their',
+    'the',
+    'be',
+    'to',
+    'of',
+    'and',
+    'a',
+    'in',
+    'that',
+    'have',
+    'i',
+    'it',
+    'for',
+    'not',
+    'on',
+    'with',
+    'he',
+    'as',
+    'you',
+    'do',
+    'at',
+    'this',
+    'but',
+    'his',
+    'by',
+    'from',
+    'they',
+    'we',
+    'say',
+    'her',
+    'she',
+    'or',
+    'an',
+    'will',
+    'my',
+    'one',
+    'all',
+    'would',
+    'there',
+    'their',
   ]);
-  
+
   // Extract words and count frequency
   const words = text
     .toLowerCase()
     .replace(/[^\w\s]/g, '')
     .split(/\s+/)
-    .filter((word) => word.length > 3 && !stopWords.has(word));
-  
+    .filter(word => word.length > 3 && !stopWords.has(word));
+
   const frequency: Record<string, number> = {};
-  words.forEach((word) => {
+  words.forEach(word => {
     frequency[word] = (frequency[word] || 0) + 1;
   });
-  
+
   // Sort by frequency and return top keywords
   return Object.entries(frequency)
     .sort((a, b) => b[1] - a[1])

@@ -339,7 +339,7 @@ class DocumentationGenerator {
   }): Promise<APIDocumentation> {
     return {
       endpoint: api.endpoint,
-      method: api.method as "GET" | "POST" | "PUT" | "DELETE" | "PATCH",
+      method: api.method as 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH',
       description: api.description,
       parameters: [
         {

@@ -13,7 +13,12 @@ interface SecurityConfig {
 }
 
 interface SecurityEvent {
-  type: 'xss_attempt' | 'clickjacking_attempt' | 'csp_violation' | 'sri_failure' | 'trusted_types_violation';
+  type:
+    | 'xss_attempt'
+    | 'clickjacking_attempt'
+    | 'csp_violation'
+    | 'sri_failure'
+    | 'trusted_types_violation';
   details: unknown;
   timestamp: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -26,14 +31,14 @@ interface AdvancedSecurityProps {
 
 const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
   config = {},
-  onSecurityEvent
+  onSecurityEvent,
 }) => {
   const [securityStatus, setSecurityStatus] = useState({
     cspEnabled: false,
     xssProtectionEnabled: false,
     clickjackingProtectionEnabled: false,
     trustedTypesEnabled: false,
-    sriEnabled: false
+    sriEnabled: false,
   });
 
   const {
@@ -43,25 +48,28 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     enableContentSecurityPolicy: contentSecurityPolicyEnabled = true,
     enableSubresourceIntegrity: subresourceIntegrityEnabled = true,
     enableTrustedTypes: trustedTypesEnabled = true,
-    debugMode = process.env.NODE_ENV === 'development'
+    debugMode = process.env.NODE_ENV === 'development',
   } = config;
 
   // Log security events
-  const logSecurityEvent = useCallback((event: SecurityEvent) => {
-    if (debugMode) {
-      console.warn('Security Event:', event);
-    }
+  const logSecurityEvent = useCallback(
+    (event: SecurityEvent) => {
+      if (debugMode) {
+        console.warn('Security Event:', event);
+      }
 
-    if (onSecurityEvent) {
-      onSecurityEvent(event);
-    }
+      if (onSecurityEvent) {
+        onSecurityEvent(event);
+      }
 
-    // In production, you would send this to your security monitoring service
-    if (process.env.NODE_ENV === 'production') {
-      // Example: sendToSecurityService(event);
-      console.warn('Security event detected:', event.type, event.details);
-    }
-  }, [debugMode, onSecurityEvent]);
+      // In production, you would send this to your security monitoring service
+      if (process.env.NODE_ENV === 'production') {
+        // Example: sendToSecurityService(event);
+        console.warn('Security event detected:', event.type, event.details);
+      }
+    },
+    [debugMode, onSecurityEvent],
+  );
 
   // Enable Content Security Policy
   const enableContentSecurityPolicy = useCallback(() => {
@@ -79,7 +87,7 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
       "base-uri 'self'",
       "form-action 'self'",
       "frame-ancestors 'none'",
-      "upgrade-insecure-requests"
+      'upgrade-insecure-requests',
     ].join('; ');
 
     // Set CSP header via meta tag
@@ -89,7 +97,7 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     document.head.appendChild(metaCSP);
 
     // Monitor CSP violations
-    document.addEventListener('securitypolicyviolation', (event) => {
+    document.addEventListener('securitypolicyviolation', event => {
       logSecurityEvent({
         type: 'csp_violation',
         details: {
@@ -97,10 +105,10 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
           blockedURI: event.blockedURI,
           sourceFile: event.sourceFile,
           lineNumber: event.lineNumber,
-          columnNumber: event.columnNumber
+          columnNumber: event.columnNumber,
         },
         timestamp: new Date().toISOString(),
-        severity: 'medium'
+        severity: 'medium',
       });
     });
 
@@ -122,10 +130,13 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     document.head.appendChild(metaXSS);
 
     // Monitor for potential XSS attempts
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(
+      Element.prototype,
+      'innerHTML',
+    )?.set;
     if (originalInnerHTML) {
       Object.defineProperty(Element.prototype, 'innerHTML', {
-        set: function(value: string) {
+        set: function (value: string) {
           if (value && typeof value === 'string') {
             // Check for potential XSS patterns
             const xssPatterns = [
@@ -134,26 +145,28 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
               /on\w+\s*=/gi,
               /<iframe[^>]*>/gi,
               /<object[^>]*>/gi,
-              /<embed[^>]*>/gi
+              /<embed[^>]*>/gi,
             ];
 
-            const hasXSSPattern = xssPatterns.some(pattern => pattern.test(value));
+            const hasXSSPattern = xssPatterns.some(pattern =>
+              pattern.test(value),
+            );
             if (hasXSSPattern) {
               logSecurityEvent({
                 type: 'xss_attempt',
                 details: {
                   suspiciousContent: value.substring(0, 200), // Truncate for logging
                   element: (this as Element).tagName,
-                  method: 'innerHTML'
+                  method: 'innerHTML',
                 },
                 timestamp: new Date().toISOString(),
-                severity: 'high'
+                severity: 'high',
               });
             }
           }
           originalInnerHTML.call(this, value);
         },
-        configurable: true
+        configurable: true,
       });
     }
 
@@ -176,26 +189,29 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
 
     // Monitor for iframe creation attempts
     const originalCreateElement = document.createElement;
-    document.createElement = function(tagName: string) {
+    document.createElement = function (tagName: string) {
       const element = originalCreateElement.call(this, tagName);
-      
+
       if (tagName.toLowerCase() === 'iframe') {
         logSecurityEvent({
           type: 'clickjacking_attempt',
           details: {
             element: 'iframe',
             src: element.getAttribute('src'),
-            method: 'createElement'
+            method: 'createElement',
           },
           timestamp: new Date().toISOString(),
-          severity: 'medium'
+          severity: 'medium',
         });
       }
-      
+
       return element;
     };
 
-    setSecurityStatus(prev => ({ ...prev, clickjackingProtectionEnabled: true }));
+    setSecurityStatus(prev => ({
+      ...prev,
+      clickjackingProtectionEnabled: true,
+    }));
 
     if (debugMode) {
       console.log('Clickjacking Protection enabled');
@@ -208,7 +224,13 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
 
     try {
       // Create a trusted types policy
-      (window as Window & { trustedTypes?: { createPolicy: (name: string, policy: unknown) => unknown } }).trustedTypes?.createPolicy('default', {
+      (
+        window as Window & {
+          trustedTypes?: {
+            createPolicy: (name: string, policy: unknown) => unknown;
+          };
+        }
+      ).trustedTypes?.createPolicy('default', {
         createHTML: (input: string) => {
           // Sanitize HTML input
           const div = document.createElement('div');
@@ -221,13 +243,13 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
             type: 'trusted_types_violation',
             details: {
               type: 'script',
-              content: input.substring(0, 100)
+              content: input.substring(0, 100),
             },
             timestamp: new Date().toISOString(),
-            severity: 'high'
+            severity: 'high',
           });
           throw new Error('Script creation blocked by Trusted Types policy');
-        }
+        },
       } as unknown);
 
       setSecurityStatus(prev => ({ ...prev, trustedTypesEnabled: true }));
@@ -247,26 +269,32 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     if (!subresourceIntegrityEnabled) return;
 
     // Monitor script and link elements for SRI
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
           if (node.nodeType === Node.ELEMENT_NODE) {
             const element = node as Element;
-            
+
             if (element.tagName === 'SCRIPT' || element.tagName === 'LINK') {
-              const src = element.getAttribute('src') || element.getAttribute('href');
+              const src =
+                element.getAttribute('src') || element.getAttribute('href');
               const integrity = element.getAttribute('integrity');
-              
-              if (src && !integrity && !src.startsWith('data:') && !src.startsWith('blob:')) {
+
+              if (
+                src &&
+                !integrity &&
+                !src.startsWith('data:') &&
+                !src.startsWith('blob:')
+              ) {
                 logSecurityEvent({
                   type: 'sri_failure',
                   details: {
                     element: element.tagName,
                     src: src,
-                    missingIntegrity: true
+                    missingIntegrity: true,
                   },
                   timestamp: new Date().toISOString(),
-                  severity: 'medium'
+                  severity: 'medium',
                 });
               }
             }
@@ -292,7 +320,9 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
 
     // Redirect to HTTPS in production
     if (process.env.NODE_ENV === 'production') {
-      window.location.replace(`https:${window.location.href.substring(window.location.protocol.length)}`);
+      window.location.replace(
+        `https:${window.location.href.substring(window.location.protocol.length)}`,
+      );
     }
   }, [httpsRedirectEnabled]);
 
@@ -304,9 +334,9 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
       enableClickjackingProtection();
       enableTrustedTypes();
       enableHTTPSRedirect();
-      
+
       const cleanupSRI = enableSubresourceIntegrity();
-      
+
       return cleanupSRI;
     };
 
@@ -318,29 +348,35 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     enableClickjackingProtection,
     enableTrustedTypes,
     enableHTTPSRedirect,
-    enableSubresourceIntegrity
+    enableSubresourceIntegrity,
   ]);
 
   // Security status indicator (development only)
   if (debugMode && process.env.NODE_ENV === 'development') {
     return (
-      <div style={{
-        position: 'fixed',
-        bottom: '10px',
-        left: '10px',
-        background: 'rgba(0,0,0,0.8)',
-        color: 'white',
-        padding: '10px',
-        borderRadius: '5px',
-        fontSize: '12px',
-        zIndex: 9999,
-        fontFamily: 'monospace'
-      }}>
+      <div
+        style={{
+          position: 'fixed',
+          bottom: '10px',
+          left: '10px',
+          background: 'rgba(0,0,0,0.8)',
+          color: 'white',
+          padding: '10px',
+          borderRadius: '5px',
+          fontSize: '12px',
+          zIndex: 9999,
+          fontFamily: 'monospace',
+        }}
+      >
         <div>🔒 Security Status:</div>
         <div>• CSP: {securityStatus.cspEnabled ? '✅' : '❌'}</div>
         <div>• XSS: {securityStatus.xssProtectionEnabled ? '✅' : '❌'}</div>
-        <div>• Frame: {securityStatus.clickjackingProtectionEnabled ? '✅' : '❌'}</div>
-        <div>• Trusted Types: {securityStatus.trustedTypesEnabled ? '✅' : '❌'}</div>
+        <div>
+          • Frame: {securityStatus.clickjackingProtectionEnabled ? '✅' : '❌'}
+        </div>
+        <div>
+          • Trusted Types: {securityStatus.trustedTypesEnabled ? '✅' : '❌'}
+        </div>
         <div>• SRI: {securityStatus.sriEnabled ? '✅' : '❌'}</div>
       </div>
     );

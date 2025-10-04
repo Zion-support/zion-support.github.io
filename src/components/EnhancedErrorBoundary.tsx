@@ -52,12 +52,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     };
 
     // For now, just log to console
     console.error('Error Report:', errorReport);
-    
+
     // In production, you would send this to your error reporting service:
     // errorReportingService.captureException(error, { extra: errorReport });
   };
@@ -79,28 +79,45 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className="error-boundary" style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: '50vh',
-          padding: '2rem',
-          textAlign: 'center',
-          backgroundColor: '#f8f9fa',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          margin: '1rem'
-        }}>
+        <div
+          className='error-boundary'
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '50vh',
+            padding: '2rem',
+            textAlign: 'center',
+            backgroundColor: '#f8f9fa',
+            border: '1px solid #dee2e6',
+            borderRadius: '8px',
+            margin: '1rem',
+          }}
+        >
           <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>⚠️</div>
           <h2 style={{ color: '#dc3545', marginBottom: '1rem' }}>
             Something went wrong
           </h2>
-          <p style={{ color: '#6c757d', marginBottom: '2rem', maxWidth: '500px' }}>
-            We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+          <p
+            style={{
+              color: '#6c757d',
+              marginBottom: '2rem',
+              maxWidth: '500px',
+            }}
+          >
+            We're sorry, but something unexpected happened. Our team has been
+            notified and is working to fix this issue.
           </p>
-          
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+
+          <div
+            style={{
+              display: 'flex',
+              gap: '1rem',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+            }}
+          >
             <button
               onClick={this.handleRetry}
               style={{
@@ -110,7 +127,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 border: 'none',
                 borderRadius: '4px',
                 cursor: 'pointer',
-                fontSize: '1rem'
+                fontSize: '1rem',
               }}
             >
               Try Again
@@ -124,7 +141,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 border: 'none',
                 borderRadius: '4px',
                 cursor: 'pointer',
-                fontSize: '1rem'
+                fontSize: '1rem',
               }}
             >
               Reload Page
@@ -132,17 +149,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           </div>
 
           {process.env.NODE_ENV === 'development' && this.state.error && (
-            <details style={{ 
-              marginTop: '2rem', 
-              textAlign: 'left', 
-              backgroundColor: '#f8f9fa',
-              padding: '1rem',
-              borderRadius: '4px',
-              border: '1px solid #dee2e6',
-              maxWidth: '100%',
-              overflow: 'auto'
-            }}>
-              <summary style={{ cursor: 'pointer', fontWeight: 'bold', marginBottom: '0.5rem' }}>
+            <details
+              style={{
+                marginTop: '2rem',
+                textAlign: 'left',
+                backgroundColor: '#f8f9fa',
+                padding: '1rem',
+                borderRadius: '4px',
+                border: '1px solid #dee2e6',
+                maxWidth: '100%',
+                overflow: 'auto',
+              }}
+            >
+              <summary
+                style={{
+                  cursor: 'pointer',
+                  fontWeight: 'bold',
+                  marginBottom: '0.5rem',
+                }}
+              >
                 Error Details (Development Only)
               </summary>
               <div style={{ fontSize: '0.875rem' }}>
@@ -151,26 +176,30 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </div>
                 <div style={{ marginBottom: '1rem' }}>
                   <strong>Stack:</strong>
-                  <pre style={{ 
-                    backgroundColor: '#e9ecef', 
-                    padding: '0.5rem', 
-                    borderRadius: '4px',
-                    overflow: 'auto',
-                    fontSize: '0.75rem'
-                  }}>
+                  <pre
+                    style={{
+                      backgroundColor: '#e9ecef',
+                      padding: '0.5rem',
+                      borderRadius: '4px',
+                      overflow: 'auto',
+                      fontSize: '0.75rem',
+                    }}
+                  >
                     {this.state.error.stack}
                   </pre>
                 </div>
                 {this.state.errorInfo && (
                   <div>
                     <strong>Component Stack:</strong>
-                    <pre style={{ 
-                      backgroundColor: '#e9ecef', 
-                      padding: '0.5rem', 
-                      borderRadius: '4px',
-                      overflow: 'auto',
-                      fontSize: '0.75rem'
-                    }}>
+                    <pre
+                      style={{
+                        backgroundColor: '#e9ecef',
+                        padding: '0.5rem',
+                        borderRadius: '4px',
+                        overflow: 'auto',
+                        fontSize: '0.75rem',
+                      }}
+                    >
                       {this.state.errorInfo.componentStack}
                     </pre>
                   </div>

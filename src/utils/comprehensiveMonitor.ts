@@ -514,14 +514,21 @@ class ComprehensiveMonitor {
   /**
    * Record error
    */
-  private recordError(type: string, message: string, details: Record<string, unknown>): void {
+  private recordError(
+    type: string,
+    message: string,
+    details: Record<string, unknown>,
+  ): void {
     console.error(`🚨 Error recorded: ${type} - ${message}`, details);
   }
 
   /**
    * Record user behavior
    */
-  private recordUserBehavior(action: string, data: Record<string, unknown>): void {
+  private recordUserBehavior(
+    action: string,
+    data: Record<string, unknown>,
+  ): void {
     if (Math.random() < this.config.samplingRate) {
       console.log(`👤 User behavior recorded: ${action}`, data);
     }
@@ -530,7 +537,10 @@ class ComprehensiveMonitor {
   /**
    * Record system health
    */
-  private recordSystemHealth(metric: string, value: Record<string, unknown>): void {
+  private recordSystemHealth(
+    metric: string,
+    value: Record<string, unknown>,
+  ): void {
     console.log(`🏥 System health recorded: ${metric}`, value);
   }
 

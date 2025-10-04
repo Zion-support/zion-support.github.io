@@ -1,6 +1,6 @@
 /**
  * Comprehensive Error Handling and Logging System
- * 
+ *
  * Provides centralized error handling, logging, and monitoring
  * for production-grade application reliability.
  */
@@ -32,7 +32,7 @@ const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
  */
 const getSessionId = (): string => {
   if (typeof window === 'undefined') return 'server';
-  
+
   let sessionId = sessionStorage.getItem('zion_session_id');
   if (!sessionId) {
     sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -46,7 +46,7 @@ const getSessionId = (): string => {
  */
 const getErrorLogs = (): ErrorLog[] => {
   if (typeof window === 'undefined') return [];
-  
+
   try {
     const stored = localStorage.getItem(ERROR_LOG_KEY);
     if (stored) {
@@ -66,16 +66,16 @@ const getErrorLogs = (): ErrorLog[] => {
  */
 const saveErrorLog = (log: ErrorLog) => {
   if (typeof window === 'undefined') return;
-  
+
   try {
     const logs = getErrorLogs();
     logs.push(log);
-    
+
     // Keep only most recent logs
     if (logs.length > MAX_ERROR_LOGS) {
       logs.splice(0, logs.length - MAX_ERROR_LOGS);
     }
-    
+
     localStorage.setItem(ERROR_LOG_KEY, JSON.stringify(logs));
   } catch (error) {
     console.error('Error saving error log:', error);
@@ -88,7 +88,7 @@ const saveErrorLog = (log: ErrorLog) => {
 export const logError = (
   error: Error | string,
   context?: Record<string, any>,
-  level: 'error' | 'warn' = 'error'
+  level: 'error' | 'warn' = 'error',
 ) => {
   const errorLog: ErrorLog = {
     timestamp: Date.now(),
@@ -96,21 +96,22 @@ export const logError = (
     message: typeof error === 'string' ? error : error.message,
     stack: typeof error === 'object' && error.stack ? error.stack : undefined,
     context,
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
+    userAgent:
+      typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
     url: typeof window !== 'undefined' ? window.location.href : undefined,
     sessionId: getSessionId(),
   };
-  
+
   // Save to local storage
   saveErrorLog(errorLog);
-  
+
   // Console logging
   if (level === 'error') {
     console.error('Error logged:', errorLog);
   } else {
     console.warn('Warning logged:', errorLog);
   }
-  
+
   // Send to external monitoring service (if configured)
   sendToMonitoring(errorLog);
 };
@@ -124,11 +125,12 @@ export const logInfo = (message: string, context?: Record<string, any>) => {
     level: 'info',
     message,
     context,
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
+    userAgent:
+      typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
     url: typeof window !== 'undefined' ? window.location.href : undefined,
     sessionId: getSessionId(),
   };
-  
+
   console.log('Info logged:', errorLog);
 };
 
@@ -137,7 +139,7 @@ export const logInfo = (message: string, context?: Record<string, any>) => {
  */
 const sendToMonitoring = (errorLog: ErrorLog) => {
   if (typeof window === 'undefined') return;
-  
+
   // Example: Send to Sentry, LogRocket, or custom endpoint
   try {
     // Uncomment and configure your monitoring service
@@ -154,7 +156,6 @@ const sendToMonitoring = (errorLog: ErrorLog) => {
       });
     }
     */
-    
     // Or send to custom endpoint
     /*
     fetch('/api/log-error',       method: 'POST',
@@ -173,19 +174,19 @@ const sendToMonitoring = (errorLog: ErrorLog) => {
 export const getErrorMetrics = (): ErrorMetrics => {
   const logs = getErrorLogs();
   const errors = logs.filter(log => log.level === 'error');
-  
+
   // Count errors by type
   const errorsByType: Record<string, number> = {};
   errors.forEach(error => {
     const type = error.message.split(':')[0] || 'Unknown';
     errorsByType[type] = (errorsByType[type] || 0) + 1;
   });
-  
+
   // Calculate error rate (errors per minute in last hour)
   const hourAgo = Date.now() - 60 * 60 * 1000;
   const recentErrors = errors.filter(e => e.timestamp > hourAgo);
   const errorRate = recentErrors.length / 60;
-  
+
   return {
     totalErrors: errors.length,
     errorsByType,
@@ -217,30 +218,30 @@ export const clearErrorLogs = () => {
  */
 export const setupGlobalErrorHandling = () => {
   if (typeof window === 'undefined') return;
-  
+
   // Handle uncaught errors
-  window.addEventListener('error', (event) => {
+  window.addEventListener('error', event => {
     logError(event.error || event.message, {
       filename: event.filename,
       lineno: event.lineno,
       colno: event.colno,
     });
   });
-  
+
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener('unhandledrejection', event => {
     logError(event.reason || 'Unhandled Promise Rejection', {
       promise: event.promise,
     });
   });
-  
+
   // Handle console errors (optional)
   const originalConsoleError = console.error;
   console.error = (...args) => {
     logError(args.join(' '), { type: 'console.error' });
     originalConsoleError.apply(console, args);
   };
-  
+
   console.log('Global error handling initialized');
 };
 
@@ -249,42 +250,56 @@ export const setupGlobalErrorHandling = () => {
  */
 export const monitorPerformance = () => {
   if (typeof window === 'undefined' || !('performance' in window)) return;
-  
+
   // Monitor page load performance
   window.addEventListener('load', () => {
     setTimeout(() => {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const perfData = performance.getEntriesByType(
+        'navigation',
+      )[0] as PerformanceNavigationTiming;
       if (perfData) {
         const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-        
-        if (loadTime > 3000) { // Slow page load (>3s)
-          logError('Slow page load detected', {
-            loadTime,
-            domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
-            type: 'performance',
-          }, 'warn');
+
+        if (loadTime > 3000) {
+          // Slow page load (>3s)
+          logError(
+            'Slow page load detected',
+            {
+              loadTime,
+              domContentLoaded:
+                perfData.domContentLoadedEventEnd - perfData.fetchStart,
+              type: 'performance',
+            },
+            'warn',
+          );
         }
-        
+
         logInfo('Page load performance', {
           loadTime,
-          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
+          domContentLoaded:
+            perfData.domContentLoadedEventEnd - perfData.fetchStart,
           ttfb: perfData.responseStart - perfData.fetchStart,
         });
       }
     }, 0);
   });
-  
+
   // Monitor long tasks
   if ('PerformanceObserver' in window) {
     try {
-      const longTaskObserver = new PerformanceObserver((list) => {
+      const longTaskObserver = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
-          if (entry.duration > 50) { // Long task threshold
-            logError('Long task detected', {
-              duration: entry.duration,
-              startTime: entry.startTime,
-              type: 'performance',
-            }, 'warn');
+          if (entry.duration > 50) {
+            // Long task threshold
+            logError(
+              'Long task detected',
+              {
+                duration: entry.duration,
+                startTime: entry.startTime,
+                type: 'performance',
+              },
+              'warn',
+            );
           }
         }
       });
@@ -304,13 +319,13 @@ export const handleNetworkError = (error: Error, endpoint: string) => {
     type: 'network',
     online: typeof navigator !== 'undefined' ? navigator.onLine : true,
   });
-  
+
   // Check if offline
   if (typeof navigator !== 'undefined' && !navigator.onLine) {
     console.warn('User is offline');
     return { offline: true };
   }
-  
+
   return { offline: false };
 };
 
@@ -319,20 +334,20 @@ export const handleNetworkError = (error: Error, endpoint: string) => {
  */
 export const withErrorHandling = <T extends (...args: any[]) => any>(
   fn: T,
-  context?: string
+  context?: string,
 ): T => {
   return ((...args: Parameters<T>) => {
     try {
       const result = fn(...args);
-      
+
       // Handle async functions
       if (result instanceof Promise) {
-        return result.catch((error) => {
+        return result.catch(error => {
           logError(error, { context, args });
           throw error;
         });
       }
-      
+
       return result;
     } catch (error) {
       logError(error as Error, { context, args });

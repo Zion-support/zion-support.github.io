@@ -3,17 +3,11 @@
  * Comprehensive system for managing and coordinating all improvements
  */
 
-import {
-  performanceOptimizer,
-} from './performanceOptimizer';
-import {
-  codeQualityImprover,
-} from './codeQualityImprover';
+import { performanceOptimizer } from './performanceOptimizer';
+import { codeQualityImprover } from './codeQualityImprover';
 import { securityEnhancer } from './securityEnhancer';
 import { testingFramework } from './testingFramework';
-import {
-  documentationGenerator,
-} from './documentationGenerator';
+import { documentationGenerator } from './documentationGenerator';
 
 interface ImprovementConfig {
   enablePerformanceOptimization: boolean;

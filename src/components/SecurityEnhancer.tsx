@@ -30,9 +30,9 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         "base-uri 'self'",
         "form-action 'self'",
         "frame-ancestors 'none'",
-        "upgrade-insecure-requests",
+        'upgrade-insecure-requests',
       ].join('; ');
-      
+
       document.head.appendChild(cspMeta);
     }
 
@@ -91,7 +91,10 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 
       // This would typically be done server-side, but we can log for development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Security headers should be configured server-side:', requiredHeaders);
+        console.log(
+          'Security headers should be configured server-side:',
+          requiredHeaders,
+        );
       }
     };
 
@@ -107,14 +110,23 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     };
 
     // Expose sanitization function globally for use in forms
-    (window as unknown as { sanitizeInput?: (input: string) => string }).sanitizeInput = sanitizeInput;
+    (
+      window as unknown as { sanitizeInput?: (input: string) => string }
+    ).sanitizeInput = sanitizeInput;
 
     // Cleanup
     return () => {
       // Remove global function on cleanup
-      delete (window as unknown as { sanitizeInput?: (input: string) => string }).sanitizeInput;
+      delete (
+        window as unknown as { sanitizeInput?: (input: string) => string }
+      ).sanitizeInput;
     };
-  }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection]);
+  }, [
+    enableCSP,
+    enableHSTS,
+    enableXSSProtection,
+    enableClickjackingProtection,
+  ]);
 
   return null; // This component doesn't render anything
 };
