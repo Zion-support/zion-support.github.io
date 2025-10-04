@@ -95,10 +95,12 @@ export const AdvancedPerformanceMonitor: React.FC<{
         } else if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+          const firstInputEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: firstInputEntry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
-          if (!(entry as any).hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+          const layoutShiftEntry = entry as LayoutShift;
+          if (!layoutShiftEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + layoutShiftEntry.value }));
           }
         }
       }
@@ -118,7 +120,7 @@ export const AdvancedPerformanceMonitor: React.FC<{
 
     // Memory
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       setMetrics(prev => ({
         ...prev,
         memory: {
@@ -131,7 +133,7 @@ export const AdvancedPerformanceMonitor: React.FC<{
 
     // Network
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as Navigator & { connection: { effectiveType: string; downlink: number; rtt: number } }).connection;
       setMetrics(prev => ({
         ...prev,
         network: {
