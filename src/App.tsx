@@ -8,6 +8,8 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/SEOHead';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SecurityEnhancer from './components/SecurityEnhancer';
 import { LoadingSpinner } from './components/LoadingSpinner';
 
 // Import improvement system
@@ -90,7 +92,21 @@ function App() {
             reportToAnalytics={process.env.NODE_ENV === 'production'}
             logToConsole={process.env.NODE_ENV === 'development'}
           />
-          <AccessibilityEnhancer />
+          <PerformanceOptimizer
+            enableReporting={process.env.NODE_ENV === 'production'}
+          />
+          <SecurityEnhancer
+            enableCSP={true}
+            enableHSTS={true}
+            enableXSSProtection={true}
+            enableClickjackingProtection={true}
+          />
+          <AccessibilityEnhancer
+            enableAutoFocus={true}
+            enableKeyboardNavigation={true}
+            enableScreenReaderOptimization={true}
+            enableContrastMonitoring={true}
+          />
 
           <div className='min-h-screen bg-gray-50'>
             <EnhancedErrorBoundary
