@@ -60,18 +60,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
   const handleMetric = useCallback((metric: any) => {
     const enhancedMetrics: EnhancedMetrics = {
-<<<<<<< HEAD
-      cls: metrics?.cls || 0,
-      inp: metrics?.inp || 0,
-      fcp: metrics?.fcp || 0,
-      lcp: metrics?.lcp || 0,
-      ttfb: metrics?.ttfb || 0,
-      [metric.name]: metric.value,
-      ...getEnhancedPerformanceInfo()
-    };
-    
-    setMetrics(enhancedMetrics);
-=======
       cls: 0,
       inp: 0,
       fcp: 0,
@@ -103,7 +91,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       ...prev,
       ...enhancedMetrics
     }));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6493
     
     // Add to history
     setHistory(prev => [
