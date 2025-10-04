@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type RealServiceQ22025 = 
   id: string;
   name: string;
@@ -12,3 +13,6 @@ export const realServicesQ22025: RealServiceQ22025[] = [;
     features['Core features', 'Standard performance', 'Basic integration']
   }
 ];
+=======
+export type RealServiceQ22025 = id: string; name: string; tagline: string; price: string; features: string[]} export const realServicesQ22025: RealServiceQ22025[] = [ id: 'q2-service-1',' name: 'Q2 Service 1',' tagline: 'Second quarter service offering',' price: '$299',' features['Core features', 'Standard performance', 'Basic integration'] } ];'
+>>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

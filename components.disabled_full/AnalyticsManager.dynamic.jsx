@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
   loading: () => null,
   ssr: 'false',
 });
 export default AnalyticsManager;
+=======
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager; '
+>>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

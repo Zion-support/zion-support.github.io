@@ -1,86 +1,73 @@
 #!/usr/bin/env python3
+"""
+Script to merge all open PRs into main branch using GitHub API
+"""
 
-import requests
 import json
+import subprocess
 import sys
+import os
 
-# GitHub API configuration
-GITHUB_TOKEN = "ghs_tukMr3CyP2oHSXPRFscExJmUauEJUi4HAU1a"
-REPO = "Zion-Holdings/zion.app"
-BASE_URL = f"https://api.github.com/repos/{REPO}"
-
-def merge_pr(pr_number):
-    """Merge a pull request"""
-    print(f"Attempting to merge PR #{pr_number}...")
-    
-    headers = {
-        "Authorization": f"token {GITHUB_TOKEN}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    
-    # Check PR status
-    pr_url = f"{BASE_URL}/pulls/{pr_number}"
-    response = requests.get(pr_url, headers=headers)
-    
-    if response.status_code != 200:
-        print(f"Failed to get PR #{pr_number}: {response.status_code}")
-        return False
-    
-    pr_data = response.json()
-    mergeable = pr_data.get('mergeable', False)
-    draft = pr_data.get('draft', True)
-    
-    print(f"PR #{pr_number} - mergeable: {mergeable}, draft: {draft}")
-    
-    if not mergeable:
-        print(f"PR #{pr_number} is not mergeable")
-        return False
-    
-    if draft:
-        print(f"PR #{pr_number} is still a draft - attempting to convert...")
-        # Try to convert draft to ready
-        update_data = {"draft": False}
-        update_response = requests.patch(pr_url, headers=headers, json=update_data)
-        
-        if update_response.status_code != 200:
-            print(f"Failed to convert draft for PR #{pr_number}: {update_response.status_code}")
-            print(f"Response: {update_response.text}")
-            return False
-    
-    # Attempt to merge
-    merge_url = f"{BASE_URL}/pulls/{pr_number}/merge"
-    merge_data = {"merge_method": "squash"}
-    
-    merge_response = requests.put(merge_url, headers=headers, json=merge_data)
-    
-    if merge_response.status_code == 200:
-        print(f"Successfully merged PR #{pr_number}")
-        return True
-    else:
-        print(f"Failed to merge PR #{pr_number}: {merge_response.status_code}")
-        print(f"Response: {merge_response.text}")
-        return False
+def run_command(cmd, check=True):
+    """Run a command and return the result"""
+    try:
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=check)
+        return result.returncode == 0, result.stdout, result.stderr
+    except subprocess.CalledProcessError as e:
+        return False, e.stdout, e.stderr
 
 def main():
-    print("Starting PR merge process...")
+    print("🚀 Starting PR merge process...")
     
-    # List of PRs to merge
-    pr_numbers = [25061, 25062]
+    # Read the open PRs from the JSON file
+    try:
+        with open('open_prs.json', 'r') as f:
+            prs = json.load(f)
+    except FileNotFoundError:
+        print("❌ Could not find open_prs.json file")
+        return 1
     
-    results = []
-    for pr_number in pr_numbers:
-        success = merge_pr(pr_number)
-        results.append((pr_number, success))
-        print("-" * 50)
+    print(f"📋 Found {len(prs)} open PRs to process")
     
-    print("\nSummary:")
-    for pr_number, success in results:
-        status = "SUCCESS" if success else "FAILED"
-        print(f"PR #{pr_number}: {status}")
+    # Process each PR
+    for i, pr in enumerate(prs, 1):
+        pr_number = pr['number']
+        pr_title = pr['title']
+        branch_name = pr['head']['ref']
+        is_draft = pr.get('draft', False)
+        
+        print(f"\n📝 Processing PR #{pr_number}: {pr_title}")
+        print(f"   Branch: {branch_name}")
+        print(f"   Draft: {is_draft}")
+        
+        # Process draft PRs as well since user wants to merge all open PRs
+        if is_draft:
+            print(f"   📝 PR #{pr_number} is a draft - processing anyway")
+        
+        # Try to merge the PR
+        print(f"   🔄 Attempting to merge PR #{pr_number}...")
+        
+        # First, let's try to checkout the branch and merge it
+        checkout_cmd = f"git checkout origin/{branch_name}"
+        success, stdout, stderr = run_command(checkout_cmd, check=False)
+        
+        if not success:
+            print(f"   ❌ Could not checkout branch {branch_name}: {stderr}")
+            continue
+        
+        # Try to merge into main
+        merge_cmd = "git checkout main && git merge --no-ff origin/{branch_name} -m 'Merge PR #{pr_number}: {pr_title}'"
+        success, stdout, stderr = run_command(merge_cmd, check=False)
+        
+        if success:
+            print(f"   ✅ Successfully merged PR #{pr_number}")
+        else:
+            print(f"   ❌ Failed to merge PR #{pr_number}: {stderr}")
+            # Try to abort the merge
+            run_command("git merge --abort", check=False)
     
-    # Check if any PRs were successfully merged
-    successful_merges = sum(1 for _, success in results if success)
-    print(f"\nTotal successful merges: {successful_merges}/{len(results)}")
+    print("\n🎉 PR merge process completed!")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

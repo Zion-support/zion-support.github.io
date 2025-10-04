@@ -35,6 +35,7 @@ const pageTransition = {
   duration: 0.4
 };
 
+<<<<<<< HEAD
 // Loading fallback component
 const PageLoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -43,6 +44,54 @@ const PageLoadingFallback = () => (
 );
 
 // Main App component
+=======
+// Lazy loaded components for better performance
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ServicesPage = React.lazy(() => import('./pages/Services'));
+
+// Simple Error Boundary
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h1>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+>>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -113,6 +162,10 @@ function App() {
               <SEOHead />
               <Header />
               
+<<<<<<< HEAD
+=======
+              {/* Main Content */}
+>>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
               <motion.main
                 initial="initial"
                 animate="in"
@@ -121,6 +174,7 @@ function App() {
                 transition={pageTransition}
                 className="flex-1"
               >
+<<<<<<< HEAD
                 <Suspense fallback={<PageLoadingFallback />}>
                   <Routes>
                     <Route path="/" element={<HomePage />} />
@@ -151,6 +205,46 @@ function App() {
                     <Suspense fallback={<LoadingSpinner />}>
                       <PerformanceOptimizer />
                     </Suspense>
+=======
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div id="main-content" className="flex-1">
+                    <React.Suspense
+                      fallback={
+                        <div className="min-h-screen flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                            <p className="text-gray-600">Loading...</p>
+                          </div>
+                        </div>
+                      }
+                    >
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services/*" element={<ServicesPage />} />
+                        
+                        {/* 404 Fallback */}
+                        <Route
+                          path="*"
+                          element={
+                            <div className="min-h-screen flex items-center justify-center">
+                              <div className="text-center">
+                                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                                <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                                <a
+                                  href="/"
+                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                                >
+                                  Return Home
+                                </a>
+                              </div>
+                            </div>
+                          }
+                        />
+                      </Routes>
+                    </React.Suspense>
+>>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
                   </div>
                 </div>
               )}

@@ -69,6 +69,7 @@ export default defineConfig({
             }
             return 'vendor-misc';
           }
+          
           // App chunks - lazy load pages
           if (id.includes('src/pages/')) {
             // Split large page bundles
@@ -83,6 +84,7 @@ export default defineConfig({
             }
             return 'pages-core';
           }
+          
           // Component chunks
           if (id.includes('src/components/')) {
             if (id.includes('banner') || id.includes('Banner')) {
@@ -90,14 +92,17 @@ export default defineConfig({
             }
             return 'components-core';
           }
+          
           // Charts and data visualization
           if (id.includes('recharts') || id.includes('d3')) {
             return 'vendor-charts';
           }
+          
           // Large libraries
           if (id.includes('lodash') || id.includes('moment')) {
             return 'vendor-large';
           }
+          
           return 'vendor';
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
@@ -170,4 +175,8 @@ export default defineConfig({
     minifySyntax: true,
     minifyWhitespace: true,
   },
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

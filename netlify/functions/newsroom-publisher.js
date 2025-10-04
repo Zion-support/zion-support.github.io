@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports.handler = async function () {
   const { execSync } = require('child_process');
   try {
@@ -24,3 +25,6 @@ exports.handler = async function () {
 exports.config = {
   schedule: '*/180 * * * *',
 };
+=======
+exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/newsroom-generator.cjs || true', { stdio: 'inherit', shell: true });' execSync('node automation/git-sync.cjs || true', { stdio: 'inherit', shell: true });' return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'newsroom-publisher' }) }; } catch (e) { return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) }; } }; exports.config = {' schedule: '*/180 * * * *', };'
+>>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

@@ -1,0 +1,1 @@
+import React from "react"; const, MarketplaceProduct, s: Rea, c, t.FC = () => { return ( <section, className="m, i, n-h-[40, v, h]" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Marketpla, c, e - Produc, t, s</h1> <p, className="te, x, t-gr, a, y-7, 0, 0" >Explore, A, I-powered, product, s.</p> </secti, o, n> ); }; export default MarketplaceProducts;
