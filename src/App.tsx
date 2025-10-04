@@ -1,241 +1,194 @@
-import React, { useState, useEffect, Suspense, lazy, useCallback } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { AppRouter } from './router';
 
-// Import core components (always loaded)
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import LoadingSpinner from './components/LoadingSpinner';
-import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
+// import { resourcePreloader } from './utils/resourcePreloader';
+// import { criticalCSSManager } from './utils/criticalCSSManager';
+// import { sriUtility } from './security/sriUtility';
+// import { csrfProtection } from './security/csrfProtection';
+// import { structuredDataManager } from './seo/structuredDataManager';
+// import { keyboardNavigationManager } from './accessibility/keyboardNavigationManager';
+// import { screenReaderSupport } from './accessibility/screenReaderSupport';
+import './index.css';
+import { securityManager as enhancedSecurityManager } from './utils/securityHeaders';
+import { accessibilityEnhancer } from './utils/accessibilityEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AdvancedAnalytics from './components/AdvancedAnalytics';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import NotificationSystem from './components/NotificationSystem';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
-// Lazy load performance components (only when needed)
-const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimizer'));
-const PerformanceMonitor = lazy(() => import('./components/PerformanceMonitor'));
+// Local stub to avoid type errors when optional performance init is not present
+const initializePerformanceEnhancements = (): void => {};
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/Home'));
-const AboutPage = lazy(() => import('./pages/About'));
-const ContactPage = lazy(() => import('./pages/Contact'));
-const ServicesPage = lazy(() => import('./pages/Services'));
-const BlogPage = lazy(() => import('./pages/Blog'));
-
-// Animation variants (memoized for performance)
-const pageVariants = {
-  initial: { opacity: 0, y: 20 },
-  in: { opacity: 1, y: 0 },
-  out: { opacity: 0, y: -20 }
-};
-
-const pageTransition = {
-  type: 'tween' as const,
-  ease: 'anticipate' as const,
-  duration: 0.4
-};
-
-// Lazy loaded components for better performance
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const AboutPage = React.lazy(() => import('./pages/About'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
-const ServicesPage = React.lazy(() => import('./pages/Services'));
-
-// Simple Error Boundary
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean }
-> {
-  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
-          </div>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
+interface Notification {
+  id: string;
+  message: string;
+  type: 'success' | 'error' | 'info' | 'warning';
 }
 
-function App() {
-  const [isLoading, setIsLoading] = useState(true);
+interface WindowWithEnhancements extends Window {
+  advancedPerformanceOptimizer?: { initialize?: () => void };
+  advancedSEOOptimizer?: { initialize?: () => void };
+  advancedSecurityManager?: { initialize?: () => void };
+  advancedAnalytics?: { initialize?: () => void };
+  advancedErrorHandler?: { initialize?: () => void };
+  advancedCachingSystem?: { initialize?: () => void };
+  advancedUXOptimizer?: { initialize?: () => void };
+  advancedTestingFramework?: { initialize?: () => void };
+  advancedI18n?: { initialize?: () => void };
+  enhancements?: Record<string, unknown>;
+  performanceOptimizer?: unknown;
+  seoOptimizer?: unknown;
+  accessibilityEnhancer?: unknown;
+  securityManager?: unknown;
+  analytics?: unknown;
+  errorHandler?: unknown;
+  cachingSystem?: unknown;
+  uxOptimizer?: unknown;
+  testingFramework?: unknown;
+  i18n?: unknown;
+}
+
+interface SecurityManager {
+  initialize?: () => void;
+}
+
+export default function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  // Memoized handlers for better performance
-  const togglePerformanceOptimizer = useCallback(() => {
-    setShowPerformanceOptimizer(prev => !prev);
-  }, []);
+  interface SEOData {
+    title: string;
+    description: string;
+    canonical: string;
+  }
 
-  const togglePerformanceMonitor = useCallback(() => {
-    setShowPerformanceMonitor(prev => !prev);
-  }, []);
+  const seoDataForOptimizer: SEOData = useMemo(() => ({
+    title: 'Zion Tech Group - Leading AI & Technology Solutions',
+    description: 'Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises.',
+    canonical: typeof window !== 'undefined' ? window.location.href : 'https://zion.app/',
+  }), []);
 
+  // Simple hotkeys for demo toggles
   useEffect(() => {
-    // Simulate loading with reduced time for better UX
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Optimized keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey) {
-        switch (event.key.toLowerCase()) {
-          case 'p':
-            event.preventDefault();
-            togglePerformanceOptimizer();
-            break;
-          case 'm':
-            event.preventDefault();
-            togglePerformanceMonitor();
-            break;
-          case 'escape':
-            event.preventDefault();
-            setShowPerformanceOptimizer(false);
-            setShowPerformanceMonitor(false);
-            break;
-          default:
-            break;
-        }
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (!e.ctrlKey || !e.shiftKey) return;
+      switch (e.key.toLowerCase()) {
+        case 'p':
+          e.preventDefault();
+          setShowPerformanceOptimizer((v) => !v);
+          break;
+        case 'm':
+          e.preventDefault();
+          setShowPerformanceMonitor((v) => !v);
+          break;
+        default:
+          break;
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [togglePerformanceOptimizer, togglePerformanceMonitor]);
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 
-  if (isLoading) {
-    return (
-      <HelmetProvider>
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <LoadingSpinner />
-        </div>
-      </HelmetProvider>
-    );
-  }
+  useEffect(() => {
+    try {
+      if (enhancedSecurityManager && typeof (enhancedSecurityManager as SecurityManager).initialize === 'function') {
+        (enhancedSecurityManager as SecurityManager).initialize?.();
+      }
+    
+      // Initialize new performance and accessibility enhancements
+      initializePerformanceEnhancements();
+      accessibilityEnhancer.initialize();
+    
+      // Initialize advanced optimizers
+      // Guard optional advanced systems if present in global scope
+      const windowWithEnhancements = window as WindowWithEnhancements;
+      const advancedPerformanceOptimizer = windowWithEnhancements.advancedPerformanceOptimizer;
+      const advancedSEOOptimizer = windowWithEnhancements.advancedSEOOptimizer;
+      const advancedSecurityManager = windowWithEnhancements.advancedSecurityManager;
+      const advancedAnalytics = windowWithEnhancements.advancedAnalytics;
+      const advancedErrorHandler = windowWithEnhancements.advancedErrorHandler;
+      const advancedCachingSystem = windowWithEnhancements.advancedCachingSystem;
+      const advancedUXOptimizer = windowWithEnhancements.advancedUXOptimizer;
+      const advancedTestingFramework = windowWithEnhancements.advancedTestingFramework;
+      const advancedI18n = windowWithEnhancements.advancedI18n;
+
+      advancedPerformanceOptimizer?.initialize?.();
+      advancedSEOOptimizer?.initialize?.();
+      accessibilityEnhancer.initialize();
+      advancedSecurityManager?.initialize?.();
+      advancedAnalytics?.initialize?.();
+      // advancedErrorHandler is initialized in constructor
+      advancedCachingSystem?.initialize?.();
+      advancedUXOptimizer?.initialize?.();
+      advancedTestingFramework?.initialize?.();
+      advancedI18n?.initialize?.();
+      // Store enhancements globally for debugging
+      windowWithEnhancements.enhancements = {
+        performanceOptimizer: advancedPerformanceOptimizer,
+        seoOptimizer: advancedSEOOptimizer,
+        accessibilityEnhancer: accessibilityEnhancer,
+        securityManager: advancedSecurityManager,
+        analytics: advancedAnalytics,
+        errorHandler: advancedErrorHandler,
+        cachingSystem: advancedCachingSystem,
+        uxOptimizer: advancedUXOptimizer
+      };
+      windowWithEnhancements.performanceOptimizer = advancedPerformanceOptimizer;
+      windowWithEnhancements.seoOptimizer = advancedSEOOptimizer;
+      windowWithEnhancements.accessibilityEnhancer = accessibilityEnhancer;
+      windowWithEnhancements.securityManager = advancedSecurityManager;
+      windowWithEnhancements.analytics = advancedAnalytics;
+      windowWithEnhancements.errorHandler = advancedErrorHandler;
+      windowWithEnhancements.cachingSystem = advancedCachingSystem;
+      windowWithEnhancements.uxOptimizer = advancedUXOptimizer;
+      windowWithEnhancements.testingFramework = advancedTestingFramework;
+      windowWithEnhancements.i18n = advancedI18n;
+    } catch (error) {
+      console.error('Error initializing enhancements:', error);
+    }
+  }, []);
+
+  const handleRemoveNotification = useCallback((id: string) => {
+    setNotifications((prev) => prev.filter((n) => n.id !== id));
+  }, []);
 
   return (
-    <HelmetProvider>
-      <UserFriendlyErrorBoundary>
-        <EnhancedErrorBoundary>
-          <Router>
-            <div className="min-h-screen bg-white">
-              <SEOHead />
-              <Header />
-              
-              {/* Main Content */}
-              <motion.main
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-                className="flex-1"
-              >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div id="main-content" className="flex-1">
-                    <React.Suspense
-                      fallback={
-                        <div className="min-h-screen flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                            <p className="text-gray-600">Loading...</p>
-                          </div>
-                        </div>
-                      }
-                    >
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/services/*" element={<ServicesPage />} />
-                        
-                        {/* 404 Fallback */}
-                        <Route
-                          path="*"
-                          element={
-                            <div className="min-h-screen flex items-center justify-center">
-                              <div className="text-center">
-                                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
-                                <p className="text-xl text-gray-600 mb-8">Page not found</p>
-                                <a
-                                  href="/"
-                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                                >
-                                  Return Home
-                                </a>
-                              </div>
-                            </div>
-                          }
-                        />
-                      </Routes>
-                    </React.Suspense>
-                  </div>
-                </div>
-              )}
+    <EnhancedErrorBoundary>
+      <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
+      <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <AppRouter />
 
-              {/* Performance Monitor Modal */}
-              {showPerformanceMonitor && (
-                <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-                  <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-                    <div className="flex justify-between items-center mb-4">
-                      <h2 className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
-                      <button
-                        onClick={togglePerformanceMonitor}
-                        className="text-gray-500 hover:text-gray-700 text-xl font-bold"
-                        aria-label="Close Performance Monitor"
-                      >
-                        ✕
-                      </button>
-                    </div>
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <PerformanceMonitor />
-                    </Suspense>
-                  </div>
-                </div>
-              )}
-
-              {/* Keyboard Shortcuts Help */}
-              <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-                <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-                <div>Ctrl+Shift+P: Performance Optimizer</div>
-                <div>Ctrl+Shift+M: Performance Monitor</div>
-                <div>Ctrl+Shift+Esc: Close Modals</div>
+        {showPerformanceOptimizer && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Performance Optimizer</h2>
+                <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
               </div>
+              <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
             </div>
-          </Router>
-        </EnhancedErrorBoundary>
-      </UserFriendlyErrorBoundary>
-    </HelmetProvider>
+          </div>
+        )}
+
+        {showPerformanceMonitor && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
+            <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-2xl font-bold">Performance Monitor</h2>
+                <button onClick={() => setShowPerformanceMonitor(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
+              </div>
+              <PerformanceMonitor showDashboard={true} />
+            </div>
+          </div>
+        )}
+
+        <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
+      </div>
+    </EnhancedErrorBoundary>
   );
 }
-
-export default App;

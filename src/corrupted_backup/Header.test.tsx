@@ -52,16 +52,13 @@ describe('Header Component', () => {
   test('renders navigation links', () => {
     renderWithRouter(<Header />);
 
-    expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Services')).toBeInTheDocument();
+    expect(screen.getByText('Solutions')).toBeInTheDocument();
+    expect(screen.getByText('Resources')).toBeInTheDocument();
+    expect(screen.getByText('Pricing')).toBeInTheDocument();
+    expect(screen.getByText('Blog')).toBeInTheDocument();
+    expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
-  });
-
-  test('renders get started button', () => {
-    renderWithRouter(<Header />);
-
-    const getStartedButton = screen.getByText('Get Started');
-    expect(getStartedButton).toBeInTheDocument();
+    expect(screen.getByText('Get Started')).toBeInTheDocument();
   });
 });
