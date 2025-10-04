@@ -32,26 +32,25 @@
       "@types/*": ["./src/types/*"]
     }
   },
-  "include": ["app"],
+  "include": ["src"],
   "exclude": [
-    "app/blog/**/*",
-    "app/components/**/*",
-    "app/contact/**/*",
-    "app/enterprise/**/*",
-    "app/guides/**/*",
-    "app/services/**/*",
-    "app/services-advertising/**/*",
-    "app/not-found.tsx",
-    "app/page-minimal.tsx",
-    "app/page-optimized.tsx",
-    "app/page-old.tsx",
-    "app/careers/page.tsx",
-    "src/**/*",
+    "app/**/*",
     "utils/**/*",
+    "src/components/**/*",
+    "src/pages/**/*",
+    "src/content/**/*",
+    "src/data/**/*",
+    "src/hooks/**/*",
+    "src/types/**/*",
+    "src/utils/**/*",
     "_pages_disabled/**/*",
     "_app_disabled/**/*",
     "_conflicted_disabled/**/*",
-    "_pages_api_disabled/**/*"
+    "_pages_api_disabled/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
