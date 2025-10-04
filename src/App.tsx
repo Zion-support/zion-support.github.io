@@ -1,58 +1,145 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Simple components
-const Home = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-    <div className="container mx-auto px-6 py-20">
-      <h1 className="text-6xl font-bold mb-8 text-center">
-        Zion Tech Group
-      </h1>
-      <p className="text-xl text-gray-300 text-center max-w-4xl mx-auto">
-        Leading AI & Technology Solutions
-      </p>
-      <div className="mt-12 text-center">
-        <a 
-          href="/contact" 
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-colors"
-        >
-          Get Started
-        </a>
-      </div>
-    </div>
-  </div>
-);
+// Components
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
-const Contact = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-    <div className="container mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
-      <div className="max-w-2xl mx-auto text-center">
-        <p className="text-xl text-gray-300 mb-8">
-          Ready to transform your business with cutting-edge AI solutions?
-        </p>
-        <div className="space-y-4">
-          <p>📞 +1 302 464 0950</p>
-          <p>✉️ kleber@ziontechgroup.com</p>
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+// Pages
+import HomePage from './page';
 
-function App() {
+// Main App component
+const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="min-h-screen bg-gray-50">
+          <SEOHead />
+          <EnhancedErrorBoundary>
+            <Header />
+            
+            <main className="flex-1">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+
+            <Footer />
+
+            {/* Performance Monitor Modal */}
+            {showPerformanceMonitor && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                onClick={togglePerformanceMonitor}
+              >
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  className="bg-white rounded-lg p-6 max-w-2xl w-full mx-4"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-xl font-bold">Performance Monitor</h2>
+                    <button
+                      onClick={togglePerformanceMonitor}
+                      className="text-gray-500 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <PerformanceMonitor />
+                </motion.div>
+              </motion.div>
+            )}
+
+            {/* Performance Optimizer (hidden) */}
+            <PerformanceOptimizer />
+          </EnhancedErrorBoundary>
+        </div>
       </Router>
+=======
+// Utils
+import {
+  setupGlobalErrorHandling,
+  monitorPerformance,
+} from '../utils/errorHandling';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+
+// Styles
+import '../src/index.css';
+
+const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize global error handling
+    setupGlobalErrorHandling();
+
+    // Initialize performance monitoring
+    monitorPerformance();
+
+    // Initialize performance optimizer
+    performanceOptimizer.clearMetrics();
+
+    console.log(
+      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+    );
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <ErrorBoundary>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className='App'>
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href='#main-content'
+                  className='skip-link'
+                  onClick={e => {
+                    e.preventDefault();
+                    const main =
+                      document.querySelector('main') ||
+                      document.querySelector('#main-content');
+                    if (main) {
+                      main.focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
+
+                <Routes>
+                  <Route path='/' element={<HomePage />} />
+                  {/* Add more routes as needed */}
+                </Routes>
+
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
+      </ErrorBoundary>
+>>>>>>> cursor/fix-errors-and-merge-to-main-80bc
     </HelmetProvider>
   );
-}
+};
 
 export default App;
