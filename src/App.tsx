@@ -8,7 +8,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/SEOHead';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import LoadingSpinner from './components/LoadingSpinner';
+import { LoadingSpinner } from './components/LoadingSpinner';
 
 // Animation variants
 const pageVariants = {
@@ -98,8 +98,7 @@ function App() {
                     <React.Suspense fallback={
                       <LoadingSpinner 
                         size="lg" 
-                        text="Loading page..." 
-                        className="min-h-screen"
+                        message="Loading page..."
                       />
                     }>
                       <Routes>
