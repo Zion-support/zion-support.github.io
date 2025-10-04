@@ -1,5 +1,18 @@
 import '@testing-library/jest-dom';
 
+// Polyfill TextEncoder and TextDecoder for Jest environment
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock PerformanceObserver for Jest environment
+global.PerformanceObserver = class PerformanceObserver {
+  constructor(callback: (list: any) => void) {}
+  observe(options?: any) {}
+  disconnect() {}
+  takeRecords() { return []; }
+} as any;
+
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
