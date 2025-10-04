@@ -42,9 +42,9 @@ const RevolutionaryBreakthroughs2025 = React.memo(function RevolutionaryBreakthr
               Revolutionary AI Breakthroughs 2025
             </h1>
             
-            <p className="text-left"></p>
-              Experience the future of AI with <span className="text-left">6 breakthrough technologies< that are revolutionizing enterprise operations:"
-              <span className="text-left"></span>
+            <p className="text-left">
+              Experience the future of AI with <span className="text-left">6 breakthrough technologies</span> that are revolutionizing enterprise operations:
+              <span className="text-left">
                 Meta-Cognitive AI • Quantum-Neural Networks • Autonomous Operations • Conscious AI Agents • Holographic Computing • Neuromorphic AI
               </span>
             </p>

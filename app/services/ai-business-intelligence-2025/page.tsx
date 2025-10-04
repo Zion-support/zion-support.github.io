@@ -44,15 +44,11 @@ const AIBusinessIntelligence2025 = React.memo(function AIBusinessIntelligence202
           AI Business Intelligence 2025: Advanced Analytics & Insights Platform
         </h1>
         
-        <div className="text-left"></div>
-          <span className="text-left"></span>
-            Business Intelligence
-          </span>
-          <span className="text-left"></span>
-            Predictive Analytics
-          </span>
-          <span className="text-left"></span>
-            Data Visualization
+        <div className="text-left">
+          <span className="text-left">Business Intelligence</span>
+        </div>
+          <span className="text-left">Predictive Analytics</span>
+          <span className="text-left">Data Visualization</span>
           </span>
           <span className="text-left"></span>
             Real-time Insights

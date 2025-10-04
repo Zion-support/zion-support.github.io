@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI Cybersecurity Solutions 2025 | Zero-Trust Architecture | Zion Tech Group',
   description: 'Revolutionary AI-powered cybersecurity solutions with 99.99% threat detection, zero-trust architecture, and real-time protection. Prevent 100% of ransomware attacks with quantum-encrypted security.',
   keywords: 'AI cybersecurity 2025, zero-trust security, quantum encryption, threat detection AI, ransomware prevention, AI security solutions, enterprise cybersecurity',
@@ -15,26 +15,21 @@ export const metadata: Metadata =
 
 const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
   return (
-    <div>/* content */}
-  return (
     <div>
-      <div></div>
-    <div className="text-left">
-        <div className="text-left"></div>
-        {/* Header */}</div>
+      {/* Header */}
+      <div className="text-left">
         <div className="text-left">
-        <div className="text-left"></div>
-            <Link href="/services" className="text-left">
-              ← Back to Services
-            </Link>
-            <h1 className="text-left">
-              AI Cybersecurity Solutions 2025
-            </h1>
-            <p className="text-left"></p>
-              Protect your enterprise with revolutionary AI-powered cybersecurity that delivers 99.99% threat detection, 
-              zero-trust architecture, and quantum-encrypted protection. Prevent 100% of ransomware attacks with 
-              our next-generation security solutions.
-            </p>
+          <Link href="/services" className="text-left">
+            ← Back to Services
+          </Link>
+          <h1 className="text-left">
+            AI Cybersecurity Solutions 2025
+          </h1>
+          <p className="text-left">
+            Protect your enterprise with revolutionary AI-powered cybersecurity that delivers 99.99% threat detection, 
+            zero-trust architecture, and quantum-encrypted protection. Prevent 100% of ransomware attacks with 
+            our next-generation security solutions.
+          </p>
           </div>
 
           {/* Success Metrics */}
