@@ -59,38 +59,18 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const handleMetric = useCallback((metric: any) => {
+    const performanceInfo = getEnhancedPerformanceInfo();
     const enhancedMetrics: EnhancedMetrics = {
       cls: 0,
       inp: 0,
       fcp: 0,
       lcp: 0,
       ttfb: 0,
-      ...getEnhancedPerformanceInfo()
+      ...performanceInfo,
+      [metric.name]: metric.value
     };
     
-    // Map metric name to our interface
-    switch (metric.name) {
-      case 'CLS':
-        enhancedMetrics.cls = metric.value;
-        break;
-      case 'INP':
-        enhancedMetrics.inp = metric.value;
-        break;
-      case 'FCP':
-        enhancedMetrics.fcp = metric.value;
-        break;
-      case 'LCP':
-        enhancedMetrics.lcp = metric.value;
-        break;
-      case 'TTFB':
-        enhancedMetrics.ttfb = metric.value;
-        break;
-    }
-    
-    setMetrics(prev => ({
-      ...prev,
-      ...enhancedMetrics
-    }));
+    setMetrics(enhancedMetrics);
     
     // Add to history
     setHistory(prev => [

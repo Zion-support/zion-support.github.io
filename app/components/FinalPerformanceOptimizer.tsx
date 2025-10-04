@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface FinalMetrics {
@@ -150,14 +150,14 @@ const FinalPerformanceOptimizer: React.FC = () => {
   }, [calculatePerformanceScore]);
 
   const handleMetric = useCallback((metric: any) => {
-    const additionalInfo = getFinalPerformanceInfo();
+    const performanceInfo = getFinalPerformanceInfo();
     const finalMetrics: FinalMetrics = {
       cls: 0,
       inp: 0,
       fcp: 0,
       lcp: 0,
       ttfb: 0,
-      ...additionalInfo,
+      ...performanceInfo,
       [metric.name]: metric.value
     };
     
@@ -227,14 +227,10 @@ const FinalPerformanceOptimizer: React.FC = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'navigation') {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Navigation timing:', entry);
-          }
+          console.log('Navigation timing:', entry);
         }
         if (entry.entryType === 'resource') {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Resource timing:', entry);
-          }
+          console.log('Resource timing:', entry);
         }
       }
     });
