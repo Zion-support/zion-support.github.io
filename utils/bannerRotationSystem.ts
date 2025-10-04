@@ -227,10 +227,12 @@ export const trackBannerClick = (bannerId: string) => {
 /**
  * A/B Testing utility
  */
-export const getABTestGroup = (): 'A' | 'B' | 'control' =>   if (typeof window === 'undefined') return 'control';
+export const getABTestGroup = (): 'A' | 'B' | 'control' => {
+  if (typeof window === 'undefined') return 'control';
   
   let group = sessionStorage.getItem('ab_test_group') as 'A' | 'B' | 'control' | null;
-  if (!group)     const random = Math.random();
+  if (!group) {
+    const random = Math.random();
     if (random < 0.33) group = 'A';
     else if (random < 0.66) group = 'B';
     else group = 'control';
@@ -244,16 +246,20 @@ export const getABTestGroup = (): 'A' | 'B' | 'control' =>   if (typeof window =
 /**
  * Clear old banner data (maintenance)
  */
-export const clearOldBannerData = () =>   if (typeof window === 'undefined') return;
+export const clearOldBannerData = () => {
+  if (typeof window === 'undefined') return;
   
-  try     const impressions = getBannerImpressions();
+  try {
+    const impressions = getBannerImpressions();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
     console.log(`Cleaned up banner data. ${impressions.length} impressions retained.`);
-  } catch (error)     console.error('Error cleaning banner data:', error);
+  } catch (error) {
+    console.error('Error cleaning banner data:', error);
   }
 };
 
-export default   recordBannerImpression,
+export default {
+  recordBannerImpression,
   selectBannersForRotation,
   getBannerAnalytics,
   shouldRefreshBanners,

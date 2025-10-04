@@ -61,11 +61,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const handleMetric = useCallback((metric: any) => {
     const performanceInfo = getEnhancedPerformanceInfo();
     const enhancedMetrics: EnhancedMetrics = {
-      cls: 0,
+cls: 0,
       inp: 0,
       fcp: 0,
       lcp: 0,
-      ttfb: 0,
+      ttfb: 0,origin/cursor/fix-errors-and-merge-to-main-1ae6
       ...performanceInfo,
       [metric.name]: metric.value
     };

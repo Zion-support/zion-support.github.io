@@ -1,20 +1,19 @@
-export const cuttingEdge2027Innovations = [
-  
-    name: 'Cutting Edge AI Innovation 2027',
+export const cuttingEdge2027Innovations = [{
+  name: 'Cutting Edge AI Innovation 2027',
     path: '/services/cutting-edge-ai-innovation-2027',
     description: 'Next-generation AI innovations for 2027',
     icon: 'Brain',
     category: 'AI & Innovation',
-    features: [
+    features: [;
       'Advanced AI algorithms',
       'Innovative solutions',
       'Future-ready technology',
       'Performance optimization'
     ],
-    pricing: 
+    pricing: any;
       starter: '$699/month',
       professional: '$1399/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom';
     }
   },
   
@@ -23,16 +22,16 @@ export const cuttingEdge2027Innovations = [
     description: 'Revolutionary technology innovations for 2027',
     icon: 'Zap',
     category: 'Technology Innovation',
-    features: [
+    features: [;
       'Revolutionary technology',
       'Innovative solutions',
       'Future-ready platform',
       'Advanced capabilities'
     ],
-    pricing: 
+    pricing: any;
       starter: '$599/month',
       professional: '$1199/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom';
     }
   }
 ];
@@ -48,5 +47,5 @@ export const cuttingEdge2027Stats =
   totalServices: 2,
   categories: 4,
   averageRating: 4.9,
-  activeUsers: 3500
+  activeUsers: 3500;
 };
