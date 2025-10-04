@@ -160,7 +160,6 @@ export const AdvancedPerformanceMonitor: React.FC<{
     return 'text-red-600';
   };
 
-
   if (!showDetails && alerts.length === 0) {
     return null;
   }
