@@ -264,7 +264,8 @@ export const monitorPerformance = () => {
           }, 'warn');
         }
         
-        logInfo('Page load performance',           loadTime,
+        logInfo('Page load performance', {
+          loadTime,
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
           ttfb: perfData.responseStart - perfData.fetchStart,
         });
@@ -273,8 +274,13 @@ export const monitorPerformance = () => {
   });
   
   // Monitor long tasks
-  if ('PerformanceObserver' in window)     try       const longTaskObserver = new PerformanceObserver((list) =>         for (const entry of list.getEntries())           if (entry.duration > 50) { // Long task threshold
-            logError('Long task detected',               duration: entry.duration,
+  if ('PerformanceObserver' in window) {
+    try {
+      const longTaskObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.duration > 50) { // Long task threshold
+            logError('Long task detected', {
+              duration: entry.duration,
               startTime: entry.startTime,
               type: 'performance',
             }, 'warn');
@@ -282,7 +288,8 @@ export const monitorPerformance = () => {
         }
       });
       longTaskObserver.observe({ entryTypes: ['longtask'] });
-    } catch (error)       // Long task API not supported
+    } catch (error) {
+      // Long task API not supported
     }
   }
 };
@@ -290,13 +297,16 @@ export const monitorPerformance = () => {
 /**
  * Network error handler
  */
-export const handleNetworkError = (error: Error, endpoint: string) =>   logError(error,     endpoint,
+export const handleNetworkError = (error: Error, endpoint: string) => {
+  logError(error, {
+    endpoint,
     type: 'network',
     online: typeof navigator !== 'undefined' ? navigator.onLine : true,
   });
   
   // Check if offline
-  if (typeof navigator !== 'undefined' && !navigator.onLine)     console.warn('User is offline');
+  if (typeof navigator !== 'undefined' && !navigator.onLine) {
+    console.warn('User is offline');
     return { offline: true };
   }
   
@@ -309,22 +319,29 @@ export const handleNetworkError = (error: Error, endpoint: string) =>   logError
 export const withErrorHandling = <T extends (...args: any[]) => any>(
   fn: T,
   context?: string
-): T =>   return ((...args: Parameters<T>) =>     try       const result = fn(...args);
+): T => {
+  return ((...args: Parameters<T>) => {
+    try {
+      const result = fn(...args);
       
       // Handle async functions
-      if (result instanceof Promise)         return result.catch((error) =>           logError(error, { context, args });
+      if (result instanceof Promise) {
+        return result.catch((error) => {
+          logError(error, { context, args });
           throw error;
         });
       }
       
       return result;
-    } catch (error)       logError(error as Error, { context, args });
+    } catch (error) {
+      logError(error as Error, { context, args });
       throw error;
     }
   }) as T;
 };
 
-export default   logError,
+export default {
+  logError,
   logInfo,
   getErrorMetrics,
   isErrorRateTooHigh,

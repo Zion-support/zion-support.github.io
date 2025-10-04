@@ -6,21 +6,21 @@ export const performanceConfig = {
     FID: 100,
     FCP: 1800,
     LCP: 2500,
-    TTFB: 800,
+    TTFB: 800
   },
-
+  
   // Monitoring intervals
   monitoring: {
     interval: 5000, // 5 seconds
-    enabled: process.env.NODE_ENV === 'production',
+    enabled: process.env.NODE_ENV === 'production'
   },
-
+  
   // Reporting
   reporting: {
     endpoint: '/api/performance',
     batchSize: 10,
-    flushInterval: 30000, // 30 seconds
-  },
+    flushInterval: 30000 // 30 seconds
+  }
 };
 
 export default performanceConfig;
