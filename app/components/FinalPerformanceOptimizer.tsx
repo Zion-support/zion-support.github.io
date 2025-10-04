@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
 interface FinalMetrics {
   cls: number;
-  fid: number;
+  inp: number;
   fcp: number;
   lcp: number;
   ttfb: number;
@@ -19,7 +19,7 @@ interface FinalMetrics {
 
 interface PerformanceThresholds {
   cls: number;
-  fid: number;
+  inp: number;
   fcp: number;
   lcp: number;
   ttfb: number;
@@ -43,7 +43,7 @@ const FinalPerformanceOptimizer: React.FC = () => {
   const [insights, setInsights] = useState<PerformanceInsights | null>(null);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
-    fid: 100,
+    inp: 200,
     fcp: 1800,
     lcp: 2500,
     ttfb: 800
@@ -77,9 +77,9 @@ const FinalPerformanceOptimizer: React.FC = () => {
     else if (currentMetrics.cls <= 0.25) score -= 5;
     else score -= 15;
     
-    // FID scoring (0-25 points)
-    if (currentMetrics.fid <= 100) score -= 0;
-    else if (currentMetrics.fid <= 300) score -= 5;
+    // INP scoring (0-25 points)
+    if (currentMetrics.inp <= 200) score -= 0;
+    else if (currentMetrics.inp <= 500) score -= 5;
     else score -= 15;
     
     // FCP scoring (0-25 points)
@@ -108,9 +108,9 @@ const FinalPerformanceOptimizer: React.FC = () => {
       optimizations.push('Add loading placeholders for dynamic content');
     }
 
-    // FID analysis
-    if (currentMetrics.fid > 300) {
-      criticalIssues.push('High First Input Delay (FID)');
+    // INP analysis
+    if (currentMetrics.inp > 500) {
+      criticalIssues.push('High Interaction to Next Paint (INP)');
       recommendations.push('Reduce JavaScript execution time');
       optimizations.push('Implement code splitting and lazy loading');
     }
@@ -150,17 +150,22 @@ const FinalPerformanceOptimizer: React.FC = () => {
   }, [calculatePerformanceScore]);
 
   const handleMetric = useCallback((metric: any) => {
-    const finalMetrics = {
-      [metric.name]: metric.value,
-      ...getFinalPerformanceInfo()
+    const performanceInfo = getFinalPerformanceInfo();
+    const finalMetrics: FinalMetrics = {
+      cls: metric.name === 'CLS' ? metric.value : 0,
+      inp: metric.name === 'INP' ? metric.value : 0,
+      fcp: metric.name === 'FCP' ? metric.value : 0,
+      lcp: metric.name === 'LCP' ? metric.value : 0,
+      ttfb: metric.name === 'TTFB' ? metric.value : 0,
+      ...performanceInfo
     };
     
     const performanceScore = calculatePerformanceScore(finalMetrics);
-    finalMetrics.performanceScore = performanceScore;
+    const metricsWithScore = { ...finalMetrics, performanceScore };
     
     setMetrics(prev => ({
       ...prev,
-      ...finalMetrics
+      ...metricsWithScore
     }));
     
     // Add to history
@@ -170,7 +175,7 @@ const FinalPerformanceOptimizer: React.FC = () => {
         timestamp: Date.now(),
         metrics: finalMetrics
       }
-    ]));
+    ]);
 
     // Generate insights
     const newInsights = generateInsights(finalMetrics);
@@ -211,11 +216,11 @@ const FinalPerformanceOptimizer: React.FC = () => {
   };
 
   useEffect(() => {
-    getCLS(handleMetric);
-    getFID(handleMetric);
-    getFCP(handleMetric);
-    getLCP(handleMetric);
-    getTTFB(handleMetric);
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
 
     // Enhanced performance monitoring
     const observer = new PerformanceObserver((list) => {
@@ -285,9 +290,9 @@ const FinalPerformanceOptimizer: React.FC = () => {
                 </span>
               </div>
               <div className="flex justify-between">
-                <span>FID:</span>
-                <span className={getStatusColor(metrics.fid, thresholds.fid)}>
-                  {getStatusIcon(metrics.fid, thresholds.fid)} {metrics.fid?.toFixed(1)}ms
+                <span>INP:</span>
+                <span className={getStatusColor(metrics.inp, thresholds.inp)}>
+                  {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
                 </span>
               </div>
               <div className="flex justify-between">
