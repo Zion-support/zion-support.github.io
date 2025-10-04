@@ -31,8 +31,8 @@ describe('Header Component', () => {
   test('renders company name', () => {
     renderWithRouter(<Header />);
     
-    const companyName = screen.getByText('Zion Tech Group');
-    expect(companyName).toBeInTheDocument();
+    const logo = screen.getByText('Zion Tech Group');
+    expect(logo).toBeInTheDocument();
   });
 
   test('renders navigation links', () => {
