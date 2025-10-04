@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
@@ -134,7 +134,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
                 {/* CTA Button */}
                 <Link
-                  href={`/blog/${content.slug}`}
+                  to={`/blog/${content.slug}`}
                   className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
                   <span>Read Full Article</span>
@@ -166,7 +166,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
           <div className="flex items-center justify-center gap-6 mb-12">
             <Link
-              href="/contact"
+              to="/contact"
               className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
               <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -174,7 +174,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </Link>
             
             <Link
-              href="/blog"
+              to="/blog"
               className="group flex items-center gap-3 bg-slate-700 hover:bg-slate-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <span>Explore All Content</span>
