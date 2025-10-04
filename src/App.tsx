@@ -18,6 +18,9 @@ import UltimateErrorBoundary from '../app/components/UltimateErrorBoundary';
 import ComprehensiveMonitoringDashboard from '../app/components/ComprehensiveMonitoringDashboard';
 import { initializeOptimizer } from '../utils/comprehensiveOptimizer';
 
+// Import improvement system
+import './utils/improvementRunner';
+
 // Animation variants
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
