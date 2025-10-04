@@ -2,11 +2,11 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface EnhancedMetrics {
-  cls: number;
-  inp: number;
-  fcp: number;
-  lcp: number;
-  ttfb: number;
+  cls?: number;
+  inp?: number;
+  fcp?: number;
+  lcp?: number;
+  ttfb?: number;
   memory?: number;
   connection?: string;
   devicePixelRatio?: number;
@@ -159,8 +159,13 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div className="flex justify-between">
               <span>INP:</span>
+<<<<<<< HEAD
               <span className={getStatusColor(metrics.inp, thresholds.inp)}>
                 {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+=======
+              <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
+                {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f474
               </span>
             </div>
             <div className="flex justify-between">
