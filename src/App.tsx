@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 // Import core components (always loaded)
 import Header from './components/Header';
 import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import LoadingSpinner from './components/LoadingSpinner';
-import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+// // import SEOHead from './components/SEOHead';
+// // import LoadingSpinner from './components/LoadingSpinner';
+// import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
+// import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
 // Lazy load performance components (only when needed)
 const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimizer'));
@@ -36,10 +36,6 @@ const pageTransition = {
 };
 
 // Lazy loaded components for better performance
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const AboutPage = React.lazy(() => import('./pages/About'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
-const ServicesPage = React.lazy(() => import('./pages/Services'));
 
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
@@ -136,7 +132,9 @@ function App() {
     return (
       <HelmetProvider>
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <LoadingSpinner />
+          <div className="min-h-screen flex items-center justify-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+          </div>
         </div>
       </HelmetProvider>
     );
@@ -145,10 +143,10 @@ function App() {
   return (
     <HelmetProvider>
       <UserFriendlyErrorBoundary>
-        <EnhancedErrorBoundary>
+        {/* <EnhancedErrorBoundary> */}
           <Router>
             <div className="min-h-screen bg-white">
-              <SEOHead />
+              {/* <SEOHead /> */}
               <Header />
               
               {/* Main Content */}
@@ -200,7 +198,7 @@ function App() {
                     </React.Suspense>
                   </div>
                 </div>
-              )}
+              </motion.main>
 
               {/* Performance Monitor Modal */}
               {showPerformanceMonitor && (
@@ -216,7 +214,7 @@ function App() {
                         ✕
                       </button>
                     </div>
-                    <Suspense fallback={<LoadingSpinner />}>
+                    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div></div>}>
                       <PerformanceMonitor />
                     </Suspense>
                   </div>
@@ -232,7 +230,7 @@ function App() {
               </div>
             </div>
           </Router>
-        </EnhancedErrorBoundary>
+        {/* </EnhancedErrorBoundary> */}
       </UserFriendlyErrorBoundary>
     </HelmetProvider>
   );

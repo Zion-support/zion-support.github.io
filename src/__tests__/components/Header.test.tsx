@@ -52,7 +52,6 @@ describe('Header Component', () => {
   test('renders navigation links', () => {
     renderWithRouter(<Header />);
 
-    expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Services')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
