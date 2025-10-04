@@ -1,26 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-// Import existing components
+// Import core components (always loaded)
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
 import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
-// Import pages
-import HomePage from './pages/Home';
-import AboutPage from './pages/About';
-import ContactPage from './pages/Contact';
-import ServicesPage from './pages/Services';
-import BlogPage from './pages/Blog';
+// Lazy load performance components (only when needed)
+const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimizer'));
+const PerformanceMonitor = lazy(() => import('./components/PerformanceMonitor'));
 
-// Animation variants
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/Home'));
+const AboutPage = lazy(() => import('./pages/About'));
+const ContactPage = lazy(() => import('./pages/Contact'));
+const ServicesPage = lazy(() => import('./pages/Services'));
+const BlogPage = lazy(() => import('./pages/Blog'));
+
+// Animation variants (memoized for performance)
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
   in: { opacity: 1, y: 0 },
@@ -33,33 +35,54 @@ const pageTransition = {
   duration: 0.4
 };
 
+// Loading fallback component
+const PageLoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <LoadingSpinner />
+  </div>
+);
+
 // Main App component
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
 
+  // Memoized handlers for better performance
+  const togglePerformanceOptimizer = useCallback(() => {
+    setShowPerformanceOptimizer(prev => !prev);
+  }, []);
+
+  const togglePerformanceMonitor = useCallback(() => {
+    setShowPerformanceMonitor(prev => !prev);
+  }, []);
+
   useEffect(() => {
-    // Simulate loading
+    // Simulate loading with reduced time for better UX
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
 
-  // Keyboard shortcuts
+  // Optimized keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.ctrlKey && event.shiftKey) {
-        switch (event.key) {
-          case 'P':
+        switch (event.key.toLowerCase()) {
+          case 'p':
             event.preventDefault();
-            setShowPerformanceOptimizer(true);
+            togglePerformanceOptimizer();
             break;
-          case 'M':
+          case 'm':
             event.preventDefault();
-            setShowPerformanceMonitor(true);
+            togglePerformanceMonitor();
+            break;
+          case 'escape':
+            event.preventDefault();
+            setShowPerformanceOptimizer(false);
+            setShowPerformanceMonitor(false);
             break;
           default:
             break;
@@ -69,7 +92,7 @@ function App() {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [togglePerformanceOptimizer, togglePerformanceMonitor]);
 
   if (isLoading) {
     return (
@@ -98,13 +121,15 @@ function App() {
                 transition={pageTransition}
                 className="flex-1"
               >
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                </Routes>
+                <Suspense fallback={<PageLoadingFallback />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                  </Routes>
+                </Suspense>
               </motion.main>
 
               <Footer />
@@ -116,13 +141,16 @@ function App() {
                     <div className="flex justify-between items-center mb-4">
                       <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
                       <button
-                        onClick={() => setShowPerformanceOptimizer(false)}
-                        className="text-gray-500 hover:text-gray-700"
+                        onClick={togglePerformanceOptimizer}
+                        className="text-gray-500 hover:text-gray-700 text-xl font-bold"
+                        aria-label="Close Performance Optimizer"
                       >
                         ✕
                       </button>
                     </div>
-                    <PerformanceOptimizer />
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <PerformanceOptimizer />
+                    </Suspense>
                   </div>
                 </div>
               )}
@@ -134,13 +162,16 @@ function App() {
                     <div className="flex justify-between items-center mb-4">
                       <h2 className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
                       <button
-                        onClick={() => setShowPerformanceMonitor(false)}
-                        className="text-gray-500 hover:text-gray-700"
+                        onClick={togglePerformanceMonitor}
+                        className="text-gray-500 hover:text-gray-700 text-xl font-bold"
+                        aria-label="Close Performance Monitor"
                       >
                         ✕
                       </button>
                     </div>
-                    <PerformanceMonitor />
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <PerformanceMonitor />
+                    </Suspense>
                   </div>
                 </div>
               )}
@@ -150,6 +181,7 @@ function App() {
                 <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
                 <div>Ctrl+Shift+P: Performance Optimizer</div>
                 <div>Ctrl+Shift+M: Performance Monitor</div>
+                <div>Ctrl+Shift+Esc: Close Modals</div>
               </div>
             </div>
           </Router>
