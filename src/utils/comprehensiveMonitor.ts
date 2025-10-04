@@ -174,9 +174,10 @@ class ComprehensiveMonitor {
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver(list => {
         let clsValue = 0;
-        list.getEntries().forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        list.getEntries().forEach((entry: PerformanceEntry) => {
+          const layoutShiftEntry = entry as any;
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value as number;
           }
         });
         this.recordPerformanceMetric('cumulativeLayoutShift', clsValue);
@@ -185,10 +186,11 @@ class ComprehensiveMonitor {
 
       // First Input Delay
       const fidObserver = new PerformanceObserver(list => {
-        list.getEntries().forEach((entry: any) => {
+        list.getEntries().forEach((entry: PerformanceEntry) => {
+          const fidEntry = entry as any;
           this.recordPerformanceMetric(
             'firstInputDelay',
-            entry.processingStart - entry.startTime,
+            fidEntry.processingStart - fidEntry.startTime,
           );
         });
       });
@@ -512,14 +514,14 @@ class ComprehensiveMonitor {
   /**
    * Record error
    */
-  private recordError(type: string, message: string, details: any): void {
+  private recordError(type: string, message: string, details: Record<string, unknown>): void {
     console.error(`🚨 Error recorded: ${type} - ${message}`, details);
   }
 
   /**
    * Record user behavior
    */
-  private recordUserBehavior(action: string, data: any): void {
+  private recordUserBehavior(action: string, data: Record<string, unknown>): void {
     if (Math.random() < this.config.samplingRate) {
       console.log(`👤 User behavior recorded: ${action}`, data);
     }
@@ -528,7 +530,7 @@ class ComprehensiveMonitor {
   /**
    * Record system health
    */
-  private recordSystemHealth(metric: string, value: any): void {
+  private recordSystemHealth(metric: string, value: Record<string, unknown>): void {
     console.log(`🏥 System health recorded: ${metric}`, value);
   }
 

@@ -31,7 +31,7 @@ interface PerformanceHistory {
 
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<EnhancedMetrics | null>(null);
-  const [history, setHistory] = useState<PerformanceHistory[]>([]);
+  const [, setHistory] = useState<PerformanceHistory[]>([]);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
     inp: 200,
@@ -43,9 +43,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const getEnhancedPerformanceInfo = useCallback(() => {
-    const memory = (performance as any).memory;
-    const connection = (navigator as any).connection;
-    const battery = (navigator as any).getBattery;
+    const memory = (performance as Record<string, unknown>).memory;
+    const connection = (navigator as Record<string, unknown>).connection;
+    const battery = (navigator as Record<string, unknown>).getBattery;
 
     return {
       memory: memory ? Math.round(memory.usedJSHeapSize / 1048576) : undefined,
@@ -59,7 +59,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const handleMetric = useCallback(
-    (metric: any) => {
+    (metric: { name: string; value: number }) => {
       const performanceInfo = getEnhancedPerformanceInfo();
       const enhancedMetrics: EnhancedMetrics = {
         cls: 0,

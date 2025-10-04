@@ -38,7 +38,7 @@ interface PropDocumentation {
   name: string;
   type: string;
   required: boolean;
-  defaultValue?: any;
+  defaultValue?: unknown;
   description: string;
   examples: string[];
 }
@@ -57,7 +57,7 @@ interface ParameterDocumentation {
   type: string;
   required: boolean;
   description: string;
-  defaultValue?: any;
+  defaultValue?: unknown;
 }
 
 interface ExampleDocumentation {
@@ -91,7 +91,7 @@ interface APIDocumentation {
 
 interface RequestBodyDocumentation {
   contentType: string;
-  schema: any;
+  schema: Record<string, unknown>;
   required: boolean;
   description: string;
 }
@@ -100,8 +100,8 @@ interface ResponseDocumentation {
   statusCode: number;
   description: string;
   contentType: string;
-  schema: any;
-  examples: any[];
+  schema: Record<string, unknown>;
+  examples: unknown[];
 }
 
 interface ArchitectureDocumentation {
@@ -339,7 +339,7 @@ class DocumentationGenerator {
   }): Promise<APIDocumentation> {
     return {
       endpoint: api.endpoint,
-      method: api.method as any,
+      method: api.method as "GET" | "POST" | "PUT" | "DELETE" | "PATCH",
       description: api.description,
       parameters: [
         {

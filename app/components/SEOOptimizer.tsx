@@ -22,7 +22,7 @@ interface SEOData {
   canonicalUrl: string;
   ogImage?: string;
   twitterImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   robots?: {
     index?: boolean;
     follow?: boolean;
