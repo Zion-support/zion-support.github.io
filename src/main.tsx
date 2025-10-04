@@ -8,33 +8,22 @@ async function reportWebVitals() {
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
     const log = (metric: { name: string; value: number }) => {
       if (process.env.NODE_ENV === 'production') {
-        console.log('Web Vital:', metric);
+        console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
       }
     };
-
     onCLS(log);
     onLCP(log);
     onFCP(log);
     onTTFB(log);
-  } catch (error) {
-    console.warn('Failed to load web-vitals:', error);
+  } catch {
+    // ignore in unsupported environments
   }
 }
 
-const container = document.getElementById('root');
-if (!container) {
-  throw new Error('Root element not found');
-}
-
-const root = createRoot(container);
-root.render(
+createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
 );
 
-<<<<<<< HEAD
 reportWebVitals();
-=======
-reportWebVitals();
->>>>>>> cursor/fix-errors-and-merge-to-main-798c
