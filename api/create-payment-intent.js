@@ -8,33 +8,13 @@ async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  try {
-    const { amount, currency = 'usd' } = req.body || {};
-    
-    if (!amount) {
-      res.statusCode = 400;
-      res.json({ error: 'Missing amount' });
-      return;
-    }
-
-    const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-    
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: Math.round(amount * 100), // Convert to cents
-      currency,
-      automatic_payment_methods: {
-        enabled: true,
-      },
-    });
-
-    res.statusCode = 200;
-    res.json({ clientSecret: paymentIntent.client_secret });
-  } catch (err) {
-    res.statusCode = 500;
-    res.json({ error: err.message });
-=======
   const { amount, currency = 'usd', userId } = req.body || {};
+  
+  if (!amount) {
+    res.statusCode = 400;
+    res.json({ error: 'Missing amount' });
+    return;
+  }
 
   try {
     // Create payment intent logic here
@@ -56,7 +36,6 @@ async function handler(req, res) {
     res.status(500).json({ 
       error: error.message || 'Failed to create payment intent' 
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-e7ef
   }
 }
 
