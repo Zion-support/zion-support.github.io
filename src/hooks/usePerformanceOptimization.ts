@@ -7,12 +7,14 @@ interface PerformanceOptimizationOptions {
   throttleDelay?: number;
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (
+  options: PerformanceOptimizationOptions = {},
+) => {
   const {
     enableIntersectionObserver = true,
     enableResizeObserver = true,
     enableVisibilityChange = true,
-    throttleDelay = 100
+    throttleDelay = 100,
   } = options;
 
   const observersRef = useRef<{
@@ -24,51 +26,60 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const throttle = useCallback((func: Function, delay: number) => {
     let timeoutId: NodeJS.Timeout;
     let lastExecTime = 0;
-    
+
     return (...args: unknown[]) => {
       const currentTime = Date.now();
-      
+
       if (currentTime - lastExecTime > delay) {
         func(...args);
         lastExecTime = currentTime;
       } else {
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          func(...args);
-          lastExecTime = Date.now();
-        }, delay - (currentTime - lastExecTime));
+        timeoutId = setTimeout(
+          () => {
+            func(...args);
+            lastExecTime = Date.now();
+          },
+          delay - (currentTime - lastExecTime),
+        );
       }
     };
   }, []);
 
   // Intersection Observer for lazy loading
-  const createIntersectionObserver = useCallback((callback: IntersectionObserverCallback) => {
-    if (!enableIntersectionObserver || !('IntersectionObserver' in window)) {
-      return null;
-    }
-
-    const observer = new IntersectionObserver(
-      throttle(callback, throttleDelay),
-      {
-        rootMargin: '50px',
-        threshold: 0.1
+  const createIntersectionObserver = useCallback(
+    (callback: IntersectionObserverCallback) => {
+      if (!enableIntersectionObserver || !('IntersectionObserver' in window)) {
+        return null;
       }
-    );
 
-    observersRef.current.intersection = observer;
-    return observer;
-  }, [enableIntersectionObserver, throttleDelay, throttle]);
+      const observer = new IntersectionObserver(
+        throttle(callback, throttleDelay),
+        {
+          rootMargin: '50px',
+          threshold: 0.1,
+        },
+      );
+
+      observersRef.current.intersection = observer;
+      return observer;
+    },
+    [enableIntersectionObserver, throttleDelay, throttle],
+  );
 
   // Resize Observer for responsive handling
-  const createResizeObserver = useCallback((callback: ResizeObserverCallback) => {
-    if (!enableResizeObserver || !('ResizeObserver' in window)) {
-      return null;
-    }
+  const createResizeObserver = useCallback(
+    (callback: ResizeObserverCallback) => {
+      if (!enableResizeObserver || !('ResizeObserver' in window)) {
+        return null;
+      }
 
-    const observer = new ResizeObserver(throttle(callback, throttleDelay));
-    observersRef.current.resize = observer;
-    return observer;
-  }, [enableResizeObserver, throttleDelay, throttle]);
+      const observer = new ResizeObserver(throttle(callback, throttleDelay));
+      observersRef.current.resize = observer;
+      return observer;
+    },
+    [enableResizeObserver, throttleDelay, throttle],
+  );
 
   // Visibility change handler
   useEffect(() => {
@@ -85,7 +96,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
-    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+    return () =>
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, [enableVisibilityChange]);
 
   // Cleanup observers
@@ -104,6 +116,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   return {
     createIntersectionObserver,
     createResizeObserver,
-    throttle
+    throttle,
   };
 };

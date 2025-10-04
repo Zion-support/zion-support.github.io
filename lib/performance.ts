@@ -219,7 +219,10 @@ export function getSlowResources(
  * Get memory usage (if available)
  */
 export function getMemoryUsage(): Record<string, number> | null {
-  if (typeof performance === 'undefined' || !(performance as Record<string, unknown>).memory)
+  if (
+    typeof performance === 'undefined' ||
+    !(performance as Record<string, unknown>).memory
+  )
     return null;
 
   const memory = (performance as Record<string, unknown>).memory;
@@ -239,7 +242,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
 
   const navigationTiming = getNavigationTiming();
   // const memoryUsage = getMemoryUsage();
-    // const slowResources = getSlowResources();
+  // const slowResources = getSlowResources();
 
   const metrics: PerformanceMetric[] = [];
 
@@ -313,7 +316,10 @@ export function monitorLayoutShifts(
  * Check if connection is slow
  */
 export function isSlowConnection(): boolean {
-  if (typeof navigator === 'undefined' || !(navigator as Record<string, unknown>).connection)
+  if (
+    typeof navigator === 'undefined' ||
+    !(navigator as Record<string, unknown>).connection
+  )
     return false;
 
   const connection = (navigator as Record<string, unknown>).connection;
@@ -328,7 +334,10 @@ export function isSlowConnection(): boolean {
  * Get connection type
  */
 export function getConnectionType(): string {
-  if (typeof navigator === 'undefined' || !(navigator as Record<string, unknown>).connection)
+  if (
+    typeof navigator === 'undefined' ||
+    !(navigator as Record<string, unknown>).connection
+  )
     return 'unknown';
 
   const connection = (navigator as Record<string, unknown>).connection;

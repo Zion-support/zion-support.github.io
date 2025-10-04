@@ -29,9 +29,9 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (!enableReporting) return;
 
     // Import web-vitals dynamically to avoid bundle bloat
-    import('web-vitals').then((webVitals) => {
+    import('web-vitals').then(webVitals => {
       const { onCLS, onINP, onFCP, onLCP, onTTFB } = webVitals;
-      onCLS((metric) => {
+      onCLS(metric => {
         setMetrics(prev => {
           const newMetrics = { ...prev, cls: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -39,7 +39,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      onINP((metric) => {
+      onINP(metric => {
         setMetrics(prev => {
           const newMetrics = { ...prev, fid: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -47,7 +47,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      onFCP((metric) => {
+      onFCP(metric => {
         setMetrics(prev => {
           const newMetrics = { ...prev, fcp: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -55,7 +55,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      onLCP((metric) => {
+      onLCP(metric => {
         setMetrics(prev => {
           const newMetrics = { ...prev, lcp: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -63,7 +63,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      onTTFB((metric) => {
+      onTTFB(metric => {
         setMetrics(prev => {
           const newMetrics = { ...prev, ttfb: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -80,12 +80,15 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         '/api/services',
       ];
 
-      criticalResources.forEach((resource) => {
+      criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
-        link.as = resource.includes('.woff') ? 'font' : 
-                  resource.includes('.webp') ? 'image' : 'fetch';
+        link.as = resource.includes('.woff')
+          ? 'font'
+          : resource.includes('.webp')
+            ? 'image'
+            : 'fetch';
         if (resource.includes('.woff')) {
           link.crossOrigin = 'anonymous';
         }
@@ -96,8 +99,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+      const imageObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
@@ -107,7 +110,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      images.forEach((img) => imageObserver.observe(img));
+      images.forEach(img => imageObserver.observe(img));
     };
 
     // Initialize optimizations
@@ -124,17 +127,17 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     const checkPerformanceBudget = () => {
       const { fcp, lcp, fid, cls } = metrics;
-      
+
       // Performance budgets (in milliseconds)
       const budgets = {
         fcp: 1800, // First Contentful Paint
         lcp: 2500, // Largest Contentful Paint
-        fid: 100,  // First Input Delay
-        cls: 0.1,  // Cumulative Layout Shift
+        fid: 100, // First Input Delay
+        cls: 0.1, // Cumulative Layout Shift
       };
 
       const violations = [];
-      
+
       if (fcp && fcp > budgets.fcp) {
         violations.push(`FCP: ${fcp}ms (budget: ${budgets.fcp}ms)`);
       }
@@ -150,14 +153,21 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       if (violations.length > 0 && enableReporting) {
         console.warn('Performance budget violations:', violations);
-        
+
         // Report to analytics or monitoring service
-        if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
-          (window as unknown as { gtag: Function }).gtag('event', 'performance_budget_violation', {
-            event_category: 'Performance',
-            event_label: violations.join(', '),
-            value: violations.length,
-          });
+        if (
+          typeof window !== 'undefined' &&
+          (window as unknown as { gtag?: Function }).gtag
+        ) {
+          (window as unknown as { gtag: Function }).gtag(
+            'event',
+            'performance_budget_violation',
+            {
+              event_category: 'Performance',
+              event_label: violations.join(', '),
+              value: violations.length,
+            },
+          );
         }
       }
     };

@@ -1,6 +1,6 @@
 /**
  * Content Validation Utility
- * 
+ *
  * Validates content integrity, consistency, and quality across:
  * - Blog posts
  * - Case studies
@@ -52,17 +52,23 @@ export class ContentValidator {
       errors.push(`Title too short (min ${this.minTitleLength} characters)`);
       score -= 10;
     } else if (metadata.title.length > this.maxTitleLength) {
-      warnings.push(`Title too long (max ${this.maxTitleLength} characters recommended)`);
+      warnings.push(
+        `Title too long (max ${this.maxTitleLength} characters recommended)`,
+      );
       score -= 5;
     }
 
     // Description validation
     if (metadata.description) {
       if (metadata.description.length < this.minDescriptionLength) {
-        warnings.push(`Description too short (min ${this.minDescriptionLength} characters recommended)`);
+        warnings.push(
+          `Description too short (min ${this.minDescriptionLength} characters recommended)`,
+        );
         score -= 5;
       } else if (metadata.description.length > this.maxDescriptionLength) {
-        warnings.push(`Description too long (max ${this.maxDescriptionLength} characters recommended)`);
+        warnings.push(
+          `Description too long (max ${this.maxDescriptionLength} characters recommended)`,
+        );
         score -= 3;
       }
     } else {
@@ -98,7 +104,9 @@ export class ContentValidator {
       warnings.push('Future publish date detected');
       score -= 5;
     } else {
-      const ageInDays = (now.getTime() - metadata.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+      const ageInDays =
+        (now.getTime() - metadata.publishDate.getTime()) /
+        (1000 * 60 * 60 * 24);
       if (ageInDays > 365) {
         warnings.push('Content is over 1 year old - consider updating');
         score -= 3;
@@ -117,10 +125,14 @@ export class ContentValidator {
     // Word count validation
     if (metadata.wordCount !== undefined) {
       if (metadata.wordCount < this.minWordCount) {
-        warnings.push(`Content too short (min ${this.minWordCount} words recommended)`);
+        warnings.push(
+          `Content too short (min ${this.minWordCount} words recommended)`,
+        );
         score -= 10;
       } else if (metadata.wordCount < this.recommendedWordCount) {
-        warnings.push(`Consider expanding content (${this.recommendedWordCount}+ words optimal for SEO)`);
+        warnings.push(
+          `Consider expanding content (${this.recommendedWordCount}+ words optimal for SEO)`,
+        );
         score -= 5;
       }
     }
@@ -137,7 +149,7 @@ export class ContentValidator {
       isValid: errors.length === 0,
       errors,
       warnings,
-      score
+      score,
     };
   }
 
@@ -174,7 +186,9 @@ export class ContentValidator {
           errors.push(`Link ${index + 1} missing URL`);
           score -= 10;
         } else if (!this.isValidUrl(link.url)) {
-          warnings.push(`Link ${index + 1} has potentially invalid URL: ${link.url}`);
+          warnings.push(
+            `Link ${index + 1} has potentially invalid URL: ${link.url}`,
+          );
           score -= 5;
         }
       });
@@ -182,7 +196,9 @@ export class ContentValidator {
 
     // Call to action validation
     if (!bannerData.hasCallToAction) {
-      warnings.push('No clear call-to-action - consider adding one for better conversion');
+      warnings.push(
+        'No clear call-to-action - consider adding one for better conversion',
+      );
       score -= 10;
     }
 
@@ -198,7 +214,7 @@ export class ContentValidator {
       isValid: errors.length === 0,
       errors,
       warnings,
-      score
+      score,
     };
   }
 
@@ -208,7 +224,7 @@ export class ContentValidator {
   private isValidUrl(url: string): boolean {
     // Allow relative URLs
     if (url.startsWith('/')) return true;
-    
+
     // Validate absolute URLs
     try {
       new URL(url);
@@ -236,9 +252,10 @@ export class ContentValidator {
     contents.forEach(content => {
       const titleLower = content.title.toLowerCase();
       titles.set(titleLower, (titles.get(titleLower) || 0) + 1);
-      
+
       // Track category distribution
-      categoryDistribution[content.category] = (categoryDistribution[content.category] || 0) + 1;
+      categoryDistribution[content.category] =
+        (categoryDistribution[content.category] || 0) + 1;
     });
 
     titles.forEach((count, title) => {
@@ -257,30 +274,40 @@ export class ContentValidator {
 
     // Generate recommendations
     if (duplicateTitles.length > 0) {
-      recommendations.push(`Found ${duplicateTitles.length} duplicate titles - ensure unique titles for each content piece`);
+      recommendations.push(
+        `Found ${duplicateTitles.length} duplicate titles - ensure unique titles for each content piece`,
+      );
     }
 
     if (inconsistentDates) {
-      recommendations.push('Inconsistent publishing schedule detected - maintain regular content cadence');
+      recommendations.push(
+        'Inconsistent publishing schedule detected - maintain regular content cadence',
+      );
     }
 
     const totalContent = contents.length;
-    const blogPercentage = (categoryDistribution.blog || 0) / totalContent * 100;
-    const caseStudyPercentage = (categoryDistribution['case-study'] || 0) / totalContent * 100;
+    const blogPercentage =
+      ((categoryDistribution.blog || 0) / totalContent) * 100;
+    const caseStudyPercentage =
+      ((categoryDistribution['case-study'] || 0) / totalContent) * 100;
 
     if (blogPercentage < 30) {
-      recommendations.push('Low blog content ratio - consider publishing more thought leadership articles');
+      recommendations.push(
+        'Low blog content ratio - consider publishing more thought leadership articles',
+      );
     }
 
     if (caseStudyPercentage < 20) {
-      recommendations.push('Low case study ratio - showcase more client successes');
+      recommendations.push(
+        'Low case study ratio - showcase more client successes',
+      );
     }
 
     return {
       duplicateTitles,
       inconsistentDates,
       categoryDistribution,
-      recommendations
+      recommendations,
     };
   }
 
@@ -298,17 +325,17 @@ export class ContentValidator {
   } {
     const validations = contents.map(c => this.validateMetadata(c));
     const totalContent = contents.length;
-    
+
     let totalScore = 0;
     let highQuality = 0;
     let mediumQuality = 0;
     let lowQuality = 0;
-    
+
     const issueMap = new Map<string, number>();
 
     validations.forEach(validation => {
       totalScore += validation.score;
-      
+
       if (validation.score >= 80) highQuality++;
       else if (validation.score >= 60) mediumQuality++;
       else lowQuality++;
@@ -320,7 +347,7 @@ export class ContentValidator {
     });
 
     const averageScore = totalContent > 0 ? totalScore / totalContent : 0;
-    
+
     // Get top issues
     const topIssues = Array.from(issueMap.entries())
       .map(([issue, count]) => ({ issue, count }))
@@ -328,17 +355,23 @@ export class ContentValidator {
       .slice(0, 5);
 
     const recommendations: string[] = [];
-    
+
     if (averageScore < 70) {
-      recommendations.push('Overall content quality is below target - review and improve existing content');
+      recommendations.push(
+        'Overall content quality is below target - review and improve existing content',
+      );
     }
 
     if (lowQuality > totalContent * 0.2) {
-      recommendations.push(`${lowQuality} pieces of low-quality content detected - prioritize improvements`);
+      recommendations.push(
+        `${lowQuality} pieces of low-quality content detected - prioritize improvements`,
+      );
     }
 
     if (topIssues.length > 0) {
-      recommendations.push(`Most common issue: ${topIssues[0].issue} (${topIssues[0].count} instances)`);
+      recommendations.push(
+        `Most common issue: ${topIssues[0].issue} (${topIssues[0].count} instances)`,
+      );
     }
 
     return {
@@ -348,7 +381,7 @@ export class ContentValidator {
       mediumQuality,
       lowQuality,
       topIssues,
-      recommendations
+      recommendations,
     };
   }
 }
