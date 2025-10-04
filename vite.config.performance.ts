@@ -3,15 +3,15 @@ import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
-export default defineConfig({/* content */}
+export default defineConfig({
   plugins: [
-    react({/* content */}
+    react({
       // Enable Fast Refresh
       fastRefresh: true,
       // Use automatic JSX runtime
       jsxRuntime: 'automatic',
       // Optimize deps
-      babel: {/* content */}
+      babel: {
         plugins: [
           // Remove console.log in production
           ['transform-remove-console', { exclude: ['error', 'warn'] }]
@@ -19,7 +19,7 @@ export default defineConfig({/* content */}
       }
     }),
     // Bundle analyzer
-    visualizer({/* content */}
+    visualizer({
       filename: './dist/stats.html',
       open: false,
       gzipSize: true,
@@ -27,7 +27,7 @@ export default defineConfig({/* content */}
     })
   ],
   
-  build: {/* content */}
+  build: {
     // Target modern browsers
     target: 'es2020',
     

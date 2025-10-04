@@ -2,23 +2,23 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 
-export default defineConfig({/* content */}
+export default defineConfig({
   plugins: [
     react(),
-    visualizer({/* content */}
+    visualizer({
       filename: './dist/stats.html',
       open: false,
       gzipSize: true,
       brotliSize: true,
     }),
   ],
-  build: {/* content */}
+  build: {
     target: 'es2015',
     minify: 'terser',
     sourcemap: false,
-    rollupOptions: {/* content */}
-      output: {/* content */}
-        manualChunks: {/* content */}
+    rollupOptions: {
+      output: {
+        manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['lucide-react', 'framer-motion'],
           'blog-content': [

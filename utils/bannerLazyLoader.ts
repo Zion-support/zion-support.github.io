@@ -7,7 +7,7 @@
 
 import { lazy, ComponentType } from 'react';
 
-interface BannerModule {/* content */}
+interface BannerModule {
   default: ComponentType<any>;
 }
 
@@ -17,19 +17,19 @@ interface BannerModule {/* content */}
 export const lazyLoadBanner = (
   importFn: () => Promise<BannerModule>,
   componentName: string
-) => {/* content */}
+) => {
   return lazy(() =>
-    importFn().catch((error) => {/* content */}
+    importFn().catch((error) => {
       console.error(`Failed to load banner: ${componentName}`, error);
       // Retry once after a delay
-      return new Promise<BannerModule>((resolve) => {/* content */}
-        setTimeout(() => {/* content */}
+      return new Promise<BannerModule>((resolve) => {
+        setTimeout(() => {
           importFn()
             .then(resolve)
-            .catch((retryError) => {/* content */}
+            .catch((retryError) => {
               console.error(`Retry failed for banner: ${componentName}`, retryError);
               // Return a fallback component
-              resolve({/* content */}
+              resolve({
                 default: () => null,
               });
             });
@@ -42,11 +42,11 @@ export const lazyLoadBanner = (
 /**
  * Preload banner components in the background
  */
-export const preloadBanners = (importFns: Array<() => Promise<BannerModule>>) => {/* content */}
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {/* content */}
-    requestIdleCallback(() => {/* content */}
-      importFns.forEach((importFn) => {/* content */}
-        importFn().catch(() => {/* content */}
+export const preloadBanners = (importFns: Array<() => Promise<BannerModule>>) => {
+  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+    requestIdleCallback(() => {
+      importFns.forEach((importFn) => {
+        importFn().catch(() => {
           // Silently fail for preloading
         });
       });
@@ -57,17 +57,17 @@ export const preloadBanners = (importFns: Array<() => Promise<BannerModule>>) =>
 /**
  * Get banner priority based on content date and value
  */
-export const getBannerPriority = (bannerName: string): number => {/* content */}
+export const getBannerPriority = (bannerName: string): number => {
   // October 2025 content gets highest priority
-  if (bannerName.includes('October2025')) {/* content */}
-    if (bannerName.includes('MultiAgent') || bannerName.includes('RealTime')) {/* content */}
+  if (bannerName.includes('October2025')) {
+    if (bannerName.includes('MultiAgent') || bannerName.includes('RealTime')) {
       return 1; // Highest priority
     }
     return 2;
   }
   
   // 2026+ content gets medium priority
-  if (bannerName.includes('2026') || bannerName.includes('2027')) {/* content */}
+  if (bannerName.includes('2026') || bannerName.includes('2027')) {
     return 3;
   }
   
@@ -78,8 +78,8 @@ export const getBannerPriority = (bannerName: string): number => {/* content */}
 /**
  * Sort banners by priority for optimal loading
  */
-export const sortBannersByPriority = (bannerNames: string[]): string[] => {/* content */}
-  return [...bannerNames].sort((a, b) => {/* content */}
+export const sortBannersByPriority = (bannerNames: string[]): string[] => {
+  return [...bannerNames].sort((a, b) => {
     return getBannerPriority(a) - getBannerPriority(b);
   });
 };
@@ -87,23 +87,23 @@ export const sortBannersByPriority = (bannerNames: string[]): string[] => {/* co
 /**
  * Intersection Observer for lazy rendering banners
  */
-export class BannerObserver {/* content */}
+export class BannerObserver {
   private observer: IntersectionObserver | null = null;
   private loadedBanners = new Set<string>();
 
   constructor(
     private onBannerVisible: (bannerId: string) => void,
-    private options: IntersectionObserverInit = {/* content */}
+    private options: IntersectionObserverInit = {
       rootMargin: '200px', // Load 200px before entering viewport
       threshold: 0.01,
     }
-  ) {/* content */}
-    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {/* content */}
-      this.observer = new IntersectionObserver((entries) => {/* content */}
-        entries.forEach((entry) => {/* content */}
-          if (entry.isIntersecting) {/* content */}
+  ) {
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
             const bannerId = entry.target.getAttribute('data-banner-id');
-            if (bannerId && !this.loadedBanners.has(bannerId)) {/* content */}
+            if (bannerId && !this.loadedBanners.has(bannerId)) {
               this.loadedBanners.add(bannerId);
               this.onBannerVisible(bannerId);
               this.observer?.unobserve(entry.target);
@@ -114,11 +114,11 @@ export class BannerObserver {/* content */}
     }
   }
 
-  observe(element: Element): void {/* content */}
+  observe(element: Element): void {
     this.observer?.observe(element);
   }
 
-  disconnect(): void {/* content */}
+  disconnect(): void {
     this.observer?.disconnect();
     this.loadedBanners.clear();
   }
@@ -129,14 +129,14 @@ export class BannerObserver {/* content */}
  */
 export const trackBannerPerformance = (
   bannerName: string,
-  metrics: {/* content */}
+  metrics: {
     loadTime?: number;
     renderTime?: number;
     visible?: boolean;
     clicked?: boolean;
   }
-) => {/* content */}
-  if (typeof window !== 'undefined' && 'performance' in window) {/* content */}
+) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
     // Send to analytics
     console.log(`Banner Performance [${bannerName}]:`, metrics);
     
@@ -145,7 +145,7 @@ export const trackBannerPerformance = (
   }
 };
 
-export default {/* content */}
+export default {
   lazyLoadBanner,
   preloadBanners,
   getBannerPriority,

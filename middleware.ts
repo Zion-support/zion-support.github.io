@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export function middleware(request: NextRequest) {/* content */}
+export function middleware(request: NextRequest) {
   const response = NextResponse.next();
 
   // Security headers
@@ -25,7 +25,7 @@ export function middleware(request: NextRequest) {/* content */}
   return response;
 }
 
-export const config = {/* content */}
+export const config = {
   matcher: [
     /*
      * Match all request paths except for the ones starting with:

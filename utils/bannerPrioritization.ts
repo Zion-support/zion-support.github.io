@@ -8,7 +8,7 @@
  * - Performance considerations
  */
 
-export interface BannerMetadata {/* content */}
+export interface BannerMetadata {
   id: string;
   component: string;
   priority: number;
@@ -19,14 +19,14 @@ export interface BannerMetadata {/* content */}
   loadStrategy: 'immediate' | 'lazy' | 'on-demand';
 }
 
-export class BannerPrioritizationEngine {/* content */}
+export class BannerPrioritizationEngine {
   private banners: Map<string, BannerMetadata> = new Map();
   private visibilityThreshold = 5; // Max banners to show above the fold
 
   /**
    * Register a banner with metadata
    */
-  registerBanner(metadata: BannerMetadata): void {/* content */}
+  registerBanner(metadata: BannerMetadata): void {
     this.banners.set(metadata.id, metadata);
   }
 
