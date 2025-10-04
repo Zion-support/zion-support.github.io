@@ -7,11 +7,11 @@ global.TextDecoder = TextDecoder;
 
 // Mock PerformanceObserver for Jest environment
 global.PerformanceObserver = class PerformanceObserver {
-  constructor(callback: (list: any) => void) {}
-  observe(options?: any) {}
+  constructor() {}
+  observe() {}
   disconnect() {}
   takeRecords() { return []; }
-} as any;
+} as unknown as typeof PerformanceObserver;
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
