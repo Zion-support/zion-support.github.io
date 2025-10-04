@@ -83,19 +83,32 @@ export default [
 
   // Base JavaScript configuration (limit to app source only)
   {
-    files: ["src/**/*.{js,cjs,mjs}"],
+    files: ["src/**/*.{js,cjs,mjs}", "**/*.{js,jsx}"],
     languageOptions: {
       globals: { ...globals.node },
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
     ...js.configs.recommended,
   },
 
   // Simplified TypeScript configuration (non type-aware)
   {
-    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}", "app/**/*.{ts,tsx}"],
+    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}", "app/**/*.{ts,tsx}", "**/*.{ts,tsx}"],
     languageOptions: {
       parser: tsParser,
-      parserOptions: {},
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       globals: { ...globals.browser },
     },
     plugins: {
