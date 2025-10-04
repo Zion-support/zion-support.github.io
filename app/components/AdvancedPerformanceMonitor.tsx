@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface AdvancedMetrics {
   cls: number;
-  fid: number;
+  inp: number;
   fcp: number;
   lcp: number;
   ttfb: number;
@@ -14,7 +14,7 @@ interface AdvancedMetrics {
 
 interface PerformanceThresholds {
   cls: number;
-  fid: number;
+  inp: number;
   fcp: number;
   lcp: number;
   ttfb: number;
@@ -24,7 +24,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<AdvancedMetrics | null>(null);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
-    fid: 100,
+    inp: 200,
     fcp: 1800,
     lcp: 2500,
     ttfb: 800
@@ -50,11 +50,11 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   }, [getPerformanceInfo]);
 
   useEffect(() => {
-    getCLS(handleMetric);
-    getFID(handleMetric);
-    getFCP(handleMetric);
-    getLCP(handleMetric);
-    getTTFB(handleMetric);
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
 
     // Additional performance monitoring
     const observer = new PerformanceObserver((list) => {
@@ -86,9 +86,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             </span>
           </div>
           <div className="flex justify-between">
-            <span>FID:</span>
-            <span className={getStatusColor(metrics.fid, thresholds.fid)}>
-              {metrics.fid?.toFixed(1)}ms
+            <span>INP:</span>
+            <span className={getStatusColor(metrics.inp, thresholds.inp)}>
+              {metrics.inp?.toFixed(1)}ms
             </span>
           </div>
           <div className="flex justify-between">
