@@ -29,15 +29,15 @@ export default defineConfig({
         },
       },
     },
-    terserOptions: {/* content */}
-      compress: {/* content */}
+    terserOptions: {
+      compress: {
         drop_console: true,
         drop_debugger: true,
       },
     },
     chunkSizeWarningLimit: 1000,
   },
-  optimizeDeps: {/* content */}
+  optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
   },
 });
