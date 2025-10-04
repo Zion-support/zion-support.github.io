@@ -133,7 +133,10 @@ export default UnifiedBanner;
 `;
 
 // Create the unified banner system file
-fs.writeFileSync('/workspace/app/components/UnifiedBannerSystem.tsx', unifiedBannerSystem);
+fs.writeFileSync(
+  '/workspace/app/components/UnifiedBannerSystem.tsx',
+  unifiedBannerSystem,
+);
 
 // Create a script to replace banner imports
 const bannerReplacementScript = `
@@ -147,32 +150,33 @@ import { UnifiedBanner, bannerConfigurations } from './UnifiedBannerSystem';
 `;
 
 console.log('✅ Created unified banner system');
-console.log('📁 File created: /workspace/app/components/UnifiedBannerSystem.tsx');
+console.log(
+  '📁 File created: /workspace/app/components/UnifiedBannerSystem.tsx',
+);
 console.log('📝 Usage example written to bannerReplacementScript');
 
 // Create a performance optimization configuration
 const performanceConfig = {
   lazyLoading: {
     enabled: true,
-    components: [
-      'UnifiedBanner',
-      'ContentShowcase',
-      'FeaturedServiceCard'
-    ]
+    components: ['UnifiedBanner', 'ContentShowcase', 'FeaturedServiceCard'],
   },
   bundleOptimization: {
     treeShaking: true,
     codeSplitting: true,
-    dynamicImports: true
+    dynamicImports: true,
   },
   caching: {
     staticAssets: true,
     apiResponses: true,
-    componentCache: true
-  }
+    componentCache: true,
+  },
 };
 
-fs.writeFileSync('/workspace/config/performance.json', JSON.stringify(performanceConfig, null, 2));
+fs.writeFileSync(
+  '/workspace/config/performance.json',
+  JSON.stringify(performanceConfig, null, 2),
+);
 
 console.log('✅ Created performance configuration');
 console.log('📁 File created: /workspace/config/performance.json');

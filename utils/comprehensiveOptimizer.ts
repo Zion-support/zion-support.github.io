@@ -2,21 +2,25 @@
  * Comprehensive optimization utilities that integrate accessibility, performance, and SEO
  */
 
-import { accessibilityTesting, ariaUtils, motionUtils } from './accessibilityUtils';
-import { 
-  getMemoryUsage, 
-  collectPerformanceMetrics, 
+import {
+  accessibilityTesting,
+  ariaUtils,
+  motionUtils,
+} from './accessibilityUtils';
+import {
+  getMemoryUsage,
+  collectPerformanceMetrics,
   performanceMonitor,
   debounce,
   throttle,
   lazyLoadImages,
   preloadCriticalResources,
-  optimizeScrollPerformance 
+  optimizeScrollPerformance,
 } from './performanceUtils';
-import { 
-  setMetaTags, 
-  setOpenGraphTags, 
-  setTwitterCardTags, 
+import {
+  setMetaTags,
+  setOpenGraphTags,
+  setTwitterCardTags,
   setStructuredData,
   setCanonicalUrl,
   setPageTitle,
@@ -26,7 +30,7 @@ import {
   setLanguage,
   setViewport,
   schemaGenerators,
-  seoAudit 
+  seoAudit,
 } from './seoUtils';
 
 // Comprehensive optimization interface
@@ -54,19 +58,19 @@ export const defaultConfig: OptimizationConfig = {
   accessibility: {
     autoFix: true,
     announceChanges: true,
-    respectMotionPreferences: true
+    respectMotionPreferences: true,
   },
   performance: {
     enableLazyLoading: true,
     preloadCritical: true,
     optimizeScroll: true,
-    monitorMemory: true
+    monitorMemory: true,
   },
   seo: {
     autoOptimize: true,
     generateStructuredData: true,
-    optimizeMetaTags: true
-  }
+    optimizeMetaTags: true,
+  },
 };
 
 // Comprehensive optimization class
@@ -136,8 +140,12 @@ export class ComprehensiveOptimizer {
   // Optimize SEO
   private optimizeSEO(): void {
     const currentUrl = window.location.href;
-    const pageTitle = document.title || 'Zion Tech Group - Advanced AI and IT Solutions';
-    const metaDescription = document.querySelector('meta[name="description"]')?.getAttribute('content') || 
+    const pageTitle =
+      document.title || 'Zion Tech Group - Advanced AI and IT Solutions';
+    const metaDescription =
+      document
+        .querySelector('meta[name="description"]')
+        ?.getAttribute('content') ||
       'Leading provider of advanced AI and IT solutions for modern businesses';
 
     // Set basic SEO elements
@@ -149,7 +157,7 @@ export class ComprehensiveOptimizer {
       width: 'device-width',
       initialScale: 1,
       maximumScale: 5,
-      userScalable: true
+      userScalable: true,
     });
 
     // Set Open Graph tags
@@ -158,7 +166,7 @@ export class ComprehensiveOptimizer {
       description: metaDescription,
       url: currentUrl,
       type: 'website',
-      siteName: 'Zion Tech Group'
+      siteName: 'Zion Tech Group',
     });
 
     // Set Twitter Card tags
@@ -167,7 +175,7 @@ export class ComprehensiveOptimizer {
       site: '@ZionTechGroup',
       creator: '@ZionTechGroup',
       title: pageTitle,
-      description: metaDescription
+      description: metaDescription,
     });
 
     // Generate structured data
@@ -175,7 +183,7 @@ export class ComprehensiveOptimizer {
       const structuredData = schemaGenerators.organization({
         name: 'Zion Tech Group',
         url: currentUrl,
-        description: metaDescription
+        description: metaDescription,
       });
       setStructuredData(structuredData);
     }
@@ -196,14 +204,21 @@ export class ComprehensiveOptimizer {
 
     // Performance observer for Core Web Vitals
     if ('PerformanceObserver' in window) {
-      this.performanceObserver = new PerformanceObserver((list) => {
+      this.performanceObserver = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
           this.handlePerformanceEntry(entry);
         }
       });
 
-      this.performanceObserver.observe({ 
-        entryTypes: ['navigation', 'resource', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] 
+      this.performanceObserver.observe({
+        entryTypes: [
+          'navigation',
+          'resource',
+          'paint',
+          'largest-contentful-paint',
+          'first-input',
+          'layout-shift',
+        ],
       });
     }
   }
@@ -211,7 +226,7 @@ export class ComprehensiveOptimizer {
   // Handle performance entries
   private handlePerformanceEntry(entry: PerformanceEntry): void {
     const entryType = entry.entryType;
-    
+
     switch (entryType) {
       case 'largest-contentful-paint':
         if (entry.startTime > 2500) {
@@ -232,7 +247,11 @@ export class ComprehensiveOptimizer {
   }
 
   // Handle high memory usage
-  private handleHighMemoryUsage(memory: { used: number; total: number; percentage: number }): void {
+  private handleHighMemoryUsage(memory: {
+    used: number;
+    total: number;
+    percentage: number;
+  }): void {
     // Trigger garbage collection if available
     if ('gc' in window && typeof (window as any).gc === 'function') {
       (window as any).gc();
@@ -240,7 +259,10 @@ export class ComprehensiveOptimizer {
 
     // Announce to screen readers if enabled
     if (this.config.accessibility.announceChanges) {
-      ariaUtils.announce(`High memory usage detected: ${memory.percentage}%`, 'polite');
+      ariaUtils.announce(
+        `High memory usage detected: ${memory.percentage}%`,
+        'polite',
+      );
     }
   }
 
@@ -264,54 +286,58 @@ export class ComprehensiveOptimizer {
       description: seoAudit.checkDescription(),
       headings: seoAudit.checkHeadings(),
       images: seoAudit.checkImages(),
-      links: seoAudit.checkLinks()
+      links: seoAudit.checkLinks(),
     };
 
     // Calculate overall score
     const accessibilityScore = accessibilityReport.score;
     const performanceScore = this.calculatePerformanceScore(performanceMetrics);
     const seoScore = this.calculateSEOScore(seoAuditResult);
-    
-    const overallScore = Math.round((accessibilityScore + performanceScore + seoScore) / 3);
+
+    const overallScore = Math.round(
+      (accessibilityScore + performanceScore + seoScore) / 3,
+    );
 
     return {
       accessibility: accessibilityReport,
       performance: performanceMetrics,
       seo: seoAuditResult,
-      overallScore
+      overallScore,
     };
   }
 
   // Calculate performance score
   private calculatePerformanceScore(metrics: Record<string, number>): number {
     let score = 100;
-    
+
     // Deduct points for poor metrics
     if (metrics.pageLoadTime > 3000) score -= 20;
     if (metrics.memoryPercentage > 80) score -= 20;
     if (metrics.resourceCount > 100) score -= 10;
     if (metrics.totalResourceSize > 5000000) score -= 10; // 5MB
-    
+
     return Math.max(0, score);
   }
 
   // Calculate SEO score
   private calculateSEOScore(seoAudit: any): number {
     let score = 0;
-    
+
     if (seoAudit.title.hasTitle && seoAudit.title.isValid) score += 20;
-    if (seoAudit.description.hasDescription && seoAudit.description.isValid) score += 20;
+    if (seoAudit.description.hasDescription && seoAudit.description.isValid)
+      score += 20;
     if (seoAudit.headings.hasH1 && seoAudit.headings.h1Count === 1) score += 20;
     if (seoAudit.images.imagesWithoutAlt === 0) score += 20;
-    if (seoAudit.links.internalLinks > seoAudit.links.externalLinks) score += 20;
-    
+    if (seoAudit.links.internalLinks > seoAudit.links.externalLinks)
+      score += 20;
+
     return score;
   }
 
   // Auto-fix accessibility issues
   public autoFixAccessibility(): void {
     const report = accessibilityTesting.generateReport();
-    
+
     // Fix missing alt text
     const images = document.querySelectorAll('img');
     images.forEach(img => {
@@ -327,16 +353,22 @@ export class ComprehensiveOptimizer {
       if (!input.id) {
         input.id = ariaUtils.generateId('input');
       }
-      
+
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (!label && !input.getAttribute('aria-label')) {
-        input.setAttribute('aria-label', input.getAttribute('placeholder') || 'Input field');
+        input.setAttribute(
+          'aria-label',
+          input.getAttribute('placeholder') || 'Input field',
+        );
       }
     });
 
     // Announce fixes
     if (this.config.accessibility.announceChanges) {
-      ariaUtils.announce('Accessibility issues have been automatically fixed', 'polite');
+      ariaUtils.announce(
+        'Accessibility issues have been automatically fixed',
+        'polite',
+      );
     }
 
     console.log('✅ Accessibility auto-fix completed');
@@ -347,11 +379,11 @@ export class ComprehensiveOptimizer {
     if (this.performanceObserver) {
       this.performanceObserver.disconnect();
     }
-    
+
     if (this.memoryInterval) {
       clearInterval(this.memoryInterval);
     }
-    
+
     performanceMonitor.clear();
     this.isInitialized = false;
   }
@@ -361,7 +393,9 @@ export class ComprehensiveOptimizer {
 let globalOptimizer: ComprehensiveOptimizer | null = null;
 
 // Initialize global optimizer
-export const initializeOptimizer = (config?: Partial<OptimizationConfig>): Promise<void> => {
+export const initializeOptimizer = (
+  config?: Partial<OptimizationConfig>,
+): Promise<void> => {
   if (!globalOptimizer) {
     globalOptimizer = new ComprehensiveOptimizer(config);
   }

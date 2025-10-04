@@ -6,21 +6,21 @@
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number,
-  immediate = false
+  immediate = false,
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout | null = null;
-  
+
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
       if (!immediate) func(...args);
     };
-    
+
     const callNow = immediate && !timeout;
-    
+
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
-    
+
     if (callNow) func(...args);
   };
 };
@@ -28,10 +28,10 @@ export const debounce = <T extends (...args: any[]) => any>(
 // Throttle function for performance optimization
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
-  limit: number
+  limit: number,
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-  
+
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func.apply(this, args);
@@ -65,10 +65,7 @@ export const lazyLoadImages = (): void => {
 
 // Preload critical resources
 export const preloadCriticalResources = (): void => {
-  const criticalResources = [
-    '/fonts/main-font.woff2',
-    '/css/critical.css'
-  ];
+  const criticalResources = ['/fonts/main-font.woff2', '/css/critical.css'];
 
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
@@ -83,19 +80,19 @@ export const preloadCriticalResources = (): void => {
 // Optimize scroll performance
 export const optimizeScrollPerformance = (): void => {
   let ticking = false;
-  
+
   const updateScrollPosition = () => {
     // Update scroll-dependent elements here
     ticking = false;
   };
-  
+
   const requestTick = () => {
     if (!ticking) {
       requestAnimationFrame(updateScrollPosition);
       ticking = true;
     }
   };
-  
+
   window.addEventListener('scroll', requestTick, { passive: true });
 };
 
@@ -110,25 +107,26 @@ export const getMemoryUsage = (): {
     const used = Math.round(memory.usedJSHeapSize / 1048576);
     const total = Math.round(memory.totalJSHeapSize / 1048576);
     const percentage = Math.round((used / total) * 100);
-    
+
     return { used, total, percentage };
   }
-  
+
   return null;
 };
 
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {
   const metrics: Record<string, number> = {};
-  
+
   // Navigation timing
   if (performance.timing) {
     const timing = performance.timing;
     metrics.pageLoadTime = timing.loadEventEnd - timing.navigationStart;
-    metrics.domContentLoaded = timing.domContentLoadedEventEnd - timing.navigationStart;
+    metrics.domContentLoaded =
+      timing.domContentLoadedEventEnd - timing.navigationStart;
     metrics.firstPaint = timing.responseEnd - timing.requestStart;
   }
-  
+
   // Resource timing
   if (performance.getEntriesByType) {
     const resources = performance.getEntriesByType('resource');
@@ -137,7 +135,7 @@ export const collectPerformanceMetrics = () => {
       return total + (resource.transferSize || 0);
     }, 0);
   }
-  
+
   // Memory usage
   const memory = getMemoryUsage();
   if (memory) {
@@ -145,7 +143,7 @@ export const collectPerformanceMetrics = () => {
     metrics.memoryTotal = memory.total;
     metrics.memoryPercentage = memory.percentage;
   }
-  
+
   return metrics;
 };
 
@@ -161,7 +159,7 @@ export const optimizeBundleSize = {
       return null;
     }
   },
-  
+
   // Tree shaking optimization
   importOnly: (module: any, ...exports: string[]) => {
     const result: any = {};
@@ -171,7 +169,7 @@ export const optimizeBundleSize = {
       }
     });
     return result;
-  }
+  },
 };
 
 // Performance monitoring
@@ -179,26 +177,26 @@ export const performanceMonitor = {
   start: (name: string) => {
     performance.mark(`${name}-start`);
   },
-  
+
   end: (name: string) => {
     performance.mark(`${name}-end`);
     performance.measure(name, `${name}-start`, `${name}-end`);
-    
+
     const measure = performance.getEntriesByName(name)[0];
     return measure ? measure.duration : 0;
   },
-  
+
   getMetrics: () => {
     const measures = performance.getEntriesByType('measure');
     return measures.map(measure => ({
       name: measure.name,
       duration: measure.duration,
-      startTime: measure.startTime
+      startTime: measure.startTime,
     }));
   },
-  
+
   clear: () => {
     performance.clearMarks();
     performance.clearMeasures();
-  }
+  },
 };

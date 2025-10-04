@@ -17,22 +17,31 @@ function fixJSXSyntax(filePath) {
     // Fix common JSX syntax errors
     const fixes = [
       // Fix className="text-left">" -> className="text-left">
-      { pattern: /className="text-left">"/g, replacement: 'className="text-left">' },
-      
+      {
+        pattern: /className="text-left">"/g,
+        replacement: 'className="text-left">',
+      },
+
       // Fix className="text-left" />" -> className="text-left" />
-      { pattern: /className="text-left" \/>"/g, replacement: 'className="text-left" />' },
-      
+      {
+        pattern: /className="text-left" \/>"/g,
+        replacement: 'className="text-left" />',
+      },
+
       // Fix unclosed span tags like <span>text< -> <span>text</span>
       { pattern: /<span([^>]*)>([^<]+)<$/gm, replacement: '<span$1>$2</span>' },
-      
+
       // Fix metadata syntax errors title= -> title:
       { pattern: /title=/g, replacement: 'title:' },
-      
+
       // Fix malformed href attributes
       { pattern: /href="\/\[\^"\]\*"/g, replacement: 'href="/"' },
-      
+
       // Fix unterminated string literals in JSX
-      { pattern: /className="text-left">([^<]+)<$/gm, replacement: 'className="text-left">$1</span>' },
+      {
+        pattern: /className="text-left">([^<]+)<$/gm,
+        replacement: 'className="text-left">$1</span>',
+      },
     ];
 
     fixes.forEach(fix => {
@@ -57,14 +66,14 @@ function fixJSXSyntax(filePath) {
 // Function to recursively find all .tsx files
 function findTSXFiles(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         traverse(fullPath);
       } else if (item.endsWith('.tsx')) {
@@ -72,7 +81,7 @@ function findTSXFiles(dir) {
       }
     }
   }
-  
+
   traverse(dir);
   return files;
 }

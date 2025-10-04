@@ -22,7 +22,7 @@ const componentsToSimplify = [
   'EnhancedEvents.tsx',
   'EnhancedResources.tsx',
   'EnhancedSupport.tsx',
-  'EnhancedDocumentation.tsx'
+  'EnhancedDocumentation.tsx',
 ];
 
 const componentsDir = path.join(__dirname, 'components');
@@ -31,7 +31,7 @@ const componentsDir = path.join(__dirname, 'components');
 function simplifyComponent(filePath) {
   const fileName = path.basename(filePath);
   const componentName = fileName.replace('.tsx', '').replace('.jsx', '');
-  
+
   const simpleContent = `import React from 'react';
 
 const ${componentName}: React.FC = () => {

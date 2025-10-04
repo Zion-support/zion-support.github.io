@@ -1,5 +1,3 @@
+string;
 
-  string;
-
-
-  boolean;
+boolean;

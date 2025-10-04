@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { accessibilityTesting } from '../../utils/accessibilityUtils';
-import { collectPerformanceMetrics, getMemoryUsage } from '../../utils/performanceUtils';
+import {
+  collectPerformanceMetrics,
+  getMemoryUsage,
+} from '../../utils/performanceUtils';
 import { seoAudit } from '../../utils/seoUtils';
 
 interface MonitoringData {
@@ -22,9 +25,11 @@ interface ComprehensiveMonitoringDashboardProps {
   refreshInterval?: number;
 }
 
-const ComprehensiveMonitoringDashboard: React.FC<ComprehensiveMonitoringDashboardProps> = ({
+const ComprehensiveMonitoringDashboard: React.FC<
+  ComprehensiveMonitoringDashboardProps
+> = ({
   showInProduction = false,
-  refreshInterval = 30000 // 30 seconds
+  refreshInterval = 30000, // 30 seconds
 }) => {
   const [data, setData] = useState<MonitoringData | null>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -35,13 +40,13 @@ const ComprehensiveMonitoringDashboard: React.FC<ComprehensiveMonitoringDashboar
     const accessibilityReport = accessibilityTesting.generateReport();
     const performanceMetrics = collectPerformanceMetrics();
     const memoryUsage = getMemoryUsage();
-    
+
     const seoData = {
       title: seoAudit.checkTitle(),
       description: seoAudit.checkDescription(),
       headings: seoAudit.checkHeadings(),
       images: seoAudit.checkImages(),
-      links: seoAudit.checkLinks()
+      links: seoAudit.checkLinks(),
     };
 
     return {
@@ -49,7 +54,7 @@ const ComprehensiveMonitoringDashboard: React.FC<ComprehensiveMonitoringDashboar
       performance: performanceMetrics,
       seo: seoData,
       memory: memoryUsage,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
   }, []);
 
@@ -90,18 +95,21 @@ const ComprehensiveMonitoringDashboard: React.FC<ComprehensiveMonitoringDashboar
 
   const calculateOverallScore = (): number => {
     if (!data) return 0;
-    
+
     const accessibilityScore = data.accessibility.score;
     const seoScore = (() => {
       let score = 0;
       if (data.seo.title.hasTitle && data.seo.title.isValid) score += 20;
-      if (data.seo.description.hasDescription && data.seo.description.isValid) score += 20;
-      if (data.seo.headings.hasH1 && data.seo.headings.h1Count === 1) score += 20;
+      if (data.seo.description.hasDescription && data.seo.description.isValid)
+        score += 20;
+      if (data.seo.headings.hasH1 && data.seo.headings.h1Count === 1)
+        score += 20;
       if (data.seo.images.imagesWithoutAlt === 0) score += 20;
-      if (data.seo.links.internalLinks > data.seo.links.externalLinks) score += 20;
+      if (data.seo.links.internalLinks > data.seo.links.externalLinks)
+        score += 20;
       return score;
     })();
-    
+
     const performanceScore = (() => {
       let score = 100;
       if (data.performance.pageLoadTime > 3000) score -= 20;
@@ -120,97 +128,151 @@ const ComprehensiveMonitoringDashboard: React.FC<ComprehensiveMonitoringDashboar
   }
 
   return (
-    <div className="fixed top-4 left-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-4 text-sm font-mono max-w-md z-50">
-      <div className="flex justify-between items-center mb-3">
-        <div className="font-bold text-gray-800 dark:text-white">
+    <div className='fixed top-4 left-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-4 text-sm font-mono max-w-md z-50'>
+      <div className='flex justify-between items-center mb-3'>
+        <div className='font-bold text-gray-800 dark:text-white'>
           Monitoring Dashboard
         </div>
-        <div className="flex items-center space-x-2">
+        <div className='flex items-center space-x-2'>
           <button
             onClick={refreshData}
             disabled={isRefreshing}
-            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer disabled:opacity-50"
-            aria-label="Refresh monitoring data"
+            className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer disabled:opacity-50'
+            aria-label='Refresh monitoring data'
           >
             {isRefreshing ? '⟳' : '↻'}
           </button>
           <button
             onClick={() => setIsVisible(!isVisible)}
-            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer"
-            aria-label={isVisible ? 'Hide monitoring dashboard' : 'Show monitoring dashboard'}
+            className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer'
+            aria-label={
+              isVisible
+                ? 'Hide monitoring dashboard'
+                : 'Show monitoring dashboard'
+            }
           >
             {isVisible ? '▼' : '▶'}
           </button>
         </div>
       </div>
-      
+
       {isVisible && data && (
-        <div className="space-y-4">
+        <div className='space-y-4'>
           {/* Overall Score */}
-          <div className="border-b border-gray-200 dark:border-gray-600 pb-3">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-700 dark:text-gray-300">Overall Score:</span>
-              <span className={`font-bold text-lg ${getScoreColor(calculateOverallScore())}`}>
-                {getScoreIcon(calculateOverallScore())} {calculateOverallScore()}/100
+          <div className='border-b border-gray-200 dark:border-gray-600 pb-3'>
+            <div className='flex justify-between items-center'>
+              <span className='text-gray-700 dark:text-gray-300'>
+                Overall Score:
+              </span>
+              <span
+                className={`font-bold text-lg ${getScoreColor(calculateOverallScore())}`}
+              >
+                {getScoreIcon(calculateOverallScore())}{' '}
+                {calculateOverallScore()}/100
               </span>
             </div>
             {lastRefresh && (
-              <div className="text-xs text-gray-500 mt-1">
+              <div className='text-xs text-gray-500 mt-1'>
                 Last updated: {lastRefresh.toLocaleTimeString()}
               </div>
             )}
           </div>
 
           {/* Accessibility */}
-          <div className="space-y-2">
-            <div className="font-semibold text-gray-700 dark:text-gray-300">Accessibility</div>
-            <div className="flex justify-between">
+          <div className='space-y-2'>
+            <div className='font-semibold text-gray-700 dark:text-gray-300'>
+              Accessibility
+            </div>
+            <div className='flex justify-between'>
               <span>Score:</span>
               <span className={getScoreColor(data.accessibility.score)}>
-                {getScoreIcon(data.accessibility.score)} {data.accessibility.score}/100
+                {getScoreIcon(data.accessibility.score)}{' '}
+                {data.accessibility.score}/100
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>Images:</span>
-              <span className={data.accessibility.images.missing + data.accessibility.images.empty > 0 ? 'text-red-600' : 'text-green-600'}>
-                {data.accessibility.images.missing + data.accessibility.images.empty} issues
+              <span
+                className={
+                  data.accessibility.images.missing +
+                    data.accessibility.images.empty >
+                  0
+                    ? 'text-red-600'
+                    : 'text-green-600'
+                }
+              >
+                {data.accessibility.images.missing +
+                  data.accessibility.images.empty}{' '}
+                issues
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>Forms:</span>
-              <span className={data.accessibility.forms.unlabeled > 0 ? 'text-red-600' : 'text-green-600'}>
+              <span
+                className={
+                  data.accessibility.forms.unlabeled > 0
+                    ? 'text-red-600'
+                    : 'text-green-600'
+                }
+              >
                 {data.accessibility.forms.unlabeled} unlabeled
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>Headings:</span>
-              <span className={data.accessibility.headings.issues.length > 0 ? 'text-red-600' : 'text-green-600'}>
+              <span
+                className={
+                  data.accessibility.headings.issues.length > 0
+                    ? 'text-red-600'
+                    : 'text-green-600'
+                }
+              >
                 {data.accessibility.headings.issues.length} issues
               </span>
             </div>
           </div>
 
           {/* Performance */}
-          <div className="space-y-2">
-            <div className="font-semibold text-gray-700 dark:text-gray-300">Performance</div>
-            <div className="flex justify-between">
+          <div className='space-y-2'>
+            <div className='font-semibold text-gray-700 dark:text-gray-300'>
+              Performance
+            </div>
+            <div className='flex justify-between'>
               <span>Load Time:</span>
-              <span className={data.performance.pageLoadTime > 3000 ? 'text-red-600' : 'text-green-600'}>
-                {data.performance.pageLoadTime ? `${data.performance.pageLoadTime}ms` : 'N/A'}
+              <span
+                className={
+                  data.performance.pageLoadTime > 3000
+                    ? 'text-red-600'
+                    : 'text-green-600'
+                }
+              >
+                {data.performance.pageLoadTime
+                  ? `${data.performance.pageLoadTime}ms`
+                  : 'N/A'}
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>Resources:</span>
               <span>{data.performance.resourceCount || 0}</span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>Bundle Size:</span>
-              <span>{data.performance.totalResourceSize ? `${Math.round(data.performance.totalResourceSize / 1024)}KB` : 'N/A'}</span>
+              <span>
+                {data.performance.totalResourceSize
+                  ? `${Math.round(data.performance.totalResourceSize / 1024)}KB`
+                  : 'N/A'}
+              </span>
             </div>
             {data.memory && (
-              <div className="flex justify-between">
+              <div className='flex justify-between'>
                 <span>Memory:</span>
-                <span className={data.memory.percentage > 80 ? 'text-red-600' : 'text-green-600'}>
+                <span
+                  className={
+                    data.memory.percentage > 80
+                      ? 'text-red-600'
+                      : 'text-green-600'
+                  }
+                >
                   {data.memory.used}MB ({data.memory.percentage}%)
                 </span>
               </div>
@@ -218,61 +280,91 @@ const ComprehensiveMonitoringDashboard: React.FC<ComprehensiveMonitoringDashboar
           </div>
 
           {/* SEO */}
-          <div className="space-y-2">
-            <div className="font-semibold text-gray-700 dark:text-gray-300">SEO</div>
-            <div className="flex justify-between">
+          <div className='space-y-2'>
+            <div className='font-semibold text-gray-700 dark:text-gray-300'>
+              SEO
+            </div>
+            <div className='flex justify-between'>
               <span>Title:</span>
-              <span className={data.seo.title.isValid ? 'text-green-600' : 'text-red-600'}>
+              <span
+                className={
+                  data.seo.title.isValid ? 'text-green-600' : 'text-red-600'
+                }
+              >
                 {data.seo.title.titleLength} chars
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>Description:</span>
-              <span className={data.seo.description.isValid ? 'text-green-600' : 'text-red-600'}>
+              <span
+                className={
+                  data.seo.description.isValid
+                    ? 'text-green-600'
+                    : 'text-red-600'
+                }
+              >
                 {data.seo.description.descriptionLength} chars
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>H1 Count:</span>
-              <span className={data.seo.headings.h1Count === 1 ? 'text-green-600' : 'text-red-600'}>
+              <span
+                className={
+                  data.seo.headings.h1Count === 1
+                    ? 'text-green-600'
+                    : 'text-red-600'
+                }
+              >
                 {data.seo.headings.h1Count}
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>Images:</span>
-              <span className={data.seo.images.imagesWithoutAlt === 0 ? 'text-green-600' : 'text-red-600'}>
+              <span
+                className={
+                  data.seo.images.imagesWithoutAlt === 0
+                    ? 'text-green-600'
+                    : 'text-red-600'
+                }
+              >
                 {data.seo.images.imagesWithoutAlt} missing alt
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>Links:</span>
-              <span className={data.seo.links.internalLinks > data.seo.links.externalLinks ? 'text-green-600' : 'text-yellow-600'}>
+              <span
+                className={
+                  data.seo.links.internalLinks > data.seo.links.externalLinks
+                    ? 'text-green-600'
+                    : 'text-yellow-600'
+                }
+              >
                 {data.seo.links.internalLinks} internal
               </span>
             </div>
           </div>
 
           {/* Actions */}
-          <div className="border-t border-gray-200 dark:border-gray-600 pt-3 space-y-2">
+          <div className='border-t border-gray-200 dark:border-gray-600 pt-3 space-y-2'>
             <button
               onClick={refreshData}
               disabled={isRefreshing}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white py-1 px-2 rounded text-xs"
+              className='w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white py-1 px-2 rounded text-xs'
             >
               {isRefreshing ? 'Refreshing...' : 'Refresh Data'}
             </button>
-            
+
             <button
               onClick={() => {
                 const report = {
                   timestamp: new Date().toISOString(),
                   data: data,
-                  overallScore: calculateOverallScore()
+                  overallScore: calculateOverallScore(),
                 };
                 console.log('Comprehensive Monitoring Report:', report);
                 alert('Monitoring report logged to console');
               }}
-              className="w-full bg-green-600 hover:bg-green-700 text-white py-1 px-2 rounded text-xs"
+              className='w-full bg-green-600 hover:bg-green-700 text-white py-1 px-2 rounded text-xs'
             >
               Export Report
             </button>

@@ -7,17 +7,17 @@ import path from 'path';
 function rewriteTSXFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if this is a blog page
     if (filePath.includes('/blog/') && filePath.endsWith('/page.tsx')) {
       return rewriteBlogPage(filePath, content);
     }
-    
+
     // Check if this is a core component
     if (filePath.includes('/src/') || filePath.includes('/app/')) {
       return rewriteCoreFile(filePath, content);
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error rewriting ${filePath}:`, error.message);
@@ -32,7 +32,7 @@ function rewriteBlogPage(filePath, content) {
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
-  
+
   const newContent = `import React from 'react';
 
 export const metadata = {
@@ -98,54 +98,58 @@ export default function BlogPage() {
 function rewriteCoreFile(filePath, content) {
   // For core files, try to extract the original structure and fix it
   let newContent = content;
-  
+
   // Fix common patterns
   const fixes = [
     // Fix malformed function declarations
     {
-      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'const $1: React.FC = () => {'
+      pattern:
+        /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*\{\s*\/\* content \*\/\}/g,
+      replacement: 'const $1: React.FC = () => {',
     },
     // Fix malformed class methods
     {
       pattern: /(\w+)\s*\(\s*[^)]*\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: '$1() {'
+      replacement: '$1() {',
     },
     // Fix malformed JSX
     {
       pattern: /return\s*\(\s*<div>\s*\{\/\* content \*\/\}/g,
-      replacement: 'return (\n    <div>'
+      replacement: 'return (\n    <div>',
     },
     // Fix malformed JSX elements
     {
       pattern: /<div>\s*\{\/\* content \*\/\}<\/div>/g,
-      replacement: '<div></div>'
+      replacement: '<div></div>',
     },
     // Fix malformed constructor
     {
       pattern: /constructor\(props: any\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'constructor(props: any) {'
+      replacement: 'constructor(props: any) {',
     },
     // Fix malformed static methods
     {
-      pattern: /static\s+getDerivedStateFromError\(error: Error\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'static getDerivedStateFromError(error: Error) {'
+      pattern:
+        /static\s+getDerivedStateFromError\(error: Error\)\s*\{\s*\/\* content \*\/\}/g,
+      replacement: 'static getDerivedStateFromError(error: Error) {',
     },
     // Fix malformed componentDidCatch
     {
-      pattern: /componentDidCatch\(error: Error, errorInfo: React\.ErrorInfo\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {'
+      pattern:
+        /componentDidCatch\(error: Error, errorInfo: React\.ErrorInfo\)\s*\{\s*\/\* content \*\/\}/g,
+      replacement:
+        'componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {',
     },
     // Fix malformed render method
     {
       pattern: /render\(\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'render() {'
+      replacement: 'render() {',
     },
     // Fix malformed if statements
     {
       pattern: /if\s*\([^)]*\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: (match) => match.replace(/\{\s*\/\* content \*\/\}/, '{')
-    }
+      replacement: match => match.replace(/\{\s*\/\* content \*\/\}/, '{'),
+    },
   ];
 
   // Apply fixes
@@ -155,14 +159,17 @@ function rewriteCoreFile(filePath, content) {
 
   // Additional cleanup
   newContent = newContent.replace(/\{\s*\/\* content \*\/\}/g, '');
-  newContent = newContent.replace(/<div><\/div>\s*<div><\/div>/g, '<div></div>');
+  newContent = newContent.replace(
+    /<div><\/div>\s*<div><\/div>/g,
+    '<div></div>',
+  );
   newContent = newContent.replace(/<div>\s*<\/div>\s*<\/div>/g, '<div></div>');
 
   if (newContent !== content) {
     fs.writeFileSync(filePath, newContent, 'utf8');
     return true;
   }
-  
+
   return false;
 }
 
@@ -174,7 +181,7 @@ function fixTSXFiles(dir) {
 
     for (const file of files) {
       const filePath = path.join(dir, file);
-      
+
       try {
         const stat = fs.statSync(filePath);
 

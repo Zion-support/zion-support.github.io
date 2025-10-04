@@ -7,10 +7,12 @@ export const focusManagement = {
   // Trap focus within an element
   trapFocus: (element: HTMLElement): (() => void) => {
     const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
     );
     const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const lastElement = focusableElements[
+      focusableElements.length - 1
+    ] as HTMLElement;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
@@ -48,7 +50,7 @@ export const focusManagement = {
       mainElement.focus();
       mainElement.scrollIntoView();
     }
-  }
+  },
 };
 
 // ARIA utilities
@@ -59,26 +61,32 @@ export const ariaUtils = {
   },
 
   // Set ARIA attributes
-  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>): void => {
+  setAriaAttributes: (
+    element: HTMLElement,
+    attributes: Record<string, string>,
+  ): void => {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
     });
   },
 
   // Announce to screen readers
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite'): void => {
+  announce: (
+    message: string,
+    priority: 'polite' | 'assertive' = 'polite',
+  ): void => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
+
     document.body.appendChild(announcement);
-    
+
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
-  }
+  },
 };
 
 // Keyboard navigation utilities
@@ -88,11 +96,11 @@ export const keyboardNavigation = {
     event: KeyboardEvent,
     items: HTMLElement[],
     currentIndex: number,
-    orientation: 'horizontal' | 'vertical' = 'vertical'
+    orientation: 'horizontal' | 'vertical' = 'vertical',
   ): number => {
     const isVertical = orientation === 'vertical';
     const isHorizontal = orientation === 'horizontal';
-    
+
     switch (event.key) {
       case isVertical ? 'ArrowDown' : 'ArrowRight':
         event.preventDefault();
@@ -117,7 +125,7 @@ export const keyboardNavigation = {
       event.preventDefault();
       callback();
     }
-  }
+  },
 };
 
 // Color contrast utilities
@@ -132,7 +140,10 @@ export const colorContrast = {
   },
 
   // Calculate contrast ratio
-  getContrastRatio: (color1: [number, number, number], color2: [number, number, number]): number => {
+  getContrastRatio: (
+    color1: [number, number, number],
+    color2: [number, number, number],
+  ): number => {
     const lum1 = colorContrast.getLuminance(...color1);
     const lum2 = colorContrast.getLuminance(...color2);
     const brightest = Math.max(lum1, lum2);
@@ -143,7 +154,7 @@ export const colorContrast = {
   // Check if contrast meets WCAG standards
   meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean => {
     return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7;
-  }
+  },
 };
 
 // Motion and animation utilities
@@ -164,21 +175,24 @@ export const motionUtils = {
   // Respect user's motion preferences
   conditionalAnimation: (animation: string, fallback: string = ''): string => {
     return motionUtils.prefersReducedMotion() ? fallback : animation;
-  }
+  },
 };
 
 // Form accessibility utilities
 export const formAccessibility = {
   // Associate label with input
-  associateLabel: (input: HTMLInputElement, labelText: string): HTMLLabelElement => {
+  associateLabel: (
+    input: HTMLInputElement,
+    labelText: string,
+  ): HTMLLabelElement => {
     const label = document.createElement('label');
     label.textContent = labelText;
     label.setAttribute('for', input.id || formAccessibility.generateInputId());
-    
+
     if (!input.id) {
       input.id = label.getAttribute('for')!;
     }
-    
+
     return label;
   },
 
@@ -195,10 +209,10 @@ export const formAccessibility = {
     errorElement.className = 'error-message';
     errorElement.textContent = errorMessage;
     errorElement.setAttribute('role', 'alert');
-    
+
     input.setAttribute('aria-describedby', errorId);
     input.setAttribute('aria-invalid', 'true');
-    
+
     input.parentNode?.insertBefore(errorElement, input.nextSibling);
   },
 
@@ -211,7 +225,7 @@ export const formAccessibility = {
       input.removeAttribute('aria-describedby');
       input.removeAttribute('aria-invalid');
     }
-  }
+  },
 };
 
 // Screen reader utilities
@@ -232,56 +246,65 @@ export const screenReaderUtils = {
     element.textContent = text;
     element.className = 'sr-only';
     return element;
-  }
+  },
 };
 
 // Accessibility testing utilities
 export const accessibilityTesting = {
   // Check for missing alt text on images
-  checkImageAltText: (): { missing: HTMLImageElement[]; empty: HTMLImageElement[] } => {
+  checkImageAltText: (): {
+    missing: HTMLImageElement[];
+    empty: HTMLImageElement[];
+  } => {
     const images = Array.from(document.querySelectorAll('img'));
     const missing = images.filter(img => !img.hasAttribute('alt'));
     const empty = images.filter(img => img.getAttribute('alt') === '');
-    
+
     return { missing, empty };
   },
 
   // Check for missing form labels
   checkFormLabels: (): HTMLInputElement[] => {
-    const inputs = Array.from(document.querySelectorAll('input, select, textarea'));
+    const inputs = Array.from(
+      document.querySelectorAll('input, select, textarea'),
+    );
     return inputs.filter(input => {
       const id = input.id;
       const label = id ? document.querySelector(`label[for="${id}"]`) : null;
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      
+
       return !label && !ariaLabel && !ariaLabelledBy;
     }) as HTMLInputElement[];
   },
 
   // Check for proper heading hierarchy
   checkHeadingHierarchy: (): { issues: string[]; structure: string[] } => {
-    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const headings = Array.from(
+      document.querySelectorAll('h1, h2, h3, h4, h5, h6'),
+    );
     const issues: string[] = [];
     const structure: string[] = [];
-    
+
     let previousLevel = 0;
-    
+
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName[1]);
       structure.push(`${heading.tagName}: ${heading.textContent?.trim()}`);
-      
+
       if (index === 0 && level !== 1) {
         issues.push('First heading should be h1');
       }
-      
+
       if (level > previousLevel + 1) {
-        issues.push(`Heading level skipped from h${previousLevel} to h${level}`);
+        issues.push(
+          `Heading level skipped from h${previousLevel} to h${level}`,
+        );
       }
-      
+
       previousLevel = level;
     });
-    
+
     return { issues, structure };
   },
 
@@ -295,22 +318,25 @@ export const accessibilityTesting = {
     const imageCheck = accessibilityTesting.checkImageAltText();
     const formCheck = accessibilityTesting.checkFormLabels();
     const headingCheck = accessibilityTesting.checkHeadingHierarchy();
-    
-    const totalIssues = imageCheck.missing.length + imageCheck.empty.length + 
-                       formCheck.length + headingCheck.issues.length;
-    
-    const score = Math.max(0, 100 - (totalIssues * 10));
-    
+
+    const totalIssues =
+      imageCheck.missing.length +
+      imageCheck.empty.length +
+      formCheck.length +
+      headingCheck.issues.length;
+
+    const score = Math.max(0, 100 - totalIssues * 10);
+
     return {
       images: {
         missing: imageCheck.missing.length,
-        empty: imageCheck.empty.length
+        empty: imageCheck.empty.length,
       },
       forms: {
-        unlabeled: formCheck.length
+        unlabeled: formCheck.length,
       },
       headings: headingCheck,
-      score
+      score,
     };
-  }
+  },
 };

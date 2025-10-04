@@ -1,10 +1,10 @@
 // eslint.config.js
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
+import js from '@eslint/js';
+import globals from 'globals';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   // Global ignores
@@ -169,13 +169,13 @@ export default [
       '!tsconfig.json',
       '!vite.config.ts',
       '!tailwind.config.js',
-      '!postcss.config.js'
-    ]
+      '!postcss.config.js',
+    ],
   },
 
   // Base JavaScript configuration (limit to app source only)
   {
-    files: ["app/**/*.{js,cjs,mjs}"],
+    files: ['app/**/*.{js,cjs,mjs}'],
     languageOptions: {
       globals: { ...globals.node },
     },
@@ -187,8 +187,8 @@ export default [
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
@@ -196,15 +196,15 @@ export default [
       globals: { ...globals.browser },
     },
     plugins: {
-      "@typescript-eslint": tseslint,
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
       ...(reactHooks.configs.recommended?.rules || {}),
-      "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
+      'react-refresh/only-export-components': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
 ];

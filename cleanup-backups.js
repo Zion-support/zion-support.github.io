@@ -5,14 +5,14 @@ const path = require('path');
 
 function findBackupFiles(dir) {
   let backupFiles = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         traverse(fullPath);
       } else if (item.includes('.backup.')) {
@@ -20,16 +20,16 @@ function findBackupFiles(dir) {
       }
     }
   }
-  
+
   traverse(dir);
   return backupFiles;
 }
 
 function deleteBackupFiles() {
   const backupFiles = findBackupFiles('./src');
-  
+
   console.log(`Found ${backupFiles.length} backup files to delete:`);
-  
+
   let deletedCount = 0;
   for (const file of backupFiles) {
     try {
@@ -40,7 +40,7 @@ function deleteBackupFiles() {
       console.error(`Failed to delete ${file}:`, error.message);
     }
   }
-  
+
   console.log(`\nSuccessfully deleted ${deletedCount} backup files.`);
 }
 

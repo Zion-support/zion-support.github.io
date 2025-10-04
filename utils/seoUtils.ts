@@ -5,14 +5,16 @@
 // Meta tags management
 export const setMetaTags = (tags: Record<string, string>): void => {
   Object.entries(tags).forEach(([name, content]) => {
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    
+    let meta = document.querySelector(
+      `meta[name="${name}"]`,
+    ) as HTMLMetaElement;
+
     if (!meta) {
       meta = document.createElement('meta');
       meta.name = name;
       document.head.appendChild(meta);
     }
-    
+
     meta.content = content;
   });
 };
@@ -32,19 +34,21 @@ export const setOpenGraphTags = (ogData: {
     'og:image': ogData.image,
     'og:url': ogData.url,
     'og:type': ogData.type || 'website',
-    'og:site_name': ogData.siteName
+    'og:site_name': ogData.siteName,
   };
 
   Object.entries(ogTags).forEach(([property, content]) => {
     if (content) {
-      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
-      
+      let meta = document.querySelector(
+        `meta[property="${property}"]`,
+      ) as HTMLMetaElement;
+
       if (!meta) {
         meta = document.createElement('meta');
         meta.setAttribute('property', property);
         document.head.appendChild(meta);
       }
-      
+
       meta.content = content;
     }
   });
@@ -65,19 +69,21 @@ export const setTwitterCardTags = (twitterData: {
     'twitter:creator': twitterData.creator,
     'twitter:title': twitterData.title,
     'twitter:description': twitterData.description,
-    'twitter:image': twitterData.image
+    'twitter:image': twitterData.image,
   };
 
   Object.entries(twitterTags).forEach(([name, content]) => {
     if (content) {
-      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-      
+      let meta = document.querySelector(
+        `meta[name="${name}"]`,
+      ) as HTMLMetaElement;
+
       if (!meta) {
         meta = document.createElement('meta');
         meta.name = name;
         document.head.appendChild(meta);
       }
-      
+
       meta.content = content;
     }
   });
@@ -86,7 +92,9 @@ export const setTwitterCardTags = (twitterData: {
 // Structured data (JSON-LD)
 export const setStructuredData = (data: any): void => {
   // Remove existing structured data
-  const existingScript = document.querySelector('script[type="application/ld+json"]');
+  const existingScript = document.querySelector(
+    'script[type="application/ld+json"]',
+  );
   if (existingScript) {
     existingScript.remove();
   }
@@ -100,14 +108,16 @@ export const setStructuredData = (data: any): void => {
 
 // Canonical URL
 export const setCanonicalUrl = (url: string): void => {
-  let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-  
+  let canonical = document.querySelector(
+    'link[rel="canonical"]',
+  ) as HTMLLinkElement;
+
   if (!canonical) {
     canonical = document.createElement('link');
     canonical.rel = 'canonical';
     document.head.appendChild(canonical);
   }
-  
+
   canonical.href = url;
 };
 
@@ -119,27 +129,29 @@ export const setPageTitle = (title: string, siteName?: string): void => {
 
 // Meta description
 export const setMetaDescription = (description: string): void => {
-  let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement;
-  
+  let meta = document.querySelector(
+    'meta[name="description"]',
+  ) as HTMLMetaElement;
+
   if (!meta) {
     meta = document.createElement('meta');
     meta.name = 'description';
     document.head.appendChild(meta);
   }
-  
+
   meta.content = description;
 };
 
 // Keywords meta tag
 export const setKeywords = (keywords: string[]): void => {
   let meta = document.querySelector('meta[name="keywords"]') as HTMLMetaElement;
-  
+
   if (!meta) {
     meta = document.createElement('meta');
     meta.name = 'keywords';
     document.head.appendChild(meta);
   }
-  
+
   meta.content = keywords.join(', ');
 };
 
@@ -152,25 +164,25 @@ export const setRobotsMeta = (robots: {
   noimageindex?: boolean;
 }): void => {
   const directives: string[] = [];
-  
+
   if (robots.index === false) directives.push('noindex');
   if (robots.follow === false) directives.push('nofollow');
   if (robots.noarchive) directives.push('noarchive');
   if (robots.nosnippet) directives.push('nosnippet');
   if (robots.noimageindex) directives.push('noimageindex');
-  
+
   if (directives.length === 0) {
     directives.push('index', 'follow');
   }
-  
+
   let meta = document.querySelector('meta[name="robots"]') as HTMLMetaElement;
-  
+
   if (!meta) {
     meta = document.createElement('meta');
     meta.name = 'robots';
     document.head.appendChild(meta);
   }
-  
+
   meta.content = directives.join(', ');
 };
 
@@ -188,19 +200,23 @@ export const setViewport = (viewport: {
 }): void => {
   const content = [
     viewport.width ? `width=${viewport.width}` : 'width=device-width',
-    viewport.initialScale ? `initial-scale=${viewport.initialScale}` : 'initial-scale=1',
+    viewport.initialScale
+      ? `initial-scale=${viewport.initialScale}`
+      : 'initial-scale=1',
     viewport.maximumScale ? `maximum-scale=${viewport.maximumScale}` : '',
-    viewport.userScalable === false ? 'user-scalable=no' : ''
-  ].filter(Boolean).join(', ');
+    viewport.userScalable === false ? 'user-scalable=no' : '',
+  ]
+    .filter(Boolean)
+    .join(', ');
 
   let meta = document.querySelector('meta[name="viewport"]') as HTMLMetaElement;
-  
+
   if (!meta) {
     meta = document.createElement('meta');
     meta.name = 'viewport';
     document.head.appendChild(meta);
   }
-  
+
   meta.content = content;
 };
 
@@ -221,7 +237,7 @@ export const schemaGenerators = {
     logo: data.logo,
     description: data.description,
     address: data.address,
-    contactPoint: data.contactPoint
+    contactPoint: data.contactPoint,
   }),
 
   website: (data: {
@@ -235,7 +251,7 @@ export const schemaGenerators = {
     name: data.name,
     url: data.url,
     description: data.description,
-    publisher: data.publisher
+    publisher: data.publisher,
   }),
 
   article: (data: {
@@ -255,7 +271,7 @@ export const schemaGenerators = {
     dateModified: data.dateModified || data.datePublished,
     description: data.description,
     image: data.image,
-    url: data.url
+    url: data.url,
   }),
 
   breadcrumb: (items: Array<{ name: string; url: string }>) => ({
@@ -265,63 +281,89 @@ export const schemaGenerators = {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url
-    }))
-  })
+      item: item.url,
+    })),
+  }),
 };
 
 // SEO audit helpers
 export const seoAudit = {
-  checkTitle: (): { hasTitle: boolean; titleLength: number; isValid: boolean } => {
+  checkTitle: (): {
+    hasTitle: boolean;
+    titleLength: number;
+    isValid: boolean;
+  } => {
     const title = document.title;
     return {
       hasTitle: !!title,
       titleLength: title.length,
-      isValid: title.length >= 30 && title.length <= 60
+      isValid: title.length >= 30 && title.length <= 60,
     };
   },
 
-  checkDescription: (): { hasDescription: boolean; descriptionLength: number; isValid: boolean } => {
-    const meta = document.querySelector('meta[name="description"]') as HTMLMetaElement;
+  checkDescription: (): {
+    hasDescription: boolean;
+    descriptionLength: number;
+    isValid: boolean;
+  } => {
+    const meta = document.querySelector(
+      'meta[name="description"]',
+    ) as HTMLMetaElement;
     const description = meta?.content || '';
     return {
       hasDescription: !!description,
       descriptionLength: description.length,
-      isValid: description.length >= 120 && description.length <= 160
+      isValid: description.length >= 120 && description.length <= 160,
     };
   },
 
-  checkHeadings: (): { h1Count: number; hasH1: boolean; headingStructure: string[] } => {
+  checkHeadings: (): {
+    h1Count: number;
+    hasH1: boolean;
+    headingStructure: string[];
+  } => {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     const h1Count = document.querySelectorAll('h1').length;
-    const headingStructure = Array.from(headings).map(h => h.tagName.toLowerCase());
-    
+    const headingStructure = Array.from(headings).map(h =>
+      h.tagName.toLowerCase(),
+    );
+
     return {
       h1Count,
       hasH1: h1Count > 0,
-      headingStructure
+      headingStructure,
     };
   },
 
-  checkImages: (): { totalImages: number; imagesWithoutAlt: number; imagesWithoutAltText: string[] } => {
+  checkImages: (): {
+    totalImages: number;
+    imagesWithoutAlt: number;
+    imagesWithoutAltText: string[];
+  } => {
     const images = document.querySelectorAll('img');
     const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
-    const imagesWithoutAltText = Array.from(imagesWithoutAlt).map(img => img.src);
-    
+    const imagesWithoutAltText = Array.from(imagesWithoutAlt).map(
+      img => img.src,
+    );
+
     return {
       totalImages: images.length,
       imagesWithoutAlt: imagesWithoutAlt.length,
-      imagesWithoutAltText
+      imagesWithoutAltText,
     };
   },
 
-  checkLinks: (): { totalLinks: number; internalLinks: number; externalLinks: number } => {
+  checkLinks: (): {
+    totalLinks: number;
+    internalLinks: number;
+    externalLinks: number;
+  } => {
     const links = document.querySelectorAll('a[href]');
     const currentDomain = window.location.hostname;
-    
+
     let internalLinks = 0;
     let externalLinks = 0;
-    
+
     links.forEach(link => {
       const href = link.getAttribute('href');
       if (href) {
@@ -338,11 +380,11 @@ export const seoAudit = {
         }
       }
     });
-    
+
     return {
       totalLinks: links.length,
       internalLinks,
-      externalLinks
+      externalLinks,
     };
-  }
+  },
 };

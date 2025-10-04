@@ -37,7 +37,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     inp: 200,
     fcp: 1800,
     lcp: 2500,
-    ttfb: 800
+    ttfb: 800,
   });
   const [isVisible, setIsVisible] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -46,7 +46,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     const memory = (performance as any).memory;
     const connection = (navigator as any).connection;
     const battery = (navigator as any).getBattery;
-    
+
     return {
       memory: memory ? Math.round(memory.usedJSHeapSize / 1048576) : undefined,
       connection: connection ? connection.effectiveType : undefined,
@@ -54,55 +54,58 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       batteryLevel: battery ? undefined : undefined, // Will be async
       networkType: connection ? connection.type : undefined,
       connectionSpeed: connection ? connection.downlink : undefined,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
   }, []);
 
-  const handleMetric = useCallback((metric: any) => {
-    const performanceInfo = getEnhancedPerformanceInfo();
-    const enhancedMetrics: EnhancedMetrics = {
-      cls: 0,
-      inp: 0,
-      fcp: 0,
-      lcp: 0,
-      ttfb: 0,
-      ...performanceInfo,
-      [metric.name]: metric.value
-    };
-    
-    // Map metric name to our interface
-    switch (metric.name) {
-      case 'CLS':
-        enhancedMetrics.cls = metric.value;
-        break;
-      case 'INP':
-        enhancedMetrics.inp = metric.value;
-        break;
-      case 'FCP':
-        enhancedMetrics.fcp = metric.value;
-        break;
-      case 'LCP':
-        enhancedMetrics.lcp = metric.value;
-        break;
-      case 'TTFB':
-        enhancedMetrics.ttfb = metric.value;
-        break;
-    }
-    
-    setMetrics(prev => ({
-      ...prev,
-      ...enhancedMetrics
-    }));
-    
-    // Add to history
-    setHistory(prev => [
-      ...prev.slice(-9), // Keep last 10 entries
-      {
-        timestamp: Date.now(),
-        metrics: enhancedMetrics
+  const handleMetric = useCallback(
+    (metric: any) => {
+      const performanceInfo = getEnhancedPerformanceInfo();
+      const enhancedMetrics: EnhancedMetrics = {
+        cls: 0,
+        inp: 0,
+        fcp: 0,
+        lcp: 0,
+        ttfb: 0,
+        ...performanceInfo,
+        [metric.name]: metric.value,
+      };
+
+      // Map metric name to our interface
+      switch (metric.name) {
+        case 'CLS':
+          enhancedMetrics.cls = metric.value;
+          break;
+        case 'INP':
+          enhancedMetrics.inp = metric.value;
+          break;
+        case 'FCP':
+          enhancedMetrics.fcp = metric.value;
+          break;
+        case 'LCP':
+          enhancedMetrics.lcp = metric.value;
+          break;
+        case 'TTFB':
+          enhancedMetrics.ttfb = metric.value;
+          break;
       }
-    ]);
-  }, [getEnhancedPerformanceInfo]);
+
+      setMetrics(prev => ({
+        ...prev,
+        ...enhancedMetrics,
+      }));
+
+      // Add to history
+      setHistory(prev => [
+        ...prev.slice(-9), // Keep last 10 entries
+        {
+          timestamp: Date.now(),
+          metrics: enhancedMetrics,
+        },
+      ]);
+    },
+    [getEnhancedPerformanceInfo],
+  );
 
   const getStatusColor = (value: number, threshold: number) => {
     if (value <= threshold * 0.5) return 'text-green-600';
@@ -128,7 +131,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     onTTFB(handleMetric);
 
     // Enhanced performance monitoring
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'navigation') {
           console.log('Navigation timing:', entry);
@@ -146,7 +149,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       const currentMetrics = getEnhancedPerformanceInfo();
       setMetrics(prev => ({
         ...prev,
-        ...currentMetrics
+        ...currentMetrics,
       }));
     }, 5000);
 
@@ -160,73 +163,80 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
   if (process.env.NODE_ENV === 'development' && metrics) {
     return (
-      <div className="fixed bottom-4 right-4 bg-black text-white p-3 rounded-lg text-xs font-mono max-w-sm">
-        <div className="flex justify-between items-center mb-2">
-          <div className="font-bold">Performance Monitor</div>
+      <div className='fixed bottom-4 right-4 bg-black text-white p-3 rounded-lg text-xs font-mono max-w-sm'>
+        <div className='flex justify-between items-center mb-2'>
+          <div className='font-bold'>Performance Monitor</div>
           <button
             onClick={toggleVisibility}
-            className="text-blue-400 hover:text-blue-300 cursor-pointer"
+            className='text-blue-400 hover:text-blue-300 cursor-pointer'
           >
             {isVisible ? '▼' : '▶'}
           </button>
         </div>
-        
+
         {isVisible && (
-          <div className="space-y-1">
-            <div className="flex justify-between">
+          <div className='space-y-1'>
+            <div className='flex justify-between'>
               <span>CLS:</span>
               <span className={getStatusColor(metrics.cls, thresholds.cls)}>
-                {getStatusIcon(metrics.cls, thresholds.cls)} {metrics.cls?.toFixed(3)}
+                {getStatusIcon(metrics.cls, thresholds.cls)}{' '}
+                {metrics.cls?.toFixed(3)}
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>INP:</span>
-              <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
-                {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+              <span
+                className={getStatusColor(metrics.inp || 0, thresholds.inp)}
+              >
+                {getStatusIcon(metrics.inp || 0, thresholds.inp)}{' '}
+                {metrics.inp?.toFixed(1)}ms
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>FCP:</span>
               <span className={getStatusColor(metrics.fcp, thresholds.fcp)}>
-                {getStatusIcon(metrics.fcp, thresholds.fcp)} {metrics.fcp?.toFixed(1)}ms
+                {getStatusIcon(metrics.fcp, thresholds.fcp)}{' '}
+                {metrics.fcp?.toFixed(1)}ms
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>LCP:</span>
               <span className={getStatusColor(metrics.lcp, thresholds.lcp)}>
-                {getStatusIcon(metrics.lcp, thresholds.lcp)} {metrics.lcp?.toFixed(1)}ms
+                {getStatusIcon(metrics.lcp, thresholds.lcp)}{' '}
+                {metrics.lcp?.toFixed(1)}ms
               </span>
             </div>
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>TTFB:</span>
               <span className={getStatusColor(metrics.ttfb, thresholds.ttfb)}>
-                {getStatusIcon(metrics.ttfb, thresholds.ttfb)} {metrics.ttfb?.toFixed(1)}ms
+                {getStatusIcon(metrics.ttfb, thresholds.ttfb)}{' '}
+                {metrics.ttfb?.toFixed(1)}ms
               </span>
             </div>
             {metrics.memory && (
-              <div className="flex justify-between">
+              <div className='flex justify-between'>
                 <span>Memory:</span>
                 <span>{metrics.memory}MB</span>
               </div>
             )}
             {metrics.connection && (
-              <div className="flex justify-between">
+              <div className='flex justify-between'>
                 <span>Connection:</span>
                 <span>{metrics.connection}</span>
               </div>
             )}
-            <div className="flex justify-between">
+            <div className='flex justify-between'>
               <span>DPR:</span>
               <span>{metrics.devicePixelRatio}</span>
             </div>
             {metrics.networkType && (
-              <div className="flex justify-between">
+              <div className='flex justify-between'>
                 <span>Network:</span>
                 <span>{metrics.networkType}</span>
               </div>
             )}
             {metrics.connectionSpeed && (
-              <div className="flex justify-between">
+              <div className='flex justify-between'>
                 <span>Speed:</span>
                 <span>{metrics.connectionSpeed}Mbps</span>
               </div>

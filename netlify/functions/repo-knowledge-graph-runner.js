@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('repo-knowledge-graph-runner function triggered');
-    
+
     // Repository knowledge graph simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Repository knowledge graph runner executed successfully',
@@ -18,11 +18,11 @@ exports.handler = async function(event, context, callback) {
           status: 'generating',
           repositories: 0,
           knowledgeNodes: 0,
-          lastGenerated: new Date().toISOString()
-        }
-      })
+          lastGenerated: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in repo-knowledge-graph-runner:', error);
@@ -30,13 +30,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'repo-knowledge-graph-runner'
-      })
+        function: 'repo-knowledge-graph-runner',
+      }),
     };
   }
 };
