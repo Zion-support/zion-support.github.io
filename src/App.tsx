@@ -1,20 +1,17 @@
-import React, { useState, useEffect, Suspense, lazy, useCallback } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
 
-// Import core components (always loaded)
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import LoadingSpinner from './components/LoadingSpinner';
-import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+// Components
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
-// Lazy load performance components (only when needed)
-const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimizer'));
-const PerformanceMonitor = lazy(() => import('./components/PerformanceMonitor'));
+// Pages
+import HomePage from './page';
 
+<<<<<<< HEAD
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/Home'));
 const AboutPage = lazy(() => import('./pages/About'));
@@ -109,6 +106,71 @@ const App: React.FC = () => {
           </EnhancedErrorBoundary>
         </div>
       </Router>
+=======
+// Utils
+import {
+  setupGlobalErrorHandling,
+  monitorPerformance,
+} from '../utils/errorHandling';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+
+// Styles
+import '../src/index.css';
+
+const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize global error handling
+    setupGlobalErrorHandling();
+
+    // Initialize performance monitoring
+    monitorPerformance();
+
+    // Initialize performance optimizer
+    performanceOptimizer.clearMetrics();
+
+    console.log(
+      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+    );
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <ErrorBoundary>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className='App'>
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href='#main-content'
+                  className='skip-link'
+                  onClick={e => {
+                    e.preventDefault();
+                    const main =
+                      document.querySelector('main') ||
+                      document.querySelector('#main-content');
+                    if (main) {
+                      main.focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
+
+                <Routes>
+                  <Route path='/' element={<HomePage />} />
+                  {/* Add more routes as needed */}
+                </Routes>
+
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
+      </ErrorBoundary>
+>>>>>>> cursor/fix-errors-and-merge-to-main-80bc
     </HelmetProvider>
   );
 };
