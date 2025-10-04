@@ -236,7 +236,8 @@ export const setupGlobalErrorHandling = () => {
   
   // Handle console errors (optional)
   const originalConsoleError = console.error;
-  console.error = (...args) =>     logError(args.join(' '), { type: 'console.error' });
+  console.error = (...args) => {
+    logError(args.join(' '), { type: 'console.error' });
     originalConsoleError.apply(console, args);
   };
   
