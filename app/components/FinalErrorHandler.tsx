@@ -170,8 +170,9 @@ class FinalErrorHandler extends Component<Props, State> {
       // Strategy 2: Reload critical resources
       const criticalScripts = document.querySelectorAll('script[data-critical]');
       criticalScripts.forEach(script => {
+        const scriptElement = script as HTMLScriptElement;
         const newScript = document.createElement('script');
-        newScript.src = script.src;
+        newScript.src = scriptElement.src;
         newScript.setAttribute('data-critical', 'true');
         document.head.appendChild(newScript);
       });
