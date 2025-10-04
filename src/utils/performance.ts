@@ -122,7 +122,8 @@ export class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach(entry => {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+          const fidEntry = entry as any;
+          this.metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
@@ -301,16 +302,7 @@ export class PerformanceMonitor {
  * Image optimization utilities
  */
 export class ImageOptimizer {
-  static async optimizeImage(
-    src: string,
-    options: {
-      width?: number;
-      height?: number;
-      quality?: number;
-      format?: 'webp' | 'avif' | 'jpeg' | 'png';
-    } = {}
-  ): Promise<string> {
-    const { width, height, quality = 80, format = 'webp' } = options;
+  static async optimizeImage(src: string): Promise<string> {
 
     // For now, return the original src
     // In a real implementation, this would use a service like Cloudinary or ImageKit
