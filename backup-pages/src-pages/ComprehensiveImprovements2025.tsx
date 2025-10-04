@@ -95,7 +95,7 @@ import: {
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {'
   ' '}Improvements
-              </span>
+              <
               {'
   ' '}2025'
             </h1>''

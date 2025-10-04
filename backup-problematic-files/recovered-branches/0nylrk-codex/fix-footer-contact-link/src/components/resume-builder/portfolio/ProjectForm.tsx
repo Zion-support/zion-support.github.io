@@ -96,7 +96,7 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
   ;
   return (;
     <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
+      <form onSubmit={form.handleSubmit(onSubmit)} className="text-left">;
         <FormField;
           control={form.control}
           name="title";
@@ -119,7 +119,7 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
               <FormControl>;
                 <Textarea ;
                   placeholder="Describe what the project does and your role in it...";
-                  className="min-h-[100px]";
+                  className="text-left";
                   {...field} ;
                 />;
               </FormControl>;
@@ -141,14 +141,14 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
           )}
         />;
         ;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+        <div className="text-left">;
           <FormField;
             control={form.control}
             name="github_url";
             render={({ field }) => (;
               <FormItem>;
-                <FormLabel className="flex items-center gap-2">;
-                  <Github className="h-4 w-4" />;
+                <FormLabel className="text-left">;
+                  <Github className="text-left" />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
@@ -163,8 +163,8 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
             name="demo_url";
             render={({ field }) => (;
               <FormItem>;
-                <FormLabel className="flex items-center gap-2">;
-                  <Link className="h-4 w-4" />;
+                <FormLabel className="text-left">;
+                  <Link className="text-left" />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
@@ -180,8 +180,8 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
           name="image_url";
           render={({ field }) => (;
             <FormItem>;
-              <FormLabel className="flex items-center gap-2">;
-                <FileImage className="h-4 w-4" />;
+              <FormLabel className="text-left">;
+                <FileImage className="text-left" />;
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
@@ -194,12 +194,12 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         ;
         {/* Future file upload field would go here */}
         ;
-        <div className="flex justify-end space-x-2 pt-4">;
+        <div className="text-left">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isLoading}>;
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isLoading && <Loader2 className="text-left" />}
             {isEditing ? 'Update' :'Add'} Project;
           </Button>;
         </div>;
@@ -213,7 +213,7 @@ try {;
   </FormControl> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Project Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) ;
+}/> <div className="text-left" > <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> {;

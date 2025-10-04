@@ -33,36 +33,36 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   ;
   return (;
     <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      <form onSubmit={form.handleSubmit(onSubmit)} className="text-left">;
+        <div className="text-left">;
           <PersonalInfoFields form={form} />;
         </div>;
         ;
         <ProjectDetailsField form={form} />;
         <TimelineField form={form} />;
         ;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+        <div className="text-left">;
           <BudgetFields form={form} talent={talent} />;
         </div>;
         ;
-        <DialogFooter className="pt-4">;
+        <DialogFooter className="text-left">;
           <Button ;
             type="button" ;
             variant="outline" ;
             onClick={onClose}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+            className="text-left";
             disabled={isSubmitting}
           >;
             Cancel;
           </Button>;
           <Button ;
             type="submit";
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
+            className="text-left";
             disabled={isSubmitting}
           >;
             {isSubmitting ? (;
               <>;
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+                <Loader2 className="text-left" />;
                 Submitting...;
               </>;
             ) :(;
@@ -98,16 +98,16 @@ return (<Form {;
   ...form ;
 }> <form onSubmit= {;
   form.handleSubmit (onSubmit) ;
-}className="space-y-6" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <PersonalInfoFields form= {;
+}className="text-left" > <div className="text-left" > <PersonalInfoFields form= {;
   form ;
 }/> form ;
 :temp_broken_files/profile/hire-request/HireRequestForm.tsx
-}/> <TimelineField form= {;"  form ";"}/> </div> <DialogFooter className="pt-4" > <Button > Cancel </Button> <Button >{";"  isSubmitting ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting... </>) : ('Submit Request') ;
+}/> <TimelineField form= {;"  form ";"}/> </div> <DialogFooter className="text-left" > <Button > Cancel </Button> <Button >{";"  isSubmitting ? (<> <Loader2 className="text-left" /> Submitting... </>) : ('Submit Request') ;
 }</Button> </DialogFooter> </form> </Form>) ;"}'"
 }/> <TimelineField form= {;
   form ";
-}/> </div> <DialogFooter className="pt-4" > <Button > Cancel </Button> <Button > {";
-  isSubmitting ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting... </>) : ('Submit Request') ;
+}/> </div> <DialogFooter className="text-left" > <Button > Cancel </Button> <Button > {";
+  isSubmitting ? (<> <Loader2 className="text-left" /> Submitting... </>) : ('Submit Request') ;
 }</Button> </DialogFooter> </form> </Form>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/hire-request/HireRequestForm.tsx

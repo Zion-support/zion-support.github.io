@@ -74,8 +74,7 @@
     rating: 4 && 4.8,
     reviews: 74,
   },
-  {
-
+  
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
     tagline:;
@@ -179,8 +178,7 @@
     rating: 4 && 4.6,
     reviews: 33,
   },
-  {
-
+  
       'QR tickets and check-in app',
       'Speaker/sponsor asset management',
       'Automated reminders and WhatsApp/SMS alerts',
@@ -201,7 +199,7 @@
       'Feedback / NPS post - event forms',
       'Budget tracker and P & L exports',
 
-  {
+  
       'Embeddable agendas and live updates',
     ],
     popular: true,
@@ -222,8 +220,7 @@
     rating: 4 && 4.7,
     reviews: 29,
   },
-  {
-
+  
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
     tagline:;
@@ -262,8 +259,7 @@
     rating: 4 && 4.5,
     reviews: 19,
   },
-  {
-
+  
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
     tagline:;
@@ -300,8 +296,7 @@
     rating: 4 && 4.6,
     reviews: 54,
   },
-  {
-
+  
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
     tagline:;
@@ -333,8 +328,7 @@
     rating: 4 && 4.5,
     reviews: 21,
   },
-  {
-
+  
       'Company/person enrich via email or domain',
       'Tech stack detection and hiring signals',
       'CSV bulk processing and API',
@@ -359,8 +353,7 @@
     rating: 4 && 4.4,
     reviews: 17,
   },
-  {
-
+  
       'High-accuracy OCR and field mapping',
       'Line item extraction and taxes',
       'Validation UI and review queues',
@@ -385,8 +378,7 @@
     rating: 4 && 4.5,
     reviews: 14,
   },
-  {
-
+  
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
     tagline:;
@@ -418,8 +410,7 @@
     rating: 4 && 4.4,
     reviews: 18,
   },
-  {
-
+  
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
     tagline:;
@@ -466,8 +457,7 @@
     rating: 4 && 4.3,
     reviews: 12,
   },
-  {
-
+  
     id: 'kpi-scorecards-studio'
     name: 'KPI Scorecards Studio'
     tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
@@ -560,22 +550,21 @@
   },;
 
 
-];	{
-
-const contact = {
+];	
+const contact = 
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
 export const real2029Q4Additions: RealMarketService[] = [
-	{
+	
 		id: 'ai-email-triage-copilot', name: 'AI Email Triage Copilot',
 		tagline: 'Auto-categorize, summarize, and draft replies for inbound email',
     price: '$99', period: '/month',
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     features: [
 
-];	{
+];	
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
@@ -609,7 +598,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 74
 	}
-	{
+	
 		id: 'mobile-survey-studio';
 		name: 'Mobile Survey Studio'
 		tagline: 'Conversational, mobile-first surveys with branching logic and realtime dashboards';
@@ -650,7 +639,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 33
 	}
-	{
+	
 		id: 'event-ops-dashboard';
 		name: 'EventOps Dashboard'
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
@@ -691,7 +680,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 29
 	}
-	{
+	
 		id: 'oncall-scheduler-pro';
 		name: 'OnCall Scheduler Pro'
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
@@ -732,7 +721,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 19
 	}
-	{
+	
 		id: 'seo-content-optimizer-pro';
 		name: 'SEO Content Optimizer Pro'
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
@@ -773,7 +762,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 54
 	}
-	{
+	
 		id: 'feature-flags-lite';
 		name: 'Feature Flags Lite'
 		tagline: 'Simple kill switches, gradual rollouts, and A/B targeting for web apps';
@@ -814,7 +803,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 21
 	}
-	{
+	
 		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV';
@@ -855,7 +844,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 17
 	}
-	{
+	
 		id: 'invoice-ocr-processor';
 		name: 'Invoice OCR Processor';
 		tagline: 'Extract line items and totals from invoices and receipts to your ERP';
@@ -896,7 +885,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 14
 	}
-	{
+	
 		id: 'rpa-browser-automation';
 		name: 'RPA Browser Automation Kit'
 		tagline: 'Headless browser workflows with queues, retries, and human review';
@@ -937,7 +926,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 18
 	}
-	{
+	
 		id: 'redaction-compliance-api';
 		name: 'Redaction & Compliance API';
 		tagline: 'PII detection and redaction for text and documents with audit logs';
@@ -978,7 +967,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 
 		reviews: 12
 	}
-	{
+	
 		id: 'kpi-scorecards-studio';
 		name: 'KPI Scorecards Studio'
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
@@ -1058,7 +1047,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.8,
   reviews: 74;
 }
-{
+
   id: 'mobile - survey - studio';
   name: 'Mobile Survey Studio',
   tagline: 'Conversational, mobile - first surveys with branching logic and realtime dashboards';
@@ -1095,7 +1084,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.6,
   reviews: 33;
 }
-{
+
   id: 'event - ops - dashboard';
   name: 'EventOps Dashboard',
   tagline: 'Ticketing, invitations, run - of - show, and post - event analytics in one place';
@@ -1132,7 +1121,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.7,
   reviews: 29;
 }
-{
+
   id: 'oncall - scheduler - pro';
   name: 'OnCall Scheduler Pro',
   tagline: 'Policy - based shift planning, rotations, and escalations with Slack / Teams';
@@ -1169,7 +1158,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.5,
   reviews: 19;
 }
-{
+
   id: 'seo - content - optimizer - pro';
   name: 'SEO Content Optimizer Pro',
   tagline: 'AI - assisted briefs, outlines, and on - page optimization with live SERP data';
@@ -1206,7 +1195,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.6,
   reviews: 54;
 }
-{
+
   id: 'feature - flags - lite';
   name: 'Feature Flags Lite',
   tagline: 'Simple kill switches, gradual rollouts, and A / B targeting for web apps';
@@ -1243,7 +1232,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.5,
   reviews: 21;
 }
-{
+
   id: 'sales - lead - enrichment';
   name: 'Sales Lead Enrichment';
   tagline: 'Firmographics and signals to qualify leads instantly via API and CSV';
@@ -1280,7 +1269,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.4,
   reviews: 17;
 }
-{
+
   id: 'invoice - ocr - processor';
   name: 'Invoice OCR Processor';
   tagline: 'Extract line items and totals from invoices and receipts to your ERP';
@@ -1317,7 +1306,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.5,
   reviews: 14;
 }
-{
+
   id: 'rpa - browser - automation';
   name: 'RPA Browser Automation Kit',
   tagline: 'Headless browser workflows with queues, retries, and human review';
@@ -1354,7 +1343,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.4,
   reviews: 18;
 }
-{
+
   id: 'redaction - compliance - api';
   name: 'Redaction & Compliance API';
   tagline: 'PII detection and redaction for text and documents with audit logs';
@@ -1391,7 +1380,7 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.3,
   reviews: 12;
 }
-{
+
   id: 'kpi - scorecards - studio';
   name: 'KPI Scorecards Studio',
   tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries';

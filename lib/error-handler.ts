@@ -1,5 +1,7 @@
-import { NextApiRequest, NextApiResponse  } from 'next';
-export interface ApiError extends Error  {statusCode?: number;
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export interface ApiError extends Error {
+  statusCode?: number;
   isOperational?: boolean;
 }
 
@@ -20,7 +22,6 @@ export const errorHandler = (err: ApiError, req: NextApiRequest, res: NextApiRes
   const { statusCode = 500, message } = err;
 
   // Log error for monitoring
-  // eslint-disable-next-line no-console
   console.error(`API Error [${statusCode}]: ${message}`, {
     url: req.url,
     method: req.method,

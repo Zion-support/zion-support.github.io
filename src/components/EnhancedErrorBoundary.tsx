@@ -3,8 +3,7 @@
  * Comprehensive error handling with performance monitoring and user feedback
  */
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { securityMonitoring } from '../utils/securityEnhancements';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { analyticsUtils } from '../utils/seoOptimizations';
 
 interface Props {
@@ -66,7 +65,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
 
     // Log to console in development
-    if (import.meta.env.DEV) {
+    if ((import.meta as unknown as { env: { DEV?: boolean } }).env?.DEV) {
       console.error('Error Boundary caught an error:', errorDetails);
     }
 
@@ -75,14 +74,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error_id: errorId,
       error_message: error.message,
       error_stack: error.stack?.substring(0, 500), // Truncate for analytics
-      component_stack: errorInfo.componentStack.substring(0, 500),
+      component_stack: errorInfo.componentStack?.substring(0, 500) || '',
       retry_count: this.retryCount
     });
-
-    // Log security event if suspicious
-    if (securityMonitoring.detectSuspiciousActivity(errorDetails)) {
-      securityMonitoring.logSecurityEvent('suspicious_error', errorDetails);
-    }
 
     // Call custom error handler
     if (onError) {

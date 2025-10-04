@@ -24,14 +24,14 @@ export function securityMiddleware(request: NextRequest) {; const response = Nex
 export /**
  * security_middleware - Function description
  */
-function security_middleware() {
+function security_middleware() {/* content */}
 export /**
  * security_middleware - Function description
  */
-function security_middleware() {
+function security_middleware() {/* content */}
   const response = NextResponse.next ();
   // Apply security headers;
-  security_headers.for_each (({ key, value }) => {
+  security_headers.for_each (({ key, value }) => {/* content */}
     response.headers.set (key, value)});
   // Apply Content Security Policy;
   const csp_string = Object.entries (contentSecurityPolicy.directives);
@@ -43,7 +43,7 @@ function security_middleware() {
   response.headers.set ("X - RateLimit - Remaining", "99");
   response.headers.set ("X - RateLimit - Reset", new Date (Date.now () + 3600000).toISOString ());
   return response}
-export const config = {
+export const config = {/* content */}
   "matcher": [;
     "/((?!api | _next / static | _next / image | favicon.ico).*)",
   ], ,

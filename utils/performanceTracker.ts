@@ -223,8 +223,7 @@ export class PerformanceTracker {
     const totalSize = resources.reduce((sum, r) => sum + r.size, 0);
     report += `Total Resource Size: ${(totalSize / 1024).toFixed(2)} KB\n\n`;
 
-    if (memory) {
-      report += 'Memory Usage:\n';
+    if (memory)       report += 'Memory Usage:\n';
       report += `- Used: ${memory.usedJSHeapSize.toFixed(2)} MB\n`;
       report += `- Total: ${memory.totalJSHeapSize.toFixed(2)} MB\n`;
       report += `- Limit: ${memory.jsHeapSizeLimit.toFixed(2)} MB\n`;
@@ -261,33 +260,26 @@ export class PerformanceTracker {
   /**
    * Send metrics to analytics endpoint
    */
-  async sendToAnalytics(endpoint: string) {
-    const metrics = this.getMetrics();
-    const data = {
-      metrics,
+  async sendToAnalytics(endpoint: string)     const metrics = this.getMetrics();
+    const data =       metrics,
       timestamp: new Date().toISOString(),
       url: window.location.href,
       userAgent: navigator.userAgent,
     };
 
-    try {
-      await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+    try       await fetch(endpoint,         method: 'POST',
+        headers:           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
-    } catch (error) {
-      console.error('Failed to send performance metrics', error);
+    } catch (error)       console.error('Failed to send performance metrics', error);
     }
   }
 
   /**
    * Cleanup observers
    */
-  cleanup() {
-    this.observers.forEach((observer) => observer.disconnect());
+  cleanup()     this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
   }
 }
@@ -297,9 +289,7 @@ export class PerformanceTracker {
  */
 let trackerInstance: PerformanceTracker | null = null;
 
-export function getPerformanceTracker(): PerformanceTracker {
-  if (!trackerInstance) {
-    trackerInstance = new PerformanceTracker();
+export function getPerformanceTracker(): PerformanceTracker   if (!trackerInstance)     trackerInstance = new PerformanceTracker();
   }
   return trackerInstance;
 }
@@ -307,29 +297,24 @@ export function getPerformanceTracker(): PerformanceTracker {
 /**
  * Performance budget recommendations
  */
-export const PERFORMANCE_BUDGETS = {
-  EXCELLENT: {
-    lcp: 2500, // 2.5s
+export const PERFORMANCE_BUDGETS =   EXCELLENT:     lcp: 2500, // 2.5s
     fid: 100, // 100ms
     cls: 0.1,
     ttfb: 600, // 600ms
   },
-  GOOD: {
-    lcp: 4000, // 4s
+  GOOD:     lcp: 4000, // 4s
     fid: 300, // 300ms
     cls: 0.25,
     ttfb: 1000, // 1s
   },
-  NEEDS_IMPROVEMENT: {
-    lcp: 6000, // 6s
+  NEEDS_IMPROVEMENT:     lcp: 6000, // 6s
     fid: 500, // 500ms
     cls: 0.5,
     ttfb: 1500, // 1.5s
   },
 };
 
-export default {
-  PerformanceTracker,
+export default   PerformanceTracker,
   getPerformanceTracker,
   PERFORMANCE_BUDGETS,
 };

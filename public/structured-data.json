@@ -1,38 +1,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Zion Tech Group",
-  "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-302-464-0950",
-    "contactType": "customer service",
-    "availableLanguage": "English"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "364 E Main St STE 1008",
-    "addressLocality": "Middletown",
-    "addressRegion": "DE",
-    "postalCode": "19709",
-    "addressCountry": "US"
-  },
+  "name": "Zion AI",
+  "url": "https://zion.app",
+  "logo": "https://zion.app/logo.png",
+  "description": "Advanced AI Solutions for Enterprise",
   "sameAs": [
-    "https://linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup"
-  ],
-  "foundingDate": "2020",
-  "numberOfEmployees": "50-100",
-  "services": [
-    "AI Workflow Automation",
-    "AI Virtual Assistant",
-    "AI Data Analytics",
-    "Quantum Computing Consulting",
-    "Edge AI Solutions",
-    "Zero Trust Security",
-    "Cybersecurity",
-    "Cloud Infrastructure"
+    "https://twitter.com/zionai",
+    "https://linkedin.com/company/zion-ai"
   ]
 }

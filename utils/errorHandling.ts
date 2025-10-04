@@ -157,8 +157,7 @@ const sendToMonitoring = (errorLog: ErrorLog) => {
     
     // Or send to custom endpoint
     /*
-    fetch('/api/log-error', {
-      method: 'POST',
+    fetch('/api/log-error',       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(errorLog),
     }).catch(console.error);
@@ -177,8 +176,7 @@ export const getErrorMetrics = (): ErrorMetrics => {
   
   // Count errors by type
   const errorsByType: Record<string, number> = {};
-  errors.forEach(error => {
-    const type = error.message.split(':')[0] || 'Unknown';
+  errors.forEach(error =>     const type = error.message.split(':')[0] || 'Unknown';
     errorsByType[type] = (errorsByType[type] || 0) + 1;
   });
   
@@ -187,8 +185,7 @@ export const getErrorMetrics = (): ErrorMetrics => {
   const recentErrors = errors.filter(e => e.timestamp > hourAgo);
   const errorRate = recentErrors.length / 60;
   
-  return {
-    totalErrors: errors.length,
+  return     totalErrors: errors.length,
     errorsByType,
     lastError: errors[errors.length - 1],
     errorRate,
@@ -198,17 +195,14 @@ export const getErrorMetrics = (): ErrorMetrics => {
 /**
  * Check if error rate is too high
  */
-export const isErrorRateTooHigh = (threshold: number = 5): boolean => {
-  const metrics = getErrorMetrics();
+export const isErrorRateTooHigh = (threshold: number = 5): boolean =>   const metrics = getErrorMetrics();
   return metrics.errorRate > threshold;
 };
 
 /**
  * Clear error logs
  */
-export const clearErrorLogs = () => {
-  if (typeof window !== 'undefined') {
-    localStorage.removeItem(ERROR_LOG_KEY);
+export const clearErrorLogs = () =>   if (typeof window !== 'undefined')     localStorage.removeItem(ERROR_LOG_KEY);
     console.log('Error logs cleared');
   }
 };
@@ -216,29 +210,23 @@ export const clearErrorLogs = () => {
 /**
  * Global error handler setup
  */
-export const setupGlobalErrorHandling = () => {
-  if (typeof window === 'undefined') return;
+export const setupGlobalErrorHandling = () =>   if (typeof window === 'undefined') return;
   
   // Handle uncaught errors
-  window.addEventListener('error', (event) => {
-    logError(event.error || event.message, {
-      filename: event.filename,
+  window.addEventListener('error', (event) =>     logError(event.error || event.message,       filename: event.filename,
       lineno: event.lineno,
       colno: event.colno,
     });
   });
   
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {
-    logError(event.reason || 'Unhandled Promise Rejection', {
-      promise: event.promise,
+  window.addEventListener('unhandledrejection', (event) =>     logError(event.reason || 'Unhandled Promise Rejection',       promise: event.promise,
     });
   });
   
   // Handle console errors (optional)
   const originalConsoleError = console.error;
-  console.error = (...args) => {
-    logError(args.join(' '), { type: 'console.error' });
+  console.error = (...args) =>     logError(args.join(' '), { type: 'console.error' });
     originalConsoleError.apply(console, args);
   };
   
@@ -248,26 +236,20 @@ export const setupGlobalErrorHandling = () => {
 /**
  * Performance monitoring
  */
-export const monitorPerformance = () => {
-  if (typeof window === 'undefined' || !('performance' in window)) return;
+export const monitorPerformance = () =>   if (typeof window === 'undefined' || !('performance' in window)) return;
   
   // Monitor page load performance
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {
-        const loadTime = perfData.loadEventEnd - perfData.fetchStart;
+  window.addEventListener('load', () =>     setTimeout(() =>       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData)         const loadTime = perfData.loadEventEnd - perfData.fetchStart;
         
         if (loadTime > 3000) { // Slow page load (>3s)
-          logError('Slow page load detected', {
-            loadTime,
+          logError('Slow page load detected',             loadTime,
             domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
             type: 'performance',
           }, 'warn');
         }
         
-        logInfo('Page load performance', {
-          loadTime,
+        logInfo('Page load performance',           loadTime,
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
           ttfb: perfData.responseStart - perfData.fetchStart,
         });
@@ -276,13 +258,8 @@ export const monitorPerformance = () => {
   });
   
   // Monitor long tasks
-  if ('PerformanceObserver' in window) {
-    try {
-      const longTaskObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.duration > 50) { // Long task threshold
-            logError('Long task detected', {
-              duration: entry.duration,
+  if ('PerformanceObserver' in window)     try       const longTaskObserver = new PerformanceObserver((list) =>         for (const entry of list.getEntries())           if (entry.duration > 50) { // Long task threshold
+            logError('Long task detected',               duration: entry.duration,
               startTime: entry.startTime,
               type: 'performance',
             }, 'warn');
@@ -290,8 +267,7 @@ export const monitorPerformance = () => {
         }
       });
       longTaskObserver.observe({ entryTypes: ['longtask'] });
-    } catch (error) {
-      // Long task API not supported
+    } catch (error)       // Long task API not supported
     }
   }
 };
@@ -299,16 +275,13 @@ export const monitorPerformance = () => {
 /**
  * Network error handler
  */
-export const handleNetworkError = (error: Error, endpoint: string) => {
-  logError(error, {
-    endpoint,
+export const handleNetworkError = (error: Error, endpoint: string) =>   logError(error,     endpoint,
     type: 'network',
     online: typeof navigator !== 'undefined' ? navigator.onLine : true,
   });
   
   // Check if offline
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    console.warn('User is offline');
+  if (typeof navigator !== 'undefined' && !navigator.onLine)     console.warn('User is offline');
     return { offline: true };
   }
   
@@ -321,29 +294,22 @@ export const handleNetworkError = (error: Error, endpoint: string) => {
 export const withErrorHandling = <T extends (...args: any[]) => any>(
   fn: T,
   context?: string
-): T => {
-  return ((...args: Parameters<T>) => {
-    try {
-      const result = fn(...args);
+): T =>   return ((...args: Parameters<T>) =>     try       const result = fn(...args);
       
       // Handle async functions
-      if (result instanceof Promise) {
-        return result.catch((error) => {
-          logError(error, { context, args });
+      if (result instanceof Promise)         return result.catch((error) =>           logError(error, { context, args });
           throw error;
         });
       }
       
       return result;
-    } catch (error) {
-      logError(error as Error, { context, args });
+    } catch (error)       logError(error as Error, { context, args });
       throw error;
     }
   }) as T;
 };
 
-export default {
-  logError,
+export default   logError,
   logInfo,
   getErrorMetrics,
   isErrorRateTooHigh,

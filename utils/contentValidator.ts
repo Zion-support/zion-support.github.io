@@ -260,24 +260,20 @@ export class ContentValidator {
       recommendations.push(`Found ${duplicateTitles.length} duplicate titles - ensure unique titles for each content piece`);
     }
 
-    if (inconsistentDates) {
-      recommendations.push('Inconsistent publishing schedule detected - maintain regular content cadence');
+    if (inconsistentDates)       recommendations.push('Inconsistent publishing schedule detected - maintain regular content cadence');
     }
 
     const totalContent = contents.length;
     const blogPercentage = (categoryDistribution.blog || 0) / totalContent * 100;
     const caseStudyPercentage = (categoryDistribution['case-study'] || 0) / totalContent * 100;
 
-    if (blogPercentage < 30) {
-      recommendations.push('Low blog content ratio - consider publishing more thought leadership articles');
+    if (blogPercentage < 30)       recommendations.push('Low blog content ratio - consider publishing more thought leadership articles');
     }
 
-    if (caseStudyPercentage < 20) {
-      recommendations.push('Low case study ratio - showcase more client successes');
+    if (caseStudyPercentage < 20)       recommendations.push('Low case study ratio - showcase more client successes');
     }
 
-    return {
-      duplicateTitles,
+    return       duplicateTitles,
       inconsistentDates,
       categoryDistribution,
       recommendations
@@ -287,16 +283,14 @@ export class ContentValidator {
   /**
    * Generate content quality report
    */
-  generateQualityReport(contents: ContentMetadata[]): {
-    averageScore: number;
+  generateQualityReport(contents: ContentMetadata[]):     averageScore: number;
     totalContent: number;
     highQuality: number; // Score >= 80
     mediumQuality: number; // Score 60-79
     lowQuality: number; // Score < 60
     topIssues: Array<{ issue: string; count: number }>;
     recommendations: string[];
-  } {
-    const validations = contents.map(c => this.validateMetadata(c));
+  }     const validations = contents.map(c => this.validateMetadata(c));
     const totalContent = contents.length;
     
     let totalScore = 0;
@@ -306,16 +300,14 @@ export class ContentValidator {
     
     const issueMap = new Map<string, number>();
 
-    validations.forEach(validation => {
-      totalScore += validation.score;
+    validations.forEach(validation =>       totalScore += validation.score;
       
       if (validation.score >= 80) highQuality++;
       else if (validation.score >= 60) mediumQuality++;
       else lowQuality++;
 
       // Collect issues
-      [...validation.errors, ...validation.warnings].forEach(issue => {
-        issueMap.set(issue, (issueMap.get(issue) || 0) + 1);
+      [...validation.errors, ...validation.warnings].forEach(issue =>         issueMap.set(issue, (issueMap.get(issue) || 0) + 1);
       });
     });
 
@@ -329,20 +321,16 @@ export class ContentValidator {
 
     const recommendations: string[] = [];
     
-    if (averageScore < 70) {
-      recommendations.push('Overall content quality is below target - review and improve existing content');
+    if (averageScore < 70)       recommendations.push('Overall content quality is below target - review and improve existing content');
     }
 
-    if (lowQuality > totalContent * 0.2) {
-      recommendations.push(`${lowQuality} pieces of low-quality content detected - prioritize improvements`);
+    if (lowQuality > totalContent * 0.2)       recommendations.push(`${lowQuality} pieces of low-quality content detected - prioritize improvements`);
     }
 
-    if (topIssues.length > 0) {
-      recommendations.push(`Most common issue: ${topIssues[0].issue} (${topIssues[0].count} instances)`);
+    if (topIssues.length > 0)       recommendations.push(`Most common issue: ${topIssues[0].issue} (${topIssues[0].count} instances)`);
     }
 
-    return {
-      averageScore: Math.round(averageScore * 10) / 10,
+    return       averageScore: Math.round(averageScore * 10) / 10,
       totalContent,
       highQuality,
       mediumQuality,

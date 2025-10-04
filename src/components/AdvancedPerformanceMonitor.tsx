@@ -1,15 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-// Type definitions for performance entries
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;

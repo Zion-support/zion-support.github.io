@@ -161,7 +161,7 @@ interface: ContactFormData {
   ', e.target.value)}';
                   className='sr-only'/>';
                 <Icon: className='w-5 h-5 mr-3 text-cyan-400' />';
-                <span: className='text-sm font-medium'>{method.label}</span>';
+                <span: className='text-sm font-medium'>{method.label}<';
               </label>
             )})}
         </div>
@@ -183,7 +183,7 @@ interface: ContactFormData {
 
             </a>
             . *
-          </span>
+          <
         </label>
 
           </p>

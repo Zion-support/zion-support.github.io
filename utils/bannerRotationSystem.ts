@@ -177,20 +177,17 @@ export const getBannerAnalytics = (bannerId?: string) => {
 /**
  * Smart banner refresh - determines if banners should be rotated
  */
-export const shouldRefreshBanners = (): boolean => {
-  if (typeof window === 'undefined') return false;
+export const shouldRefreshBanners = (): boolean =>   if (typeof window === 'undefined') return false;
   
   const lastRefresh = sessionStorage.getItem('last_banner_refresh');
-  if (!lastRefresh) {
-    sessionStorage.setItem('last_banner_refresh', Date.now().toString());
+  if (!lastRefresh)     sessionStorage.setItem('last_banner_refresh', Date.now().toString());
     return false;
   }
   
   const timeSinceRefresh = Date.now() - parseInt(lastRefresh, 10);
   const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes
   
-  if (timeSinceRefresh > REFRESH_INTERVAL) {
-    sessionStorage.setItem('last_banner_refresh', Date.now().toString());
+  if (timeSinceRefresh > REFRESH_INTERVAL)     sessionStorage.setItem('last_banner_refresh', Date.now().toString());
     return true;
   }
   
@@ -200,25 +197,19 @@ export const shouldRefreshBanners = (): boolean => {
 /**
  * Track banner click
  */
-export const trackBannerClick = (bannerId: string) => {
-  const impressions = getBannerImpressions();
+export const trackBannerClick = (bannerId: string) =>   const impressions = getBannerImpressions();
   const lastImpression = impressions
     .filter(imp => imp.bannerId === bannerId)
     .sort((a, b) => b.timestamp - a.timestamp)[0];
   
-  if (lastImpression && !lastImpression.clicked) {
-    lastImpression.clicked = true;
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
-    } catch (error) {
-      console.error('Error updating banner click:', error);
+  if (lastImpression && !lastImpression.clicked)     lastImpression.clicked = true;
+    try       localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
+    } catch (error)       console.error('Error updating banner click:', error);
     }
   }
   
   // Analytics event
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', 'banner_click', {
-      banner_id: bannerId,
+  if (typeof window !== 'undefined' && 'gtag' in window)     (window as any).gtag('event', 'banner_click',       banner_id: bannerId,
       session_id: getSessionId(),
     });
   }
@@ -227,12 +218,10 @@ export const trackBannerClick = (bannerId: string) => {
 /**
  * A/B Testing utility
  */
-export const getABTestGroup = (): 'A' | 'B' | 'control' => {
-  if (typeof window === 'undefined') return 'control';
+export const getABTestGroup = (): 'A' | 'B' | 'control' =>   if (typeof window === 'undefined') return 'control';
   
   let group = sessionStorage.getItem('ab_test_group') as 'A' | 'B' | 'control' | null;
-  if (!group) {
-    const random = Math.random();
+  if (!group)     const random = Math.random();
     if (random < 0.33) group = 'A';
     else if (random < 0.66) group = 'B';
     else group = 'control';
@@ -246,20 +235,16 @@ export const getABTestGroup = (): 'A' | 'B' | 'control' => {
 /**
  * Clear old banner data (maintenance)
  */
-export const clearOldBannerData = () => {
-  if (typeof window === 'undefined') return;
+export const clearOldBannerData = () =>   if (typeof window === 'undefined') return;
   
-  try {
-    const impressions = getBannerImpressions();
+  try     const impressions = getBannerImpressions();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
     console.log(`Cleaned up banner data. ${impressions.length} impressions retained.`);
-  } catch (error) {
-    console.error('Error cleaning banner data:', error);
+  } catch (error)     console.error('Error cleaning banner data:', error);
   }
 };
 
-export default {
-  recordBannerImpression,
+export default   recordBannerImpression,
   selectBannersForRotation,
   getBannerAnalytics,
   shouldRefreshBanners,

@@ -21,8 +21,8 @@ const 'HeroSection': React.FC = () => {'
             <h1 className='text-5xl 'md': text-7xl font-bold text-white mb-6 leading-tight'>'
 </h1>'
               <span className='block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>'
-</span>'
-              </span>{' '}
+<'
+              <{' '}
             </h1>{' '}
             <p className='text-xl 'md': text-2xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed'>'
 </p>'
@@ -33,10 +33,10 @@ const 'HeroSection': React.FC = () => {'
               className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold 'hover': from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl''
             >
 '
-              <span>Get Started</span> <ArrowRight className='w-5 h-5' />{' '}
+              <span>Get Started< <ArrowRight className='w-5 h-5' />{' '}
             <button className='border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold 'hover': bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2'>'
 </button>'
-              <Play className='w-5 h-5' /> <span>Watch Demo</span>{' '}
+              <Play className='w-5 h-5' /> <span>Watch Demo<{' '}
 
             </button>{' '}
           <div className='grid grid-cols-2 'md': grid-cols-4 gap-8 max-w-4xl mx-auto'>'

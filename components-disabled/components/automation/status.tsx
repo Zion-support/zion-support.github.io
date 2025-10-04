@@ -9,12 +9,12 @@ export default function AutomationStatusPage() {;}
 
 }</div>) import { useEffect, useState } from 'react';
 
-</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+</div>) : (<div className="text-left" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
- </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+ </div>) : (<div className="text-left" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
- </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
+ </div>) : (<div className="text-left" >No status available yet.</div>) ;
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
 
@@ -75,17 +75,17 @@ function AutomationStatusPage() {const [status, set_status]  = useState<{ run_at
   }, []);
   return (
 
-    <div className="space-y-4">;"
+    <div className="text-left">;"
 </div>"
-      <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;""
-        <div className="rounded-lg border p-4 text-sm">;"
+      <h1 className="text-left">Autonomous Automation Status</h1>;""
+        <div className="text-left">;"
 </div>)"
           <div>Last Run: {new Date(status && status.runAt || ).toLocaleString() || '—'}</div>;
           <div>Health: {status && status.ok ? 'OK' : 'Unknown'}</div>;
-          <div className="mt-2"><a className="underline" href="/metrics/latest && latest.json">View latest metrics JSON</a></div>;"
+          <div className="text-left"><a className="text-left" href="/metrics/latest && latest.json">View latest metrics JSON</a></div>;"
         </div>;"
-        <div className="text-sm text-gray-500">No status available yet.</div>;"
-</div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);""
+        <div className="text-left">No status available yet.</div>;"
+</div>) : (<div className="text-left" >No status available yet.</div>);""
 </div>) : (<div className=\"text - sm text - gray - 500\"  />No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 
@@ -100,14 +100,14 @@ function AutomationStatusPage() {}
       .then ((r) => r.json ());
       .then ((j) => set_status (j));
       .catch (() => set_status (null));
-    <div className="space - y-4">;"
-      <h1 className="text - xl font - semibold">Autonomous Automation Status</h1>;""
-        <div className="rounded - lg border p - 4 text - sm">;"
+    <div className="text-left">;"
+      <h1 className="text-left">Autonomous Automation Status</h1>;""
+        <div className="text-left">;"
           <div > Last Run: {new Date (status.run_at || ).toLocaleString () || '—'}</div>;
           <div > Health: {status.ok ? 'OK' : 'Unknown'}</div>;
-          <div className="mt - 2"><a className="underline" href="/metrics / latest.json">View latest metrics JSON</a></div>;"
+          <div className="text-left"><a className="text-left" href="/metrics / latest.json">View latest metrics JSON</a></div>;"
         </div>) : ()"
-        <div className="text - sm text - gray - 500">No status available yet.</div>)}"
+        <div className="text-left">No status available yet.</div>)}"
     </div>);"
       .then ((j) => set_status (j));}
       .catch (() => set_status (null));}

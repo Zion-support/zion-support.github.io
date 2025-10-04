@@ -8,6 +8,6 @@
 }{;
   /* Submit Button */ ;
 }<Button > {'";
-  isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
+  isSubmitting ? (<> <Loader2 className="text-left" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
 

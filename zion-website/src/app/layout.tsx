@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
 import type { Metadata, Viewport } from 'next'
@@ -54,7 +54,11 @@ export const viewport: Viewport = {
 	themeColor: '#000000',
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+	children,
+}: {
+	children: ReactNode
+}) {
 	return (
 		<html lang='en' className='scroll-smooth'>
 			<body className={`${inter.className} bg-black text-white antialiased`}>

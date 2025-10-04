@@ -79,11 +79,11 @@ features[';Basic AI features',
 '
 
                   <category.icon className='w-4 h-4' />
-                  <span>{category.name}</span>''
+                  <span>{category.name}<''
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
 
                     {category.count}
-                  </span>
+                  <
                 </button>) ) }
             </div>
           </div>
@@ -130,7 +130,7 @@ features[';Basic AI features',
                   <div className='flex items-center justify-between mb-4>'
                     <span className='text-xs bg-slate-800 px-2 py-1 rounded text-cyan-300'>
                       {service.category}
-                    </span>''
+                    <''
                     <div className='text-right>'
                       <div className='text-xs text-slate-400'>ROI</div>''
                       <div className='text-sm font-semibold text-green-400'>{service.roi}</div>

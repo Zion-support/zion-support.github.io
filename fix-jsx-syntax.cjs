@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
@@ -5,76 +7,86 @@ function fixJsxSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix className: to className=
-    content = content.replace(/className:\s*"/g, 'className="');
+    // Fix common JSX syntax issues
+    content = content
+      // Fix malformed span tags
+      .replace(/span>/g, 'span>')
+      .replace(/\/span>/g, '/span>')
+      // Fix malformed closing tags
+      .replace(/\/>>/g, '/>')
+      .replace(/>>/g, '>')
+      // Fix unterminated strings
+      .replace(/className="[^"]*$/gm, 'className="text-left">')
+      // Fix missing closing tags
+      .replace(/<span([^>]*)>([^<]*)<span>/g, '<span$1>$2</span>')
+      // Fix malformed JSX elements
+      .replace(/className="[^"]*"([^>]*)>/g, 'className="text-left">');
     
-    // Fix href: to href=
-    content = content.replace(/href:\s*"/g, 'href="');
-    
-    // Fix key: to key=
-    content = content.replace(/key:\s*{/g, 'key={');
-    
-    // Remove malformed quotes and commas
-    content = content.replace(/";,/g, '"');
-    content = content.replace(/";/g, '"');
-    content = content.replace(/>";,/g, '>');
-    content = content.replace(/>";/g, '>');
-    content = content.replace(/\/>";,/g, '/>');
-    content = content.replace(/\/>";/g, '/>');
-    
-    // Fix malformed spaces in class names
-    content = content.replace(/sm:\s*px-6/g, 'sm:px-6');
-    content = content.replace(/md:\s*text-7xl/g, 'md:text-7xl');
-    content = content.replace(/md:\s*text-2xl/g, 'md:text-2xl');
-    content = content.replace(/md:\s*grid-cols-4/g, 'md:grid-cols-4');
-    content = content.replace(/md:\s*grid-cols-2/g, 'md:grid-cols-2');
-    content = content.replace(/lg:\s*grid-cols-4/g, 'lg:grid-cols-4');
-    content = content.replace(/lg:\s*grid-cols-3/g, 'lg:grid-cols-3');
-    content = content.replace(/hover:\s*bg-red-700/g, 'hover:bg-red-700');
-    content = content.replace(/hover:\s*bg-white/g, 'hover:bg-white');
-    content = content.replace(/hover:\s*text-red-900/g, 'hover:text-red-900');
-    content = content.replace(/hover:\s*shadow-xl/g, 'hover:shadow-xl');
-    content = content.replace(/flex-shrink-0/g, 'flex-shrink-0');
-    
-    // Fix malformed closing tags
-    content = content.replace(/>",/g, '>');
-    content = content.replace(/",/g, '"');
-    
-    // Remove duplicate lines and fix structure
+    // Ensure proper JSX structure
     const lines = content.split('\n');
-    const fixedLines = [];
-    let i = 0;
+    let fixedLines = [];
+    let openTags = [];
     
-    while (i < lines.length) {
-      const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
       
-      // Skip duplicate lines
-      if (i > 0 && line.trim() === lines[i-1].trim()) {
-        i++;
-        continue;
+      // Fix malformed lines
+      if (line.includes('className="') && !line.includes('>')) {
+        line = line.replace(/className="[^"]*$/, 'className="text-left">');
       }
       
-      // Fix malformed JSX attributes
-      let fixedLine = line
-        .replace(/className:\s*"/g, 'className="')
-        .replace(/href:\s*"/g, 'href="')
-        .replace(/key:\s*{/g, 'key={');
+      // Fix unterminated span tags
+      if (line.includes('<span') && !line.includes('</span>') && !line.includes('/>')) {
+        const nextLine = lines[i + 1];
+        if (nextLine && nextLine.trim() && !nextLine.includes('</span>')) {
+          line = line + '</span>';
+        }
+      }
       
-      fixedLines.push(fixedLine);
-      i++;
+      fixedLines.push(line);
     }
     
     content = fixedLines.join('\n');
     
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed JSX syntax in: ${filePath}`);
-    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Fix the SmartContractAudit.tsx file
-fixJsxSyntax('/workspace/src/pages/services/SmartContractAudit.tsx');
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
 
-console.log('JSX syntax fixes completed');
+// Main execution
+const tsxFiles = findTsxFiles('/workspace');
+let fixedCount = 0;
+
+for (const file of tsxFiles) {
+  if (fixJsxSyntax(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} out of ${tsxFiles.length} TSX files`);

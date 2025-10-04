@@ -1,8 +1,8 @@
-              className="text-center""
+              className="text-left""
             >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+              <h1 className="text-left">";
                 SMB Solutions;
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+              <p className="text-left">";
 
 export default Smb;

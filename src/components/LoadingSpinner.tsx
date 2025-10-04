@@ -55,5 +55,4 @@ export const PageLoader: React.FC = () => {
 
 PageLoader.displayName = 'PageLoader';
 
-export { PageLoader };
-export default LoadingSpinner;
+export default PageLoader;

@@ -1,6 +1,8 @@
 import React from "react"
 import { createRoot } from "react-dom/client"
-import App from "./AppSafe"
+import App from "./App.tsx"
+import "./index.css"
+
 async function reportWebVitals() {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
@@ -18,39 +20,10 @@ async function reportWebVitals() {
   }
 };
 
-// Optimized service worker registration
-const registerServiceWorker = () => {
-  if (typeof window !== "undefined" && "serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/sw.js").catch(() => {
-        // Silently fail if service worker registration fails
-      });
-    });
-  }
-};
+createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
 
-// Main app initialization with performance optimizations
-const initializeApp = () => {
-  const container = document.getElementById("root");
-  if (!container) {
-    console.error("Root container not found");
-    return;
-  }
-
-  const root = createRoot(container);
-  
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-
-  // Initialize performance monitoring and service worker
-  if (import.meta.env.PROD) {
-    void reportWebVitals();
-    registerServiceWorker();
-  }
-};
-
-// Start the app
-initializeApp();
+reportWebVitals();

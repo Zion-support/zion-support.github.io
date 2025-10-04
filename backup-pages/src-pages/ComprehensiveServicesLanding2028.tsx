@@ -28,7 +28,7 @@
     d:text-4xl text-zion-cyan mt-2'>
               Revolutionary Technology Solutions for Business Transformation
 
-            </span>
+            <
           </motion.h1>
           <motion.p
             initial = {
@@ -79,24 +79,24 @@
 ''
                 <div className='space-y-3 mb-6>'
                   <div className='flex items-center justify-between>'
-                    <span className='text-zion-slate-light text-sm'>Category:</span>''
-                    <span className='text-white font-medium'>{service.category}</span>
+                    <span className='text-zion-slate-light text-sm'>Category:<''
+                    <span className='text-white font-medium'>{service.category}<
                   </div>'
                   {service.price && (''
                     <div className='flex items-center justify-between>'
-                      <span className='text-zion-slate-light text-sm'>Price:</span>''
-                      <span className='text-zion-cyan font-bold'>${service.price.toLocaleString()}</span>
+                      <span className='text-zion-slate-light text-sm'>Price:<''
+                      <span className='text-zion-cyan font-bold'>${service.price.toLocaleString()}<
                     </div>
                   )}, {service.hourlyRate && (''
                     <div className='flex items-center justify-between>'
-                      <span className='text-zion-slate-light text-sm'>Hourly Rate:</span>''
-                      <span className='text-zion-cyan font-bold'>${service.hourlyRate}/hr</span>
+                      <span className='text-zion-slate-light text-sm'>Hourly Rate:<''
+                      <span className='text-zion-cyan font-bold'>${service.hourlyRate}/hr<
                     </div>
                   )}
 ''
                   <div className='flex items-center justify-between>'
-                    <span className='text-zion-slate-light text-sm'>ROI:</span>''
-                    <span className='text-green-400 font-medium'>{service.roi}</span>
+                    <span className='text-zion-slate-light text-sm'>ROI:<''
+                    <span className='text-green-400 font-medium'>{service.roi}<
                   </div>
                 </div>'
 ''
@@ -352,31 +352,31 @@
                     <div className='space-y-3>
                       {selectedService.price && (''
                         <div className='flex justify-between>'
-                          <span className='text-zion-slate-light'>Price:</span>''
-                          <span className='text-zion-cyan font-bold'>${selectedService.price.toLocaleString()}</span>
+                          <span className='text-zion-slate-light'>Price:<''
+                          <span className='text-zion-cyan font-bold'>${selectedService.price.toLocaleString()}<
                         </div>
                       )}, {selectedService.hourlyRate && (''
                         <div className='flex justify-between>'
-                          <span className='text-zion-slate-light'>Hourly Rate:</span>''
-                          <span className='text-zion-cyan font-bold'>${selectedService.hourlyRate}/hr</span>
+                          <span className='text-zion-slate-light'>Hourly Rate:<''
+                          <span className='text-zion-cyan font-bold'>${selectedService.hourlyRate}/hr<
                         </div>
                       )}, {selectedService.projectRate && (''
                         <div className='flex justify-between>'
-                          <span className='text-zion-slate-light'>Project Rate:</span>''
-                          <span className='text-zion-cyan font-bold'>${selectedService.projectRate.toLocaleString()}</span>
+                          <span className='text-zion-slate-light'>Project Rate:<''
+                          <span className='text-zion-cyan font-bold'>${selectedService.projectRate.toLocaleString()}<
                         </div>'
                       )}
                       <div className='flex justify-between>'
-                        <span className='text-zion-slate-light'>Market Price:</span>''
-                        <span className='text-white font-medium'>{selectedService.marketPrice}</span>'
+                        <span className='text-zion-slate-light'>Market Price:<''
+                        <span className='text-white font-medium'>{selectedService.marketPrice}<'
                       </div>''
                       <div className='flex justify-between>'
-                        <span className='text-zion-slate-light'>ROI:</span>''
-                        <span className='text-green-400 font-medium'>{selectedService.roi}</span>'
+                        <span className='text-zion-slate-light'>ROI:<''
+                        <span className='text-green-400 font-medium'>{selectedService.roi}<'
                       </div>''
                       <div className='flex justify-between>'
-                        <span className='text-zion-slate-light'>Setup Time:</span>''
-                        <span className='text-white font-medium'>{selectedService.setupTime}</span>
+                        <span className='text-zion-slate-light'>Setup Time:<''
+                        <span className='text-white font-medium'>{selectedService.setupTime}<
                       </div>
                     </div>
                   </div>'

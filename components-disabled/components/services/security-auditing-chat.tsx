@@ -5,9 +5,6 @@
 ;
   return (<div>;
       <Head></Head>;<meta name="description" content="SecurityAuditingChat service" />;"
-
-
-
 }
 return (;
 
@@ -16,13 +13,7 @@ return (;
       <Head>;
         <title > SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name="description" content="SecurityAuditingChat service" />{" "}"
-
-
   return (<div>;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name="description" content="SecurityAuditingChat service" />{" "}"
-
-
-
-

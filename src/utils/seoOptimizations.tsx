@@ -14,18 +14,8 @@ export const seoUtils = {
     "name": "Zion Tech Group",
     "url": "https://zion.app",
     "logo": "https://zion.app/logo.png",
-    "description": "Advanced AI and IT Solutions for Enterprise",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-XXX-XXX-XXXX",
-      "contactType": "customer service"
-    },
+    "description": "Advanced AI and IT Solutions",
     "sameAs": [
-      "https://twitter.com/ziontech",
       "https://linkedin.com/company/zion-tech"
     ]
   }),
@@ -74,17 +64,8 @@ export const seoUtils = {
       "@type": "Person",
       "name": article.author
     },
-    "datePublished": article.datePublished,
-    "dateModified": article.dateModified,
-    "image": article.image,
-    "url": article.url,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://zion.app/logo.png"
-      }
+    "image": {
+      "url": article.image || "https://zion.app/logo.png"
     }
   })
 };
@@ -204,8 +185,8 @@ export const performanceSEO = {
 export const analyticsUtils = {
   // Track page views
   trackPageView: (url: string, title: string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {
+      (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
         page_location: url
       });
@@ -213,16 +194,16 @@ export const analyticsUtils = {
   },
 
   // Track custom events
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', eventName, parameters);
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {
+      (window as typeof window & { gtag: Function }).gtag('event', eventName, parameters);
     }
   },
 
   // Track conversion events
   trackConversion: (conversionId: string, value?: number) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {
+      (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {
         send_to: conversionId,
         value: value
       });
@@ -236,7 +217,7 @@ export const coreWebVitals = {
   trackCoreWebVitals: () => {
     if (typeof window === 'undefined') return;
 
-    const trackMetric = (metric: any) => {
+    const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {
       analyticsUtils.trackEvent('core_web_vitals', {
         metric_name: metric.name,
         metric_value: Math.round(metric.value),
@@ -246,9 +227,9 @@ export const coreWebVitals = {
     };
 
     // Import and track web vitals
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
       onCLS(trackMetric);
-      onFID(trackMetric);
+      // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions
       onFCP(trackMetric);
       onLCP(trackMetric);
       onTTFB(trackMetric);
@@ -272,7 +253,7 @@ export const SEOComponent = ({
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }) => {
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://zion.app';
@@ -288,7 +269,6 @@ export const SEOComponent = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullUrl} />
-      
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
@@ -296,13 +276,11 @@ export const SEOComponent = ({
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:site_name" content={siteName} />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
-      
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">

@@ -95,11 +95,10 @@ pr-12325
             sizes={isGrid ? "(max-width: 768px) 100vw;, (max-width: 1200px) 50vw;, 33vw" :"192px"} // 192px is w-48;"
           />;
 "
-            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">;"
-
+            <Badge className="text-left">;"
             <Badge;
               variant={stockVariant as any}"
-              className="absolute top-2 left-2";"
+              className="text-left";"
             >;              {stockStatus}
 
            <FavoriteButton itemId={listing.id} />;
@@ -108,46 +107,44 @@ pr-12325
       </div>;"`;
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' :'p-4 flex-1'}`}>;
         <div>;
-          <div className="flex justify-between items-center mb-2">;"
+          <div className="text-left">;"
 </div>"
-            <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">;"
-
+            <Badge variant="outline" className="text-left">;"
               <RatingStars value={listing.rating} count={listing.reviewCount} />;            )}
 
           </div>;"
-          <div onClick={handleViewListing} className="block">;"
-              <p className="text-primary font-semibold text-sm mb-1">;                {listing.uspHeadline}"
+          <div onClick={handleViewListing} className="text-left">;"
+              <p className="text-left">;                {listing.uspHeadline}"
 </p>
               </p>;"
-            <h3 className="font-semibold text-foreground mb-2 hover: text-primary transition-colors text-[clamp(1rem;,2.5vw,1.125rem)]">;"
+            <h3 className="text-left">;"
 </h3>
             </h3>;
-          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">;            {listing.description}"
-            <div className="flex flex-wrap gap-1 mb-4">;"
+          <p className="text-left">;            {listing.description}"
+            <div className="text-left">;"
                 <span ;
                   key={idx} ;"
-                  className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full";"
+                  className="text-left";"
                 >;                  {tag}
 
               onClick={(e) => {;
 
                 <>;"
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
+                  <svg className="text-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
 </svg>"
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;""
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;"
+                    <circle className="text-left" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;""
+                    <path className="text-left" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;"
                   </svg>;
                 </>;
               ) :(;"
                 "Add to Cart";")
               )}
               variant="default";""
-              className="bg-green-600 hover:bg-green-700 text-white";"
-
+              className="text-left";"
               <Button ;"
                 variant="outline" ;"
                 onClick={handleRequestQuote}"
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";"
+                className="text-left";"
               >;
 
 
@@ -167,7 +164,7 @@ setImageError (true) ;
 
   stockStatus && (<Badge variant= {;
   stockVariant as any ;
-}className="absolute top-2 left-2" > {;"
+}className="text-left" > {;"
 )
 });
 }<FavoriteButton itemId= {;
@@ -192,7 +189,7 @@ setImageError (true) ;
 }
 }disabled= {;
   loading ";
-}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") ;
+}loading ? (<> <svg className="text-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="text-left" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="text-left" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") ;
 }</Button> <Button onClick={;
   (e) => {;
   e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({;
@@ -205,7 +202,7 @@ router.push ('/checkout') ;
 }> Buy Now </Button> {";
   onRequestQuote && (<Button size="sm" variant="outline" onClick={;
   handleRequestQuote ";
-}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) ;
+}className="text-left" > Request Quote </Button>) ;
 }</div> </div> </div> </div>) 
 };
 '"

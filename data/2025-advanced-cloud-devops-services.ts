@@ -1,10 +1,10 @@
-export interface CloudDevOpsService {
+export interface CloudDevOpsService 
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: string;
-  pricing: {
+  pricing: 
     starter: string;
     professional: string;
     enterprise: string;
@@ -36,13 +36,13 @@ export interface CloudDevOpsService {
 }
 
 export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
-  {
+  
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Unified management and orchestration across multiple cloud providers',
     description: 'Advanced multi-cloud platform that provides unified management, cost optimization, and seamless orchestration across AWS, Azure, Google Cloud, and other cloud providers.',
     category: 'Cloud Management',
-    pricing: {
+    pricing: 
       starter: '$399/month',
       professional: '$999/month',
       enterprise: '$2,999/month',
@@ -103,13 +103,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     rating: 4.8,
     reviews: 167
   },
-  {
+  
     id: 'intelligent-devops-automation-suite',
     name: 'Intelligent DevOps Automation Suite',
     tagline: 'AI-powered DevOps automation with intelligent CI/CD and infrastructure management',
     description: 'Comprehensive DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment processes for maximum efficiency and reliability.',
     category: 'DevOps Automation',
-    pricing: {
+    pricing: 
       starter: '$299/month',
       professional: '$799/month',
       enterprise: '$2,499/month',
@@ -170,13 +170,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     rating: 4.7,
     reviews: 145
   },
-  {
+  
     id: 'enterprise-kubernetes-management-platform',
     name: 'Enterprise Kubernetes Management Platform',
     tagline: 'Enterprise-grade Kubernetes management with advanced monitoring and automation',
     description: 'Comprehensive Kubernetes management platform that provides advanced monitoring, security, automation, and governance for enterprise containerized applications.',
     category: 'Kubernetes Management',
-    pricing: {
+    pricing: 
       starter: '$599/month',
       professional: '$1,499/month',
       enterprise: '$3,999/month',
@@ -237,13 +237,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     rating: 4.8,
     reviews: 112
   },
-  {
+  
     id: 'intelligent-infrastructure-monitoring',
     name: 'Intelligent Infrastructure Monitoring',
     tagline: 'AI-powered infrastructure monitoring with predictive analytics and automated alerting',
     description: 'Advanced infrastructure monitoring platform that uses AI to predict issues, optimize performance, and provide real-time insights into your entire technology stack.',
     category: 'Infrastructure Monitoring',
-    pricing: {
+    pricing: 
       starter: '$199/month',
       professional: '$499/month',
       enterprise: '$1,499/month',
@@ -304,13 +304,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     rating: 4.8,
     reviews: 234
   },
-  {
+  
     id: 'cloud-security-posture-management',
     name: 'Cloud Security Posture Management',
     tagline: 'Comprehensive cloud security management with automated compliance and threat detection',
     description: 'Advanced cloud security platform that provides continuous monitoring, automated compliance checks, and proactive threat detection across all cloud environments.',
     category: 'Cloud Security',
-    pricing: {
+    pricing: 
       starter: '$499/month',
       professional: '$1,299/month',
       enterprise: '$3,499/month',
