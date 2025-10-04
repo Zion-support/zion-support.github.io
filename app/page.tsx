@@ -1,23 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
+import { Link } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('./components/UnifiedContentPromotion'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded"></div>
-});
-
-const InteractiveAIROICalculator = dynamic(() => import('./components/InteractiveAIROICalculator'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded"></div>
-});
-
-const ContentShowcase = dynamic(() => import('./components/ContentShowcase'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>
-});
-
-const InteractiveContentShowcase2026 = dynamic(() => import('./components/InteractiveContentShowcase2026'), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>
-});
+const UnifiedContentPromotion = lazy(() => import('./components/UnifiedContentPromotion'));
+const InteractiveAIROICalculator = lazy(() => import('./components/InteractiveAIROICalculator'));
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(() => import('./components/InteractiveContentShowcase2026'));
 
 export const metadata = {
   title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
@@ -114,7 +103,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/services"
+              to="/services"
               className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
               Explore Our Services
             </Link>
@@ -146,13 +135,19 @@ export default function HomePage() {
       </section>
 
       {/* Interactive AI ROI Calculator */}
-      <InteractiveAIROICalculator />
+      <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 rounded"></div>}>
+        <InteractiveAIROICalculator />
+      </Suspense>
 
       {/* Dynamic Content Showcase */}
-      <ContentShowcase />
+      <Suspense fallback={<div className="animate-pulse bg-gray-200 h-48 rounded"></div>}>
+        <ContentShowcase />
+      </Suspense>
 
       {/* Interactive Content Showcase 2026 */}
-      <InteractiveContentShowcase2026 />
+      <Suspense fallback={<div className="animate-pulse bg-gray-200 h-48 rounded"></div>}>
+        <InteractiveContentShowcase2026 />
+      </Suspense>
 
       {/* Enhanced Newsletter Signup */}
       <section className="bg-gray-50 py-16">
@@ -209,7 +204,7 @@ export default function HomePage() {
               </div>
               <div className="mt-6">
                 <Link
-                  href="/blog"
+                  to="/blog"
                   className="text-blue-600 hover:text-blue-800 font-semibold">
                   View All Content →
                 </Link>
