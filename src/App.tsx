@@ -15,11 +15,11 @@ import HomePage from './page';
 import {
   setupGlobalErrorHandling,
   monitorPerformance,
-} from '../utils/errorHandling';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+} from './utils/errorHandling';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Styles
-import '../src/index.css';
+import './index.css';
 
 const App: React.FC = () => {
   useEffect(() => {

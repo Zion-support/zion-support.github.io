@@ -1,1 +1,0 @@
-export const accessibilityConfig = {ariaLabels: truekeyboardNavigation: truescreenReaderSupport: truecolorContrast: 'AAA', focusManagement: truealtText: true, }; 

@@ -1,1 +1,0 @@
-export const performanceConfig = {lazyLoading: trueimageOptimization: truebundleSplitting: truecaching: {static: '1y"dynamic: "1h', }, compression: {gzip: truebrotli: true, }, }; 

@@ -1,1 +1,0 @@
-import React from "react"; exportdefaultfunction ContentValueTestimonial, s () : Reac, t.JSX.Element {return <sectionaria-label = "ContentValueTestimonials/>;"; ======= import React from "react";"; exportdefaultfunction ContentValueTestimonial, s () : Reac, t.JSX.Element {return <sectionaria-label = "ContentValueTestimonials" />;"; };'
