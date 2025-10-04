@@ -9,6 +9,8 @@ import { codeQualityImprover } from './codeQualityImprover';
 import { securityEnhancer } from './securityEnhancer';
 import { testingFramework } from './testingFramework';
 import { documentationGenerator } from './documentationGenerator';
+import { advancedOptimizer } from './advancedOptimizer';
+import { comprehensiveMonitor } from './comprehensiveMonitor';
 
 /**
  * Initialize and run all improvements
@@ -20,6 +22,12 @@ export async function runAllImprovements(): Promise<void> {
     // Initialize the improvement orchestrator
     await improvementOrchestrator.initialize();
     
+    // Initialize advanced optimizer
+    await advancedOptimizer.initialize();
+    
+    // Initialize comprehensive monitor
+    await comprehensiveMonitor.initialize();
+    
     // Run comprehensive analysis
     const report = await improvementOrchestrator.runImprovementAnalysis();
     
@@ -30,6 +38,18 @@ export async function runAllImprovements(): Promise<void> {
     console.log(`Security: ${report.security.score}/100`);
     console.log(`Testing: ${report.testing.score}/100`);
     console.log(`Documentation: ${report.documentation.score}/100`);
+    
+    // Run advanced optimization
+    console.log('🔧 Running advanced optimization...');
+    const optimizationReport = await advancedOptimizer.runOptimization();
+    console.log(`📦 Bundle size reduced by ${optimizationReport.bundleSize.reductionPercentage}%`);
+    console.log(`⚡ Performance improved by ${optimizationReport.performance.loadTime}ms`);
+    
+    // Generate monitoring report
+    console.log('📊 Generating comprehensive monitoring report...');
+    const monitoringReport = await comprehensiveMonitor.generateMonitoringReport();
+    console.log(`🏥 Overall system health: ${monitoringReport.overallHealth}`);
+    console.log(`🚨 Active alerts: ${monitoringReport.alerts.length}`);
     
     // Execute high-priority improvements
     const highPriorityActions = report.improvements.filter(a => a.priority === 'critical' || a.priority === 'high');
@@ -44,6 +64,17 @@ export async function runAllImprovements(): Promise<void> {
     // Generate final report
     const finalReport = await improvementOrchestrator.runImprovementAnalysis();
     console.log(`🎯 Final Overall Score: ${finalReport.overallScore}/100`);
+    
+    // Display comprehensive statistics
+    const optimizationStats = advancedOptimizer.getStatistics();
+    const monitoringData = comprehensiveMonitor.getDashboardData();
+    
+    console.log('📈 Comprehensive Statistics:');
+    console.log(`🔧 Total optimizations: ${optimizationStats.totalOptimizations}`);
+    console.log(`📦 Average bundle reduction: ${optimizationStats.averageBundleReduction}%`);
+    console.log(`⚡ Average performance improvement: ${optimizationStats.averagePerformanceImprovement}ms`);
+    console.log(`🏥 System health: ${monitoringData.overallHealth}`);
+    console.log(`📊 Total monitoring reports: ${monitoringData.statistics.totalReports}`);
     
   } catch (error) {
     console.error('❌ Improvement process failed:', error);
@@ -114,10 +145,58 @@ export function exportImprovementData(): string {
 }
 
 /**
+ * Run advanced optimization
+ */
+export async function runAdvancedOptimization(): Promise<void> {
+  console.log('🔧 Running advanced optimization...');
+  await advancedOptimizer.initialize();
+  const report = await advancedOptimizer.runOptimization();
+  console.log(`📦 Bundle size reduced by ${report.bundleSize.reductionPercentage}%`);
+  console.log(`⚡ Performance improved by ${report.performance.loadTime}ms`);
+  console.log('Recommendations:', report.recommendations);
+}
+
+/**
+ * Run comprehensive monitoring
+ */
+export async function runComprehensiveMonitoring(): Promise<void> {
+  console.log('📊 Running comprehensive monitoring...');
+  await comprehensiveMonitor.initialize();
+  const report = await comprehensiveMonitor.generateMonitoringReport();
+  console.log(`🏥 Overall system health: ${report.overallHealth}`);
+  console.log(`🚨 Active alerts: ${report.alerts.length}`);
+  console.log('Recommendations:', report.recommendations);
+}
+
+/**
+ * Get comprehensive status
+ */
+export function getComprehensiveStatus(): any {
+  return {
+    improvement: improvementOrchestrator.getDashboardData(),
+    optimization: advancedOptimizer.getStatistics(),
+    monitoring: comprehensiveMonitor.getDashboardData(),
+  };
+}
+
+/**
+ * Export comprehensive data
+ */
+export function exportComprehensiveData(): string {
+  return JSON.stringify({
+    improvement: improvementOrchestrator.exportData(),
+    optimization: advancedOptimizer.exportData(),
+    monitoring: comprehensiveMonitor.exportData(),
+  }, null, 2);
+}
+
+/**
  * Cleanup resources
  */
 export function cleanupImprovements(): void {
   improvementOrchestrator.cleanup();
+  advancedOptimizer.cleanup();
+  comprehensiveMonitor.cleanup();
 }
 
 // Auto-run improvements if this module is imported
