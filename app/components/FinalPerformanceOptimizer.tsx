@@ -78,15 +78,9 @@ const FinalPerformanceOptimizer: React.FC = () => {
     else if (currentMetrics.cls) score -= 15;
     
     // INP scoring (0-25 points)
-<<<<<<< HEAD
-    if (currentMetrics.inp <= 200) score -= 0;
-    else if (currentMetrics.inp <= 500) score -= 5;
-    else score -= 15;
-=======
     if (currentMetrics.inp && currentMetrics.inp <= 200) score -= 0;
     else if (currentMetrics.inp && currentMetrics.inp <= 500) score -= 5;
     else if (currentMetrics.inp) score -= 15;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f474
     
     // FCP scoring (0-25 points)
     if (currentMetrics.fcp && currentMetrics.fcp <= 1800) score -= 0;
@@ -115,14 +109,7 @@ const FinalPerformanceOptimizer: React.FC = () => {
     }
 
     // INP analysis
-<<<<<<< HEAD
-    if (currentMetrics.inp > 500) {
-<<<<<<< HEAD
-=======
     if (currentMetrics.inp && currentMetrics.inp > 500) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f474
-=======
->>>>>>> origin/test-typescript
       criticalIssues.push('High Interaction to Next Paint (INP)');
       recommendations.push('Reduce JavaScript execution time');
       optimizations.push('Implement code splitting and lazy loading');
@@ -163,13 +150,8 @@ const FinalPerformanceOptimizer: React.FC = () => {
   }, [calculatePerformanceScore]);
 
   const handleMetric = useCallback((metric: any) => {
-<<<<<<< HEAD
     const performanceInfo = getFinalPerformanceInfo();
-=======
-    const additionalInfo = getFinalPerformanceInfo();
->>>>>>> origin/test-typescript
     const finalMetrics: FinalMetrics = {
-<<<<<<< HEAD
       cls: 0,
       inp: 0,
       fcp: 0,
@@ -177,13 +159,6 @@ const FinalPerformanceOptimizer: React.FC = () => {
       ttfb: 0,
       ...performanceInfo,
       [metric.name]: metric.value
-<<<<<<< HEAD
-=======
-      [metric.name.toLowerCase()]: metric.value,
-      ...performanceInfo
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f474
-=======
->>>>>>> origin/test-typescript
     };
     
     const performanceScore = calculatePerformanceScore(finalMetrics);
@@ -199,13 +174,10 @@ const FinalPerformanceOptimizer: React.FC = () => {
         metrics: finalMetrics
       }
     ]);
-<<<<<<< HEAD
 
     // Generate insights
     const newInsights = generateInsights(finalMetrics);
     setInsights(newInsights);
-=======
->>>>>>> origin/test-typescript
   }, [getFinalPerformanceInfo, calculatePerformanceScore, generateInsights]);
 
   const getStatusColor = (value: number, threshold: number) => {
@@ -317,16 +289,8 @@ const FinalPerformanceOptimizer: React.FC = () => {
               </div>
               <div className="flex justify-between">
                 <span>INP:</span>
-<<<<<<< HEAD
-                <span className={getStatusColor(metrics.inp, thresholds.inp)}>
-                  {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
-<<<<<<< HEAD
-=======
                 <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
                   {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f474
-=======
->>>>>>> origin/test-typescript
                 </span>
               </div>
               <div className="flex justify-between">
