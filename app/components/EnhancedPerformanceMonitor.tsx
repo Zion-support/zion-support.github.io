@@ -59,6 +59,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const handleMetric = useCallback((metric: any) => {
+<<<<<<< HEAD
     const performanceInfo = getEnhancedPerformanceInfo();
     const enhancedMetrics: EnhancedMetrics = {
       cls: metrics?.cls || 0,
@@ -71,6 +72,17 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     };
     
     setMetrics(enhancedMetrics);
+=======
+    const enhancedMetrics = {
+      [metric.name]: metric.value,
+      ...getEnhancedPerformanceInfo()
+    };
+    
+    setMetrics(prev => ({
+      ...prev,
+      ...enhancedMetrics
+    }));
+>>>>>>> origin/test-typescript
     
     // Add to history
     setHistory(prev => [
@@ -80,7 +92,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         metrics: enhancedMetrics
       }
     ]);
+<<<<<<< HEAD
   }, [getEnhancedPerformanceInfo, metrics]);
+=======
+  }, [getEnhancedPerformanceInfo]);
+>>>>>>> origin/test-typescript
 
   const getStatusColor = (value: number, threshold: number) => {
     if (value <= threshold * 0.5) return 'text-green-600';
@@ -162,10 +178,13 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 <<<<<<< HEAD
               <span className={getStatusColor(metrics.inp, thresholds.inp)}>
                 {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+<<<<<<< HEAD
 =======
               <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
                 {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-f474
+=======
+>>>>>>> origin/test-typescript
               </span>
             </div>
             <div className="flex justify-between">
