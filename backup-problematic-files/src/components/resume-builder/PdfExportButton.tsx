@@ -94,48 +94,44 @@ export default function ProjectRoom() {;
 pr-12325
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />"
-
       <Header />
 "
-      <main className="container mx-auto py-8">"
+      <main className="text-left">"
 </main>"
-        <div className="flex justify-between items-center mb-6">"
+        <div className="text-left">"
 </div>"
-          <h1 className="text-3xl font-bold">Project Room: {projectId;}</h1>""
-          <div className="flex gap-2">"
-              <Button variant="destructive" className="flex items-center gap-2">"
-                <X className="h-4 w-4" />"
-
+          <h1 className="text-left">Project Room: {projectId;}</h1>""
+          <div className="text-left">"
+              <Button variant="destructive" className="text-left">"
+                <X className="text-left" />"
             <Button variant="outline">Invite Team Member"
           </div>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">"
-          <TabsList className="grid grid-cols-6 md:w-fit">"
-            <TabsTrigger value="chat" className="flex items-center gap-2">"
-              <MessageSquare className="h-4 w-4" />"
-              <span className="hidden sm:inline">Chat</span>"
-            <TabsTrigger value="files" className="flex items-center gap-2">"
-              <FileText className="h-4 w-4" />"
-              <span className="hidden sm:inline">Files</span>"
-            <TabsTrigger value="video" className="flex items-center gap-2">"
-              <Video className="h-4 w-4" />"
-              <span className="hidden sm:inline">Video</span>""
-                <span className="relative flex h-2 w-2">"
-</span>"
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>""
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>"
-                </span>
-            <TabsTrigger value="calendar" className="flex items-center gap-2">"
-              <Calendar className="h-4 w-4" />"
-              <span className="hidden sm:inline">Calendar</span>"
-            <TabsTrigger value="team" className="flex items-center gap-2">"
-              <Users className="h-4 w-4" />"
-              <span className="hidden sm:inline">Team</span>"
-            <TabsTrigger value="settings" className="flex items-center gap-2">"
-              <Settings className="h-4 w-4" />"
-              <span className="hidden sm:inline">Settings</span>"
-
-          <TabsContent value="chat" className="space-y-4">"
-
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="text-left">"
+          <TabsList className="text-left">"
+            <TabsTrigger value="chat" className="text-left">"
+              <MessageSquare className="text-left" />"
+              <span className="text-left">Chat<"
+            <TabsTrigger value="files" className="text-left">"
+              <FileText className="text-left" />"
+              <span className="text-left">Files<"
+            <TabsTrigger value="video" className="text-left">"
+              <Video className="text-left" />"
+              <span className="text-left">Video<""
+                <span className="text-left">"
+<"
+                  <span className="text-left"><""
+                  <span className="text-left"><"
+                <
+            <TabsTrigger value="calendar" className="text-left">"
+              <Calendar className="text-left" />"
+              <span className="text-left">Calendar<"
+            <TabsTrigger value="team" className="text-left">"
+              <Users className="text-left" />"
+              <span className="text-left">Team<"
+            <TabsTrigger value="settings" className="text-left">"
+              <Settings className="text-left" />"
+              <span className="text-left">Settings<"
+          <TabsContent value="chat" className="text-left">"
             <Card>
 
               <CardHeader>
@@ -143,56 +139,44 @@ pr-12325
                 <CardTitle>Project Chat
                 <CardDescription>Communicate with your team members
               ]"
-              <CardContent className="h-[400px]">"
-                <div className="flex items-center justify-center h-full">"
-                  <p className="text-muted-foreground">Chat functionality will be implemented soon</p>"
-
-          <TabsContent value="files" className="space-y-4">"
-
+              <CardContent className="text-left">"
+                <div className="text-left">"
+                  <p className="text-left">Chat functionality will be implemented soon</p>"
+          <TabsContent value="files" className="text-left">"
                 <CardTitle>Project Files
                 <CardDescription>Manage documents and files
-                  <p className="text-muted-foreground">File management will be implemented soon</p>"
-
-          <TabsContent value="video" className="space-y-4">"
-
+                  <p className="text-left">File management will be implemented soon</p>"
+          <TabsContent value="video" className="text-left">"
                 <CardTitle>Video Meetings
                 <CardDescription>Schedule and join video calls
-              <CardContent className="min-h-[400px] p-4">"
-                  <div className="space-y-4">"
+              <CardContent className="text-left">"
+                  <div className="text-left">"
                     <VideoCallRoom;`;
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
                     />;
-                    <div className="flex justify-center mt-4">"
-                      <Button variant="outline" onClick={simulateUserJoining} className="text-sm">"
-
-                  <div className="flex flex-col items-center justify-center h-[400px] space-y-4">"
-                    <p className="text-muted-foreground">Start a video call with your team</p>""
-                      <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">"
-
-                    <div className="text-xs text-muted-foreground mt-4">"
+                    <div className="text-left">"
+                      <Button variant="outline" onClick={simulateUserJoining} className="text-left">"
+                  <div className="text-left">"
+                    <p className="text-left">Start a video call with your team</p>""
+                      <Button onClick={startVideoCall} className="text-left">"
+                    <div className="text-left">"
                       <p>Recent calls:</p>
                       <p>No recent calls for this project</p>
 
-          <TabsContent value="calendar" className="space-y-4">"
-
+          <TabsContent value="calendar" className="text-left">"
                 <CardTitle>Project Calendar
                 <CardDescription>Schedule and manage events
-                  <p className="text-muted-foreground">Calendar will be implemented soon</p>"
-
-          <TabsContent value="team" className="space-y-4">"
-
+                  <p className="text-left">Calendar will be implemented soon</p>"
+          <TabsContent value="team" className="text-left">"
                 <CardTitle>Team Members
                 <CardDescription>Manage project participants
-                  <p className="text-muted-foreground">Team management will be implemented soon</p>"
-
-          <TabsContent value="settings" className="space-y-4">"
-
+                  <p className="text-left">Team management will be implemented soon</p>"
+          <TabsContent value="settings" className="text-left">"
                 <CardTitle>Project Settings
                 <CardDescription>Configure project parameters
-                  <p className="text-muted-foreground">Settings will be implemented soon</p>"
-
+                  <p className="text-left">Settings will be implemented soon</p>"
       </main>
     </>)
   )

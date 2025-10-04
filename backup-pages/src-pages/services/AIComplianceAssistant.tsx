@@ -35,7 +35,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 
-              </span>
+              <
             </h1>'
 
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
@@ -74,7 +74,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
             </div>''
             <div className='flex flex-wrap gap-2>
               {frameworks.map((fw) => (''
-                <span key={fw} className='px-3 py-1 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>{fw}</span>
+                <span key={fw} className='px-3 py-1 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>{fw}<
               ))}
             </div>
           </div>'

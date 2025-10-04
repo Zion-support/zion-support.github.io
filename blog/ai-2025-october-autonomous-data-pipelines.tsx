@@ -2,19 +2,19 @@ import React from 'react';
 
 const AutonomousDataPipelines2025 = () => {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto px-4 py-8">
+    <article className="text-left">
       <h1>Autonomous Data Pipelines 2025: Self-Healing Infrastructure Processing 500TB Daily</h1>
       
-      <div className="text-gray-600 mb-6">
-        <p className="text-sm">
+      <div className="text-left">
+        <p className="text-left">
           By Zion Tech Group Team | October 1, 2025 | 12 min read
         </p>
       </div>
 
       <img 
-        src="/images/autonomous-data-pipelines-2025.jpg" 
-        alt="Autonomous Data Pipelines" 
-        className="w-full rounded-lg shadow-lg mb-8"
+        src="/images/autonomous-data-pipelines-2025.jpg"
+        alt="Autonomous Data Pipelines"
+        className="text-left"
       />
 
       <h2>Executive Summary</h2>
@@ -255,7 +255,7 @@ const AutonomousDataPipelines2025 = () => {
         <li>Measure and iterate toward lights-out operations</li>
       </ul>
 
-      <p className="text-sm text-gray-600 mt-8">
+      <p className="text-left">
         Ready to build autonomous data pipelines? Zion Tech Group helps enterprises design, deploy, 
         and optimize self-healing data infrastructure. Contact us for a pipeline maturity assessment.
       </p>

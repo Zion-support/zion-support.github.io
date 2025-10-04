@@ -11,20 +11,20 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>⚡ Neural Network Edge Computing Revolution 2025: Real-Time Intelligence Everywhere</h1>
       
-      <div className="bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 border border-violet-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-violet-300 mt-0">🚀 Edge AI Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Neural network edge computing</strong> achieving <span className="text-green-400 font-bold">sub-10ms inference latency</span>, 
-          <span className="text-green-400 font-bold"> 99.9% uptime at the edge</span>, and <span className="text-green-400 font-bold">95% bandwidth reduction</span> with 
-          <span className="text-green-400 font-bold"> real-time intelligence</span>. Transform IoT, autonomous vehicles, and smart cities with 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Edge AI Breakthrough</h3>
+        <p className="text-left">
+          <strong>Neural network edge computing</strong> achieving <span className="text-left">sub-10ms inference latency<, 
+          <span className="text-left"> 99.9% uptime at the edge<, and <span className="text-left">95% bandwidth reduction< with 
+          <span className="text-left"> real-time intelligence<. Transform IoT, autonomous vehicles, and smart cities with 
           neural networks running directly where data is generated—eliminating cloud latency and enabling instant decision-making.
         </p>
-        <div className="mt-4 p-4 bg-green-500/10 border border-green-500/30 rounded">
-          <p className="text-green-300 font-semibold mb-2">💎 Proven Edge Deployments:</p>
-          <ul className="text-green-200 space-y-1">
+        <div className="text-left">
+          <p className="text-left">💎 Proven Edge Deployments:</p>
+          <ul className="text-left">
             <li>✓ $427M in cost savings through reduced cloud data transfer and processing</li>
             <li>✓ Sub-10ms inference enabling real-time autonomous operations</li>
             <li>✓ 95% reduction in bandwidth consumption</li>
@@ -110,24 +110,24 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-900/50 p-6 rounded-lg my-6">
-        <h3 className="text-xl font-bold text-violet-400 mb-4">Real-World Performance Data</h3>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-violet-500/10 p-4 rounded border border-violet-500/30">
-            <div className="text-3xl font-bold text-violet-400">&lt;10ms</div>
-            <div className="text-white/70">End-to-End Inference Latency</div>
+      <div className="text-left">
+        <h3 className="text-left">Real-World Performance Data</h3>
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">&lt;10ms</div>
+            <div className="text-left">End-to-End Inference Latency</div>
           </div>
-          <div className="bg-fuchsia-500/10 p-4 rounded border border-fuchsia-500/30">
-            <div className="text-3xl font-bold text-fuchsia-400">99.9%</div>
-            <div className="text-white/70">Edge Device Uptime</div>
+          <div className="text-left">
+            <div className="text-left">99.9%</div>
+            <div className="text-left">Edge Device Uptime</div>
           </div>
-          <div className="bg-purple-500/10 p-4 rounded border border-purple-500/30">
-            <div className="text-3xl font-bold text-purple-400">95%</div>
-            <div className="text-white/70">Bandwidth Reduction</div>
+          <div className="text-left">
+            <div className="text-left">95%</div>
+            <div className="text-left">Bandwidth Reduction</div>
           </div>
-          <div className="bg-pink-500/10 p-4 rounded border border-pink-500/30">
-            <div className="text-3xl font-bold text-pink-400">$427M</div>
-            <div className="text-white/70">Cloud Cost Savings</div>
+          <div className="text-left">
+            <div className="text-left">$427M</div>
+            <div className="text-left">Cloud Cost Savings</div>
           </div>
         </div>
       </div>
@@ -160,18 +160,18 @@ export default function BlogPost() {
 
       <h2>💰 ROI Analysis</h2>
       
-      <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 border border-green-500/30 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-green-300 mb-4">Financial Impact</h3>
-        <p className="text-white/80 mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Financial Impact</h3>
+        <p className="text-left">
           Based on deployments across 10,000+ edge devices:
         </p>
-        <ul className="space-y-2 text-white/90">
-          <li><strong className="text-green-400">Average ROI:</strong> 3,470% over 18 months</li>
-          <li><strong className="text-green-400">Cloud cost savings:</strong> $427M annually for large-scale IoT</li>
-          <li><strong className="text-green-400">Bandwidth reduction:</strong> 95% decrease saving $142M</li>
-          <li><strong className="text-green-400">Operational efficiency:</strong> 89% reduction in latency-related issues</li>
-          <li><strong className="text-green-400">Revenue increase:</strong> $284M from new real-time capabilities</li>
-          <li><strong className="text-green-400">Compliance savings:</strong> $47M through on-device privacy</li>
+        <ul className="text-left">
+          <li><strong className="text-left">Average ROI:</strong> 3,470% over 18 months</li>
+          <li><strong className="text-left">Cloud cost savings:</strong> $427M annually for large-scale IoT</li>
+          <li><strong className="text-left">Bandwidth reduction:</strong> 95% decrease saving $142M</li>
+          <li><strong className="text-left">Operational efficiency:</strong> 89% reduction in latency-related issues</li>
+          <li><strong className="text-left">Revenue increase:</strong> $284M from new real-time capabilities</li>
+          <li><strong className="text-left">Compliance savings:</strong> $47M through on-device privacy</li>
         </ul>
       </div>
 
@@ -203,30 +203,30 @@ export default function BlogPost() {
 
       <h2>🌐 Industry Applications</h2>
       
-      <div className="bg-slate-900/50 p-6 rounded-lg my-6">
-        <h3 className="text-xl font-bold text-violet-400 mb-4">Vertical-Specific Solutions</h3>
+      <div className="text-left">
+        <h3 className="text-left">Vertical-Specific Solutions</h3>
         
-        <div className="space-y-4">
-          <div className="border-l-4 border-violet-500 pl-4">
-            <h4 className="font-bold text-white">Healthcare & Medical Devices</h4>
-            <p className="text-white/70">
+        <div className="text-left">
+          <div className="text-left">
+            <h4 className="text-left">Healthcare & Medical Devices</h4>
+            <p className="text-left">
               Real-time patient monitoring, diagnostic imaging analysis, and clinical decision support at the 
               bedside—processing sensitive medical data on-device for HIPAA compliance while enabling instant 
               clinical insights.
             </p>
           </div>
           
-          <div className="border-l-4 border-fuchsia-500 pl-4">
-            <h4 className="font-bold text-white">Energy & Utilities</h4>
-            <p className="text-white/70">
+          <div className="text-left">
+            <h4 className="text-left">Energy & Utilities</h4>
+            <p className="text-left">
               Smart grid optimization, predictive maintenance for wind turbines, and real-time power distribution 
               management—processing millions of sensor readings locally for sub-second grid balancing.
             </p>
           </div>
           
-          <div className="border-l-4 border-purple-500 pl-4">
-            <h4 className="font-bold text-white">Agriculture & Farming</h4>
-            <p className="text-white/70">
+          <div className="text-left">
+            <h4 className="text-left">Agriculture & Farming</h4>
+            <p className="text-left">
               Precision agriculture with computer vision for crop health monitoring, autonomous irrigation systems, 
               and yield prediction—operating in remote locations with intermittent connectivity.
             </p>
@@ -241,13 +241,13 @@ export default function BlogPost() {
         of inferences daily with sub-10ms latency.
       </p>
 
-      <div className="bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 border border-violet-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-violet-300 mb-4">Ready to Deploy Edge Intelligence?</h3>
-        <p className="text-white/80 mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Ready to Deploy Edge Intelligence?</h3>
+        <p className="text-left">
           Schedule a consultation with our edge AI experts to assess your use case and design a custom 
           edge neural network solution optimized for your hardware and requirements.
         </p>
-        <ul className="text-white/90 space-y-2">
+        <ul className="text-left">
           <li>✓ Free edge AI feasibility assessment and model optimization analysis</li>
           <li>✓ Custom model architecture designed for your edge hardware</li>
           <li>✓ ROI projection including cloud cost savings and latency benefits</li>
@@ -255,9 +255,9 @@ export default function BlogPost() {
         </ul>
       </div>
 
-      <hr className="my-8 border-white/10" />
+      <hr className="text-left" />
       
-      <p className="text-white/60 text-sm">
+      <p className="text-left">
         <strong>About Zion Tech Group:</strong> We are pioneers in neural network edge computing, deploying 
         real-time AI across autonomous vehicles, smart cities, and industrial IoT. Our optimized edge models 
         power over 50,000 devices processing billions of inferences daily with industry-leading performance.

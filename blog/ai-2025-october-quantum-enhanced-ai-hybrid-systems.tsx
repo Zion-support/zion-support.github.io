@@ -11,16 +11,16 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>⚛️ Quantum-Enhanced AI Systems 2025: Hybrid Classical-Quantum Intelligence</h1>
       
-      <div className="bg-gradient-to-r from-violet-600/20 to-cyan-600/20 border border-violet-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-violet-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Quantum-enhanced AI systems</strong> achieving <span className="text-green-400 font-bold">10,000x speedup</span> for 
-          optimization problems, <span className="text-green-400 font-bold">98.9% accuracy improvements</span>, and 
-          <span className="text-green-400 font-bold"> $234M+ annual value creation</span> through 
-          <span className="text-green-400 font-bold"> hybrid classical-quantum processing</span>. Unlock unprecedented computational 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Quantum-enhanced AI systems</strong> achieving <span className="text-left">10,000x speedup< for 
+          optimization problems, <span className="text-left">98.9% accuracy improvements<, and 
+          <span className="text-left"> $234M+ annual value creation< through 
+          <span className="text-left"> hybrid classical-quantum processing<. Unlock unprecedented computational 
           power for problems intractable with classical AI alone.
         </p>
       </div>
@@ -86,8 +86,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>10,000x speedup</strong> for combinatorial optimization problems</li>
           <li>✅ <strong>98.9% accuracy improvement</strong> on complex classification tasks</li>
           <li>✅ <strong>$234M+ annual value creation</strong> from quantum-powered insights</li>
@@ -171,10 +171,10 @@ export default function BlogPost() {
       </ul>
 
       <h2>💡 Real-World Impact</h2>
-      <blockquote className="border-l-4 border-violet-500 pl-4 italic">
+      <blockquote className="text-left">
         "Quantum-enhanced AI transformed our portfolio optimization, achieving 10,000x speedup and 23% higher returns. 
         What previously took 3 days now completes in 15 minutes, enabling real-time market response."
-        <footer className="text-sm text-gray-400 mt-2">— Chief Investment Officer, Global Asset Management Firm</footer>
+        <footer className="text-left">— Chief Investment Officer, Global Asset Management Firm</footer>
       </blockquote>
 
       <h2>🔬 Quantum Algorithms Supported</h2>
@@ -204,8 +204,8 @@ export default function BlogPost() {
         you can integrate it into your AI strategy.
       </p>
 
-      <div className="bg-gradient-to-r from-violet-600/10 to-cyan-600/10 border border-violet-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-violet-300 mt-0">🚀 Ready to Harness Quantum Power?</h3>
+      <div className="text-left">
+        <h3 className="text-left">🚀 Ready to Harness Quantum Power?</h3>
         <p>
           Contact Zion Tech Group to deploy quantum-enhanced AI achieving 10,000x speedup, 98.9% accuracy improvements, 
           and $234M+ value creation. Our quantum computing experts will identify your highest-impact use cases and 

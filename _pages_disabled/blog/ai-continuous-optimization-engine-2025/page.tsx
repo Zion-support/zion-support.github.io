@@ -20,58 +20,58 @@ export const metadata = {
 
 export default function AIContinuousOptimizationEnginePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="text-left">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-emerald-900 via-green-900 to-teal-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-6xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="bg-green-400 text-emerald-900 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse">
+      <section className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
+            <span className="text-left">
               🚀 GAME-CHANGER — OCT 2025
-            </span>
-            <span className="bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+            <
+            <span className="text-left">
               SELF-OPTIMIZATION
-            </span>
+            <
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-left">
             AI Continuous Optimization Engine: Self-Improving Enterprise Systems
           </h1>
           
-          <p className="text-2xl text-green-100 mb-8 leading-relaxed">
+          <p className="text-left">
             Deploy AI systems that automatically optimize every business process in real-time, 
             delivering 400% efficiency gains, 92% cost reduction, and $50M+ annual ROI
           </p>
           
-          <div className="flex flex-wrap gap-4 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-              <div className="text-3xl font-bold text-green-400">400%</div>
-              <div className="text-sm text-green-200">Efficiency Gain</div>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">400%</div>
+              <div className="text-left">Efficiency Gain</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-              <div className="text-3xl font-bold text-yellow-400">$50M+</div>
-              <div className="text-sm text-green-200">Annual ROI</div>
+            <div className="text-left">
+              <div className="text-left">$50M+</div>
+              <div className="text-left">Annual ROI</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-              <div className="text-3xl font-bold text-cyan-400">92%</div>
-              <div className="text-sm text-green-200">Cost Reduction</div>
+            <div className="text-left">
+              <div className="text-left">92%</div>
+              <div className="text-left">Cost Reduction</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-              <div className="text-3xl font-bold text-pink-400">24/7</div>
-              <div className="text-sm text-green-200">Optimization</div>
+            <div className="text-left">
+              <div className="text-left">24/7</div>
+              <div className="text-left">Optimization</div>
             </div>
           </div>
           
-          <div className="flex flex-wrap gap-4">
+          <div className="text-left">
             <Link 
-              href="/contact" 
-              className="bg-green-400 text-emerald-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-300 transition-all transform hover:scale-105 shadow-xl"
+              href="/contact"
+              className="text-left"
             >
               🎯 Deploy Self-Optimization Now
             </Link>
             <Link 
-              href="/services/ai-business-intelligence-2025" 
-              className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
+              href="/services/ai-business-intelligence-2025"
+              className="text-left"
             >
               Explore AI Solutions →
             </Link>
@@ -80,11 +80,11 @@ export default function AIContinuousOptimizationEnginePage() {
       </section>
 
       {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-4 py-16">
+      <article className="text-left">
         {/* Introduction */}
-        <section className="mb-12">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600 p-6 rounded-lg mb-8">
-            <p className="text-xl text-gray-800 leading-relaxed">
+        <section className="text-left">
+          <div className="text-left">
+            <p className="text-left">
               <strong>The Optimization Breakthrough of 2025:</strong> What if every business process 
               automatically improved itself every day? <strong>AI Continuous Optimization Engines</strong> 
               make this reality — systems that analyze, learn, and optimize themselves autonomously, 
@@ -92,7 +92,7 @@ export default function AIContinuousOptimizationEnginePage() {
             </p>
           </div>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-left">
             Traditional business optimization requires expensive consultants, months of analysis, 
             and manual implementation. AI Continuous Optimization Engines eliminate this overhead 
             by embedding intelligence that automatically identifies and implements improvements 
@@ -101,71 +101,71 @@ export default function AIContinuousOptimizationEnginePage() {
         </section>
 
         {/* Core Concept */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             ⚡ The Continuous Optimization Paradigm
           </h2>
           
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-6 border border-gray-200">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <div className="text-left">
+            <p className="text-left">
               An AI Continuous Optimization Engine is an autonomous system that monitors every 
               business process, identifies optimization opportunities, simulates improvements, 
               implements changes, measures results, and repeats — all without human intervention.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-green-900 mb-3 flex items-center gap-2">
+            <div className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   🎯 Optimization Domains
                 </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600">•</span>
-                    <span>Process efficiency & workflow</span>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Process efficiency & workflow<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600">•</span>
-                    <span>Resource allocation & scheduling</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Resource allocation & scheduling<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600">•</span>
-                    <span>Cost reduction & profitability</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Cost reduction & profitability<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600">•</span>
-                    <span>Quality & customer satisfaction</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Quality & customer satisfaction<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600">•</span>
-                    <span>Risk management & compliance</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Risk management & compliance<
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-900 mb-3 flex items-center gap-2">
+              <div className="text-left">
+                <h3 className="text-left">
                   🚀 Optimization Techniques
                 </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>Reinforcement learning</span>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Reinforcement learning<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>Genetic algorithms</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Genetic algorithms<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>Bayesian optimization</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Bayesian optimization<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>Multi-objective optimization</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Multi-objective optimization<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>Constraint satisfaction</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Constraint satisfaction<
                   </li>
                 </ul>
               </div>
@@ -174,82 +174,82 @@ export default function AIContinuousOptimizationEnginePage() {
         </section>
 
         {/* How It Works */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             🔄 The Continuous Optimization Cycle
           </h2>
 
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">1</span>
-                <h3 className="text-2xl font-bold text-gray-900">Monitor & Measure</h3>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">1<
+                <h3 className="text-left">Monitor & Measure</h3>
               </div>
-              <p className="text-gray-700 mb-3">
+              <p className="text-left">
                 Continuously capture performance metrics across all business processes using 
                 real-time data streams, sensors, and system logs.
               </p>
-              <div className="bg-white rounded-lg p-3 text-sm text-gray-600">
+              <div className="text-left">
                 <strong>Metrics tracked:</strong> 50,000+ per second • Response time • Throughput • 
                 Cost • Quality • Customer satisfaction • Resource utilization
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500 p-6 rounded-lg">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">2</span>
-                <h3 className="text-2xl font-bold text-gray-900">Analyze & Identify</h3>
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">2<
+                <h3 className="text-left">Analyze & Identify</h3>
               </div>
-              <p className="text-gray-700 mb-3">
+              <p className="text-left">
                 AI models analyze performance data to identify bottlenecks, inefficiencies, 
                 patterns, and optimization opportunities using advanced ML techniques.
               </p>
-              <div className="bg-white rounded-lg p-3 text-sm text-gray-600">
+              <div className="text-left">
                 <strong>Analysis:</strong> Pattern recognition • Anomaly detection • Root cause analysis • 
                 Correlation discovery • Predictive modeling
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-500 p-6 rounded-lg">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">3</span>
-                <h3 className="text-2xl font-bold text-gray-900">Simulate & Test</h3>
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">3<
+                <h3 className="text-left">Simulate & Test</h3>
               </div>
-              <p className="text-gray-700 mb-3">
+              <p className="text-left">
                 Generate optimization scenarios and simulate their impact using digital twins 
                 and predictive models before implementing any changes.
               </p>
-              <div className="bg-white rounded-lg p-3 text-sm text-gray-600">
+              <div className="text-left">
                 <strong>Simulation:</strong> What-if analysis • Impact prediction • Risk assessment • 
                 Multi-scenario testing • Constraint validation
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 p-6 rounded-lg">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">4</span>
-                <h3 className="text-2xl font-bold text-gray-900">Implement & Deploy</h3>
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">4<
+                <h3 className="text-left">Implement & Deploy</h3>
               </div>
-              <p className="text-gray-700 mb-3">
+              <p className="text-left">
                 Automatically implement validated optimizations through automated deployments, 
                 configuration updates, and workflow adjustments.
               </p>
-              <div className="bg-white rounded-lg p-3 text-sm text-gray-600">
+              <div className="text-left">
                 <strong>Implementation:</strong> Automated deployment • Gradual rollout • Safety checks • 
                 Rollback capability • Change tracking
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="bg-yellow-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">5</span>
-                <h3 className="text-2xl font-bold text-gray-900">Validate & Learn</h3>
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">5<
+                <h3 className="text-left">Validate & Learn</h3>
               </div>
-              <p className="text-gray-700 mb-3">
+              <p className="text-left">
                 Measure actual results versus predictions, validate improvements, and update 
                 models with learnings to improve future optimizations.
               </p>
-              <div className="bg-white rounded-lg p-3 text-sm text-gray-600">
+              <div className="text-left">
                 <strong>Learning:</strong> A/B testing • Performance validation • Model updates • 
                 Knowledge base enrichment • Feedback loops
               </div>
@@ -258,89 +258,89 @@ export default function AIContinuousOptimizationEnginePage() {
         </section>
 
         {/* Real Results */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             📊 Transformative Results: Real Enterprise Data
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-green-600 to-emerald-600 text-white p-8 rounded-xl shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">🏭 Manufacturing Leader</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-green-100">Efficiency Improvement</span>
-                  <span className="text-3xl font-bold">420%</span>
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">🏭 Manufacturing Leader</h3>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">Efficiency Improvement<
+                  <span className="text-left">420%<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-green-100">Cost Reduction</span>
-                  <span className="text-3xl font-bold">$58M</span>
+                <div className="text-left">
+                  <span className="text-left">Cost Reduction<
+                  <span className="text-left">$58M<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-green-100">Waste Reduction</span>
-                  <span className="text-3xl font-bold">94%</span>
+                <div className="text-left">
+                  <span className="text-left">Waste Reduction<
+                  <span className="text-left">94%<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-green-100">Optimization Cycles/Day</span>
-                  <span className="text-2xl font-bold">1,440</span>
+                <div className="text-left">
+                  <span className="text-left">Optimization Cycles/Day<
+                  <span className="text-left">1,440<
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-600 to-cyan-600 text-white p-8 rounded-xl shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">🚚 Logistics Company</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Route Optimization</span>
-                  <span className="text-3xl font-bold">89%</span>
+            <div className="text-left">
+              <h3 className="text-left">🚚 Logistics Company</h3>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">Route Optimization<
+                  <span className="text-left">89%<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Fuel Savings</span>
-                  <span className="text-3xl font-bold">$22M</span>
+                <div className="text-left">
+                  <span className="text-left">Fuel Savings<
+                  <span className="text-left">$22M<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Delivery Time</span>
-                  <span className="text-3xl font-bold">-65%</span>
+                <div className="text-left">
+                  <span className="text-left">Delivery Time<
+                  <span className="text-left">-65%<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Customer Satisfaction</span>
-                  <span className="text-2xl font-bold">98%</span>
+                <div className="text-left">
+                  <span className="text-left">Customer Satisfaction<
+                  <span className="text-left">98%<
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-500 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          <div className="text-left">
+            <h3 className="text-left">
               Average Impact Across All Implementations
             </h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">400%</div>
-                <div className="text-sm text-gray-700 font-semibold">Avg. Efficiency Gain</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">400%</div>
+                <div className="text-left">Avg. Efficiency Gain</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">92%</div>
-                <div className="text-sm text-gray-700 font-semibold">Cost Reduction</div>
+              <div className="text-left">
+                <div className="text-left">92%</div>
+                <div className="text-left">Cost Reduction</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">$50M</div>
-                <div className="text-sm text-gray-700 font-semibold">Annual ROI</div>
+              <div className="text-left">
+                <div className="text-left">$50M</div>
+                <div className="text-left">Annual ROI</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">5 mos</div>
-                <div className="text-sm text-gray-700 font-semibold">Payback Period</div>
+              <div className="text-left">
+                <div className="text-left">5 mos</div>
+                <div className="text-left">Payback Period</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Use Cases */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             💼 Industry-Specific Optimization Scenarios
           </h2>
 
-          <div className="space-y-6">
+          <div className="text-left">
             {[
               {
                 icon: '🏭',
@@ -367,19 +367,19 @@ export default function AIContinuousOptimizationEnginePage() {
                 improvements: ['94% stock accuracy', '82% logistics cost reduction', '99% product availability', '$28M profit increase']
               }
             ].map((useCase, idx) => (
-              <div key={idx} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-4xl">{useCase.icon}</span>
+              <div key={idx} className="text-left">
+                <div className="text-left">
+                  <span className="text-left">{useCase.icon}<
                   <div>
-                    <div className="text-sm text-green-600 font-semibold uppercase">{useCase.industry}</div>
-                    <h3 className="text-xl font-bold text-gray-900">{useCase.title}</h3>
+                    <div className="text-left">{useCase.industry}</div>
+                    <h3 className="text-left">{useCase.title}</h3>
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-3">
+                <div className="text-left">
                   {useCase.improvements.map((improvement, impIdx) => (
-                    <div key={impIdx} className="flex items-start gap-2 text-gray-700">
-                      <span className="text-green-600 mt-1">✓</span>
-                      <span className="font-semibold">{improvement}</span>
+                    <div key={impIdx} className="text-left">
+                      <span className="text-left">✓<
+                      <span className="text-left">{improvement}<
                     </div>
                   ))}
                 </div>
@@ -389,12 +389,12 @@ export default function AIContinuousOptimizationEnginePage() {
         </section>
 
         {/* Implementation */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             🚀 Rapid Deployment: 8-Week Path to Continuous Optimization
           </h2>
 
-          <div className="space-y-4">
+          <div className="text-left">
             {[
               { week: 'Week 1', title: 'Discovery & Baseline', desc: 'Process mapping, metric definition, baseline measurement' },
               { week: 'Week 2', title: 'Architecture & Design', desc: 'System design, integration planning, optimization strategy' },
@@ -403,13 +403,13 @@ export default function AIContinuousOptimizationEnginePage() {
               { week: 'Week 6', title: 'Expansion & Training', desc: 'Full rollout, user training, documentation' },
               { week: 'Weeks 7-8', title: 'Optimization & Handover', desc: 'Fine-tuning, performance optimization, support transition' }
             ].map((phase, idx) => (
-              <div key={idx} className="flex items-center gap-4 bg-white rounded-lg shadow-md p-4 border border-gray-200">
-                <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold min-w-[100px] text-center">
+              <div key={idx} className="text-left">
+                <div className="text-left">
                   {phase.week}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">{phase.title}</h3>
-                  <p className="text-gray-600 text-sm">{phase.desc}</p>
+                <div className="text-left">
+                  <h3 className="text-left">{phase.title}</h3>
+                  <p className="text-left">{phase.desc}</p>
                 </div>
               </div>
             ))}
@@ -417,42 +417,42 @@ export default function AIContinuousOptimizationEnginePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="mb-12">
-          <div className="bg-gradient-to-r from-emerald-900 via-green-900 to-teal-900 text-white rounded-2xl p-10 shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Deploy Self-Improving Systems That Never Stop Getting Better
             </h2>
-            <p className="text-xl text-green-100 mb-8 leading-relaxed">
+            <p className="text-left">
               Join innovative enterprises achieving 400% efficiency gains and $50M+ ROI through 
               AI Continuous Optimization. Our experts will design and deploy a custom solution 
               that automatically improves your business every single day.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">500+</div>
-                <div className="text-sm text-green-200">Optimization Engines Deployed</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">500+</div>
+                <div className="text-left">Optimization Engines Deployed</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-1">$5B+</div>
-                <div className="text-sm text-green-200">Total Value Created</div>
+              <div className="text-left">
+                <div className="text-left">$5B+</div>
+                <div className="text-left">Total Value Created</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-1">99%</div>
-                <div className="text-sm text-green-200">Client Retention</div>
+              <div className="text-left">
+                <div className="text-left">99%</div>
+                <div className="text-left">Client Retention</div>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="text-left">
               <Link 
-                href="/contact" 
-                className="bg-green-400 text-emerald-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-300 transition-all transform hover:scale-105 shadow-xl"
+                href="/contact"
+                className="text-left"
               >
                 🚀 Start Continuous Optimization
               </Link>
               <Link 
-                href="/case-studies" 
-                className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
+                href="/case-studies"
+                className="text-left"
               >
                 View Success Stories →
               </Link>
@@ -462,34 +462,34 @@ export default function AIContinuousOptimizationEnginePage() {
 
         {/* Related Content */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">🔗 Related Optimization Topics</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-orchestration-mega-agents-2025" className="group">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600">
+          <h2 className="text-left">🔗 Related Optimization Topics</h2>
+          <div className="text-left">
+            <Link href="/blog/ai-orchestration-mega-agents-2025" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   AI Orchestration Mega-Agents
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-left">
                   Intelligent coordination of AI agents for maximum efficiency
                 </p>
               </div>
             </Link>
-            <Link href="/blog/ai-enterprise-supergraph-2025" className="group">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600">
+            <Link href="/blog/ai-enterprise-supergraph-2025" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   AI Enterprise Supergraph
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-left">
                   Unified intelligence fabric across your organization
                 </p>
               </div>
             </Link>
-            <Link href="/services/ai-business-intelligence-2025" className="group">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600">
+            <Link href="/services/ai-business-intelligence-2025" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   AI Business Intelligence
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-left">
                   Complete AI transformation services
                 </p>
               </div>

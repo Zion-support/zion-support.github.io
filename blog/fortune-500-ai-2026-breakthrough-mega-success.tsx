@@ -16,49 +16,49 @@ const Fortune500AI2026BreakthroughMegaSuccess = () => {
         <link rel="canonical" href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-green-950 to-blue-950">
+      <div className="text-left">
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 mb-8">
-                <span className="text-green-400 font-bold text-lg tracking-wider uppercase">
+        <section className="text-left">
+          <div className="text-left"></div>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
                   💰 Fortune 500 Success Story
-                </span>
+                <
               </div>
               
-              <h1 className="text-6xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-left">
                 $2.3B Annual Savings
               </h1>
               
-              <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
-                How a Fortune 500 manufacturing giant achieved <span className="text-green-400 font-bold">$2.3B in annual savings</span> using 
-                <span className="text-blue-400 font-bold"> breakthrough AI technologies</span> and autonomous operations
+              <p className="text-left">
+                How a Fortune 500 manufacturing giant achieved <span className="text-left">$2.3B in annual savings< using 
+                <span className="text-left"> breakthrough AI technologies< and autonomous operations
               </p>
               
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <div className="bg-green-500/20 px-6 py-3 rounded-full border border-green-500/30">
-                  <span className="text-green-300 font-semibold">$2.3B Saved</span>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">$2.3B Saved<
                 </div>
-                <div className="bg-blue-500/20 px-6 py-3 rounded-full border border-blue-500/30">
-                  <span className="text-blue-300 font-semibold">98% Automation</span>
+                <div className="text-left">
+                  <span className="text-left">98% Automation<
                 </div>
-                <div className="bg-purple-500/20 px-6 py-3 rounded-full border border-purple-500/30">
-                  <span className="text-purple-300 font-semibold">300% ROI</span>
+                <div className="text-left">
+                  <span className="text-left">300% ROI<
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="text-left">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                  href="/contact"
+                  className="text-left"
                 >
                   Achieve Similar Results →
                 </a>
                 <a 
-                  href="#case-study-details" 
-                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="#case-study-details"
+                  className="text-left"
                 >
                   Read Full Case Study
                 </a>
@@ -68,20 +68,20 @@ const Fortune500AI2026BreakthroughMegaSuccess = () => {
         </section>
 
         {/* Case Study Details */}
-        <section id="case-study-details" className="py-20 bg-slate-900/50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+        <section id="case-study-details" className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <h2 className="text-left">
                   The Challenge
                 </h2>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p className="text-left">
                   A global Fortune 500 manufacturing company faced escalating operational costs, inefficient supply chain management, 
                   and declining productivity across 150+ facilities worldwide.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <div className="text-left">
                 {[
                   {
                     challenge: 'Operational Costs',
@@ -102,20 +102,20 @@ const Fortune500AI2026BreakthroughMegaSuccess = () => {
                     impact: '65% Manual Work'
                   }
                 ].map((challenge, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-300">
-                    <div className="text-6xl mb-6 text-center">{challenge.icon}</div>
-                    <h3 className="text-2xl font-bold text-white mb-4 text-center">{challenge.challenge}</h3>
-                    <p className="text-gray-400 mb-4 leading-relaxed text-center">{challenge.description}</p>
-                    <div className="text-red-400 font-bold text-center text-lg">{challenge.impact}</div>
+                  <div key={index} className="text-left">
+                    <div className="text-left">{challenge.icon}</div>
+                    <h3 className="text-left">{challenge.challenge}</h3>
+                    <p className="text-left">{challenge.description}</p>
+                    <div className="text-left">{challenge.impact}</div>
                   </div>
                 ))}
               </div>
 
               {/* Solution Implementation */}
-              <div className="bg-gradient-to-r from-blue-500/10 to-green-500/10 border border-blue-500/30 rounded-2xl p-8 mb-16">
-                <div className="text-center">
-                  <h3 className="text-3xl font-bold mb-6 text-blue-400">Our Solution</h3>
-                  <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Our Solution</h3>
+                  <div className="text-left">
                     {[
                       {
                         solution: 'Meta-Cognitive AI',
@@ -133,10 +133,10 @@ const Fortune500AI2026BreakthroughMegaSuccess = () => {
                         results: '1000x Speed Improvement'
                       }
                     ].map((solution, index) => (
-                      <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                        <h4 className="text-xl font-bold text-white mb-3">{solution.solution}</h4>
-                        <p className="text-gray-400 mb-4 text-sm">{solution.description}</p>
-                        <div className="text-green-400 font-semibold text-sm">{solution.results}</div>
+                      <div key={index} className="text-left">
+                        <h4 className="text-left">{solution.solution}</h4>
+                        <p className="text-left">{solution.description}</p>
+                        <div className="text-left">{solution.results}</div>
                       </div>
                     ))}
                   </div>
@@ -144,28 +144,28 @@ const Fortune500AI2026BreakthroughMegaSuccess = () => {
               </div>
 
               {/* Results */}
-              <div className="text-center mb-16">
-                <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+              <div className="text-left">
+                <h2 className="text-left">
                   Outstanding Results
                 </h2>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
+                <p className="text-left">
                   Within 18 months of implementation, the company achieved unprecedented results across all operational metrics.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-4 gap-8 mb-16">
+              <div className="text-left">
                 {[
                   { metric: '$2.3B', label: 'Annual Savings', icon: '💰', color: 'text-green-400' },
                   { metric: '300%', label: 'ROI Achieved', icon: '📈', color: 'text-blue-400' },
                   { metric: '98%', label: 'Process Automation', icon: '⚡', color: 'text-purple-400' },
                   { metric: '18mo', label: 'Payback Period', icon: '⏱️', color: 'text-orange-400' }
                 ].map((result, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 text-center">
-                    <div className="text-6xl mb-4">{result.icon}</div>
+                  <div key={index} className="text-left">
+                    <div className="text-left">{result.icon}</div>
                     <div className={`text-5xl font-extrabold mb-2 ${result.color}`}>
                       {result.metric}
                     </div>
-                    <div className="text-gray-400 text-sm font-medium">
+                    <div className="text-left">
                       {result.label}
                     </div>
                   </div>
@@ -173,48 +173,48 @@ const Fortune500AI2026BreakthroughMegaSuccess = () => {
               </div>
 
               {/* Detailed Results */}
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
-                <h3 className="text-3xl font-bold mb-8 text-center text-white">Detailed Impact Analysis</h3>
-                <div className="grid md:grid-cols-2 gap-8">
+              <div className="text-left">
+                <h3 className="text-left">Detailed Impact Analysis</h3>
+                <div className="text-left">
                   <div>
-                    <h4 className="text-xl font-bold text-green-400 mb-4">Cost Reductions</h4>
-                    <ul className="space-y-3">
-                      <li className="flex justify-between items-center">
-                        <span className="text-gray-300">Supply Chain Optimization</span>
-                        <span className="text-green-400 font-bold">$850M</span>
+                    <h4 className="text-left">Cost Reductions</h4>
+                    <ul className="text-left">
+                      <li className="text-left">
+                        <span className="text-left">Supply Chain Optimization<
+                        <span className="text-left">$850M<
                       </li>
-                      <li className="flex justify-between items-center">
-                        <span className="text-gray-300">Operational Efficiency</span>
-                        <span className="text-green-400 font-bold">$720M</span>
+                      <li className="text-left">
+                        <span className="text-left">Operational Efficiency<
+                        <span className="text-left">$720M<
                       </li>
-                      <li className="flex justify-between items-center">
-                        <span className="text-gray-300">Predictive Maintenance</span>
-                        <span className="text-green-400 font-bold">$480M</span>
+                      <li className="text-left">
+                        <span className="text-left">Predictive Maintenance<
+                        <span className="text-left">$480M<
                       </li>
-                      <li className="flex justify-between items-center">
-                        <span className="text-gray-300">Energy Optimization</span>
-                        <span className="text-green-400 font-bold">$250M</span>
+                      <li className="text-left">
+                        <span className="text-left">Energy Optimization<
+                        <span className="text-left">$250M<
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-blue-400 mb-4">Efficiency Gains</h4>
-                    <ul className="space-y-3">
-                      <li className="flex justify-between items-center">
-                        <span className="text-gray-300">Decision Speed</span>
-                        <span className="text-blue-400 font-bold">95% Faster</span>
+                    <h4 className="text-left">Efficiency Gains</h4>
+                    <ul className="text-left">
+                      <li className="text-left">
+                        <span className="text-left">Decision Speed<
+                        <span className="text-left">95% Faster<
                       </li>
-                      <li className="flex justify-between items-center">
-                        <span className="text-gray-300">Process Automation</span>
-                        <span className="text-blue-400 font-bold">98% Rate</span>
+                      <li className="text-left">
+                        <span className="text-left">Process Automation<
+                        <span className="text-left">98% Rate<
                       </li>
-                      <li className="flex justify-between items-center">
-                        <span className="text-gray-300">Error Reduction</span>
-                        <span className="text-blue-400 font-bold">92% Less</span>
+                      <li className="text-left">
+                        <span className="text-left">Error Reduction<
+                        <span className="text-left">92% Less<
                       </li>
-                      <li className="flex justify-between items-center">
-                        <span className="text-gray-300">Resource Utilization</span>
-                        <span className="text-blue-400 font-bold">85% Improvement</span>
+                      <li className="text-left">
+                        <span className="text-left">Resource Utilization<
+                        <span className="text-left">85% Improvement<
                       </li>
                     </ul>
                   </div>
@@ -222,22 +222,22 @@ const Fortune500AI2026BreakthroughMegaSuccess = () => {
               </div>
 
               {/* Implementation Timeline */}
-              <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8">
-                <h3 className="text-3xl font-bold mb-8 text-center text-green-400">Implementation Timeline</h3>
-                <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-left">
+                <h3 className="text-left">Implementation Timeline</h3>
+                <div className="text-left">
                   {[
                     { phase: 'Phase 1', title: 'Assessment', duration: '6 weeks', description: 'Comprehensive analysis and pilot program setup.' },
                     { phase: 'Phase 2', title: 'Pilot Deployment', duration: '12 weeks', description: 'Meta-Cognitive AI deployment in 5 facilities.' },
                     { phase: 'Phase 3', title: 'Scale Implementation', duration: '24 weeks', description: 'Full deployment across all 150+ facilities.' },
                     { phase: 'Phase 4', title: 'Optimization', duration: 'Ongoing', description: 'Continuous improvement and advanced features.' }
                   ].map((phase, index) => (
-                    <div key={index} className="text-center">
-                      <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold py-2 px-4 rounded-full mb-4 text-sm">
+                    <div key={index} className="text-left">
+                      <div className="text-left">
                         {phase.phase}
                       </div>
-                      <h4 className="text-xl font-bold text-white mb-2">{phase.title}</h4>
-                      <div className="text-green-400 font-semibold mb-2">{phase.duration}</div>
-                      <p className="text-gray-400 text-sm">{phase.description}</p>
+                      <h4 className="text-left">{phase.title}</h4>
+                      <div className="text-left">{phase.duration}</div>
+                      <p className="text-left">{phase.description}</p>
                     </div>
                   ))}
                 </div>
@@ -247,25 +247,25 @@ const Fortune500AI2026BreakthroughMegaSuccess = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-green-900/30 to-blue-900/30">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-5xl font-extrabold mb-6 text-white">
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Ready to Achieve Similar Results?
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            <p className="text-left">
               Join the Fortune 500 companies already achieving breakthrough results with our AI technologies. 
               Get your personalized transformation roadmap and start your journey to $2B+ savings.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/contact"
+                className="text-left"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/case-studies"
+                className="text-left"
               >
                 View More Case Studies
               </a>

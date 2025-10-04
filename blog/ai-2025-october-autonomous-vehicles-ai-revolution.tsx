@@ -14,31 +14,31 @@ export const metadata = {
 
 export default function AutonomousVehiclesAIGuide() {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto px-4 py-12">
+    <article className="text-left">
       <h1>Autonomous Vehicles AI Revolution 2025: Enterprise Fleet Management & Self-Driving Technology</h1>
       
-      <div className="text-sm text-gray-600 mb-8">
+      <div className="text-left">
         Published on {metadata.date} • {metadata.readTime} • By {metadata.author}
       </div>
 
-      <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg mb-8 border-l-4 border-green-500">
-        <h3 className="text-xl font-bold text-green-900 mb-3">🚗 Global Logistics Company Success Story</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div className="text-left">
+        <h3 className="text-left">🚗 Global Logistics Company Success Story</h3>
+        <div className="text-left">
           <div>
-            <div className="text-3xl font-bold text-green-700">$8.7B</div>
-            <div className="text-sm text-gray-700">Market Value</div>
+            <div className="text-left">$8.7B</div>
+            <div className="text-left">Market Value</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-blue-700">99.94%</div>
-            <div className="text-sm text-gray-700">Safety Accuracy</div>
+            <div className="text-left">99.94%</div>
+            <div className="text-left">Safety Accuracy</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-purple-700">87%</div>
-            <div className="text-sm text-gray-700">Cost Reduction</div>
+            <div className="text-left">87%</div>
+            <div className="text-left">Cost Reduction</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-orange-700">1,847%</div>
-            <div className="text-sm text-gray-700">ROI</div>
+            <div className="text-left">1,847%</div>
+            <div className="text-left">ROI</div>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function AutonomousVehiclesAIGuide() {
       <h2>Enterprise Use Cases Driving Adoption</h2>
 
       <h3>1. Long-Haul Trucking & Freight</h3>
-      <div className="bg-blue-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <p><strong>Success Story:</strong> Major logistics company deployed 2,500 autonomous trucks</p>
         <ul>
           <li>$2.3B in annual operational savings</li>
@@ -80,7 +80,7 @@ export default function AutonomousVehiclesAIGuide() {
       </div>
 
       <h3>2. Last-Mile Delivery</h3>
-      <div className="bg-green-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <p><strong>Success Story:</strong> E-commerce giant operates 8,000 autonomous delivery vehicles</p>
         <ul>
           <li>$847M annual cost savings</li>
@@ -92,7 +92,7 @@ export default function AutonomousVehiclesAIGuide() {
       </div>
 
       <h3>3. Corporate Campus & Airport Shuttles</h3>
-      <div className="bg-purple-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <p><strong>Success Story:</strong> Fortune 100 tech campus with 150 autonomous shuttles</p>
         <ul>
           <li>$47M in annual savings vs. traditional shuttle service</li>
@@ -104,7 +104,7 @@ export default function AutonomousVehiclesAIGuide() {
       </div>
 
       <h3>4. Mining & Industrial Operations</h3>
-      <div className="bg-orange-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <p><strong>Success Story:</strong> Global mining operation with 400 autonomous haul trucks</p>
         <ul>
           <li>$1.2B productivity improvement</li>
@@ -180,7 +180,7 @@ export default function AutonomousVehiclesAIGuide() {
 
       <h2>Safety & Regulatory Considerations</h2>
 
-      <div className="bg-red-50 p-6 rounded-lg my-6 border-l-4 border-red-500">
+      <div className="text-left">
         <h3>Critical Safety Requirements</h3>
         <ul>
           <li><strong>Redundant Systems:</strong> Multiple fail-safes for all critical functions</li>
@@ -193,7 +193,7 @@ export default function AutonomousVehiclesAIGuide() {
 
       <h2>Economic Impact & ROI Analysis</h2>
 
-      <div className="bg-green-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <h3>Cost Savings Breakdown:</h3>
         <ul>
           <li><strong>Labor Costs:</strong> 60-80% reduction in driver-related expenses</li>
@@ -229,7 +229,7 @@ export default function AutonomousVehiclesAIGuide() {
 
       <h2>Challenges & Mitigation Strategies</h2>
 
-      <div className="bg-yellow-50 p-6 rounded-lg my-6 border-l-4 border-yellow-500">
+      <div className="text-left">
         <h3>Common Implementation Challenges:</h3>
         <ul>
           <li><strong>Public Acceptance:</strong> Build trust through transparency and proven safety records</li>
@@ -248,12 +248,12 @@ export default function AutonomousVehiclesAIGuide() {
       <p><strong>Step 4:</strong> Build internal expertise and operational procedures</p>
       <p><strong>Step 5:</strong> Scale based on demonstrated results and ROI</p>
 
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg my-8 border-l-4 border-blue-500">
+      <div className="text-left">
         <h2>Ready to Transform Your Fleet with Autonomous Technology?</h2>
-        <p className="text-lg mb-4">
+        <p className="text-left">
           Join the enterprises achieving $8.7B in value creation with AI-powered autonomous vehicles.
         </p>
-        <p className="text-sm text-gray-600">
+        <p className="text-left">
           Contact Zion Tech Group for a customized autonomous vehicle strategy and implementation roadmap.
         </p>
       </div>

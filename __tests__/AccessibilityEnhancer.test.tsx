@@ -10,7 +10,7 @@
 
         tabIndex={0}
       >
-        <span>Button: Text</span>
+        <span>Button: Text<
       </AccessibilityEnhancer>
 
   'tabindex''0')})
@@ -20,7 +20,7 @@
     render('
       <AccessibilityEnhancer role='button' onClick={handleClick} tabIndex={0}>
 
-        <span>Clickable Element</span>
+        <span>Clickable Element<
       </AccessibilityEnhancer>
     );
 
@@ -40,13 +40,13 @@
         tabIndex={0}
 
 
-        <span>Focusable Element</span>
+        <span>Focusable Element<
       </AccessibilityEnhancer>
 
 
-,
+
   focus: ring-,2,
-,
+
 
     const element = screen.getByRole('button');
     expect(element).toHaveClass(
@@ -61,7 +61,7 @@
     render(
       <AccessibilityEnhancer role="button" tabIndex={-1}>
 
-        <span>Non-focusable Element</span>
+        <span>Non-focusable Element<
 
       </AccessibilityEnhancer>
 

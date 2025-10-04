@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ServerlessAIInferenceCostPlaybook2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12">
+    <main className="text-left">
       <h1>Serverless AI Inference Cost Playbook (2025)</h1>
       <p>
         Cut model serving costs by 40–70% without sacrificing latency or reliability. This playbook

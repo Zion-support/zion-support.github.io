@@ -7,7 +7,7 @@ interface LazyComponentProps {
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
 
-  fallback = <div className="flex items-center justify-center p-4">Loading...</div>,"
+  fallback = <div className="text-left">Loading...</div>,"
     <Suspense fallback={fallback}>
 
     

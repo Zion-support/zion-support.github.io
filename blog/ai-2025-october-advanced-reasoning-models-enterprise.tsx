@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🧠 Advanced Reasoning Models for Enterprise 2025: Chain-of-Thought at Scale</h1>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Advanced reasoning AI models</strong> achieving <span className="text-green-400 font-bold">97% accuracy on complex problems</span>, 
-          <span className="text-green-400 font-bold"> 89% reduction in decision time</span>, and <span className="text-green-400 font-bold">$47M proven ROI</span> across 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Advanced reasoning AI models</strong> achieving <span className="text-left">97% accuracy on complex problems<, 
+          <span className="text-left"> 89% reduction in decision time<, and <span className="text-left">$47M proven ROI< across 
           Fortune 500 enterprises. Transform decision-making with explainable, step-by-step reasoning that humans can trust and verify.
         </p>
       </div>
@@ -80,8 +80,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>97% accuracy</strong> on complex multi-step reasoning tasks</li>
           <li>✅ <strong>89% reduction in decision time</strong> with automated reasoning</li>
           <li>✅ <strong>$47M average ROI</strong> across Fortune 500 implementations</li>
@@ -103,7 +103,7 @@ export default function BlogPost() {
       </ol>
 
       <h3>Technology Stack</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Advanced Reasoning Model Architecture
 Model: GPT-4 + Reasoning Layer
 Framework: LangChain with Custom Chains
@@ -116,10 +116,10 @@ Monitoring: Prometheus + Grafana + Custom Metrics`}</code>
       <h2>🎓 Quick Start Guide</h2>
       
       <h3>Step 1: Define Reasoning Domain</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Configure reasoning domain and rules
 reasoning_config = {
-    "domain": "financial_risk_assessment",
+    "domain": "financial_risk_assessment
     "reasoning_depth": 5,  # Max chain length
     "confidence_threshold": 0.85,
     "explainability": "full"
@@ -127,21 +127,21 @@ reasoning_config = {
       </pre>
 
       <h3>Step 2: Load Knowledge Base</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Import enterprise knowledge
 knowledge_base.load([
-    "financial_statements.csv",
-    "market_data.json",
-    "historical_decisions.db",
+    "financial_statements.csv
+    "market_data.json
+    "historical_decisions.db
     "risk_assessment_rules.yaml"
 ])`}</code>
       </pre>
 
       <h3>Step 3: Execute Reasoning</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Perform reasoning with explanation
 result = reasoning_engine.analyze(
-    query="Assess credit risk for loan application #12847",
+    query="Assess credit risk for loan application #12847
     show_reasoning=True,
     output_format="detailed"
 )
@@ -159,9 +159,9 @@ result = reasoning_engine.analyze(
       </ul>
 
       <h2>💰 Business Value</h2>
-      <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-green-300 mt-0">Typical Enterprise Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Typical Enterprise Results</h3>
+        <ul className="text-left">
           <li>💰 <strong>$47M average ROI</strong> from improved decision-making</li>
           <li>⚡ <strong>89% faster decisions</strong> with automated reasoning</li>
           <li>🎯 <strong>97% accuracy rate</strong> on complex problems</li>
@@ -206,12 +206,12 @@ result = reasoning_engine.analyze(
         <li>24/7 support and continuous improvement</li>
       </ul>
 
-      <div className="bg-purple-600/20 border border-purple-500 rounded-lg p-6 my-8">
-        <p className="text-lg font-bold mb-2">🚀 Transform Your Decision-Making Today</p>
+      <div className="text-left">
+        <p className="text-left">🚀 Transform Your Decision-Making Today</p>
         <p>Contact our AI reasoning specialists to discuss your use case and see a custom demo.</p>
-        <p className="mt-4">
+        <p className="text-left">
           <strong>Email:</strong> reasoning-ai@ziontechgroup.com<br/>
-          <strong>Schedule:</strong> <a href="/contact" className="text-purple-400 hover:text-purple-300">Book a consultation</a>
+          <strong>Schedule:</strong> <a href="/contact" className="text-left">Book a consultation</a>
         </p>
       </div>
     </article>

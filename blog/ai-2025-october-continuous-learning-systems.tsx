@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🔄 Continuous Learning Systems 2025: AI That Never Stops Improving</h1>
       
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">♾️ Perpetual Intelligence Evolution</h3>
-        <p className="text-lg">
-          <strong>Self-improving AI systems</strong> achieving <span className="text-green-400 font-bold">99.8% uptime during learning</span>, 
-          <span className="text-green-400 font-bold"> 94% accuracy improvement over time</span>, and <span className="text-green-400 font-bold">zero-downtime model updates</span>. 
-          Deploy <span className="text-green-400 font-bold">adaptive AI that evolves with your business</span>.
+      <div className="text-left">
+        <h3 className="text-left">♾️ Perpetual Intelligence Evolution</h3>
+        <p className="text-left">
+          <strong>Self-improving AI systems</strong> achieving <span className="text-left">99.8% uptime during learning<, 
+          <span className="text-left"> 94% accuracy improvement over time<, and <span className="text-left">zero-downtime model updates<. 
+          Deploy <span className="text-left">adaptive AI that evolves with your business<.
         </p>
       </div>
 
@@ -46,21 +46,21 @@ export default function BlogPost() {
       </ul>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>99.8% uptime during continuous learning</strong> with zero service interruptions</li>
           <li>✅ <strong>94% accuracy improvement</strong> over static models within 6 months</li>
           <li>✅ <strong>10x faster adaptation</strong> to concept drift vs batch retraining</li>
         </ul>
       </div>
 
-      <div className="bg-cyan-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-cyan-300 mt-0">🚀 Deploy Self-Improving AI</h3>
-        <p className="mb-4">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Deploy Self-Improving AI</h3>
+        <p className="text-left">
           Zion Tech Group builds enterprise continuous learning systems that combine cutting-edge algorithms with 
           production-grade infrastructure.
         </p>
-        <p className="font-semibold text-cyan-300">
+        <p className="text-left">
           Contact us to transform your static models into continuously learning intelligence.
         </p>
       </div>

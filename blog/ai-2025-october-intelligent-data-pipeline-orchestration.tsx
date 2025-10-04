@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function IntelligentDataPipelineOrchestration2025() {
   return (
-    <main className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold mb-4">Intelligent Data Pipeline Orchestration 2025</h1>
-      <p className="text-gray-700 mb-6">Self-optimizing data pipelines that automatically scale, recover from failures, and adapt to changing data patterns — processing 10PB+ daily with 99.99% reliability.</p>
-      <section className="prose prose-invert max-w-none">
+    <main className="text-left">
+      <h1 className="text-left">Intelligent Data Pipeline Orchestration 2025</h1>
+      <p className="text-left">Self-optimizing data pipelines that automatically scale, recover from failures, and adapt to changing data patterns — processing 10PB+ daily with 99.99% reliability.</p>
+      <section className="text-left">
         <h2>Overview</h2>
         <p>
           Modern data engineering demands intelligent pipelines that can automatically adapt to scale, complexity, and failures.

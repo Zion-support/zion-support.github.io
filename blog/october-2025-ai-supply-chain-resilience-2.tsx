@@ -10,21 +10,21 @@ export const metadata = {
 
 export default function October2025AISupplyChainResilience() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">Featured · October 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <article className="text-left">
+      <header className="text-left">
+        <div className="text-left">
+          <p className="text-left">Featured · October 2025</p>
+          <h1 className="text-left">
             AI-Driven Supply Chain Resilience 2.0
           </h1>
-          <p className="mt-4 text-blue-50 text-lg">
+          <p className="text-left">
             Transform your supply chain with AI agents that predict disruptions, optimize inventory autonomously,
             and continuously score supplier risk—delivering 40% cost reduction and 99.5% fulfillment rates.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-blue">
+      <div className="text-left">
         <p>
           Supply chain disruptions cost enterprises billions annually. In 2025, leading organizations are deploying
           AI-powered resilience frameworks that don't just react—they predict, prevent, and autonomously adapt.
@@ -88,7 +88,7 @@ export default function October2025AISupplyChainResilience() {
           <li>25% improvement in supplier delivery performance</li>
         </ul>
 
-        <p className="text-sm text-gray-500">22 min read · Published October 2025</p>
+        <p className="text-left">22 min read · Published October 2025</p>
       </div>
     </article>
   );

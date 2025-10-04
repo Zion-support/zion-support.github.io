@@ -10,38 +10,36 @@ export const metadata = {
 
 export default function QuantumNeuralSuperintelligence2026() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-6xl mx-auto px-4 py-24">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-indigo-600/20 text-indigo-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Zap className="w-4 h-4" />
+    <div className="text-left">
+      {/* Hero Section */}</div>
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <Zap className="text-left" />
               Quantum Breakthrough
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-left">
               AI 2026: Quantum Neural
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"> Superintelligence</span>
+              <span className="text-left"> Superintelligence</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-left">
               Witness the convergence of quantum computing and neural networks in a revolutionary breakthrough that creates 
               the world's first quantum neural superintelligence—capable of solving problems beyond the reach of classical AI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left"></div>
               <Link 
                 href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="text-left">
                 View $25B Success Case Study
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="text-left" />
               </Link>
               <Link 
                 href="/services/quantum-ai-development"
-                className="inline-flex items-center gap-2 border border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500/10 transition-all duration-300"
-              >
+                className="text-left">
                 Implement Quantum AI
-                <Brain className="w-5 h-5" />
+                <Brain className="text-left" />
               </Link>
             </div>
           </div>
@@ -49,38 +47,38 @@ export default function QuantumNeuralSuperintelligence2026() {
       </div>
 
       {/* Key Features Section */}
-      <div className="py-20 bg-black/20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            The <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Quantum Revolution</span>
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+          <h2 className="text-left">
+            The <span className="text-left">Quantum Revolution</span>
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-2xl border border-indigo-500/30">
-              <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
-                <Cpu className="w-6 h-6 text-white" />
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <Cpu className="text-left" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Quantum Processing</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-left">Quantum Processing</h3>
+              <p className="text-left">
                 Leverages quantum entanglement and superposition to process information at speeds 
                 exponentially faster than classical computers, enabling real-time superintelligence.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <Brain className="text-left" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Neural Quantum States</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-left">Neural Quantum States</h3>
+              <p className="text-left">
                 Quantum neural networks that exist in superposition states, allowing for 
                 parallel processing of infinite possibilities and optimal solution discovery.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-pink-600/20 to-indigo-600/20 p-8 rounded-2xl border border-pink-500/30">
-              <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-white" />
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <Target className="text-left" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Superintelligent Reasoning</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-left">Superintelligent Reasoning</h3>
+              <p className="text-left">
                 Capable of solving complex multi-dimensional problems that would take classical AI 
                 centuries to process, delivering insights in milliseconds.
               </p>
@@ -90,113 +88,113 @@ export default function QuantumNeuralSuperintelligence2026() {
       </div>
 
       {/* Performance Metrics */}
-      <div className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Quantum Performance</span>
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+          <h2 className="text-left">
+            <span className="text-left">Quantum Performance</span>
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                10^15
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <div className="text-left">
+                10^15</div>
               </div>
-              <div className="text-xl text-gray-300 mb-2">Speed Improvement</div>
-              <div className="text-sm text-gray-400">Over classical AI systems</div>
+              <div className="text-left">Speed Improvement</div>
+              <div className="text-left">Over classical AI systems</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                99.9%
+            <div className="text-left"></div>
+              <div className="text-left">
+                99.9%</div>
               </div>
-              <div className="text-xl text-gray-300 mb-2">Problem Solving Accuracy</div>
-              <div className="text-sm text-gray-400">Across all complexity levels</div>
+              <div className="text-left">Problem Solving Accuracy</div>
+              <div className="text-left">Across all complexity levels</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent mb-2">
-                ∞
+            <div className="text-left"></div>
+              <div className="text-left">
+                ∞</div>
               </div>
-              <div className="text-xl text-gray-300 mb-2">Parallel Processing</div>
-              <div className="text-sm text-gray-400">Quantum superposition states</div>
+              <div className="text-left">Parallel Processing</div>
+              <div className="text-left">Quantum superposition states</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-                $25B
+            <div className="text-left"></div>
+              <div className="text-left">
+                $25B</div>
               </div>
-              <div className="text-xl text-gray-300 mb-2">ROI Generated</div>
-              <div className="text-sm text-gray-400">For enterprise clients</div>
+              <div className="text-left">ROI Generated</div>
+              <div className="text-left">For enterprise clients</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Technical Architecture */}
-      <div className="py-20 bg-black/20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            The <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Quantum Architecture</span>
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+          <h2 className="text-left">
+            The <span className="text-left">Quantum Architecture</span>
           </h2>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Revolutionary Quantum Neural Design</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+          <div className="text-left"></div>
+            <div></div>
+              <h3 className="text-left">Revolutionary Quantum Neural Design</h3>
+              <p className="text-left">
                 Our quantum neural superintelligence combines cutting-edge quantum computing principles with 
                 advanced neural network architectures to create systems that transcend classical computational limits.
               </p>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2"></div>
-                  <span className="text-gray-300">Quantum entanglement for instant information transfer</span>
+              <ul className="text-left">
+                <li className="text-left">
+                  <div className="text-left"></div>
+                  <span className="text-left">Quantum entanglement for instant information transfer</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
-                  <span className="text-gray-300">Superposition-based neural weight optimization</span>
+                <li className="text-left">
+                  <div className="text-left"></div>
+                  <span className="text-left">Superposition-based neural weight optimization</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full mt-2"></div>
-                  <span className="text-gray-300">Quantum tunneling for breakthrough solutions</span>
+                <li className="text-left">
+                  <div className="text-left"></div>
+                  <span className="text-left">Quantum tunneling for breakthrough solutions</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2"></div>
-                  <span className="text-gray-300">Quantum error correction for perfect reliability</span>
+                <li className="text-left">
+                  <div className="text-left"></div>
+                  <span className="text-left">Quantum error correction for perfect reliability</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-2xl border border-indigo-500/30">
-              <h4 className="text-xl font-bold text-white mb-4">Quantum Capabilities Matrix</h4>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Quantum Processing Power</span>
-                  <div className="flex items-center gap-2">
-                    <div className="w-24 h-2 bg-gray-700 rounded-full">
-                      <div className="w-full h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+            <div className="text-left"></div>
+              <h4 className="text-left">Quantum Capabilities Matrix</h4>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
+                  <span className="text-left">Quantum Processing Power</span>
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
+                      <div className="text-left"></div>
                     </div>
-                    <span className="text-indigo-400 font-semibold">∞</span>
+                    <span className="text-left">∞</span>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Neural Complexity</span>
-                  <div className="flex items-center gap-2">
-                    <div className="w-24 h-2 bg-gray-700 rounded-full">
-                      <div className="w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                <div className="text-left"></div>
+                  <span className="text-left">Neural Complexity</span>
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
+                      <div className="text-left"></div>
                     </div>
-                    <span className="text-purple-400 font-semibold">99%</span>
+                    <span className="text-left">99%</span>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Solution Discovery</span>
-                  <div className="flex items-center gap-2">
-                    <div className="w-24 h-2 bg-gray-700 rounded-full">
-                      <div className="w-full h-2 bg-gradient-to-r from-pink-500 to-indigo-500 rounded-full"></div>
+                <div className="text-left"></div>
+                  <span className="text-left">Solution Discovery</span>
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
+                      <div className="text-left"></div>
                     </div>
-                    <span className="text-pink-400 font-semibold">100%</span>
+                    <span className="text-left">100%</span>
                   </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Quantum Stability</span>
-                  <div className="flex items-center gap-2">
-                    <div className="w-24 h-2 bg-gray-700 rounded-full">
-                      <div className="w-full h-2 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+                <div className="text-left"></div>
+                  <span className="text-left">Quantum Stability</span>
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
+                      <div className="text-left"></div>
                     </div>
-                    <span className="text-indigo-400 font-semibold">99.9%</span>
+                    <span className="text-left">99.9%</span>
                   </div>
                 </div>
               </div>
@@ -206,50 +204,50 @@ export default function QuantumNeuralSuperintelligence2026() {
       </div>
 
       {/* Applications */}
-      <div className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Revolutionary Applications</span>
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+          <h2 className="text-left">
+            <span className="text-left">Revolutionary Applications</span>
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-6 rounded-2xl border border-indigo-500/30">
-              <h3 className="text-xl font-bold text-white mb-4">Drug Discovery</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <h3 className="text-left">Drug Discovery</h3>
+              <p className="text-left">
                 Accelerate pharmaceutical research by analyzing molecular interactions across infinite quantum states, 
                 discovering breakthrough treatments in days instead of decades.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-6 rounded-2xl border border-purple-500/30">
-              <h3 className="text-xl font-bold text-white mb-4">Financial Modeling</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+            <div className="text-left"></div>
+              <h3 className="text-left">Financial Modeling</h3>
+              <p className="text-left">
                 Model complex financial systems with quantum precision, predicting market movements and 
                 optimizing portfolios with unprecedented accuracy.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-pink-600/20 to-indigo-600/20 p-6 rounded-2xl border border-pink-500/30">
-              <h3 className="text-xl font-bold text-white mb-4">Climate Simulation</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+            <div className="text-left"></div>
+              <h3 className="text-left">Climate Simulation</h3>
+              <p className="text-left">
                 Simulate global climate systems with quantum-level precision, enabling accurate predictions 
                 and effective climate change mitigation strategies.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-indigo-600/20 to-cyan-600/20 p-6 rounded-2xl border border-indigo-500/30">
-              <h3 className="text-xl font-bold text-white mb-4">Space Exploration</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+            <div className="text-left"></div>
+              <h3 className="text-left">Space Exploration</h3>
+              <p className="text-left">
                 Optimize space mission trajectories and analyze cosmic phenomena with quantum computational power, 
                 advancing humanity's reach into the cosmos.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-cyan-600/20 to-purple-600/20 p-6 rounded-2xl border border-cyan-500/30">
-              <h3 className="text-xl font-bold text-white mb-4">AI Research</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+            <div className="text-left"></div>
+              <h3 className="text-left">AI Research</h3>
+              <p className="text-left">
                 Accelerate AI research by exploring infinite neural architectures simultaneously, 
                 discovering new AI paradigms and capabilities.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-6 rounded-2xl border border-purple-500/30">
-              <h3 className="text-xl font-bold text-white mb-4">Logistics Optimization</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+            <div className="text-left"></div>
+              <h3 className="text-left">Logistics Optimization</h3>
+              <p className="text-left">
                 Solve complex logistics problems across global supply chains with quantum optimization, 
                 reducing costs and improving efficiency exponentially.
               </p>
@@ -259,29 +257,27 @@ export default function QuantumNeuralSuperintelligence2026() {
       </div>
 
       {/* CTA Section */}
-      <div className="py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Experience <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Quantum Superintelligence</span>?
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+          <h2 className="text-left">
+            Ready to Experience <span className="text-left">Quantum Superintelligence<?"
           </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-left">
             Transform your organization with the power of quantum neural superintelligence. 
             Join the quantum revolution and unlock solutions to problems that were previously unsolvable.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-left"></div>
             <Link 
               href="/contact"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
+              className="text-left">
               Schedule Quantum Consultation
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="text-left" />
             </Link>
             <Link 
               href="/services/quantum-ai-development"
-              className="inline-flex items-center gap-2 border border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500/10 transition-all duration-300"
-            >
+              className="text-left">
               Explore Quantum Solutions
-              <TrendingUp className="w-5 h-5" />
+              <TrendingUp className="text-left" />
             </Link>
           </div>
         </div>
@@ -289,3 +285,11 @@ export default function QuantumNeuralSuperintelligence2026() {
     </div>
   );
 }
+</TrendingUp>
+</ArrowRight>
+</Target>
+</Brain>
+</Cpu>
+</Brain>
+</ArrowRight>
+</Zap>

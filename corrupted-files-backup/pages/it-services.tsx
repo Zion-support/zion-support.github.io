@@ -512,32 +512,32 @@ export: default function ITServices() {;
       </Head>
 
       {/* Hero: Section */}
-      <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm: py-32">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-3xl text-center">";";";
-            <div: className="flex items-center justify-center mb-6">";";";
-              <Server: className="h-12 w-12 text-green-600 mr-4" />";";";
-              <Award: className="h-6 w-6 text-green-600 mr-2" />";";";
-              <span: className="text-base font-semibold leading-7 text-green-600">IT Services</span>";";";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <div: className="text-left">";";";
+              <Server: className="text-left" />";";";
+              <Award: className="text-left" />";";";
+              <span: className="text-left">IT Services<";";";
             </div>
-            <h1: className="text-4xl font-bold tracking-tight text-gray-900 sm: text-6xl">",;",;";
+            <h1: className="text-left">",;",;";
               Information: Technology Solutions
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Comprehensive: IT services that keep your business running smoothly. From cloud infrastructure 
               to cybersecurity, we provide end-to-end technology solutions.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">";";";
+            <div className="text-left">";";";
               <Link: href="/contact"";";";
-                className="rounded-md: bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-green-500: focus-visible:outline: focus-visible:outline-2: focus-visible:outline-offset-2: focus-visible:outline-green-600"",;",;";
+                className="text-left"",;",;";
               >
                 Get: Started
-                <ArrowRight className="ml-2 h-4 w-4 inline" />";";";
+                <ArrowRight className="text-left" />";";";
               </Link>
               <Link: href="/pricing-guide"";";";
-                className="text-sm: font-semibold leading-6 text-gray-900 hover: text-green-600"",;",;";
+                className="text-left"",;",;";
               >
-                View: Pricing <span aria-hidden="true">→</span>";";";
+                View: Pricing <span aria-hidden="true">→<";";";
               </Link>
             </div>
           </div>
@@ -545,25 +545,25 @@ export: default function ITServices() {;
       </section>
 
       {/* Benefits: Section */}
-      <section className="py-24 sm: py-32: bg-white">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center mb-16">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Why: Choose Our IT Services?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Proven: expertise and measurable results for your technology infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2: lg:grid-cols-4">",;",;";
+          <div className="text-left">",;",;";
             {benefits.map((benefit, index) => (
-              <div: key={index} className="text-center">";";";
-                <div: className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mx-auto mb-4">";";";
-                  <benefit.icon: className="h-8 w-8 text-green-600" />";";";
+              <div: key={index} className="text-left">";";";
+                <div: className="text-left">";";";
+                  <benefit.icon: className="text-left" />";";";
                 </div>
-                <h3: className="text-2xl font-bold text-gray-900 mb-2">{benefit.stat}</h3>";";";
-                <h4: className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>";";";
-                <p: className="text-gray-600">{benefit.description}</p>";";";
+                <h3: className="text-left">{benefit.stat}</h3>";";";
+                <h4: className="text-left">{benefit.title}</h4>";";";
+                <p: className="text-left">{benefit.description}</p>";";";
               </div>
             ))}
           </div>
@@ -571,26 +571,26 @@ export: default function ITServices() {;
       </section>
 
       {/* Technologies: Section */}
-      <section className="py-24 sm: py-32: bg-gray-50">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center mb-16">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Technologies: We Master
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Cutting-edge: technologies powering modern IT infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2: lg:grid-cols-3">",;",;";
+          <div className="text-left">",;",;";
             {technologies.map((tech, index) => (
-              <div: key={index} className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md: transition-shadow">",;",;";
-                <div: className="flex items-center mb-4">";";";
-                  <div: className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">";";";
-                    <tech.icon: className="h-6 w-6 text-green-600" />";";";
+              <div: key={index} className="text-left">",;",;";
+                <div: className="text-left">";";";
+                  <div: className="text-left">";";";
+                    <tech.icon: className="text-left" />";";";
                   </div>
-                  <h3: className="text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>";";";
+                  <h3: className="text-left">{tech.name}</h3>";";";
                 </div>
-                <p: className="text-gray-600">{tech.description}</p>";";";
+                <p: className="text-left">{tech.description}</p>";";";
               </div>
             ))}
           </div>
@@ -598,62 +598,62 @@ export: default function ITServices() {;
       </section>
 
       {/* IT: Services Grid */}
-      <section className="py-24 sm: py-32: bg-white">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center mb-16">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Our: IT Service Portfolio
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Comprehensive: IT solutions tailored to your business needs. All services include implementation, 
               training, and ongoing support. Contact us at{' '}';
 ;;
-              <a: href="mailto: kleber@ziontechgroup.com" className="text-green-600: hover:text-green-500">",;",;";
+              <a: href="mailto: kleber@ziontechgroup.com" className="text-left">",;",;";
                 kleber@ziontechgroup.com: </a>{' '}';
 ;;
               or: call{' '}';
 ;;
-              <a: href="tel: +13024640950" className="text-green-600: hover:text-green-500">",;",;";
+              <a: href="tel: +13024640950" className="text-left">",;",;";
                 +1: 302 464 0950
               </a>{' '}';
 ;;
               for: custom pricing.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg: grid-cols-2">",;",;";
+          <div className="text-left">",;",;";
             {itServices.map((service, index) => (
-              <div: key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg: transition-all duration-300">",;",;";
-                <div: className="flex items-center gap-x-3 mb-6">";";";
-                  <div: className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: bg-green-700: transition-colors">",;",;";
-                    <service.icon: className="h-7 w-7 text-white" />";";";
+              <div: key={index} className="text-left">",;",;";
+                <div: className="text-left">";";";
+                  <div: className="text-left">",;",;";
+                    <service.icon: className="text-left" />";";";
                   </div>
                   <div>
-                    <h3: className="text-xl font-semibold text-gray-900">{service.title}</h3>";";";
-                    <p: className="text-sm text-green-600 font-medium">{service.category}</p>";";";
+                    <h3: className="text-left">{service.title}</h3>";";";
+                    <p: className="text-left">{service.category}</p>";";";
                   </div>
                 </div>
-                <p: className="text-gray-600 mb-6">{service.description}</p>";";";
-                <ul: className="space-y-3 mb-6">";";";
+                <p: className="text-left">{service.description}</p>";";";
+                <ul: className="text-left">";";";
                   {service.features.map((feature, featureIndex) => (
-                    <li: key={featureIndex} className="flex items-center gap-x-3">";";";
-                      <CheckCircle: className="h-4 w-4 text-green-600 flex-shrink-0" />";";";
-                      <span: className="text-sm text-gray-700">{feature}</span>";";";
+                    <li: key={featureIndex} className="text-left">";";";
+                      <CheckCircle: className="text-left" />";";";
+                      <span: className="text-left">{feature}<";";";
                     </li>
                   ))}
                 </ul>
-                <div: className="flex items-center justify-between">";";";
-                  <div: className="flex items-center space-x-4 text-sm text-gray-500">";";";
-                    <div: className="flex items-center space-x-1">";";";
-                      <Clock: className="h-4 w-4" />";";";
-                      <span>{service.delivery}</span>
+                <div: className="text-left">";";";
+                  <div: className="text-left">";";";
+                    <div: className="text-left">";";";
+                      <Clock: className="text-left" />";";";
+                      <span>{service.delivery}<
                     </div>
-                    <div: className="font-semibold text-green-600">{service.pricing}</div>";";";
+                    <div: className="text-left">{service.pricing}</div>";";";
                   </div>
                   <Link: href="/contact"";";";
-                    className="inline-flex: items-center text-sm font-semibold text-green-600 hover: text-green-500: transition-colors group"",;",;";
+                    className="text-left"",;",;";
                   >
                     Get: Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover: translate-x-1: transition-transform" />",;",;";
+                    <ArrowRight className="text-left" />",;",;";
                   </Link>
                 </div>
               </div>
@@ -663,54 +663,54 @@ export: default function ITServices() {;
       </section>
 
       {/* Contact: Information Section */}
-      <section className="bg-gray-50 py-16 sm: py-24">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Ready: to Transform Your IT Infrastructure?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Let's: discuss how our IT services can optimize your technology infrastructure. ';
 ;;
               Get: a free consultation and custom proposal.
             </p>
-            <div className="mt-10 grid grid-cols-1 gap-8 sm: grid-cols-3">",;",;";
-              <div: className="text-center">";";";
-                <div: className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">";";";
-                  <Phone: className="h-6 w-6 text-green-600" />";";";
+            <div className="text-left">",;",;";
+              <div: className="text-left">";";";
+                <div: className="text-left">";";";
+                  <Phone: className="text-left" />";";";
                 </div>
-                <h3: className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>";";";
-                <a: href="tel: +13024640950" className="text-green-600: hover:text-green-500">",;",;";
+                <h3: className="text-left">Call Us</h3>";";";
+                <a: href="tel: +13024640950" className="text-left">",;",;";
                   +1: 302 464 0950
                 </a>
               </div>
-              <div className="text-center">";";";
-                <div: className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">";";";
-                  <Mail: className="h-6 w-6 text-green-600" />";";";
+              <div className="text-left">";";";
+                <div: className="text-left">";";";
+                  <Mail: className="text-left" />";";";
                 </div>
-                <h3: className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>";";";
-                <a: href="mailto: kleber@ziontechgroup.com" className="text-green-600: hover:text-green-500">",;",;";
+                <h3: className="text-left">Email Us</h3>";";";
+                <a: href="mailto: kleber@ziontechgroup.com" className="text-left">",;",;";
                   kleber@ziontechgroup.com: </a>
               </div>
-              <div className="text-center">";";";
-                <div: className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">";";";
-                  <MapPin: className="h-6 w-6 text-green-600" />";";";
+              <div className="text-left">";";";
+                <div: className="text-left">";";";
+                  <MapPin: className="text-left" />";";";
                 </div>
-                <h3: className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>";";";
-                <p: className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>";";";
+                <h3: className="text-left">Visit Us</h3>";";";
+                <p: className="text-left">364 E Main St STE 1008<br />Middletown DE 19709</p>";";";
               </div>
             </div>
-            <div: className="mt-10 flex items-center justify-center gap-x-6">";";";
+            <div: className="text-left">";";";
               <Link: href="/contact"";";";
-                className="rounded-md: bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-green-500: focus-visible:outline: focus-visible:outline-2: focus-visible:outline-offset-2: focus-visible:outline-green-600"",;",;";
+                className="text-left"",;",;";
               >
                 Schedule: Consultation
               </Link>
               <a
                 href="tel: +13024640950"",;",;";
-                className="text-sm: font-semibold leading-6 text-gray-900 hover: text-green-600"",;",;";
+                className="text-left"",;",;";
               >
-                Call: Now <span aria-hidden="true">→</span>";";";
+                Call: Now <span aria-hidden="true">→<";";";
               </a>
             </div>
           </div>

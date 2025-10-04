@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function AdaptiveSecurityMeshArchitecture() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Adaptive Security Mesh: Revolutionizing Zero-Trust Architecture</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Adaptive Security Mesh: Revolutionizing Zero-Trust Architecture</h1>
+        <div className="text-left">
           <time dateTime="2025-10-01">October 1, 2025</time>
-          <span>•</span>
-          <span>12 min read</span>
+          <span>•<
+          <span>12 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Explore how adaptive security mesh architecture is transforming enterprise cybersecurity, 
           delivering 99.8% threat prevention rates and $2.7B in breach prevention value across Fortune 500 companies.
         </p>
@@ -246,13 +246,13 @@ export default function AdaptiveSecurityMeshArchitecture() {
           operational excellence that traditional security approaches simply cannot match.
         </p>
 
-        <div className="mt-12 p-6 bg-indigo-50 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Transform Your Security Posture</h3>
-          <p className="mb-4">
+        <div className="text-left">
+          <h3 className="text-left">Transform Your Security Posture</h3>
+          <p className="text-left">
             Schedule a consultation with our ASMA experts to learn how adaptive security 
             mesh can protect your enterprise while reducing costs.
           </p>
-          <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+          <button className="text-left">
             Book Security Assessment
           </button>
         </div>

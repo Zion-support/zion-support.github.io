@@ -1,77 +1,97 @@
-import React, { JSX, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header, Footer } from './app/components/Navigation';
-import ErrorBoundary from './src/components/ErrorBoundary';
-import { PageLoader } from './src/components/LoadingSpinner';
-import './app/globals.css';
-import ConsensusIntelligenceBreakthroughBanner from "./components/ConsensusIntelligenceBreakthroughBanner";
-import AutonomousEnterpriseBreakthroughBanner from "./components/AutonomousEnterpriseBreakthroughBanner";
-import June2026MegaBreakthroughBanner from "./components/June2026MegaBreakthroughBanner";
-import QuantumConsciousnessRevolutionBanner from "./components/QuantumConsciousnessRevolutionBanner";
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// Lazy load pages for better performance
-const LazyHomePage = React.lazy(() => import('./app/page'));
-const LazySolutionsPage = React.lazy(() => import('./app/solutions/page'));
-const LazyResourcesPage = React.lazy(() => import('./app/resources/page'));
-const LazyTeamPage = React.lazy(() => import('./app/team/page'));
-const LazyNewsPage = React.lazy(() => import('./app/news/page'));
-const LazyPressPage = React.lazy(() => import('./app/press/page'));
-const LazyCareersPage = React.lazy(() => import('./app/careers/page'));
-const LazyMarketplacePage = React.lazy(() => import('./app/marketplace/page'));
-const LazyServicesPage = React.lazy(() => import('./app/services/page'));
-const LazyAIInvoiceProcessingPage = React.lazy(() => import('./app/services/ai-invoice-processing-saas/page'));
-const LazyComprehensiveITServicesPage = React.lazy(() => import('./app/services/comprehensive-it-services/page'));
-const LazyContactPage = React.lazy(() => import('./app/contact/page'));
-const LazyAboutPage = React.lazy(() => import('./app/about/page'));
+// Simple Home component
+const Home = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <div className="text-center text-white max-w-4xl mx-auto p-8">
+      <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+        Zion Tech Group
+      </h1>
+      <p className="text-xl text-gray-300 mb-8">
+        Revolutionary AI Solutions for Enterprise
+      </p>
+      <p className="text-lg text-gray-400 mb-12">
+        Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations.
+        Experience 2000x processing speed and 99.9% automation rates.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors">
+          Get Started
+        </button>
+        <button className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg transition-colors">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+)
 
-export default function App(): JSX.Element {
+// Simple About component
+const About = () => (
+  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+    <div className="text-center max-w-4xl mx-auto p-8">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+      <p className="text-lg text-gray-600">
+        We are pioneers in AI and quantum computing solutions, delivering transformative technology 
+        that empowers enterprises to achieve unprecedented levels of automation and intelligence.
+      </p>
+    </div>
+  </div>
+)
+
+// Simple Contact component
+const Contact = () => (
+  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+    <div className="text-center max-w-4xl mx-auto p-8">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
+      <p className="text-lg text-gray-600 mb-4">
+        Ready to transform your business with AI?
+      </p>
+      <p className="text-gray-600">
+        Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a>
+      </p>
+      <p className="text-gray-600">
+        Phone: <a href="tel:+1-302-464-0950" className="text-blue-600 hover:underline">+1-302-464-0950</a>
+      </p>
+    </div>
+  </div>
+)
+
+// 404 component
+const NotFound = () => (
+  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+      <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
+      <p className="text-gray-600 mb-8">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <button
+        onClick={() => window.history.back()}
+        className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4">
+        Go Back
+      </button>
+      <button
+        onClick={() => window.location.href = '/'}
+        className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
+        Go Home
+      </button>
+    </div>
+  </div>
+)
+
+function App() {
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-slate-950">
-          <Header />
-          
-          {/* NEW: June 2026 Mega Breakthrough Banner - Most Prominent */}
-          <June2026MegaBreakthroughBanner />
-
-          {/* NEW: Quantum Consciousness Revolution Banner - Revolutionary Technology */}
-          <QuantumConsciousnessRevolutionBanner />
-
-          {/* Existing Banners and Sections */}
-          <ConsensusIntelligenceBreakthroughBanner />
-          <AutonomousEnterpriseBreakthroughBanner />
-          
-          <main className="min-h-screen">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<LazyHomePage />} />
-                <Route path="/solutions" element={<LazySolutionsPage />} />
-                <Route path="/resources" element={<LazyResourcesPage />} />
-                <Route path="/team" element={<LazyTeamPage />} />
-                <Route path="/news" element={<LazyNewsPage />} />
-                <Route path="/press" element={<LazyPressPage />} />
-                <Route path="/careers" element={<LazyCareersPage />} />
-                <Route path="/marketplace" element={<LazyMarketplacePage />} />
-                <Route path="/services" element={<LazyServicesPage />} />
-                <Route path="/services/ai-invoice-processing-saas" element={<LazyAIInvoiceProcessingPage />} />
-                <Route path="/services/comprehensive-it-services" element={<LazyComprehensiveITServicesPage />} />
-                <Route path="/services/comprehensive-micro-saas-solutions" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive Micro SaaS Solutions</h1></div>} />
-                <Route path="/services/ai-voice-assistant-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Voice Assistant Platform</h1></div>} />
-                <Route path="/services/ai-document-automation-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Document Automation Platform</h1></div>} />
-                <Route path="/services/ai-business-intelligence-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Business Intelligence Platform</h1></div>} />
-                <Route path="/comprehensive-micro-saas-services" element={<LazyServicesPage />} />
-                <Route path="/comprehensive-it-services" element={<LazyComprehensiveITServicesPage />} />
-                <Route path="/case-studies" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Case Studies</h1></div>} />
-                <Route path="/contact" element={<LazyContactPage />} />
-                <Route path="/about" element={<LazyAboutPage />} />
-                <Route path="*" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">404 - Page Not Found</h1></div>} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  )
 }
+
+export default App

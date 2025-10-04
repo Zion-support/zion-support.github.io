@@ -2,19 +2,19 @@ import React from 'react';
 
 const RealTimeEmbeddingOptimization2025 = () => {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto px-4 py-8">
+    <article className="text-left">
       <h1>Real-Time Embedding Optimization 2025: Sub-10ms Vector Search at Billion-Scale</h1>
       
-      <div className="text-gray-600 mb-6">
-        <p className="text-sm">
+      <div className="text-left">
+        <p className="text-left">
           By Zion Tech Group Team | October 1, 2025 | 10 min read
         </p>
       </div>
 
       <img 
-        src="/images/real-time-embedding-optimization-2025.jpg" 
-        alt="Real-Time Embedding Optimization" 
-        className="w-full rounded-lg shadow-lg mb-8"
+        src="/images/real-time-embedding-optimization-2025.jpg"
+        alt="Real-Time Embedding Optimization"
+        className="text-left"
       />
 
       <h2>Executive Summary</h2>
@@ -208,7 +208,7 @@ const RealTimeEmbeddingOptimization2025 = () => {
         <li>Monitor continuously and optimize based on usage patterns</li>
       </ul>
 
-      <p className="text-sm text-gray-600 mt-8">
+      <p className="text-left">
         Need help optimizing your vector search? Zion Tech Group specializes in building high-performance 
         RAG and semantic search systems. Contact us for a performance audit and optimization roadmap.
       </p>

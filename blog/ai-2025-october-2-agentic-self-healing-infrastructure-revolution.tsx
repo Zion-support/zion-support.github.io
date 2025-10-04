@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function AgenticSelfHealingInfrastructureRevolution() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Agentic Self-Healing Infrastructure: The Future of Zero-Touch Operations</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Agentic Self-Healing Infrastructure: The Future of Zero-Touch Operations</h1>
+        <div className="text-left">
           <time dateTime="2025-10-02">October 2, 2025</time>
-          <span>•</span>
-          <span>16 min read</span>
+          <span>•<
+          <span>16 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Explore how agentic AI systems are revolutionizing infrastructure management with autonomous 
           self-healing capabilities, achieving 99.999% uptime and delivering $5.4B in operational savings 
           through intelligent automation.
@@ -111,7 +111,7 @@ export default function AgenticSelfHealingInfrastructureRevolution() {
         <h2>Technical Architecture</h2>
         
         <h3>Agent Framework</h3>
-        <pre className="bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto">
+        <pre className="text-left">
 {`// Multi-Agent Self-Healing System
 class SelfHealingOrchestrator {
   private agents: {
@@ -258,14 +258,14 @@ class SelfHealingOrchestrator {
           will have a decisive operational advantage tomorrow.
         </p>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Ready to Transform Your Infrastructure?</h3>
+        <div className="text-left">
+          <h3 className="text-left">Ready to Transform Your Infrastructure?</h3>
           <p>
             Our team of experts can help you implement agentic self-healing infrastructure 
             tailored to your organization's needs. We've helped Fortune 500 companies achieve 
             99.999% uptime and billions in operational savings.
           </p>
-          <button className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          <button className="text-left">
             Schedule a Consultation
           </button>
         </div>

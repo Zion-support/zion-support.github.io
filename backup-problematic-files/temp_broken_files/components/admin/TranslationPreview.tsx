@@ -22,8 +22,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/Transla
         onChange={e => setText(e.target.value)}
       />
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
-      <div className="text-sm text-gray-500">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="text-left">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>
+      <div className="text-left">
         {targets.map((lng) => (
 
 

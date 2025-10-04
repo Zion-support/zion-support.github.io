@@ -2,19 +2,19 @@ import React from 'react';
 
 const MultiAgentOrchestrationPlatforms2025 = () => {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto px-4 py-8">
+    <article className="text-left">
       <h1>Multi-Agent Orchestration Platforms 2025: Coordinating 10,000+ Agents with 99.99% Reliability</h1>
       
-      <div className="text-gray-600 mb-6">
-        <p className="text-sm">
+      <div className="text-left">
+        <p className="text-left">
           By Zion Tech Group Team | October 1, 2025 | 11 min read
         </p>
       </div>
 
       <img 
-        src="/images/multiagent-orchestration-2025.jpg" 
-        alt="Multi-Agent Orchestration Platform" 
-        className="w-full rounded-lg shadow-lg mb-8"
+        src="/images/multiagent-orchestration-2025.jpg"
+        alt="Multi-Agent Orchestration Platform"
+        className="text-left"
       />
 
       <h2>Executive Summary</h2>
@@ -179,7 +179,7 @@ const MultiAgentOrchestrationPlatforms2025 = () => {
         <li>Measure and optimize for your specific use case</li>
       </ul>
 
-      <p className="text-sm text-gray-600 mt-8">
+      <p className="text-left">
         Ready to build a multi-agent system? Contact Zion Tech Group for expert guidance on 
         architecting, deploying, and scaling production-ready multi-agent platforms.
       </p>

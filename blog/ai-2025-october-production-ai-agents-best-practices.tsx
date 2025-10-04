@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function ProductionAIAgentsBestPractices() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Production AI Agents: Enterprise Best Practices & Deployment Strategies for 2025</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Production AI Agents: Enterprise Best Practices & Deployment Strategies for 2025</h1>
+        <div className="text-left">
           <time dateTime="2025-10-01">October 1, 2025</time>
-          <span>•</span>
-          <span>15 min read</span>
+          <span>•<
+          <span>15 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Deploying AI agents in production requires robust architecture, monitoring, and governance. 
           Learn how enterprise leaders achieve 99.9% uptime, 40% cost reduction, and 3x productivity gains 
           with production-grade AI agent systems.
@@ -233,13 +233,13 @@ export default function ProductionAIAgentsBestPractices() {
           <li>Design for model-agnostic flexibility to adapt to rapid AI evolution</li>
         </ul>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">Ready to Deploy Production AI Agents?</h3>
-          <p className="mb-4">
+        <div className="text-left">
+          <h3 className="text-left">Ready to Deploy Production AI Agents?</h3>
+          <p className="text-left">
             Zion Tech Group specializes in enterprise AI agent deployment with proven frameworks 
             that reduce time-to-production by 70% and ensure 99.9% uptime.
           </p>
-          <p className="font-semibold">
+          <p className="text-left">
             Contact us for a production readiness assessment and custom deployment strategy.
           </p>
         </div>

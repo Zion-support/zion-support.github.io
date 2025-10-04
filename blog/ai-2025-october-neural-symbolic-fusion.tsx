@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🧠 Neural-Symbolic Fusion 2025: Combining Deep Learning with Logical Reasoning</h1>
       
-      <div className="bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 border border-violet-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-violet-300 mt-0">🔬 The Best of Both Worlds</h3>
-        <p className="text-lg">
-          <strong>Neural-symbolic fusion architectures</strong> achieving <span className="text-green-400 font-bold">98% reasoning accuracy</span>, 
-          <span className="text-green-400 font-bold"> 10x improved interpretability</span>, and <span className="text-green-400 font-bold">human-like problem solving</span> by 
-          <span className="text-green-400 font-bold"> combining statistical learning with logical reasoning</span>. Build AI systems that are 
+      <div className="text-left">
+        <h3 className="text-left">🔬 The Best of Both Worlds</h3>
+        <p className="text-left">
+          <strong>Neural-symbolic fusion architectures</strong> achieving <span className="text-left">98% reasoning accuracy<, 
+          <span className="text-left"> 10x improved interpretability<, and <span className="text-left">human-like problem solving< by 
+          <span className="text-left"> combining statistical learning with logical reasoning<. Build AI systems that are 
           both powerful and explainable.
         </p>
       </div>
@@ -96,8 +96,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Benchmarks</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>98% reasoning accuracy</strong> on complex multi-step problems</li>
           <li>✅ <strong>10x improved interpretability</strong> compared to pure neural approaches</li>
           <li>✅ <strong>95% reduction in training data requirements</strong> through knowledge injection</li>
@@ -179,9 +179,9 @@ export default function BlogPost() {
 
       <h2>💼 Business Impact</h2>
       
-      <div className="bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 border border-indigo-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-indigo-300 mt-0">Enterprise Value</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Enterprise Value</h3>
+        <ul className="text-left">
           <li><strong>Regulatory compliance:</strong> Guarantee adherence to business rules and regulations</li>
           <li><strong>Reduced training costs:</strong> 95% less data needed through knowledge injection</li>
           <li><strong>Stakeholder trust:</strong> Explainable AI builds confidence in automated decisions</li>
@@ -234,14 +234,14 @@ export default function BlogPost() {
         will become the new standard. The future of AI is not neural OR symbolic—it's neural AND symbolic.
       </p>
 
-      <div className="bg-violet-600/20 border border-violet-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-violet-300 mt-0">🚀 Build Intelligent, Explainable AI</h3>
-        <p className="mb-4">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Build Intelligent, Explainable AI</h3>
+        <p className="text-left">
           Zion Tech Group specializes in neural-symbolic fusion architectures that deliver both performance and 
           interpretability. Our team combines expertise in deep learning, knowledge representation, and symbolic 
           reasoning to build next-generation AI systems.
         </p>
-        <p className="font-semibold text-violet-300">
+        <p className="text-left">
           Contact us to discuss your neural-symbolic AI initiatives and custom solution design.
         </p>
       </div>

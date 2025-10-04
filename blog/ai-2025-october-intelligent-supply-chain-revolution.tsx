@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🚚 Intelligent Supply Chain Revolution 2025: Autonomous Logistics at Scale</h1>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">🚀 Revolutionary Supply Chain Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Intelligent supply chain platform</strong> achieving <span className="text-green-400 font-bold">99.6% forecast accuracy</span>, 
-          <span className="text-green-400 font-bold"> 94% cost reduction</span>, and <span className="text-green-400 font-bold">$24.8M annual savings</span> through 
-          <span className="text-green-400 font-bold"> AI-powered autonomous logistics</span>. Transform global operations with intelligent 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Supply Chain Breakthrough</h3>
+        <p className="text-left">
+          <strong>Intelligent supply chain platform</strong> achieving <span className="text-left">99.6% forecast accuracy<, 
+          <span className="text-left"> 94% cost reduction<, and <span className="text-left">$24.8M annual savings< through 
+          <span className="text-left"> AI-powered autonomous logistics<. Transform global operations with intelligent 
           demand forecasting, autonomous inventory management, and predictive logistics that optimize supply chains in real-time.
         </p>
       </div>
@@ -81,8 +81,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>99.6% demand forecast accuracy</strong> with AI prediction</li>
           <li>✅ <strong>94% inventory cost reduction</strong> through optimization</li>
           <li>✅ <strong>$24.8M annual savings</strong> from operational efficiency</li>
@@ -115,7 +115,7 @@ export default function BlogPost() {
       <h2>🎓 Quick Start Guide</h2>
       
       <h3>Step 1: Deploy Supply Chain Platform</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Install intelligent supply chain platform
 helm install supply-chain ziontech/intelligent-scm \\
   --set ai.forecasting=enabled \\
@@ -126,7 +126,7 @@ scm-cli connect --erp sap --wms manhattan --tms oracle`}</code>
       </pre>
 
       <h3>Step 2: Configure Demand Forecasting</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Train AI forecasting models
 scm-cli forecast train \\
   --historical-data 24months \\
@@ -137,7 +137,7 @@ scm-cli forecast enable --update-frequency daily`}</code>
       </pre>
 
       <h3>Step 3: Activate Autonomous Inventory</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Configure inventory optimization
 scm-cli inventory optimize \\
   --strategy jit \\
@@ -183,7 +183,7 @@ scm-cli dashboard --metrics all`}</code>
       </ul>
 
       <h2>🚀 Success Story: Global Retailer</h2>
-      <div className="bg-blue-900/30 border border-blue-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> $50B retailer with chronic stockouts, excess inventory, and 200+ distribution centers</p>
         <p><strong>Solution:</strong> Deployed intelligent supply chain platform with AI forecasting and autonomous inventory</p>
         <p><strong>Results:</strong></p>
@@ -227,8 +227,8 @@ scm-cli dashboard --metrics all`}</code>
         <li><strong>24/7 support:</strong> Global support team for business continuity</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-green-300 mt-0">🚚 Ready to Transform Your Supply Chain?</h3>
+      <div className="text-left">
+        <h3 className="text-left">🚚 Ready to Transform Your Supply Chain?</h3>
         <p>
           Deploy intelligent supply chain automation and achieve unprecedented efficiency with AI-powered logistics. 
           Contact Zion Tech Group to start your supply chain transformation journey today.

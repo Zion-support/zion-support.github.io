@@ -11,8 +11,7 @@
     "build:fast": "vite build --mode development --minify false",
     "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "preview": "vite preview --host --open",
-    "lint": "eslint src/App.tsx src/main.tsx src/components/ --max-warnings 0",
-    "lint:fix": "eslint src/App.tsx src/main.tsx src/components/ --fix",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --ignore-pattern '__tests__/**' --ignore-pattern '_app_disabled/**' --ignore-pattern '_conflicted_disabled/**' --ignore-pattern '_pages_api_disabled/**' --ignore-pattern '_pages_disabled/**' --ignore-pattern 'admin-api-disabled/**' --ignore-pattern 'api-disabled/**' --ignore-pattern 'api.disabled/**' --ignore-pattern 'api.disabled.temp/**' --ignore-pattern 'api-backup/**' --ignore-pattern 'apps.backup/**' --ignore-pattern 'automation_backup/**' --ignore-pattern 'ai-optimization-backups/**' --ignore-pattern 'automation_logs/**' --ignore-pattern 'all-automations-reports/**' --ignore-pattern 'accessibility-reports/**' --fix",
     "type-check": "tsc --noEmit",
     "type-check:ci": "tsc --noEmit -p tsconfig.ci.json",
     "test": "jest",
@@ -109,6 +108,7 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.28.0",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@eslint/js": "^9.36.0",
@@ -142,7 +142,7 @@
     "netlify-plugin-cloudinary": "1.17.0",
     "postcss": "^8.5.0",
     "prettier": "^3.2.5",
-    "rollup-plugin-visualizer": "^6.0.3",
+    "rollup-plugin-visualizer": "^6.0.4",
     "tailwindcss": "^4.1.13",
     "terser": "^5.31.0",
     "ts-jest": "^29.4.4",

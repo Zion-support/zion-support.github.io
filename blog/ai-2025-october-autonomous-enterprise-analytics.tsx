@@ -25,7 +25,7 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
       >
         <section>
           <h2>🚀 The Autonomous Analytics Revolution: From Hindsight to Foresight</h2>
-          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400 my-4">
+          <p className="text-left">
             $5.2B in Data-Driven Value | 99.2% Prediction Accuracy | 10,000+ Daily AI Decisions | 5,740% ROI
           </p>
           <p>
@@ -41,7 +41,7 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
           <p>
             Despite investing $230 billion annually in analytics and business intelligence, enterprises capture only 18% of potential value due to fundamental limitations:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Slow Insight Generation:</strong> Traditional analytics takes 3-14 days from question to answer</li>
             <li><strong>Human Bottlenecks:</strong> Data scientists spend 80% of time on data preparation, not analysis</li>
             <li><strong>Limited Coverage:</strong> Only 12% of business questions get answered by analytics teams</li>
@@ -56,12 +56,12 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
 
         <section>
           <h2>🏗️ Autonomous Analytics Architecture</h2>
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <h3 className="text-xl font-bold mb-4">System Architecture:</h3>
-            <div className="space-y-4">
+          <div className="text-left">
+            <h3 className="text-left">System Architecture:</h3>
+            <div className="text-left">
               <div>
-                <h4 className="font-semibold text-blue-600 dark:text-blue-400">1. Data Intelligence Layer</h4>
-                <ul className="list-disc pl-6 mt-2">
+                <h4 className="text-left">1. Data Intelligence Layer</h4>
+                <ul className="text-left">
                   <li>Real-time data ingestion from 2,400+ enterprise data sources</li>
                   <li>Automated data quality monitoring and correction (99.97% accuracy)</li>
                   <li>Intelligent data cataloging with ML-powered metadata generation</li>
@@ -69,8 +69,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-indigo-600 dark:text-indigo-400">2. AI Insight Engine</h4>
-                <ul className="list-disc pl-6 mt-2">
+                <h4 className="text-left">2. AI Insight Engine</h4>
+                <ul className="text-left">
                   <li>Automated insight discovery using unsupervised learning</li>
                   <li>Causal inference to identify true drivers of business outcomes</li>
                   <li>Natural language generation for executive summaries</li>
@@ -78,8 +78,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-purple-600 dark:text-purple-400">3. Decision Intelligence Platform</h4>
-                <ul className="list-disc pl-6 mt-2">
+                <h4 className="text-left">3. Decision Intelligence Platform</h4>
+                <ul className="text-left">
                   <li>Predictive models for 5,000+ business KPIs (99.2% accuracy)</li>
                   <li>Prescriptive optimization recommending optimal actions</li>
                   <li>Reinforcement learning for sequential decision-making</li>
@@ -87,8 +87,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-teal-600 dark:text-teal-400">4. Continuous Learning System</h4>
-                <ul className="list-disc pl-6 mt-2">
+                <h4 className="text-left">4. Continuous Learning System</h4>
+                <ul className="text-left">
                   <li>AutoML for automatic model selection and hyperparameter tuning</li>
                   <li>Continuous model retraining on latest business data</li>
                   <li>Feedback loops measuring decision outcomes and adjusting strategies</li>
@@ -101,12 +101,12 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
 
         <section>
           <h2>📊 Global Retail Giant: $5.2B Success Story</h2>
-          <div className="bg-yellow-50 dark:bg-gray-800 border-l-4 border-yellow-500 p-6 my-6">
-            <h3 className="font-bold text-xl mb-3">Fortune 50 Retailer: 847B Daily Data Points Driving Autonomous Decisions</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="text-left">
+            <h3 className="text-left">Fortune 50 Retailer: 847B Daily Data Points Driving Autonomous Decisions</h3>
+            <div className="text-left">
               <div>
-                <h4 className="font-semibold mb-2">Challenge:</h4>
-                <ul className="list-disc pl-6 space-y-1 text-sm">
+                <h4 className="text-left">Challenge:</h4>
+                <ul className="text-left">
                   <li>$420B annual revenue with fragmented analytics across 127 countries</li>
                   <li>2,400+ data sources generating 847 billion daily data points</li>
                   <li>47,000+ daily business decisions made manually by managers</li>
@@ -116,8 +116,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">Results After 24 Months:</h4>
-                <ul className="list-disc pl-6 space-y-1 text-sm">
+                <h4 className="text-left">Results After 24 Months:</h4>
+                <ul className="text-left">
                   <li><strong>$5.2B in measurable value</strong> from data-driven optimization</li>
                   <li><strong>10,000+ autonomous decisions</strong> made daily by AI systems</li>
                   <li><strong>99.2% prediction accuracy</strong> across 5,000+ business KPIs</li>
@@ -135,40 +135,40 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
         <section>
           <h2>🎯 Autonomous Analytics Capabilities</h2>
           
-          <h3 className="text-xl font-semibold mt-6 mb-3">1. Real-Time Business Monitoring</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">1. Real-Time Business Monitoring</h3>
+          <ul className="text-left">
             <li><strong>5,000+ KPI Tracking:</strong> Monitor all critical business metrics in real-time</li>
             <li><strong>Intelligent Alerting:</strong> AI determines which anomalies require human attention</li>
             <li><strong>Predictive Forecasting:</strong> Forecast KPIs 30-90 days ahead with 99.2% accuracy</li>
             <li><strong>Root Cause Analysis:</strong> Automatically identify drivers of performance changes</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">2. Automated Insight Discovery</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">2. Automated Insight Discovery</h3>
+          <ul className="text-left">
             <li><strong>Pattern Recognition:</strong> Discover hidden patterns in 847B daily data points</li>
             <li><strong>Causal Analysis:</strong> Distinguish correlation from causation with 94% accuracy</li>
             <li><strong>Segment Intelligence:</strong> Automatically identify high-value customer/product segments</li>
             <li><strong>Natural Language Insights:</strong> Generate executive summaries in plain English</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">3. Dynamic Pricing & Promotion Optimization</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">3. Dynamic Pricing & Promotion Optimization</h3>
+          <ul className="text-left">
             <li><strong>Real-Time Pricing:</strong> Optimize prices for 2.4M SKUs every hour based on demand</li>
             <li><strong>Promotion Planning:</strong> AI generates optimal promotional calendar ($1.2B lift)</li>
             <li><strong>Markdown Optimization:</strong> Minimize losses while clearing inventory (47% improvement)</li>
             <li><strong>Competitive Intelligence:</strong> Monitor competitor pricing and respond dynamically</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">4. Intelligent Inventory Management</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">4. Intelligent Inventory Management</h3>
+          <ul className="text-left">
             <li><strong>Demand Forecasting:</strong> Predict demand for 2.4M SKUs with 97.4% accuracy</li>
             <li><strong>Stock Optimization:</strong> Optimize inventory across 15,000 locations ($1.7B savings)</li>
             <li><strong>Allocation Intelligence:</strong> Dynamically allocate products to maximize revenue</li>
             <li><strong>Waste Reduction:</strong> Cut perishable waste by 73% through predictive ordering</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-6 mb-3">5. Customer Intelligence & Personalization</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">5. Customer Intelligence & Personalization</h3>
+          <ul className="text-left">
             <li><strong>Next Best Action:</strong> Recommend optimal actions for 847M customers individually</li>
             <li><strong>Churn Prediction:</strong> Identify at-risk customers 90 days in advance (91% accuracy)</li>
             <li><strong>Lifetime Value Modeling:</strong> Predict customer value and optimize acquisition costs</li>
@@ -179,8 +179,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
         <section>
           <h2>🔧 Implementation Strategy</h2>
           
-          <h3 className="text-xl font-semibold mt-4 mb-3">Phase 1: Data Foundation (Months 0-6)</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">Phase 1: Data Foundation (Months 0-6)</h3>
+          <ul className="text-left">
             <li>Build modern data platform (lakehouse architecture) consolidating 2,400+ sources</li>
             <li>Implement real-time data pipelines with automated quality monitoring</li>
             <li>Deploy AI-powered data cataloging and governance</li>
@@ -189,8 +189,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
             <li><strong>Investment:</strong> $47M | <strong>Expected Payback:</strong> 11 months</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-4 mb-3">Phase 2: Intelligence Layer (Months 7-15)</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">Phase 2: Intelligence Layer (Months 7-15)</h3>
+          <ul className="text-left">
             <li>Deploy predictive models for 5,000+ business KPIs</li>
             <li>Implement automated insight discovery and anomaly detection</li>
             <li>Launch prescriptive optimization for pricing and inventory</li>
@@ -199,8 +199,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
             <li><strong>Investment:</strong> $94M | <strong>Cumulative Value:</strong> $2.8B</li>
           </ul>
 
-          <h3 className="text-xl font-semibold mt-4 mb-3">Phase 3: Autonomous Operations (Months 16-24)</h3>
-          <ul className="list-disc pl-6 space-y-2">
+          <h3 className="text-left">Phase 3: Autonomous Operations (Months 16-24)</h3>
+          <ul className="text-left">
             <li>Enable autonomous decision-making for 10,000+ daily decisions</li>
             <li>Implement closed-loop optimization with reinforcement learning</li>
             <li>Deploy meta-learning to accelerate improvement across business units</li>
@@ -212,11 +212,11 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
 
         <section>
           <h2>🛠️ Technology Stack</h2>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-6">
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h4 className="font-semibold mb-3">Data Platform</h4>
-                <ul className="space-y-1 text-sm">
+                <h4 className="text-left">Data Platform</h4>
+                <ul className="text-left">
                   <li>• Databricks Lakehouse for unified data architecture</li>
                   <li>• Apache Kafka for real-time event streaming</li>
                   <li>• Delta Lake for ACID transactions on data lake</li>
@@ -225,8 +225,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">AI/ML Platform</h4>
-                <ul className="space-y-1 text-sm">
+                <h4 className="text-left">AI/ML Platform</h4>
+                <ul className="text-left">
                   <li>• Databricks ML for model development</li>
                   <li>• MLflow for model lifecycle management</li>
                   <li>• H2O.ai for AutoML and model interpretation</li>
@@ -235,8 +235,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Analytics & BI</h4>
-                <ul className="space-y-1 text-sm">
+                <h4 className="text-left">Analytics & BI</h4>
+                <ul className="text-left">
                   <li>• ThoughtSpot for AI-powered analytics</li>
                   <li>• Looker for embedded analytics</li>
                   <li>• PowerBI for enterprise dashboards</li>
@@ -245,8 +245,8 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Orchestration & Governance</h4>
-                <ul className="space-y-1 text-sm">
+                <h4 className="text-left">Orchestration & Governance</h4>
+                <ul className="text-left">
                   <li>• Airflow for workflow orchestration</li>
                   <li>• Alation for data cataloging</li>
                   <li>• Collibra for data governance</li>
@@ -260,56 +260,56 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
 
         <section>
           <h2>📈 Measurable Business Impact</h2>
-          <div className="grid md:grid-cols-3 gap-4 my-6">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">$5.2B</div>
-              <div className="text-sm mt-2">Total business value created in 24 months</div>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">$5.2B</div>
+              <div className="text-left">Total business value created in 24 months</div>
             </div>
-            <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400">99.2%</div>
-              <div className="text-sm mt-2">Prediction accuracy across 5,000+ KPIs</div>
+            <div className="text-left">
+              <div className="text-left">99.2%</div>
+              <div className="text-left">Prediction accuracy across 5,000+ KPIs</div>
             </div>
-            <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">10,000+</div>
-              <div className="text-sm mt-2">Autonomous AI decisions made daily</div>
+            <div className="text-left">
+              <div className="text-left">10,000+</div>
+              <div className="text-left">Autonomous AI decisions made daily</div>
             </div>
-            <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">$2.4B</div>
-              <div className="text-sm mt-2">Revenue increase from dynamic pricing</div>
+            <div className="text-left">
+              <div className="text-left">$2.4B</div>
+              <div className="text-left">Revenue increase from dynamic pricing</div>
             </div>
-            <div className="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-teal-600 dark:text-teal-400">$1.7B</div>
-              <div className="text-sm mt-2">Cost savings from inventory optimization</div>
+            <div className="text-left">
+              <div className="text-left">$1.7B</div>
+              <div className="text-left">Cost savings from inventory optimization</div>
             </div>
-            <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
-              <div className="text-3xl font-bold text-red-600 dark:text-red-400">5,740%</div>
-              <div className="text-sm mt-2">Return on investment achieved</div>
+            <div className="text-left">
+              <div className="text-left">5,740%</div>
+              <div className="text-left">Return on investment achieved</div>
             </div>
           </div>
         </section>
 
         <section>
           <h2>🎓 Critical Success Factors</h2>
-          <div className="space-y-4 my-6">
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h4 className="font-semibold">Executive Sponsorship & Change Management</h4>
-              <p className="text-sm mt-1">CEO-level commitment required to overcome organizational resistance to AI-driven decisions</p>
+          <div className="text-left">
+            <div className="text-left">
+              <h4 className="text-left">Executive Sponsorship & Change Management</h4>
+              <p className="text-left">CEO-level commitment required to overcome organizational resistance to AI-driven decisions</p>
             </div>
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="font-semibold">Data Quality First</h4>
-              <p className="text-sm mt-1">99.97% data accuracy is prerequisite for autonomous analytics—invest heavily in data quality</p>
+            <div className="text-left">
+              <h4 className="text-left">Data Quality First</h4>
+              <p className="text-left">99.97% data accuracy is prerequisite for autonomous analytics—invest heavily in data quality</p>
             </div>
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h4 className="font-semibold">Start with High-Impact Use Cases</h4>
-              <p className="text-sm mt-1">Focus on pricing, inventory, and churn—areas with clear ROI and measurable outcomes</p>
+            <div className="text-left">
+              <h4 className="text-left">Start with High-Impact Use Cases</h4>
+              <p className="text-left">Focus on pricing, inventory, and churn—areas with clear ROI and measurable outcomes</p>
             </div>
-            <div className="border-l-4 border-orange-500 pl-4">
-              <h4 className="font-semibold">Build Trust Through Explainability</h4>
-              <p className="text-sm mt-1">Implement AI explainability tools so business users understand and trust AI recommendations</p>
+            <div className="text-left">
+              <h4 className="text-left">Build Trust Through Explainability</h4>
+              <p className="text-left">Implement AI explainability tools so business users understand and trust AI recommendations</p>
             </div>
-            <div className="border-l-4 border-teal-500 pl-4">
-              <h4 className="font-semibold">Continuous Learning Culture</h4>
-              <p className="text-sm mt-1">Establish feedback loops measuring decision outcomes and continuously improving models</p>
+            <div className="text-left">
+              <h4 className="text-left">Continuous Learning Culture</h4>
+              <p className="text-left">Establish feedback loops measuring decision outcomes and continuously improving models</p>
             </div>
           </div>
         </section>
@@ -317,7 +317,7 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
         <section>
           <h2>🔮 Future of Autonomous Analytics</h2>
           <p>The next generation of autonomous analytics will include:</p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Large Language Model Integration:</strong> Natural language interfaces for querying and decision-making</li>
             <li><strong>Multi-Agent Systems:</strong> Specialized AI agents collaborating to solve complex business problems</li>
             <li><strong>Quantum Analytics:</strong> Quantum computing enabling optimization at unprecedented scales</li>
@@ -332,7 +332,7 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
           <p>
             Ready to achieve $5.2B+ in data-driven value with autonomous analytics? Zion Tech Group can help you:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li>Assess analytics maturity and identify high-ROI autonomous analytics opportunities</li>
             <li>Design modern data architecture (lakehouse) consolidating all enterprise data</li>
             <li>Develop custom AI models for your specific business KPIs and decisions</li>
@@ -341,10 +341,10 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
             <li>Build closed-loop optimization systems for autonomous decision-making</li>
             <li>Establish AI governance and explainability frameworks</li>
           </ul>
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg my-6 text-center">
-            <h3 className="text-2xl font-bold mb-2">Begin Your Autonomous Analytics Journey</h3>
-            <p className="mb-4">Join Fortune 50 leaders making 10,000+ AI decisions daily with 99.2% accuracy</p>
-            <a href="/contact" className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+          <div className="text-left">
+            <h3 className="text-left">Begin Your Autonomous Analytics Journey</h3>
+            <p className="text-left">Join Fortune 50 leaders making 10,000+ AI decisions daily with 99.2% accuracy</p>
+            <a href="/contact" className="text-left">
               Schedule Consultation →
             </a>
           </div>
@@ -352,11 +352,11 @@ const AutonomousEnterpriseAnalyticsArticle = () => {
 
         <section>
           <h2>📚 Related Content</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li><a href="/blog/ai-2025-october-digital-twins-enterprise-operations" className="text-blue-600 hover:underline">AI-Powered Digital Twins for Enterprise Operations</a></li>
-            <li><a href="/blog/ai-2025-october-predictive-maintenance-at-scale" className="text-blue-600 hover:underline">Real-Time Predictive Maintenance at Scale</a></li>
-            <li><a href="/case-studies" className="text-blue-600 hover:underline">Autonomous Analytics Success Stories</a></li>
-            <li><a href="/services/data-analytics" className="text-blue-600 hover:underline">Enterprise Data & Analytics Services</a></li>
+          <ul className="text-left">
+            <li><a href="/blog/ai-2025-october-digital-twins-enterprise-operations" className="text-left">AI-Powered Digital Twins for Enterprise Operations</a></li>
+            <li><a href="/blog/ai-2025-october-predictive-maintenance-at-scale" className="text-left">Real-Time Predictive Maintenance at Scale</a></li>
+            <li><a href="/case-studies" className="text-left">Autonomous Analytics Success Stories</a></li>
+            <li><a href="/services/data-analytics" className="text-left">Enterprise Data & Analytics Services</a></li>
           </ul>
         </section>
       </BlogArticleLayout>

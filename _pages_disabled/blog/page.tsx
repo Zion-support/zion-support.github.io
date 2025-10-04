@@ -94,24 +94,24 @@ const categories = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="text-left">
+      <div className="text-left">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+        <div className="text-left">
+          <h1 className="text-left">
             AI & Technology
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="text-left">
               {' '}Insights
-            </span>
+            <
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-left">
             Stay ahead with the latest AI breakthroughs, implementation guides, and revolutionary technologies 
             that are transforming enterprise operations worldwide.
           </p>
         </div>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="text-left">
           {categories.map((category) => (
             <button
               key={category.name}
@@ -133,20 +133,20 @@ export default function BlogPage() {
         </div>
 
         {/* Featured Posts */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-left">
+          <h2 className="text-left">Featured Articles</h2>
+          <div className="text-left">
             {blogPosts.slice(0, 3).map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200 hover:border-indigo-200">
-                  <div className="flex items-center gap-3 mb-4">
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                       post.color === 'indigo' ? 'bg-indigo-100' :
                       post.color === 'purple' ? 'bg-purple-100' :
                       post.color === 'blue' ? 'bg-blue-100' :
                       'bg-green-100'
                     }`}>
-                      <span className="text-2xl">{post.image}</span>
+                      <span className="text-left">{post.image}<
                     </div>
                     <div>
                       <div className={`text-sm font-semibold ${
@@ -157,18 +157,18 @@ export default function BlogPage() {
                       }`}>
                         {post.category}
                       </div>
-                      <div className="text-sm text-gray-500">{post.readTime}</div>
+                      <div className="text-left">{post.readTime}</div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                  <h3 className="text-left">
                     {post.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-left">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">{post.publishedAt}</div>
-                    <div className="text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
+                  <div className="text-left">
+                    <div className="text-left">{post.publishedAt}</div>
+                    <div className="text-left">
                       Read Article →
                     </div>
                   </div>
@@ -180,12 +180,12 @@ export default function BlogPage() {
 
         {/* All Posts */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">All Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-left">All Articles</h2>
+          <div className="text-left">
             {blogPosts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200">
-                  <div className="flex items-center gap-2 mb-3">
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                       post.color === 'indigo' ? 'bg-indigo-100 text-indigo-800' :
                       post.color === 'purple' ? 'bg-purple-100 text-purple-800' :
@@ -193,18 +193,18 @@ export default function BlogPage() {
                       'bg-green-100 text-green-800'
                     }`}>
                       {post.category}
-                    </span>
-                    <span className="text-sm text-gray-500">{post.readTime}</span>
+                    <
+                    <span className="text-left">{post.readTime}<
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                  <h3 className="text-left">
                     {post.title}
                   </h3>
-                  <p className="text-gray-600 mb-3 text-sm line-clamp-2">
+                  <p className="text-left">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">{post.publishedAt}</div>
-                    <div className="text-indigo-600 font-semibold group-hover:text-indigo-700 transition-colors">
+                  <div className="text-left">
+                    <div className="text-left">{post.publishedAt}</div>
+                    <div className="text-left">
                       Read →
                     </div>
                   </div>
@@ -215,18 +215,18 @@ export default function BlogPage() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Stay Updated with AI Insights</h3>
-          <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
+        <div className="text-left">
+          <h3 className="text-left">Stay Updated with AI Insights</h3>
+          <p className="text-left">
             Get the latest AI breakthroughs, implementation guides, and industry insights delivered to your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <div className="text-left">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
+              className="text-left"
             />
-            <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="text-left">
               Subscribe
             </button>
           </div>

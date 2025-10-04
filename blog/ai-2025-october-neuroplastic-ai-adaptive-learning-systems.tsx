@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🧠 Neuroplastic AI Systems 2025: Self-Adapting Neural Networks Revolution</h1>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Neuroplastic AI systems</strong> achieving <span className="text-green-400 font-bold">99.2% continuous learning accuracy</span>, 
-          <span className="text-green-400 font-bold"> 840% faster adaptation</span>, and <span className="text-green-400 font-bold">$4.8B value creation</span>. 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Neuroplastic AI systems</strong> achieving <span className="text-left">99.2% continuous learning accuracy<, 
+          <span className="text-left"> 840% faster adaptation<, and <span className="text-left">$4.8B value creation<. 
           Transform AI capabilities with self-modifying neural networks inspired by human brain plasticity that continuously learn, 
           adapt, and evolve without catastrophic forgetting.
         </p>
@@ -80,9 +80,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-purple-400 mt-0">Proven Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Proven Results</h3>
+        <ul className="text-left">
           <li>✅ <strong>99.2%</strong> accuracy maintained across continuous learning</li>
           <li>✅ <strong>840%</strong> faster adaptation to new tasks vs. retraining</li>
           <li>✅ <strong>$4.8B</strong> value created through adaptive intelligence</li>
@@ -121,8 +121,8 @@ export default function BlogPost() {
 
       <h2>💰 ROI Analysis</h2>
       
-      <div className="bg-purple-900/30 border-l-4 border-purple-500 p-6 my-8">
-        <h3 className="text-xl font-bold text-purple-300 mt-0">Investment Returns</h3>
+      <div className="text-left">
+        <h3 className="text-left">Investment Returns</h3>
         <ul>
           <li><strong>Retraining savings:</strong> $2.4B from continuous adaptation vs. periodic retraining</li>
           <li><strong>Downtime elimination:</strong> $1.2B from zero-downtime learning</li>
@@ -198,13 +198,13 @@ export default function BlogPost() {
         <li><strong>Universal learners:</strong> Single AI system mastering all human knowledge domains</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🎯 Ready for Neuroplastic AI?</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Ready for Neuroplastic AI?</h3>
+        <p className="text-left">
           Join 2,940 enterprises achieving 99.2% continuous learning accuracy, 840% faster adaptation, and $4.8B value 
           creation with neuroplastic AI systems. Transform your AI from static models to living, learning intelligence.
         </p>
-        <p className="text-purple-300 font-semibold mb-0">
+        <p className="text-left">
           Contact Zion Tech Group today to deploy neuroplastic AI in your enterprise.
         </p>
       </div>

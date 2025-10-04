@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>⚛️ Quantum-Inspired Optimization 2025: Enterprise Problem Solving Revolution</h1>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Quantum-inspired optimization algorithms</strong> solving enterprise problems <span className="text-green-400 font-bold">1000x faster</span> with 
-          <span className="text-green-400 font-bold"> 99.8% optimality</span>, delivering <span className="text-green-400 font-bold">$42M annual value</span> through 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Quantum-inspired optimization algorithms</strong> solving enterprise problems <span className="text-left">1000x faster< with 
+          <span className="text-left"> 99.8% optimality<, delivering <span className="text-left">$42M annual value< through 
           breakthrough solutions for supply chain, logistics, portfolio optimization, and resource allocation challenges that were previously unsolvable.
         </p>
       </div>
@@ -80,8 +80,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>1000x faster</strong> than traditional optimization methods</li>
           <li>✅ <strong>99.8% solution optimality</strong> vs theoretical best</li>
           <li>✅ <strong>$42M annual value creation</strong> across use cases</li>
@@ -148,7 +148,7 @@ export default function BlogPost() {
       <h2>🌟 Success Stories</h2>
       
       <h3>Global Logistics Company - Route Optimization</h3>
-      <div className="bg-blue-900/30 border border-blue-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> Optimize 50,000+ daily deliveries across 200 cities with complex constraints</p>
         <p><strong>Solution:</strong> Quantum-inspired vehicle routing and scheduling</p>
         <p><strong>Results:</strong></p>
@@ -161,7 +161,7 @@ export default function BlogPost() {
       </div>
 
       <h3>Investment Bank - Portfolio Optimization</h3>
-      <div className="bg-purple-900/30 border border-purple-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> Optimize $50B portfolio with 10,000+ assets and complex risk constraints</p>
         <p><strong>Solution:</strong> Quantum-inspired portfolio allocation algorithms</p>
         <p><strong>Results:</strong></p>
@@ -174,7 +174,7 @@ export default function BlogPost() {
       </div>
 
       <h3>Manufacturing - Production Scheduling</h3>
-      <div className="bg-green-900/30 border border-green-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> Schedule 5000+ jobs across 200 machines with complex dependencies</p>
         <p><strong>Solution:</strong> Quantum-inspired job shop scheduling</p>
         <p><strong>Results:</strong></p>
@@ -205,12 +205,12 @@ export default function BlogPost() {
       </ul>
 
       <h2>💰 ROI Analysis</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-green-400 mt-0">Typical Enterprise ROI (Year 1)</h3>
-        <div className="grid grid-cols-2 gap-4 mt-4">
+      <div className="text-left">
+        <h3 className="text-left">Typical Enterprise ROI (Year 1)</h3>
+        <div className="text-left">
           <div>
-            <p className="font-bold text-red-400">Investment:</p>
-            <ul className="text-sm">
+            <p className="text-left">Investment:</p>
+            <ul className="text-left">
               <li>Implementation: $800K</li>
               <li>Infrastructure: $200K</li>
               <li>Training: $100K</li>
@@ -218,8 +218,8 @@ export default function BlogPost() {
             </ul>
           </div>
           <div>
-            <p className="font-bold text-green-400">Returns:</p>
-            <ul className="text-sm">
+            <p className="text-left">Returns:</p>
+            <ul className="text-left">
               <li>Cost savings: $18M</li>
               <li>Revenue increase: $12M</li>
               <li>Risk reduction: $8M</li>
@@ -227,24 +227,24 @@ export default function BlogPost() {
             </ul>
           </div>
         </div>
-        <p className="mt-4 text-lg font-bold text-green-400">ROI: 3,355% | Payback: 11 days</p>
+        <p className="text-left">ROI: 3,355% | Payback: 11 days</p>
       </div>
 
       <h2>🚀 Get Started with Quantum-Inspired Optimization</h2>
-      <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 border border-purple-500/30 rounded-lg p-8 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">Unlock Breakthrough Performance</h3>
-        <p className="text-lg mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Unlock Breakthrough Performance</h3>
+        <p className="text-left">
           Join Fortune 500 companies achieving $42M+ annual value through quantum-inspired optimization. 
           Start solving previously impossible problems today.
         </p>
-        <ul className="space-y-2 text-lg">
+        <ul className="text-left">
           <li>⚛️ <strong>Free assessment:</strong> Identify high-value optimization opportunities</li>
           <li>🧪 <strong>Proof of concept:</strong> 6-week pilot on your hardest problem</li>
           <li>🚀 <strong>Production deployment:</strong> Full-scale implementation</li>
           <li>📈 <strong>Continuous improvement:</strong> Ongoing optimization services</li>
         </ul>
-        <div className="mt-6">
-          <a href="/contact" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+        <div className="text-left">
+          <a href="/contact" className="text-left">
             Schedule Your Assessment →
           </a>
         </div>
@@ -258,12 +258,12 @@ export default function BlogPost() {
         <li><a href="/services/quantum-inspired-optimization">Quantum-Inspired Optimization Service</a></li>
       </ul>
 
-      <div className="bg-yellow-900/30 border border-yellow-500/30 rounded-lg p-6 my-8">
-        <p className="text-yellow-300 font-bold mb-2">⚡ Early Adopter Program</p>
+      <div className="text-left">
+        <p className="text-left">⚡ Early Adopter Program</p>
         <p>
           Join our <strong>Quantum Optimization Early Adopter Program</strong> and receive: 40% discount on implementation, 
           priority support, and exclusive access to new features for 12 months. 
-          <a href="/contact" className="text-yellow-400 hover:text-yellow-300 underline ml-2">Apply today →</a>
+          <a href="/contact" className="text-left">Apply today →</a>
         </p>
       </div>
     </article>

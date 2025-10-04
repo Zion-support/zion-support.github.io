@@ -52,38 +52,38 @@ const EnhancedAnalytics: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-300">Loading analytics...</p>
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left"></div>
+          <p className="text-left">Loading analytics...</p>
         </div>
       </div>
     )}
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <div className="max-w-7xl mx-auto">
+    <div className="text-left">
+      <div className="text-left">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="text-left"
         >
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-left">
             Enhanced Analytics Dashboard
           </h1>
-          <div className="flex items-center space-x-4">
+          <div className="text-left">
             <select
               value={selectedTimeRange}
               onChange={e => setSelectedTimeRange(e.target.value)}
-              className="bg-gray-800 border border-gray-600 rounded px-3 py-2"
+              className="text-left"
             >
               <option value="24h">Last 24 Hours</option>
               <option value="7d">Last 7 Days</option>
               <option value="30d">Last 30 Days</option>
               <option value="90d">Last 90 Days</option>
             </select>
-            <span className="text-gray-400">Data updated in real-time</span>
+            <span className="text-left">Data updated in real-time<
           </div>
         </motion.div>
 
@@ -92,67 +92,67 @@ const EnhancedAnalytics: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+          className="text-left"
         >
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="flex items-center justify-between">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h3 className="text-gray-400 text-sm mb-2">Page Views</h3>
-                <p className="text-3xl font-bold">
+                <h3 className="text-left">Page Views</h3>
+                <p className="text-left">
                   {analyticsData.pageViews.toLocaleString()}
                 </p>
-                <span className="text-green-400 text-sm">
+                <span className="text-left">
                   +12.5% from last period
-                </span>
+                <
               </div>
-              <Eye className="w-8 h-8 text-blue-400" />
+              <Eye className="text-left" />
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="flex items-center justify-between">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h3 className="text-gray-400 text-sm mb-2">Unique Visitors</h3>
-                <p className="text-3xl font-bold">
+                <h3 className="text-left">Unique Visitors</h3>
+                <p className="text-left">
                   {analyticsData.uniqueVisitors.toLocaleString()}
                 </p>
-                <span className="text-green-400 text-sm">
+                <span className="text-left">
                   +8.3% from last period
-                </span>
+                <
               </div>
-              <Users className="w-8 h-8 text-green-400" />
+              <Users className="text-left" />
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="flex items-center justify-between">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h3 className="text-gray-400 text-sm mb-2">Bounce Rate</h3>
-                <p className="text-3xl font-bold">
+                <h3 className="text-left">Bounce Rate</h3>
+                <p className="text-left">
                   {analyticsData.bounceRate}%
                 </p>
-                <span className="text-red-400 text-sm">
+                <span className="text-left">
                   +2.1% from last period
-                </span>
+                <
               </div>
-              <MousePointer className="w-8 h-8 text-red-400" />
+              <MousePointer className="text-left" />
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <div className="flex items-center justify-between">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h3 className="text-gray-400 text-sm mb-2">
+                <h3 className="text-left">
                   Avg Session Duration
                 </h3>
-                <p className="text-3xl font-bold">
+                <p className="text-left">
                   {analyticsData.avgSessionDuration}m
                 </p>
-                <span className="text-green-400 text-sm">
+                <span className="text-left">
                   +5.7% from last period
-                </span>
+                <
               </div>
-              <Clock className="w-8 h-8 text-yellow-400" />
+              <Clock className="text-left" />
             </div>
           </div>
         </motion.div>
@@ -162,47 +162,47 @@ const EnhancedAnalytics: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 mb-8"
+          className="text-left"
         >
-          <div className="flex items-center justify-between">
+          <div className="text-left">
             <div>
-              <h3 className="text-xl font-bold mb-2">Real-time Users</h3>
-              <p className="text-4xl font-bold">
+              <h3 className="text-left">Real-time Users</h3>
+              <p className="text-left">
                 {analyticsData.realTimeUsers}
               </p>
-              <span className="text-blue-100 text-sm">
+              <span className="text-left">
                 Currently active on your site
-              </span>
+              <
             </div>
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-              <Users className="w-8 h-8 text-white" />
+            <div className="text-left">
+              <Users className="text-left" />
             </div>
           </div>
         </motion.div>
 
         {/* Charts and Tables */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="text-left">
           {/* Top Pages */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-gray-800 rounded-lg p-6"
+            className="text-left"
           >
-            <h3 className="text-xl font-bold mb-4">Top Pages</h3>
-            <div className="space-y-3">
+            <h3 className="text-left">Top Pages</h3>
+            <div className="text-left">
               {analyticsData.topPages.map((page, index) => (
                 <div
                   key={page.page}
-                  className="flex justify-between items-center"
+                  className="text-left"
                 >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-gray-400 text-sm">#{index + 1}</span>
-                    <span className="font-medium">{page.page}</span>
+                  <div className="text-left">
+                    <span className="text-left">#{index + 1}<
+                    <span className="text-left">{page.page}<
                   </div>
-                  <span className="text-blue-400 font-semibold">
+                  <span className="text-left">
                     {page.views.toLocaleString()}
-                  </span>
+                  <
                 </div>
               ))}
             </div>
@@ -213,26 +213,26 @@ const EnhancedAnalytics: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-gray-800 rounded-lg p-6"
+            className="text-left"
           >
-            <h3 className="text-xl font-bold mb-4">Traffic Sources</h3>
-            <div className="space-y-3">
+            <h3 className="text-left">Traffic Sources</h3>
+            <div className="text-left">
               {analyticsData.trafficSources.map(source => (
                 <div
                   key={source.source}
-                  className="flex justify-between items-center"
+                  className="text-left"
                 >
-                  <span>{source.source}</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-20 bg-gray-700 rounded-full h-2">
+                  <span>{source.source}<
+                  <div className="text-left">
+                    <div className="text-left">
                       <div
-                        className="bg-blue-500 h-2 rounded-full"
+                        className="text-left"
                         style={{ width: `${source.percentage}%` }}
                       ></div>
                     </div>
-                    <span className="text-sm text-gray-400">
+                    <span className="text-left">
                       {source.percentage}%
-                    </span>
+                    <
                   </div>
                 </div>
               ))}

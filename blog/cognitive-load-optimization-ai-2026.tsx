@@ -15,58 +15,58 @@ const CognitiveLoadOptimizationAI2026 = () => {
         <link rel="canonical" href="https://ziontechgroup.com/blog/cognitive-load-optimization-ai-2026" />
       </Helmet>
 
-      <article className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
-        <div className="container mx-auto px-6 py-12 max-w-4xl">
+      <article className="text-left">
+        <div className="text-left">
           {/* Back Navigation */}
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 mb-8 group"
+            className="text-left"
           >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            <span>Back to Blog</span>
+            <ArrowLeft className="text-left" />
+            <span>Back to Blog<
           </Link>
 
           {/* Article Header */}
-          <header className="mb-12">
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+          <header className="text-left">
+            <div className="text-left">
+              <span className="text-left">
                 Human-Centered AI
-              </span>
-              <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium flex items-center gap-1">
-                <TrendingUp className="w-3 h-3" />
+              <
+              <span className="text-left">
+                <TrendingUp className="text-left" />
                 Trending
-              </span>
+              <
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-left">
               Cognitive Load Optimization AI 2026: Reducing Human Decision Fatigue
             </h1>
 
-            <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+            <p className="text-left">
               Design AI systems that minimize cognitive load for users. Learn attention budgets, progressive disclosure, and intelligent defaults that enhance productivity without overwhelming humans.
             </p>
 
-            <div className="flex flex-wrap items-center gap-6 text-gray-600">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>September 30, 2025</span>
+            <div className="text-left">
+              <div className="text-left">
+                <Calendar className="text-left" />
+                <span>September 30, 2025<
               </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>12 min read</span>
+              <div className="text-left">
+                <Clock className="text-left" />
+                <span>12 min read<
               </div>
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4" />
-                <span>Zion Tech Group Team</span>
+              <div className="text-left">
+                <BookOpen className="text-left" />
+                <span>Zion Tech Group Team<
               </div>
             </div>
           </header>
 
           {/* Article Content */}
-          <div className="prose prose-lg max-w-none">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-600 p-6 rounded-r-lg mb-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">🧠 Key Insights</h3>
-              <ul className="space-y-2 text-gray-700">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">🧠 Key Insights</h3>
+              <ul className="text-left">
                 <li>✅ Reduce user decision fatigue by 70% with intelligent defaults</li>
                 <li>✅ Design attention-aware interfaces that respect cognitive budgets</li>
                 <li>✅ Implement progressive disclosure that reveals complexity gradually</li>
@@ -91,22 +91,22 @@ const CognitiveLoadOptimizationAI2026 = () => {
             <h2>Understanding Cognitive Load</h2>
 
             <h3>Types of Cognitive Load</h3>
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
-              <ul className="space-y-4 text-gray-700">
+            <div className="text-left">
+              <ul className="text-left">
                 <li>
-                  <strong className="text-gray-900">Intrinsic Load:</strong> The inherent complexity of the task itself
+                  <strong className="text-left">Intrinsic Load:</strong> The inherent complexity of the task itself
                   <br />
-                  <em className="text-sm">Example: Understanding a complex data model</em>
+                  <em className="text-left">Example: Understanding a complex data model</em>
                 </li>
                 <li>
-                  <strong className="text-gray-900">Extraneous Load:</strong> Unnecessary complexity added by poor design
+                  <strong className="text-left">Extraneous Load:</strong> Unnecessary complexity added by poor design
                   <br />
-                  <em className="text-sm">Example: Confusing UI, unclear instructions, excessive options</em>
+                  <em className="text-left">Example: Confusing UI, unclear instructions, excessive options</em>
                 </li>
                 <li>
-                  <strong className="text-gray-900">Germane Load:</strong> Mental effort toward learning and skill development
+                  <strong className="text-left">Germane Load:</strong> Mental effort toward learning and skill development
                   <br />
-                  <em className="text-sm">Example: Building mental models, pattern recognition</em>
+                  <em className="text-left">Example: Building mental models, pattern recognition</em>
                 </li>
               </ul>
             </div>
@@ -122,9 +122,9 @@ const CognitiveLoadOptimizationAI2026 = () => {
               Treat human attention as a scarce resource with a daily budget.
             </p>
 
-            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg my-6">
-              <h4 className="font-bold text-gray-900 mb-3">Pattern: Proactive Information Filtering</h4>
-              <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <h4 className="text-left">Pattern: Proactive Information Filtering</h4>
+              <ul className="text-left">
                 <li>• AI learns what information matters to each user</li>
                 <li>• Surfaces only high-priority items requiring decisions</li>
                 <li>• Auto-handles routine tasks with user-approved rules</li>
@@ -148,9 +148,9 @@ const CognitiveLoadOptimizationAI2026 = () => {
               The best AI makes zero-configuration the norm, not the exception.
             </p>
 
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
-              <h4 className="font-bold text-gray-900 mb-3">Pattern: Adaptive Defaults</h4>
-              <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <h4 className="text-left">Pattern: Adaptive Defaults</h4>
+              <ul className="text-left">
                 <li>• Learn from user behavior to pre-select optimal settings</li>
                 <li>• Recommend configurations based on similar users</li>
                 <li>• Make "suggested" path the fastest (1 click vs. 5 clicks for custom)</li>
@@ -173,9 +173,9 @@ const CognitiveLoadOptimizationAI2026 = () => {
               Reveal complexity gradually as users need it, not all at once.
             </p>
 
-            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg my-6">
-              <h4 className="font-bold text-gray-900 mb-3">Pattern: Contextual Expansion</h4>
-              <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <h4 className="text-left">Pattern: Contextual Expansion</h4>
+              <ul className="text-left">
                 <li>• Start with simple, high-level view (3-5 key metrics)</li>
                 <li>• Offer "See more" or drill-down options for curious users</li>
                 <li>• Expose advanced features only after basic mastery</li>
@@ -215,9 +215,9 @@ const CognitiveLoadOptimizationAI2026 = () => {
               Empower AI to make routine decisions on behalf of users.
             </p>
 
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
-              <h4 className="font-bold mb-3">Example: Smart Calendar Assistant</h4>
-              <ul className="space-y-2">
+            <div className="text-left">
+              <h4 className="text-left">Example: Smart Calendar Assistant</h4>
+              <ul className="text-left">
                 <li>• User sets preferences once: "No meetings before 10am, prefer Tue/Thu for external meetings"</li>
                 <li>• AI auto-accepts/declines meeting invites based on rules</li>
                 <li>• Suggests optimal meeting times considering attendee time zones, workload, energy levels</li>
@@ -231,9 +231,9 @@ const CognitiveLoadOptimizationAI2026 = () => {
               Distill information to its essence before presenting to users.
             </p>
 
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
-              <h4 className="font-bold mb-3">Example: Document Intelligence</h4>
-              <ul className="space-y-2">
+            <div className="text-left">
+              <h4 className="text-left">Example: Document Intelligence</h4>
+              <ul className="text-left">
                 <li>• AI reads contracts, reports, proposals</li>
                 <li>• Extracts key points, risks, action items</li>
                 <li>• Presents 3-sentence summary with "Read full document" option</li>
@@ -247,9 +247,9 @@ const CognitiveLoadOptimizationAI2026 = () => {
               Reduce cognitive load by breaking complex tasks into simple steps.
             </p>
 
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
-              <h4 className="font-bold mb-3">Example: Onboarding New Employees</h4>
-              <ul className="space-y-2">
+            <div className="text-left">
+              <h4 className="text-left">Example: Onboarding New Employees</h4>
+              <ul className="text-left">
                 <li>• AI creates personalized onboarding plan based on role</li>
                 <li>• Breaks plan into daily tasks (3-5 per day, not 50 at once)</li>
                 <li>• Surfaces next task proactively when previous task completed</li>
@@ -270,9 +270,9 @@ const CognitiveLoadOptimizationAI2026 = () => {
               <li><strong>Task Completion:</strong> Drop-off rates in multi-step workflows</li>
             </ul>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 rounded-r-lg my-6">
-              <h4 className="font-bold text-gray-900 mb-2">⚠️ Warning Signs of High Cognitive Load</h4>
-              <ul className="space-y-1 text-gray-700">
+            <div className="text-left">
+              <h4 className="text-left">⚠️ Warning Signs of High Cognitive Load</h4>
+              <ul className="text-left">
                 <li>• Users abandoning tasks mid-flow</li>
                 <li>• High support ticket volume for "how do I..." questions</li>
                 <li>• Features with &lt;10% adoption after 3 months</li>
@@ -283,12 +283,12 @@ const CognitiveLoadOptimizationAI2026 = () => {
 
             <h2>Real-World Case Studies</h2>
 
-            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg my-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">SaaS Company: 75% Reduction in Support Tickets</h3>
-              <p className="text-gray-700 mb-3">
+            <div className="text-left">
+              <h3 className="text-left">SaaS Company: 75% Reduction in Support Tickets</h3>
+              <p className="text-left">
                 Implemented cognitive load optimization:
               </p>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="text-left">
                 <li>• Replaced 30-field configuration form with AI-powered smart defaults</li>
                 <li>• Added contextual help that appears based on user behavior, not static tooltips</li>
                 <li>• Built progressive onboarding: 3 core features first, advanced features revealed over time</li>
@@ -296,12 +296,12 @@ const CognitiveLoadOptimizationAI2026 = () => {
               </ul>
             </div>
 
-            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg my-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Healthcare System: 60% Faster Clinical Workflows</h3>
-              <p className="text-gray-700 mb-3">
+            <div className="text-left">
+              <h3 className="text-left">Healthcare System: 60% Faster Clinical Workflows</h3>
+              <p className="text-left">
                 Deployed AI assistant to reduce cognitive load for nurses:
               </p>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="text-left">
                 <li>• AI auto-fills 70% of EHR fields by analyzing previous notes</li>
                 <li>• Surfaces only abnormal patient vitals, not all 20 metrics</li>
                 <li>• Proactively suggests medication adjustments based on guidelines</li>
@@ -334,25 +334,25 @@ const CognitiveLoadOptimizationAI2026 = () => {
 
             <h2>Implementation Roadmap</h2>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 my-8">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">90-Day Plan</h3>
-              <ol className="space-y-3 text-gray-700">
+            <div className="text-left">
+              <h3 className="text-left">90-Day Plan</h3>
+              <ol className="text-left">
                 <li><strong>Month 1:</strong> Audit current cognitive load
-                  <ul className="ml-6 mt-2 space-y-1">
+                  <ul className="text-left">
                     <li>• Map all user decisions in key workflows</li>
                     <li>• Identify decisions that could be automated or eliminated</li>
                     <li>• Survey users on perceived mental effort</li>
                   </ul>
                 </li>
                 <li><strong>Month 2:</strong> Design and implement quick wins
-                  <ul className="ml-6 mt-2 space-y-1">
+                  <ul className="text-left">
                     <li>• Add smart defaults to top 5 high-friction workflows</li>
                     <li>• Implement proactive summarization for information-heavy screens</li>
                     <li>• Test progressive disclosure for complex features</li>
                   </ul>
                 </li>
                 <li><strong>Month 3:</strong> Measure and iterate
-                  <ul className="ml-6 mt-2 space-y-1">
+                  <ul className="text-left">
                     <li>• Track cognitive load metrics</li>
                     <li>• A/B test original vs. optimized flows</li>
                     <li>• Roll out winners, iterate on learnings</li>
@@ -372,22 +372,22 @@ const CognitiveLoadOptimizationAI2026 = () => {
               <li>Coordinate across tools to provide unified, low-friction experiences</li>
             </ul>
 
-            <div className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl p-8 my-12 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Design Human-Centered AI</h3>
-              <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+            <div className="text-left">
+              <h3 className="text-left">Design Human-Centered AI</h3>
+              <p className="text-left">
                 Our team specializes in building AI systems that empower users without overwhelming them. Let's design experiences that enhance human capability while respecting cognitive limits.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="text-left">
                 <Link
                   to="/contact"
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+                  className="text-left"
                 >
                   Schedule UX AI Consultation
-                  <ArrowLeft className="w-4 h-4 rotate-180" />
+                  <ArrowLeft className="text-left" />
                 </Link>
                 <Link
                   to="/blog"
-                  className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+                  className="text-left"
                 >
                   Read More Insights
                 </Link>
@@ -395,19 +395,19 @@ const CognitiveLoadOptimizationAI2026 = () => {
             </div>
 
             {/* Share Section */}
-            <div className="border-t border-gray-200 pt-8 mt-12">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-gray-600">
-                  <Tag className="w-5 h-5" />
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-gray-100 rounded-full text-sm">Cognitive Load</span>
-                    <span className="px-3 py-1 bg-gray-100 rounded-full text-sm">UX AI</span>
-                    <span className="px-3 py-1 bg-gray-100 rounded-full text-sm">Human-Centered Design</span>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  <Tag className="text-left" />
+                  <div className="text-left">
+                    <span className="text-left">Cognitive Load<
+                    <span className="text-left">UX AI<
+                    <span className="text-left">Human-Centered Design<
                   </div>
                 </div>
-                <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
-                  <Share2 className="w-5 h-5" />
-                  <span>Share</span>
+                <button className="text-left">
+                  <Share2 className="text-left" />
+                  <span>Share<
                 </button>
               </div>
             </div>

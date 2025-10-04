@@ -10,21 +10,21 @@ export const metadata = {
 
 export default function September302025AutonomousFinOpsScorecards() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">FinOps · September 30, 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <article className="text-left">
+      <header className="text-left">
+        <div className="text-left">
+          <p className="text-left">FinOps · September 30, 2025</p>
+          <h1 className="text-left">
             Autonomous FinOps Scorecards — Prevent Cost Regressions
           </h1>
-          <p className="mt-4 text-emerald-50 text-lg">
+          <p className="text-left">
             Tie budgets to business KPIs and enforce in real time using routers, caches, and policy guardrails
             so quality rises while spend falls.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-emerald">
+      <div className="text-left">
         <p>
           Traditional monthly cost reports are too slow for dynamic AI workloads. Scorecards linked to KPIs
           surface regressions instantly and trigger safe controls before bills spike.
@@ -63,7 +63,7 @@ export default function September302025AutonomousFinOpsScorecards() {
           <li>Rollback events and mean time to recovery (MTTR)</li>
         </ul>
 
-        <p className="text-sm text-gray-500">14 min read · Updated September 30, 2025</p>
+        <p className="text-left">14 min read · Updated September 30, 2025</p>
       </div>
     </article>
   );

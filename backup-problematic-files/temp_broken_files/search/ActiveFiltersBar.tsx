@@ -1,24 +1,24 @@
 
 >;
           {type}
-          <X className="h-3 w-3" />;
+          <X className="text-left" />;
         </ClickableBadge>;
       ))}
 
         >;
           {location}
-          <X className="h-3 w-3" />;
+          <X className="text-left" />;
         </ClickableBadge>;
       ))}
 
         >;
           {availability}
-          <X className="h-3 w-3" />;
+          <X className="text-left" />;
         </ClickableBadge>;
       ))}
 
           {selectedRating}+ Stars;
-          <X className="h-3 w-3" />;
+          <X className="text-left" />;
         </ClickableBadge>;
       )}
     </div>;
@@ -64,31 +64,29 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
 </string>`;
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
 </div>
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;"
+      <span className="text-left">Active filters:<;"
         <Badge ;
           key={filter.key} ;"
           variant="secondary" ;""
-          className="flex items-center gap-1 pl-2 pr-1";"
+          className="text-left";"
         >;
 "
-          <span className="text-xs">;"
-</span>
-          </span>;
+          <span className="text-left">;"
+<
+          <;
           <Button;"
             variant="ghost";""
             size="sm";""
-            className="h-4 w-4 p-0 hover:bg-transparent";"
+            className="text-left";"
             onClick={() => removeFilter(filter.key)}
-            <X className="h-3 w-3" />;"
-
+            <X className="text-left" />;"
         size="sm";"
         onClick={onClearAll}"
-        className="text-xs h-6 px-2";"
-
+        className="text-left";"
     </div>;
   activeFilters.map (filter => (<Badge key= {;
   filter.key ;
-}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;
+}variant="secondary" className="text-left" > > <X className="text-left" /> </Button> </Badge>) ) ;
 }<Button > Clear all </Button> </div>) 
 };
 

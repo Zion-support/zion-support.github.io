@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🏢 Autonomous Enterprise Orchestration Platform 2025: Self-Managing Business Operations</h1>
       
-      <div className="bg-gradient-to-r from-indigo-600/20 to-amber-600/20 border border-indigo-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-indigo-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Autonomous enterprise orchestration platforms</strong> achieving <span className="text-green-400 font-bold">97.8% operational automation</span>, 
-          <span className="text-green-400 font-bold"> 83% cost reduction</span>, and <span className="text-green-400 font-bold">$312M+ annual value creation</span> through 
-          <span className="text-green-400 font-bold"> self-managing business processes</span>. Transform your organization with AI-powered orchestration 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Autonomous enterprise orchestration platforms</strong> achieving <span className="text-left">97.8% operational automation<, 
+          <span className="text-left"> 83% cost reduction<, and <span className="text-left">$312M+ annual value creation< through 
+          <span className="text-left"> self-managing business processes<. Transform your organization with AI-powered orchestration 
           that coordinates thousands of systems, processes, and decisions autonomously.
         </p>
       </div>
@@ -88,8 +88,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>97.8% operational automation rate</strong> across business processes</li>
           <li>✅ <strong>83% operational cost reduction</strong> through autonomous orchestration</li>
           <li>✅ <strong>$312M+ annual value creation</strong> from efficiency and intelligence gains</li>
@@ -184,16 +184,16 @@ export default function BlogPost() {
 
       <h2>💡 Real-World Success Stories</h2>
       
-      <blockquote className="border-l-4 border-indigo-500 pl-4 italic">
+      <blockquote className="text-left">
         "The Autonomous Enterprise Orchestration Platform transformed our operations. We achieved 97.8% automation, 
         reduced costs by 83%, and created $312M in annual value. What used to require 500 people now runs autonomously."
-        <footer className="text-sm text-gray-400 mt-2">— COO, Fortune 500 Manufacturing Company</footer>
+        <footer className="text-left">— COO, Fortune 500 Manufacturing Company</footer>
       </blockquote>
 
-      <blockquote className="border-l-4 border-amber-500 pl-4 italic mt-6">
+      <blockquote className="text-left">
         "Our financial close went from 10 days to 2 days with 98% fewer errors. The platform's self-healing capabilities 
         resolved 92% of issues automatically, freeing our team to focus on strategic analysis rather than firefighting."
-        <footer className="text-sm text-gray-400 mt-2">— CFO, Global Financial Services Firm</footer>
+        <footer className="text-left">— CFO, Global Financial Services Firm</footer>
       </blockquote>
 
       <h2>🔐 Enterprise-Grade Security</h2>
@@ -206,9 +206,9 @@ export default function BlogPost() {
       </ul>
 
       <h2>📈 Measurable Business Impact</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <h3 className="text-lg font-semibold mb-4">First Year Results (Typical Enterprise)</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">First Year Results (Typical Enterprise)</h3>
+        <ul className="text-left">
           <li>💰 <strong>$312M total value created</strong> through efficiency and intelligence</li>
           <li>⚡ <strong>89% faster process execution</strong> with automated workflows</li>
           <li>🎯 <strong>83% operational cost reduction</strong> via autonomous operations</li>
@@ -225,8 +225,8 @@ export default function BlogPost() {
         modern enterprises, enabling unprecedented agility, efficiency, and intelligence at scale.
       </p>
 
-      <div className="bg-gradient-to-r from-indigo-600/10 to-amber-600/10 border border-indigo-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-indigo-300 mt-0">🚀 Ready to Transform Your Enterprise?</h3>
+      <div className="text-left">
+        <h3 className="text-left">🚀 Ready to Transform Your Enterprise?</h3>
         <p>
           Contact Zion Tech Group to deploy an Autonomous Enterprise Orchestration Platform achieving 97.8% automation, 
           83% cost reduction, and $312M+ value creation. Our enterprise AI experts will design and implement self-managing 

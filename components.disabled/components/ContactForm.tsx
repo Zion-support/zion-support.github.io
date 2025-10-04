@@ -104,13 +104,13 @@ const ContactForm: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-green-50 border border-green-200 rounded-xl p-8 text-center"
+        className="text-left"
       >
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-green-800 mb-2">
+        <CheckCircle className="text-left" />
+        <h3 className="text-left">
           Message Sent!
         </h3>
-        <p className="text-green-600">
+        <p className="text-left">
           Thank you for reaching out. We&apos;ll get back to you within 24
           hours.'
         </p>
@@ -118,40 +118,40 @@ const ContactForm: React.FC = () => {
     )}
 
   return (
-    <div className="bg-white rounded-xl shadow-xl p-8">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+    <div className="text-left">
+      <div className="text-left">
+        <h2 className="text-left">Get In Touch</h2>
+        <p className="text-left">
           Ready to transform your business? Let&apos;s discuss how our
           technology' solutions can drive your success.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">
+      <div className="text-left">
         <div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+          <h3 className="text-left">
             Contact Information
           </h3>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-blue-600" />
+          <div className="text-left">
+            <div className="text-left">
+              <Mail className="text-left" />
               <div>
-                <p className="font-medium text-gray-900">Email</p>
-                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                <p className="text-left">Email</p>
+                <p className="text-left">kleber@ziontechgroup.com</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-600" />
+            <div className="text-left">
+              <Phone className="text-left" />
               <div>
-                <p className="font-medium text-gray-900">Phone</p>
-                <p className="text-gray-600">+1 (302) 464-0950</p>
+                <p className="text-left">Phone</p>
+                <p className="text-left">+1 (302) 464-0950</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-blue-600" />
+            <div className="text-left">
+              <MapPin className="text-left" />
               <div>
-                <p className="font-medium text-gray-900">Address</p>
-                <p className="text-gray-600">
+                <p className="text-left">Address</p>
+                <p className="text-left">
                   364 E Main St STE 1008
                   <br />
                   Middletown, DE 19709
@@ -161,12 +161,12 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit} className="text-left">
+          <div className="text-left">
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="text-left"
               >
                 Full Name *
               </label>
@@ -182,14 +182,14 @@ const ContactForm: React.FC = () => {
                 placeholder="John Doe"
               />
               {errors.name && (
-                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                <p className="text-left">{errors.name}</p>
               )}
             </div>
 
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="text-left"
               >
                 Email Address *
               </label>
@@ -205,16 +205,16 @@ const ContactForm: React.FC = () => {
                 placeholder="john@compunknown.com"
               />
               {errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                <p className="text-left">{errors.email}</p>
               )}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
+          <div className="text-left">
             <div>
               <label
                 htmlFor="compunknown"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="text-left"
               >
                 Compunknown
               </label>
@@ -224,7 +224,7 @@ const ContactForm: React.FC = () => {
                 name="compunknown"
                 value={formData.compunknown}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="text-left"
                 placeholder="Your Compunknown"
               />
             </div>
@@ -232,7 +232,7 @@ const ContactForm: React.FC = () => {
             <div>
               <label
                 htmlFor="service"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="text-left"
               >
                 Service Interest
               </label>
@@ -241,7 +241,7 @@ const ContactForm: React.FC = () => {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="text-left"
               >
                 <option value="">Select a service</option>
                 {services.map(service => (
@@ -256,7 +256,7 @@ const ContactForm: React.FC = () => {
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="text-left"
             >
               Message *
             </label>
@@ -272,7 +272,7 @@ const ContactForm: React.FC = () => {
               placeholder="Tell us about your project and how we can help..."
             />
             {errors.message && (
-              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+              <p className="text-left">{errors.message}</p>
             )}
           </div>
 
@@ -287,13 +287,13 @@ const ContactForm: React.FC = () => {
           >
             {isSubmitting ? (
               <>
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                <span>Sending...</span>
+                <div className="text-left"></div>
+                <span>Sending...<
               </>
             ) : (
               <>
-                <Send className="w-5 h-5" />
-                <span>Send Message</span>
+                <Send className="text-left" />
+                <span>Send Message<
               </>
             )}
           </motion.button>

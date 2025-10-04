@@ -12,91 +12,91 @@ export const metadata = {
 
 export default function SovereignAIEnterpriseDeployment() {
   return (
-    <article className="max-w-4xl mx-auto px-6 py-12">
-      <header className="mb-12">
-        <div className="inline-block bg-gradient-to-r from-emerald-500/20 to-teal-500/20 px-4 py-2 rounded-full mb-4">
-          <span className="text-emerald-400 font-semibold">🛡️ OCTOBER 2025 BREAKTHROUGH</span>
+    <article className="text-left">
+      <header className="text-left">
+        <div className="text-left">
+          <span className="text-left">🛡️ OCTOBER 2025 BREAKTHROUGH<
         </div>
-        <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+        <h1 className="text-left">
           {metadata.title}
         </h1>
-        <p className="text-xl text-gray-300 mb-6">{metadata.description}</p>
-        <div className="flex items-center gap-6 text-sm text-gray-400">
-          <span>{metadata.publishedDate}</span>
-          <span>•</span>
-          <span>{metadata.readTime}</span>
-          <span>•</span>
-          <span>By {metadata.author}</span>
+        <p className="text-left">{metadata.description}</p>
+        <div className="text-left">
+          <span>{metadata.publishedDate}<
+          <span>•<
+          <span>{metadata.readTime}<
+          <span>•<
+          <span>By {metadata.author}<
         </div>
       </header>
 
-      <div className="prose prose-invert prose-lg max-w-none">
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-emerald-400">Executive Summary</h2>
-          <div className="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 rounded-xl p-8 mb-6">
-            <p className="text-lg leading-relaxed mb-4">
+      <div className="text-left">
+        <section className="text-left">
+          <h2 className="text-left">Executive Summary</h2>
+          <div className="text-left">
+            <p className="text-left">
               Sovereign AI represents the most significant shift in enterprise AI deployment since the 
-              cloud revolution. Organizations are achieving <strong className="text-emerald-400">complete data sovereignty</strong>, 
-              <strong className="text-teal-400"> 100% compliance</strong>, and 
-              <strong className="text-cyan-400"> unprecedented security</strong> while maintaining 
+              cloud revolution. Organizations are achieving <strong className="text-left">complete data sovereignty</strong>, 
+              <strong className="text-left"> 100% compliance</strong>, and 
+              <strong className="text-left"> unprecedented security</strong> while maintaining 
               full control over their AI infrastructure.
             </p>
-            <div className="grid md:grid-cols-3 gap-4 mt-6">
-              <div className="bg-emerald-500/10 rounded-lg p-4">
-                <div className="text-3xl font-bold text-emerald-400 mb-1">$180M</div>
-                <div className="text-sm text-emerald-300">Annual Value Created</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">$180M</div>
+                <div className="text-left">Annual Value Created</div>
               </div>
-              <div className="bg-teal-500/10 rounded-lg p-4">
-                <div className="text-3xl font-bold text-teal-400 mb-1">100%</div>
-                <div className="text-sm text-teal-300">Data Sovereignty</div>
+              <div className="text-left">
+                <div className="text-left">100%</div>
+                <div className="text-left">Data Sovereignty</div>
               </div>
-              <div className="bg-cyan-500/10 rounded-lg p-4">
-                <div className="text-3xl font-bold text-cyan-400 mb-1">Zero</div>
-                <div className="text-sm text-cyan-300">Compliance Violations</div>
+              <div className="text-left">
+                <div className="text-left">Zero</div>
+                <div className="text-left">Compliance Violations</div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-teal-400">What is Sovereign AI?</h2>
-          <p className="text-gray-300 leading-relaxed mb-6">
+        <section className="text-left">
+          <h2 className="text-left">What is Sovereign AI?</h2>
+          <p className="text-left">
             Sovereign AI enables organizations to deploy advanced AI systems entirely within their own 
             infrastructure boundaries, maintaining complete control over data, models, and operations. 
             This approach addresses critical concerns around data privacy, regulatory compliance, and 
             intellectual property protection.
           </p>
           
-          <h3 className="text-2xl font-bold mb-4 text-cyan-400">Core Principles</h3>
-          <ul className="space-y-3 mb-6">
-            <li className="flex items-start">
-              <span className="text-emerald-400 mr-3">✓</span>
-              <span><strong>Complete Data Control:</strong> All training data, model weights, and inference data remain within organizational boundaries</span>
+          <h3 className="text-left">Core Principles</h3>
+          <ul className="text-left">
+            <li className="text-left">
+              <span className="text-left">✓<
+              <span><strong>Complete Data Control:</strong> All training data, model weights, and inference data remain within organizational boundaries<
             </li>
-            <li className="flex items-start">
-              <span className="text-emerald-400 mr-3">✓</span>
-              <span><strong>Regulatory Compliance:</strong> Built-in compliance with GDPR, CCPA, HIPAA, and industry-specific regulations</span>
+            <li className="text-left">
+              <span className="text-left">✓<
+              <span><strong>Regulatory Compliance:</strong> Built-in compliance with GDPR, CCPA, HIPAA, and industry-specific regulations<
             </li>
-            <li className="flex items-start">
-              <span className="text-emerald-400 mr-3">✓</span>
-              <span><strong>Custom Model Control:</strong> Fine-tuned models that incorporate proprietary knowledge without external exposure</span>
+            <li className="text-left">
+              <span className="text-left">✓<
+              <span><strong>Custom Model Control:</strong> Fine-tuned models that incorporate proprietary knowledge without external exposure<
             </li>
-            <li className="flex items-start">
-              <span className="text-emerald-400 mr-3">✓</span>
-              <span><strong>Zero Trust Architecture:</strong> End-to-end encryption and isolated compute environments</span>
+            <li className="text-left">
+              <span className="text-left">✓<
+              <span><strong>Zero Trust Architecture:</strong> End-to-end encryption and isolated compute environments<
             </li>
           </ul>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-emerald-400">Enterprise Implementation Architecture</h2>
+        <section className="text-left">
+          <h2 className="text-left">Enterprise Implementation Architecture</h2>
           
-          <div className="bg-slate-800/50 rounded-xl p-8 mb-6 border border-emerald-500/20">
-            <h3 className="text-2xl font-bold mb-4 text-teal-400">Infrastructure Stack</h3>
-            <div className="space-y-4">
-              <div className="border-l-4 border-emerald-500 pl-4">
-                <h4 className="font-bold text-emerald-400 mb-2">1. Hardware Layer</h4>
-                <ul className="text-gray-300 space-y-1 text-sm">
+          <div className="text-left">
+            <h3 className="text-left">Infrastructure Stack</h3>
+            <div className="text-left">
+              <div className="text-left">
+                <h4 className="text-left">1. Hardware Layer</h4>
+                <ul className="text-left">
                   <li>• On-premises GPU clusters (NVIDIA H100/A100 or AMD MI300)</li>
                   <li>• Dedicated AI accelerators with secure enclaves</li>
                   <li>• Distributed storage with encryption at rest</li>
@@ -104,9 +104,9 @@ export default function SovereignAIEnterpriseDeployment() {
                 </ul>
               </div>
               
-              <div className="border-l-4 border-teal-500 pl-4">
-                <h4 className="font-bold text-teal-400 mb-2">2. Platform Layer</h4>
-                <ul className="text-gray-300 space-y-1 text-sm">
+              <div className="text-left">
+                <h4 className="text-left">2. Platform Layer</h4>
+                <ul className="text-left">
                   <li>• Kubernetes-based orchestration with Istio service mesh</li>
                   <li>• Private model registry with version control</li>
                   <li>• MLOps pipeline (MLflow, Kubeflow, or custom)</li>
@@ -114,9 +114,9 @@ export default function SovereignAIEnterpriseDeployment() {
                 </ul>
               </div>
               
-              <div className="border-l-4 border-cyan-500 pl-4">
-                <h4 className="font-bold text-cyan-400 mb-2">3. Security Layer</h4>
-                <ul className="text-gray-300 space-y-1 text-sm">
+              <div className="text-left">
+                <h4 className="text-left">3. Security Layer</h4>
+                <ul className="text-left">
                   <li>• Zero Trust Network Access (ZTNA) with BeyondCorp principles</li>
                   <li>• Hardware Security Modules (HSM) for key management</li>
                   <li>• Runtime application self-protection (RASP)</li>
@@ -127,107 +127,107 @@ export default function SovereignAIEnterpriseDeployment() {
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-teal-400">Deployment Strategies</h2>
+        <section className="text-left">
+          <h2 className="text-left">Deployment Strategies</h2>
           
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl p-6 border border-emerald-500/20">
-              <h3 className="text-xl font-bold mb-4 text-emerald-400">🏢 Full On-Premises</h3>
-              <p className="text-gray-300 mb-4">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">🏢 Full On-Premises</h3>
+              <p className="text-left">
                 Complete control with all infrastructure in private data centers. 
                 Ideal for highly regulated industries and government agencies.
               </p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Control:</span>
-                  <span className="text-emerald-400 font-bold">Maximum</span>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">Control:<
+                  <span className="text-left">Maximum<
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Cost:</span>
-                  <span className="text-yellow-400 font-bold">High Initial</span>
+                <div className="text-left">
+                  <span className="text-left">Cost:<
+                  <span className="text-left">High Initial<
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Time to Deploy:</span>
-                  <span className="text-orange-400 font-bold">6-12 months</span>
+                <div className="text-left">
+                  <span className="text-left">Time to Deploy:<
+                  <span className="text-left">6-12 months<
                 </div>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-teal-500/10 to-cyan-500/10 rounded-xl p-6 border border-teal-500/20">
-              <h3 className="text-xl font-bold mb-4 text-teal-400">☁️ Hybrid Sovereign Cloud</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="text-left">
+              <h3 className="text-left">☁️ Hybrid Sovereign Cloud</h3>
+              <p className="text-left">
                 Leverage sovereign cloud providers (AWS Outposts, Azure Stack, Google Anthos) 
                 with dedicated tenancy and regional data residency.
               </p>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Control:</span>
-                  <span className="text-teal-400 font-bold">High</span>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">Control:<
+                  <span className="text-left">High<
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Cost:</span>
-                  <span className="text-yellow-400 font-bold">Moderate</span>
+                <div className="text-left">
+                  <span className="text-left">Cost:<
+                  <span className="text-left">Moderate<
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Time to Deploy:</span>
-                  <span className="text-green-400 font-bold">2-4 months</span>
+                <div className="text-left">
+                  <span className="text-left">Time to Deploy:<
+                  <span className="text-left">2-4 months<
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-cyan-400">Model Governance Framework</h2>
+        <section className="text-left">
+          <h2 className="text-left">Model Governance Framework</h2>
           
-          <div className="bg-slate-800/50 rounded-xl p-8 border border-cyan-500/20 mb-6">
-            <h3 className="text-xl font-bold mb-4 text-emerald-400">End-to-End Model Lifecycle</h3>
-            <ol className="space-y-4">
-              <li className="flex">
-                <span className="flex-shrink-0 w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 font-bold mr-4">1</span>
+          <div className="text-left">
+            <h3 className="text-left">End-to-End Model Lifecycle</h3>
+            <ol className="text-left">
+              <li className="text-left">
+                <span className="text-left">1<
                 <div>
-                  <h4 className="font-bold text-white mb-1">Data Preparation & Privacy</h4>
-                  <p className="text-gray-400 text-sm">Implement differential privacy, data masking, and synthetic data generation for sensitive information</p>
+                  <h4 className="text-left">Data Preparation & Privacy</h4>
+                  <p className="text-left">Implement differential privacy, data masking, and synthetic data generation for sensitive information</p>
                 </div>
               </li>
-              <li className="flex">
-                <span className="flex-shrink-0 w-8 h-8 bg-teal-500/20 rounded-full flex items-center justify-center text-teal-400 font-bold mr-4">2</span>
+              <li className="text-left">
+                <span className="text-left">2<
                 <div>
-                  <h4 className="font-bold text-white mb-1">Model Training & Fine-Tuning</h4>
-                  <p className="text-gray-400 text-sm">Use federated learning, secure multi-party computation, or isolated training environments</p>
+                  <h4 className="text-left">Model Training & Fine-Tuning</h4>
+                  <p className="text-left">Use federated learning, secure multi-party computation, or isolated training environments</p>
                 </div>
               </li>
-              <li className="flex">
-                <span className="flex-shrink-0 w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center text-cyan-400 font-bold mr-4">3</span>
+              <li className="text-left">
+                <span className="text-left">3<
                 <div>
-                  <h4 className="font-bold text-white mb-1">Validation & Testing</h4>
-                  <p className="text-gray-400 text-sm">Automated bias detection, adversarial testing, and explainability analysis before deployment</p>
+                  <h4 className="text-left">Validation & Testing</h4>
+                  <p className="text-left">Automated bias detection, adversarial testing, and explainability analysis before deployment</p>
                 </div>
               </li>
-              <li className="flex">
-                <span className="flex-shrink-0 w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 font-bold mr-4">4</span>
+              <li className="text-left">
+                <span className="text-left">4<
                 <div>
-                  <h4 className="font-bold text-white mb-1">Deployment & Monitoring</h4>
-                  <p className="text-gray-400 text-sm">Continuous monitoring for drift, performance degradation, and compliance violations</p>
+                  <h4 className="text-left">Deployment & Monitoring</h4>
+                  <p className="text-left">Continuous monitoring for drift, performance degradation, and compliance violations</p>
                 </div>
               </li>
             </ol>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-emerald-400">Real-World Success: Global Financial Services</h2>
-          <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-white">$180M Annual Value Creation</h3>
-            <p className="text-gray-300 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">Real-World Success: Global Financial Services</h2>
+          <div className="text-left">
+            <h3 className="text-left">$180M Annual Value Creation</h3>
+            <p className="text-left">
               A Fortune 100 financial services company deployed sovereign AI infrastructure across 
               45 countries, achieving complete regulatory compliance while unlocking unprecedented AI capabilities.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="text-left">
               <div>
-                <h4 className="font-bold text-teal-400 mb-3">Business Impact</h4>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <h4 className="text-left">Business Impact</h4>
+                <ul className="text-left">
                   <li>• 94% fraud detection accuracy (up from 73%)</li>
                   <li>• $120M in fraud prevention annually</li>
                   <li>• 67% reduction in compliance costs</li>
@@ -236,8 +236,8 @@ export default function SovereignAIEnterpriseDeployment() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-cyan-400 mb-3">Technical Achievements</h4>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <h4 className="text-left">Technical Achievements</h4>
+                <ul className="text-left">
                   <li>• 15 sovereign AI regions deployed</li>
                   <li>• 800+ models in production</li>
                   <li>• 99.99% uptime SLA achieved</li>
@@ -247,23 +247,23 @@ export default function SovereignAIEnterpriseDeployment() {
               </div>
             </div>
             
-            <div className="bg-emerald-500/10 rounded-lg p-4 border-l-4 border-emerald-500">
-              <p className="text-sm text-emerald-300 italic">
+            <div className="text-left">
+              <p className="text-left">
                 "Sovereign AI transformed our ability to leverage advanced AI while maintaining 
-                complete control over our data and ensuring regulatory compliance across all markets." 
+                complete control over our data and ensuring regulatory compliance across all markets."
                 - Chief AI Officer
               </p>
             </div>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-teal-400">Implementation Roadmap</h2>
+        <section className="text-left">
+          <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="space-y-6">
-            <div className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-emerald-500">
-              <h3 className="text-xl font-bold mb-3 text-emerald-400">Phase 1: Foundation (Months 1-3)</h3>
-              <ul className="space-y-2 text-gray-300">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
+              <ul className="text-left">
                 <li>✓ Assess regulatory requirements and data residency needs</li>
                 <li>✓ Design sovereign infrastructure architecture</li>
                 <li>✓ Procure hardware and establish secure facilities</li>
@@ -272,9 +272,9 @@ export default function SovereignAIEnterpriseDeployment() {
               </ul>
             </div>
             
-            <div className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-teal-500">
-              <h3 className="text-xl font-bold mb-3 text-teal-400">Phase 2: Pilot Deployment (Months 4-6)</h3>
-              <ul className="space-y-2 text-gray-300">
+            <div className="text-left">
+              <h3 className="text-left">Phase 2: Pilot Deployment (Months 4-6)</h3>
+              <ul className="text-left">
                 <li>✓ Deploy initial AI models in controlled environment</li>
                 <li>✓ Implement monitoring and observability</li>
                 <li>✓ Conduct security and compliance audits</li>
@@ -283,9 +283,9 @@ export default function SovereignAIEnterpriseDeployment() {
               </ul>
             </div>
             
-            <div className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-cyan-500">
-              <h3 className="text-xl font-bold mb-3 text-cyan-400">Phase 3: Scale & Optimize (Months 7-12)</h3>
-              <ul className="space-y-2 text-gray-300">
+            <div className="text-left">
+              <h3 className="text-left">Phase 3: Scale & Optimize (Months 7-12)</h3>
+              <ul className="text-left">
                 <li>✓ Roll out to additional use cases and regions</li>
                 <li>✓ Implement advanced model governance</li>
                 <li>✓ Optimize infrastructure and costs</li>
@@ -296,79 +296,79 @@ export default function SovereignAIEnterpriseDeployment() {
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-cyan-400">Cost Optimization Strategies</h2>
-          <div className="bg-slate-800/50 rounded-xl p-8 border border-cyan-500/20">
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-start">
-                <span className="text-emerald-400 text-2xl mr-4">💰</span>
+        <section className="text-left">
+          <h2 className="text-left">Cost Optimization Strategies</h2>
+          <div className="text-left">
+            <ul className="text-left">
+              <li className="text-left">
+                <span className="text-left">💰<
                 <div>
-                  <strong className="text-white">Right-Sizing Compute:</strong> Dynamic resource allocation based on workload patterns, achieving 40-60% cost reduction
+                  <strong className="text-left">Right-Sizing Compute:</strong> Dynamic resource allocation based on workload patterns, achieving 40-60% cost reduction
                 </div>
               </li>
-              <li className="flex items-start">
-                <span className="text-teal-400 text-2xl mr-4">⚡</span>
+              <li className="text-left">
+                <span className="text-left">⚡<
                 <div>
-                  <strong className="text-white">Model Optimization:</strong> Quantization, distillation, and pruning reduce inference costs by 3-5x without accuracy loss
+                  <strong className="text-left">Model Optimization:</strong> Quantization, distillation, and pruning reduce inference costs by 3-5x without accuracy loss
                 </div>
               </li>
-              <li className="flex items-start">
-                <span className="text-cyan-400 text-2xl mr-4">🔄</span>
+              <li className="text-left">
+                <span className="text-left">🔄<
                 <div>
-                  <strong className="text-white">Intelligent Caching:</strong> Result caching and request deduplication cut redundant compute by 35-50%
+                  <strong className="text-left">Intelligent Caching:</strong> Result caching and request deduplication cut redundant compute by 35-50%
                 </div>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 text-2xl mr-4">📊</span>
+              <li className="text-left">
+                <span className="text-left">📊<
                 <div>
-                  <strong className="text-white">Multi-Tenancy:</strong> Shared infrastructure with isolation achieves 60-70% better resource utilization
+                  <strong className="text-left">Multi-Tenancy:</strong> Shared infrastructure with isolation achieves 60-70% better resource utilization
                 </div>
               </li>
             </ul>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-emerald-400">The Future of Sovereign AI</h2>
-          <p className="text-gray-300 leading-relaxed mb-6">
+        <section className="text-left">
+          <h2 className="text-left">The Future of Sovereign AI</h2>
+          <p className="text-left">
             As data privacy regulations continue to evolve globally, sovereign AI will become the 
             standard for enterprise AI deployment. Emerging trends include:
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-xl p-6 border border-emerald-500/20">
-              <div className="text-3xl mb-3">🔐</div>
-              <h3 className="font-bold text-white mb-2">Confidential Computing</h3>
-              <p className="text-gray-400 text-sm">Hardware-based secure enclaves for processing encrypted data without exposing it</p>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">🔐</div>
+              <h3 className="text-left">Confidential Computing</h3>
+              <p className="text-left">Hardware-based secure enclaves for processing encrypted data without exposing it</p>
             </div>
-            <div className="bg-gradient-to-br from-teal-500/10 to-cyan-500/10 rounded-xl p-6 border border-teal-500/20">
-              <div className="text-3xl mb-3">🌐</div>
-              <h3 className="font-bold text-white mb-2">Edge Sovereignty</h3>
-              <p className="text-gray-400 text-sm">Distributed AI at the edge with local data processing and real-time inference</p>
+            <div className="text-left">
+              <div className="text-left">🌐</div>
+              <h3 className="text-left">Edge Sovereignty</h3>
+              <p className="text-left">Distributed AI at the edge with local data processing and real-time inference</p>
             </div>
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-500/20">
-              <div className="text-3xl mb-3">🤝</div>
-              <h3 className="font-bold text-white mb-2">Federated Ecosystems</h3>
-              <p className="text-gray-400 text-sm">Cross-organizational AI collaboration while maintaining data sovereignty</p>
+            <div className="text-left">
+              <div className="text-left">🤝</div>
+              <h3 className="text-left">Federated Ecosystems</h3>
+              <p className="text-left">Cross-organizational AI collaboration while maintaining data sovereignty</p>
             </div>
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl p-8 border border-emerald-500/30">
-          <h2 className="text-3xl font-bold mb-4 text-white text-center">Ready to Deploy Sovereign AI?</h2>
-          <p className="text-gray-300 text-center mb-6 max-w-2xl mx-auto">
+        <section className="text-left">
+          <h2 className="text-left">Ready to Deploy Sovereign AI?</h2>
+          <p className="text-left">
             Transform your organization with enterprise-grade sovereign AI infrastructure. 
             Our experts will guide you through every step of your deployment journey.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-left">
             <a 
               href="/contact"
-              className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 text-center"
+              className="text-left"
             >
               Schedule Consultation
             </a>
             <a 
               href="/case-studies"
-              className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 text-center"
+              className="text-left"
             >
               View Success Stories
             </a>

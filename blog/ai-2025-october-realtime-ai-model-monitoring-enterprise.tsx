@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function RealtimeAIModelMonitoringEnterprise() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Real-Time AI Model Monitoring: Enterprise Observability Platform for 2025</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Real-Time AI Model Monitoring: Enterprise Observability Platform for 2025</h1>
+        <div className="text-left">
           <time dateTime="2025-10-01">October 1, 2025</time>
-          <span>•</span>
-          <span>13 min read</span>
+          <span>•<
+          <span>13 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Enterprise AI systems fail silently without proper monitoring. Discover how real-time observability 
           platforms detect model drift, prevent hallucinations, and ensure 99.95% AI reliability while reducing 
           incident response time by 85%.
@@ -287,13 +287,13 @@ export default function RealtimeAIModelMonitoringEnterprise() {
           <li>Explainability and governance are essential for enterprise deployment</li>
         </ul>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">Build Production-Grade AI Observability</h3>
-          <p className="mb-4">
+        <div className="text-left">
+          <h3 className="text-left">Build Production-Grade AI Observability</h3>
+          <p className="text-left">
             Zion Tech Group delivers enterprise AI monitoring platforms that detect drift 
             10x faster and reduce incident response time by 85%.
           </p>
-          <p className="font-semibold">
+          <p className="text-left">
             Schedule a consultation to assess your AI observability gaps and implementation roadmap.
           </p>
         </div>

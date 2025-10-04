@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function EnterpriseLLMSecurityFramework2025() {
   return (
-    <main className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold mb-4">Enterprise LLM Security Framework 2025</h1>
-      <p className="text-gray-700 mb-6">Comprehensive security architecture for production LLM deployments — protecting against prompt injection, data leakage, and model exploitation with 99.9% threat detection.</p>
-      <section className="prose prose-invert max-w-none">
+    <main className="text-left">
+      <h1 className="text-left">Enterprise LLM Security Framework 2025</h1>
+      <p className="text-left">Comprehensive security architecture for production LLM deployments — protecting against prompt injection, data leakage, and model exploitation with 99.9% threat detection.</p>
+      <section className="text-left">
         <h2>Overview</h2>
         <p>
           As Large Language Models become mission-critical enterprise infrastructure, security becomes paramount.

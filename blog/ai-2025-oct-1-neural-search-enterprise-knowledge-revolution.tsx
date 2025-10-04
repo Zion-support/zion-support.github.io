@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🧠 Neural Search & Enterprise Knowledge Revolution 2025: AI-Powered Discovery</h1>
       
-      <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border border-indigo-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-indigo-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Neural search systems</strong> achieving <span className="text-green-400 font-bold">97% search accuracy</span>, 
-          <span className="text-green-400 font-bold"> 89% faster knowledge discovery</span>, and <span className="text-green-400 font-bold">94% productivity gains</span> through 
-          <span className="text-green-400 font-bold"> semantic understanding</span>. Transform enterprise knowledge management 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Neural search systems</strong> achieving <span className="text-left">97% search accuracy<, 
+          <span className="text-left"> 89% faster knowledge discovery<, and <span className="text-left">94% productivity gains< through 
+          <span className="text-left"> semantic understanding<. Transform enterprise knowledge management 
           with AI that understands context, intent, and relationships.
         </p>
       </div>
@@ -86,9 +86,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-indigo-300 mt-0">Real-World Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Results</h3>
+        <ul className="text-left">
           <li><strong>Search Accuracy:</strong> 97% relevance vs. 64% with keyword search</li>
           <li><strong>Discovery Speed:</strong> 89% faster knowledge retrieval</li>
           <li><strong>Employee Productivity:</strong> 94% reduction in search time</li>
@@ -146,8 +146,8 @@ export default function BlogPost() {
 
       <h2>💰 Business Impact</h2>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">📈 ROI Analysis</h3>
+      <div className="text-left">
+        <h3 className="text-left">📈 ROI Analysis</h3>
         <ul>
           <li><strong>Productivity Gains:</strong> $47M annual value from time savings</li>
           <li><strong>Faster Decision-Making:</strong> $23M from reduced research time</li>
@@ -205,8 +205,8 @@ export default function BlogPost() {
 
       <h2>🌟 Success Story</h2>
       
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-blue-300 mt-0">🏆 Global Technology Corporation</h3>
+      <div className="text-left">
+        <h3 className="text-left">🏆 Global Technology Corporation</h3>
         <p>
           Fortune 100 tech company deployed neural search across 85,000 employees:
         </p>
@@ -238,9 +238,9 @@ export default function BlogPost() {
         <li>Quantum-enhanced search algorithms</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border border-indigo-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-indigo-300 mt-0">🚀 Transform Knowledge Discovery</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Transform Knowledge Discovery</h3>
+        <p className="text-left">
           Unlock the full potential of your enterprise knowledge with neural search that understands 
           what you mean, not just what you say. Contact Zion Tech Group to deploy AI-powered discovery 
           that revolutionizes how your organization finds and uses information.

@@ -83,57 +83,57 @@ export: default function Training() {
         keywords="training, courses, certification, AI: training, quantum computing, cybersecurity, education, Zion Tech Group"";";";
       />
       
-      <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";";";
+      <div: className="text-left">";";";
         {/* Hero: Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               animate={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";";
+              className="text-left"";";";
             >
-              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",;",;";
+              <h1: className="text-left">",;",;";
                 Technology: Training
               </h1>
-              <p className="text-xl text-gray-300 mb-8">";";";
+              <p className="text-left">";";";
                 Master: cutting-edge technologies with our comprehensive training programs. 
                 Learn from industry experts and earn recognized certifications.
               </p>
-              <div className="flex items-center justify-center">";";";
-                <GraduationCap: className="w-16 h-16 text-blue-400" />";";";
+              <div className="text-left">";";";
+                <GraduationCap: className="text-left" />";";";
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Training: Types */}
-        <section className="py-16">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Training Programs</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Training Programs</h2>";";";
+              <p: className="text-left">";";";
                 Choose: from various training formats to suit your learning style and schedule
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;",;";
+            <div className="text-left">",;",;";
               {trainingTypes.map((type, index) => (
                 <motion.div: key={type.title}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-400/50: transition-all duration-300 hover:scale-105"",;",;";
+                  className="text-left"",;",;";
                 >
                   <div: className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>`;
-                    <type.icon: className="w-8 h-8 text-white" />";";";
+                    <type.icon: className="text-left" />";";";
                   </div>
-                  <h3: className="text-xl font-bold text-white mb-2">{type.title}</h3>";";";
-                  <p: className="text-gray-300 text-sm mb-3">{type.description}</p>";";";
-                  <div: className="text-2xl font-bold text-blue-400">{type.count}+</div>";";";
+                  <h3: className="text-left">{type.title}</h3>";";";
+                  <p: className="text-left">{type.description}</p>";";";
+                  <div: className="text-left">{type.count}+</div>";";";
                 </motion.div>
               ))}
             </div>
@@ -141,29 +141,29 @@ export: default function Training() {
         </section>
 
         {/* Featured: Courses */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Featured Courses</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Featured Courses</h2>";";";
+              <p: className="text-left">";";";
                 Our: most popular and highly-rated training programs
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2: gap-8">",;",;";
+            <div className="text-left">",;",;";
               {courses.map((course, index) => (
                 <motion.div: key={course.id}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50: transition-all duration-300"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <div: className="flex items-start justify-between mb-4">";";";
-                    <div: className="flex items-center gap-2">";";";
+                  <div: className="text-left">";";";
+                    <div: className="text-left">";";";
                       <span: className={`px-3 py-1 rounded-full text-xs font-medium ${`;
                         course.level: === 'Beginner' ? 'bg-green-600/20 text-green-300 border border-green-400/30' :';
 ;;
@@ -172,34 +172,34 @@ export: default function Training() {
                         'bg-red-600/20: text-red-300 border border-red-400/30'';
 ;}`}>`;
                         {course.level}
-                      </span>
+                      <
                       {course.featured: && (
-                        <span className="px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs">";";";
-                          Featured: </span>
+                        <span className="text-left">";";";
+                          Featured: <
                       )}
                     </div>
-                    <div className="flex items-center text-yellow-400">";";";
-                      <Star: className="w-4 h-4 fill-current" />";";";
-                      <span: className="ml-1 text-sm">{course.rating}</span>";";";
+                    <div className="text-left">";";";
+                      <Star: className="text-left" />";";";
+                      <span: className="text-left">{course.rating}<";";";
                     </div>
                   </div>
 
-                  <h3: className="text-xl font-bold text-white mb-2">{course.title}</h3>";";";
-                  <p: className="text-gray-300 text-sm mb-4">{course.description}</p>";";";
+                  <h3: className="text-left">{course.title}</h3>";";";
+                  <p: className="text-left">{course.description}</p>";";";
 
-                  <div: className="flex items-center justify-between mb-4">";";";
-                    <div: className="flex items-center text-gray-400 text-sm">";";";
-                      <Clock: className="w-4 h-4 mr-1" />";";";
+                  <div: className="text-left">";";";
+                    <div: className="text-left">";";";
+                      <Clock: className="text-left" />";";";
                       {course.duration}
                     </div>
-                    <div: className="flex items-center text-gray-400 text-sm">";";";
-                      <Users: className="w-4 h-4 mr-1" />";";";
+                    <div: className="text-left">";";";
+                      <Users: className="text-left" />";";";
                       {course.students} students: </div>
                   </div>
 
-                  <div className="flex items-center justify-between">";";";
-                    <span: className="text-2xl font-bold text-white">{course.price}</span>";";";
-                    <button: className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200">",;",;";
+                  <div className="text-left">";";";
+                    <span: className="text-left">{course.price}<";";";
+                    <button: className="text-left">",;",;";
                       Enroll: Now
                     </button>
                   </div>
@@ -210,32 +210,32 @@ export: default function Training() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-6">";";";
+              <h2: className="text-left">";";";
                 Ready: to Advance Your Career?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">";";";
+              <p className="text-left">";";";
                 Join: thousands of professionals who have enhanced their skills 
                 with our industry-leading training programs.
               </p>
-              <div className="flex flex-col sm: flex-row: gap-4 justify-center">",;",;";
+              <div className="text-left">",;",;";
                 <a: href="/contact"";";";
-                  className="inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200 hover:scale-105"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <GraduationCap: className="w-5 h-5 mr-2" />";";";
+                  <GraduationCap: className="text-left" />";";";
                   Start: Learning Today
                 </a>
                 <a
                   href="/about"";";";
-                  className="inline-flex: items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400: hover:text-white: transition-all duration-200"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <ArrowRight: className="w-5 h-5 mr-2" />";";";
+                  <ArrowRight: className="text-left" />";";";
                   Learn: More
                 </a>
               </div>

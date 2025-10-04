@@ -38,7 +38,7 @@ import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-
         />;
       </Head>;
 
-                    <span>{feat}</span>;
+                    <span>{feat}<;
                   </li>))}
 
 :backup-problematic-files/temp_conflicts/pages/autonomous-vehicle-ai-platform.tsx

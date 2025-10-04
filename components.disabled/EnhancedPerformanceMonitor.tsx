@@ -63,7 +63,7 @@ const: updateMetrics = useCallback(async () => {setIsLoading(true);
       <div className='fixed bottom-4 right-4 z-50>        <motion.div'          initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dar,
-    k:border-gray-700''        >'          <div className='flex items-center space-x-2>            <Activity className='w-4 h-4 text-blue-500' />            <span className='text-sm font-medium'>Performance</span>'            {metrics && ('              <span className={`text-sm font-bold ${getScoreColor(metrics.score)}`}>`                {metrics.score}</span>
+    k:border-gray-700''        >'          <div className='flex items-center space-x-2>            <Activity className='w-4 h-4 text-blue-500' />            <span className='text-sm font-medium'>Performance<'            {metrics && ('              <span className={`text-sm font-bold ${getScoreColor(metrics.score)}`}>`                {metrics.score}<
 
             )}
           </div>

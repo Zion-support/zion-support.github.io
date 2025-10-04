@@ -5,9 +5,6 @@
 ;
   return (<div>;
       <Head></Head>;<meta name="description" content="UiUxDesignChat blog post" />;"
-
-
-
 }
 return (;
 
@@ -16,13 +13,7 @@ return (;
       <Head>;
         <title > UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}"
-
-
   return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}"
-
-
-
-

@@ -30,9 +30,9 @@ const Layout: React.FC<LayoutProps> = ({
         <meta property="og:site_name" content="Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
-      <div className="min-h-screen flex flex-col">
+      <div className="text-left">
         <EnhancedNavigation />
-        <main className="flex-grow">{children}</main>
+        <main className="text-left">{children}</main>
         <EnhancedFooter />
       </div>
     </>

@@ -13,10 +13,10 @@ import { Calendar, Clock, Check } from 'lucide-react';
       case 'unavailable':return 'Currently Unavailable',;
       default:return ;
   return (;
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;"
+    <div className="text-left">;"
 </div>"
-      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;""
-      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;"
+      <h3 className="text-left">Availability</h3>;""
+      <div className="text-left">;"
 </div>
         <Badge ;"
           variant="outline" ;")
@@ -24,21 +24,16 @@ import { Calendar, Clock, Check } from 'lucide-react';
         >;
 
         ;"
-          <div className="flex items-center gap-2 text-zion-slate-light">;"
-            <Calendar className="h-4 w-4" />;"
-
-            <span>Next available: {availability.nextAvailable;}</span>;
+          <div className="text-left">;"
+            <Calendar className="text-left" />;"
+            <span>Next available: {availability.nextAvailable;}<;
           </div>;
       </div>;"
-        <p className="text-zion-slate mb-4">{availability.message}</p>;""
-        <div className="mt-4">;"
-          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>;""
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">;"
-              <div key={index} className="flex items-center gap-2 text-zion-slate">;"
-                <div className="w-20 text-zion-slate-light">{slot.day} </div>;""
-                <div className="flex items-center gap-1">;"
-                  <Clock className="h-4 w-4 text-zion-cyan" />;"
-
-
-
-
+        <p className="text-left">{availability.message}</p>;""
+        <div className="text-left">;"
+          <h4 className="text-left">Weekly Availability</h4>;""
+          <div className="text-left">;"
+              <div key={index} className="text-left">;"
+                <div className="text-left">{slot.day} </div>;""
+                <div className="text-left">;"
+                  <Clock className="text-left" />;"

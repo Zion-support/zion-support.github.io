@@ -18,40 +18,40 @@ const speakers:Speaker[] = [;
     linkedin: '#';}],;
 export function SpeakersSection() {;
   return (;
-    <section className="py-12 bg-zion-blue-dark text-white" id="speakers">;"
+    <section className="text-left" id="speakers">;"
 </section>"
-      <div className="container mx-auto px-4">;"
+      <div className="text-left">;"
 </div>"
-        <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>;""
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">;"
-            <div key={sp.name} className="text-center space-y-2">;"
+        <h2 className="text-left">Speakers</h2>;""
+        <div className="text-left">;"
+            <div key={sp.name} className="text-left">;"
 </div>
               <Image;                src={sp.avatar}
                 alt={sp.name}
                 width={96}
                 height={96}"
-                className="rounded-full mx-auto";""
+                className="text-left";""
                 loading="lazy";"
               />;
 "
-              <p className="font-semibold">{sp.name}</p>;""
-              <p className="text-sm opacity-80">{sp.title}</p>;""
-              <div className="flex justify-center gap-3 text-zion-cyan">;"
+              <p className="text-left">{sp.name}</p>;""
+              <p className="text-left">{sp.title}</p>;""
+              <div className="text-left">;"
                   <a;
                     href={sp.twitter}"
                     aria-label="Twitter";""
                     target="_blank";""
                     rel="noopener noreferrer";""
-                    className="flex items-center";"
+                    className="text-left";"
                   >;
 </a>"
-                    <Twitter className="h-4 w-4" aria-hidden="true" />;"
-                    <span className="sr-only">Twitter</span>;"
+                    <Twitter className="text-left" aria-hidden="true" />;"
+                    <span className="text-left">Twitter<;"
                   </a>;
                     href={sp.linkedin}"
                     aria-label="LinkedIn";""
-                    <Linkedin className="h-4 w-4" aria-hidden="true" />;"
-                    <span className="sr-only">LinkedIn</span>;")
+                    <Linkedin className="text-left" aria-hidden="true" />;"
+                    <span className="text-left">LinkedIn<;")
 
                   </a>;                )}
               </div>;

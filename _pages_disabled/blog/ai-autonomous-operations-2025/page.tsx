@@ -17,52 +17,52 @@ export const metadata = {
 
 export default function AutonomousOperations2025() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
+    <div className="text-left">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 animate-pulse"></div>
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <Link href="/blog" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left">
+          <Link href="/blog" className="text-left">
+            <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
           
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-semibold">
+          <div className="text-left">
+            <div className="text-left">
+              <span className="text-left">
                 🚀 BREAKTHROUGH TECHNOLOGY
-              </span>
-              <span className="px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-400 text-sm font-semibold">
+              <
+              <span className="text-left">
                 September 30, 2025
-              </span>
+              <
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-left">
               AI-Powered Autonomous Operations 2025: Self-Healing Infrastructure & Zero-Touch IT
             </h1>
             
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-left">
               Discover how Fortune 500 enterprises are achieving 99.99% uptime, 95% operational cost reduction, 
               and complete infrastructure automation with autonomous AI operations platforms. Real implementations, 
               proven results, and the roadmap to zero-touch IT operations.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-cyan-400 mb-1">99.99%</div>
-                <div className="text-sm text-gray-400">System Uptime</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">99.99%</div>
+                <div className="text-left">System Uptime</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-blue-400 mb-1">95%</div>
-                <div className="text-sm text-gray-400">Cost Reduction</div>
+              <div className="text-left">
+                <div className="text-left">95%</div>
+                <div className="text-left">Cost Reduction</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-purple-400 mb-1">10M+</div>
-                <div className="text-sm text-gray-400">Auto-Resolved Issues</div>
+              <div className="text-left">
+                <div className="text-left">10M+</div>
+                <div className="text-left">Auto-Resolved Issues</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-fuchsia-400 mb-1">&lt;30s</div>
-                <div className="text-sm text-gray-400">Incident Response</div>
+              <div className="text-left">
+                <div className="text-left">&lt;30s</div>
+                <div className="text-left">Incident Response</div>
               </div>
             </div>
           </div>
@@ -70,14 +70,14 @@ export default function AutonomousOperations2025() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Zap className="w-8 h-8 text-yellow-400" />
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
+              <Zap className="text-left" />
               The Autonomous Operations Revolution
             </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
+            <div className="text-left">
               <p>
                 Traditional IT operations are reaching a breaking point. With infrastructure complexity growing exponentially 
                 and the average enterprise managing 1000+ microservices, manual operations are no longer sustainable. 
@@ -93,12 +93,12 @@ export default function AutonomousOperations2025() {
           </div>
 
           {/* Key Capabilities */}
-          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-              <Shield className="w-8 h-8 text-cyan-400" />
+          <div className="text-left">
+            <h2 className="text-left">
+              <Shield className="text-left" />
               Core Autonomous Capabilities
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="text-left">
               {[
                 {
                   title: 'Self-Healing Infrastructure',
@@ -131,19 +131,19 @@ export default function AutonomousOperations2025() {
                   icon: '🔬'
                 }
               ].map((capability, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-4">{capability.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{capability.description}</p>
+                <div key={index} className="text-left">
+                  <div className="text-left">{capability.icon}</div>
+                  <h3 className="text-left">{capability.title}</h3>
+                  <p className="text-left">{capability.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Implementation Guide */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8">Implementation Roadmap</h2>
-            <div className="space-y-6">
+          <div className="text-left">
+            <h2 className="text-left">Implementation Roadmap</h2>
+            <div className="text-left">
               {[
                 {
                   phase: 'Phase 1: Foundation (Months 1-2)',
@@ -182,13 +182,13 @@ export default function AutonomousOperations2025() {
                   ]
                 }
               ].map((phase, index) => (
-                <div key={index} className="border-l-4 border-cyan-500 pl-6">
-                  <h3 className="text-xl font-bold text-cyan-400 mb-4">{phase.phase}</h3>
-                  <ul className="space-y-2">
+                <div key={index} className="text-left">
+                  <h3 className="text-left">{phase.phase}</h3>
+                  <ul className="text-left">
                     {phase.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-gray-300">
-                        <CheckCircle2 className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                        <span>{item}</span>
+                      <li key={i} className="text-left">
+                        <CheckCircle2 className="text-left" />
+                        <span>{item}<
                       </li>
                     ))}
                   </ul>
@@ -198,43 +198,43 @@ export default function AutonomousOperations2025() {
           </div>
 
           {/* Results */}
-          <div className="bg-gradient-to-br from-purple-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-purple-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Real-World Results</h2>
-            <div className="space-y-6 text-gray-300">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-purple-400 mb-3">Global E-Commerce Leader</h3>
-                <p className="mb-4">$10B annual revenue company processing 50M+ daily transactions</p>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span>99.99% uptime achieved (up from 99.5%)</span>
+          <div className="text-left">
+            <h2 className="text-left">Real-World Results</h2>
+            <div className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">Global E-Commerce Leader</h3>
+                <p className="text-left">$10B annual revenue company processing 50M+ daily transactions</p>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <TrendingUp className="text-left" />
+                    <span>99.99% uptime achieved (up from 99.5%)<
                   </li>
-                  <li className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span>$45M annual operational cost savings</span>
+                  <li className="text-left">
+                    <TrendingUp className="text-left" />
+                    <span>$45M annual operational cost savings<
                   </li>
-                  <li className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span>Mean time to resolution reduced from 4 hours to 30 seconds</span>
+                  <li className="text-left">
+                    <TrendingUp className="text-left" />
+                    <span>Mean time to resolution reduced from 4 hours to 30 seconds<
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-cyan-400 mb-3">Fortune 100 Financial Services</h3>
-                <p className="mb-4">Managing 10,000+ microservices across hybrid cloud infrastructure</p>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span>95% reduction in manual operations interventions</span>
+              <div className="text-left">
+                <h3 className="text-left">Fortune 100 Financial Services</h3>
+                <p className="text-left">Managing 10,000+ microservices across hybrid cloud infrastructure</p>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <TrendingUp className="text-left" />
+                    <span>95% reduction in manual operations interventions<
                   </li>
-                  <li className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span>Zero unplanned downtime for 18 consecutive months</span>
+                  <li className="text-left">
+                    <TrendingUp className="text-left" />
+                    <span>Zero unplanned downtime for 18 consecutive months<
                   </li>
-                  <li className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span>$80M infrastructure cost optimization achieved</span>
+                  <li className="text-left">
+                    <TrendingUp className="text-left" />
+                    <span>$80M infrastructure cost optimization achieved<
                   </li>
                 </ul>
               </div>
@@ -242,27 +242,27 @@ export default function AutonomousOperations2025() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="text-left">
+            <h2 className="text-left">
               Ready to Achieve Autonomous Operations?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-left">
               Our autonomous operations experts have implemented these solutions for 50+ Fortune 500 enterprises. 
               Let us accelerate your journey to zero-touch IT operations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"
+                className="text-left"
               >
-                <span>Schedule Expert Consultation</span>
-                <ArrowLeft className="w-5 h-5 rotate-180" />
+                <span>Schedule Expert Consultation<
+                <ArrowLeft className="text-left" />
               </Link>
               <Link
                 href="/services"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
+                className="text-left"
               >
-                <span>Explore Our Services</span>
+                <span>Explore Our Services<
               </Link>
             </div>
           </div>

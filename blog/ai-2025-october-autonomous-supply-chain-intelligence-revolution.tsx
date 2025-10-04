@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🚚 Autonomous Supply Chain Intelligence 2025: Multi-Agent Revolution</h1>
       
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">🚀 Groundbreaking Innovation</h3>
-        <p className="text-lg">
-          <strong>Autonomous multi-agent supply chains</strong> achieving <span className="text-blue-400 font-bold">99.2% on-time delivery</span>, 
-          <span className="text-blue-400 font-bold"> 58% cost reduction</span>, and <span className="text-blue-400 font-bold">$4.2B value creation</span>. 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Groundbreaking Innovation</h3>
+        <p className="text-left">
+          <strong>Autonomous multi-agent supply chains</strong> achieving <span className="text-left">99.2% on-time delivery<, 
+          <span className="text-left"> 58% cost reduction<, and <span className="text-left">$4.2B value creation<. 
           Transform global logistics with self-coordinating AI agents that autonomously manage procurement, inventory, transportation, 
           and demand across complex multi-tier networks.
         </p>
@@ -100,9 +100,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-cyan-400 mt-0">Proven Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Proven Results</h3>
+        <ul className="text-left">
           <li>✅ <strong>99.2%</strong> on-time delivery across global networks</li>
           <li>✅ <strong>58%</strong> total supply chain cost reduction</li>
           <li>✅ <strong>$4.2B</strong> value creation across 1,847 deployments</li>
@@ -176,9 +176,9 @@ export default function BlogPost() {
 
       <h2>💼 Business Impact</h2>
       
-      <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-600/40 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-cyan-300 mt-0">Typical Business Outcomes</h3>
-        <ul className="space-y-3">
+      <div className="text-left">
+        <h3 className="text-left">Typical Business Outcomes</h3>
+        <ul className="text-left">
           <li><strong>Delivery Performance:</strong> 99.2% on-time delivery (vs. 87% industry average)</li>
           <li><strong>Cost Reduction:</strong> 58% lower total supply chain costs</li>
           <li><strong>Inventory Optimization:</strong> 42% lower inventory with 99.2% availability</li>
@@ -267,17 +267,17 @@ export default function BlogPost() {
         <li><strong>Continuous optimization:</strong> Refine agent performance over time</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg p-8 my-8 text-center">
-        <h3 className="text-2xl font-bold text-white mt-0">Ready to Revolutionize Your Supply Chain?</h3>
-        <p className="text-lg text-cyan-100 mb-6">
+      <div className="text-left">
+        <h3 className="text-left">Ready to Revolutionize Your Supply Chain?</h3>
+        <p className="text-left">
           Join 1,847 enterprises achieving 99.2% delivery performance and $4.2B in value creation
         </p>
-        <a href="/contact" className="inline-block px-8 py-4 bg-white text-cyan-600 font-bold rounded-lg hover:bg-cyan-50 transition-colors">
+        <a href="/contact" className="text-left">
           Schedule Your Supply Chain Intelligence Demo →
         </a>
       </div>
 
-      <p className="text-sm text-gray-400 italic">
+      <p className="text-left">
         Last updated: October 1, 2025 | © 2025 Zion Tech Group. All rights reserved.
       </p>
     </article>

@@ -10,21 +10,21 @@ export const metadata = {
 
 export default function November2025AIGovernance() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-slate-700 to-slate-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">Governance · November 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <article className="text-left">
+      <header className="text-left">
+        <div className="text-left">
+          <p className="text-left">Governance · November 2025</p>
+          <h1 className="text-left">
             AI Governance for Autonomous Systems
           </h1>
-          <p className="mt-4 text-slate-50 text-lg">
+          <p className="text-left">
             Deploy production AI with confidence: compliance automation, continuous risk assessment,
             comprehensive audit trails, and board-level reporting frameworks.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate">
+      <div className="text-left">
         <p>
           As AI systems gain autonomy, governance becomes critical. Regulators worldwide are implementing
           AI-specific requirements. Leading enterprises are building governance-first frameworks that
@@ -146,7 +146,7 @@ export default function November2025AIGovernance() {
           <li>Data-driven decision-making at executive level</li>
         </ul>
 
-        <p className="text-sm text-gray-500">32 min read · Published November 2025</p>
+        <p className="text-left">32 min read · Published November 2025</p>
       </div>
     </article>
   );

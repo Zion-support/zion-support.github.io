@@ -1,5 +1,5 @@
 return (
-    <motion.div initial={ opacity: 0, y: 4 } animate={ opacity: 1, y: 0 } className="relative">
+    <motion.div initial={ opacity: 0, y: 4 } animate={ opacity: 1, y: 0 } className="text-left">
 origin/cursor/automate-test-improve-and-merge-code-2533
       <input
 
@@ -40,8 +40,8 @@ function InteractiveSearch() {}
     const query = form_data.get ("search") as string,
     on_search?.(query)}"
   return (";"
-    <form on_submit = "{handle_submit}" className="{class_name}">";"
-      <div className="relative">";"
+    <form on_submit = "{handle_submit}" className="text-left">";"
+      <div className="text-left">";"
         <inputtype="text"
           name="search"
           placeholder="{placeholder}"
@@ -54,13 +54,12 @@ function InteractiveSearch() {}
 });
 }
 "
-        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-
+        className="text-left"
       />
       {value && (
         <button'
           onClick={() => setValue('')}"
-          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+          className="text-left"
       />
       {_value && (_<button'
           onClick={() => setValue('')}
@@ -83,7 +82,7 @@ function InteractiveSearch() {}
 });
 }
 
-        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="text-left"
       />
       {value && (
         <button
