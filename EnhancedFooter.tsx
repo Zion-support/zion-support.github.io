@@ -31,13 +31,6 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const resources = [
-    { name: 'Documentation', href: '/resources/documentation' },
-    { name: 'API Reference', href: '/resources/api' },
-    { name: 'Support Center', href: '/support' },
-    { name: 'Privacy Policy', href: '/legal/privacy' },
-    { name: 'Terms of Service', href: '/legal/terms' },
-  ];
 
   return (
     <footer className="bg-gray-900 text-white">

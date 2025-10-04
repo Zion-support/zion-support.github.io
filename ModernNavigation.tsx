@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface ModernNavigationProps {
   className?: string;
@@ -10,7 +10,6 @@ export default function ModernNavigation({
   className = "",
 }: ModernNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -19,9 +18,6 @@ export default function ModernNavigation({
     { name: 'Contact', href: '/contact' }
   ];
 
-  const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
 
   return (
     <nav className={`bg-white shadow-sm ${className}`}>

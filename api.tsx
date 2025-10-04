@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
+import { Code, Shield, Zap, ArrowRight, ExternalLink } from 'lucide-react';
 
 const API: React.FC = () => {
   const endpoints = [
