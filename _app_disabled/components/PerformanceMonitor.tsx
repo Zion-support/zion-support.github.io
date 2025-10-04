@@ -16,7 +16,9 @@ export default function PerformanceMonitor() {
     if (typeof window === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType(
+        'navigation',
+      )[0] as PerformanceNavigationTiming;
       const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
 
       const memory = (performance as any).memory;

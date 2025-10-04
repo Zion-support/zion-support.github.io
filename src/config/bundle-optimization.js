@@ -1,4 +1,3 @@
-
 // Bundle optimization configuration
 export const bundleConfig = {
   optimization: {

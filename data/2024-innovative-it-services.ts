@@ -1,4 +1,4 @@
-export interface InnovativeITService2024 
+export interface InnovativeITService2024 {
   id: string;
   name: string;
   tagline: string;
@@ -27,11 +27,11 @@ export interface InnovativeITService2024
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: 
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
-    website: string
+    website: string;
 };
   realImplementation: boolean;
   implementationDetails: string;
@@ -39,15 +39,14 @@ export interface InnovativeITService2024
   reviews: number;
 }
 
-export const innovativeITServices2024: InnovativeITService2024[] = [
-  
+export const innovativeITServices2024: InnovativeITService2024[] = [;
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
     tagline: "Self-healing infrastructure with zero downtime",
     price: "$799",
     period: "/month",
     description: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.",
-    features: [
+    features: [;
       "AI-powered infrastructure monitoring and alerting",
       "Automatic performance optimization and scaling",
       "Self-healing deployment pipelines",
@@ -60,7 +59,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       "White-label solution for MSPs"
     ],
     popular: true,
-    icon: "⚡",
+    icon: "",
     color: "from-blue-500 to-cyan-600",
     textColor: "text-blue-400",
     link: "https://ziontechgroup.com/autonomous-devops",
@@ -78,17 +77,17 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     marketSize: "$8.2B market",
     growthRate: "20.1% annual growth",
     variant: "ai-futuristic",
-    contactInfo: 
+    contactInfo: any;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com";
     },
     realImplementation: true,
     implementationDetails: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.",
     launchDate: "2024-01-15",
     customers: 950,
     rating: 4.8,
-    reviews: 520
+    reviews: 520;
   }
 ];

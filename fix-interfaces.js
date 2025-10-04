@@ -19,7 +19,7 @@ function fixInterfaceErrors(filePath) {
         // Remove extra commas after semicolons in interface properties
         return line.replace(/;,\s*$/, ';');
       });
-      
+
       const fixedBody = fixedLines.join('\n');
       if (fixedBody !== body) {
         modified = true;
@@ -35,7 +35,7 @@ function fixInterfaceErrors(filePath) {
       const fixedLines = lines.map(line => {
         return line.replace(/;,\s*$/, ';');
       });
-      
+
       const fixedBody = fixedLines.join('\n');
       if (fixedBody !== body) {
         modified = true;
@@ -57,18 +57,25 @@ function fixInterfaceErrors(filePath) {
 function findTsFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
-  
+
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+    if (
+      stat.isDirectory() &&
+      !item.startsWith('.') &&
+      item !== 'node_modules'
+    ) {
       files.push(...findTsFiles(fullPath));
-    } else if (stat.isFile() && (item.endsWith('.ts') || item.endsWith('.tsx'))) {
+    } else if (
+      stat.isFile() &&
+      (item.endsWith('.ts') || item.endsWith('.tsx'))
+    ) {
       files.push(fullPath);
     }
   }
-  
+
   return files;
 }
 

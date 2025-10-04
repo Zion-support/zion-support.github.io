@@ -35,29 +35,28 @@ class WebsiteAnalyzer {
       brokenLinks: [],
       missingPages: [],
       navigationIssues: [],
-      recommendations: []
+      recommendations: [],
     };
   }
 
   async analyzeWebsite() {
     console.log('🔍 Starting comprehensive website analysis...');
     console.log(`📍 Target: ${BASE_URL}`);
-    
+
     try {
       // Start with homepage analysis
       await this.analyzePage(BASE_URL, 0);
-      
+
       // Analyze navigation structure
       await this.analyzeNavigation();
-      
+
       // Check for common missing pages
       await this.checkCommonPages();
-      
+
       // Generate comprehensive report
       await this.generateReport();
-      
+
       console.log('✅ Analysis completed successfully!');
-      
     } catch (error) {
       console.error('❌ Analysis failed:', error.message);
       throw error;
@@ -76,8 +75,8 @@ class WebsiteAnalyzer {
       const response = await axios.get(url, {
         timeout: 10000,
         headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)'
-        }
+          'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)',
+        },
       });
 
       const dom = new JSDOM(response.data);
@@ -92,7 +91,7 @@ class WebsiteAnalyzer {
         links: [],
         images: [],
         headings: [],
-        lastModified: response.headers['last-modified'] || null
+        lastModified: response.headers['last-modified'] || null,
       };
 
       // Extract all links
@@ -100,18 +99,18 @@ class WebsiteAnalyzer {
       for (const link of links) {
         const href = link.getAttribute('href');
         const text = link.textContent?.trim() || '';
-        
+
         if (href) {
           const absoluteUrl = this.resolveUrl(url, href);
           pageInfo.links.push({
             href: absoluteUrl,
             text,
             isExternal: this.isExternalUrl(absoluteUrl),
-            isInternal: this.isInternalUrl(absoluteUrl)
+            isInternal: this.isInternalUrl(absoluteUrl),
           });
-          
+
           this.allLinks.add(absoluteUrl);
-          
+
           // Check if link is broken (for internal links)
           if (this.isInternalUrl(absoluteUrl)) {
             await this.checkLinkStatus(absoluteUrl);
@@ -127,7 +126,7 @@ class WebsiteAnalyzer {
           pageInfo.images.push({
             src: this.resolveUrl(url, src),
             alt: img.getAttribute('alt') || '',
-            isBroken: false // Will be checked later
+            isBroken: false, // Will be checked later
           });
         }
       }
@@ -138,7 +137,7 @@ class WebsiteAnalyzer {
         pageInfo.headings.push({
           tag: heading.tagName.toLowerCase(),
           text: heading.textContent?.trim() || '',
-          id: heading.id || null
+          id: heading.id || null,
         });
       }
 
@@ -147,42 +146,41 @@ class WebsiteAnalyzer {
 
       // Analyze child pages
       if (depth < MAX_DEPTH) {
-        const internalLinks = pageInfo.links.filter(link => 
-          link.isInternal && !this.visitedUrls.has(link.href)
+        const internalLinks = pageInfo.links.filter(
+          link => link.isInternal && !this.visitedUrls.has(link.href),
         );
 
         // Process internal links in batches
         for (let i = 0; i < internalLinks.length; i += MAX_CONCURRENT) {
           const batch = internalLinks.slice(i, i + MAX_CONCURRENT);
           await Promise.all(
-            batch.map(link => this.analyzePage(link.href, depth + 1))
+            batch.map(link => this.analyzePage(link.href, depth + 1)),
           );
         }
       }
-
     } catch (error) {
       console.log(`❌ Failed to analyze ${url}:`, error.message);
-      
+
       if (error.response?.status === 404) {
         this.brokenLinks.push({
           url,
           status: 404,
           error: 'Page not found',
-          depth
+          depth,
         });
       } else if (error.response?.status >= 500) {
         this.brokenLinks.push({
           url,
           status: error.response.status,
           error: 'Server error',
-          depth
+          depth,
         });
       } else {
         this.brokenLinks.push({
           url,
           status: error.code || 'UNKNOWN',
           error: error.message,
-          depth
+          depth,
         });
       }
     }
@@ -197,7 +195,7 @@ class WebsiteAnalyzer {
         this.brokenLinks.push({
           url,
           status: 404,
-          error: 'Link target not found'
+          error: 'Link target not found',
         });
       }
       return false;
@@ -206,7 +204,7 @@ class WebsiteAnalyzer {
 
   async analyzeNavigation() {
     console.log('🧭 Analyzing navigation structure...');
-    
+
     const homepage = this.pageStructure.get(BASE_URL);
     if (!homepage) return;
 
@@ -222,21 +220,21 @@ class WebsiteAnalyzer {
       '/blog',
       '/privacy',
       '/terms',
-      '/sitemap'
+      '/sitemap',
     ];
 
     for (const page of commonPages) {
       const fullUrl = `${BASE_URL}${page}`;
-      const hasLink = homepage.links.some(link => 
-        link.href === fullUrl || link.href.endsWith(page)
+      const hasLink = homepage.links.some(
+        link => link.href === fullUrl || link.href.endsWith(page),
       );
-      
+
       if (!hasLink) {
         navIssues.push({
           type: 'missing_navigation_link',
           page,
           severity: 'medium',
-          recommendation: `Add navigation link to ${page}`
+          recommendation: `Add navigation link to ${page}`,
         });
       }
     }
@@ -250,7 +248,7 @@ class WebsiteAnalyzer {
           url: link.href,
           text: link.text,
           severity: 'high',
-          recommendation: `Fix broken navigation link: ${link.text} -> ${link.href}`
+          recommendation: `Fix broken navigation link: ${link.text} -> ${link.href}`,
         });
       }
     }
@@ -260,7 +258,7 @@ class WebsiteAnalyzer {
 
   async checkCommonPages() {
     console.log('📋 Checking for common missing pages...');
-    
+
     const commonPages = [
       '/about',
       '/contact',
@@ -270,7 +268,7 @@ class WebsiteAnalyzer {
       '/privacy-policy',
       '/terms-of-service',
       '/sitemap.xml',
-      '/robots.txt'
+      '/robots.txt',
     ];
 
     for (const page of commonPages) {
@@ -283,7 +281,7 @@ class WebsiteAnalyzer {
               url,
               type: 'missing_page',
               priority: this.getPagePriority(page),
-              recommendation: `Create ${page} page`
+              recommendation: `Create ${page} page`,
             });
           }
         } catch (error) {
@@ -292,7 +290,7 @@ class WebsiteAnalyzer {
               url,
               type: 'missing_page',
               priority: this.getPagePriority(page),
-              recommendation: `Create ${page} page`
+              recommendation: `Create ${page} page`,
             });
           }
         }
@@ -302,8 +300,13 @@ class WebsiteAnalyzer {
 
   getPagePriority(page) {
     const highPriority = ['/about', '/contact', '/services'];
-    const mediumPriority = ['/portfolio', '/blog', '/privacy-policy', '/terms-of-service'];
-    
+    const mediumPriority = [
+      '/portfolio',
+      '/blog',
+      '/privacy-policy',
+      '/terms-of-service',
+    ];
+
     if (highPriority.includes(page)) return 'high';
     if (mediumPriority.includes(page)) return 'medium';
     return 'low';
@@ -335,7 +338,7 @@ class WebsiteAnalyzer {
 
   async generateReport() {
     console.log('📊 Generating comprehensive analysis report...');
-    
+
     this.analysisResults.brokenLinks = this.brokenLinks;
     this.analysisResults.missingPages = this.missingPages;
     this.analysisResults.navigationIssues = this.navigationIssues;
@@ -348,17 +351,19 @@ class WebsiteAnalyzer {
         category: 'broken_links',
         priority: 'high',
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,
-        action: 'Fix all broken links to improve user experience and SEO'
+        action: 'Fix all broken links to improve user experience and SEO',
       });
     }
 
     if (this.missingPages.length > 0) {
-      const highPriorityMissing = this.missingPages.filter(p => p.priority === 'high');
+      const highPriorityMissing = this.missingPages.filter(
+        p => p.priority === 'high',
+      );
       recommendations.push({
         category: 'missing_pages',
         priority: highPriorityMissing.length > 0 ? 'high' : 'medium',
         description: `Found ${this.missingPages.length} missing pages`,
-        action: 'Create missing pages, starting with high-priority ones'
+        action: 'Create missing pages, starting with high-priority ones',
       });
     }
 
@@ -367,7 +372,7 @@ class WebsiteAnalyzer {
         category: 'navigation',
         priority: 'medium',
         description: `Found ${this.navigationIssues.length} navigation issues`,
-        action: 'Improve navigation structure and fix broken navigation links'
+        action: 'Improve navigation structure and fix broken navigation links',
       });
     }
 
@@ -375,11 +380,14 @@ class WebsiteAnalyzer {
 
     // Save detailed report
     const reportPath = path.join(__dirname, 'website-analysis-report.json');
-    await fs.writeFile(reportPath, JSON.stringify(this.analysisResults, null, 2));
-    
+    await fs.writeFile(
+      reportPath,
+      JSON.stringify(this.analysisResults, null, 2),
+    );
+
     // Generate summary report
     await this.generateSummaryReport();
-    
+
     console.log(`📄 Detailed report saved to: ${reportPath}`);
   }
 
@@ -406,11 +414,14 @@ ${this.navigationIssues.map(issue => `- [${issue.severity}] ${issue.type}: ${iss
 
 ## 🎯 Recommendations
 
-${this.analysisResults.recommendations.map(rec => 
-  `### ${rec.category.toUpperCase()} (${rec.priority} priority)
+${this.analysisResults.recommendations
+  .map(
+    rec =>
+      `### ${rec.category.toUpperCase()} (${rec.priority} priority)
 ${rec.description}
-**Action**: ${rec.action}`
-).join('\n\n')}
+**Action**: ${rec.action}`,
+  )
+  .join('\n\n')}
 
 ## 📋 Next Steps
 

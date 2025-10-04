@@ -260,10 +260,4 @@ const March2026BreakthroughConsultingPage = React.memo(function March2026Breakth
           </div>
       </section>
   );
-<<<<<<< HEAD
-});</div></div></div></div></div></div></div></div></div></div></div></div>)
-
-export default $1;
-=======
 }</div></div>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-edcb

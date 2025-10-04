@@ -1,4 +1,3 @@
-
 import { describe, it, expect } from '@jest/globals';
 
 describe('RatingStars', () => {
@@ -6,4 +5,3 @@ describe('RatingStars', () => {
     expect(true).toBe(true);
   });
 });
-

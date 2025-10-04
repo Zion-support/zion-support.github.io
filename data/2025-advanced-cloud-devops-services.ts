@@ -1,10 +1,10 @@
-export interface CloudDevOpsService 
+export interface CloudDevOpsService {
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: string;
-  pricing: 
+  pricing: any;
     starter: string;
     professional: string;
     enterprise: string;
@@ -35,22 +35,21 @@ export interface CloudDevOpsService
   reviews: number;
 }
 
-export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
-  
+export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [;
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Unified management and orchestration across multiple cloud providers',
     description: 'Advanced multi-cloud platform that provides unified management, cost optimization, and seamless orchestration across AWS, Azure, Google Cloud, and other cloud providers.',
     category: 'Cloud Management',
-    pricing: 
+    pricing: any;
       starter: '$399/month',
       professional: '$999/month',
       enterprise: '$2,999/month',
       currency: 'USD',
       trialDays: 30,
-      setupTime: '1-2 weeks'
+      setupTime: '1-2 weeks';
     },
-    keyFeatures: [
+    keyFeatures: [;
       'Multi-cloud management',
       'Cost optimization',
       'Resource orchestration',
@@ -62,14 +61,14 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
       'API management',
       'Mobile app access'
     ],
-    benefits: [
+    benefits: [;
       'Reduce cloud costs by 25-40%',
       'Simplify multi-cloud operations',
       'Improve resource utilization',
       'Ensure consistent security',
       'Optimize performance across clouds'
     ],
-    targetAudience: [
+    targetAudience: [;
       'Large enterprises',
       'Technology companies',
       'Financial institutions',
@@ -83,7 +82,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     realImplementation: true,
     implementationDetails: 'Multi-cloud orchestration platform with unified management, cost optimization, and automated operations. Includes training and customization.',
     roi: 'Organizations typically see 200-350% ROI within 6-12 months through cost optimization and operational efficiency.',
-    useCases: [
+    useCases: [;
       'Multi-cloud management',
       'Cost optimization',
       'Resource orchestration',
@@ -95,13 +94,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     support: '24/7 support, cloud consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX, PCI DSS'],
     link: 'https://ziontechgroup.com/multi-cloud-orchestration-platform',
-    icon: '☁️',
+    icon: '',
     color: 'from-blue-500 to-cyan-600',
     popular: true,
     launchDate: '2024-12-01',
     customers: 110,
     rating: 4.8,
-    reviews: 167
+    reviews: 167;
   },
   
     id: 'intelligent-devops-automation-suite',
@@ -109,15 +108,15 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     tagline: 'AI-powered DevOps automation with intelligent CI/CD and infrastructure management',
     description: 'Comprehensive DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment processes for maximum efficiency and reliability.',
     category: 'DevOps Automation',
-    pricing: 
+    pricing: any;
       starter: '$299/month',
       professional: '$799/month',
       enterprise: '$2,499/month',
       currency: 'USD',
       trialDays: 30,
-      setupTime: '1-2 weeks'
+      setupTime: '1-2 weeks';
     },
-    keyFeatures: [
+    keyFeatures: [;
       'AI-powered CI/CD optimization',
       'Automated testing',
       'Infrastructure as code',
@@ -129,14 +128,14 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
       'Custom workflows',
       'API integration'
     ],
-    benefits: [
+    benefits: [;
       'Reduce deployment time by 80%',
       'Improve code quality by 60%',
       'Cut operational costs by 40%',
       'Ensure deployment reliability',
       'Automate compliance checks'
     ],
-    targetAudience: [
+    targetAudience: [;
       'Technology companies',
       'Financial institutions',
       'Healthcare organizations',
@@ -150,7 +149,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     realImplementation: true,
     implementationDetails: 'AI-powered DevOps automation platform with intelligent CI/CD, infrastructure management, and comprehensive monitoring. Includes training and customization.',
     roi: 'Typical ROI of 300-500% within 6-12 months through faster deployments and improved reliability.',
-    useCases: [
+    useCases: [;
       'CI/CD automation',
       'Infrastructure management',
       'Deployment automation',
@@ -162,13 +161,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     support: '24/7 support, DevOps consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
     link: 'https://ziontechgroup.com/intelligent-devops-automation-suite',
-    icon: '🚀',
+    icon: '',
     color: 'from-green-500 to-emerald-600',
     popular: true,
     launchDate: '2024-12-01',
     customers: 95,
     rating: 4.7,
-    reviews: 145
+    reviews: 145;
   },
   
     id: 'enterprise-kubernetes-management-platform',
@@ -176,15 +175,15 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     tagline: 'Enterprise-grade Kubernetes management with advanced monitoring and automation',
     description: 'Comprehensive Kubernetes management platform that provides advanced monitoring, security, automation, and governance for enterprise containerized applications.',
     category: 'Kubernetes Management',
-    pricing: 
+    pricing: any;
       starter: '$599/month',
       professional: '$1,499/month',
       enterprise: '$3,999/month',
       currency: 'USD',
       trialDays: 30,
-      setupTime: '2-3 weeks'
+      setupTime: '2-3 weeks';
     },
-    keyFeatures: [
+    keyFeatures: [;
       'Multi-cluster management',
       'Advanced monitoring',
       'Security scanning',
@@ -196,14 +195,14 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
       'Custom dashboards',
       'API access'
     ],
-    benefits: [
+    benefits: [;
       'Simplify Kubernetes operations',
       'Improve security posture',
       'Optimize resource utilization',
       'Ensure compliance',
       'Reduce operational overhead'
     ],
-    targetAudience: [
+    targetAudience: [;
       'Technology companies',
       'Financial institutions',
       'Healthcare organizations',
@@ -217,7 +216,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     realImplementation: true,
     implementationDetails: 'Enterprise Kubernetes management platform with advanced monitoring, security, and automation capabilities. Includes training and customization.',
     roi: 'Organizations typically see 200-400% ROI within 6-12 months through operational efficiency and resource optimization.',
-    useCases: [
+    useCases: [;
       'Multi-cluster management',
       'Application deployment',
       'Security management',
@@ -229,13 +228,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     support: '24/7 support, Kubernetes consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
     link: 'https://ziontechgroup.com/enterprise-kubernetes-management-platform',
-    icon: '⚓',
+    icon: '',
     color: 'from-purple-500 to-indigo-600',
     popular: true,
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
-    reviews: 112
+    reviews: 112;
   },
   
     id: 'intelligent-infrastructure-monitoring',
@@ -243,15 +242,15 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     tagline: 'AI-powered infrastructure monitoring with predictive analytics and automated alerting',
     description: 'Advanced infrastructure monitoring platform that uses AI to predict issues, optimize performance, and provide real-time insights into your entire technology stack.',
     category: 'Infrastructure Monitoring',
-    pricing: 
+    pricing: any;
       starter: '$199/month',
       professional: '$499/month',
       enterprise: '$1,499/month',
       currency: 'USD',
       trialDays: 30,
-      setupTime: '1 week'
+      setupTime: '1 week';
     },
-    keyFeatures: [
+    keyFeatures: [;
       'AI-powered monitoring',
       'Predictive analytics',
       'Real-time alerting',
@@ -263,14 +262,14 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
       'API integration',
       'Multi-cloud support'
     ],
-    benefits: [
+    benefits: [;
       'Prevent 80% of infrastructure issues',
       'Improve performance by 30%',
       'Reduce downtime by 60%',
       'Optimize resource utilization',
       'Real-time infrastructure insights'
     ],
-    targetAudience: [
+    targetAudience: [;
       'Technology companies',
       'Financial institutions',
       'Healthcare organizations',
@@ -284,7 +283,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     realImplementation: true,
     implementationDetails: 'AI-powered infrastructure monitoring platform with predictive analytics, automated alerting, and performance optimization. Includes training and customization.',
     roi: 'Typical ROI of 200-400% within 6-12 months through improved performance and reduced downtime.',
-    useCases: [
+    useCases: [;
       'Infrastructure monitoring',
       'Performance optimization',
       'Capacity planning',
@@ -296,13 +295,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     support: '24/7 support, monitoring consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
     link: 'https://ziontechgroup.com/intelligent-infrastructure-monitoring',
-    icon: '📊',
+    icon: '',
     color: 'from-yellow-500 to-orange-600',
     popular: true,
     launchDate: '2024-12-01',
     customers: 160,
     rating: 4.8,
-    reviews: 234
+    reviews: 234;
   },
   
     id: 'cloud-security-posture-management',
@@ -310,15 +309,15 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     tagline: 'Comprehensive cloud security management with automated compliance and threat detection',
     description: 'Advanced cloud security platform that provides continuous monitoring, automated compliance checks, and proactive threat detection across all cloud environments.',
     category: 'Cloud Security',
-    pricing: 
+    pricing: any;
       starter: '$499/month',
       professional: '$1,299/month',
       enterprise: '$3,499/month',
       currency: 'USD',
       trialDays: 30,
-      setupTime: '2-3 weeks'
+      setupTime: '2-3 weeks';
     },
-    keyFeatures: [
+    keyFeatures: [;
       'Continuous security monitoring',
       'Automated compliance checks',
       'Threat detection',
@@ -330,14 +329,14 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
       'Custom dashboards',
       'API integration'
     ],
-    benefits: [
+    benefits: [;
       'Reduce security risks by 80%',
       'Automate compliance checks',
       'Detect threats in real-time',
       'Ensure policy compliance',
       'Improve security posture'
     ],
-    targetAudience: [
+    targetAudience: [;
       'Financial institutions',
       'Healthcare organizations',
       'Government agencies',
@@ -351,7 +350,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     realImplementation: true,
     implementationDetails: 'Comprehensive cloud security platform with continuous monitoring, automated compliance, and threat detection. Includes training and customization.',
     roi: 'Organizations typically see 200-300% ROI within 6-12 months through reduced security risks and automated compliance.',
-    useCases: [
+    useCases: [;
       'Security monitoring',
       'Compliance management',
       'Threat detection',
@@ -363,12 +362,12 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     support: '24/7 security support, compliance consulting, training programs, and custom development.',
     compliance: ['SOC 2 Type II, ISO 27001, NIST, GDPR, HIPAA, SOX, PCI DSS'],
     link: 'https://ziontechgroup.com/cloud-security-posture-management',
-    icon: '🛡️',
+    icon: '',
     color: 'from-red-500 to-pink-600',
     popular: true,
     launchDate: '2024-11-01',
     customers: 85,
     rating: 4.9,
-    reviews: 123
+    reviews: 123;
   }
 ];

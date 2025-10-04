@@ -15,7 +15,11 @@ const branches = execSync('git branch -r', { encoding: 'utf8' })
   .split('\n')
   .filter(branch => branch.trim())
   .map(branch => branch.trim().replace('origin/', ''))
-  .filter(branch => branch.startsWith('cursor/') && branch !== 'cursor/analyze-improve-and-deploy-application-5157');
+  .filter(
+    branch =>
+      branch.startsWith('cursor/') &&
+      branch !== 'cursor/analyze-improve-and-deploy-application-5157',
+  );
 
 console.log(`📋 Found ${branches.length} potential PR branches`);
 
@@ -25,23 +29,24 @@ const mergeStrategy = {
   priority: [
     'cursor/build-fixes-clean',
     'cursor/build-and-fix-errors-merged',
-    'cursor/check-fix-push-and-merge-to-main-02c2-resolved'
+    'cursor/check-fix-push-and-merge-to-main-02c2-resolved',
   ],
-  
+
   // Branches that should be merged last (feature additions)
-  features: branches.filter(branch => 
-    branch.includes('build-') || 
-    branch.includes('feature-') || 
-    branch.includes('enhance-')
+  features: branches.filter(
+    branch =>
+      branch.includes('build-') ||
+      branch.includes('feature-') ||
+      branch.includes('enhance-'),
   ),
-  
+
   // Branches that should be skipped (duplicates or problematic)
   skip: [
     'cursor/build-and-fix-errors-ff02',
     'cursor/build-and-fix-errors-f8b4',
     'cursor/build-and-fix-errors-f8e2',
-    'cursor/build-and-fix-errors-fad9'
-  ]
+    'cursor/build-and-fix-errors-fad9',
+  ],
 };
 
 console.log('📊 Merge Strategy:');
@@ -53,36 +58,49 @@ console.log(`  Branches to skip: ${mergeStrategy.skip.length}`);
 function safeMerge(branchName) {
   try {
     console.log(`\n🔄 Attempting to merge ${branchName}...`);
-    
+
     // Check if branch exists
-    const branchExists = execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { encoding: 'utf8' });
-    
+    const branchExists = execSync(
+      `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
+      { encoding: 'utf8' },
+    );
+
     // Fetch the branch
-    execSync(`git fetch origin ${branchName}:${branchName}`, { stdio: 'inherit' });
-    
+    execSync(`git fetch origin ${branchName}:${branchName}`, {
+      stdio: 'inherit',
+    });
+
     // Try to merge
-    execSync(`git merge ${branchName} --no-ff -m "Merge ${branchName} into main"`, { stdio: 'inherit' });
-    
+    execSync(
+      `git merge ${branchName} --no-ff -m "Merge ${branchName} into main"`,
+      { stdio: 'inherit' },
+    );
+
     console.log(`✅ Successfully merged ${branchName}`);
     return true;
   } catch (error) {
     console.log(`❌ Failed to merge ${branchName}: ${error.message}`);
-    
+
     // Try to resolve conflicts automatically
     try {
       console.log(`🔧 Attempting to resolve conflicts for ${branchName}...`);
-      
+
       // Reset to main
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
-      
+
       // Try merge with strategy
-      execSync(`git merge ${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} into main"`, { stdio: 'inherit' });
-      
+      execSync(
+        `git merge ${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} into main"`,
+        { stdio: 'inherit' },
+      );
+
       console.log(`✅ Auto-resolved conflicts for ${branchName}`);
       return true;
     } catch (resolveError) {
-      console.log(`❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`);
-      
+      console.log(
+        `❌ Could not resolve conflicts for ${branchName}: ${resolveError.message}`,
+      );
+
       // Skip this branch and continue
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       return false;
@@ -122,7 +140,7 @@ const summary = {
   skippedBranches: mergeStrategy.skip.length,
   successfulMerges: successCount,
   failedMerges: failCount,
-  timestamp: new Date().toISOString()
+  timestamp: new Date().toISOString(),
 };
 
 fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2));

@@ -23,7 +23,9 @@ interface OptimizationResult {
 /**
  * Analyzes code quality and suggests improvements
  */
-export class CodeQualityAnalyzer   private metrics: CodeQualityMetrics =     totalFiles: 0,
+export class CodeQualityAnalyzer {
+  private metrics: CodeQualityMetrics = {
+    totalFiles: 0,
     lintWarnings: 0,
     typeErrors: 0,
     testCoverage: 0,
@@ -34,38 +36,44 @@ export class CodeQualityAnalyzer   private metrics: CodeQualityMetrics =     tot
   /**
    * Run comprehensive code quality analysis
    */
-  async analyze(): Promise<OptimizationResult[]>     const results: OptimizationResult[] = [];
+  async analyze(): Promise<OptimizationResult[]> {
+    const results: OptimizationResult[] = [];
 
     // Performance optimizations
-    results.push(      category: 'Performance',
+    results.push({
+      category: 'Performance',
       improvement: 'Implemented lazy loading for banner components',
       impact: 'high',
       implemented: true,
       metrics: { performanceScore: 95 },
     });
 
-    results.push(      category: 'Performance',
+    results.push({
+      category: 'Performance',
       improvement: 'Added image optimization pipeline',
       impact: 'high',
       implemented: true,
       metrics: { bundleSize: 450 },
     });
 
-    results.push(      category: 'Performance',
+    results.push({
+      category: 'Performance',
       improvement: 'Configured code splitting for routes',
       impact: 'medium',
       implemented: true,
     });
 
     // Code quality improvements
-    results.push(      category: 'Code Quality',
+    results.push({
+      category: 'Code Quality',
       improvement: 'Reduced duplicate code in banner components',
       impact: 'medium',
       implemented: true,
       metrics: { totalFiles: 1007 },
     });
 
-    results.push(      category: 'Code Quality',
+    results.push({
+      category: 'Code Quality',
       improvement: 'Standardized TypeScript types across components',
       impact: 'medium',
       implemented: true,
@@ -73,46 +81,53 @@ export class CodeQualityAnalyzer   private metrics: CodeQualityMetrics =     tot
     });
 
     // Testing improvements
-    results.push(      category: 'Testing',
+    results.push({
+      category: 'Testing',
       improvement: 'Added unit tests for utility functions',
       impact: 'high',
       implemented: true,
       metrics: { testCoverage: 75 },
     });
 
-    results.push(      category: 'Testing',
+    results.push({
+      category: 'Testing',
       improvement: 'Created integration tests for banner rotation',
       impact: 'medium',
       implemented: true,
     });
 
     // Accessibility improvements
-    results.push(      category: 'Accessibility',
+    results.push({
+      category: 'Accessibility',
       improvement: 'Added ARIA labels to interactive elements',
       impact: 'high',
       implemented: true,
     });
 
-    results.push(      category: 'Accessibility',
+    results.push({
+      category: 'Accessibility',
       improvement: 'Improved keyboard navigation support',
       impact: 'high',
       implemented: true,
     });
 
-    results.push(      category: 'Accessibility',
+    results.push({
+      category: 'Accessibility',
       improvement: 'Enhanced color contrast for readability',
       impact: 'medium',
       implemented: true,
     });
 
     // SEO improvements
-    results.push(      category: 'SEO',
+    results.push({
+      category: 'SEO',
       improvement: 'Optimized meta tags and structured data',
       impact: 'high',
       implemented: true,
     });
 
-    results.push(      category: 'SEO',
+    results.push({
+      category: 'SEO',
       improvement: 'Generated comprehensive sitemap',
       impact: 'medium',
       implemented: true,
@@ -124,29 +139,38 @@ export class CodeQualityAnalyzer   private metrics: CodeQualityMetrics =     tot
   /**
    * Generate improvement report
    */
-  generateReport(results: OptimizationResult[]): string     const report = ['# Code Quality Improvement Report\n'];
+  generateReport(results: OptimizationResult[]): string {
+    const report = ['# Code Quality Improvement Report\n'];
     report.push(`**Generated**: ${new Date().toISOString()}\n`);
     report.push(`**Total Improvements**: ${results.length}\n\n`);
 
-    const byCategory = results.reduce((acc, result) =>       if (!acc[result.category])         acc[result.category] = [];
-      }
-      acc[result.category].push(result);
-      return acc;
-    }, {} as Record<string, OptimizationResult[]>);
+    const byCategory = results.reduce(
+      (acc, result) => {
+        if (!acc[result.category]) {
+          acc[result.category] = [];
+        }
+        acc[result.category].push(result);
+        return acc;
+      },
+      {} as Record<string, OptimizationResult[]>,
+    );
 
-    for (const [category, items] of Object.entries(byCategory))       report.push(`## ${category}\n\n`);
-      items.forEach((item) =>         const status = item.implemented ? '✅' : '⏳';
+    for (const [category, items] of Object.entries(byCategory)) {
+      report.push(`## ${category}\n\n`);
+      items.forEach(item => {
+        const status = item.implemented ? '✅' : '⏳';
         const impact = item.impact.toUpperCase();
         report.push(`${status} **[${impact}]** ${item.improvement}\n`);
-        if (item.metrics)           report.push(`   Metrics: ${JSON.stringify(item.metrics)}\n`);
+        if (item.metrics) {
+          report.push(`   Metrics: ${JSON.stringify(item.metrics)}\n`);
         }
       });
       report.push('\n');
     }
 
     // Summary statistics
-    const implemented = results.filter((r) => r.implemented).length;
-    const highImpact = results.filter((r) => r.impact === 'high').length;
+    const implemented = results.filter(r => r.implemented).length;
+    const highImpact = results.filter(r => r.impact === 'high').length;
 
     report.push('## Summary\n\n');
     report.push(`- **Implemented**: ${implemented}/${results.length}\n`);
@@ -159,27 +183,33 @@ export class CodeQualityAnalyzer   private metrics: CodeQualityMetrics =     tot
   /**
    * Get current metrics
    */
-  getMetrics(): CodeQualityMetrics     return { ...this.metrics };
+  getMetrics(): CodeQualityMetrics {
+    return { ...this.metrics };
   }
 
   /**
    * Update metrics after improvements
    */
-  updateMetrics(updates: Partial<CodeQualityMetrics>): void     this.metrics = { ...this.metrics, ...updates };
+  updateMetrics(updates: Partial<CodeQualityMetrics>): void {
+    this.metrics = { ...this.metrics, ...updates };
   }
 }
 
 /**
  * Bundle size optimizer
  */
-export class BundleOptimizer   /**
+export class BundleOptimizer {
+  /**
    * Analyze and optimize bundle size
    */
-  async optimize(): Promise<    originalSize: number;
+  async optimize(): Promise<{
+    originalSize: number;
     optimizedSize: number;
     reduction: number;
     strategies: string[];
-  }>     return       originalSize: 1200, // KB
+  }> {
+    return {
+      originalSize: 1200, // KB
       optimizedSize: 450, // KB
       reduction: 62.5, // %
       strategies: [
@@ -197,14 +227,19 @@ export class BundleOptimizer   /**
 /**
  * Accessibility checker
  */
-export class AccessibilityChecker   /**
+export class AccessibilityChecker {
+  /**
    * Check accessibility compliance
    */
-  async check(): Promise<    score: number;
+  async check(): Promise<{
+    score: number;
     issues: Array<{ severity: string; description: string }>;
     recommendations: string[];
-  }>     return       score: 95,
+  }> {
+    return {
+      score: 95,
       issues: [
+        {
           severity: 'minor',
           description: 'Some images missing alt text in legacy components',
         },
@@ -226,12 +261,15 @@ export const bundleOptimizer = new BundleOptimizer();
 export const accessibilityChecker = new AccessibilityChecker();
 
 // Export utility functions
-export const generateQualityReport = async (): Promise<string> =>   const results = await codeQualityAnalyzer.analyze();
+export const generateQualityReport = async (): Promise<string> => {
+  const results = await codeQualityAnalyzer.analyze();
   return codeQualityAnalyzer.generateReport(results);
 };
 
-export const optimizeBundle = async () =>   return await bundleOptimizer.optimize();
+export const optimizeBundle = async () => {
+  return await bundleOptimizer.optimize();
 };
 
-export const checkAccessibility = async () =>   return await accessibilityChecker.check();
+export const checkAccessibility = async () => {
+  return await accessibilityChecker.check();
 };

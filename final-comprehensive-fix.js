@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-import fs from "fs";
-import path from "path";
-import { fileURLToPath  } from "url";
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -35,11 +35,12 @@ export default function ${componentName}() {
       </div>
     </div>
   )}
-`}
+`;
+}
 
 function createValidConfig(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
-  
+
   if (fileName.includes('tailwind')) {
     return `import type { Config } from 'tailwindcss';
 
@@ -56,8 +57,9 @@ const config: Config = {
   plugins: [] };
 
 export default config;
-`}
-  
+`;
+  }
+
   if (fileName.includes('vite')) {
     return `import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
@@ -66,8 +68,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000 } });
-`}
-  
+`;
+  }
+
   if (fileName.includes('vitest')) {
     return `import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
@@ -76,16 +79,19 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: 'jsdom' } });
-`}
-  
-  return `export default {};`}
+`;
+  }
+
+  return `export default {};`;
+}
 
 function createValidTypeScript(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
-  
+
   if (fileName.includes('vite-env')) {
-    return `/// <reference types="vite/client" />`}
-  
+    return `/// <reference types="vite/client" />`;
+  }
+
   if (fileName.includes('external-modules')) {
     return `declare module '*.svg' {
   const content: string;
@@ -98,74 +104,96 @@ declare module '*.png' {
 declare module '*.jpg' {
   const content: string;
   export default content}
-`}
-  
-  return `export {};`}
+`;
+  }
+
+  return `export {};`;
+}
 
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const ext = path.extname(filePath);
-    
+
     // If file is severely corrupted, rewrite it completely
-    if (content.length < 50 || 
-        content.includes('Parsing error') ||
-        content.includes('Expression expected') ||
-        content.includes('Declaration or statement expected') ||
-        content.includes('Unterminated string literal') ||
-        content.includes('; expected') ||
-        content.includes('> expected') ||
-        content.includes(', expected') ||
-        content.includes(': expected') ||
-        content.includes('( expected') ||
-        content.includes('} expected') ||
-        content.includes('Type expected') ||
-        content.includes('Argument expression expected') ||
-        content.includes('Unknown keyword or identifier') ||
-        content.includes('Unexpected keyword or identifier') ||
-        content.includes('Property or signature expected') ||
-        content.includes('Component definition is missing display name') ||
-        content.includes('Assign object to a variable before exporting as module default')) {
-      
+    if (
+      content.length < 50 ||
+      content.includes('Parsing error') ||
+      content.includes('Expression expected') ||
+      content.includes('Declaration or statement expected') ||
+      content.includes('Unterminated string literal') ||
+      content.includes('; expected') ||
+      content.includes('> expected') ||
+      content.includes(', expected') ||
+      content.includes(': expected') ||
+      content.includes('( expected') ||
+      content.includes('} expected') ||
+      content.includes('Type expected') ||
+      content.includes('Argument expression expected') ||
+      content.includes('Unknown keyword or identifier') ||
+      content.includes('Unexpected keyword or identifier') ||
+      content.includes('Property or signature expected') ||
+      content.includes('Component definition is missing display name') ||
+      content.includes(
+        'Assign object to a variable before exporting as module default',
+      )
+    ) {
       let newContent;
-      
+
       if (ext === '.tsx' || ext === '.jsx') {
-        newContent = createValidComponent(filePath)} else if (ext === '.ts' || ext === '.js') {
+        newContent = createValidComponent(filePath);
+      } else if (ext === '.ts' || ext === '.js') {
         if (filePath.includes('config')) {
-          newContent = createValidConfig(filePath)} else if (filePath.includes('types') || filePath.includes('d.ts')) {
-          newContent = createValidTypeScript(filePath)} else {
-          newContent = `export default {};`}
+          newContent = createValidConfig(filePath);
+        } else if (filePath.includes('types') || filePath.includes('d.ts')) {
+          newContent = createValidTypeScript(filePath);
+        } else {
+          newContent = `export default {};`;
+        }
       } else {
-        newContent = `export default {};`}
-      
+        newContent = `export default {};`;
+      }
+
       fs.writeFileSync(filePath, newContent);
-      return true}
-    
-    return false} catch (error) {
+      return true;
+    }
+
+    return false;
+  } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false}
+    return false;
+  }
 }
 
 function processDirectory(dirPath) {
   let fixedCount = 0;
-  
+
   try {
     const items = fs.readdirSync(dirPath);
-    
+
     for (const item of items) {
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        fixedCount += processDirectory(fullPath);
+      } else if (
+        item.endsWith('.tsx') ||
+        item.endsWith('.ts') ||
+        item.endsWith('.js') ||
+        item.endsWith('.jsx')
+      ) {
         if (fixFile(fullPath)) {
-          fixedCount++}
+          fixedCount++;
+        }
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message)}
-  
-  return fixedCount}
+    console.error(`Error processing directory ${dirPath}:`, error.message);
+  }
+
+  return fixedCount;
+}
 
 console.log('Starting final comprehensive fix...');
 const fixedCount = processDirectory(path.join(__dirname, 'src'));
