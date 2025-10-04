@@ -77,59 +77,15 @@ export default [
       'store/**',
       'jest.setup.js',
       '*.config.js',
-      '*.config.ts',
-      // Ignore problematic test files and disabled directories
-      '__tests__/**',
-      '_app_disabled/**',
-      '_conflicted_disabled/**',
-      '_pages_api_disabled/**',
-      '_pages_disabled/**',
-      'admin-api-disabled/**',
-      'api-backup/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'api.disabled.temp/**',
-      'apps.backup/**',
-      // Ignore specific problematic files
-      'AppMinimal.test.tsx',
-      'ComprehensivePricingGuide2030.tsx',
-      'EnhancedFooter.tsx',
-      'EnhancedHeader.tsx',
-      'EnhancedNavigation.tsx',
-      'ModernNavigation.tsx',
-      'SidebarNavigation.tsx',
-      // Ignore problematic root files
-      'additional-services.tsx',
-      'advanced-app-improvements.js',
-      'advanced-source-fixer.js',
-      'aggressive-fix.cjs',
-      'aggressive-fix.js',
-      'aggressive-syntax-fixer.cjs',
-      'analyze-missing-pages.js',
-      'api-documentation.tsx',
-      'api.tsx',
-      'app-improvement-automation.cjs',
-      'app-optimizer.js',
-      'ai-optimization-backups/**',
-      'api/**',
-      '*.js',
-      '*.cjs'
+      '*.config.ts'
     ]
   },
+
   // Base JavaScript configuration (limit to app source only)
   {
-    files: ["src/**/*.{js,cjs,mjs}"],
+    files: ["src/**/*.{js,cjs,mjs}", "**/*.{js,jsx}"],
     languageOptions: {
-      globals: {
-        ...globals.node,
-      },
-    },
-    ...js.configs.recommended,
-  },
-  // JSX configuration for JavaScript files
-  {
-    files: ["**/*.{jsx}"],
-    languageOptions: {
+      globals: { ...globals.node },
       parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
@@ -137,22 +93,13 @@ export default [
           jsx: true,
         },
       },
-      globals: {
-        ...globals.browser,
-      },
     },
-    plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-    },
-    rules: {
-      ...(reactHooks.configs.recommended?.rules || {}),
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-    },
+    ...js.configs.recommended,
   },
+
   // Simplified TypeScript configuration (non type-aware)
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}", "app/**/*.{ts,tsx}", "**/*.{ts,tsx}"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -162,9 +109,7 @@ export default [
           jsx: true,
         },
       },
-      globals: {
-        ...globals.browser,
-      },
+      globals: { ...globals.browser },
     },
     plugins: {
       "@typescript-eslint": tseslint,
@@ -173,9 +118,9 @@ export default [
     },
     rules: {
       ...(reactHooks.configs.recommended?.rules || {}),
-      "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-explicit-any": "off",
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
     },
   },
 ];
