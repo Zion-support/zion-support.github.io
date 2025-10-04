@@ -26,7 +26,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: 
+  contact_info: any;
     mobile: string;
     email: string;
 
@@ -43,7 +43,7 @@
   benefits: string[];
 
 
-  marketAdvantage: string
+  marketAdvantage: string;
   capabilities: string[],
   market_advantage: string;
 }
@@ -52,11 +52,11 @@ const contact =
 
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
 
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
+export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services
   
     id: 'ai - content - generation - platform';
@@ -67,7 +67,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation';
     marketPosition: 'Leading AI content generation platform with enterprise features',
 
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
+export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services
   {;
     id: 'ai-content-generation-platform';
@@ -102,7 +102,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Collaboration toolsAPI integration';
     ];
     popular: true;
-    icon: '✍️';
+    icon: '';
     color: 'from - blue - 600 to - indigo - 600';
     text_color: 'text - blue - 400';
     link: 'https://ziontechgroup.com / ai - content - generation';
@@ -158,7 +158,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Data encryption_security analytics dashboard';
     ];
     popular: true;
-    icon: '🔐';
+    icon: '';
     color: 'from - red - 600 to - pink - 600';
     text_color: 'text - red - 400';
     link: 'https://ziontechgroup.com / zero - trust - security';
@@ -213,11 +213,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     trialDays: 21;
     setupTime: '1-2 weeks';
     category: 'DevOps & Infrastructure';
-    realService: true
+    realService: true;
     technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
-    roi: 'Reduce deployment time by 70% and increase team productivity by 50%'
+    roi: 'Reduce deployment time by 70% and increase team productivity by 50%';
     period: '/month',
     description: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.';
     features: [;
@@ -225,7 +225,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Compliance automation_analytics and reporting';
     ];
     popular: true;
-    icon: '⚙️';
+    icon: '';
     color: 'from - green - 600 to - teal - 600';
     text_color: 'text - green - 400';
     link: 'https://ziontechgroup.com / ai - devops - automation';
@@ -275,11 +275,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     trialDays: 30;
     setupTime: '2-4 weeks';
     category: 'Edge Computing';
-    realService: true
+    realService: true;
     technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
     useCases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
-    roi: 'Reduce latency by 80% and improve operational efficiency by 45%'
+    roi: 'Reduce latency by 80% and improve operational efficiency by 45%';
     period: '/month',
     description: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.';
     features: [;
@@ -287,7 +287,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Performance optimization_integration APIs';
     ];
     popular: false;
-    icon: '🌐';
+    icon: '';
     color: 'from - purple - 600 to - blue - 600';
     text_color: 'text - purple - 400';
     link: 'https://ziontechgroup.com / iot - edge - intelligence';
@@ -338,7 +338,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'HIPAA compliance_integration with PACS systems';
     ];
     popular: true;
-    icon: '🏥';
+    icon: '';
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-medical-imaging';
     marketPosition: 'Leading AI medical imaging platform with FDA clearance',
@@ -347,11 +347,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     trialDays: 30;
     setupTime: '4-6 weeks';
     category: 'Healthcare AI';
-    realService: true
+    realService: true;
     technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
     integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
     useCases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
-    roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%'
+    roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%';
     color: 'from - emerald - 600 to - green - 600';
     text_color: 'text - emerald - 400';
     link: 'https://ziontechgroup.com / ai - medical - imaging';
@@ -409,7 +409,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Risk analytics dashboardAPI integration';
     ];
     popular: true;
-    icon: '💰';
+    icon: '';
     color: 'from - yellow - 600 to - orange - 600';
     text_color: 'text - yellow - 400';
     link: 'https://ziontechgroup.com / ai - financial - risk';
@@ -456,14 +456,14 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     name: 'AI Personalized Learning Platform';
     tagline: 'Adaptive learning powered by artificial intelligence';
     price: '$799';
-    period: '/month'
+    period: '/month';
     description: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.';
     features: [;
       'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard';
       'Mobile learning support_integration with LMS systems';
     ];
     popular: false;
-    icon: '🎓';
+    icon: '';
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-personalized-learning';
     marketPosition: 'Advanced AI-powered personalized learning platform',
@@ -535,7 +535,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Performance analytics_integration with ERP systems';
     ];
     popular: true;
-    icon: '📦';
+    icon: '';
     color: 'from - teal - 600 to - cyan - 600';
     text_color: 'text - teal - 400';
     link: 'https://ziontechgroup.com / ai - supply - chain';
@@ -588,11 +588,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     trialDays: 30;
     setupTime: '4-6 weeks';
     category: 'Energy & Sustainability';
-    realService: true
+    realService: true;
     technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
     integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
     useCases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
-    roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%'
+    roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%';
     tagline: 'Intelligent energy management and sustainability',
     price: '$1, 299';
     period: '/month',
@@ -602,7 +602,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Performance analytics_integration with smart meters';
     ];
     popular: false;
-    icon: '⚡';
+    icon: '';
     color: 'from - green - 600 to - emerald - 600';
     text_color: 'text - green - 400';
     link: 'https://ziontechgroup.com / ai - energy - optimization';
@@ -698,7 +698,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'Collaboration toolsAPI integration';
     ],;
     popular: true,;
-    icon: '✍️',;
+    icon: '',;
     color: 'from-blue-600 to-indigo-600',;
     textColor: 'text-blue-400',;
     link: 'https://ziontechgroup.com/ai-content-generation',;

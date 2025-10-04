@@ -34,8 +34,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         console.log('Performance Metric:', metric);
       }
 
-      if (reportToAnalytics && typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
+      if (reportToAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
+        const gtag = (window as Window & { gtag: (...args: unknown[]) => void }).gtag;
+        gtag('event', metric.name, {
           event_category: 'Web Vitals',
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),

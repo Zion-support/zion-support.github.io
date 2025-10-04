@@ -43,9 +43,8 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => {
     try {
-      // TODO: Implement error logging service (e.g., Sentry, LogRocket, etc.)
       const errorData = {
         message: error.message,
         stack: error.stack,
@@ -53,19 +52,73 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         errorId: this.state.errorId,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
+        userId: this.getUserId(),
+        sessionId: this.getSessionId(),
+        buildVersion: process.env.NODE_ENV === 'production' ? process.env.BUILD_VERSION : 'development'
       };
       
-      console.log('Error logged to service:', errorData);
+      // Try multiple logging strategies
+      await Promise.allSettled([
+        this.logToConsole(errorData),
+        this.logToLocalStorage(errorData),
+        this.logToServer(errorData)
+      ]);
       
+    } catch (loggingError) {
+      console.error('Failed to log error:', loggingError);
+    }
+  };
+
+  private logToConsole = async (errorData: any) => {
+    console.error('Application Error:', errorData);
+  };
+
+  private logToLocalStorage = async (errorData: any) => {
+    try {
+      const errors = JSON.parse(localStorage.getItem('app_errors') || '[]');
+      errors.push(errorData);
+      // Keep only last 10 errors
+      if (errors.length > 10) {
+        errors.splice(0, errors.length - 10);
+      }
+      localStorage.setItem('app_errors', JSON.stringify(errors));
+    } catch (e) {
+      // Ignore localStorage errors
+    }
+  };
+
+  private logToServer = async (errorData: any) => {
+    try {
       // Example: Send to error reporting service
-      // fetch('/api/errors', {
+      // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorData)
       // });
     } catch (loggingError) {
       console.error('Failed to log error:', loggingError);
+    }
+  };
+
+  private getUserId = (): string => {
+    try {
+      return localStorage.getItem('user_id') || 'anonymous';
+    } catch {
+      return 'anonymous';
+    }
+  };
+
+  private getSessionId = (): string => {
+    try {
+      let sessionId = sessionStorage.getItem('session_id');
+      if (!sessionId) {
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        sessionStorage.setItem('session_id', sessionId);
+      }
+      return sessionId;
+    } catch {
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
   };
 
