@@ -65,11 +65,11 @@ type=&quot;email&quot;
                       onChange={_(e) => setEmails(e.target.value)}
                       placeholder="john@example.com&#10;jane@company.org&#10;user@domain.net"
                       rows={8}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                      className="text-left"
                     />
                   </div>
                 ) : (_<div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="text-left">
                       Email Address
                     </label>
                     <input,
@@ -77,7 +77,7 @@ type="email"
                       value={emails}
                       onChange={_(e) => setEmails(e.target.value)}
                       placeholder="Enter email address to validate"
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="text-left"
                     />
                   </div>
                 )}
@@ -185,7 +185,7 @@ variant=&quot;outline & quot;
                           {getStatusIcon(result.status)}
                           <span className={`font-medium ${getStatusColor(result.status)}`}>;
                             {result.email}
-                          </span>;
+                          <;
                         </div>;
                         <span className={`text-sm font-medium ${getScoreColor(result.score)}`}>;
                   {validationResults.map((result, index) => (                    <div,
@@ -199,17 +199,17 @@ key={index}`;
                         <div className=&quot;flex items-center space-x-3&quot;>
 </div>)`;
                           <span className={`font-medium ${getStatusColor(result.status)}`}>
-                            {result.email}                          </span>
+                            {result.email}                          <
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
 
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
                           Score: {result.score}
-</span>
+<
                       </div>
                       <div className=&quot;text-sm text-gray-300 mb-2&quot;>
-                        <span className=&quot;text-gray-400&quot;>Domain:</span>
-                        <span className=&quot;ml-2&quot;>{result.domain}</span>
+                        <span className=&quot;text-gray-400&quot;>Domain:<
+                        <span className=&quot;ml-2&quot;>{result.domain}<
                       </div>
                           Score: {result.score}
 
@@ -217,7 +217,7 @@ key={index}`;
                       {result.issues.length > 0 && (
 
                         <div className=&quot;text-sm&quot;>
-                          <span className=&quot;text-gray-400&quot;>Issues:</span>
+                          <span className=&quot;text-gray-400&quot;>Issues:<
                           <ul className=&quot;mt-1 space-y-1&quot;>
                             {result.issues.map((issue: string, issueIndex: number) => (
                               <li key={issueIndex} className=&quot;text-red-300 flex items-center&quot;>
@@ -254,9 +254,9 @@ key={index}`;
 
 
 }
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+      <section className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
       <section className=&quot;py-20 bg-gradient-to-r from-blue-600 to-indigo-600&quot;>
         <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
@@ -418,9 +418,9 @@ href=&quot;/pricing&quot;
 }
 
 }
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+      <section className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
       <section className=&quot;py-20 bg-gradient-to-r from-blue-600 to-indigo-600&quot;>
         <div className=&quot;max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <p className=&quot;text-xl text-blue-100 mb-8&quot;>

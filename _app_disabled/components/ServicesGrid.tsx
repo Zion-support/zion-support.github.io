@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const services = [
   {
@@ -24,18 +24,18 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+    <div className="text-left">
       {services.map((service, index) => (
         <div
           key={index}
-          className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition duration-300 group"
+          className="text-left"
         >
-          <div className="text-4xl mb-4">{service.icon}</div>
-          <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-          <p className="text-gray-300 mb-4">{service.description}</p>
+          <div className="text-left">{service.icon}</div>
+          <h3 className="text-left">{service.title}</h3>
+          <p className="text-left">{service.description}</p>
           <Link
             href={service.href}
-            className="text-blue-400 hover:text-blue-300 transition duration-300 group-hover:underline"
+            className="text-left"
           >
             Learn More →
           </Link>

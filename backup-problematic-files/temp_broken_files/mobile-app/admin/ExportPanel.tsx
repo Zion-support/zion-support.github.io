@@ -12,13 +12,13 @@ interface ExportPanelProps {;
 
 
 
-    <Card className="bg-zion-blue border-zion-purple/30">;
+    <Card className="text-left">;
 
       <CardHeader>;
 "
-        <CardTitle className="text-lg">Export & Analytics;"
+        <CardTitle className="text-left">Export & Analytics;"
       <CardContent>;
-        <div className="space-y-4">;"
+        <div className="text-left">;"
 </div>
           <div>;
 

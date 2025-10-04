@@ -1,115 +1,60 @@
 #!/bin/bash
 
-# Simple script to merge all open PRs into main branch
+# Simple script to merge the most recent PRs
 set -e
 
-echo "🚀 Starting PR merge process..."
+echo "🚀 Starting simple PR merge process..."
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m'
+# Get the latest branches
+echo "📋 Fetching latest branches..."
+git fetch origin
 
-print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
-}
+# Get the 10 most recent branches
+RECENT_BRANCHES=$(git branch -r | grep -E "cursor/fix-errors-and-merge-to-main" | tail -10 | sed 's/origin\///' | sort -r)
 
-print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
-}
+echo "📊 Found recent branches to merge:"
+echo "$RECENT_BRANCHES"
 
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
+# Process each branch
+COUNT=0
+MERGED=0
+FAILED=0
 
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-# Get open PRs
-print_status "Fetching open PRs..."
-prs=$(curl -s -H "Accept: application/vnd.github.v3+json" \
-     "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | \
-jq -r '.[] | "\(.number)|\(.head.ref)|\(.title)"')
-
-if [ -z "$prs" ]; then
-    print_warning "No open PRs found"
-    exit 0
-fi
-
-print_status "Found open PRs:"
-echo "$prs"
-
-# Ensure we're on main branch
-print_status "Switching to main branch..."
-git checkout main
-git pull origin main
-
-# Merge each PR
-successful_merges=0
-failed_merges=0
-
-echo "$prs" | while IFS='|' read -r pr_number branch_name pr_title; do
-    print_status "Processing PR #${pr_number}: ${pr_title}"
+for branch in $RECENT_BRANCHES; do
+    ((COUNT++))
+    echo ""
+    echo "🔄 [$COUNT/10] Processing branch: $branch"
     
-    # Fetch the PR head
-    if git fetch origin pull/${pr_number}/head:pr-${pr_number} 2>/dev/null; then
-        print_success "Fetched PR #${pr_number}"
+    # Checkout and merge
+    if git checkout -b temp-$branch origin/$branch 2>/dev/null; then
+        git checkout main
         
-        # Try to merge
-        if git merge pr-${pr_number} --no-ff -m "Merge PR #${pr_number}: ${pr_title}" 2>/dev/null; then
-            print_success "Successfully merged PR #${pr_number}"
-            ((successful_merges++))
-        else
-            print_warning "Merge conflict in PR #${pr_number}, attempting to resolve..."
+        if git merge --no-ff temp-$branch -m "Merge $branch into main" 2>/dev/null; then
+            echo "✅ Successfully merged $branch"
+            ((MERGED++))
             
-            # Try to resolve conflicts automatically
-            conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
-            if [ -n "$conflicted_files" ]; then
-                for file in $conflicted_files; do
-                    print_status "Resolving conflicts in ${file}..."
-                    # Use incoming version for most files
-                    git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-                    git add "$file" 2>/dev/null || true
-                done
-                
-                if git commit --no-edit 2>/dev/null; then
-                    print_success "Resolved conflicts and merged PR #${pr_number}"
-                    ((successful_merges++))
-                else
-                    print_error "Failed to resolve conflicts for PR #${pr_number}"
-                    git merge --abort 2>/dev/null || true
-                    ((failed_merges++))
-                fi
-            else
-                print_error "Failed to merge PR #${pr_number}"
-                git merge --abort 2>/dev/null || true
-                ((failed_merges++))
-            fi
+            # Push the merge
+            git push origin main
+            
+            # Clean up
+            git branch -D temp-$branch
+        else
+            echo "❌ Failed to merge $branch due to conflicts"
+            git merge --abort
+            git branch -D temp-$branch
+            ((FAILED++))
         fi
-        
-        # Clean up
-        git branch -D pr-${pr_number} 2>/dev/null || true
     else
-        print_error "Unable to fetch PR #${pr_number}"
-        ((failed_merges++))
+        echo "⚠️  Could not checkout branch $branch"
+        ((FAILED++))
     fi
 done
 
-# Fix syntax errors
-print_status "Fixing syntax errors..."
-find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
-    if grep -q "'$" "$file"; then
-        print_status "Fixing syntax errors in $file"
-        sed -i "s/'$//g" "$file"
-    fi
-done
+echo ""
+echo "🎯 Summary:"
+echo "  Total processed: $COUNT"
+echo "  Successfully merged: $MERGED"
+echo "  Failed: $FAILED"
 
-# Push all changes
-print_status "Pushing all changes..."
-git push origin main
-
-print_success "PR merge process completed!"
-print_status "Check git log for merged commits"
+echo ""
+echo "✅ Simple merge process completed!"

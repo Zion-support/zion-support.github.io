@@ -22,20 +22,20 @@ export default function LoadingSpinner({
     white: 'border-white' };
 
   const spinner = (
-    <div className="flex flex-col items-center justify-center">
+    <div className="text-left">
       <div
         className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full ${colorClasses[color]} border-t-transparent`}
         style={{ animation: 'spin 1s linear infinite' }}
         role="status"
         aria-label="Loading"
       />
-      {text && <p className="mt-4 text-gray-600 text-center">{text}</p>}
+      {text && <p className="text-left">{text}</p>}
     </div>
   );
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
+      <div className="text-left">
         {spinner}
       </div>
     )}
@@ -57,7 +57,7 @@ export function LoadingPulse({
     white: 'bg-white' };
 
   return (
-    <div className="flex space-x-2">
+    <div className="text-left">
       {[0, 1, 2].map(i => (
         <div
           key={i}

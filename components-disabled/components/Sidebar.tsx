@@ -68,7 +68,7 @@ const quick_links = [;
 
 
 import React, { useState, useEffect } from 'react';'
-import { Link } from 'react-router-dom';'
+import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { 
   }

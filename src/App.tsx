@@ -1,89 +1,131 @@
-import React, { JSX, Suspense } from "react";
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header, Footer } from '../app/components/Navigation';
-import ErrorBoundary from './components/ErrorBoundary';
-import { PageLoader } from './components/LoadingSpinner';
-import '../app/globals.css';
-import ConsensusIntelligenceBreakthroughBanner from "../components/ConsensusIntelligenceBreakthroughBanner"
-import AutonomousEnterpriseBreakthroughBanner from "../components/AutonomousEnterpriseBreakthroughBanner"
-import June2026MegaBreakthroughBanner from "../components/June2026MegaBreakthroughBanner"
-import QuantumConsciousnessRevolutionBanner from "../components/QuantumConsciousnessRevolutionBanner"
-// Lazy load pages for better performance
-const LazyHomePage = React.lazy(() => import('../app/page'));
-const LazySolutionsPage = React.lazy(() => import('../app/solutions/page'));
-const LazyResourcesPage = React.lazy(() => import('../app/resources/page'));
-const LazyTeamPage = React.lazy(() => import('../app/team/page'));
-const LazyNewsPage = React.lazy(() => import('../app/news/page'));
-const LazyPressPage = React.lazy(() => import('../app/press/page'));
-const LazyCareersPage = React.lazy(() => import('../app/careers/page'));
-const LazyMarketplacePage = React.lazy(() => import('../app/marketplace/page'));
-const LazyServicesPage = React.lazy(() => import('../app/services/page'));
-const LazyAIInvoiceProcessingPage = React.lazy(() => import('../app/services/ai-invoice-processing-saas/page'));
-const LazyComprehensiveITServicesPage = React.lazy(() => import('../app/services/comprehensive-it-services/page'));
-const LazyAISocialMediaContentGenerator = React.lazy(() => import('../app/services/ai-social-media-content-generator/page'));
-const LazyAIEmailMarketingAutomation = React.lazy(() => import('../app/services/ai-email-marketing-automation/page'));
-const LazyAIBusinessIntelligencePlatform = React.lazy(() => import('../app/services/ai-business-intelligence-platform/page'));
-const LazyCloudMigrationService = React.lazy(() => import('../app/services/cloud-migration-service/page'));
-const LazyDevOpsAutomationService = React.lazy(() => import('../app/services/devops-automation-service/page'));
-const LazyAPIDevelopmentService = React.lazy(() => import('../app/services/api-development-service/page'));
-const LazyAIChatbotBuilder = React.lazy(() => import('../app/services/ai-chatbot-builder/page'));
-const LazyContactPage = React.lazy(() => import('../app/contact/page'));
-const LazyAboutPage = React.lazy(() => import('../app/about/page'));
+import { HelmetProvider } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import Header from './components/Header';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
-export default function App(): JSX.Element {
-  return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-slate-950">
-          <Header />
-          
-          {/* NEW: June 2026 Mega Breakthrough Banner - Most Prominent */}
-          <June2026MegaBreakthroughBanner />
-
-          {/* NEW: Quantum Consciousness Revolution Banner - Revolutionary Technology */}
-          <QuantumConsciousnessRevolutionBanner />
-
-          {/* Existing Banners and Sections */}
-          <ConsensusIntelligenceBreakthroughBanner />
-          <AutonomousEnterpriseBreakthroughBanner />
-          
-          <main className="min-h-screen">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<LazyHomePage />} />
-                <Route path="/solutions" element={<LazySolutionsPage />} />
-                <Route path="/resources" element={<LazyResourcesPage />} />
-                <Route path="/team" element={<LazyTeamPage />} />
-                <Route path="/news" element={<LazyNewsPage />} />
-                <Route path="/press" element={<LazyPressPage />} />
-                <Route path="/careers" element={<LazyCareersPage />} />
-                <Route path="/marketplace" element={<LazyMarketplacePage />} />
-                <Route path="/services" element={<LazyServicesPage />} />
-                <Route path="/services/ai-invoice-processing-saas" element={<LazyAIInvoiceProcessingPage />} />
-                <Route path="/services/comprehensive-it-services" element={<LazyComprehensiveITServicesPage />} />
-                <Route path="/services/ai-social-media-content-generator" element={<LazyAISocialMediaContentGenerator />} />
-                <Route path="/services/ai-email-marketing-automation" element={<LazyAIEmailMarketingAutomation />} />
-                <Route path="/services/ai-business-intelligence-platform" element={<LazyAIBusinessIntelligencePlatform />} />
-                <Route path="/services/cloud-migration-service" element={<LazyCloudMigrationService />} />
-                <Route path="/services/devops-automation-service" element={<LazyDevOpsAutomationService />} />
-                <Route path="/services/api-development-service" element={<LazyAPIDevelopmentService />} />
-                <Route path="/services/ai-chatbot-builder" element={<LazyAIChatbotBuilder />} />
-                <Route path="/services/comprehensive-micro-saas-solutions" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive Micro SaaS Solutions</h1></div>} />
-                <Route path="/services/ai-voice-assistant-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Voice Assistant Platform</h1></div>} />
-                <Route path="/services/ai-document-automation-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Document Automation Platform</h1></div>} />
-                <Route path="/comprehensive-micro-saas-services" element={<LazyServicesPage />} />
-                <Route path="/comprehensive-it-services" element={<LazyComprehensiveITServicesPage />} />
-                <Route path="/case-studies" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Case Studies</h1></div>} />
-                <Route path="/contact" element={<LazyContactPage />} />
-                <Route path="/about" element={<LazyAboutPage />} />
-                <Route path="*" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">404 - Page Not Found</h1></div>} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
-  );
+// Animation variants
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -20 }
 };
+
+const pageTransition = {
+  type: 'tween' as const,
+  ease: 'anticipate' as const,
+  duration: 0.4
+};
+
+
+// Lazy loaded components for better performance
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ServicesPage = React.lazy(() => import('./pages/Services'));
+
+// Simple Error Boundary
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+function App() {
+  return (
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="min-h-screen bg-gray-50">
+            <EnhancedErrorBoundary>
+              <Header />
+
+              {/* Main Content */}
+              <motion.main
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                className="relative z-10"
+              >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div id="main-content" className="flex-1">
+                    <React.Suspense fallback={
+                      <div className="min-h-screen flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                          <p className="text-gray-600">Loading...</p>
+                        </div>
+                      </div>
+                    }>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services/*" element={<ServicesPage />} />
+
+                        {/* 404 Fallback */}
+                        <Route
+                          path="*"
+                          element={
+                            <div className="min-h-screen flex items-center justify-center">
+                              <div className="text-center">
+                                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                                <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                                <a
+                                  href="/"
+                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                                >
+                                  Return Home
+                                </a>
+                              </div>
+                            </div>
+                          } />
+                      </Routes>
+                    </React.Suspense>
+                  </div>
+                </div>
+              </motion.main>
+            </EnhancedErrorBoundary>
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
+  );
+}
+
+export default App;

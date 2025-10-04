@@ -325,9 +325,9 @@ import: {
                     <div className='flex items-center space-x-3'>'
 
                       <filter.icon className='h-5 w-5 text-gray-600' />'
-                      <span className='text-sm font-medium text-gray-700'>{filter.name}</span>'
+                      <span className='text-sm font-medium text-gray-700'>{filter.name}<'
                     </div>''
-                    <span className='text-sm text-gray-500'>{filter.count}</span>
+                    <span className='text-sm text-gray-500'>{filter.count}<
 
                   </button>
                 ))}

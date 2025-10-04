@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const services = [
   {
@@ -71,28 +71,28 @@ const features = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="text-left">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Welcome to <span className="text-yellow-400">Zion Tech Group</span>
+      <section className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
+            <h1 className="text-left">
+              Welcome to <span className="text-left">Zion Tech Group<
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-left">
               Leading the future of technology with AI, autonomous systems, quantum computing, and innovative business solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <Link 
-                href="/solutions" 
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
+                href="/solutions"
+                className="text-left"
               >
                 Explore Solutions
               </Link>
               <Link 
-                href="/contact" 
-                className="border-2 border-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
+                href="/contact"
+                className="text-left"
               >
                 Get Started
               </Link>
@@ -102,34 +102,34 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left">
               Comprehensive technology solutions designed to transform your business and drive innovation.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-left">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
+              <div key={index} className="text-left">
+                <div className="text-left">{service.icon}</div>
+                <h3 className="text-left">{service.title}</h3>
+                <p className="text-left">{service.description}</p>
+                <ul className="text-left">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <li key={featureIndex} className="text-left">
+                      <span className="text-left"><
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Link 
                   href={service.href}
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
+                  className="text-left"
                 >
                   Learn More
                 </Link>
@@ -140,23 +140,23 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-left">
               We deliver exceptional value through innovation, expertise, and unwavering commitment to your success.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-left">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+              <div key={index} className="text-left">
+                <div className="text-left">{feature.icon}</div>
+                <h3 className="text-left">{feature.title}</h3>
+                <p className="text-left">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -164,24 +164,24 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl mb-8">
+          <p className="text-left">
             Let's discuss how our cutting-edge technology solutions can drive your success.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-left">
             <Link 
-              href="/contact" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
+              href="/contact"
+              className="text-left"
             >
               Start Your Project
             </Link>
             <Link 
-              href="/research" 
-              className="border-2 border-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
+              href="/research"
+              className="text-left"
             >
               View Our Research
             </Link>

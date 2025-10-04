@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Next-Generation Automation 2026: Revolutionary Business Process Transformation',
@@ -9,13 +9,17 @@ export const metadata = {
 
 export default function AINextGenerationAutomation2026() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <div className="text-left"></div>
       {/* Header */}
-      <div className="text-center mb-12">
+      <div className="text-left"></div>
               </div>
             </div>
           </div>
 
     </div>
   );
-}
+})

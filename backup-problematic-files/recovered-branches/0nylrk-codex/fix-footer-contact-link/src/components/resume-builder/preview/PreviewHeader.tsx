@@ -55,9 +55,9 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
       <Button ;
         variant="outline" ;
         onClick={onBack} ;
-        className="gap-2 no-print";
+        className="text-left";
       >;
-        <ArrowLeft className="h-4 w-4" />;
+        <ArrowLeft className="text-left" />;
         Back;
       </Button>;
       ;
@@ -68,14 +68,14 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
           variant="outline" ;
           onClick={handleBrowserPrint} ;
           disabled={isPrinting}
-          className="gap-2";
+          className="text-left";
         >;
-          <FileText className="h-4 w-4" />;
+          <FileText className="text-left" />;
           Print;
         </Button>;
         ;
-        <Button variant="outline" className="gap-2">;
-          <Link className="h-4 w-4" />;
+        <Button variant="outline" className="text-left">;
+          <Link className="text-left" />;
           Add to Profile;
         </Button>;
       </div>;
@@ -91,16 +91,16 @@ document.head.appendChild (style);
 }items-$ {';
   isMobile ? 'stretch' : 'center' ;
 }gap-3` ;
-}> <Button > <ArrowLeft className="h-4 w-4" /> Back </Button> <div className= {;
+}> <Button > <ArrowLeft className="text-left" /> Back </Button> <div className= {;
   `flex $ {';
   isMobile ? 'flex-col' : 'flex-row' ;
 }space-$ {';
   isMobile ? 'y-2' : 'x-2' ;
 }no-print` ;
 :temp_broken_files/resume-builder/preview/PreviewHeader.tsx
-}> <PdfExportButton resume= {;"  resume ";"}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;"}'"
+}> <PdfExportButton resume= {;"  resume ";"}/> <Button > <FileText className="text-left" /> Print </Button> <Button variant="outline" className="text-left" > <Link className="text-left" /> Add to Profile </Button> </div> </div>) ;"}'"
 }> <PdfExportButton resume= {;
   resume ";
-}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;
+}/> <Button > <FileText className="text-left" /> Print </Button> <Button variant="outline" className="text-left" > <Link className="text-left" /> Add to Profile </Button> </div> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/preview/PreviewHeader.tsx

@@ -71,7 +71,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
     <Button ;
       variant="outline" ;
       onClick={handleExport}
-      className="flex items-center gap-2";
+      className="text-left";
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
@@ -82,7 +82,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
   quotes: QuoteRequest[];
 filename?: string 
 }export const ExportToCSV = ({
-  quotes, filename = "quote-requests" 
+  quotes, filename = "quote-requests"
 }: ExportToCSVProps) => {
   const handleExport = () => {
   //Define CSV Headers const headers = [ 'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
@@ -94,7 +94,7 @@ quote.budget min
   quote.budget min 
 }` : 'Not specified');
 quote.timeline;
-quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="flex items-center gap-2" disabled= {;
+quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="text-left" disabled= {;
   quotes.length === 0 ;
 }> <Download size= {;
   16 ;

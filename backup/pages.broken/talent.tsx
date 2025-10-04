@@ -61,91 +61,90 @@ export default function TalentPage() {
 
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
-      <div className="min-h-screen bg-gray-50">;
+      <div className="text-left">;
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
 
 
-              className="text-center max-w-4xl mx-auto"
+              className="text-left"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-left">
                 Join Our Team
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-left">
                 Be part of a team that's shaping the future of technology and helping businesses transform digitally
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="#openings" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              <div className="text-left">
+                <Link href="#openings" className="text-left">
                   View Open Positions
                 </Link>
-                <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                <Link href="/contact" className="text-left">
                   Get In Touch
               </p>
                   </motion.div>)
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">
+        <section className="text-left">
                 Why Work With Us?
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 We're building a culture of innovation, collaboration, and growth where talented individuals can thrive
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-left">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
                 return (
                   <motion.div,
     key={index}
-                    className="text-center p-6"
+                    className="text-left"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
-                      <IconComponent className="w-8 h-8" />
+                    <div className="text-left">
+                      <IconComponent className="text-left" />
           </div>
         </div>
 
       </section>"
-      <section className="py-16 bg-gray-100">"
+      <section className="text-left">"
 </section>"
-        <div className="container mx-auto px-4">"
+        <div className="text-left">"
 </div>"
-          <div className="max-w-6xl mx-auto">"
+          <div className="text-left">"
 </div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">"
+            <h2 className="text-left">"
 </h2>
             </h2>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="text-left">"
 </div>
                 <motion.div;
                   key={index}
         </section>
 </motion>"
-        <section id="openings" className="py-20 bg-white">"
+        <section id="openings" className="text-left">"
 </section>"
-          <div className="container mx-auto px-4">"
+          <div className="text-left">"
 </div>
             <motion.div,"
-    className="text-center mb-16"""
+    className="text-left"""
               initial={{ "opacity": 0, "y": 30 }}""
               whileInView={{ "opacity": 1, "y": 0 }}""
               transition={{ "duration": 0.8 }}""
               viewport={{ "once": true }}"
             <motion.div;"
-              className="text-center mb-16""
-
-                    <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;
-                      <IconComponent className="w-8 h-8" />;
+              className="text-left""
+                    <div className="text-left">;
+                      <IconComponent className="text-left" />;
                     </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">;
+                    <h3 className="text-left">;
                       {benefit && benefit.title}
                     </h3>;
-                    <p className="text-gray-600">;
+                    <p className="text-left">;
                       {benefit && benefit.description}
                     </p>;
                   </motion && motion.div>;
@@ -155,8 +154,8 @@ export default function TalentPage() {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
 
 
               initial={{ opacity: 0, y: 30 }}
@@ -167,204 +166,203 @@ export default function TalentPage() {
 
             >
 </motion>"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+              <h2 className="text-left">"
 </h2>
               </h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+              <p className="text-left">"
 </p>
             </motion.div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
+            <div className="text-left">"
 </div>
                 <motion.div,
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
 </motion>"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;"
+              <h2 className="text-left">;"
 </h2>
               </h2>;"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;"
+              <p className="text-left">;"
 </p>
               </p>;
             </motion && motion.div>;"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
+            <div className="text-left">;"
 </div>
                 <motion&& motion.div,
     key={index}"
-                  className="bg-white p-6 rounded-lg shadow-lg""
+                  className="text-left""
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}"
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">;"
+                  className="text-left">;"
 </motion>"
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">;"
+                  <h3 className="text-left">;"
 </h3>
                   </h3>;"
-                  <p className="text-gray-600 mb-4">;"
+                  <p className="text-left">;"
 </p>
                   </p>;"
-                  <p className="text-gray-700 mb-4">;"
+                  <p className="text-left">;"
 </p>
                   </p>;"
-                  <div className="mb-4">;"
+                  <div className="text-left">;"
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-2">Requirements:</h4>;""
-                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">;"
+                    <h4 className="text-left">Requirements:</h4>;""
+                    <ul className="text-left">;"
 </ul>
                         <li key={reqIndex}>{req}</li>;
                     </ul>;
                   </div>;"
-                  <div className="mb-4">;"
+                  <div className="text-left">;"
 </div>"
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>;""
-                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">;"
+                    <h4 className="text-left">Benefits:</h4>;""
+                    <ul className="text-left">;"
 </ul>
                         <li key={benefitIndex}>{benefit}</li>;
                     </ul>;
                   </div>;"
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">;"
+                  <button className="text-left">;"
 </button>
                   </button>;"
-                  <div className="flex items-center">;"
+                  <div className="text-left">;"
 </div>"
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />;"
+                    <CheckCircle className="text-left" />;"
 </CheckCircle>"
-                    <span className="text-gray-900 font-medium">{value}</span>;"
-
+                    <span className="text-left">{value}<;"
                   </div>;
                 </motion && motion.div>;
               ))}
             </div>;
 
       </section>;"
-      <section className="py-16 bg-gray-100">;"
+      <section className="text-left">;"
 </section>"
-        <div className="container mx-auto px-4">;"
+        <div className="text-left">;"
 </div>"
-          <div className="max-w-6xl mx-auto">;"
+          <div className="text-left">;"
 </div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">;"
+            <h2 className="text-left">;"
 </h2>
             </h2>;"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
+            <div className="text-left">;"
 </div>
                 <motion&& motion.div;
                   key={index}
         </section>;
 </motion>
             <motion.div,"
-    className="text-center mb-16"""
+    className="text-left"""
               initial={{ "opacity": 0, "y": 30 }}""
               whileInView={{ "opacity": 1, "y": 0 }}""
               transition={{ "duration": 0 && 0.8 }}""
               viewport={{ "once": true }}"
             <motion && motion.div;"
-              className="text-center mb-16""
+              className="text-left""
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
 </motion>"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+              <h2 className="text-left">"
 </h2>
               </h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+              <p className="text-left">"
 </p>
             </motion.div>"
-            <div className="space-y-8">"
+            <div className="text-left">"
 </div>
                 <motion.div,
     key={job.id}"
-                  className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300""
+                  className="text-left""
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}"
-                  className="bg-white rounded-lg shadow-lg p-6 text-center""
+                  className="text-left""
                 >
 </motion>"
-                  <benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />"
+                  <benefit.icon className="text-left" />"
 </benefit>"
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">"
+                  <h3 className="text-left">"
 </h3>
                   </h3>"
-                  <p className="text-gray-600">"
+                  <p className="text-left">"
 </p>
                   </p>"
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">"
+                  <div className="text-left">"
 </div>
                     <div>
 </div>"
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">"
+                      <h3 className="text-left">"
 </h3>
                       </h3>"
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">"
+                      <div className="text-left">"
 </div>"
-                        <div className="flex items-center">"
+                        <div className="text-left">"
 </div>"
-                          <MapPin className="w-4 h-4 mr-1" />"
+                          <MapPin className="text-left" />"
 </MapPin>
                         </div>"
-                        <div className="flex items-center">"
+                        <div className="text-left">"
 </div>"
-                          <Clock className="w-4 h-4 mr-1" />"
+                          <Clock className="text-left" />"
 </Clock>
                         </div>"
-                        <div className="flex items-center">"
+                        <div className="text-left">"
 </div>"
-                          <Users className="w-4 h-4 mr-1" />"
+                          <Users className="text-left" />"
 </Users>
                         </div>"
-                        <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">"
-</span>
+                        <span className="text-left">"
+<
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Our Values
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 The principles that guide our work and shape our company culture
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="text-left">
               {values.map((value, index) => (
                 <motion.div,
-                  className="bg-white p-6 rounded-lg shadow-lg"
+                  className="text-left"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+                  className="text-left"
                 >
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-left">
                     {job.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-left">
                     {job.department} • {job.location} • {job.type}
                   </p>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-left">
                     {job.description}
                   </p>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Requirements:</h4>
-                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
+                  <div className="text-left">
+                    <h4 className="text-left">Requirements:</h4>
+                    <ul className="text-left">
                       {job.requirements.map((req, reqIndex) => (
                         <li key={reqIndex}>{req}</li>
                       ))}
                     </ul>
                   </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
+                  <div className="text-left">
+                    <h4 className="text-left">Benefits:</h4>
+                    <ul className="text-left">
                       {job.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex}>{benefit}</li>
                       ))}
                     </ul>
                   </div>
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                  <button className="text-left">
                     Apply Now
                   </button>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-gray-900 font-medium">{value}</span>
+                  <div className="text-left">
+                    <CheckCircle className="text-left" />
+                    <span className="text-left">{value}<
                   </div>
                 </motion.div>
               ))}
@@ -372,138 +370,138 @@ export default function TalentPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Why Work With Us
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-left">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
         </section>
 
         {/* Job Openings Section */}
-        <section id="openings" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+        <section id="openings" className="text-left">
+          <div className="text-left">
 
 
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Open Positions
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 Explore current job openings and find the perfect role for your skills and career goals
               </p>
             </motion.div>
-            <div className="space-y-8">
+            <div className="text-left">
               {jobOpenings.map((job, index) => (
                 <motion.div,
     key={job.id}
 
-                  className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
+                  className="text-left"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg shadow-lg p-6 text-center"
+                  className="text-left"
                 >
-                  <benefit.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <benefit.icon className="text-left" />
+                  <h3 className="text-left">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-left">
                     {benefit.description}
                   </p>
                 >
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                  <div className="text-left">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      <h3 className="text-left">
                         {job.title}
                       </h3>
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                        <div className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-1" />
+                      <div className="text-left">
+                        <div className="text-left">
+                          <MapPin className="text-left" />
                           {job.location}
                         </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
+                        <div className="text-left">
+                          <Clock className="text-left" />
                           {job.type}
                         </div>
-                        <div className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
+                        <div className="text-left">
+                          <Users className="text-left" />
                           {job.experience}
                         </div>
-                        <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">
+                        <span className="text-left">
                           {job.department}
-                        </span>
+                        <
                       </div>
                     <Link,
 :backup/pages.broken/talent.tsx
     href={`/talent/${job.id}`}"
-                      className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center""
+                      className="text-left""
                     >
 </Link>"
-                      <ArrowRight className="w-4 h-4 ml-2" />"
+                      <ArrowRight className="text-left" />"
 </ArrowRight>
                     </Link>
                   </div>"
-                  <p className="text-gray-600 mb-6">"
+                  <p className="text-left">"
 </p>
                   </p>"
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+                  <div className="text-left">"
 </div>
                     <div>
 </div>"
-                      <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>""
-                      <ul className="space-y-1">"
+                      <h4 className="text-left">Requirements</h4>""
+                      <ul className="text-left">"
 </ul>"
-                          <li key={reqIndex} className="flex items-start text-sm text-gray-600">"
+                          <li key={reqIndex} className="text-left">"
 </li>"
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />"
+                            <CheckCircle className="text-left" />"
 </CheckCircle>
                           </li>
                       </ul>
                     </div>
                     <div>
 </div>"
-                      <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>""
-                      <ul className="space-y-1">"
+                      <h4 className="text-left">Benefits</h4>""
+                      <ul className="text-left">"
 </ul>"
-                          <li key={benefitIndex} className="flex items-start text-sm text-gray-600">"
+                          <li key={benefitIndex} className="text-left">"
 </li>"
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />"
+                            <CheckCircle className="text-left" />"
 </CheckCircle>
                           </li>
     href={`/talent/${job.id}`}
-                      className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
+                      className="text-left"
                     >
                       Apply Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="text-left" />
                     </Link>
                   </div>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-left">
                     {job.description}
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="text-left">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
-                      <ul className="space-y-1">
+                      <h4 className="text-left">Requirements</h4>
+                      <ul className="text-left">
                         {job.requirements.slice(0, 3).map((req, reqIndex) => (
-                          <li key={reqIndex} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <li key={reqIndex} className="text-left">
+                            <CheckCircle className="text-left" />
                             {req}
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>
-                      <ul className="space-y-1">
+                      <h4 className="text-left">Benefits</h4>
+                      <ul className="text-left">
                         {job.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <li key={benefitIndex} className="text-left">
+                            <CheckCircle className="text-left" />
                             {benefit}
                           </li>
                         ))}
@@ -516,16 +514,16 @@ export default function TalentPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Don't See Your Role?
             </h2>
-            <p className="text-xl mb-8">
+            <p className="text-left">
               We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="text-left">
               Send Resume
 :backup/pages.broken/talent.tsx
               </p>

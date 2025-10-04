@@ -32,17 +32,15 @@ class EnhancedPerformanceMonitor {
   private metrics: PerformanceMetrics[] = [];
   private alerts: PerformanceAlert[] = [];
   private observers: PerformanceObserver[] = [];
-  private isMonitoring = false;
+  private _isMonitoring = false;
 
   constructor() {
     this.initializeObservers();
-  };
+  }
 
   private initializeObservers(): void {
-    if (typeof window === 'undefined') return;
-
     // Observe navigation timing
-    if ('PerformanceObserver' in window) {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
         const navObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -51,10 +49,10 @@ class EnhancedPerformanceMonitor {
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
           });
-        ');
+        });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      ' catch (error) {
+      } catch (error) {
         console.warn('Navigation timing observer failed:', error);
       }
     }
@@ -63,7 +61,7 @@ class EnhancedPerformanceMonitor {
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - entry.navigationStart,
+      timeToInteractive: entry.domInteractive - entry.fetchStart,
       timestamp: Date.now()
     };
 
@@ -90,14 +88,14 @@ class EnhancedPerformanceMonitor {
       timeToInteractive: 3800,
       totalBlockingTime: 200,
       speedIndex: 3000
-    ';
+    };
 
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
-      if (typeof value === 'number' && value > threshold) {
+      if (value && value > threshold) {
         this.addAlert({
           type: value > threshold * 1.5 ? 'error' : 'warning',
-          message: `${key} exceeded threshold: ${value}ms > ${threshold`ms`,
+          message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
           metric: key as keyof PerformanceMetrics,
           value,
           threshold,
@@ -113,21 +111,21 @@ class EnhancedPerformanceMonitor {
     // Keep only last 50 alerts
     if (this.alerts.length > 50) {
       this.alerts = this.alerts.slice(-50);
-    };
+    }
 
     // Log critical alerts
     if (alert.type === 'error') {
       console.error('Performance Alert:', alert);
     }
-  
+  }
 
   public startMonitoring(): void {
-    this.isMonitoring = true;
+    this._isMonitoring = true;
     console.log('Enhanced performance monitoring started');
-  
+  }
 
   public stopMonitoring(): void {
-    this.isMonitoring = false;
+    this._isMonitoring = false;
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     console.log('Enhanced performance monitoring stopped');
@@ -164,4 +162,4 @@ export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 // Auto-start monitoring in browser environment
 if (typeof window !== 'undefined') {
   enhancedPerformanceMonitor.startMonitoring();
-`
+}

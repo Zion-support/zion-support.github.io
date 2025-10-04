@@ -1,46 +1,24 @@
-// @ts-nocheck
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-export default function GenAIE2EEvalPipelines(): React.JSX.Element {
+export default function E2EEvalPipelines(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
-      <Helmet >
-        <title >E2E Eval Pipelines — KPI‑Linked Gates</title>
-        <meta name="description" content="Eval pipelines wired to KPIs with budgets, canaries, and instant rollback hooks." /><link rel="canonical", href ="https://ziontechgroup.com/blog/genai-2025-oct-01-e2e-eval-pipelines/>",
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <Helmet>
+        <title>Oct 1, 2025: E2E Evaluation Pipelines</title>
+        <meta name="description" content="End-to-end evaluation pipelines for generative AI systems with automated testing." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/genai-2025-oct-01-e2e-eval-pipelines" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">E2E Eval Pipelines — KPI‑Linked Gates</h1>",
-        <p className="text-zion-slate-light mb-8">Design eval pipelines tied to outcomes with cost/quality budgets, canaries, and rollback triggers.</h3>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Oct 1, 2025: E2E Evaluation Pipelines</h1>
+        <p className="text-zion-slate-light mb-8">End-to-end evaluation pipelines for generative AI systems with automated testing.</p>
         <div className="prose prose-invert max-w-3xl">
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">E2E Eval Pipelines — KPI‑Linked Gates</h1>",
-        <p className="text-zion-slate-light mb-8">Design eval pipelines tied to outcomes with cost/quality budgets, canaries, and rollback triggers.</h3>
-        <div className="prose prose-invert max-w-3xl">
-        <meta name="description", content ="Eval pipelines wired to KPIs with budgets, canaries, and instant rollback hooks." />",
-        <p className="text-zion-slate-light mb-8">Design eval pipelines tied to outcomes with cost/quality budgets, canaries, and rollback triggers.</p>
-        <div className="prose prose-invert max-w-3xl">
-        <meta name="description" content="Eval pipelines wired to KPIs with budgets, canaries, and instant rollback hooks." />",
-        <link rel="canonical", href ="https: //ziontechgroup.com/blog/genai-2025-oct-01-e2e-eval-pipelines" />",
-      </Helmet>
-
-      <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">E2E Eval Pipelines — KPI‑Linked Gates</h1>",
-        <p className="text-zion-slate-light mb-8">Design eval pipelines tied to outcomes with cost/quality budgets, canaries, and rollback triggers.</p>",
-        <div className="prose prose-invert max-w-3xl",
-      <div className="container mx-auto px-6 py-16>
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">E2E Eval Pipelines — KPI‑Linked Gates</h1>",
-        <p className="text-zion-slate-light mb-8">Design eval pipelines tied to outcomes with cost/quality budgets, canaries, and rollback triggers.</p>",
-        <div className="prose prose-invert max-w-3xl>
-          <p >
-            Build end‑to‑end evaluation pipelines that correlate with business KPIs. Use budget‑aware
-            routing, live canaries, and rollback hooks to prevent regressions while preserving velocity.
+          <p>
+            Build comprehensive end-to-end evaluation pipelines for generative AI systems with automated testing and validation.
           </p>
         </div>
       </div>
     </div>
   );
 }
-
-;

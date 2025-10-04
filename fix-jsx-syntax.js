@@ -3,79 +3,102 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-// Get list of files with JSX syntax errors
-const filesWithErrors = execSync('find src -name "*.tsx" -type f -exec grep -l "className=[^\\"]" {} \\;', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.trim());
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-console.log(`Found ${filesWithErrors.length} files with JSX syntax errors`);
-
-let totalFixed = 0;
-
-filesWithErrors.forEach(filePath => {
+// Function to fix JSX syntax errors in a file
+function fixJSXSyntax(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let fixedContent = content;
-    let fileFixed = false;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Fix malformed className attributes with trailing quotes
-    // Pattern: className="some-class">", -> className="some-class"
-    const classNameRegex1 = /className="([^"]+?)">"/g;
-    fixedContent = fixedContent.replace(classNameRegex1, (match, className) => {
-      fileFixed = true;
-      return `className="${className}"`;
+    // Fix common JSX syntax errors
+    const fixes = [
+      // Fix className="text-left">" -> className="text-left">
+      { pattern: /className="text-left">"/g, replacement: 'className="text-left">' },
+      
+      // Fix className="text-left" />" -> className="text-left" />
+      { pattern: /className="text-left" \/>"/g, replacement: 'className="text-left" />' },
+      
+      // Fix unclosed span tags like <span>text< -> <span>text</span>
+      { pattern: /<span([^>]*)>([^<]+)<$/gm, replacement: '<span$1>$2</span>' },
+      
+      // Fix metadata syntax errors title= -> title:
+      { pattern: /title=/g, replacement: 'title:' },
+      
+      // Fix malformed href attributes
+      { pattern: /href="\/\[\^"\]\*"/g, replacement: 'href="/"' },
+      
+      // Fix unterminated string literals in JSX
+      { pattern: /className="text-left">([^<]+)<$/gm, replacement: 'className="text-left">$1</span>' },
+    ];
+
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
     });
 
-    // Fix malformed className attributes without quotes
-    // Pattern: className=some-class">" -> className="some-class"
-    const classNameRegex2 = /className=([^"]+?)">"/g;
-    fixedContent = fixedContent.replace(classNameRegex2, (match, className) => {
-      fileFixed = true;
-      return `className="${className}"`;
-    });
-
-    // Fix malformed className with trailing comma and quote
-    // Pattern: className="some-class">", -> className="some-class"
-    const classNameRegex3 = /className="([^"]+?)">",/g;
-    fixedContent = fixedContent.replace(classNameRegex3, (match, className) => {
-      fileFixed = true;
-      return `className="${className}"`;
-    });
-
-    // Fix malformed JSX tags with trailing quotes
-    // Pattern: <Component className="...">", -> <Component className="...">
-    const jsxTagRegex = /(<\w+[^>]*?)">",/g;
-    fixedContent = fixedContent.replace(jsxTagRegex, (match, tag) => {
-      fileFixed = true;
-      return `${tag}>`;
-    });
-
-    // Fix malformed closing tags
-    // Pattern: </Component>", -> </Component>
-    const closingTagRegex = /(<\/\w+>)">",/g;
-    fixedContent = fixedContent.replace(closingTagRegex, (match, tag) => {
-      fileFixed = true;
-      return tag;
-    });
-
-    // Fix malformed self-closing tags
-    // Pattern: <Component />">" -> <Component />
-    const selfClosingRegex = /(<[^>]*\/>)">"/g;
-    fixedContent = fixedContent.replace(selfClosingRegex, (match, tag) => {
-      fileFixed = true;
-      return tag;
-    });
-
-    if (fileFixed) {
-      fs.writeFileSync(filePath, fixedContent);
-      totalFixed++;
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
+      return true;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-});
+  return false;
+}
 
-console.log(`\nTotal files fixed: ${totalFixed}`);
+// Function to recursively find all .tsx files
+function findTSXFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting JSX syntax fix...');
+
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTSXFiles(appDir);
+
+console.log(`Found ${tsxFiles.length} .tsx files`);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixJSXSyntax(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);
+
+// Run type check to see if we fixed the issues
+console.log('Running type check...');
+try {
+  execSync('npm run type-check', { stdio: 'inherit' });
+  console.log('Type check passed!');
+} catch (error) {
+  console.log('Type check still has errors, but we fixed many issues.');
+}

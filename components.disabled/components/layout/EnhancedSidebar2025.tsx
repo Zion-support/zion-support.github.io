@@ -1,5 +1,5 @@
 import React { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -198,7 +198,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="text-left"
           onClick={onClose}
         />
       )}, {/* Sidebar */}
@@ -207,51 +207,51 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
         animate={{ x: isOpen ? 0 : '-100%' }}
         exit={{ x: '-100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg:translate-x-0 lg:static lg:shadow-none"
+        className="text-left"
       >
-        <div className="flex flex-col h-full">
+        <div className="text-left">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">Z<
               </div>
-              <div className="ml-3">
-                <h1 className="text-xl font-bold text-gray-900">Zion Tech</h1>
-                <p className="text-sm text-gray-500">2025 Edition</p>
+              <div className="text-left">
+                <h1 className="text-left">Zion Tech</h1>
+                <p className="text-left">2025 Edition</p>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="text-left"
             >
-              <X className="w-6 h-6" />
+              <X className="text-left" />
             </button>
           </div>
 
           {/* Navigation */}
-          <div className="flex-1 overflow-y-auto p-4">
-            <div className="space-y-6">
+          <div className="text-left">
+            <div className="text-left">
               {sidebarSections.map((section, sectionIndex) => (
                 <div key={sectionIndex}>
                   <button
                     onClick={() => toggleSection(section.title)}
-                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="text-left"
                   >
-                    <div className="flex items-center">
+                    <div className="text-left">
                       <div
                         className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`}
                       >
-                        <section.icon className="w-4 h-4 text-white" />
+                        <section.icon className="text-left" />
                       </div>
-                      <span className="font-semibold text-gray-900">
+                      <span className="text-left">
                         {section.title}
-                      </span>
+                      <
                     </div>
                     {expandedSections.includes(section.title) ? (
-                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                      <ChevronDown className="text-left" />
                     ) : (
-                      <ChevronRight className="w-5 h-5 text-gray-500" />
+                      <ChevronRight className="text-left" />
                     )}
                   </button>
 
@@ -261,7 +261,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-2 space-y-1"
+                        className="text-left"
                       >
                         {section.items.map((item, itemIndex) => (
                           <div key={itemIndex}>
@@ -274,11 +274,11 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                   : 'text-gray-700 hover:bg-gray-50'
                               }`}
                             >
-                              <item.icon className="w-5 h-5 mr-3" />
-                              <div className="flex-1">
-                                <div className="font-medium">{item.name}</div>
+                              <item.icon className="text-left" />
+                              <div className="text-left">
+                                <div className="text-left">{item.name}</div>
                                 {item.description && (
-                                  <div className="text-sm text-gray-500">
+                                  <div className="text-left">
                                     {item.description}
                                   </div>
                                 )}
@@ -288,12 +288,12 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                   onClick={e => {
                                     e.preventDefault();
                                     toggleItem(item.name)}}
-                                  className="p-1 hover:bg-gray-200 rounded"
+                                  className="text-left"
                                 >
                                   {expandedItems.includes(item.name) ? (
-                                    <ChevronDown className="w-4 h-4" />
+                                    <ChevronDown className="text-left" />
                                   ) : (
-                                    <ChevronRight className="w-4 h-4" />
+                                    <ChevronRight className="text-left" />
                                   )}
                                 </button>
                               )}
@@ -306,7 +306,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                     initial={{ opacity: 0, height: 0 }}
                                     animate={{ opacity: 1, height: 'auto' }}
                                     exit={{ opacity: 0, height: 0 }}
-                                    className="ml-8 mt-1 space-y-1"
+                                    className="text-left"
                                   >
                                     {item.children.map((child, childIndex) => (
                                       <Link
@@ -337,24 +337,24 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-gray-200">
-            <div className="flex items-center space-x-4">
+          <div className="text-left">
+            <div className="text-left">
               <a
                 href="https://linkedin.com/company/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
+                className="text-left"
               >
-                <Globe className="w-5 h-5" />
+                <Globe className="text-left" />
               </a>
               <a
                 href="mailto:info@ziontechgroup.com"
-                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-left"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="text-left" />
               </a>
             </div>
-            <p className="mt-2 text-xs text-gray-500">
+            <p className="text-left">
               © 2025 Zion Tech Group. All rights reserved.
             </p>
           </div>

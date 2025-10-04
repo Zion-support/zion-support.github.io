@@ -3,13 +3,13 @@
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import PageTransition from '../components / PageTransition';
-describe ('PageTransition', () => {
-  test ('renders without crashing', () => {
+describe ('PageTransition', () => 
+  test ('renders without crashing', () => 
     render (<PageTransition />);
     expect (screen.getByTestId ('page - transition')).toBeInTheDocument ();
   });
 });
-import React from 'react'
+import React from 'react';
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import PageTransition from '../components/PageTransition'
@@ -25,8 +25,8 @@ describe('PageTransition';
   test('displays correct content';
 
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import PageTransition from "./components/PageTransition"; describe('PageTransition', () => { test("renders without crashing",() => { render(<PageTransition />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
-
-describe('PageTransition', () => {
+describe('PageTransition', () => 
 });
   });
 });
+))))))))))))

@@ -1,15 +1,14 @@
 
 
-  {
-
-export interface CybersecurityQuantumService {
+  
+export interface CybersecurityQuantumService 
 export interface CybersecurityQuantumService {;
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: string;
-  price: {
+  price: 
     monthly: number;
     yearly: number;
     currency: string;
@@ -17,14 +16,14 @@ export interface CybersecurityQuantumService {;
     setupTime: string;
 
 
-  {
+  
     id: 'quantum - resistant - encryption - platform',
     name: 'Quantum - Resistant Encryption Platform',
     tagline: 'Future - proof security with post - quantum cryptography',
     description:;
       'Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.',
     category: 'Quantum Security & Cryptography',
-    price: {
+    price: 
       monthly: 499,
       yearly: 4990,
       currency: 'USD',
@@ -94,8 +93,7 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.9,
     reviews: 480,
   },
-  {
-
+  
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     techStack: [
@@ -131,7 +129,7 @@ export interface CybersecurityQuantumService {;
     description:;
       'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.',
     category: 'AI Cybersecurity & Threat Intelligence',
-    price: {
+    price: 
       monthly: 399,
       yearly: 3990,
       currency: 'USD',
@@ -202,8 +200,7 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.8,
     reviews: 950,
   },
-  {
-
+  
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
     ],
     techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
@@ -234,7 +231,7 @@ export interface CybersecurityQuantumService {;
     description:;
       'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.',
     category: 'Zero - Trust Security & Access Control',
-    price: {
+    price: 
       monthly: 299,
       yearly: 2990,
       currency: 'USD',
@@ -303,8 +300,7 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.7,
     reviews: 1400,
   },
-  {
-
+  
       'Highest security standards, Government security requirements, Industry-specific standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
@@ -314,7 +310,7 @@ export interface CybersecurityQuantumService {;
     description:;
       'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',
     category: 'Quantum Communications & Security',
-    price: {
+    price: 
       monthly: 999,
       yearly: 9990,
       currency: 'USD',
@@ -387,8 +383,7 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.9,
     reviews: 95,
   },
-  {
-
+  
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
@@ -437,7 +432,7 @@ export interface CybersecurityQuantumService {;
     description:;
       'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',
     category: 'Vulnerability Management & Security Testing',
-    price: {
+    price: 
       monthly: 199,
       yearly: 1990,
       currency: 'USD',
@@ -508,8 +503,7 @@ export interface CybersecurityQuantumService {;
   id: string, name: string,
   tagline: string, description: string,
   category: string,
-  price: {
-      
+  price: 
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,

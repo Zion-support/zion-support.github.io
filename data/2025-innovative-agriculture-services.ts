@@ -1,8 +1,7 @@
 
 import { ServiceVariant } from '../types / service - variants';
 
-export interface InnovativeAgricultureService {
-
+export interface InnovativeAgricultureService 
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -13,7 +12,7 @@ export interface InnovativeAgricultureService {
   reviews: number;
 
 ;
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -57,8 +56,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -70,7 +68,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   reviews: number
 }
 
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
@@ -83,17 +81,14 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 };
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-  {
-
-
-  {
-
+  
+  
       'AI-powered crop monitoring',
   website: 'https://ziontechgroup.com';
 }
 ;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
-  {
+  
     id: 'ai - powered - precision - agriculture',
     name: 'AI - Powered Precision Agriculture',
     tagline:;
@@ -148,7 +143,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4 && 4.8,
     reviews: 178,
   },
-  {
+  
     id: 'quantum - agriculture - optimization',
     name: 'Quantum Agriculture Optimization',
     tagline:;
@@ -217,8 +212,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4 && 4.6,
     reviews: 26,
   },
-  {
-
+  
       'AI-powered contamination detection',
     id: 'ai - powered - food - safety - monitoring',
     name: 'AI - Powered Food Safety Monitoring',
@@ -280,8 +274,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4 && 4.7,
     reviews: 145,
   },
-  {
-
+  
       'Blockchain-based tracking',
     id: 'blockchain - food - traceability',
     name: 'Blockchain Food Traceability',
@@ -342,8 +335,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4 && 4.5,
     reviews: 67,
   },
-  {
-
+  
       'AI-powered climate control',
       'Crop growth monitoring',
       'Environmental optimization',
@@ -429,7 +421,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4.8,
     reviews: 178
   };
-  {
+  
     id: 'quantum-agriculture-optimization', name: 'Quantum Agriculture Optimization',
     tagline: 'Quantum-powered agriculture optimization for crop planning and resource allocation',
     price: '$4,999',
@@ -461,7 +453,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4.6,
     reviews: 26
   };
-  {
+  
     id: 'ai-powered-food-safety-monitoring', name: 'AI-Powered Food Safety Monitoring',
     tagline: 'Intelligent food safety monitoring with AI-powered contamination detection and quality control',
     price: '$1,599',
@@ -493,7 +485,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4.7,
     reviews: 145
   };
-  {
+  
     id: 'blockchain-food-traceability', name: 'Blockchain Food Traceability',
     tagline: 'Transparent food traceability with blockchain technology and supply chain tracking',
     price: '$1,799',
@@ -525,7 +517,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4.5,
     reviews: 67
   };
-  {
+  
     id: 'ai-powered-vertical-farming', name: 'AI-Powered Vertical Farming',
     tagline: 'Intelligent vertical farming with AI-powered climate control and crop optimization',
     price: '$2,299',

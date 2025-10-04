@@ -78,32 +78,32 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
   if (!metrics) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-300">Loading performance metrics...</p>
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left"></div>
+          <p className="text-left">Loading performance metrics...</p>
         </div>
       </div>
     )}
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <div className="max-w-7xl mx-auto">
+    <div className="text-left">
+      <div className="text-left">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="text-left"
         >
-          <h1 className="text-4xl font-bold mb-4">Performance Monitor</h1>
-          <div className="flex items-center justify-between">
-            <p className="text-gray-400">
+          <h1 className="text-left">Performance Monitor</h1>
+          <div className="text-left">
+            <p className="text-left">
               Last updated: {lastUpdated.toLocaleTimeString()}
             </p>
             <button
               onClick={updateMetrics}
               disabled={isLoading}
-              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 px-4 py-2 rounded-lg transition-colors"
+              className="text-left"
             >
               {isLoading ? 'Updating...' : 'Refresh'}
             </button>
@@ -115,20 +115,20 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-gray-800 rounded-lg p-6 mb-8"
+          className="text-left"
         >
-          <div className="flex items-center justify-between">
+          <div className="text-left">
             <div>
-              <h2 className="text-2xl font-bold mb-2">Performance Score</h2>
-              <p className="text-gray-400">Overall web vitals performance</p>
+              <h2 className="text-left">Performance Score</h2>
+              <p className="text-left">Overall web vitals performance</p>
             </div>
-            <div className="text-right">
+            <div className="text-left">
               <div
                 className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}
               >
                 {Math.round(metrics.score)}
               </div>
-              <div className="text-sm text-gray-400">out of 100</div>
+              <div className="text-left">out of 100</div>
             </div>
           </div>
         </motion.div>
@@ -140,10 +140,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="mb-8"
+              className="text-left"
             >
-              <h3 className="text-lg font-semibold mb-4">Performance Alerts</h3>
-              <div className="space-y-3">
+              <h3 className="text-left">Performance Alerts</h3>
+              <div className="text-left">
                 {alerts.map((alert, index) => (
                   <motion.div
                     key={index}
@@ -156,15 +156,15 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                         : 'bg-yellow-900/20 border-yellow-500 text-yellow-200'
                     }`}
                   >
-                    <div className="flex items-center">
+                    <div className="text-left">
                       {alert.type === 'error' ? (
-                        <AlertTriangle className="w-5 h-5 mr-3" />
+                        <AlertTriangle className="text-left" />
                       ) : (
-                        <Activity className="w-5 h-5 mr-3" />
+                        <Activity className="text-left" />
                       )}
                       <div>
-                        <div className="font-medium">{alert.metric}</div>
-                        <div className="text-sm opacity-90">
+                        <div className="text-left">{alert.metric}</div>
+                        <div className="text-left">
                           {alert.message}
                         </div>
                       </div>
@@ -181,13 +181,13 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+          className="text-left"
         >
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="text-left">
+            <h3 className="text-left">
               First Contentful Paint
             </h3>
-            <div className="text-3xl font-bold mb-2">
+            <div className="text-left">
               {Math.round(metrics.fcp)}ms
             </div>
             <div
@@ -199,11 +199,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="text-left">
+            <h3 className="text-left">
               Largest Contentful Paint
             </h3>
-            <div className="text-3xl font-bold mb-2">
+            <div className="text-left">
               {Math.round(metrics.lcp)}ms
             </div>
             <div
@@ -215,9 +215,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4">First Input Delay</h3>
-            <div className="text-3xl font-bold mb-2">
+          <div className="text-left">
+            <h3 className="text-left">First Input Delay</h3>
+            <div className="text-left">
               {Math.round(metrics.fid)}ms
             </div>
             <div
@@ -229,11 +229,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="text-left">
+            <h3 className="text-left">
               Cumulative Layout Shift
             </h3>
-            <div className="text-3xl font-bold mb-2">
+            <div className="text-left">
               {metrics.cls.toFixed(3)}
             </div>
             <div
@@ -251,23 +251,23 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="text-left"
         >
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4">Time to First Byte</h3>
-            <div className="text-3xl font-bold mb-2">
+          <div className="text-left">
+            <h3 className="text-left">Time to First Byte</h3>
+            <div className="text-left">
               {Math.round(metrics.ttfb)}ms
             </div>
-            <div className="text-sm text-gray-400">Server response time</div>
+            <div className="text-left">Server response time</div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4">Status</h3>
-            <div className="flex items-center">
-              <CheckCircle className="w-6 h-6 text-green-400 mr-2" />
-              <span className="text-green-400">Monitoring Active</span>
+          <div className="text-left">
+            <h3 className="text-left">Status</h3>
+            <div className="text-left">
+              <CheckCircle className="text-left" />
+              <span className="text-left">Monitoring Active<
             </div>
-            <div className="text-sm text-gray-400 mt-2">
+            <div className="text-left">
               Real-time performance tracking
             </div>
           </div>
