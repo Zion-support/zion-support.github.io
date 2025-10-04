@@ -30,13 +30,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           />
           <path
             className="opacity-75"
-            fill="currentColor""
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z""
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
           />
         </svg>
       </div>
       {message && (
-        <p className="mt-4 text-gray-600 text-sm font-medium">{message}</p>"
+        <p className="mt-4 text-gray-600 text-sm font-medium">{message}</p>
       )}
     </div>
   );
@@ -44,10 +44,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 export const PageLoader: React.FC = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-slate-950">"
-      <div className="text-center">"
-        <LoadingSpinner size="lg" />"
-        <p className="mt-4 text-gray-400">Loading...</p>"
+    <div className="flex items-center justify-center min-h-screen bg-slate-950">
+      <div className="text-center">
+        <LoadingSpinner size="lg" />
+        <p className="mt-4 text-gray-400">Loading...</p>
       </div>
     </div>
   );
