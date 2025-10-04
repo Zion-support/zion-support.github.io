@@ -43,7 +43,6 @@ const App: React.FC = () => {
           togglePerformanceMonitor();
         }
       };
-
       window.addEventListener('keydown', handleKeyPress);
       return () => window.removeEventListener('keydown', handleKeyPress);
     }
@@ -56,7 +55,6 @@ const App: React.FC = () => {
           <SEOHead />
           <EnhancedErrorBoundary>
             <Header />
-            
             <main className="flex-1">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
@@ -71,9 +69,8 @@ const App: React.FC = () => {
                 </Routes>
               </Suspense>
             </main>
-
             <Footer />
-
+            
             {/* Performance Monitor Modal */}
             {showPerformanceMonitor && (
               <motion.div
@@ -103,7 +100,7 @@ const App: React.FC = () => {
                 </motion.div>
               </motion.div>
             )}
-
+            
             {/* Performance Optimizer (hidden) */}
             <PerformanceOptimizer />
           </EnhancedErrorBoundary>

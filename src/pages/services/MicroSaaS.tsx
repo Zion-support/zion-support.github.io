@@ -1,2 +1,1 @@
-
-    <div className="min-h-screen bg-white"
+ <div className = "min-h-screen bg-white" ;

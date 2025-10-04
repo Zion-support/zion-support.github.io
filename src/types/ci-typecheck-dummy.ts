@@ -1,1 +1,1 @@
-// CI, placeholder, to satisfy, narrowed, type-check, includ, e export, type, CiTypecheckPlaceholder = unkno, w, n;
+// CIplaceholderto satisfynarrowedtype-checkinclude exporttype CiTypecheckPlaceholder = unknow, n;

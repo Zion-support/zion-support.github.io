@@ -1,1 +1,1 @@
-export, type, Placeholder = Reco, r, d<stri, n, g, unkno, w, n>;
+exporttype Placeholder = Recor, d<strin, gunknow, n>;
