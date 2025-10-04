@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface EnhancedMetrics {
-  cls?: number;
-  inp?: number;
-  fcp?: number;
-  lcp?: number;
-  ttfb?: number;
+  cls: number;
+  inp: number;
+  fcp: number;
+  lcp: number;
+  ttfb: number;
   memory?: number;
   connection?: string;
   devicePixelRatio?: number;
@@ -34,7 +34,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const [history, setHistory] = useState<PerformanceHistory[]>([]);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
-    inp: 100,
+    inp: 200,
     fcp: 1800,
     lcp: 2500,
     ttfb: 800
@@ -60,14 +60,16 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
   const handleMetric = useCallback((metric: any) => {
     const enhancedMetrics: EnhancedMetrics = {
+      cls: metrics?.cls || 0,
+      inp: metrics?.inp || 0,
+      fcp: metrics?.fcp || 0,
+      lcp: metrics?.lcp || 0,
+      ttfb: metrics?.ttfb || 0,
       [metric.name]: metric.value,
       ...getEnhancedPerformanceInfo()
     };
     
-    setMetrics(prev => ({
-      ...prev,
-      ...enhancedMetrics
-    }));
+    setMetrics(enhancedMetrics);
     
     // Add to history
     setHistory(prev => [
@@ -77,7 +79,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         metrics: enhancedMetrics
       }
     ]);
-  }, [getEnhancedPerformanceInfo]);
+  }, [getEnhancedPerformanceInfo, metrics]);
 
   const getStatusColor = (value: number, threshold: number) => {
     if (value <= threshold * 0.5) return 'text-green-600';
@@ -156,8 +158,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div className="flex justify-between">
               <span>INP:</span>
-              <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
-                {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+              <span className={getStatusColor(metrics.inp, thresholds.inp)}>
+                {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
               </span>
             </div>
             <div className="flex justify-between">
