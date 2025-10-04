@@ -66,7 +66,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       fcp: 0,
       lcp: 0,
       ttfb: 0,
-      ...performanceInfo
+      ...performanceInfo,
+      [metric.name]: metric.value
     };
     
     // Map metric name to our interface
@@ -101,7 +102,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         metrics: enhancedMetrics
       }
     ]);
-}, [getEnhancedPerformanceInfo]);
+  }, [getEnhancedPerformanceInfo]);
 
   const getStatusColor = (value: number, threshold: number) => {
     if (value <= threshold * 0.5) return 'text-green-600';
