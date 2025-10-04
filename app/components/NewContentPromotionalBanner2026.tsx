@@ -3,7 +3,21 @@ import Link from 'next/link';
 import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
+<<<<<<< HEAD
+  const featuredContent = [
+    {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
   const featuredContent = [{
+=======
+  const featuredContent = [
+    {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3825
+=======
+  const featuredContent = [{
+>>>>>>> origin/main
+>>>>>>> main
       id: 1,
       title: 'AI Autonomous Workflows 2026',
       slug: 'ai-autonomous-workflows-2026',
@@ -15,7 +29,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       badge: 'NEW',
       badgeColor: 'from-cyan-500 to-blue-600'
     },
-    
+    {
       id: 2,
       title: 'Enterprise AI Transformation Roadmap 2026',
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -27,7 +41,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       badge: 'STRATEGIC',
       badgeColor: 'from-purple-500 to-fuchsia-600'
     },
-    
+    {
       id: 3,
       title: 'AI-Powered Security Operations Center 2026',
       slug: 'ai-security-operations-center-2026',
@@ -42,51 +56,51 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-  <div></div>
-    <div className="text-left"></div>
+    <div className="text-left">
       {/* Animated background effects */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
         <div className="text-left" style={{ animationDelay: '1s' }}></div>
         <div className="text-left" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         {/* Header Section */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
             <Sparkles className="text-left" />
-            <span className="text-left"></span>
+            <span className="text-left">
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
             <Sparkles className="text-left" />
           </div>
 
           <h2 className="text-left">
-            <span className="text-left"></span>
+            <span className="text-left">
               Latest AI Innovations
             </span>
             <br />
-            <span className="text-left"></span>
+            <span className="text-left">
               That Transform Business
             </span>
           </h2>
           
-          <p className="text-left"></p>
+          <p className="text-left">
             Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
             that are delivering <span className="text-left">300%+ ROI</span> for enterprises worldwide
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+            <div className="text-left">
               <TrendingUp className="text-left" />
               <span className="text-left">10,000+ Readers</span>
             </div>
-            <div className="text-left"></div>
+            <div className="text-left">
               <Zap className="text-left" />
               <span className="text-left">3 New Articles</span>
             </div>
-            <div className="text-left"></div>
+            </div>
+            <div className="text-left">
               <Target className="text-left" />
               <span className="text-left">Proven Results</span>
             </div>
@@ -94,30 +108,30 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         {/* Featured Content Cards */}
-        <div className="text-left"></div>
+        <div className="text-left">
           {featuredContent.map((content, index) => (
             <div 
               key={content.id}
               className="text-left"
               style={{ animationDelay: `${index * 150}ms` }}
-            ></div>
+            >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
-              <div className="text-left"></div>
+              <div className="text-left">
                 {/* Icon & Badge */}
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+                  <div className="text-left">
                     {content.icon}
                   </div>
-                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}></div>
+                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
                     {content.badge}
                   </div>
                 </div>
 
                 {/* Category */}
-                <div className="text-left"></div>
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}></span>
+                <div className="text-left">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
                     {content.category}
                   </span>
                 </div>
@@ -128,7 +142,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-left"></p>
+                <p className="text-left">
                   {content.excerpt}
                 </p>
 
