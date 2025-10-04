@@ -1,15 +1,1 @@
-import React from "react";
-const, Securit, y: Rea, c, t.FC = () => {
-    return (
-        <section, className="m, i, n-h-[40, v, h]">
-            <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Securi, t, y</h1>
-            <p, className="te, x, t-gr, a, y-700, m, b-4">We, follow, best practices, for, security, including, encryptio, n, least, privileg, e, and, continuous, monitoring.</p>
-            <ul, className="li, s, t-disc, p, l-6, spac, e-y-2, tex, t-gr, a, y-7, 0, 0">
-                <li>Data, encryption, in transit, and, at re, s, t</li>
-                <li>Security, reviews, and audi, t, s</li>
-                <li>Incident, response, procedures</li>
-            </ul>
-        </secti, o, n>
-    );
-};
-export default Security;
+import React from "react"; const, Securit, y: Rea, c, t.FC = () => { return ( <section, className="m, i, n-h-[40, v, h]" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Securi, t, y</h1> <p, className="te, x, t-gr, a, y-700, m, b-4" >We, follow, best practices, for, security, including, encryptio, n, least, privileg, e, and, continuous, monitoring.</p> <ul, className="li, s, t-disc, p, l-6, spac, e-y-2, tex, t-gr, a, y-7, 0, 0" > <li>Data, encryption, in transit, and, at re, s, t</li> <li>Security, reviews, and audi, t, s</li> <li>Incident, response, procedures</li> </ul> </secti, o, n> ); }; export default Security;

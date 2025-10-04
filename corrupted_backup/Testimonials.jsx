@@ -1,17 +1,1 @@
-
-interface TestimonialsProps {
-  // Add props here as needed
-}
-
-export default function Testimonials() {
-}
-return (;
-    <div>
-      <h1>Testimonials</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-}
-
+interface TestimonialsProps { // Add props here as needed } export default function Testimonials() {} return (; <div> <h1>Testimonials</h1> <p>This component is currently under development.</p> </div> ); } } }

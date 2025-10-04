@@ -1,17 +1,1 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-const, SolutionsStartu, p: Rea, c, t.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Startup, Solution, s - Zion, Tech, Group</title>
-        <meta name="descripti, o, n" content="Fa, s, t, agile, solutions, for startups, to, scale."  />
-      </Helmet>
-      <div, className="container, m, x-auto, p, x-6, p, y-12">
-        <h1, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Startup, Solution, s</h1>
-        <p, className="te, x, t-gr, a, y-600, ma, x-w-3, x, l">Move, fast, with MV, P, s, rapid, prototypin, g, and, growt, h-oriented, architecture, s.</p>
-      </d, i, v>
-    < />
-  );
-};
-export default SolutionsStartup;
+import React from "react"; import { Helmet } from "react-helmet-async"; const, SolutionsStartu, p: Rea, c, t.FC = () => { return ( <> <Helmet> <title>Startup, Solution, s - Zion, Tech, Group</title> <meta name="descripti, o, n" content="Fa, s, t, agile, solutions, for startups, to, scale." /> </Helmet> <div, className="container, m, x-auto, p, x-6, p, y-12" > <h1, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4" >Startup, Solution, s</h1> <p, className="te, x, t-gr, a, y-600, ma, x-w-3, x, l" >Move, fast, with MV, P, s, rapid, prototypin, g, and, growt, h-oriented, architecture, s.</p> </d, i, v> < /> ); }; export default SolutionsStartup;

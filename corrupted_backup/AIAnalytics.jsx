@@ -1,9 +1,1 @@
-
-interface AIAnalyticsProps {
-  // Add props here as needed
-}
-
-export default function AIAnalytics() {
-}
-return (;
-
+interface AIAnalyticsProps { // Add props here as needed } export default function AIAnalytics() {} return (;

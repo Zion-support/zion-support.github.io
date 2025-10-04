@@ -18,7 +18,6 @@ const pageTransition = {
   duration: 0.4
 };
 
-
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const AboutPage = React.lazy(() => import('./pages/About'));
@@ -48,7 +47,9 @@ class ErrorBoundary extends React.Component<
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h1>
             <button
               onClick={() => this.setState({ hasError: false })}
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
@@ -59,7 +60,6 @@ class ErrorBoundary extends React.Component<
         </div>
       );
     }
-
     return this.props.children;
   }
 }
@@ -72,7 +72,7 @@ function App() {
           <div className="min-h-screen bg-gray-50">
             <EnhancedErrorBoundary>
               <Header />
-
+              
               {/* Main Content */}
               <motion.main
                 initial="initial"
@@ -84,20 +84,22 @@ function App() {
               >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div id="main-content" className="flex-1">
-                    <React.Suspense fallback={
-                      <div className="min-h-screen flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                          <p className="text-gray-600">Loading...</p>
+                    <React.Suspense
+                      fallback={
+                        <div className="min-h-screen flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                            <p className="text-gray-600">Loading...</p>
+                          </div>
                         </div>
-                      </div>
-                    }>
+                      }
+                    >
                       <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/services/*" element={<ServicesPage />} />
-
+                        
                         {/* 404 Fallback */}
                         <Route
                           path="*"
@@ -114,7 +116,8 @@ function App() {
                                 </a>
                               </div>
                             </div>
-                          } />
+                          }
+                        />
                       </Routes>
                     </React.Suspense>
                   </div>

@@ -1,10 +1,1 @@
-import React from "react";
-const, MarketplaceTalen, t: Rea, c, t.FC = () => {
-    return (
-        <section, className="m, i, n-h-[40, v, h]">
-            <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Marketpla, c, e - Tale, n, t</h1>
-            <p, className="te, x, t-gr, a, y-7, 0, 0">Hire, to, p-tier, A, I, clo, u, d, and, security, experts.</p>
-        </secti, o, n>
-    );
-};
-export default MarketplaceTalent;
+import React from "react"; const, MarketplaceTalen, t: Rea, c, t.FC = () => { return ( <section, className="m, i, n-h-[40, v, h]" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Marketpla, c, e - Tale, n, t</h1> <p, className="te, x, t-gr, a, y-7, 0, 0" >Hire, to, p-tier, A, I, clo, u, d, and, security, experts.</p> </secti, o, n> ); }; export default MarketplaceTalent;

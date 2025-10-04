@@ -1,5 +1,1 @@
-
-  } else {
-
-    res.writeHead(404 {
-
+} else { res.writeHead(404 {
