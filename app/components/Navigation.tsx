@@ -1,25 +1,25 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleScroll = useCallback(() => {
-    setIsScrolled(window.scrollY > 50);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  const navItems = useMemo(() => [
-    { name: 'Home', href: '/', ariaLabel: 'Go to home page' },
-    { name: 'Services', href: '/services', ariaLabel: 'View our services' },
-    { name: 'About', href: '/about', ariaLabel: 'Learn about us' },
-    { name: 'Contact', href: '/contact', ariaLabel: 'Get in touch' },
-    { name: 'Careers', href: '/careers', ariaLabel: 'Join our team' },
-  ], []);
+  const navItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Careers', href: '/careers' },
+  ];
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${

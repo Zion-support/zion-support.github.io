@@ -1,6 +1,6 @@
 
 import { ServiceVariant } from '../types/service-variants';
-export interface NextGenAIService2026 
+export interface NextGenAIService2026 {
   name: string;
   tagline: string;
   price: string;
@@ -35,9 +35,9 @@ export interface NextGenAIService2026
   rating: number;
 
 
-  reviews: number;    mobile: string
-    email: string
-    address: string
+  reviews: number;    mobile: string;
+    email: string;
+    address: string;
     website: string;
   }
   customers: number;
@@ -69,7 +69,7 @@ export interface NextGenAIService2026
   growthRate: string,
   variant: ServiceVariant,
 
-  contactInfo: 
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
@@ -83,27 +83,27 @@ export interface NextGenAIService2026
   customers: number;
   rating: number;
 
-  reviews: number;    mobile: string
-    email: string
-    address: string
+  reviews: number;    mobile: string;
+    email: string;
+    address: string;
 
 
 
-  contactInfo: 
+  contactInfo: any;
     mobile: string,
     email: string,
     address: string,
 
 
 
-    website: string
+    website: string;
   }
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
-  reviews: number
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
     website: string;
   },
   real_implementation: boolean,
@@ -115,25 +115,22 @@ export interface NextGenAIService2026
 }
 
 
-export const nextGenAIServices2026: NextGenAIService2026[] = [
-  
+export const nextGenAIServices2026: NextGenAIService2026[] = [;
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-};  website: 'https://ziontechgroup.com'
-  website: 'https://ziontechgroup.com'
+};  website: 'https://ziontechgroup.com';
+  website: 'https://ziontechgroup.com';
 
 },
 
-export const nextGenAIServices2026: NextGenAIService2026[] = [
-  
+export const nextGenAIServices2026: NextGenAIService2026[] = [;
     id: 'ai-emotional-intelligence-platform',
   website: 'https://ziontechgroup.com',
 }  website: 'https://ziontechgroup.com';
 },
 export const nextGenAIServices2026: NextGenAIService2026[] = [;
-  
     id: 'ai - emotional - intelligence - platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Understand and respond to human emotions in real - time',
@@ -142,19 +139,17 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     ],
     description:
       'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.'
-    features: [
+    features: [;
     popular: true,
-    icon: '🧠💙',
+    icon: '',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
 
 
     marketPosition:
       'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',
-    targetAudience:
-    technology: [
-
-    description:;
+    targetAudience: technology: [;
+    description: any;
       'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',
     features: [;
       'Real - time emotion detection from video / audio',
@@ -171,13 +166,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Real - time emotion detection from video / audio_sentiment analysis with emotional context_emotional response recommendations_multi - modal emotion fusion (facial, voice, text)Emotional intelligence training modules_custom emotion models for specific industries_real - time emotional analytics dashboardAPI for integration with existing systems',
       'Privacy - compliant emotion processing_emotional intelligence scoring and reports';
     popular: true,
-    icon: '🧠💙',
+    icon: '',
     color: 'from - blue - 600 to - purple - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - emotional - intelligence',
-    market_position:;
+    market_position: any;
       'Competitive with Affectiva and Realeyes, but with more advanced multi - modal fusion and real - time processing capabilities.',
-    target_audience:;
+    target_audience: any;
       'Customer service platforms, HR tech companies, Mental health apps, E - learning platforms, Healthcare providers',    trial_days: 21,
     setup_time: '2 - 3 days',
     category: 'AI & Emotional Intelligence',
@@ -188,7 +183,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     category: 'AI & Emotional Intelligence',
     real_service: true,
     technology: [;
-
       'TensorFlow',
       'OpenCV',
       'PyTorch',
@@ -208,9 +202,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Custom APIs',
     ],
     use_cases: [;
-
-    integrations: [
-    useCases: [
+    integrations: [;
+    useCases: [;
       'Customer sentiment analysis',
       'Employee wellness monitoring',
       'Mental health assessment',
@@ -244,7 +237,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4 && 4.9,
-    reviews: 89
+    reviews: 89;
 
 
   },
@@ -252,7 +245,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Production - ready platform with real - time video / audio processing, emotion detection models, and comprehensive analytics dashboard.',
     launch_date: '2025 - 06 - 01',
     customers: 45,
@@ -270,12 +263,12 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     period: '/month',
 
 
-    features: [
+    features: [;
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians'
       'Custom alerting and notificationsHistorical performance analytics'
 
     popular: true,
-    icon: '⚙️🔮',
+    icon: '',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-400',
 
@@ -288,7 +281,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     category: 'AI & Industrial IoT',
     realService: true,
 
-    description:;
+    description: any;
       'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',
     features: [;
       'Real - time sensor data monitoring',
@@ -321,9 +314,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'REST APIs',
     ],
     use_cases: [;
-
-    integrations: [
-    useCases: [
+    integrations: [;
+    useCases: [;
       'Equipment failure prediction',
       'Maintenance optimization',
       'Energy efficiency',
@@ -343,7 +335,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4 && 4.7,
-    reviews: 156
+    reviews: 156;
 
 
   },
@@ -365,7 +357,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
 
 
     popular: false,
-    icon: '🎯✨',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
 
@@ -374,19 +366,18 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.'
     targetAudience:
 
-      'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',    trialDays: 14
-    setupTime: '3-5 days'
-    category: 'AI & Personalization'
+      'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',    trialDays: 14;
+    setupTime: '3-5 days';
+    category: 'AI & Personalization';
     realService: true,    marketPosition: 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.'
     targetAudience: 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms'
-    trialDays: 14
-    setupTime: '3-5 days'
-    category: 'AI & Personalization'
-    realService: true
+    trialDays: 14;
+    setupTime: '3-5 days';
+    category: 'AI & Personalization';
+    realService: true;
 
-    technology: [
-
-    description:;
+    technology: [;
+    description: any;
       'Advanced AI engine that personalizes content, recommendations, and user experiences in real - time based on user behavior, preferences, and contextual data.',
     features: [;
       'Real - time user behavior tracking',
@@ -403,13 +394,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Real - time user behavior tracking_dynamic content personalization_a / B testing automation_multi - channel personalization_predictive user modeling_content performance optimization_personalization analytics dashboardAPI for content delivery',
       'GDPR - compliant data handling_custom personalization rules engine';
     popular: false,
-    icon: '🎯✨',
+    icon: '',
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - content - personalization',
-    market_position:;
+    market_position: any;
       'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
-    target_audience:;
+    target_audience: any;
       'E - commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',    trial_days: 14,
     setup_time: '3 - 5 days',
     category: 'AI & Personalization',
@@ -420,11 +411,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     category: 'AI & Personalization',
     real_service: true,
     technology: [;
-
     marketPosition:
       'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
-    targetAudience:
-    technology: [
+    targetAudience: technology: [;
       'Python',
       'TensorFlow',
       'Redis',
@@ -443,9 +432,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Custom CMS',
     ],
     use_cases: [;
-
-    integrations: [
-    useCases: [
+    integrations: [;
+    useCases: [;
       'Product recommendations',
       'Content personalization',
       'Email marketing',
@@ -479,7 +467,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4 && 4.6,
-    reviews: 203
+    reviews: 203;
 
 
   },
@@ -487,7 +475,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Production - ready personalization engine with real - time processing, comprehensive analytics, and easy integration capabilities.',
     launch_date: '2025 - 04 - 20',
     customers: 92,
@@ -506,7 +494,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
 
 
     popular: false,
-    icon: '🎤🎭',
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
 
@@ -524,7 +512,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     realService: true,
 
 
-    technology: [
+    technology: [;
       'Python',
       'PyTorch',
       'TensorFlow',
@@ -542,9 +530,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'REST APIs',
     ],
     use_cases: [;
-
-    integrations: [
-    useCases: [
+    integrations: [;
+    useCases: [;
       'Podcast production',
       'Marketing videos',
       'E-learning content',
@@ -563,7 +550,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4 && 4.8,
-    reviews: 312
+    reviews: 312;
 
 
   },
@@ -572,7 +559,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Professional - grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',
     launch_date: '2025 - 02 - 10',
     customers: 156,
@@ -590,16 +577,16 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     period: '/month',
 
 
-    features: [
+    features: [;
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics'
       'Pull request automationMulti-language support'
 
     popular: true,
-    icon: '💻🔍',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
 
-    description:;
+    description: any;
       'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',
     features: [;
       'Automated code quality analysis',
@@ -631,7 +618,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Teams',
     ],
     use_cases: [;
-
       'Code quality improvement',
       'Security auditing',
       'Performance optimization',
@@ -673,7 +659,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     launchDate: '2025-01-25',
     customers: 203,
     rating: 4 && 4.7,
-    reviews: 445
+    reviews: 445;
   }
 
 ],
@@ -692,19 +678,16 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
 
 },
 
-export const nextGenAIServices2026: NextGenAIService2026[] = [
-  
+export const nextGenAIServices2026: NextGenAIService2026[] = [;
     id: 'ai-emotional-intelligence-platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Understand and respond to human emotions in real-time',
     price: '$1,299',
     period: '/month',
     description: 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',
-    features: [
-
-
+    features: [;
     popular: true,
-    icon: '🧠💙',
+    icon: '',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-emotional-intelligence',
@@ -740,11 +723,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     price: '$899',
     period: '/month',
     description: 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',
-    features: [
-
-
+    features: [;
     popular: true,
-    icon: '⚙️🔮',
+    icon: '',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
@@ -780,11 +761,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     price: '$599',
     period: '/month',
     description: 'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',
-    features: [
-
-
+    features: [;
     popular: false,
-    icon: '🎯✨',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-content-personalization',
@@ -820,11 +799,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     price: '$399',
     period: '/month',
     description: 'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.',
-    features: [
-
-
+    features: [;
     popular: false,
-    icon: '🎤🎭',
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-voice-cloning',
@@ -860,9 +837,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     price: '$299',
     period: '/month',
     description: 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',
-    features: [
-
-
+    features: [;
       'Automated code quality analysis',
       'Security vulnerability detection',
       'Performance optimization suggestions',
@@ -873,14 +848,14 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Code review analytics',
       'Pull request automation',
       'Multi-language support',    ],    description: 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',
-    features: [
+    features: [;
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',
       'Pull request automationMulti-language support'
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',
       'Pull request automationMulti-language support'
     ],
     popular: true,
-    icon: '💻🔍',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-code-review',
@@ -901,7 +876,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     realService: true,
 
 
-    technology: [
+    technology: [;
       'Python',
       'TensorFlow',
       'React',
@@ -910,7 +885,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Redis',
       'Docker',
     ],
-    integrations: [
+    integrations: [;
       'GitHub',
       'GitLab',
       'Bitbucket',
@@ -919,7 +894,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Jira',
       'Teams',
     ],
-    useCases: [
+    useCases: [;
       'Code quality improvement',
       'Security auditing',
       'Performance optimization',
@@ -946,7 +921,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
   },
     launchDate: '2025-01-25',
     customers: 203,
-    reviews: 445
+    reviews: 445;
 import { ServiceVariant } from '../types/service-variants',;
 export interface NextGenAIService2026 {;
   id: string,;
@@ -1008,7 +983,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Privacy-compliant emotion processingEmotional intelligence scoring and reports';
     ],;
     popular: true,;
-    icon: '🧠💙',;
+    icon: '',;
     color: 'from-blue-600 to-purple-700',;
     textColor: 'text-blue-400',;
     link: 'https://ziontechgroup.com/ai-emotional-intelligence',;
@@ -1046,7 +1021,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Custom alerting and notificationsHistorical performance analytics';
     ],;
     popular: true,;
-    icon: '⚙️🔮',;
+    icon: '',;
     color: 'from-green-600 to-teal-700',;
     textColor: 'text-green-400',;
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',;
@@ -1084,7 +1059,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'GDPR-compliant data handlingCustom personalization rules engine';
     ],;
     popular: false,;
-    icon: '🎯✨',;
+    icon: '',;
     color: 'from-purple-600 to-pink-700',;
     textColor: 'text-purple-400',;
     link: 'https://ziontechgroup.com/ai-content-personalization',;
@@ -1122,7 +1097,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Quality assurance toolsCommercial usage rights';
     ],;
     popular: false,;
-    icon: '🎤🎭',;
+    icon: '',;
     color: 'from-orange-600 to-red-700',;
     textColor: 'text-orange-400',;
     link: 'https://ziontechgroup.com/ai-voice-cloning',;
@@ -1160,7 +1135,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       'Pull request automationMulti-language support';
     ],;
     popular: true,;
-    icon: '💻🔍',;
+    icon: '',;
     color: 'from-indigo-600 to-blue-700',;
     textColor: 'text-indigo-400',;
     link: 'https://ziontechgroup.com/ai-code-review',;

@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
 const Footer: React.FC = () => {
-  const currentYear = useMemo(() => new Date().getFullYear(), []);
+  const currentYear = new Date().getFullYear();
 
-  const footerLinks = useMemo(() => ({
+  const footerLinks = {
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/team' },
@@ -28,13 +28,13 @@ const Footer: React.FC = () => {
       { name: 'Cookie Policy', href: '/cookies' },
       { name: 'GDPR', href: '/gdpr' },
     ],
-  }), []);
+  };
 
-  const socialLinks = useMemo(() => [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'linkedin', ariaLabel: 'Follow us on LinkedIn' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter', ariaLabel: 'Follow us on Twitter' },
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'github', ariaLabel: 'View our GitHub profile' },
-  ], []);
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'linkedin' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'github' },
+  ];
 
   return (
     <footer className="bg-slate-900 border-t border-slate-800">
