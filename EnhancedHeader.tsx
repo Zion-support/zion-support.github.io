@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const EnhancedHeader: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -13,9 +12,6 @@ const EnhancedHeader: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);

@@ -18,6 +18,7 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <div className="container mx-auto px-6 py-12 max-w-4xl">
+        <article className="prose prose-lg prose-invert max-w-none">
         {/* Hero Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8">
@@ -64,7 +65,6 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
         </div>
 
         {/* Main Content */}
-        <article className="prose prose-lg prose-invert max-w-none">
           <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Meta-Cognitive Architecture</h2>
           
           <p className="text-xl text-gray-300 mb-8">
@@ -197,6 +197,11 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h3>
             <p className="text-xl text-gray-300 mb-6">
               Join the meta-cognitive revolution and unlock unprecedented AI capabilities for your organization.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 py-20">
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
@@ -454,8 +459,10 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
               </a>
             </div>
           </div>
-        </article>
+        </div>
+        </section>
       </div>
     </div>
+    </article>
   );
 }
