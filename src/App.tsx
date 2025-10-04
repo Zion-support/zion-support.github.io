@@ -73,7 +73,7 @@ class ErrorBoundary extends React.Component<
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <ErrorBoundary fallback={<div>Error occurred</div>}>
         <Router>
           {/* SEO and Performance Monitoring */}
           <SEOHead />
@@ -84,7 +84,7 @@ function App() {
           <AccessibilityEnhancer />
           
           <div className="min-h-screen bg-gray-50">
-            <EnhancedErrorBoundary>
+            <EnhancedErrorBoundary fallback={<div>Enhanced error occurred</div>}>
               <Header />
 
               {/* Main Content */}
