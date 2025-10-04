@@ -9,8 +9,8 @@ import {Brain,
   ArrowRight,
   DollarSign,
   Clock,
-  Star}
-  Smartphone;
+  Star,
+  Smartphone,
   Globe
 } from 'lucide-react'
 export default function AdditionalServices() {const title = 'Expanded Services Catalog — Zion Tech Group'
@@ -36,7 +36,7 @@ export default function AdditionalServices() {const title = 'Expanded Services C
             'Compliance with CAN-SPAM and GDPR'
           ],
           link: '/contact',
-          marketSize: '$7.5B email marketing market'}
+          marketSize: '$7.5B email marketing market',
           roi: 'Average 23% increase in open rates'
         },
         {name: 'Smart Meeting Analytics Platform',

@@ -1,6 +1,6 @@
-import React, {useState} useMemo } from 'react'
-import { motion  } from 'framer-motion'
-import { Link  } from 'react-router-dom'
+import React, { useState, useMemo } from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import {CheckCircle,
   Star,
   Zap,
@@ -31,34 +31,38 @@ import {CheckCircle,
   Crown,
   Rocket,
   Cpu,
-  Lock}
-  Heart;
+  Lock,
+  Heart,
   Sparkles
- } from 'lucide-react'
-import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025'
-import { SEO  } from '@/components/SEO'
-const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selectedCategory, setSelectedCategory] = useState('all');
+} from 'lucide-react'
+import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025'
+import { SEO } from '@/components/SEO'
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');
-  const services = INNOVATIVE_SERVICES_2025}
+  const services = INNOVATIVE_SERVICES_2025;
   const categories = useMemo(() => {
-    const cats = services.reduce((acc: unknown) service: unknown) => {
+    const cats = services.reduce((acc: string[], service: any) => {
       if (!acc.includes(service.category)) {
-        acc.push(service.category)}
+        acc.push(service.category);
       }
       return acc;
     }, [] as string[]);
-    return ['all'; ...cats];
+    return ['all', ...cats];
   }, [services]);
   const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
-  const filteredServices = useMemo(() => {let filtered = services;
+  const filteredServices = useMemo(() => {
+    let filtered = services;
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory)}
+      filtered = filtered.filter(service => service.category === selectedCategory);
     }
-    if (selectedPricingModel !== 'all') {filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)}
+    if (selectedPricingModel !== 'all') {
+      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel);
     }
     return filtered;
   }, [services, selectedCategory, selectedPricingModel]);
-  const getCategoryIcon = (category: anystring)  => {switch (category) {
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
       case 'AI & Compliance':
@@ -74,10 +78,10 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
       case 'Quantum Computing':
         return Rocket;
       default:
-        return Zap}
+        return Zap;
     }
   };
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
@@ -112,7 +116,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
       ],
       color: 'from-cyan-500 to-blue-600',
       popular: false,
-      bestFor: 'Small businesses, startups} individual professionals'
+      bestFor: 'Small businesses, startups, individual professionals'
     },
     {name: 'Professional',
       description: 'Ideal for growing businesses and teams',
@@ -130,7 +134,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
       ],
       color: 'from-purple-500 to-pink-600',
       popular: true,
-      bestFor: 'Growing businesses, mid-size companies} agencies'
+      bestFor: 'Growing businesses, mid-size companies, agencies'
     },
     {name: 'Enterprise',
       description: 'For large organizations with complex needs',
@@ -149,50 +153,50 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
       ],
       color: 'from-indigo-500 to-purple-600',
       popular: false,
-      bestFor: 'Large enterprises, government agencies} Fortune 500 companies'
+      bestFor: 'Large enterprises, government agencies, Fortune 500 companies'
     }
   ];
   const marketInsights = [
     {title: 'AI Services Market',
       value: '$29.9B',
       growth: '+32.4%',
-      description: 'Expected market size by 2025'}
+      description: 'Expected market size by 2025',
       color: 'from-purple-500 to-pink-600'
     },
     {title: 'Cloud Services Market',
       value: '$832.1B',
       growth: '+17.5%',
-      description: 'Global cloud market value'}
+      description: 'Global cloud market value',
       color: 'from-blue-500 to-cyan-600'
     },
     {title: 'IoT Market',
       value: '$1.1T',
       growth: '+25.7%',
-      description: 'IoT market by 2027'}
+      description: 'IoT market by 2027',
       color: 'from-green-500 to-emerald-600'
     },
     {title: 'Quantum Computing',
       value: '$65.0B',
       growth: '+48.2%',
-      description: 'Quantum market by 2030'}
+      description: 'Quantum market by 2030',
       color: 'from-indigo-500 to-purple-600'
     }
   ];
   return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
-        description="Explore our innovative service pricing with market analysis: unknown, ROI calculations: unknown, and flexible pricing tiers for AI: unknown, Cloud: unknown, IoT: unknown, and Quantum Computing solutions."
+        description="Explore our innovative service pricing with market analysis, ROI calculations, and flexible pricing tiers for AI, Cloud, IoT, and Quantum Computing solutions."
       />
       {/* Hero Section */}
-      <section className="relative py-20 sm: py-32 overflow-hidden">
+      <section className="relative py-20 sm:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <motion.h1
-              initial={{ opacity: 0} y: 20 }}
-              animate={{ opacity: 1} y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl sm: text-7xl font-extrabold tracking-tight mb-6"
+              className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6"
             >
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Pricing Guide
@@ -201,18 +205,18 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
               <span className="text-white">2030</span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0} y: 20 }}
-              animate={{ opacity: 1} y: 0 }}
-              transition={{ duration: 0.8} delay: 0.2 }}
-              className="text-xl sm: text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
             >
               Transparent pricing for cutting-edge technology solutions.
-              Compare market rates, calculate ROI: unknown) and choose the perfect plan for your business.
+              Compare market rates, calculate ROI, and choose the perfect plan for your business.
             </motion.p>
             <motion.div
-              initial={{ opacity: 0} y: 20 }}
-              animate={{ opacity: 1} y: 0 }}
-              transition={{ duration: 0.8} delay: 0.4 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4"
             >
               <Link
@@ -243,8 +247,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
           >
             Market Insights & Trends
           </motion.h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {marketInsights.map((insight} index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index) => (
               <motion.div
                 key={insight.title}
                 initial={{ opacity: 0} y: 20 }}
@@ -275,8 +279,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
           >
             Flexible Pricing Tiers
           </motion.h2>
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier} index)  => (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0} y: 20 }}
@@ -305,7 +309,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
                   <p className="text-sm text-slate-400 mb-4">Best for: {tier.bestFor}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature: unknown} idx: unknown) => (
+                  {tier.features.map((feature: string, idx: number) => (
                     <li key={idx} className="flex items-center text-slate-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -364,10 +368,10 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
             </select>
           </div>
           {/* Services Grid */}
-          <div className="grid gap-8 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service) index)  => {
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {filteredServices.map((service, index) => {
               const CategoryIcon = getCategoryIcon(service.category);
-              const categoryColor = getCategoryColor(service.category)}
+              const categoryColor = getCategoryColor(service.category);
               return (
                 <motion.div
                   key={service.id}
@@ -420,7 +424,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
                   <div className="mb-4">
                     <div className="text-xs text-slate-400 mb-2">Key Benefits: </div>
                     <div className="space-y-1">
-                      {service.benefits.slice(0) 2).map((benefit: unknown} idx: unknown) => (
+                      {service.benefits.slice(0, 2).map((benefit: string, idx: number) => (
                         <div key={idx} className="flex items-center text-xs text-slate-300">
                           <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                           {benefit}
@@ -432,7 +436,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/services/${service.id}`}
-                      className="inline-flex items-center text-sm text-cyan-400 hover: text-cyan-300 transition-colors"
+                      className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Learn More
                       <ArrowRight className="ml-1 h-4 w-4" />
@@ -448,12 +452,13 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
               );
             })}
           </div>
-          {filteredServices.length === 0 && (<div className="text-center py-16">
+          {filteredServices.length === 0 && (
+            <div className="text-center py-16">
               <div className="text-slate-400 text-lg mb-4">No services found matching your criteria</div>
               <button
-                onClick={(: unknown) => {
+                onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedPricingModel('all')}
+                  setSelectedPricingModel('all');
                 }}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
@@ -540,7 +545,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
               initial={{ opacity: 0} y: 20 }}
               whileInView={{ opacity: 1} y: 0 }}
               transition={{ duration: 0.8} delay: 0.4 }}
-              className="grid md: grid-cols-3 gap-8 mb-12"
+              className="grid md:grid-cols-3 gap-8 mb-12"
             >
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-cyan-400 mb-4" />
@@ -612,7 +617,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {const [selec
               {' '}to explore our full range of services and solutions.
             </div>
             <div className="text-sm text-slate-400">
-              All pricing includes comprehensive support, documentation; and integration assistance.
+              All pricing includes comprehensive support, documentation, and integration assistance.
               Custom enterprise solutions available with volume discounts and dedicated support.
             </div>
           </div>
