@@ -56,6 +56,8 @@ jest.mock('lucide-react', () => ({
   Award: ({ className }: { className?: string }) => <div data-testid="award-icon" className={className} />,
   CheckCircle: ({ className }: { className?: string }) => <div data-testid="check-circle-icon" className={className} />,
   Zap: ({ className }: { className?: string }) => <div data-testid="zap-icon" className={className} />,
+  Eye: ({ className }: { className?: string }) => <div data-testid="eye-icon" className={className} />,
+  Lock: ({ className }: { className?: string }) => <div data-testid="lock-icon" className={className} />,
 }));
 
 // Mock react-router-dom
