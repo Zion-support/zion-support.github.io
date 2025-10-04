@@ -12,7 +12,7 @@ import { CheckCircle,
   MapPin, 
   Rocket,
   Cpu
-} from 'lucide-react';
+ } from 'lucide-react';
 import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
 import { SEO  } from '@/components/SEO';
 

@@ -4,7 +4,15 @@ import {
   Brain, 
   Code, 
   Cloud, 
-  Server
+  Server, 
+  MessageSquare, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  Smartphone,
+  Globe
 } from 'lucide-react';
 
 export default function AdditionalServices() {
