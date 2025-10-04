@@ -68,6 +68,8 @@ export default [
       '**/*.broken/**',
       '**/*.corrupted/**',
       '**/*.temp/**',
+      '**/corrupted_backup/**',
+      'src/corrupted_backup/**',
       'tests/**',
       'scripts/**',
       'pages/**',

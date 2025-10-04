@@ -44,4 +44,9 @@ const Footer: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-798c
