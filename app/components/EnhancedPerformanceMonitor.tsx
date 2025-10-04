@@ -74,13 +74,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       fcp: metrics?.fcp || 0,
       lcp: metrics?.lcp || 0,
       ttfb: metrics?.ttfb || 0,
-<<<<<<< HEAD
       ...performanceInfo,
       [metric.name]: metric.value
-=======
-      [metric.name]: metric.value,
-      ...getEnhancedPerformanceInfo()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-443e
     };
     
     setMetrics(enhancedMetrics);
