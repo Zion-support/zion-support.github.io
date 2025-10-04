@@ -32,10 +32,7 @@ const ServicesPage = React.lazy(() => import('./pages/Services'));
 const BlogPage = React.lazy(() => import('./pages/Blog'));
 
 // Simple Error Boundary
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean }
-> {
+class ErrorBoundary extends React.Component<{ children: React.ReactNode; fallback?: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
