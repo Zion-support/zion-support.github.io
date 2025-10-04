@@ -8,7 +8,7 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import SEOHead from './components/SEOHead';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import LoadingSpinner from './components/LoadingSpinner';
+import { LoadingSpinner } from './components/LoadingSpinner';
 
 // Animation variants
 const pageVariants = {
