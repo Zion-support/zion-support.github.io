@@ -150,15 +150,14 @@ const FinalPerformanceOptimizer: React.FC = () => {
   }, [calculatePerformanceScore]);
 
   const handleMetric = useCallback((metric: any) => {
-    const additionalInfo = getFinalPerformanceInfo();
+    const performanceInfo = getFinalPerformanceInfo();
     const finalMetrics: FinalMetrics = {
-      cls: 0,
-      inp: 0,
-      fcp: 0,
-      lcp: 0,
-      ttfb: 0,
-      ...additionalInfo,
-      [metric.name]: metric.value
+      cls: metric.name === 'CLS' ? metric.value : 0,
+      inp: metric.name === 'INP' ? metric.value : 0,
+      fcp: metric.name === 'FCP' ? metric.value : 0,
+      lcp: metric.name === 'LCP' ? metric.value : 0,
+      ttfb: metric.name === 'TTFB' ? metric.value : 0,
+      ...performanceInfo
     };
     
     const performanceScore = calculatePerformanceScore(finalMetrics);
