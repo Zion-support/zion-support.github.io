@@ -1,6 +1,6 @@
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { AdvancedErrorBoundary } from './components/AdvancedErrorBoundary';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 
 interface RootLayoutProps {
   children: React.ReactNode;

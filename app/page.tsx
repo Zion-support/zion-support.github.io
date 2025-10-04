@@ -1,8 +1,8 @@
 import React from 'react';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
-import { AdvancedErrorBoundary } from './components/AdvancedErrorBoundary';
-import { AdvancedSEO } from './components/AdvancedSEO';
-import { AdvancedLoadingComponents } from './components/AdvancedLoadingComponents';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import AdvancedSEO from './components/AdvancedSEO';
+import AdvancedLoadingComponents from './components/AdvancedLoadingComponents';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
