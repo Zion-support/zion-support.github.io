@@ -3,19 +3,19 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('./components/UnifiedContentPromotion'), {
+const UnifiedContentPromotion = dynamic(() => import('../src/components/UnifiedPromotionalBanner'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded"></div>
 });
 
-const InteractiveAIROICalculator = dynamic(() => import('./components/InteractiveAIROICalculator'), {
+const InteractiveAIROICalculator = dynamic(() => import('../src/components/AICostOptimizationBanner'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded"></div>
 });
 
-const ContentShowcase = dynamic(() => import('./components/ContentShowcase'), {
+const ContentShowcase = dynamic(() => import('../src/components/ContentShowcase'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>
 });
 
-const InteractiveContentShowcase2026 = dynamic(() => import('./components/InteractiveContentShowcase2026'), {
+const InteractiveContentShowcase2026 = dynamic(() => import('../src/components/EnhancedContentShowcase2026'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>
 });
 
