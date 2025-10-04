@@ -1,11 +1,11 @@
 import { ServiceVariant } from "../types/service-variants";
 
-export interface AIEmergingTechService 
+export interface AIEmergingTechService {
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
