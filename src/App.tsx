@@ -35,7 +35,6 @@ const pageTransition = {
   duration: 0.4
 };
 
-<<<<<<< HEAD
 // Loading fallback component
 const PageLoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -44,7 +43,6 @@ const PageLoadingFallback = () => (
 );
 
 // Main App component
-=======
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const AboutPage = React.lazy(() => import('./pages/About'));
@@ -91,7 +89,6 @@ class ErrorBoundary extends React.Component<
   }
 }
 
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -162,10 +159,7 @@ function App() {
               <SEOHead />
               <Header />
               
-<<<<<<< HEAD
-=======
               {/* Main Content */}
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
               <motion.main
                 initial="initial"
                 animate="in"
@@ -174,7 +168,6 @@ function App() {
                 transition={pageTransition}
                 className="flex-1"
               >
-<<<<<<< HEAD
                 <Suspense fallback={<PageLoadingFallback />}>
                   <Routes>
                     <Route path="/" element={<HomePage />} />
@@ -205,7 +198,6 @@ function App() {
                     <Suspense fallback={<LoadingSpinner />}>
                       <PerformanceOptimizer />
                     </Suspense>
-=======
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div id="main-content" className="flex-1">
                     <React.Suspense
@@ -244,7 +236,6 @@ function App() {
                         />
                       </Routes>
                     </React.Suspense>
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
                   </div>
                 </div>
               )}

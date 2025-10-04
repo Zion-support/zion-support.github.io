@@ -175,8 +175,4 @@ export default defineConfig({
     minifySyntax: true,
     minifyWhitespace: true,
   },
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

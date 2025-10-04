@@ -33,7 +33,7 @@ merge_branch() {
                 # Check if file exists
                 if [ -f "$file" ]; then
                     # Try to resolve common conflicts
-                    if grep -q "<<<<<<< HEAD" "$file"; then
+                    if grep -q "" "$file"; then
                         echo "    🔄 Resolving merge conflicts in $file"
                         
                         # For vite.config.ts - keep the simpler version
@@ -45,8 +45,7 @@ merge_branch() {
                         git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
                         
                         # Remove conflict markers
-                        sed -i '/<<<<<<< HEAD/,/>>>>>>> /d' "$file" 2>/dev/null || true
-                        sed -i '/=======/d' "$file" 2>/dev/null || true
+                        sed -i '//,/                        sed -i '//d' "$file" 2>/dev/null || true
                         
                         # Stage the resolved file
                         git add "$file" 2>/dev/null || true

@@ -11,7 +11,7 @@ echo ""
 
 # Check for any remaining merge conflicts
 echo "=== Checking for Remaining Conflicts ==="
-conflict_count=$(find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" \) -exec grep -l "<<<<<<< HEAD" {} \; 2>/dev/null | wc -l)
+conflict_count=$(find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" \) -exec grep -l "" {} \; 2>/dev/null | wc -l)
 echo "Files with remaining conflicts: $conflict_count"
 
 if [ $conflict_count -eq 0 ]; then

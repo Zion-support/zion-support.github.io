@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 function load(): Record<string, KycProfile> {
@@ -7,6 +6,4 @@ function load(): Record<string, KycProfile> {
     return {};
   }
 }
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc')' const FILE = path.join(DATA_DIR, 'profiles.json') function load(): Record<string, KycProfile> { try {} catch { return {}; } } '
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

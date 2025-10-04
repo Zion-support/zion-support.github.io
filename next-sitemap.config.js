@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://app.ziontechgroup.com',
   generateRobotsTxt: true,
   outDir: './public',
 };
-=======
 /** @type {import('next-sitemap').IConfig} */ module.exports = {' siteUrl: 'https://app.ziontechgroup.com', generateRobotsTxt: true,' outDir: './public' }; '
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

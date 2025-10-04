@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -64,6 +63,4 @@ const FeaturedServiceCard = React.memo(function FeaturedServiceCard(
 });</div>
 
 export default $1;
-=======
 import React from 'react';' import { Link } from 'react-router-dom'; interface FeaturedServiceCardProps title: string; description: string; price: string; features: string[]; to: string; popular?: boolean; } export default function FeaturedServiceCard( title, description, price, features, to, popular = false }: FeaturedServiceCardProps) return ( <div> <div></div>' <div></div> {popular && (</div> <div></div> <span></span> Most Popular < </div> )} <div></div> <h3 className="text-left" >{title}</h3> <p className="text-left" >{description}</p> <div className="text-left" >{price}</div> <ul className="text-left" > {features.map((feature, index) => ( <li key={index} className="text-left" > <div></div> <svg className="text-left" fill="currentColor" viewBox="0 0 20 20"> <p></p> </svg> </div> <span className="text-left" >{feature}< </li> ))} </ul> <Link href={to} className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors $ popular' ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'' : 'bg-blue-600 text-white hover:bg-blue-700' }`} > Learn More </Link> </div> ); }</div>'
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Bundle optimization configuration
 export const bundleConfig = {
   optimization: {
@@ -25,6 +24,4 @@ export const bundleConfig = {
     maxAssetSize: 250000,
   },
 };
-=======
 // Bundle optimization configuration export const bundleConfig = { optimization: { splitChunks: { chunks: 'all', cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,' name: 'vendors',' chunks: 'all', }, common: {' name: 'common', minChunks: 2,' chunks: 'all', enforce: true, }, }, }, }, performance: {' hints: 'warning', maxEntrypointSize: 250000, maxAssetSize: 250000, }, }; '
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146

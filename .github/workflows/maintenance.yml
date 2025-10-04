@@ -224,7 +224,7 @@ jobs:
           
           # Check for merge conflicts
           echo "🔀 Checking for merge conflicts..."
-          if grep -r "<<<<<<< HEAD" . --exclude-dir=.git --exclude-dir=node_modules; then
+          if grep -r "" . --exclude-dir=.git --exclude-dir=node_modules; then
             echo "❌ Found merge conflicts!"
             exit 1
           else
@@ -257,7 +257,7 @@ jobs:
       - name: 📊 Generate summary
         run: |
           echo "🔧 Maintenance workflow completed!"
-          echo "=================================="
+          echo "======"
           echo "Dependency Update: ${{ needs.dependency-update.result }}"
           echo "Cleanup: ${{ needs.cleanup.result }}"
           echo "Security Scan: ${{ needs.security-scan.result }}"

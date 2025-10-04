@@ -18,7 +18,6 @@ export default function AI2026MayRevolutionaryBreakthrough() {
   return (
     <div className="text-left"></div>
       {/* Hero Section */}</div>
-<<<<<<< HEAD
       <section className="text-left">
         <div className="text-left">
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -26,7 +25,6 @@ export default function AI2026MayRevolutionaryBreakthrough() {
         
         <div className="text-left">
             <h1 className="text-left">
-=======
       <section className="text-left"></section>
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -36,7 +34,6 @@ export default function AI2026MayRevolutionaryBreakthrough() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <h1 className="text-left"></h1>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
               AI 2026 May Revolutionary Breakthrough
             </h1>
             <p className="text-left"></p>
@@ -58,16 +55,13 @@ export default function AI2026MayRevolutionaryBreakthrough() {
       </section>
       
       {/* Content Section */}
-<<<<<<< HEAD
       <section className="text-left">
         <div className="text-left">
             <h2 className="text-left">
-=======
       <section className="text-left"></section>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <h2 className="text-left"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
               Revolutionary AI Breakthrough
             </h2>
             <p className="text-left"></p>

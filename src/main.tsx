@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-<<<<<<< HEAD
 import App from './App.tsx';
 import './index.css';
 
@@ -28,7 +27,6 @@ createRoot(document.getElementById('root')!).render(
 );
 
 reportWebVitals();
-=======
 import App from './App';
 
 // Report web vitals to help monitor performance in production
@@ -75,4 +73,3 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
