@@ -239,7 +239,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {isVisible && <AccessibilityPanel />}
 
       {/* Global Accessibility Styles */}
-      <style jsx global>{`
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;
@@ -299,7 +300,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         .skip-link:focus {
           top: 6px;
         }
-      `}</style>
+      `}} />
     </>
   );
 };
