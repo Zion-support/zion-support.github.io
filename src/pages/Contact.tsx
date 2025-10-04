@@ -1,426 +1,307 @@
-import React from "react";";
-impo, r, t {
-} fr, o, m "luci, d, e-rea, c, t";";
-import, Header, from "../componen, t, s/Head, e, r";";
-import, Footer, from "../componen, t, s/Foot, e, r";";
-// Fallback, form, in environments, without, the enhanced, componen, t
-  const, ContactFormComponen, t: Rea, c, t.FC = () => nu, l, l
-=======
-const, ContactFormComponen, t: Rea, c, t.FC = () => nu, l, l;
-export, default, function Conta, c, t(): Rea, c, t.J, S, X.Eleme, n, t {
-  const, contactInf, o = [
+import React from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Users,
+  Award,
+  Globe,
+  Zap,
+  MessageSquare,
+  Sparkles,
+} from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { Helmet } from "react-helmet-async";
+
+// Fallback form component in environments without the enhanced component
+const ContactFormComponent: React.FC = () => null;
+
+export default function Contact(): React.JSX.Element {
+  const contactInfo = [
     {
-      i, c, o
-  n: <Mail, className="w-6 h-6" />
-      tit, l, e: "Email, U, s"
-      detai, l, s: "hel, l, o@ziontechgro, u, p.c, o, m"
-      descripti, o, n: "Send, us, an email, anytim, e"
-    }
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email Us",
+      details: "hello@ziontechgroup.com",
+      description: "Send us an email anytime"
+    },
     {
-      ic, o, n: <Phone, className="w-6 h-6" />
-      tit, l, e: "Call, U, s"
-      detai, l, s: "+1 (5, 5, 5) 1, 2, 3-45, 6, 7"
-      descripti, o, n: "M, o, n-Fri, from, 9am to, 6p, m"
-    }
+      icon: <Phone className="w-6 h-6" />,
+      title: "Call Us",
+      details: "+1 (555) 123-4567",
+      description: "Mon-Fri from 9am to 6pm"
+    },
     {
-      ic, o, n: <MapPin, className="w-6 h-6" />
-      tit, l, e: "Visit, U, s"
-      detai, l, s: "123, Tech, Street, San, Francisc, o, CA, 9410, 5"
-      descripti, o, n: "Come, say, hello at, our, office"
-    }
+      icon: <MapPin className="w-6 h-6" />,
+      title: "Visit Us",
+      details: "123 Tech Street, San Francisco, CA 94105",
+      description: "Come say hello at our office"
+    },
     {
-      ic, o, n: <Clock, className="w-6 h-6" />
-      tit, l, e: "Response, Tim, e"
-      detai, l, s: "Within, 24, hours"
-      descripti, o, n: "We, respond, to all, inquiries, quickly"
-    }
-=======
-      ic, o, n: <Mail, className="w-6 h-6" />,";
-      tit, l, e: "Email, U, s",";
-      detai, l, s: "hel, l, o@ziontechgro, u, p.c, o, m",";
-      descripti, o, n: "Send, us, an email, anytim, e",";
-    }
-    {
-      ic, o, n: <Phone, className="w-6 h-6" />,";
-      tit, l, e: "Call, U, s",";
-      detai, l, s: "+1 (5, 5, 5) 1, 2, 3-45, 6, 7",";
-      descripti, o, n: "M, o, n-Fri, from, 9am to, 6p, m",";
-    }
-    {
-      ic, o, n: <MapPin, className="w-6 h-6" />,";
-      tit, l, e: "Visit, U, s",";
-      detai, l, s: "123, Tech, Street, San, Francisc, o, CA, 9410, 5",";
-      descripti, o, n: "Come, say, hello at, our, office",";
-    }
-    {
-      ic, o, n: <Clock, className="w-6 h-6" />,";
-      tit, l, e: "Response, Tim, e",";
-      detai, l, s: "Within, 24, hours",";
-      descripti, o, n: "We, respond, to all, inquiries, quickly",";
+      icon: <Clock className="w-6 h-6" />,
+      title: "Response Time",
+      details: "Within 24 hours",
+      description: "We respond to all inquiries quickly"
     }
   ];
-  const, stat, s = [
+
+  const stats = [
     {
-      ic, o, n: <Users, className="w-8 h-8" />
-      val, u, e: "5, 0, 0+"
-      lab, e, l: "Happy, Client, s"
-    }
+      icon: <Users className="w-8 h-8" />,
+      value: "500+",
+      label: "Happy Clients"
+    },
     {
-      ic, o, n: <Award, className="w-8 h-8" />
-      val, u, e: "99.9%"
-      lab, e, l: "Satisfaction, Rat, e"
-    }
+      icon: <Award className="w-8 h-8" />,
+      value: "99.9%",
+      label: "Satisfaction Rate"
+    },
     {
-      ic, o, n: <Globe, className="w-8 h-8" />
-      val, u, e: "50+"
-      lab, e, l: "Countries, Serve, d"
-    }
+      icon: <Globe className="w-8 h-8" />,
+      value: "50+",
+      label: "Countries Served"
+    },
     {
-      ic, o, n: <Zap, className="w-8 h-8" />
-      val, u, e: "24/7"
-      lab, e, l: "Support, Availabl, e"
-    }
-=======
-      ic, o, n: <Users, className="w-8 h-8" />,";
-      val, u, e: "5, 0, 0+",";
-      lab, e, l: "Happy, Client, s",";
-    }
-    {
-      ic, o, n: <Award, className="w-8 h-8" />,";
-      val, u, e: "99.9%",";
-      lab, e, l: "Satisfaction, Rat, e",";
-    }
-    {
-      ic, o, n: <Globe, className="w-8 h-8" />,";
-      val, u, e: "50+",";
-      lab, e, l: "Countries, Serve, d",";
-    }
-    {
-      ic, o, n: <Zap, className="w-8 h-8" />,";
-      val, u, e: "24/7",";
-      lab, e, l: "Support, Availabl, e",";
+      icon: <Zap className="w-8 h-8" />,
+      value: "24/7",
+      label: "Support Available"
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>
-          Contact, Zion, Tech Gro, u, p - Get, in, Touch | AI & Technology, Solution, s;
+          Contact Zion Tech Group - Get in Touch | AI & Technology Solutions
         </title>
-        <me, t, a
-  na, m, e="descripti, o, n"
-          content="Contact, Zion, Tech Group, for, AI solutio, n, s, cloud, service, s, and, technology, consulting. Get, expert, advice and, start, your digital, transformation, journey." /><me, t, a
-  na, m, e="keywor, d, s"
-          content="conta, c, t, AI, consultin, g, technology, solution, s, cloud, service, s, digital, transformatio, n" /><me, t, a
-  proper, t, y="og: tit, l, e"
-          content="Contact, Zion, Tech Gro, u, p - Get, in, Touch" /><me, t, a
-  proper, t, y="og:descripti, o, n"
-          content="Contact, us, for AI, solution, s, cloud, service, s, and, technology, consulting" /><meta, propert, y="og:ty, p, e" content="websi, t, e" />
-        <meta, propert, y="og: u, r, l" content="ht, t, p
-  s://ziontechgro, u, p.c, o, m/conta, c, t" />
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/conta, c, t/>"
+        <meta
+          name="description"
+          content="Contact Zion Tech Group for AI solutions, cloud services, and technology consulting. Get expert advice and start your digital transformation journey."
+        />
+        <meta
+          name="keywords"
+          content="contact, AI consulting, technology solutions, cloud services, digital transformation"
+        />
+        <meta
+          property="og:title"
+          content="Contact Zion Tech Group - Get in Touch"
+        />
+        <meta
+          property="og:description"
+          content="Contact us for AI solutions, cloud services, and technology consulting"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/contact" />
+        <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Helmet>
-      <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gr, a, y-100, dar, k: fr, o, m-gr, a, y-900, da, r
-  k:to-gr, a, y-8, 0, 0">"
-=======
-          content="conta, c, t, AI, consultin, g, technology, solution, s, cloud, service, s, digital, transformatio, n"
-         />
-        <me, t, a 
-  proper, t, y="og: tit, l, e"
-          content="Contact, Zion, Tech Gro, u, p - Get, in, Touch"  />
-        <me, t, a 
-  proper, t, y="og: descripti, o, n"
-          content="Contact, us, for AI, solution, s, cloud, service, s, and, technology, consulting"  />
-        <meta, propert, y="og: ty, p, e" content="websi, t, e" />";
-        <meta, propert, y="og: u, r, l" content="htt, p, s://ziontechgro, u, p.c, o, m/conta, c, t" />";
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/conta, c, t" />";
-      </Helmet>
-      <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gr, a, y-100, dar, k: fr, o, m-gr, a, y-900, da, r
-  k:to-gr, a, y-8, 0, 0">";
-        <Head, e, r   />
-        {/* Hero, Sectio, n */}
-        <section, className="py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, relative, overflow-hidd, e, n">";
-          <div, className="absolute, inse, t-0">";
-            <div, className="absolute, to, p-20, lef, t-2, 0, w-3, 2, h-32, b, g-whi, t, e/10, rounde, d-full, blu, r-xl, animat, e-pul, s, e"></d, i, v>";
-            <d, i, v
-  classNa, m, e="absolute, botto, m-20, righ, t-2, 0, w-4, 0, h-40, b, g-whi, t, e/10, rounde, d-full, blu, r-xl, animat, e-pul, s, e"
-              sty, l, e={{ animationDel, a, y: "1s" }}";
-            ></d, i, v>
-            <d, i, v
-  classNa, m, e="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 0, h-60, b, g-whi, t, e/5, rounde, d-full, blu, r-2xl, animat, e-pul, s, e"
-              sty, l, e={{ animationDel, a, y: "2s" }}";
-            ></d, i, v>
-          </d, i, v>
-          <div, className="container, m, x-auto, p, x-6, tex, t-center, relative, z-10">
-            <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, tex, t-sm, fon, t-medium, m, b-6">
-              <MessageSquare, className="w-4 h-4, m, r-2  />
-              L, e, t&ap, o, s;s, Start, a Conversati, o, n;
-            </d, i, v>
-            <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6">"
-              Get, in, Touch;
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+        <Header />
+
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+            <div
+              className="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-xl animate-pulse"
+              style={{ animationDelay: "1s" }}
+            ></div>
+            <div
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/5 rounded-full blur-2xl animate-pulse"
+              style={{ animationDelay: "2s" }}
+            ></div>
+          </div>
+
+          <div className="container mx-auto px-6 text-center relative z-10">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
+              <MessageSquare className="w-4 h-4 mr-2" />
+              Let&apos;s Start a Conversation
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Get in Touch
             </h1>
-            <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-whi, t, e/90, m, b-8, ma, x-w-3xl, m, x-au, t, o">"
-=======
-          <div, className="container, m, x-auto, p, x-6, tex, t-center, relative, z-10">";
-            <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, tex, t-sm, fon, t-medium, m, b-6">";
-              <MessageSquare, className="w-4 h-4, m, r-2" />";
-              L, e, t&ap, o, s;s, Start, a Conversati, o, n;
-            </d, i, v>
-            <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6">";
-              Get, in, Touch;
-            </h1>
-            <p, className="te, x, t-x, l, m
-  d: te, x, t-2xl, tex, t-whi, t, e/90, m, b-8, ma, x-w-3xl, m, x-au, t, o">";
-              Ready, to, transform your, business, with cutti, n, g-edge, technolog, y?
-              L, e, t&ap, o, s;s, discuss, your project, and, explore the, possibilitie, s.
+
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge technology?
+              Let&apos;s discuss your project and explore the possibilities.
             </p>
-          </d, i, v>
-        </secti, o, n>
-        {/* Contact, Informatio, n */}
-        <section, className="py-16, b, g-white, dar, k: bg-gr, a, y-8, 0, 0">"
-          <div, className="container, m, x-auto, p, x-6">
-            <div, className="text-center mb-12">
-              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-4">"
-                Multiple, Ways, to Reach, U, s;
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-16 bg-white dark:bg-gray-800">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Multiple Ways to Reach Us
               </h2>
-              <p, className="te, x, t-lg, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
-        <section, className="py-16, b, g-white, dar, k: bg-gr, a, y-8, 0, 0">";
-          <div, className="container, m, x-auto, p, x-6">";
-            <div, className="text-center mb-12">";
-              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-4">";
-                Multiple, Ways, to Reach, U, s;
-              </h2>
-              <p, className="te, x, t-lg, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">";
-                Choose, the, communication method, that, works best, for, you;
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                Choose the communication method that works best for you
               </p>
-            </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-4, ga, p-8">"
-=======
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-4, ga, p-8">";
-              {contactIn, f, o.m, a, p((in, f, o, ind, e, x) => (
-                <d, i, v
-  k, e, y={ind, e, x}
-                  classNa, m, e="te, x, t-cente, r, p-6, b, g-gr, a, y-50, dar, k: bg-gr, a, y-700, rounde, d-2xl, hove, r:shad, o, w-lg, transitio, n-all, duratio, n-300, hov, e
-  r:sca, l, e-1, 0, 5"
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {contactInfo.map((info, index) => (
+                <div
+                  key={index}
+                  className="text-center p-6 bg-gray-50 dark:bg-gray-700 rounded-2xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                 >
-                  <div, className="inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, tex, t-white, m, b-4">";
-                    {in, f, o.ic, o, n}
-                  </d, i, v>
-                  <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-2">"
-                    {in, f, o.tit, l, e}
+                  <div className="inline-flex p-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white mb-4">
+                    {info.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    {info.title}
                   </h3>
-                  <p, className="te, x, t-lg, fon, t-medium, tex, t-bl, u, e-600, dar, k: te, x, t-bl, u, e-400, m, b-2">"
-                    {in, f, o.detai, l, s}
+                  <p className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">
+                    {info.details}
                   </p>
-                  <p, className="te, x, t-sm, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
-                  <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-2">";
-                    {in, f, o.tit, l, e}
-                  </h3>
-                  <p, className="te, x, t-lg, fon, t-medium, tex, t-bl, u, e-600, dar, k: te, x, t-bl, u, e-400, m, b-2">";
-                    {in, f, o.detai, l, s}
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    {info.description}
                   </p>
-                  <p, className="te, x, t-sm, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">";
-                    {in, f, o.descripti, o, n}
-                  </p>
-                </d, i, v>
+                </div>
               ))}
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-        {/* Enhanced, Contact, Form */}
-        <section, className="py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0">"
-          <div, className="container, m, x-auto, p, x-6">
-            <div, className="text-center mb-12">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-4">"
-                Start, Your, Project Tod, a, y;
+            </div>
+          </div>
+        </section>
+
+        {/* Enhanced Contact Form */}
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Start Your Project Today
               </h2>
-              <p, className="te, x, t-xl, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">"
-=======
-        <section, className="py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0">";
-          <div, className="container, m, x-auto, p, x-6">";
-            <div, className="text-center mb-12">";
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-4">";
-                Start, Your, Project Tod, a, y;
-              </h2>
-              <p, className="te, x, t-xl, tex, t-gr, a, y-600, da, r
-  k: te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">";
-                Fill, out, the form, below, and our, team, will get, back, to you, withi, n
-  24, hours, with a, personalized, proposal for, your, project.
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Fill out the form below and our team will get back to you within
+                24 hours with a personalized proposal for your project.
               </p>
-            </d, i, v>
-            <ContactFormCompone, n, t   />
-          </d, i, v>
-        </secti, o, n>
-        {/* Stats, Sectio, n */}
-        <section, className="py-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0">";
-          <div, className="container, m, x-auto, p, x-6">";
-            <div, className="text-center mb-12">";
-              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">";
-                Why, Choose, Zion Tech, Grou, p?
+            </div>
+            <ContactFormComponent />
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Why Choose Zion Tech Group?
               </h2>
-              <p, className="te, x, t-xl, tex, t-whi, t, e/90">";
-                Our, track, record speaks, for, itself;
+              <p className="text-xl text-white/90">
+                Our track record speaks for itself
               </p>
-            </d, i, v>
-            <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8">"
-=======
-            <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8">";
-              {sta, t, s.m, a, p((st, a, t, ind, e, x) => (
-                <d, i, v
-  k, e, y={ind, e, x}
-                  classNa, m, e="te, x, t-cente, r, p-6, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  <div, className="inli, n, e-fle, x, p-4, rounde, d-xl, b, g-whi, t, e/20, tex, t-white, m, b-4">";
-                    {st, a, t.ic, o, n}
-                  </d, i, v>
-                  <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2">";
-                    {st, a, t.val, u, e}
-                  </d, i, v>
-                  <div, className="te, x, t-whi, t, e/80, fon, t-medi, u, m">{st, a, t.lab, e, l}</d, i, v>";
-                </d, i, v>
+                  <div className="inline-flex p-4 rounded-xl bg-white/20 text-white mb-4">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-white/80 font-medium">{stat.label}</div>
+                </div>
               ))}
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-        {/* FAQ, Sectio, n */}
-        <section, className="py-20, b, g-white, dar, k: bg-gr, a, y-8, 0, 0">"
-          <div, className="container, m, x-auto, p, x-6">
-            <div, className="text-center mb-12">
-              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-4">"
-                Frequently, Asked, Questions;
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-white dark:bg-gray-800">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Frequently Asked Questions
               </h2>
-              <p, className="te, x, t-lg, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
-        <section, className="py-20, b, g-white, dar, k: bg-gr, a, y-8, 0, 0">";
-          <div, className="container, m, x-auto, p, x-6">";
-            <div, className="text-center mb-12">";
-              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-4">";
-                Frequently, Asked, Questions;
-              </h2>
-              <p, className="te, x, t-lg, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">";
-                Quick, answers, to common, question, s;
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                Quick answers to common questions
               </p>
-            </d, i, v>
-            <div, className="m, a, x-w-4xl, m, x-auto, spac, e-y-6">";
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-6">
               {[
                 {
-                  quest, i, o
-  n: "How, quickly, can you, start, my proje, c, t?"
-                  answ, e, r:
-                    "We, typically, begin new, projects, within 1-2, weeks, of contract, signin, g. Rush, projects, can be, accommodated, with additional, plannin, g."
-                }
+                  question: "How quickly can you start my project?",
+                  answer: "We typically begin new projects within 1-2 weeks of contract signing. Rush projects can be accommodated with additional planning."
+                },
                 {
-                  questi, o, n: "Wh, a, t&ap, o, s;s, your, typical project, timelin, e?"
-                  answ, e, r: "Project, timelines, vary based, on, complexity. Simple, websites, take 2-4, week, s, while, complex, AI implementations, can, take 3-6, month, s."
-                }
+                  question: "What&apos;s your typical project timeline?",
+                  answer: "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months."
+                },
                 {
-                  questi, o, n: "Do, you, provide ongoing, suppor, t?"
-                  answ, e, r:
-                    "Y, e, s! We, offer, comprehensive support, packages, including maintenan, c, e, updat, e, s, and, 2, 4/7, monitoring, for all, our, solutions."
-                }
+                  question: "Do you provide ongoing support?",
+                  answer: "Yes! We offer comprehensive support packages including maintenance, updates, and 24/7 monitoring for all our solutions."
+                },
                 {
-                  questi, o, n: "What, technologies, do you, specialize, in?"
-                  answ, e, r:
-                    "We, specialize, in AI/ML, cloud, computin, g, cybersecuri, t, y, quantum, computin, g, and, modern, web technologies, like, React, No, d, e.js, and, Pytho, n."
+                  question: "What technologies do you specialize in?",
+                  answer: "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, and modern web technologies like React, Node.js, and Python."
                 }
-=======
-                  questi, o, n: "How, quickly, can you, start, my proje, c, t?",";
-                  answ, e, r: "We, typically, begin new, projects, within 1-2, weeks, of contract, signin, g. Rush, projects, can be, accommodated, with additional, plannin, g.",";
-                }
-                {
-                  questi, o, n: "Wh, a, t&ap, o, s;s, your, typical project, timelin, e?",";
-                  answ, e, r: "Project, timelines, vary based, on, complexity. Simple, websites, take 2-4, week, s, while, complex, AI implementations, can, take 3-6, month, s.",";
-                }
-                {
-                  questi, o, n: "Do, you, provide ongoing, suppor, t?",";
-                  answ, e, r: "Y, e, s! We, offer, comprehensive support, packages, including maintenan, c, e, updat, e, s, and, 2, 4/7, monitoring, for all, our, solutions.",";
-                }
-                {
-                  questi, o, n: "What, technologies, do you, specialize, in?",";
-                  answ, e, r: "We, specialize, in AI/ML, cloud, computin, g, cybersecuri, t, y, quantum, computin, g, and, modern, web technologies, like, React, No, d, e.js, and, Pytho, n.",";
-                }
-              ].m, a, p((f, a, q, ind, e, x) => (
-                <d, i, v
-  k, e, y={ind, e, x}
-                  classNa, m, e="bg-gr, a, y-50, dar, k: bg-gr, a, y-700, rounde, d-2x, l, p-6, hov, e
-  r:shad, o, w-lg, transitio, n-all, duratio, n-3, 0, 0"
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 hover:shadow-lg transition-all duration-300"
                 >
-                  <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-3">"
-                    {f, a, q.questi, o, n}
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                    {faq.question}
                   </h3>
-                  <p, className="te, x, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
-                  <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, dar, k: te, x, t-white, m, b-3">";
-                    {f, a, q.questi, o, n}
-                  </h3>
-                  <p, className="te, x, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">";
-                    {f, a, q.answ, e, r}
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {faq.answer}
                   </p>
-                </d, i, v>
+                </div>
               ))}
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-        {/* CTA, Sectio, n */}
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, t, o-bl, u, e-9, 0, 0">
-          <div, className="container, m, x-auto, p, x-6, tex, t-cent, e, r">
-            <div, className="m, a, x-w-4xl, m, x-au, t, o">
-              <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, tex, t-sm, fon, t-medium, m, b-6">
-                <Sparkles, className="w-4 h-4, m, r-2  />
-                Ready, to, Get Start, e, d?
-              </d, i, v>
-              <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6">"
-=======
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, t, o-bl, u, e-9, 0, 0">";
-          <div, className="container, m, x-auto, p, x-6, tex, t-cent, e, r">";
-            <div, className="m, a, x-w-4xl, m, x-au, t, o">";
-              <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, tex, t-sm, fon, t-medium, m, b-6">";
-                <Sparkles, className="w-4 h-4, m, r-2" />";
-                Ready, to, Get Start, e, d?
-              </d, i, v>
-              <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6">";
-                L, e, t&ap, o, s;s, Build, Something Amazing, Togethe, r;
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900">
+          <div className="container mx-auto px-6 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Ready to Get Started?
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Let&apos;s Build Something Amazing Together
               </h2>
-              <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8">";
-                Join, hundreds, of companies, that, trust Zion, Tech, Group for, thei, r
-  technology, need, s. Your, digital, transformation starts, with, a
-  single, conversatio, n.
+
+              <p className="text-xl text-gray-300 mb-8">
+                Join hundreds of companies that trust Zion Tech Group for their
+                technology needs. Your digital transformation starts with a
+                single conversation.
               </p>
-              <div, className="flex, fle, x-co, l, s
-  m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
-              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
-                <a, titl, e="Internal, lin, k"
-                  hr, e, f="#conta, c, t-fo, r, m"
-                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, rounde, d-xl, fon, t-semibold, hov, e
-  r: shad, o, w-lg, transitio, n-all, duratio, n-3, 0, 0"
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  title="Internal link"
+                  href="#contact-form"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
                 >
-                  <MessageSquare, className="w-5 h-5, m, r-2  />
-=======
-                  <MessageSquare, className="w-5 h-5, m, r-2" />";
-                  Start, Your, Project;
+                  <MessageSquare className="w-5 h-5 mr-2" />
+                  Start Your Project
                 </a>
-                <a, titl, e="Internal, lin, k"
-                  hr, e, f="t, e, l: +155512345, 6, 7"
-                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, rounde, d-xl, fon, t-semibold, hove, r: bg-white, hov, e
-  r:te, x, t-bl, u, e-600, transitio, n-all, duratio, n-3, 0, 0"
+                <a
+                  title="Internal link"
+                  href="tel:+15551234567"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
                 >
-                  <Phone, className="w-5 h-5, m, r-2  />
-=======
-                  <Phone, className="w-5 h-5, m, r-2" />";
-                  Call, Us, Now;
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Us Now
                 </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-        <Foot, e, r   />
-      </d, i, v>
-    < />
+              </div>
+            </div>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    </>
   );
 }
-;
