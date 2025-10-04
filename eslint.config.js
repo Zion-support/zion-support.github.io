@@ -72,6 +72,14 @@ export default [
       'tests/**',
       'scripts/**',
       'pages/**',
+      // Temporarily ignore known heavy TSX pages with pending fixes
+      'src/pages/**',
+      'src/components/Revolutionary2026ContentMegaBanner.tsx',
+      'store/**',
+      'jest.setup.js',
+      '*.config.js',
+      '*.config.ts',
+      // Ignore disabled and backup directories
       '_app_disabled/**',
       '_conflicted_disabled/**',
       '_pages_api_disabled/**',
@@ -85,14 +93,7 @@ export default [
       'ai-optimization-backups/**',
       '*.js',
       '*.cjs',
-      '*.mjs',
-      // Temporarily ignore known heavy TSX pages with pending fixes
-      'src/pages/**',
-      'src/components/Revolutionary2026ContentMegaBanner.tsx',
-      'store/**',
-      'jest.setup.js',
-      '*.config.js',
-      '*.config.ts'
+      '*.mjs'
     ]
   },
 
@@ -103,6 +104,30 @@ export default [
       globals: { ...globals.node },
     },
     ...js.configs.recommended,
+  },
+
+  // JSX configuration for React components
+  {
+    files: ["**/*.{jsx}"],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: { ...globals.browser },
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...(reactHooks.configs.recommended?.rules || {}),
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+    },
   },
 
   // Simplified TypeScript configuration (non type-aware)
@@ -129,29 +154,6 @@ export default [
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
-    },
-  },
-
-  // JSX configuration for .jsx files
-  {
-    files: ["**/*.{js,jsx}"],
-    languageOptions: {
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: { ...globals.browser },
-    },
-    plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-    },
-    rules: {
-      ...(reactHooks.configs.recommended?.rules || {}),
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     },
   },
 ];
