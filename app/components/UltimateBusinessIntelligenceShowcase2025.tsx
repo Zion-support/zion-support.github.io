@@ -6,8 +6,19 @@ import Link from 'next/link';
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const content = [{
+=======
   const content = [
     {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3825
+=======
+  const content = [{
+>>>>>>> origin/main
+>>>>>>> main
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,000% ROI',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
@@ -60,7 +71,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
     }
   ];
 
-  const filters = [
+  const filters = [{
     { id: 'all', label: 'All Content', count: content.length },
     { id: 'blog', label: 'Blog Posts', count: content.filter(item => item.category === 'blog').length },
     { id: 'case-study', label: 'Case Studies', count: content.filter(item => item.category === 'case-study').length },
@@ -90,31 +101,31 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Success Metrics */}
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <div className="text-left">30,000%</div>"
             <div className="text-left">Average ROI</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">$750B+</div>"
             <div className="text-left">Annual Savings</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">99.99%</div>"
             <div className="text-left">Accuracy Rate</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">5,000%</div>"
             <div className="text-left">Faster Decisions</div>"
           </div>
 
         {/* Filter Tabs */}
-        <div className="text-left">
+        <div className="text-left"></div>
           {filters.map((filter) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 $
                 activeFilter === filter.id
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
@@ -126,67 +137,67 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="text-left">
+        <div className="text-left"></div>
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className="text-left">
+              className="text-left"></div>
               {/* Content Type Badge */}
-              <div className="text-left">
-                <div className="text-left">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+              <div className="text-left"></div>
+                <div className="text-left"></div>
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium $
                     item.category === 'blog' ? 'bg-blue-100 text-blue-800' :
                     item.category === 'case-study' ? 'bg-green-100 text-green-800' :
                     'bg-purple-100 text-purple-800'
-                  }`}>
+                  }`}></span>
                     {item.type}
                   </span>
                   {item.featured && (
-                    <span className="text-left">
+                    <span className="text-left"></span>
                       FEATURED
                     </span>
                   )}
                 </div>
 
               {/* Content */}
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">
                   {item.title}
                 </h3>
-                <p className="text-left">
+                <p className="text-left"></p>
                   {item.description}
                 </p>
 
                 {/* Metrics */}
-                <div className="text-left">
-                  <div className="text-left">
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
                     <div className="text-left">{item.metrics.roi}</div>"
                     <div className="text-left">ROI</div>"
                   </div>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <div className="text-left">{item.metrics.savings}</div>"
                     <div className="text-left">Savings</div>"
                   </div>
 
                 {/* Tags */}
-                <div className="text-left">
+                <div className="text-left"></div>
                   {item.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="text-left">
+                      className="text-left"></span>
                       {tag}
                     </span>
                   ))}
                 </div>
 
                 {/* Action Buttons */}
-                <div className="text-left">
+                <div className="text-left"></div>
                   <Link
                     href={item.url}
                     className="text-left">
                     Read {item.type}
                   </Link>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <span>{item.readingTime}</span>
                     <span>•</span>
                     <span>Ultimate Breakthrough</span>
@@ -196,15 +207,15 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h3 className="text-left">
               Ready to Achieve 30,000% ROI?
             </h3>
-            <p className="text-left">
+            <p className="text-left"></p>
               Join Fortune 500 companies transforming their business intelligence with AI-powered analytics.
             </p>
-            <div className="text-left">
+            <div className="text-left"></div>
               <Link
                 href="/contact"
                 className="text-left">

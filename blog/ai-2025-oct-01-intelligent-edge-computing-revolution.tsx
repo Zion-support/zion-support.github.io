@@ -11,12 +11,16 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <article className="text-left"></a>
       <h1>⚡ Intelligent Edge Computing Revolution (2025): Real-Time AI at Scale</h1>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         <h3 className="text-left">🚀 Executive Overview</h3>
-        <p className="text-left">
+        <p className="text-left"></p>
           Deploy <strong>autonomous edge AI</strong> for sub-<span className="text-left">5ms latency<,
           <span className="text-left"> 99.99% uptime<, and <span className="text-left">90% cost reduction<.
           This guide outlines a proven architecture, rollout plan, and ROI model for 2025.
@@ -61,12 +65,12 @@ export default function BlogPost() {
       </ol>
 
       <h2>💰 ROI Model</h2>
-      <p>
+      <p></p>
         Typical programs see <strong>4–12 month payback</strong> and multi-million annual savings from
         bandwidth, cloud egress, and defect reduction.
       </p>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         <h3 className="text-left">Ready to launch?</h3>
         <p className="text-left">Our edge AI blueprint accelerates pilots to production with enterprise guardrails.</p>
       </div>
@@ -74,3 +78,4 @@ export default function BlogPost() {
   );
 }
 
+)

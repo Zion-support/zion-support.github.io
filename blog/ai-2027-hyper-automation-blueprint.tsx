@@ -1,15 +1,19 @@
 import React from 'react';
 
 export default function HyperAutomationBlueprint2027() {
+  return (
+    <div>/* content */}
 	return (
-		<div className="text-left">
+    <div>
+      <div></div>
+		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">AI 2027 Hyper‑Automation Blueprint</h1>
-				<p className="text-left">
+				<p className="text-left"></p>
 					A pragmatic, budget-aware roadmap to scale reliable, guardrailed automation across the enterprise.
 					This blueprint aligns architecture, governance, and value stream analytics to ship outcomes fast.
 				</p>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Foundation</h2>
 					<ul className="text-left">
 						<li>Policy tests and approvals-as-code for every change</li>
@@ -17,7 +21,7 @@ export default function HyperAutomationBlueprint2027() {
 						<li>Skills registry with versioned prompts, tools, and datasets</li>
 					</ul>
 				</section>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Scale Patterns</h2>
 					<ul className="text-left">
 						<li>Multi-model routing with cache-first and fallback strategies</li>
@@ -25,7 +29,7 @@ export default function HyperAutomationBlueprint2027() {
 						<li>Quality gates: offline evals → shadow → canary → steady state</li>
 					</ul>
 				</section>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">KPIs</h2>
 					<ul className="text-left">
 						<li>Outcome success rate, cost per outcome, rollback rate</li>
@@ -38,3 +42,4 @@ export default function HyperAutomationBlueprint2027() {
 	);
 }
 
+)

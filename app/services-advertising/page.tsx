@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = 
   title: 'Services Advertising & Pricing | Zion Tech Group',
   description: 'Comprehensive overview of all Zion Tech Group services with competitive pricing, market comparisons, and ROI benefits. Contact us for custom quotes.',
   keywords: 'AI services pricing, micro SaaS pricing, IT services cost, technology consulting rates, enterprise solutions pricing',
@@ -10,7 +10,11 @@ export const metadata: Metadata = {
 
 export default function ServicesAdvertisingPage() {
   return (
-    <div className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <div className="text-left"></div>
       {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
@@ -21,7 +25,7 @@ export default function ServicesAdvertisingPage() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">
+              <span className="text-left"></span>
                 🎯 AI-Powered Advertising Solutions
               </span>
             </div>
@@ -30,11 +34,11 @@ export default function ServicesAdvertisingPage() {
               AI Advertising Services
             </h1>
             
-            <p className="text-left">
+            <p className="text-left"></p>
               Revolutionize Your Marketing with 300% ROI Guaranteed
             </p>
             
-            <p className="text-left">
+            <p className="text-left"></p>
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics.
             </p>
@@ -42,12 +46,12 @@ export default function ServicesAdvertisingPage() {
             <div className="text-left"></div>
               <a 
                 href="/"
-                className="text-left">
+                className="text-left"></a>
                 Start Free Consultation
               </a>
               <a 
                 href="#services" "
-                className="text-left">
+                className="text-left"></a>
                 View Our Services
               </a>
             </div>
@@ -60,7 +64,7 @@ export default function ServicesAdvertisingPage() {
       </section>
 
       {/* AI Advertising Banner */}
-      <section>
+      <section></section>
         <AIAdvertisingBanner />
       </section>
 
@@ -98,11 +102,11 @@ export default function ServicesAdvertisingPage() {
                 <p>📍 364 E Main St STE 1008<br />Middletown, DE 19709</p>
               </div>
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | </div>
             <Link href="https://ziontechgroup.com" className="text-left">ziontechgroup.com</Link>"
           </div>
       </footer>
     </div>
   );
-}</div></div></div></div></div>
+}</div></div></div></div></div>)

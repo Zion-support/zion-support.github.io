@@ -147,7 +147,7 @@ timePosted?: string
   items, type, onViewDetails 
 }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]> ([]);
-setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id) </Avatar>) : (<div className="text-left" > <span className="text-left" >JOB< </div>) ";"}<div> </div> </div> <button) : (<Bookmark className="text-left" />) ;
+setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id) </Avatar>) : (<div className="text-left" > <span className="text-left" >JOB< </div>) ";"}<div></div> <button) : (<Bookmark className="text-left" />) ;
 }</button> </div> <Badge key= {;"  index ";"}variant="outline" className="text-left" >{;
   badge ;
 }</Badge>) ) ;

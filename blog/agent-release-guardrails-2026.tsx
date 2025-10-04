@@ -1,15 +1,19 @@
 import React from 'react';
 
 export default function AgentReleaseGuardrails2026() {
+  return (
+    <div>/* content */}
 	return (
-		<div className="text-left">
+    <div>
+      <div></div>
+		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Agent Release Guardrails 2026</h1>
-				<p className="text-left">
+				<p className="text-left"></p>
 					Budgets, approvals, KPI-linked canaries, and instant rollback for safe, fast agent
 					releases at scale.
 				</p>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Release Checklist</h2>
 					<ul className="text-left">
 						<li>Define SLOs and error budgets per action</li>
@@ -22,3 +26,4 @@ export default function AgentReleaseGuardrails2026() {
 	);
 }
 
+)

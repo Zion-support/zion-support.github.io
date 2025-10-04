@@ -10,47 +10,51 @@ export const metadata = {
 
 export default function September302025NewGovernedAgentPatterns() {
   return (
-    <article className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <article className="text-left"></a>
       <header className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <p className="text-left">Highlights · September 30, 2025</p>
           <h1 className="text-left">
             New Governed Agent Patterns for Reliable Autonomy
           </h1>
-          <p className="text-left">
+          <p className="text-left"></p>
             Ship autonomy with confidence using policy guardrails, approval gates, budget-aware routing,
             and independent verifiers—plus instant rollback when metrics drift.
           </p>
         </div>
       </header>
 
-      <div className="text-left">
-        <p>
+      <div className="text-left"></div>
+        <p></p>
           Mature autonomous systems don’t rely on a single agent. They orchestrate planners, executors,
           and verifiers behind strong policy and observability. Below are the field‑tested patterns teams
           are standardizing to move from pilots to production.
         </p>
 
         <h2>1) Policy‑first orchestration</h2>
-        <p>
+        <p></p>
           Use declarative policy to constrain tools, data, and actions. Require approvals for high‑risk
           transitions. Deny access by default; permit with context and expiry.
         </p>
 
         <h2>2) Budget‑aware routing</h2>
-        <p>
+        <p></p>
           Bind spend to value by routing high‑impact requests to premium models while steering routine traffic
           to efficient paths (distilled models, caches, quantized runtimes). Enforce per‑flow spend limits.
         </p>
 
         <h2>3) Independent verification</h2>
-        <p>
+        <p></p>
           Add verifiers for safety, policy, and factuality. Use counter‑models or rule engines to validate
           outputs before commit. Escalate to human review when uncertainty is high.
         </p>
 
         <h2>4) Instant rollback and quarantine</h2>
-        <p>
+        <p></p>
           Wire online checks to KPIs (quality, latency, cost). If bands are breached, quarantine new behavior,
           roll back to last good config, and open an incident with traces attached.
         </p>

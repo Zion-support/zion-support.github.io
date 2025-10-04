@@ -1,9 +1,9 @@
-describe('Critical user journeys', () => {
-  beforeEach(() => {
+describe('Critical user journeys', () => 
+  beforeEach(() => 
     cy.visit('/');
   });
 
-  it('Registers a new user successfully', () => {
+  it('Registers a new user successfully', () => 
     cy.intercept('POST', '/api/auth/register').as('register');
     cy.get('nav').contains('Sign up').click();
     cy.get('input[name="name"]').type('Test User');
@@ -16,24 +16,24 @@ describe('Critical user journeys', () => {
     cy.url().should('include', '/dashboard');
   });
 
-  it('Logs in and completes Stripe test checkout', () => {
+  it('Logs in and completes Stripe test checkout', () => 
     cy.loginByApi('existing@test.com', 'password123');
     cy.visit('/marketplace');
     cy.contains('Buy Now').first().click();
     cy.url().should('include', '/checkout');
-    cy.get('iframe[name^="__privateStripeFrame"]').then(($iframe) => {
+    cy.get('iframe[name^="__privateStripeFrame"]').then(($iframe) => 
       // fill Stripe test card 4242 4242 4242 4242
     });
     cy.contains('Payment successful').should('be.visible');
   });
 
-  it('Loads equipment detail page', () => {
+  it('Loads equipment detail page', () => 
     cy.visit('/equipment');
     cy.contains('Rack Mount').click();
     cy.contains('Specs').should('be.visible');
   });
 
-  it('Creates a community post', () => {
+  it('Creates a community post', () => 
     cy.loginByApi('existing@test.com', 'password123');
     cy.visit('/community');
     cy.contains('Create New Post').click();

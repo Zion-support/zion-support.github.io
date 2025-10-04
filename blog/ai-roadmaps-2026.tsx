@@ -13,9 +13,13 @@ export const metadata = {
 
 export default function AIRoadmaps2026() {
   return (
-    <article className="text-left">
-      <div className="text-left">
-        <div className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <article className="text-left"></a>
+      <div className="text-left"></div>
+        <div className="text-left"></div>
           <Link href="/blog" className="text-left">
             ← Back to Blog
           </Link>
@@ -25,19 +29,19 @@ export default function AIRoadmaps2026() {
           <h1 className="text-left">
             AI Roadmaps 2026: What to Build Next and Why
           </h1>
-          <div className="text-left">
+          <div className="text-left"></div>
             <time dateTime="2025-09-30">September 30, 2025</time>
             <span className="text-left">•<
             <span>10 min read<
           </div>
-          <p className="text-left">
+          <p className="text-left"></p>
             Sequence initiatives that compound value. Start with revenue-generating copilots, harden
             governance and observability, then scale platform capabilities to enable dozens of use cases.
           </p>
         </header>
 
-        <div className="text-left">
-          <section className="text-left">
+        <div className="text-left"></div>
+          <section className="text-left"></section>
             <h2 className="text-left">2026 Priority Themes</h2>
             <ul className="text-left">
               <li>High-ROI CX copilots with grounded retrieval and approval flows</li>
@@ -46,29 +50,29 @@ export default function AIRoadmaps2026() {
             </ul>
           </section>
 
-          <section className="text-left">
+          <section className="text-left"></section>
             <h2 className="text-left">Capability Ladder</h2>
-            <p className="text-left">
+            <p className="text-left"></p>
               Build capabilities in layers—data readiness, model access, guardrails, and analytics—so new
               use cases can launch in days, not months.
             </p>
           </section>
 
-          <section className="text-left">
+          <section className="text-left"></section>
             <h2 className="text-left">Measuring Success</h2>
-            <p className="text-left">
+            <p className="text-left"></p>
               Define success with clear KPIs: revenue impact, cost per outcome, time-to-value, and policy
               adherence. Review weekly and rebalance investments quarterly.
             </p>
           </section>
         </div>
 
-        <div className="text-left">
+        <div className="text-left"></div>
           <h3 className="text-left">Need a 2026 Roadmap?</h3>
-          <p className="text-left">
+          <p className="text-left"></p>
             We help leadership teams prioritize and implement AI initiatives that deliver measurable ROI.
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a href="tel:+13024640950" className="text-left">Call +1 302 464 0950</a>
             <a href="mailto:kleber@ziontechgroup.com" className="text-left">Email Us</a>
           </div>
@@ -78,3 +82,4 @@ export default function AIRoadmaps2026() {
   );
 }
 
+)

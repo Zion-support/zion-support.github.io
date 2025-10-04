@@ -1,9 +1,9 @@
       roles: []}
-    mockSupabaseInvoke.mockResolvedValueOnce({
+    mockSupabaseInvoke.mockResolvedValueOnce(
       data: mockRecommendation
       error: null})
 
-    const { req, res } = createMocks<NextApiRequest NextApiResponse>({
+    const { req, res } = createMocks<NextApiRequest NextApiResponse>(
       method:
   'POST' as RequestMethod',
       body: mockBrief})

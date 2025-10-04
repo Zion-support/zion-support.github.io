@@ -196,7 +196,7 @@ export class EnhancedAccessibility {
 
     // Basic voice control setup
     document.addEventListener('keydown', (e) => {
-      if (e.ctrlKey && e.key === 'v') {
+      if (e.key === 'v' && e.ctrlKey) {
         this.activateVoiceControl();
       }
     });

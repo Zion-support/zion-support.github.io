@@ -2,9 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Shield, Scale, FileText } from "lucide-react";
 
-const AIEthicsOperationalBlueprint2026 = () => {
+const AIEthicsOperationalBlueprint2026 = () => 
   return (
-    <>
+    <div>
+      <div></div>
       <Helmet>
         <title>AI Ethics Operational Blueprint 2026: Bias, Fairness, Auditability | Zion Tech Group</title>
         <meta
@@ -14,15 +15,15 @@ const AIEthicsOperationalBlueprint2026 = () => {
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-ethics-operational-blueprint-2026" />
       </Helmet>
 
-      <div className="text-left">
-        <article className="text-left">
+      <div className="text-left"></div>
+        <article className="text-left"></a>
           <Link to="/blog" className="text-left">
             <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
 
           <header className="text-left">
-            <div className="text-left">
+            <div className="text-left"></div>
               <span className="text-left">AI Governance<
               <span className="text-left">✅ COMPLIANCE<
               <time className="text-left">October 30, 2025</time>
@@ -31,25 +32,25 @@ const AIEthicsOperationalBlueprint2026 = () => {
             <p className="text-left">Bias tests, fairness SLAs, red‑team drills, and audit‑ready trails that teams actually adopt.</p>
           </header>
 
-          <div className="text-left">
-            <div className="text-left">
-              <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <Shield className="text-left" />
-                <div>
+                <div></div>
                   <h3 className="text-left">Policy‑Backed Guardrails</h3>
                   <p className="text-left">PR checks and live canaries wired to risk budgets</p>
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <Scale className="text-left" />
-                <div>
+                <div></div>
                   <h3 className="text-left">Fairness SLAs</h3>
                   <p className="text-left">Monitored parity metrics with rollbacks on breach</p>
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <FileText className="text-left" />
-                <div>
+                <div></div>
                   <h3 className="text-left">Audit Trails</h3>
                   <p className="text-left">Signed configs, model lineage, and explainability packets</p>
                 </div>
@@ -57,7 +58,7 @@ const AIEthicsOperationalBlueprint2026 = () => {
             </div>
           </div>
 
-          <section className="text-left">
+          <section className="text-left"></section>
             <h2 className="text-left">Blueprint Overview</h2>
             <p className="text-left">Operational ethics succeeds when it is embedded in delivery. This blueprint shows how to layer lightweight governance—policy tests in CI, KPI‑linked canaries, and owned risk budgets—so teams move faster with fewer incidents.</p>
             <h3 className="text-left">Key Practices</h3>
@@ -69,8 +70,8 @@ const AIEthicsOperationalBlueprint2026 = () => {
             </ul>
           </section>
 
-          <div className="text-left">
-            <div>
+          <div className="text-left"></div>
+            <div></div>
               <h3 className="text-left">Need help implementing ethical guardrails?</h3>
               <p className="text-left">We ship practical frameworks that satisfy compliance and speed delivery.</p>
             </div>

@@ -6,19 +6,19 @@ const NewestContent2025Banner = () => {
     <section className="text-left">
       {/* Animated Background Effects */}
       <div className="text-left">
-        <div className="text-left"></div>"
-        <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        <div className="text-left" style={{ animationDelay: '1s' }}></div></div>
+        <div className="text-left"></div>
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>
+        <div className="text-left" style={{ animationDelay: '1s' }}></div>
 
       <div className="text-left">
         {/* Header */}
         <div className="text-left">
           <div className="text-left">
-            <span className="text-left">🚀</span>/span>/span>/span>
+            <span className="text-left">🚀</span>
             <span className="text-left">
               BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
-            </span>/span>/span>/span>
-            <span className="text-left">⚡</span>/span>/span>/span>
+            </span>
+            <span className="text-left">⚡</span>
           </div>
 
           <h2 className="text-left">
@@ -36,7 +36,7 @@ const NewestContent2025Banner = () => {
           <Link href="/blog/ai-edge-computing-real-time-2025" className="text-left">
             <div className="text-left">
               {/* Card glow effect */}
-              <div className="text-left"></div>
+              <div className="text-left">
               <div className="text-left">
                 {/* Icon & Badges */}
                 <div className="text-left">
@@ -45,19 +45,19 @@ const NewestContent2025Banner = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">🔥</span>/span>/span>/span>
+                      <span className="text-left">🔥</span>
                       <span>HOT</span>
                     </div>
                     <span className="text-left">
                       NEW TODAY
-                    </span>/span>/span>/span>
+                    </span>
                   </div>
 
                 {/* Category Tag */}
                 <div className="text-left">
                   <span className="text-left">
                     Edge AI & Real-Time
-                  </span>/span>/span>/span>
+                  </span>
                 </div>
 
                 {/* Title */}
@@ -74,14 +74,18 @@ const NewestContent2025Banner = () => {
                 {/* Key Stats */}
                 <div className="text-left">
                   <div className="text-left">
-                    <div className="text-left">&lt;10ms</div>"
-                    <div className="text-left">Latency</div></div>
+                    <div className="text-left">&lt;10ms</div>
+                    <div className="text-left">Latency</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">95%</div>"
-                    <div className="text-left">Bandwidth ↓</div></div>
+                    <div className="text-left">95%</div>
+                    <div className="text-left">Bandwidth ↓</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">87%</div>"
-                    <div className="text-left">Cost ↓</div></div>
+                    <div className="text-left">87%</div>
+                    <div className="text-left">Cost ↓</div>
+                  </div>
+                </div>
 
                 {/* Meta Info */}
                 <div className="text-left">
@@ -92,15 +96,15 @@ const NewestContent2025Banner = () => {
                 {/* CTA Button */}
                 <div className="text-left">
                   <span>Read Full Article</span>
-                  <span className="text-left">→</span>/span>/span>/span>
+                  <span className="text-left">→</span>
                 </div>
+              </div>
             </div>
           </Link>
 
           {/* Article 2: Neural Networks */}
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left">
             <div className="text-left">
-              <div className="text-left"></div>
               <div className="text-left">
                 <div className="text-left">
                   <div className="text-left">
@@ -108,18 +112,18 @@ const NewestContent2025Banner = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">🔥</span>/span>/span>/span>
+                      <span className="text-left">🔥</span>
                       <span>HOT</span>
                     </div>
                     <span className="text-left">
                       NEW TODAY
-                    </span>/span>/span>/span>
+                    </span>
                   </div>
 
                 <div className="text-left">
                   <span className="text-left">
                     Neural Networks & AI
-                  </span>/span>/span>/span>
+                  </span>
                 </div>
 
                 <h3 className="text-left">
@@ -133,14 +137,18 @@ const NewestContent2025Banner = () => {
 
                 <div className="text-left">
                   <div className="text-left">
-                    <div className="text-left">98.5%</div>"
-                    <div className="text-left">Accuracy</div></div>
+                    <div className="text-left">98.5%</div>
+                    <div className="text-left">Accuracy</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">10x</div>"
-                    <div className="text-left">ROI</div></div>
+                    <div className="text-left">10x</div>
+                    <div className="text-left">ROI</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">85%</div>"
-                    <div className="text-left">Efficiency</div></div>
+                    <div className="text-left">85%</div>
+                    <div className="text-left">Efficiency</div>
+                  </div>
+                </div>
 
                 <div className="text-left">
                   <span>⏱️ 40 min read</span>
@@ -149,7 +157,7 @@ const NewestContent2025Banner = () => {
 
                 <div className="text-left">
                   <span>Read Full Article</span>
-                  <span className="text-left">→</span>/span>/span>/span>
+                  <span className="text-left">→</span>
                 </div>
             </div>
           </Link>
@@ -157,7 +165,7 @@ const NewestContent2025Banner = () => {
           {/* Article 3: Quantum Security */}
           <Link href="/blog/ai-quantum-security-protocols-2026" className="text-left">
             <div className="text-left">
-              <div className="text-left"></div>
+              <div className="text-left">
               <div className="text-left">
                 <div className="text-left">
                   <div className="text-left">
@@ -165,18 +173,18 @@ const NewestContent2025Banner = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">🚨</span>/span>/span>/span>
+                      <span className="text-left">🚨</span>
                       <span>CRITICAL</span>
                     </div>
                     <span className="text-left">
                       NEW TODAY
-                    </span>/span>/span>/span>
+                    </span>
                   </div>
 
                 <div className="text-left">
                   <span className="text-left">
                     Quantum Security
-                  </span>/span>/span>/span>
+                  </span>
                 </div>
 
                 <h3 className="text-left">
@@ -190,14 +198,18 @@ const NewestContent2025Banner = () => {
 
                 <div className="text-left">
                   <div className="text-left">
-                    <div className="text-left">99.99%</div>"
-                    <div className="text-left">Security</div></div>
+                    <div className="text-left">99.99%</div>
+                    <div className="text-left">Security</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">&lt;1ms</div>"
-                    <div className="text-left">Overhead</div></div>
+                    <div className="text-left">&lt;1ms</div>
+                    <div className="text-left">Overhead</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">Zero</div>"
-                    <div className="text-left">Breaches</div></div>
+                    <div className="text-left">Zero</div>
+                    <div className="text-left">Breaches</div>
+                  </div>
+                </div>
 
                 <div className="text-left">
                   <span>⏱️ 45 min read</span>
@@ -206,7 +218,7 @@ const NewestContent2025Banner = () => {
 
                 <div className="text-left">
                   <span>Read Full Article</span>
-                  <span className="text-left">→</span>/span>/span>/span>
+                  <span className="text-left">→</span>
                 </div>
             </div>
           </Link>
@@ -228,21 +240,25 @@ const NewestContent2025Banner = () => {
                 <a
                   href="tel:+13024640950"
                   className="text-left">
-                  <span className="text-left">📞</span>/span>/span>/span>
+                  <span className="text-left">📞</span>
                   <span>Call +1 302 464 0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-left">
-                  <span className="text-left">📧</span>/span>/span>/span>
+                  <span className="text-left">📧</span>
                   <span>Get Expert Consultation</span>
                 </a>
               </div>
           </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
         {/* Stats Section */}
         <div className="text-left">
-          {[
+          {[{
             { value: '500+', label: 'Enterprise Clients' },
             { value: '10B+', label: 'Data Points Processed Daily' },
             { value: '99.9%', label: 'System Uptime' },
@@ -255,6 +271,24 @@ const NewestContent2025Banner = () => {
               <div className="text-left">
                 {stat.label}
               </div>
+<<<<<<< HEAD
+=======
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/contact"
+                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                <span>Start Your AI Transformation</span>
+              </Link>
+              
+              <Link
+                href="/blog"
+                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
+                <span>Explore All Articles</span>
+                <span>→</span>
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3825
+=======
+>>>>>>> origin/main
             </div>
           ))}
         </div>

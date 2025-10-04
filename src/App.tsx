@@ -1,97 +1,131 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import Header from './components/Header';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
-// Simple Home component
-const Home = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center text-white max-w-4xl mx-auto p-8">
-      <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-        Zion Tech Group
-      </h1>
-      <p className="text-xl text-gray-300 mb-8">
-        Revolutionary AI Solutions for Enterprise
-      </p>
-      <p className="text-lg text-gray-400 mb-12">
-        Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations.
-        Experience 2000x processing speed and 99.9% automation rates.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors">
-          Get Started
-        </button>
-        <button className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg transition-colors">
-          Learn More
-        </button>
-      </div>
-    </div>
-  </div>
-)
+// Animation variants
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -20 }
+};
 
-// Simple About component
-const About = () => (
-  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-    <div className="text-center max-w-4xl mx-auto p-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
-      <p className="text-lg text-gray-600">
-        We are pioneers in AI and quantum computing solutions, delivering transformative technology 
-        that empowers enterprises to achieve unprecedented levels of automation and intelligence.
-      </p>
-    </div>
-  </div>
-)
+const pageTransition = {
+  type: 'tween' as const,
+  ease: 'anticipate' as const,
+  duration: 0.4
+};
 
-// Simple Contact component
-const Contact = () => (
-  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-    <div className="text-center max-w-4xl mx-auto p-8">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
-      <p className="text-lg text-gray-600 mb-4">
-        Ready to transform your business with AI?
-      </p>
-      <p className="text-gray-600">
-        Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a>
-      </p>
-      <p className="text-gray-600">
-        Phone: <a href="tel:+1-302-464-0950" className="text-blue-600 hover:underline">+1-302-464-0950</a>
-      </p>
-    </div>
-  </div>
-)
 
-// 404 component
-const NotFound = () => (
-  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-    <div className="text-center">
-      <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-      <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
-      <p className="text-gray-600 mb-8">
-        The page you're looking for doesn't exist or has been moved.
-      </p>
-      <button
-        onClick={() => window.history.back()}
-        className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4">
-        Go Back
-      </button>
-      <button
-        onClick={() => window.location.href = '/'}
-        className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
-        Go Home
-      </button>
-    </div>
-  </div>
-)
+// Lazy loaded components for better performance
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ServicesPage = React.lazy(() => import('./pages/Services'));
+
+// Simple Error Boundary
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
-  )
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="min-h-screen bg-gray-50">
+            <EnhancedErrorBoundary>
+              <Header />
+
+              {/* Main Content */}
+              <motion.main
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                className="relative z-10"
+              >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div id="main-content" className="flex-1">
+                    <React.Suspense fallback={
+                      <div className="min-h-screen flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                          <p className="text-gray-600">Loading...</p>
+                        </div>
+                      </div>
+                    }>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services/*" element={<ServicesPage />} />
+
+                        {/* 404 Fallback */}
+                        <Route
+                          path="*"
+                          element={
+                            <div className="min-h-screen flex items-center justify-center">
+                              <div className="text-center">
+                                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                                <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                                <a
+                                  href="/"
+                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                                >
+                                  Return Home
+                                </a>
+                              </div>
+                            </div>
+                          } />
+                      </Routes>
+                    </React.Suspense>
+                  </div>
+                </div>
+              </motion.main>
+            </EnhancedErrorBoundary>
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
+  );
 }
 
-export default App
+export default App;

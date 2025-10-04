@@ -3,11 +3,9 @@
 
 
 export const real2027Q3Additions = [
-  {
-
-
+  
 export const real2027Q3Additions = [;
-  {
+  
     id: 'it - asset - discovery - agent',
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
@@ -25,7 +23,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.',
   },
-  {
+  
     id: 'managed - postgres - ha',
     name: 'Managed Postgres HA',
     tagline: 'High availability PostgreSQL with SRE runbooks',
@@ -44,7 +42,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Eliminate 2–4 on - call incidents / month and improve p99 latency by 20–40%.',
   },
-  {
+  
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Production RAG foundation with evals and ops',
@@ -63,7 +61,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Cut RAG prototyping time from weeks to days while improving answer quality.',
   },
-  {
+  
     id: 'serverless - cron - manager',
     name: 'Serverless Cron Manager',
     tagline: 'Reliable jobs with retries, idempotency, and alerting',
@@ -82,7 +80,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Reduce failed job incidents by 70% and engineering toil by 50%.',
   },
-  {
+  
     id: 'domain - dns - monitor',
     name: 'Domain & DNS Monitor',
     tagline: 'Proactive domain health and expiry guardrails',
@@ -101,7 +99,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Avoid costly outages from expired domains and misconfigured DNS.',
   },
-  {
+  
     id: 'uptime - slo - monitor',
     name: 'Uptime & SLO Monitor',
     tagline: 'Synthetic checks with SLOs and error budgets',
@@ -120,7 +118,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Cut false alerts by 60% and align reliability to user impact.',
   },
-  {
+  
     id: 'sso - user - lifecycle - automation',
     name: 'SSO User Lifecycle Automation',
     tagline: 'Provisioning, deprovisioning, and access reviews',
@@ -139,7 +137,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Reduce onboarding time by 80% and access risk by 50%.',
   },
-  {
+  
     id: 'api - observability - starter',
     name: 'API Observability Starter',
     tagline: 'Traces, metrics, logs for APIs in minutes',
@@ -158,7 +156,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Decrease MTTR by 40% and increase release confidence.',
   },
-  {
+  
     id: 'kubernetes - rbac - auditor',
     name: 'Kubernetes RBAC Auditor',
     tagline: 'Least - privilege insights and drift detection',
@@ -177,7 +175,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Reduce lateral movement risk and pass audits faster.',
   },
-  {
+  
     id: 'infrastructure - drift - detector',
     name: 'Infrastructure Drift Detector',
     tagline: 'Detect and reconcile infra drift automatically',
@@ -196,7 +194,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Prevent config drift incidents and reduce compliance toil.',
   },
-  {
+  
     id: 'incident - copilot',
     name: 'Incident Copilot',
     tagline: 'AI - assisted incident response and postmortems',
@@ -215,7 +213,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.',
   },
-  {
+  
     id: 'ai - market - research',
     name: 'AI Market Research',
     tagline: 'Automated landscape scans and insight briefs',
@@ -234,7 +232,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Save 10–20 analyst hours per week while increasing coverage.',
   },
-  {
+  
     id: 'ai - sales - automation',
     name: 'AI Sales Automation',
     tagline: 'Sequencing, enrichment, and AI reply drafting',
@@ -253,7 +251,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Increase meetings booked by 20–40% with consistent outreach.',
   },
-  {
+  
     id: 'ai - legal - contract - analyzer',
     name: 'AI Legal Contract Analyzer',
     tagline: 'Clause extraction, risk flags, and playbooks',
@@ -272,7 +270,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.',
   },
-  {
+  
     id: 'ai - content - generator',
     name: 'AI Content Generator',
     tagline: 'SEO - optimized content with brand voice',
@@ -291,7 +289,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Publish 3–5x more content while improving rankings.',
   },
-  {
+  
     id: 'email - dmarc - analyzer',
     name: 'Email DMARC Analyzer',
     tagline: 'DMARC, DKIM, SPF reporting and policy help',
@@ -310,7 +308,7 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Improve deliverability and block spoofing / phishing attempts.',
   },
-  {
+  
     id: 'api - security - scanner',
     name: 'API Security Scanner',
     tagline: 'API discovery and vuln scanning with CI gates',

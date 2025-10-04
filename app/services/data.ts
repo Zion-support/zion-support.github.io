@@ -18,7 +18,7 @@ export interface Service {
   href: string;
 }
 
-export const services: Service[] = [
+export const services: Service[] = [{
   // EXISTING SERVICES
   {
     slug: 'ai-data-analytics',
@@ -26,14 +26,14 @@ export const services: Service[] = [
     category: 'AI Services',
     headline: 'Transform data into actionable insights with predictive modeling and real-time dashboards',
     description: 'Advanced analytics solutions powered by machine learning and AI to drive data-driven decision making.',
-    features: [
+    features: [{
       'Predictive Analytics & Forecasting',
       'Real-time Business Intelligence',
       'Machine Learning Model Development',
       'Data Visualization & Reporting',
       'Custom Analytics Solutions'
     ],
-    benefits: [
+    benefits: [{
       'Increase decision-making speed by 300%',
       'Reduce operational costs by 25%',
       'Improve forecast accuracy by 85%',
@@ -56,14 +56,14 @@ export const services: Service[] = [
     category: 'AI Services',
     headline: 'Automate business processes with intelligent workflow design and smart triggers',
     description: 'Streamline operations with AI-powered workflow automation that learns and optimizes over time.',
-    features: [
+    features: [{
       'Process Automation Design',
       'Intelligent Document Processing',
       'Business Rule Engine Development',
       'Workflow Optimization',
       'Integration & Orchestration'
     ],
-    benefits: [
+    benefits: [{
       'Reduce manual work by 70%',
       'Improve process efficiency by 150%',
       'Eliminate human errors',
@@ -86,14 +86,14 @@ export const services: Service[] = [
     category: 'AI Services',
     headline: '24/7 intelligent customer support with natural language processing',
     description: 'Advanced conversational AI that provides instant, accurate responses to customer inquiries.',
-    features: [
+    features: [{
       'Natural Language Processing',
       'Multi-channel Support',
       'Intelligent Routing',
       'Sentiment Analysis',
       'Continuous Learning Systems'
     ],
-    benefits: [
+    benefits: [{
       'Reduce support costs by 60%',
       'Improve customer satisfaction by 40%',
       'Handle 80% of inquiries automatically',
@@ -118,7 +118,7 @@ export const services: Service[] = [
     category: 'Micro SaaS',
     headline: 'Automate repetitive tasks with AI-powered workflow intelligence',
     description: 'Transform your business operations with intelligent workflow automation that learns from your processes and optimizes them automatically.',
-    features: [
+    features: [{
       'AI-powered task recognition and automation',
       'Smart workflow optimization suggestions',
       'Multi-platform integration (Slack, Teams, Google Workspace)',
@@ -126,7 +126,7 @@ export const services: Service[] = [
       'Real-time performance analytics and insights',
       'Advanced error handling and recovery mechanisms'
     ],
-    benefits: [
+    benefits: [{
       'Reduce manual work by 85%',
       'Improve process efficiency by 200%',
       'Eliminate bottlenecks and delays',
@@ -150,7 +150,7 @@ export const services: Service[] = [
     category: 'Micro SaaS',
     headline: 'AI-powered expense tracking and financial management for modern businesses',
     description: 'Revolutionary expense management platform that automatically categorizes, approves, and analyzes business expenses with AI precision.',
-    features: [
+    features: [{
       'AI-powered receipt scanning and categorization',
       'Automated approval workflows',
       'Real-time expense tracking and reporting',
@@ -158,7 +158,7 @@ export const services: Service[] = [
       'Fraud detection and compliance monitoring',
       'Mobile-first design with offline capabilities'
     ],
-    benefits: [
+    benefits: [{
       'Reduce expense processing time by 90%',
       'Improve compliance by 95%',
       'Save 15-25% on operational costs',
@@ -182,7 +182,7 @@ export const services: Service[] = [
     category: 'Micro SaaS',
     headline: 'Maximize profits with intelligent inventory management and demand forecasting',
     description: 'Advanced inventory optimization platform that uses AI to predict demand, prevent stockouts, and reduce carrying costs.',
-    features: [
+    features: [{
       'AI-driven demand forecasting with 95% accuracy',
       'Automated reorder point optimization',
       'Multi-location inventory synchronization',
@@ -190,7 +190,7 @@ export const services: Service[] = [
       'Supplier performance analytics',
       'Integration with major e-commerce platforms'
     ],
-    benefits: [
+    benefits: [{
       'Reduce inventory costs by 30%',
       'Increase sales by 25% through better stock management',
       'Eliminate stockouts and overstock situations',
@@ -208,13 +208,13 @@ export const services: Service[] = [
     icon: '📦',
     href: '/services/ai-inventory-optimizer'
   },
-  {
+  
     slug: 'customer-feedback-platform',
     name: 'Intelligent Customer Feedback Platform',
     category: 'Micro SaaS',
     headline: 'Transform customer insights into actionable business improvements',
     description: 'Comprehensive feedback management platform that captures, analyzes, and acts on customer insights using advanced AI.',
-    features: [
+    features: [{
       'Multi-channel feedback collection (email, SMS, web, social)',
       'AI-powered sentiment analysis and categorization',
       'Automated response and follow-up systems',
@@ -222,7 +222,7 @@ export const services: Service[] = [
       'Integration with CRM and support systems',
       'Custom survey builder with advanced logic'
     ],
-    benefits: [
+    benefits: [{
       'Increase customer satisfaction by 35%',
       'Reduce churn rate by 40%',
       'Improve response time by 80%',
@@ -240,13 +240,13 @@ export const services: Service[] = [
     icon: '💬',
     href: '/services/customer-feedback-platform'
   },
-  {
+  
     slug: 'ai-scheduling-optimizer',
     name: 'AI-Powered Scheduling Optimizer',
     category: 'Micro SaaS',
     headline: 'Optimize schedules and maximize productivity with intelligent automation',
     description: 'Smart scheduling platform that automatically optimizes appointments, meetings, and resource allocation using AI algorithms.',
-    features: [
+    features: [{
       'AI-powered schedule optimization',
       'Multi-calendar synchronization',
       'Automatic conflict resolution',
@@ -254,7 +254,7 @@ export const services: Service[] = [
       'Real-time availability tracking',
       'Integration with popular calendar apps'
     ],
-    benefits: [
+    benefits: [{
       'Increase productivity by 40%',
       'Reduce scheduling conflicts by 95%',
       'Optimize resource utilization',
@@ -274,13 +274,13 @@ export const services: Service[] = [
   },
 
   // NEW IT SERVICES
-  {
+  
     slug: 'cloud-native-security-platform',
     name: 'Cloud-Native Security Platform',
     category: 'IT Services',
     headline: 'Enterprise-grade security for cloud-native applications and infrastructure',
     description: 'Comprehensive security platform designed for modern cloud environments with zero-trust architecture and advanced threat protection.',
-    features: [
+    features: [{
       'Zero-trust network access implementation',
       'Advanced threat detection and response',
       'Container security and runtime protection',
@@ -288,7 +288,7 @@ export const services: Service[] = [
       'Compliance automation (SOC2, GDPR, HIPAA)',
       '24/7 security operations center'
     ],
-    benefits: [
+    benefits: [{
       'Reduce security incidents by 90%',
       'Achieve 99.9% compliance score',
       'Lower security costs by 40%',
@@ -306,13 +306,13 @@ export const services: Service[] = [
     icon: '🛡️',
     href: '/services/cloud-native-security-platform'
   },
-  {
+  
     slug: 'enterprise-data-governance',
     name: 'Enterprise Data Governance Suite',
     category: 'IT Services',
     headline: 'Comprehensive data governance and compliance management for enterprise organizations',
     description: 'Advanced data governance platform that ensures data quality, compliance, and security across your entire organization.',
-    features: [
+    features: [{
       'Data cataloging and lineage tracking',
       'Automated data quality monitoring',
       'Privacy compliance automation',
@@ -320,7 +320,7 @@ export const services: Service[] = [
       'Regulatory reporting and documentation',
       'Real-time data governance dashboard'
     ],
-    benefits: [
+    benefits: [{
       'Improve data quality by 85%',
       'Reduce compliance costs by 60%',
       'Enable data-driven decision making',
@@ -338,13 +338,13 @@ export const services: Service[] = [
     icon: '📊',
     href: '/services/enterprise-data-governance'
   },
-  {
+  
     slug: 'devops-automation-platform',
     name: 'DevOps Automation Platform',
     category: 'IT Services',
     headline: 'Complete DevOps automation with CI/CD pipelines and infrastructure management',
     description: 'End-to-end DevOps platform that automates development, testing, deployment, and monitoring processes for modern applications.',
-    features: [
+    features: [{
       'Automated CI/CD pipeline creation',
       'Infrastructure as Code (IaC) automation',
       'Multi-cloud deployment orchestration',
@@ -352,7 +352,7 @@ export const services: Service[] = [
       'Performance monitoring and alerting',
       'Disaster recovery automation'
     ],
-    benefits: [
+    benefits: [{
       'Reduce deployment time by 80%',
       'Improve deployment success rate by 95%',
       'Lower operational costs by 50%',
@@ -370,13 +370,13 @@ export const services: Service[] = [
     icon: '🚀',
     href: '/services/devops-automation-platform'
   },
-  {
+  
     slug: 'enterprise-integration-platform',
     name: 'Enterprise Integration Platform',
     category: 'IT Services',
     headline: 'Seamless integration of enterprise systems and applications',
     description: 'Robust integration platform that connects disparate systems, applications, and data sources across your organization.',
-    features: [
+    features: [{
       'Pre-built connectors for 500+ applications',
       'Real-time data synchronization',
       'API management and gateway',
@@ -384,7 +384,7 @@ export const services: Service[] = [
       'Error handling and monitoring',
       'Scalable cloud-native architecture'
     ],
-    benefits: [
+    benefits: [{
       'Reduce integration costs by 70%',
       'Improve data consistency by 90%',
       'Enable real-time business processes',
@@ -402,13 +402,13 @@ export const services: Service[] = [
     icon: '🔗',
     href: '/services/enterprise-integration-platform'
   },
-  {
+  
     slug: 'backup-recovery-solutions',
     name: 'Enterprise Backup & Recovery Solutions',
     category: 'IT Services',
     headline: 'Comprehensive backup and disaster recovery for business continuity',
     description: 'Advanced backup and recovery platform that ensures business continuity with automated backups, testing, and rapid recovery.',
-    features: [
+    features: [{
       'Automated backup scheduling and monitoring',
       'Multi-tier storage optimization',
       'Point-in-time recovery capabilities',
@@ -416,7 +416,7 @@ export const services: Service[] = [
       'Compliance reporting and auditing',
       '24/7 monitoring and support'
     ],
-    benefits: [
+    benefits: [{
       'Achieve 99.99% data protection',
       'Reduce recovery time by 90%',
       'Lower backup costs by 60%',
@@ -436,13 +436,13 @@ export const services: Service[] = [
   },
 
   // NEW AI SOLUTIONS
-  {
+  
     slug: 'predictive-analytics-engine',
     name: 'Predictive Analytics Engine',
     category: 'AI Solutions',
     headline: 'Advanced predictive analytics with machine learning and AI',
     description: 'Sophisticated predictive analytics platform that uses machine learning to forecast trends, behaviors, and outcomes.',
-    features: [
+    features: [{
       'Advanced machine learning algorithms',
       'Real-time prediction processing',
       'Automated model training and optimization',
@@ -450,7 +450,7 @@ export const services: Service[] = [
       'Custom prediction model development',
       'API integration for real-time insights'
     ],
-    benefits: [
+    benefits: [{
       'Improve prediction accuracy by 85%',
       'Reduce forecasting errors by 70%',
       'Enable proactive decision making',
@@ -468,13 +468,13 @@ export const services: Service[] = [
     icon: '🔮',
     href: '/services/predictive-analytics-engine'
   },
-  {
+  
     slug: 'nlp-processing-suite',
     name: 'Natural Language Processing Suite',
     category: 'AI Solutions',
     headline: 'Advanced NLP capabilities for text analysis and language understanding',
     description: 'Comprehensive NLP platform that processes, analyzes, and understands human language for business applications.',
-    features: [
+    features: [{
       'Text classification and sentiment analysis',
       'Named entity recognition and extraction',
       'Language translation and localization',
@@ -482,7 +482,7 @@ export const services: Service[] = [
       'Chatbot and conversational AI',
       'Custom model training capabilities'
     ],
-    benefits: [
+    benefits: [{
       'Process 10M+ documents monthly',
       'Improve content understanding by 95%',
       'Enable multilingual operations',
@@ -500,13 +500,13 @@ export const services: Service[] = [
     icon: '🗣️',
     href: '/services/nlp-processing-suite'
   },
-  {
+  
     slug: 'computer-vision-platform',
     name: 'Computer Vision Platform',
     category: 'AI Solutions',
     headline: 'Advanced computer vision for image and video analysis',
     description: 'Powerful computer vision platform that analyzes images and videos to extract insights and automate visual tasks.',
-    features: [
+    features: [{
       'Object detection and recognition',
       'Image classification and tagging',
       'Video analysis and monitoring',
@@ -514,7 +514,7 @@ export const services: Service[] = [
       'Quality inspection automation',
       'Real-time processing capabilities'
     ],
-    benefits: [
+    benefits: [{
       'Automate visual inspection tasks',
       'Improve accuracy by 95%',
       'Reduce manual review time by 80%',
@@ -532,13 +532,13 @@ export const services: Service[] = [
     icon: '👁️',
     href: '/services/computer-vision-platform'
   },
-  {
+  
     slug: 'recommendation-engine',
     name: 'AI Recommendation Engine',
     category: 'AI Solutions',
     headline: 'Personalized recommendation system for enhanced user experience',
     description: 'Advanced recommendation engine that delivers personalized suggestions to improve user engagement and conversion rates.',
-    features: [
+    features: [{
       'Collaborative and content-based filtering',
       'Real-time recommendation updates',
       'A/B testing and optimization',
@@ -546,7 +546,7 @@ export const services: Service[] = [
       'Advanced analytics and insights',
       'Custom algorithm development'
     ],
-    benefits: [
+    benefits: [{
       'Increase conversion rates by 40%',
       'Improve user engagement by 60%',
       'Boost revenue by 25%',
@@ -564,13 +564,13 @@ export const services: Service[] = [
     icon: '🎯',
     href: '/services/recommendation-engine'
   },
-  {
+  
     slug: 'fraud-detection-system',
     name: 'AI Fraud Detection System',
     category: 'AI Solutions',
     headline: 'Advanced fraud detection and prevention with machine learning',
     description: 'Sophisticated fraud detection system that uses machine learning to identify and prevent fraudulent activities in real-time.',
-    features: [
+    features: [{
       'Real-time fraud detection and scoring',
       'Machine learning model training',
       'Anomaly detection and pattern recognition',
@@ -578,7 +578,7 @@ export const services: Service[] = [
       'Automated response and blocking',
       'Comprehensive reporting and analytics'
     ],
-    benefits: [
+    benefits: [{
       'Reduce fraud losses by 90%',
       'Improve detection accuracy by 95%',
       'Minimize false positives by 70%',

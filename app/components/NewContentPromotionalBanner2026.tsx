@@ -3,8 +3,21 @@ import Link from 'next/link';
 import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
+<<<<<<< HEAD
   const featuredContent = [
     {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const featuredContent = [{
+=======
+  const featuredContent = [
+    {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3825
+=======
+  const featuredContent = [{
+>>>>>>> origin/main
+>>>>>>> main
       id: 1,
       title: 'AI Autonomous Workflows 2026',
       slug: 'ai-autonomous-workflows-2026',
@@ -86,6 +99,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <Zap className="text-left" />
               <span className="text-left">3 New Articles</span>
             </div>
+            </div>
             <div className="text-left">
               <Target className="text-left" />
               <span className="text-left">Proven Results</span>
@@ -149,9 +163,9 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <Rocket className="text-left" />
               <h3 className="text-left">
                 Ready to Transform Your Enterprise?
@@ -159,13 +173,13 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <Shield className="text-left" />
             </div>
             
-            <p className="text-left">
+            <p className="text-left"></p>
               Join 500+ enterprises achieving <span className="text-left">300% ROI</span>, 
               <span className="text-left"> 85% automation</span>, and 
               <span className="text-left"> complete digital transformation</span> with Zion Tech Group's AI solutions
             </p>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <Link
                 href="/contact"
                 className="text-left">
@@ -182,36 +196,36 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
 
             {/* Stats */}
-            <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   500+
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Enterprise Clients
                 </div>
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   300%
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Average ROI
                 </div>
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   99.9%
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   System Uptime
                 </div>
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   24/7
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Expert Support
                 </div>
               </div>

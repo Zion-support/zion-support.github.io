@@ -84,7 +84,7 @@ reviews: 12
 }];  reviews: number
 
 import { ServiceVariant } from '../types/service-variants';
-export interface AIAutonomousEcosystem2030 {
+export interface AIAutonomousEcosystem2030 
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -98,8 +98,7 @@ export interface AIAutonomousEcosystem2030 {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -116,10 +115,7 @@ export interface AIAutonomousEcosystem2030 {
 }
 export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
   // AI Autonomous Business Management
-  {
-
-
-
+  
     id: 'ai-autonomous-business-manager', name: 'AI Autonomous Business Manager',
     tagline: 'Fully autonomous business operations and decision making',
     price: '$12,999',
@@ -136,7 +132,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     roi: 'Average customer sees 400% ROI within 12 months through improved efficiency and decision making.', competitors: ['No direct competitors in autonomous business management']
     marketSize: '$20B market', growthRate: '350% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -148,8 +144,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
 
     reviews: 6
   }
-  {
-
+  
     id: 'ai-creativity-orchestrator', name: 'AI Creativity Orchestrator'
     tagline: 'Multi-model creativity fusion and innovation engine'
     price: '$5,999'
@@ -171,7 +166,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     competitors: ['OpenAI, Midjourney, DALL-E, Stable Diffusion'];
     marketSize: '$7B market', growthRate: '200% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -182,7 +177,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     rating: 4.8,    reviews: 45
   }
   // AI Health & Wellness
-  {
+  
     id: 'ai-predictive-health-analytics', name: 'AI Predictive Health Analytics'
     tagline: 'Predictive health outcomes and preventive care'
     price: '$7,999'
@@ -204,7 +199,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, Amazon Health'];
     marketSize: '$18B market', growthRate: '220% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -216,8 +211,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
 
     reviews: 18
   }
-  {
-
+  
     id: 'ai-mental-health-companion', name: 'AI Mental Health Companion'
     tagline: '24/7 AI-powered mental health support and therapy', price: '$299'
     period: '/month'
@@ -238,7 +232,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     competitors: ['Woebot, Wysa, Replika, Youper'];
     marketSize: '$6B market', growthRate: '180% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -249,7 +243,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     rating: 4.7,    reviews: 156
   }
   // AI Education & Learning
-  {
+  
     id: 'ai-personalized-learning-orchestrator', name: 'AI Personalized Learning Orchestrator'
     tagline: 'Adaptive learning paths and personalized education'
     price: '$1,999'
@@ -271,7 +265,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
     marketSize: '$10B market', growthRate: '160% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -282,7 +276,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     rating: 4.8,    reviews: 52
   }
   // AI Financial Services
-  {
+  
     id: 'ai-autonomous-trading-system', name: 'AI Autonomous Trading System'
     tagline: 'Fully autonomous AI-powered trading and investment'
     price: '$8,999'
@@ -304,7 +298,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     competitors: ['Renaissance Technologies, Two Sigma, Bridgewater Associates, AQR Capital'];
     marketSize: '$15B market', growthRate: '280% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -347,7 +341,7 @@ reviews: 12;
 }
 export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
   // AI Autonomous Business Management;
-  {
+  
     id: 'ai - autonomous - business - manager', name: 'AI Autonomous Business Manager',
     tagline: 'Fully autonomous business operations and decision making',
     price: '$12, 999',
@@ -387,7 +381,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
 ;
     marketSize: '$15B market', growthRate: '280% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -443,7 +437,7 @@ export interface AIAutonomousEcosystem2030 {;
 }
 export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
   // AI Autonomous Business Management;
-  {
+  
     id: 'ai - autonomous - business - manager', name: 'AI Autonomous Business Manager',
     tagline: 'Fully autonomous business operations and decision making',
     price: '$12, 999',
@@ -720,7 +714,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
 ;
     marketSize: '$15B market', growthRate: '280% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
     reviews: 12
       website: 'https://ziontechgroup.com';
     },;

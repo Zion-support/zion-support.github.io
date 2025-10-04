@@ -1,15 +1,19 @@
 import React from 'react';
 
 export default function Edge2026PrivateFeatureFlags() {
+  return (
+    <div>/* content */}
 	return (
-		<div className="text-left">
+    <div>
+      <div></div>
+		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Edge 2026: Private Feature Flags</h1>
-				<p className="text-left">
+				<p className="text-left"></p>
 					Signed configs, scoped identifiers, and on-device telemetry for zero‑PII rollouts at
 					&lt;100ms worldwide.
 				</p>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">What You Will Learn</h2>
 					<ul className="text-left">
 						<li>Consent-aware targeting without centralizing PII</li>
@@ -22,3 +26,4 @@ export default function Edge2026PrivateFeatureFlags() {
 	);
 }
 
+)

@@ -7,8 +7,19 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const content = [{
+=======
   const content = [
     {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3825
+=======
+  const content = [{
+>>>>>>> origin/main
+>>>>>>> main
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
@@ -55,22 +66,22 @@ const UltimateBusinessIntelligence2025Banner = () => {
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  useEffect(() => 
+    const timer = setInterval(() => 
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
 
     return () => clearInterval(timer);
   }, [content.length]);
 
-  useEffect(() => {
+  useEffect(() => 
     const dismissed = localStorage.getItem('ultimate-business-intelligence-2025-banner-dismissed');
-    if (dismissed === 'true') {
+    if (dismissed === 'true') 
       setIsVisible(false);
     }
   }, []);
 
-  const handleDismiss = () => {
+  const handleDismiss = () => 
     setIsVisible(false);
     localStorage.setItem('ultimate-business-intelligence-2025-banner-dismissed', 'true');
   };
@@ -80,9 +91,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="text-left">
+  <div></div>
+    <div className="text-left"></div>
       {/* Animated Background */}
-      <div className="text-left">
+      <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left"></div>
@@ -90,13 +102,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
         <div className="text-left"></div>
       </div>
 
-      <div className="text-left">
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+      <div className="text-left"></div>
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               🚀 NEW BREAKTHROUGH
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               Ultimate Business Intelligence 2025
             </div>
             </div>
@@ -118,7 +130,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <h2 className="text-left">
                 {currentContent.title}
               </h2>
-              <p className="text-left">
+              <p className="text-left"></p>
                 {currentContent.description}
               </p>
             </div>
@@ -159,14 +171,14 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
             {/* Content Type Badge */}
             <div className="text-left"></div>
-              <span className="text-left">
+              <span className="text-left"></span>
                 {currentContent.type}
               </span>
-              <span className="text-left">
+              <span className="text-left"></span>
                 {currentContent.readingTime}
               </span>
               {currentContent.featured && (
-                <span className="text-left">
+                <span className="text-left"></span>
                   FEATURED
                 </span>
               )}
@@ -179,7 +191,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {content.map((item, index) => (
               <div
                 key={item.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-300 ${
+                className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-300 $
                   index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'
                 }`}
                 onClick={() => setCurrentSlide(index)}
@@ -205,7 +217,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
         {/* Progress Indicators */}
         <div className="text-left">
-          {content.map((_, index) => (</div>
+          {content.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
