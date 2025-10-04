@@ -54,7 +54,7 @@ interface SecurityManager {
   initialize?: () => void;
 }
 
-export default function App(): React.JSX.Element {
+const App = React.memo(function App(): React.JSX.Element {
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   const [notifications, setNotifications] = useState<Notification[]>([]);

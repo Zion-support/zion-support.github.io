@@ -44,7 +44,7 @@ export const metadata = {
   },
 };
 
-export default function HomePage() {
+const HomePage = React.memo(function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -243,4 +243,6 @@ export default function HomePage() {
       </section>
     </div>
   );
-}
+});
+
+export default $1;
