@@ -126,13 +126,15 @@ export class ContentValidator {
     }
 
     // Media validation
-    if (!metadata.hasImages && metadata.category !== 'service')       warnings.push('No images detected - add visuals for better engagement');
+    if (!metadata.hasImages && metadata.category !== 'service') {
+      warnings.push('No images detected - add visuals for better engagement');
       score -= 5;
     }
 
     score = Math.max(0, Math.min(100, score));
 
-    return       isValid: errors.length === 0,
+    return {
+      isValid: errors.length === 0,
       errors,
       warnings,
       score
@@ -142,46 +144,58 @@ export class ContentValidator {
   /**
    * Validate banner component
    */
-  validateBanner(bannerData:     title: string;
+  validateBanner(bannerData: {
+    title: string;
     value?: number;
     links: Array<{ text: string; url: string }>;
     hasCallToAction: boolean;
-  }): ContentValidationResult     const errors: string[] = [];
+  }): ContentValidationResult {
+    const errors: string[] = [];
     const warnings: string[] = [];
     let score = 100;
 
     // Title validation
-    if (!bannerData.title || bannerData.title.trim().length === 0)       errors.push('Banner title is required');
+    if (!bannerData.title || bannerData.title.trim().length === 0) {
+      errors.push('Banner title is required');
       score -= 25;
     }
 
     // Links validation
-    if (!bannerData.links || bannerData.links.length === 0)       warnings.push('No links in banner - consider adding navigation');
+    if (!bannerData.links || bannerData.links.length === 0) {
+      warnings.push('No links in banner - consider adding navigation');
       score -= 15;
-    } else       bannerData.links.forEach((link, index) =>         if (!link.text || link.text.trim().length === 0)           errors.push(`Link ${index + 1} missing text`);
+    } else {
+      bannerData.links.forEach((link, index) => {
+        if (!link.text || link.text.trim().length === 0) {
+          errors.push(`Link ${index + 1} missing text`);
           score -= 10;
         }
-        if (!link.url || link.url.trim().length === 0)           errors.push(`Link ${index + 1} missing URL`);
+        if (!link.url || link.url.trim().length === 0) {
+          errors.push(`Link ${index + 1} missing URL`);
           score -= 10;
-        } else if (!this.isValidUrl(link.url))           warnings.push(`Link ${index + 1} has potentially invalid URL: ${link.url}`);
+        } else if (!this.isValidUrl(link.url)) {
+          warnings.push(`Link ${index + 1} has potentially invalid URL: ${link.url}`);
           score -= 5;
         }
       });
     }
 
     // Call to action validation
-    if (!bannerData.hasCallToAction)       warnings.push('No clear call-to-action - consider adding one for better conversion');
+    if (!bannerData.hasCallToAction) {
+      warnings.push('No clear call-to-action - consider adding one for better conversion');
       score -= 10;
     }
 
     // Value validation
-    if (bannerData.value !== undefined && bannerData.value > 0)       // Bonus for showing value
+    if (bannerData.value !== undefined && bannerData.value > 0) {
+      // Bonus for showing value
       score = Math.min(100, score + 5);
     }
 
     score = Math.max(0, Math.min(100, score));
 
-    return       isValid: errors.length === 0,
+    return {
+      isValid: errors.length === 0,
       errors,
       warnings,
       score
@@ -191,49 +205,59 @@ export class ContentValidator {
   /**
    * Validate URL format
    */
-  private isValidUrl(url: string): boolean     // Allow relative URLs
+  private isValidUrl(url: string): boolean {
+    // Allow relative URLs
     if (url.startsWith('/')) return true;
     
     // Validate absolute URLs
-    try       new URL(url);
+    try {
+      new URL(url);
       return true;
-    } catch       return false;
+    } catch {
+      return false;
     }
   }
 
   /**
    * Validate content consistency across related items
    */
-  validateContentConsistency(contents: ContentMetadata[]):     duplicateTitles: string[];
+  validateContentConsistency(contents: ContentMetadata[]): {
+    duplicateTitles: string[];
     inconsistentDates: boolean;
     categoryDistribution: Record<string, number>;
     recommendations: string[];
-  }     const titles = new Map<string, number>();
+  } {
+    const titles = new Map<string, number>();
     const duplicateTitles: string[] = [];
     const categoryDistribution: Record<string, number> = {};
     const recommendations: string[] = [];
 
     // Check for duplicate titles
-    contents.forEach(content =>       const titleLower = content.title.toLowerCase();
+    contents.forEach(content => {
+      const titleLower = content.title.toLowerCase();
       titles.set(titleLower, (titles.get(titleLower) || 0) + 1);
       
       // Track category distribution
       categoryDistribution[content.category] = (categoryDistribution[content.category] || 0) + 1;
     });
 
-    titles.forEach((count, title) =>       if (count > 1)         duplicateTitles.push(title);
+    titles.forEach((count, title) => {
+      if (count > 1) {
+        duplicateTitles.push(title);
       }
     });
 
     // Check date consistency
     const dates = contents.map(c => c.publishDate.getTime()).sort();
-    const inconsistentDates = dates.some((date, i) =>       if (i === 0) return false;
+    const inconsistentDates = dates.some((date, i) => {
+      if (i === 0) return false;
       const daysDiff = (date - dates[i - 1]) / (1000 * 60 * 60 * 24);
       return daysDiff > 180; // Gap of more than 6 months
     });
 
     // Generate recommendations
-    if (duplicateTitles.length > 0)       recommendations.push(`Found ${duplicateTitles.length} duplicate titles - ensure unique titles for each content piece`);
+    if (duplicateTitles.length > 0) {
+      recommendations.push(`Found ${duplicateTitles.length} duplicate titles - ensure unique titles for each content piece`);
     }
 
     if (inconsistentDates)       recommendations.push('Inconsistent publishing schedule detected - maintain regular content cadence');

@@ -235,18 +235,22 @@ export class PerformanceTracker {
   /**
    * Check if metrics meet performance budgets
    */
-  checkPerformanceBudget(budget: Partial<PerformanceMetrics>): boolean     const metrics = this.getMetrics();
+  checkPerformanceBudget(budget: Partial<PerformanceMetrics>): boolean {
+    const metrics = this.getMetrics();
     let passes = true;
 
-    if (budget.lcp && metrics.lcp && metrics.lcp > budget.lcp)       console.warn(`LCP budget exceeded: ${metrics.lcp}ms > ${budget.lcp}ms`);
+    if (budget.lcp && metrics.lcp && metrics.lcp > budget.lcp) {
+      console.warn(`LCP budget exceeded: ${metrics.lcp}ms > ${budget.lcp}ms`);
       passes = false;
     }
 
-    if (budget.fid && metrics.fid && metrics.fid > budget.fid)       console.warn(`FID budget exceeded: ${metrics.fid}ms > ${budget.fid}ms`);
+    if (budget.fid && metrics.fid && metrics.fid > budget.fid) {
+      console.warn(`FID budget exceeded: ${metrics.fid}ms > ${budget.fid}ms`);
       passes = false;
     }
 
-    if (budget.cls && metrics.cls && metrics.cls > budget.cls)       console.warn(`CLS budget exceeded: ${metrics.cls} > ${budget.cls}`);
+    if (budget.cls && metrics.cls && metrics.cls > budget.cls) {
+      console.warn(`CLS budget exceeded: ${metrics.cls} > ${budget.cls}`);
       passes = false;
     }
 
