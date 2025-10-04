@@ -11,41 +11,8 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 // Pages
 import HomePage from './page';
 
-<<<<<<< HEAD
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/Home'));
-const AboutPage = lazy(() => import('./pages/About'));
-const ContactPage = lazy(() => import('./pages/Contact'));
-const BlogPage = lazy(() => import('./pages/Blog'));
-const ServicesPage = lazy(() => import('./pages/Services'));
-const TeamPage = lazy(() => import('./pages/Team'));
-const PrivacyPage = lazy(() => import('./pages/Privacy'));
-const TermsPage = lazy(() => import('./pages/Terms'));
-
-// Performance monitoring state
+// Main App component
 const App: React.FC = () => {
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
-
-  // Performance monitoring toggle
-  const togglePerformanceMonitor = useCallback(() => {
-    setShowPerformanceMonitor(prev => !prev);
-  }, []);
-
-  // Performance metrics collection
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      const handleKeyPress = (e: KeyboardEvent) => {
-        if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-          togglePerformanceMonitor();
-        }
-      };
-
-      window.addEventListener('keydown', handleKeyPress);
-      return () => window.removeEventListener('keydown', handleKeyPress);
-    }
-  }, [togglePerformanceMonitor]);
-
   return (
     <HelmetProvider>
       <Router>
