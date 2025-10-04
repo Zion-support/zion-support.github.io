@@ -87,7 +87,7 @@
           </div>
         </div>
 
-                          </span>) ) }
+                          <) ) }
                       </div>
                     </div>
                     {/* CTA: Button */}

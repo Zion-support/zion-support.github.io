@@ -25,42 +25,40 @@ export default function QuantumInternetSecurityPage() {
         />
 </link>
       "
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">"
+      <div className="text-left">"
 </div>"
-        <div className="max-w-6xl mx-auto">"
-          <div className="text-center mb-10">"
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3">"
+        <div className="text-left">"
+          <div className="text-left">"
+            <h1 className="text-left">"
 </h1>"
-              <Shield className="w-10 h-10" />"
-
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">"
+              <Shield className="text-left" />"
+            <p className="text-left">"
 </p>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">"
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-500/30 p-6">"
-              <h2 className="text-2xl font-semibold mb-4">"
+          <div className="text-left">"
+            <div className="text-left">"
+              <h2 className="text-left">"
 </h2>
               </h2>"
-              <p className="text-slate-300 mb-6">{service.description}</p>""
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">"
+              <p className="text-left">{service.description}</p>""
+              <ul className="text-left">"
 </ul>
                   <li;
                     key={i}"
-                    className="flex items-start space-x-3 text-slate-200""
+                    className="text-left""
                   >
 </li>"
-                    <Check className="w-5 h-5 text-emerald-400 mt-0.5" />"
-
-                    <span>{feat}</span>
+                    <Check className="text-left" />"
+                    <span>{feat}<
                   </li>
-            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">"
-              <div className="flex items-end justify-between mb-3">"
+            <div className="text-left">"
+              <div className="text-left">"
 </div>
                 <div>
 
 
 
 
-                  <span>{service.contactInfo.mobile}</span>
+                  <span>{service.contactInfo.mobile}<
 
 
 

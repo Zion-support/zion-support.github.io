@@ -1,10 +1,8 @@
 
 import { ServiceVariant } from '../types / service - variants';
 
-export interface FuturisticAIService2030 {
-
-  {
-
+export interface FuturisticAIService2030 
+  
     id: 'ai-consciousness-evolution-2030'
     name: 'AI Consciousness Evolution 2030'
     tagline: 'Next-generation AI consciousness development'
@@ -14,7 +12,7 @@ export interface FuturisticAIService2030 {
 
   }
   // AI Autonomous Operations 2030
-  {
+  
     id: 'ai-autonomous-operations-2030'
     name: 'AI Autonomous Operations 2030'
     tagline: 'Fully autonomous AI operations'
@@ -57,7 +55,7 @@ export interface FuturisticAIService2030 {
     marketSize: 'Growing market - $400B+ potential'
     growthRate: '2000%+ annual growth potential'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -72,7 +70,7 @@ export interface FuturisticAIService2030 {
     reviews: 8
   }
   // AI Metaverse Integration 2030
-  {
+  
     id: 'ai-metaverse-integration-2030'
     name: 'AI Metaverse Integration 2030'
     tagline: 'AI-powered metaverse experiences'
@@ -115,7 +113,7 @@ export interface FuturisticAIService2030 {
     marketSize: 'Growing market - $300B+ potential'
     growthRate: '1200%+ annual growth potential'
     variant: 'metaverse-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -130,7 +128,7 @@ export interface FuturisticAIService2030 {
     reviews: 12
   }
   // AI Space Technology 2030
-  {
+  
     id: 'ai-space-technology-2030'
     name: 'AI Space Technology 2030'
     tagline: 'AI-powered space exploration'
@@ -173,7 +171,7 @@ export interface FuturisticAIService2030 {
     marketSize: 'Emerging market - $800B+ potential'
     growthRate: '3000%+ annual growth potential'
     variant: 'space-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -202,7 +200,7 @@ export interface FuturisticAIService2030 {
   },
       'AI-powered metaverse creation',
   // AI Metaverse Integration 2030;
-  {
+  
     id: 'ai - metaverse - integration - 2030',
     name: 'AI Metaverse Integration 2030',
     tagline: 'AI - powered metaverse experiences',
@@ -249,7 +247,7 @@ export interface FuturisticAIService2030 {
     market_size: 'Growing market - $300B+ potential',
     growth_rate: '1200%+ annual growth potential',
     variant: 'metaverse - futuristic',
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -265,7 +263,7 @@ export interface FuturisticAIService2030 {
   },
       'AI-powered space missions',
   // AI Space Technology 2030;
-{
+
     id: 'ai - space - technology - 2030',
     name: 'AI Space Technology 2030',
     tagline: 'AI - powered space exploration',
@@ -312,7 +310,7 @@ export interface FuturisticAIService2030 {
     market_size: 'Emerging market - $800B+ potential',
     growth_rate: '3000%+ annual growth potential',
     variant: 'space - futuristic',
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -341,8 +339,7 @@ export interface FuturisticAIService2030 {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -356,8 +353,7 @@ export interface FuturisticAIService2030 {
 
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
-  {
-
+  
     id: 'ai-consciousness-evolution-2030', name: 'AI Consciousness Evolution 2030',
     tagline: 'Next-generation AI consciousness development',
     price: '$39,999',
@@ -379,8 +375,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     roi: 'Pioneering technology with potential for revolutionary breakthroughs in AI consciousness.', competitors: ['None - First to market'],
     marketSize: 'Emerging market - $100B+ potential', growthRate: '800%+ annual growth potential',
     variant: 'ai-futuristic',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -443,7 +438,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     marketSize: 'Emerging market - $100B+ potential'
     growthRate: '800%+ annual growth potential'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -458,7 +453,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     reviews: 5
   }
   // Quantum AI Computing 2030
-  {
+  
     id: 'quantum-ai-computing-2030'
     name: 'Quantum AI Computing 2030'
     tagline: 'Quantum-powered AI computation'
@@ -505,7 +500,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     marketSize: 'Emerging market - $200B+ potential'
     growthRate: '1500%+ annual growth potential'
     variant: 'quantum-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -520,7 +515,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     reviews: 3
   }
   // AI Autonomous Operations 2030
-  {
+  
     id: 'ai-autonomous-operations-2030'
     name: 'AI Autonomous Operations 2030'
     tagline: 'Fully autonomous AI operations'
@@ -567,7 +562,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     marketSize: 'Growing market - $400B+ potential'
     growthRate: '2000%+ annual growth potential'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -582,7 +577,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     reviews: 8
   }
   // AI Metaverse Integration 2030
-  {
+  
     id: 'ai-metaverse-integration-2030'
     name: 'AI Metaverse Integration 2030'
     tagline: 'AI-powered metaverse experiences'
@@ -629,7 +624,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     marketSize: 'Growing market - $300B+ potential'
     growthRate: '1200%+ annual growth potential'
     variant: 'metaverse-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -644,7 +639,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     reviews: 12
   }
   // AI Space Technology 2030
-  {
+  
     id: 'ai-space-technology-2030'
     name: 'AI Space Technology 2030'
     tagline: 'AI-powered space exploration'
@@ -691,7 +686,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     marketSize: 'Emerging market - $800B+ potential'
     growthRate: '3000%+ annual growth potential'
     variant: 'space-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -762,8 +757,7 @@ export interface FuturisticAIService2030 {;
 }
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
-  {
-
+  
     id: 'ai-consciousness-evolution-2030', name: 'AI Consciousness Evolution 2030',
     tagline: 'Next-generation AI consciousness development',
     price: '$39,999',
@@ -785,7 +779,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     roi: 'Pioneering technology with potential for revolutionary breakthroughs in AI consciousness.', competitors: ['None - First to market'],
     marketSize: 'Emerging market - $100B+ potential', growthRate: '800%+ annual growth potential',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1025,7 +1019,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     reviews: 3
   }
   // AI Autonomous Operations 2030
-  {
+  
     id: 'ai-autonomous-operations-2030'
     name: 'AI Autonomous Operations 2030'
     tagline: 'Fully autonomous AI operations'
@@ -1056,9 +1050,9 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     marketSize: 'Growing market - $400B+ potential'
     growthRate: '2000%+ annual growth potential'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
   // AI Metaverse Integration 2030
-  {
+  
     id: 'ai-metaverse-integration-2030'
     name: 'AI Metaverse Integration 2030'
     tagline: 'AI-powered metaverse experiences'
@@ -1089,9 +1083,9 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     marketSize: 'Growing market - $300B+ potential'
     growthRate: '1200%+ annual growth potential'
     variant: 'metaverse-futuristic'
-    contactInfo: {
+    contactInfo: 
   // AI Space Technology 2030
-  {
+  
     id: 'ai-space-technology-2030'
     name: 'AI Space Technology 2030'
     tagline: 'AI-powered space exploration'
@@ -1122,4 +1116,4 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     marketSize: 'Emerging market - $800B+ potential'
     growthRate: '3000%+ annual growth potential'
     variant: 'space-futuristic'
-    contactInfo: {
+    contactInfo: 

@@ -31,9 +31,9 @@ export function AutocompleteSuggestions({
                 onClick={() => onSelectSuggestion(suggestion.text)}>
               <div className=&quot;flex items-center justify-between&quot;>
                 <div>
-                  <span>{highlight.before}</span>
-                  <span className=&quot;font-bold text-zion-purple&quot;>{highlight.match}</span>
-                  <span>{highlight.after}</span>
+                  <span>{highlight.before}<
+                  <span className=&quot;font-bold text-zion-purple&quot;>{highlight.match}<
+                  <span>{highlight.after}<
                 </div>
                 <span className=&quot;text-xs text-zion-slate-light capitalize&quot;>
                   {suggestion.type}
@@ -61,23 +61,23 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {i
 
 export function AutocompleteSuggestions(_{suggestions, searchTerm, onSelectSuggestion, visible}: AutocompleteSuggestionsProps) {if (!visible || suggestions.length === 0) return null;
   
-  return (_<div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
-      <ul className="py-2 max-h-60 overflow-y-auto">
+  return (_<div className="text-left">
+      <ul className="text-left">
         {suggestions.map((suggestion, index) => {
           const highlight = highlightMatch(suggestion.text, searchTerm);
           
           return (_<li key={`${suggestion.type}-${index}`} 
-                className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
+                className="text-left"
                 onClick={_() => onSelectSuggestion(suggestion.text)}>
-              <div className="flex items-center justify-between">
+              <div className="text-left">
                 <div>
-                  <span>{highlight.before}</span>
-                  <span className="font-bold text-zion-purple">{highlight.match}</span>
-                  <span>{highlight.after}</span>
+                  <span>{highlight.before}<
+                  <span className="text-left">{highlight.match}<
+                  <span>{highlight.after}<
                 </div>
-                <span className="text-xs text-zion-slate-light capitalize">
+                <span className="text-left">
                   {suggestion.type}
-                </span>
+                <
               </div>
             </li>
           )
@@ -105,7 +105,7 @@ onSelectSuggestion;
 visible 
 }: AutocompleteSuggestionsProps) {
   if (!visible || suggestions.length === 0) return null;
-return (<div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden" > <ul className="py-2 max-h-60 overflow-y-auto" > {
+return (<div className="text-left" > <ul className="text-left" > {
   suggestions.map ( (suggestion, index) => {
   const highlight = highlightMatch (suggestion.text, searchTerm);
 return (<li key= {
@@ -114,15 +114,15 @@ return (<li key= {
 }-$ {
   index 
 }` 
-}className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer" onClick= {
+}className="text-left" onClick= {
   () => onSelectSuggestion (suggestion.text) 
-}> <div className="flex items-center justify-between" > <div> <span> {
+}> <div className="text-left" > <div> <span> {
   highlight.before 
-}</span> <span className="font-bold text-zion-purple" > {
+}< <span className="text-left" > {
   highlight.match 
-}</span> <span> {
+}< <span> {
   highlight.after 
-}</span> </div> <span className="text-xs text-zion-slate-light capitalize" > {
+}< </div> <span className="text-left" > {
   suggestion.type 
 }
 }) 

@@ -43,26 +43,25 @@ export function InvoiceHistory() {;
   },;
   const getBadgeForStatus = (status:string) => {;
     switch (status) {;"
-      case "paid":return <Badge className="bg-green-500">Paid,;""
+      case "paid":return <Badge className="text-left">Paid,;""
         return <Badge variant="outline">Pending,;""
         return <Badge variant="destructive">Overdue,;""
         return <Badge variant="outline">{status},;""
-    <div className="space-y-6">;"
+    <div className="text-left">;"
 </div>"
-      <div className="flex items-center justify-between">;"
-        <h3 className="text-xl font-medium">Invoice History</h3>;""
-        <div className="relative">;"
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />;"
-
+      <div className="text-left">;"
+        <h3 className="text-left">Invoice History</h3>;""
+        <div className="text-left">;"
+          <Search className="text-left" />;"
           <Input;"
             type="search";""
             placeholder="Search invoices...";""
-            className="w-[200px] md:w-[300px] pl-9";"
+            className="text-left";"
           />;
 
         </div>;
       </div>;"
-      <div className="rounded-md border">;"
+      <div className="text-left">;"
 </div>
         <Table>;
 
@@ -75,35 +74,34 @@ export function InvoiceHistory() {;
               <TableHead>Billing Period;
               <TableHead>Amount;
               <TableHead>Status;"
-              <TableHead className="text-right">Actions;"
+              <TableHead className="text-left">Actions;"
           <TableBody>;
 
               <TableRow key={invoice.id}>;
 "
-                <TableCell className="font-medium">{invoice.id};"
+                <TableCell className="text-left">{invoice.id};"
                 <TableCell>{invoice.date};
                 <TableCell>{invoice.period};
                 <TableCell>{invoice.amount};
                 <TableCell>{getBadgeForStatus(invoice.status)};"
-                <TableCell className="text-right">;"
-                  <div className="flex justify-end gap-2">;"
+                <TableCell className="text-left">;"
+                  <div className="text-left">;"
                     <Button;"
                       variant="outline";""
                       size="sm";""
-                      className="h-8 gap-1";"
+                      className="text-left";"
                       onClick={() => handleDownloadInvoice(invoice.id)}
-                      <Download className="h-3.5 w-3.5" />;"
-
+                      <Download className="text-left" />;"
                     >;
-                      <Download className="h-3.5 w-3.5" />;
+                      <Download className="text-left" />;
                       PDF;
                     </Button>;
                     <Button;
                       variant="outline";
                       size="sm";
-                      className="h-8 gap-1";
+                      className="text-left";
                     >;
-                      <FileText className="h-3.5 w-3.5" />;
+                      <FileText className="text-left" />;
                       View;
                     </Button>;
                   </div>;
@@ -114,11 +112,11 @@ export function InvoiceHistory() {;
         </Table>;
       </div>;
       ;
-      <div className="flex items-center justify-between">;
+      <div className="text-left">;
         <Button variant="outline" size="sm">;
           Previous;
         </Button>;
-        <div className="text-sm text-muted-foreground">;
+        <div className="text-left">;
           Showing 1 - 6 of 12 invoices;
         </div>;
         <Button variant="outline" size="sm">;
@@ -175,10 +173,10 @@ status: "paid";";
 }</Badge>;
 }
 };";
-<Input type="search" placeholder="Search invoices..." className="w-[200px] md:w-[300px] pl-9" /> </div> </div> <div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>Invoice Number</TableHead> <TableHead>Date</TableHead> <TableHead>Billing Period</TableHead> <TableHead>Amount</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+<Input type="search" placeholder="Search invoices..." className="text-left" /> </div> </div> <div className="text-left" > <Table> <TableHeader> <TableRow> <TableHead>Invoice Number</TableHead> <TableHead>Date</TableHead> <TableHead>Billing Period</TableHead> <TableHead>Amount</TableHead> <TableHead>Status</TableHead> <TableHead className="text-left" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
   invoices.map ( (invoice) => (<TableRow key= {;
   invoice.id ";
-}> > <Download className="h-3.5 w-3.5" /> PDF </Button> <Button variant="outline" size="sm" className="h-8 gap-1" > <FileText className="h-3.5 w-3.5" /> View </Button> </div> </TableCell> </TableRow>) ) ";
+}> > <Download className="text-left" /> PDF </Button> <Button variant="outline" size="sm" className="text-left" > <FileText className="text-left" /> View </Button> </div> </TableCell> </TableRow>) ) ";
 
-}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Showing 1 - 6 of 12 invoices </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
+}</TableBody> </Table> </div> <div className="text-left" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-left" > Showing 1 - 6 of 12 invoices </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
 }"

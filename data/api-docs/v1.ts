@@ -4,7 +4,7 @@ const baseUrl = 'https://api.zion.os';
 const baseUrl = 'https://api && api.zion.os';
 
 
-const v1: ApiDocsSpec = {
+const v1: ApiDocsSpec = 
   product: 'Zion OS'
   versions: ['v1']
   defaultVersion: 'v1'
@@ -12,14 +12,13 @@ const v1: ApiDocsSpec = {
   sections: [
 const base_url = 'https://api.zion.os';
 ;
-const v1: ApiDocsSpec = {
+const v1: ApiDocsSpec = 
   product: 'Zion OS',
   versions: ['v1'],
   default_version: 'v1',
   lastUpdatedIso: new Date ().toISOString (),
   sections: [;
-    {
-
+    
       id: 'auth',
       title: 'Auth (JWT, OAuth, Wallet)',
 
@@ -33,7 +32,7 @@ const v1: ApiDocsSpec = {
       title: 'Talent Profiles'
 
       endpoints: [
-        {
+        
           id: 'talent-get'
           title: 'Get Talent Profile'
           description: 'Fetch a talent profile by ID.'
@@ -59,7 +58,7 @@ const v1: ApiDocsSpec = {
       title: 'Job Listings'
 
       endpoints: [
-        {
+        
           id: 'jobs-list'
           title: 'List Jobs'
           description: 'List job postings with optional filters.'
@@ -77,24 +76,23 @@ const baseUrl = 'https://api.zion.os';
 
 
 const baseUrl = 'https://api.zion.os';
-const v1: ApiDocsSpec = {
-
+const v1: ApiDocsSpec = 
   openapi: '3.0.0',
-  info: {
+  info: 
     title: 'Zion OS API',
     version: '1.0.0',
     description: 'Zion OS API Documentation'
   },
   servers: [{ url: baseUrl }],
-  paths: {
-    '/v1/nation/stats': {
-      get: {
+  paths: 
+    '/v1/nation/stats': 
+      get: 
         summary: 'Get Nation Stats',
-        responses: {
-          '200': {
+        responses: 
+          '200': 
             description: 'Success',
-            content: {
-              'application/json': {
+            content: 
+              'application/json': 
                 schema: { type: 'object' }
               }
             }
@@ -113,15 +111,15 @@ const v1: ApiDocsSpec = {
   ];
 
   }
-    {
+    
       id: 'jobs', title: 'Job Listings',
       endpoints: [
-        {
+        
           id: 'jobs-list', title: 'List Jobs',
           description: 'List job postings with optional filters.', path: '/v1/jobs',
           method: 'GET', visibility: 'public',
           auth: ['jwt'],
-          query: {
+          query: 
        q: 'Search text', status: 'open|closed' 
     },
     responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } },
@@ -134,10 +132,10 @@ const v1: ApiDocsSpec = {
         }
       ]
     },
-    {
+    
       id: 'quotes', title: 'Quotes + Milestones',
       endpoints: [
-        {
+        
           id: 'quotes-create', title: 'Create Quote',
           description: 'Create a quote with milestones.', path: '/v1/quotes',
           method: 'POST', visibility: 'partner',
@@ -154,10 +152,10 @@ const v1: ApiDocsSpec = {
         }
       ]
     },
-    {
+    
       id: 'messages', title: 'Messages',
       endpoints: [
-        {
+        
           id: 'messages-send', title: 'Send Message',
           description: 'Send a message between users.', path: '/v1/messages',
           method: 'POST', visibility: 'public',
@@ -175,10 +173,10 @@ const v1: ApiDocsSpec = {
     }
   ],
   sections: [
-    {
+    
       id: 'wallet', title: 'ZION$ Wallet API',
       endpoints: [
-        {
+        
           id: 'wallet-balance', title: 'Get Balance',
           description: 'Fetch wallet balance for the current user.', path: '/v1/wallet/balance',
           method: 'GET', visibility: 'public',
@@ -192,7 +190,7 @@ const v1: ApiDocsSpec = {
           versions: ['v1']
       description: 'Authenticate using JWT, OAuth 2.0, or connect a wallet.',
       endpoints: [;
-        {
+        
           id: 'auth - login - jwt',
           title: 'JWT Login',
           description: 'Obtain a JWT by providing credentials.',
@@ -209,7 +207,7 @@ const v1: ApiDocsSpec = {
           errors: [;
             { code: 'INVALID_CREDENTIALS', http_status: 401, message: 'Email or password incorrect' }],
           versions: ['v1']},
-        {
+        
           id: 'oauth - token',
           title: 'OAuth Token',
           description: 'Exchange auth code for access token.',
@@ -224,11 +222,11 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch ('${base_url}/v1 / oauth / token', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com / callback' }) }).then (r => r.json ()), ` },
             { language: 'python', code: `import requests\nrequests.post ('${base_url}/v1 / oauth / token', json={'code':'AUTH_CODE', 'redirect_uri':'https://app.partner.com / callback'}).json ()` }],
           versions: ['v1']}]},
-    {
+    
       id: 'talent',
       title: 'Talent Profiles',
       endpoints: [;
-        {
+        
           id: 'talent - get',
           title: 'Get Talent Profile',
           description: 'Fetch a talent profile by ID.',
@@ -243,11 +241,11 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch ('${base_url}/v1 / talent / 123', { headers: { Authorization: 'Bearer <token>' } }).then (r => r.json ()), ` },
             { language: 'python', code: `import requests\nrequests.get ('${base_url}/v1 / talent / 123', headers={'Authorization':'Bearer <token>'}).json ()` }],
           versions: ['v1']}]},
-    {
+    
       id: 'jobs',
       title: 'Job Listings',
       endpoints: [;
-        {
+        
           id: 'jobs - list',
           title: 'List Jobs',
           description: 'List job postings with optional filters.',
@@ -262,11 +260,11 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch ('${base_url}/v1 / jobs?q = engineer & status = open', { headers: { Authorization: 'Bearer <token>' } }).then (r => r.json ()), ` },
             { language: 'python', code: `import requests\nrequests.get ('${base_url}/v1 / jobs', params={'q':'engineer', 'status':'open'}, headers={'Authorization':'Bearer <token>'}).json ()` }],
           versions: ['v1']}]},
-    {
+    
       id: 'quotes',
       title: 'Quotes + Milestones',
       endpoints: [;
-        {
+        
           id: 'quotes - create',
           title: 'Create Quote',
           description: 'Create a quote with milestones.',
@@ -281,11 +279,11 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch ('${base_url}/v1 / quotes', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content - Type': 'application / json' }, body: JSON.stringify ({ job_id: 'JOB123', milestones: [{ title: 'Design', amount: 1000 }] }) }).then (r => r.json ()), ` },
             { language: 'python', code: `import requests\nrequests.post ('${base_url}/v1 / quotes', json={'job_id':'JOB123', 'milestones':[{'title':'Design', 'amount':1000}]}, headers={'Authorization':'Bearer <token>'}).json ()` }],
           versions: ['v1']}]},
-    {
+    
       id: 'messages',
       title: 'Messages',
       endpoints: [;
-        {
+        
           id: 'messages - send',
           title: 'Send Message',
           description: 'Send a message between users.',
@@ -300,11 +298,11 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch ('${base_url}/v1 / messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content - Type': 'application / json' }, body: JSON.stringify ({ to: 'USER123', body: 'Hello' }) }).then (r => r.json ()), ` },
             { language: 'python', code: `import requests\nrequests.post ('${base_url}/v1 / messages', json={'to':'USER123', 'body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json ()` }],
           versions: ['v1']}]},
-    {
+    
       id: 'wallet',
       title: 'ZION$ Wallet API',
       endpoints: [;
-        {
+        
           id: 'wallet - balance',
           title: 'Get Balance',
           description: 'Fetch wallet balance for the current user.',
@@ -318,11 +316,11 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch ('${base_url}/v1 / wallet / balance', { headers: { Authorization: 'Bearer <token>' } }).then (r => r.json ()), ` },
             { language: 'python', code: `import requests\nrequests.get ('${base_url}/v1 / wallet / balance', headers={'Authorization':'Bearer <token>'}).json ()` }],
           versions: ['v1']}]},
-    {
+    
       id: 'dao',
       title: 'DAO & Proposals',
       endpoints: [;
-        {
+        
           id: 'dao - proposals - list',
           title: 'List Proposals',
           description: 'List DAO proposals.',
@@ -336,11 +334,11 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch ('${base_url}/v1 / dao / proposals', { headers: { Authorization: 'Bearer <token>' } }).then (r => r.json ()), ` },
             { language: 'python', code: `import requests\nrequests.get ('${base_url}/v1 / dao / proposals', headers={'Authorization':'Bearer <token>'}).json ()` }],
           versions: ['v1']}]},
-    {
+    
       id: 'voting',
       title: 'Voting + Treasury logs',
       endpoints: [;
-        {
+        
           id: 'treasury - logs',
           title: 'Get Treasury Logs',
           description: 'Fetch treasury transactions and snapshots.',
@@ -354,11 +352,11 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch ('${base_url}/v1 / treasury / logs', { headers: { Authorization: 'Bearer <token>' } }).then (r => r.json ()), ` },
             { language: 'python', code: `import requests\nrequests.get ('${base_url}/v1 / treasury / logs', headers={'Authorization':'Bearer <token>'}).json ()` }],
           versions: ['v1']}]},
-    {
+    
       id: 'nation',
       title: 'Nation Module',
       endpoints: [;
-        {
+        
           id: 'nation - stats',
           title: 'Nation Stats',
           description: 'Aggregate stats across the Zion Nation module.',

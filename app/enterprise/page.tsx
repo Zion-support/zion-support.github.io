@@ -1,73 +1,142 @@
 import React from 'react';
-import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Enterprise Solutions - Zion Tech Group',
+  description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
+  keywords: 'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
+};
 
 export default function EnterprisePage() {
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-900 py-20">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center max-w-5xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 mb-8">
-              <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
-                🏢 Enterprise AI Solutions
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-6xl font-extrabold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Enterprise Solutions
               </span>
-            </div>
-            
-            <h1 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent leading-tight">
-              Enterprise Solutions
             </h1>
-            
-            <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold">
-              Trusted by 500+ Fortune 500 Companies Worldwide
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.
             </p>
-            
-            <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Transform your enterprise with our proven AI solutions. Achieve $100M+ cost savings, 
-              500% productivity gains, and 99.9% system uptime with enterprise-grade security and compliance.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-              >
-                Schedule Enterprise Demo
-              </a>
-              <a 
-                href="#solutions" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
-                View Solutions
-              </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                Get Started
+              </Link>
+              <Link
+                href="/services"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
+                View Services
+              </Link>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Enterprise Solutions Banner */}
-      <section id="solutions">
-        <EnterpriseSolutionsBanner />
-      </section>
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Enterprise AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced AI technologies designed for enterprise-scale operations and transformation.
+            </p>
+          </div>
 
-      {/* Footer */}
-      <footer className="py-12 bg-slate-950 border-t border-white/10">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-gray-400">
-            <p className="mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
-            <div className="flex justify-center gap-6 text-sm">
-              <a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-              <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI Autonomous Operations */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Autonomous Operations</h3>
+              <p className="text-gray-300 mb-6">
+                End-to-end automation with 99.9% reliability, 300% efficiency gains, and self-healing infrastructure.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-cyan-400 font-semibold">99.9% Uptime</div>
+                <div className="text-purple-400 font-semibold">300% Efficiency</div>
+                <div className="text-green-400 font-semibold">Self-Healing</div>
+              </div>
+              <Link
+                href="/services/ai-autonomous-operations"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                Learn More
+              </Link>
+            </div>
+
+            {/* Quantum Computing */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
+              <p className="text-gray-300 mb-6">
+                Next-generation quantum algorithms processing 1000x faster with quantum supremacy capabilities.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-cyan-400 font-semibold">1000x Faster</div>
+                <div className="text-purple-400 font-semibold">Quantum Supremacy</div>
+                <div className="text-green-400 font-semibold">Advanced Algorithms</div>
+              </div>
+              <Link
+                href="/services/quantum-computing"
+                className="block w-full bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-600 hover:to-fuchsia-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                Learn More
+              </Link>
+            </div>
+
+            {/* Enterprise Security */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced threat detection with 99.99% accuracy, autonomous response, and zero-trust architecture.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-cyan-400 font-semibold">99.99% Accuracy</div>
+                <div className="text-purple-400 font-semibold">Zero-Trust</div>
+                <div className="text-green-400 font-semibold">Autonomous Response</div>
+              </div>
+              <Link
+                href="/services/enterprise-security"
+                className="block w-full bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                Learn More
+              </Link>
             </div>
           </div>
         </div>
-      </footer>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Enterprise?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join 500+ Fortune 500 companies already implementing our cutting-edge AI solutions with proven results and exceptional ROI.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                Start Your Transformation
+              </Link>
+              <Link
+                href="/case-studies"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
+                View Case Studies
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

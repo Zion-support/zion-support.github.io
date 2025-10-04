@@ -64,11 +64,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {/* Accessibility Controls */}
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
-        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
+      <div className="text-left">
+        <h3 className="text-left">
           Accessibility Options
         </h3>
-        <div className="space-y-2">
+        <div className="text-left">
           <button
             onClick={toggleHighContrast}
             className={`w-full px-3 py-1 text-xs rounded ${
@@ -80,10 +80,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           >
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast
           </button>
-          <div className="text-xs text-gray-600 dark:text-gray-300">
+          <div className="text-left">
             Font Size:
           </div>
-          <div className="flex gap-1">
+          <div className="text-left">
             {['small,normal,large,extra-large'].map(size => (
               <button
                 key={size}
@@ -104,12 +104,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       {/* Skip to main content link */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+        className="text-left"
       >
         Skip to main content
       </a>
       {/* Screen reader only content */}
-      <div className="sr-only">
+      <div className="text-left">
         <h1>Zion Tech Group - Technology Solutions Provider</h1>
         <p>
           Leading technology solutions provider helping businesses transform

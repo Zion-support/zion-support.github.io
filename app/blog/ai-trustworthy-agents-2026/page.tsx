@@ -1,72 +1,57 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
-  description:
-    'Design production-grade, trustworthy autonomous agents with defense-in-depth guardrails, evaluations, and human-in-the-loop controls.',
+  title: 'Ai Trustworthy Agents 2026',
+  description: 'Discover the latest insights and breakthroughs in AI technology.',
+  keywords: 'AI, artificial intelligence, technology, innovation',
+  openGraph: {
+    title: 'Ai Trustworthy Agents 2026',
+    description: 'Discover the latest insights and breakthroughs in AI technology.',
+    type: 'article',
+  },
 };
 
-export default function Page() {
+export default function BlogPage() {
   return (
-    <article className="max-w-4xl mx-auto px-6 py-12">
-      <header className="mb-10">
-        <div className="text-sm text-gray-400">January 2026 • 16 min read</div>
-        <h1 className="text-4xl font-extrabold mt-2 bg-gradient-to-r from-fuchsia-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-          Trustworthy Autonomous Agents 2026
-        </h1>
-        <p className="text-lg text-gray-300 mt-4">
-          A practical blueprint to ship reliable autonomy: layered policy gates, budgeted actions, live evals, and
-          measurable outcomes with human approval where it matters.
-        </p>
-      </header>
-
-      <div className="prose prose-invert prose-lg max-w-none">
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-white">Why Trust Matters</h2>
-          <p className="text-gray-300">
-            Enterprise adoption hinges on predictability, compliance, and recoverability. Trustworthy systems combine
-            clear policies, observability, and rollback paths to ensure actions stay within budget and business intent.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-white">Defense-in-Depth Guardrails</h2>
-          <ul className="list-disc pl-6 text-gray-300">
-            <li>Static policy filters for hard constraints and redlines</li>
-            <li>Dynamic runtime checks tied to business KPIs and budgets</li>
-            <li>Tiered approvals: auto, soft-approve with notify, human approval</li>
-            <li>Rollback playbooks for quick recovery and auditability</li>
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-white">Live Evaluations</h2>
-          <p className="text-gray-300">
-            Couple offline scorecards with live canaries. Track precision/recall, policy violations, and customer
-            outcomes. Promote only when guardrail SLOs are consistently met.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-white">Getting Started</h2>
-          <ol className="list-decimal pl-6 text-gray-300 space-y-2">
-            <li>Define non-negotiable policies and map to tests</li>
-            <li>Instrument traces and link to outcome metrics</li>
-            <li>Implement budgeted tools and action approvals</li>
-            <li>Automate rollback runbooks and postmortems</li>
-          </ol>
-        </section>
-
-        <section className="mt-10">
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-semibold rounded-lg hover:from-fuchsia-400 hover:to-purple-500"
-          >
-            Schedule a Consultation
-          </a>
-        </section>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <article className="bg-white rounded-lg shadow-md p-8">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Ai Trustworthy Agents 2026
+            </h1>
+            <div className="flex items-center text-gray-600">
+              <span className="text-sm">Published on {new Date().toLocaleDateString()}</span>
+            </div>
+          </header>
+          
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              This article explores the latest developments and insights in AI technology. 
+              Our team of experts has compiled comprehensive information to help you understand 
+              the current landscape and future possibilities.
+            </p>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              Key Insights
+            </h2>
+            
+            <p className="text-gray-700 mb-4">
+              The field of artificial intelligence continues to evolve rapidly, bringing new 
+              opportunities and challenges for businesses and individuals alike.
+            </p>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              Conclusion
+            </h2>
+            
+            <p className="text-gray-700">
+              As we continue to advance in AI technology, it's important to stay informed 
+              and prepared for the changes ahead.
+            </p>
+          </div>
+        </article>
       </div>
-    </article>
+    </div>
   );
 }
-

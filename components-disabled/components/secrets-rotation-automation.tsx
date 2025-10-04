@@ -30,8 +30,6 @@ const features = [;
     "Policy approvals and audit trails","
     "CI / CD integration (GitHub Actions, CircleCI)","
     "Cloud KMS and Vault support""
-
-
 const features = [;
   'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
   'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''

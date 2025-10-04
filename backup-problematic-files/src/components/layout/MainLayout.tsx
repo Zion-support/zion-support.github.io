@@ -1,6 +1,6 @@
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="main-layout">
+    <div className="text-left">
       {children}
     </div>
 

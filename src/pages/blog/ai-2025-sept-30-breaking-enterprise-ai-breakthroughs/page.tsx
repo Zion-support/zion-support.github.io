@@ -1,4 +1,3 @@
-// Minimal types; remove ts-nocheck
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -17,12 +16,10 @@ export default function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Eleme
         <div className="prose prose-invert max-w-3xl">
           <p>
             Explore eight enterprise‑ready patterns you can deploy now: runtime rollback, KPI‑linked scorecards,
-            consentless analytics, budget‑aware routing, on‑device aggregation, and more. Each pattern includes
-            reference architecture notes and rollout guardrails.
+            consentless analytics, and more breakthrough technologies.
           </p>
         </div>
       </div>
     </div>
   );
 }
-

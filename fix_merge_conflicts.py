@@ -1,83 +1,113 @@
 #!/usr/bin/env python3
+"""
+Script to fix merge conflicts in blog files by resolving conflicts and fixing syntax errors.
+"""
+
 import os
 import re
-import sys
-from pathlib import Path
+import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflict markers in a file"""
+    """Fix merge conflicts in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove merge conflict markers and everything between them
-        # Pattern matches <<<<<<< HEAD, =======, >>>>>>> branch-name
-        content = re.sub(r'^[<>=]{7}.*$', '', content, flags=re.MULTILINE)
+        original_content = content
         
-        # Remove lines that contain merge conflict markers anywhere
-        lines = content.split('\n')
-        cleaned_lines = []
+        # Remove Next.js imports since this is a Vite project
+        content = re.sub(r"import { Metadata } from 'next';\n", '', content)
         
-        for line in lines:
-            # Skip lines that contain merge conflict markers
-            if not re.search(r'[<>=]{7,}', line):
-                cleaned_lines.append(line)
+        # Fix merge conflict markers by keeping the newer version (after =======)
+        # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> branch-name
+        content = re.sub(
+            r'<<<<<<< HEAD.*?=======(.*?)>>>>>>> [^\n]+',
+            r'\1',
+            content,
+            flags=re.DOTALL
+        )
         
-        content = '\n'.join(cleaned_lines)
+        # Fix syntax errors - add missing commas and braces
+        # Fix missing comma before closing brace in metadata
+        content = re.sub(
+            r'(\s+type: \'article\',?)\s*(\n\s*}\s*;)',
+            r'\1\n  },\n};',
+            content
+        )
         
-        # Clean up extra whitespace and empty lines
-        lines = content.split('\n')
-        cleaned_lines = []
-        prev_empty = False
+        # Fix missing comma in metadata object
+        content = re.sub(
+            r'(\s+type: \'article\',?)\s*(\n\s*}\s*;?\s*export)',
+            r'\1\n  },\n};\n\nexport',
+            content
+        )
         
-        for line in lines:
-            line = line.rstrip()
-            if line.strip() == '':
-                if not prev_empty:
-                    cleaned_lines.append('')
-                prev_empty = True
-            else:
-                cleaned_lines.append(line)
-                prev_empty = False
+        # Fix function declarations with missing braces
+        content = re.sub(
+            r'export default function ([^(]+)\s*\)\s*(\n\s*return)',
+            r'export default function \1() {\n  \2',
+            content
+        )
         
-        content = '\n'.join(cleaned_lines)
+        # Fix missing opening brace after function declaration
+        content = re.sub(
+            r'(export default function [^{]+)\s*(\n\s*return)',
+            r'\1 {\n  \2',
+            content
+        )
         
-        # Write back the cleaned content
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+        # Fix missing closing brace at end of function
+        if 'export default function' in content and content.count('{') > content.count('}'):
+            # Add missing closing brace before the last line
+            lines = content.split('\n')
+            if lines and not lines[-1].strip():
+                lines.pop()
+            lines.append('}')
+            content = '\n'.join(lines)
         
-        return True
+        # Fix metadata object syntax
+        content = re.sub(
+            r'export const metadata: Metadata = \s*(\n\s*title:)',
+            r'export const metadata: Metadata = {\n  \1',
+            content
+        )
+        
+        # Fix missing opening brace in metadata
+        content = re.sub(
+            r'export const metadata: Metadata = \s*(\n\s*title: [^,]+,\s*\n\s*description:)',
+            r'export const metadata: Metadata = {\n  \1',
+            content
+        )
+        
+        # Only write if content changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed: {file_path}")
+            return True
+        else:
+            print(f"No changes needed: {file_path}")
+            return False
+            
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    src_dir = Path('src')
+    """Main function to process all blog files."""
+    # Get all blog files with merge conflicts
+    blog_files = glob.glob('/workspace/app/blog/**/*.tsx', recursive=True)
+    
     fixed_count = 0
-    error_count = 0
+    total_count = 0
     
-    # Find all TypeScript/JavaScript files with merge conflicts
-    files = list(src_dir.rglob('*.ts')) + list(src_dir.rglob('*.tsx')) + list(src_dir.rglob('*.js')) + list(src_dir.rglob('*.jsx'))
+    for file_path in blog_files:
+        if os.path.exists(file_path):
+            total_count += 1
+            if fix_merge_conflicts(file_path):
+                fixed_count += 1
     
-    for file_path in files:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            if re.search(r'[<>=]{7,}', content):
-                print(f"Fixing {file_path}")
-                if fix_merge_conflicts(file_path):
-                    fixed_count += 1
-                else:
-                    error_count += 1
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
-            error_count += 1
-    
-    print(f"\nFixed {fixed_count} files")
-    if error_count > 0:
-        print(f"Errors in {error_count} files")
-        sys.exit(1)
+    print(f"\nProcessed {total_count} files, fixed {fixed_count} files")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

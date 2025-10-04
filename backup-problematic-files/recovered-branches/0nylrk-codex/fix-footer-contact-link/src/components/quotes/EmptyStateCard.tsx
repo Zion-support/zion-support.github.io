@@ -11,19 +11,19 @@ export const EmptyStateCard:React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active',;
   ;
   return (;
-    <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">;
+    <Card className="text-left">;
       <CardContent>;
-        <div className="mx-auto w-16 h-16 bg-zion-blue-light opacity-60 rounded-full flex items-center justify-center mb-4">;
+        <div className="text-left">;
           {isActive ? (;
-            <MessageSquare className="h-8 w-8 text-white" />;
+            <MessageSquare className="text-left" />;
           ) :(;
-            <ArchiveIcon className="h-8 w-8 text-white" />;
+            <ArchiveIcon className="text-left" />;
           )}
         </div>;
-        <h3 className="text-xl font-medium text-white mb-2">;
+        <h3 className="text-left">;
           {isActive ? 'No hire requests yet' :'No archived requests'}
         </h3>;
-        <p className="text-zion-slate-light max-w-md mx-auto">;
+        <p className="text-left">;
           {isActive ;
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
             :"You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
@@ -39,7 +39,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({
   type 
 }) => {
   const isActive = type === 'active';
-bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent> <div className=" mx-auto w-16 h-16 bg-zion-blue-light opacity-60 rounded-full flex items-center justify-center mb-4">{";"  isActive ? (<MessageSquare className=" h-8 w-8 text-white"/>) : (<ArchiveIcon className=" h-8 w-8 text-white" />) ;
+bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent> <div className="text-left">{";"  isActive ? (<MessageSquare className="text-left"/>) : (<ArchiveIcon className="text-left" />) ;
 }</div> </p> </CardContent> </Card>) ;
 :temp_broken_files/quotes/EmptyStateCard.tsx
 };"'"

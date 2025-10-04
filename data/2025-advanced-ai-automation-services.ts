@@ -1,10 +1,8 @@
 
 import { ServiceVariant } from '../types / service - variants';
 
-export interface AdvancedAIAutomationService {
-
-  {
-
+export interface AdvancedAIAutomationService 
+  
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -18,13 +16,12 @@ export interface AdvancedAIAutomationService {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
   
-  contactInfo: {
+  contactInfo: 
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -34,8 +31,7 @@ export interface AdvancedAIAutomationService {
 
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Code Generation & Review
-  {
-
+  
     id: 'ai-code-generation-review', name: 'AI Code Generation & Review Platform',
     tagline: 'Generate, review, and optimize code with AI intelligence',
     price: '$199', period: '/month',
@@ -58,8 +54,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     competitors: ['GitHub Copilot, Tabnine, Kite, IntelliCode'];
     marketSize: '$8.2B AI development tools market', growthRate: '25% annual growth',
     variant: 'ai-code-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -93,7 +88,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     reviews: 28
   }
   // AI-Powered Customer Support Automation
-  {
+  
     id: 'ai-customer-support-automation'
     name: 'AI Customer Support Automation Platform'
     tagline: 'Transform customer support with intelligent automation'
@@ -140,7 +135,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     marketSize: '$18.5B customer support market'
     growthRate: '18% annual growth'
     variant: 'ai-support-enterprise'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -155,7 +150,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     reviews: 41
   }
   // AI-Powered Marketing Automation
-  {
+  
     id: 'ai-marketing-automation'
     name: 'AI Marketing Automation Suite'
     tagline: 'Intelligent marketing automation with predictive analytics'
@@ -200,7 +195,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     marketSize: '$25.1B marketing automation market'
     growthRate: '22% annual growth'
     variant: 'ai-marketing-enterprise'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -215,7 +210,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     reviews: 67
   }
   // AI-Powered Sales Intelligence
-  {
+  
     id: 'ai-sales-intelligence'
     name: 'AI Sales Intelligence Platform'
     tagline: 'Boost sales performance with AI-powered insights'
@@ -260,7 +255,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     marketSize: '$21.3B sales intelligence market'
     growthRate: '24% annual growth'
     variant: 'ai-sales-enterprise'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'

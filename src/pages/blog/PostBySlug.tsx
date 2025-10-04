@@ -1,17 +1,50 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { posts as staticPosts } from "../../content/posts";
-import { latestArticles } from "../../content/latest-articles";
-import { blogPosts } from "../../content/blog-posts";
+import { useParams } from "react-router-dom";
 import Header from "../../components/Header";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
 export default function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
 
+  // Mock data - in a real app, this would come from an API or CMS
+  const latestArticles = [
+    {
+      slug: "ai-autonomous-workflows-2026",
+      title: "AI Autonomous Workflows 2026",
+      description: "Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration",
+      excerpt: "Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration",
+      category: "Enterprise Automation",
+      date: "2026-01-15",
+      readTime: "8 min read",
+      author: "Zion Tech Group Team"
+    }
+  ];
+
+  const blogPosts = [
+    {
+      slug: "enterprise-ai-transformation-roadmap-2026",
+      title: "Enterprise AI Transformation Roadmap 2026",
+      description: "Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation",
+      category: "Strategic Guide",
+      date: "2026-01-10",
+      readTime: "12 min read",
+      author: "Zion Tech Group Team"
+    }
+  ];
+
+  const staticPosts = [
+    {
+      slug: "ai-governance-framework-enterprise-2025",
+      title: "AI Governance Framework for Enterprise 2025",
+      description: "Comprehensive framework for implementing AI governance in enterprise environments",
+      category: "AI Governance",
+      publishedAt: "2025-12-20",
+      readTime: "10 min read"
+    }
+  ];
+
   const article = React.useMemo(() => {
     if (!slug) return undefined;
+    
     const fromLatest = latestArticles.find((a) => a.slug === slug);
     if (fromLatest) {
       return {
@@ -21,9 +54,10 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromLatest.category,
         publishedAt: fromLatest.date,
         readTime: fromLatest.readTime,
-        author: fromLatest.author,
+        author: fromLatest.author
       };
     }
+    
     const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
     if (fromBlogPosts) {
       return {
@@ -33,9 +67,10 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromBlogPosts.category,
         publishedAt: fromBlogPosts.date,
         readTime: fromBlogPosts.readTime,
-        author: fromBlogPosts.author,
+        author: fromBlogPosts.author
       };
     }
+    
     const fromPosts = staticPosts.find((p) => p.slug === slug);
     if (fromPosts) {
       return {
@@ -45,24 +80,27 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromPosts.category,
         publishedAt: fromPosts.publishedAt,
         readTime: fromPosts.readTime,
-        author: "Zion Tech Group Team",
+        author: "Zion Tech Group Team"
       };
     }
+    
     return undefined;
-  }, [slug]);
+  }, [slug, blogPosts, latestArticles, staticPosts]);
 
   if (!article) {
     return (
       <>
         <Header />
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-          <div className="max-w-3xl mx-auto pt-20">
-            <h1 className="text-3xl font-bold mb-4">Article not found</h1>
-            <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
-            <Link to="/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" />
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+            <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
+            <a 
+              href="/blog" 
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
               Back to Blog
-            </Link>
+            </a>
           </div>
         </div>
       </>
@@ -71,65 +109,84 @@ export default function PostBySlug(): React.JSX.Element {
 
   return (
     <>
-      <Helmet>
-        <title>{article.title} | Zion Tech Group</title>
-        <meta name="description" content={article.description} />
-        <meta property="og:title" content={article.title} />
-        <meta property="og:description" content={article.description} />
-        <meta property="og:type" content="article" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog" className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Blog
-          </Link>
-          
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
+      <Header />
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          {/* Article Header */}
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <div className="mb-4">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                 {article.category}
               </span>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
               {article.title}
             </h1>
-            
-            <div className="flex flex-wrap items-center gap-4 text-zion-slate-light text-sm mb-8 pb-8 border-b border-white/10">
-              {article.author && (
-                <span className="font-medium text-white">{article.author}</span>
-              )}
-              <span className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                {new Date(article.publishedAt).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
-              </span>
-              {article.readTime && (
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  {article.readTime}
-                </span>
-              )}
+            <div className="flex items-center text-gray-600 mb-6">
+              <span className="mr-4">By {article.author}</span>
+              <span className="mr-4">•</span>
+              <span className="mr-4">{new Date(article.publishedAt).toLocaleDateString()}</span>
+              <span>•</span>
+              <span className="ml-4">{article.readTime}</span>
             </div>
-            
-            <div className="prose prose-invert prose-lg max-w-none">
-              <p className="text-xl leading-relaxed text-white/90 mb-6">
-                {article.description}
+            <p className="text-xl text-gray-700 leading-relaxed">
+              {article.description}
+            </p>
+          </div>
+
+          {/* Article Content */}
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="prose prose-lg max-w-none">
+              <h2>Article Content</h2>
+              <p>
+                This is where the full article content would be displayed. In a real application, 
+                this content would be fetched from a CMS or markdown files and rendered appropriately.
               </p>
-              
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-                  💡 <strong>Coming Soon:</strong> Full article content will be available shortly. 
-                  This preview shows the key insights and value proposition of this groundbreaking topic.
-                </p>
-              </div>
+              <p>
+                The article content would include detailed information about the topic, 
+                formatted with proper headings, paragraphs, lists, and other content elements.
+              </p>
+              <h3>Key Points</h3>
+              <ul>
+                <li>Comprehensive coverage of the topic</li>
+                <li>Real-world examples and case studies</li>
+                <li>Actionable insights and recommendations</li>
+                <li>Expert analysis and commentary</li>
+              </ul>
+              <p>
+                This placeholder content demonstrates the structure and styling that would be 
+                applied to the actual article content.
+              </p>
             </div>
-          </article>
+          </div>
+
+          {/* Related Articles */}
+          <div className="mt-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {latestArticles.slice(0, 3).map((relatedArticle, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+                  <div className="mb-3">
+                    <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">
+                      {relatedArticle.category}
+                    </span>
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    {relatedArticle.title}
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {relatedArticle.excerpt}
+                  </p>
+                  <a 
+                    href={`/blog/${relatedArticle.slug}`}
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Read More →
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>
