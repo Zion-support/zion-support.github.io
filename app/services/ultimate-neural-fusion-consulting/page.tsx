@@ -2,15 +2,13 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'Ultimate Neural Fusion Consulting - Zion Tech Group',
   description: 'Transform your enterprise with Ultimate Neural Fusion technology achieving 500,000x performance improvements, universal consciousness integration, and $100B+ ROI potential.',
   keywords: 'Ultimate Neural Fusion, AI consulting, enterprise AI, neural networks, quantum consciousness, performance optimization',
 };
 
 export default function UltimateNeuralFusionConsulting() {
-  return (
-    <div>/* content */}
   return (
     <div>
       <div></div>

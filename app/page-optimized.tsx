@@ -6,20 +6,20 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load heavy components
-const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), 
-  loading: () => <div className="text-left"></div>"
+const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
+  loading: () => <div className="text-left"></div>
 });
 
-const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), 
-  loading: () => <div className="text-left"></div>"
+const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), {
+  loading: () => <div className="text-left"></div>
 });
 
-const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), 
-  loading: () => <div className="text-left"></div>"
+const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), {
+  loading: () => <div className="text-left"></div>
 });
 
-const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), 
-  loading: () => <div className="text-left"></div>"
+const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), {
+  loading: () => <div className="text-left"></div>
 });
 
 export const metadata = {

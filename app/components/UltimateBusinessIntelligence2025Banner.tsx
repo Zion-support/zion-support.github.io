@@ -7,19 +7,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const content = [{
-=======
   const content = [
     {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3825
-=======
-  const content = [{
->>>>>>> origin/main
->>>>>>> main
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
@@ -66,22 +55,22 @@ const UltimateBusinessIntelligence2025Banner = () => {
     }
   ];
 
-  useEffect(() => 
-    const timer = setInterval(() => 
+  useEffect(() => {
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
 
     return () => clearInterval(timer);
   }, [content.length]);
 
-  useEffect(() => 
+  useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-business-intelligence-2025-banner-dismissed');
-    if (dismissed === 'true') 
+    if (dismissed === 'true') {
       setIsVisible(false);
     }
   }, []);
 
-  const handleDismiss = () => 
+  const handleDismiss = () => {
     setIsVisible(false);
     localStorage.setItem('ultimate-business-intelligence-2025-banner-dismissed', 'true');
   };

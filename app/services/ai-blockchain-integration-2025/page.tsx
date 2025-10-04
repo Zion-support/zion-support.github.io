@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI Blockchain Integration 2025 | Smart Contracts & DeFi | Zion Tech Group',
   description: 'Revolutionary AI-powered blockchain solutions with intelligent smart contracts, DeFi optimization, and 10,000 TPS throughput. Achieve 99.9% transaction success with enterprise blockchain.',
   keywords: 'AI blockchain 2025, smart contracts AI, DeFi solutions, blockchain integration, enterprise blockchain, AI crypto, blockchain automation',
@@ -14,8 +14,6 @@ export const metadata: Metadata =
 };
 
 export default function AIBlockchainIntegration2025Page() {
-  return (
-    <div>/* content */}
   return (
     <div>
       <div></div>

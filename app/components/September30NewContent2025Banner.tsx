@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
 
 const September30NewContent2025Banner: React.FC = () => {
-  const newArticles = [{
+  const newArticles = [
     {
       id: 0,
       title: 'AI-Accelerated Customer Experience 2025',

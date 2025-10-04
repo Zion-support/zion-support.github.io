@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI Cybersecurity Solutions 2025 | Zero-Trust Architecture | Zion Tech Group',
   description: 'Revolutionary AI-powered cybersecurity solutions with 99.99% threat detection, zero-trust architecture, and real-time protection. Prevent 100% of ransomware attacks with quantum-encrypted security.',
   keywords: 'AI cybersecurity 2025, zero-trust security, quantum encryption, threat detection AI, ransomware prevention, AI security solutions, enterprise cybersecurity',
@@ -14,8 +14,6 @@ export const metadata: Metadata =
 };
 
 export default function AICybersecurity2025Page() {
-  return (
-    <div>/* content */}
   return (
     <div>
       <div></div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',
   description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards for data-driven decision making.',
   keywords: 'AI business intelligence, business analytics, predictive analytics, data visualization, business insights, AI dashboards',

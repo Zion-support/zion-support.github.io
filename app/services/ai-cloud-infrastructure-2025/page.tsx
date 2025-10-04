@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = 
+export const metadata: Metadata = {
   title: 'AI Cloud Infrastructure 2025 | Self-Healing Systems | Zion Tech Group',
   description: 'Next-generation AI-powered cloud infrastructure with self-healing capabilities, 99.999% uptime, and 70% cost reduction. Transform your cloud operations with intelligent automation.',
   keywords: 'AI cloud infrastructure 2025, self-healing cloud, cloud automation, intelligent cloud management, cloud cost optimization, enterprise cloud solutions',
@@ -14,8 +14,6 @@ export const metadata: Metadata =
 };
 
 export default function AICloudInfrastructure2025Page() {
-  return (
-    <div>/* content */}
   return (
     <div>
       <div></div>
