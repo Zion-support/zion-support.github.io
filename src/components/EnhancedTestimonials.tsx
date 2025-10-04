@@ -1,1 +1,12 @@
-import React from "react"; export, default, function EnhancedTestimonia, l, s(): Rea, c, t.J, S, X.Eleme, n, t { retu, r, n <section, ari, a-lab, e, l="Enhanced, Testimonial, s/>;"; ======= import React from "react";'; export, default, function EnhancedTestimonia, l, s(): Rea, c, t.J, S, X.Eleme, n, t { retu, r, n <section, ari, a-lab, e, l="Enhanced, Testimonial, s" />;"; };'
+import React from "react";
+
+const EnhancedTestimonials: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 p-6 rounded-xl border border-yellow-500/30">
+      <h2 className="text-xl font-bold text-white mb-2">Enhanced Testimonials</h2>
+      <p className="text-gray-300">Enhanced testimonials component</p>
+    </div>
+  );
+};
+
+export default EnhancedTestimonials;
