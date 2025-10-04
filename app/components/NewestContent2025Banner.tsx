@@ -9,6 +9,7 @@ const NewestContent2025Banner = () => {
         <div className="text-left"></div>
         <div className="text-left" style={{ animationDelay: '2s' }}></div>
         <div className="text-left" style={{ animationDelay: '1s' }}></div>
+      </div>
 
       <div className="text-left">
         {/* Header */}
