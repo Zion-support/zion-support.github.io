@@ -490,21 +490,6 @@ class ContentRecommendationEngine {
     };
   }
 
-  /**
-   * Get user profile
-   */
-  getUserProfile(userId: string): UserProfile {
-    if (!this.userProfiles.has(userId)) {
-      this.userProfiles.set(userId, {
-        interests: [],
-        viewedContent: [],
-        preferredCategories: [],
-        readingLevel: 'intermediate',
-        engagement: 0.5,
-      });
-    }
-    return this.userProfiles.get(userId)!;
-  }
 
   /**
    * Get catalog size

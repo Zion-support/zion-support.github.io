@@ -3,11 +3,11 @@
  * Tracks Core Web Vitals and custom performance metrics
  */
 
-import { onCLS, onFID, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB, Metric } from 'web-vitals';
 
 export interface PerformanceMetrics {
   cls?: number;
-  fid?: number;
+  inp?: number;
   fcp?: number;
   lcp?: number;
   ttfb?: number;
@@ -27,9 +27,9 @@ class PerformanceMonitor {
       this.updateMetric('cls', metric.value);
     });
 
-    // First Input Delay
-    onFID((metric: Metric) => {
-      this.updateMetric('fid', metric.value);
+    // Interaction to Next Paint
+    onINP((metric: Metric) => {
+      this.updateMetric('inp', metric.value);
     });
 
     // First Contentful Paint
@@ -126,13 +126,13 @@ class PerformanceMonitor {
    * Get performance score (0-100)
    */
   getPerformanceScore(): number {
-    const { cls, fid, lcp, fcp, ttfb } = this.metrics;
+    const { cls, inp, lcp, fcp, ttfb } = this.metrics;
     
     let score = 100;
     
     // Deduct points for poor metrics
     if (cls && cls > 0.1) score -= 20; // Poor CLS
-    if (fid && fid > 100) score -= 20; // Poor FID
+    if (inp && inp > 200) score -= 20; // Poor INP
     if (lcp && lcp > 2500) score -= 20; // Poor LCP
     if (fcp && fcp > 1800) score -= 20; // Poor FCP
     if (ttfb && ttfb > 600) score -= 20; // Poor TTFB

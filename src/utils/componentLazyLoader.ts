@@ -5,7 +5,7 @@
  */
 
 import React, { lazy, ComponentType } from 'react';
-import { ErrorBoundary } from '../components/ErrorBoundary';
+import ErrorBoundaryComponent from '../components/ErrorBoundary';
 
 export interface LazyLoadConfig {
   componentPath: string;
@@ -26,8 +26,8 @@ export function createLazyComponent<T extends ComponentType<any>>(
     return (props: any) => {
       const FallbackComponent = fallback;
       return React.createElement(
-        ErrorBoundary,
-        { fallback: React.createElement(FallbackComponent) },
+        ErrorBoundaryComponent,
+        null,
         React.createElement(LazyComponent, props)
       );
     };
@@ -67,7 +67,7 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
   threshold: number = 0.1
 ): ComponentType<any> {
   return lazy(() => {
-    return new Promise((resolve) => {
+    return new Promise<{ default: T }>((resolve) => {
       // Check if IntersectionObserver is supported
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver(
@@ -137,4 +137,3 @@ class ErrorBoundary extends React.Component<
   }
 }
 
-import React from 'react';

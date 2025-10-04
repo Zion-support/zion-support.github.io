@@ -186,8 +186,8 @@ class AnalyticsIntegration {
           a.get_group = function() {
             function b(c: any) {
               d[c] = function() {
-                call2_args = arguments;
-                call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
+                const call2_args = arguments;
+                const call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
                 a.push([e, call2]);
               };
             }
@@ -248,7 +248,7 @@ class AnalyticsIntegration {
         };
       }
       
-      var o = function() {
+      var o = function(this: any) {
         this._q = [];
         return this;
       };
@@ -258,7 +258,7 @@ class AnalyticsIntegration {
       }
       n.Identify = o;
       
-      var u = function() {
+      var u = function(this: any) {
         this._q = [];
         return this;
       };
@@ -305,7 +305,7 @@ class AnalyticsIntegration {
     const { writeKey } = this.config.providers.segment!;
     
     // Load Segment
-    !(function() {
+    (function() {
       var analytics = ((window as any).analytics = (window as any).analytics || []);
       if (!analytics.initialize)
         if (analytics.invoked)

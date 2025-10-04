@@ -3,7 +3,7 @@
  * Tracks user behavior, performance, and business metrics
  */
 
-import { getPerformanceOptimizer } from './performanceOptimizer';
+import getPerformanceOptimizer from './performanceOptimizer';
 
 interface PageView {
   path: string;
@@ -46,7 +46,7 @@ class EnhancedAnalytics {
     this.session = this.createNewSession();
     
     if (typeof window !== 'undefined') {
-      this.performanceOptimizer = getPerformanceOptimizer();
+      this.performanceOptimizer = getPerformanceOptimizer;
       this.initialize();
     }
   }

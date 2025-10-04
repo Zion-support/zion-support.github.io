@@ -196,7 +196,7 @@ export const requestIdleCallback = (callback: IdleRequestCallback): number => {
   }
 
   // Fallback for browsers that don't support requestIdleCallback
-  return window.setTimeout(() => {
+  return setTimeout(() => {
     const start = Date.now();
     callback({
       didTimeout: false,
@@ -214,7 +214,7 @@ export const cancelIdleCallback = (id: number): void => {
   if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(id);
   } else {
-    window.clearTimeout(id);
+    clearTimeout(id);
   }
 };
 

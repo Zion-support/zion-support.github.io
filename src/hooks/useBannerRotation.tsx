@@ -3,7 +3,7 @@
  * Manages banner display, tracking, and rotation logic
  */
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
   BannerConfig,
   RotationStrategy,
@@ -182,7 +182,7 @@ export const useBannerABTest = (
   // Track variation performance
   const trackVariationPerformance = useCallback(
     (metric: string, value: number) => {
-      trackBannerInteraction(selectedVariation.id, 'performance', {
+      trackBannerInteraction(selectedVariation.id, 'click', {
         testName,
         variation: selectedVariation.id,
         metric,
