@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
 interface EnhancedMetrics {
-  cls: number;
-  fid: number;
-  fcp: number;
-  lcp: number;
-  ttfb: number;
+  cls?: number;
+  inp?: number;
+  fcp?: number;
+  lcp?: number;
+  ttfb?: number;
   memory?: number;
   connection?: string;
   devicePixelRatio?: number;
@@ -18,7 +18,7 @@ interface EnhancedMetrics {
 
 interface PerformanceThresholds {
   cls: number;
-  fid: number;
+  inp: number;
   fcp: number;
   lcp: number;
   ttfb: number;
@@ -34,7 +34,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const [history, setHistory] = useState<PerformanceHistory[]>([]);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
-    fid: 100,
+    inp: 200,
     fcp: 1800,
     lcp: 2500,
     ttfb: 800
@@ -96,11 +96,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   };
 
   useEffect(() => {
-    getCLS(handleMetric);
-    getFID(handleMetric);
-    getFCP(handleMetric);
-    getLCP(handleMetric);
-    getTTFB(handleMetric);
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
 
     // Enhanced performance monitoring
     const observer = new PerformanceObserver((list) => {
@@ -155,9 +155,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
               </span>
             </div>
             <div className="flex justify-between">
-              <span>FID:</span>
-              <span className={getStatusColor(metrics.fid, thresholds.fid)}>
-                {getStatusIcon(metrics.fid, thresholds.fid)} {metrics.fid?.toFixed(1)}ms
+              <span>INP:</span>
+              <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
+                {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
               </span>
             </div>
             <div className="flex justify-between">

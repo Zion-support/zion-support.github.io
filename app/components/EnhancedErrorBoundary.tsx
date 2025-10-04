@@ -123,7 +123,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       const criticalScripts = document.querySelectorAll('script[data-critical]');
       criticalScripts.forEach(script => {
         const newScript = document.createElement('script');
-        newScript.src = script.src;
+        newScript.src = (script as HTMLScriptElement).src;
         newScript.setAttribute('data-critical', 'true');
         document.head.appendChild(newScript);
       });
