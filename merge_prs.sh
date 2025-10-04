@@ -5,19 +5,18 @@ set -e
 
 echo "Starting PR merge process..."
 
-# List of PR branches to merge (including newest ones)
+# List of PR branches to merge (including latest ones)
 PR_BRANCHES=(
-    "origin/cursor/fix-errors-and-merge-to-main-07f8"
-    "origin/cursor/fix-errors-and-merge-to-main-0c7f"
-    "origin/cursor/fix-errors-and-merge-to-main-13d2"
-    "origin/cursor/fix-errors-and-merge-to-main-2888"
-    "origin/cursor/fix-errors-and-merge-to-main-5a08"
-    "origin/cursor/fix-errors-and-merge-to-main-ccc6"
-    "origin/cursor/fix-errors-and-merge-to-main-ceea"
-    "origin/cursor/fix-errors-and-merge-to-main-cfd3"
-    "origin/cursor/fix-errors-and-merge-to-main-f578"
-    "origin/cursor/fix-errors-and-merge-to-main-f7b4"
-    "origin/cursor/fix-errors-and-merge-to-main-fa2a"
+    "origin/cursor/fix-errors-and-merge-to-main-0571"
+    "origin/cursor/fix-errors-and-merge-to-main-5e24"
+    "origin/cursor/fix-errors-and-merge-to-main-631d"
+    "origin/cursor/fix-errors-and-merge-to-main-69c7"
+    "origin/cursor/fix-errors-and-merge-to-main-849a"
+    "origin/cursor/fix-errors-and-merge-to-main-ac42"
+    "origin/cursor/fix-errors-and-merge-to-main-d6cf"
+    "origin/cursor/fix-errors-and-merge-to-main-e6fc"
+    "origin/cursor/fix-errors-and-merge-to-main-eb9b"
+    "origin/cursor/fix-errors-and-merge-to-main-f51c"
 )
 
 # Ensure we're on main branch
