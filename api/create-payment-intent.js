@@ -9,6 +9,9 @@ async function handler(req, res) {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
   const { amount, currency = 'usd', userId } = req.body || {};
   
   if (!amount) {
@@ -37,6 +40,7 @@ async function handler(req, res) {
     res.status(500).json({ 
       error: error.message || 'Failed to create payment intent' 
     });
+<<<<<<< HEAD
 =======
   try {
     const { amount, currency = 'usd' } = req.body || {};
@@ -59,6 +63,8 @@ async function handler(req, res) {
     console.error('Payment intent error:', err);
     res.status(500).json({ error: err.message });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0588
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
   }
 }
 

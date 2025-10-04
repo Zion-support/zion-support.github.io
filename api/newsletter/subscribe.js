@@ -83,6 +83,7 @@ async function handler(req, res) {
     res.status(500).json({ 
       error: error.message || 'Failed to subscribe to newsletter' 
     });
+<<<<<<< HEAD
 =======
     subscribers.push(email);
     fs.writeFileSync(subscribersFile, JSON.stringify(subscribers, null, 2));
@@ -95,6 +96,8 @@ async function handler(req, res) {
     console.error('Newsletter subscription error:', err);
     res.status(500).json({ error: 'Internal server error' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0588
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
   }
 }
 

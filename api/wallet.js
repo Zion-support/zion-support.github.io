@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { withErrorLogging } from './withErrorLogging.cjs';
 =======
 const { withErrorLogging } = require('./withErrorLogging.cjs');
 >>>>>>> cursor/fix-errors-and-merge-to-main-0588
+=======
+import { withErrorLogging } from './withErrorLogging.cjs';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
 
 async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -13,6 +17,9 @@ async function handler(req, res) {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
   const { userId } = req.query || {};
   
   if (!userId) {
@@ -45,6 +52,7 @@ async function handler(req, res) {
 }
 
 export default withErrorLogging(handler);
+<<<<<<< HEAD
 =======
   try {
     const { userId } = req.query || {};
@@ -72,3 +80,5 @@ export default withErrorLogging(handler);
 
 module.exports = withErrorLogging(handler);
 >>>>>>> cursor/fix-errors-and-merge-to-main-0588
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302

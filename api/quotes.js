@@ -11,6 +11,9 @@ export default async function handler(req, res) {
     
     if (!name || !email || !phone || !details) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
       res.status(400).json({ 
         error: 'Missing required fields: name, email, phone, and details are required' 
       });
@@ -54,6 +57,7 @@ export default async function handler(req, res) {
     res.status(500).json({ 
       error: error.message || 'Quote submission failed' 
     });
+<<<<<<< HEAD
 =======
       country: country || 'US',
       service: service || 'General Inquiry',
@@ -72,5 +76,7 @@ export default async function handler(req, res) {
     console.error('Quote submission error:', err);
     res.status(500).json({ error: err.message || 'Quote submission failed' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0588
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
   }
 }

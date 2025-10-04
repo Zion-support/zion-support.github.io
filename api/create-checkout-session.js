@@ -1,6 +1,9 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
 const PROD_DOMAIN = process.env.PROD_DOMAIN || 'https://ziontechgroup.com';
 =======
 const PROD_DOMAIN = 'https://ziontechgroup.com';
@@ -14,6 +17,9 @@ async function handler(req, res) {
     return;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8302
 
   const { productId, userId } = req.body || {};
   if (!productId || !userId) {
