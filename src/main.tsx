@@ -33,8 +33,4 @@ root.render(
   </React.StrictMode>,
 );
 
-<<<<<<< HEAD
 reportWebVitals();
-=======
-reportWebVitals();
->>>>>>> cursor/fix-errors-and-merge-to-main-798c

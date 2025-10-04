@@ -20,8 +20,4 @@ const Header: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Header;
-=======
-export default Header;
->>>>>>> cursor/fix-errors-and-merge-to-main-798c

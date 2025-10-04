@@ -1,17 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // Import core components
 import Header from './components/Header';
 import Footer from './components/Footer';
-<<<<<<< HEAD
-// import SEOHead from './components/SEOHead';
-=======
 import SEOHead from './components/SEOHead';
-import LoadingSpinner from './components/LoadingSpinner';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
->>>>>>> cursor/fix-errors-and-merge-to-main-798c
 
 // Simple Home component
 const Home: React.FC = () => {
@@ -49,8 +45,6 @@ const Home: React.FC = () => {
 };
 
 const App: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   // const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
 
@@ -72,27 +66,23 @@ const App: React.FC = () => {
       return () => window.removeEventListener('keydown', handleKeyPress);
     }
   }, [togglePerformanceMonitor]);
-
->>>>>>> cursor/fix-errors-and-merge-to-main-798c
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-gray-50">
-          {/* <SEOHead /> */}
-          <Header />
-          
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<Home />} />
-              <Route path="/contact" element={<Home />} />
-              <Route path="/services" element={<Home />} />
-            </Routes>
-          </main>
+        <EnhancedErrorBoundary>
+          <div className="min-h-screen bg-gray-50">
+            <SEOHead />
+            <Header />
+            
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<Home />} />
+                <Route path="/contact" element={<Home />} />
+                <Route path="/services" element={<Home />} />
+              </Routes>
+            </main>
 
-<<<<<<< HEAD
-          <Footer />
-=======
             <Footer />
 
             {/* Performance Monitor Modal */}
@@ -120,16 +110,14 @@ const App: React.FC = () => {
                       ✕
                     </button>
                   </div>
-                  <PerformanceMonitor />
+                  <div className="text-center text-gray-500">
+                    Performance monitoring features coming soon...
+                  </div>
                 </motion.div>
               </motion.div>
             )}
-
-            {/* Performance Optimizer (hidden) */}
-            <PerformanceOptimizer isVisible={false} onClose={() => {}} />
-          </EnhancedErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-798c
-        </div>
+          </div>
+        </EnhancedErrorBoundary>
       </Router>
     </HelmetProvider>
   );
