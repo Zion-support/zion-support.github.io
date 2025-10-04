@@ -1,41 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions | Enterprise AI Transformation',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation.',
-  keywords: ['AI solutions', 'enterprise AI', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://zion.app',
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    siteName: 'Zion Tech Group',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#4f46e5',
-};
+// Metadata will be handled by React Helmet in the main app
 
 const HomePage = React.memo(function HomePage() {
   return (
@@ -44,16 +10,16 @@ const HomePage = React.memo(function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
+              <Link to="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
                 Zion Tech Group
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</Link>
-              <Link href="/services" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Services</Link>
-              <Link href="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Blog</Link>
-              <Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Case Studies</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</Link>
+              <Link to="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</Link>
+              <Link to="/services" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Services</Link>
+              <Link to="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Blog</Link>
+              <Link to="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Case Studies</Link>
+              <Link to="/contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</Link>
             </nav>
             <div className="md:hidden">
               <button className="text-gray-700 hover:text-indigo-600 transition-colors">
@@ -86,7 +52,7 @@ const HomePage = React.memo(function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                href="/services"
+                to="/services"
                 className="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
                 Explore Our Services
               </Link>
@@ -142,7 +108,7 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Advanced analytics and machine learning solutions that provide actionable insights for strategic decision-making.
                 </p>
-                <Link href="/services/ai-business-intelligence-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+                <Link to="/services/ai-business-intelligence-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
                   Learn More →
                 </Link>
               </div>
@@ -157,7 +123,7 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Streamline operations with intelligent automation solutions that reduce costs and increase efficiency.
                 </p>
-                <Link href="/services/ai-cloud-infrastructure-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+                <Link to="/services/ai-cloud-infrastructure-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
                   Learn More →
                 </Link>
               </div>
@@ -172,7 +138,7 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Protect your digital assets with advanced AI-powered security solutions and threat detection systems.
                 </p>
-                <Link href="/services/ai-cybersecurity-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+                <Link to="/services/ai-cybersecurity-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
                   Learn More →
                 </Link>
               </div>
@@ -192,7 +158,7 @@ const HomePage = React.memo(function HomePage() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Link href="/blog/ai-enterprise-transformation-2026" className="group">
+              <Link to="/blog/ai-enterprise-transformation-2026" className="group">
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -212,7 +178,7 @@ const HomePage = React.memo(function HomePage() {
                 </div>
               </Link>
 
-              <Link href="/blog/ai-autonomous-systems-2026" className="group">
+              <Link to="/blog/ai-autonomous-systems-2026" className="group">
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -232,7 +198,7 @@ const HomePage = React.memo(function HomePage() {
                 </div>
               </Link>
 
-              <Link href="/case-studies/manufacturing-ai-transformation-2026" className="group">
+              <Link to="/case-studies/manufacturing-ai-transformation-2026" className="group">
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -273,19 +239,19 @@ const HomePage = React.memo(function HomePage() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2">
-                <li><Link href="/services/ai-business-intelligence-2025" className="text-gray-300 hover:text-white transition-colors">AI Business Intelligence</Link></li>
-                <li><Link href="/services/ai-cloud-infrastructure-2025" className="text-gray-300 hover:text-white transition-colors">Cloud Automation</Link></li>
-                <li><Link href="/services/ai-cybersecurity-2025" className="text-gray-300 hover:text-white transition-colors">AI Cybersecurity</Link></li>
-                <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">All Services</Link></li>
+                <li><Link to="/services/ai-business-intelligence-2025" className="text-gray-300 hover:text-white transition-colors">AI Business Intelligence</Link></li>
+                <li><Link to="/services/ai-cloud-infrastructure-2025" className="text-gray-300 hover:text-white transition-colors">Cloud Automation</Link></li>
+                <li><Link to="/services/ai-cybersecurity-2025" className="text-gray-300 hover:text-white transition-colors">AI Cybersecurity</Link></li>
+                <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">All Services</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
-                <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
-                <li><Link href="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link></li>
-                <li><Link href="/guides" className="text-gray-300 hover:text-white transition-colors">Guides</Link></li>
-                <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
+                <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+                <li><Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link></li>
+                <li><Link to="/guides" className="text-gray-300 hover:text-white transition-colors">Guides</Link></li>
+                <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
               </ul>
             </div>
             <div>
@@ -294,7 +260,7 @@ const HomePage = React.memo(function HomePage() {
                 Ready to transform your business with AI? Let's discuss your project.
               </p>
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
                 Get Started
               </Link>
