@@ -88,7 +88,7 @@ export default function AIGovernanceRiskCompliancePage() {
           </p>
           <div className="mt-6 text-sm text-gray-600"><span className="font-semibold text-emerald-700">Pricing</span>: Starter $799/month, Growth $1,999/month, Enterprise custom.</div>
           <div className="mt-6 flex gap-3">
-            <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Talk to an Expert</Link>
+            <Link to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Talk to an Expert</Link>
             <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50">Email Us</a>
           </div>
         </div>

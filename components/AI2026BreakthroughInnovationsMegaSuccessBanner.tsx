@@ -79,22 +79,19 @@ const AI2026BreakthroughInnovationsMegaSuccessBanner = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-breakthrough-innovations-mega-success" 
+            <Link to="/blog/ai-2026-breakthrough-innovations-mega-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
             >
               Read Full Story
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success" 
+            <Link to="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success" 
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
             >
               View Case Study
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link 
-              href="/services/ai-2026-breakthrough-innovations-implementation" 
+            <Link to="/services/ai-2026-breakthrough-innovations-implementation" 
               className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
             >
               Start Implementation

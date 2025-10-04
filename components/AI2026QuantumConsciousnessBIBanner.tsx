@@ -55,20 +55,17 @@ const AI2026QuantumConsciousnessBIBanner = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/blog/ai-2026-quantum-consciousness-business-intelligence"
+            <Link to="/blog/ai-2026-quantum-consciousness-business-intelligence"
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Read Quantum Consciousness Guide →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-quantum-consciousness-bi-500-billion-success"
+            <Link to="/case-studies/ai-2026-quantum-consciousness-bi-500-billion-success"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $500B Success Story →
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Transform Your BI

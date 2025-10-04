@@ -183,7 +183,7 @@ export default function AIFinancialAnalysisPlatform() {
               <li>• 5 data sources</li>
               <li>• Email support</li>
             </ul>
-            <Link href="/contact" className="block mt-6 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <Link to="/contact" className="block mt-6 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started
             </Link>
           </div>
@@ -201,7 +201,7 @@ export default function AIFinancialAnalysisPlatform() {
               <li>• Fraud detection</li>
               <li>• Priority support</li>
             </ul>
-            <Link href="/contact" className="block mt-6 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <Link to="/contact" className="block mt-6 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started
             </Link>
           </div>
@@ -216,7 +216,7 @@ export default function AIFinancialAnalysisPlatform() {
               <li>• Regulatory compliance</li>
               <li>• Dedicated account manager</li>
             </ul>
-            <Link href="/contact" className="block mt-6 bg-gray-600 text-white text-center py-2 rounded-lg hover:bg-gray-700 transition-colors">
+            <Link to="/contact" className="block mt-6 bg-gray-600 text-white text-center py-2 rounded-lg hover:bg-gray-700 transition-colors">
               Contact Sales
             </Link>
           </div>
@@ -227,10 +227,10 @@ export default function AIFinancialAnalysisPlatform() {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Financial Analysis?</h2>
         <p className="text-gray-600 mb-6">Make smarter financial decisions with AI-powered insights and automated analysis.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+          <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
             Start Free Trial
           </Link>
-          <Link href="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium">
+          <Link to="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium">
             Schedule Demo
           </Link>
         </div>

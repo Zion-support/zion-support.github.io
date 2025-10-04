@@ -29,8 +29,7 @@ export function Ultimate2027ContentShowcaseBanner() {
               <div className="text-3xl mb-3">🚀</div>
               <h3 className="text-xl font-bold mb-2">Autonomous Enterprise</h3>
               <p className="text-sm opacity-90 mb-4">95% automation, $1.2B+ ROI success stories</p>
-              <Link 
-                href="/blog/ai-2027-autonomous-enterprise-revolution"
+              <Link to="/blog/ai-2027-autonomous-enterprise-revolution"
                 className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
               >
                 Read More
@@ -43,8 +42,7 @@ export function Ultimate2027ContentShowcaseBanner() {
               <div className="text-3xl mb-3">⚛️</div>
               <h3 className="text-xl font-bold mb-2">Quantum AI</h3>
               <p className="text-sm opacity-90 mb-4">1000x performance with quantum computing</p>
-              <Link 
-                href="/blog/ai-2027-quantum-breakthrough-enterprise"
+              <Link to="/blog/ai-2027-quantum-breakthrough-enterprise"
                 className="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
               >
                 Explore Quantum
@@ -57,8 +55,7 @@ export function Ultimate2027ContentShowcaseBanner() {
               <div className="text-3xl mb-3">🏆</div>
               <h3 className="text-xl font-bold mb-2">Success Stories</h3>
               <p className="text-sm opacity-90 mb-4">$1.2B ROI case studies and transformations</p>
-              <Link 
-                href="/case-studies/ai-2027-revolutionary-breakthrough-success"
+              <Link to="/case-studies/ai-2027-revolutionary-breakthrough-success"
                 className="bg-white text-pink-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
               >
                 View Success
@@ -69,14 +66,12 @@ export function Ultimate2027ContentShowcaseBanner() {
         
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/content-hub"
+            <Link to="/content-hub"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Content Hub
             </Link>
-            <Link 
-              href="/services/ai-2027-revolutionary-breakthrough-solutions"
+            <Link to="/services/ai-2027-revolutionary-breakthrough-solutions"
               className="bg-white bg-opacity-20 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-colors"
             >
               Get AI 2027 Solutions

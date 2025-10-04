@@ -67,14 +67,12 @@ export default function RevolutionaryAI2025Banner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/services/ai-2025-revolutionary-solutions"
+            <Link to="/services/ai-2025-revolutionary-solutions"
               className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-600 hover:to-orange-600 transition-colors shadow-lg hover:shadow-xl"
             >
               Explore AI 2025 Solutions
             </Link>
-            <Link
-              href="/blog/ai-revolution-2025"
+            <Link to="/blog/ai-revolution-2025"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-slate-900 transition-colors"
             >
               Read Latest Articles

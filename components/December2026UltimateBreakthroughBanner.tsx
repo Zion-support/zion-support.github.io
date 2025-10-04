@@ -52,20 +52,17 @@ export default function December2026UltimateBreakthroughBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-december-ultimate-breakthrough-announcement" 
+            <Link to="/blog/ai-2026-december-ultimate-breakthrough-announcement" 
               className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-yellow-500/50 transform hover:-translate-y-1"
             >
               Read Breakthrough Details →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-december-ultimate-breakthrough-100-billion-success" 
+            <Link to="/case-studies/ai-2026-december-ultimate-breakthrough-100-billion-success" 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               View $100B Success Story →
             </Link>
-            <Link 
-              href="/services/ai-2026-december-quantum-superintelligence-consulting" 
+            <Link to="/services/ai-2026-december-quantum-superintelligence-consulting" 
               className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Quantum AI Consulting →
@@ -74,7 +71,7 @@ export default function December2026UltimateBreakthroughBanner() {
           
           {/* Additional Content Links */}
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-december-quantum-superintelligence-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-december-quantum-superintelligence-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">QUANTUM AI</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">10,000+ IQ</span>
@@ -84,7 +81,7 @@ export default function December2026UltimateBreakthroughBanner() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Explore Quantum Revolution →</div>
             </Link>
             
-            <Link href="/case-studies/ai-2026-december-ultimate-breakthrough-100-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/case-studies/ai-2026-december-ultimate-breakthrough-100-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$100B SUCCESS</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 100</span>
@@ -94,7 +91,7 @@ export default function December2026UltimateBreakthroughBanner() {
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
             
-            <Link href="/services/ai-2026-december-quantum-superintelligence-consulting" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/services/ai-2026-december-quantum-superintelligence-consulting" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold">QUANTUM CONSULTING</span>
                 <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">10,000% ROI</span>

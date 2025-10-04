@@ -111,14 +111,12 @@ const AIQuantumComputingBreakthroughBanner = () => {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/quantum-ai-computing"
+            <Link to="/services/quantum-ai-computing"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-5 rounded-lg font-bold text-xl hover:from-cyan-600 hover:to-blue-700 transition-all shadow-2xl hover:shadow-cyan-500/25"
             >
               Explore Quantum AI
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-cyan-400 text-cyan-400 px-10 py-5 rounded-lg font-bold text-xl hover:bg-cyan-400 hover:text-black transition-all"
             >
               Schedule Demo

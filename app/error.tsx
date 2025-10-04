@@ -54,8 +54,7 @@ export default function Error({
           >
             🔄 Try Again
           </button>
-          <Link
-            href="/"
+          <Link to="/"
             className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors inline-block"
           >
             ← Back to Home

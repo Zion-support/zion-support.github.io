@@ -73,8 +73,7 @@ export default function FederatedLearningPrivacyBanner() {
                 <span className="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm font-semibold">1000x Speed</span>
                 <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">GDPR Compliant</span>
               </div>
-              <Link 
-                href="/blog/ai-2026-federated-learning-enterprise-privacy"
+              <Link to="/blog/ai-2026-federated-learning-enterprise-privacy"
                 className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Read Full Guide
@@ -97,8 +96,7 @@ export default function FederatedLearningPrivacyBanner() {
                 <span className="bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full text-sm font-semibold">Banking Industry</span>
                 <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">95% Accuracy</span>
               </div>
-              <Link 
-                href="/case-studies/federated-learning-banking-consortium-success"
+              <Link to="/case-studies/federated-learning-banking-consortium-success"
                 className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 View Case Study
@@ -134,14 +132,12 @@ export default function FederatedLearningPrivacyBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
-            <Link 
-              href="/services/federated-learning-enterprise-services"
+            <Link to="/services/federated-learning-enterprise-services"
               className="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🔒 Implement Privacy-Preserving AI
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-green-400 hover:bg-green-400/20 text-green-200 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300"
             >
               Schedule Privacy Consultation

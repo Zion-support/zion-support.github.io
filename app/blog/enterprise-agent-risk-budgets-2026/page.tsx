@@ -26,7 +26,7 @@ export default function Page() {
 				Adopt a scorecard that correlates agent outcomes to business metrics, ensuring speed without surprises.
 			</p>
 			<div className="mt-10">
-				<Link href="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
+				<Link to="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
 			</div>
 		</div>
 	);

@@ -49,8 +49,7 @@ export default function New2025ContentShowcase() {
               </div>
             </div>
 
-            <Link 
-              href="/blog/ai-2025-next-generation-autonomous-systems-revolution"
+            <Link to="/blog/ai-2025-next-generation-autonomous-systems-revolution"
               className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
             >
               Read Full Article
@@ -92,8 +91,7 @@ export default function New2025ContentShowcase() {
               </div>
             </div>
 
-            <Link 
-              href="/blog/ai-2025-quantum-enhanced-business-intelligence-breakthrough"
+            <Link to="/blog/ai-2025-quantum-enhanced-business-intelligence-breakthrough"
               className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
             >
               Read Full Article
@@ -135,8 +133,7 @@ export default function New2025ContentShowcase() {
               </div>
             </div>
 
-            <Link 
-              href="/blog/ai-2025-autonomous-cloud-operations-revolution"
+            <Link to="/blog/ai-2025-autonomous-cloud-operations-revolution"
               className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
             >
               Read Full Article
@@ -167,8 +164,7 @@ export default function New2025ContentShowcase() {
               </div>
             </div>
 
-            <Link 
-              href="/case-studies/ai-2025-autonomous-systems-50-billion-success"
+            <Link to="/case-studies/ai-2025-autonomous-systems-50-billion-success"
               className="inline-flex items-center gap-2 bg-white text-green-600 hover:bg-gray-100 py-3 px-8 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
             >
               Read Success Story
@@ -187,14 +183,12 @@ export default function New2025ContentShowcase() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/content-hub"
+            <Link to="/content-hub"
               className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white py-3 px-8 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
             >
               View All Content
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-white border-2 border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white py-3 px-8 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
             >
               Schedule Consultation

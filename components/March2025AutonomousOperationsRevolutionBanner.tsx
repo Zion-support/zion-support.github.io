@@ -60,20 +60,17 @@ const March2025AutonomousOperationsRevolutionBanner: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Link
-              href="/content/blog/ai-2025-march-autonomous-enterprise-operations-revolution"
+            <Link to="/content/blog/ai-2025-march-autonomous-enterprise-operations-revolution"
               className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               📖 Read Full Guide
             </Link>
-            <Link
-              href="/services/autonomous-operations-consultation"
+            <Link to="/services/autonomous-operations-consultation"
               className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               🚀 Start Implementation
             </Link>
-            <Link
-              href="/case-studies/autonomous-operations-success"
+            <Link to="/case-studies/autonomous-operations-success"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               💰 View Success Stories

@@ -12,7 +12,7 @@ export default function EdgeNativeAgents2027Banner() {
 						<h2 className="text-2xl md:text-3xl font-bold">AI 2027: Edge‑Native Agents</h2>
 						<p className="text-white/80">Sub‑50ms latency with guardrails, observability, and cost control.</p>
 					</div>
-					<Link href="/blog/ai-2027-edge-native-agents" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
+					<Link to="/blog/ai-2027-edge-native-agents" className="inline-flex items-center gap-2 bg-white text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">
 						Read now <span>→</span>
 					</Link>
 				</div>

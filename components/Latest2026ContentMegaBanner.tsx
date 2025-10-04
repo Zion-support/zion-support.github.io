@@ -20,8 +20,7 @@ export default function Latest2026ContentMegaBanner() {
           <p className="text-sm opacity-90 mb-4">
             Revolutionary brain-computer interfaces transforming human-AI interaction
           </p>
-          <Link 
-            href="/blog/ai-neural-interfaces-2026"
+          <Link to="/blog/ai-neural-interfaces-2026"
             className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Read Article
@@ -34,8 +33,7 @@ export default function Latest2026ContentMegaBanner() {
           <p className="text-sm opacity-90 mb-4">
             AI-powered space exploration and autonomous satellite systems
           </p>
-          <Link 
-            href="/blog/ai-space-tech-2026"
+          <Link to="/blog/ai-space-tech-2026"
             className="inline-block bg-white text-teal-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Explore Space AI
@@ -48,8 +46,7 @@ export default function Latest2026ContentMegaBanner() {
           <p className="text-sm opacity-90 mb-4">
             Comprehensive AI transformation case study with massive returns
           </p>
-          <Link 
-            href="/case-studies/ai-mega-transformation-success-2026"
+          <Link to="/case-studies/ai-mega-transformation-success-2026"
             className="inline-block bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             View Case Study
@@ -58,8 +55,7 @@ export default function Latest2026ContentMegaBanner() {
       </div>
       
       <div className="text-center">
-        <Link 
-          href="/content-hub"
+        <Link to="/content-hub"
           className="inline-block bg-white text-gray-800 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
         >
           Explore All 2026 Content →

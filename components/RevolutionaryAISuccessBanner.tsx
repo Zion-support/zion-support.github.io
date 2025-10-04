@@ -36,8 +36,7 @@ export default function RevolutionaryAISuccessBanner() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/case-studies/ai-enterprise-transformation-mega-success-2026"
+              <Link to="/case-studies/ai-enterprise-transformation-mega-success-2026"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
               >
                 📖 Read Full Case Study
@@ -62,8 +61,7 @@ export default function RevolutionaryAISuccessBanner() {
               <p className="text-green-100 mb-4">
                 Discover the revolutionary AI breakthroughs that are transforming enterprise operations.
               </p>
-              <Link 
-                href="/blog/ai-2026-next-generation-ai-revolution" 
+              <Link to="/blog/ai-2026-next-generation-ai-revolution" 
                 className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
               >
                 Read Article →
@@ -80,8 +78,7 @@ export default function RevolutionaryAISuccessBanner() {
               <p className="text-green-100 mb-4">
                 1000x faster machine learning with quantum-enhanced AI capabilities.
               </p>
-              <Link 
-                href="/blog/ai-quantum-optimization-2026" 
+              <Link to="/blog/ai-quantum-optimization-2026" 
                 className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
               >
                 Learn More →
@@ -98,8 +95,7 @@ export default function RevolutionaryAISuccessBanner() {
               <p className="text-green-100 mb-4">
                 Revolutionary human-AI collaboration through neural interface technology.
               </p>
-              <Link 
-                href="/blog/ai-neural-interfaces-2026" 
+              <Link to="/blog/ai-neural-interfaces-2026" 
                 className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
               >
                 Explore →

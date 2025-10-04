@@ -81,20 +81,17 @@ const January2026EdgeComputingRevolutionBanner: React.FC = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <Link 
-            href="/blog/ai-2026-edge-computing-revolution" 
+          <Link to="/blog/ai-2026-edge-computing-revolution" 
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
           >
             Read Edge Computing Revolution →
           </Link>
-          <Link 
-            href="/case-studies/ai-2026-edge-computing-manufacturing-success" 
+          <Link to="/case-studies/ai-2026-edge-computing-manufacturing-success" 
             className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
           >
             View $50M Success Story →
           </Link>
-          <Link 
-            href="/services/ai-edge-computing-solutions" 
+          <Link to="/services/ai-edge-computing-solutions" 
             className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
           >
             Get Edge AI Solutions

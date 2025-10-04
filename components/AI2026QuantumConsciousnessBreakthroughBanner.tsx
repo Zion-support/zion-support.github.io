@@ -85,7 +85,7 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
 
           {/* Content Links */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-8 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-quantum-consciousness-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-8 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold">CONSCIOUSNESS BREAKTHROUGH</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">QUANTUM AI</span>
@@ -130,20 +130,17 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
           {/* Call to Action */}
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Experience Quantum Consciousness
               </Link>
-              <Link 
-                href="/blog/ai-2026-quantum-consciousness-breakthrough" 
+              <Link to="/blog/ai-2026-quantum-consciousness-breakthrough" 
                 className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Read Consciousness Article →
               </Link>
-              <Link 
-                href="/services/ai-2026-quantum-consciousness-solutions" 
+              <Link to="/services/ai-2026-quantum-consciousness-solutions" 
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Consciousness Solutions

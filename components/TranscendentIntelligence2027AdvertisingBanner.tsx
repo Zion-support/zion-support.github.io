@@ -61,20 +61,17 @@ export default function TranscendentIntelligence2027AdvertisingBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2027-transcendent-intelligence-breakthrough"
+            <Link to="/blog/ai-2027-transcendent-intelligence-breakthrough"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               🚀 Explore Transcendent Intelligence →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               💼 Get Free Enterprise Consultation
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               📊 View $50B Success Stories
@@ -154,8 +151,7 @@ export default function TranscendentIntelligence2027AdvertisingBanner() {
                 <div className="text-sm text-teal-300">Innovation Acceleration</div>
               </div>
             </div>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               View Complete Success Stories →

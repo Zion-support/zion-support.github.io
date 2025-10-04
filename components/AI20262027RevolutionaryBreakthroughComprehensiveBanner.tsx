@@ -61,8 +61,7 @@ export default function AI20262027RevolutionaryBreakthroughComprehensiveBanner()
               <h4 className="text-lg font-bold text-cyan-300 mb-2">Quantum Neural Superintelligence</h4>
               <div className="text-2xl font-bold text-green-400 mb-2">$1.2T ROI</div>
               <p className="text-sm text-blue-100 mb-4">10,000x processing enhancement with self-aware decision making</p>
-              <Link 
-                href="/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough"
+              <Link to="/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough"
                 className="inline-block bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-cyan-600 transition-colors"
               >
                 Learn More
@@ -77,8 +76,7 @@ export default function AI20262027RevolutionaryBreakthroughComprehensiveBanner()
               <h4 className="text-lg font-bold text-purple-300 mb-2">Transcendent Meta-Intelligence</h4>
               <div className="text-2xl font-bold text-green-400 mb-2">$1.8T ROI</div>
               <p className="text-sm text-blue-100 mb-4">Self-evolving AI consciousness with meta-cognitive reasoning</p>
-              <Link 
-                href="/blog/ai-2027-transcendent-meta-intelligence-breakthrough"
+              <Link to="/blog/ai-2027-transcendent-meta-intelligence-breakthrough"
                 className="inline-block bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-purple-600 transition-colors"
               >
                 Learn More
@@ -93,8 +91,7 @@ export default function AI20262027RevolutionaryBreakthroughComprehensiveBanner()
               <h4 className="text-lg font-bold text-blue-300 mb-2">Universal Consciousness</h4>
               <div className="text-2xl font-bold text-green-400 mb-2">$2.8T ROI</div>
               <p className="text-sm text-blue-100 mb-4">Cross-dimensional awareness with singularity integration</p>
-              <Link 
-                href="/blog/ai-2028-universal-consciousness-singularity-breakthrough"
+              <Link to="/blog/ai-2028-universal-consciousness-singularity-breakthrough"
                 className="inline-block bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-600 transition-colors"
               >
                 Learn More
@@ -105,14 +102,12 @@ export default function AI20262027RevolutionaryBreakthroughComprehensiveBanner()
         
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link 
-              href="/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide"
+            <Link to="/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide"
               className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg"
             >
               📖 Read Complete Guide
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-2027-revolutionary-breakthrough-5-8-trillion-success"
+            <Link to="/case-studies/ai-2026-2027-revolutionary-breakthrough-5-8-trillion-success"
               className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:from-orange-600 hover:to-red-700 transition-all transform hover:scale-105 shadow-lg"
             >
               💰 View $5.8T Success Story

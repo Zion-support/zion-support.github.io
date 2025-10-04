@@ -81,20 +81,17 @@ const January2026AutonomousProcessesRevolutionBanner: React.FC = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <Link 
-            href="/blog/ai-2026-autonomous-business-processes" 
+          <Link to="/blog/ai-2026-autonomous-business-processes" 
             className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
           >
             Read Autonomous Processes Guide →
           </Link>
-          <Link 
-            href="/case-studies/ai-2026-autonomous-processes-financial-success" 
+          <Link to="/case-studies/ai-2026-autonomous-processes-financial-success" 
             className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
           >
             View $75M Success Story →
           </Link>
-          <Link 
-            href="/services/autonomous-business-processes" 
+          <Link to="/services/autonomous-business-processes" 
             className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
           >
             Get Autonomous Solutions

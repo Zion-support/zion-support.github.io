@@ -109,14 +109,12 @@ const MegaTransformationSuccessBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/case-studies/ai-2026-mega-transformation-success-story"
+              <Link to="/case-studies/ai-2026-mega-transformation-success-story"
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center"
               >
                 Read Full Case Study →
               </Link>
-              <Link
-                href="/services/ai-2026-revolutionary-solutions"
+              <Link to="/services/ai-2026-revolutionary-solutions"
                 className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 hover:text-white transition-all duration-300 text-center"
               >
                 Start Your Transformation →
@@ -227,8 +225,7 @@ const MegaTransformationSuccessBanner: React.FC = () => {
             >
               Call +1 302 464 0950
             </a>
-            <Link
-              href="/services/ai-2026-revolutionary-solutions"
+            <Link to="/services/ai-2026-revolutionary-solutions"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
             >
               Explore Solutions

@@ -39,8 +39,7 @@ export default function January2026SyntheticDataRevolutionBanner() {
               Maintain perfect privacy compliance while having unlimited access 
               to high-quality training data.
             </p>
-            <Link 
-              href="/blog/ai-2026-synthetic-data-revolution"
+            <Link to="/blog/ai-2026-synthetic-data-revolution"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
             >
               Learn More <span>→</span>
@@ -62,8 +61,7 @@ export default function January2026SyntheticDataRevolutionBanner() {
               synthetic data while maintaining perfect privacy compliance and 
               accelerating drug discovery by 10x.
             </p>
-            <Link 
-              href="/case-studies/ai-2026-synthetic-data-transformation-success"
+            <Link to="/case-studies/ai-2026-synthetic-data-transformation-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all"
             >
               View Success Story <span>→</span>

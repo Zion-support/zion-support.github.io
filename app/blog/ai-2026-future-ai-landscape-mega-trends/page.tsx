@@ -259,15 +259,13 @@ export default function AI2026FutureLandscapeMegaTrends() {
                 these breakthrough technologies and achieve unprecedented results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
+                <Link to="/contact"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   Get Started Today
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link 
-                  href="/services"
+                <Link to="/services"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors flex items-center justify-center gap-2"
                 >
                   Explore Our Services
@@ -283,7 +281,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Related Articles</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="group">
+            <Link to="/blog/ai-2026-quantum-consciousness-breakthrough" className="group">
               <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   Quantum Consciousness Breakthrough
@@ -293,7 +291,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/ai-2026-autonomous-enterprise-revolution" className="group">
+            <Link to="/blog/ai-2026-autonomous-enterprise-revolution" className="group">
               <div className="bg-gradient-to-r from-yellow-900/50 to-orange-900/50 border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-300 transition-colors">
                   Autonomous Enterprise Revolution
@@ -303,7 +301,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/ai-2026-neural-superintelligence" className="group">
+            <Link to="/blog/ai-2026-neural-superintelligence" className="group">
               <div className="bg-gradient-to-r from-green-900/50 to-teal-900/50 border border-green-500/30 rounded-xl p-6 hover:border-green-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
                   Neural Superintelligence Platform

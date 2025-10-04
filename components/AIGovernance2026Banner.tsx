@@ -27,8 +27,7 @@ const AIGovernance2026Banner: React.FC = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Link 
-                  href="/blog/ai-governance-2026-enterprise-safety"
+                <Link to="/blog/ai-governance-2026-enterprise-safety"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   Read Governance Guide
@@ -36,8 +35,7 @@ const AIGovernance2026Banner: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
-                <Link 
-                  href="/services"
+                <Link to="/services"
                   className="inline-flex items-center px-6 py-3 border-2 border-indigo-400 text-indigo-300 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300"
                 >
                   Get Governance Assessment

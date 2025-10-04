@@ -99,8 +99,7 @@ const SelfEvolvingAIBanner = () => {
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           {/* Blog Article */}
-          <Link 
-            href="/blog/ai-2025-oct-01-self-evolving-ai-architectures-breakthrough"
+          <Link to="/blog/ai-2025-oct-01-self-evolving-ai-architectures-breakthrough"
             className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border-2 border-white/30"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -137,8 +136,7 @@ const SelfEvolvingAIBanner = () => {
                 <span>End-to-end implementation support</span>
               </li>
             </ul>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-bold hover:bg-gray-900 transition-all"
             >
               <span>Schedule Consultation</span>

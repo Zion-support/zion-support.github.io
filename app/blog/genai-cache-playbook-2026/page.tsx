@@ -20,7 +20,7 @@ export default function Page() {
         <li>Canary buckets to validate cache safety and drift</li>
       </ul>
       <p>
-        Pair this with <Link href="/blog/genai-quality-tiers-v2-2026">GenAI Quality Tiers v2</Link> for predictable costs.
+        Pair this with <Link to="/blog/genai-quality-tiers-v2-2026">GenAI Quality Tiers v2</Link> for predictable costs.
       </p>
     </main>
   );

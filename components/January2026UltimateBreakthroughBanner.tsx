@@ -86,15 +86,13 @@ export default function January2026UltimateBreakthroughBanner() {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            href="/blog/ai-2026-january-ultimate-autonomous-enterprise-breakthrough-revolution"
+          <Link to="/blog/ai-2026-january-ultimate-autonomous-enterprise-breakthrough-revolution"
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
           >
             <span>Read the Breakthrough</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <Link
-            href="/case-studies/ai-2026-january-goldman-sachs-847-billion-autonomous-trading-revolution"
+          <Link to="/case-studies/ai-2026-january-goldman-sachs-847-billion-autonomous-trading-revolution"
             className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-300 border border-white/30 flex items-center gap-2"
           >
             <span>View $847B Case Study</span>

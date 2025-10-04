@@ -24,14 +24,12 @@ export function AI2027QuantumBreakthroughBanner() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link 
-              href="/blog/ai-2027-quantum-breakthrough-enterprise"
+            <Link to="/blog/ai-2027-quantum-breakthrough-enterprise"
               className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center whitespace-nowrap"
             >
               Explore Quantum AI
             </Link>
-            <Link 
-              href="/services/ai-2027-quantum-computing-solutions"
+            <Link to="/services/ai-2027-quantum-computing-solutions"
               className="bg-white bg-opacity-20 border-2 border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-30 transition-colors text-center whitespace-nowrap"
             >
               Get Quantum Solutions

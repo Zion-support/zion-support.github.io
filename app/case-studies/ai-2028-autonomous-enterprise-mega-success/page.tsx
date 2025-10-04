@@ -223,8 +223,7 @@ export default function AI2028AutonomousEnterpriseMegaSuccess() {
           <p className="text-lg mb-4">
             Discover how autonomous enterprise technology can transform your operations and create unprecedented value.
           </p>
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Start Your Autonomous Transformation
@@ -234,15 +233,13 @@ export default function AI2028AutonomousEnterpriseMegaSuccess() {
         <div className="border-t pt-6 mt-8">
           <h4 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h4>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link 
-              href="/case-studies/ai-2028-neuromorphic-superintelligence-success" 
+            <Link to="/case-studies/ai-2028-neuromorphic-superintelligence-success" 
               className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >
               <h5 className="font-semibold text-blue-600 mb-2">Neuromorphic $75B Success</h5>
               <p className="text-sm text-gray-600">Brain-inspired computing breakthrough</p>
             </Link>
-            <Link 
-              href="/blog/ai-2028-next-generation-autonomous-enterprise" 
+            <Link to="/blog/ai-2028-next-generation-autonomous-enterprise" 
               className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >
               <h5 className="font-semibold text-blue-600 mb-2">Autonomous Enterprise Technology</h5>

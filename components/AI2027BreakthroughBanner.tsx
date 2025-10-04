@@ -31,7 +31,7 @@ export default function AI2027BreakthroughBanner() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           
           {/* Quantum AI Intelligence */}
-          <Link href="/blog/ai-2027-next-generation-breakthroughs" className="group">
+          <Link to="/blog/ai-2027-next-generation-breakthroughs" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-violet-600 to-purple-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -73,7 +73,7 @@ export default function AI2027BreakthroughBanner() {
           </Link>
 
           {/* Autonomous Enterprise */}
-          <Link href="/blog/ai-2027-next-generation-breakthroughs" className="group">
+          <Link to="/blog/ai-2027-next-generation-breakthroughs" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -115,7 +115,7 @@ export default function AI2027BreakthroughBanner() {
           </Link>
 
           {/* Neural Network Evolution */}
-          <Link href="/blog/ai-2027-next-generation-breakthroughs" className="group">
+          <Link to="/blog/ai-2027-next-generation-breakthroughs" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-fuchsia-300">
               <div className="bg-gradient-to-r from-fuchsia-600 to-pink-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">

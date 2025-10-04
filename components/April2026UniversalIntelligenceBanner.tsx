@@ -68,8 +68,7 @@ export default function April2026UniversalIntelligenceBanner() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-400">45 min read</div>
-                <Link
-                  href="/blog/ai-2026-april-ultimate-breakthrough-revolution"
+                <Link to="/blog/ai-2026-april-ultimate-breakthrough-revolution"
                   className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
                 >
                   Read Universal AI Guide →
@@ -93,8 +92,7 @@ export default function April2026UniversalIntelligenceBanner() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-400">35 min read</div>
-                <Link
-                  href="/case-studies/ai-2026-april-ultimate-breakthrough-50-billion-success"
+                <Link to="/case-studies/ai-2026-april-ultimate-breakthrough-50-billion-success"
                   className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
                 >
                   View Success Story →
@@ -111,14 +109,12 @@ export default function April2026UniversalIntelligenceBanner() {
                 Don't let your competitors achieve Universal Intelligence first. Experience the future of AI with 1,000,000x performance improvements and complete autonomous operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Experience Universal AI
                 </Link>
-                <Link
-                  href="/services/universal-intelligence-consulting"
+                <Link to="/services/universal-intelligence-consulting"
                   className="bg-gradient-to-r from-pink-500 to-red-600 hover:from-pink-400 hover:to-red-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
                 >
                   Universal Intelligence Services

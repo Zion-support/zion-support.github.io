@@ -44,14 +44,12 @@ const March2026AutonomousSingularityBanner = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-march-autonomous-enterprise-singularity"
+            <Link to="/blog/ai-2026-march-autonomous-enterprise-singularity"
               className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-green-300 hover:to-emerald-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Experience Singularity →
             </Link>
-            <Link 
-              href="/enterprise"
+            <Link to="/enterprise"
               className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-300 transform hover:scale-105"
             >
               Achieve Singularity

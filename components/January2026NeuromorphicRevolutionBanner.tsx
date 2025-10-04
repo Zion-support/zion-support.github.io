@@ -92,20 +92,17 @@ export default function January2026NeuromorphicRevolutionBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog/ai-2026-neuromorphic-computing-revolution"
+            <Link to="/blog/ai-2026-neuromorphic-computing-revolution"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Read Full Article →
             </Link>
-            <Link
-              href="/case-studies/ai-2026-neuromorphic-computing-mega-success"
+            <Link to="/case-studies/ai-2026-neuromorphic-computing-mega-success"
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               View Success Story →
             </Link>
-            <Link
-              href="/services/neuromorphic-computing-consulting"
+            <Link to="/services/neuromorphic-computing-consulting"
               className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Get Started →

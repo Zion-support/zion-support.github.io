@@ -54,8 +54,7 @@ export default function NewContent20252026MegaBanner() {
               <span className="bg-green-500 text-white px-2 py-1 rounded text-xs">95% Automation</span>
               <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs">Quantum AI</span>
             </div>
-            <Link 
-              href="/blog/ai-2025-2026-mega-trends-breakthrough"
+            <Link to="/blog/ai-2025-2026-mega-trends-breakthrough"
               className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-400 hover:to-orange-400 transition-all transform hover:scale-105"
             >
               Read Full Article →
@@ -84,8 +83,7 @@ export default function NewContent20252026MegaBanner() {
               <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs">450% Revenue</span>
               <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs">Fortune 500</span>
             </div>
-            <Link 
-              href="/case-studies/ai-2025-2026-mega-transformation-success"
+            <Link to="/case-studies/ai-2025-2026-mega-transformation-success"
               className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-bold hover:from-green-400 hover:to-emerald-400 transition-all transform hover:scale-105"
             >
               View Case Study →
@@ -100,7 +98,7 @@ export default function NewContent20252026MegaBanner() {
             <p className="text-gray-200 text-sm mb-3">
               Revolutionary quantum-enhanced AI delivering 1000x performance improvements
             </p>
-            <Link href="/blog/ai-2026-quantum-enhanced-analytics" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
+            <Link to="/blog/ai-2026-quantum-enhanced-analytics" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
               Learn More →
             </Link>
           </div>
@@ -110,7 +108,7 @@ export default function NewContent20252026MegaBanner() {
             <p className="text-gray-200 text-sm mb-3">
               Achieve 95% operational automation with self-healing infrastructure
             </p>
-            <Link href="/blog/ai-2026-autonomous-enterprise-operations" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
+            <Link to="/blog/ai-2026-autonomous-enterprise-operations" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
               Discover More →
             </Link>
           </div>
@@ -120,7 +118,7 @@ export default function NewContent20252026MegaBanner() {
             <p className="text-gray-200 text-sm mb-3">
               Self-improving AI systems with autonomous learning capabilities
             </p>
-            <Link href="/blog/ai-2026-meta-cognitive-breakthrough" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
+            <Link to="/blog/ai-2026-meta-cognitive-breakthrough" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
               Explore More →
             </Link>
           </div>
@@ -135,14 +133,12 @@ export default function NewContent20252026MegaBanner() {
             Don't miss the AI revolution. Implement these breakthrough technologies and achieve unprecedented results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors transform hover:scale-105"
             >
               Start Your Transformation
             </Link>
-            <Link 
-              href="/services"
+            <Link to="/services"
               className="bg-black text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-800 transition-colors transform hover:scale-105"
             >
               View Our Services

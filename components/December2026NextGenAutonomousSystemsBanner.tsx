@@ -100,20 +100,17 @@ const December2026NextGenAutonomousSystemsBanner: React.FC = () => {
           {/* Call to Action */}
           <div className="text-center mb-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                href="/blog/ai-2026-december-next-generation-autonomous-systems"
+              <Link to="/blog/ai-2026-december-next-generation-autonomous-systems"
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Read Technical Breakthrough →
               </Link>
-              <Link
-                href="/case-studies/ai-2026-december-autonomous-systems-2-7-billion-success"
+              <Link to="/case-studies/ai-2026-december-autonomous-systems-2-7-billion-success"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 View $2.7B Success Story →
               </Link>
-              <Link
-                href="/services/autonomous-systems-implementation"
+              <Link to="/services/autonomous-systems-implementation"
                 className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Implementation Guide
@@ -185,8 +182,7 @@ const December2026NextGenAutonomousSystemsBanner: React.FC = () => {
             <p className="text-lg text-gray-300 mb-6">
               Ready to achieve 99.99% operational autonomy and $2.7B in value creation?
             </p>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600 hover:from-indigo-400 hover:via-purple-400 hover:to-pink-500 text-white font-bold py-4 px-12 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 text-lg"
             >
               Start Your Autonomous Transformation →

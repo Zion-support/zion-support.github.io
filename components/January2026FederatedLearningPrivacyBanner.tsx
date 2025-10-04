@@ -119,20 +119,17 @@ export default function January2026FederatedLearningPrivacyBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog/ai-2026-federated-learning-privacy-breakthrough"
+            <Link to="/blog/ai-2026-federated-learning-privacy-breakthrough"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Read Full Article →
             </Link>
-            <Link
-              href="/services/federated-learning-consulting"
+            <Link to="/services/federated-learning-consulting"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Get Started →
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Contact Us →

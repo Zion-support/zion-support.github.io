@@ -281,13 +281,13 @@ export default function AI2026JanuaryBreakthroughInnovations() {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More AI Innovations</h3>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/blog/ai-2026-february-advanced-autonomous-systems" className="text-blue-400 hover:text-blue-300 transition-colors">
+              <Link to="/blog/ai-2026-february-advanced-autonomous-systems" className="text-blue-400 hover:text-blue-300 transition-colors">
                 February Autonomous Systems →
               </Link>
-              <Link href="/blog/ai-2026-march-ultimate-breakthrough-revolution" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <Link to="/blog/ai-2026-march-ultimate-breakthrough-revolution" className="text-purple-400 hover:text-purple-300 transition-colors">
                 March Ultimate Breakthrough →
               </Link>
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link to="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 All AI Content →
               </Link>
             </div>

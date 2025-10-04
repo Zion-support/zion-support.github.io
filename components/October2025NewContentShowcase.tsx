@@ -83,8 +83,7 @@ const October2025NewContentShowcase = () => {
               <span className="px-3 py-1 bg-purple-600/50 text-white text-xs rounded-full">Kubernetes</span>
             </div>
             
-            <Link 
-              href="/blog/ai-2025-oct-autonomous-system-orchestration-revolution"
+            <Link to="/blog/ai-2025-oct-autonomous-system-orchestration-revolution"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Read Full Article →
@@ -135,8 +134,7 @@ const October2025NewContentShowcase = () => {
               <span className="px-3 py-1 bg-pink-600/50 text-white text-xs rounded-full">Future of Work</span>
             </div>
             
-            <Link 
-              href="/blog/ai-2025-oct-cognitive-ai-workplace-transformation"
+            <Link to="/blog/ai-2025-oct-cognitive-ai-workplace-transformation"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Read Full Article →
@@ -194,8 +192,7 @@ const October2025NewContentShowcase = () => {
               </div>
             </div>
             
-            <Link 
-              href="/case-studies/fortune-100-autonomous-orchestration-42m-success"
+            <Link to="/case-studies/fortune-100-autonomous-orchestration-42m-success"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               View Case Study →
@@ -253,8 +250,7 @@ const October2025NewContentShowcase = () => {
               </div>
             </div>
             
-            <Link 
-              href="/case-studies/fortune-500-cognitive-ai-workplace-87m-success"
+            <Link to="/case-studies/fortune-500-cognitive-ai-workplace-87m-success"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               View Case Study →
@@ -272,14 +268,12 @@ const October2025NewContentShowcase = () => {
             with AI-powered transformation. Contact us for a complimentary assessment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="px-10 py-5 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
             >
               Schedule Free Assessment
             </Link>
-            <Link 
-              href="/blog"
+            <Link to="/blog"
               className="px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-lg rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
             >
               Explore All Content

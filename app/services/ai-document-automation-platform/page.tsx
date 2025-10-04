@@ -51,15 +51,13 @@ export default function AIDocumentAutomationPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                href="#demo" 
+              <Link to="#demo" 
                 className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-green-500 hover:text-green-600 transition-all duration-300"
               >
                 Watch Demo
@@ -310,8 +308,7 @@ export default function AIDocumentAutomationPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Email support</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Basic analytics</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition-colors text-center block"
               >
                 Get Started
@@ -337,8 +334,7 @@ export default function AIDocumentAutomationPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />API access</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Advanced analytics</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition-colors text-center block"
               >
                 Get Started
@@ -362,8 +358,7 @@ export default function AIDocumentAutomationPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />On-premise deployment</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />SLA guarantees</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors text-center block"
               >
                 Contact Sales
@@ -383,15 +378,13 @@ export default function AIDocumentAutomationPage() {
             Join thousands of businesses using our AI document automation platform to streamline workflows
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
             >
               Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              href="#demo" 
+            <Link to="#demo" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300"
             >
               Schedule Demo

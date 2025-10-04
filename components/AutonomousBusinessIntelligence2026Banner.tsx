@@ -40,22 +40,19 @@ export default function AutonomousBusinessIntelligence2026Banner() {
           </div>
           
           <div className="flex flex-col gap-4">
-            <Link 
-              href="/blog/ai-2026-autonomous-business-intelligence"
+            <Link to="/blog/ai-2026-autonomous-business-intelligence"
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center whitespace-nowrap"
             >
               Read Full Guide →
             </Link>
             
-            <Link 
-              href="/services/ai-autonomous-cloud-ops"
+            <Link to="/services/ai-autonomous-cloud-ops"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors text-center whitespace-nowrap"
             >
               Get Autonomous AI Solutions
             </Link>
             
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-green-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-green-300 transition-colors text-center whitespace-nowrap"
             >
               Schedule Consultation

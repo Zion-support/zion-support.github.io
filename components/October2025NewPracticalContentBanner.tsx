@@ -15,8 +15,7 @@ export default function October2025NewPracticalContentBanner() {
         </div>
         
         <div className="grid md:grid-cols-3 gap-4">
-          <Link 
-            href="/blog/ai-2025-oct-practical-agentic-ai-systems-production"
+          <Link to="/blog/ai-2025-oct-practical-agentic-ai-systems-production"
             className="bg-white/10 backdrop-blur-sm hover:bg-white/20 p-4 rounded-xl transition-all transform hover:scale-105 border border-white/20"
           >
             <div className="flex items-start gap-3">
@@ -35,8 +34,7 @@ export default function October2025NewPracticalContentBanner() {
             </div>
           </Link>
 
-          <Link 
-            href="/blog/ai-2025-oct-ai-security-enterprise-best-practices"
+          <Link to="/blog/ai-2025-oct-ai-security-enterprise-best-practices"
             className="bg-white/10 backdrop-blur-sm hover:bg-white/20 p-4 rounded-xl transition-all transform hover:scale-105 border border-white/20"
           >
             <div className="flex items-start gap-3">
@@ -55,8 +53,7 @@ export default function October2025NewPracticalContentBanner() {
             </div>
           </Link>
 
-          <Link 
-            href="/case-studies/ai-2025-oct-global-fintech-agentic-ai-customer-service-success"
+          <Link to="/case-studies/ai-2025-oct-global-fintech-agentic-ai-customer-service-success"
             className="bg-white/10 backdrop-blur-sm hover:bg-white/20 p-4 rounded-xl transition-all transform hover:scale-105 border border-white/20"
           >
             <div className="flex items-start gap-3">
@@ -77,8 +74,7 @@ export default function October2025NewPracticalContentBanner() {
         </div>
 
         <div className="mt-4 text-center">
-          <Link
-            href="/services/production-agentic-ai-implementation-services"
+          <Link to="/services/production-agentic-ai-implementation-services"
             className="inline-flex items-center bg-white text-indigo-700 hover:bg-yellow-400 hover:text-indigo-900 px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Get Implementation Services
@@ -160,8 +156,7 @@ export const October2025PracticalContentShowcase = () => {
               </div>
             </div>
 
-            <Link
-              href="/blog/ai-2025-oct-practical-agentic-ai-systems-production"
+            <Link to="/blog/ai-2025-oct-practical-agentic-ai-systems-production"
               className="block w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold py-3 px-6 rounded-xl text-center transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Read Complete Guide →
@@ -220,8 +215,7 @@ export const October2025PracticalContentShowcase = () => {
               </div>
             </div>
 
-            <Link
-              href="/blog/ai-2025-oct-ai-security-enterprise-best-practices"
+            <Link to="/blog/ai-2025-oct-ai-security-enterprise-best-practices"
               className="block w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-400 hover:to-orange-400 text-white font-bold py-3 px-6 rounded-xl text-center transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Read Security Guide →
@@ -259,14 +253,12 @@ export const October2025PracticalContentShowcase = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <Link
-                href="/case-studies/ai-2025-oct-global-fintech-agentic-ai-customer-service-success"
+              <Link to="/case-studies/ai-2025-oct-global-fintech-agentic-ai-customer-service-success"
                 className="bg-white text-cyan-700 hover:bg-yellow-400 hover:text-cyan-900 px-8 py-4 rounded-xl font-bold text-center transition-all shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap"
               >
                 Read Full Case Study →
               </Link>
-              <Link
-                href="/services/production-agentic-ai-implementation-services"
+              <Link to="/services/production-agentic-ai-implementation-services"
                 className="bg-cyan-900 hover:bg-cyan-800 text-white px-8 py-4 rounded-xl font-bold text-center transition-all shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap"
               >
                 Get Implementation Services

@@ -90,20 +90,17 @@ export default function AI2026RevolutionaryAutonomousEnterpriseBanner() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link 
-            href="/blog/ai-2026-revolutionary-autonomous-enterprise-systems" 
+          <Link to="/blog/ai-2026-revolutionary-autonomous-enterprise-systems" 
             className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             🚀 Read Full Breakthrough Article
           </Link>
-          <Link 
-            href="/case-studies/ai-2026-revolutionary-autonomous-enterprise-success" 
+          <Link to="/case-studies/ai-2026-revolutionary-autonomous-enterprise-success" 
             className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             💰 View $2.8B ROI Case Study
           </Link>
-          <Link 
-            href="/services/ai-2026-revolutionary-autonomous-enterprise-systems" 
+          <Link to="/services/ai-2026-revolutionary-autonomous-enterprise-systems" 
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             ⚛️ Get Revolutionary Solutions

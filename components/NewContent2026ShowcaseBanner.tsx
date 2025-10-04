@@ -54,14 +54,12 @@ export default function NewContent2026ShowcaseBanner() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <Link
-                  href="/blog/ai-2026-january-mega-breakthrough-revolution"
+                <Link to="/blog/ai-2026-january-mega-breakthrough-revolution"
                   className="flex-1 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-center"
                 >
                   Read Report →
                 </Link>
-                <Link
-                  href="/case-studies/ai-2026-january-mega-breakthrough-5-billion-success"
+                <Link to="/case-studies/ai-2026-january-mega-breakthrough-5-billion-success"
                   className="flex-1 border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-center"
                 >
                   Success Story
@@ -91,14 +89,12 @@ export default function NewContent2026ShowcaseBanner() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <Link
-                  href="/blog/ai-2026-quantum-neural-superintelligence-breakthrough"
+                <Link to="/blog/ai-2026-quantum-neural-superintelligence-breakthrough"
                   className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-center"
                 >
                   Explore Technology →
                 </Link>
-                <Link
-                  href="/case-studies/ai-2026-quantum-neural-superintelligence-8-billion-success"
+                <Link to="/case-studies/ai-2026-quantum-neural-superintelligence-8-billion-success"
                   className="flex-1 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-center"
                 >
                   View Results
@@ -128,14 +124,12 @@ export default function NewContent2026ShowcaseBanner() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <Link
-                  href="/blog/ai-2026-revolutionary-autonomous-enterprise-systems"
+                <Link to="/blog/ai-2026-revolutionary-autonomous-enterprise-systems"
                   className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-center"
                 >
                   Learn More →
                 </Link>
-                <Link
-                  href="/case-studies/ai-2026-revolutionary-autonomous-enterprise-2-billion-success"
+                <Link to="/case-studies/ai-2026-revolutionary-autonomous-enterprise-2-billion-success"
                   className="flex-1 border border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-center"
                 >
                   Success Story
@@ -173,20 +167,17 @@ export default function NewContent2026ShowcaseBanner() {
 
           {/* Call to Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/blog" 
+            <Link to="/blog" 
               className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Explore All AI Content →
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View All Success Stories →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Started Today

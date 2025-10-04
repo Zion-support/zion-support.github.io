@@ -46,7 +46,7 @@ const February2026ContentShowcaseBanner: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">Comprehensive implementation framework achieving 99.99% uptime with zero human intervention</p>
                 <div className="flex items-center justify-between">
                   <div className="text-xs text-gray-400">18 min read</div>
-                  <Link href="/content/blog/ai-2026-february-next-generation-autonomous-systems-revolution" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                  <Link to="/content/blog/ai-2026-february-next-generation-autonomous-systems-revolution" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
                     Read More →
                   </Link>
                 </div>
@@ -64,7 +64,7 @@ const February2026ContentShowcaseBanner: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">Global manufacturing conglomerate achieves 1,847% ROI with autonomous systems</p>
                 <div className="flex items-center justify-between">
                   <div className="text-xs text-gray-400">12 min read</div>
-                  <Link href="/content/case-studies/ai-2026-february-fortune-500-autonomous-systems-2-7-billion-success" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                  <Link to="/content/case-studies/ai-2026-february-fortune-500-autonomous-systems-2-7-billion-success" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                     View Case →
                   </Link>
                 </div>
@@ -82,7 +82,7 @@ const February2026ContentShowcaseBanner: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">Expert implementation services for next-generation autonomous systems transformation</p>
                 <div className="flex items-center justify-between">
                   <div className="text-xs text-gray-400">Services</div>
-                  <Link href="/content/services/ai-2026-february-next-generation-autonomous-systems-consulting" className="text-green-400 hover:text-green-300 text-sm font-medium">
+                  <Link to="/content/services/ai-2026-february-next-generation-autonomous-systems-consulting" className="text-green-400 hover:text-green-300 text-sm font-medium">
                     Learn More →
                   </Link>
                 </div>
@@ -111,14 +111,12 @@ const February2026ContentShowcaseBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/content/blog/ai-2026-february-next-generation-autonomous-systems-revolution"
+              <Link to="/content/blog/ai-2026-february-next-generation-autonomous-systems-revolution"
                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 📚 Explore All Content
               </Link>
-              <Link 
-                href="/content/services/ai-2026-february-next-generation-autonomous-systems-consulting"
+              <Link to="/content/services/ai-2026-february-next-generation-autonomous-systems-consulting"
                 className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-white/30 hover:border-white/50 text-white font-semibold rounded-lg transition-all duration-200"
               >
                 🚀 Start Transformation

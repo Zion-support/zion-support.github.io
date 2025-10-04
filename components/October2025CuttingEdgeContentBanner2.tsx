@@ -113,8 +113,7 @@ export default function October2025CuttingEdgeContentBanner2() {
                 Discover how these technologies can drive measurable ROI for your organization
               </div>
             </div>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="whitespace-nowrap bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
             >
               Get Started

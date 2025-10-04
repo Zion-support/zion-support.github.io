@@ -81,8 +81,7 @@ export default function UltimateContent2027Showcase() {
                   <div className="text-sm text-blue-200">Value</div>
                 </div>
               </div>
-              <Link
-                href="/blog/ai-cognitive-computing-breakthrough-2026"
+              <Link to="/blog/ai-cognitive-computing-breakthrough-2026"
                 className="inline-flex items-center bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Read Full Article
@@ -116,8 +115,7 @@ export default function UltimateContent2027Showcase() {
                   <div className="text-sm text-blue-200">ROI</div>
                 </div>
               </div>
-              <Link
-                href="/blog/ai-autonomous-business-systems-2026"
+              <Link to="/blog/ai-autonomous-business-systems-2026"
                 className="inline-flex items-center bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Read Full Article
@@ -154,8 +152,7 @@ export default function UltimateContent2027Showcase() {
                   <div className="text-sm text-blue-200">Carbon Neutral</div>
                 </div>
               </div>
-              <Link
-                href="/case-studies/ai-sustainability-transformation-2026"
+              <Link to="/case-studies/ai-sustainability-transformation-2026"
                 className="inline-flex items-center bg-gradient-to-r from-teal-500 to-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 View Case Study
@@ -189,8 +186,7 @@ export default function UltimateContent2027Showcase() {
                   <div className="text-sm text-blue-200">Returns</div>
                 </div>
               </div>
-              <Link
-                href="/case-studies/ai-quantum-optimization-2026"
+              <Link to="/case-studies/ai-quantum-optimization-2026"
                 className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 View Case Study
@@ -211,14 +207,12 @@ export default function UltimateContent2027Showcase() {
               to transform their operations and achieve unprecedented success.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-4 rounded-xl font-bold text-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
                 Explore All Content
               </Link>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-xl hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Get Free Consultation

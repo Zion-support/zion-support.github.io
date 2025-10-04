@@ -84,16 +84,14 @@ export default function PersonalizationTransformationBanner() {
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            href="/case-studies/ai-2025-oct-02-retail-personalization-12-4-billion-success"
+          <Link to="/case-studies/ai-2025-oct-02-retail-personalization-12-4-billion-success"
             className="inline-flex items-center px-8 py-4 bg-white text-purple-700 font-bold rounded-xl hover:bg-pink-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group"
           >
             Read Success Story
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           
-          <Link
-            href="/blog/ai-2025-oct-02-real-time-personalization-engines"
+          <Link to="/blog/ai-2025-oct-02-real-time-personalization-engines"
             className="inline-flex items-center px-8 py-4 bg-purple-800/50 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/30 hover:bg-purple-700/50 transition-all duration-300"
           >
             Technical Deep Dive
@@ -132,8 +130,7 @@ export function PersonalizationTransformationCompactBanner() {
           </p>
         </div>
         
-        <Link
-          href="/case-studies/ai-2025-oct-02-retail-personalization-12-4-billion-success"
+        <Link to="/case-studies/ai-2025-oct-02-retail-personalization-12-4-billion-success"
           className="inline-flex items-center px-6 py-3 bg-white text-purple-700 font-bold rounded-lg hover:bg-pink-50 transition-all duration-200 shadow-md hover:shadow-lg whitespace-nowrap"
         >
           View Case Study

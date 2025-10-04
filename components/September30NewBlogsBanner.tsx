@@ -39,8 +39,7 @@ export default function September30NewBlogsBanner() {
                 <div className="text-xs text-white/70">Cost Savings</div>
               </div>
             </div>
-            <Link
-              href="/blog/ai-zero-day-threat-detection-2025"
+            <Link to="/blog/ai-zero-day-threat-detection-2025"
               className="block w-full bg-white text-red-600 font-semibold py-3 px-6 rounded-lg text-center hover:bg-gray-100 transition-colors"
             >
               Read Case Study →
@@ -68,8 +67,7 @@ export default function September30NewBlogsBanner() {
                 <div className="text-xs text-white/70">Annual Savings</div>
               </div>
             </div>
-            <Link
-              href="/blog/sustainable-ai-green-computing-2025"
+            <Link to="/blog/sustainable-ai-green-computing-2025"
               className="block w-full bg-white text-green-600 font-semibold py-3 px-6 rounded-lg text-center hover:bg-gray-100 transition-colors"
             >
               Explore Green AI →
@@ -97,8 +95,7 @@ export default function September30NewBlogsBanner() {
                 <div className="text-xs text-white/70">Value Created</div>
               </div>
             </div>
-            <Link
-              href="/blog/ai-innovation-labs-product-development-2025"
+            <Link to="/blog/ai-innovation-labs-product-development-2025"
               className="block w-full bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg text-center hover:bg-gray-100 transition-colors"
             >
               Discover Innovation →
@@ -108,20 +105,17 @@ export default function September30NewBlogsBanner() {
 
         <div className="text-center mt-12">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog/ai-trustworthy-agents-2026"
+            <Link to="/blog/ai-trustworthy-agents-2026"
               className="inline-block bg-white text-purple-700 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
             >
               New: Trustworthy Agents 2026 →
             </Link>
-            <Link
-              href="/blog/ai-agent-security-blueprint-2026"
+            <Link to="/blog/ai-agent-security-blueprint-2026"
               className="inline-block bg-white text-teal-700 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
             >
               New: Agent Security Blueprint →
             </Link>
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="inline-block bg-white/90 text-indigo-700 font-semibold py-4 px-8 rounded-lg hover:bg-white transition-colors text-lg"
             >
               View All Latest Articles →

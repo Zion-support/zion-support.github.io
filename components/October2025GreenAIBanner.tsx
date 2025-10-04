@@ -52,20 +52,17 @@ export default function October2025GreenAIBanner() {
           
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2025-oct-01-green-ai-carbon-neutral-computing-revolution" 
+            <Link to="/blog/ai-2025-oct-01-green-ai-carbon-neutral-computing-revolution" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Read Green AI Guide →
             </Link>
-            <Link 
-              href="/case-studies/ai-2025-oct-01-fortune-100-green-ai-transformation-470-billion-success" 
+            <Link to="/case-studies/ai-2025-oct-01-fortune-100-green-ai-transformation-470-billion-success" 
               className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               View $470B Success Story →
             </Link>
-            <Link 
-              href="/services/green-ai-transformation-2025" 
+            <Link to="/services/green-ai-transformation-2025" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Green AI Services
@@ -89,8 +86,7 @@ export default function October2025GreenAIBanner() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-400">14 min read</div>
-                <Link
-                  href="/blog/ai-2025-oct-01-green-ai-carbon-neutral-computing-revolution"
+                <Link to="/blog/ai-2025-oct-01-green-ai-carbon-neutral-computing-revolution"
                   className="text-green-400 font-semibold hover:text-green-300 transition-colors"
                 >
                   Read Guide →
@@ -113,8 +109,7 @@ export default function October2025GreenAIBanner() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-400">18 min read</div>
-                <Link
-                  href="/case-studies/ai-2025-oct-01-fortune-100-green-ai-transformation-470-billion-success"
+                <Link to="/case-studies/ai-2025-oct-01-fortune-100-green-ai-transformation-470-billion-success"
                   className="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors"
                 >
                   Read Case Study →
@@ -137,8 +132,7 @@ export default function October2025GreenAIBanner() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-400">Free audit available</div>
-                <Link
-                  href="/services/green-ai-transformation-2025"
+                <Link to="/services/green-ai-transformation-2025"
                   className="text-teal-400 font-semibold hover:text-teal-300 transition-colors"
                 >
                   Explore Services →
@@ -160,15 +154,15 @@ export default function October2025GreenAIBanner() {
 
           {/* Additional Links */}
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 border border-green-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-green-500/30 transition-colors">
               Schedule Free Carbon Audit
               <span>→</span>
             </Link>
-            <Link href="/blog" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">
+            <Link to="/blog" className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-500/30 transition-colors">
               More Green AI Content
               <span>→</span>
             </Link>
-            <Link href="/case-studies" className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-200 border border-teal-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-teal-500/30 transition-colors">
+            <Link to="/case-studies" className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-200 border border-teal-400/30 px-4 py-2 rounded-lg font-semibold hover:bg-teal-500/30 transition-colors">
               All Success Stories
               <span>→</span>
             </Link>

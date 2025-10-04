@@ -34,7 +34,7 @@ export default function RevolutionaryContentMegaBanner2026() {
         {/* Featured Revolutionary Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Quantum AI Revolution */}
-          <Link href="/blog/ai-2027-quantum-revolution" className="group">
+          <Link to="/blog/ai-2027-quantum-revolution" className="group">
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
               <div className="flex items-center gap-3 mb-6">
                 <div className="text-5xl">⚛️</div>
@@ -79,7 +79,7 @@ export default function RevolutionaryContentMegaBanner2026() {
           </Link>
 
           {/* Autonomous Enterprise Systems */}
-          <Link href="/blog/ai-2027-autonomous-enterprise-systems" className="group">
+          <Link to="/blog/ai-2027-autonomous-enterprise-systems" className="group">
             <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30">
               <div className="flex items-center gap-3 mb-6">
                 <div className="text-5xl">🤖</div>
@@ -124,7 +124,7 @@ export default function RevolutionaryContentMegaBanner2026() {
           </Link>
 
           {/* Neuromorphic Intelligence */}
-          <Link href="/blog/ai-2027-neuromorphic-intelligence" className="group">
+          <Link to="/blog/ai-2027-neuromorphic-intelligence" className="group">
             <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30">
               <div className="flex items-center gap-3 mb-6">
                 <div className="text-5xl">🧠</div>
@@ -210,14 +210,12 @@ export default function RevolutionaryContentMegaBanner2026() {
             Transform your organization with breakthrough AI capabilities that deliver unprecedented results.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50 transform hover:-translate-y-1 text-xl"
             >
               Start Revolutionary Transformation
             </Link>
-            <Link 
-              href="/blog" 
+            <Link to="/blog" 
               className="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 text-xl"
             >
               Explore All Revolutionary Content

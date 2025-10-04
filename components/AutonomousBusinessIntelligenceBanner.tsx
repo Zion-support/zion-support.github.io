@@ -52,20 +52,17 @@ export default function AutonomousBusinessIntelligenceBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" 
+            <Link to="/blog/ai-2026-autonomous-business-intelligence-breakthrough" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Discover the Technology →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-autonomous-bi-mega-success" 
+            <Link to="/case-studies/ai-2026-autonomous-bi-mega-success" 
               className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               View Success Stories →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Start Free Trial

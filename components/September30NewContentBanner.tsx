@@ -24,7 +24,7 @@ export default function September30NewContentBanner() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           
           {/* Blog Post: AI Observability */}
-          <Link href="/blog/ai-observability-enterprise-2025" className="group">
+          <Link to="/blog/ai-observability-enterprise-2025" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-8 text-white">
                 <div className="flex items-center gap-2 mb-4">
@@ -70,7 +70,7 @@ export default function September30NewContentBanner() {
           </Link>
 
           {/* Case Study: FinTech Transformation */}
-          <Link href="/case-studies/fintech-ai-transformation-september-2025" className="group">
+          <Link to="/case-studies/fintech-ai-transformation-september-2025" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-green-300">
               <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-8 text-white">
                 <div className="flex items-center gap-2 mb-4">

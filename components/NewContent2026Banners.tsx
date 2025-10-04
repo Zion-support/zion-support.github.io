@@ -26,8 +26,7 @@ export function NewContent2026MegaBanner() {
             <p className="text-sm opacity-90 mb-4">
               10,000x faster optimization and unbreakable security for enterprise applications.
             </p>
-            <Link
-              href="/blog/ai-trends-2026-future-tech"
+            <Link to="/blog/ai-trends-2026-future-tech"
               className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               Read Article →
@@ -40,8 +39,7 @@ export function NewContent2026MegaBanner() {
             <p className="text-sm opacity-90 mb-4">
               Direct brain-computer communication for seamless human-AI collaboration.
             </p>
-            <Link
-              href="/blog/ai-trends-2026-future-tech"
+            <Link to="/blog/ai-trends-2026-future-tech"
               className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               Learn More →
@@ -54,8 +52,7 @@ export function NewContent2026MegaBanner() {
             <p className="text-sm opacity-90 mb-4">
               Self-managing AI systems that learn, adapt, and optimize continuously.
             </p>
-            <Link
-              href="/case-studies/enterprise-ai-transformation-2026"
+            <Link to="/case-studies/enterprise-ai-transformation-2026"
               className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               View Case Study →
@@ -64,8 +61,7 @@ export function NewContent2026MegaBanner() {
         </div>
         
         <div className="text-center">
-          <Link
-            href="/blog/ai-trends-2026-future-tech"
+          <Link to="/blog/ai-trends-2026-future-tech"
             className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all shadow-lg hover:shadow-xl"
           >
             Explore 2026 AI Trends
@@ -128,8 +124,7 @@ export function AIRevolutionary2026Banner() {
         </div>
         
         <div className="text-center">
-          <Link
-            href="/services"
+          <Link to="/services"
             className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-500 hover:to-blue-500 transition-all shadow-lg hover:shadow-xl"
           >
             Start Your AI Revolution
@@ -167,8 +162,7 @@ export function Revolutionary2026ContentBanner() {
                 <div className="text-sm opacity-90">Total ROI</div>
               </div>
             </div>
-            <Link
-              href="/case-studies/enterprise-ai-transformation-2026"
+            <Link to="/case-studies/enterprise-ai-transformation-2026"
               className="inline-block bg-white text-teal-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               View Case Study →
@@ -242,8 +236,7 @@ export function LatestAIInnovations2026Banner() {
               Quantum-enhanced AI systems solving complex optimization problems in seconds, 
               delivering 10,000x performance improvements.
             </p>
-            <Link
-              href="/blog/ai-trends-2026-future-tech"
+            <Link to="/blog/ai-trends-2026-future-tech"
               className="text-violet-600 font-semibold hover:text-violet-700 transition-colors"
             >
               Learn More →
@@ -264,8 +257,7 @@ export function LatestAIInnovations2026Banner() {
               Direct neural communication enabling seamless human-AI collaboration 
               with 90% faster decision making and zero latency.
             </p>
-            <Link
-              href="/blog/ai-trends-2026-future-tech"
+            <Link to="/blog/ai-trends-2026-future-tech"
               className="text-pink-600 font-semibold hover:text-pink-700 transition-colors"
             >
               Explore Technology →
@@ -286,8 +278,7 @@ export function LatestAIInnovations2026Banner() {
               Fully autonomous AI ecosystems that learn, adapt, and optimize 
               continuously, reducing operational costs by 80%.
             </p>
-            <Link
-              href="/case-studies/enterprise-ai-transformation-2026"
+            <Link to="/case-studies/enterprise-ai-transformation-2026"
               className="text-emerald-600 font-semibold hover:text-emerald-700 transition-colors"
             >
               View Implementation →
@@ -296,8 +287,7 @@ export function LatestAIInnovations2026Banner() {
         </div>
         
         <div className="text-center">
-          <Link
-            href="/blog"
+          <Link to="/blog"
             className="inline-block bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-violet-500 hover:to-purple-500 transition-all shadow-lg hover:shadow-xl"
           >
             Explore All 2026 Innovations

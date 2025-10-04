@@ -55,20 +55,17 @@ export default function August2026QuantumConsciousnessBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-august-quantum-consciousness-revolution" 
+            <Link to="/blog/ai-2026-august-quantum-consciousness-revolution" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Read August 2026 Revolution →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-august-quantum-consciousness-50-billion-success" 
+            <Link to="/case-studies/ai-2026-august-quantum-consciousness-50-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $50B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Started Today

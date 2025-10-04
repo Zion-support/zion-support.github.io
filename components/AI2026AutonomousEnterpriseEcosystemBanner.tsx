@@ -134,16 +134,14 @@ const AI2026AutonomousEnterpriseEcosystemBanner: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/blog/ai-2026-autonomous-enterprise-ecosystem"
+            <Link to="/blog/ai-2026-autonomous-enterprise-ecosystem"
               className="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2"
             >
               <span>Explore Ecosystem</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             
-            <Link 
-              href="/autonomous-consultation"
+            <Link to="/autonomous-consultation"
               className="group bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/30 hover:border-white/50 flex items-center space-x-2"
             >
               <span>Enterprise Strategy Session</span>

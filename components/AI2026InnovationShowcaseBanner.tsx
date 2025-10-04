@@ -168,20 +168,17 @@ const AI2026InnovationShowcaseBanner = () => {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              href="/services/ai-innovation-2026"
+            <Link to="/services/ai-innovation-2026"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-12 py-6 rounded-lg font-bold text-xl hover:from-cyan-600 hover:to-blue-700 transition-all shadow-2xl hover:shadow-cyan-500/25"
             >
               Explore AI Innovations
             </Link>
-            <Link
-              href="/blog/ai-2026-innovations"
+            <Link to="/blog/ai-2026-innovations"
               className="border-2 border-cyan-400 text-cyan-400 px-12 py-6 rounded-lg font-bold text-xl hover:bg-cyan-400 hover:text-black transition-all"
             >
               Read Innovation Blog
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-purple-400 text-purple-400 px-12 py-6 rounded-lg font-bold text-xl hover:bg-purple-400 hover:text-black transition-all"
             >
               Schedule Innovation Demo

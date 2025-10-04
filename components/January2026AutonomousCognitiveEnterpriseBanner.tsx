@@ -62,14 +62,12 @@ export default function January2026AutonomousCognitiveEnterpriseBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog/ai-2026-autonomous-cognitive-enterprise-breakthrough"
+            <Link to="/blog/ai-2026-autonomous-cognitive-enterprise-breakthrough"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read the Breakthrough Guide →
             </Link>
-            <Link
-              href="/case-studies/ai-2026-autonomous-cognitive-enterprise-5-billion-success"
+            <Link to="/case-studies/ai-2026-autonomous-cognitive-enterprise-5-billion-success"
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View $5.2B Success Story →

@@ -111,8 +111,7 @@ const NewContentNavigationHub: React.FC = () => {
                 ))}
               </div>
 
-              <Link
-                href={content.href}
+              <Link to={content.href}
                 className={`block w-full text-center py-3 px-4 rounded-lg font-bold transition-all duration-300 ${
                   content.featured
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white shadow-lg hover:shadow-indigo-500/50'
@@ -131,26 +130,22 @@ const NewContentNavigationHub: React.FC = () => {
             Quick Access to All New Content
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 hover:from-indigo-500/30 hover:to-indigo-600/30 border border-indigo-500/30 text-indigo-300 hover:text-indigo-200 px-4 py-3 rounded-lg text-center font-semibold transition-all duration-300"
             >
               📚 All Blog Posts
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="bg-gradient-to-r from-green-500/20 to-green-600/20 hover:from-green-500/30 hover:to-green-600/30 border border-green-500/30 text-green-300 hover:text-green-200 px-4 py-3 rounded-lg text-center font-semibold transition-all duration-300"
             >
               💼 Case Studies
             </Link>
-            <Link
-              href="/services"
+            <Link to="/services"
               className="bg-gradient-to-r from-purple-500/20 to-purple-600/20 hover:from-purple-500/30 hover:to-purple-600/30 border border-purple-500/30 text-purple-300 hover:text-purple-200 px-4 py-3 rounded-lg text-center font-semibold transition-all duration-300"
             >
               🚀 AI Services
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 hover:from-orange-500/30 hover:to-orange-600/30 border border-orange-500/30 text-orange-300 hover:text-orange-200 px-4 py-3 rounded-lg text-center font-semibold transition-all duration-300"
             >
               💬 Contact Us
@@ -169,14 +164,12 @@ const NewContentNavigationHub: React.FC = () => {
               Get expert guidance and implementation support from our experienced team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Free Consultation
               </Link>
-              <Link
-                href="/services/ai-implementation"
+              <Link to="/services/ai-implementation"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 View Implementation Services →

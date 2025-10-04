@@ -41,8 +41,7 @@ export default function SyntheticConsciousnessBreakthroughBanner() {
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <Link 
-            href="/blog/ai-2026-synthetic-consciousness-breakthrough-revolution" 
+          <Link to="/blog/ai-2026-synthetic-consciousness-breakthrough-revolution" 
             className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -54,8 +53,7 @@ export default function SyntheticConsciousnessBreakthroughBanner() {
             <div className="text-indigo-300 text-sm font-semibold group-hover:text-indigo-200">Read Consciousness Details →</div>
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2026-synthetic-consciousness-breakthrough-75-billion-success" 
+          <Link to="/case-studies/ai-2026-synthetic-consciousness-breakthrough-75-billion-success" 
             className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -67,8 +65,7 @@ export default function SyntheticConsciousnessBreakthroughBanner() {
             <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
           </Link>
           
-          <Link 
-            href="/services/ai-2026-synthetic-consciousness-breakthrough-solutions" 
+          <Link to="/services/ai-2026-synthetic-consciousness-breakthrough-solutions" 
             className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -83,20 +80,17 @@ export default function SyntheticConsciousnessBreakthroughBanner() {
         
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-synthetic-consciousness-breakthrough-revolution" 
+            <Link to="/blog/ai-2026-synthetic-consciousness-breakthrough-revolution" 
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Read Consciousness Revolution →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-synthetic-consciousness-breakthrough-75-billion-success" 
+            <Link to="/case-studies/ai-2026-synthetic-consciousness-breakthrough-75-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $75B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Conscious AI Solutions

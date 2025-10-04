@@ -20,7 +20,7 @@ export default function September30BreakthroughContentBanner() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <Link href="/blog/ai-conscious-agents-breakthrough-2025" className="group">
+          <Link to="/blog/ai-conscious-agents-breakthrough-2025" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105 transform">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center">
@@ -50,7 +50,7 @@ export default function September30BreakthroughContentBanner() {
             </div>
           </Link>
 
-          <Link href="/blog/neuromorphic-quantum-hybrid-computing-2025" className="group">
+          <Link to="/blog/neuromorphic-quantum-hybrid-computing-2025" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105 transform">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -80,7 +80,7 @@ export default function September30BreakthroughContentBanner() {
             </div>
           </Link>
 
-          <Link href="/blog/ai-swarm-intelligence-enterprise-revolution-2025" className="group">
+          <Link to="/blog/ai-swarm-intelligence-enterprise-revolution-2025" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105 transform">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
@@ -130,14 +130,12 @@ export default function September30BreakthroughContentBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore All Breakthrough Content
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
             >
               Schedule Consultation

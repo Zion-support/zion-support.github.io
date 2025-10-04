@@ -32,8 +32,7 @@ export default function AI2026SustainableRevolutionBanner() {
               Revolutionary quantum-inspired optimization algorithms deliver unprecedented energy efficiency 
               while maintaining superior AI performance.
             </p>
-            <Link 
-              href="/blog/ai-2026-sustainable-ai-revolution-breakthrough"
+            <Link to="/blog/ai-2026-sustainable-ai-revolution-breakthrough"
               className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold transition-colors"
             >
               Read Breakthrough Details →
@@ -51,8 +50,7 @@ export default function AI2026SustainableRevolutionBanner() {
               Transform your operations with carbon-neutral AI infrastructure and renewable energy 
               integration systems that reduce environmental impact.
             </p>
-            <Link 
-              href="/services/ai-2026-sustainable-ai-solutions"
+            <Link to="/services/ai-2026-sustainable-ai-solutions"
               className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
             >
               Get Sustainable Solutions →
@@ -70,8 +68,7 @@ export default function AI2026SustainableRevolutionBanner() {
               Fortune 100 companies have achieved $2.5B ROI through our sustainable AI implementation, 
               proving that environmental responsibility drives profitability.
             </p>
-            <Link 
-              href="/case-studies/ai-2026-sustainable-ai-revolution-2-5-billion-success"
+            <Link to="/case-studies/ai-2026-sustainable-ai-revolution-2-5-billion-success"
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
             >
               View Success Story →
@@ -81,14 +78,12 @@ export default function AI2026SustainableRevolutionBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Get Sustainable AI Solutions
             </Link>
-            <Link 
-              href="/services/ai-2026-sustainable-ai-solutions"
+            <Link to="/services/ai-2026-sustainable-ai-solutions"
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
             >
               Explore All Services

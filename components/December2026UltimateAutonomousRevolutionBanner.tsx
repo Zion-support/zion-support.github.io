@@ -57,8 +57,7 @@ const December2026UltimateAutonomousRevolutionBanner = () => {
             <p className="text-gray-300 mb-6">
               100% autonomous operations with infinite scalability, perfect efficiency, and complete elimination of human intervention in business processes.
             </p>
-            <Link
-              href="/blog/ai-2026-december-ultimate-autonomous-revolution-breakthrough"
+            <Link to="/blog/ai-2026-december-ultimate-autonomous-revolution-breakthrough"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-slate-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-400 hover:to-slate-400 transition-all"
             >
               Read Revolution Details →
@@ -78,8 +77,7 @@ const December2026UltimateAutonomousRevolutionBanner = () => {
             <p className="text-gray-300 mb-6">
               How a global manufacturing conglomerate achieved $1 trillion ROI through ultimate autonomous revolution with 100% autonomous operations and infinite scalability.
             </p>
-            <Link
-              href="/case-studies/ai-2026-december-ultimate-autonomous-1-trillion-success"
+            <Link to="/case-studies/ai-2026-december-ultimate-autonomous-1-trillion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-slate-400 hover:to-cyan-400 transition-all"
             >
               View Success Story →
@@ -89,14 +87,12 @@ const December2026UltimateAutonomousRevolutionBanner = () => {
         
         <div className="text-center">
           <div className="inline-flex flex-wrap gap-4">
-            <Link
-              href="/blog/ai-2026-december-ultimate-autonomous-revolution-breakthrough"
+            <Link to="/blog/ai-2026-december-ultimate-autonomous-revolution-breakthrough"
               className="bg-gradient-to-r from-blue-500 to-slate-600 hover:from-blue-400 hover:to-slate-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Explore Autonomous Revolution
             </Link>
-            <Link
-              href="/case-studies/ai-2026-december-ultimate-autonomous-1-trillion-success"
+            <Link to="/case-studies/ai-2026-december-ultimate-autonomous-1-trillion-success"
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View $1T Success Story

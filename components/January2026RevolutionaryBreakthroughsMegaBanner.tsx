@@ -72,8 +72,7 @@ const January2026RevolutionaryBreakthroughsMegaBanner = () => {
               </div>
             </div>
             
-            <Link 
-              href="/blog/ai-2026-january-ultra-autonomous-enterprise-revolution"
+            <Link to="/blog/ai-2026-january-ultra-autonomous-enterprise-revolution"
               className="block w-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white text-center py-2 rounded-lg font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
             >
               Read Article
@@ -103,8 +102,7 @@ const January2026RevolutionaryBreakthroughsMegaBanner = () => {
               </div>
             </div>
             
-            <Link 
-              href="/blog/ai-2026-january-quantum-consciousness-bi-breakthrough"
+            <Link to="/blog/ai-2026-january-quantum-consciousness-bi-breakthrough"
               className="block w-full bg-gradient-to-r from-violet-500 to-cyan-500 text-white text-center py-2 rounded-lg font-semibold hover:from-violet-600 hover:to-cyan-600 transition-all duration-300"
             >
               Read Article
@@ -134,8 +132,7 @@ const January2026RevolutionaryBreakthroughsMegaBanner = () => {
               </div>
             </div>
             
-            <Link 
-              href="/blog/ai-2026-january-neural-quantum-fusion-breakthrough"
+            <Link to="/blog/ai-2026-january-neural-quantum-fusion-breakthrough"
               className="block w-full bg-gradient-to-r from-purple-500 to-emerald-500 text-white text-center py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-emerald-600 transition-all duration-300"
             >
               Read Article
@@ -153,20 +150,17 @@ const January2026RevolutionaryBreakthroughsMegaBanner = () => {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/services"
+              <Link to="/services"
                 className="bg-gradient-to-r from-purple-500 to-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
               >
                 Explore All Solutions
               </Link>
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
               >
                 Schedule Consultation
               </Link>
-              <Link 
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="border border-emerald-500 text-emerald-300 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500/10 transition-all duration-300"
               >
                 View Case Studies

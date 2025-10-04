@@ -43,15 +43,13 @@ const February2026NeuralConsciousnessBanner: React.FC = () => {
           </div>
           
           <div className="flex flex-col gap-3">
-            <Link 
-              href="/blog/ai-2026-neural-consciousness-enterprise-transformation"
+            <Link to="/blog/ai-2026-neural-consciousness-enterprise-transformation"
               className="bg-gradient-to-r from-pink-400 to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Explore Consciousness →
             </Link>
             
-            <Link 
-              href="/guides/quantum-ai-implementation-roadmap-2026"
+            <Link to="/guides/quantum-ai-implementation-roadmap-2026"
               className="bg-white/20 hover:bg-white/30 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 border border-white/30 hover:border-white/50"
             >
               Implementation Roadmap

@@ -35,14 +35,12 @@ export default function AI2027QuantumAIBreakthroughAdvertisingBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation"
+            <Link to="/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation"
               className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Full Breakthrough Report
             </Link>
-            <Link 
-              href="/case-studies/ai-2027-quantum-ai-500-billion-success-story"
+            <Link to="/case-studies/ai-2027-quantum-ai-500-billion-success-story"
               className="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-white/30"
             >
               View $500B Success Story

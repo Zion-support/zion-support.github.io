@@ -33,14 +33,12 @@ export default function RevolutionaryContentShowcaseBanner() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-5 rounded-xl font-bold text-xl hover:from-yellow-500 hover:to-orange-600 transition-all hover:scale-105 shadow-2xl"
             >
               Explore Breakthrough Articles →
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-purple-900 transition-all hover:scale-105"
             >
               View Success Stories →
@@ -52,7 +50,7 @@ export default function RevolutionaryContentShowcaseBanner() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           
           {/* Autonomous Business Processes */}
-          <Link href="/blog/ai-2026-autonomous-business-processes" className="group">
+          <Link to="/blog/ai-2026-autonomous-business-processes" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 hover:scale-105 border border-white border-opacity-20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
@@ -89,7 +87,7 @@ export default function RevolutionaryContentShowcaseBanner() {
           </Link>
 
           {/* Customer Intelligence */}
-          <Link href="/blog/ai-2026-next-generation-customer-intelligence" className="group">
+          <Link to="/blog/ai-2026-next-generation-customer-intelligence" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 hover:scale-105 border border-white border-opacity-20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
@@ -126,7 +124,7 @@ export default function RevolutionaryContentShowcaseBanner() {
           </Link>
 
           {/* Fortune 500 Case Study */}
-          <Link href="/case-studies/fortune-500-autonomous-operations-transformation-2026" className="group">
+          <Link to="/case-studies/fortune-500-autonomous-operations-transformation-2026" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 hover:scale-105 border border-white border-opacity-20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
@@ -170,8 +168,7 @@ export default function RevolutionaryContentShowcaseBanner() {
             Essential reading for CTOs, CIOs, and technology leaders planning their 2026 AI transformation strategy
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog" 
+            <Link to="/blog" 
               className="bg-purple-900 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-purple-800 transition-all hover:scale-105 shadow-lg"
             >
               View All Articles & Insights →

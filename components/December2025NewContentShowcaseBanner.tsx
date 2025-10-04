@@ -49,8 +49,7 @@ export default function December2025NewContentShowcaseBanner() {
                 <p className="text-gray-300 text-sm">Days to first ROI</p>
               </div>
             </div>
-            <Link
-              href="/blog/ai-2025-december-enterprise-ai-transformation-guide"
+            <Link to="/blog/ai-2025-december-enterprise-ai-transformation-guide"
               className="inline-block bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50"
             >
               Read Full Guide →
@@ -85,8 +84,7 @@ export default function December2025NewContentShowcaseBanner() {
                 <p className="text-gray-300 text-sm">Downtime reduction</p>
               </div>
             </div>
-            <Link
-              href="/case-studies/manufacturing-ai-transformation-86-million-success"
+            <Link to="/case-studies/manufacturing-ai-transformation-86-million-success"
               className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               View Case Study →
@@ -100,8 +98,7 @@ export default function December2025NewContentShowcaseBanner() {
             <div className="text-4xl mb-4">💰</div>
             <h4 className="text-xl font-bold text-white mb-2">AI Cost Optimization Mastery</h4>
             <p className="text-gray-300 text-sm mb-4">Reduce AI expenses by 78% while scaling performance with proven optimization strategies.</p>
-            <Link 
-              href="/blog/ai-2025-december-ai-cost-optimization-mastery"
+            <Link to="/blog/ai-2025-december-ai-cost-optimization-mastery"
               className="inline-block bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
             >
               Learn More →
@@ -111,8 +108,7 @@ export default function December2025NewContentShowcaseBanner() {
             <div className="text-4xl mb-4">🚀</div>
             <h4 className="text-xl font-bold text-white mb-2">90-Day AI Accelerator</h4>
             <p className="text-gray-300 text-sm mb-4">Proven program delivering measurable results in 90 days with ongoing support.</p>
-            <Link 
-              href="/services/90-day-ai-accelerator-program"
+            <Link to="/services/90-day-ai-accelerator-program"
               className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
             >
               Get Started →
@@ -122,8 +118,7 @@ export default function December2025NewContentShowcaseBanner() {
             <div className="text-4xl mb-4">📊</div>
             <h4 className="text-xl font-bold text-white mb-2">ROI Measurement Framework</h4>
             <p className="text-gray-300 text-sm mb-4">Comprehensive framework for measuring AI transformation ROI across all business dimensions.</p>
-            <Link 
-              href="/resources/ai-roi-measurement-framework"
+            <Link to="/resources/ai-roi-measurement-framework"
               className="inline-block bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-400 hover:to-teal-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
             >
               Download Guide →
@@ -142,20 +137,17 @@ export default function December2025NewContentShowcaseBanner() {
               AI strategies and frameworks. Get started with a free consultation today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50"
               >
                 Get Free Consultation →
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 View All Case Studies →
               </Link>
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Explore All Content →

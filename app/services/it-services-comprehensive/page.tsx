@@ -272,8 +272,7 @@ export default function ITServicesPage() {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Link 
-                      href={service.href}
+                    <Link to={service.href}
                       className="flex-1 bg-green-600 text-white text-center py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                     >
                       Learn More
@@ -366,10 +365,10 @@ export default function ITServicesPage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">IT Services</h4>
               <div className="space-y-2">
-                <Link href="/services/cloud-migration" className="block text-gray-300 hover:text-green-400">Cloud Migration</Link>
-                <Link href="/services/devops-implementation" className="block text-gray-300 hover:text-green-400">DevOps</Link>
-                <Link href="/services/cybersecurity-solutions" className="block text-gray-300 hover:text-green-400">Cybersecurity</Link>
-                <Link href="/services/digital-transformation" className="block text-gray-300 hover:text-green-400">Digital Transformation</Link>
+                <Link to="/services/cloud-migration" className="block text-gray-300 hover:text-green-400">Cloud Migration</Link>
+                <Link to="/services/devops-implementation" className="block text-gray-300 hover:text-green-400">DevOps</Link>
+                <Link to="/services/cybersecurity-solutions" className="block text-gray-300 hover:text-green-400">Cybersecurity</Link>
+                <Link to="/services/digital-transformation" className="block text-gray-300 hover:text-green-400">Digital Transformation</Link>
               </div>
             </div>
           </div>

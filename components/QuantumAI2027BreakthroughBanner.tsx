@@ -39,22 +39,19 @@ export default function QuantumAI2027BreakthroughBanner() {
           </div>
           
           <div className="flex flex-col gap-4">
-            <Link 
-              href="/blog/ai-2027-quantum-neural-networks"
+            <Link to="/blog/ai-2027-quantum-neural-networks"
               className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center whitespace-nowrap"
             >
               Read Full Article →
             </Link>
             
-            <Link 
-              href="/case-studies/ai-2027-quantum-breakthrough-success"
+            <Link to="/case-studies/ai-2027-quantum-breakthrough-success"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-indigo-600 transition-colors text-center whitespace-nowrap"
             >
               View $500M Success Story
             </Link>
             
-            <Link 
-              href="/services/ai-2027-quantum-enterprise-solutions"
+            <Link to="/services/ai-2027-quantum-enterprise-solutions"
               className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors text-center whitespace-nowrap"
             >
               Get Quantum AI Solutions

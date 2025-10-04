@@ -37,14 +37,12 @@ export default function NextGenAutonomousIntelligenceSuccessPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                href="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" 
+              <Link to="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" 
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough →
               </Link>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Similar Results
@@ -398,14 +396,12 @@ export default function NextGenAutonomousIntelligenceSuccessPage() {
                 Contact Zion Tech Group to begin your autonomous intelligence transformation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact" 
+                <Link to="/contact" 
                   className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
                 >
                   Start Your Transformation
                 </Link>
-                <Link 
-                  href="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" 
+                <Link to="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" 
                   className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Read Full Breakthrough

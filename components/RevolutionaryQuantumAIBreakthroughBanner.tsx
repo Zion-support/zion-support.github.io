@@ -55,15 +55,13 @@ export default function RevolutionaryQuantumAIBreakthroughBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Link 
-              href="/blog/ai-quantum-computing-breakthrough-2026"
+            <Link to="/blog/ai-quantum-computing-breakthrough-2026"
               className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read Full Research Paper
             </Link>
             
-            <Link 
-              href="/case-studies/ai-quantum-breakthrough-success-2026"
+            <Link to="/case-studies/ai-quantum-breakthrough-success-2026"
               className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View $500M ROI Case Study
@@ -71,15 +69,15 @@ export default function RevolutionaryQuantumAIBreakthroughBanner() {
           </div>
           
           <div className="flex justify-center items-center gap-6 text-purple-200">
-            <Link href="/services/ai-quantum-computing-solutions" className="hover:text-white transition-colors">
+            <Link to="/services/ai-quantum-computing-solutions" className="hover:text-white transition-colors">
               Explore Quantum AI Services
             </Link>
             <span>•</span>
-            <Link href="/services/ai-autonomous-operations" className="hover:text-white transition-colors">
+            <Link to="/services/ai-autonomous-operations" className="hover:text-white transition-colors">
               Autonomous Operations
             </Link>
             <span>•</span>
-            <Link href="/contact" className="hover:text-white transition-colors">
+            <Link to="/contact" className="hover:text-white transition-colors">
               Schedule Consultation
             </Link>
           </div>

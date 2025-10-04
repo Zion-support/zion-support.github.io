@@ -27,14 +27,12 @@ export default function AI2030QuantumConsciousnessRevolutionBanner() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2030-quantum-consciousness-revolution"
+            <Link to="/blog/ai-2030-quantum-consciousness-revolution"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
             >
               Discover Quantum Consciousness →
             </Link>
-            <Link 
-              href="/services/ai-2030-quantum-consciousness"
+            <Link to="/services/ai-2030-quantum-consciousness"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Learn About Services

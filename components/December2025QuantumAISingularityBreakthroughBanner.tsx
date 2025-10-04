@@ -132,24 +132,21 @@ const December2025QuantumAISingularityBreakthroughBanner: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap gap-4">
-          <Link 
-            href="/blog/ai-2025-december-quantum-ai-singularity-breakthrough"
+          <Link to="/blog/ai-2025-december-quantum-ai-singularity-breakthrough"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <span>⚛️</span>
             Read Full Article
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2025-december-global-enterprise-quantum-ai-transformation-1-trillion-success"
+          <Link to="/case-studies/ai-2025-december-global-enterprise-quantum-ai-transformation-1-trillion-success"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <span>💎</span>
             $1T Case Study
           </Link>
           
-          <Link 
-            href="/services/quantum-ai-integration"
+          <Link to="/services/quantum-ai-integration"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <span>🚀</span>

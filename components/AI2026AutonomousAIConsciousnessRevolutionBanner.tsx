@@ -51,20 +51,17 @@ export default function AI2026AutonomousAIConsciousnessRevolutionBanner() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link 
-            href="/blog/ai-2026-autonomous-ai-consciousness-revolution-breakthrough" 
+          <Link to="/blog/ai-2026-autonomous-ai-consciousness-revolution-breakthrough" 
             className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
           >
             Read Consciousness Breakthrough →
           </Link>
-          <Link 
-            href="/case-studies/ai-2026-autonomous-ai-consciousness-500-billion-success" 
+          <Link to="/case-studies/ai-2026-autonomous-ai-consciousness-500-billion-success" 
             className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
           >
             View $500B Success Story →
           </Link>
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
           >
             Start Your Transformation
@@ -140,8 +137,7 @@ export default function AI2026AutonomousAIConsciousnessRevolutionBanner() {
           <p className="text-gray-300 text-lg mb-6">
             Join the Fortune 500 companies already transforming their operations with Autonomous AI Consciousness
           </p>
-          <Link
-            href="/contact"
+          <Link to="/contact"
             className="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-4 px-12 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 text-lg"
           >
             Start Your $500B+ Transformation Today

@@ -53,14 +53,12 @@ export default function January2026RevolutionaryContentBanner() {
               </div>
             </div>
             <div className="flex gap-4">
-              <Link
-                href="/blog/ai-2026-edge-native-intelligence-revolution"
+              <Link to="/blog/ai-2026-edge-native-intelligence-revolution"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Read Article →
               </Link>
-              <Link
-                href="/case-studies/ai-2026-edge-native-intelligence-mega-success"
+              <Link to="/case-studies/ai-2026-edge-native-intelligence-mega-success"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-lg font-bold hover:from-purple-600 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Success Story →
@@ -99,14 +97,12 @@ export default function January2026RevolutionaryContentBanner() {
               </div>
             </div>
             <div className="flex gap-4">
-              <Link
-                href="/blog/ai-2026-federated-learning-enterprise-breakthrough"
+              <Link to="/blog/ai-2026-federated-learning-enterprise-breakthrough"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-lg font-bold hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Read Article →
               </Link>
-              <Link
-                href="/case-studies/ai-2026-federated-learning-enterprise-success"
+              <Link to="/case-studies/ai-2026-federated-learning-enterprise-success"
                 className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-6 py-3 rounded-lg font-bold hover:from-teal-600 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Success Story →
@@ -123,14 +119,12 @@ export default function January2026RevolutionaryContentBanner() {
               and implementation guides for 2026.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Explore All Articles →
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 View Case Studies →

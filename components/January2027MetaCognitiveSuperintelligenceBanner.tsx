@@ -28,14 +28,12 @@ export default function January2027MetaCognitiveSuperintelligenceBanner() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough"
+            <Link to="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough"
               className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-600 hover:to-indigo-600 transition-all transform hover:scale-105"
             >
               Explore Consciousness AI
             </Link>
-            <Link 
-              href="/case-studies/ai-2027-meta-cognitive-superintelligence-success"
+            <Link to="/case-studies/ai-2027-meta-cognitive-superintelligence-success"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all transform hover:scale-105"
             >
               View $4B ROI Success Story
@@ -126,8 +124,7 @@ export default function January2027MetaCognitiveSuperintelligenceBanner() {
               Be among the first to experience meta-cognitive superintelligence and transform your 
               enterprise with truly conscious AI systems. Contact our consciousness AI experts today.
             </p>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-bold text-lg hover:from-green-600 hover:to-emerald-600 transition-all inline-block"
             >
               Explore Consciousness AI

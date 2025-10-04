@@ -68,16 +68,14 @@ const AI2026NextGenerationAutonomousSystemsBanner: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/blog/ai-2026-next-generation-autonomous-systems"
+            <Link to="/blog/ai-2026-next-generation-autonomous-systems"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2"
             >
               <span>Read Full Article</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             
-            <Link 
-              href="/consultation"
+            <Link to="/consultation"
               className="group bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/30 hover:border-white/50 flex items-center space-x-2"
             >
               <span>Schedule Consultation</span>

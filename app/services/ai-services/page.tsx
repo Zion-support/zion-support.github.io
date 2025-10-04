@@ -668,8 +668,7 @@ export default function AIServicesPage() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Link 
-                      href={service.link}
+                    <Link to={service.link}
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors text-sm"
                     >
                       Learn More

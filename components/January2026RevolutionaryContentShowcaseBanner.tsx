@@ -26,7 +26,7 @@ export default function January2026RevolutionaryContentShowcaseBanner() {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Meta-Cognitive Intelligence */}
-          <Link href="/blog/ai-2026-meta-cognitive-intelligence-revolution" className="group block">
+          <Link to="/blog/ai-2026-meta-cognitive-intelligence-revolution" className="group block">
             <div className="relative overflow-hidden rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-8 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
@@ -56,7 +56,7 @@ export default function January2026RevolutionaryContentShowcaseBanner() {
           </Link>
 
           {/* Neuromorphic Computing */}
-          <Link href="/blog/ai-2026-neuromorphic-computing-breakthrough" className="group block">
+          <Link to="/blog/ai-2026-neuromorphic-computing-breakthrough" className="group block">
             <div className="relative overflow-hidden rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-cyan-900/20 p-8 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
@@ -86,7 +86,7 @@ export default function January2026RevolutionaryContentShowcaseBanner() {
           </Link>
 
           {/* Quantum-Neural Fusion */}
-          <Link href="/blog/ai-2026-quantum-neural-fusion-revolution" className="group block">
+          <Link to="/blog/ai-2026-quantum-neural-fusion-revolution" className="group block">
             <div className="relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-8 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
@@ -129,7 +129,7 @@ export default function January2026RevolutionaryContentShowcaseBanner() {
           
           <div className="grid md:grid-cols-2 gap-6">
             {/* Meta-Cognitive Success */}
-            <Link href="/case-studies/ai-2026-meta-cognitive-intelligence-2-billion-success" className="group block">
+            <Link to="/case-studies/ai-2026-meta-cognitive-intelligence-2-billion-success" className="group block">
               <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl border border-green-500/30 p-6 hover:border-green-400/50 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">$2.3B SUCCESS</span>
@@ -152,7 +152,7 @@ export default function January2026RevolutionaryContentShowcaseBanner() {
             </Link>
 
             {/* Neuromorphic Success */}
-            <Link href="/case-studies/ai-2026-neuromorphic-computing-500-million-success" className="group block">
+            <Link to="/case-studies/ai-2026-neuromorphic-computing-500-million-success" className="group block">
               <div className="bg-gradient-to-br from-blue-900/20 to-indigo-900/20 rounded-xl border border-blue-500/30 p-6 hover:border-blue-400/50 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold">$500M SUCCESS</span>
@@ -179,20 +179,17 @@ export default function January2026RevolutionaryContentShowcaseBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog" 
+            <Link to="/blog" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Explore All AI Content
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View All Success Stories
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Start Your AI Journey

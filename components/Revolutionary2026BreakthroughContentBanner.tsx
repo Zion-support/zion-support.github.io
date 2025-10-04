@@ -28,7 +28,7 @@ export default function Revolutionary2026BreakthroughContentBanner() {
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Neuromorphic AI */}
-          <Link href="/blog/ai-2026-neuromorphic-breakthrough" className="group">
+          <Link to="/blog/ai-2026-neuromorphic-breakthrough" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all transform hover:scale-105 border border-white/20 shadow-2xl">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center">
@@ -69,7 +69,7 @@ export default function Revolutionary2026BreakthroughContentBanner() {
           </Link>
 
           {/* Quantum Neural Fusion */}
-          <Link href="/blog/ai-2026-quantum-neural-fusion" className="group">
+          <Link to="/blog/ai-2026-quantum-neural-fusion" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all transform hover:scale-105 border border-white/20 shadow-2xl">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center">
@@ -110,7 +110,7 @@ export default function Revolutionary2026BreakthroughContentBanner() {
           </Link>
 
           {/* Autonomous Business Intelligence */}
-          <Link href="/blog/ai-2026-autonomous-business-intelligence" className="group">
+          <Link to="/blog/ai-2026-autonomous-business-intelligence" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all transform hover:scale-105 border border-white/20 shadow-2xl">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
@@ -158,8 +158,7 @@ export default function Revolutionary2026BreakthroughContentBanner() {
             Essential reading for CTOs, CIOs, and technology leaders planning their 2026 AI transformation strategy
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all hover:scale-105 shadow-lg"
             >
               Explore All Breakthrough Content →

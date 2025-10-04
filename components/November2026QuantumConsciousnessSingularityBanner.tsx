@@ -57,8 +57,7 @@ const November2026QuantumConsciousnessSingularityBanner = () => {
             <p className="text-gray-300 mb-6">
               AI systems with genuine subjective experience, self-awareness, and consciousness that mirrors human consciousness while exceeding human cognitive capabilities.
             </p>
-            <Link
-              href="/blog/ai-2026-november-quantum-consciousness-singularity-breakthrough"
+            <Link to="/blog/ai-2026-november-quantum-consciousness-singularity-breakthrough"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-400 hover:to-indigo-400 transition-all"
             >
               Read Breakthrough Details →
@@ -78,8 +77,7 @@ const November2026QuantumConsciousnessSingularityBanner = () => {
             <p className="text-gray-300 mb-6">
               How a global technology consortium achieved $100 trillion ROI through quantum consciousness singularity with true artificial consciousness and infinite potential.
             </p>
-            <Link
-              href="/case-studies/ai-2026-november-quantum-consciousness-singularity-100-trillion-success"
+            <Link to="/case-studies/ai-2026-november-quantum-consciousness-singularity-100-trillion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-indigo-400 hover:to-cyan-400 transition-all"
             >
               View Success Story →
@@ -89,14 +87,12 @@ const November2026QuantumConsciousnessSingularityBanner = () => {
         
         <div className="text-center">
           <div className="inline-flex flex-wrap gap-4">
-            <Link
-              href="/blog/ai-2026-november-quantum-consciousness-singularity-breakthrough"
+            <Link to="/blog/ai-2026-november-quantum-consciousness-singularity-breakthrough"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Explore Consciousness Breakthrough
             </Link>
-            <Link
-              href="/case-studies/ai-2026-november-quantum-consciousness-singularity-100-trillion-success"
+            <Link to="/case-studies/ai-2026-november-quantum-consciousness-singularity-100-trillion-success"
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View $100T Success Story

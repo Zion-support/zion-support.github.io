@@ -30,7 +30,7 @@ export default function NewContent2026MegaTrendsBanner() {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* AI 2026 Mega Trends */}
-          <Link href="/blog/ai-2026-future-ai-landscape-mega-trends" className="group">
+          <Link to="/blog/ai-2026-future-ai-landscape-mega-trends" className="group">
             <div className="bg-gradient-to-br from-purple-800/50 to-blue-800/50 border border-purple-500/40 rounded-xl p-6 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
@@ -56,7 +56,7 @@ export default function NewContent2026MegaTrendsBanner() {
           </Link>
 
           {/* Quantum Computing Breakthrough */}
-          <Link href="/blog/quantum-computing-2026-commercial-breakthrough" className="group">
+          <Link to="/blog/quantum-computing-2026-commercial-breakthrough" className="group">
             <div className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 border border-blue-500/40 rounded-xl p-6 hover:border-blue-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -82,7 +82,7 @@ export default function NewContent2026MegaTrendsBanner() {
           </Link>
 
           {/* Fortune 500 Case Study */}
-          <Link href="/case-studies/fortune-500-ai-transformation-12b-roi" className="group">
+          <Link to="/case-studies/fortune-500-ai-transformation-12b-roi" className="group">
             <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 border border-green-500/40 rounded-xl p-6 hover:border-green-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
@@ -131,16 +131,14 @@ export default function NewContent2026MegaTrendsBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
             >
               <Brain className="w-5 h-5" />
               Explore All Content
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="border-2 border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Target className="w-5 h-5" />

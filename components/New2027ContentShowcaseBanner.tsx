@@ -24,8 +24,7 @@ export default function New2027ContentShowcaseBanner() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          <Link 
-            href="/blog/ai-2027-quantum-breakthrough"
+          <Link to="/blog/ai-2027-quantum-breakthrough"
             className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -48,8 +47,7 @@ export default function New2027ContentShowcaseBanner() {
             </div>
           </Link>
 
-          <Link 
-            href="/blog/ai-2027-autonomous-enterprise"
+          <Link to="/blog/ai-2027-autonomous-enterprise"
             className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -72,8 +70,7 @@ export default function New2027ContentShowcaseBanner() {
             </div>
           </Link>
 
-          <Link 
-            href="/case-studies/ai-2027-mega-transformation-success"
+          <Link to="/case-studies/ai-2027-mega-transformation-success"
             className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -99,14 +96,12 @@ export default function New2027ContentShowcaseBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Explore All Articles
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               View Case Studies

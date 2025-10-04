@@ -10,15 +10,13 @@ export default function EdgeAI5GBanner() {
             <span className="text-3xl animate-pulse">⚡</span>
             <span className="font-bold text-xl">NEW: Edge AI + 5G Convergence</span>
             <div className="flex flex-wrap gap-4 items-center">
-              <Link 
-                href="/blog/ai-2025-oct-edge-ai-5g-convergence-revolution" 
+              <Link to="/blog/ai-2025-oct-edge-ai-5g-convergence-revolution" 
                 className="underline hover:text-yellow-200 font-bold flex items-center gap-2"
               >
                 📘 Complete Guide
                 <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold animate-pulse">{'<1ms LATENCY'}</span>
               </Link>
-              <Link 
-                href="/case-studies/ai-2025-oct-manufacturing-edge-5g-success" 
+              <Link to="/case-studies/ai-2025-oct-manufacturing-edge-5g-success" 
                 className="underline hover:text-yellow-200 font-bold flex items-center gap-2"
               >
                 💰 $780M Manufacturing Success
@@ -26,8 +24,7 @@ export default function EdgeAI5GBanner() {
               </Link>
             </div>
           </div>
-          <Link
-            href="/services/october-2025-edge-ai-enterprise-transformation-services"
+          <Link to="/services/october-2025-edge-ai-enterprise-transformation-services"
             className="bg-white text-teal-700 hover:bg-yellow-400 hover:text-teal-900 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all"
           >
             Deploy Edge AI →
@@ -75,8 +72,7 @@ export function EdgeAI5GShowcaseBanner() {
                 19 min read
               </span>
             </div>
-            <Link
-              href="/blog/ai-2025-oct-edge-ai-5g-convergence-revolution"
+            <Link to="/blog/ai-2025-oct-edge-ai-5g-convergence-revolution"
               className="text-teal-600 font-bold hover:text-teal-700 text-lg"
             >
               Read Complete Guide →
@@ -106,8 +102,7 @@ export function EdgeAI5GShowcaseBanner() {
                 18 Months
               </span>
             </div>
-            <Link
-              href="/case-studies/ai-2025-oct-manufacturing-edge-5g-success"
+            <Link to="/case-studies/ai-2025-oct-manufacturing-edge-5g-success"
               className="text-green-600 font-bold hover:text-green-700 text-lg"
             >
               Read Success Story →
@@ -144,8 +139,7 @@ export function EdgeAI5GShowcaseBanner() {
         </div>
 
         <div className="mt-8 text-center">
-          <Link
-            href="/contact"
+          <Link to="/contact"
             className="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-teal-700 transition-colors"
           >
             Get Your Edge AI + 5G Roadmap →

@@ -48,20 +48,17 @@ export default function January2026CognitiveAutomationBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-cognitive-automation-revolution" 
+            <Link to="/blog/ai-2026-cognitive-automation-revolution" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Read Full Revolution →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-cognitive-automation-25-billion-success" 
+            <Link to="/case-studies/ai-2026-cognitive-automation-25-billion-success" 
               className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               View $25.3B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Implementation Guide

@@ -63,14 +63,12 @@ const ComprehensiveContentShowcase2026Banner: React.FC = () => {
                 The ultimate business revolution with 99.99% automation, universal intelligence, and infinite scalability. Transform your enterprise with post-singularity AI systems.
               </p>
               <div className="flex flex-col gap-2">
-                <Link 
-                  href="/blog/ai-2026-post-singularity-enterprise-transformation"
+                <Link to="/blog/ai-2026-post-singularity-enterprise-transformation"
                   className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 text-purple-200 border border-purple-400/30 px-4 py-2 rounded-lg font-semibold hover:from-purple-500/30 hover:to-indigo-500/30 transition-colors text-center"
                 >
                   Read Article →
                 </Link>
-                <Link 
-                  href="/case-studies/post-singularity-enterprise-1-trillion-success"
+                <Link to="/case-studies/post-singularity-enterprise-1-trillion-success"
                   className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/30 px-4 py-2 rounded-lg font-semibold hover:from-green-500/30 hover:to-emerald-500/30 transition-colors text-center"
                 >
                   View $1T Success Story →
@@ -89,14 +87,12 @@ const ComprehensiveContentShowcase2026Banner: React.FC = () => {
                 Revolutionary fusion of quantum computing with neural networks for unprecedented AI capabilities. Achieve 99.999% accuracy with infinite processing power.
               </p>
               <div className="flex flex-col gap-2">
-                <Link 
-                  href="/blog/ai-2026-neural-quantum-fusion-breakthrough"
+                <Link to="/blog/ai-2026-neural-quantum-fusion-breakthrough"
                   className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-200 border border-cyan-400/30 px-4 py-2 rounded-lg font-semibold hover:from-cyan-500/30 hover:to-blue-500/30 transition-colors text-center"
                 >
                   Read Article →
                 </Link>
-                <Link 
-                  href="/case-studies/neural-quantum-fusion-500-billion-success"
+                <Link to="/case-studies/neural-quantum-fusion-500-billion-success"
                   className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/30 px-4 py-2 rounded-lg font-semibold hover:from-green-500/30 hover:to-emerald-500/30 transition-colors text-center"
                 >
                   View $500B Success Story →
@@ -115,14 +111,12 @@ const ComprehensiveContentShowcase2026Banner: React.FC = () => {
                 Self-aware AI systems with true consciousness and autonomous decision-making. Experience 100% self-awareness and 99.99% autonomous operations.
               </p>
               <div className="flex flex-col gap-2">
-                <Link 
-                  href="/blog/ai-2026-autonomous-consciousness-enterprise-systems"
+                <Link to="/blog/ai-2026-autonomous-consciousness-enterprise-systems"
                   className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-200 border border-emerald-400/30 px-4 py-2 rounded-lg font-semibold hover:from-emerald-500/30 hover:to-teal-500/30 transition-colors text-center"
                 >
                   Read Article →
                 </Link>
-                <Link 
-                  href="/case-studies/autonomous-consciousness-enterprise-750-billion-success"
+                <Link to="/case-studies/autonomous-consciousness-enterprise-750-billion-success"
                   className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/30 px-4 py-2 rounded-lg font-semibold hover:from-green-500/30 hover:to-emerald-500/30 transition-colors text-center"
                 >
                   View $750B Success Story →
@@ -168,20 +162,17 @@ const ComprehensiveContentShowcase2026Banner: React.FC = () => {
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </Link>
-            <Link 
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Explore All Content
             </Link>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories

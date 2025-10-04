@@ -214,10 +214,10 @@ export default function IoTSolutionsPage() {
                 Connect, monitor, and optimize with intelligent IoT solutions for industrial automation, smart buildings, and environmental monitoring
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="#services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                <Link to="#services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Explore Services
                 </Link>
-                <Link href="/contact" className="border border-white text-white hover:bg-white hover:text-green-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                <Link to="/contact" className="border border-white text-white hover:bg-white hover:text-green-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                   Get Quote
                 </Link>
               </div>
@@ -311,7 +311,7 @@ export default function IoTSolutionsPage() {
                       </p>
                     </div>
 
-                    <Link href={service.link} className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
+                    <Link to={service.link} className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
@@ -332,7 +332,7 @@ export default function IoTSolutionsPage() {
               Let's build intelligent IoT solutions that transform your operations and drive measurable business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <Link to="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Your Project
               </Link>
               <a href="tel:+13024640950" className="border border-white text-white hover:bg-white hover:text-green-600 px-8 py-3 rounded-lg font-semibold transition-colors">

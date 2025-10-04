@@ -141,14 +141,12 @@ const AIMegaTransformationSuccessBanner = () => {
               community of successful enterprises.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-white text-emerald-600 px-10 py-5 rounded-lg font-bold text-xl hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Start Your Transformation
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="border-2 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:text-emerald-600 transition-colors"
               >
                 View All Success Stories

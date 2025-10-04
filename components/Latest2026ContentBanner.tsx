@@ -23,7 +23,7 @@ export default function Latest2026ContentBanner() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           
           {/* AI Autonomous Cloud Native */}
-          <Link href="/blog/ai-autonomous-cloud-native-2026" className="group">
+          <Link to="/blog/ai-autonomous-cloud-native-2026" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -65,7 +65,7 @@ export default function Latest2026ContentBanner() {
           </Link>
 
           {/* AI Synthetic Data Generation */}
-          <Link href="/blog/ai-synthetic-data-generation-2026" className="group">
+          <Link to="/blog/ai-synthetic-data-generation-2026" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -107,7 +107,7 @@ export default function Latest2026ContentBanner() {
           </Link>
 
           {/* Enterprise Case Study */}
-          <Link href="/case-studies/ai-autonomous-cloud-enterprise-2026" className="group">
+          <Link to="/case-studies/ai-autonomous-cloud-enterprise-2026" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-green-300">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">

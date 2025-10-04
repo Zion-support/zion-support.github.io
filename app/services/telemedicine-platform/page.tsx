@@ -132,14 +132,12 @@ export default function TelemedicinePlatformPage() {
             Enable secure virtual consultations, streamline appointment management, and enhance patient care.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Schedule Demo
             </Link>
-            <Link 
-              href="/pricing" 
+            <Link to="/pricing" 
               className="border border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
             >
               View Pricing
@@ -213,8 +211,7 @@ export default function TelemedicinePlatformPage() {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact"
+                <Link to="/contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-green-600 text-white hover:bg-green-700'

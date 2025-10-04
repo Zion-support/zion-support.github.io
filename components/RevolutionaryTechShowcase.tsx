@@ -122,8 +122,7 @@ export default function RevolutionaryTechShowcase() {
                 ))}
               </div>
 
-              <Link 
-                href="/services/ultimate-neural-fusion-consulting"
+              <Link to="/services/ultimate-neural-fusion-consulting"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-bold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
                 Get Started Today
@@ -153,7 +152,7 @@ export default function RevolutionaryTechShowcase() {
             Proven Success Stories
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/case-studies/ai-2026-ultimate-neural-fusion-100-billion-success" className="group">
+            <Link to="/case-studies/ai-2026-ultimate-neural-fusion-100-billion-success" className="group">
               <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-2xl p-6 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 group-hover:scale-105">
                 <div className="text-3xl font-bold text-green-400 mb-2">$100B</div>
                 <div className="text-white font-semibold mb-2">Fortune 50 Success</div>
@@ -163,7 +162,7 @@ export default function RevolutionaryTechShowcase() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-2026-quantum-consciousness-fusion-100-billion-success" className="group">
+            <Link to="/case-studies/ai-2026-quantum-consciousness-fusion-100-billion-success" className="group">
               <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 group-hover:scale-105">
                 <div className="text-3xl font-bold text-blue-400 mb-2">$100B</div>
                 <div className="text-white font-semibold mb-2">Quantum AI Success</div>
@@ -173,7 +172,7 @@ export default function RevolutionaryTechShowcase() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-2026-autonomous-enterprise-25-billion-success" className="group">
+            <Link to="/case-studies/ai-2026-autonomous-enterprise-25-billion-success" className="group">
               <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-2xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group-hover:scale-105">
                 <div className="text-3xl font-bold text-purple-400 mb-2">$25B</div>
                 <div className="text-white font-semibold mb-2">Autonomous Success</div>

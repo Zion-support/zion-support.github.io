@@ -26,8 +26,7 @@ export default function February2026AutonomousSystemsBanner() {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Link 
-            href="/blog/ai-2026-february-advanced-autonomous-systems" 
+          <Link to="/blog/ai-2026-february-advanced-autonomous-systems" 
             className="group block rounded-2xl border border-blue-500/30 bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-8 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -64,8 +63,7 @@ export default function February2026AutonomousSystemsBanner() {
             </div>
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2026-february-autonomous-systems-25-billion-success" 
+          <Link to="/case-studies/ai-2026-february-autonomous-systems-25-billion-success" 
             className="group block rounded-2xl border border-green-500/30 bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-8 hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
           >
             <div className="flex items-center gap-3 mb-4">

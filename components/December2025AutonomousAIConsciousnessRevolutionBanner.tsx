@@ -106,24 +106,21 @@ const December2025AutonomousAIConsciousnessRevolutionBanner: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap gap-4">
-          <Link 
-            href="/blog/ai-2025-december-autonomous-ai-consciousness-revolution"
+          <Link to="/blog/ai-2025-december-autonomous-ai-consciousness-revolution"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <span>🧠</span>
             Read Full Article
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2025-december-global-enterprise-quantum-ai-transformation-1-trillion-success"
+          <Link to="/case-studies/ai-2025-december-global-enterprise-quantum-ai-transformation-1-trillion-success"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <span>💰</span>
             $1T Success Story
           </Link>
           
-          <Link 
-            href="/services/ai-consciousness-consulting"
+          <Link to="/services/ai-consciousness-consulting"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <span>🚀</span>

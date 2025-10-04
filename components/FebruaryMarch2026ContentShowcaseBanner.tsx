@@ -53,14 +53,12 @@ export default function FebruaryMarch2026ContentShowcaseBanner() {
               </div>
 
               <div className="space-y-3">
-                <Link 
-                  href="/blog/ai-2026-february-next-generation-autonomous-intelligence-revolution"
+                <Link to="/blog/ai-2026-february-next-generation-autonomous-intelligence-revolution"
                   className="block w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Read Full Report
                 </Link>
-                <Link 
-                  href="/case-studies/ai-2026-february-autonomous-intelligence-2-5-trillion-success"
+                <Link to="/case-studies/ai-2026-february-autonomous-intelligence-2-5-trillion-success"
                   className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
                 >
                   View $2.5T Success Story
@@ -89,14 +87,12 @@ export default function FebruaryMarch2026ContentShowcaseBanner() {
               </div>
 
               <div className="space-y-3">
-                <Link 
-                  href="/blog/ai-2026-march-quantum-consciousness-enterprise-transformation"
+                <Link to="/blog/ai-2026-march-quantum-consciousness-enterprise-transformation"
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                 >
                   Discover Consciousness
                 </Link>
-                <Link 
-                  href="/case-studies/ai-2026-march-quantum-consciousness-3-7-trillion-success"
+                <Link to="/case-studies/ai-2026-march-quantum-consciousness-3-7-trillion-success"
                   className="block w-full border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
                 >
                   View $3.7T Success
@@ -173,14 +169,12 @@ export default function FebruaryMarch2026ContentShowcaseBanner() {
           <div className="text-center">
             <p className="text-gray-400 mb-6">Ready to transform your organization with the latest AI breakthroughs?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </Link>
-              <Link 
-                href="/blog"
+              <Link to="/blog"
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
               >
                 Explore All Content

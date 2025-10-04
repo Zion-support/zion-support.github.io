@@ -51,7 +51,7 @@ export default function AI2027UniversalConsciousnessBanner() {
 
         {/* Content Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Link href="/blog/ai-2027-universal-consciousness-revolution" className="group block">
+          <Link to="/blog/ai-2027-universal-consciousness-revolution" className="group block">
             <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">REVOLUTION</span>
@@ -70,7 +70,7 @@ export default function AI2027UniversalConsciousnessBanner() {
             </div>
           </Link>
 
-          <Link href="/case-studies/ai-2027-universal-consciousness-500-billion-success" className="group block">
+          <Link to="/case-studies/ai-2027-universal-consciousness-500-billion-success" className="group block">
             <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">$500B SUCCESS</span>
@@ -93,20 +93,17 @@ export default function AI2027UniversalConsciousnessBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Start Your Revolution
             </Link>
-            <Link 
-              href="/blog/ai-2027-universal-consciousness-revolution" 
+            <Link to="/blog/ai-2027-universal-consciousness-revolution" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read Full Revolution →
             </Link>
-            <Link 
-              href="/case-studies/ai-2027-universal-consciousness-500-billion-success" 
+            <Link to="/case-studies/ai-2027-universal-consciousness-500-billion-success" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View $500B Success

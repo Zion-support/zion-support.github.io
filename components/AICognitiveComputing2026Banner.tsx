@@ -25,14 +25,12 @@ export default function AICognitiveComputing2026Banner() {
               300% productivity gains with cognitive AI systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Link
-                href="/blog/ai-cognitive-computing-2026"
+              <Link to="/blog/ai-cognitive-computing-2026"
                 className="bg-cyan-400 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-300 transition-colors shadow-lg hover:shadow-xl"
               >
                 Explore Cognitive AI →
               </Link>
-              <Link
-                href="/services/ai-cognitive-computing"
+              <Link to="/services/ai-cognitive-computing"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-400 hover:text-purple-900 transition-colors"
               >
                 Get Cognitive AI Services

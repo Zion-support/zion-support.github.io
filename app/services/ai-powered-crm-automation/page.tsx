@@ -251,14 +251,12 @@ export default function AIPoweredCRMAutomation() {
           Join 400+ sales teams using our AI-Powered CRM Automation to increase revenue and efficiency.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link 
-            href="tel:+13024640950" 
+          <Link to="tel:+13024640950" 
             className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold border border-purple-600 hover:bg-purple-50 transition-colors"
           >
             Call +1 302 464 0950

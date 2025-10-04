@@ -66,16 +66,14 @@ export default function MLOpsTransformationBanner() {
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            href="/case-studies/ai-2025-oct-02-global-tech-mlops-transformation-340m-success"
+          <Link to="/case-studies/ai-2025-oct-02-global-tech-mlops-transformation-340m-success"
             className="inline-flex items-center px-8 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group"
           >
             Read Full Case Study
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           
-          <Link
-            href="/blog/ai-2025-oct-02-advanced-mlops-automation-platform"
+          <Link to="/blog/ai-2025-oct-02-advanced-mlops-automation-platform"
             className="inline-flex items-center px-8 py-4 bg-blue-800/50 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/30 hover:bg-blue-700/50 transition-all duration-300"
           >
             Implementation Guide
@@ -114,8 +112,7 @@ export function MLOpsTransformationCompactBanner() {
           </p>
         </div>
         
-        <Link
-          href="/case-studies/ai-2025-oct-02-global-tech-mlops-transformation-340m-success"
+        <Link to="/case-studies/ai-2025-oct-02-global-tech-mlops-transformation-340m-success"
           className="inline-flex items-center px-6 py-3 bg-white text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition-all duration-200 shadow-md hover:shadow-lg whitespace-nowrap"
         >
           Read Case Study

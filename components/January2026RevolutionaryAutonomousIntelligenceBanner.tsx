@@ -81,8 +81,7 @@ const January2026RevolutionaryAutonomousIntelligenceBanner: React.FC = () => {
                 </div>
               </div>
               
-              <Link 
-                href="/blog/ai-2026-january-revolutionary-autonomous-intelligence-breakthrough"
+              <Link to="/blog/ai-2026-january-revolutionary-autonomous-intelligence-breakthrough"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-400 hover:to-blue-400 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read Breakthrough Guide
@@ -119,8 +118,7 @@ const January2026RevolutionaryAutonomousIntelligenceBanner: React.FC = () => {
                 </div>
               </div>
               
-              <Link 
-                href="/case-studies/ai-2026-january-autonomous-intelligence-2-7-billion-success"
+              <Link to="/case-studies/ai-2026-january-autonomous-intelligence-2-7-billion-success"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View Success Story
@@ -140,14 +138,12 @@ const January2026RevolutionaryAutonomousIntelligenceBanner: React.FC = () => {
                 Limited implementation slots available for early 2026.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
+                <Link to="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Get Started Today
                 </Link>
-                <Link 
-                  href="/services/autonomous-intelligence"
+                <Link to="/services/autonomous-intelligence"
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Services

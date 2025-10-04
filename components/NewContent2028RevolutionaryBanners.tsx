@@ -57,8 +57,7 @@ export default function PromotionalBanner({
           </div>
           
           <div className="flex items-center space-x-3">
-            <Link
-              href={ctaLink}
+            <Link to={ctaLink}
               className="bg-white/20 hover:bg-white/30 px-4 py-1.5 rounded-full text-sm font-semibold transition-colors duration-200 border border-white/30"
             >
               {ctaText}

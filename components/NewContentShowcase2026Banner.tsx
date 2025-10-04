@@ -29,8 +29,7 @@ export default function NewContentShowcase2026Banner() {
                 <span className="font-bold">$500M+</span>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-agent-swarms-enterprise-orchestration-2026"
+            <Link to="/blog/ai-agent-swarms-enterprise-orchestration-2026"
               className="block bg-white text-blue-600 hover:bg-yellow-400 hover:text-blue-800 px-4 py-2 rounded-full text-sm font-bold text-center transition-all"
             >
               Read Full Guide
@@ -55,8 +54,7 @@ export default function NewContentShowcase2026Banner() {
                 <span className="font-bold">$10B+</span>
               </div>
             </div>
-            <Link 
-              href="/blog/quantum-enhanced-ai-enterprise-breakthrough-2026"
+            <Link to="/blog/quantum-enhanced-ai-enterprise-breakthrough-2026"
               className="block bg-white text-blue-600 hover:bg-yellow-400 hover:text-blue-800 px-4 py-2 rounded-full text-sm font-bold text-center transition-all"
             >
               Learn More
@@ -81,8 +79,7 @@ export default function NewContentShowcase2026Banner() {
                 <span className="font-bold">75% faster</span>
               </div>
             </div>
-            <Link 
-              href="/case-studies/ai-agent-swarms-manufacturing-success-2026"
+            <Link to="/case-studies/ai-agent-swarms-manufacturing-success-2026"
               className="block bg-white text-blue-600 hover:bg-yellow-400 hover:text-blue-800 px-4 py-2 rounded-full text-sm font-bold text-center transition-all"
             >
               View Case Study
@@ -91,8 +88,7 @@ export default function NewContentShowcase2026Banner() {
         </div>
 
         <div className="text-center">
-          <Link
-            href="/content-hub"
+          <Link to="/content-hub"
             className="inline-block bg-white text-blue-600 hover:bg-yellow-400 hover:text-blue-800 px-8 py-3 rounded-full font-bold transition-all shadow-lg"
           >
             Explore All 2026 Content →

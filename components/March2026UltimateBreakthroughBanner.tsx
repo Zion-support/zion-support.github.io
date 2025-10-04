@@ -52,20 +52,17 @@ export default function March2026UltimateBreakthroughBanner() {
           
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-march-ultimate-breakthrough-revolution" 
+            <Link to="/blog/ai-2026-march-ultimate-breakthrough-revolution" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Discover Revolutionary AI →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-success" 
+            <Link to="/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-success" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               View $15B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Started Today

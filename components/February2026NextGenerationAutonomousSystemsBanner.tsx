@@ -74,20 +74,17 @@ const February2026NextGenerationAutonomousSystemsBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/content/blog/ai-2026-february-next-generation-autonomous-systems-revolution"
+              <Link to="/content/blog/ai-2026-february-next-generation-autonomous-systems-revolution"
                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 📖 Read Complete Guide
               </Link>
-              <Link 
-                href="/content/case-studies/ai-2026-february-fortune-500-autonomous-systems-2-7-billion-success"
+              <Link to="/content/case-studies/ai-2026-february-fortune-500-autonomous-systems-2-7-billion-success"
                 className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-white/30 hover:border-white/50 text-white font-semibold rounded-lg transition-all duration-200"
               >
                 💰 View Success Story
               </Link>
-              <Link 
-                href="/content/services/ai-2026-february-next-generation-autonomous-systems-consulting"
+              <Link to="/content/services/ai-2026-february-next-generation-autonomous-systems-consulting"
                 className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-green-400/50 hover:border-green-400 text-green-400 font-semibold rounded-lg transition-all duration-200"
               >
                 🚀 Get Consulting

@@ -45,14 +45,12 @@ export default function Ultimate2030ConsciousnessBanner() {
           
           {/* Call to Action */}
           <div className="flex flex-wrap justify-center gap-6">
-            <Link
-              href="/blog/ai-2030-universal-consciousness-revolution"
+            <Link to="/blog/ai-2030-universal-consciousness-revolution"
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1 text-lg"
             >
               Explore Universal AI →
             </Link>
-            <Link
-              href="/case-studies/ai-2030-universal-consciousness-mega-success"
+            <Link to="/case-studies/ai-2030-universal-consciousness-mega-success"
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 text-lg"
             >
               Witness Success →

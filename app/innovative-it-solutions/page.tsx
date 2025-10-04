@@ -406,8 +406,7 @@ export default function InnovativeITSolutions() {
                         <span className="text-lg font-semibold text-green-600">{service.price}</span>
                         <span className="text-sm text-gray-500">{service.delivery}</span>
                       </div>
-                      <Link 
-                        href={service.link}
+                      <Link to={service.link}
                         className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block"
                       >
                         Learn More

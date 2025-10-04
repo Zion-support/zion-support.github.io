@@ -40,7 +40,7 @@ export default function AIAutonomousOpsBlueprint2026Page() {
 				</div>
 
 				<div className="mt-12">
-					<Link href="/blog" className="inline-block bg-white text-emerald-700 px-6 py-3 rounded-lg font-bold hover:bg-emerald-50">
+					<Link to="/blog" className="inline-block bg-white text-emerald-700 px-6 py-3 rounded-lg font-bold hover:bg-emerald-50">
 						← Back to Blog
 					</Link>
 				</div>

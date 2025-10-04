@@ -18,24 +18,21 @@ export function Revolutionary2026ContentBreakthroughBanner() {
           </div>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Link 
-            href="/blog/ai-2026-future-trends-breakthrough"
+          <Link to="/blog/ai-2026-future-trends-breakthrough"
             className="bg-white text-red-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
           >
             <span>🌟</span>
             Future Trends
             <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs">BREAKTHROUGH</span>
           </Link>
-          <Link 
-            href="/case-studies/ai-2026-global-enterprise-transformation-success"
+          <Link to="/case-studies/ai-2026-global-enterprise-transformation-success"
             className="bg-white text-orange-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
           >
             <span>💰</span>
             $500M Success
             <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">ROI</span>
           </Link>
-          <Link 
-            href="/services/ai-autonomous-operations-2026"
+          <Link to="/services/ai-autonomous-operations-2026"
             className="bg-white text-yellow-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
           >
             <span>🤖</span>

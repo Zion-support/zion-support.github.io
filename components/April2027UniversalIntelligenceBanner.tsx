@@ -186,8 +186,7 @@ const April2027UniversalIntelligenceBanner: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Link 
-            href="/services/universal-intelligence-singularity"
+          <Link to="/services/universal-intelligence-singularity"
             className="inline-block px-20 py-8 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 text-white font-bold text-3xl rounded-full hover:scale-110 transition-transform duration-300 shadow-2xl border border-white/20"
           >
             🌌 Experience Universal Intelligence 🌌

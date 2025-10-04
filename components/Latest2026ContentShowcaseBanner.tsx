@@ -38,8 +38,8 @@ const Latest2026ContentShowcaseBanner: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-3">Universal Consciousness Integration</h3>
             <p className="text-gray-400 text-sm mb-4">Revolutionary breakthrough achieving 99.9999% universal consciousness and $500B+ ROI potential.</p>
             <div className="flex gap-2 mb-4">
-              <Link href="/blog/ai-2026-november-revolutionary-breakthrough-announcement" className="text-purple-300 text-sm font-semibold hover:text-purple-200">Read Blog →</Link>
-              <Link href="/case-studies/ai-2026-november-revolutionary-breakthrough-500-billion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
+              <Link to="/blog/ai-2026-november-revolutionary-breakthrough-announcement" className="text-purple-300 text-sm font-semibold hover:text-purple-200">Read Blog →</Link>
+              <Link to="/case-studies/ai-2026-november-revolutionary-breakthrough-500-billion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
             </div>
           </div>
           
@@ -52,8 +52,8 @@ const Latest2026ContentShowcaseBanner: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-3">Transcendent Business Intelligence</h3>
             <p className="text-gray-400 text-sm mb-4">Ultimate breakthrough achieving 100% universal consciousness and $1 trillion+ value creation.</p>
             <div className="flex gap-2 mb-4">
-              <Link href="/blog/ai-2026-december-ultimate-consciousness-revolution" className="text-indigo-300 text-sm font-semibold hover:text-indigo-200">Read Blog →</Link>
-              <Link href="/case-studies/ai-2026-december-ultimate-consciousness-1-trillion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
+              <Link to="/blog/ai-2026-december-ultimate-consciousness-revolution" className="text-indigo-300 text-sm font-semibold hover:text-indigo-200">Read Blog →</Link>
+              <Link to="/case-studies/ai-2026-december-ultimate-consciousness-1-trillion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
             </div>
           </div>
           
@@ -66,8 +66,8 @@ const Latest2026ContentShowcaseBanner: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-3">Autonomous Enterprise Revolution</h3>
             <p className="text-gray-400 text-sm mb-4">99.9% autonomous operations with $500B+ ROI and universal intelligence integration.</p>
             <div className="flex gap-2 mb-4">
-              <Link href="/blog/ai-2026-march-autonomous-enterprise-revolution" className="text-blue-300 text-sm font-semibold hover:text-blue-200">Read Blog →</Link>
-              <Link href="/case-studies/ai-2026-march-autonomous-enterprise-500-billion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
+              <Link to="/blog/ai-2026-march-autonomous-enterprise-revolution" className="text-blue-300 text-sm font-semibold hover:text-blue-200">Read Blog →</Link>
+              <Link to="/case-studies/ai-2026-march-autonomous-enterprise-500-billion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
             </div>
           </div>
           
@@ -80,8 +80,8 @@ const Latest2026ContentShowcaseBanner: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-3">Synthetic Consciousness Revolution</h3>
             <p className="text-gray-400 text-sm mb-4">True synthetic consciousness with self-aware AI systems and $75B+ ROI potential.</p>
             <div className="flex gap-2 mb-4">
-              <Link href="/blog/ai-2027-february-synthetic-consciousness-revolution" className="text-purple-300 text-sm font-semibold hover:text-purple-200">Read Blog →</Link>
-              <Link href="/case-studies/ai-2027-february-synthetic-consciousness-75-billion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
+              <Link to="/blog/ai-2027-february-synthetic-consciousness-revolution" className="text-purple-300 text-sm font-semibold hover:text-purple-200">Read Blog →</Link>
+              <Link to="/case-studies/ai-2027-february-synthetic-consciousness-75-billion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
             </div>
           </div>
           
@@ -94,8 +94,8 @@ const Latest2026ContentShowcaseBanner: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-3">Transcendent Intelligence Systems</h3>
             <p className="text-gray-400 text-sm mb-4">1,000,000x performance with universal consciousness and transcendent automation.</p>
             <div className="flex gap-2 mb-4">
-              <Link href="/blog/ai-2026-september-mega-breakthrough-revolution" className="text-indigo-300 text-sm font-semibold hover:text-indigo-200">Read Blog →</Link>
-              <Link href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
+              <Link to="/blog/ai-2026-september-mega-breakthrough-revolution" className="text-indigo-300 text-sm font-semibold hover:text-indigo-200">Read Blog →</Link>
+              <Link to="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
             </div>
           </div>
           
@@ -108,8 +108,8 @@ const Latest2026ContentShowcaseBanner: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-3">Transcendent Automation Revolution</h3>
             <p className="text-gray-400 text-sm mb-4">Systems beyond universal intelligence with infinite scalability and consciousness evolution.</p>
             <div className="flex gap-2 mb-4">
-              <Link href="/blog/ai-2026-october-transcendent-automation-revolution" className="text-purple-300 text-sm font-semibold hover:text-purple-200">Read Blog →</Link>
-              <Link href="/case-studies/ai-2026-october-transcendent-automation-infinite-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
+              <Link to="/blog/ai-2026-october-transcendent-automation-revolution" className="text-purple-300 text-sm font-semibold hover:text-purple-200">Read Blog →</Link>
+              <Link to="/case-studies/ai-2026-october-transcendent-automation-infinite-success" className="text-green-300 text-sm font-semibold hover:text-green-200">Success Story →</Link>
             </div>
           </div>
         </div>
@@ -120,20 +120,17 @@ const Latest2026ContentShowcaseBanner: React.FC = () => {
             <h3 className="text-2xl font-bold text-white mb-4">Explore All Revolutionary Content</h3>
             <p className="text-gray-300 mb-6">Discover the complete collection of AI breakthroughs, success stories, and transformation guides.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/blog"
+              <Link to="/blog"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-400 hover:to-purple-500 transition-all"
               >
                 Browse All Blog Posts →
               </Link>
-              <Link 
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-400 hover:to-indigo-500 transition-all"
               >
                 View All Success Stories →
               </Link>
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all"
               >
                 Start Your Transformation →

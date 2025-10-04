@@ -12,7 +12,7 @@ export default function AINeuralNetworksEnterpriseTransformation2025Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-fuchsia-900 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-purple-300 hover:text-purple-200 transition-colors">
+          <Link to="/blog" className="text-purple-300 hover:text-purple-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -59,7 +59,7 @@ export default function AINeuralNetworksEnterpriseTransformation2025Page() {
           <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-2">Need help deploying at scale?</h3>
             <p className="text-white/80 mb-4">We implement reliable, governed AI platforms delivering measurable ROI.</p>
-            <Link href="/contact" className="text-purple-300 hover:text-purple-200 font-semibold">Talk to experts →</Link>
+            <Link to="/contact" className="text-purple-300 hover:text-purple-200 font-semibold">Talk to experts →</Link>
           </div>
         </article>
       </main>

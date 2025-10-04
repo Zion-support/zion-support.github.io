@@ -21,7 +21,7 @@ export default function Page() {
         <li>Progressive delivery with cost‑per‑request limits</li>
       </ul>
       <p>
-        Continue exploring in our <Link href="/blog">Blog</Link>.
+        Continue exploring in our <Link to="/blog">Blog</Link>.
       </p>
     </main>
   );

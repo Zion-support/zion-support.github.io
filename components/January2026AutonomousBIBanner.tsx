@@ -52,7 +52,7 @@ export default function January2026AutonomousBIBanner() {
 
           {/* Content Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Link href="/blog/ai-2026-january-revolutionary-breakthroughs" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-january-revolutionary-breakthroughs" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">JANUARY 2026</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">BREAKTHROUGH</span>
@@ -62,7 +62,7 @@ export default function January2026AutonomousBIBanner() {
               <div className="text-indigo-300 text-sm font-semibold group-hover:text-indigo-200">Read Breakthrough Details →</div>
             </Link>
 
-            <Link href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">AUTONOMOUS BI</span>
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-3 py-1 rounded-full text-xs font-bold">$500B ROI</span>
@@ -72,7 +72,7 @@ export default function January2026AutonomousBIBanner() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Explore Autonomous BI →</div>
             </Link>
 
-            <Link href="/case-studies/ai-2026-autonomous-bi-500-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/case-studies/ai-2026-autonomous-bi-500-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$500B SUCCESS</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 100</span>
@@ -86,14 +86,12 @@ export default function January2026AutonomousBIBanner() {
           {/* Call to Action */}
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Transform Your Business Today
               </Link>
-              <Link 
-                href="/blog/ai-2026-january-revolutionary-breakthroughs" 
+              <Link to="/blog/ai-2026-january-revolutionary-breakthroughs" 
                 className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore All Breakthroughs →

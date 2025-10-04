@@ -47,8 +47,7 @@ export default function NewContentJune2026PromotionalBanner() {
                 <span className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs">50,000x Faster</span>
               </div>
             </div>
-            <Link
-              href="/blog/ai-2026-june-revolutionary-breakthrough-announcement"
+            <Link to="/blog/ai-2026-june-revolutionary-breakthrough-announcement"
               className="inline-block w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
             >
               Read Full Article →
@@ -81,8 +80,7 @@ export default function NewContentJune2026PromotionalBanner() {
                 <span className="bg-emerald-500/20 text-emerald-300 px-2 py-1 rounded text-xs">99.7% Automation</span>
               </div>
             </div>
-            <Link
-              href="/case-studies/ai-2026-june-ami-15-billion-success"
+            <Link to="/case-studies/ai-2026-june-ami-15-billion-success"
               className="inline-block w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
             >
               View Success Story →
@@ -115,8 +113,7 @@ export default function NewContentJune2026PromotionalBanner() {
                 <span className="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded text-xs">Full Support</span>
               </div>
             </div>
-            <Link
-              href="/services/ami-autonomous-meta-cognitive-intelligence"
+            <Link to="/services/ami-autonomous-meta-cognitive-intelligence"
               className="inline-block w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
             >
               View Service Details →
@@ -135,14 +132,12 @@ export default function NewContentJune2026PromotionalBanner() {
               Get your free consultation and discover how AMI can deliver unprecedented results for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Free Consultation
               </Link>
-              <Link
-                href="/services/ami-autonomous-meta-cognitive-intelligence"
+              <Link to="/services/ami-autonomous-meta-cognitive-intelligence"
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Complete Service Details

@@ -75,20 +75,17 @@ export default function January2026NeuralOptimizationRevolutionBanner() {
 
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link 
-              href="/blog/ai-2026-advanced-neural-optimization-revolution" 
+            <Link to="/blog/ai-2026-advanced-neural-optimization-revolution" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               🚀 Read Complete Guide
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-neural-optimization-mega-success" 
+            <Link to="/case-studies/ai-2026-neural-optimization-mega-success" 
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               💰 View $200M Success Story
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               🎯 Start Your Transformation

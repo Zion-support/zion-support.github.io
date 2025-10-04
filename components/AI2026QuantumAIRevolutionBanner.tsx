@@ -28,20 +28,17 @@ export default function AI2026QuantumAIRevolutionBanner() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-quantum-ai-revolution-enterprise-breakthrough"
+            <Link to="/blog/ai-2026-quantum-ai-revolution-enterprise-breakthrough"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Explore Quantum AI →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-quantum-ai-revolution-10-billion-success"
+            <Link to="/case-studies/ai-2026-quantum-ai-revolution-10-billion-success"
               className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               $10.2B Success Story →
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Quantum Advantage

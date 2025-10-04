@@ -23,7 +23,7 @@ export default function LatestBreakthroughsBanner() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-          <Link href="/blog/ai-2026-quantum-enterprise-transformation-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+          <Link to="/blog/ai-2026-quantum-enterprise-transformation-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-3">
               <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">QUANTUM AI</span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">1000x</span>
@@ -33,7 +33,7 @@ export default function LatestBreakthroughsBanner() {
             <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Discover the Technology →</div>
           </Link>
           
-          <Link href="/blog/ai-2026-neural-architecture-search-revolution" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
+          <Link to="/blog/ai-2026-neural-architecture-search-revolution" className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-3">
               <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold">NAS REVOLUTION</span>
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">500x</span>
@@ -43,7 +43,7 @@ export default function LatestBreakthroughsBanner() {
             <div className="text-blue-300 text-sm font-semibold group-hover:text-blue-200">Explore NAS →</div>
           </Link>
           
-          <Link href="/case-studies/ai-2026-quantum-transformation-10-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+          <Link to="/case-studies/ai-2026-quantum-transformation-10-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-3">
               <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$10B ROI</span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">MEGA SUCCESS</span>
@@ -53,7 +53,7 @@ export default function LatestBreakthroughsBanner() {
             <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
           </Link>
           
-          <Link href="/case-studies/ai-2026-neural-architecture-search-500x-success" className="group block rounded-xl border border-orange-500/20 bg-gradient-to-br from-orange-900/20 to-red-900/20 p-6 hover:border-orange-400/40 transition-all duration-300 hover:scale-105">
+          <Link to="/case-studies/ai-2026-neural-architecture-search-500x-success" className="group block rounded-xl border border-orange-500/20 bg-gradient-to-br from-orange-900/20 to-red-900/20 p-6 hover:border-orange-400/40 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-2 mb-3">
               <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">500x SPEED</span>
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">DEVELOPMENT</span>
@@ -65,8 +65,7 @@ export default function LatestBreakthroughsBanner() {
         </div>
 
         <div className="text-center">
-          <Link
-            href="/blog"
+          <Link to="/blog"
             className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             🌟 Explore All AI Breakthroughs

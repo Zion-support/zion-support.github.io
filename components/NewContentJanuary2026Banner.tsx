@@ -27,7 +27,7 @@ export default function NewContentJanuary2026Banner() {
         
         <div className="grid md:grid-cols-3 gap-8">
           {/* Edge Computing Article */}
-          <Link href="/blog/ai-2026-edge-computing-revolution" className="group">
+          <Link to="/blog/ai-2026-edge-computing-revolution" className="group">
             <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 border-4 border-blue-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
@@ -69,7 +69,7 @@ export default function NewContentJanuary2026Banner() {
           </Link>
 
           {/* Finance Automation Article */}
-          <Link href="/blog/ai-2026-autonomous-finance-operations" className="group">
+          <Link to="/blog/ai-2026-autonomous-finance-operations" className="group">
             <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 border-4 border-emerald-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center">
@@ -111,7 +111,7 @@ export default function NewContentJanuary2026Banner() {
           </Link>
 
           {/* Edge Computing Success Story */}
-          <Link href="/case-studies/ai-edge-computing-success-2026" className="group">
+          <Link to="/case-studies/ai-edge-computing-success-2026" className="group">
             <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 border-4 border-green-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
@@ -160,14 +160,12 @@ export default function NewContentJanuary2026Banner() {
               Essential reading for CTOs, CFOs, and technology leaders planning their 2026 AI strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Explore All Latest Insights →
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View All Success Stories →

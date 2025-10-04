@@ -52,8 +52,7 @@ export default function Revolutionary2026QuantumMLBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-400 text-sm font-semibold">$100M+ ROI</span>
-              <Link 
-                href="/blog/ai-2027-quantum-machine-learning-revolution"
+              <Link to="/blog/ai-2027-quantum-machine-learning-revolution"
                 className="text-purple-400 hover:text-purple-300 text-sm font-semibold transition-colors"
               >
                 Learn More →
@@ -77,8 +76,7 @@ export default function Revolutionary2026QuantumMLBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-400 text-sm font-semibold">$2.5B Value</span>
-              <Link 
-                href="/case-studies/ai-2027-quantum-pharmaceutical-breakthrough"
+              <Link to="/case-studies/ai-2027-quantum-pharmaceutical-breakthrough"
                 className="text-green-400 hover:text-green-300 text-sm font-semibold transition-colors"
               >
                 View Success →
@@ -102,8 +100,7 @@ export default function Revolutionary2026QuantumMLBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-400 text-sm font-semibold">$75M ROI</span>
-              <Link 
-                href="/case-studies/ai-2026-autonomous-cloud-enterprise-success"
+              <Link to="/case-studies/ai-2026-autonomous-cloud-enterprise-success"
                 className="text-blue-400 hover:text-blue-300 text-sm font-semibold transition-colors"
               >
                 See Results →
@@ -115,15 +112,13 @@ export default function Revolutionary2026QuantumMLBreakthroughBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog/ai-2027-quantum-machine-learning-revolution"
+            <Link to="/blog/ai-2027-quantum-machine-learning-revolution"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
             >
               <span>⚛️</span>
               Explore Quantum ML Revolution
             </Link>
-            <Link
-              href="/case-studies/ai-2027-quantum-pharmaceutical-breakthrough"
+            <Link to="/case-studies/ai-2027-quantum-pharmaceutical-breakthrough"
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
             >
               <span>🧬</span>

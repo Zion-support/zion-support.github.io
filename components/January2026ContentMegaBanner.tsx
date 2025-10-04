@@ -45,14 +45,12 @@ export default function January2026ContentMegaBanner() {
               <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-xs font-semibold">99.9% Uptime</span>
             </div>
             <div className="flex gap-2">
-              <Link 
-                href="/blog/ai-2026-edge-native-intelligence-revolution"
+              <Link to="/blog/ai-2026-edge-native-intelligence-revolution"
                 className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-600 transition-all"
               >
                 Read Article
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-edge-native-intelligence-mega-success"
+              <Link to="/case-studies/ai-2026-edge-native-intelligence-mega-success"
                 className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all"
               >
                 $500M Success
@@ -81,14 +79,12 @@ export default function January2026ContentMegaBanner() {
               <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-xs font-semibold">Unlimited Scale</span>
             </div>
             <div className="flex gap-2">
-              <Link 
-                href="/blog/ai-2026-synthetic-data-revolution"
+              <Link to="/blog/ai-2026-synthetic-data-revolution"
                 className="flex-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-pink-600 hover:to-purple-600 transition-all"
               >
                 Read Article
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-synthetic-data-transformation-success"
+              <Link to="/case-studies/ai-2026-synthetic-data-transformation-success"
                 className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all"
               >
                 $300M Success
@@ -117,14 +113,12 @@ export default function January2026ContentMegaBanner() {
               <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-xs font-semibold">Quantum</span>
             </div>
             <div className="flex gap-2">
-              <Link 
-                href="/blog/ai-2026-quantum-enterprise-transformation-breakthrough"
+              <Link to="/blog/ai-2026-quantum-enterprise-transformation-breakthrough"
                 className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-indigo-600 hover:to-purple-600 transition-all"
               >
                 Read Article
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-quantum-transformation-10-billion-success"
+              <Link to="/case-studies/ai-2026-quantum-transformation-10-billion-success"
                 className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all"
               >
                 $10B Success
@@ -135,15 +129,13 @@ export default function January2026ContentMegaBanner() {
         
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link 
-              href="/blog"
+            <Link to="/blog"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Explore All AI Articles
               <span className="text-xl">→</span>
             </Link>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-600 hover:to-emerald-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               View All Success Stories

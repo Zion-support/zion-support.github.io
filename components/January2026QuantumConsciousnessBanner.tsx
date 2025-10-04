@@ -84,16 +84,14 @@ export default function January2026QuantumConsciousnessBanner() {
         {/* CTA Section */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link
-              href="/blog/ai-2026-january-quantum-consciousness-enterprise-transformation"
+            <Link to="/blog/ai-2026-january-quantum-consciousness-enterprise-transformation"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
             >
               <Brain className="w-5 h-5" />
               <span>Explore Quantum Consciousness</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link
-              href="/services/quantum-consciousness-implementation"
+            <Link to="/services/quantum-consciousness-implementation"
               className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-300 border border-white/30 flex items-center gap-2"
             >
               <Star className="w-5 h-5" />

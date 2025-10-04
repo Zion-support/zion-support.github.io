@@ -34,8 +34,7 @@ export default function NewContent2026Banner() {
             <p className="text-blue-100 mb-6">
               Learn how Fortune 500 companies achieved $50M+ in savings through AI-driven autonomous operations
             </p>
-            <Link 
-              href="/blog/ai-2026-enterprise-automation-breakthrough"
+            <Link to="/blog/ai-2026-enterprise-automation-breakthrough"
               className="inline-flex items-center text-green-300 hover:text-green-200 font-semibold group"
             >
               Read the Guide
@@ -51,8 +50,7 @@ export default function NewContent2026Banner() {
             <p className="text-blue-100 mb-6">
               Explore how quantum AI is revolutionizing business intelligence with exponential processing power
             </p>
-            <Link 
-              href="/blog/quantum-ai-2026-business-intelligence-revolution"
+            <Link to="/blog/quantum-ai-2026-business-intelligence-revolution"
               className="inline-flex items-center text-purple-300 hover:text-purple-200 font-semibold group"
             >
               Discover Quantum AI
@@ -68,8 +66,7 @@ export default function NewContent2026Banner() {
             <p className="text-blue-100 mb-6">
               Real Fortune 500 transformation case study with 156% ROI and $52M+ annual savings
             </p>
-            <Link 
-              href="/case-studies/fortune-500-ai-transformation-success"
+            <Link to="/case-studies/fortune-500-ai-transformation-success"
               className="inline-flex items-center text-blue-300 hover:text-blue-200 font-semibold group"
             >
               View Case Study
@@ -84,8 +81,7 @@ export default function NewContent2026Banner() {
             <p className="text-blue-100 mb-6">
               Your comprehensive 24-month guide to enterprise AI transformation with proven strategies, best practices, and real-world examples
             </p>
-            <Link 
-              href="/guides/ai-2026-implementation-roadmap"
+            <Link to="/guides/ai-2026-implementation-roadmap"
               className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105"
             >
               Get Your Roadmap

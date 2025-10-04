@@ -46,14 +46,12 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <Link
-                href="/blog/ai-2026-edge-computing-revolution"
+              <Link to="/blog/ai-2026-edge-computing-revolution"
                 className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
               >
                 📖 Edge Computing Revolution Guide
               </Link>
-              <Link
-                href="/case-studies/ai-2026-edge-computing-manufacturing-success"
+              <Link to="/case-studies/ai-2026-edge-computing-manufacturing-success"
                 className="text-green-400 hover:text-green-300 font-semibold transition-colors"
               >
                 💰 $50M Manufacturing Success Story
@@ -82,14 +80,12 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <Link
-                href="/blog/ai-2026-autonomous-business-processes"
+              <Link to="/blog/ai-2026-autonomous-business-processes"
                 className="text-purple-400 hover:text-purple-300 font-semibold transition-colors"
               >
                 📖 Autonomous Processes Guide
               </Link>
-              <Link
-                href="/case-studies/ai-2026-autonomous-processes-financial-success"
+              <Link to="/case-studies/ai-2026-autonomous-processes-financial-success"
                 className="text-green-400 hover:text-green-300 font-semibold transition-colors"
               >
                 💰 $75M Financial Success Story
@@ -118,14 +114,12 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <Link
-                href="/content-hub"
+              <Link to="/content-hub"
                 className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors"
               >
                 🏠 AI Content Hub
               </Link>
-              <Link
-                href="/services"
+              <Link to="/services"
                 className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
               >
                 🚀 AI Solutions & Services
@@ -161,20 +155,17 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/blog" 
+          <Link to="/blog" 
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
           >
             Explore All AI Content →
           </Link>
-          <Link 
-            href="/case-studies" 
+          <Link to="/case-studies" 
             className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
           >
             View All Success Stories →
           </Link>
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
           >
             Get AI Consultation

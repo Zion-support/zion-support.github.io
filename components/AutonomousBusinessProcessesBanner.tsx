@@ -90,7 +90,7 @@ const AutonomousBusinessProcessesBanner: React.FC = () => {
         {/* Featured Content */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Blog Article */}
-          <Link href="/blog/ai-powered-autonomous-business-processes-2026" className="group">
+          <Link to="/blog/ai-powered-autonomous-business-processes-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 h-full">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mr-4">
@@ -113,7 +113,7 @@ const AutonomousBusinessProcessesBanner: React.FC = () => {
           </Link>
 
           {/* Case Study */}
-          <Link href="/case-studies/global-manufacturing-autonomous-transformation" className="group">
+          <Link to="/case-studies/global-manufacturing-autonomous-transformation" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 h-full">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mr-4">
@@ -148,16 +148,14 @@ const AutonomousBusinessProcessesBanner: React.FC = () => {
               and proven methodologies for deploying autonomous business processes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/guides/autonomous-business-processes-implementation-guide-2026"
+              <Link to="/guides/autonomous-business-processes-implementation-guide-2026"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-xl hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
               >
                 <Clock className="w-5 h-5 mr-2" />
                 Get Implementation Guide
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Schedule Consultation

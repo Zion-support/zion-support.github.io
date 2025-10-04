@@ -54,8 +54,7 @@ const EmotionAIRevolutionBanner = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {/* Blog Post - Emotion AI */}
-          <Link 
-            href="/blog/ai-2025-oct-01-emotion-ai-enterprise-revolution"
+          <Link to="/blog/ai-2025-oct-01-emotion-ai-enterprise-revolution"
             className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border-2 border-white/30"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -73,8 +72,7 @@ const EmotionAIRevolutionBanner = () => {
           </Link>
 
           {/* Case Study */}
-          <Link 
-            href="/case-studies/ai-2025-oct-01-global-telecom-emotion-ai-transformation-4-2-billion-success"
+          <Link to="/case-studies/ai-2025-oct-01-global-telecom-emotion-ai-transformation-4-2-billion-success"
             className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border-2 border-white/30"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -92,8 +90,7 @@ const EmotionAIRevolutionBanner = () => {
           </Link>
 
           {/* Service Offering */}
-          <Link 
-            href="/services/emotion-ai-enterprise-transformation-services"
+          <Link to="/services/emotion-ai-enterprise-transformation-services"
             className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border-2 border-white/30"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -112,8 +109,7 @@ const EmotionAIRevolutionBanner = () => {
         </div>
 
         <div className="text-center mt-8">
-          <Link
-            href="/services/emotion-ai-enterprise-transformation-services"
+          <Link to="/services/emotion-ai-enterprise-transformation-services"
             className="inline-flex items-center gap-3 bg-white text-rose-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-rose-50 transition-all duration-300 hover:scale-105 shadow-xl"
           >
             <Heart className="w-6 h-6" />

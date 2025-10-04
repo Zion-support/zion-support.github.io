@@ -39,20 +39,17 @@ export default function AI2027RevolutionaryBreakthroughShowcaseBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link 
-              href="/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation"
+            <Link to="/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation"
               className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Quantum AI $500B Success
             </Link>
-            <Link 
-              href="/blog/ai-2027-autonomous-enterprise-operations-revolution"
+            <Link to="/blog/ai-2027-autonomous-enterprise-operations-revolution"
               className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Autonomous Operations
             </Link>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               All Success Stories
@@ -63,7 +60,7 @@ export default function AI2027RevolutionaryBreakthroughShowcaseBanner() {
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
               <h3 className="text-lg font-semibold mb-3 text-purple-300">🧠 Quantum AI Breakthrough</h3>
               <p className="text-sm text-orange-200 mb-4">Revolutionary quantum artificial intelligence delivering 1000x performance improvements and $500B in value creation.</p>
-              <Link href="/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation" className="text-purple-300 hover:text-purple-200 text-sm font-semibold">
+              <Link to="/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation" className="text-purple-300 hover:text-purple-200 text-sm font-semibold">
                 Learn More →
               </Link>
             </div>
@@ -71,7 +68,7 @@ export default function AI2027RevolutionaryBreakthroughShowcaseBanner() {
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
               <h3 className="text-lg font-semibold mb-3 text-green-300">🤖 Autonomous Operations</h3>
               <p className="text-sm text-orange-200 mb-4">99.9% autonomous enterprise operations achieving $200B in operational savings and unprecedented efficiency.</p>
-              <Link href="/blog/ai-2027-autonomous-enterprise-operations-revolution" className="text-green-300 hover:text-green-200 text-sm font-semibold">
+              <Link to="/blog/ai-2027-autonomous-enterprise-operations-revolution" className="text-green-300 hover:text-green-200 text-sm font-semibold">
                 Learn More →
               </Link>
             </div>
@@ -79,7 +76,7 @@ export default function AI2027RevolutionaryBreakthroughShowcaseBanner() {
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
               <h3 className="text-lg font-semibold mb-3 text-blue-300">📊 Proven Results</h3>
               <p className="text-sm text-orange-200 mb-4">500+ successful implementations across Fortune 500 companies with measurable ROI and transformative outcomes.</p>
-              <Link href="/case-studies" className="text-blue-300 hover:text-blue-200 text-sm font-semibold">
+              <Link to="/case-studies" className="text-blue-300 hover:text-blue-200 text-sm font-semibold">
                 View Cases →
               </Link>
             </div>

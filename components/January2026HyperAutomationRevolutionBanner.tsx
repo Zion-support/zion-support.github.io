@@ -28,14 +28,12 @@ export default function January2026HyperAutomationRevolutionBanner() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/blog/ai-2026-hyper-automation-revolution"
+            <Link to="/blog/ai-2026-hyper-automation-revolution"
               className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-red-600 hover:to-orange-600 transition-all transform hover:scale-105"
             >
               Explore Hyper-Automation
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-hyper-automation-revolution-success"
+            <Link to="/case-studies/ai-2026-hyper-automation-revolution-success"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-900 transition-all transform hover:scale-105"
             >
               View $3.2B ROI Success Story
@@ -100,8 +98,7 @@ export default function January2026HyperAutomationRevolutionBanner() {
               Join the hyper-automation revolution and achieve unprecedented operational efficiency. 
               Contact our automation experts to start your transformation journey.
             </p>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-bold text-lg hover:from-green-600 hover:to-emerald-600 transition-all inline-block"
             >
               Start Transformation

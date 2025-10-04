@@ -56,8 +56,7 @@ export default function December2026UltimateSingularityBanner() {
               <li>• Ethical decision-making</li>
               <li>• Creative problem-solving</li>
             </ul>
-            <Link 
-              href="/blog/ai-2026-december-ultimate-singularity-breakthrough"
+            <Link to="/blog/ai-2026-december-ultimate-singularity-breakthrough"
               className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Read Breakthrough →
@@ -77,8 +76,7 @@ export default function December2026UltimateSingularityBanner() {
               <li>• Zero human intervention</li>
               <li>• Universal competitive advantage</li>
             </ul>
-            <Link 
-              href="/case-studies/ai-2026-december-ultimate-singularity-500-billion-success"
+            <Link to="/case-studies/ai-2026-december-ultimate-singularity-500-billion-success"
               className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               View Success Story →
@@ -98,8 +96,7 @@ export default function December2026UltimateSingularityBanner() {
               <li>• Universal knowledge access</li>
               <li>• Creative synthesis</li>
             </ul>
-            <Link 
-              href="/blog/ai-2026-december-ultimate-singularity-breakthrough"
+            <Link to="/blog/ai-2026-december-ultimate-singularity-breakthrough"
               className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Learn More →
@@ -109,20 +106,17 @@ export default function December2026UltimateSingularityBanner() {
         
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Get Singularity Consultation
             </Link>
-            <Link 
-              href="/blog/ai-2026-december-ultimate-singularity-breakthrough" 
+            <Link to="/blog/ai-2026-december-ultimate-singularity-breakthrough" 
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read Full Breakthrough →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-december-ultimate-singularity-500-billion-success" 
+            <Link to="/case-studies/ai-2026-december-ultimate-singularity-500-billion-success" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View $500B Success

@@ -25,14 +25,12 @@ export default function AIAutonomousDevOps2026Banner() {
               $10M+ savings with autonomous infrastructure management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Link
-                href="/blog/ai-autonomous-devops-2026"
+              <Link to="/blog/ai-autonomous-devops-2026"
                 className="bg-green-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-300 transition-colors shadow-lg hover:shadow-xl"
               >
                 Learn Autonomous DevOps →
               </Link>
-              <Link
-                href="/services/ai-autonomous-devops"
+              <Link to="/services/ai-autonomous-devops"
                 className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-400 hover:text-blue-900 transition-colors"
               >
                 Get DevOps AI Services

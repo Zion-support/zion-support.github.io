@@ -105,8 +105,7 @@ const NewContentShowcaseOct2025: React.FC = () => {
           <p className="text-gray-600 mb-4">
             Looking for more AI/ML content?
           </p>
-          <Link
-            href="/content-hub"
+          <Link to="/content-hub"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             View All Resources

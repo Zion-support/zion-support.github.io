@@ -131,8 +131,7 @@ export default function CognitiveComputingBreakthroughBanner() {
                   <div className="text-xs text-gray-400">Value</div>
                 </div>
               </div>
-              <Link 
-                href="/case-studies/ai-cognitive-computing-success-2026"
+              <Link to="/case-studies/ai-cognitive-computing-success-2026"
                 className="inline-flex items-center text-cyan-300 font-semibold hover:text-white transition-colors"
               >
                 View Case Study <ArrowRight className="w-4 h-4 ml-1" />
@@ -153,8 +152,7 @@ export default function CognitiveComputingBreakthroughBanner() {
                 Discover the revolutionary AI breakthrough that achieves human-level reasoning, 
                 decision-making, and problem-solving capabilities.
               </p>
-              <Link 
-                href="/blog/ai-cognitive-computing-breakthrough-2026"
+              <Link to="/blog/ai-cognitive-computing-breakthrough-2026"
                 className="inline-flex items-center text-cyan-300 font-semibold hover:text-white transition-colors"
               >
                 Read Full Article <ArrowRight className="w-4 h-4 ml-1" />
@@ -243,14 +241,12 @@ export default function CognitiveComputingBreakthroughBanner() {
               cognitive computing systems that deliver measurable business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/blog/ai-cognitive-computing-breakthrough-2026"
+              <Link to="/blog/ai-cognitive-computing-breakthrough-2026"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Read Full Article
               </Link>
-              <Link
-                href="/services/ai-cognitive-computing"
+              <Link to="/services/ai-cognitive-computing"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 Explore Services

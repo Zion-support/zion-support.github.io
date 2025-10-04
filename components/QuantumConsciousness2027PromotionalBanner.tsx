@@ -34,20 +34,17 @@ export function QuantumConsciousness2027PromotionalBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link 
-              href="/blog/ai-2027-quantum-consciousness-fusion"
+            <Link to="/blog/ai-2027-quantum-consciousness-fusion"
               className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Learn More
             </Link>
-            <Link 
-              href="/case-studies/ai-2027-quantum-consciousness-mega-success"
+            <Link to="/case-studies/ai-2027-quantum-consciousness-mega-success"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all text-center"
             >
               View $2.5B Success
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all text-center animate-pulse"
             >
               Secure Access
@@ -95,20 +92,17 @@ export function AutonomousEnterprise2026PromotionalBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link 
-              href="/blog/ai-2026-autonomous-enterprise-revolution"
+            <Link to="/blog/ai-2026-autonomous-enterprise-revolution"
               className="bg-white text-red-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Learn More
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-global-enterprise-transformation-success"
+            <Link to="/case-studies/ai-2026-global-enterprise-transformation-success"
               className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-500 hover:to-emerald-600 transition-all text-center"
             >
               View $500M Success
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all text-center animate-pulse"
             >
               Get Implementation

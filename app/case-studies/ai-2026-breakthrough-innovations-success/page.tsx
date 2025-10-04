@@ -126,20 +126,17 @@ export default function AI2026BreakthroughInnovationsSuccessPage() {
             unprecedented results.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all"
             >
               Schedule Consultation
             </Link>
-            <Link 
-              href="/blog/ai-2026-breakthrough-innovations-january" 
+            <Link to="/blog/ai-2026-breakthrough-innovations-january" 
               className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all"
             >
               Read Full Innovation Report
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all"
             >
               View All Success Stories

@@ -146,20 +146,17 @@ export default function Fortune500SuccessStoryBanner() {
             Join leading Fortune 500 companies achieving breakthrough results and competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/case-studies/fortune-500-superintelligent-automation-success" 
+            <Link to="/case-studies/fortune-500-superintelligent-automation-success" 
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Read Full Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Get Free Assessment
             </Link>
-            <Link 
-              href="/blog/ai-2026-superintelligent-automation-breakthrough" 
+            <Link to="/blog/ai-2026-superintelligent-automation-breakthrough" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Learn About Technology

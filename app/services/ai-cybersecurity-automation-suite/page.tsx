@@ -251,14 +251,12 @@ export default function AICybersecurityAutomationSuite() {
           Join 100+ organizations using our AI Cybersecurity Automation Suite to protect their critical assets.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
             Schedule Security Assessment
           </Link>
-          <Link 
-            href="tel:+13024640950" 
+          <Link to="tel:+13024640950" 
             className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold border border-red-600 hover:bg-red-50 transition-colors"
           >
             Call +1 302 464 0950

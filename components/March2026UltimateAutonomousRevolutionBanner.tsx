@@ -27,14 +27,12 @@ export default function March2026UltimateAutonomousRevolutionBanner() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link 
-                href="/blog/ai-2026-march-ultimate-autonomous-revolution"
+              <Link to="/blog/ai-2026-march-ultimate-autonomous-revolution"
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Explore Autonomous Breakthrough
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-march-autonomous-revolution-150-billion-success"
+              <Link to="/case-studies/ai-2026-march-autonomous-revolution-150-billion-success"
                 className="bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-400 hover:to-green-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 View $150B Success Story →
@@ -88,8 +86,7 @@ export default function March2026UltimateAutonomousRevolutionBanner() {
             <p className="text-gray-300 mb-4">
               Ready to achieve autonomy? Join the revolution today.
             </p>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               Get Autonomous Implementation Guide

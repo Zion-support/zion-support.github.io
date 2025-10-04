@@ -51,14 +51,12 @@ export default function NeuralArchitectureSearchBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog/ai-2026-neural-architecture-search-revolution"
+            <Link to="/blog/ai-2026-neural-architecture-search-revolution"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               🚀 Discover NAS Revolution
             </Link>
-            <Link
-              href="/case-studies/ai-2026-neural-architecture-search-500x-success"
+            <Link to="/case-studies/ai-2026-neural-architecture-search-500x-success"
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               📊 Read 500x Success Story

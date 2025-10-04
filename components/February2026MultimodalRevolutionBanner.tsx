@@ -80,8 +80,7 @@ const February2026MultimodalRevolutionBanner: React.FC = () => {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/content/blog/ai-2026-february-multimodal-revolution-enterprise-transformation"
+            <Link to="/content/blog/ai-2026-february-multimodal-revolution-enterprise-transformation"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Brain className="w-6 h-6 mr-3" />
@@ -89,8 +88,7 @@ const February2026MultimodalRevolutionBanner: React.FC = () => {
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
             
-            <Link 
-              href="/content/case-studies/ai-2026-february-multimodal-enterprise-transformation-125-billion-success"
+            <Link to="/content/case-studies/ai-2026-february-multimodal-enterprise-transformation-125-billion-success"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <TrendingUp className="w-6 h-6 mr-3" />

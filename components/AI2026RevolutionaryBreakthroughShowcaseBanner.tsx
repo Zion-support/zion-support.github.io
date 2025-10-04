@@ -39,8 +39,7 @@ export function AI2026RevolutionaryBreakthroughShowcaseBanner() {
             <p className="text-sm opacity-90 mb-3">
               Revolutionary AI trends transforming industries in 2026
             </p>
-            <Link 
-              href="/blog/ai-2026-future-trends-breakthrough"
+            <Link to="/blog/ai-2026-future-trends-breakthrough"
               className="inline-block bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Trends →
@@ -55,8 +54,7 @@ export function AI2026RevolutionaryBreakthroughShowcaseBanner() {
             <p className="text-sm opacity-90 mb-3">
               $500M ROI success stories with Fortune 100 companies
             </p>
-            <Link 
-              href="/case-studies/ai-2026-global-enterprise-transformation-success"
+            <Link to="/case-studies/ai-2026-global-enterprise-transformation-success"
               className="inline-block bg-white text-indigo-600 px-3 py-1 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
             >
               View Success →
@@ -71,8 +69,7 @@ export function AI2026RevolutionaryBreakthroughShowcaseBanner() {
             <p className="text-sm opacity-90 mb-3">
               Revolutionary AI services for autonomous operations
             </p>
-            <Link 
-              href="/services/ai-autonomous-operations-2026"
+            <Link to="/services/ai-autonomous-operations-2026"
               className="inline-block bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Started →

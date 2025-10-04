@@ -44,14 +44,12 @@ export default function EnterpriseTransformation2027Banner() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/case-studies/enterprise-ai-transformation-2027-success"
+              <Link to="/case-studies/enterprise-ai-transformation-2027-success"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 View Full Case Study
               </Link>
-              <Link
-                href="/services"
+              <Link to="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-colors"
               >
                 Start Your Transformation

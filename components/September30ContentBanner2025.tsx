@@ -169,15 +169,13 @@ const September30ContentBanner2025: React.FC = () => {
                 Join <span className="text-cyan-400 font-bold">65,000+ AI leaders and innovators</span> who trust Zion Tech Group.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <Link
-                  href="/blog"
+                <Link to="/blog"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-xl hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg transform hover:-translate-y-1"
                 >
                   <Sparkles className="w-6 h-6" />
                   <span>Explore All AI Insights</span>
                 </Link>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className="border-3 border-cyan-400 text-cyan-300 hover:bg-cyan-400 hover:text-slate-950 font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg shadow-xl transform hover:-translate-y-1"
                 >
                   <span>Transform Your Enterprise</span>

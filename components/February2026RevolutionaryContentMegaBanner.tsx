@@ -73,8 +73,7 @@ const February2026RevolutionaryContentMegaBanner: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">
             <h3 className="text-2xl font-bold text-white mb-6">🔥 New Revolutionary Content</h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link 
-                href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
+              <Link to="/blog/ai-2026-quantum-neural-fusion-breakthrough"
                 className="group bg-gradient-to-r from-purple-500/20 to-purple-600/20 hover:from-purple-400/30 hover:to-purple-500/30 rounded-xl p-6 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="text-3xl mb-3">⚛️</div>
@@ -89,8 +88,7 @@ const February2026RevolutionaryContentMegaBanner: React.FC = () => {
                 </span>
               </Link>
 
-              <Link 
-                href="/blog/ai-enterprise-automation-2026-mega-guide"
+              <Link to="/blog/ai-enterprise-automation-2026-mega-guide"
                 className="group bg-gradient-to-r from-blue-500/20 to-blue-600/20 hover:from-blue-400/30 hover:to-blue-500/30 rounded-xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="text-3xl mb-3">🤖</div>
@@ -105,8 +103,7 @@ const February2026RevolutionaryContentMegaBanner: React.FC = () => {
                 </span>
               </Link>
 
-              <Link 
-                href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
+              <Link to="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
                 className="group bg-gradient-to-r from-green-500/20 to-green-600/20 hover:from-green-400/30 hover:to-green-500/30 rounded-xl p-6 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="text-3xl mb-3">💰</div>
@@ -125,20 +122,17 @@ const February2026RevolutionaryContentMegaBanner: React.FC = () => {
 
           {/* Call to Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Get Free Consultation
             </Link>
-            <Link 
-              href="/blog" 
+            <Link to="/blog" 
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Explore All Content →
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories

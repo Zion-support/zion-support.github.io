@@ -10,30 +10,26 @@ export default function ExplainableAIBanner() {
             <span className="text-3xl animate-pulse">🔍</span>
             <span className="font-bold text-xl">NEW: Explainable AI Revolution</span>
             <div className="flex flex-wrap gap-4 items-center">
-              <Link 
-                href="/blog/ai-2025-oct-explainable-ai-enterprise-transparency-revolution" 
+              <Link to="/blog/ai-2025-oct-explainable-ai-enterprise-transparency-revolution" 
                 className="underline hover:text-yellow-200 font-bold flex items-center gap-2"
               >
                 📘 Complete XAI Guide
                 <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold animate-pulse">NEW</span>
               </Link>
-              <Link 
-                href="/case-studies/ai-2025-oct-global-bank-xai-compliance-success" 
+              <Link to="/case-studies/ai-2025-oct-global-bank-xai-compliance-success" 
                 className="underline hover:text-yellow-200 font-bold flex items-center gap-2"
               >
                 💰 $420M Bank Success
                 <span className="bg-green-400 text-black px-2 py-1 rounded-full text-xs font-bold animate-pulse">100% COMPLIANCE</span>
               </Link>
-              <Link 
-                href="/services/explainable-ai-enterprise-platform-2025" 
+              <Link to="/services/explainable-ai-enterprise-platform-2025" 
                 className="underline hover:text-yellow-200 font-bold"
               >
                 🚀 Get XAI Platform
               </Link>
             </div>
           </div>
-          <Link
-            href="/services/explainable-ai-enterprise-platform-2025"
+          <Link to="/services/explainable-ai-enterprise-platform-2025"
             className="bg-white text-indigo-700 hover:bg-yellow-400 hover:text-indigo-900 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all"
           >
             Start Your XAI Journey →
@@ -81,8 +77,7 @@ export function XAIShowcaseBanner() {
                 16 min read
               </span>
             </div>
-            <Link
-              href="/blog/ai-2025-oct-explainable-ai-enterprise-transparency-revolution"
+            <Link to="/blog/ai-2025-oct-explainable-ai-enterprise-transparency-revolution"
               className="text-indigo-600 font-bold hover:text-indigo-700 text-lg"
             >
               Read Complete Guide →
@@ -112,8 +107,7 @@ export function XAIShowcaseBanner() {
                 14 Months
               </span>
             </div>
-            <Link
-              href="/case-studies/ai-2025-oct-global-bank-xai-compliance-success"
+            <Link to="/case-studies/ai-2025-oct-global-bank-xai-compliance-success"
               className="text-green-600 font-bold hover:text-green-700 text-lg"
             >
               Read Success Story →
@@ -143,8 +137,7 @@ export function XAIShowcaseBanner() {
                 500-2000% ROI
               </span>
             </div>
-            <Link
-              href="/services/explainable-ai-enterprise-platform-2025"
+            <Link to="/services/explainable-ai-enterprise-platform-2025"
               className="text-purple-600 font-bold hover:text-purple-700 text-lg"
             >
               Explore Platform →
@@ -153,8 +146,7 @@ export function XAIShowcaseBanner() {
         </div>
 
         <div className="mt-8 text-center">
-          <Link
-            href="/contact"
+          <Link to="/contact"
             className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-indigo-700 transition-colors"
           >
             Get Your Free XAI Assessment →

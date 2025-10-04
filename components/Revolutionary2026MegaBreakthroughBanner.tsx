@@ -33,7 +33,7 @@ export default function Revolutionary2026MegaBreakthroughBanner() {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Main Article */}
-          <Link href="/blog/ai-2026-mega-breakthrough-revolution" className="group">
+          <Link to="/blog/ai-2026-mega-breakthrough-revolution" className="group">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
               <div className="flex items-start justify-between mb-6">
                 <div className="text-6xl group-hover:scale-110 transition-transform duration-300">🚀</div>
@@ -80,7 +80,7 @@ export default function Revolutionary2026MegaBreakthroughBanner() {
           </Link>
 
           {/* Secondary Article */}
-          <Link href="/blog/ai-2026-future-predictions-mega-trends" className="group">
+          <Link to="/blog/ai-2026-future-predictions-mega-trends" className="group">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20">
               <div className="flex items-start justify-between mb-6">
                 <div className="text-6xl group-hover:scale-110 transition-transform duration-300">🔮</div>
@@ -168,14 +168,12 @@ export default function Revolutionary2026MegaBreakthroughBanner() {
             Get started with a free assessment and personalized implementation roadmap.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-mega-breakthrough-revolution" 
+            <Link to="/blog/ai-2026-mega-breakthrough-revolution" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Explore Breakthrough Framework
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Free Assessment

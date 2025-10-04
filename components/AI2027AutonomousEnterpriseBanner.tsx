@@ -47,14 +47,12 @@ export default function AI2027AutonomousEnterpriseBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog/ai-2027-autonomous-enterprise-revolution"
+            <Link to="/blog/ai-2027-autonomous-enterprise-revolution"
               className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl"
             >
               🏢 Read Autonomous Enterprise Guide
             </Link>
-            <Link
-              href="/case-studies/ai-autonomous-enterprise-success-2027"
+            <Link to="/case-studies/ai-autonomous-enterprise-success-2027"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-colors"
             >
               💰 View $50M Success Story
@@ -89,8 +87,7 @@ export default function AI2027AutonomousEnterpriseBanner() {
         </div>
         
         <div className="text-center mt-8">
-          <Link
-            href="/services/ai-2027-autonomous-enterprise-solutions"
+          <Link to="/services/ai-2027-autonomous-enterprise-solutions"
             className="inline-block bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all"
           >
             Get Autonomous Enterprise Solutions →

@@ -36,8 +36,7 @@ export function AIEdgeIntelligence2026Banner() {
             <div className="text-sm text-blue-100">Uptime Achieved</div>
           </div>
         </div>
-        <Link
-          href="/blog/ai-edge-intelligence-2026"
+        <Link to="/blog/ai-edge-intelligence-2026"
           className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg"
         >
           Read Full Article →
@@ -82,8 +81,7 @@ export function AIHyperautomation2026Banner() {
             <div className="text-sm text-purple-100">ROI in 24 Months</div>
           </div>
         </div>
-        <Link
-          href="/blog/ai-hyperautomation-enterprise-2026"
+        <Link to="/blog/ai-hyperautomation-enterprise-2026"
           className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors shadow-lg"
         >
           Discover Hyperautomation →
@@ -128,8 +126,7 @@ export function GlobalLogisticsSuccessBanner() {
             <div className="text-sm text-green-100">ROI Achieved</div>
           </div>
         </div>
-        <Link
-          href="/case-studies/global-logistics-ai-transformation-2026"
+        <Link to="/case-studies/global-logistics-ai-transformation-2026"
           className="inline-block bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors shadow-lg"
         >
           View Full Case Study →
@@ -157,7 +154,7 @@ export function September2025ContentShowcase() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <Link href="/blog/ai-edge-intelligence-2026" className="group">
+          <Link to="/blog/ai-edge-intelligence-2026" className="group">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all p-8 border border-gray-200 h-full">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
@@ -182,7 +179,7 @@ export function September2025ContentShowcase() {
             </div>
           </Link>
 
-          <Link href="/blog/ai-hyperautomation-enterprise-2026" className="group">
+          <Link to="/blog/ai-hyperautomation-enterprise-2026" className="group">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all p-8 border border-gray-200 h-full">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">
@@ -207,7 +204,7 @@ export function September2025ContentShowcase() {
             </div>
           </Link>
 
-          <Link href="/case-studies/global-logistics-ai-transformation-2026" className="group">
+          <Link to="/case-studies/global-logistics-ai-transformation-2026" className="group">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all p-8 border border-gray-200 h-full">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
@@ -234,8 +231,7 @@ export function September2025ContentShowcase() {
         </div>
 
         <div className="text-center mt-12">
-          <Link
-            href="/blog"
+          <Link to="/blog"
             className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
           >
             View All Content →
@@ -261,14 +257,12 @@ export function ContentAnnouncementBanner() {
           plus real-world success stories with proven $80M+ savings.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/blog"
+          <Link to="/blog"
             className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Explore Latest Articles
           </Link>
-          <Link
-            href="/case-studies"
+          <Link to="/case-studies"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
           >
             View Success Stories

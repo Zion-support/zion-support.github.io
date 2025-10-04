@@ -244,8 +244,7 @@ export default function InteractiveContentDiscovery() {
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{item.readTime} read</span>
-                  <Link
-                    href={item.href}
+                  <Link to={item.href}
                     className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -321,8 +320,7 @@ export default function InteractiveContentDiscovery() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href={selectedItem.href}
+                  <Link to={selectedItem.href}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
                   >
                     Read Full Article

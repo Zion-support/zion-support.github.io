@@ -57,8 +57,7 @@ const January2027UniversalIntelligenceRevolutionBanner = () => {
             <p className="text-gray-300 mb-6">
               Universal intelligence that transcends all human cognitive capabilities, with complete understanding across all domains and infinite creative problem-solving capacity.
             </p>
-            <Link
-              href="/blog/ai-2027-january-universal-intelligence-revolution"
+            <Link to="/blog/ai-2027-january-universal-intelligence-revolution"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-indigo-400 hover:to-purple-400 transition-all"
             >
               Read Evolution Details →
@@ -78,8 +77,7 @@ const January2027UniversalIntelligenceRevolutionBanner = () => {
             <p className="text-gray-300 mb-6">
               How a global technology enterprise achieved $1 trillion ROI through universal intelligence revolution with transcendent intelligence and infinite capabilities.
             </p>
-            <Link
-              href="/case-studies/ai-2027-january-universal-intelligence-1-trillion-success"
+            <Link to="/case-studies/ai-2027-january-universal-intelligence-1-trillion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-400 hover:to-cyan-400 transition-all"
             >
               View Success Story →
@@ -89,14 +87,12 @@ const January2027UniversalIntelligenceRevolutionBanner = () => {
         
         <div className="text-center">
           <div className="inline-flex flex-wrap gap-4">
-            <Link
-              href="/blog/ai-2027-january-universal-intelligence-revolution"
+            <Link to="/blog/ai-2027-january-universal-intelligence-revolution"
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Explore Intelligence Evolution
             </Link>
-            <Link
-              href="/case-studies/ai-2027-january-universal-intelligence-1-trillion-success"
+            <Link to="/case-studies/ai-2027-january-universal-intelligence-1-trillion-success"
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View $1T Success Story

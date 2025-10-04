@@ -83,14 +83,12 @@ export default function January2026QuantumNeuralSuperintelligenceBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog/ai-2026-quantum-neural-superintelligence-breakthrough"
+            <Link to="/blog/ai-2026-quantum-neural-superintelligence-breakthrough"
               className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-700 hover:to-blue-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read the Superintelligence Guide →
             </Link>
-            <Link
-              href="/case-studies/ai-2026-quantum-neural-superintelligence-15-billion-success"
+            <Link to="/case-studies/ai-2026-quantum-neural-superintelligence-15-billion-success"
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View $15.8B Success Story →

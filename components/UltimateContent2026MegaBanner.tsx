@@ -35,8 +35,7 @@ export default function UltimateContent2026MegaBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link
-              href="/blog/ai-2026-autonomous-enterprise-systems"
+            <Link to="/blog/ai-2026-autonomous-enterprise-systems"
               className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105"
             >
               <span className="flex items-center gap-3">
@@ -44,8 +43,7 @@ export default function UltimateContent2026MegaBanner() {
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </span>
             </Link>
-            <Link
-              href="/case-studies/ai-2026-mega-transformation-success-story"
+            <Link to="/case-studies/ai-2026-mega-transformation-success-story"
               className="group border-2 border-white/30 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               <span className="flex items-center gap-3">
@@ -67,8 +65,7 @@ export default function UltimateContent2026MegaBanner() {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">New Article</div>
-              <Link
-                href="/blog/ai-2026-autonomous-enterprise-systems"
+              <Link to="/blog/ai-2026-autonomous-enterprise-systems"
                 className="text-cyan-400 font-semibold hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform"
               >
                 Read More →
@@ -85,8 +82,7 @@ export default function UltimateContent2026MegaBanner() {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">Case Study</div>
-              <Link
-                href="/case-studies/ai-2026-mega-transformation-success-story"
+              <Link to="/case-studies/ai-2026-mega-transformation-success-story"
                 className="text-cyan-400 font-semibold hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform"
               >
                 View Story →
@@ -103,8 +99,7 @@ export default function UltimateContent2026MegaBanner() {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">Featured</div>
-              <Link
-                href="/services/ai-2026-revolutionary-solutions"
+              <Link to="/services/ai-2026-revolutionary-solutions"
                 className="text-cyan-400 font-semibold hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform"
               >
                 Learn More →

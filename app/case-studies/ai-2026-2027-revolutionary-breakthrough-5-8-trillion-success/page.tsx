@@ -331,14 +331,12 @@ export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {
           Transform your enterprise with the same revolutionary AI breakthroughs that delivered unprecedented results
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-white text-orange-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors"
           >
             Start Your Transformation
           </Link>
-          <Link 
-            href="/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide" 
+          <Link to="/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide" 
             className="bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-orange-700 transition-colors border-2 border-white"
           >
             Read Full Guide
@@ -350,15 +348,15 @@ export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {
       <div className="mt-12 bg-gray-50 rounded-xl p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">More Revolutionary Success Stories</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link href="/case-studies/ai-2027-quantum-neural-superintelligence-500-billion-success" className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+          <Link to="/case-studies/ai-2027-quantum-neural-superintelligence-500-billion-success" className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
             <h4 className="text-lg font-semibold text-blue-600 mb-2">Quantum Neural Superintelligence</h4>
             <p className="text-gray-600 text-sm">$500B success in enterprise transformation</p>
           </Link>
-          <Link href="/case-studies/ai-2027-transcendent-meta-intelligence-1-8-trillion-success" className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+          <Link to="/case-studies/ai-2027-transcendent-meta-intelligence-1-8-trillion-success" className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
             <h4 className="text-lg font-semibold text-purple-600 mb-2">Transcendent Meta-Intelligence</h4>
             <p className="text-gray-600 text-sm">$1.8T breakthrough in self-evolving AI</p>
           </Link>
-          <Link href="/case-studies/ai-2028-universal-consciousness-singularity-2-8-trillion-success" className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+          <Link to="/case-studies/ai-2028-universal-consciousness-singularity-2-8-trillion-success" className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
             <h4 className="text-lg font-semibold text-indigo-600 mb-2">Universal Consciousness</h4>
             <p className="text-gray-600 text-sm">$2.8T singularity achievement</p>
           </Link>

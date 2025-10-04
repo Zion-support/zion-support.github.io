@@ -39,14 +39,12 @@ export default function Ultimate2026ContentShowcaseBanner() {
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-500">60 min read</div>
               <div className="flex gap-2">
-                <Link
-                  href="/blog/ai-2026-april-ultimate-breakthrough-revolution"
+                <Link to="/blog/ai-2026-april-ultimate-breakthrough-revolution"
                   className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
                 >
                   Read Breakthrough →
                 </Link>
-                <Link
-                  href="/case-studies/ai-2026-april-ultimate-breakthrough-25-billion-success"
+                <Link to="/case-studies/ai-2026-april-ultimate-breakthrough-25-billion-success"
                   className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                 >
                   $25B Success →
@@ -73,14 +71,12 @@ export default function Ultimate2026ContentShowcaseBanner() {
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-500">75 min read</div>
               <div className="flex gap-2">
-                <Link
-                  href="/blog/ai-2026-may-revolutionary-breakthrough-announcement"
+                <Link to="/blog/ai-2026-may-revolutionary-breakthrough-announcement"
                   className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                 >
                   Read Breakthrough →
                 </Link>
-                <Link
-                  href="/case-studies/ai-2026-may-revolutionary-breakthrough-50-billion-success"
+                <Link to="/case-studies/ai-2026-may-revolutionary-breakthrough-50-billion-success"
                   className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
                 >
                   $50B Success →
@@ -107,14 +103,12 @@ export default function Ultimate2026ContentShowcaseBanner() {
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-500">90 min read</div>
               <div className="flex gap-2">
-                <Link
-                  href="/blog/ai-2026-june-ultimate-breakthrough-revolution"
+                <Link to="/blog/ai-2026-june-ultimate-breakthrough-revolution"
                   className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
                 >
                   Read Breakthrough →
                 </Link>
-                <Link
-                  href="/case-studies/ai-2026-june-ultimate-breakthrough-100-billion-success"
+                <Link to="/case-studies/ai-2026-june-ultimate-breakthrough-100-billion-success"
                   className="text-red-600 font-semibold hover:text-red-700 transition-colors"
                 >
                   $100B Success →
@@ -148,8 +142,7 @@ export default function Ultimate2026ContentShowcaseBanner() {
         </div>
 
         <div className="text-center">
-          <Link
-            href="/blog"
+          <Link to="/blog"
             className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
           >
             Explore All AI Breakthroughs

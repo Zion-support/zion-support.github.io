@@ -28,8 +28,7 @@ const Fortune500SuccessBanner: React.FC = () => {
                 <div className="text-green-300 text-sm font-medium">85% Cost Reduction</div>
               </div>
             </div>
-            <Link 
-              href="/case-studies/fortune-500-ai-transformation-mega-success-2026" 
+            <Link to="/case-studies/fortune-500-ai-transformation-mega-success-2026" 
               className="inline-flex items-center bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
             >
               Read Full Case Study

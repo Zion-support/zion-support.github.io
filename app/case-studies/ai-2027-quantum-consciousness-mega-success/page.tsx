@@ -265,8 +265,7 @@ export default function AI2027QuantumConsciousnessMegaSuccess() {
             Limited availability - Only 10 slots remaining for 2027
           </div>
           <br />
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all"
           >
             Start Your Quantum Transformation
@@ -288,14 +287,12 @@ export default function AI2027QuantumConsciousnessMegaSuccess() {
             Contact us today to secure your implementation slot and achieve unprecedented ROI.
           </p>
           <div className="flex gap-4">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Get Started Today
             </Link>
-            <Link 
-              href="/blog/ai-2027-quantum-consciousness-fusion" 
+            <Link to="/blog/ai-2027-quantum-consciousness-fusion" 
               className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
             >
               Learn More About Quantum AI

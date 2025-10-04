@@ -56,20 +56,17 @@ export default function AI2026FutureTrendsBanner() {
           
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-future-trends-breakthrough" 
+            <Link to="/blog/ai-2026-future-trends-breakthrough" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Read Full Trends Report →
             </Link>
-            <Link 
-              href="/blog/ai-2026-january-mega-breakthrough-revolution" 
+            <Link to="/blog/ai-2026-january-mega-breakthrough-revolution" 
               className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               View Breakthrough Details →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Expert Consultation

@@ -23,8 +23,7 @@ export default function Revolutionary2026ContentMegaBanner() {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Consciousness Fusion */}
-          <Link 
-            href="/blog/ai-2026-consciousness-fusion-breakthrough"
+          <Link to="/blog/ai-2026-consciousness-fusion-breakthrough"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -53,8 +52,7 @@ export default function Revolutionary2026ContentMegaBanner() {
           </Link>
 
           {/* Quantum Consciousness */}
-          <Link 
-            href="/blog/ai-2026-quantum-consciousness-breakthrough"
+          <Link to="/blog/ai-2026-quantum-consciousness-breakthrough"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -83,8 +81,7 @@ export default function Revolutionary2026ContentMegaBanner() {
           </Link>
 
           {/* Neuromorphic Computing */}
-          <Link 
-            href="/blog/ai-2026-neuromorphic-breakthrough"
+          <Link to="/blog/ai-2026-neuromorphic-breakthrough"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -160,14 +157,12 @@ export default function Revolutionary2026ContentMegaBanner() {
               technologies can transform your enterprise beyond the limits of conventional computing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consultation
               </Link>
-              <Link 
-                href="/case-studies" 
+              <Link to="/case-studies" 
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories

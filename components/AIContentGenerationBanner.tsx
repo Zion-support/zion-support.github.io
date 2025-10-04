@@ -48,14 +48,12 @@ export default function AIContentGenerationBanner() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/blog/ai-content-generation-2026"
+                <Link to="/blog/ai-content-generation-2026"
                   className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl text-center"
                 >
                   Read Full Article →
                 </Link>
-                <Link
-                  href="/services/ai-content-generation"
+                <Link to="/services/ai-content-generation"
                   className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 hover:text-white transition-colors text-center"
                 >
                   Explore Services

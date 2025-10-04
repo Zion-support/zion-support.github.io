@@ -59,8 +59,7 @@ export default function January2026AutonomousGovernanceBanner() {
               Self-regulating AI systems that monitor and adjust their own behavior in real-time, 
               ensuring 99.7% compliance across all regulations.
             </p>
-            <Link 
-              href="/blog/ai-2026-autonomous-ai-governance-revolution"
+            <Link to="/blog/ai-2026-autonomous-ai-governance-revolution"
               className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Read Article →
@@ -74,8 +73,7 @@ export default function January2026AutonomousGovernanceBanner() {
               See how a Fortune 500 financial services leader achieved unprecedented results 
               with autonomous AI governance across 47 countries.
             </p>
-            <Link 
-              href="/case-studies/ai-2026-autonomous-governance-mega-success"
+            <Link to="/case-studies/ai-2026-autonomous-governance-mega-success"
               className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               View Case Study →
@@ -89,8 +87,7 @@ export default function January2026AutonomousGovernanceBanner() {
               Achieve 2.3-minute response times for compliance issues with predictive analytics 
               and automated risk mitigation.
             </p>
-            <Link 
-              href="/services/ai-2026-autonomous-governance-solutions"
+            <Link to="/services/ai-2026-autonomous-governance-solutions"
               className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Get Solutions →
@@ -110,20 +107,17 @@ export default function January2026AutonomousGovernanceBanner() {
               $5.2B+ in measurable value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Free Consultation
               </Link>
-              <Link 
-                href="/blog/ai-2026-autonomous-ai-governance-revolution" 
+              <Link to="/blog/ai-2026-autonomous-ai-governance-revolution" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read Full Article →
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-autonomous-governance-mega-success" 
+              <Link to="/case-studies/ai-2026-autonomous-governance-mega-success" 
                 className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View $5.2B Success Story

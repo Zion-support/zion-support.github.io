@@ -46,8 +46,7 @@ export default function AI2026ContentShowcaseBanner() {
                 <BookOpen className="w-4 h-4 mr-2" />
                 <span>12 min read</span>
               </div>
-              <Link 
-                href="/blog/ai-2026-enterprise-automation-breakthrough"
+              <Link to="/blog/ai-2026-enterprise-automation-breakthrough"
                 className="text-blue-600 hover:text-blue-700 font-semibold"
               >
                 Read Now →
@@ -76,8 +75,7 @@ export default function AI2026ContentShowcaseBanner() {
                 <BookOpen className="w-4 h-4 mr-2" />
                 <span>15 min read</span>
               </div>
-              <Link 
-                href="/blog/quantum-ai-2026-business-intelligence-revolution"
+              <Link to="/blog/quantum-ai-2026-business-intelligence-revolution"
                 className="text-purple-600 hover:text-purple-700 font-semibold"
               >
                 Explore →
@@ -106,8 +104,7 @@ export default function AI2026ContentShowcaseBanner() {
                 <FileText className="w-4 h-4 mr-2" />
                 <span>18 min read</span>
               </div>
-              <Link 
-                href="/case-studies/fortune-500-ai-transformation-success"
+              <Link to="/case-studies/fortune-500-ai-transformation-success"
                 className="text-orange-600 hover:text-orange-700 font-semibold"
               >
                 View Case Study →
@@ -126,14 +123,12 @@ export default function AI2026ContentShowcaseBanner() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/guides/ai-2026-implementation-roadmap"
+            <Link to="/guides/ai-2026-implementation-roadmap"
               className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Implementation Roadmap
             </Link>
-            <Link 
-              href="/tools/ai-roi-calculator"
+            <Link to="/tools/ai-roi-calculator"
               className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               Calculate Your ROI

@@ -53,20 +53,17 @@ export default function March2027TranscendentAutomationBanner() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/blog/ai-2027-march-transcendent-automation-breakthrough"
+          <Link to="/blog/ai-2027-march-transcendent-automation-breakthrough"
             className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
           >
             Read Breakthrough Details
           </Link>
-          <Link 
-            href="/case-studies/ai-2027-march-transcendent-automation-750-billion-success"
+          <Link to="/case-studies/ai-2027-march-transcendent-automation-750-billion-success"
             className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
           >
             View $750B Success Story →
           </Link>
-          <Link 
-            href="/contact"
+          <Link to="/contact"
             className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
           >
             Start Transcendent Journey

@@ -41,8 +41,7 @@ export default function QuantumNeuralSuperintelligenceUltimateBanner() {
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <Link 
-            href="/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough" 
+          <Link to="/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough" 
             className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -54,8 +53,7 @@ export default function QuantumNeuralSuperintelligenceUltimateBanner() {
             <div className="text-cyan-300 text-sm font-semibold group-hover:text-cyan-200">Read Ultimate Details →</div>
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2026-quantum-neural-superintelligence-ultimate-100-billion-success" 
+          <Link to="/case-studies/ai-2026-quantum-neural-superintelligence-ultimate-100-billion-success" 
             className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -67,8 +65,7 @@ export default function QuantumNeuralSuperintelligenceUltimateBanner() {
             <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
           </Link>
           
-          <Link 
-            href="/services/ai-2026-quantum-neural-superintelligence-ultimate-solutions" 
+          <Link to="/services/ai-2026-quantum-neural-superintelligence-ultimate-solutions" 
             className="group block rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-6 hover:border-blue-400/40 transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-center gap-2 mb-3">
@@ -83,20 +80,17 @@ export default function QuantumNeuralSuperintelligenceUltimateBanner() {
         
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough" 
+            <Link to="/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Read Ultimate Breakthrough →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-quantum-neural-superintelligence-ultimate-100-billion-success" 
+            <Link to="/case-studies/ai-2026-quantum-neural-superintelligence-ultimate-100-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $100B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Ultimate AI Solutions

@@ -23,14 +23,12 @@ export const DigitalTwinsPromoBanner = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href="/blog/ai-powered-digital-twins-2025"
+            <Link to="/blog/ai-powered-digital-twins-2025"
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl text-center whitespace-nowrap"
             >
               Read Article →
             </Link>
-            <Link
-              href="/services"
+            <Link to="/services"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all text-center whitespace-nowrap"
             >
               Get Started
@@ -63,14 +61,12 @@ export const ServerlessAIPromoBanner = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href="/blog/serverless-ai-architecture-2025"
+            <Link to="/blog/serverless-ai-architecture-2025"
               className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl text-center whitespace-nowrap"
             >
               Read Guide →
             </Link>
-            <Link
-              href="/services/cloud-migration"
+            <Link to="/services/cloud-migration"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all text-center whitespace-nowrap"
             >
               Cloud Services
@@ -103,14 +99,12 @@ export const CybersecurityAIPromoBanner = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href="/blog/ai-enhanced-cybersecurity-2025"
+            <Link to="/blog/ai-enhanced-cybersecurity-2025"
               className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all shadow-lg hover:shadow-xl text-center whitespace-nowrap"
             >
               Read Article →
             </Link>
-            <Link
-              href="/services/cybersecurity-consulting"
+            <Link to="/services/cybersecurity-consulting"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all text-center whitespace-nowrap"
             >
               Security Services
@@ -140,7 +134,7 @@ export const ComprehensiveNewContentShowcase = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <Link href="/blog/ai-powered-digital-twins-2025" className="group">
+          <Link to="/blog/ai-powered-digital-twins-2025" className="group">
             <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group-hover:scale-105">
               <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-8 text-white">
                 <div className="text-5xl mb-4">🔮</div>
@@ -178,7 +172,7 @@ export const ComprehensiveNewContentShowcase = () => {
             </div>
           </Link>
 
-          <Link href="/blog/serverless-ai-architecture-2025" className="group">
+          <Link to="/blog/serverless-ai-architecture-2025" className="group">
             <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group-hover:scale-105">
               <div className="bg-gradient-to-br from-purple-500 to-pink-600 p-8 text-white">
                 <div className="text-5xl mb-4">☁️</div>
@@ -216,7 +210,7 @@ export const ComprehensiveNewContentShowcase = () => {
             </div>
           </Link>
 
-          <Link href="/blog/ai-enhanced-cybersecurity-2025" className="group">
+          <Link to="/blog/ai-enhanced-cybersecurity-2025" className="group">
             <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group-hover:scale-105">
               <div className="bg-gradient-to-br from-red-500 to-orange-600 p-8 text-white">
                 <div className="text-5xl mb-4">🛡️</div>
@@ -256,8 +250,7 @@ export const ComprehensiveNewContentShowcase = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link
-            href="/blog"
+          <Link to="/blog"
             className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
           >
             Explore All Articles →

@@ -25,14 +25,12 @@ export default function RevolutionarySpaceTech2026Banner() {
               space organizations achieved $50M ROI with AI-powered operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Link
-                href="/blog/ai-space-tech-2026"
+              <Link to="/blog/ai-space-tech-2026"
                 className="bg-yellow-400 text-indigo-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl"
               >
                 Read Space AI Guide →
               </Link>
-              <Link
-                href="/case-studies/ai-space-tech-success-2026"
+              <Link to="/case-studies/ai-space-tech-success-2026"
                 className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 hover:text-indigo-900 transition-colors"
               >
                 View $50M ROI Case Study
