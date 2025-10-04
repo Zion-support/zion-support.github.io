@@ -21,11 +21,7 @@ interface AccessibilityMetrics {
 export class EnhancedAccessibility {
   private config: AccessibilityConfig;
 
-<<<<<<< HEAD
-  constructor(config?: Partial<AccessibilityConfig>) {
-=======
   constructor(config: Partial<AccessibilityConfig> = {}) {
->>>>>>> cursor/fix-errors-and-merge-to-main-87dd
     this.config = {
       enableAnnouncements: true,
       enableFormLabels: true,
@@ -200,11 +196,7 @@ export class EnhancedAccessibility {
 
     // Basic voice control setup
     document.addEventListener('keydown', (e) => {
-<<<<<<< HEAD
-      if (e.key === 'Control' && e.shiftKey) {
-=======
       if (e.key === 'v' && e.ctrlKey) {
->>>>>>> cursor/fix-errors-and-merge-to-main-87dd
         this.activateVoiceControl();
       }
     });

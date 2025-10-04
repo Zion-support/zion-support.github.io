@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import BannerManager from './components/BannerManager';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import SEOHead from './components/EnhancedSEOHead';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import NotificationSystem from './components/NotificationSystem';
-import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Animation variants
 const pageVariants = {
@@ -21,30 +14,17 @@ const pageVariants = {
 };
 
 const pageTransition = {
-  type: 'tween',
-  ease: 'anticipate',
+  type: 'tween' as const,
+  ease: 'anticipate' as const,
   duration: 0.4
 };
 
-// Banner data
-const bannerData = [
-  {
-    id: '1',
-    title: 'Welcome to Zion Tech Group',
-    subtitle: 'Advanced AI and IT Solutions',
-    image: '/images/hero-banner.jpg',
-    link: '/services'
-  }
-];
 
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
-const AboutPage = React.lazy(() => import('./pages/AboutPage'));
-const ContactPage = React.lazy(() => import('./pages/ContactPage'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const SolutionsPage = React.lazy(() => import('./pages/SolutionsPage'));
-const BlogPage = React.lazy(() => import('./pages/BlogPage'));
-const CaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ServicesPage = React.lazy(() => import('./pages/Services'));
 
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
@@ -86,32 +66,13 @@ class ErrorBoundary extends React.Component<
 }
 
 function App() {
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-
   return (
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gray-50">
-            <SEOHead />
             <EnhancedErrorBoundary>
               <Header />
-
-              {/* Dynamic Banner System */}
-              <motion.div
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-                className="relative"
-              >
-                <BannerManager
-                  banners={bannerData}
-                  rotationInterval={8000}
-                  maxVisibleBanners={3}
-                />
-              </motion.div>
 
               {/* Main Content */}
               <motion.main
@@ -122,8 +83,7 @@ function App() {
                 transition={pageTransition}
                 className="relative z-10"
               >
-                <div className="flex gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <Sidebar />
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div id="main-content" className="flex-1">
                     <React.Suspense fallback={
                       <div className="min-h-screen flex items-center justify-center">
@@ -138,12 +98,6 @@ function App() {
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/services/*" element={<ServicesPage />} />
-                        <Route path="/solutions/*" element={<SolutionsPage />} />
-                        <Route path="/blog/*" element={<BlogPage />} />
-                        <Route path="/case-studies" element={<CaseStudiesPage />} />
-
-                        {/* Blog Routes */}
-                        <Route path="/blog/:slug" element={<BlogPage />} />
 
                         {/* 404 Fallback */}
                         <Route
@@ -167,31 +121,8 @@ function App() {
                   </div>
                 </div>
               </motion.main>
-
-              <Footer />
             </EnhancedErrorBoundary>
           </div>
-
-          {showPerformanceOptimizer && (
-            <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center" role="dialog" aria-modal="true">
-              <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-                <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-2xl font-bold">Performance Optimizer</h2>
-                  <button onClick={() => setShowPerformanceOptimizer(false)} className="text-gray-500 hover:text-gray-700 text-2xl">✕</button>
-                </div>
-                <PerformanceOptimizer isVisible={true} onClose={() => setShowPerformanceOptimizer(false)} />
-              </div>
-            </div>
-          )}
-
-          {/* Performance Monitoring */}
-          <PerformanceMonitor />
-          
-          {/* Accessibility Enhancement */}
-          <AccessibilityEnhancer />
-          
-          {/* Notification System */}
-          <NotificationSystem />
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
