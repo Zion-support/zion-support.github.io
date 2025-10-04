@@ -1,20 +1,17 @@
-export const codeQualityConfig = {
-  eslint: {
+export const codeQualityConfig = {eslint: {
     rules: {
       'no-unused-vars': 'error',
       'no-console': 'warn',
       'prefer-const': 'error',
-      'no-var': 'error',
+      'no-var': 'error'}
     },
   },
-  typescript: {
-    strict: true,
+  typescript: {strict: true,
     noImplicitAny: true,
-    noImplicitReturns: true,
+    noImplicitReturns: true}
   },
-  testing: {
-    coverage: 90,
+  testing: {coverage: 90,
     unitTests: true,
-    integrationTests: true,
+    integrationTests: true}
   },
 };

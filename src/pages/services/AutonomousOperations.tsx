@@ -1,43 +1,32 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import {
-  CheckCircle,
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import {CheckCircle,
   ArrowRight,
   Shield,
   Zap,
-  TrendingUp,
-  Users,
-} from 'lucide-react';
-
-const AutonomousOperations: React.FC = () => {
-  const features = [
+  TrendingUp}
+  Users;
+} from 'lucide-react'
+const AutonomousOperations: React.FC = () => {const features = [
     {
       icon: Shield,
       title: 'Self-Healing Infrastructure',
-      description:
-        'Automatically detect and resolve infrastructure issues before they impact your business operations.',
+      description: 'Automatically detect and resolve infrastructure issues before they impact your business operations.'}
     },
-    {
-      icon: Zap,
+    {icon: Zap,
       title: 'Intelligent Automation',
-      description:
-        'AI-powered automation that learns from patterns and continuously optimizes your operations.',
+      description: 'AI-powered automation that learns from patterns and continuously optimizes your operations.'}
     },
-    {
-      icon: TrendingUp,
+    {icon: TrendingUp,
       title: 'Performance Optimization',
-      description:
-        'Real-time monitoring and optimization that improves system performance by up to 70%.',
+      description: 'Real-time monitoring and optimization that improves system performance by up to 70%.'}
     },
-    {
-      icon: Users,
+    {icon: Users,
       title: '24/7 Operations',
-      description:
-        'Round-the-clock monitoring and management ensuring 99.9% uptime for your critical systems.',
+      description: 'Round-the-clock monitoring and management ensuring 99.9% uptime for your critical systems.'}
     },
   ];
-
   const benefits = [
     'Reduce operational costs by up to 70%',
     'Achieve 99.9% system uptime',
@@ -46,36 +35,25 @@ const AutonomousOperations: React.FC = () => {
     'Scale operations automatically',
     'Reduce human error by 95%',
   ];
-
   const useCases = [
-    {
-      title: 'Cloud Infrastructure Management',
-      description:
-        'Automated scaling, monitoring, and maintenance of cloud resources across multiple providers.',
-      results: '50% cost reduction, 99.9% uptime',
+    {title: 'Cloud Infrastructure Management',
+      description: 'Automated scaling, monitoring, and maintenance of cloud resources across multiple providers.',
+      results: '50% cost reduction, 99.9% uptime'}
     },
-    {
-      title: 'DevOps Pipeline Automation',
-      description:
-        'End-to-end automation of CI/CD pipelines with intelligent failure recovery.',
-      results: '80% faster deployments, 60% fewer failures',
+    {title: 'DevOps Pipeline Automation',
+      description: 'End-to-end automation of CI/CD pipelines with intelligent failure recovery.',
+      results: '80% faster deployments, 60% fewer failures'}
     },
-    {
-      title: 'Database Operations',
-      description:
-        'Automated database optimization, backup, and performance tuning.',
-      results: '40% performance improvement, 90% fewer issues',
+    {title: 'Database Operations',
+      description: 'Automated database optimization, backup, and performance tuning.',
+      results: '40% performance improvement, 90% fewer issues'}
     },
-    {
-      title: 'Security Monitoring',
-      description:
-        'Continuous security monitoring with automated threat detection and response.',
-      results: '99.9% threat detection, 95% faster response',
+    {title: 'Security Monitoring',
+      description: 'Continuous security monitoring with automated threat detection and response.',
+      results: '99.9% threat detection, 95% faster response'}
     },
   ];
-
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>
           AI Autonomous Operations - Zion Tech Group | Self-Healing
@@ -86,11 +64,10 @@ const AutonomousOperations: React.FC = () => {
           content='Transform your operations with AI-powered autonomous systems. Achieve 99.9% uptime, reduce costs by 70%, and eliminate manual tasks with our self-healing infrastructure solutions.'
         />
       </Helmet>
-
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
         {/* Hero Section */}
         <div className='relative overflow-hidden'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24'>
             <div className='text-center'>
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
@@ -99,7 +76,7 @@ const AutonomousOperations: React.FC = () => {
               </h1>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
                 Transform your infrastructure with self-healing systems that
-                automatically detect, diagnose, and resolve issues before they
+                automatically detect, diagnose) and resolve issues before they
                 impact your business.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -119,10 +96,9 @@ const AutonomousOperations: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Features Section */}
         <div className='py-24 bg-white/5'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Autonomous Operations Features
@@ -132,10 +108,9 @@ const AutonomousOperations: React.FC = () => {
                 running optimally
               </p>
             </div>
-
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+              {features.map((feature) index) => {
+                const Icon = feature.icon}
                 return (
                   <div
                     key={index}
@@ -154,10 +129,9 @@ const AutonomousOperations: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Benefits Section */}
         <div className='py-24'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='grid lg:grid-cols-2 gap-12 items-center'>
               <div>
                 <h2 className='text-4xl font-bold text-white mb-6'>
@@ -169,7 +143,7 @@ const AutonomousOperations: React.FC = () => {
                   infrastructure.
                 </p>
                 <div className='space-y-4'>
-                  {benefits.map((benefit, index) => (
+                  {benefits.map((benefit} index) => (
                     <div key={index} className='flex items-center space-x-3'>
                       <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
                       <span className='text-gray-300'>{benefit}</span>
@@ -211,10 +185,9 @@ const AutonomousOperations: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Use Cases Section */}
         <div className='py-24 bg-white/5'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Real-World Applications
@@ -224,9 +197,8 @@ const AutonomousOperations: React.FC = () => {
                 your infrastructure
               </p>
             </div>
-
             <div className='grid md:grid-cols-2 gap-8'>
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCase} index) => (
                 <div
                   key={index}
                   className='bg-white/10 rounded-2xl p-8 backdrop-blur-sm border border-white/20'
@@ -245,10 +217,9 @@ const AutonomousOperations: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className='py-24'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
             <h2 className='text-4xl font-bold text-white mb-4'>
               Ready to Automate Your Operations?
             </h2>
@@ -256,7 +227,7 @@ const AutonomousOperations: React.FC = () => {
               Join hundreds of companies already using our autonomous operations
               to reduce costs, improve reliability, and scale effortlessly.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               <Link
                 to='/contact'
                 className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center'
@@ -275,7 +246,6 @@ const AutonomousOperations: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
-
 export default AutonomousOperations;

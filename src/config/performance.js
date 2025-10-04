@@ -1,37 +1,29 @@
 // Advanced Performance Optimizations
-export const advancedPerformanceConfig = {
-  // Service Worker for caching
+export const advancedPerformanceConfig = {// Service Worker for caching
   enableServiceWorker: true,
-
   // Prefetching strategy
   prefetchStrategy: {
     critical: ['/home', '/services', '/about'],
-    optional: ['/blog', '/contact', '/pricing'],
+    optional: ['/blog', '/contact', '/pricing']}
   },
-
   // Resource hints
-  resourceHints: {
-    preload: ['/fonts/main.woff2', '/images/hero.webp'],
+  resourceHints: {preload: ['/fonts/main.woff2', '/images/hero.webp'],
     prefetch: ['/api/services', '/api/testimonials'],
     preconnect: [
       'https://fonts.googleapis.com',
-      'https://analytics.google.com',
-    ],
+      'https: //analytics.google.com',
+    ]}
   },
-
   // Bundle splitting
-  bundleSplitting: {
-    vendor: ['react', 'react-dom'],
+  bundleSplitting: {vendor: ['react', 'react-dom'],
     ui: ['@headlessui/react', '@heroicons/react'],
     utils: ['lodash', 'date-fns'],
-    charts: ['recharts', 'd3'],
+    charts: ['recharts', 'd3']}
   },
-
   // Compression
-  compression: {
-    gzip: true,
+  compression: {gzip: true,
     brotli: true,
-    minify: true,
+    minify: true}
   },
 };
-// Advanced Performance Optimizations export const advancedPerformanceConfig = { // Service Worker for caching enableServiceWorker: true, // Prefetching strategy prefetchStrategy: { critical: ['/home', '/services', '/about'],' optional: ['/blog', '/contact', '/pricing'] }, // Resource hints resourceHints: {' preload: ['/fonts/main.woff2', '/images/hero.webp'],' prefetch: ['/api/services', '/api/testimonials'],' preconnect: ['https://fonts.googleapis.com', 'https://analytics.google.com'] }, // Bundle splitting bundleSplitting: {' vendor: ['react', 'react-dom'],' ui: ['@headlessui/react', '@heroicons/react'],' utils: ['lodash', 'date-fns'],' charts: ['recharts', 'd3'] }, // Compression compression: { gzip: true, brotli: true, minify: true } }; '
+// Advanced Performance Optimizations export const advancedPerformanceConfig = {// Service Worker for caching enableServiceWorker: true, // Prefetching strategy prefetchStrategy: { critical: ['/home', '/services', '/about'],' optional: ['/blog', '/contact'} '/pricing'] }, // Resource hints resourceHints: {' preload: ['/fonts/main.woff2', '/images/hero.webp'],' prefetch: ['/api/services', '/api/testimonials'],' preconnect: ['https://fonts.googleapis.com'} 'https://analytics.google.com'] }, // Bundle splitting bundleSplitting: {' vendor: ['react', 'react-dom'],' ui: ['@headlessui/react', '@heroicons/react'],' utils: ['lodash', 'date-fns'],' charts: ['recharts'} 'd3'] }, // Compression compression: {gzip: true, brotli: true} minify: true } }; '

@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
 const APIDocumentation: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -11,7 +10,6 @@ const APIDocumentation: React.FC = () => {
             Welcome to the Zion Tech Group API documentation. Our RESTful API provides access to all our services and features.
           </p>
         </div>
-
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">API Endpoints</h2>
           <div className="space-y-6">
@@ -25,7 +23,6 @@ const APIDocumentation: React.FC = () => {
                 <div><code className="bg-gray-100 px-2 py-1 rounded">DELETE /content/{'{id}'}</code> - Delete content</div>
               </div>
             </div>
-
             <div className="border-l-4 border-green-500 pl-4">
               <h3 className="text-lg font-medium text-gray-800 mb-2">User Management</h3>
               <div className="space-y-2 text-sm">
@@ -35,7 +32,6 @@ const APIDocumentation: React.FC = () => {
                 <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /users/{'{id}'}</code> - Update user</div>
               </div>
             </div>
-
             <div className="border-l-4 border-purple-500 pl-4">
               <h3 className="text-lg font-medium text-gray-800 mb-2">Analytics</h3>
               <div className="space-y-2 text-sm">
@@ -46,52 +42,43 @@ const APIDocumentation: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Code Examples</h2>
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-medium text-gray-800 mb-3">JavaScript/Node.js</h3>
               <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
-{`const axios = require('axios');
-
-const apiKey = 'your-api-key';
-const baseUrl = 'https://api.ziontechgroup.com';
-
+{`const axios = require('axios')}
+const apiKey = 'your-api-key'
+const baseUrl = 'https://api.ziontechgroup.com'
 const createContent = async () => {
   try {
-    const response = await axios.post(\`\${baseUrl}/content\`, {
-      title: 'New Content',
+    const response = await axios.post(\`\${baseUrl}/content\`, {title: 'New Content'}
       body: 'Content body here'
     }, {
       headers: {
-        'Authorization': \`Bearer \${apiKey}\`,
+        'Authorization': \`Bearer \${apiKey}\`)
         'Content-Type': 'application/json'
       }
     });
     console.log(response.data);
-  } catch (error) {
-    console.error('Error:', error.response.data);
+  } catch (error) {console.error('Error: '} error.response.data);
   }
-};`}
+}`}
               </pre>
             </div>
-
             <div>
               <h3 className="text-lg font-medium text-gray-800 mb-3">Python</h3>
               <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
 {`import requests
-
 api_key = 'your-api-key'
 base_url = 'https://api.ziontechgroup.com'
-
 headers = {
     'Authorization': f'Bearer {api_key}',
     'Content-Type': 'application/json'
 }
-
 # Get content
-response = requests.get(f'{base_url}/content', headers=headers)
+response = requests.get(f'{base_url}/content' headers=headers)
 if response.status_code == 200:
     print(response.json())
 else:
@@ -100,10 +87,9 @@ else:
             </div>
           </div>
         </div>
-
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Error Codes</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div className="bg-red-50 p-4 rounded-lg">
               <h3 className="font-medium text-red-800">4xx Client Errors</h3>
               <div className="text-sm text-red-700 space-y-1 mt-2">
@@ -125,7 +111,6 @@ else:
             </div>
           </div>
         </div>
-
         <div className="bg-blue-50 rounded-lg p-6 text-center">
           <h3 className="text-lg font-medium text-blue-800 mb-2">Need Help?</h3>
           <p className="text-blue-600 mb-4">
@@ -137,7 +122,6 @@ else:
         </div>
       </div>
     </div>
-  );
+  ),
 };
-
 export default APIDocumentation;

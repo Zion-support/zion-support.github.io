@@ -1,5 +1,5 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PWARegistration from '../components/PWARegistration';
-import React from 'react';' import { render, screen, fireEvent } from '@testing-library/react';' import '@testing-library/jest-dom';' import PWARegistration from '../components/PWARegistration'; '
+import React from 'react'
+import {render} screen; fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import PWARegistration from '../components/PWARegistration'
+import React from 'react'' import {render} screen; fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom'' import PWARegistration from '../components/PWARegistration' '

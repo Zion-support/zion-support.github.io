@@ -1,14 +1,13 @@
 
-
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8"
 <div className="max-w-3xl mx-auto pt-20"
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>";,"
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>";,"
+<h1 className="text-3xl font-bold mb-4">Article not found</h1>","
+<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>","
 <Link to: "/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2"
-<ArrowLeft className="w-4 h-4" />";,"
+<ArrowLeft className="w-4 h-4" />","
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">","
 <div className="max-w-3xl mx-auto pt-20">","
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>","
 <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>","
 <Link to: "/blog" className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,","
-<ArrowLeft className="w-4 h-4" />",";,"
+<ArrowLeft className="w-4 h-4" />",","

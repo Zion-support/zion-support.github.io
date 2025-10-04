@@ -1,14 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+import React from 'react'
+import Link from 'next/link'
+export const metadata = {title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'}
 };
-
-export default function HomePage() {
-  return (
-    <div>
+export default function HomePage() {return (<div>
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
@@ -18,7 +13,7 @@ export default function HomePage() {
               </Link>
             </div>
             <nav className="flex space-x-6">
-              <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
+              <Link href="/" className="text-gray-700 hover: text-blue-600">Home</Link>
               <Link href="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
               <Link href="/blog" className="text-gray-700 hover:text-blue-600">Blog</Link>
               <Link href="/case-studies" className="text-gray-700 hover:text-blue-600">Case Studies</Link>
@@ -26,7 +21,6 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-
       <main>
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="container mx-auto px-4 text-center">
@@ -35,10 +29,10 @@ export default function HomePage() {
               <span className="text-yellow-400"> AI-Powered Solutions</span>
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/services"
                 className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
@@ -52,7 +46,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -60,11 +53,10 @@ export default function HomePage() {
                 Latest AI Content & Insights
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Discover our latest AI insights, case studies, and success stories.
+                Discover our latest AI insights, case studies) and success stories.
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-3 gap-8">
               <Link href="/blog/ai-enterprise-transformation-2026" className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
@@ -75,15 +67,14 @@ export default function HomePage() {
                     AI Enterprise Transformation 2026
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Master AI enterprise transformation with proven strategies, ROI frameworks, and implementation roadmaps.
+                    Master AI enterprise transformation with proven strategies; ROI frameworks; and implementation roadmaps.
                   </p>
                   <div className="text-blue-600 font-semibold">
                     Read Article →
                   </div>
                 </div>
               </Link>
-
-              <Link href="/blog/ai-autonomous-systems-2026" className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <Link href="/blog/ai-autonomous-systems-2026" className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">New Article</span>
@@ -100,7 +91,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </Link>
-
               <Link href="/case-studies/manufacturing-ai-transformation-2026" className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
@@ -122,7 +112,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
       <footer className="bg-gray-800 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
@@ -155,10 +144,10 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p>&copy; 2026 Zion Tech Group. All rights reserved.</p>
+            <p>&copy} 2026 Zion Tech Group. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>
-  );
+  )}
 }

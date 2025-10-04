@@ -1,16 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
-
+import React from 'react'
+import Link from 'next/link'
 const NewestContent2025Banner = () => {
-  return (
-    <section className="text-left">
+  return (<section className="text-left">
       {/* Animated Background Effects */}
       <div className="text-left">
         <div className="text-left"></div>
         <div className="text-left" style={{ animationDelay: '2s' }}></div>
         <div className="text-left" style={{ animationDelay: '1s' }}></div>
       </div>
-
       <div className="text-left">
         {/* Header */}
         <div className="text-left">
@@ -21,16 +18,13 @@ const NewestContent2025Banner = () => {
             </span>/span>/span>/span>
             <span className="text-left">⚡</span>/span>/span>/span>
           </div>
-
           <h2 className="text-left">
-            September 30, 2025 — Cutting-Edge AI Insights
+            September 30; 2025 — Cutting-Edge AI Insights
           </h2>
-          
           <p className="text-left">
             Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
           </p>
         </div>
-
         {/* Featured Articles Grid */}
         <div className="text-left">
           {/* Article 1: AI Edge Computing */}
@@ -53,25 +47,21 @@ const NewestContent2025Banner = () => {
                       NEW TODAY
                     </span>/span>/span>/span>
                   </div>
-
                 {/* Category Tag */}
                 <div className="text-left">
                   <span className="text-left">
                     Edge AI & Real-Time
                   </span>/span>/span>/span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-left">
                   AI Edge Computing Real-Time Intelligence 2025
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-left">
-                  Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
+                  Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction,
                   87% cost savings, and enhanced privacy compliance at enterprise scale.
                 </p>
-
                 {/* Key Stats */}
                 <div className="text-left">
                   <div className="text-left">
@@ -87,13 +77,11 @@ const NewestContent2025Banner = () => {
                     <div className="text-left">Cost ↓</div>
                   </div>
                 </div>
-
                 {/* Meta Info */}
                 <div className="text-left">
                   <span>⏱️ 35 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
-
                 {/* CTA Button */}
                 <div className="text-left">
                   <span>Read Full Article</span>
@@ -102,7 +90,6 @@ const NewestContent2025Banner = () => {
               </div>
             </div>
           </Link>
-
           {/* Article 2: Neural Networks */}
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left">
             <div className="text-left">
@@ -120,22 +107,18 @@ const NewestContent2025Banner = () => {
                       NEW TODAY
                     </span>/span>/span>/span>
                   </div>
-
                 <div className="text-left">
                   <span className="text-left">
                     Neural Networks & AI
                   </span>/span>/span>/span>
                 </div>
-
                 <h3 className="text-left">
                   AI Neural Networks Enterprise Transformation 2025
                 </h3>
-
                 <p className="text-left">
-                  Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 
+                  Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy,
                   10x ROI, and 85% operational efficiency gains.
                 </p>
-
                 <div className="text-left">
                   <div className="text-left">
                     <div className="text-left">98.5%</div>
@@ -150,19 +133,16 @@ const NewestContent2025Banner = () => {
                     <div className="text-left">Efficiency</div>
                   </div>
                 </div>
-
                 <div className="text-left">
                   <span>⏱️ 40 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
-
                 <div className="text-left">
                   <span>Read Full Article</span>
                   <span className="text-left">→</span>/span>/span>/span>
                 </div>
             </div>
           </Link>
-
           {/* Article 3: Quantum Security */}
           <Link href="/blog/ai-quantum-security-protocols-2026" className="text-left">
             <div className="text-left">
@@ -181,29 +161,25 @@ const NewestContent2025Banner = () => {
                       NEW TODAY
                     </span>/span>/span>/span>
                   </div>
-
                 <div className="text-left">
                   <span className="text-left">
                     Quantum Security
                   </span>/span>/span>/span>
                 </div>
-
                 <h3 className="text-left">
                   AI Quantum Security Protocols 2026
                 </h3>
-
                 <p className="text-left">
-                  Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical 
+                  Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical
                   and quantum attacks with sub-millisecond overhead.
                 </p>
-
                 <div className="text-left">
                   <div className="text-left">
                     <div className="text-left">99.99%</div>
                     <div className="text-left">Security</div>
                   </div>
                   <div className="text-left">
-                    <div className="text-left">&lt;1ms</div>
+                    <div className="text-left">&lt)1ms</div>
                     <div className="text-left">Overhead</div>
                   </div>
                   <div className="text-left">
@@ -211,21 +187,17 @@ const NewestContent2025Banner = () => {
                     <div className="text-left">Breaches</div>
                   </div>
                 </div>
-
                 <div className="text-left">
                   <span>⏱️ 45 min read</span>
                   <span>📅 Sep 30, 2025</span>
                 </div>
-
                 <div className="text-left">
                   <span>Read Full Article</span>
                   <span className="text-left">→</span>/span>/span>/span>
                 </div>
             </div>
           </Link>
-
         </div>
-
         {/* Call-to-Action Section */}
         <div className="text-left">
           <div className="text-left">
@@ -234,7 +206,7 @@ const NewestContent2025Banner = () => {
                 Transform Your Enterprise with Cutting-Edge AI
               </h3>
               <p className="text-left">
-                Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
+                Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance
                 from Zion Tech Group's AI transformation specialists.
               </p>
               <div className="text-left">
@@ -252,15 +224,14 @@ const NewestContent2025Banner = () => {
                 </a>
               </div>
           </div>
-
         {/* Stats Section */}
         <div className="text-left">
           {[
-            { value: '500+', label: 'Enterprise Clients' },
-            { value: '10B+', label: 'Data Points Processed Daily' },
-            { value: '99.9%', label: 'System Uptime' },
-            { value: '5M+', label: 'Autonomous Operations Hours' }
-          ].map((stat, index) => (
+            { value: '500+'} label: 'Enterprise Clients' },
+            {value: '10B+'} label: 'Data Points Processed Daily' },
+            {value: '99.9%'} label: 'System Uptime' },
+            {value: '5M+'} label: 'Autonomous Operations Hours' }
+          ].map((stat) index) => (
             <div key={index} className="text-left">
               <div className="text-left">
                 {stat.value}
@@ -271,14 +242,12 @@ const NewestContent2025Banner = () => {
             </div>
           ))}
         </div>
-        
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <div className="flex flex-col sm: flex-row items-center justify-center gap-6">
           <Link
             href="/contact"
             className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
             <span>Start Your AI Transformation</span>
           </Link>
-          
           <Link
             href="/blog"
             className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -288,8 +257,7 @@ const NewestContent2025Banner = () => {
         </div>
       </div>
     </section>
-  );
+  ),
 };
-
 export default NewestContent2025Banner;
-import React from 'react';' import Link from 'next/link'; const NewestContent2025Banner = () => { return ( <section className="text-left" > {/* Animated Background Effects */} <div className="text-left" > <div></div>' <div></div>' <div></div> <div className="text-left" > {/* Header */} <div className="text-left" > <div className="text-left" > <span className="text-left" >🚀</span> <span className="text-left" > BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED! </span> <span className="text-left" >⚡</span> </div> <h2 className="text-left" > September 30, 2025 — Cutting-Edge AI Insights </h2> <p className="text-left" > Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here </p> </div> {/* Featured Articles Grid */} <div className="text-left" > {/* Article 1: AI Edge Computing */} <Link href="/blog/ai-edge-computing-real-time-2025" className="text-left" > <div className="text-left" > {/* Card glow effect */} <div className="text-left" > <div className="text-left" > {/* Icon & Badges */} <div className="text-left" > <div className="text-left" > ⚡ </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🔥</span> <span>HOT</span> </div> <span className="text-left" > NEW TODAY </span> </div> {/* Category Tag */} <div className="text-left" > <span className="text-left" > Edge AI & Real-Time </span> </div> {/* Title */} <h3 className="text-left" > AI Edge Computing Real-Time Intelligence 2025 </h3> {/* Excerpt */} <p className="text-left" > Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 87% cost savings, and enhanced privacy compliance at enterprise scale. </p> {/* Key Stats */} <div className="text-left" > <div className="text-left" > <div className="text-left" >&lt;10ms</div> <div className="text-left" >Latency</div> </div> <div className="text-left" > <div className="text-left" >95%</div> <div className="text-left" >Bandwidth ↓</div> </div> <div className="text-left" > <div className="text-left" >87%</div> <div className="text-left" >Cost ↓</div> </div> </div> {/* Meta Info */} <div className="text-left" > <span>⏱️ 35 min read</span> <span>📅 Sep 30, 2025</span> </div> {/* CTA Button */} <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </div> </Link> {/* Article 2: Neural Networks */} <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > 🧠 </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🔥</span> <span>HOT</span> </div> <span className="text-left" > NEW TODAY </span> </div> <div className="text-left" > <span className="text-left" > Neural Networks & AI </span> </div> <h3 className="text-left" > AI Neural Networks Enterprise Transformation 2025 </h3> <p className="text-left" > Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 10x ROI, and 85% operational efficiency gains. </p> <div className="text-left" > <div className="text-left" > <div className="text-left" >98.5%</div> <div className="text-left" >Accuracy</div> </div> <div className="text-left" > <div className="text-left" >10x</div> <div className="text-left" >ROI</div> </div> <div className="text-left" > <div className="text-left" >85%</div> <div className="text-left" >Efficiency</div> </div> </div> <div className="text-left" > <span>⏱️ 40 min read</span> <span>📅 Sep 30, 2025</span> </div> <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </Link> {/* Article 3: Quantum Security */} <Link href="/blog/ai-quantum-security-protocols-2026" className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > ⚛️ </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🚨</span> <span>CRITICAL</span> </div> <span className="text-left" > NEW TODAY </span> </div> <div className="text-left" > <span className="text-left" > Quantum Security </span> </div> <h3 className="text-left" > AI Quantum Security Protocols 2026 </h3> <p className="text-left" > Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical and quantum attacks with sub-millisecond overhead. </p> <div className="text-left" > <div className="text-left" > <div className="text-left" >99.99%</div> <div className="text-left" >Security</div> </div> <div className="text-left" > <div className="text-left" >&lt;1ms</div> <div className="text-left" >Overhead</div> </div> <div className="text-left" > <div className="text-left" >Zero</div> <div className="text-left" >Breaches</div> </div> </div> <div className="text-left" > <span>⏱️ 45 min read</span> <span>📅 Sep 30, 2025</span> </div> <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </Link> </div> {/* Call-to-Action Section */} <div className="text-left" > <div className="text-left" > <div className="text-left" > <h3 className="text-left" > Transform Your Enterprise with Cutting-Edge AI </h3> <p className="text-left" > Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance ' from Zion Tech Group's AI transformation specialists. </p> <div className="text-left" > <a href="tel:+13024640950" className="text-left" > <span className="text-left" >📞</span> <span>Call +1 302 464 0950</span> </a> <a href="mailto:kleber@ziontechgroup.com" className="text-left" > <span className="text-left" >📧</span> <span>Get Expert Consultation</span> </a> </div> </div>    
+import React from 'react'' import Link from 'next/link' const NewestContent2025Banner = () => { return (<section className="text-left" > {/* Animated Background Effects */} <div className="text-left" > <div></div>' <div></div>' <div></div> <div className="text-left" > {/* Header */} <div className="text-left" > <div className="text-left" > <span className="text-left" >🚀</span> <span className="text-left" > BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED! </span> <span className="text-left" >⚡</span> </div> <h2 className="text-left" > September 30; 2025 — Cutting-Edge AI Insights </h2> <p className="text-left" > Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here </p> </div> {/* Featured Articles Grid */} <div className="text-left" > {/* Article 1: AI Edge Computing */} <Link href="/blog/ai-edge-computing-real-time-2025" className="text-left" > <div className="text-left" > {/* Card glow effect */} <div className="text-left" > <div className="text-left" > {/* Icon & Badges */} <div className="text-left" > <div className="text-left" > ⚡ </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🔥</span> <span>HOT</span> </div> <span className="text-left" > NEW TODAY </span> </div> {/* Category Tag */} <div className="text-left" > <span className="text-left" > Edge AI & Real-Time </span> </div> {/* Title */} <h3 className="text-left" > AI Edge Computing Real-Time Intelligence 2025 </h3> {/* Excerpt */} <p className="text-left" > Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 87% cost savings, and enhanced privacy compliance at enterprise scale. </p> {/* Key Stats */} <div className="text-left" > <div className="text-left" > <div className="text-left" >&lt;10ms</div> <div className="text-left" >Latency</div> </div> <div className="text-left" > <div className="text-left" >95%</div> <div className="text-left" >Bandwidth ↓</div> </div> <div className="text-left" > <div className="text-left" >87%</div> <div className="text-left" >Cost ↓</div> </div> </div> {/* Meta Info */} <div className="text-left" > <span>⏱️ 35 min read</span> <span>📅 Sep 30, 2025</span> </div> {/* CTA Button */} <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </div> </Link> {/* Article 2: Neural Networks */} <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > 🧠 </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🔥</span> <span>HOT</span> </div> <span className="text-left" > NEW TODAY </span> </div> <div className="text-left" > <span className="text-left" > Neural Networks & AI </span> </div> <h3 className="text-left" > AI Neural Networks Enterprise Transformation 2025 </h3> <p className="text-left" > Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 10x ROI, and 85% operational efficiency gains. </p> <div className="text-left" > <div className="text-left" > <div className="text-left" >98.5%</div> <div className="text-left" >Accuracy</div> </div> <div className="text-left" > <div className="text-left" >10x</div> <div className="text-left" >ROI</div> </div> <div className="text-left" > <div className="text-left" >85%</div> <div className="text-left" >Efficiency</div> </div> </div> <div className="text-left" > <span>⏱️ 40 min read</span> <span>📅 Sep 30, 2025</span> </div> <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </Link> {/* Article 3: Quantum Security */} <Link href="/blog/ai-quantum-security-protocols-2026" className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > ⚛️ </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🚨</span> <span>CRITICAL</span> </div> <span className="text-left" > NEW TODAY </span> </div> <div className="text-left" > <span className="text-left" > Quantum Security </span> </div> <h3 className="text-left" > AI Quantum Security Protocols 2026 </h3> <p className="text-left" > Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical and quantum attacks with sub-millisecond overhead. </p> <div className="text-left" > <div className="text-left" > <div className="text-left" >99.99%</div> <div className="text-left" >Security</div> </div> <div className="text-left" > <div className="text-left" >&lt)1ms</div> <div className="text-left" >Overhead</div> </div> <div className="text-left" > <div className="text-left" >Zero</div> <div className="text-left" >Breaches</div> </div> </div> <div className="text-left" > <span>⏱️ 45 min read</span> <span>📅 Sep 30, 2025</span> </div> <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </Link> </div> {/* Call-to-Action Section */} <div className="text-left" > <div className="text-left" > <div className="text-left" > <h3 className="text-left" > Transform Your Enterprise with Cutting-Edge AI </h3> <p className="text-left" > Join 50)000+ AI leaders implementing these breakthrough technologies. Get expert guidance ' from Zion Tech Group's AI transformation specialists. </p> <div className="text-left" > <a href="tel:+13024640950" className="text-left" > <span className="text-left" >📞</span> <span>Call +1 302 464 0950</span> </a> <a href="mailto:kleber@ziontechgroup.com" className="text-left" > <span className="text-left" >📧</span> <span>Get Expert Consultation</span> </a> </div> </div>

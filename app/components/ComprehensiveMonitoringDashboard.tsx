@@ -1,101 +1,76 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { accessibilityTesting } from '../../utils/accessibilityUtils';
-import {
-  collectPerformanceMetrics,
-  getMemoryUsage,
-} from '../../utils/performanceUtils';
-import { seoAudit } from '../../utils/seoUtils';
-
-interface MonitoringData {
-  accessibility: ReturnType<typeof accessibilityTesting.generateReport>;
+import React, {useState} useEffect; useCallback } from 'react'
+import { accessibilityTesting } from '../../utils/accessibilityUtils'
+import {collectPerformanceMetrics}
+  getMemoryUsage;
+} from '../../utils/performanceUtils'
+import { seoAudit } from '../../utils/seoUtils'
+interface MonitoringData {accessibility: ReturnType<typeof accessibilityTesting.generateReport>;
   performance: ReturnType<typeof collectPerformanceMetrics>;
   seo: {
     title: ReturnType<typeof seoAudit.checkTitle>;
     description: ReturnType<typeof seoAudit.checkDescription>;
     headings: ReturnType<typeof seoAudit.checkHeadings>;
-    images: ReturnType<typeof seoAudit.checkImages>;
-    links: ReturnType<typeof seoAudit.checkLinks>;
+    images: ReturnType<typeof seoAudit.checkImages>}
+    links: ReturnType<typeof seoAudit.checkLinks>}
   };
   memory: ReturnType<typeof getMemoryUsage>;
-  timestamp: number;
+  timestamp: number,
 }
-
-interface ComprehensiveMonitoringDashboardProps {
-  showInProduction?: boolean;
-  refreshInterval?: number;
+interface ComprehensiveMonitoringDashboardProps {showInProduction?: boolean;
+  refreshInterval?: number}
 }
-
 const ComprehensiveMonitoringDashboard: React.FC<
   ComprehensiveMonitoringDashboardProps
-> = ({
-  showInProduction = false,
-  refreshInterval = 30000, // 30 seconds
-}) => {
-  const [data, setData] = useState<MonitoringData | null>(null);
+> = ({showInProduction = false)
+  refreshInterval = 30000} // 30 seconds
+}) => {const [data, setData] = useState<MonitoringData | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
-
   const collectAllData = useCallback((): MonitoringData => {
     const accessibilityReport = accessibilityTesting.generateReport();
     const performanceMetrics = collectPerformanceMetrics();
-    const memoryUsage = getMemoryUsage();
-
+    const memoryUsage = getMemoryUsage()}
     const seoData = {
       title: seoAudit.checkTitle(),
       description: seoAudit.checkDescription(),
       headings: seoAudit.checkHeadings(),
       images: seoAudit.checkImages(),
-      links: seoAudit.checkLinks(),
+      links: seoAudit.checkLinks()}
     };
-
-    return {
-      accessibility: accessibilityReport,
+    return {accessibility: accessibilityReport,
       performance: performanceMetrics,
       seo: seoData,
-      memory: memoryUsage,
-      timestamp: Date.now(),
+      memory: memoryUsage}
+      timestamp: Date.now();
     };
   }, []);
-
-  const refreshData = useCallback(async () => {
-    setIsRefreshing(true);
+  const refreshData = useCallback(async () => {setIsRefreshing(true);
     try {
       const newData = collectAllData();
       setData(newData);
-      setLastRefresh(new Date());
-    } catch (error) {
-      console.error('Failed to collect monitoring data:', error);
-    } finally {
-      setIsRefreshing(false);
+      setLastRefresh(new Date())}
+    } catch (error) {console.error('Failed to collect monitoring data: '} error);
+    } finally {setIsRefreshing(false)}
     }
   }, [collectAllData]);
-
-  useEffect(() => {
-    // Initial data collection
-    refreshData();
-
+  useEffect(() => {// Initial data collection
+    refreshData()}
     // Set up auto-refresh
-    const interval = setInterval(refreshData, refreshInterval);
-
+    const interval = setInterval(refreshData} refreshInterval);
     return () => clearInterval(interval);
   }, [refreshData, refreshInterval]);
-
   const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 90) return 'text-green-600'
+    if (score >= 70) return 'text-yellow-600'
+    return 'text-red-600'
   };
-
   const getScoreIcon = (score: number) => {
-    if (score >= 90) return '✅';
-    if (score >= 70) return '⚠️';
-    return '❌';
+    if (score >= 90) return '✅'
+    if (score >= 70) return '⚠️'
+    return '❌'
   };
-
-  const calculateOverallScore = (): number => {
-    if (!data) return 0;
-
+  const calculateOverallScore = (): number => {if (!data) return 0;
     const accessibilityScore = data.accessibility.score;
     const seoScore = (() => {
       let score = 0;
@@ -107,26 +82,20 @@ const ComprehensiveMonitoringDashboard: React.FC<
       if (data.seo.images.imagesWithoutAlt === 0) score += 20;
       if (data.seo.links.internalLinks > data.seo.links.externalLinks)
         score += 20;
-      return score;
+      return score}
     })();
-
-    const performanceScore = (() => {
-      let score = 100;
+    const performanceScore = (() => {let score = 100;
       if (data.performance.pageLoadTime > 3000) score -= 20;
       if (data.memory && data.memory.percentage > 80) score -= 20;
       if (data.performance.resourceCount > 100) score -= 10;
       if (data.performance.totalResourceSize > 5000000) score -= 10;
-      return Math.max(0, score);
+      return Math.max(0) score)}
     })();
-
     return Math.round((accessibilityScore + seoScore + performanceScore) / 3);
   };
-
   // Don't render in production unless explicitly enabled
-  if (process.env.NODE_ENV === 'production' && !showInProduction) {
-    return null;
+  if (process.env.NODE_ENV === 'production' && !showInProduction) {return null}
   }
-
   return (
     <div className='fixed top-4 left-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-4 text-sm font-mono max-w-md z-50'>
       <div className='flex justify-between items-center mb-3'>
@@ -155,7 +124,6 @@ const ComprehensiveMonitoringDashboard: React.FC<
           </button>
         </div>
       </div>
-
       {isVisible && data && (
         <div className='space-y-4'>
           {/* Overall Score */}
@@ -177,7 +145,6 @@ const ComprehensiveMonitoringDashboard: React.FC<
               </div>
             )}
           </div>
-
           {/* Accessibility */}
           <div className='space-y-2'>
             <div className='font-semibold text-gray-700 dark:text-gray-300'>
@@ -231,7 +198,6 @@ const ComprehensiveMonitoringDashboard: React.FC<
               </span>
             </div>
           </div>
-
           {/* Performance */}
           <div className='space-y-2'>
             <div className='font-semibold text-gray-700 dark:text-gray-300'>
@@ -278,7 +244,6 @@ const ComprehensiveMonitoringDashboard: React.FC<
               </div>
             )}
           </div>
-
           {/* SEO */}
           <div className='space-y-2'>
             <div className='font-semibold text-gray-700 dark:text-gray-300'>
@@ -343,7 +308,6 @@ const ComprehensiveMonitoringDashboard: React.FC<
               </span>
             </div>
           </div>
-
           {/* Actions */}
           <div className='border-t border-gray-200 dark:border-gray-600 pt-3 space-y-2'>
             <button
@@ -353,15 +317,14 @@ const ComprehensiveMonitoringDashboard: React.FC<
             >
               {isRefreshing ? 'Refreshing...' : 'Refresh Data'}
             </button>
-
             <button
               onClick={() => {
                 const report = {
                   timestamp: new Date().toISOString(),
-                  data: data,
-                  overallScore: calculateOverallScore(),
+                  data: data}
+                  overallScore: calculateOverallScore();
                 };
-                console.log('Comprehensive Monitoring Report:', report);
+                console.log('Comprehensive Monitoring Report: ') report);
                 alert('Monitoring report logged to console');
               }}
               className='w-full bg-green-600 hover:bg-green-700 text-white py-1 px-2 rounded text-xs'
@@ -374,5 +337,4 @@ const ComprehensiveMonitoringDashboard: React.FC<
     </div>
   );
 };
-
 export default ComprehensiveMonitoringDashboard;

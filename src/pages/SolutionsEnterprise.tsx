@@ -1,5 +1,4 @@
 
-
       <div className="container mx-auto px-6 py-12"
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise Solutions</h1>";,"
-        <p className="text-gray-600 max-w-3xl">Scalable, secure, and compliant solutions for large organizations.</p>";,"
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise Solutions</h1>","
+        <p className="text-gray-600 max-w-3xl">Scalable, secure, and compliant solutions for large organizations.</p>","

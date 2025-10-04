@@ -1,14 +1,13 @@
 
-
     <div className="min-h-screen bg-gray-50">","
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
           <div className="text-center"
-            <h1 className="text-4xl md: text-6xl font-bold mb-6">",";,"
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">",","
   Simple, Transparent Pricing
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">,";,"
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">,","
   Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
@@ -16,13 +15,13 @@
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">","
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
           <div className="text-center">","
-            <h1 className="text-4xl md: text-6xl font-bold mb-6">",";,"
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">",","
   Simple, Transparent Pricing
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">",";,"
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">",","
   Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">","
-              <Link to: "/demo",";,"
+              <Link to: "/demo",","
   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors","

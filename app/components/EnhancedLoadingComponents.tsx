@@ -1,45 +1,35 @@
-import React, { useState, useEffect } from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'blue' | 'gray' | 'white' | 'green' | 'red';
+import React, {useState} useEffect } from 'react'
+interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl'
+  color?: 'blue' | 'gray' | 'white' | 'green' | 'red'
   text?: string;
   fullScreen?: boolean;
   progress?: number;
-  showProgress?: boolean;
+  showProgress?: boolean}
 }
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md',
   color = 'blue',
   text = 'Loading...',
   fullScreen = false,
-  progress = 0,
-  showProgress = false,
-}) => {
-  const sizeClasses = {
+  progress = 0)
+  showProgress = false}
+}) => {const sizeClasses = {
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
     lg: 'h-12 w-12',
-    xl: 'h-16 w-16',
+    xl: 'h-16 w-16'}
   };
-
-  const colorClasses = {
-    blue: 'border-blue-600',
+  const colorClasses = {blue: 'border-blue-600',
     gray: 'border-gray-600',
     white: 'border-white',
     green: 'border-green-600',
-    red: 'border-red-600',
+    red: 'border-red-600'}
   };
-
-  const textColorClasses = {
-    blue: 'text-blue-600',
+  const textColorClasses = {blue: 'text-blue-600',
     gray: 'text-gray-600',
     white: 'text-white',
     green: 'text-green-600',
-    red: 'text-red-600',
+    red: 'text-red-600'}
   };
-
   const spinner = (
     <div className='flex flex-col items-center'>
       <div
@@ -61,7 +51,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   );
-
   if (fullScreen) {
     return (
       <div className='flex items-center justify-center min-h-screen bg-gray-50'>
@@ -69,32 +58,24 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </div>
     );
   }
-
   return spinner;
 };
-
 // Progress Loading Component
-interface ProgressLoadingProps {
-  progress: number;
-  text?: string;
-  showPercentage?: boolean;
-  color?: 'blue' | 'green' | 'red';
+interface ProgressLoadingProps {progress: number;
+  text?: string}
+  showPercentage?: boolean}
+  color?: 'blue' | 'green' | 'red'
 }
-
-const ProgressLoading: React.FC<ProgressLoadingProps> = ({
-  progress,
+const ProgressLoading: React.FC<ProgressLoadingProps> = ({progress,
   text = 'Loading...',
-  showPercentage = true,
-  color = 'blue',
-}) => {
-  const colorClasses = {
+  showPercentage = true)
+  color = 'blue'}
+}) => {const colorClasses = {
     blue: 'bg-blue-600',
     green: 'bg-green-600',
-    red: 'bg-red-600',
+    red: 'bg-red-600'}
   };
-
-  return (
-    <div className='flex flex-col items-center p-6'>
+  return (<div className='flex flex-col items-center p-6'>
       <div className='w-16 h-16 relative mb-4'>
         <svg className='w-16 h-16 transform -rotate-90' viewBox='0 0 36 36'>
           <path
@@ -109,7 +90,7 @@ const ProgressLoading: React.FC<ProgressLoadingProps> = ({
             stroke='currentColor'
             strokeWidth='3'
             fill='none'
-            strokeDasharray={`${progress}, 100`}
+            strokeDasharray={`${progress}) 100`}
             d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831'
           />
         </svg>
@@ -125,21 +106,14 @@ const ProgressLoading: React.FC<ProgressLoadingProps> = ({
     </div>
   );
 };
-
 // Animated Loading Component
-const AnimatedLoading: React.FC<{ text?: string }> = ({
-  text = 'Loading...',
-}) => {
-  const [dots, setDots] = useState('');
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDots(prev => (prev.length >= 3 ? '' : prev + '.'));
+const AnimatedLoading: React.FC<{ text?: string }> = ({text = 'Loading...'}
+}) => {const [dots} setDots] = useState('');
+  useEffect(() => {const interval = setInterval(() => {
+      setDots(prev => (prev.length >= 3 ? '' : prev + '.'))}
     }, 500);
-
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div className='flex items-center justify-center p-6'>
       <div className='flex items-center space-x-2'>
@@ -162,7 +136,6 @@ const AnimatedLoading: React.FC<{ text?: string }> = ({
     </div>
   );
 };
-
 // Pulse Loading Component
 const PulseLoading: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => {
   return (
@@ -174,6 +147,5 @@ const PulseLoading: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => {
     </div>
   );
 };
-
-export { LoadingSpinner, ProgressLoading, AnimatedLoading, PulseLoading };
+export {LoadingSpinner, ProgressLoading, AnimatedLoading} PulseLoading };
 export default LoadingSpinner;

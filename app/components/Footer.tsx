@@ -1,59 +1,50 @@
-import React from 'react';
-
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
+import React from 'react'
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear(),
   const footerLinks = {
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' },
+      { name: 'About Us'} href: '/about' },
+      {name: 'Our Team'} href: '/team' },
+      {name: 'Careers'} href: '/careers' },
+      {name: 'Contact'} href: '/contact' },
     ],
     services: [
-      { name: 'AI Solutions', href: '/services/ai' },
-      { name: 'Cloud Services', href: '/services/cloud' },
-      { name: 'Software Development', href: '/services/development' },
-      { name: 'Consulting', href: '/services/consulting' },
+      {name: 'AI Solutions'} href: '/services/ai' },
+      {name: 'Cloud Services'} href: '/services/cloud' },
+      {name: 'Software Development'} href: '/services/development' },
+      {name: 'Consulting'} href: '/services/consulting' },
     ],
     resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Support', href: '/support' },
+      {name: 'Blog'} href: '/blog' },
+      {name: 'Case Studies'} href: '/case-studies' },
+      {name: 'Documentation'} href: '/docs' },
+      {name: 'Support'} href: '/support' },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'GDPR', href: '/gdpr' },
+      {name: 'Privacy Policy'} href: '/privacy' },
+      {name: 'Terms of Service'} href: '/terms' },
+      {name: 'Cookie Policy'} href: '/cookies' },
+      {name: 'GDPR'} href: '/gdpr' },
     ],
   };
-
   const socialLinks = [
-    {
-      name: 'LinkedIn',
+    {name: 'LinkedIn',
       href: 'https://linkedin.com/company/zion-tech-group',
-      icon: 'linkedin',
+      icon: 'linkedin'}
     },
-    {
-      name: 'Twitter',
+    {name: 'Twitter',
       href: 'https://twitter.com/ziontechgroup',
-      icon: 'twitter',
+      icon: 'twitter'}
     },
-    {
-      name: 'GitHub',
+    {name: 'GitHub',
       href: 'https://github.com/zion-tech-group',
-      icon: 'github',
+      icon: 'github'}
     },
   ];
-
-  return (
-    <footer className='bg-slate-900 border-t border-slate-800'>
+  return (<footer className='bg-slate-900 border-t border-slate-800'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>
           {/* Company Info */}
-          <div className='lg:col-span-2'>
+          <div className='lg: col-span-2'>
             <div className='flex items-center mb-4'>
               <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center'>
                 <span className='text-white font-bold text-sm'>Z</span>
@@ -70,10 +61,9 @@ const Footer: React.FC = () => {
             <div className='space-y-2 text-sm text-gray-400'>
               <p>📧 kleber@ziontechgroup.com</p>
               <p>📞 +1 302 464 0950</p>
-              <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+              <p>📍 364 E Main St STE 1008) Middletown; DE 19709</p>
             </div>
           </div>
-
           {/* Company Links */}
           <div>
             <h3 className='text-white font-semibold mb-4'>Company</h3>
@@ -90,7 +80,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Services Links */}
           <div>
             <h3 className='text-white font-semibold mb-4'>Services</h3>
@@ -107,7 +96,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Resources Links */}
           <div>
             <h3 className='text-white font-semibold mb-4'>Resources</h3>
@@ -125,14 +113,12 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className='mt-12 pt-8 border-t border-slate-800'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
             {/* Social Links */}
             <div className='flex space-x-4 mt-4 md:mt-0'>
               {socialLinks.map(social => (
@@ -162,7 +148,6 @@ const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
-
             {/* Legal Links */}
             <div className='flex space-x-6 mt-4 md:mt-0'>
               {footerLinks.legal.map(link => (
@@ -181,5 +166,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
 export default Footer;

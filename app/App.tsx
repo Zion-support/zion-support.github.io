@@ -12,10 +12,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import HomePage from './page';
 
 // Utils
-import {
-  setupGlobalErrorHandling,
-  monitorPerformance,
-} from '../utils/errorHandling';
+import { setupGlobalErrorHandling, monitorPerformance } from '../utils/errorHandling';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 // Styles
@@ -25,16 +22,12 @@ const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
     setupGlobalErrorHandling();
-
-    // Initialize performance monitoring
+    
+    // Start performance monitoring
     monitorPerformance();
-
+    
     // Initialize performance optimizer
-    performanceOptimizer.clearMetrics();
-
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    performanceOptimizer.init();
   }, []);
 
   return (
@@ -42,35 +35,13 @@ const App: React.FC = () => {
       <ErrorBoundary>
         <SEOOptimizer>
           <AccessibilityEnhancer>
-            <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link'
-                  onClick={e => {
-                    e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
-
+            <PerformanceDashboard>
+              <Router>
                 <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  {/* Add more routes as needed */}
+                  <Route path="/" element={<HomePage />} />
                 </Routes>
-
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-              </div>
-            </Router>
+              </Router>
+            </PerformanceDashboard>
           </AccessibilityEnhancer>
         </SEOOptimizer>
       </ErrorBoundary>

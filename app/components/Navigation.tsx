@@ -1,30 +1,21 @@
-'use client';
-
-import React, { useState } from 'react';
-
+'use client'
+import React; { useState } from 'react'
 // Lightweight Link shim that accepts both `to` and `href` and renders a normal anchor.
 // This avoids coupling to a specific router and prevents breaking builds.
-const Link: React.FC<{ to?: string; href?: string; children: React.ReactNode; [key: string]: any }> = ({ to, href, children, ...rest }) => {
-  const resolvedHref = to ?? href ?? '#';
+const Link: React.FC<{to?: string; href?: string} children: React.ReactNode} [key: string]: any }> = ({to, href) children} ...rest }) => {
+  const resolvedHref = to ?? href ?? '#'
   return (
     <a href={resolvedHref} {...rest}>
       {children}
     </a>
   );
 };
-
-export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+export function Header() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)}
+  const [openDropdown} setOpenDropdown] = useState<string | null>(null);
+  const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}
   };
-
-  const toggleDropdown = (dropdown: string) => {
-    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  const toggleDropdown = (dropdown: string) => {setOpenDropdown(openDropdown === dropdown ? null : dropdown)}
   };
-
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
@@ -32,12 +23,11 @@ export function Header() {
           <span className="text-blue-600 mr-2 text-xl">🚀</span>
           Zion Tech Group
         </Link>
-        
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6">
           {/* Services Dropdown */}
           <div className="relative group">
-            <button 
+            <button
               className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
               onMouseEnter={() => setOpenDropdown('services')}
               onMouseLeave={() => setOpenDropdown(null)}
@@ -52,7 +42,7 @@ export function Header() {
             }`}>
               <div className="py-3">
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured Services</div>
-                <Link to="/services/ai-content-optimization-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                <Link to="/services/ai-content-optimization-platform" className="block px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600">
                   AI Content Optimization Platform
                 </Link>
                 <Link to="/services/micro-saas/ai-lead-scoring-api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
@@ -105,7 +95,7 @@ export function Header() {
                   AI Observability Platform
                 </Link>
                 <Link to="/services/ai-governance-risk-compliance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">
-                  AI Governance, Risk & Compliance
+                  AI Governance; Risk & Compliance
                 </Link>
                 <Link to="/services/ai-customer-insights-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
                   AI Customer Insights Platform
@@ -157,10 +147,9 @@ export function Header() {
               </div>
             </div>
           </div>
-          
           {/* Solutions Dropdown */}
           <div className="relative group">
-            <button 
+            <button
               className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
               onMouseEnter={() => setOpenDropdown('solutions')}
               onMouseLeave={() => setOpenDropdown(null)}
@@ -189,10 +178,9 @@ export function Header() {
               </div>
             </div>
           </div>
-
           {/* Resources Dropdown */}
           <div className="relative group">
-            <button 
+            <button
               className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
               onMouseEnter={() => setOpenDropdown('resources')}
               onMouseLeave={() => setOpenDropdown(null)}
@@ -221,14 +209,12 @@ export function Header() {
               </div>
             </div>
           </div>
-
           <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">About</Link>
           <Link to="/portfolio" className="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</Link>
           <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
-          
           {/* Featured Success Stories */}
           <div className="relative group">
-            <button 
+            <button
               className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1 font-medium"
               onMouseEnter={() => setOpenDropdown('success')}
               onMouseLeave={() => setOpenDropdown(null)}
@@ -269,10 +255,9 @@ export function Header() {
             </div>
           </div>
         </div>
-
         {/* Mobile Menu Button */}
-        <button 
-          className="lg:hidden p-2" 
+        <button
+          className="lg:hidden p-2"
           aria-label="Toggle menu"
           onClick={toggleMobileMenu}
         >
@@ -285,7 +270,6 @@ export function Header() {
           </svg>
         </button>
       </nav>
-
       {/* Mobile Menu */}
       <div className={`lg:hidden transition-all duration-300 ease-in-out ${
         isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
@@ -294,7 +278,7 @@ export function Header() {
           <div className="px-4 py-4 space-y-4">
             {/* Mobile Services Section */}
             <div>
-              <button 
+              <button
                 className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
                 onClick={() => toggleDropdown('mobile-services')}
               >
@@ -322,10 +306,9 @@ export function Header() {
                 </div>
               )}
             </div>
-
             {/* Mobile Solutions Section */}
             <div>
-              <button 
+              <button
                 className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
                 onClick={() => toggleDropdown('mobile-solutions')}
               >
@@ -342,10 +325,9 @@ export function Header() {
                 </div>
               )}
             </div>
-
             {/* Mobile Resources Section */}
             <div>
-              <button 
+              <button
                 className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
                 onClick={() => toggleDropdown('mobile-resources')}
               >
@@ -363,15 +345,13 @@ export function Header() {
                 </div>
               )}
             </div>
-
             {/* Direct Links */}
             <Link to="/about" className="block font-medium text-gray-700 hover:text-blue-600">About</Link>
             <Link to="/portfolio" className="block font-medium text-gray-700 hover:text-blue-600">Portfolio</Link>
             <Link to="/contact" className="block font-medium text-gray-700 hover:text-blue-600">Contact</Link>
-            
             {/* Success Stories */}
             <div>
-              <button 
+              <button
                 className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
                 onClick={() => toggleDropdown('mobile-success')}
               >
@@ -395,7 +375,6 @@ export function Header() {
     </header>
   );
 }
-
 export function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-16 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -435,7 +414,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Services */}
           <div>
@@ -453,7 +431,6 @@ export function Footer() {
               <Link to="/services/ai-financial-analysis-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">Financial Analysis</Link>
             </div>
           </div>
-          
           {/* Solutions */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Solutions</h3>
@@ -465,7 +442,6 @@ export function Footer() {
               <Link to="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 Case Studies</Link>
             </div>
           </div>
-
           {/* Resources */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
@@ -478,7 +454,6 @@ export function Footer() {
               </Link>
             </div>
           </div>
-
           {/* Company & Contact */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-4 text-lg">Company</h3>
@@ -502,7 +477,6 @@ export function Footer() {
                 Security
               </Link>
             </div>
-            
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center">
@@ -532,7 +506,6 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            
             {/* Social Media */}
             <div className="mt-4">
               <h4 className="font-medium text-gray-900 mb-2">Follow Us</h4>

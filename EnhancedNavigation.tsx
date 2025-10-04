@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-
-const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+import React; { useState } from 'react'
+import { Link } from 'react-router-dom'
+import {Menu} X } from 'lucide-react'
+const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false)}
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home'} href: '/' },
+    {name: 'Services'} href: '/services' },
+    {name: 'About'} href: '/about' },
+    {name: 'Contact'} href: '/contact' },
   ];
-
   return (
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4">
@@ -19,7 +15,6 @@ const EnhancedNavigation: React.FC = () => {
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
-          
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navigationItems.map((item) => (
@@ -32,7 +27,6 @@ const EnhancedNavigation: React.FC = () => {
               </Link>
             ))}
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -41,7 +35,6 @@ const EnhancedNavigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t">
@@ -61,5 +54,4 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
-
 export default EnhancedNavigation;

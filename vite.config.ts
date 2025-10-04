@@ -7,12 +7,12 @@ import { visualizer } from 'rollup-plugin-visualizer';
 export default defineConfig({
   plugins: [
     react({
-      jsxRuntime: 'automatic',
+      jsxRuntime: 'automatic'
     }),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
-      gzipSize: true,
+      gzipSize: true
     }),
   ],
   root: '.',
@@ -21,7 +21,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'components'),
-      '@app': resolve(__dirname, 'app'),
+      '@app': resolve(__dirname, 'app')
     },
   },
   build: {
@@ -35,7 +35,7 @@ export default defineConfig({
         moduleSideEffects: false,
         propertyReadSideEffects: false,
         tryCatchDeoptimization: false,
-        preset: 'smallest',
+        preset: 'smallest'
       },
       output: {
         manualChunks: id => {
@@ -69,7 +69,6 @@ export default defineConfig({
             }
             return 'vendor-misc';
           }
-          
           // App chunks - lazy load pages
           if (id.includes('src/pages/')) {
             // Split large page bundles
@@ -84,7 +83,6 @@ export default defineConfig({
             }
             return 'pages-core';
           }
-          
           // Component chunks
           if (id.includes('src/components/')) {
             if (id.includes('banner') || id.includes('Banner')) {
@@ -92,17 +90,14 @@ export default defineConfig({
             }
             return 'components-core';
           }
-          
           // Charts and data visualization
           if (id.includes('recharts') || id.includes('d3')) {
             return 'vendor-charts';
           }
-          
           // Large libraries
           if (id.includes('lodash') || id.includes('moment')) {
             return 'vendor-large';
           }
-          
           return 'vendor';
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
@@ -126,15 +121,15 @@ export default defineConfig({
         passes: 2,
         unsafe: false,
         dead_code: true,
-        unused: true,
+        unused: true
       },
       mangle: {
         safari10: true,
-        toplevel: true,
+        toplevel: true
       },
       format: {
         comments: false,
-        ascii_only: true,
+        ascii_only: true
       },
     },
   },
@@ -142,13 +137,13 @@ export default defineConfig({
     port: 3000,
     open: true,
     cors: true,
-    host: true,
+    host: true
   },
   preview: {
     port: 3000,
     open: true,
     cors: true,
-    host: true,
+    host: true
   },
   optimizeDeps: {
     include: [
@@ -161,11 +156,11 @@ export default defineConfig({
       'tailwind-merge',
       'axios',
     ],
-    exclude: ['@vite/client', '@vite/env'],
+    exclude: ['@vite/client', '@vite/env']
   },
   assetsInclude: ['**/*.html', '**/*.new'],
   define: {
-    global: 'globalThis',
+    global: 'globalThis'
   },
   esbuild: {
     target: 'es2020',
@@ -173,6 +168,6 @@ export default defineConfig({
     treeShaking: true,
     minifyIdentifiers: true,
     minifySyntax: true,
-    minifyWhitespace: true,
+    minifyWhitespace: true
   },
 });

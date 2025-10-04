@@ -1,15 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface AdvancedSEOProps {
-  title?: string;
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+interface AdvancedSEOProps {title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string, unknown>;
+  twitterCard?: string}
+  structuredData?: Record<string} unknown>;
   robots?: string;
   language?: string;
   author?: string;
@@ -18,13 +16,11 @@ interface AdvancedSEOProps {
   section?: string;
   tags?: string[];
 }
-
-const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
-  title = 'Zion Tech Group - AI-Powered Business Solutions',
+const AdvancedSEO: React.FC<AdvancedSEOProps> = ({title = 'Zion Tech Group - AI-Powered Business Solutions',
   description = 'Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions. Contact us at +1 302 464 0950.',
   keywords = 'AI solutions, micro SaaS, cloud automation, enterprise IT, business transformation, artificial intelligence, machine learning, automation, digital transformation',
-  canonical = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  canonical = 'https: //ziontechgroup.com',
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
@@ -33,11 +29,10 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
-  section,
-  tags = [],
-}) => {
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
+  section)
+  tags = []}
+}) => {const defaultStructuredData = {
+    '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
@@ -49,31 +44,26 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com',
-      availableLanguage: 'English',
+      availableLanguage: 'English'}
     },
-    address: {
-      '@type': 'PostalAddress',
+    address: {'@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
+      addressCountry: 'US'}
     },
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
+      'https: //twitter.com/ziontechgroup',
     ],
-    offers: {
-      '@type': 'Offer',
+    offers: {'@type': 'Offer',
       description: 'AI-powered business solutions and automation services',
-      category: 'Technology Services',
+      category: 'Technology Services'}
     },
   };
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (
-    <Helmet>
+  return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name='description' content={description} />
@@ -82,7 +72,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       <meta name='robots' content={robots} />
       <meta name='language' content={language} />
       <link rel='canonical' href={canonical} />
-
       {/* Open Graph */}
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
@@ -91,7 +80,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       <meta property='og:type' content={ogType} />
       <meta property='og:site_name' content='Zion Tech Group' />
       <meta property='og:locale' content='en_US' />
-
       {/* Twitter */}
       <meta name='twitter:card' content={twitterCard} />
       <meta name='twitter:title' content={title} />
@@ -99,14 +87,12 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       <meta name='twitter:image' content={ogImage} />
       <meta name='twitter:site' content='@ziontechgroup' />
       <meta name='twitter:creator' content='@ziontechgroup' />
-
       {/* Additional SEO */}
-      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <meta name='viewport' content='width=device-width) initial-scale=1.0' />
       <meta name='theme-color' content='#2563eb' />
       <meta name='msapplication-TileColor' content='#2563eb' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-
       {/* Article specific meta tags */}
       {publishedTime && (
         <meta property='article:published_time' content={publishedTime} />
@@ -115,15 +101,13 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         <meta property='article:modified_time' content={modifiedTime} />
       )}
       {section && <meta property='article:section' content={section} />}
-      {tags.map((tag, index) => (
+      {tags.map((tag} index) => (
         <meta key={index} property='article:tag' content={tag} />
       ))}
-
       {/* Structured Data */}
       <script type='application/ld+json'>
         {JSON.stringify(finalStructuredData)}
       </script>
-
       {/* Preconnect to external domains */}
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link
@@ -131,12 +115,10 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         href='https://fonts.gstatic.com'
         crossOrigin='anonymous'
       />
-
       {/* DNS Prefetch */}
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
       <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     </Helmet>
   );
 };
-
 export default AdvancedSEO;

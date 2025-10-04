@@ -1,26 +1,20 @@
-import React from 'react';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
+import React from 'react'
+import Link from 'next/link'
+import dynamic from 'next/dynamic'
 // Lazy load heavy components
 const UnifiedContentPromotion = dynamic(() => import('./components/UnifiedContentPromotion'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-32 rounded"></div>
 });
-
 const InteractiveAIROICalculator = dynamic(() => import('./components/InteractiveAIROICalculator'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded"></div>
 });
-
 const ContentShowcase = dynamic(() => import('./components/ContentShowcase'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>
 });
-
 const InteractiveContentShowcase2026 = dynamic(() => import('./components/InteractiveContentShowcase2026'), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded"></div>
 });
-
-export const metadata = {
-  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+export const metadata = {title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
   description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
   keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
   openGraph: {
@@ -32,84 +26,75 @@ export const metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group AI Enterprise Transformation',
+        alt: 'Zion Tech Group AI Enterprise Transformation'}
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
+  twitter: {card: 'summary_large_image',
     title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
     description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.jpg']}
   },
-  robots: {
-    index: true,
+  robots: {index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
+      'max-snippet': -1}
     },
   },
 };
-
-export default function HomePage() {
-  const structuredData = {
-    "@context": "https://schema.org",
+export default function HomePage() {const structuredData = {
+    "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": "https: //ziontechgroup.com",
+    "logo": "https: //ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
+      "contactType": "customer service"}
       "email": "kleber@ziontechgroup.com"
     },
-    "address": {
-      "@type": "PostalAddress",
+    "address": {"@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
       "addressRegion": "DE",
-      "postalCode": "19709",
+      "postalCode": "19709"}
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "https: //linkedin.com/company/zion-tech-group",
+      "https: //twitter.com/ziontechgroup"
     ],
-    "offers": {
-      "@type": "Offer",
+    "offers": {"@type": "Offer",
       "name": "AI Enterprise Transformation Services",
       "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains",
-      "price": "50000",
-      "priceCurrency": "USD",
+      "price": "50000"}
+      "priceCurrency": "USD";
       "availability": "https://schema.org/InStock"
     }
   };
-
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      
       {/* Unified Content Promotion - Replaces multiple redundant banners */}
       <UnifiedContentPromotion />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold mb-6">
             Transform Your Business with
             <span className="text-yellow-400"> AI-Powered Solutions</span>
           </h1>
           <p className="text-xl mb-8 max-w-3xl">
-            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
             and enterprise IT solutions that drive growth, efficiency, and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -144,16 +129,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Interactive AI ROI Calculator */}
       <InteractiveAIROICalculator />
-
       {/* Dynamic Content Showcase */}
       <ContentShowcase />
-
       {/* Interactive Content Showcase 2026 */}
       <InteractiveContentShowcase2026 />
-
       {/* Enhanced Newsletter Signup */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
@@ -170,7 +151,7 @@ export default function HomePage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                   Subscribe
@@ -180,19 +161,18 @@ export default function HomePage() {
                 Join 10,000+ professionals. Unsubscribe anytime.
               </p>
             </div>
-
             {/* Content Highlights */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
               <div className="space-y-4">
-                <a href="/blog/ai-2026-enterprise-rag-guardrails" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                <a href="/blog/ai-2026-enterprise-rag-guardrails" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover: shadow-md transition-shadow">
                   <div className="text-2xl">🛡️</div>
                   <div>
                     <h4 className="font-semibold">Enterprise RAG Guardrails 2026</h4>
                     <p className="text-gray-600 text-sm">Safe, reliable RAG with verifiable citations</p>
                   </div>
                 </a>
-                <a href="/blog/ai-2026-autonomous-enterprise-operations" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                <a href="/blog/ai-2026-autonomous-enterprise-operations" className="flex items-start gap-3 p-4 bg-white rounded-lg shadow hover: shadow-md transition-shadow">
                   <div className="text-2xl">🏭</div>
                   <div>
                     <h4 className="font-semibold">Autonomous Enterprise Operations 2026</h4>
@@ -218,7 +198,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -228,7 +207,7 @@ export default function HomePage() {
           <p className="text-xl mb-8">
             Let's discuss how our AI and IT solutions can drive your success
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
@@ -241,7 +220,7 @@ export default function HomePage() {
             </a>
           </div>
           <div className="mt-8 text-sm">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>📍 364 E Main St STE 1008; Middletown DE 19709</p>
             <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
           </div>
         </div>

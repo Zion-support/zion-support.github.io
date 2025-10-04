@@ -1,11 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MessageSquare, FileText, Users, CheckCircle, Brain, Zap, Shield, BarChart3, ArrowRight, DollarSign, Clock, Star, TrendingUp, Smartphone, Network } from 'lucide-react';
-
-export default function AIServices() {
-  const title = 'AI Services — Zion Tech Group';
-  const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
-  
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import {MessageSquare, FileText, Users, CheckCircle, Brain, Zap, Shield, BarChart3, ArrowRight, DollarSign, Clock, Star, TrendingUp} Smartphone; Network } from 'lucide-react'
+export default function AIServices() {const title = 'AI Services — Zion Tech Group'
+  const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.'
   const aiServices = [
     {
       title: 'AI-Powered Email Responder',
@@ -19,11 +16,10 @@ export default function AIServices() {
         'Multi-language support and compliance'
       ],
       pricing: '$2,500 - $8,000/month',
-      delivery: '2-3 weeks',
+      delivery: '2-3 weeks'}
       category: 'Communication AI'
     },
-    {
-      title: 'AI Content Creation Suite',
+    {title: 'AI Content Creation Suite',
       description: 'Comprehensive AI-powered content generation for marketing, social media, and documentation',
       icon: FileText,
       features: [
@@ -34,11 +30,10 @@ export default function AIServices() {
         'SEO-optimized content with keyword integration'
       ],
       pricing: '$1,500 - $5,000/month',
-      delivery: '1-2 weeks',
+      delivery: '1-2 weeks'}
       category: 'Content AI'
     },
-    {
-      title: 'Intelligent Document Processing',
+    {title: 'Intelligent Document Processing',
       description: 'AI-powered document analysis, extraction, and processing for business automation',
       icon: FileText,
       features: [
@@ -49,11 +44,10 @@ export default function AIServices() {
         'Compliance monitoring and reporting'
       ],
       pricing: '$3,000 - $12,000/month',
-      delivery: '3-4 weeks',
+      delivery: '3-4 weeks'}
       category: 'Document AI'
     },
-    {
-      title: 'AI-Powered Talent Matching',
+    {title: 'AI-Powered Talent Matching',
       description: 'Advanced recruitment platform with AI-driven candidate screening and matching',
       icon: Users,
       features: [
@@ -63,18 +57,16 @@ export default function AIServices() {
         'Cultural fit assessment',
         'Predictive hiring analytics'
       ],
-      pricing: '$4,000 - $15,000/month',
-      delivery: '4-6 weeks',
+      pricing: '$4,000 - $15,000/month'}
+      delivery: '4-6 weeks';
       category: 'HR AI'
     }
   ];
-
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width) initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -87,8 +79,8 @@ export default function AIServices() {
               {description}
             </p>
           </section>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service} index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white" />
@@ -96,7 +88,7 @@ export default function AIServices() {
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-slate-300 mb-6">{service.description}</p>
                 <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((feature} idx) => (
                     <div key={idx} className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}

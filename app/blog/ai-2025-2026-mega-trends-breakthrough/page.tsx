@@ -1,16 +1,13 @@
-import React from 'react';
-
-export const metadata = {
-  title: 'Ai 2025 2026 Mega Trends Breakthrough',
+import React from 'react'
+export const metadata = {title: 'Ai 2025 2026 Mega Trends Breakthrough',
   description: 'Discover the latest insights and breakthroughs in AI technology.',
   keywords: 'AI, artificial intelligence, technology, innovation',
   openGraph: {
     title: 'Ai 2025 2026 Mega Trends Breakthrough',
     description: 'Discover the latest insights and breakthroughs in AI technology.',
-    type: 'article',
+    type: 'article'}
   },
 };
-
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -32,13 +29,13 @@ export default function BlogPage() {
               Key Insights
             </h2>
             <p className="text-gray-700 mb-4">
-              The field of artificial intelligence continues to evolve rapidly, bringing new opportunities and challenges for businesses and individuals alike.
+              The field of artificial intelligence continues to evolve rapidly; bringing new opportunities and challenges for businesses and individuals alike.
             </p>
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
               Conclusion
             </h2>
             <p className="text-gray-700">
-              As we continue to advance in AI technology, it's important to stay informed and prepared for the changes ahead.
+              As we continue to advance in AI technology; it's important to stay informed and prepared for the changes ahead.
             </p>
           </div>
         </article>

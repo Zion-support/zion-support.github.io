@@ -1,90 +1,70 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import {
-  Shield,
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import {Shield,
   Eye,
   Lock,
   AlertTriangle,
-  Zap,
-  TrendingUp,
-} from 'lucide-react';
-
-const CybersecurityAI: React.FC = () => {
-  const features = [
+  Zap}
+  TrendingUp;
+} from 'lucide-react'
+const CybersecurityAI: React.FC = () => {const features = [
     {
       icon: Shield,
       title: 'AI Threat Detection',
-      description:
-        'Advanced machine learning algorithms that identify and neutralize threats in real-time with 99.9% accuracy.',
+      description: 'Advanced machine learning algorithms that identify and neutralize threats in real-time with 99.9% accuracy.'}
     },
-    {
-      icon: Eye,
+    {icon: Eye,
       title: 'Continuous Monitoring',
-      description:
-        '24/7 surveillance of your entire digital infrastructure with instant threat response capabilities.',
+      description: '24/7 surveillance of your entire digital infrastructure with instant threat response capabilities.'}
     },
-    {
-      icon: Lock,
+    {icon: Lock,
       title: 'Zero Trust Security',
-      description:
-        'Implement comprehensive zero-trust architecture that verifies every access request and transaction.',
+      description: 'Implement comprehensive zero-trust architecture that verifies every access request and transaction.'}
     },
-    {
-      icon: Zap,
+    {icon: Zap,
       title: 'Automated Response',
-      description:
-        'Intelligent automated responses that contain and eliminate threats within seconds of detection.',
+      description: 'Intelligent automated responses that contain and eliminate threats within seconds of detection.'}
     },
   ];
-
   const securityServices = [
-    {
-      title: 'Network Security',
-      description:
-        'Protect your network infrastructure with AI-powered intrusion detection and prevention systems.',
+    {title: 'Network Security',
+      description: 'Protect your network infrastructure with AI-powered intrusion detection and prevention systems.',
       features: [
         'Real-time monitoring',
         'Threat intelligence',
         'Automated blocking',
         'Incident response',
-      ],
+      ]}
     },
-    {
-      title: 'Endpoint Protection',
-      description:
-        'Secure all devices and endpoints with advanced behavioral analysis and threat prevention.',
+    {title: 'Endpoint Protection',
+      description: 'Secure all devices and endpoints with advanced behavioral analysis and threat prevention.',
       features: [
         'Device monitoring',
         'Malware detection',
         'Behavioral analysis',
         'Automatic quarantine',
-      ],
+      ]}
     },
-    {
-      title: 'Data Protection',
-      description:
-        'Safeguard sensitive data with encryption, access controls, and data loss prevention.',
+    {title: 'Data Protection',
+      description: 'Safeguard sensitive data with encryption, access controls, and data loss prevention.',
       features: [
         'Data encryption',
         'Access controls',
         'DLP monitoring',
         'Compliance reporting',
-      ],
+      ]}
     },
-    {
-      title: 'Cloud Security',
-      description:
-        'Comprehensive cloud security solutions for multi-cloud and hybrid environments.',
+    {title: 'Cloud Security',
+      description: 'Comprehensive cloud security solutions for multi-cloud and hybrid environments.',
       features: [
         'Cloud monitoring',
         'Config management',
         'Identity management',
         'Compliance automation',
-      ],
+      ]}
     },
   ];
-
   const complianceStandards = [
     'SOC 2 Type II',
     'ISO 27001',
@@ -93,9 +73,7 @@ const CybersecurityAI: React.FC = () => {
     'PCI DSS',
     'NIST Framework',
   ];
-
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>
           Advanced Cybersecurity AI - Zion Tech Group | AI-Powered Security
@@ -106,11 +84,10 @@ const CybersecurityAI: React.FC = () => {
           content='Protect your business with AI-powered cybersecurity solutions. Achieve 99.9% threat detection accuracy with our advanced machine learning security systems.'
         />
       </Helmet>
-
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>
         {/* Hero Section */}
         <div className='relative overflow-hidden'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24'>
             <div className='text-center'>
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent'>
@@ -139,10 +116,9 @@ const CybersecurityAI: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Threat Statistics */}
         <div className='py-16 bg-red-900/20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='grid md:grid-cols-4 gap-8 text-center'>
               <div>
                 <div className='text-4xl font-bold text-red-400 mb-2'>
@@ -152,7 +128,7 @@ const CybersecurityAI: React.FC = () => {
               </div>
               <div>
                 <div className='text-4xl font-bold text-orange-400 mb-2'>
-                  &lt;1s
+                  &lt)1s
                 </div>
                 <div className='text-gray-300'>Average Response Time</div>
               </div>
@@ -171,10 +147,9 @@ const CybersecurityAI: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Features Section */}
         <div className='py-24 bg-white/5'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-4'>
                 AI-Powered Security Features
@@ -184,10 +159,9 @@ const CybersecurityAI: React.FC = () => {
                 intelligence
               </p>
             </div>
-
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+              {features.map((feature) index) => {
+                const Icon = feature.icon}
                 return (
                   <div
                     key={index}
@@ -206,10 +180,9 @@ const CybersecurityAI: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Security Services */}
         <div className='py-24'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Comprehensive Security Solutions
@@ -219,9 +192,8 @@ const CybersecurityAI: React.FC = () => {
                 infrastructure
               </p>
             </div>
-
             <div className='grid md:grid-cols-2 gap-8'>
-              {securityServices.map((service, index) => (
+              {securityServices.map((service} index) => (
                 <div
                   key={index}
                   className='bg-white/10 rounded-2xl p-8 backdrop-blur-sm border border-white/20'
@@ -231,7 +203,7 @@ const CybersecurityAI: React.FC = () => {
                   </h3>
                   <p className='text-gray-300 mb-6'>{service.description}</p>
                   <div className='grid grid-cols-2 gap-3'>
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature} featureIndex) => (
                       <div
                         key={featureIndex}
                         className='flex items-center space-x-2'
@@ -246,10 +218,9 @@ const CybersecurityAI: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Compliance Section */}
         <div className='py-24 bg-white/5'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='grid lg:grid-cols-2 gap-12 items-center'>
               <div>
                 <h2 className='text-4xl font-bold text-white mb-6'>
@@ -261,7 +232,7 @@ const CybersecurityAI: React.FC = () => {
                   compliant while maintaining robust protection.
                 </p>
                 <div className='grid grid-cols-2 gap-4'>
-                  {complianceStandards.map((standard, index) => (
+                  {complianceStandards.map((standard} index) => (
                     <div
                       key={index}
                       className='bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-lg p-4 border border-red-500/20 text-center'
@@ -305,10 +276,9 @@ const CybersecurityAI: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className='py-24'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
             <h2 className='text-4xl font-bold text-white mb-4'>
               Secure Your Business Today
             </h2>
@@ -335,7 +305,6 @@ const CybersecurityAI: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
-
 export default CybersecurityAI;

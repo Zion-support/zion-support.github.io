@@ -1,8 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOData {
-  title: string;
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+interface SEOData {title: string;
   description: string;
   keywords?: string[];
   canonical?: string;
@@ -16,24 +14,19 @@ interface SEOData {
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  section?: string}
+  tags?: string[]}
 }
-
-interface AdvancedSEOHeadProps {
-  seoData: SEOData;
+interface AdvancedSEOHeadProps {seoData: SEOData;
   siteName?: string;
-  siteUrl?: string;
-  defaultImage?: string;
+  siteUrl?: string}
+  defaultImage?: string}
 }
-
-const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
-  seoData,
+const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({seoData,
   siteName = 'Zion Tech Group',
-  siteUrl = 'https://zion.app',
-  defaultImage = '/images/og-default.jpg',
-}) => {
-  const {
+  siteUrl = 'https: //zion.app')
+  defaultImage = '/images/og-default.jpg'}
+}) => {const {
     title,
     description,
     keywords = [],
@@ -49,20 +42,17 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
     publishedTime,
     modifiedTime,
     section,
-    tags = [],
+    tags = []}
   } = seoData;
-
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : '';
   const imageUrl = ogImage.startsWith('http')
     ? ogImage
     : `${siteUrl}${ogImage}`;
-
   // Generate structured data for articles
-  const generateArticleStructuredData = () => {
-    if (ogType === 'article' && publishedTime) {
+  const generateArticleStructuredData = () => {if (ogType === 'article' && publishedTime) {
       return {
-        '@context': 'https://schema.org',
+        '@context': 'https: //schema.org',
         '@type': 'Article',
         headline: title,
         description: description,
@@ -70,57 +60,50 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
         author: {
           '@type': 'Organization',
           name: author || siteName,
-          url: siteUrl,
+          url: siteUrl}
         },
-        publisher: {
-          '@type': 'Organization',
+        publisher: {'@type': 'Organization',
           name: siteName,
           url: siteUrl,
           logo: {
-            '@type': 'ImageObject',
+            '@type': 'ImageObject'}
             url: `${siteUrl}/images/logo.png`,
           },
         },
         datePublished: publishedTime,
         dateModified: modifiedTime || publishedTime,
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': canonicalUrl,
+        mainEntityOfPage: {'@type': 'WebPage',
+          '@id': canonicalUrl}
         },
         ...(section && { articleSection: section }),
-        ...(tags.length > 0 && { keywords: tags.join(', ') }),
+        ...(tags.length > 0 && {keywords: tags.join('} ') });
       };
     }
     return null;
   };
-
   // Generate organization structured data
-  const generateOrganizationStructuredData = () => {
-    return {
-      '@context': 'https://schema.org',
+  const generateOrganizationStructuredData = () => {return {
+      '@context': 'https: //schema.org',
       '@type': 'Organization',
       name: siteName,
-      url: siteUrl,
+      url: siteUrl}
       logo: `${siteUrl}/images/logo.png`,
       description: 'Advanced AI and IT Solutions Provider',
       sameAs: [
         'https://twitter.com/ZionTechGroup',
-        'https://linkedin.com/company/zion-tech-group',
-        'https://github.com/Zion-Holdings',
+        'https: //linkedin.com/company/zion-tech-group',
+        'https: //github.com/Zion-Holdings',
       ],
-      contactPoint: {
-        '@type': 'ContactPoint',
+      contactPoint: {'@type': 'ContactPoint',
         telephone: '+1-555-ZION-TECH',
         contactType: 'customer service',
         areaServed: 'US',
-        availableLanguage: 'English',
-      },
+        availableLanguage: 'English'}
+      };
     };
   };
-
   const articleStructuredData = generateArticleStructuredData();
   const organizationStructuredData = generateOrganizationStructuredData();
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -128,13 +111,11 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
       <meta name='description' content={description} />
       <meta name='robots' content={robots} />
       {keywords.length > 0 && (
-        <meta name='keywords' content={keywords.join(', ')} />
+        <meta name='keywords' content={keywords.join('} ')} />
       )}
       {author && <meta name='author' content={author} />}
-
       {/* Canonical URL */}
       {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
-
       {/* Open Graph Tags */}
       <meta property='og:title' content={fullTitle} />
       <meta property='og:description' content={description} />
@@ -143,7 +124,6 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
       <meta property='og:image' content={imageUrl} />
       <meta property='og:site_name' content={siteName} />
       <meta property='og:locale' content='en_US' />
-
       {/* Article-specific Open Graph tags */}
       {ogType === 'article' && (
         <>
@@ -155,12 +135,11 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
             <meta property='article:modified_time' content={modifiedTime} />
           )}
           {section && <meta property='article:section' content={section} />}
-          {tags.map((tag, index) => (
+          {tags.map((tag} index) => (
             <meta key={index} property='article:tag' content={tag} />
           ))}
         </>
       )}
-
       {/* Twitter Card Tags */}
       <meta name='twitter:card' content={twitterCard} />
       <meta name='twitter:site' content={twitterSite} />
@@ -168,9 +147,8 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
       <meta name='twitter:title' content={fullTitle} />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={imageUrl} />
-
       {/* Additional Meta Tags */}
-      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <meta name='viewport' content='width=device-width; initial-scale=1.0' />
       <meta name='theme-color' content='#1a1a1a' />
       <meta name='msapplication-TileColor' content='#1a1a1a' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
@@ -178,7 +156,6 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
         name='apple-mobile-web-app-status-bar-style'
         content='black-translucent'
       />
-
       {/* Favicon and Icons */}
       <link rel='icon' type='image/x-icon' href='/favicon.ico' />
       <link
@@ -199,24 +176,20 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
         href='/favicon-16x16.png'
       />
       <link rel='manifest' href='/site.webmanifest' />
-
       {/* Structured Data */}
       {structuredData && (
         <script type='application/ld+json'>
           {JSON.stringify(structuredData)}
         </script>
       )}
-
       {articleStructuredData && (
         <script type='application/ld+json'>
           {JSON.stringify(articleStructuredData)}
         </script>
       )}
-
       <script type='application/ld+json'>
         {JSON.stringify(organizationStructuredData)}
       </script>
-
       {/* Preconnect to external domains for performance */}
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link
@@ -225,12 +198,10 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
         crossOrigin='anonymous'
       />
       <link rel='preconnect' href='https://www.google-analytics.com' />
-
       {/* DNS Prefetch for performance */}
       <link rel='dns-prefetch' href='//fonts.googleapis.com' />
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
     </Helmet>
   );
 };
-
 export default AdvancedSEOHead;

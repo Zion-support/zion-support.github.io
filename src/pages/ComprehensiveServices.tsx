@@ -1,13 +1,12 @@
 
-
       <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden"
         <div className: {`bg-gradient-to-br ${service.color} p-6 text-white`}>`;`;
-          {Icon ? <Icon className="w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}";"
-          <h3 className="text-xl font-bold mb-2">{service.title}</h3>";"
-          <p className="text-white/90 mb-4">{service.description}</p>";"
+          {Icon ? <Icon className="w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}""
+          <h3 className="text-xl font-bold mb-2">{service.title}</h3>""
+          <p className="text-white/90 mb-4">{service.description}</p>""
           <div className="flex items-center justify-between"
             <span className="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full"
               {service.pricing}
             </span>
             <Link to: {service.link}
-              className="text-white hover:text-white/80 transition-colors","
+              className="text-white hover: text-white/80 transition-colors","

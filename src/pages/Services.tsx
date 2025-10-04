@@ -1,61 +1,45 @@
-import React from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
-import AutonomousOperations from './services/AutonomousOperations';
-import CybersecurityAI from './services/CybersecurityAI';
-
-interface Service {
-  title: string;
+import React from 'react'
+import {Link} Routes; Route } from 'react-router-dom'
+import AutonomousOperations from './services/AutonomousOperations'
+import CybersecurityAI from './services/CybersecurityAI'
+interface Service {title: string;
   description: string;
-  icon: string;
-  href: string;
+  icon: string}
+  href: string}
 }
-
-const Services: React.FC = () => {
-  const services: Service[] = [
+const Services: React.FC = () => {const services: Service[] = [
     {
       title: 'AI Autonomous Operations',
-      description:
-        'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
+      description: 'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
       icon: '🤖',
-      href: '/services/autonomous-operations',
+      href: '/services/autonomous-operations'}
     },
-    {
-      title: 'Quantum Computing Solutions',
-      description:
-        'Revolutionary quantum computing that delivers 2000x processing speed improvements for complex calculations.',
+    {title: 'Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing that delivers 2000x processing speed improvements for complex calculations.',
       icon: '⚡',
-      href: '/services/quantum-computing',
+      href: '/services/quantum-computing'}
     },
-    {
-      title: 'Advanced Cybersecurity AI',
-      description:
-        'Next-generation AI-powered cybersecurity solutions with 99.9% threat detection accuracy.',
+    {title: 'Advanced Cybersecurity AI',
+      description: 'Next-generation AI-powered cybersecurity solutions with 99.9% threat detection accuracy.',
       icon: '🛡️',
-      href: '/services/cybersecurity',
+      href: '/services/cybersecurity'}
     },
-    {
-      title: 'Enterprise AI Consulting',
-      description:
-        'Strategic AI implementation guidance that transforms business operations and drives exponential growth.',
+    {title: 'Enterprise AI Consulting',
+      description: 'Strategic AI implementation guidance that transforms business operations and drives exponential growth.',
       icon: '🎯',
-      href: '/services/consulting',
+      href: '/services/consulting'}
     },
-    {
-      title: 'Cloud Migration Services',
-      description:
-        'Seamless cloud migration with zero downtime, ensuring business continuity and improved scalability.',
+    {title: 'Cloud Migration Services',
+      description: 'Seamless cloud migration with zero downtime, ensuring business continuity and improved scalability.',
       icon: '☁️',
-      href: '/services/cloud-migration',
+      href: '/services/cloud-migration'}
     },
-    {
-      title: 'Digital Transformation',
-      description:
-        'Complete digital transformation solutions that modernize operations and enhance customer experiences.',
+    {title: 'Digital Transformation',
+      description: 'Complete digital transformation solutions that modernize operations and enhance customer experiences.',
       icon: '🔄',
-      href: '/services/digital-transformation',
+      href: '/services/digital-transformation'}
     },
   ];
-
   return (
     <Routes>
       <Route path='/autonomous-operations' element={<AutonomousOperations />} />
@@ -64,11 +48,9 @@ const Services: React.FC = () => {
     </Routes>
   );
 };
-
-const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {
-  return (
+const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24'>
         <div className='text-center mb-16'>
           <h1 className='text-5xl font-bold text-white mb-6'>Our Services</h1>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -76,9 +58,8 @@ const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {
             business and drive unprecedented growth and efficiency.
           </p>
         </div>
-
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          {services.map((service, index) => (
+          {services.map((service} index) => (
             <div
               key={index}
               className='p-8 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105'
@@ -99,7 +80,6 @@ const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {
             </div>
           ))}
         </div>
-
         <div className='text-center'>
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
@@ -109,7 +89,7 @@ const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {
               Let us help you transform your business with our cutting-edge AI
               solutions. Schedule a consultation to discuss your specific needs.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               <Link
                 to='/contact'
                 className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
@@ -129,6 +109,5 @@ const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {
     </div>
   );
 };
-
 export default Services;
-import React from "react"; import { Helmet } from "react-helmet-async"; import, ComprehensiveServices, from "./ComprehensiveServic, e, s"; const, Service, s: Rea, c, t.FC = () => { return ( <> <Helmet> <title>Servic, e, s - Zion, Tech, Group | AI & IT, Solution, s</title> <me, t, a na, m, e="descripti, o, n" content="Explore, our, comprehensive AI, and, IT services, including, workflow automati, o, n, virtual, assistant, s, data, analytic, s, and, cybersecurity, solutions." /> </Helmet> <ComprehensiveServic, e, s /> < /> ); }; export default Services;
+import React from "react" import { Helmet } from "react-helmet-async" import, ComprehensiveServices, from "./ComprehensiveServic, e, s" const, Service, s: Rea, c, t.FC = () => {return (<> <Helmet> <title>Servic, e, s - Zion, Tech, Group | AI & IT, Solution, s</title> <me, t, a na, m, e="descripti, o, n" content="Explore, our, comprehensive AI, and, IT services, including, workflow automati, o, n, virtual, assistant, s, data, analytic, s, and, cybersecurity) solutions." /> </Helmet> <ComprehensiveServic} e; s /> < /> ); }; export default Services;

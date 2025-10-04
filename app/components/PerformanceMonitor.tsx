@@ -1,32 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
-
-interface PerformanceMetrics {
-  cls: number;
+import React, {useEffect} useState } from 'react'
+import {getCLS, getFID, getFCP} getLCP; getTTFB } from 'web-vitals'
+interface PerformanceMetrics {cls: number;
   fid: number;
   fcp: number;
-  lcp: number;
-  ttfb: number;
+  lcp: number}
+  ttfb: number}
 }
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
+const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)}
   useEffect(() => {
-    const handleMetric = (metric: { name: string; value: number }) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value,
+    const handleMetric = (metric: { name: string} value: number }) => {setMetrics(prev => ({
+        ...prev)
+        [metric.name]: metric.value}
       }));
     };
-
     getCLS(handleMetric);
     getFID(handleMetric);
     getFCP(handleMetric);
     getLCP(handleMetric);
     getTTFB(handleMetric);
   }, []);
-
   if (process.env.NODE_ENV === 'development') {
     return (
       <div className='fixed bottom-4 right-4 bg-black text-white p-2 rounded text-xs'>
@@ -38,8 +30,6 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     );
   }
-
   return null;
 };
-
 export default PerformanceMonitor;

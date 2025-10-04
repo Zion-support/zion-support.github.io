@@ -1,43 +1,37 @@
-module.exports = {
-  wcagCompliance: {
+module.exports = {wcagCompliance: {
     level: 'AA',
     guidelines: {
       perceivable: true,
       operable: true,
       understandable: true,
-      robust: true,
+      robust: true}
     },
   },
-  screenReaderOptimization: {
-    ariaLabels: true,
+  screenReaderOptimization: {ariaLabels: true,
     ariaDescribedby: true,
     ariaLive: true,
     roleAttributes: true,
-    landmarkRoles: true,
+    landmarkRoles: true}
   },
-  keyboardNavigation: {
-    tabOrder: true,
+  keyboardNavigation: {tabOrder: true,
     focusManagement: true,
     skipLinks: true,
     keyboardShortcuts: true,
-    focusIndicators: true,
+    focusIndicators: true}
   },
-  colorContrast: {
-    ratio: '4.5:1',
+  colorContrast: {ratio: '4.5:1',
     largeText: '3:1',
-    enhanced: '7:1',
+    enhanced: '7:1'}
   },
-  motionPreferences: {
-    respectReducedMotion: true,
+  motionPreferences: {respectReducedMotion: true,
     pauseAnimations: true,
-    reducedMotion: true,
+    reducedMotion: true}
   },
-  altText: {
-    images: true,
+  altText: {images: true,
     icons: true,
     decorative: 'empty',
-    functional: 'descriptive',
+    functional: 'descriptive'}
   },
   timestamp: '2025-10-03T22:24:50.022Z',
 };
-module.exports = { "wcagCompliance": { "level": "AA", "guidelines": { "perceivable": true, "operable": true, "understandable": true, "robust": true } }, "screenReaderOptimization": { "ariaLabels": true, "ariaDescribedby": true, "ariaLive": true, "roleAttributes": true, "landmarkRoles": true }, "keyboardNavigation": { "tabOrder": true, "focusManagement": true, "skipLinks": true, "keyboardShortcuts": true, "focusIndicators": true }, "colorContrast": { "ratio": "4.5:1", "largeText": "3:1", "enhanced": "7:1" }, "motionPreferences": { "respectReducedMotion": true, "pauseAnimations": true, "reducedMotion": true }, "altText": { "images": true, "icons": true, "decorative": "empty", "functional": "descriptive" }, "timestamp": "2025-10-03T22:24:50.022Z" };
+module.exports = {"wcagCompliance": { "level": "AA", "guidelines": { "perceivable": true, "operable": true, "understandable": true} "robust": true } }, "screenReaderOptimization": {"ariaLabels": true, "ariaDescribedby": true, "ariaLive": true, "roleAttributes": true} "landmarkRoles": true }, "keyboardNavigation": {"tabOrder": true, "focusManagement": true, "skipLinks": true, "keyboardShortcuts": true} "focusIndicators": true }, "colorContrast": {"ratio": "4.5:1", "largeText": "3:1"} "enhanced": "7:1" }, "motionPreferences": {"respectReducedMotion": true, "pauseAnimations": true} "reducedMotion": true }, "altText": {"images": true, "icons": true, "decorative": "empty"} "functional": "descriptive" }, "timestamp": "2025-10-03T22:24:50.022Z" };
