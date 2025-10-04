@@ -1,5 +1,12 @@
 import '@testing-library/jest-dom';
 
+// Polyfill TextEncoder/TextDecoder for react-router in Jest (Node environment)
+if (typeof global.TextEncoder === 'undefined') {
+  const { TextEncoder, TextDecoder } = require('util');
+  global.TextEncoder = TextEncoder;
+  global.TextDecoder = TextDecoder;
+}
+
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -42,6 +49,17 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
+
+// Mock PerformanceObserver
+class MockPerformanceObserver {
+  constructor() {}
+  observe() {}
+  disconnect() {}
+  takeRecords() { return []; }
+}
+
+// @ts-ignore
+global.PerformanceObserver = MockPerformanceObserver;
 
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;

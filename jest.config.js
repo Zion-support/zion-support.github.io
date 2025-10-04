@@ -61,6 +61,9 @@ export default {
     '/services/',
     '/middleware/',
   ],
+  modulePathIgnorePatterns: [
+    '/automation/backups/',
+  ],
   watchPathIgnorePatterns: [
     '/node_modules/',
     '/automation/',

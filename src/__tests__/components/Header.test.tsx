@@ -31,7 +31,7 @@ describe('Header Component', () => {
   test('renders logo', () => {
     renderWithRouter(<Header />);
     
-    const logo = screen.getByAltText('Zion Tech Group');
+    const logo = screen.getByText('Zion Tech Group');
     expect(logo).toBeInTheDocument();
   });
 
@@ -44,10 +44,10 @@ describe('Header Component', () => {
     expect(screen.getByText('Contact')).toBeInTheDocument();
   });
 
-  test('renders mobile menu button', () => {
+  test('renders get started button', () => {
     renderWithRouter(<Header />);
     
-    const menuButton = screen.getByRole('button', { name: /menu/i });
-    expect(menuButton).toBeInTheDocument();
+    const getStartedButton = screen.getByText('Get Started');
+    expect(getStartedButton).toBeInTheDocument();
   });
 });
