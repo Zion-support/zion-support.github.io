@@ -35,16 +35,6 @@ const pageTransition = {
   duration: 0.4
 };
 
-<<<<<<< HEAD
-// Loading fallback component
-const PageLoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <LoadingSpinner />
-  </div>
-);
-
-// Main App component
-=======
 // Lazy loaded components for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const AboutPage = React.lazy(() => import('./pages/About'));
@@ -91,7 +81,6 @@ class ErrorBoundary extends React.Component<
   }
 }
 
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
@@ -162,10 +151,7 @@ function App() {
               <SEOHead />
               <Header />
               
-<<<<<<< HEAD
-=======
               {/* Main Content */}
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
               <motion.main
                 initial="initial"
                 animate="in"
@@ -174,38 +160,6 @@ function App() {
                 transition={pageTransition}
                 className="flex-1"
               >
-<<<<<<< HEAD
-                <Suspense fallback={<PageLoadingFallback />}>
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                  </Routes>
-                </Suspense>
-              </motion.main>
-
-              <Footer />
-
-              {/* Performance Optimizer Modal */}
-              {showPerformanceOptimizer && (
-                <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-                  <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-                    <div className="flex justify-between items-center mb-4">
-                      <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
-                      <button
-                        onClick={togglePerformanceOptimizer}
-                        className="text-gray-500 hover:text-gray-700 text-xl font-bold"
-                        aria-label="Close Performance Optimizer"
-                      >
-                        ✕
-                      </button>
-                    </div>
-                    <Suspense fallback={<LoadingSpinner />}>
-                      <PerformanceOptimizer />
-                    </Suspense>
-=======
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div id="main-content" className="flex-1">
                     <React.Suspense
@@ -244,7 +198,6 @@ function App() {
                         />
                       </Routes>
                     </React.Suspense>
->>>>>>> b64650e00461d09eaf1ec492cc713ff355215146
                   </div>
                 </div>
               )}
