@@ -1,340 +1,289 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import {
-  setMetaTags,
-  setOpenGraphTags,
-  setTwitterCardTags,
-  setStructuredData,
-  setCanonicalUrl,
-  setPageTitle,
-  setMetaDescription,
-  setKeywords,
-  setRobotsMeta,
-  setLanguage,
-  setViewport,
-  schemaGenerators,
-  seoAudit,
-} from '../../utils/seoUtils';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
   title: string;
   description: string;
   keywords: string[];
-  canonicalUrl: string;
-  ogImage?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: {
-    index?: boolean;
-    follow?: boolean;
-    noarchive?: boolean;
-    nosnippet?: boolean;
-    noimageindex?: boolean;
-  };
-}
-
-interface SEOAuditResult {
-  title: { hasTitle: boolean; titleLength: number; isValid: boolean };
-  description: {
-    hasDescription: boolean;
-    descriptionLength: number;
-    isValid: boolean;
-  };
-  headings: { h1Count: number; hasH1: boolean; headingStructure: string[] };
-  images: {
-    totalImages: number;
-    imagesWithoutAlt: number;
-    imagesWithoutAltText: string[];
-  };
-  links: { totalLinks: number; internalLinks: number; externalLinks: number };
+  canonical: string;
+  ogImage: string;
+  structuredData: any;
+  metaTags: Array<{ name: string; content: string }>;
 }
 
 interface SEOOptimizerProps {
-  seoData: SEOData;
-  autoOptimize?: boolean;
-  showAudit?: boolean;
+  pageData?: Partial<SEOData>;
+  children: React.ReactNode;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  seoData,
-  autoOptimize = true,
-  showAudit = false,
-}) => {
-  const [auditResult, setAuditResult] = useState<SEOAuditResult | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [optimizationScore, setOptimizationScore] = useState(0);
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ pageData, children }) => {
+  const [seoMetrics, setSeoMetrics] = useState({
+    titleLength: 0,
+    descriptionLength: 0,
+    hasCanonical: false,
+    hasStructuredData: false,
+    hasOgTags: false,
+    score: 0
+  });
 
-  const optimizeSEO = useCallback(() => {
-    // Set basic meta tags
-    setMetaTags({
-      description: seoData.description,
-      keywords: seoData.keywords.join(', '),
-      author: 'Zion Tech Group',
-      robots: seoData.robots
-        ? Object.entries(seoData.robots)
-            .filter(([_, value]) => value !== undefined)
-            .map(([key, value]) => (value ? key : `no${key}`))
-            .join(', ')
-        : 'index, follow',
-    });
+  const defaultSEO: SEOData = {
+    title: "Zion Tech Group - AI-Powered Business Solutions",
+    description: "Transform your business with cutting-edge AI micro SaaS services, cloud automation, and enterprise IT solutions. Contact us at +1 302 464 0950.",
+    keywords: ["AI solutions", "micro SaaS", "cloud automation", "enterprise IT", "business transformation", "artificial intelligence"],
+    canonical: "https://ziontechgroup.com",
+    ogImage: "https://ziontechgroup.com/og-image.jpg",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup"
+      ]
+    },
+    metaTags: [
+      { name: "robots", content: "index, follow" },
+      { name: "author", content: "Zion Tech Group" },
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+      { name: "theme-color", content: "#3b82f6" },
+      { name: "msapplication-TileColor", content: "#3b82f6" }
+    ]
+  };
 
-    // Set page title
-    setPageTitle(seoData.title, 'Zion Tech Group');
+  const seoData = { ...defaultSEO, ...pageData };
 
-    // Set canonical URL
-    setCanonicalUrl(seoData.canonicalUrl);
+  // Calculate SEO score
+  useEffect(() => {
+    let score = 0;
+    const maxScore = 100;
 
-    // Set Open Graph tags
-    setOpenGraphTags({
-      title: seoData.title,
-      description: seoData.description,
-      image: seoData.ogImage,
-      url: seoData.canonicalUrl,
-      type: 'website',
-      siteName: 'Zion Tech Group',
-    });
-
-    // Set Twitter Card tags
-    setTwitterCardTags({
-      card: 'summary_large_image',
-      site: '@ZionTechGroup',
-      creator: '@ZionTechGroup',
-      title: seoData.title,
-      description: seoData.description,
-      image: seoData.twitterImage || seoData.ogImage,
-    });
-
-    // Set structured data
-    if (seoData.structuredData) {
-      setStructuredData(seoData.structuredData);
-    } else {
-      // Default organization structured data
-      const defaultStructuredData = schemaGenerators.organization({
-        name: 'Zion Tech Group',
-        url: seoData.canonicalUrl,
-        description: seoData.description,
-        logo: seoData.ogImage,
-      });
-      setStructuredData(defaultStructuredData);
+    // Title optimization (20 points)
+    if (seoData.title.length >= 30 && seoData.title.length <= 60) {
+      score += 20;
+    } else if (seoData.title.length > 0) {
+      score += 10;
     }
 
-    // Set language and viewport
-    setLanguage('en');
-    setViewport({
-      width: 'device-width',
-      initialScale: 1,
-      maximumScale: 5,
-      userScalable: true,
+    // Description optimization (20 points)
+    if (seoData.description.length >= 120 && seoData.description.length <= 160) {
+      score += 20;
+    } else if (seoData.description.length > 0) {
+      score += 10;
+    }
+
+    // Keywords (10 points)
+    if (seoData.keywords.length >= 3) {
+      score += 10;
+    }
+
+    // Canonical URL (10 points)
+    if (seoData.canonical) {
+      score += 10;
+    }
+
+    // Open Graph tags (10 points)
+    if (seoData.ogImage) {
+      score += 10;
+    }
+
+    // Structured data (15 points)
+    if (seoData.structuredData) {
+      score += 15;
+    }
+
+    // Meta tags (15 points)
+    if (seoData.metaTags.length >= 3) {
+      score += 15;
+    }
+
+    setSeoMetrics({
+      titleLength: seoData.title.length,
+      descriptionLength: seoData.description.length,
+      hasCanonical: !!seoData.canonical,
+      hasStructuredData: !!seoData.structuredData,
+      hasOgTags: !!seoData.ogImage,
+      score: Math.round((score / maxScore) * 100)
     });
   }, [seoData]);
 
-  const runSEOAudit = useCallback(() => {
-    const audit = {
-      title: seoAudit.checkTitle(),
-      description: seoAudit.checkDescription(),
-      headings: seoAudit.checkHeadings(),
-      images: seoAudit.checkImages(),
-      links: seoAudit.checkLinks(),
+  // Generate breadcrumb structured data
+  const generateBreadcrumbData = (breadcrumbs: Array<{ name: string; url: string }>) => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((crumb, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": crumb.name,
+        "item": crumb.url
+      }))
     };
-
-    setAuditResult(audit);
-
-    // Calculate optimization score
-    let score = 0;
-    if (audit.title.hasTitle && audit.title.isValid) score += 20;
-    if (audit.description.hasDescription && audit.description.isValid)
-      score += 20;
-    if (audit.headings.hasH1 && audit.headings.h1Count === 1) score += 20;
-    if (audit.images.imagesWithoutAlt === 0) score += 20;
-    if (audit.links.internalLinks > audit.links.externalLinks) score += 20;
-
-    setOptimizationScore(score);
-  }, []);
-
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-yellow-600';
-    return 'text-red-600';
   };
 
-  const getScoreIcon = (score: number) => {
-    if (score >= 80) return '✅';
-    if (score >= 60) return '⚠️';
-    return '❌';
+  // Generate FAQ structured data
+  const generateFAQData = (faqs: Array<{ question: string; answer: string }>) => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
   };
-
-  useEffect(() => {
-    if (autoOptimize) {
-      optimizeSEO();
-    }
-
-    if (showAudit) {
-      runSEOAudit();
-    }
-  }, [autoOptimize, optimizeSEO, showAudit, runSEOAudit]);
-
-  // Only show audit panel in development or if explicitly enabled
-  if (process.env.NODE_ENV !== 'development' && !showAudit) {
-    return null;
-  }
 
   return (
-    <div className='fixed top-4 right-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-4 text-sm font-mono max-w-sm z-50'>
-      <div className='flex justify-between items-center mb-3'>
-        <div className='font-bold text-gray-800 dark:text-white'>
-          SEO Optimizer
-        </div>
-        <button
-          onClick={() => setIsVisible(!isVisible)}
-          className='text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 cursor-pointer'
-          aria-label={isVisible ? 'Hide SEO audit' : 'Show SEO audit'}
-        >
-          {isVisible ? '▼' : '▶'}
-        </button>
-      </div>
+    <>
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <meta name="keywords" content={seoData.keywords.join(', ')} />
+        <link rel="canonical" href={seoData.canonical} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:image" content={seoData.ogImage} />
+        <meta property="og:url" content={seoData.canonical} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoData.title} />
+        <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={seoData.ogImage} />
+        <meta name="twitter:site" content="@ziontechgroup" />
+        
+        {/* Additional Meta Tags */}
+        {seoData.metaTags.map((tag, index) => (
+          <meta key={index} name={tag.name} content={tag.content} />
+        ))}
+        
+        {/* Structured Data */}
+        {seoData.structuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(seoData.structuredData)}
+          </script>
+        )}
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* DNS Prefetch */}
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        
+        {/* Favicon */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Helmet>
 
-      {isVisible && (
-        <div className='space-y-3'>
-          {/* SEO Score */}
-          <div className='border-b border-gray-200 dark:border-gray-600 pb-2'>
-            <div className='flex justify-between items-center'>
-              <span className='text-gray-700 dark:text-gray-300'>
-                SEO Score:
-              </span>
-              <span className={`font-bold ${getScoreColor(optimizationScore)}`}>
-                {getScoreIcon(optimizationScore)} {optimizationScore}/100
-              </span>
+      {/* SEO Debug Panel (only in development) */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 left-4 z-50 bg-white rounded-lg shadow-xl border border-gray-200 w-80 max-h-96 overflow-y-auto">
+          <div className="p-4 border-b border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-900">SEO Analysis</h3>
+            <div className="flex items-center mt-2">
+              <div className={`w-3 h-3 rounded-full mr-2 ${
+                seoMetrics.score >= 80 ? 'bg-green-500' : 
+                seoMetrics.score >= 60 ? 'bg-yellow-500' : 'bg-red-500'
+              }`}></div>
+              <span className="text-sm text-gray-600">Score: {seoMetrics.score}/100</span>
             </div>
           </div>
 
-          {/* Audit Results */}
-          {auditResult && (
-            <div className='space-y-2 text-xs'>
-              {/* Title */}
-              <div className='flex justify-between'>
-                <span>Title:</span>
-                <span
-                  className={
-                    auditResult.title.isValid
-                      ? 'text-green-600'
-                      : 'text-red-600'
-                  }
-                >
-                  {auditResult.title.isValid ? '✅' : '❌'}
-                  {auditResult.title.titleLength} chars
+          <div className="p-4 space-y-3">
+            <div className="text-sm">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Title Length:</span>
+                <span className={`font-semibold ${
+                  seoMetrics.titleLength >= 30 && seoMetrics.titleLength <= 60 ? 'text-green-600' : 'text-red-600'
+                }`}>
+                  {seoMetrics.titleLength} chars
                 </span>
               </div>
-
-              {/* Description */}
-              <div className='flex justify-between'>
-                <span>Description:</span>
-                <span
-                  className={
-                    auditResult.description.isValid
-                      ? 'text-green-600'
-                      : 'text-red-600'
-                  }
-                >
-                  {auditResult.description.isValid ? '✅' : '❌'}
-                  {auditResult.description.descriptionLength} chars
-                </span>
-              </div>
-
-              {/* Headings */}
-              <div className='flex justify-between'>
-                <span>H1 Count:</span>
-                <span
-                  className={
-                    auditResult.headings.h1Count === 1
-                      ? 'text-green-600'
-                      : 'text-red-600'
-                  }
-                >
-                  {auditResult.headings.h1Count === 1 ? '✅' : '❌'}
-                  {auditResult.headings.h1Count}
-                </span>
-              </div>
-
-              {/* Images */}
-              <div className='flex justify-between'>
-                <span>Images:</span>
-                <span
-                  className={
-                    auditResult.images.imagesWithoutAlt === 0
-                      ? 'text-green-600'
-                      : 'text-red-600'
-                  }
-                >
-                  {auditResult.images.imagesWithoutAlt === 0 ? '✅' : '❌'}
-                  {auditResult.images.imagesWithoutAlt} missing alt
-                </span>
-              </div>
-
-              {/* Links */}
-              <div className='flex justify-between'>
-                <span>Links:</span>
-                <span
-                  className={
-                    auditResult.links.internalLinks >
-                    auditResult.links.externalLinks
-                      ? 'text-green-600'
-                      : 'text-yellow-600'
-                  }
-                >
-                  {auditResult.links.internalLinks >
-                  auditResult.links.externalLinks
-                    ? '✅'
-                    : '⚠️'}
-                  {auditResult.links.internalLinks} internal
-                </span>
-              </div>
-
-              {/* Heading Structure */}
-              {auditResult.headings.headingStructure.length > 0 && (
-                <div className='mt-2'>
-                  <div className='font-semibold text-gray-700 dark:text-gray-300'>
-                    Structure:
-                  </div>
-                  <div className='text-xs text-gray-600 dark:text-gray-400 max-h-16 overflow-y-auto'>
-                    {auditResult.headings.headingStructure
-                      .slice(0, 4)
-                      .map((heading, index) => (
-                        <div key={index} className='truncate'>
-                          {heading}
-                        </div>
-                      ))}
-                    {auditResult.headings.headingStructure.length > 4 && (
-                      <div className='text-gray-500'>
-                        ...and{' '}
-                        {auditResult.headings.headingStructure.length - 4} more
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
+              <div className="text-xs text-gray-500">Optimal: 30-60 characters</div>
             </div>
-          )}
 
-          {/* Actions */}
-          <div className='border-t border-gray-200 dark:border-gray-600 pt-2 space-y-2'>
-            <button
-              onClick={optimizeSEO}
-              className='w-full bg-blue-600 hover:bg-blue-700 text-white py-1 px-2 rounded text-xs'
-              aria-label='Apply SEO optimizations'
-            >
-              Apply SEO
-            </button>
+            <div className="text-sm">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Description Length:</span>
+                <span className={`font-semibold ${
+                  seoMetrics.descriptionLength >= 120 && seoMetrics.descriptionLength <= 160 ? 'text-green-600' : 'text-red-600'
+                }`}>
+                  {seoMetrics.descriptionLength} chars
+                </span>
+              </div>
+              <div className="text-xs text-gray-500">Optimal: 120-160 characters</div>
+            </div>
 
-            <button
-              onClick={runSEOAudit}
-              className='w-full bg-green-600 hover:bg-green-700 text-white py-1 px-2 rounded text-xs'
-              aria-label='Run SEO audit'
-            >
-              Run Audit
-            </button>
+            <div className="text-sm">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Canonical URL:</span>
+                <span className={`font-semibold ${seoMetrics.hasCanonical ? 'text-green-600' : 'text-red-600'}`}>
+                  {seoMetrics.hasCanonical ? '✓' : '✗'}
+                </span>
+              </div>
+            </div>
+
+            <div className="text-sm">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Structured Data:</span>
+                <span className={`font-semibold ${seoMetrics.hasStructuredData ? 'text-green-600' : 'text-red-600'}`}>
+                  {seoMetrics.hasStructuredData ? '✓' : '✗'}
+                </span>
+              </div>
+            </div>
+
+            <div className="text-sm">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Open Graph:</span>
+                <span className={`font-semibold ${seoMetrics.hasOgTags ? 'text-green-600' : 'text-red-600'}`}>
+                  {seoMetrics.hasOgTags ? '✓' : '✗'}
+                </span>
+              </div>
+            </div>
+
+            <div className="pt-2 border-t border-gray-200">
+              <div className="text-xs text-gray-500">
+                Keywords: {seoData.keywords.length} tags
+              </div>
+              <div className="text-xs text-gray-500">
+                Meta tags: {seoData.metaTags.length} tags
+              </div>
+            </div>
           </div>
         </div>
       )}
-    </div>
+
+      {children}
+    </>
   );
 };
 
