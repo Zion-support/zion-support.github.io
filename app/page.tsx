@@ -1,24 +1,62 @@
 import React from 'react';
-
-// SEO metadata will be handled by the HTML head in the main layout
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const HomePage = React.memo(function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Enterprise AI Transformation</title>
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge AI micro SaaS services and cloud automation." />
+        <meta name="keywords" content="AI solutions, enterprise AI, digital transformation, automation, cloud services, AI consulting, business intelligence" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#4f46e5" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content="https://zion.app" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services." />
+        
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
+<<<<<<< HEAD
               <a href="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
+=======
+              <Link to="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 Zion Tech Group
               </a>
             </div>
             <nav className="hidden md:flex space-x-8">
+<<<<<<< HEAD
               <a href="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</a>
               <a href="/services" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Services</a>
               <a href="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Blog</a>
               <a href="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Case Studies</a>
               <a href="/contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</a>
+=======
+              <Link to="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</Link>
+              <Link to="/services" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Services</Link>
+              <Link to="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Blog</Link>
+              <Link to="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Case Studies</Link>
+              <Link to="/contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
             </nav>
             <div className="md:hidden">
               <button className="text-gray-700 hover:text-indigo-600 transition-colors">
@@ -50,8 +88,13 @@ const HomePage = React.memo(function HomePage() {
               and enterprise IT solutions that drive growth, efficiency, and innovation across industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+<<<<<<< HEAD
               <a
                 href="/services"
+=======
+              <Link
+                to="/services"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 className="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
                 Explore Our Services
               </a>
@@ -107,7 +150,11 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Advanced analytics and machine learning solutions that provide actionable insights for strategic decision-making.
                 </p>
+<<<<<<< HEAD
                 <a href="/services/ai-business-intelligence-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+=======
+                <Link to="/services/ai-business-intelligence-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                   Learn More →
                 </a>
               </div>
@@ -122,7 +169,11 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Streamline operations with intelligent automation solutions that reduce costs and increase efficiency.
                 </p>
+<<<<<<< HEAD
                 <a href="/services/ai-cloud-infrastructure-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+=======
+                <Link to="/services/ai-cloud-infrastructure-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                   Learn More →
                 </a>
               </div>
@@ -137,7 +188,11 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Protect your digital assets with advanced AI-powered security solutions and threat detection systems.
                 </p>
+<<<<<<< HEAD
                 <a href="/services/ai-cybersecurity-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+=======
+                <Link to="/services/ai-cybersecurity-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                   Learn More →
                 </a>
               </div>
@@ -157,7 +212,11 @@ const HomePage = React.memo(function HomePage() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
+<<<<<<< HEAD
               <a href="/blog/ai-enterprise-transformation-2026" className="group">
+=======
+              <Link to="/blog/ai-enterprise-transformation-2026" className="group">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -177,7 +236,11 @@ const HomePage = React.memo(function HomePage() {
                 </div>
               </a>
 
+<<<<<<< HEAD
               <a href="/blog/ai-autonomous-systems-2026" className="group">
+=======
+              <Link to="/blog/ai-autonomous-systems-2026" className="group">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -197,7 +260,11 @@ const HomePage = React.memo(function HomePage() {
                 </div>
               </a>
 
+<<<<<<< HEAD
               <a href="/case-studies/manufacturing-ai-transformation-2026" className="group">
+=======
+              <Link to="/case-studies/manufacturing-ai-transformation-2026" className="group">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -238,19 +305,33 @@ const HomePage = React.memo(function HomePage() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2">
+<<<<<<< HEAD
                 <li><a href="/services/ai-business-intelligence-2025" className="text-gray-300 hover:text-white transition-colors">AI Business Intelligence</a></li>
                 <li><a href="/services/ai-cloud-infrastructure-2025" className="text-gray-300 hover:text-white transition-colors">Cloud Automation</a></li>
                 <li><a href="/services/ai-cybersecurity-2025" className="text-gray-300 hover:text-white transition-colors">AI Cybersecurity</a></li>
                 <li><a href="/services" className="text-gray-300 hover:text-white transition-colors">All Services</a></li>
+=======
+                <li><Link to="/services/ai-business-intelligence-2025" className="text-gray-300 hover:text-white transition-colors">AI Business Intelligence</Link></li>
+                <li><Link to="/services/ai-cloud-infrastructure-2025" className="text-gray-300 hover:text-white transition-colors">Cloud Automation</Link></li>
+                <li><Link to="/services/ai-cybersecurity-2025" className="text-gray-300 hover:text-white transition-colors">AI Cybersecurity</Link></li>
+                <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">All Services</Link></li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
+<<<<<<< HEAD
                 <li><a href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
                 <li><a href="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</a></li>
                 <li><a href="/guides" className="text-gray-300 hover:text-white transition-colors">Guides</a></li>
                 <li><a href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+=======
+                <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+                <li><Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link></li>
+                <li><Link to="/guides" className="text-gray-300 hover:text-white transition-colors">Guides</Link></li>
+                <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
               </ul>
             </div>
             <div>
@@ -258,8 +339,13 @@ const HomePage = React.memo(function HomePage() {
               <p className="text-gray-300 mb-4">
                 Ready to transform your business with AI? Let's discuss your project.
               </p>
+<<<<<<< HEAD
               <a 
                 href="/contact" 
+=======
+              <Link 
+                to="/contact" 
+>>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
                 Get Started
               </a>
@@ -270,7 +356,8 @@ const HomePage = React.memo(function HomePage() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 });
 
