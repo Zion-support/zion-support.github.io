@@ -12,6 +12,9 @@ const HomePage = React.memo(function HomePage() {
   return (
     <ErrorBoundary>
       <SEOHead />
+      {/* Preload critical resources */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/images/hero-bg.jpg" as="image" />
       <main role="main">
       {/* Hero Section */}
       <section 
@@ -51,20 +54,20 @@ const HomePage = React.memo(function HomePage() {
             role="region"
             aria-label="Company Statistics"
           >
-            <div role="img" aria-label="500 plus projects delivered">
-              <div className="text-3xl font-bold text-blue-600" aria-hidden="true">500+</div>
+            <div className="stat-item">
+              <div className="text-3xl font-bold text-blue-600" aria-label="500 plus projects delivered">500+</div>
               <div className="text-gray-600">Projects Delivered</div>
             </div>
-            <div role="img" aria-label="99.9 percent uptime guarantee">
-              <div className="text-3xl font-bold text-blue-600" aria-hidden="true">99.9%</div>
+            <div className="stat-item">
+              <div className="text-3xl font-bold text-blue-600" aria-label="99.9 percent uptime guarantee">99.9%</div>
               <div className="text-gray-600">Uptime Guarantee</div>
             </div>
-            <div role="img" aria-label="24/7 expert support">
-              <div className="text-3xl font-bold text-blue-600" aria-hidden="true">24/7</div>
+            <div className="stat-item">
+              <div className="text-3xl font-bold text-blue-600" aria-label="24/7 expert support">24/7</div>
               <div className="text-gray-600">Expert Support</div>
             </div>
-            <div role="img" aria-label="2 million plus cost savings">
-              <div className="text-3xl font-bold text-blue-600" aria-hidden="true">$2M+</div>
+            <div className="stat-item">
+              <div className="text-3xl font-bold text-blue-600" aria-label="2 million plus cost savings">$2M+</div>
               <div className="text-gray-600">Cost Savings</div>
             </div>
           </div>

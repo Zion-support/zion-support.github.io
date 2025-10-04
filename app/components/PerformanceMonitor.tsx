@@ -9,7 +9,7 @@ interface PerformanceMetrics {
   ttfb: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = React.memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
@@ -18,13 +18,36 @@ const PerformanceMonitor: React.FC = () => {
         ...prev,
         [metric.name]: metric.value
       }));
+      
+      // Log performance metrics in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Performance metric ${metric.name}:`, metric.value);
+      }
     };
 
-    onCLS(handleMetric);
-    onINP(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
+    // Use requestIdleCallback for better performance
+    const scheduleMetrics = () => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          onCLS(handleMetric);
+          onINP(handleMetric);
+          onFCP(handleMetric);
+          onLCP(handleMetric);
+          onTTFB(handleMetric);
+        });
+      } else {
+        // Fallback for browsers without requestIdleCallback
+        setTimeout(() => {
+          onCLS(handleMetric);
+          onINP(handleMetric);
+          onFCP(handleMetric);
+          onLCP(handleMetric);
+          onTTFB(handleMetric);
+        }, 0);
+      }
+    };
+
+    scheduleMetrics();
   }, []);
 
   if (process.env.NODE_ENV === 'development') {
@@ -40,6 +63,6 @@ const PerformanceMonitor: React.FC = () => {
   }
 
   return null;
-};
+});
 
 export default PerformanceMonitor;

@@ -24,8 +24,27 @@ class ErrorBoundary extends Component<Props, State> {
     
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // TODO: Implement error logging service
-      console.log('Error logged to external service');
+      // Send error to monitoring service
+      try {
+        // In a real application, you would send this to your error monitoring service
+        // Example: Sentry, LogRocket, Bugsnag, etc.
+        fetch('/api/error-report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            error: error.message,
+            stack: error.stack,
+            componentStack: errorInfo.componentStack,
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent,
+            url: window.location.href
+          })
+        }).catch(() => {
+          // Silently fail if error reporting fails
+        });
+      } catch (reportingError) {
+        console.error('Failed to report error:', reportingError);
+      }
     }
   }
 
