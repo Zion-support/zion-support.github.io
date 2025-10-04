@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -42,6 +43,33 @@ const Home: React.FC = () => {
   );
 };
 
+=======
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+
+// Components
+import ErrorBoundary from './components/ErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
+
+// Pages
+import HomePage from './page';
+
+<<<<<<< HEAD
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/Home'));
+const AboutPage = lazy(() => import('./pages/About'));
+const ContactPage = lazy(() => import('./pages/Contact'));
+const BlogPage = lazy(() => import('./pages/Blog'));
+const ServicesPage = lazy(() => import('./pages/Services'));
+const TeamPage = lazy(() => import('./pages/Team'));
+const PrivacyPage = lazy(() => import('./pages/Privacy'));
+const TermsPage = lazy(() => import('./pages/Terms'));
+
+// Performance monitoring state
+>>>>>>> 88d0ea4f423ef5f1f930f657abc08e3e473524d9
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -62,6 +90,71 @@ const App: React.FC = () => {
           <Footer />
         </div>
       </Router>
+=======
+// Utils
+import {
+  setupGlobalErrorHandling,
+  monitorPerformance,
+} from '../utils/errorHandling';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+
+// Styles
+import '../src/index.css';
+
+const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize global error handling
+    setupGlobalErrorHandling();
+
+    // Initialize performance monitoring
+    monitorPerformance();
+
+    // Initialize performance optimizer
+    performanceOptimizer.clearMetrics();
+
+    console.log(
+      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+    );
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <ErrorBoundary>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className='App'>
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href='#main-content'
+                  className='skip-link'
+                  onClick={e => {
+                    e.preventDefault();
+                    const main =
+                      document.querySelector('main') ||
+                      document.querySelector('#main-content');
+                    if (main) {
+                      main.focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
+
+                <Routes>
+                  <Route path='/' element={<HomePage />} />
+                  {/* Add more routes as needed */}
+                </Routes>
+
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
+      </ErrorBoundary>
+>>>>>>> cursor/fix-errors-and-merge-to-main-80bc
     </HelmetProvider>
   );
 };
