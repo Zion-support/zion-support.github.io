@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 
@@ -63,3 +64,28 @@ const NewContentShowcase2025: React.FC = () => {
 };
 
 export default NewContentShowcase2025;
+=======
+
+interface NewContentShowcase2025Props {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewContentShowcase2025: React.FC<NewContentShowcase2025Props> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newcontentshowcase2025-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewContentShowcase2025</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default NewContentShowcase2025;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

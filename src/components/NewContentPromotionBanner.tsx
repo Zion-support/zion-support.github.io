@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { X, ArrowRight, BookOpen, TrendingUp, Sparkles, Zap } from 'lucide-react';
@@ -127,8 +128,33 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
           )}
         </div>
       </div>
+=======
+import React from 'react';
+
+interface NewContentPromotionBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newcontentpromotionbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewContentPromotionBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default NewContentPromotionBanner;
+=======
+export default NewContentPromotionBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

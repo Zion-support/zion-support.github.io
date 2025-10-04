@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
 
 interface FeaturedContent {
@@ -272,8 +273,32 @@ const NewContentAdvertisingBanner: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+
+interface NewContentAdvertisingBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewContentAdvertisingBanner: React.FC<NewContentAdvertisingBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newcontentadvertisingbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewContentAdvertisingBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default NewContentAdvertisingBanner;
+=======
+export default NewContentAdvertisingBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

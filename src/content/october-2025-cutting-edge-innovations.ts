@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const octoberCuttingEdgeInnovations = [
   {
     id: 'quantum-security-networks',
@@ -72,4 +73,18 @@ export const octoberInnovationMetrics = {
   averageEfficiency: '98x',
   combinedCompliance: '99.9%',
   enterpriseDeployments: '500+'
+=======
+// october-2025-cutting-edge-innovations - TypeScript definitions and utilities
+
+export interface October2025CuttingEdgeInnovationsConfig {
+  // Configuration properties
+}
+
+export const defaultOctober2025CuttingEdgeInnovationsConfig: October2025CuttingEdgeInnovationsConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultOctober2025CuttingEdgeInnovationsConfig
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
 };

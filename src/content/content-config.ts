@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface BlogPost {
   id: string;
   title: string;
@@ -588,4 +589,18 @@ export const getRecentContent = (limit: number = 3) => {
       return bTime - aTime;
     })
     .slice(0, limit);
+=======
+// content-config - TypeScript definitions and utilities
+
+export interface ContentConfigConfig {
+  // Configuration properties
+}
+
+export const defaultContentConfigConfig: ContentConfigConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultContentConfigConfig
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -206,8 +207,33 @@ const TrendingContentBanner: React.FC = () => {
           style={{ width: `${((currentIndex + 1) / trendingItems.length) * 100}%` }}
         />
       </div>
+=======
+import React from 'react';
+
+interface TrendingContentBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const TrendingContentBanner: React.FC<TrendingContentBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`trendingcontentbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">TrendingContentBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default TrendingContentBanner;
+=======
+export default TrendingContentBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

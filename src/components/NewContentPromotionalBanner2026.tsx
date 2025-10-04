@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Star, Users, TrendingUp, Rocket, Globe } from 'lucide-react';
 
 const NewContentPromotionalBanner2026 = () => {
@@ -180,8 +181,32 @@ const NewContentPromotionalBanner2026 = () => {
           </div>
         </div>
       </div>
+=======
+
+interface NewContentPromotionalBanner2026Props {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewContentPromotionalBanner2026: React.FC<NewContentPromotionalBanner2026Props> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newcontentpromotionalbanner2026-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewContentPromotionalBanner2026</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default React.memo(NewContentPromotionalBanner2026);
+=======
+export default NewContentPromotionalBanner2026;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface NewArticle {
   id: string;
   title: string;
@@ -397,3 +398,18 @@ export const newArticles2025: NewArticle[] = [
     tags: ["Anomaly Detection", "Real-Time AI", "Security", "Monitoring"]
   }
 ];
+=======
+// new-articles-2025 - TypeScript definitions and utilities
+
+export interface NewArticles2025Config {
+  // Configuration properties
+}
+
+export const defaultNewArticles2025Config: NewArticles2025Config = {
+  // Default configuration
+};
+
+export default {
+  defaultNewArticles2025Config
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

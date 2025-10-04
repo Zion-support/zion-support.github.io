@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Zap, TrendingUp, Clock, Shield, CheckCircle, Star } from 'lucide-react';
 
 const PerformanceOptimizationBanner = () => {
@@ -69,8 +70,32 @@ const PerformanceOptimizationBanner = () => {
           Your application is now running with enhanced performance, security, and accessibility features.
         </p>
       </div>
+=======
+
+interface PerformanceOptimizationBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PerformanceOptimizationBanner: React.FC<PerformanceOptimizationBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`performanceoptimizationbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">PerformanceOptimizationBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default PerformanceOptimizationBanner;
+=======
+export default PerformanceOptimizationBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

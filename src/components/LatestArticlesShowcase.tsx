@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock } from 'lucide-react';
 import { newArticles2025 } from '../content/new-articles-2025';
@@ -86,3 +87,28 @@ const LatestArticlesShowcase: React.FC = () => {
 };
 
 export default LatestArticlesShowcase;
+=======
+
+interface LatestArticlesShowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LatestArticlesShowcase: React.FC<LatestArticlesShowcaseProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`latestarticlesshowcase-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">LatestArticlesShowcase</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default LatestArticlesShowcase;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

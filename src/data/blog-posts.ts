@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface BlogPost {
   id: string;
   title: string;
@@ -580,3 +581,18 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 10,
   },
 ];
+=======
+// blog-posts - TypeScript definitions and utilities
+
+export interface BlogPostsConfig {
+  // Configuration properties
+}
+
+export const defaultBlogPostsConfig: BlogPostsConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultBlogPostsConfig
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

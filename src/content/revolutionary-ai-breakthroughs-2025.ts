@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Normalized, single-source content exports
 
 export const revolutionaryBreakthroughs2025 = [
@@ -285,3 +286,18 @@ export const promotionalBanners2025 = [
     ]
   }
 ];
+=======
+// revolutionary-ai-breakthroughs-2025 - TypeScript definitions and utilities
+
+export interface RevolutionaryAiBreakthroughs2025Config {
+  // Configuration properties
+}
+
+export const defaultRevolutionaryAiBreakthroughs2025Config: RevolutionaryAiBreakthroughs2025Config = {
+  // Default configuration
+};
+
+export default {
+  defaultRevolutionaryAiBreakthroughs2025Config
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

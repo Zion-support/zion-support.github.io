@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface BreakthroughArticle {
   id: string;
   slug: string;
@@ -180,3 +181,18 @@ export const getLatestBreakthroughs = () => {
 export const getBreakthroughBySlug = (slug: string) => {
   return sept30BreakthroughArticles.find(article => article.slug === slug);
 };
+=======
+// sept-30-breakthrough-articles-2025 - TypeScript definitions and utilities
+
+export interface Sept30BreakthroughArticles2025Config {
+  // Configuration properties
+}
+
+export const defaultSept30BreakthroughArticles2025Config: Sept30BreakthroughArticles2025Config = {
+  // Default configuration
+};
+
+export default {
+  defaultSept30BreakthroughArticles2025Config
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

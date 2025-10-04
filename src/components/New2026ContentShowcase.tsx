@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const New2026ContentShowcase: React.FC = () => {
@@ -247,3 +248,28 @@ const New2026ContentShowcase: React.FC = () => {
 };
 
 export default New2026ContentShowcase;
+=======
+
+interface New2026ContentShowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const New2026ContentShowcase: React.FC<New2026ContentShowcaseProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`new2026contentshowcase-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">New2026ContentShowcase</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default New2026ContentShowcase;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

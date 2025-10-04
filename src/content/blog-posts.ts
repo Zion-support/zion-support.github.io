@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface BlogPost {
   slug: string;
   title: string;
@@ -1796,3 +1797,18 @@ Comes with policy templates and playbooks used in Fortune 500 stacks.
 ];
 
 export default blogPosts;
+=======
+// blog-posts - TypeScript definitions and utilities
+
+export interface BlogPostsConfig {
+  // Configuration properties
+}
+
+export const defaultBlogPostsConfig: BlogPostsConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultBlogPostsConfig
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

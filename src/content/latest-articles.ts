@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface LatestArticle {
   id: string;
   slug: string;
@@ -1360,3 +1361,18 @@ latestArticles.unshift(
     trending: true
   }
 );
+=======
+// latest-articles - TypeScript definitions and utilities
+
+export interface LatestArticlesConfig {
+  // Configuration properties
+}
+
+export const defaultLatestArticlesConfig: LatestArticlesConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultLatestArticlesConfig
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

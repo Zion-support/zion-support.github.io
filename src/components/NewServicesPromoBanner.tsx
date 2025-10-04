@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, Rocket, Star, Zap } from 'lucide-react';
 import { newServices2026 } from '../content/new-services-2026';
@@ -169,8 +170,32 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
           </div>
         ))}
       </div>
+=======
+
+interface NewServicesPromoBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newservicespromobanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewServicesPromoBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default NewServicesPromoBanner;
+=======
+export default NewServicesPromoBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

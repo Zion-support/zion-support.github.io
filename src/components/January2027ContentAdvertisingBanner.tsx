@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export default function January2027ContentAdvertisingBanner() {
   return (
     <div className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/30 mb-12">
@@ -120,3 +121,27 @@ export default function January2027ContentAdvertisingBanner() {
     </div>
   );
 }
+=======
+interface January2027ContentAdvertisingBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const January2027ContentAdvertisingBanner: React.FC<January2027ContentAdvertisingBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`january2027contentadvertisingbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">January2027ContentAdvertisingBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default January2027ContentAdvertisingBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

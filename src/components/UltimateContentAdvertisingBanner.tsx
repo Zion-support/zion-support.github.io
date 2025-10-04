@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Zap, Star, Rocket, Shield, Target, Users, DollarSign, Clock, CheckCircle } from 'lucide-react';
 
@@ -230,8 +231,32 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+
+interface UltimateContentAdvertisingBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const UltimateContentAdvertisingBanner: React.FC<UltimateContentAdvertisingBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`ultimatecontentadvertisingbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">UltimateContentAdvertisingBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default UltimateContentAdvertisingBanner;
+=======
+export default UltimateContentAdvertisingBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

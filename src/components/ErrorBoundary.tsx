@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -104,12 +105,29 @@ class ErrorBoundary extends Component<Props, State> {
               </a>
             </div>
           </div>
-        </div>
-      );
-    }
+=======
+import React from 'react';
 
-    return this.props.children;
-  }
+interface ErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`errorboundary-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">ErrorBoundary</h3>
+          <p>Component placeholder - implementation needed</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default ErrorBoundary;

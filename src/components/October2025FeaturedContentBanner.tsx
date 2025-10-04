@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Sparkles, ArrowRight, TrendingUp, Package, Brain } from 'lucide-react';
 
@@ -193,6 +194,26 @@ const October2025FeaturedContentBanner = () => {
           </div>
         </div>
       </div>
+=======
+
+interface October2025FeaturedContentBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const October2025FeaturedContentBanner: React.FC<October2025FeaturedContentBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`october2025featuredcontentbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">October2025FeaturedContentBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };

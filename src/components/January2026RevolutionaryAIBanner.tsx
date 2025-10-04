@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Sparkles, Zap, Brain, CheckCircle, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -117,8 +118,32 @@ const January2026RevolutionaryAIBanner = () => {
         <span className="bg-green-100/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-300/20">95% Efficiency</span>
         <span className="bg-orange-100/20 text-orange-200 px-4 py-2 rounded-full text-sm font-medium border border-orange-300/20">Revolutionary</span>
       </div>
+=======
+
+interface January2026RevolutionaryAIBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const January2026RevolutionaryAIBanner: React.FC<January2026RevolutionaryAIBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`january2026revolutionaryaibanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">January2026RevolutionaryAIBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default January2026RevolutionaryAIBanner;
+=======
+export default January2026RevolutionaryAIBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export default function EnterpriseAIFall2025Banner() {
   return (
     <section className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-900 text-white py-24 px-6 relative overflow-hidden">
@@ -104,3 +105,27 @@ export default function EnterpriseAIFall2025Banner() {
     </section>
   );
 }
+=======
+interface EnterpriseAIFall2025BannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnterpriseAIFall2025Banner: React.FC<EnterpriseAIFall2025BannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`enterpriseaifall2025banner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">EnterpriseAIFall2025Banner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default EnterpriseAIFall2025Banner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Sparkles, Zap, Brain, Star, Users, Award, TrendingUp } from 'lucide-react';
 
 const February2026ContentShowcaseBanner = () => {
@@ -241,8 +242,32 @@ const February2026ContentShowcaseBanner = () => {
           </div>
         </div>
       </div>
+=======
+
+interface February2026ContentShowcaseBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const February2026ContentShowcaseBanner: React.FC<February2026ContentShowcaseBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`february2026contentshowcasebanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">February2026ContentShowcaseBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default February2026ContentShowcaseBanner;
+=======
+export default February2026ContentShowcaseBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

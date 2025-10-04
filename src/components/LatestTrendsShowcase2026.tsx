@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const LatestTrendsShowcase2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">
@@ -177,3 +178,27 @@ const LatestTrendsShowcase2026: React.FC = () => {
 };
 
 export default LatestTrendsShowcase2026;
+=======
+interface LatestTrendsShowcase2026Props {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LatestTrendsShowcase2026: React.FC<LatestTrendsShowcase2026Props> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`latesttrendsshowcase2026-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">LatestTrendsShowcase2026</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default LatestTrendsShowcase2026;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

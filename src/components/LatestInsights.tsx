@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowRight } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -74,8 +75,33 @@ const LatestInsights: React.FC = () => {
         </div>
       </div>
     </section>
+=======
+import React from 'react';
+
+interface LatestInsightsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LatestInsights: React.FC<LatestInsightsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`latestinsights-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">LatestInsights</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
   );
 };
 
 export default LatestInsights;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

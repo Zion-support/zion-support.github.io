@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const NewServicesPromotionalBanner: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-emerald-900/40 via-teal-900/40 to-cyan-900/40 border-y border-emerald-500/20">
@@ -194,3 +195,27 @@ const NewServicesPromotionalBanner: React.FC = () => {
 };
 
 export default NewServicesPromotionalBanner;
+=======
+interface NewServicesPromotionalBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NewServicesPromotionalBanner: React.FC<NewServicesPromotionalBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`newservicespromotionalbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">NewServicesPromotionalBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default NewServicesPromotionalBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

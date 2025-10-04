@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const BlogPromotionBanner: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -38,3 +39,27 @@ const BlogPromotionBanner: React.FC = () => {
 };
 
 export default BlogPromotionBanner;
+=======
+interface BlogPromotionBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const BlogPromotionBanner: React.FC<BlogPromotionBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`blogpromotionbanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">BlogPromotionBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default BlogPromotionBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

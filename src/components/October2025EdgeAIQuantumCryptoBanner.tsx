@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Sparkles, Zap, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -144,3 +145,29 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
     </section>
   );
 }
+=======
+import React from 'react';
+
+interface October2025EdgeAIQuantumCryptoBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const October2025EdgeAIQuantumCryptoBanner: React.FC<October2025EdgeAIQuantumCryptoBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`october2025edgeaiquantumcryptobanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">October2025EdgeAIQuantumCryptoBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default October2025EdgeAIQuantumCryptoBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

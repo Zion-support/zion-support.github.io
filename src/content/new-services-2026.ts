@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface NewService {
   id: string;
   name: string;
@@ -427,3 +428,18 @@ newServices2026.push(
     launchDate: "2026-01-15"
   }
 );
+=======
+// new-services-2026 - TypeScript definitions and utilities
+
+export interface NewServices2026Config {
+  // Configuration properties
+}
+
+export const defaultNewServices2026Config: NewServices2026Config = {
+  // Default configuration
+};
+
+export default {
+  defaultNewServices2026Config
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

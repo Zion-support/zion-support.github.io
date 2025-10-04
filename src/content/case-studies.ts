@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type CaseStudy = {
   id: string;
   title: string;
@@ -170,3 +171,18 @@ export const caseStudies: CaseStudy[] = [
     imageUrl: "/images/case-studies/enterprise-rag.jpg"
   }
 ];
+=======
+// case-studies - TypeScript definitions and utilities
+
+export interface CaseStudiesConfig {
+  // Configuration properties
+}
+
+export const defaultCaseStudiesConfig: CaseStudiesConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultCaseStudiesConfig
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

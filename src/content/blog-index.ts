@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Blog Content Index
  * Centralized index of all blog posts for easy discovery and navigation
@@ -258,4 +259,18 @@ export const blogStats = {
   categories: getAllCategories().length,
   tags: getAllTags().length,
   totalValue: getTotalValueProposition(),
+=======
+// blog-index - TypeScript definitions and utilities
+
+export interface BlogIndexConfig {
+  // Configuration properties
+}
+
+export const defaultBlogIndexConfig: BlogIndexConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultBlogIndexConfig
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
 };

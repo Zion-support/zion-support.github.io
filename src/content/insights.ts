@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type InsightArticle = {
   id: string;
   title: string;
@@ -145,3 +146,18 @@ export const latestInsights: InsightArticle[] = [
   },
 ];
 
+=======
+// insights - TypeScript definitions and utilities
+
+export interface insightsConfig {
+  // Configuration properties
+}
+
+export const defaultinsightsConfig: insightsConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultinsightsConfig
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

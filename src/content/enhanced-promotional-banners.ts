@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EnhancedPromotionalBanner {
   id: string;
   title: string;
@@ -1061,3 +1062,18 @@ enhancedPromotionalBanners.unshift(
     startDate: '2025-10-06'
   }
 );
+=======
+// enhanced-promotional-banners - TypeScript definitions and utilities
+
+export interface EnhancedPromotionalBannersConfig {
+  // Configuration properties
+}
+
+export const defaultEnhancedPromotionalBannersConfig: EnhancedPromotionalBannersConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultEnhancedPromotionalBannersConfig
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

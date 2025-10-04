@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Sparkles, ArrowRight, Brain, Atom, Layers, GraduationCap, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -174,8 +175,33 @@ const September30NewContentMegaBanner = () => {
           </span>
         </div>
       </div>
+=======
+import React from 'react';
+
+interface September30NewContentMegaBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const September30NewContentMegaBanner: React.FC<September30NewContentMegaBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`september30newcontentmegabanner-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">September30NewContentMegaBanner</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default September30NewContentMegaBanner;
+=======
+export default September30NewContentMegaBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

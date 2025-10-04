@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface BlogPost {
   slug: string;
   title: string;
@@ -1442,3 +1443,18 @@ export const posts: BlogPost[] = [
     readTime: "7 min read"
   }
 ];
+=======
+// posts - TypeScript definitions and utilities
+
+export interface postsConfig {
+  // Configuration properties
+}
+
+export const defaultpostsConfig: postsConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultpostsConfig
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57

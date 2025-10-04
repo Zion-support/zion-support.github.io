@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const newInsights = [
   {
     id: "ai-platform-roi-scorecards",
@@ -308,3 +309,18 @@ newInsights.unshift({
 
 export const featuredInsights = newInsights.filter(insight => insight.featured);
 export const latestInsights = newInsights.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+=======
+// new-insights - TypeScript definitions and utilities
+
+export interface NewInsightsConfig {
+  // Configuration properties
+}
+
+export const defaultNewInsightsConfig: NewInsightsConfig = {
+  // Default configuration
+};
+
+export default {
+  defaultNewInsightsConfig
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8d57
