@@ -64,7 +64,8 @@ export class PerformanceOptimizer {
     componentMetrics.push(metrics);
 
     // Keep only last 100 metrics to prevent memory bloat
-    if (componentMetrics.length > 100)       componentMetrics.shift();
+    if (componentMetrics.length > 100) {
+      componentMetrics.shift();
     }
   }
 
@@ -79,7 +80,9 @@ export class PerformanceOptimizer {
   /**
    * Get current memory usage (if available)
    */
-  private getMemoryUsage(): number     if (typeof performance !== 'undefined' && 'memory' in performance)       const memory = (performance as any).memory;
+  private getMemoryUsage(): number {
+    if (typeof performance !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as any).memory;
       return memory.usedJSHeapSize / 1048576; // Convert to MB
     }
     return 0;
@@ -88,7 +91,8 @@ export class PerformanceOptimizer {
   /**
    * Get average render time for a component
    */
-  getAverageRenderTime(componentName: string): number     const metrics = this.metrics.get(componentName);
+  getAverageRenderTime(componentName: string): number {
+    const metrics = this.metrics.get(componentName);
     if (!metrics || metrics.length === 0) return 0;
 
     const sum = metrics.reduce((acc, m) => acc + m.renderTime, 0);
@@ -98,10 +102,13 @@ export class PerformanceOptimizer {
   /**
    * Get slow components (render time > threshold)
    */
-  getSlowComponents(thresholdMs: number = 16): Array<{ name: string; avgTime: number }>     const slow: Array<{ name: string; avgTime: number }> = [];
+  getSlowComponents(thresholdMs: number = 16): Array<{ name: string; avgTime: number }> {
+    const slow: Array<{ name: string; avgTime: number }> = [];
 
-    this.observedComponents.forEach(componentName =>       const avgTime = this.getAverageRenderTime(componentName);
-      if (avgTime > thresholdMs)         slow.push({ name: componentName, avgTime });
+    this.observedComponents.forEach(componentName => {
+      const avgTime = this.getAverageRenderTime(componentName);
+      if (avgTime > thresholdMs) {
+        slow.push({ name: componentName, avgTime });
       }
     });
 

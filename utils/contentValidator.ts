@@ -267,13 +267,16 @@ export class ContentValidator {
     const blogPercentage = (categoryDistribution.blog || 0) / totalContent * 100;
     const caseStudyPercentage = (categoryDistribution['case-study'] || 0) / totalContent * 100;
 
-    if (blogPercentage < 30)       recommendations.push('Low blog content ratio - consider publishing more thought leadership articles');
+    if (blogPercentage < 30) {
+      recommendations.push('Low blog content ratio - consider publishing more thought leadership articles');
     }
 
-    if (caseStudyPercentage < 20)       recommendations.push('Low case study ratio - showcase more client successes');
+    if (caseStudyPercentage < 20) {
+      recommendations.push('Low case study ratio - showcase more client successes');
     }
 
-    return       duplicateTitles,
+    return {
+      duplicateTitles,
       inconsistentDates,
       categoryDistribution,
       recommendations

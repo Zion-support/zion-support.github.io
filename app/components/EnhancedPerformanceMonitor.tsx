@@ -100,7 +100,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         metrics: enhancedMetrics
       }
     ]);
-  }, [getEnhancedPerformanceInfo, metrics]);
+  }, [getEnhancedPerformanceInfo]);
 
   const getStatusColor = (value: number, threshold: number) => {
     if (value <= threshold * 0.5) return 'text-green-600';

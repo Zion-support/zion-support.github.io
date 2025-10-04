@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
 interface FinalMetrics {
   cls: number;
