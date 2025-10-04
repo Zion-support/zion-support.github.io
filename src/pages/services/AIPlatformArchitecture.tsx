@@ -2,6 +2,8 @@ import React from 'react';
 
 import React from 'react';
 
+import React from 'react';
+
 const AIPlatformArchitecture: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950">
@@ -69,11 +71,16 @@ const AIPlatformArchitecture: React.FC = () => {
           <a 
             href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl"
           >
             Get Started with AI Platform
 =======
             className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
+=======
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl"
+          >
+>>>>>>> cursor/fix-errors-and-merge-to-main-4095
             Design Your AI Platform
 >>>>>>> cursor/fix-errors-and-merge-to-main-87dd
           </a>
