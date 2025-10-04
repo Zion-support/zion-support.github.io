@@ -43,6 +43,9 @@ jest.mock('react-router-dom', () => ({
   BrowserRouter: ({ children }: { children: React.ReactNode }) => <div data-testid="router">{children}</div>,
   Routes: ({ children }: { children: React.ReactNode }) => <div data-testid="routes">{children}</div>,
   Route: ({ element }: { element: React.ReactNode }) => <div data-testid="route">{element}</div>,
+  Link: ({ children, to, ...props }: { children: React.ReactNode; to: string; [key: string]: unknown }) => (
+    <a href={to} {...props}>{children}</a>
+  ),
 }));
 
 const renderApp = (component: React.ReactElement) => {
