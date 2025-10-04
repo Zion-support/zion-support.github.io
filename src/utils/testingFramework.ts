@@ -610,9 +610,10 @@ export const expect = {
       await fn();
       throw new Error('Expected function to throw, but it did not');
     } catch (error) {
-      if (expectedError && !error.message.includes(expectedError)) {
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      if (expectedError && !errorMessage.includes(expectedError)) {
         throw new Error(
-          `Expected error to contain "${expectedError}", but got "${error.message}"`,
+          `Expected error to contain "${expectedError}", but got "${errorMessage}"`,
         );
       }
     }
