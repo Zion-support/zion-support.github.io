@@ -65,8 +65,7 @@ Object.defineProperty(window, 'performance', {
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  constructor(_callback: PerformanceObserverCallback) {}
+  constructor() {}
   observe() {}
   disconnect() {}
   takeRecords() { return []; }
