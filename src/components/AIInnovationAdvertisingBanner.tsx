@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const AIInnovationAdvertisingBanner: React.FC = () => {
   return (
@@ -127,6 +127,7 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
 
             <div className="space-y-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a title="Internal link" href="/contact?offer=ai-innovation-50" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block">
                 Claim Your 50% Discount Now
               </a>
@@ -135,13 +136,16 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
               <a
                 title="Internal link"
                 href="/contact?offer=ai-innovation-50"
+=======
+              <a 
+                href="/contact?offer=ai-innovation-50" 
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block"
               >
                 Claim Your 50% Discount Now
               </a>
-              <a
-                title="Internal link"
-                href="/schedule-demo"
+              <a 
+                href="/schedule-demo" 
                 className="w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center block"
               >
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
@@ -164,6 +168,7 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
             <p className="text-gray-400">Join 500+ enterprises already transforming with our AI solutions</p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -171,6 +176,9 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
               { company: 'Global Financial Institution', result: '$50M cost savings', testimonial: 'The autonomous systems reduced our operational costs dramatically' },
               { company: 'Leading Healthcare System', result: '99.9% uptime achieved', testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%' }
 =======
+=======
+          
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {

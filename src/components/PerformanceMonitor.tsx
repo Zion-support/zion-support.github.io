@@ -48,28 +48,28 @@ const PerformanceMonitor: React.FC = () => {
         const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
 
         // Measure Core Web Vitals
-        onCLS((metric: any) => {
+        onCLS((metric: { value: number }) => {
           setMetrics((prev: PerformanceMetrics) => ({
             ...prev,
             cls: metric.value,
           }));
         });
 
-        onFCP((metric: any) => {
+        onFCP((metric: { value: number }) => {
           setMetrics((prev: PerformanceMetrics) => ({
             ...prev,
             fcp: metric.value,
           }));
         });
 
-        onLCP((metric: any) => {
+        onLCP((metric: { value: number }) => {
           setMetrics((prev: PerformanceMetrics) => ({
             ...prev,
             lcp: metric.value,
           }));
         });
 
-        onTTFB((metric: any) => {
+        onTTFB((metric: { value: number }) => {
           setMetrics((prev: PerformanceMetrics) => ({
             ...prev,
             ttfb: metric.value,
@@ -78,7 +78,7 @@ const PerformanceMonitor: React.FC = () => {
 
         // Try to use onINP if available (for newer versions)
         if (webVitals.onINP) {
-          webVitals.onINP((metric: any) => {
+          webVitals.onINP((metric: { value: number }) => {
             setMetrics((prev: PerformanceMetrics) => ({
               ...prev,
               inp: metric.value,
@@ -91,27 +91,6 @@ const PerformanceMonitor: React.FC = () => {
       });
   }, []);
 
-  const getPerformanceGrade = (
-    metric: number,
-    thresholds: { good: number; poor: number }
-  ) => {
-    if (metric <= thresholds.good) return 'good';
-    if (metric <= thresholds.poor) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getGradeColor = (grade: string) => {
-    switch (grade) {
-      case 'good':
-        return 'text-green-600 bg-green-100';
-      case 'needs-improvement':
-        return 'text-yellow-600 bg-yellow-100';
-      case 'poor':
-        return 'text-red-600 bg-red-100';
-      default:
-        return 'text-gray-600 bg-gray-100';
-    }
-  };
 
   if (!isVisible) {
     return (

@@ -8,23 +8,14 @@ interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
-  keywords = 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI and IT solutions for modern businesses. Expert consulting, implementation, and support services.',
+  keywords = 'AI solutions, IT consulting, cloud services, technology consulting'
 }) => {
+<<<<<<< HEAD
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
 
@@ -57,6 +48,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
 
 const SEOHead: React.FC = () => {
+=======
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
   return (
 <<<<<<< HEAD
     <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
@@ -69,40 +62,15 @@ const SEOHead: React.FC = () => {
 export default SEOHead;
 =======
     <Helmet>
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={fullCanonicalUrl} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={fullCanonicalUrl} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#2563eb" />
-      
-      {/* Performance hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
     </Helmet>
   );
 };

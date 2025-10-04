@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
 
@@ -8,6 +9,10 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       <p className="text-gray-300">Latest AI trends and insights for 2026</p>
 =======
 import { Brain, Target, Rocket, TrendingUp, Globe, Award, Sparkles, Clock, ArrowRight, Users } from "lucide-react";
+=======
+import React from 'react';
+import { ArrowRight, Sparkles, TrendingUp, Brain, Target, Users, Award, Clock, Globe, Rocket } from 'lucide-react';
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
 
 const AITrendsInsightsBanner2026: React.FC = () => {
   const trendingTopics = [
@@ -29,7 +34,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       category: 'Quantum Tech',
       trend: '+300%',
       growth: 'Exponential',
-      description: 'Quantum computing achieves practical applications in AI optimization with 300% improvement in processing complex machine learning algorithms.',
+      description: 'Quantum computing achieves practical applications in AI optimization, with 300% improvement in processing complex machine learning algorithms.',
       icon: <Target className="w-6 h-6" />,
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'BREAKTHROUGH',
@@ -111,11 +116,14 @@ const AITrendsInsightsBanner2026: React.FC = () => {
             </span>
             <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
           </div>
+
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
             AI Trends & Insights 2026
           </h2>
+          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Stay ahead of the curve with the latest AI trends, market insights, and breakthrough technologies. Discover what's shaping the future of artificial intelligence and how it impacts your business.
+            Stay ahead of the curve with the latest AI trends, market insights, and breakthrough technologies. 
+            Discover what's shaping the future of artificial intelligence and how it impacts your business.
           </p>
 
           {/* Market Insights */}
@@ -139,7 +147,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
         {/* Trending Topics Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {trendingTopics.map((topic, index) => (
-            <div
+            <div 
               key={topic.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
@@ -216,12 +224,15 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                 REAL-TIME UPDATES
               </span>
             </div>
+            
             <h3 className="text-4xl font-extrabold text-white mb-4">
               Get Weekly AI Trends & Insights
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Stay informed with our weekly AI trends newsletter. Get exclusive insights, market analyses and early access to breakthrough technologies.
+              Stay informed with our weekly AI trends newsletter. Get exclusive insights, market analysis, 
+              and early access to breakthrough technologies.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
@@ -247,11 +258,11 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                 Lead the AI Revolution
               </h3>
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Don't just follow trends – create them. Get exclusive access to our AI insights, early technology previews, and strategic guidance for your organization.
+                Don't just follow trends – create them. Get exclusive access to our AI insights, 
+                early technology previews, and strategic guidance for your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  title="Internal link"
                   href="/insights"
                   className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
@@ -259,7 +270,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                   <span>Explore All Insights</span>
                 </a>
                 <a
-                  title="Internal link"
                   href="/contact"
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >

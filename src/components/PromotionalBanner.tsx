@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const PromotionalBanner: React.FC = () => {
@@ -10,3 +11,6 @@ const PromotionalBanner: React.FC = () => {
 };
 
 export default PromotionalBanner;
+=======
+export { default } from '../../components/PromotionalBanner';
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7

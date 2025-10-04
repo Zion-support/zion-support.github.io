@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const AdvancedAnalytics: React.FC = () => {
@@ -14,3 +15,20 @@ export default AdvancedAnalytics;
 =======
 export default AdvancedAnalytics;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+import React, { useEffect } from "react";
+
+interface AdvancedAnalyticsProps {
+  enableConversionTracking?: boolean;
+  enablePerformanceTracking?: boolean;
+  enableErrorTracking?: boolean;
+}
+
+export default function AdvancedAnalytics(props: AdvancedAnalyticsProps): React.JSX.Element {
+  useEffect(() => {
+    void props;
+  }, [props]);
+  return <></>;
+}
+
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7

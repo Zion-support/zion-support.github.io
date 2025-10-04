@@ -87,10 +87,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               message: 'Failed to load user profile data',
               lastOccurrence: new Date(Date.now() - Math.random() * 3600000),
               occurrenceCount: Math.floor(Math.random() * 50 + 10),
-              context: {
-                component: 'UserProfile',
-                action: 'load'
-              },
+              context: { component: 'UserProfile', action: 'load' },
               aiPredictedImpact: Math.random() * 0.8 + 0.2,
               resolutionSuggestions: [
                 'Check database connection pool',
@@ -104,10 +101,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               message: 'Slow response time in search functionality',
               lastOccurrence: new Date(Date.now() - Math.random() * 1800000),
               occurrenceCount: Math.floor(Math.random() * 20 + 5),
-              context: {
-                component: 'SearchBar',
-                action: 'query'
-              },
+              context: { component: 'SearchBar', action: 'query' },
               aiPredictedImpact: Math.random() * 0.6 + 0.1,
               resolutionSuggestions: [
                 'Implement search result caching',
@@ -119,20 +113,21 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
 
           // Simulate async data loading
           await new Promise(resolve => setTimeout(resolve, 1000));
-
+          
           // Update state with mock data
           setMetrics(mockMetrics);
           setInsights(mockInsights);
           setErrors(mockErrors);
-
+          
           console.log('Performance data loaded successfully');
         } catch (error) {
-          console.error('Failed to fetch dashboard data: ', error);
+          console.error('Failed to fetch dashboard data:', error);
         }
       };
 
       loadPerformanceData();
       const interval = setInterval(loadPerformanceData, 30000); // Update every 30 seconds
+
       return () => clearInterval(interval);
     }
   }, [isVisible]);
@@ -219,6 +214,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                   )}
                 </div>
               </div>
+
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3 text-gray-800">💡 AI Recommendations</h3>
                 <div className="space-y-2">
@@ -275,7 +271,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
                         <div className="text-sm text-gray-600">
                           Component: {error.context.component || 'Unknown'} | 
-                          Action: {error.context.action || 'Unknown'} | 
+                          Action: {error.context.action || 'Unknown'} |
                           Count: {String(error.occurrenceCount)}
                         </div>
                         {error.aiPredictedImpact && (
@@ -285,6 +281,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         )}
                       </div>
                     </div>
+                    
                     {error.resolutionSuggestions && error.resolutionSuggestions.length > 0 && (
                       <div className="mt-3 p-3 bg-green-50 rounded">
                         <h5 className="text-sm font-medium text-green-800 mb-2">💡 AI Suggestions:</h5>

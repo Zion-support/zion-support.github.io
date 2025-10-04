@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 
 const PerformanceOptimizer: React.FC = () => {
@@ -13,43 +14,21 @@ const PerformanceOptimizer: React.FC = () => {
 export default PerformanceOptimizer;
 =======
 import React, { useEffect } from 'react';
+=======
+import React from "react";
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
 
 interface PerformanceOptimizerProps {
-  preloadImages?: string[];
-  preloadFonts?: string[];
-  criticalCSS?: string;
+  isVisible?: boolean;
+  onClose?: () => void;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  preloadImages = [],
-  preloadFonts = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
-  ],
-  criticalCSS,
-}) => {
-  useEffect(() => {
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP: ', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log(
-              'FID: ',
-              (entry as any).processingStart - entry.startTime
-            );
-          }
-          if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              console.log('CLS: ', (entry as any).value);
-            }
-          }
-        }
-      });
+export default function PerformanceOptimizer(props: PerformanceOptimizerProps): React.JSX.Element {
+  if (!props.isVisible) return <></>;
+  return <div aria-label="Performance Optimizer" />;
+}
 
+<<<<<<< HEAD
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       } catch (e) {
@@ -128,3 +107,5 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
 export default PerformanceOptimizer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const ContentValueTestimonials: React.FC = () => {
@@ -10,3 +11,10 @@ const ContentValueTestimonials: React.FC = () => {
 };
 
 export default ContentValueTestimonials;
+=======
+import React from 'react';
+
+export default function ContentValueTestimonials(): React.JSX.Element {
+	return <section aria-label="Content Value Testimonials" />;
+}
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7

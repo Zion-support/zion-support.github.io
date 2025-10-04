@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { DollarSign, TrendingDown, ArrowRight, Zap } from "lucide-react";
 <<<<<<< HEAD
@@ -5,6 +6,11 @@ import Link from "next/link";
 =======
 import { Link } from "react-router-dom";
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, DollarSign, TrendingDown, Zap } from 'lucide-react';
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
 
 const AICostOptimizationBanner: React.FC = () => {
   const costOptimizationContent = [
@@ -12,12 +18,13 @@ const AICostOptimizationBanner: React.FC = () => {
       id: 1,
       title: 'AI Cost Optimization Breakthrough: Cut Spending by 90%',
       slug: 'ai-cost-optimization-breakthrough-2026',
-      excerpt: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings and 10x efficiency gains for Fortune 500 companies.',
+      excerpt: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
       category: 'Cost Optimization',
       date: '2026-01-30',
       readTime: '22 min',
       trending: true,
       icon: '💰',
+<<<<<<< HEAD
 <<<<<<< HEAD
       metrics: { value: '90%', label: 'Cost Reduction' }
 =======
@@ -26,6 +33,9 @@ const AICostOptimizationBanner: React.FC = () => {
         label: 'Cost Reduction'
       }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+      metrics: { value: '90%', label: 'Cost Reduction' }
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
     },
     {
       id: 2,
@@ -42,6 +52,7 @@ const AICostOptimizationBanner: React.FC = () => {
       trending: true,
       icon: '🧠',
 <<<<<<< HEAD
+<<<<<<< HEAD
       metrics: { value: '85%', label: 'GenAI Savings' }
 =======
       metrics: {
@@ -49,6 +60,9 @@ const AICostOptimizationBanner: React.FC = () => {
         label: 'GenAI Savings'
       }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+      metrics: { value: '85%', label: 'GenAI Savings' }
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
     },
     {
       id: 3,
@@ -65,6 +79,7 @@ const AICostOptimizationBanner: React.FC = () => {
       trending: true,
       icon: '⚡',
 <<<<<<< HEAD
+<<<<<<< HEAD
       metrics: { value: '70%', label: 'Infra Cost Cut' }
 =======
       metrics: {
@@ -72,6 +87,9 @@ const AICostOptimizationBanner: React.FC = () => {
         label: 'Infra Cost Cut'
       }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+      metrics: { value: '70%', label: 'Infra Cost Cut' }
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
     },
     {
       id: 4,
@@ -88,6 +106,7 @@ const AICostOptimizationBanner: React.FC = () => {
       trending: true,
       icon: '📊',
 <<<<<<< HEAD
+<<<<<<< HEAD
       metrics: { value: '$500M+', label: 'Total Savings' }
 =======
       metrics: {
@@ -95,6 +114,9 @@ const AICostOptimizationBanner: React.FC = () => {
         label: 'Total Savings'
       }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+      metrics: { value: '$500M+', label: 'Total Savings' }
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
     }
   ];
 
@@ -118,6 +140,7 @@ const AICostOptimizationBanner: React.FC = () => {
             <TrendingDown className="w-6 h-6 text-emerald-400 animate-pulse" />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent animate-fade-in">
             AI Cost Optimization Revolution
@@ -127,13 +150,21 @@ const AICostOptimizationBanner: React.FC = () => {
             Discover the breakthrough strategies Fortune 500 companies use to reduce AI costs by 90%, achieve $500M+ in savings and maximize ROI with intelligent optimization techniques.
 =======
           
+=======
+
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent animate-fade-in">
             AI Cost Optimization Revolution
           </h2>
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+<<<<<<< HEAD
             Discover the breakthrough strategies Fortune 500 companies use to reduce AI costs by 90%, achieve $500M+ in savings, and maximize ROI with intelligent optimization techniques.
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+            Discover the breakthrough strategies Fortune 500 companies use to reduce AI costs by 90%, 
+            achieve $500M+ in savings, and maximize ROI with intelligent optimization techniques.
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
           </p>
 
           {/* Key Stats */}
@@ -161,12 +192,16 @@ const AICostOptimizationBanner: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {costOptimizationContent.map((content, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div key={content.id} className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20" style={{ animationDelay: `${index * 150}ms` }}>
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 via-emerald-500/0 to-teal-500/0 group-hover:from-green-500/10 group-hover:via-emerald-500/10 group-hover:to-teal-500/10 transition-all duration-500"></div>
 
 =======
             <div
+=======
+            <div 
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
               key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
@@ -259,7 +294,8 @@ const AICostOptimizationBanner: React.FC = () => {
                 Ready to Cut Your AI Costs by 90%?
               </h3>
               <p className="text-gray-400 mb-8 max-w-3xl mx-auto text-lg">
-                Join Fortune 500 companies achieving $500M+ in AI cost savings with our proven optimization strategies. Get your free cost optimization audit today.
+                Join Fortune 500 companies achieving $500M+ in AI cost savings with our proven 
+                optimization strategies. Get your free cost optimization audit today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
@@ -271,7 +307,6 @@ const AICostOptimizationBanner: React.FC = () => {
                   <span>Call +1 302 464 0950</span>
 =======
                 <a
-                  title="Internal link"
                   href="/contact"
                   className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2"
                 >
@@ -279,12 +314,15 @@ const AICostOptimizationBanner: React.FC = () => {
                   <span>Get Free Cost Audit</span>
                 </a>
                 <a
-                  title="Internal link"
                   href="tel:+13024640950"
                   className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
+<<<<<<< HEAD
                   <span>Call +1 (302) 464-0950</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+                  <span>Call +1 302 464 0950</span>
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>

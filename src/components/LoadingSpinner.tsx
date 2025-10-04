@@ -3,6 +3,7 @@ import React from "react";
 =======
 import React from 'react';
 
+<<<<<<< HEAD
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   message?: string;
@@ -49,6 +50,12 @@ const LoadingSpinner: React.FC = () => {
         <p className="mt-4 text-gray-600 text-sm font-medium">{message}</p>
       )}
 >>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+=======
+const LoadingSpinner: React.FC = () => {
+  return (
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
     </div>
   );
 };

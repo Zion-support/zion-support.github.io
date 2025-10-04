@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const EnhancedTestimonials: React.FC = () => {
@@ -10,3 +11,10 @@ const EnhancedTestimonials: React.FC = () => {
 };
 
 export default EnhancedTestimonials;
+=======
+import React from 'react';
+
+export default function EnhancedTestimonials(): React.JSX.Element {
+	return <section aria-label="Enhanced Testimonials" />;
+}
+>>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
