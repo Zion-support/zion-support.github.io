@@ -96,7 +96,7 @@ const HomePage = React.memo(function HomePage() {
           {/* Lazy load the promotional banner */}
           <Suspense fallback={
             <div className="flex justify-center items-center py-20">
-              <LoadingSpinner size="lg" color="white" />
+              <LoadingSpinner />
             </div>
           }>
             <NewContentPromotionalBanner2026 />
