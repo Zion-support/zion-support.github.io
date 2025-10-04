@@ -24,7 +24,8 @@ export interface SEORecommendations {
 /**
  * Calculate reading time based on average reading speed (200 words per minute)
  */
-export function calculateReadingTime(text: string): number   const wordsPerMinute = 200;
+export function calculateReadingTime(text: string): number {
+  const wordsPerMinute = 200;
   const wordCount = text.trim().split(/\s+/).length;
   const minutes = Math.ceil(wordCount / wordsPerMinute);
   return minutes;
@@ -33,13 +34,15 @@ export function calculateReadingTime(text: string): number   const wordsPerMinut
 /**
  * Count words in text content
  */
-export function countWords(text: string): number   return text.trim().split(/\s+/).length;
+export function countWords(text: string): number {
+  return text.trim().split(/\s+/).length;
 }
 
 /**
  * Analyze content and generate metrics
  */
-export function analyzeContent(html: string): ContentMetrics   const parser = new DOMParser();
+export function analyzeContent(html: string): ContentMetrics {
+  const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   
   const textContent = doc.body.textContent || '';
@@ -50,7 +53,8 @@ export function analyzeContent(html: string): ContentMetrics   const parser = ne
   const images = doc.querySelectorAll('img');
   const links = doc.querySelectorAll('a');
   
-  const seoScore = calculateSEOScore(    wordCount,
+  const seoScore = calculateSEOScore({
+    wordCount,
     headingCount: headings.length,
     imageCount: images.length,
     linkCount: links.length,
@@ -58,7 +62,8 @@ export function analyzeContent(html: string): ContentMetrics   const parser = ne
     hasMetaDescription: doc.querySelector('meta[name="description"]') !== null,
   });
   
-  return     readingTime,
+  return {
+    readingTime,
     wordCount,
     headingCount: headings.length,
     imageCount: images.length,
@@ -70,13 +75,15 @@ export function analyzeContent(html: string): ContentMetrics   const parser = ne
 /**
  * Calculate SEO score based on various factors
  */
-function calculateSEOScore(factors:   wordCount: number;
+function calculateSEOScore(factors: {
+  wordCount: number;
   headingCount: number;
   imageCount: number;
   linkCount: number;
   hasH1: boolean;
   hasMetaDescription: boolean;
-}): number   let score = 0;
+}): number {
+  let score = 0;
   
   // Word count (0-30 points)
   if (factors.wordCount >= 300) score += 30;
@@ -108,7 +115,9 @@ export function generateSEORecommendations(
   html: string,
   currentTitle?: string,
   currentDescription?: string
-): SEORecommendations   const recommendations: SEORecommendations =     title: [],
+): SEORecommendations {
+  const recommendations: SEORecommendations = {
+    title: [],
     description: [],
     headings: [],
     images: [],
@@ -121,40 +130,52 @@ export function generateSEORecommendations(
   const metrics = analyzeContent(html);
   
   // Title recommendations
-  if (!currentTitle || currentTitle.length < 30)     recommendations.title.push('Title should be at least 30 characters');
+  if (!currentTitle || currentTitle.length < 30) {
+    recommendations.title.push('Title should be at least 30 characters');
   }
-  if (currentTitle && currentTitle.length > 60)     recommendations.title.push('Title should be less than 60 characters for optimal display');
+  if (currentTitle && currentTitle.length > 60) {
+    recommendations.title.push('Title should be less than 60 characters for optimal display');
   }
   
   // Description recommendations
-  if (!currentDescription || currentDescription.length < 120)     recommendations.description.push('Meta description should be at least 120 characters');
+  if (!currentDescription || currentDescription.length < 120) {
+    recommendations.description.push('Meta description should be at least 120 characters');
   }
   if (currentDescription && currentDescription.length > 160)     recommendations.description.push('Meta description should be less than 160 characters');
   }
   
   // Heading recommendations
   const h1Count = doc.querySelectorAll('h1').length;
-  if (h1Count === 0)     recommendations.headings.push('Add an H1 heading for better SEO');
-  } else if (h1Count > 1)     recommendations.headings.push('Use only one H1 heading per page');
+  if (h1Count === 0) {
+    recommendations.headings.push('Add an H1 heading for better SEO');
+  } else if (h1Count > 1) {
+    recommendations.headings.push('Use only one H1 heading per page');
   }
   
-  if (metrics.headingCount < 3)     recommendations.headings.push('Add more headings (H2, H3) to structure your content');
+  if (metrics.headingCount < 3) {
+    recommendations.headings.push('Add more headings (H2, H3) to structure your content');
   }
   
   // Image recommendations
   const images = doc.querySelectorAll('img');
-  images.forEach((img, index) =>     if (!img.getAttribute('alt'))       recommendations.images.push(`Image ${index + 1} is missing alt text`);
+  images.forEach((img, index) => {
+    if (!img.getAttribute('alt')) {
+      recommendations.images.push(`Image ${index + 1} is missing alt text`);
     }
-    if (!img.getAttribute('loading'))       recommendations.images.push(`Image ${index + 1} should use lazy loading`);
+    if (!img.getAttribute('loading')) {
+      recommendations.images.push(`Image ${index + 1} should use lazy loading`);
     }
   });
   
   // Link recommendations
-  if (metrics.linkCount < 3)     recommendations.links.push('Add more internal and external links to improve SEO');
+  if (metrics.linkCount < 3) {
+    recommendations.links.push('Add more internal and external links to improve SEO');
   }
   
   const externalLinks = doc.querySelectorAll('a[href^="http"]');
-  externalLinks.forEach((link) =>     if (!link.getAttribute('rel')?.includes('noopener'))       recommendations.links.push('External links should include rel="noopener noreferrer"');
+  externalLinks.forEach((link) => {
+    if (!link.getAttribute('rel')?.includes('noopener')) {
+      recommendations.links.push('External links should include rel="noopener noreferrer"');
     }
   });
   

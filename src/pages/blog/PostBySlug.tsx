@@ -192,3 +192,5 @@ const PostBySlug = React.memo(function PostBySlug(): React.JSX.Element {
     </>
   );
 }
+
+export default PostBySlug;
