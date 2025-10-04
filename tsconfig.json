@@ -36,10 +36,21 @@
   "exclude": [
     "app/**/*",
     "utils/**/*",
+    "src/components/**/*",
+    "src/pages/**/*",
+    "src/content/**/*",
+    "src/data/**/*",
+    "src/hooks/**/*",
+    "src/types/**/*",
+    "src/utils/**/*",
     "_pages_disabled/**/*",
     "_app_disabled/**/*",
     "_conflicted_disabled/**/*",
-    "_pages_api_disabled/**/*"
+    "_pages_api_disabled/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

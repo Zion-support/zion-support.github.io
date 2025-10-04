@@ -1,6 +1,6 @@
 /**
  * Performance Optimization Utility
- *
+ * 
  * Provides tools for optimizing application performance including:
  * - Component lazy loading
  * - Image optimization
@@ -162,8 +162,8 @@ export class PerformanceOptimizer {
     const totalComponents = this.observedComponents.size;
     const slowComponents = this.getSlowComponents();
     const suspectedLeaks = this.detectMemoryLeaks();
-
     const allMetrics: PerformanceMetrics[] = [];
+
     this.metrics.forEach(metrics => allMetrics.push(...metrics));
 
     const avgRenderTime = allMetrics.length > 0

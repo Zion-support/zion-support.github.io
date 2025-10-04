@@ -1,6 +1,6 @@
 /**
  * Comprehensive Error Handling and Logging System
- *
+ * 
  * Provides centralized error handling, logging, and monitoring
  * for production-grade application reliability.
  */
@@ -159,7 +159,9 @@ const sendToMonitoring = (errorLog: ErrorLog) => {
     /*
     fetch('/api/log-error', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(errorLog),
     }).catch(console.error);
     */
