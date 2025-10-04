@@ -5,8 +5,7 @@ set -e
 
 echo "Starting PR merge process..."
 
-<<<<<<< HEAD
-# List of PR branches to merge (including newest ones)
+# List of PR branches to merge (consolidated list)
 PR_BRANCHES=(
     "origin/cursor/fix-errors-and-merge-to-main-07f8"
     "origin/cursor/fix-errors-and-merge-to-main-0c7f"
@@ -19,9 +18,6 @@ PR_BRANCHES=(
     "origin/cursor/fix-errors-and-merge-to-main-f578"
     "origin/cursor/fix-errors-and-merge-to-main-f7b4"
     "origin/cursor/fix-errors-and-merge-to-main-fa2a"
-=======
-# List of PR branches to merge (including latest ones)
-PR_BRANCHES=(
     "origin/cursor/fix-errors-and-merge-to-main-0571"
     "origin/cursor/fix-errors-and-merge-to-main-5e24"
     "origin/cursor/fix-errors-and-merge-to-main-631d"
@@ -32,7 +28,6 @@ PR_BRANCHES=(
     "origin/cursor/fix-errors-and-merge-to-main-e6fc"
     "origin/cursor/fix-errors-and-merge-to-main-eb9b"
     "origin/cursor/fix-errors-and-merge-to-main-f51c"
->>>>>>> main
 )
 
 # Ensure we're on main branch

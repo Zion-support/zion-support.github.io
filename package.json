@@ -41,7 +41,7 @@
     "preview:optimized": "vite preview --port 3000 --host",
     "audit:performance": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "optimize:images": "node scripts/optimize-images.js",
-    "optimize:css": "node scripts/optimize-css.js",
+    "optimize:css": "node scripts/optimize-css.cjs",
     "optimize:all": "pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized",
     "build:performance": "NODE_ENV=production vite build --mode performance",
     "analyze:bundle": "vite-bundle-analyzer dist/stats.html",
