@@ -98,8 +98,7 @@ function App() {
                     <React.Suspense fallback={
                       <LoadingSpinner 
                         size="lg" 
-                        text="Loading page..." 
-                        className="min-h-screen"
+                        message="Loading page..."
                       />
                     }>
                       <Routes>
