@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { BookOpen, FileText, TrendingUp, Target, Award, Lightbulb } from 'lucide-react';
 
 export default function AI2026ContentShowcaseBanner() {

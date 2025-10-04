@@ -1,5 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
 

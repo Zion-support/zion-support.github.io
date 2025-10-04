@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star, TrendingUp, Zap, Target, Award, Brain, Bot, Atom } from 'lucide-react';
 
 export default function UltimateContent2026Showcase() {

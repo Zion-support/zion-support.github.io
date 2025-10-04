@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Enterprise Transformation Ultimate Guide 2025: $2B+ ROI Strategies | Zion Tech Group',

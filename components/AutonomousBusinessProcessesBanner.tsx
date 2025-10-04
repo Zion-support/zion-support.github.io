@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, TrendingUp, Target, Clock, CheckCircle, Star } from 'lucide-react';
 
 const AutonomousBusinessProcessesBanner: React.FC = () => {

@@ -66,7 +66,7 @@ export const defaultSecurityHeaders: SecurityHeaders = {
   'X-XSS-Protection': '1; mode=block',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 };
 
 /**
@@ -183,7 +183,7 @@ export class SecurityLogger {
   static logSecurityEvent(
     event: string,
     details: Record<string, any>,
-    level: 'info' | 'warn' | 'error' = 'warn
+    level: 'info' | 'warn' | 'error' = 'warn'
   ): void {
     if (level === 'error' || (level === 'warn' && this.logLevel !== 'error')) {
       const logEntry = {

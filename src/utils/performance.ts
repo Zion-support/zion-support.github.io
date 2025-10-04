@@ -242,7 +242,7 @@ export class PerformanceMonitor {
       await fetch(this.config.reportUrl!, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(report)
       });
@@ -325,7 +325,7 @@ export class ImageOptimizer {
       .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
       .join(', ');
 
-    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy/>`;
+    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy" />`;
   }
 
   static preloadCriticalImages(imageUrls: string[]): void {

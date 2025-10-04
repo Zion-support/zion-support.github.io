@@ -26,7 +26,7 @@ interface ComponentProps {
   children?: React.ReactNode;
   [key: string]: unknown}
 
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import {
   Cloud,
   Facebook,

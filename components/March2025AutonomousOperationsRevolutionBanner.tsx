@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const March2025AutonomousOperationsRevolutionBanner: React.FC = () => {
   return (

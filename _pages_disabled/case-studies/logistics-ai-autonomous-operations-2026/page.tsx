@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Global Logistics: $240M ROI with Autonomous AI Operations 2026 | Zion Tech Group',

@@ -1,4 +1,4 @@
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {

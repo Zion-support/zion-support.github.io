@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Network, AlertCircle, Layers } from 'lucide-react';
 
 const September30ContentBanner2025: React.FC = () => {

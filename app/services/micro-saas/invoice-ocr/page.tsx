@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import { DollarSign, FileText, CheckCircle, Shield, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -91,7 +91,7 @@ export default function InvoiceOCRPage() {
 }
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { Link } from 'react-router-dom';
 import { DollarSign, CheckCircle, Shield, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 

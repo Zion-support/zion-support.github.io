@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function InteractiveDecember2026Showcase() {
   const [activeTab, setActiveTab] = useState('breakthrough');

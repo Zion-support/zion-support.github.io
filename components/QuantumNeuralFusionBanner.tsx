@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, Cpu } from 'lucide-react';
 
 const QuantumNeuralFusionBanner: React.FC = () => {
