@@ -6,7 +6,7 @@
 // Extend Window interface for Google Analytics
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
     dataLayer?: unknown[];
   }
 }

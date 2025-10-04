@@ -16,7 +16,8 @@ interface ErrorLog {
   sessionId?: string;
 }
 
-interface ErrorMetrics   totalErrors: number;
+interface ErrorMetrics {
+  totalErrors: number;
   errorsByType: Record<string, number>;
   lastError?: ErrorLog;
   errorRate: number; // errors per minute
@@ -29,10 +30,12 @@ const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
 /**
  * Get session ID
  */
-const getSessionId = (): string =>   if (typeof window === 'undefined') return 'server';
+const getSessionId = (): string => {
+  if (typeof window === 'undefined') return 'server';
   
   let sessionId = sessionStorage.getItem('zion_session_id');
-  if (!sessionId)     sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  if (!sessionId) {
+    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     sessionStorage.setItem('zion_session_id', sessionId);
   }
   return sessionId;
@@ -41,15 +44,19 @@ const getSessionId = (): string =>   if (typeof window === 'undefined') return '
 /**
  * Get error logs from storage
  */
-const getErrorLogs = (): ErrorLog[] =>   if (typeof window === 'undefined') return [];
+const getErrorLogs = (): ErrorLog[] => {
+  if (typeof window === 'undefined') return [];
   
-  try     const stored = localStorage.getItem(ERROR_LOG_KEY);
-    if (stored)       const logs = JSON.parse(stored) as ErrorLog[];
+  try {
+    const stored = localStorage.getItem(ERROR_LOG_KEY);
+    if (stored) {
+      const logs = JSON.parse(stored) as ErrorLog[];
       // Keep only last 24 hours
       const dayAgo = Date.now() - 24 * 60 * 60 * 1000;
       return logs.filter(log => log.timestamp > dayAgo);
     }
-  } catch (error)     console.error('Error reading error logs:', error);
+  } catch (error) {
+    console.error('Error reading error logs:', error);
   }
   return [];
 };
@@ -57,17 +64,21 @@ const getErrorLogs = (): ErrorLog[] =>   if (typeof window === 'undefined') retu
 /**
  * Save error log
  */
-const saveErrorLog = (log: ErrorLog) =>   if (typeof window === 'undefined') return;
+const saveErrorLog = (log: ErrorLog) => {
+  if (typeof window === 'undefined') return;
   
-  try     const logs = getErrorLogs();
+  try {
+    const logs = getErrorLogs();
     logs.push(log);
     
     // Keep only most recent logs
-    if (logs.length > MAX_ERROR_LOGS)       logs.splice(0, logs.length - MAX_ERROR_LOGS);
+    if (logs.length > MAX_ERROR_LOGS) {
+      logs.splice(0, logs.length - MAX_ERROR_LOGS);
     }
     
     localStorage.setItem(ERROR_LOG_KEY, JSON.stringify(logs));
-  } catch (error)     console.error('Error saving error log:', error);
+  } catch (error) {
+    console.error('Error saving error log:', error);
   }
 };
 
@@ -78,7 +89,9 @@ export const logError = (
   error: Error | string,
   context?: Record<string, any>,
   level: 'error' | 'warn' = 'error'
-) =>   const errorLog: ErrorLog =     timestamp: Date.now(),
+) => {
+  const errorLog: ErrorLog = {
+    timestamp: Date.now(),
     level,
     message: typeof error === 'string' ? error : error.message,
     stack: typeof error === 'object' && error.stack ? error.stack : undefined,
@@ -92,8 +105,10 @@ export const logError = (
   saveErrorLog(errorLog);
   
   // Console logging
-  if (level === 'error')     console.error('Error logged:', errorLog);
-  } else     console.warn('Warning logged:', errorLog);
+  if (level === 'error') {
+    console.error('Error logged:', errorLog);
+  } else {
+    console.warn('Warning logged:', errorLog);
   }
   
   // Send to external monitoring service (if configured)
@@ -103,7 +118,9 @@ export const logError = (
 /**
  * Log info message
  */
-export const logInfo = (message: string, context?: Record<string, any>) =>   const errorLog: ErrorLog =     timestamp: Date.now(),
+export const logInfo = (message: string, context?: Record<string, any>) => {
+  const errorLog: ErrorLog = {
+    timestamp: Date.now(),
     level: 'info',
     message,
     context,
@@ -118,14 +135,20 @@ export const logInfo = (message: string, context?: Record<string, any>) =>   con
 /**
  * Send error to monitoring service
  */
-const sendToMonitoring = (errorLog: ErrorLog) =>   if (typeof window === 'undefined') return;
+const sendToMonitoring = (errorLog: ErrorLog) => {
+  if (typeof window === 'undefined') return;
   
   // Example: Send to Sentry, LogRocket, or custom endpoint
-  try     // Uncomment and configure your monitoring service
+  try {
+    // Uncomment and configure your monitoring service
     /*
-    if ('Sentry' in window)       (window as any).Sentry.captureException(new Error(errorLog.message),         contexts:           custom: errorLog.context,
+    if ('Sentry' in window) {
+      (window as any).Sentry.captureException(new Error(errorLog.message), {
+        contexts: {
+          custom: errorLog.context,
         },
-        tags:           level: errorLog.level,
+        tags: {
+          level: errorLog.level,
           sessionId: errorLog.sessionId,
         },
       });
@@ -139,14 +162,16 @@ const sendToMonitoring = (errorLog: ErrorLog) =>   if (typeof window === 'undefi
       body: JSON.stringify(errorLog),
     }).catch(console.error);
     */
-  } catch (error)     console.error('Failed to send to monitoring:', error);
+  } catch (error) {
+    console.error('Failed to send to monitoring:', error);
   }
 };
 
 /**
  * Get error metrics
  */
-export const getErrorMetrics = (): ErrorMetrics =>   const logs = getErrorLogs();
+export const getErrorMetrics = (): ErrorMetrics => {
+  const logs = getErrorLogs();
   const errors = logs.filter(log => log.level === 'error');
   
   // Count errors by type

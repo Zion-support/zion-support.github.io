@@ -18,25 +18,29 @@ export interface PerformanceMetrics {
   timestamp: Date;
 }
 
-export class PerformanceOptimizer   private metrics: Map<string, PerformanceMetrics[]> = new Map();
+export class PerformanceOptimizer {
+  private metrics: Map<string, PerformanceMetrics[]> = new Map();
   private renderStartTimes: Map<string, number> = new Map();
   private observedComponents: Set<string> = new Set();
 
   /**
    * Start tracking a component render
    */
-  startRender(componentName: string): void     this.renderStartTimes.set(componentName, performance.now());
+  startRender(componentName: string): void {
+    this.renderStartTimes.set(componentName, performance.now());
     this.observedComponents.add(componentName);
   }
 
   /**
    * End tracking a component render and record metrics
    */
-  endRender(componentName: string): void     const startTime = this.renderStartTimes.get(componentName);
+  endRender(componentName: string): void {
+    const startTime = this.renderStartTimes.get(componentName);
     if (!startTime) return;
 
     const renderTime = performance.now() - startTime;
-    const metrics: PerformanceMetrics =       componentName,
+    const metrics: PerformanceMetrics = {
+      componentName,
       renderTime,
       mountTime: renderTime,
       updateCount: this.getUpdateCount(componentName),
@@ -51,7 +55,9 @@ export class PerformanceOptimizer   private metrics: Map<string, PerformanceMetr
   /**
    * Record metrics for a component
    */
-  private recordMetrics(componentName: string, metrics: PerformanceMetrics): void     if (!this.metrics.has(componentName))       this.metrics.set(componentName, []);
+  private recordMetrics(componentName: string, metrics: PerformanceMetrics): void {
+    if (!this.metrics.has(componentName)) {
+      this.metrics.set(componentName, []);
     }
     
     const componentMetrics = this.metrics.get(componentName)!;
@@ -65,7 +71,8 @@ export class PerformanceOptimizer   private metrics: Map<string, PerformanceMetr
   /**
    * Get update count for a component
    */
-  private getUpdateCount(componentName: string): number     const metrics = this.metrics.get(componentName);
+  private getUpdateCount(componentName: string): number {
+    const metrics = this.metrics.get(componentName);
     return metrics ? metrics.length : 0;
   }
 
