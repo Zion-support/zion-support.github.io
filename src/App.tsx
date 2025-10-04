@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Header from './components/Header';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
