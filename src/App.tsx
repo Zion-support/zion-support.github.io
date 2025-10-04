@@ -8,7 +8,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
 import LoadingSpinner from './components/LoadingSpinner';
-import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
 // Lazy load performance components (only when needed)
@@ -28,7 +27,7 @@ const TermsPage = lazy(() => import('./pages/Terms'));
 // Performance monitoring state
 const App: React.FC = () => {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
+  // const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
 
   // Performance monitoring toggle
   const togglePerformanceMonitor = useCallback(() => {
@@ -105,7 +104,7 @@ const App: React.FC = () => {
             )}
 
             {/* Performance Optimizer (hidden) */}
-            <PerformanceOptimizer />
+            <PerformanceOptimizer isVisible={false} onClose={() => {}} />
           </EnhancedErrorBoundary>
         </div>
       </Router>

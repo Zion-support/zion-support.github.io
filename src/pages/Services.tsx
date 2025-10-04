@@ -1,134 +1,82 @@
 import React from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
-import AutonomousOperations from './services/AutonomousOperations';
-import CybersecurityAI from './services/CybersecurityAI';
-
-interface Service {
-  title: string;
-  description: string;
-  icon: string;
-  href: string;
-}
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Rocket, Shield, Users, Target, Award } from 'lucide-react';
 
 const Services: React.FC = () => {
-  const services: Service[] = [
+  const services = [
     {
-      title: 'AI Autonomous Operations',
-      description:
-        'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
-      icon: '🤖',
-      href: '/services/autonomous-operations',
+      icon: Rocket,
+      title: 'AI Services & Solutions',
+      description: 'Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation.',
+      features: ['Machine Learning Models', 'Deep Learning Systems', 'AI Automation', 'Predictive Analytics'],
+      price: 'Starting at $5,000'
     },
     {
-      title: 'Quantum Computing Solutions',
-      description:
-        'Revolutionary quantum computing that delivers 2000x processing speed improvements for complex calculations.',
-      icon: '⚡',
-      href: '/services/quantum-computing',
+      icon: Shield,
+      title: 'IT Services & Solutions',
+      description: 'Comprehensive IT infrastructure, cloud migration, and DevOps services.',
+      features: ['Cloud Migration', 'DevOps & SRE', 'Infrastructure Management', 'Security & Compliance'],
+      price: 'Starting at $2,500'
     },
     {
-      title: 'Advanced Cybersecurity AI',
-      description:
-        'Next-generation AI-powered cybersecurity solutions with 99.9% threat detection accuracy.',
-      icon: '🛡️',
-      href: '/services/cybersecurity',
-    },
-    {
-      title: 'Enterprise AI Consulting',
-      description:
-        'Strategic AI implementation guidance that transforms business operations and drives exponential growth.',
-      icon: '🎯',
-      href: '/services/consulting',
-    },
-    {
-      title: 'Cloud Migration Services',
-      description:
-        'Seamless cloud migration with zero downtime, ensuring business continuity and improved scalability.',
-      icon: '☁️',
-      href: '/services/cloud-migration',
-    },
-    {
-      title: 'Digital Transformation',
-      description:
-        'Complete digital transformation solutions that modernize operations and enhance customer experiences.',
-      icon: '🔄',
-      href: '/services/digital-transformation',
-    },
+      icon: Users,
+      title: 'Micro SaaS Solutions',
+      description: 'Scalable software-as-a-service applications designed for rapid deployment and growth.',
+      features: ['Rapid Development', 'Scalable Architecture', 'Cloud-Native Design', 'API-First Approach'],
+      price: 'Starting at $3,000'
+    }
   ];
 
   return (
-    <Routes>
-      <Route path='/autonomous-operations' element={<AutonomousOperations />} />
-      <Route path='/cybersecurity' element={<CybersecurityAI />} />
-      <Route path='/' element={<ServicesMain services={services} />} />
-    </Routes>
-  );
-};
-
-const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>
-        <div className='text-center mb-16'>
-          <h1 className='text-5xl font-bold text-white mb-6'>Our Services</h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Comprehensive AI and technology solutions designed to transform your
-            business and drive unprecedented growth and efficiency.
-          </p>
-        </div>
-
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className='p-8 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105'
-            >
-              <div className='text-4xl mb-4'>{service.icon}</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                {service.title}
-              </h3>
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                {service.description}
-              </p>
-              <Link
-                to={service.href}
-                className='text-blue-400 hover:text-blue-300 font-semibold transition-colors'
-              >
-                Learn More →
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        <div className='text-center'>
-          <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20'>
-            <h2 className='text-3xl font-bold text-white mb-4'>
-              Ready to Get Started?
-            </h2>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Let us help you transform your business with our cutting-edge AI
-              solutions. Schedule a consultation to discuss your specific needs.
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Comprehensive AI and IT solutions designed to accelerate your digital transformation. Expert consulting services with proven results." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4 py-12">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive solutions designed to accelerate your digital transformation and drive business growth.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
-              >
-                Schedule Consultation
-              </Link>
-              <Link
-                to='/about'
-                className='border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300'
-              >
-                Learn About Us
-              </Link>
-            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    <div className="text-3xl font-bold text-blue-600 mb-4">{service.price}</div>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-600" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                    Learn More
+                  </button>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Services;
-import React from "react"; import { Helmet } from "react-helmet-async"; import, ComprehensiveServices, from "./ComprehensiveServic, e, s"; const, Service, s: Rea, c, t.FC = () => { return ( <> <Helmet> <title>Servic, e, s - Zion, Tech, Group | AI & IT, Solution, s</title> <me, t, a na, m, e="descripti, o, n" content="Explore, our, comprehensive AI, and, IT services, including, workflow automati, o, n, virtual, assistant, s, data, analytic, s, and, cybersecurity, solutions." /> </Helmet> <ComprehensiveServic, e, s /> < /> ); }; export default Services;
