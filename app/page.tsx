@@ -22,10 +22,19 @@ const HomePage = React.memo(function HomePage() {
       enableBundleOptimization: true
     });
     
-    optimizer.initialize();
-    optimizer.startPerformanceMonitoring();
+    // Log performance metrics periodically
+    const logMetrics = () => {
+      const metrics = optimizer.getMetrics();
+      const score = optimizer.getPerformanceScore();
+      console.log('Performance Metrics:', metrics);
+      console.log('Performance Score:', score);
+    };
+    
+    // Log metrics after page load
+    const timer = setTimeout(logMetrics, 2000);
     
     return () => {
+      clearTimeout(timer);
       optimizer.cleanup();
     };
   }, []);
