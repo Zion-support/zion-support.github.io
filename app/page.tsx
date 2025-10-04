@@ -35,28 +35,16 @@ const HomePage = React.memo(function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-<<<<<<< HEAD
-              <a href="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
-=======
               <Link to="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 Zion Tech Group
-              </a>
+              </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-<<<<<<< HEAD
-              <a href="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</a>
-              <a href="/services" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Services</a>
-              <a href="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Blog</a>
-              <a href="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Case Studies</a>
-              <a href="/contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</a>
-=======
               <Link to="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</Link>
               <Link to="/services" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Services</Link>
               <Link to="/blog" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Blog</Link>
               <Link to="/case-studies" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Case Studies</Link>
               <Link to="/contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
             </nav>
             <div className="md:hidden">
               <button className="text-gray-700 hover:text-indigo-600 transition-colors">
@@ -88,16 +76,11 @@ const HomePage = React.memo(function HomePage() {
               and enterprise IT solutions that drive growth, efficiency, and innovation across industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-<<<<<<< HEAD
-              <a
-                href="/services"
-=======
               <Link
                 to="/services"
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 className="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium">
                 Explore Our Services
-              </a>
+              </Link>
               <a
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-4 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 font-medium">
@@ -150,13 +133,9 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Advanced analytics and machine learning solutions that provide actionable insights for strategic decision-making.
                 </p>
-<<<<<<< HEAD
-                <a href="/services/ai-business-intelligence-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
-=======
                 <Link to="/services/ai-business-intelligence-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                   Learn More →
-                </a>
+                </Link>
               </div>
 
               <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
