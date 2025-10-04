@@ -11,7 +11,7 @@ interface Service {
 }
 
 const Services: React.FC = () => {
-  const services = [
+  const services: Service[] = [
     {
       title: 'AI Autonomous Operations',
       description: 'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
