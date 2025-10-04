@@ -29,7 +29,7 @@ describe('Footer Component', () => {
   test('renders company information', () => {
     renderWithRouter(<Footer />);
     
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Zion Tech Group/i)).toHaveLength(2);
   });
 
   test('renders social media links', () => {

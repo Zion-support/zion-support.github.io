@@ -64,7 +64,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
 
     // Log to console in development
-    if ((import.meta as unknown as { env: { DEV?: boolean } }).env?.DEV) {
+    if (process.env.NODE_ENV === 'development') {
       console.error('Error Boundary caught an error:', errorDetails);
     }
 
