@@ -222,7 +222,8 @@ export function optimizeImageTags(html: string): string {
 /**
  * Generate structured data for better SEO
  */
-export function generateStructuredData(data:   type: 'Article' | 'BlogPosting' | 'WebPage' | 'Organization';
+export function generateStructuredData(data: {
+  type: 'Article' | 'BlogPosting' | 'WebPage' | 'Organization';
   title: string;
   description: string;
   image?: string;
@@ -230,27 +231,35 @@ export function generateStructuredData(data:   type: 'Article' | 'BlogPosting' |
   datePublished?: string;
   dateModified?: string;
   url?: string;
-}): string   const structuredData: any =     '@context': 'https://schema.org',
+}): string {
+  const structuredData: any = {
+    '@context': 'https://schema.org',
     '@type': data.type,
     headline: data.title,
     description: data.description,
   };
   
-  if (data.image)     structuredData.image = data.image;
+  if (data.image) {
+    structuredData.image = data.image;
   }
   
-  if (data.author)     structuredData.author =       '@type': 'Person',
+  if (data.author) {
+    structuredData.author = {
+      '@type': 'Person',
       name: data.author,
     };
   }
   
-  if (data.datePublished)     structuredData.datePublished = data.datePublished;
+  if (data.datePublished) {
+    structuredData.datePublished = data.datePublished;
   }
   
-  if (data.dateModified)     structuredData.dateModified = data.dateModified;
+  if (data.dateModified) {
+    structuredData.dateModified = data.dateModified;
   }
   
-  if (data.url)     structuredData.url = data.url;
+  if (data.url) {
+    structuredData.url = data.url;
   }
   
   return JSON.stringify(structuredData);
@@ -275,7 +284,8 @@ export function extractKeywords(text: string, count: number = 10): string[]   //
     .filter((word) => word.length > 3 && !stopWords.has(word));
   
   const frequency: Record<string, number> = {};
-  words.forEach((word) =>     frequency[word] = (frequency[word] || 0) + 1;
+  words.forEach((word) => {
+    frequency[word] = (frequency[word] || 0) + 1;
   });
   
   // Sort by frequency and return top keywords
@@ -285,7 +295,8 @@ export function extractKeywords(text: string, count: number = 10): string[]   //
     .map(([word]) => word);
 }
 
-export default   calculateReadingTime,
+export default {
+  calculateReadingTime,
   countWords,
   analyzeContent,
   generateSEORecommendations,
