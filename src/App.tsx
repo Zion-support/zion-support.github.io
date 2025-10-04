@@ -10,6 +10,9 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { LoadingSpinner } from './components/LoadingSpinner';
 
+// Import improvement system
+import './utils/improvementRunner';
+
 // Animation variants
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
