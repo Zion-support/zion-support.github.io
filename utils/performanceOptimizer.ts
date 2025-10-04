@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-=======
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
 /**
  * Performance Optimization Utility
- * 
+ *
  * Provides tools for optimizing application performance including:
  * - Component lazy loading
  * - Image optimization
@@ -13,6 +8,8 @@ import React from 'react';
  * - Memory leak detection
  * - Render performance tracking
  */
+
+import React from 'react';
 
 export interface PerformanceMetrics {
   componentName: string;
@@ -64,7 +61,7 @@ export class PerformanceOptimizer {
     if (!this.metrics.has(componentName)) {
       this.metrics.set(componentName, []);
     }
-    
+
     const componentMetrics = this.metrics.get(componentName)!;
     componentMetrics.push(metrics);
 
@@ -132,9 +129,7 @@ export class PerformanceOptimizer {
       // Check for steadily increasing memory usage
       const recent = metrics.slice(-10);
       const memoryTrend = recent.map(m => m.memoryUsage);
-      const isIncreasing = memoryTrend.every((val, i) => 
-        i === 0 || val >= memoryTrend[i - 1]
-      );
+      const isIncreasing = memoryTrend.every((val, i) => i === 0 || val >= memoryTrend[i - 1]);
 
       if (isIncreasing && memoryTrend[memoryTrend.length - 1] > memoryTrend[0] * 1.5) {
         leaks.push({
@@ -167,22 +162,12 @@ export class PerformanceOptimizer {
     const totalComponents = this.observedComponents.size;
     const slowComponents = this.getSlowComponents();
     const suspectedLeaks = this.detectMemoryLeaks();
-<<<<<<< HEAD
-=======
-    
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
+
     const allMetrics: PerformanceMetrics[] = [];
-
     this.metrics.forEach(metrics => allMetrics.push(...metrics));
-<<<<<<< HEAD
 
-    const avgRenderTime = allMetrics.length > 0 
-      ? allMetrics.reduce((acc, m) => acc + m.renderTime, 0) / allMetrics.length 
-=======
-    
     const avgRenderTime = allMetrics.length > 0
       ? allMetrics.reduce((acc, m) => acc + m.renderTime, 0) / allMetrics.length
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
       : 0;
 
     const currentMemoryUsage = this.getMemoryUsage();
@@ -281,7 +266,7 @@ export class PerformanceOptimizer {
     componentName: string
   ): T {
     const optimizer = this;
-    
+
     return class MonitoredComponent extends React.Component {
       componentDidMount() {
         optimizer.endRender(componentName);
@@ -312,10 +297,6 @@ export const performanceOptimizer = new PerformanceOptimizer();
 export function usePerformanceMonitor(componentName: string) {
   React.useEffect(() => {
     performanceOptimizer.startRender(componentName);
-<<<<<<< HEAD
-=======
-    
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
     return () => {
       performanceOptimizer.endRender(componentName);
     };
@@ -342,11 +323,4 @@ export function withPerformanceMonitoring<P extends object>(
   };
 }
 
-<<<<<<< HEAD
 export default performanceOptimizer;
-<<<<<<< HEAD
-=======
-export default performanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
-=======
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7

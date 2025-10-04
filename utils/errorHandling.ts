@@ -1,10 +1,10 @@
 /**
-<<<<<<< HEAD
  * Comprehensive Error Handling and Logging System
- * 
+ *
  * Provides centralized error handling, logging, and monitoring
  * for production-grade application reliability.
  */
+
 interface ErrorLog {
   timestamp: number;
   level: 'error' | 'warn' | 'info' | 'debug';
@@ -100,17 +100,17 @@ export const logError = (
     url: typeof window !== 'undefined' ? window.location.href : undefined,
     sessionId: getSessionId(),
   };
-  
+
   // Save to local storage
   saveErrorLog(errorLog);
-  
+
   // Console logging
   if (level === 'error') {
     console.error('Error logged:', errorLog);
   } else {
     console.warn('Warning logged:', errorLog);
   }
-  
+
   // Send to external monitoring service (if configured)
   sendToMonitoring(errorLog);
 };
@@ -128,38 +128,16 @@ export const logInfo = (message: string, context?: Record<string, any>) => {
     url: typeof window !== 'undefined' ? window.location.href : undefined,
     sessionId: getSessionId(),
   };
-  
+
   console.log('Info logged:', errorLog);
-=======
- * Error Handling Utilities
- */
-
-export const logError = (error: Error | string, context?: Record<string, any>) => {
-  console.error('Error:', error, context);
 };
 
-<<<<<<< HEAD
-export const logInfo = (message: string, context?: Record<string, any>) => {
-  console.log('Info:', message, context);
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
-};
-
-export const getErrorMetrics = () => ({
-  totalErrors: 0,
-  errorsByType: {},
-  lastError: null,
-  errorRate: 0
-});
-
-<<<<<<< HEAD
-=======
 /**
  * Send error to monitoring service
  */
 const sendToMonitoring = (errorLog: ErrorLog) => {
   if (typeof window === 'undefined') return;
-  
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
+
   // Example: Send to Sentry, LogRocket, or custom endpoint
   try {
     // Uncomment and configure your monitoring service
@@ -176,11 +154,7 @@ const sendToMonitoring = (errorLog: ErrorLog) => {
       });
     }
     */
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
     // Or send to custom endpoint
     /*
     fetch('/api/log-error', {
@@ -200,19 +174,19 @@ const sendToMonitoring = (errorLog: ErrorLog) => {
 export const getErrorMetrics = (): ErrorMetrics => {
   const logs = getErrorLogs();
   const errors = logs.filter(log => log.level === 'error');
-  
+
   // Count errors by type
   const errorsByType: Record<string, number> = {};
   errors.forEach(error => {
     const type = error.message.split(':')[0] || 'Unknown';
     errorsByType[type] = (errorsByType[type] || 0) + 1;
   });
-  
+
   // Calculate error rate (errors per minute in last hour)
   const hourAgo = Date.now() - 60 * 60 * 1000;
   const recentErrors = errors.filter(e => e.timestamp > hourAgo);
   const errorRate = recentErrors.length / 60;
-  
+
   return {
     totalErrors: errors.length,
     errorsByType,
@@ -224,20 +198,27 @@ export const getErrorMetrics = (): ErrorMetrics => {
 /**
  * Check if error rate is too high
  */
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
 export const isErrorRateTooHigh = (threshold: number = 5): boolean => {
-  return false;
+  const metrics = getErrorMetrics();
+  return metrics.errorRate > threshold;
 };
 
+/**
+ * Clear error logs
+ */
 export const clearErrorLogs = () => {
-  console.log('Error logs cleared');
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem(ERROR_LOG_KEY);
+    console.log('Error logs cleared');
+  }
 };
 
+/**
+ * Global error handler setup
+ */
 export const setupGlobalErrorHandling = () => {
-<<<<<<< HEAD
   if (typeof window === 'undefined') return;
-  
+
   // Handle uncaught errors
   window.addEventListener('error', (event) => {
     logError(event.error || event.message, {
@@ -246,44 +227,36 @@ export const setupGlobalErrorHandling = () => {
       colno: event.colno,
     });
   });
-  
+
   // Handle unhandled promise rejections
   window.addEventListener('unhandledrejection', (event) => {
     logError(event.reason || 'Unhandled Promise Rejection', {
       promise: event.promise,
     });
   });
-  
+
   // Handle console errors (optional)
   const originalConsoleError = console.error;
   console.error = (...args) => {
     logError(args.join(' '), { type: 'console.error' });
     originalConsoleError.apply(console, args);
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
-=======
-  
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
   console.log('Global error handling initialized');
 };
 
+/**
+ * Performance monitoring
+ */
 export const monitorPerformance = () => {
-<<<<<<< HEAD
   if (typeof window === 'undefined' || !('performance' in window)) return;
-  
+
   // Monitor page load performance
   window.addEventListener('load', () => {
     setTimeout(() => {
       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (perfData) {
         const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-<<<<<<< HEAD
-=======
-        
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
         if (loadTime > 3000) { // Slow page load (>3s)
           logError('Slow page load detected', {
             loadTime,
@@ -291,7 +264,7 @@ export const monitorPerformance = () => {
             type: 'performance',
           }, 'warn');
         }
-        
+
         logInfo('Page load performance', {
           loadTime,
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
@@ -300,7 +273,7 @@ export const monitorPerformance = () => {
       }
     }, 0);
   });
-  
+
   // Monitor long tasks
   if ('PerformanceObserver' in window) {
     try {
@@ -320,38 +293,36 @@ export const monitorPerformance = () => {
       // Long task API not supported
     }
   }
-=======
-  console.log('Performance monitoring initialized');
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
 };
 
+/**
+ * Network error handler
+ */
 export const handleNetworkError = (error: Error, endpoint: string) => {
-<<<<<<< HEAD
-  logError(error, { endpoint, type: 'network' });
-=======
   logError(error, {
     endpoint,
     type: 'network',
     online: typeof navigator !== 'undefined' ? navigator.onLine : true,
   });
-  
+
   // Check if offline
   if (typeof navigator !== 'undefined' && !navigator.onLine) {
     console.warn('User is offline');
     return { offline: true };
   }
-  
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7
+
   return { offline: false };
 };
 
+/**
+ * Try-catch wrapper with automatic error logging
+ */
 export const withErrorHandling = <T extends (...args: any[]) => any>(
   fn: T,
   context?: string
 ): T => {
   return ((...args: Parameters<T>) => {
     try {
-<<<<<<< HEAD
       const result = fn(...args);
       
       // Handle async functions
@@ -363,9 +334,6 @@ export const withErrorHandling = <T extends (...args: any[]) => any>(
       }
       
       return result;
-=======
-      return fn(...args);
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
     } catch (error) {
       logError(error as Error, { context, args });
       throw error;
@@ -383,11 +351,4 @@ export default {
   monitorPerformance,
   handleNetworkError,
   withErrorHandling,
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
-=======
->>>>>>> 83e4988d0b484747cc68fa307caba20f45af70a7

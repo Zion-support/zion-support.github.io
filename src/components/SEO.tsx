@@ -1,12 +1,15 @@
-import React from "react";
+import React from 'react';
 
-const SEO: React.FC = () => {
+interface SEOProps {
+  className?: string;
+}
+
+export default function SEO({ className = '' }: SEOProps) {
   return (
-    <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-      <h2 className="text-2xl font-bold text-white mb-6">SEO</h2>
-      <p className="text-gray-400">SEO component</p>
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className='text-lg font-semibold text-blue-800'>SEO</h3>
+      <p className='text-blue-600'>This component is under development.</p>
     </div>
   );
-};
-
-export default SEO;
+}
+import React from 'react'; interface SEOProps { className?: string; } ' export default function SEO({ className = '' }: SEOProps) { return ( <div className={`bg-blue-100 p-4 rounded-lg ${className}`}> <h3 className="text-lg font-semibold text-blue-800" >SEO</h3> <p className="text-blue-600" >This component is under development.</p> </div> ); }'
