@@ -148,13 +148,9 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Streamline operations with intelligent automation solutions that reduce costs and increase efficiency.
                 </p>
-<<<<<<< HEAD
-                <a href="/services/ai-cloud-infrastructure-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
-=======
                 <Link to="/services/ai-cloud-infrastructure-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                   Learn More →
-                </a>
+                </Link>
               </div>
 
               <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
@@ -167,13 +163,9 @@ const HomePage = React.memo(function HomePage() {
                 <p className="text-gray-600 mb-6">
                   Protect your digital assets with advanced AI-powered security solutions and threat detection systems.
                 </p>
-<<<<<<< HEAD
-                <a href="/services/ai-cybersecurity-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
-=======
                 <Link to="/services/ai-cybersecurity-2025" className="text-indigo-600 font-medium hover:text-indigo-700">
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                   Learn More →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -191,11 +183,7 @@ const HomePage = React.memo(function HomePage() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              <a href="/blog/ai-enterprise-transformation-2026" className="group">
-=======
               <Link to="/blog/ai-enterprise-transformation-2026" className="group">
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -213,13 +201,9 @@ const HomePage = React.memo(function HomePage() {
                     Read Article →
                   </div>
                 </div>
-              </a>
+              </Link>
 
-<<<<<<< HEAD
-              <a href="/blog/ai-autonomous-systems-2026" className="group">
-=======
               <Link to="/blog/ai-autonomous-systems-2026" className="group">
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -237,13 +221,9 @@ const HomePage = React.memo(function HomePage() {
                     Read Article →
                   </div>
                 </div>
-              </a>
+              </Link>
 
-<<<<<<< HEAD
-              <a href="/case-studies/manufacturing-ai-transformation-2026" className="group">
-=======
               <Link to="/case-studies/manufacturing-ai-transformation-2026" className="group">
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 <div className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -261,7 +241,7 @@ const HomePage = React.memo(function HomePage() {
                     View Case Study →
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -284,33 +264,19 @@ const HomePage = React.memo(function HomePage() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2">
-<<<<<<< HEAD
-                <li><a href="/services/ai-business-intelligence-2025" className="text-gray-300 hover:text-white transition-colors">AI Business Intelligence</a></li>
-                <li><a href="/services/ai-cloud-infrastructure-2025" className="text-gray-300 hover:text-white transition-colors">Cloud Automation</a></li>
-                <li><a href="/services/ai-cybersecurity-2025" className="text-gray-300 hover:text-white transition-colors">AI Cybersecurity</a></li>
-                <li><a href="/services" className="text-gray-300 hover:text-white transition-colors">All Services</a></li>
-=======
                 <li><Link to="/services/ai-business-intelligence-2025" className="text-gray-300 hover:text-white transition-colors">AI Business Intelligence</Link></li>
                 <li><Link to="/services/ai-cloud-infrastructure-2025" className="text-gray-300 hover:text-white transition-colors">Cloud Automation</Link></li>
                 <li><Link to="/services/ai-cybersecurity-2025" className="text-gray-300 hover:text-white transition-colors">AI Cybersecurity</Link></li>
                 <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">All Services</Link></li>
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
-<<<<<<< HEAD
-                <li><a href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</a></li>
-                <li><a href="/guides" className="text-gray-300 hover:text-white transition-colors">Guides</a></li>
-                <li><a href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
-=======
                 <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
                 <li><Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link></li>
                 <li><Link to="/guides" className="text-gray-300 hover:text-white transition-colors">Guides</Link></li>
                 <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
               </ul>
             </div>
             <div>
@@ -318,16 +284,11 @@ const HomePage = React.memo(function HomePage() {
               <p className="text-gray-300 mb-4">
                 Ready to transform your business with AI? Let's discuss your project.
               </p>
-<<<<<<< HEAD
-              <a 
-                href="/contact" 
-=======
               <Link 
                 to="/contact" 
->>>>>>> cursor/fix-errors-and-merge-to-main-2264
                 className="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
                 Get Started
-              </a>
+              </Link>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
