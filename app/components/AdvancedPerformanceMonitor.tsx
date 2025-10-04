@@ -88,7 +88,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         ...customMetrics,
       });
     }, 1000),
-    [],
+    [setRealTimeMetrics],
   );
 
   const calculatePerformanceScore = useCallback(

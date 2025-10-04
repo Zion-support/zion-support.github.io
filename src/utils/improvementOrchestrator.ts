@@ -554,9 +554,7 @@ class ImprovementOrchestrator {
   /**
    * Execute performance improvement
    */
-  private async executePerformanceImprovement(
-    _action: ImprovementAction,
-  ): Promise<void> {
+  private async executePerformanceImprovement(): Promise<void> {
     // Simulate performance improvement execution
     console.log('🚀 Executing performance improvements...');
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -565,9 +563,7 @@ class ImprovementOrchestrator {
   /**
    * Execute quality improvement
    */
-  private async executeQualityImprovement(
-    _action: ImprovementAction,
-  ): Promise<void> {
+  private async executeQualityImprovement(): Promise<void> {
     // Simulate quality improvement execution
     console.log('🔧 Executing quality improvements...');
     await new Promise(resolve => setTimeout(resolve, 1000));

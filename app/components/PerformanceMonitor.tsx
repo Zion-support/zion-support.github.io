@@ -13,7 +13,7 @@ const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
-    const handleMetric = (metric: any) => {
+    const handleMetric = (metric: { name: string; value: number }) => {
       setMetrics(prev => ({
         ...prev,
         [metric.name]: metric.value,
