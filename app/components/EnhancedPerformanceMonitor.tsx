@@ -59,30 +59,22 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const handleMetric = useCallback((metric: any) => {
-    const enhancedInfo = getEnhancedPerformanceInfo();
-    const updatedMetrics: Partial<EnhancedMetrics> = {
-      ...enhancedInfo,
-      [metric.name]: metric.value
+    const enhancedMetrics: EnhancedMetrics = {
+      [metric.name.toLowerCase()]: metric.value,
+      ...getEnhancedPerformanceInfo()
     };
     
     setMetrics(prev => ({
       ...prev,
-      ...updatedMetrics
-    } as EnhancedMetrics));
+      ...enhancedMetrics
+    }));
     
     // Add to history
     setHistory(prev => [
       ...prev.slice(-9), // Keep last 10 entries
       {
         timestamp: Date.now(),
-        metrics: {
-          cls: updatedMetrics.cls || 0,
-          inp: updatedMetrics.inp || 0,
-          fcp: updatedMetrics.fcp || 0,
-          lcp: updatedMetrics.lcp || 0,
-          ttfb: updatedMetrics.ttfb || 0,
-          ...enhancedInfo
-        }
+        metrics: enhancedMetrics
       }
     ]);
   }, [getEnhancedPerformanceInfo]);
