@@ -218,7 +218,8 @@ export class PerformanceOptimizer {
       recommendations.push(`${suspectedLeaks.length} potential memory leaks detected. Review cleanup in useEffect hooks.`);
     }
 
-    if (this.getMemoryUsage() > 100)       recommendations.push('High memory usage detected (>100MB). Consider implementing virtual scrolling or pagination.');
+    if (this.getMemoryUsage() > 100) {
+      recommendations.push('High memory usage detected (>100MB). Consider implementing virtual scrolling or pagination.');
     }
 
     if (recommendations.length === 0) {
