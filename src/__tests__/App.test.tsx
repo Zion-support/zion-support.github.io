@@ -22,33 +22,43 @@ jest.mock('react-helmet-async', () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
+const renderApp = (component: React.ReactElement) => {
+  return render(component);
+};
+
 describe('App Component', () => {
   test('renders without crashing', () => {
-    render(<App />);
+    renderApp(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   test('renders header component', () => {
-    render(<App />);
+    renderApp(<App />);
     expect(screen.getByRole('banner')).toBeInTheDocument();
   });
 
   test('renders footer component', () => {
-    render(<App />);
+    renderApp(<App />);
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 
   test('renders performance monitor', () => {
-    render(<App />);
+    renderApp(<App />);
     // Check for accessibility features that indicate the accessibility enhancer is working
     const skipLinks = screen.getAllByText('Skip to main content');
     expect(skipLinks.length).toBeGreaterThan(0);
   });
 
   test('renders accessibility enhancer', () => {
-    render(<App />);
+    renderApp(<App />);
     // Check for accessibility features that indicate the accessibility enhancer is working
     const skipLinks = screen.getAllByText('Skip to main content');
     expect(skipLinks.length).toBeGreaterThan(0);
+  });
+
+  test('renders app without errors', () => {
+    renderApp(<App />);
+    // Just check that the app renders without throwing errors
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 });
