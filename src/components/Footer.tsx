@@ -1,17 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <footer className="bg-gray-800 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300">
-              Advanced AI and IT Solutions for modern businesses.
-            </p>
-=======
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -147,17 +137,8 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
             </div>
->>>>>>> 88d0ea4f423ef5f1f930f657abc08e3e473524d9
           </div>
           <div>
-<<<<<<< HEAD
-            <h4 className="text-md font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>AI Solutions</li>
-              <li>IT Infrastructure</li>
-              <li>Cloud Services</li>
-              <li>Consulting</li>
-=======
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
@@ -170,17 +151,9 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
->>>>>>> 88d0ea4f423ef5f1f930f657abc08e3e473524d9
             </ul>
           </div>
           <div>
-<<<<<<< HEAD
-            <h4 className="text-md font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Contact</li>
-=======
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {resources.map((resource) => (
@@ -193,21 +166,9 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
->>>>>>> 88d0ea4f423ef5f1f930f657abc08e3e473524d9
             </ul>
           </div>
           <div>
-<<<<<<< HEAD
-            <h4 className="text-md font-semibold mb-4">Contact</h4>
-            <p className="text-gray-300">
-              Email: info@ziontechgroup.com<br />
-              Phone: +1 (302) 464-0950
-            </p>
-          </div>
-        </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-=======
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
@@ -241,7 +202,6 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
->>>>>>> 88d0ea4f423ef5f1f930f657abc08e3e473524d9
         </div>
       </div>
     </footer>

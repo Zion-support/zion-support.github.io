@@ -49,9 +49,16 @@ describe('Header Component', () => {
     expect(logo).toBeInTheDocument();
   });
 
-  test('renders navigation text', () => {
+  test('renders navigation links', () => {
     renderWithRouter(<Header />);
 
-    expect(screen.getByText('AI • Cloud • Security')).toBeInTheDocument();
+    expect(screen.getByText('Services')).toBeInTheDocument();
+    expect(screen.getByText('Solutions')).toBeInTheDocument();
+    expect(screen.getByText('Resources')).toBeInTheDocument();
+    expect(screen.getByText('Pricing')).toBeInTheDocument();
+    expect(screen.getByText('Blog')).toBeInTheDocument();
+    expect(screen.getByText('About')).toBeInTheDocument();
+    expect(screen.getByText('Contact')).toBeInTheDocument();
+    expect(screen.getByText('Get Started')).toBeInTheDocument();
   });
 });
