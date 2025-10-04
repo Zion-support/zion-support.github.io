@@ -1,1 +1,24 @@
-import React from "react"; export, default, function ContentValueTestimonia, l, s(): Rea, c, t.J, S, X.Eleme, n, t { retu, r, n <section, ari, a-lab, e, l="Content, Value, Testimonials/>;"; ======= import React from "react";'; export, default, function ContentValueTestimonia, l, s(): Rea, c, t.J, S, X.Eleme, n, t { retu, r, n <section, ari, a-lab, e, l="Content, Value, Testimonials" />;"; };'
+import React from 'react';
+
+interface ContentValueTestimonialsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ContentValueTestimonials: React.FC<ContentValueTestimonialsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`contentvaluetestimonials-component ${className}`}>
+      {children || (
+        <div className="p-4 text-center text-gray-600">
+          <h3 className="text-lg font-semibold mb-2">ContentValueTestimonials</h3>
+          <p>Component placeholder - implementation needed</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ContentValueTestimonials;

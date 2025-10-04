@@ -9,28 +9,20 @@ const __dirname = path.dirname(__filename);
 
 // Files that need to be fixed
 const filesToFix = [
-  'src/components/SiteFooter.tsx',
-  'src/components/SiteHeader.tsx', 
+  'src/components/SiteHeader.tsx',
   'src/components/SiteSidebar.tsx',
-  'src/content/blog-index.ts',
   'src/content/blog-posts.ts',
   'src/content/case-studies.ts',
   'src/content/content-config.ts',
   'src/content/enhanced-promotional-banners.ts',
-  'src/content/insights.ts',
   'src/content/latest-articles.ts',
   'src/content/new-articles-2025.ts',
   'src/content/new-insights.ts',
   'src/content/new-services-2026.ts',
   'src/content/october-2025-cutting-edge-innovations.ts',
-  'src/content/posts.ts',
   'src/content/revolutionary-ai-breakthroughs-2025.ts',
   'src/content/sept-30-breakthrough-articles-2025.ts',
-  'src/data/bannerConfigurations.ts',
-  'src/data/bannerData.ts',
   'src/data/blog-posts.ts',
-  'src/hooks/useBannerRotation.tsx',
-  'src/hooks/usePerformance.ts',
   'src/router.tsx',
   'src/types/index.ts',
   'src/types/next-stubs.d.ts'
@@ -114,7 +106,10 @@ function fixFile(filePath) {
         content.includes('con, s, t') ||
         content.includes('useSta, t, e') ||
         content.includes('Declaration or statement expected') ||
-        content.includes('Unterminated string constant')) {
+        content.includes('Unterminated string constant') ||
+        content.includes('impo, r, t') ||
+        content.includes('const,') ||
+        content.includes('{') && content.includes('expected')) {
       
       console.log(`Fixing corrupted file: ${filePath}`);
       
@@ -129,8 +124,8 @@ function fixFile(filePath) {
   }
 }
 
-console.log('Starting remaining file fixes...\n');
+console.log('Starting final file fixes...\n');
 
 filesToFix.forEach(fixFile);
 
-console.log('\n✓ Remaining file fixes completed!');
+console.log('\n✓ Final file fixes completed!');
