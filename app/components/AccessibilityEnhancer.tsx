@@ -239,7 +239,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {isVisible && <AccessibilityPanel />}
 
       {/* Global Accessibility Styles */}
-      <style jsx global>{`
+      <style>{`
         .high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;
