@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 // Lightweight Link shim that accepts both `to` and `href` and renders a normal anchor.
 // This avoids coupling to a specific router and prevents breaking builds.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+ 
 const Link: React.FC<any> = ({ to, href, children, ...rest }) => {
   const resolvedHref = to ?? href ?? '#';
   return (
