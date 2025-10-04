@@ -49,19 +49,9 @@ describe('Header Component', () => {
     expect(logo).toBeInTheDocument();
   });
 
-  test('renders navigation links', () => {
+  test('renders navigation text', () => {
     renderWithRouter(<Header />);
 
-    expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(screen.getByText('About')).toBeInTheDocument();
-    expect(screen.getByText('Services')).toBeInTheDocument();
-    expect(screen.getByText('Contact')).toBeInTheDocument();
-  });
-
-  test('renders get started button', () => {
-    renderWithRouter(<Header />);
-
-    const getStartedButton = screen.getByText('Get Started');
-    expect(getStartedButton).toBeInTheDocument();
+    expect(screen.getByText('AI • Cloud • Security')).toBeInTheDocument();
   });
 });

@@ -1,1 +1,38 @@
-import React from "react"; const, AdvertisingBanne, r: Rea, c, t.FC = () => { return ( <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-3, shado, w-lg, animat, e-gradie, n, t-x" > <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l g:px-8" >" <div, className="flex, item, s-center, justif, y-center, ga, p-4, fle, x-wr, a, p" > <div, className="flex, item, s-center, ga, p-2" > <Sparkles, className="w-5 h-5, animat, e-pul, s, e /> <span, className=" te, x, t-sm, fon, t-bold, uppercase, tracking-wi, d, e">🚀 N, E, W - Octobe, r, 1, 20, 2, 5</sp, a, n> </d, i, v> <div, className="hidden, s, m: bloc, k, h-6 w-px, b, g-whi, t, e/30" ></d, i, v>" <p, className="te, x, t-sm, fon, t-medi, u, m" > <span, className="fo, n, t-bo, l, d" >NEW, THIS, WEEK: </sp, a, n> Vector, DB, Optimization at, 100, B+ sca, l, e & Enterprise, Agent, Uptime 99.9%" ======= import React from "react";'; const, AdvertisingBanne, r: Rea, c, t.FC = () => { return ( <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-3, shado, w-lg, animat, e-gradie, n, t-x" >"; <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l g:px-8" >"; <div, className="flex, item, s-center, justif, y-center, ga, p-4, fle, x-wr, a, p" >"; <div, className="flex, item, s-center, ga, p-2" >"; <Sparkles, className="w-5 h-5, animat, e-pul, s, e" />"; <span, className="te, x, t-sm, fon, t-bold, uppercase, tracking-wi, d, e" >🚀 N, E, W - Octobe, r, 1, 20, 2, 5</sp, a, n>"; </d, i, v> <div, className="hidden, s, m: bloc, k, h-6 w-px, b, g-whi, t, e/30" ></d, i, v>"; <p, className="te, x, t-sm, fon, t-medi, u, m" >"; <span, className="fo, n, t-bo, l, d" >NEW, THIS, WEEK: </sp, a, n> Vector, DB, Optimization at, 100, B+ sca, l, e & Enterprise, Agent, Uptime 99.9%"; </p> <Li, n, k to="/bl, o, g/ai-20, 2, 5-o, c, t-01-vect, o, r-databa, s, e-optimizati, o, n-enterpri, s, e" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-1, b, g-white, tex, t-purp, l, e-700, hove, r: bg-purp, l, e-50, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibold, transitio, n-all, duratio, n-300, hov, e r:sca, l, e-105, shado, w-md" > <Zap, className="w-4 h-4 /> ======= <Zap, className=" w-4 h-4" />"; Vector, DB, Guide; </Li, n, k> <Li, n, k to="/bl, o, g/ai-20, 2, 5-o, c, t-02-enterpri, s, e-age, n, t-syste, m, s-upti, m, e-9, 9, 9" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-1, b, g-white, tex, t-purp, l, e-700, hove, r: bg-purp, l, e-50, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibold, transitio, n-all, duratio, n-300, hov, e r:sca, l, e-105, shado, w-md" > <Shield, className="w-4 h-4 /> ======= <Shield, className=" w-4 h-4" />"; Agent, Uptim, e; </Li, n, k> </d, i, v> </d, i, v> </d, i, v> ); }; export default AdvertisingBanner;'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Sparkles, Zap, Shield } from 'lucide-react';
+
+const AdvertisingBanner: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-3 shadow-lg animate-gradient-x">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center gap-4 flex-wrap">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-5 h-5 animate-pulse" />
+            <span className="text-sm font-bold uppercase tracking-wide">🚀 NEW - October 1, 2025</span>
+          </div>
+          <div className="hidden sm:block h-6 w-px bg-white/30"></div>
+          <p className="text-sm font-medium">
+            <span className="font-bold">NEW THIS WEEK:</span> Vector DB Optimization at 100B+ scale & Enterprise Agent Uptime 99.9%
+          </p>
+          <Link 
+            to="/blog/ai-2025-oct-01-vector-database-optimization-enterprise" 
+            className="inline-flex items-center gap-1 bg-white text-purple-700 hover:bg-purple-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md"
+          >
+            <Zap className="w-4 h-4" />
+            Vector DB Guide
+          </Link>
+          <Link 
+            to="/blog/ai-2025-oct-02-enterprise-agent-systems-uptime-999" 
+            className="inline-flex items-center gap-1 bg-white text-purple-700 hover:bg-purple-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md"
+          >
+            <Shield className="w-4 h-4" />
+            Agent Uptime
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AdvertisingBanner;

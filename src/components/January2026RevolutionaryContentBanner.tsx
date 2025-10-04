@@ -1,1 +1,173 @@
-import React from "react"; const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => { const, revolutionaryConten, t = [ { tit, l, e: "Ne, x, t-Generation, Enterprise, Automatio n: The, 2026, AI Revoluti, o, n"," descripti, o, n: "98% Automation, Rat, e, 1000x, Processing, Speed, $2.5B, Cost, Savings"," sl, u, g: "ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automati, o, n"," catego, r, y: "AI, Innovatio, n"," emo, j, i: "🚀"," highlig, h, t: "BREAKTHROU, G, H"," impa, c, t: "98% Automati, o, n"," ty, p, e: "bl, o, g"," readTi, m, e: "15, mi, n" } { tit, l, e: "Quantum, AI, Breakthroug h: Revolutionary, Computing, Paradigm"," descripti, o, n: "10^18, Operation, s/s, e, c, 99.9% Accura, c, y, $10B, Market, Value"," sl, u, g: "quant, u, m-ai-breakthrou, g, h-20, 2, 6-revolutiona, r, y-computi, n, g"," catego, r, y: "Quantum, Computin, g"," emo, j, i: "⚛️"," highlig, h, t: "REVOLUTIONA, R, Y"," impa, c, t: "10^18, Op, s/s, e, c"," ty, p, e: "bl, o, g"," readTi, m, e: "18, mi, n" } { tit, l, e: "Fortune, 500, Quantum AI, Transformati, o n: $10B, Revenue, Impact"," descripti, o, n: "5, 0, 0% Productivity, Increas, e, 95% Process, Automatio, n, Market, Leadershi, p"," sl, u, g: "fortu, n, e-5, 0, 0-quant, u, m-ai-transformati, o, n-20, 2, 6"," catego, r, y: "Success, Stor, y"," emo, j, i: "🏆"," highlig, h, t: "MEGA, SUCCES, S"," impa, c, t: "$10B, Revenu, e"," ty, p, e: "ca, s, e-stu, d, y"," ======= import React from "react";'; const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => { const, revolutionaryConten, t = [ { tit, l, e: "Ne, x, t-Generation, Enterprise, Automatio n: The, 2026, AI Revoluti, o, n","; descripti, o, n: "98% Automation, Rat, e, 1000x, Processing, Speed, $2.5B, Cost, Savings","; sl, u, g: "ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automati, o, n","; catego, r, y: "AI, Innovatio, n","; emo, j, i: "🚀","; highlig, h, t: "BREAKTHROU, G, H","; impa, c, t: "98% Automati, o, n","; ty, p, e: "bl, o, g","; readTi, m, e: "15, mi, n" } { tit, l, e: "Quantum, AI, Breakthroug h: Revolutionary, Computing, Paradigm","; descripti, o, n: "10^18, Operation, s/s, e, c, 99.9% Accura, c, y, $10B, Market, Value","; sl, u, g: "quant, u, m-ai-breakthrou, g, h-20, 2, 6-revolutiona, r, y-computi, n, g","; catego, r, y: "Quantum, Computin, g","; emo, j, i: "⚛️","; highlig, h, t: "REVOLUTIONA, R, Y","; impa, c, t: "10^18, Op, s/s, e, c","; ty, p, e: "bl, o, g","; readTi, m, e: "18, mi, n" } { tit, l, e: "Fortune, 500, Quantum AI, Transformati, o n: $10B, Revenue, Impact","; descripti, o, n: "5, 0, 0% Productivity, Increas, e, 95% Process, Automatio, n, Market, Leadershi, p","; sl, u, g: "fortu, n, e-5, 0, 0-quant, u, m-ai-transformati, o, n-20, 2, 6","; catego, r, y: "Success, Stor, y","; emo, j, i: "🏆","; highlig, h, t: "MEGA, SUCCES, S","; impa, c, t: "$10B, Revenu, e","; ty, p, e: "ca, s, e-stu, d, y","; readTi, m, e: "12, mi, n" } ]; return ( <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n" >"; {/* Animated, Backgroun, d */} <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" > <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" ></d, i, v>' <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;' <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>; ======= <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" >"; <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" ></d, i, v>";' <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';' <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>'; </d, i, v> <div, className="container, m, x-auto, p, x-6, relative, z-10" >"; {/* Head, e, r */} <div, className="te, x, t-center, m, b-16" > <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8" > <Sparkles, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0 /> <span, className=" te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"> ======= <div, className="te, x, t-center, m, b-16" >"; <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8" >"; <Sparkles, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0" />"; <span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e" >"; January, 202, 6 • Revolutionary, Content, Launch; </sp, a, n> </d, i, v> <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t" >" Revolutionary, AI, Breakthroughs: The, Future, is He, r, e </h2> <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d" > ======= <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t" >"; Revolutionary, AI, Breakthrough s: The, Future, is He, r, e </h2> <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d" >"; Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, content: 98% automation, rate, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B. </p> </d, i, v> {/* Content, Gri, d */} <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12" >" ======= <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12" >"; {revolutionaryConte, n, t.m, a, p((conte, n, t, ind, e, x) => ( <d, i, v k, e, y={ind, e, x} classNa, m, e="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e r:sca, l, e-1, 0, 5" > {/* Content, Heade, r */} <div, className="flex, item, s-start, justif, y-between, m, b-4" >"; <div, className="te, x, t-4, x, l" >{conte, n, t.emo, j, i}</d, i, v>"; <div, className="flex, fle, x-col, item, s-end, ga, p-2" >"; <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-fu, l, l" >"; {conte, n, t.highlig, h, t} </sp, a, n> <span, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >{conte, n, t.readTi, m, e}</sp, a, n>"; </d, i, v> </d, i, v> {/* Content, Inf, o */} <div, className="mb-4" >"; <span, className="te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, uppercase, tracking-wi, d, e" >"; {conte, n, t.catego, r, y} </sp, a, n> <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s" >" ======= <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s" >"; {conte, n, t.tit, l, e} </h3> <p, className="te, x, t-gr, a, y-400, tex, t-sm, leadin, g-relaxed, m, b-4" >"; {conte, n, t.descripti, o, n} </p> </d, i, v> {/* Impact, Badg, e */} <div, className="mb-6" > <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l" > <Target, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0 /> <span, className=" te, x, t-gre, e, n-400, fon, t-bold, tex, t-sm"> Impa, c, t: {conte, n, t.impa, c, t} ======= <div, className="mb-6" >"; <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l" >"; <Target, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />"; <span, className="te, x, t-gre, e, n-400, fon, t-bold, tex, t-sm" >"; Impa, c, t: {conte, n, t.impa, c, t} </sp, a, n> </d, i, v> </d, i, v> {/* CTA, Butto, n */} <Li, n, k' to={`/${conte, n, t.ty, p, e === 'bl, o, g' ? 'bl, o, g' : 'ca, s, e-studi, e, s'}/${conte, n, t.sl, u, g}`}`;` classNa, m, e="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2, grou, p-hov, e, r:shad, o, w-lg, grou, p-ho, v, e r:shad, o, w-bl, u, e-5, 0, 0/25" >' {conte, n, t.ty, p, e === 'bl, o, g' ? 'Read, Articl, e' : 'View, Case, Study'}; <ArrowRight, className="w-4 h-4 /> =======' {conte, n, t.ty, p, e === 'bl, o, g' ? 'Read, Articl, e' : 'View, Case, Study'}'; <ArrowRight, className=" w-4 h-4" />"; </Li, n, k> </d, i, v> ))} </d, i, v> {/* Stats, Sectio, n */} <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12" >" {[' { val, u, e: '98%', lab, e, l: 'Automation, Rat, e', ic, o, n: '🤖', col, o, r: 'fr, o, m-bl, u, e-400, t, o-cy, a, n-4, 0, 0' }' { val, u, e: '10^18', lab, e, l: 'Quantum, Op, s/s, e, c', ic, o, n: '⚛️', col, o, r: 'fr, o, m-purp, l, e-400, t, o-pi, n, k-4, 0, 0' }' { val, u, e: '$1, 0, B', lab, e, l: 'Revenue, Impac, t', ic, o, n: '💰', col, o, r: 'fr, o, m-gre, e, n-400, t, o-emera, l, d-4, 0, 0' }' { val, u, e: '5, 0, 0%', lab, e, l: 'Productivity, Gai, n', ic, o, n: '⚡', col, o, r: 'fr, o, m-yell, o, w-400, t, o-oran, g, e-4, 0, 0' } ].m, a, p((st, a, t, ind, e, x) => ( <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r"> <div, className="te, x, t-3xl, m, b-2" >{st, a, t.ic, o, n}</d, i, v> ======= <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12" >"; {[ { va, l, u' e: '98%', lab, e, l: 'Automation, Rat, e', ic, o, n: '🤖', col, o, r: 'fr, o, m-bl, u, e-400, t, o-cy, a, n-4, 0, 0' },';' { val, u, e: '10^18', lab, e, l: 'Quantum, Op, s/s, e, c', ic, o, n: '⚛️', col, o, r: 'fr, o, m-purp, l, e-400, t, o-pi, n, k-4, 0, 0' },';' { val, u, e: '$1, 0, B', lab, e, l: 'Revenue, Impac, t', ic, o, n: '💰', col, o, r: 'fr, o, m-gre, e, n-400, t, o-emera, l, d-4, 0, 0' },';' { val, u, e: '5, 0, 0%', lab, e, l: 'Productivity, Gai, n', ic, o, n: '⚡', col, o, r: 'fr, o, m-yell, o, w-400, t, o-oran, g, e-4, 0, 0' }'; ].m, a, p((st, a, t, ind, e, x) => ( <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r">"; <div, className="te, x, t-3xl, m, b-2" >{st, a, t.ic, o, n}</d, i, v>"; <div, className={`te, x, t-2xl, fon, t-extrabold, b, g-gradie, n, t-to-r ${st, a, t.col, o, r} bg-cl, i, p-text, tex, t-transparent, m, b-1`}>`;` {st, a, t.val, u, e} </d, i, v> <div, className="te, x, t-gr, a, y-400, tex, t-xs, fon, t-medi, u, m" >"; {st, a, t.lab, e, l} </d, i, v> </d, i, v> ))} </d, i, v> {/* Call, to, Action */} <div, className="te, x, t-cent, e, r" >"; <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8" >"; <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e" >"; Ready, to, Experience the, AI, Revolution? </h3> <p, className="te, x, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o" >' Join, the, Fortune 500, companies, already transforming, their, operations with, Zion, Tech Gro, u, p's, breakthrough, AI solutio, n, s.; </p> <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r" >" ======= <p, className="te, x, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o" >";' Join, the, Fortune 500, companies, already transforming, their, operations with, Zion, Tech Gro, u, p's, breakthrough, AI solutio, n, s.'; </p> <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r" >"; <Li, n, k to="/conta, c, t" classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove r:-transla, t, e-y-1" > Start, Your, Transformation; </Li, n, k> <Li, n, k to="/servic, e, s" classNa, m, e="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r: bg-bl, u, e-500, hov, e r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0" > Explore, Our, Services; </Li, n, k> </d, i, v> </d, i, v> </d, i, v> </d, i, v> </secti, o, n> ); }; export default January2026RevolutionaryContentBanner;'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles, Target } from 'lucide-react';
+
+const January2026RevolutionaryContentBanner: React.FC = () => {
+  const revolutionaryContent = [
+    {
+      title: "Next-Generation Enterprise Automation: The 2026 AI Revolution",
+      description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",
+      slug: "ai-2026-next-generation-enterprise-automation",
+      category: "AI Innovation",
+      emoji: "🚀",
+      highlight: "BREAKTHROUGH",
+      impact: "98% Automation",
+      type: "blog",
+      readTime: "15 min"
+    },
+    {
+      title: "Quantum AI Breakthrough: Revolutionary Computing Paradigm",
+      description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",
+      slug: "quantum-ai-breakthrough-2026-revolutionary-computing",
+      category: "Quantum Computing",
+      emoji: "⚛️",
+      highlight: "REVOLUTIONARY",
+      impact: "10^18 Ops/sec",
+      type: "blog",
+      readTime: "18 min"
+    },
+    {
+      title: "Fortune 500 Quantum AI Transformation: $10B Revenue Impact",
+      description: "500% Productivity Increase, 95% Process Automation, Market Leadership",
+      slug: "fortune-500-quantum-ai-transformation-2026",
+      category: "Success Story",
+      emoji: "🏆",
+      highlight: "MEGA SUCCESS",
+      impact: "$10B Revenue",
+      type: "case-study",
+      readTime: "12 min"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
+            <Sparkles className="w-5 h-5 text-blue-400" />
+            <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
+              January 2026 • Revolutionary Content Launch
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary AI Breakthroughs: The Future is Here
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Experience the cutting-edge of AI innovation with our latest breakthrough content: 98% automation rates, quantum computing revolutions, and Fortune 500 transformations worth $10B.
+          </p>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {revolutionaryContent.map((content, index) => (
+            <div 
+              key={index} 
+              className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              {/* Content Header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="text-4xl">{content.emoji}</div>
+                <div className="flex flex-col items-end gap-2">
+                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    {content.highlight}
+                  </span>
+                  <span className="text-xs text-gray-400">{content.readTime}</span>
+                </div>
+              </div>
+
+              {/* Content Info */}
+              <div className="mb-4">
+                <span className="text-blue-400 text-sm font-semibold uppercase tracking-wide">
+                  {content.category}
+                </span>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                  {content.title}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  {content.description}
+                </p>
+              </div>
+
+              {/* Impact Badge */}
+              <div className="mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
+                  <Target className="w-4 h-4 text-green-400" />
+                  <span className="text-green-400 font-bold text-sm">
+                    Impact: {content.impact}
+                  </span>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <Link 
+                to={`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+              >
+                {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid md:grid-cols-4 gap-6 mb-12">
+          {[
+            { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
+            { value: '10^18', label: 'Quantum Ops/sec', icon: '⚛️', color: 'from-purple-400 to-pink-400' },
+            { value: '$10B', label: 'Revenue Impact', icon: '💰', color: 'from-green-400 to-emerald-400' },
+            { value: '500%', label: 'Productivity Gain', icon: '⚡', color: 'from-yellow-400 to-orange-400' }
+          ].map((stat, index) => (
+            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 text-center">
+              <div className="text-3xl mb-2">{stat.icon}</div>
+              <div className={`text-2xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-1`}>
+                {stat.value}
+              </div>
+              <div className="text-gray-400 text-xs font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4 text-white">
+              Ready to Experience the AI Revolution?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join the Fortune 500 companies already transforming their operations with Zion Tech Group's breakthrough AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+              >
+                Start Your Transformation
+              </Link>
+              <Link 
+                to="/services" 
+                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              >
+                Explore Our Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default January2026RevolutionaryContentBanner;

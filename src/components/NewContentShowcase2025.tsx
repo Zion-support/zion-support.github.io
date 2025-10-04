@@ -1,1 +1,65 @@
-import React from "react"; impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"; impo, r, t { Sparkl, e, s } fr, o, m "luci, d, e-rea, c, t"; ======= import React from "react";'; impo, r, t { Li, n, k;' } fr, o, m "rea, c, t-rout, e, r-d, o, m";'; impo, r, t { Sparkl, e, s;' } fr, o, m "luci, d, e-rea, c, t";'; const, NewContentShowcase202, 5: Rea, c, t.FC = () => { const, highlight, s = [ { ti, t, l e: "🎭 Multimodal, AI, Revolution"," descripti, o, n: "Unified, visio, n-langua, g, e-audio, processing, with 98% accura, c, y"," li, n, k: "/bl, o, g/multimod, a, l-ai-revoluti, o, n-20, 2, 5"," col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0" } { tit, l, e: "⛓️ Blockcha, i, n-AI, Integratio, n"," descripti, o, n: "Trustless, intelligence, with decentralized, governanc, e"," li, n, k: "/bl, o, g/blockcha, i, n-ai-integrati, o, n-20, 2, 5"," col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0" } { tit, l, e: "🌱 Green, A, I & Sustainabili, t, y"," descripti, o, n: "Carb, o, n-neutral, ML, with 90% emissions, reductio, n"," li, n, k: "/bl, o, g/gre, e, n-ai-sustainabili, t, y-20, 2, 5"," col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0" } { tit, l, e: "⚙️ AI, Predictive, Maintenance"," descripti, o, n: "85% downtime, reduction, with 98% prediction, accurac, y"," li, n, k: "/servic, e, s/ai-predicti, v, e-maintenan, c, e"," ======= tit, l, e: "🎭 Multimodal, AI, Revolution","; descripti, o, n: "Unified, visio, n-langua, g, e-audio, processing, with 98% accura, c, y","; li, n, k: "/bl, o, g/multimod, a, l-ai-revoluti, o, n-20, 2, 5","; col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0" } { tit, l, e: "⛓️ Blockcha, i, n-AI, Integratio, n","; descripti, o, n: "Trustless, intelligence, with decentralized, governanc, e","; li, n, k: "/bl, o, g/blockcha, i, n-ai-integrati, o, n-20, 2, 5","; col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0" } { tit, l, e: "🌱 Green, A, I & Sustainabili, t, y","; descripti, o, n: "Carb, o, n-neutral, ML, with 90% emissions, reductio, n","; li, n, k: "/bl, o, g/gre, e, n-ai-sustainabili, t, y-20, 2, 5","; col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0" } { tit, l, e: "⚙️ AI, Predictive, Maintenance","; descripti, o, n: "85% downtime, reduction, with 98% prediction, accurac, y","; li, n, k: "/servic, e, s/ai-predicti, v, e-maintenan, c, e","; col, o, r: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0" } ]; return ( <section, className="py-16, b, g-gr, a, y-900, tex, t-whi, t, e" > <div, className="container, m, x-auto, p, x-6" > <div, className="text-center mb-12" > <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-4" > <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e /> <h2, className=" te, x, t-4xl, fon, t-bo, l, d">2025, Breakthrough, Content</h2> <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e /> ======= <section, className=" py-16, b, g-gr, a, y-900, tex, t-whi, t, e">"; <div, className="container, m, x-auto, p, x-6" >"; <div, className="text-center mb-12" >"; <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-4" >"; <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />"; <h2, className="te, x, t-4xl, fon, t-bo, l, d" >2025, Breakthrough, Content</h2>"; <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />"; </d, i, v> <p, className="te, x, t-xl, tex, t-gr, a, y-3, 0, 0" >"; The, most, innovative AI, content, of the, yea, r; </p> </d, i, v> <div, className="grid, m, d: gr, i, d-co, l, s-2 l g:gr, i, d-co, l, s-4, ga, p-6" >" ======= <div, className="grid, m, d: gr, i, d-co, l, s-2 l g:gr, i, d-co, l, s-4, ga, p-6" >"; {highligh, t, s.m, a, p((it, e, m, ind, e, x) => ( <Li, n, k k, e, y={ind, e, x} to={it, e, m.li, n, k} classNa, m, e="group, relative, overflow-hidden, rounde, d-2x, l, p-6, b, g-gr, a, y-800, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" > <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${it, e, m.col, o, r} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-20, transitio, n-opaci, t, y`}></d, i, v>`;` <h3, className="te, x, t-xl, fon, t-bold, m, b-3, relative, z-10" >{it, e, m.tit, l, e}</h3> <p, className="te, x, t-gr, a, y-300, tex, t-sm, relative, z-10" >{it, e, m.descripti, o, n}</p> ======= <h3, className="te, x, t-xl, fon, t-bold, m, b-3, relative, z-10" >{it, e, m.tit, l, e}</h3>"; <p, className="te, x, t-gr, a, y-300, tex, t-sm, relative, z-10" >{it, e, m.descripti, o, n}</p>"; </Li, n, k> ))} </d, i, v> </d, i, v> </secti, o, n> ); }; export default NewContentShowcase2025;'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Sparkles } from 'lucide-react';
+
+const NewContentShowcase2025: React.FC = () => {
+  const highlights = [
+    {
+      title: "🎭 Multimodal AI Revolution",
+      description: "Unified vision-language-audio processing with 98% accuracy",
+      link: "/blog/multimodal-ai-revolution-2025",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "⛓️ Blockchain-AI Integration",
+      description: "Trustless intelligence with decentralized governance",
+      link: "/blog/blockchain-ai-integration-2025",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "🌱 Green AI & Sustainability",
+      description: "Carbon-neutral ML with 90% emissions reduction",
+      link: "/blog/green-ai-sustainability-2025",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "⚙️ AI Predictive Maintenance",
+      description: "85% downtime reduction with 98% prediction accuracy",
+      link: "/services/ai-predictive-maintenance",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-gray-900 text-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+            <h2 className="text-4xl font-bold">2025 Breakthrough Content</h2>
+            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+          </div>
+          <p className="text-xl text-gray-300">
+            The most innovative AI content of the year
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {highlights.map((item, index) => (
+            <Link
+              key={index}
+              to={item.link}
+              className="group relative overflow-hidden rounded-2xl p-6 bg-gray-800 hover:scale-105 transition-all duration-300"
+            >
+              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity`}></div>
+              <h3 className="text-xl font-bold mb-3 relative z-10">{item.title}</h3>
+              <p className="text-gray-300 text-sm relative z-10">{item.description}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NewContentShowcase2025;

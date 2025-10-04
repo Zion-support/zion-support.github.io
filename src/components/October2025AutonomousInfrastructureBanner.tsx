@@ -1,1 +1,308 @@
-const, October2025AutonomousInfrastructureBanne, r = () => { return ( <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n" > {/* Animated, background, effects */}; <div, className="absolute, inse, t-0, opacit, y-10" > <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" ></d, i, v> <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;' <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>; </d, i, v> <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l g:px-8, p, y-12" >" {/* Header, Sectio, n */} <div, className="te, x, t-center, m, b-10" > <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e" > <Bot, className="w-5 h-5, tex, t-cy, a, n-4, 0, 0 /> <span, className=" te, x, t-cy, a, n-300, fon, t-semibold, tex, t-sm">🚀 BREAKI, N, G: OCTOBE, R, 1, 20, 2, 5 — AUTONOMOUS, INFRASTRUCTURE, REVOLUTION</sp, a, n>" <Bot, className="w-5 h-5, tex, t-cy, a, n-4, 0, 0 /> </d, i, v> <h2, className=" te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">" ======= <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n" >"; {/* Animated, background, effects */}; <div, className="absolute, inse, t-0, opacit, y-10" >"; <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" ></d, i, v>";' <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';' <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>'; </d, i, v> <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l g:px-8, p, y-12" >"; {/* Header, Sectio, n */} <div, className="te, x, t-center, m, b-10" >"; <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e" >"; <Bot, className="w-5 h-5, tex, t-cy, a, n-4, 0, 0" />"; <span, className="te, x, t-cy, a, n-300, fon, t-semibold, tex, t-sm" >🚀 BREAKI, N, G: OCTOBE, R, 1, 20, 2, 5 — AUTONOMOUS, INFRASTRUCTURE, REVOLUTION</sp, a, n>"; <Bot, className="w-5 h-5, tex, t-cy, a, n-4, 0, 0" />"; </d, i, v> <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t" >"; Re, a, l-Time, Autonomous, Infrastructure Orchestrati, o, n; <br /> <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0" >"; $3.2B, Value, Created | 99.99% Upti, m, e | 87% Cost, Reductio, n | 42x, RO, I; </sp, a, n> </h2> <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d" > ======= <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d" >"; Revolutionary, sel, f-healing, AI, agents achievi, n, g <strong, className="te, x, t-whi, t, e" >$410M, annual, value</stro, n, g> for, Fortune, 500 enterpris, e, s. "; Predictive, incident, prevention, autonomous, remediatio, n, and, zer, o-touch, operations, with <strong, className="te, x, t-cy, a, n-4, 0, 0" >97% autonomous, success, rate</stro, n, g>. "; Transform, from, reactive firefighting, to, proactive excellen, c, e. </p> </d, i, v> {/* Key, Metrics, Grid */} <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10" >" <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0" >" <Target, className="w-8 h-8, tex, t-cy, a, n-400, m, x-auto, m, b-2 /> <div, className=" te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.99%</d, i, v> <div, className="te, x, t-sm, tex, t-cy, a, n-2, 0, 0" >Uptime, Achieve, d</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >8.6, sec, downtime/ye, a, r</d, i, v> </d, i, v> <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-bl, u, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0" >" <DollarSign, className="w-8 h-8, tex, t-bl, u, e-400, m, x-auto, m, b-2 /> <div, className=" te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">87%</d, i, v> <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0" >Cost, Reductio, n</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >$111M, avg, savings</d, i, v> </d, i, v> <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0" >" <Zap, className="w-8 h-8, tex, t-purp, l, e-400, m, x-auto, m, b-2 /> <div, className=" te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">97%</d, i, v> <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0" >Ze, r, o-Touch, Op, s</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >Fully, autonomou, s</d, i, v> </d, i, v> <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0" >" <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2 /> <div, className=" te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">4, 2, x</d, i, v> <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0" >Average, RO, I</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >1.8-month, paybac, k</d, i, v> ======= <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10" >"; <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0" >"; <Target, className="w-8 h-8, tex, t-cy, a, n-400, m, x-auto, m, b-2" />"; <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1" >99.99%</d, i, v>"; <div, className="te, x, t-sm, tex, t-cy, a, n-2, 0, 0" >Uptime, Achieve, d</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >8.6, sec, downtime/ye, a, r</d, i, v>"; </d, i, v> <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-bl, u, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0" >"; <DollarSign, className="w-8 h-8, tex, t-bl, u, e-400, m, x-auto, m, b-2" />"; <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1" >87%</d, i, v>"; <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0" >Cost, Reductio, n</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >$111M, avg, savings</d, i, v>"; </d, i, v> <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0" >"; <Zap, className="w-8 h-8, tex, t-purp, l, e-400, m, x-auto, m, b-2" />"; <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1" >97%</d, i, v>"; <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0" >Ze, r, o-Touch, Op, s</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >Fully, autonomou, s</d, i, v>"; </d, i, v> <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0" >"; <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />"; <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1" >4, 2, x</d, i, v>"; <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0" >Average, RO, I</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >1.8-month, paybac, k</d, i, v>"; </d, i, v> </d, i, v> {/* Revolutionary, Capabilitie, s */} <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10" >"; <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r" >"; 🤖 Revolutionary, A, I-Powered, Capabilitie, s; </h3> <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6" >" <div, className="flex, item, s-start, ga, p-4" > <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r" > <Activity, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0 /> ======= <div, className=" grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"; <div, className="flex, item, s-start, ga, p-4" >"; <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r" >"; <Activity, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />"; </d, i, v> <d, i, v> <div, className="fo, n, t-semibold, tex, t-white, m, b-1" >Predictive, Incident, Prevention</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >"; 15-45, minute, advance warning, with, 94% accura, c, y. Prevent, incidents, before user, impac, t. AI, analyzes, 2.3M, event, s/minu, t, e. </d, i, v> </d, i, v> </d, i, v> <div, className="flex, item, s-start, ga, p-4" > <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r" > <Bot, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0 /> ======= <div, className=" flex, item, s-start, ga, p-4">"; <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r" >"; <Bot, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />"; </d, i, v> <d, i, v> <div, className="fo, n, t-semibold, tex, t-white, m, b-1" >Autonomous, Sel, f-Heali, n, g</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >"; 97% success, rate, in under, 30, seconds. Automatic, rollback, on failu, r, e. 2, 5, 0+ bui, l, t-in, remediation, patterns. </d, i, v> </d, i, v> </d, i, v> <div, className="flex, item, s-start, ga, p-4" > <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r" > <Cloud, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0 /> ======= <div, className=" flex, item, s-start, ga, p-4">"; <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r" >"; <Cloud, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />"; </d, i, v> <d, i, v> <div, className="fo, n, t-semibold, tex, t-white, m, b-1" >Intelligent, Cost, Optimization</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >"; 87% cost, reduction, through re, a, l-time, righ, t-sizi, n, g, idle, resource, cleanup, and, predictive, capacity planni, n, g. </d, i, v> </d, i, v> </d, i, v> </d, i, v> </d, i, v> {/* Fortune, 500, Success Sto, r, y */} <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/20, rounde, d-2x, l, p-8, m, b-10" > <div, className="flex, item, s-start, ga, p-4, m, b-6" > <div, className="fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r" > <Shield, className="w-8 h-8, tex, t-whi, t, e /> </d, i, v> <d, i, v> <h3, className=" te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2"> ======= <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/20, rounde, d-2x, l, p-8, m, b-10" >"; <div, className="flex, item, s-start, ga, p-4, m, b-6" >"; <div, className="fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r" >"; <Shield, className="w-8 h-8, tex, t-whi, t, e" />"; </d, i, v> <d, i, v> <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2" >"; Fortune, 100, Financial Servic, e, s: $410M, Annual, Value Creati, o, n </h3> <p, className="te, x, t-gr, a, y-3, 0, 0" >"; $2.3T, assets, under manageme, n, t • 24/7, trading, operations • 8,500, microservice, s • 47, countrie, s; </p> </d, i, v> </d, i, v> <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-6" >" <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4" > <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-1" >99.9, 9, 4%</d, i, v> <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >Uptime, Achieve, d</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >3, minutes, total downti, m, e/ye, a, r</d, i, v> ======= <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-6" >"; <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4" >"; <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-1" >99.9, 9, 4%</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >Uptime, Achieve, d</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >3, minutes, total downti, m, e/ye, a, r</d, i, v>"; </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4" >"; <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-1" >$41, 0, M</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >Annual, Value, Created</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >47x, ROI, in 12, month, s</d, i, v>"; </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4" >"; <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-1" >96%</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >Incident, Preventio, n</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1" >396, incidents, prevented</d, i, v>"; </d, i, v> </d, i, v> <div, className="gri, d, m d: gr, i, d-co, l, s-2, ga, p-4" >" <div, className="flex, item, s-start, ga, p-3" > <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5 /> <div, className=" te, x, t-sm, tex, t-gr, a, y-3, 0, 0"> <strong, className="te, x, t-whi, t, e" >Zero, critical, incidents</stro, n, g> during, Black, Friday (5.2M, transaction, s/second, handle, d)"; </d, i, v> </d, i, v> <div, className="flex, item, s-start, ga, p-3" > <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5 /> <div, className=" te, x, t-sm, tex, t-gr, a, y-3, 0, 0"> <strong, className="te, x, t-whi, t, e" >87% cost, reductio, n</stro, n, g> — Operations, cost, from $127M, t, o $16M, annuall, y"; </d, i, v> </d, i, v> <div, className="flex, item, s-start, ga, p-3" > <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5 /> <div, className=" te, x, t-sm, tex, t-gr, a, y-3, 0, 0"> <strong, className="te, x, t-whi, t, e" >Team, reduced, 85 → 12, peopl, e</stro, n, g> — freed, for, strategic initiativ, e, s, zero, layoff, s"; </d, i, v> </d, i, v> <div, className="flex, item, s-start, ga, p-3" > <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5 /> <div, className=" te, x, t-sm, tex, t-gr, a, y-3, 0, 0"> ======= <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4" >"; <div, className="flex, item, s-start, ga, p-3" >"; <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >"; <strong, className="te, x, t-whi, t, e" >Zero, critical, incidents</stro, n, g> during, Black, Friday (5.2M, transaction, s/second, handle, d)"; </d, i, v> </d, i, v> <div, className="flex, item, s-start, ga, p-3" >"; <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >"; <strong, className="te, x, t-whi, t, e" >87% cost, reductio, n</stro, n, g> — Operations, cost, from $127M, t, o $16M, annuall, y"; </d, i, v> </d, i, v> <div, className="flex, item, s-start, ga, p-3" >"; <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >"; <strong, className="te, x, t-whi, t, e" >Team, reduced, 85 → 12, peopl, e</stro, n, g> — freed, for, strategic initiativ, e, s, zero, layoff, s"; </d, i, v> </d, i, v> <div, className="flex, item, s-start, ga, p-3" >"; <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />"; <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0" >"; <strong, className="te, x, t-whi, t, e" >2.8-minute, MTT, R</stro, n, g> — down, from, 4.7, hour, s (99% improveme, n, t)"; </d, i, v> </d, i, v> </d, i, v> </d, i, v> {/* Industry, Application, s */} <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/50, t, o-gr, a, y-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10" >"; <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r" >"; 🌍 Proven, Across, Industries; </h3> <div, className="grid, m, d: gr, i, d-co, l, s-5, ga, p-4" >" <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hove, r: bg-bla, c, k/30, transitio, n-colo, r, s" >" <div, className="te, x, t-2xl, m, b-2" >🏦</d, i, v> <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >Financial, Service, s</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >$410M, valu, e, 99.9, 9, 4% upti, m, e</d, i, v> </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hove, r: bg-bla, c, k/30, transitio, n-colo, r, s" >" <div, className="te, x, t-2xl, m, b-2" >🛒</d, i, v> <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >E-Commer, c, e</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >$287M, saving, s, 3x, scal, e</d, i, v> </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hove, r: bg-bla, c, k/30, transitio, n-colo, r, s" >" <div, className="te, x, t-2xl, m, b-2" >🏥</d, i, v> <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >Healthca, r, e</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >99.99% uptime, critical, systems</d, i, v> </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hove, r: bg-bla, c, k/30, transitio, n-colo, r, s" >" <div, className="te, x, t-2xl, m, b-2" >🏭</d, i, v> <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >Manufacturi, n, g</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >Zero, production, downtime</d, i, v> </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hove, r: bg-bla, c, k/30, transitio, n-colo, r, s" >" <div, className="te, x, t-2xl, m, b-2" >📡</d, i, v> <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >Technolo, g, y</d, i, v> <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >Scale, without, team grow, t, h</d, i, v> ======= <div, className="grid, m, d: gr, i, d-co, l, s-5, ga, p-4" >"; <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e r: bg-bla, c, k/30, transitio, n-colo, r, s" >"; <div, className="te, x, t-2xl, m, b-2" >🏦</d, i, v>"; <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >Financial, Service, s</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >$410M, valu, e, 99.9, 9, 4% upti, m, e</d, i, v>"; </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hove, r: bg-bla, c, k/30, transitio, n-colo, r, s" >"; <div, className="te, x, t-2xl, m, b-2" >🛒</d, i, v>"; <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >E-Commer, c, e</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >$287M, saving, s, 3x, scal, e</d, i, v>"; </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hove, r: bg-bla, c, k/30, transitio, n-colo, r, s" >"; <div, className="te, x, t-2xl, m, b-2" >🏥</d, i, v>"; <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >Healthca, r, e</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >99.99% uptime, critical, systems</d, i, v>"; </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hove, r: bg-bla, c, k/30, transitio, n-colo, r, s" >"; <div, className="te, x, t-2xl, m, b-2" >🏭</d, i, v>"; <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >Manufacturi, n, g</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >Zero, production, downtime</d, i, v>"; </d, i, v> <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e r: bg-bla, c, k/30, transitio, n-colo, r, s" >"; <div, className="te, x, t-2xl, m, b-2" >📡</d, i, v>"; <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1" >Technolo, g, y</d, i, v>"; <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0" >Scale, without, team grow, t, h</d, i, v>"; </d, i, v> </d, i, v> </d, i, v> {/* Ca, l, l-to-Action, Button, s */} <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8" >" ======= <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8" >"; <Li, n, k to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-autonomo, u, s-infrastructu, r, e-orchestrati, o, n-revoluti, o, n" classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e r:shad, o, w-2, x, l" > <div, className="flex, item, s-center, justif, y-between, m, b-3" > <Cpu, className="w-8 h-8 /> <ArrowRight, className=" w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>" </d, i, v> <div, className="fo, n, t-bold, tex, t-lg, m, b-2" >Read, Technical, Deep Di, v, e</d, i, v> <div, className="te, x, t-sm, tex, t-cy, a, n-1, 0, 0" > ======= <div, className="flex, item, s-center, justif, y-between, m, b-3" >"; <Cpu, className="w-8 h-8" />"; <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"; </d, i, v> <div, className="fo, n, t-bold, tex, t-lg, m, b-2" >Read, Technical, Deep Di, v, e</d, i, v>"; <div, className="te, x, t-sm, tex, t-cy, a, n-1, 0, 0" >"; 18-min, re, a d: Complete, architectur, e, ML, model, s, Python, code, examples, implementation, roadma, p </d, i, v> </Li, n, k> <Li, n, k to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-glob, a, l-financi, a, l-servic, e, s-autonomo, u, s-infrastructu, r, e-4, 1, 0-milli, o, n-succe, s, s" classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e r:shad, o, w-2, x, l" > <div, className="flex, item, s-center, justif, y-between, m, b-3" > <Shield, className="w-8 h-8 /> <ArrowRight, className=" w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>" </d, i, v> <div, className="fo, n, t-bold, tex, t-lg, m, b-2" >Vi, e, w $410M, Success, Story</d, i, v> <div, className="te, x, t-sm, tex, t-bl, u, e-1, 0, 0" > ======= <div, className="flex, item, s-center, justif, y-between, m, b-3" >"; <Shield, className="w-8 h-8" />"; <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"; </d, i, v> <div, className="fo, n, t-bold, tex, t-lg, m, b-2" >Vi, e, w $410M, Success, Story</d, i, v>"; <div, className="te, x, t-sm, tex, t-bl, u, e-1, 0, 0" >"; Fortune, 100, case st, u, d y: 99.9, 9, 4% upti, m, e, 87% cost, reductio, n, 47x, RO, I, 12-month, journe, y </d, i, v> </Li, n, k> <Li, n, k to="/servic, e, s/autonomo, u, s-infrastructu, r, e-orchestrati, o, n-servic, e, s" classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e r:shad, o, w-2, x, l" > <div, className="flex, item, s-center, justif, y-between, m, b-3" > <Target, className="w-8 h-8 /> <ArrowRight, className=" w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>" ======= <div, className="flex, item, s-center, justif, y-between, m, b-3" >"; <Target, className="w-8 h-8" />"; <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"; </d, i, v> <div, className="fo, n, t-bold, tex, t-lg, m, b-2" >Explore, Service, s & Prici, n, g</d, i, v>"; <div, className="te, x, t-sm, tex, t-purp, l, e-1, 0, 0" >"; Implementation, package, s, managed, service, s, ROI, projection, s, success, guarantee, s; </d, i, v> </Li, n, k> </d, i, v> {/* Free, Assessment, CTA */} <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-8, tex, t-cent, e, r" >"; <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3" >"; 🎁 Fre, e, 2-Week, Infrastructure, Readiness Assessme, n, t; </h3> <p, className="te, x, t-lg, tex, t-whi, t, e/90, m, b-6, ma, x-w-3xl, m, x-au, t, o" >"; Get, a, comprehensive evaluation, of, your infrastructure, readiness, for autonomous, operation, s. Includes, ROI, projection, implementation, roadma, p, and, executive, presentation. No, cos, t. No, obligatio, n. </p> <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r" >" ======= <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r" >"; <Li, n, k to="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-cy, a, n-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-gr, a, y-100, transitio, n-colors, transform, hove r:sca, l, e-1, 0, 5" > Request, Free, Assessment; <ArrowRight, className="w-5 h-5 /> </Li, n, k> <div, className=" te, x, t-white, tex, t-sm"> <Clock, className="w-4 h-4, inline, mr-1 /> ======= <ArrowRight, className=" w-5 h-5" />"; </Li, n, k> <div, className="te, x, t-white, tex, t-sm" >"; <Clock, className="w-4 h-4, inline, mr-1" />"; Typical, assessment, value: $7, 5, K • Yours, fre, e </d, i, v> </d, i, v> </d, i, v> {/* Trust, Indicator, s */} <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r" > <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0" >" ======= <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r" >"; <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0" >"; <d, i, v> <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1" >12+</d, i, v>"; <d, i, v>Fortune, 500, Deployments</d, i, v> </d, i, v> <d, i, v> <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1" >$3.2B</d, i, v>"; <d, i, v>Total, Value, Created</d, i, v> </d, i, v> <d, i, v> <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1" >99.99%</d, i, v>"; <d, i, v>Average, Uptime, Achieved</d, i, v> </d, i, v> <d, i, v> <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1" >4, 2, x</d, i, v>"; <d, i, v>Average, RO, I</d, i, v> </d, i, v> <d, i, v> <div, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-1" >1.8, m, o</d, i, v>"; <d, i, v>Average, Payback, Period</d, i, v> </d, i, v> </d, i, v> </d, i, v> </d, i, v> </d, i, v> ); }; export default October2025AutonomousInfrastructureBanner;'
+import { Shield, TrendingUp, Zap, Target, CheckCircle, ArrowRight, Bot, Cpu, Cloud, Activity, DollarSign, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const October2025AutonomousInfrastructureBanner = () => {
+  return (
+    <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header Section */}
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/40 rounded-full mb-4 animate-pulse">
+            <Bot className="w-5 h-5 text-cyan-400" />
+            <span className="text-cyan-300 font-semibold text-sm">🚀 BREAKING: OCTOBER 1, 2025 — AUTONOMOUS INFRASTRUCTURE REVOLUTION</span>
+            <Bot className="w-5 h-5 text-cyan-400" />
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            Real-Time Autonomous Infrastructure Orchestration
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+              $3.2B Value Created | 99.99% Uptime | 87% Cost Reduction | 42x ROI
+            </span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
+            Predictive incident prevention, autonomous remediation, and zero-touch operations with <strong className="text-cyan-400">97% autonomous success rate</strong>. 
+            Transform from reactive firefighting to proactive excellence.
+          </p>
+        </div>
+
+        {/* Key Metrics Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+            <Target className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+            <div className="text-3xl font-bold text-white mb-1">99.99%</div>
+            <div className="text-sm text-cyan-200">Uptime Achieved</div>
+            <div className="text-xs text-gray-400 mt-1">8.6 sec downtime/year</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+            <DollarSign className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+            <div className="text-3xl font-bold text-white mb-1">87%</div>
+            <div className="text-sm text-blue-200">Cost Reduction</div>
+            <div className="text-xs text-gray-400 mt-1">$111M avg savings</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+            <Zap className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+            <div className="text-3xl font-bold text-white mb-1">97%</div>
+            <div className="text-sm text-purple-200">Zero-Touch Ops</div>
+            <div className="text-xs text-gray-400 mt-1">Fully autonomous</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+            <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-2" />
+            <div className="text-3xl font-bold text-white mb-1">42x</div>
+            <div className="text-sm text-green-200">Average ROI</div>
+            <div className="text-xs text-gray-400 mt-1">1.8-month payback</div>
+          </div>
+        </div>
+
+        {/* Revolutionary Capabilities */}
+        <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            🤖 Revolutionary AI-Powered Capabilities
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">
+                <Activity className="w-6 h-6 text-cyan-400" />
+              </div>
+              <div>
+                <div className="font-semibold text-white mb-1">Predictive Incident Prevention</div>
+                <div className="text-sm text-gray-300">
+                  15-45 minute advance warning with 94% accuracy. Prevent incidents before user impact. AI analyzes 2.3M events/minute.
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
+                <Bot className="w-6 h-6 text-blue-400" />
+              </div>
+              <div>
+                <div className="font-semibold text-white mb-1">Autonomous Self-Healing</div>
+                <div className="text-sm text-gray-300">
+                  97% success rate in under 30 seconds. Automatic rollback on failure. 250+ built-in remediation patterns.
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
+                <Cloud className="w-6 h-6 text-purple-400" />
+              </div>
+              <div>
+                <div className="font-semibold text-white mb-1">Intelligent Cost Optimization</div>
+                <div className="text-sm text-gray-300">
+                  87% cost reduction through real-time right-sizing, idle resource cleanup, and predictive capacity planning.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Fortune 500 Success Story */}
+        <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 mb-10">
+          <div className="flex items-start gap-4 mb-6">
+            <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+              <Shield className="w-8 h-8 text-white" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                Fortune 100 Financial Services: $410M Annual Value Creation
+              </h3>
+              <p className="text-gray-300">
+                $2.3T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries
+              </p>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-6">
+            <div className="bg-black/20 rounded-lg p-4">
+              <div className="text-3xl font-bold text-cyan-400 mb-1">99.994%</div>
+              <div className="text-sm text-gray-300">Uptime Achieved</div>
+              <div className="text-xs text-gray-400 mt-1">3 minutes total downtime/year</div>
+            </div>
+            <div className="bg-black/20 rounded-lg p-4">
+              <div className="text-3xl font-bold text-blue-400 mb-1">$410M</div>
+              <div className="text-sm text-gray-300">Annual Value Created</div>
+              <div className="text-xs text-gray-400 mt-1">47x ROI in 12 months</div>
+            </div>
+            <div className="bg-black/20 rounded-lg p-4">
+              <div className="text-3xl font-bold text-purple-400 mb-1">96%</div>
+              <div className="text-sm text-gray-300">Incident Prevention</div>
+              <div className="text-xs text-gray-400 mt-1">396 incidents prevented</div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-gray-300">
+                <strong className="text-white">Zero critical incidents</strong> during Black Friday (5.2M transactions/second handled)
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-gray-300">
+                <strong className="text-white">87% cost reduction</strong> — Operations cost from $127M to $16M annually
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-gray-300">
+                <strong className="text-white">Team reduced 85 → 12 people</strong> — freed for strategic initiatives, zero layoffs
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-gray-300">
+                <strong className="text-white">2.8-minute MTTR</strong> — down from 4.7 hours (99% improvement)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Industry Applications */}
+        <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            🌍 Proven Across Industries
+          </h3>
+          <div className="grid md:grid-cols-5 gap-4">
+            <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
+              <div className="text-2xl mb-2">🏦</div>
+              <div className="font-semibold text-white text-sm mb-1">Financial Services</div>
+              <div className="text-xs text-gray-400">$410M value, 99.994% uptime</div>
+            </div>
+            <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
+              <div className="text-2xl mb-2">🛒</div>
+              <div className="font-semibold text-white text-sm mb-1">E-Commerce</div>
+              <div className="text-xs text-gray-400">$287M savings, 3x scale</div>
+            </div>
+            <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
+              <div className="text-2xl mb-2">🏥</div>
+              <div className="font-semibold text-white text-sm mb-1">Healthcare</div>
+              <div className="text-xs text-gray-400">99.99% uptime critical systems</div>
+            </div>
+            <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
+              <div className="text-2xl mb-2">🏭</div>
+              <div className="font-semibold text-white text-sm mb-1">Manufacturing</div>
+              <div className="text-xs text-gray-400">Zero production downtime</div>
+            </div>
+            <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
+              <div className="text-2xl mb-2">📡</div>
+              <div className="font-semibold text-white text-sm mb-1">Technology</div>
+              <div className="text-xs text-gray-400">Scale without team growth</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call-to-Action Buttons */}
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <Link
+            to="/blog/ai-2025-oct-real-time-autonomous-infrastructure-orchestration-revolution"
+            className="group bg-gradient-to-br from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="flex items-center justify-between mb-3">
+              <Cpu className="w-8 h-8" />
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </div>
+            <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>
+            <div className="text-sm text-cyan-100">
+              18-min read: Complete architecture, ML models, Python code examples, implementation roadmap
+            </div>
+          </Link>
+
+          <Link
+            to="/case-studies/ai-2025-oct-global-financial-services-autonomous-infrastructure-410-million-success"
+            className="group bg-gradient-to-br from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="flex items-center justify-between mb-3">
+              <Shield className="w-8 h-8" />
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </div>
+            <div className="font-bold text-lg mb-2">View $410M Success Story</div>
+            <div className="text-sm text-blue-100">
+              Fortune 100 case study: 99.994% uptime, 87% cost reduction, 47x ROI, 12-month journey
+            </div>
+          </Link>
+
+          <Link
+            to="/services/autonomous-infrastructure-orchestration-services"
+            className="group bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="flex items-center justify-between mb-3">
+              <Target className="w-8 h-8" />
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </div>
+            <div className="font-bold text-lg mb-2">Explore Services & Pricing</div>
+            <div className="text-sm text-purple-100">
+              Implementation packages, managed services, ROI projections, success guarantees
+            </div>
+          </Link>
+        </div>
+
+        {/* Free Assessment CTA */}
+        <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 rounded-2xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-3">
+            🎁 Free 2-Week Infrastructure Readiness Assessment
+          </h3>
+          <p className="text-lg text-white/90 mb-6 max-w-3xl mx-auto">
+            Get a comprehensive evaluation of your infrastructure readiness for autonomous operations. 
+            Includes ROI projection, implementation roadmap, and executive presentation. No cost. No obligation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105"
+            >
+              Request Free Assessment
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <div className="text-white text-sm">
+              <Clock className="w-4 h-4 inline mr-1" />
+              Typical assessment value: $75K • Yours free
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="mt-10 pt-8 border-t border-white/10 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-gray-400">
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">12+</div>
+              <div>Fortune 500 Deployments</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">$3.2B</div>
+              <div>Total Value Created</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">99.99%</div>
+              <div>Average Uptime Achieved</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">42x</div>
+              <div>Average ROI</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
+              <div>Average Payback Period</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default October2025AutonomousInfrastructureBanner;

@@ -1,1 +1,234 @@
-import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t"; impo, r, t { CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t"; ======= import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";'; impo, r, t { CheckCirc, l, e;' } fr, o, m "luci, d, e-rea, c, t";'; const, NewContentPromoBanne, r: Rea, c, t.FC = () => { con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(tr, u, e); const, feature, s = [ { ic, o, n: <TrendingUp, className="w-5 h-5/>," te, x, t: "AI-Powered, Analytic, s" } { ic, o, n: <Users, className="w-5 h-5/>," te, x, t: "Team, Collaboratio, n" } { ic, o, n: <Zap, className="w-5 h-5/>," te, x, t: "Lightning, Fas, t" } { ic, o, n: <Star, className="w-5 h-5/>," ======= ic, o, n: <TrendingUp, className="w-5 h-5" />,"; te, x, t: "AI-Powered, Analytic, s" } { ic, o, n: <Users, className="w-5 h-5" />,"; te, x, t: "Team, Collaboratio, n" } { ic, o, n: <Zap, className="w-5 h-5" />,"; te, x, t: "Lightning, Fas, t" } { ic, o, n: <Star, className="w-5 h-5" />,"; te, x, t: "Premium, Qualit, y" } ]; if (!isVisib, l, e) return, nul, l; return ( <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-8, p, x-4, relative, overflow-hidd, e, n" >"; {/* Background, Patter, n */} <div, className="absolute, inse, t-0, opacit, y-10" >"; <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" ></d, i, v>"; </d, i, v> <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10" > <div, className="flex, item, s-center, justif, y-betwe, e, n" > <div, className="fl, e, x-1" > <div, className="flex, item, s-center, ga, p-3, m, b-4" > <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e /> <span, className=" bg-yell, o, w-300, tex, t-bl, u, e-900, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d"> ======= <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10" >"; <div, className="flex, item, s-center, justif, y-betwe, e, n" >"; <div, className="fl, e, x-1" >"; <div, className="flex, item, s-center, ga, p-3, m, b-4" >"; <Sparkles, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />"; <span, className="bg-yell, o, w-300, tex, t-bl, u, e-900, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d" >"; NEW, CONTENT, AVAILABLE; </sp, a, n> </d, i, v> <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4" >" ======= <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4" >"; Revolutionary, AI, Breakthroughs 20, 2, 6; </h2> <p, className="te, x, t-lg, tex, t-bl, u, e-100, m, b-6, ma, x-w-2, x, l" >"; Discover, the, latest AI, innovations, that are, transforming, industries worldwi, d, e. Get, exclusive, access to, cuttin, g-edge, research, and implementation, guide, s. </p> <div, className="flex, fle, x-wrap, ga, p-4, m, b-6" >"; {featur, e, s.m, a, p((featu, r, e, ind, e, x) => ( <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, ga, p-2, tex, t-bl, u, e-1, 0, 0"> <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0 /> <span, className=" te, x, t-sm">{featu, r, e.te, x, t}</sp, a, n> ======= <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, ga, p-2, tex, t-bl, u, e-1, 0, 0">"; <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />"; <span, className="te, x, t-sm" >{featu, r, e.te, x, t}</sp, a, n>"; </d, i, v> ))} </d, i, v> <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4" >" <button, className="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, flex, items-center, ga, p-2" >" Explore, Conten, t; <ArrowRight, className="w-4 h-4 /> </butt, o, n> <button, className=" bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-white, hov, e r:te, x, t-bl, u, e-600, transitio, n-colo, r, s">" ======= <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4" >"; <button, className="bg-white, tex, t-bl, u, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, flex, items-center, ga, p-2" >"; Explore, Conten, t; <ArrowRight, className="w-4 h-4" />"; </butt, o, n> <button, className="bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-white, hove, r:te, x, t-bl, u, e-600, transitio, n-colo, r, s" >"; Learn, Mor, e; </butt, o, n> </d, i, v> </d, i, v> <div, className="hidde, n, l g: block, m, l-8" >" <div, className="w-6, 4, h-64, b, g-whi, t, e/10, rounde, d-full, flex, items-center, justif, y-center, backdro, p-bl, u, r-sm" > <div, className="te, x, t-cent, e, r" > <div, className="te, x, t-4xl, fon, t-bold, m, b-2" >20, 2, 6</d, i, v> <div, className="te, x, t-lg, tex, t-bl, u, e-1, 0, 0" >AI, Revolutio, n</d, i, v> ======= <div, className="hidden, l, g: block, m, l-8" >"; <div, className="w-6, 4, h-64, b, g-whi, t, e/10, rounde, d-full, flex, items-center, justif, y-center, backdro, p-bl, u, r-sm" >"; <div, className="te, x, t-cent, e, r" >"; <div, className="te, x, t-4xl, fon, t-bold, m, b-2" >20, 2, 6</d, i, v>"; <div, className="te, x, t-lg, tex, t-bl, u, e-1, 0, 0" >AI, Revolutio, n</d, i, v>"; </d, i, v> </d, i, v> </d, i, v> </d, i, v> </d, i, v> {/* Close, Butto, n */} <butt, o, n onCli, c, k={() => setIsVisib, l, e(fal, s, e)} classNa, m, e="absolute, to, p-4, righ, t-4, tex, t-whi, t, e/70, hove, r: te, x, t-white, transitio, n-colo, r, s" ar, i, a-lab, e, l="Close, banne, r" > <svg, className="w-6 h-6" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24"> <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6, 18L18, 6M6 6l12, 1, 2 /> ======= <svg, className="w-6 h-6" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">"; <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M6, 18L18, 6M6 6l12, 1, 2" />"; </s, v, g> </butt, o, n> </d, i, v> ); }; export, default, React.me, m, o(NewContentPromoBann, e, r);'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Sparkles, 
+  ArrowRight, 
+  X, 
+  BookOpen, 
+  TrendingUp, 
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Star
+} from 'lucide-react';
+
+interface NewContentPromoBannerProps {
+  variant?: 'info' | 'premium' | 'success' | 'warning';
+  className?: string;
+}
+
+const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
+  variant = 'premium', 
+  className = '' 
+}) => {
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  const variants = {
+    info: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-blue-400/30',
+    premium: 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-400/30',
+    success: 'bg-gradient-to-r from-green-500 to-emerald-500 text-white border-green-400/30',
+    warning: 'bg-gradient-to-r from-orange-500 to-red-500 text-white border-orange-400/30'
+  };
+
+  const featuredContent = [
+    {
+      title: "AI Safety Budgets 2026",
+      description: "Guardrails wired to KPIs, approvals, rollbacks",
+      icon: Shield,
+      link: "/blog/ai-safety-budgets-2026",
+      category: "AI Strategy"
+    },
+    {
+      title: "Edge Privacy for ML 2026",
+      description: "On‑device filters and scoped identifiers",
+      icon: Cloud,
+      link: "/blog/edge-privacy-ml-2026",
+      category: "Edge"
+    },
+    {
+      title: "Agent Evals in Prod 2026",
+      description: "Online checks that predict outcomes",
+      icon: TrendingUp,
+      link: "/blog/agent-evals-in-prod-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Cost‑Aware Inference 2026",
+      description: "Warm pools and quality tiers under SLAs",
+      icon: Zap,
+      link: "/blog/ai-cost-aware-inference-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Platform Golden Paths 2026",
+      description: "Paved roads that move KPIs",
+      icon: TrendingUp,
+      link: "/blog/platform-golden-paths-kpis-2026",
+      category: "Platform"
+    },
+    {
+      title: "Quality‑Tiered GenAI Routing 2026",
+      description: "Control cost with tiers, caches, and eval signals",
+      icon: Zap,
+      link: "/blog/genai-routing-under-budgets-2026",
+      category: "GenAI"
+    },
+    {
+      title: "On‑Device Agents 2026",
+      description: "Offline‑capable tools, private caches, safe fallbacks",
+      icon: Cloud,
+      link: "/blog/on-device-agents-offline-tools-2026",
+      category: "Edge"
+    },
+    {
+      title: "Zero‑Trust Observability 2026",
+      description: "Signed traces and least‑privilege telemetry",
+      icon: Shield,
+      link: "/blog/zero-trust-observability-2026",
+      category: "Security"
+    },
+    {
+      title: "AI Incident Response Playbooks",
+      description: "Contain incidents in under 60 seconds",
+      icon: TrendingUp,
+      link: "/blog/ai-incident-response-playbooks-2025",
+      category: "Security"
+    },
+    {
+      title: "Agentic Workflows Blueprint 2026",
+      description: "Compose multi‑tool agents with safe tools and policy tests in CI",
+      icon: TrendingUp,
+      link: "/blog/agentic-workflows-blueprint-2026",
+      category: "GenAI"
+    },
+    {
+      title: "Edge LLM Caching",
+      description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
+      icon: Zap,
+      link: "/blog/edge-llm-caching-blueprint-2025",
+      category: "Architecture"
+    },
+    {
+      title: "AI Operational Scorecards 2026",
+      description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
+      icon: Brain,
+      link: "/blog/ai-operational-scorecards-2026",
+      category: "AI Strategy"
+    }
+  ];
+
+  if (isDismissed) return null;
+
+  return (
+    <div className={`${variants[variant]} ${className} relative overflow-hidden`}>
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-3">
+              <Sparkles className="w-6 h-6 animate-pulse" />
+              <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
+              <Star className="w-5 h-5 animate-spin" />
+            </div>
+            
+            <h3 className="text-xl font-bold mb-2">
+              Just Published: New Guides for 2026
+            </h3>
+            
+            <p className="text-white/90 mb-4 text-sm">
+              Discover fresh insights on on‑device agents, GenAI cost controls, secure tool marketplaces,
+              and privacy‑first observability.
+            </p>
+
+            {/* Featured content grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              {featuredContent.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon className="w-4 h-4 text-white/80" />
+                      <span className="text-xs font-medium text-white/80">{item.category}</span>
+                    </div>
+                    <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs text-white/70 mt-1 line-clamp-2">
+                      {item.description}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/blog"
+                className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <BookOpen className="w-4 h-4" />
+                Read All Articles
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              
+              <Link
+                to="/case-studies"
+                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <TrendingUp className="w-4 h-4" />
+                View Case Studies
+              </Link>
+
+              <Link
+                to="/services"
+                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+              >
+                <Shield className="w-4 h-4" />
+                Explore Services
+              </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">13</span>
+                <span>New Articles</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">3</span>
+                <span>New Case Studies</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span className="font-semibold">50+</span>
+                <span>Expert Insights</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Dismiss button */}
+          <button
+            onClick={() => setIsDismissed(true)}
+            className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
+            aria-label="Dismiss banner"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default React.memo(NewContentPromoBanner);

@@ -1,1 +1,220 @@
-import React from "react"; ======= import React from "react";'; const, January2025EnterpriseSuccessBanne, r: Rea, c, t.FC = () => { return ( <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-gr, a, y-900, t, o-sla, t, e-8, 0, 0" >"; {/* Background, Patter, n */}' <div, className="absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/gr, i, d-patte, r, n.s, v, g')] opaci, t, y-5" ></d, i, v> <div, className="absolute, to, p-0, righ, t-0 w-9, 6, h-96, b, g-gradie, n, t-to-bl, fro, m-bl, u, e-5, 0, 0/10, t, o-transparent, rounde, d-full, blu, r-3, x, l" ></d, i, v> <div, className="absolute, botto, m-0, lef, t-0 w-9, 6, h-96, b, g-gradie, n, t-to-tr, fro, m-emera, l, d-5, 0, 0/10, t, o-transparent, rounde, d-full, blu, r-3, x, l" ></d, i, v> <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l g:px-8, p, y-20" >" <div, className="te, x, t-center, m, b-16" > <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-400, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-medium, m, b-8" > <Award, className="w-5 h-5 /> <sp, a, n>ENTERPRISE, SUCCESS, STORIES</sp, a, n> </d, i, v> <h2, className=" te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">" <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-emera, l, d-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t" > =======' <div, className="absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/gr, i, d-patte, r, n.s, v, g')] opaci, t, y-5" ></d, i, v>"; <div, className="absolute, to, p-0, righ, t-0 w-9, 6, h-96, b, g-gradie, n, t-to-bl, fro, m-bl, u, e-5, 0, 0/10, t, o-transparent, rounde, d-full, blu, r-3, x, l" ></d, i, v>"; <div, className="absolute, botto, m-0, lef, t-0 w-9, 6, h-96, b, g-gradie, n, t-to-tr, fro, m-emera, l, d-5, 0, 0/10, t, o-transparent, rounde, d-full, blu, r-3, x, l" ></d, i, v>"; <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20" >"; <div, className="te, x, t-center, m, b-16" >"; <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-400, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-medium, m, b-8" >"; <Award, className="w-5 h-5" />"; <sp, a, n>ENTERPRISE, SUCCESS, STORIES</sp, a, n> </d, i, v> <h2, className="te, x, t-4x, l, m d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t" >"; <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-emera, l, d-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t" >"; Real, Result, s; </sp, a, n> <br /> <span, className="te, x, t-whi, t, e" >From, Real, Companies</sp, a, n>"; </h2> <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12" > Discover, how, Fortune 500, companies, are achieving, unprecedented, success with, A, I-powered, transformation, s; ======= <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12" >"; Discover, how, Fortune 500, companies, are achieving, unprecedented, success with, A, I-powered, transformation, s generating, billions, in value, and, revolutionizing their, industrie, s. </p> </d, i, v> {/* Success, Stories, Grid */} <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-8, m, b-16" >" {/* Manufacturing, Transformatio, n */} <div, className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e r:sca, l, e-[1.02]" >" <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/5, t, o-emera, l, d-5, 0, 0/5, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0" ></d, i, v>" <div, className="relati, v, e" > <div, className="flex, item, s-center, ga, p-4, m, b-6" > <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl" > <Building2, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0 /> ======= <div, className=" grid, l, g: gr, i, d-co, l, s-2, ga, p-8, m, b-16">"; {/* Manufacturing, Transformatio, n */} <div, className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-[1.02]" >"; <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/5, t, o-emera, l, d-5, 0, 0/5, rounde, d-3xl, opacit, y-0, grou, p-ho, v, e r: opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0" ></d, i, v>"; <div, className="relati, v, e" >"; <div, className="flex, item, s-center, ga, p-4, m, b-6" >"; <div, className="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl" >"; <Building2, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0" />"; </d, i, v> <d, i, v> <h3, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e" >Global, Manufacturing, Corp</h3>"; <p, className="te, x, t-gr, a, y-4, 0, 0" >Fortune, 50, 0 • Manufacturi, n, g</p>"; </d, i, v> </d, i, v> <p, className="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d" >"; Complete, AI, transformation across, 450, global faciliti, e, s, achieving, 9, 9.99% operational, autonom, y a, n, d $3.7B, in, annual value, creatio, n. </p> <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6" >"; <div, className="bg-whi, t, e/5, rounde, d-x, l, p-4" >"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-400, m, b-1" >99.99%</d, i, v>"; <div, className="te, x, t-gr, a, y-400, tex, t-sm" >Operational, Uptim, e</d, i, v>"; </d, i, v> <div, className="bg-whi, t, e/5, rounde, d-x, l, p-4" >"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-400, m, b-1" >$3.7B</d, i, v>"; <div, className="te, x, t-gr, a, y-400, tex, t-sm" >Annual, Valu, e</d, i, v>"; </d, i, v> </d, i, v> <Li, n, k to="/ca, s, e-studi, e, s/fortu, n, e-5, 0, 0-ai-transformati, o, n" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, hove, r: te, x, t-bl, u, e-300, fon, t-medium, transitio, n-colo, r, s" > Read, Full, Case Stu, d, y; <ArrowRight, className="w-4 h-4 /> ======= <ArrowRight, className=" w-4 h-4" />"; </Li, n, k> </d, i, v> </d, i, v> {/* Financial, Service, s */} <div, className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hov, e r:sca, l, e-[1.02]" >" <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/5, t, o-bl, u, e-5, 0, 0/5, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0" ></d, i, v>" <div, className="relati, v, e" > <div, className="flex, item, s-center, ga, p-4, m, b-6" > <div, className="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl" > <TrendingUp, className="w-8 h-8, tex, t-emera, l, d-4, 0, 0 /> ======= <div, className=" group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-[1.02]">"; <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/5, t, o-bl, u, e-5, 0, 0/5, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0" ></d, i, v>"; <div, className="relati, v, e" >"; <div, className="flex, item, s-center, ga, p-4, m, b-6" >"; <div, className="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl" >"; <TrendingUp, className="w-8 h-8, tex, t-emera, l, d-4, 0, 0" />"; </d, i, v> <d, i, v> <h3, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e" >Global, Financial, Services</h3>"; <p, className="te, x, t-gr, a, y-4, 0, 0" >Fortune, 10, 0 • Financial, Service, s</p>"; </d, i, v> </d, i, v> <p, className="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d" >"; Advanced, AI, fraud detection, preventin, g $47B, in, fraudulent transactions, with, 99.94% accura, c, y and, rea, l-time, processing, capabilities. </p> <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6" >"; <div, className="bg-whi, t, e/5, rounde, d-x, l, p-4" >"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-400, m, b-1" >99.94%</d, i, v>"; <div, className="te, x, t-gr, a, y-400, tex, t-sm" >Detection, Accurac, y</d, i, v>"; </d, i, v> <div, className="bg-whi, t, e/5, rounde, d-x, l, p-4" >"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-400, m, b-1" >$4, 7, B</d, i, v>"; <div, className="te, x, t-gr, a, y-400, tex, t-sm" >Fraud, Prevente, d</d, i, v>"; </d, i, v> </d, i, v> <Li, n, k to="/ca, s, e-studi, e, s/financi, a, l-servic, e, s-fra, u, d-preventi, o, n" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, hov, e r: te, x, t-emera, l, d-300, fon, t-medium, transitio, n-colo, r, s" > Read, Full, Case Stu, d, y; <ArrowRight, className="w-4 h-4 /> ======= <ArrowRight, className=" w-4 h-4" />"; </Li, n, k> </d, i, v> </d, i, v> </d, i, v> {/* Additional, Success, Stories */} <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-16" >" {/* Healthca, r, e */} <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0" >" <div, className="flex, item, s-center, ga, p-3, m, b-4" > <div, className="p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg" > <Users, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0 /> ======= <div, className=" grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-16">"; {/* Healthca, r, e */} <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0" >"; <div, className="flex, item, s-center, ga, p-3, m, b-4" >"; <div, className="p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg" >"; <Users, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />"; </d, i, v> <d, i, v> <h4, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e" >Regional, Healthcar, e</h4>"; <p, className="te, x, t-gr, a, y-400, tex, t-sm" >Healthcare, Networ, k</p>"; </d, i, v> </d, i, v> <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4" >"; AI, diagnostic, system achieving, 9, 4% accuracy, and, saving 252, lives, with 4, 9, 7% R, O, I. </p> <div, className="flex, item, s-center, justif, y-betwe, e, n" > <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d" >$1.5B, Valu, e</sp, a, n> <Link, t, o="/ca, s, e-studi, e, s/healthca, r, e-ai-diagnost, i, c-syst, e, m" classNa, m, e="te, x, t-purp, l, e-400, hov, e r: te, x, t-purp, l, e-3, 0, 0">" <ArrowRight, className="w-4 h-4 /> ======= <div, className=" flex, item, s-center, justif, y-betwe, e, n">"; <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d" >$1.5B, Valu, e</sp, a, n>"; <Link, t, o="/ca, s, e-studi, e, s/healthca, r, e-ai-diagnost, i, c-syst, e, m" classNa, m, e="te, x, t-purp, l, e-400, hove, r: te, x, t-purp, l, e-3, 0, 0">"; <ArrowRight, className="w-4 h-4" />"; </Li, n, k> </d, i, v> </d, i, v> {/* Reta, i, l */} <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0" >" <div, className="flex, item, s-center, ga, p-3, m, b-4" > <div, className="p-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-lg" > <Zap, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0 /> ======= <div, className=" bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">"; <div, className="flex, item, s-center, ga, p-3, m, b-4" >"; <div, className="p-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-lg" >"; <Zap, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />"; </d, i, v> <d, i, v> <h4, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e" >Global, Retail, Corp</h4>"; <p, className="te, x, t-gr, a, y-400, tex, t-sm" >Retail, Chai, n</p>"; </d, i, v> </d, i, v> <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4" >"; Supply, chain, optimization achieving, 6, 5% faster, deliveries, and 40% cost, reductio, n. </p> <div, className="flex, item, s-center, justif, y-betwe, e, n" > <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d" >2,8, 0, 0% R, O, I</sp, a, n> <Link, t, o="/ca, s, e-studi, e, s/reta, i, l-supp, l, y-cha, i, n-optimizati, o, n" classNa, m, e="te, x, t-bl, u, e-400, hove, r: te, x, t-bl, u, e-3, 0, 0">" <ArrowRight, className="w-4 h-4 /> ======= <div, className=" flex, item, s-center, justif, y-betwe, e, n">"; <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d" >2,8, 0, 0% R, O, I</sp, a, n>"; <Link, t, o="/ca, s, e-studi, e, s/reta, i, l-supp, l, y-cha, i, n-optimizati, o, n" classNa, m, e="te, x, t-bl, u, e-400, hove, r: te, x, t-bl, u, e-3, 0, 0">"; <ArrowRight, className="w-4 h-4" />"; </Li, n, k> </d, i, v> </d, i, v> {/* Ener, g, y */} <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0" >" <div, className="flex, item, s-center, ga, p-3, m, b-4" > <div, className="p-2, b, g-emera, l, d-5, 0, 0/20, rounde, d-lg" > <Award, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0 /> ======= <div, className=" bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">"; <div, className="flex, item, s-center, ga, p-3, m, b-4" >"; <div, className="p-2, b, g-emera, l, d-5, 0, 0/20, rounde, d-lg" >"; <Award, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />"; </d, i, v> <d, i, v> <h4, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e" >Energy, Utilit, y</h4>"; <p, className="te, x, t-gr, a, y-400, tex, t-sm" >Smart, Gri, d</p>"; </d, i, v> </d, i, v> <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4" >"; Smart, grid, AI achieving, 9, 9.97% uptime, an, d $890M, annual, savings. </p> <div, className="flex, item, s-center, justif, y-betwe, e, n" > <span, className="te, x, t-emera, l, d-400, fon, t-bo, l, d" >1,6, 0, 0% R, O, I</sp, a, n> <Link, t, o="/ca, s, e-studi, e, s/ener, g, y-sect, o, r-sma, r, t-gr, i, d" classNa, m, e="te, x, t-emera, l, d-400, hove, r: te, x, t-emera, l, d-3, 0, 0">" <ArrowRight, className="w-4 h-4 /> ======= <div, className=" flex, item, s-center, justif, y-betwe, e, n">"; <span, className="te, x, t-emera, l, d-400, fon, t-bo, l, d" >1,6, 0, 0% R, O, I</sp, a, n>"; <Link, t, o="/ca, s, e-studi, e, s/ener, g, y-sect, o, r-sma, r, t-gr, i, d" classNa, m, e="te, x, t-emera, l, d-400, hove, r: te, x, t-emera, l, d-3, 0, 0">"; <ArrowRight, className="w-4 h-4" />"; </Li, n, k> </d, i, v> </d, i, v> </d, i, v> {/* Call, to, Action */} <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/10" > <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-6" > <Star, className="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t /> <h3, className=" te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Ready, to, Transform Your, Enterpris, e?</h3> </d, i, v> <p, className="te, x, t-gr, a, y-300, tex, t-lg, m, b-8, ma, x-w-2xl, m, x-au, t, o" > Join, 50, 0+ enterprise, clients, who have, already, transformed their, operations, with AI generating, billions, in value, and, achieving unprecedented, efficienc, y. </p> <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4" >" ======= <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/10" >"; <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-6" >"; <Star, className="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t" />"; <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e" >Ready, to, Transform Your, Enterpris, e?</h3>"; </d, i, v> <p, className="te, x, t-gr, a, y-300, tex, t-lg, m, b-8, ma, x-w-2xl, m, x-au, t, o" >"; Join, 50, 0+ enterprise, clients, who have, already, transformed their, operations, with AI generating, billions, in value, and, achieving unprecedented, efficienc, y. </p> <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4" >"; <Li, n, k to="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r: fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, transform, hove r:sca, l, e-1, 0, 5" > <CheckCircle, className="w-5 h-5 /> ======= <CheckCircle, className=" w-5 h-5" />"; Start, Your, AI Transformati, o, n; </Li, n, k> <Li, n, k to="/ca, s, e-studi, e, s" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0" > View, All, Success Stori, e, s; <ArrowRight, className="w-5 h-5 /> ======= <ArrowRight, className=" w-5 h-5" />"; </Li, n, k> </d, i, v> </d, i, v> </d, i, v> </d, i, v> ); }; export default January2025EnterpriseSuccessBanner;'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Building2, TrendingUp, Award, Users, ArrowRight, Star, CheckCircle, Zap } from 'lucide-react';
+
+const January2025EnterpriseSuccessBanner: React.FC = () => {
+  return (
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-emerald-500/10 to-transparent rounded-full blur-3xl"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-8">
+            <Award className="w-5 h-5" />
+            <span>ENTERPRISE SUCCESS STORIES</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">
+              Real Results
+            </span>
+            <br />
+            <span className="text-white">From Real Companies</span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
+            Discover how Fortune 500 companies are achieving unprecedented success with AI-powered transformations, 
+            generating billions in value and revolutionizing their industries.
+          </p>
+        </div>
+
+        {/* Success Stories Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          {/* Manufacturing Transformation */}
+          <div className="group relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="relative">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-blue-500/20 rounded-xl">
+                  <Building2 className="w-8 h-8 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Global Manufacturing Corp</h3>
+                  <p className="text-gray-400">Fortune 500 • Manufacturing</p>
+                </div>
+              </div>
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Complete AI transformation across 450 global facilities, achieving 99.99% operational autonomy 
+                and $3.7B in annual value creation.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-white/5 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-emerald-400 mb-1">99.99%</div>
+                  <div className="text-gray-400 text-sm">Operational Uptime</div>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-blue-400 mb-1">$3.7B</div>
+                  <div className="text-gray-400 text-sm">Annual Value</div>
+                </div>
+              </div>
+              
+              <Link 
+                to="/case-studies/fortune-500-ai-transformation"
+                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+              >
+                Read Full Case Study
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Financial Services */}
+          <div className="group relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="relative">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-emerald-500/20 rounded-xl">
+                  <TrendingUp className="w-8 h-8 text-emerald-400" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Global Financial Services</h3>
+                  <p className="text-gray-400">Fortune 100 • Financial Services</p>
+                </div>
+              </div>
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Advanced AI fraud detection preventing $47B in fraudulent transactions with 99.94% accuracy 
+                and real-time processing capabilities.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-white/5 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-emerald-400 mb-1">99.94%</div>
+                  <div className="text-gray-400 text-sm">Detection Accuracy</div>
+                </div>
+                <div className="bg-white/5 rounded-xl p-4">
+                  <div className="text-2xl font-bold text-purple-400 mb-1">$47B</div>
+                  <div className="text-gray-400 text-sm">Fraud Prevented</div>
+                </div>
+              </div>
+              
+              <Link 
+                to="/case-studies/financial-services-fraud-prevention"
+                className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+              >
+                Read Full Case Study
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Success Stories */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {/* Healthcare */}
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-purple-500/20 rounded-lg">
+                <Users className="w-6 h-6 text-purple-400" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-white">Regional Healthcare</h4>
+                <p className="text-gray-400 text-sm">Healthcare Network</p>
+              </div>
+            </div>
+            <p className="text-gray-300 text-sm mb-4">
+              AI diagnostic system achieving 94% accuracy and saving 252 lives with 497% ROI.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-purple-400 font-bold">$1.5B Value</span>
+              <Link to="/case-studies/healthcare-ai-diagnostic-system" className="text-purple-400 hover:text-purple-300">
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Retail */}
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-blue-500/20 rounded-lg">
+                <Zap className="w-6 h-6 text-blue-400" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-white">Global Retail Corp</h4>
+                <p className="text-gray-400 text-sm">Retail Chain</p>
+              </div>
+            </div>
+            <p className="text-gray-300 text-sm mb-4">
+              Supply chain optimization achieving 65% faster deliveries and 40% cost reduction.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-blue-400 font-bold">2,800% ROI</span>
+              <Link to="/case-studies/retail-supply-chain-optimization" className="text-blue-400 hover:text-blue-300">
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Energy */}
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-emerald-400/50 transition-all duration-300">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-emerald-500/20 rounded-lg">
+                <Award className="w-6 h-6 text-emerald-400" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-white">Energy Utility</h4>
+                <p className="text-gray-400 text-sm">Smart Grid</p>
+              </div>
+            </div>
+            <p className="text-gray-300 text-sm mb-4">
+              Smart grid AI achieving 99.97% uptime and $890M annual savings.
+            </p>
+            <div className="flex items-center justify-between">
+              <span className="text-emerald-400 font-bold">1,600% ROI</span>
+              <Link to="/case-studies/energy-sector-smart-grid" className="text-emerald-400 hover:text-emerald-300">
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Star className="w-6 h-6 text-yellow-400 fill-current" />
+            <h3 className="text-3xl font-bold text-white">Ready to Transform Your Enterprise?</h3>
+          </div>
+          
+          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            Join 500+ enterprise clients who have already transformed their operations with AI, 
+            generating billions in value and achieving unprecedented efficiency.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
+            >
+              <CheckCircle className="w-5 h-5" />
+              Start Your AI Transformation
+            </Link>
+            <Link
+              to="/case-studies"
+              className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
+            >
+              View All Success Stories
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default January2025EnterpriseSuccessBanner;

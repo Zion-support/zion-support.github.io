@@ -1,1 +1,156 @@
-const, October2025LatestPremiumContentBanne, r = () => { return ( <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6 l g:px-8, shado, w-2xl, relative, overflow-hidd, e, n" > {/* Animated, background, effects */ }; <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" ></d, i, v> <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: ima, g, e/s, v, g+x, m, l;base, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" ></d, i, v>" <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10" > <div, className="flex, fle, x-col, l, g: fl, e, x-row, item, s-star, t, l g:ite, m, s-center, justif, y-between, ga, p-6" >" <div, className="fl, e, x-1" > <div, className="flex, item, s-center, ga, p-3, m, b-3" > <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e" > ======= <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6 l g:px-8, shado, w-2xl, relative, overflow-hidd, e, n" >,"; {/* Animated, background, effects */ }; <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" ></d, i, v>";' <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: ima, g, e/s, v, g+x, m, l;base, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" ></d, i, v>"; <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10" >"; <div, className="flex, fle, x-col, l, g: fl, e, x-row, item, s-star, t, l g:ite, m, s-center, justif, y-between, ga, p-6" >"; <div, className="fl, e, x-1" >"; <div, className="flex, item, s-center, ga, p-3, m, b-3" >"; <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e" >"; 🔥 JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5; </sp, a, n> <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30" >"; PREMIUM, CONTEN, T; </sp, a, n> </d, i, v> <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t" >" 🚀 3, Revolutionary, AI Breakthroug, h, s — Transform, Your, Enterprise Tod, a, y! </h2> <p, className="te, x, t-lg, tex, t-purp, l, e-100, m, b-4, ma, x-w-4xl, leadin, g-relax, e, d" > ======= <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t" >"; 🚀 3, Revolutionary, AI Breakthroug, h, s — Transform, Your, Enterprise Tod, a, y! </h2> <p, className="te, x, t-lg, tex, t-purp, l, e-100, m, b-4, ma, x-w-4xl, leadin, g-relax, e, d" >"; ⚡ <stro, n, g>BRAND, NEW, RELEASE S: </stro, n, g> Deploy, Autonomous, Data Governance, achieving, 99.98% compliance, accuracy, with $4.2B, risk, mitigation, implement, Neural, Fraud Detection, preventin, g $8.7B, in, losses with, su, b-50ms, response, times, and, master, Cognitive Workflow, Orchestration, delivering 98.7% automation, wit, h $6.3B, value, creation! </p> {/* Featured, Stat, s */} <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, m, b-4" >" <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20" > <div, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0" >$19.2B+</d, i, v> <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0" >Total, Value, Created</d, i, v> ======= <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, m, b-4" >"; <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20" >"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0" >$19.2B+</d, i, v>"; <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0" >Total, Value, Created</d, i, v>"; </d, i, v> <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20" >"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0" >99.87%</d, i, v>"; <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0" >Average, Accurac, y</d, i, v>"; </d, i, v> <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20" >"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0" >3,2, 7, 6%</d, i, v>"; <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0" >Average, RO, I</d, i, v>"; </d, i, v> <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20" >"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0" >2,5, 0, 0+</d, i, v>"; <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0" >Enterprises, Transforme, d</d, i, v>"; </d, i, v> </d, i, v> {/* Featured, Article, s */} <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4" >" ======= <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4" >"; <Li, n, k to="/bl, o, g/ai-20, 2, 5-autonomo, u, s-da, t, a-governan, c, e-revoluti, o, n" classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-indi, g, o-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-purp, l, e-400, hove, r:shad, o, w-xl, hov, e r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" > <div, className="flex, item, s-start, ga, p-3, m, b-2" > <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1 /> <d, i, v> <h3, className=" fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">" ======= <div, className="flex, item, s-start, ga, p-3, m, b-2" >"; <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1" />"; <d, i, v> <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s" >"; 🛡️ Autonomous, Data, Governance Revoluti, o, n; </h3> <p, className="te, x, t-xs, tex, t-purp, l, e-200, m, b-2" >"; 99.98% compliance, accurac, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I; </p> <div, className="flex, item, s-center, ga, p-2, tex, t-xs" > <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0 /> <span, className=" te, x, t-purp, l, e-3, 0, 0">Se, l, f-Regulating, System, s</sp, a, n> ======= <div, className="flex, item, s-center, ga, p-2, tex, t-xs" >"; <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />"; <span, className="te, x, t-purp, l, e-3, 0, 0" >Se, l, f-Regulating, System, s</sp, a, n>"; </d, i, v> </d, i, v> </d, i, v> </Li, n, k> <Li, n, k to="/bl, o, g/ai-20, 2, 5-neur, a, l-fra, u, d-detecti, o, n-revoluti, o, n" classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-6, 0, 0/30, t, o-oran, g, e-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-r, e, d-400, hove, r:shad, o, w-xl, hov, e r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" > <div, className="flex, item, s-start, ga, p-3, m, b-2" > <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1 /> <d, i, v> <h3, className=" fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-r, e, d-200, transitio, n-colo, r, s">" ======= <div, className="flex, item, s-start, ga, p-3, m, b-2" >"; <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1" />"; <d, i, v> <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-r, e, d-200, transitio, n-colo, r, s" >"; 🧠 Neural, Fraud, Detection Revoluti, o, n; </h3> <p, className="te, x, t-xs, tex, t-r, e, d-200, m, b-2" >"; 99.96% detection, accurac, y, $8.7B, losses, prevented, s, u, b-50ms, respons, e, 3,2, 4, 7% R, O, I; </p> <div, className="flex, item, s-center, ga, p-2, tex, t-xs" > <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0 /> <span, className=" te, x, t-r, e, d-3, 0, 0">Re, a, l-Time, Protectio, n</sp, a, n> ======= <div, className="flex, item, s-center, ga, p-2, tex, t-xs" >"; <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />"; <span, className="te, x, t-r, e, d-3, 0, 0" >Re, a, l-Time, Protectio, n</sp, a, n>"; </d, i, v> </d, i, v> </d, i, v> </Li, n, k> <Li, n, k to="/bl, o, g/ai-20, 2, 5-cogniti, v, e-workfl, o, w-orchestrati, o, n-maste, r, y" classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/30, t, o-cy, a, n-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-bl, u, e-400, hove, r:shad, o, w-xl, hov, e r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" > <div, className="flex, item, s-start, ga, p-3, m, b-2" > <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1 /> <d, i, v> <h3, className=" fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">" ======= <div, className="flex, item, s-start, ga, p-3, m, b-2" >"; <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" />"; <d, i, v> <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s" >"; ⚡ Cognitive, Workflow, Orchestration; </h3> <p, className="te, x, t-xs, tex, t-bl, u, e-200, m, b-2" >"; 98.7% automation, rat, e, $6.3B, value, creation, 89% faster, executio, n, 3,7, 4, 2% R, O, I; </p> <div, className="flex, item, s-center, ga, p-2, tex, t-xs" > <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0 /> <span, className=" te, x, t-bl, u, e-3, 0, 0">Intelligent, Automatio, n</sp, a, n> ======= <div, className="flex, item, s-center, ga, p-2, tex, t-xs" >"; <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />"; <span, className="te, x, t-bl, u, e-3, 0, 0" >Intelligent, Automatio, n</sp, a, n>"; </d, i, v> </d, i, v> </d, i, v> </Li, n, k> </d, i, v> {/* Key, Benefit, s */} <div, className="flex, fle, x-wrap, ga, p-3" > <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0" > <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0 /> <sp, a, n>Enterpri, s, e-Proven, Result, s</sp, a, n> </d, i, v> <div, className=" flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0"> <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0 /> <sp, a, n>Producti, o, n-Ready, System, s</sp, a, n> </d, i, v> <div, className=" flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0"> <Shield, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0 /> ======= <div, className=" flex, fle, x-wrap, ga, p-3">"; <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0" >"; <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />"; <sp, a, n>Enterpri, s, e-Proven, Result, s</sp, a, n> </d, i, v> <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0" >"; <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />"; <sp, a, n>Producti, o, n-Ready, System, s</sp, a, n> </d, i, v> <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0" >"; <Shield, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />"; <sp, a, n>Fortune, 500, Trusted</sp, a, n> </d, i, v> </d, i, v> </d, i, v> <div, className="flex, fle, x-col, ga, p-3, l, g: ml-6" >" ======= <div, className="flex, fle, x-col, ga, p-3, l, g: ml-6" >"; <Li, n, k to="/bl, o, g" classNa, m, e="group, inlin, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-purp, l, e-600, hove, r:to-indi, g, o-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hov, e r:sca, l, e-105, whitespac, e-nowr, a, p" > <span, className="mr-2" >Explore, All, 3 Breakthroug, h, s</sp, a, n> <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>" ======= <span, className="mr-2">Explore, All, 3 Breakthroug, h, s</sp, a, n>"; <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"; </Li, n, k> <Li, n, k to="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/20, hov, e r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-300, whitespac, e-nowr, a, p" > Schedule, Enterprise, Demo; </Li, n, k> </d, i, v> </d, i, v> </d, i, v> </d, i, v> ); }; export default October2025LatestPremiumContentBanner;'
+import { ArrowRight, Shield, Brain, Workflow, TrendingUp, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const October2025LatestPremiumContentBanner = () => {
+  return (
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-y border-purple-500/30 py-6 px-4 sm:px-6 lg:px-8 shadow-2xl relative overflow-hidden">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-blue-500/10 animate-pulse"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 shadow-lg animate-pulse">
+                🔥 JUST PUBLISHED - OCTOBER 1, 2025
+              </span>
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-200 border border-purple-400/30">
+                PREMIUM CONTENT
+              </span>
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 leading-tight">
+              🚀 3 Revolutionary AI Breakthroughs — Transform Your Enterprise Today!
+            </h2>
+            
+            <p className="text-lg text-purple-100 mb-4 max-w-4xl leading-relaxed">
+              ⚡ <strong>BRAND NEW RELEASES:</strong> Deploy Autonomous Data Governance achieving 99.98% compliance accuracy with $4.2B risk mitigation, implement Neural Fraud Detection preventing $8.7B in losses with sub-50ms response times, and master Cognitive Workflow Orchestration delivering 98.7% automation with $6.3B value creation!
+            </p>
+
+            {/* Featured Stats */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                <div className="text-2xl font-bold text-yellow-400">$19.2B+</div>
+                <div className="text-xs text-purple-200">Total Value Created</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                <div className="text-2xl font-bold text-green-400">99.87%</div>
+                <div className="text-xs text-purple-200">Average Accuracy</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                <div className="text-2xl font-bold text-blue-400">3,276%</div>
+                <div className="text-xs text-purple-200">Average ROI</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                <div className="text-2xl font-bold text-purple-400">2,500+</div>
+                <div className="text-xs text-purple-200">Enterprises Transformed</div>
+              </div>
+            </div>
+
+            {/* Featured Articles */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+              <Link
+                to="/blog/ai-2025-autonomous-data-governance-revolution"
+                className="group bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4 hover:border-purple-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                <div className="flex items-start gap-3 mb-2">
+                  <Shield className="w-6 h-6 text-purple-300 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-bold text-white text-sm mb-1 group-hover:text-purple-200 transition-colors">
+                      🛡️ Autonomous Data Governance Revolution
+                    </h3>
+                    <p className="text-xs text-purple-200 mb-2">
+                      99.98% compliance accuracy, $4.2B risk mitigation, 94% faster compliance, 2,847% ROI
+                    </p>
+                    <div className="flex items-center gap-2 text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-400" />
+                      <span className="text-purple-300">Self-Regulating Systems</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                to="/blog/ai-2025-neural-fraud-detection-revolution"
+                className="group bg-gradient-to-br from-red-600/30 to-orange-600/30 backdrop-blur-sm border border-red-400/30 rounded-lg p-4 hover:border-red-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                <div className="flex items-start gap-3 mb-2">
+                  <Brain className="w-6 h-6 text-red-300 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-bold text-white text-sm mb-1 group-hover:text-red-200 transition-colors">
+                      🧠 Neural Fraud Detection Revolution
+                    </h3>
+                    <p className="text-xs text-red-200 mb-2">
+                      99.96% detection accuracy, $8.7B losses prevented, sub-50ms response, 3,247% ROI
+                    </p>
+                    <div className="flex items-center gap-2 text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-400" />
+                      <span className="text-red-300">Real-Time Protection</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                to="/blog/ai-2025-cognitive-workflow-orchestration-mastery"
+                className="group bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 hover:border-blue-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                <div className="flex items-start gap-3 mb-2">
+                  <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-bold text-white text-sm mb-1 group-hover:text-blue-200 transition-colors">
+                      ⚡ Cognitive Workflow Orchestration
+                    </h3>
+                    <p className="text-xs text-blue-200 mb-2">
+                      98.7% automation rate, $6.3B value creation, 89% faster execution, 3,742% ROI
+                    </p>
+                    <div className="flex items-center gap-2 text-xs">
+                      <CheckCircle className="w-3 h-3 text-green-400" />
+                      <span className="text-blue-300">Intelligent Automation</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            {/* Key Benefits */}
+            <div className="flex flex-wrap gap-3">
+              <div className="flex items-center gap-2 text-sm text-purple-100">
+                <TrendingUp className="w-4 h-4 text-green-400" />
+                <span>Enterprise-Proven Results</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-purple-100">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span>Production-Ready Systems</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-purple-100">
+                <Shield className="w-4 h-4 text-green-400" />
+                <span>Fortune 500 Trusted</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3 lg:ml-6">
+            <Link
+              to="/blog"
+              className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold rounded-lg hover:from-purple-600 hover:to-indigo-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 whitespace-nowrap"
+            >
+              <span className="mr-2">Explore All 3 Breakthroughs</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-8 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300 whitespace-nowrap"
+            >
+              Schedule Enterprise Demo
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default October2025LatestPremiumContentBanner;

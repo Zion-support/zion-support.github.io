@@ -1,1 +1,73 @@
-import React from "react"; const, ModernFeature, s: Rea, c, t.FC = () => { const, feature, s = [ { i, c, o n: <Zap, className="w-1, 0, h-10/>," tit, l, e: "Lightning, Fas, t"," descripti, o, n: "Deploy, AI, solutions 10x, faster, with our, pr, e-built, frameworks, and automation, tool, s." } { ic, o, n: <Shield, className="w-1, 0, h-10/>," tit, l, e: "Enterprise, Securit, y"," descripti, o, n: "Ba, n, k-level, security, with SO, C, 2, GDPR, complianc, e, and, continuous, monitoring." } { ic, o, n: <TrendingUp, className="w-1, 0, h-10/>," tit, l, e: "Proven, Result, s"," descripti, o, n: "Average, 30, 0% ROI, within, 6 months, across, all client, implementation, s." } { ic, o, n: <Users, className="w-1, 0, h-10/>," tit, l, e: "Expert, Suppor, t"," descripti, o, n: "Dedicated, team, of AI, specialists, providing 24/7, support, and guidan, c, e." } { ic, o, n: <Globe, className="w-1, 0, h-10/>," tit, l, e: "Global, Scal, e"," descripti, o, n: "Infrastructure, spanning, 50+ countries, for, low-latency, worldwide, access." } { ic, o, n: <Award, className="w-1, 0, h-10/>," tit, l, e: "Award, Winnin, g"," ======= import React from "react";'; const, ModernFeature, s: Rea, c, t.FC = () => { const, feature, s = [ { i, c, o n: <Zap, className="w-1, 0, h-10" />,"; tit, l, e: "Lightning, Fas, t","; descripti, o, n: "Deploy, AI, solutions 10x, faster, with our, pr, e-built, frameworks, and automation, tool, s." } { ic, o, n: <Shield, className="w-1, 0, h-10" />,"; tit, l, e: "Enterprise, Securit, y","; descripti, o, n: "Ba, n, k-level, security, with SO, C, 2, GDPR, complianc, e, and, continuous, monitoring." } { ic, o, n: <TrendingUp, className="w-1, 0, h-10" />,"; tit, l, e: "Proven, Result, s","; descripti, o, n: "Average, 30, 0% ROI, within, 6 months, across, all client, implementation, s." } { ic, o, n: <Users, className="w-1, 0, h-10" />,"; tit, l, e: "Expert, Suppor, t","; descripti, o, n: "Dedicated, team, of AI, specialists, providing 24/7, support, and guidan, c, e." } { ic, o, n: <Globe, className="w-1, 0, h-10" />,"; tit, l, e: "Global, Scal, e","; descripti, o, n: "Infrastructure, spanning, 50+ countries, for, low-latency, worldwide, access." } { ic, o, n: <Award, className="w-1, 0, h-10" />,"; tit, l, e: "Award, Winnin, g","; descripti, o, n: "Recognized, industry, leader with, 1, 5+ awards, for, innovation and, excellenc, e." } ]; return ( <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50" >"; <div, className="container, m, x-auto, p, x-6" >"; <div, className="te, x, t-center, m, b-16" >"; <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4" >"; Why, Choose, Zion Tech, Grou, p? </h2> <p, className="text-xl text-gray-600 max-w-3xl mx-auto" >"; Indust, r, y-leading, AI, solutions backed, by, enterprise-grade, infrastructure, and expert, suppor, t; </p> </d, i, v> <div, className="grid, m, d: gr, i, d-co, l, s-2 l g:gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-au, t, o" >" ======= <div, className="grid, m, d: gr, i, d-co, l, s-2 l g:gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-au, t, o" >"; {featur, e, s.m, a, p((featu, r, e, ind, e, x) => ( <d, i, v k, e, y={ind, e, x} classNa, m, e="bg-white, rounde, d-2x, l, p-8, shado, w-lg, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, hov, e r:sca, l, e-105, grou, p" > <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, tex, t-whit, e, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m" >" ======= <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, tex, t-whit, e, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m" >"; {featu, r, e.ic, o, n} </d, i, v> <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3" >"; {featu, r, e.tit, l, e} </h3> <p, className="te, x, t-gr, a, y-600, leadin, g-relax, e, d" >"; {featu, r, e.descripti, o, n} </p> </d, i, v> ))} </d, i, v> </d, i, v> </secti, o, n> ); }; export default ModernFeatures;'
+import React from 'react';
+import { Zap, Shield, TrendingUp, Users, Globe, Award } from 'lucide-react';
+
+const ModernFeatures: React.FC = () => {
+  const features = [
+    {
+      icon: <Zap className="w-10 h-10" />,
+      title: "Lightning Fast",
+      description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
+    },
+    {
+      icon: <Shield className="w-10 h-10" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with SOC 2, GDPR compliance, and continuous monitoring."
+    },
+    {
+      icon: <TrendingUp className="w-10 h-10" />,
+      title: "Proven Results",
+      description: "Average 300% ROI within 6 months across all client implementations."
+    },
+    {
+      icon: <Users className="w-10 h-10" />,
+      title: "Expert Support",
+      description: "Dedicated team of AI specialists providing 24/7 support and guidance."
+    },
+    {
+      icon: <Globe className="w-10 h-10" />,
+      title: "Global Scale",
+      description: "Infrastructure spanning 50+ countries for low-latency worldwide access."
+    },
+    {
+      icon: <Award className="w-10 h-10" />,
+      title: "Award Winning",
+      description: "Recognized industry leader with 15+ awards for innovation and excellence."
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Why Choose Zion Tech Group?
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Industry-leading AI solutions backed by enterprise-grade infrastructure and expert support
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+            >
+              <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                {feature.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ModernFeatures;
