@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
 interface EnhancedMetrics {
   cls?: number;
@@ -70,7 +70,29 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       [metric.name]: metric.value
     };
     
-    setMetrics(enhancedMetrics);
+    // Map metric name to our interface
+    switch (metric.name) {
+      case 'CLS':
+        enhancedMetrics.cls = metric.value;
+        break;
+      case 'INP':
+        enhancedMetrics.inp = metric.value;
+        break;
+      case 'FCP':
+        enhancedMetrics.fcp = metric.value;
+        break;
+      case 'LCP':
+        enhancedMetrics.lcp = metric.value;
+        break;
+      case 'TTFB':
+        enhancedMetrics.ttfb = metric.value;
+        break;
+    }
+    
+    setMetrics(prev => ({
+      ...prev,
+      ...enhancedMetrics
+    }));
     
     // Add to history
     setHistory(prev => [

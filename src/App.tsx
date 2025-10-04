@@ -14,6 +14,8 @@ import { LoadingSpinner } from './components/LoadingSpinner';
 import EnhancedAccessibilityMonitor from '../app/components/EnhancedAccessibilityMonitor';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
 import SEOOptimizer from '../app/components/SEOOptimizer';
+import UltimateErrorBoundary from '../app/components/UltimateErrorBoundary';
+import ComprehensiveMonitoringDashboard from '../app/components/ComprehensiveMonitoringDashboard';
 import { initializeOptimizer } from '../utils/comprehensiveOptimizer';
 
 // Animation variants
@@ -134,12 +136,23 @@ function App() {
                 autoFix={true}
               />
               <AdvancedPerformanceMonitor />
+              <ComprehensiveMonitoringDashboard 
+                showInProduction={false}
+                refreshInterval={30000}
+              />
             </>
           )}
           
           <div className="min-h-screen bg-gray-50">
-            <EnhancedErrorBoundary fallback={<div>Enhanced error occurred</div>}>
-              <Header />
+            <UltimateErrorBoundary 
+              fallback={<div>Ultimate error occurred</div>}
+              showDetails={process.env.NODE_ENV === 'development'}
+              onError={(error, errorInfo) => {
+                console.error('Ultimate error caught:', error, errorInfo);
+              }}
+            >
+              <EnhancedErrorBoundary fallback={<div>Enhanced error occurred</div>}>
+                <Header />
 
               {/* Main Content */}
               <motion.main
@@ -191,7 +204,8 @@ function App() {
               
               {/* Footer */}
               <Footer />
-            </EnhancedErrorBoundary>
+              </EnhancedErrorBoundary>
+            </UltimateErrorBoundary>
           </div>
         </Router>
       </ErrorBoundary>
