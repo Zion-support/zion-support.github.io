@@ -1,145 +1,239 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect, Suspense, lazy, useCallback } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-// Components
-import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
+// Import core components (always loaded)
+import Header from './components/Header';
+import Footer from './components/Footer';
+// // import SEOHead from './components/SEOHead';
+// // import LoadingSpinner from './components/LoadingSpinner';
+// import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
+// import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
-// Pages
-import HomePage from './page';
+// Lazy load performance components (only when needed)
+const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimizer'));
+const PerformanceMonitor = lazy(() => import('./components/PerformanceMonitor'));
 
-// Main App component
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <SEOHead />
-          <EnhancedErrorBoundary>
-            <Header />
-            
-            <main className="flex-1">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                </Routes>
-              </Suspense>
-            </main>
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/Home'));
+const AboutPage = lazy(() => import('./pages/About'));
+const ContactPage = lazy(() => import('./pages/Contact'));
+const ServicesPage = lazy(() => import('./pages/Services'));
+const BlogPage = lazy(() => import('./pages/Blog'));
 
-            <Footer />
+// Animation variants (memoized for performance)
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+  out: { opacity: 0, y: -20 }
+};
 
-            {/* Performance Monitor Modal */}
-            {showPerformanceMonitor && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-                onClick={togglePerformanceMonitor}
-              >
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.9, opacity: 0 }}
-                  className="bg-white rounded-lg p-6 max-w-2xl w-full mx-4"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-xl font-bold">Performance Monitor</h2>
-                    <button
-                      onClick={togglePerformanceMonitor}
-                      className="text-gray-500 hover:text-gray-700"
-                    >
-                      ✕
-                    </button>
-                  </div>
-                  <PerformanceMonitor />
-                </motion.div>
-              </motion.div>
-            )}
+const pageTransition = {
+  type: 'tween' as const,
+  ease: 'anticipate' as const,
+  duration: 0.4
+};
 
-            {/* Performance Optimizer (hidden) */}
-            <PerformanceOptimizer />
-          </EnhancedErrorBoundary>
+// Lazy loaded components for better performance
+
+// Simple Error Boundary
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h1>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Try again
+            </button>
+          </div>
         </div>
-      </Router>
-=======
-// Utils
-import {
-  setupGlobalErrorHandling,
-  monitorPerformance,
-} from '../utils/errorHandling';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+      );
+    }
+    return this.props.children;
+  }
+}
 
-// Styles
-import '../src/index.css';
+function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
 
-const App: React.FC = () => {
-  useEffect(() => {
-    // Initialize global error handling
-    setupGlobalErrorHandling();
-
-    // Initialize performance monitoring
-    monitorPerformance();
-
-    // Initialize performance optimizer
-    performanceOptimizer.clearMetrics();
-
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+  // Memoized handlers for better performance
+  const togglePerformanceOptimizer = useCallback(() => {
+    setShowPerformanceOptimizer(prev => !prev);
   }, []);
 
+  const togglePerformanceMonitor = useCallback(() => {
+    setShowPerformanceMonitor(prev => !prev);
+  }, []);
+
+  useEffect(() => {
+    // Simulate loading with reduced time for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Optimized keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.shiftKey) {
+        switch (event.key.toLowerCase()) {
+          case 'p':
+            event.preventDefault();
+            togglePerformanceOptimizer();
+            break;
+          case 'm':
+            event.preventDefault();
+            togglePerformanceMonitor();
+            break;
+          case 'escape':
+            event.preventDefault();
+            setShowPerformanceOptimizer(false);
+            setShowPerformanceMonitor(false);
+            break;
+          default:
+            break;
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [togglePerformanceOptimizer, togglePerformanceMonitor]);
+
+  if (isLoading) {
+    return (
+      <HelmetProvider>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="min-h-screen flex items-center justify-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+          </div>
+        </div>
+      </HelmetProvider>
+    );
+  }
+
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <SEOOptimizer>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link'
-                  onClick={e => {
-                    e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
+      <UserFriendlyErrorBoundary>
+        {/* <EnhancedErrorBoundary> */}
+          <Router>
+            <div className="min-h-screen bg-white">
+              {/* <SEOHead /> */}
+              <Header />
+              
+              {/* Main Content */}
+              <motion.main
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                className="flex-1"
+              >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div id="main-content" className="flex-1">
+                    <React.Suspense
+                      fallback={
+                        <div className="min-h-screen flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                            <p className="text-gray-600">Loading...</p>
+                          </div>
+                        </div>
+                      }
+                    >
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services/*" element={<ServicesPage />} />
+                        
+                        {/* 404 Fallback */}
+                        <Route
+                          path="*"
+                          element={
+                            <div className="min-h-screen flex items-center justify-center">
+                              <div className="text-center">
+                                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                                <p className="text-xl text-gray-600 mb-8">Page not found</p>
+                                <a
+                                  href="/"
+                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                                >
+                                  Return Home
+                                </a>
+                              </div>
+                            </div>
+                          }
+                        />
+                      </Routes>
+                    </React.Suspense>
+                  </div>
+                </div>
+              </motion.main>
 
-                <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  {/* Add more routes as needed */}
-                </Routes>
+              {/* Performance Monitor Modal */}
+              {showPerformanceMonitor && (
+                <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+                  <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+                    <div className="flex justify-between items-center mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
+                      <button
+                        onClick={togglePerformanceMonitor}
+                        className="text-gray-500 hover:text-gray-700 text-xl font-bold"
+                        aria-label="Close Performance Monitor"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div></div>}>
+                      <PerformanceMonitor />
+                    </Suspense>
+                  </div>
+                </div>
+              )}
 
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
+              {/* Keyboard Shortcuts Help */}
+              <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
+                <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
+                <div>Ctrl+Shift+P: Performance Optimizer</div>
+                <div>Ctrl+Shift+M: Performance Monitor</div>
+                <div>Ctrl+Shift+Esc: Close Modals</div>
               </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </SEOOptimizer>
-      </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-80bc
+            </div>
+          </Router>
+        {/* </EnhancedErrorBoundary> */}
+      </UserFriendlyErrorBoundary>
     </HelmetProvider>
   );
-};
+}
 
 export default App;
