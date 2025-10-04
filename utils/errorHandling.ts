@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * Comprehensive Error Handling and Logging System
  * 
  * Provides centralized error handling, logging, and monitoring
@@ -129,14 +130,27 @@ export const logInfo = (message: string, context?: Record<string, any>) => {
   };
 
   console.log('Info logged:', errorLog);
+=======
+ * Error Handling Utilities
+ */
+
+export const logError = (error: Error | string, context?: Record<string, any>) => {
+  console.error('Error:', error, context);
 };
 
-/**
- * Send error to monitoring service
- */
-const sendToMonitoring = (errorLog: ErrorLog) => {
-  if (typeof window === 'undefined') return;
+export const logInfo = (message: string, context?: Record<string, any>) => {
+  console.log('Info:', message, context);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
+};
 
+export const getErrorMetrics = () => ({
+  totalErrors: 0,
+  errorsByType: {},
+  lastError: null,
+  errorRate: 0
+});
+
+<<<<<<< HEAD
   // Example: Send to Sentry, LogRocket, or custom endpoint
   try {
     // Uncomment and configure your monitoring service
@@ -197,25 +211,18 @@ export const getErrorMetrics = (): ErrorMetrics => {
 /**
  * Check if error rate is too high
  */
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
 export const isErrorRateTooHigh = (threshold: number = 5): boolean => {
-  const metrics = getErrorMetrics();
-  return metrics.errorRate > threshold;
+  return false;
 };
 
-/**
- * Clear error logs
- */
 export const clearErrorLogs = () => {
-  if (typeof window !== 'undefined') {
-    localStorage.removeItem(ERROR_LOG_KEY);
-    console.log('Error logs cleared');
-  }
+  console.log('Error logs cleared');
 };
 
-/**
- * Global error handler setup
- */
 export const setupGlobalErrorHandling = () => {
+<<<<<<< HEAD
   if (typeof window === 'undefined') return;
 
   // Handle uncaught errors
@@ -241,13 +248,13 @@ export const setupGlobalErrorHandling = () => {
     originalConsoleError.apply(console, args);
   };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
   console.log('Global error handling initialized');
 };
 
-/**
- * Performance monitoring
- */
 export const monitorPerformance = () => {
+<<<<<<< HEAD
   if (typeof window === 'undefined' || !('performance' in window)) return;
 
   // Monitor page load performance
@@ -292,36 +299,23 @@ export const monitorPerformance = () => {
       // Long task API not supported
     }
   }
+=======
+  console.log('Performance monitoring initialized');
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
 };
 
-/**
- * Network error handler
- */
 export const handleNetworkError = (error: Error, endpoint: string) => {
-  logError(error, {
-    endpoint,
-    type: 'network',
-    online: typeof navigator !== 'undefined' ? navigator.onLine : true,
-  });
-
-  // Check if offline
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    console.warn('User is offline');
-    return { offline: true };
-  }
-
+  logError(error, { endpoint, type: 'network' });
   return { offline: false };
 };
 
-/**
- * Try-catch wrapper with automatic error logging
- */
 export const withErrorHandling = <T extends (...args: any[]) => any>(
   fn: T,
   context?: string
 ): T => {
   return ((...args: Parameters<T>) => {
     try {
+<<<<<<< HEAD
       const result = fn(...args);
       
       // Handle async functions
@@ -333,6 +327,9 @@ export const withErrorHandling = <T extends (...args: any[]) => any>(
       }
       
       return result;
+=======
+      return fn(...args);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
     } catch (error) {
       logError(error as Error, { context, args });
       throw error;
@@ -350,4 +347,8 @@ export default {
   monitorPerformance,
   handleNetworkError,
   withErrorHandling,
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b

@@ -1,6 +1,10 @@
 import React from "react";
 import { DollarSign, TrendingDown, ArrowRight, Zap } from "lucide-react";
+<<<<<<< HEAD
 import Link from "next/link";
+=======
+import { Link } from "react-router-dom";
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
 
 const AICostOptimizationBanner: React.FC = () => {
   const costOptimizationContent = [
@@ -14,43 +18,83 @@ const AICostOptimizationBanner: React.FC = () => {
       readTime: '22 min',
       trending: true,
       icon: '💰',
+<<<<<<< HEAD
       metrics: { value: '90%', label: 'Cost Reduction' }
+=======
+      metrics: {
+        value: '90%',
+        label: 'Cost Reduction'
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
     },
     {
       id: 2,
       title: 'Generative AI Cost Breakthrough: 85% Savings',
       slug: 'generative-ai-cost-breakthrough-2025',
+<<<<<<< HEAD
       excerpt: 'Proven strategies to slash generative AI costs by 85% through semantic caching, model cascading and intelligent routing without sacrificing quality.',
+=======
+      excerpt: 'Proven strategies to slash generative AI costs by 85% through semantic caching, model cascading, and intelligent routing without sacrificing quality.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
       category: 'GenAI Optimization',
       date: '2025-09-30',
       readTime: '18 min',
       trending: true,
       icon: '🧠',
+<<<<<<< HEAD
       metrics: { value: '85%', label: 'GenAI Savings' }
+=======
+      metrics: {
+        value: '85%',
+        label: 'GenAI Savings'
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
     },
     {
       id: 3,
       title: 'AI Infrastructure Automation: 70% Cost Cut',
       slug: 'ai-infrastructure-automation-2026',
+<<<<<<< HEAD
       excerpt: 'Self-healing AI infrastructure achieving 70% cost reduction, 99.99% uptime and 8-minute MTTR through intelligent automation and optimization.',
+=======
+      excerpt: 'Self-healing AI infrastructure achieving 70% cost reduction, 99.99% uptime, and 8-minute MTTR through intelligent automation and optimization.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
       category: 'Infrastructure AI',
       date: '2026-01-30',
       readTime: '25 min',
       trending: true,
       icon: '⚡',
+<<<<<<< HEAD
       metrics: { value: '70%', label: 'Infra Cost Cut' }
+=======
+      metrics: {
+        value: '70%',
+        label: 'Infra Cost Cut'
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
     },
     {
       id: 4,
       title: 'Enterprise AI FinOps: $500M+ Savings Guide',
       slug: 'enterprise-ai-finops-optimization-2026',
+<<<<<<< HEAD
       excerpt: 'Complete guide to AI Financial Operations achieving $500M+ savings through intelligent resource allocation, usage optimization and cost governance.',
+=======
+      excerpt: 'Complete guide to AI Financial Operations achieving $500M+ savings through intelligent resource allocation, usage optimization, and cost governance.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
       category: 'AI FinOps',
       date: '2026-01-30',
       readTime: '30 min',
       trending: true,
       icon: '📊',
+<<<<<<< HEAD
       metrics: { value: '$500M+', label: 'Total Savings' }
+=======
+      metrics: {
+        value: '$500M+',
+        label: 'Total Savings'
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
     }
   ];
 
@@ -73,6 +117,7 @@ const AICostOptimizationBanner: React.FC = () => {
             </span>
             <TrendingDown className="w-6 h-6 text-emerald-400 animate-pulse" />
           </div>
+<<<<<<< HEAD
 
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent animate-fade-in">
             AI Cost Optimization Revolution
@@ -80,6 +125,15 @@ const AICostOptimizationBanner: React.FC = () => {
 
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover the breakthrough strategies Fortune 500 companies use to reduce AI costs by 90%, achieve $500M+ in savings and maximize ROI with intelligent optimization techniques.
+=======
+          
+          <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent animate-fade-in">
+            AI Cost Optimization Revolution
+          </h2>
+          
+          <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            Discover the breakthrough strategies Fortune 500 companies use to reduce AI costs by 90%, achieve $500M+ in savings, and maximize ROI with intelligent optimization techniques.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
           </p>
 
           {/* Key Stats */}
@@ -106,10 +160,21 @@ const AICostOptimizationBanner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {costOptimizationContent.map((content, index) => (
+<<<<<<< HEAD
             <div key={content.id} className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20" style={{ animationDelay: `${index * 150}ms` }}>
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 via-emerald-500/0 to-teal-500/0 group-hover:from-green-500/10 group-hover:via-emerald-500/10 group-hover:to-teal-500/10 transition-all duration-500"></div>
 
+=======
+            <div
+              key={content.id}
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Card glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 via-emerald-500/0 to-teal-500/0 group-hover:from-green-500/10 group-hover:via-emerald-500/10 group-hover:to-teal-500/10 transition-all duration-500"></div>
+              
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
               <div className="relative p-8">
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">
@@ -170,7 +235,14 @@ const AICostOptimizationBanner: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
+<<<<<<< HEAD
                 <Link to={`/blog/${content.slug}`} className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1">
+=======
+                <Link
+                  to={`/blog/${content.slug}`}
+                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                >
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
                   <span>Read Optimization Guide</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -190,12 +262,29 @@ const AICostOptimizationBanner: React.FC = () => {
                 Join Fortune 500 companies achieving $500M+ in AI cost savings with our proven optimization strategies. Get your free cost optimization audit today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <a title="Internal link" href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2">
                   <DollarSign className="w-5 h-5" />
                   <span>Get Free Cost Audit</span>
                 </a>
                 <a title="Internal link" href="tel:+13024640950" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
                   <span>Call +1 302 464 0950</span>
+=======
+                <a
+                  title="Internal link"
+                  href="/contact"
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2"
+                >
+                  <DollarSign className="w-5 h-5" />
+                  <span>Get Free Cost Audit</span>
+                </a>
+                <a
+                  title="Internal link"
+                  href="tel:+13024640950"
+                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <span>Call +1 (302) 464-0950</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>

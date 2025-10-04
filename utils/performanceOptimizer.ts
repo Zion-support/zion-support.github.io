@@ -325,4 +325,8 @@ export function withPerformanceMonitoring<P extends object>(
   };
 }
 
+<<<<<<< HEAD
 export default performanceOptimizer;
+=======
+export default performanceOptimizer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b

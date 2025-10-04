@@ -8,68 +8,29 @@ async function reportWebVitals() {
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
     const log = (metric: { name: string; value: number }) => {
       if (process.env.NODE_ENV === 'production') {
-        console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
+        console.log('Web Vital:', metric);
       }
     };
+
     onCLS(log);
     onLCP(log);
     onFCP(log);
     onTTFB(log);
-  } catch {
-    // ignore in unsupported environments
+  } catch (error) {
+    console.warn('Failed to load web-vitals:', error);
   }
 }
 
-createRoot(document.getElementById('root')!).render(
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Root element not found');
+}
+
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
 );
 
 reportWebVitals();
-import App from './App';
-
-// Report web vitals to help monitor performance in production
-async function reportWebVitals() {
-  try {
-    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import('web-vitals');
-    const log = (metric: { name: string; value: number }) => {
-      // Replace with analytics endpoint if available
-      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
-    };
-    onCLS(log);
-    onFID(log);
-    onLCP(log);
-    onFCP(log);
-    onTTFB(log);
-    // @ts-ignore web-vitals v4 also exports onINP
-    if (onINP) onINP(log);
-  } catch {
-    // no-op in dev or if unsupported
-  }
-}
-
-const container = document.getElementById('root');
-if (container) {
-  const root = createRoot(container);
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-  
-  if (import.meta.env.PROD) {
-    void reportWebVitals();
-  }
-}
-
-// Register service worker for basic offline support if available
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .catch(() => {
-        // no-op: registration failed; proceed without SW
-      });
-  });
-}

@@ -9,4 +9,8 @@ const AdvancedAnalytics: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AdvancedAnalytics;
+=======
+export default AdvancedAnalytics;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
