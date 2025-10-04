@@ -9,7 +9,7 @@ interface AdvancedSEOProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   robots?: string;
   language?: string;
   author?: string;

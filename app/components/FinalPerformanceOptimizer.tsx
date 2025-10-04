@@ -3,7 +3,6 @@ import React, {
   useState,
   useCallback,
   useRef,
-  useMemo,
 } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -45,7 +44,7 @@ interface PerformanceInsights {
 
 const FinalPerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<FinalMetrics | null>(null);
-  const [history, setHistory] = useState<PerformanceHistory[]>([]);
+  const [, setHistory] = useState<PerformanceHistory[]>([]);
   const [insights, setInsights] = useState<PerformanceInsights | null>(null);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
@@ -60,9 +59,9 @@ const FinalPerformanceOptimizer: React.FC = () => {
   const analysisRef = useRef<NodeJS.Timeout | null>(null);
 
   const getFinalPerformanceInfo = useCallback(() => {
-    const memory = (performance as any).memory;
-    const connection = (navigator as any).connection;
-    const battery = (navigator as any).getBattery;
+    const memory = (performance as Record<string, unknown>).memory;
+    const connection = (navigator as Record<string, unknown>).connection;
+    const battery = (navigator as Record<string, unknown>).getBattery;
 
     return {
       memory: memory ? Math.round(memory.usedJSHeapSize / 1048576) : undefined,
@@ -165,7 +164,7 @@ const FinalPerformanceOptimizer: React.FC = () => {
   );
 
   const handleMetric = useCallback(
-    (metric: any) => {
+    (metric: { name: string; value: number }) => {
       const performanceInfo = getFinalPerformanceInfo();
       const finalMetrics: FinalMetrics = {
         cls: 0,

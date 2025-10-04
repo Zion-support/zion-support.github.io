@@ -49,5 +49,5 @@ export const errorHandler = (
 export const asyncHandler =
   (fn: Function) =>
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    Promise.resolve(fn(req, res, next)).catch((error: any) => next(error));
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
   };

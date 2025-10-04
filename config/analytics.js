@@ -61,7 +61,7 @@ export const analyticsConfig = {
 // Analytics utility functions
 export const analyticsUtils = {
   // Track custom event
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => {
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }

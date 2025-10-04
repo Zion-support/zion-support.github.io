@@ -126,7 +126,7 @@ export const enhancedAnalyticsConfig = {
 // Enhanced analytics utility functions
 export const enhancedAnalyticsUtils = {
   // Track custom event with enhanced data
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => {
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       const enhancedParams = {
         ...parameters,
@@ -164,7 +164,7 @@ export const enhancedAnalyticsUtils = {
   },
   
   // Track user engagement
-  trackEngagement: (engagementType: string, details?: Record<string, any>) => {
+  trackEngagement: (engagementType: string, details?: Record<string, unknown>) => {
     enhancedAnalyticsUtils.trackEvent('user_engagement', {
       engagement_type: engagementType,
       ...details

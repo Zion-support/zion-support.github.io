@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 import {
   getMemoryUsage,
@@ -47,14 +47,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     Record<string, number>
   >({});
 
-  const thresholds: PerformanceThresholds = {
+  const thresholds = useMemo((): PerformanceThresholds => ({
     cls: 0.1,
     inp: 200,
     fcp: 1800,
     lcp: 2500,
     ttfb: 800,
     memory: 50,
-  };
+  }), []);
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const analysisRef = useRef<NodeJS.Timeout | null>(null);
@@ -178,7 +178,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   );
 
   const handleMetric = useCallback(
-    (metric: any) => {
+    (metric: { name: string; value: number }) => {
       performanceMonitor.start(`metric-${metric.name}`);
 
       const memory = getMemoryUsage();
