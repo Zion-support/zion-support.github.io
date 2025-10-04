@@ -300,8 +300,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         .skip-link:focus {
           top: 6px;
         }
-        `
-      }} />
+      `}} />
     </>
   );
 };
