@@ -4,7 +4,7 @@
  */
 
 import { Component, ErrorInfo, ReactNode } from 'react';
-import { analyticsUtils } from '../utils/seoOptimizations';
+// import { analyticsUtils } from '../utils/seoOptimizations'; // File removed
 
 interface Props {
   children: ReactNode;
@@ -69,8 +69,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Error Boundary caught an error:', errorDetails);
     }
 
-    // Send to analytics
-    analyticsUtils.trackEvent('error_boundary_caught', {
+    // Send to analytics (replaced with console.log)
+    console.log('Error boundary caught:', {
       error_id: errorId,
       error_message: error.message,
       error_stack: error.stack?.substring(0, 500), // Truncate for analytics
@@ -95,7 +95,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       });
 
       // Track retry attempt
-      analyticsUtils.trackEvent('error_boundary_retry', {
+      console.log('Error boundary retry:', {
         error_id: this.state.errorId,
         retry_count: this.retryCount
       });
@@ -116,8 +116,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href
     };
 
-    // Track error report
-    analyticsUtils.trackEvent('error_boundary_report', {
+    // Track error report (replaced with console.log)
+    console.log('Error boundary report:', {
       error_id: errorId,
       reported: true
     });

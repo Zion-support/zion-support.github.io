@@ -2,9 +2,13 @@
 
 declare global {
   interface Window {
-    mixpanel: any;
-    gtag: any;
-    dataLayer: any[];
+    mixpanel: {
+      track: (event: string, properties?: Record<string, unknown>) => void;
+      identify: (id: string) => void;
+      alias: (id: string) => void;
+    };
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
   }
 }
 
