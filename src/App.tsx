@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 // Import core components (always loaded)
 import Header from './components/Header';
 import Footer from './components/Footer';
-// // import SEOHead from './components/SEOHead';
-// // import LoadingSpinner from './components/LoadingSpinner';
-// import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
-// import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import SEOHead from './components/SEOHead';
+import LoadingSpinner from './components/LoadingSpinner';
+import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
 // Lazy load performance components (only when needed)
 const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimizer'));
@@ -19,221 +19,65 @@ const PerformanceMonitor = lazy(() => import('./components/PerformanceMonitor'))
 const HomePage = lazy(() => import('./pages/Home'));
 const AboutPage = lazy(() => import('./pages/About'));
 const ContactPage = lazy(() => import('./pages/Contact'));
-const ServicesPage = lazy(() => import('./pages/Services'));
 const BlogPage = lazy(() => import('./pages/Blog'));
+const ServicesPage = lazy(() => import('./pages/Services'));
+const TeamPage = lazy(() => import('./pages/Team'));
+const PrivacyPage = lazy(() => import('./pages/Privacy'));
+const TermsPage = lazy(() => import('./pages/Terms'));
 
-// Animation variants (memoized for performance)
-const pageVariants = {
-  initial: { opacity: 0, y: 20 },
-  in: { opacity: 1, y: 0 },
-  out: { opacity: 0, y: -20 }
-};
-
-const pageTransition = {
-  type: 'tween' as const,
-  ease: 'anticipate' as const,
-  duration: 0.4
-};
-
-// Lazy loaded components for better performance
-
-// Simple Error Boundary
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean }
-> {
-  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
-          </div>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-
-function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
+// Performance monitoring state
+const App: React.FC = () => {
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+  const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
 
-  // Memoized handlers for better performance
-  const togglePerformanceOptimizer = useCallback(() => {
-    setShowPerformanceOptimizer(prev => !prev);
-  }, []);
-
+  // Performance monitoring toggle
   const togglePerformanceMonitor = useCallback(() => {
     setShowPerformanceMonitor(prev => !prev);
   }, []);
 
+  // Performance metrics collection
   useEffect(() => {
-    // Simulate loading with reduced time for better UX
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Optimized keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey) {
-        switch (event.key.toLowerCase()) {
-          case 'p':
-            event.preventDefault();
-            togglePerformanceOptimizer();
-            break;
-          case 'm':
-            event.preventDefault();
-            togglePerformanceMonitor();
-            break;
-          case 'escape':
-            event.preventDefault();
-            setShowPerformanceOptimizer(false);
-            setShowPerformanceMonitor(false);
-            break;
-          default:
-            break;
-        }
-      }
+    const collectMetrics = () => {
+      const metrics = {
+        loadTime: performance.now(),
+        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+        timestamp: new Date().toISOString()
+      };
+      setPerformanceMetrics(metrics);
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [togglePerformanceOptimizer, togglePerformanceMonitor]);
-
-  if (isLoading) {
-    return (
-      <HelmetProvider>
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="min-h-screen flex items-center justify-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-          </div>
-        </div>
-      </HelmetProvider>
-    );
-  }
+    collectMetrics();
+    const interval = setInterval(collectMetrics, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <HelmetProvider>
-      <UserFriendlyErrorBoundary>
-        {/* <EnhancedErrorBoundary> */}
-          <Router>
-            <div className="min-h-screen bg-white">
-              {/* <SEOHead /> */}
-              <Header />
-              
-              {/* Main Content */}
-              <motion.main
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-                className="flex-1"
-              >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div id="main-content" className="flex-1">
-                    <React.Suspense
-                      fallback={
-                        <div className="min-h-screen flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                            <p className="text-gray-600">Loading...</p>
-                          </div>
-                        </div>
-                      }
-                    >
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/services/*" element={<ServicesPage />} />
-                        
-                        {/* 404 Fallback */}
-                        <Route
-                          path="*"
-                          element={
-                            <div className="min-h-screen flex items-center justify-center">
-                              <div className="text-center">
-                                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
-                                <p className="text-xl text-gray-600 mb-8">Page not found</p>
-                                <a
-                                  href="/"
-                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                                >
-                                  Return Home
-                                </a>
-                              </div>
-                            </div>
-                          }
-                        />
-                      </Routes>
-                    </React.Suspense>
-                  </div>
-                </div>
-              </motion.main>
-
-              {/* Performance Monitor Modal */}
-              {showPerformanceMonitor && (
-                <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-                  <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-                    <div className="flex justify-between items-center mb-4">
-                      <h2 className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
-                      <button
-                        onClick={togglePerformanceMonitor}
-                        className="text-gray-500 hover:text-gray-700 text-xl font-bold"
-                        aria-label="Close Performance Monitor"
-                      >
-                        ✕
-                      </button>
-                    </div>
-                    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div></div>}>
-                      <PerformanceMonitor />
-                    </Suspense>
-                  </div>
-                </div>
-              )}
-
-              {/* Keyboard Shortcuts Help */}
-              <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-                <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-                <div>Ctrl+Shift+P: Performance Optimizer</div>
-                <div>Ctrl+Shift+M: Performance Monitor</div>
-                <div>Ctrl+Shift+Esc: Close Modals</div>
-              </div>
-            </div>
-          </Router>
-        {/* </EnhancedErrorBoundary> */}
-      </UserFriendlyErrorBoundary>
+      <Router>
+        <EnhancedErrorBoundary>
+          <SEOHead />
+          <div className="min-h-screen bg-gray-50">
+            <Header />
+            <main className="flex-1">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </EnhancedErrorBoundary>
+      </Router>
     </HelmetProvider>
   );
-}
+};
 
 export default App;

@@ -1,1 +1,1 @@
-export default {}; export default {}; module.exports = {}; export default {},
+export default {}; export default {}; module.exports = {}; export default {};

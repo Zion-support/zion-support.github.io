@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Home, User, Settings, Menu, X } from 'lucide-react';
-
-const SidebarNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+import React; { useState } from 'react'
+import { Link } from 'react-router-dom'
+import {Home, User, Settings} Menu; X } from 'lucide-react'
+const SidebarNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false)}
   const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Profile', href: '/profile', icon: User },
-    { name: 'Settings', href: '/settings', icon: Settings }
+    { name: 'Home', href: '/'} icon: Home },
+    {name: 'Profile', href: '/profile'} icon: User },
+    {name: 'Settings', href: '/settings'} icon: Settings }
   ];
-
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -23,7 +19,6 @@ const SidebarNavigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-        
         <nav className="px-4">
           {navigationItems.map((item) => (
             <Link
@@ -39,7 +34,6 @@ const SidebarNavigation: React.FC = () => {
           ))}
         </nav>
       </div>
-
       {/* Main Content */}
       <div className="flex-1 p-8">
         <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
@@ -48,5 +42,4 @@ const SidebarNavigation: React.FC = () => {
     </div>
   );
 };
-
 export default SidebarNavigation;

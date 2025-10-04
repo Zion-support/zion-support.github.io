@@ -1,24 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-
-const EnhancedHeader: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+import React; { useState } from 'react'
+import { Link } from 'react-router-dom'
+import {Menu} X } from 'lucide-react'
+const EnhancedHeader: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)}
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home'} href: '/' },
+    {name: 'Services'} href: '/services' },
+    {name: 'About'} href: '/about' },
+    {name: 'Contact'} href: '/contact' },
   ];
-
-
-  const closeMobileMenu = () => {
-    setIsOpen(false);
-    setActiveDropdown(null);
+  const closeMobileMenu = () => {setIsOpen(false);
+    setActiveDropdown(null)}
   };
-
   return (
     <header className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
@@ -26,7 +19,6 @@ const EnhancedHeader: React.FC = () => {
           <Link href="/" className="text-2xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
-          
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigationItems.map((item) => (
@@ -39,7 +31,6 @@ const EnhancedHeader: React.FC = () => {
               </Link>
             ))}
           </nav>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -48,7 +39,6 @@ const EnhancedHeader: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t">
@@ -69,5 +59,4 @@ const EnhancedHeader: React.FC = () => {
     </header>
   );
 };
-
 export default EnhancedHeader;
