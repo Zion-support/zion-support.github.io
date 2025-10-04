@@ -11,7 +11,7 @@ export const metadata = {
   },
 };
 
-export default function BlogPage() {
+const BlogPage = React.memo(function BlogPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -54,4 +54,6 @@ export default function BlogPage() {
       </div>
     </div>
   );
-}
+});
+
+export default $1;

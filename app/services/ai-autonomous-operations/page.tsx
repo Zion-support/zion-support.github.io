@@ -12,7 +12,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function AIAutonomousOperationsService() {
+const AIAutonomousOperationsService = React.memo(function AIAutonomousOperationsService() {
   return (
     <div>/* content */}
   return (
@@ -333,4 +333,6 @@ export default function AIAutonomousOperationsService() {
       </footer>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div></div></div></div>)
+
+export default $1;

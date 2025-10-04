@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function CustomerAgentBlueprints(): React.JSX.Element {
+const CustomerAgentBlueprints = React.memo(function CustomerAgentBlueprints(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function CustomerAgentBlueprints(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

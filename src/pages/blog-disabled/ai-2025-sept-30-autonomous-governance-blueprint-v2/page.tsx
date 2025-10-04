@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 
-export default function AutonomousGovernanceBlueprintV2(): React.JSX.Element {
+const AutonomousGovernanceBlueprintV2 = React.memo(function AutonomousGovernanceBlueprintV2(): React.JSX.Element {
   return (
     <div>
       <Helmet>

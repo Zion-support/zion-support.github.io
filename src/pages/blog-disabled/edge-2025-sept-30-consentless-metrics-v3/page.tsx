@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ConsentlessMetricsV3(): React.JSX.Element {
+const ConsentlessMetricsV3 = React.memo(function ConsentlessMetricsV3(): React.JSX.Element {
   return (
     <div>
       <Helmet>

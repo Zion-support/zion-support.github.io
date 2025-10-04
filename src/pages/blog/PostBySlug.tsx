@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header";
 
-export default function PostBySlug(): React.JSX.Element {
+const PostBySlug = React.memo(function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
 
   // Mock data - in a real app, this would come from an API or CMS

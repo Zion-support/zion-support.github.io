@@ -20,7 +20,7 @@ export const metadata = {
   },
 };
 
-export default function AI2027BreakthroughSolutions() {
+const AI2027BreakthroughSolutions = React.memo(function AI2027BreakthroughSolutions() {
   return (
     <div>/* content */}
   return (
@@ -534,4 +534,6 @@ export default function AI2027BreakthroughSolutions() {
       </div>
     </div>
   );
-})
+});)
+
+export default $1;

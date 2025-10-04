@@ -13,7 +13,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function AI2026EnterpriseTransformationPage() {
+const AI2026EnterpriseTransformationPage = React.memo(function AI2026EnterpriseTransformationPage() {
   return (
     <div>/* content */}
   return (
@@ -321,4 +321,6 @@ export default function AI2026EnterpriseTransformationPage() {
           </section>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+
+export default $1;

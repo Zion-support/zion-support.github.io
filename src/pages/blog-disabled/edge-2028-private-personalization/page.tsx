@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Edge2028PrivatePersonalization(): React.JSX.Element {
+const Edge2028PrivatePersonalization = React.memo(function Edge2028PrivatePersonalization(): React.JSX.Element {
   return (
     <div>
       <Helmet>

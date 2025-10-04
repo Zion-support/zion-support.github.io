@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 
-export default function AIE2EObservabilityBlueprint2026(): React.JSX.Element {
+const AIE2EObservabilityBlueprint2026 = React.memo(function AIE2EObservabilityBlueprint2026(): React.JSX.Element {
   return (
     <div>
       <Helmet>

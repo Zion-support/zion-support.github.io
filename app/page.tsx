@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-export default function HomePage() {
+const HomePage = React.memo(function HomePage() {
   return (
     <div>
       

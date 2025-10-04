@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function ConsentlessJourneysBlueprint(): React.JSX.Element {
+const ConsentlessJourneysBlueprint = React.memo(function ConsentlessJourneysBlueprint(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function ConsentlessJourneysBlueprint(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

@@ -16,7 +16,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function February2026ConsultingPage() {
+const February2026ConsultingPage = React.memo(function February2026ConsultingPage() {
   return (
     <div>/* content */}
   return (
@@ -222,4 +222,6 @@ export default function February2026ConsultingPage() {
           </div>
       </section>
   );
-}</div></div></div></div></div></div>)
+});</div></div></div></div></div></div>)
+
+export default $1;

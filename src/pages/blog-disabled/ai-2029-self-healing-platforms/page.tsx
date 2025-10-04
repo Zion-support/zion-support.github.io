@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AI2029SelfHealingPlatforms(): React.JSX.Element {
+const AI2029SelfHealingPlatforms = React.memo(function AI2029SelfHealingPlatforms(): React.JSX.Element {
   return (
     <div>
       <Helmet>

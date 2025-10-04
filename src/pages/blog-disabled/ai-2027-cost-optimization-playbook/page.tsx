@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AICostOptimizationPlaybook2027(): React.JSX.Element {
+const AICostOptimizationPlaybook2027 = React.memo(function AICostOptimizationPlaybook2027(): React.JSX.Element {
   return (
     <div>
       <Helmet>

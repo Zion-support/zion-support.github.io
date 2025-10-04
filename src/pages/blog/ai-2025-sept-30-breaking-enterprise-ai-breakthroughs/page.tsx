@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function BreakingEnterpriseAIBreakthroughs(): React.JSX.Element {
+const BreakingEnterpriseAIBreakthroughs = React.memo(function BreakingEnterpriseAIBreakthroughs(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function BreakingEnterpriseAIBreakthroughs(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

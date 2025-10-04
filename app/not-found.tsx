@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function NotFound() {
+const NotFound = React.memo(function NotFound() {
   return (
     <div>/* content */}
   const popularPages = [{
@@ -149,4 +149,6 @@ export default function NotFound() {
         </div>
     </div>
   );
-}</div></div></div></div>)
+});</div></div></div></div>)
+
+export default $1;

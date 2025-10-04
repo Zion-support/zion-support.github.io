@@ -12,7 +12,7 @@ export const metadata = {
   },
 };
 
-export default function AI2027QuantumEnterpriseSolutions() {
+const AI2027QuantumEnterpriseSolutions = React.memo(function AI2027QuantumEnterpriseSolutions() {
   return (
     <div>/* content */}
   return (
@@ -306,4 +306,6 @@ export default function AI2027QuantumEnterpriseSolutions() {
       </div>
     </div>
   );
-})
+});)
+
+export default $1;

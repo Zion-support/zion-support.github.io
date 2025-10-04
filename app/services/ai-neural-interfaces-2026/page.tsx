@@ -13,7 +13,7 @@ export const metadata = {
   },
 };
 
-export default function AINeuralInterfacesService() {
+const AINeuralInterfacesService = React.memo(function AINeuralInterfacesService() {
   return (
     <div>/* content */}
   return (
@@ -313,4 +313,6 @@ export default function AINeuralInterfacesService() {
       </div>
     </div>
   );
-})
+});)
+
+export default $1;

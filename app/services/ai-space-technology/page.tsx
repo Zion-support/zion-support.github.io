@@ -7,7 +7,7 @@ export const metadata = {
   keywords: 'AI space technology, autonomous satellites, space operations, mission planning, space AI services',
 };
 
-export default function AISpaceTechnologyServices() {
+const AISpaceTechnologyServices = React.memo(function AISpaceTechnologyServices() {
   return (
     <div>/* content */}
   return (
@@ -187,4 +187,6 @@ export default function AISpaceTechnologyServices() {
         </div>
     </div>
   );
-}</div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div>)
+
+export default $1;

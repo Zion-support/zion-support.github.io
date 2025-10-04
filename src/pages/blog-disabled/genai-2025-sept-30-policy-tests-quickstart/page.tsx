@@ -1,7 +1,7 @@
 // Minimal types; remove ts-nocheck
 import React from "react";
 
-export default function PolicyTestsQuickstart2025(): React.JSX.Element {
+const PolicyTestsQuickstart2025 = React.memo(function PolicyTestsQuickstart2025(): React.JSX.Element {
   return (
     <div>
       <Helmet>

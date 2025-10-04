@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function GenAICachePlaybookV2(): React.JSX.Element {
+const GenAICachePlaybookV2 = React.memo(function GenAICachePlaybookV2(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function GenAICachePlaybookV2(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

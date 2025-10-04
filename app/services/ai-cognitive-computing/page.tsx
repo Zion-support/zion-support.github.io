@@ -7,7 +7,7 @@ export const metadata = {
   keywords: 'AI cognitive computing, artificial intelligence, machine learning, cognitive systems, AI reasoning',
 };
 
-export default function AICognitiveComputingServices() {
+const AICognitiveComputingServices = React.memo(function AICognitiveComputingServices() {
   return (
     <div>/* content */}
   return (
@@ -187,4 +187,6 @@ export default function AICognitiveComputingServices() {
         </div>
     </div>
   );
-}</div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div>)
+
+export default $1;

@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "../../../components/Header";
 
-export default function BlogPost(): React.JSX.Element {
+const BlogPost = React.memo(function BlogPost(): React.JSX.Element {
   return (
     <>
       <Header />
@@ -71,4 +71,6 @@ export default function BlogPost(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

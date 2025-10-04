@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function GenAICostTiersV3(): React.JSX.Element {
+const GenAICostTiersV3 = React.memo(function GenAICostTiersV3(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function GenAICostTiersV3(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

@@ -13,7 +13,7 @@ export const metadata = {
   },
 };
 
-export default function AISpaceTechnologyService() {
+const AISpaceTechnologyService = React.memo(function AISpaceTechnologyService() {
   return (
     <div>/* content */}
   return (
@@ -314,4 +314,6 @@ export default function AISpaceTechnologyService() {
       </div>
     </div>
   );
-})
+});)
+
+export default $1;

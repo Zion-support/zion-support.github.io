@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function ConsentlessFeatureFlagsV4(): React.JSX.Element {
+const ConsentlessFeatureFlagsV4 = React.memo(function ConsentlessFeatureFlagsV4(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function ConsentlessFeatureFlagsV4(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

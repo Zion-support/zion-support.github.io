@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function SignedEvals(): React.JSX.Element {
+const SignedEvals = React.memo(function SignedEvals(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function SignedEvals(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

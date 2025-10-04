@@ -1,7 +1,7 @@
 // Minimal types; remove ts-nocheck
 import React from "react";
 
-export default function AIAutonomousRoadmaps2027(): React.JSX.Element {
+const AIAutonomousRoadmaps2027 = React.memo(function AIAutonomousRoadmaps2027(): React.JSX.Element {
   return (
     <div>
       <Helmet>

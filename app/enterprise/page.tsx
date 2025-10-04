@@ -7,7 +7,7 @@ export const metadata = {
   keywords: 'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
 };
 
-export default function EnterprisePage() {
+const EnterprisePage = React.memo(function EnterprisePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -139,4 +139,6 @@ export default function EnterprisePage() {
       </section>
     </div>
   );
-}
+});
+
+export default $1;

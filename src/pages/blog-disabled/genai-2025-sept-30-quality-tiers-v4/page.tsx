@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 
-export default function GenAIQualityTiersV4(): React.JSX.Element {
+const GenAIQualityTiersV4 = React.memo(function GenAIQualityTiersV4(): React.JSX.Element {
   return (
     <div>
       <Helmet>

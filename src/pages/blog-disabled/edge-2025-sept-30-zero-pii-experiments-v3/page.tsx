@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 
-export default function ZeroPIIExperimentsV3(): React.JSX.Element {
+const ZeroPIIExperimentsV3 = React.memo(function ZeroPIIExperimentsV3(): React.JSX.Element {
   return (
     <div>
       <Helmet>

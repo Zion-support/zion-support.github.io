@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
 };
 
-export default function HomePage() {
+const HomePage = React.memo(function HomePage() {
   return (
     <div>/* content */}
   return (
@@ -172,4 +172,6 @@ export default function HomePage() {
       </footer>
     </div>
   );
-})
+});)
+
+export default $1;

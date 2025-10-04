@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function EdgeZeroPIIAnalytics2026(): React.JSX.Element {
+const EdgeZeroPIIAnalytics2026 = React.memo(function EdgeZeroPIIAnalytics2026(): React.JSX.Element {
   return (
     <div>
       <Helmet>

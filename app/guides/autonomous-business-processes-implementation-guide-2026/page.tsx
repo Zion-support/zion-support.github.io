@@ -16,7 +16,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function ImplementationGuide() {
+const ImplementationGuide = React.memo(function ImplementationGuide() {
   return (
     <div>/* content */}
   return (
@@ -529,4 +529,6 @@ export default function ImplementationGuide() {
       </div>
     </div>
   );
-})
+});)
+
+export default $1;

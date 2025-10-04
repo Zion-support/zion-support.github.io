@@ -8,7 +8,7 @@ export const metadata: Metadata =
   keywords: 'AI services pricing, micro SaaS pricing, IT services cost, technology consulting rates, enterprise solutions pricing',
 };
 
-export default function ServicesAdvertisingPage() {
+const ServicesAdvertisingPage = React.memo(function ServicesAdvertisingPage() {
   return (
     <div>/* content */}
   return (
@@ -109,4 +109,6 @@ export default function ServicesAdvertisingPage() {
       </footer>
     </div>
   );
-}</div></div></div></div></div>)
+});</div></div></div></div></div>)
+
+export default $1;

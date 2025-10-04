@@ -8,7 +8,7 @@ export const metadata: Metadata =
   keywords: 'sustainable AI solutions, green AI services, energy efficient AI, carbon neutral AI, environmental AI consulting',
 };
 
-export default function SustainableAISolutionsPage() {
+const SustainableAISolutionsPage = React.memo(function SustainableAISolutionsPage() {
   return (
     <div>/* content */}
   return (
@@ -404,4 +404,6 @@ export default function SustainableAISolutionsPage() {
       </main>
     </div>
   );
-}</div></div></div></div></div></div>)
+});</div></div></div></div></div></div>)
+
+export default $1;

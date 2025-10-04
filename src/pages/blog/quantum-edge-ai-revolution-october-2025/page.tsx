@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function QuantumEdgeAIRevolutionPage(): React.JSX.Element {
+const QuantumEdgeAIRevolutionPage = React.memo(function QuantumEdgeAIRevolutionPage(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -87,4 +87,6 @@ export default function QuantumEdgeAIRevolutionPage(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

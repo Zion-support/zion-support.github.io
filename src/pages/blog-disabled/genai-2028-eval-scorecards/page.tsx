@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function GenAIEvalScorecards2028(): React.JSX.Element {
+const GenAIEvalScorecards2028 = React.memo(function GenAIEvalScorecards2028(): React.JSX.Element {
   return (
     <div>
       <Helmet>

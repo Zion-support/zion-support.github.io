@@ -27,7 +27,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function AIBusinessIntelligence2025() {
+const AIBusinessIntelligence2025 = React.memo(function AIBusinessIntelligence2025() {
   return (
     <div>/* content */}
   return (
@@ -591,4 +591,6 @@ export default function AIBusinessIntelligence2025() {
         </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div></div></div></div></div>)
+
+export default $1;

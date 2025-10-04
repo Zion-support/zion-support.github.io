@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AI2026UltimateAutonomousRevolution() {
+const AI2026UltimateAutonomousRevolution = React.memo(function AI2026UltimateAutonomousRevolution() {
   return (
     <div>/* content */}
   return (

@@ -17,7 +17,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function December2026MegaBreakthroughConsultingPage() {
+const December2026MegaBreakthroughConsultingPage = React.memo(function December2026MegaBreakthroughConsultingPage() {
   return (
     <div>/* content */}
   return (
@@ -394,4 +394,6 @@ export default function December2026MegaBreakthroughConsultingPage() {
         </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+
+export default $1;

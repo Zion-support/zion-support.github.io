@@ -7,7 +7,7 @@ export const metadata = {
   keywords: 'AI implementation, roadmap, 2026, business transformation, AI strategy',
 };
 
-export default function AI2026ImplementationRoadmap() {
+const AI2026ImplementationRoadmap = React.memo(function AI2026ImplementationRoadmap() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
@@ -174,4 +174,6 @@ export default function AI2026ImplementationRoadmap() {
       </section>
     </div>
   );
-}
+});
+
+export default $1;

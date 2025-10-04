@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
 
-export default function CaseStudy(): React.JSX.Element {
+const CaseStudy = React.memo(function CaseStudy(): React.JSX.Element {
   return (
     <>
       <Header />
@@ -69,4 +69,6 @@ export default function CaseStudy(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

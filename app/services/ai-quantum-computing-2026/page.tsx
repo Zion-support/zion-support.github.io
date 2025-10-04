@@ -50,7 +50,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function AIQuantumComputingServices2026() {
+const AIQuantumComputingServices2026 = React.memo(function AIQuantumComputingServices2026() {
   return (
     <div>/* content */}
   return (
@@ -255,4 +255,6 @@ export default function AIQuantumComputingServices2026() {
           </div>
       </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div></div></div></div></div>)
+
+export default $1;

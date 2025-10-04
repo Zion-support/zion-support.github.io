@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, Lock, Zap, DollarSign, AlertTriangle } from 'lucide-react';
 
-export default function NextGenSecurityOperations2025(): JSX.Element {
+const NextGenSecurityOperations2025 = React.memo(function NextGenSecurityOperations2025(): JSX.Element {
   return (
     <div>
       <Helmet>

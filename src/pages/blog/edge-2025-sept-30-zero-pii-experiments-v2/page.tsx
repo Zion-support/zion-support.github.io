@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function ZeroPIIExperimentsV2(): React.JSX.Element {
+const ZeroPIIExperimentsV2 = React.memo(function ZeroPIIExperimentsV2(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function ZeroPIIExperimentsV2(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-export default function AutonomousInfrastructureHealing2025(): void {
+const AutonomousInfrastructureHealing2025 = React.memo(function AutonomousInfrastructureHealing2025(): void {
   return (
     <div>
       <Helmet>

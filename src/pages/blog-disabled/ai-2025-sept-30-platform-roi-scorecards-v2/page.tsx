@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PlatformRoiScorecardsV2(): React.JSX.Element {
+const PlatformRoiScorecardsV2 = React.memo(function PlatformRoiScorecardsV2(): React.JSX.Element {
   return (
     <div>
       <Helmet>

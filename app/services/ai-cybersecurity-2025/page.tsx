@@ -13,7 +13,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function AICybersecurity2025Page() {
+const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
   return (
     <div>/* content */}
   return (
@@ -322,4 +322,6 @@ export default function AICybersecurity2025Page() {
           </section>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+
+export default $1;

@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-export default function RealtimePersonalizationEngine2025(): void {
+const RealtimePersonalizationEngine2025 = React.memo(function RealtimePersonalizationEngine2025(): void {
   return (
     <div>
       <Helmet>

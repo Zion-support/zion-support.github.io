@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function PrivateExperimentsV4(): React.JSX.Element {
+const PrivateExperimentsV4 = React.memo(function PrivateExperimentsV4(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function PrivateExperimentsV4(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

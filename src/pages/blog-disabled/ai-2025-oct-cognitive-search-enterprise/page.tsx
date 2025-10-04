@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-export default function CognitiveSearchEnterprise2025(): void {
+const CognitiveSearchEnterprise2025 = React.memo(function CognitiveSearchEnterprise2025(): void {
   return (
     <div>
       <Helmet>

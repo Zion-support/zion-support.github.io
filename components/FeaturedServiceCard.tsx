@@ -10,7 +10,7 @@ interface FeaturedServiceCardProps
   popular?: boolean;
 }
 
-export default function FeaturedServiceCard(
+const FeaturedServiceCard = React.memo(function FeaturedServiceCard(
   title,
   description,
   price,
@@ -60,4 +60,6 @@ export default function FeaturedServiceCard(
       </Link>
     </div>
   );
-}</div>
+});</div>
+
+export default $1;

@@ -12,7 +12,7 @@ export const metadata = {
   },
 };
 
-export default function AI2027AdvancedAutonomousSystemsService() {
+const AI2027AdvancedAutonomousSystemsService = React.memo(function AI2027AdvancedAutonomousSystemsService() {
   return (
     <div>/* content */}
   return (
@@ -336,4 +336,6 @@ export default function AI2027AdvancedAutonomousSystemsService() {
       </section>
     </div>
   );
-})
+});)
+
+export default $1;

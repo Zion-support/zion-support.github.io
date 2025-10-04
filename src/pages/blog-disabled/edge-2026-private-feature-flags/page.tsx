@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function EdgePrivateFeatureFlags2026(): React.JSX.Element {
+const EdgePrivateFeatureFlags2026 = React.memo(function EdgePrivateFeatureFlags2026(): React.JSX.Element {
   return (
     <div>
       <Helmet>

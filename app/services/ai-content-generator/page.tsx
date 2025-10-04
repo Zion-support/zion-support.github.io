@@ -7,7 +7,7 @@ export const metadata: Metadata =
   keywords: 'AI content generator, automated content creation, GPT-4, blog writing, social media content, SEO content',
 };
 
-export default function AIContentGeneratorPage() {
+const AIContentGeneratorPage = React.memo(function AIContentGeneratorPage() {
   return (
     <div>/* content */}
   return (
@@ -319,4 +319,6 @@ export default function AIContentGeneratorPage() {
           </div>
       </section>
   );
-}</div></div></div></div></div></div>)
+});</div></div></div></div></div></div>)
+
+export default $1;

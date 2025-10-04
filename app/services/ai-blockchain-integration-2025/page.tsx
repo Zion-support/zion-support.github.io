@@ -13,7 +13,7 @@ export const metadata: Metadata =
   },
 };
 
-export default function AIBlockchainIntegration2025Page() {
+const AIBlockchainIntegration2025Page = React.memo(function AIBlockchainIntegration2025Page() {
   return (
     <div>/* content */}
   return (
@@ -323,4 +323,6 @@ export default function AIBlockchainIntegration2025Page() {
           </section>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+
+export default $1;

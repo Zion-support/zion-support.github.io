@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-export default function HyperPersonalizedCustomerExperience2025(): void {
+const HyperPersonalizedCustomerExperience2025 = React.memo(function HyperPersonalizedCustomerExperience2025(): void {
   return (
     <div>
       <Helmet>

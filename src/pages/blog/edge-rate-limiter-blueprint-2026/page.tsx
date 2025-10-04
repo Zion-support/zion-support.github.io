@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
+const EdgeRateLimiterBlueprint2026 = React.memo(function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
   return (
     <>
       <Helmet>
@@ -24,4 +24,6 @@ export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
+
+export default $1;

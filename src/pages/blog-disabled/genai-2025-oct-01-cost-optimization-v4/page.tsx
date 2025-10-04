@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 
-export default function GenAICostOptimizationV4(): React.JSX.Element {
+const GenAICostOptimizationV4 = React.memo(function GenAICostOptimizationV4(): React.JSX.Element {
   return (
     <div>
       <Helmet>

@@ -14,7 +14,7 @@ export const metadata = {
   },
 };
 
-export default function AI2027ImplementationRoadmap() {
+const AI2027ImplementationRoadmap = React.memo(function AI2027ImplementationRoadmap() {
   return (
     <div>/* content */}
   return (
@@ -354,4 +354,6 @@ export default function AI2027ImplementationRoadmap() {
       </div>
     </div>
   );
-})
+});)
+
+export default $1;

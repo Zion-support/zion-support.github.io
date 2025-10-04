@@ -7,7 +7,7 @@ export const metadata: Metadata =
   keywords: 'cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration',
 };
 
-export default function CloudMigrationServicesPage() {
+const CloudMigrationServicesPage = React.memo(function CloudMigrationServicesPage() {
   return (
     <div>/* content */}
   return (
@@ -402,4 +402,6 @@ export default function CloudMigrationServicesPage() {
           </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div>)
+});</div></div></div></div></div></div></div></div></div></div>)
+
+export default $1;

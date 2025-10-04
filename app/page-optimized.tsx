@@ -58,7 +58,7 @@ export const metadata = {
   },
 };
 
-export default function HomePage() {
+const HomePage = React.memo(function HomePage() {
   return (
     <div>/* content */}
   const structuredData = 
@@ -257,4 +257,6 @@ export default function HomePage() {
       </div>
     </>
   );
-})
+});)
+
+export default $1;
