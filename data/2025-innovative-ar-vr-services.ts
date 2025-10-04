@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeARVRService 
+export interface InnovativeARVRService {
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeARVRService
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: 
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
@@ -45,18 +45,17 @@ const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
-export const innovativeARVRServices: InnovativeARVRService[] = [
-  
+export const innovativeARVRServices: InnovativeARVRService[] = [;
     id: 'ai-powered-ar-platform',
     name: 'AI-Powered AR Platform',
     tagline: 'Intelligent augmented reality platform with AI-powered content generation and spatial computing',
     price: '$3,999',
     period: '/month',
     description: 'Advanced augmented reality platform that uses AI to generate AR content, enable spatial computing, and provide immersive AR experiences for businesses and consumers.',
-    features: [
+    features: [;
       'AI-powered content generation',
       'Spatial computing',
       'AR content creation',
@@ -68,7 +67,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
       'Compliance management'
     ],
     popular: true,
-    icon: '👁️',
+    icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-ar-platform',
@@ -92,7 +91,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     launchDate: '2025-01-01',
     customers: 234,
     rating: 4.8,
-    reviews: 178
+    reviews: 178;
   },
   
     id: 'quantum-vr-optimization',
@@ -101,7 +100,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary virtual reality optimization platform that uses quantum computing to enhance VR performance, create immersive experiences, and optimize virtual environments.',
-    features: [
+    features: [;
       'Quantum VR optimization',
       'Immersive experiences',
       'Performance enhancement',
@@ -113,7 +112,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
       'Multi-environment support'
     ],
     popular: false,
-    icon: '⚡',
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-vr-optimization',
@@ -137,7 +136,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     launchDate: '2025-01-07',
     customers: 6,
     rating: 4.7,
-    reviews: 4
+    reviews: 4;
   },
   
     id: 'metaverse-ar-vr-platform',
@@ -146,7 +145,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     price: '$4,999',
     period: '/month',
     description: 'Advanced metaverse platform that integrates AR and VR technologies to create immersive virtual worlds, interactive experiences, and social environments for users.',
-    features: [
+    features: [;
       'Metaverse technology',
       'AR/VR integration',
       'Virtual world creation',
@@ -158,7 +157,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
       'Compliance management'
     ],
     popular: true,
-    icon: '🌐',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/metaverse-ar-vr-platform',
@@ -182,7 +181,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     launchDate: '2025-01-13',
     customers: 123,
     rating: 4.6,
-    reviews: 89
+    reviews: 89;
   },
   
     id: 'ai-powered-vr-content-creation',
@@ -191,7 +190,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     price: '$2,799',
     period: '/month',
     description: 'Advanced VR content creation platform that uses AI to generate virtual environments, optimize VR content, and create immersive experiences for VR applications.',
-    features: [
+    features: [;
       'AI-powered content generation',
       'VR content optimization',
       'Virtual environment creation',
@@ -203,7 +202,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
       'Compliance management'
     ],
     popular: true,
-    icon: '🎬',
+    icon: '',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-vr-content-creation',
@@ -227,7 +226,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     launchDate: '2025-01-19',
     customers: 178,
     rating: 4.7,
-    reviews: 134
+    reviews: 134;
   },
   
     id: 'ar-vr-enterprise-platform',
@@ -236,7 +235,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     price: '$5,999',
     period: '/month',
     description: 'Advanced AR/VR enterprise platform that provides comprehensive business applications, training solutions, and enterprise-grade AR/VR services for corporations.',
-    features: [
+    features: [;
       'Business applications',
       'Training solutions',
       'Enterprise services',
@@ -248,7 +247,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
       'Compliance management'
     ],
     popular: true,
-    icon: '🏢',
+    icon: '',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ar-vr-enterprise-platform',
@@ -272,6 +271,6 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     launchDate: '2025-01-26',
     customers: 145,
     rating: 4.6,
-    reviews: 112
+    reviews: 112;
   }
 ];

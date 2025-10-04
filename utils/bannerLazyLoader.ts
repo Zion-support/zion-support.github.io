@@ -1,6 +1,6 @@
 /**
  * Banner Lazy Loader Utility
- * 
+ *
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
@@ -16,18 +16,21 @@ interface BannerModule {
  */
 export const lazyLoadBanner = (
   importFn: () => Promise<BannerModule>,
-  componentName: string
+  componentName: string,
 ) => {
   return lazy(() =>
-    importFn().catch((error) => {
+    importFn().catch(error => {
       console.error(`Failed to load banner: ${componentName}`, error);
       // Retry once after a delay
-      return new Promise<BannerModule>((resolve) => {
+      return new Promise<BannerModule>(resolve => {
         setTimeout(() => {
           importFn()
             .then(resolve)
-            .catch((retryError) => {
-              console.error(`Retry failed for banner: ${componentName}`, retryError);
+            .catch(retryError => {
+              console.error(
+                `Retry failed for banner: ${componentName}`,
+                retryError,
+              );
               // Return a fallback component
               resolve({
                 default: () => null,
@@ -35,17 +38,19 @@ export const lazyLoadBanner = (
             });
         }, 1000);
       });
-    })
+    }),
   );
 };
 
 /**
  * Preload banner components in the background
  */
-export const preloadBanners = (importFns: Array<() => Promise<BannerModule>>) => {
+export const preloadBanners = (
+  importFns: Array<() => Promise<BannerModule>>,
+) => {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
     requestIdleCallback(() => {
-      importFns.forEach((importFn) => {
+      importFns.forEach(importFn => {
         importFn().catch(() => {
           // Silently fail for preloading
         });
@@ -65,12 +70,12 @@ export const getBannerPriority = (bannerName: string): number => {
     }
     return 2;
   }
-  
+
   // 2026+ content gets medium priority
   if (bannerName.includes('2026') || bannerName.includes('2027')) {
     return 3;
   }
-  
+
   // Older content gets lower priority
   return 4;
 };
@@ -96,11 +101,11 @@ export class BannerObserver {
     private options: IntersectionObserverInit = {
       rootMargin: '200px', // Load 200px before entering viewport
       threshold: 0.01,
-    }
+    },
   ) {
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      this.observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+      this.observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const bannerId = entry.target.getAttribute('data-banner-id');
             if (bannerId && !this.loadedBanners.has(bannerId)) {
@@ -134,12 +139,12 @@ export const trackBannerPerformance = (
     renderTime?: number;
     visible?: boolean;
     clicked?: boolean;
-  }
+  },
 ) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     // Send to analytics
     console.log(`Banner Performance [${bannerName}]:`, metrics);
-    
+
     // You can integrate with your analytics service here
     // Example: gtag('event', 'banner_performance', { ...metrics, banner: bannerName });
   }

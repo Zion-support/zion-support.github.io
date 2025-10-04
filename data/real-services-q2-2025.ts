@@ -4,8 +4,7 @@ export type RealServiceQ22025 =
   tagline: string;
   price: string;
   features: string[]}
-export const realServicesQ22025: RealServiceQ22025[] = [
-  
+export const realServicesQ22025: RealServiceQ22025[] = [;
     id: 'q2-service-1',
     name: 'Q2 Service 1',
     tagline: 'Second quarter service offering',

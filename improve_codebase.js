@@ -2,116 +2,123 @@ const fs = require('fs');
 const path = require('path');
 
 class CodebaseImprover {
-    constructor() {
-        this.workspacePath = process.cwd();
-        this.improvements = [];
-    }
+  constructor() {
+    this.workspacePath = process.cwd();
+    this.improvements = [];
+  }
 
-    // Read file safely
-    readFile(filePath) {
-        try {
-            return fs.readFileSync(path.join(this.workspacePath, filePath), 'utf8');
-        } catch (error) {
-            console.warn(`Could not read file ${filePath}:`, error.message);
-            return null;
-        }
+  // Read file safely
+  readFile(filePath) {
+    try {
+      return fs.readFileSync(path.join(this.workspacePath, filePath), 'utf8');
+    } catch (error) {
+      console.warn(`Could not read file ${filePath}:`, error.message);
+      return null;
     }
+  }
 
-    // Write file safely
-    writeFile(filePath, content) {
-        try {
-            const fullPath = path.join(this.workspacePath, filePath);
-            const dir = path.dirname(fullPath);
-            if (!fs.existsSync(dir)) {
-                fs.mkdirSync(dir, { recursive: true });
-            }
-            fs.writeFileSync(fullPath, content);
-            console.log(`✅ Updated ${filePath}`);
-            return true;
-        } catch (error) {
-            console.error(`❌ Error writing file ${filePath}:`, error.message);
-            return false;
-        }
+  // Write file safely
+  writeFile(filePath, content) {
+    try {
+      const fullPath = path.join(this.workspacePath, filePath);
+      const dir = path.dirname(fullPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      fs.writeFileSync(fullPath, content);
+      console.log(`✅ Updated ${filePath}`);
+      return true;
+    } catch (error) {
+      console.error(`❌ Error writing file ${filePath}:`, error.message);
+      return false;
     }
+  }
 
-    // Improve App.tsx
-    improveAppTsx() {
-        console.log('🔧 Improving App.tsx...');
-        
-        const appPath = 'src/App.tsx';
-        let content = this.readFile(appPath);
-        
-        if (!content) return;
-        
-        // Remove unused imports
-        const lines = content.split('\n');
-        const improvedLines = lines.filter(line => {
-            // Remove commented out imports
-            if (line.trim().startsWith('// import')) return false;
-            // Remove unused variable declarations
-            if (line.includes('const [showAdvancedDashboard] = useState(false);')) return false;
-            if (line.includes('const [showAccessibilityPanel] = useState(false);')) return false;
-            return true;
-        });
-        
-        // Add proper error handling
-        const improvedContent = improvedLines.join('\n')
-            .replace(/console\.log\(/g, 'console.debug(')
-            .replace(/console\.warn\(/g, 'console.debug(');
-        
-        if (this.writeFile(appPath, improvedContent)) {
-            this.improvements.push('Cleaned up App.tsx - removed unused imports and variables');
-        }
+  // Improve App.tsx
+  improveAppTsx() {
+    console.log('🔧 Improving App.tsx...');
+
+    const appPath = 'src/App.tsx';
+    let content = this.readFile(appPath);
+
+    if (!content) return;
+
+    // Remove unused imports
+    const lines = content.split('\n');
+    const improvedLines = lines.filter(line => {
+      // Remove commented out imports
+      if (line.trim().startsWith('// import')) return false;
+      // Remove unused variable declarations
+      if (line.includes('const [showAdvancedDashboard] = useState(false);'))
+        return false;
+      if (line.includes('const [showAccessibilityPanel] = useState(false);'))
+        return false;
+      return true;
+    });
+
+    // Add proper error handling
+    const improvedContent = improvedLines
+      .join('\n')
+      .replace(/console\.log\(/g, 'console.debug(')
+      .replace(/console\.warn\(/g, 'console.debug(');
+
+    if (this.writeFile(appPath, improvedContent)) {
+      this.improvements.push(
+        'Cleaned up App.tsx - removed unused imports and variables',
+      );
     }
+  }
 
-    // Improve TypeScript configuration
-    improveTypeScriptConfig() {
-        console.log('🔧 Improving TypeScript configuration...');
-        
-        const tsConfigPath = 'tsconfig.json';
-        let content = this.readFile(tsConfigPath);
-        
-        if (!content) return;
-        
-        try {
-            const config = JSON.parse(content);
-            
-            // Improve compiler options
-            config.compilerOptions = {
-                ...config.compilerOptions,
-                strict: true,
-                noUnusedLocals: true,
-                noUnusedParameters: true,
-                noImplicitReturns: true,
-                noFallthroughCasesInSwitch: true,
-                noUncheckedIndexedAccess: true,
-                exactOptionalPropertyTypes: true,
-                noImplicitOverride: true,
-                noPropertyAccessFromIndexSignature: true,
-                noUncheckedSideEffectImports: true
-            };
-            
-            if (this.writeFile(tsConfigPath, JSON.stringify(config, null, 2))) {
-                this.improvements.push('Enhanced TypeScript configuration with stricter settings');
-            }
-        } catch (error) {
-            console.warn('Could not parse tsconfig.json:', error.message);
-        }
+  // Improve TypeScript configuration
+  improveTypeScriptConfig() {
+    console.log('🔧 Improving TypeScript configuration...');
+
+    const tsConfigPath = 'tsconfig.json';
+    let content = this.readFile(tsConfigPath);
+
+    if (!content) return;
+
+    try {
+      const config = JSON.parse(content);
+
+      // Improve compiler options
+      config.compilerOptions = {
+        ...config.compilerOptions,
+        strict: true,
+        noUnusedLocals: true,
+        noUnusedParameters: true,
+        noImplicitReturns: true,
+        noFallthroughCasesInSwitch: true,
+        noUncheckedIndexedAccess: true,
+        exactOptionalPropertyTypes: true,
+        noImplicitOverride: true,
+        noPropertyAccessFromIndexSignature: true,
+        noUncheckedSideEffectImports: true,
+      };
+
+      if (this.writeFile(tsConfigPath, JSON.stringify(config, null, 2))) {
+        this.improvements.push(
+          'Enhanced TypeScript configuration with stricter settings',
+        );
+      }
+    } catch (error) {
+      console.warn('Could not parse tsconfig.json:', error.message);
     }
+  }
 
-    // Improve Vite configuration
-    improveViteConfig() {
-        console.log('🔧 Improving Vite configuration...');
-        
-        const viteConfigPath = 'vite.config.ts';
-        let content = this.readFile(viteConfigPath);
-        
-        if (!content) return;
-        
-        // Add better optimization settings
-        const improvedContent = content.replace(
-            /build: \{[\s\S]*?\}/,
-            `build: {
+  // Improve Vite configuration
+  improveViteConfig() {
+    console.log('🔧 Improving Vite configuration...');
+
+    const viteConfigPath = 'vite.config.ts';
+    let content = this.readFile(viteConfigPath);
+
+    if (!content) return;
+
+    // Add better optimization settings
+    const improvedContent = content.replace(
+      /build: \{[\s\S]*?\}/,
+      `build: {
     outDir: 'dist',
     sourcemap: mode !== 'production',
     minify: 'terser',
@@ -148,19 +155,21 @@ class CodebaseImprover {
     chunkSizeWarningLimit: 1000,
     cssCodeSplit: true,
     target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
-  }`
-        );
-        
-        if (this.writeFile(viteConfigPath, improvedContent)) {
-            this.improvements.push('Enhanced Vite configuration with better optimization');
-        }
-    }
+  }`,
+    );
 
-    // Create performance monitoring utility
-    createPerformanceMonitoring() {
-        console.log('🔧 Creating performance monitoring utility...');
-        
-        const performanceContent = `/**
+    if (this.writeFile(viteConfigPath, improvedContent)) {
+      this.improvements.push(
+        'Enhanced Vite configuration with better optimization',
+      );
+    }
+  }
+
+  // Create performance monitoring utility
+  createPerformanceMonitoring() {
+    console.log('🔧 Creating performance monitoring utility...');
+
+    const performanceContent = `/**
  * Advanced Performance Monitoring Utility
  * Provides comprehensive performance tracking and optimization
  */
@@ -330,16 +339,18 @@ if (typeof window !== 'undefined') {
   performanceMonitor.startMonitoring();
 }`;
 
-        if (this.writeFile('src/utils/performanceMonitoring.ts', performanceContent)) {
-            this.improvements.push('Created advanced performance monitoring utility');
-        }
+    if (
+      this.writeFile('src/utils/performanceMonitoring.ts', performanceContent)
+    ) {
+      this.improvements.push('Created advanced performance monitoring utility');
     }
+  }
 
-    // Create error handling utility
-    createErrorHandling() {
-        console.log('🔧 Creating error handling utility...');
-        
-        const errorHandlingContent = `/**
+  // Create error handling utility
+  createErrorHandling() {
+    console.log('🔧 Creating error handling utility...');
+
+    const errorHandlingContent = `/**
  * Advanced Error Handling Utility
  * Provides comprehensive error tracking and recovery
  */
@@ -504,53 +515,55 @@ class ErrorHandler {
 // Export singleton instance
 export const errorHandler = new ErrorHandler();`;
 
-        if (this.writeFile('src/utils/errorHandling.ts', errorHandlingContent)) {
-            this.improvements.push('Created comprehensive error handling utility');
-        }
+    if (this.writeFile('src/utils/errorHandling.ts', errorHandlingContent)) {
+      this.improvements.push('Created comprehensive error handling utility');
     }
+  }
 
-    // Improve package.json scripts
-    improvePackageJson() {
-        console.log('🔧 Improving package.json scripts...');
-        
-        const packageJsonPath = 'package.json';
-        let content = this.readFile(packageJsonPath);
-        
-        if (!content) return;
-        
-        try {
-            const packageJson = JSON.parse(content);
-            
-            // Improve scripts
-            packageJson.scripts = {
-                ...packageJson.scripts,
-                'build:production': 'NODE_ENV=production pnpm build',
-                'build:analyze': 'vite build --mode analyze',
-                'build:clean': 'rm -rf dist && pnpm build',
-                'build:check': 'pnpm type-check && pnpm lint && pnpm build',
-                'dev:clean': 'rm -rf node_modules/.vite && pnpm dev',
-                'test:coverage': 'jest --coverage --watchAll=false',
-                'test:ci': 'jest --ci --coverage --watchAll=false',
-                'lint:fix': 'eslint . --fix --max-warnings 0',
-                'lint:check': 'eslint . --max-warnings 0',
-                'type-check:strict': 'tsc --noEmit --strict',
-                'precommit': 'pnpm type-check && pnpm lint && pnpm test:ci',
-                'postinstall': 'pnpm type-check'
-            };
-            
-            if (this.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2))) {
-                this.improvements.push('Enhanced package.json with better scripts');
-            }
-        } catch (error) {
-            console.warn('Could not parse package.json:', error.message);
-        }
+  // Improve package.json scripts
+  improvePackageJson() {
+    console.log('🔧 Improving package.json scripts...');
+
+    const packageJsonPath = 'package.json';
+    let content = this.readFile(packageJsonPath);
+
+    if (!content) return;
+
+    try {
+      const packageJson = JSON.parse(content);
+
+      // Improve scripts
+      packageJson.scripts = {
+        ...packageJson.scripts,
+        'build:production': 'NODE_ENV=production pnpm build',
+        'build:analyze': 'vite build --mode analyze',
+        'build:clean': 'rm -rf dist && pnpm build',
+        'build:check': 'pnpm type-check && pnpm lint && pnpm build',
+        'dev:clean': 'rm -rf node_modules/.vite && pnpm dev',
+        'test:coverage': 'jest --coverage --watchAll=false',
+        'test:ci': 'jest --ci --coverage --watchAll=false',
+        'lint:fix': 'eslint . --fix --max-warnings 0',
+        'lint:check': 'eslint . --max-warnings 0',
+        'type-check:strict': 'tsc --noEmit --strict',
+        precommit: 'pnpm type-check && pnpm lint && pnpm test:ci',
+        postinstall: 'pnpm type-check',
+      };
+
+      if (
+        this.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2))
+      ) {
+        this.improvements.push('Enhanced package.json with better scripts');
+      }
+    } catch (error) {
+      console.warn('Could not parse package.json:', error.message);
     }
+  }
 
-    // Create comprehensive build script
-    createBuildScript() {
-        console.log('🔧 Creating comprehensive build script...');
-        
-        const buildScriptContent = `#!/bin/bash
+  // Create comprehensive build script
+  createBuildScript() {
+    console.log('🔧 Creating comprehensive build script...');
+
+    const buildScriptContent = `#!/bin/bash
 
 # Comprehensive Build and Test Script
 set -e
@@ -691,16 +704,16 @@ echo "- Build: ✅"
 echo "- Tests: ✅"
 echo "- Bundle Analysis: ✅"`;
 
-        if (this.writeFile('build-and-test.sh', buildScriptContent)) {
-            this.improvements.push('Created comprehensive build and test script');
-        }
+    if (this.writeFile('build-and-test.sh', buildScriptContent)) {
+      this.improvements.push('Created comprehensive build and test script');
     }
+  }
 
-    // Create summary report
-    createSummaryReport() {
-        console.log('📝 Creating summary report...');
-        
-        const summaryContent = `# Codebase Improvements Summary
+  // Create summary report
+  createSummaryReport() {
+    console.log('📝 Creating summary report...');
+
+    const summaryContent = `# Codebase Improvements Summary
 
 ## 🎯 **Improvements Completed: ${this.improvements.length}**
 
@@ -752,38 +765,37 @@ The codebase has been significantly improved with:
 
 **Ready for production deployment!** 🚀`;
 
-        if (this.writeFile('IMPROVEMENTS_SUMMARY.md', summaryContent)) {
-            this.improvements.push('Created comprehensive improvements summary');
-        }
+    if (this.writeFile('IMPROVEMENTS_SUMMARY.md', summaryContent)) {
+      this.improvements.push('Created comprehensive improvements summary');
     }
+  }
 
-    // Run all improvements
-    run() {
-        console.log('🎯 Starting codebase improvements...');
-        
-        try {
-            this.improveAppTsx();
-            this.improveTypeScriptConfig();
-            this.improveViteConfig();
-            this.createPerformanceMonitoring();
-            this.createErrorHandling();
-            this.improvePackageJson();
-            this.createBuildScript();
-            this.createSummaryReport();
-            
-            console.log('\n🎉 CODEBASE IMPROVEMENTS COMPLETED!');
-            console.log(`✅ ${this.improvements.length} improvements implemented`);
-            console.log('✅ Code quality enhanced');
-            console.log('✅ Performance monitoring added');
-            console.log('✅ Error handling improved');
-            console.log('✅ Build system optimized');
-            console.log('\n🚀 Codebase is ready for production!');
-            
-        } catch (error) {
-            console.error('❌ Error during improvements:', error.message);
-            process.exit(1);
-        }
+  // Run all improvements
+  run() {
+    console.log('🎯 Starting codebase improvements...');
+
+    try {
+      this.improveAppTsx();
+      this.improveTypeScriptConfig();
+      this.improveViteConfig();
+      this.createPerformanceMonitoring();
+      this.createErrorHandling();
+      this.improvePackageJson();
+      this.createBuildScript();
+      this.createSummaryReport();
+
+      console.log('\n🎉 CODEBASE IMPROVEMENTS COMPLETED!');
+      console.log(`✅ ${this.improvements.length} improvements implemented`);
+      console.log('✅ Code quality enhanced');
+      console.log('✅ Performance monitoring added');
+      console.log('✅ Error handling improved');
+      console.log('✅ Build system optimized');
+      console.log('\n🚀 Codebase is ready for production!');
+    } catch (error) {
+      console.error('❌ Error during improvements:', error.message);
+      process.exit(1);
     }
+  }
 }
 
 // Run the codebase improver

@@ -33,10 +33,13 @@ const THRESHOLDS = {
 /**
  * Get rating based on metric value
  */
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+function getRating(
+  name: string,
+  value: number,
+): 'good' | 'needs-improvement' | 'poor' {
   const threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good';
-  
+
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
   return 'poor';
@@ -63,7 +66,9 @@ function sendToAnalytics(metric: Metric): void {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      value: Math.round(
+        metric.name === 'CLS' ? metric.value * 1000 : metric.value,
+      ),
       event_label: metric.id,
       non_interaction: true,
     });
@@ -81,7 +86,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-    }).catch((error) => console.error('Performance reporting error:', error));
+    }).catch(error => console.error('Performance reporting error:', error));
   }
 }
 
@@ -108,7 +113,7 @@ export function initPerformanceMonitoring(): void {
  */
 export function measurePerformance(name: string, startTime: number): number {
   const duration = performance.now() - startTime;
-  
+
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'timing_complete', {
       name: name,
@@ -129,7 +134,7 @@ export function measurePerformance(name: string, startTime: number): number {
  */
 export function markPerformance(name: string): void {
   if (typeof performance === 'undefined') return;
-  
+
   try {
     performance.mark(name);
   } catch (error) {
@@ -140,7 +145,11 @@ export function markPerformance(name: string): void {
 /**
  * Measure between two performance marks
  */
-export function measureBetween(name: string, startMark: string, endMark: string): number {
+export function measureBetween(
+  name: string,
+  startMark: string,
+  endMark: string,
+): number {
   if (typeof performance === 'undefined') return 0;
 
   try {
@@ -187,7 +196,9 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
   if (typeof performance === 'undefined') return [];
 
   try {
-    return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+    return performance.getEntriesByType(
+      'resource',
+    ) as PerformanceResourceTiming[];
   } catch (error) {
     console.error('Error getting resource timing:', error);
     return [];
@@ -197,7 +208,9 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
 /**
  * Analyze slow resources
  */
-export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {
+export function getSlowResources(
+  threshold: number = 1000,
+): PerformanceResourceTiming[] {
   const resources = getResourceTiming();
   return resources.filter(resource => resource.duration > threshold);
 }
@@ -206,7 +219,8 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
  * Get memory usage (if available)
  */
 export function getMemoryUsage(): Record<string, number> | null {
-  if (typeof performance === 'undefined' || !(performance as any).memory) return null;
+  if (typeof performance === 'undefined' || !(performance as any).memory)
+    return null;
 
   const memory = (performance as any).memory;
   return {
@@ -235,7 +249,8 @@ export function generatePerformanceReport(): PerformanceReport | null {
       metrics.push({
         name,
         value,
-        rating: value < 1000 ? 'good' : value < 3000 ? 'needs-improvement' : 'poor',
+        rating:
+          value < 1000 ? 'good' : value < 3000 ? 'needs-improvement' : 'poor',
         delta: 0,
         id: `nav-${name}`,
       });
@@ -253,11 +268,13 @@ export function generatePerformanceReport(): PerformanceReport | null {
 /**
  * Monitor long tasks
  */
-export function monitorLongTasks(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+export function monitorLongTasks(
+  callback: (entries: PerformanceEntry[]) => void,
+): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
   try {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
       callback(entries);
     });
@@ -273,11 +290,13 @@ export function monitorLongTasks(callback: (entries: PerformanceEntry[]) => void
 /**
  * Monitor layout shifts
  */
-export function monitorLayoutShifts(callback: (entries: PerformanceEntry[]) => void): PerformanceObserver | null {
+export function monitorLayoutShifts(
+  callback: (entries: PerformanceEntry[]) => void,
+): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
 
   try {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
       callback(entries);
     });
@@ -294,19 +313,23 @@ export function monitorLayoutShifts(callback: (entries: PerformanceEntry[]) => v
  * Check if connection is slow
  */
 export function isSlowConnection(): boolean {
-  if (typeof navigator === 'undefined' || !(navigator as any).connection) return false;
+  if (typeof navigator === 'undefined' || !(navigator as any).connection)
+    return false;
 
   const connection = (navigator as any).connection;
   const slowTypes = ['slow-2g', '2g'];
-  
-  return slowTypes.includes(connection.effectiveType) || connection.saveData === true;
+
+  return (
+    slowTypes.includes(connection.effectiveType) || connection.saveData === true
+  );
 }
 
 /**
  * Get connection type
  */
 export function getConnectionType(): string {
-  if (typeof navigator === 'undefined' || !(navigator as any).connection) return 'unknown';
+  if (typeof navigator === 'undefined' || !(navigator as any).connection)
+    return 'unknown';
 
   const connection = (navigator as any).connection;
   return connection.effectiveType || connection.type || 'unknown';
