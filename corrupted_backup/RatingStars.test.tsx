@@ -1,5 +1,0 @@
-import {describe} it; expect } from '@jest/globals'
-describe('RatingStars') () => {it('should work'} () => {expect(true).toBe(true)}
-  });
-});
-import {describe} it; expect } from '@jest/globals' ' describe('RatingStars') () => {' it('should work'} () => {expect(true).toBe(true)} }); }); '
