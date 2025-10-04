@@ -174,9 +174,10 @@ class ComprehensiveMonitor {
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver(list => {
         let clsValue = 0;
-        list.getEntries().forEach((entry: Record<string, unknown>) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        list.getEntries().forEach((entry: PerformanceEntry) => {
+          const layoutShiftEntry = entry as any;
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value as number;
           }
         });
         this.recordPerformanceMetric('cumulativeLayoutShift', clsValue);
@@ -185,10 +186,11 @@ class ComprehensiveMonitor {
 
       // First Input Delay
       const fidObserver = new PerformanceObserver(list => {
-        list.getEntries().forEach((entry: Record<string, unknown>) => {
+        list.getEntries().forEach((entry: PerformanceEntry) => {
+          const fidEntry = entry as any;
           this.recordPerformanceMetric(
             'firstInputDelay',
-            entry.processingStart - entry.startTime,
+            fidEntry.processingStart - fidEntry.startTime,
           );
         });
       });
@@ -320,7 +322,7 @@ class ComprehensiveMonitor {
     // Monitor system resources
     if (typeof window !== 'undefined' && 'performance' in window) {
       const monitorResources = () => {
-        const memory = (performance as Record<string, unknown>).memory;
+        const memory = (performance as any).memory;
         if (memory) {
           this.recordSystemHealth('memory', {
             used: memory.usedJSHeapSize,
@@ -439,7 +441,7 @@ class ComprehensiveMonitor {
           navigation.domInteractive - navigation.fetchStart;
       }
 
-      const memory = (performance as Record<string, unknown>).memory;
+      const memory = (performance as any).memory;
       if (memory) {
         metrics.memoryUsage = memory.usedJSHeapSize;
       }
