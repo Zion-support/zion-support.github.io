@@ -1,0 +1,179 @@
+import, Reac, t, { useEffe, c, t } fr, o, m "rea, c, t";
+=======
+import, Reac, t, { useEffe, c, t } fr, o, m "rea, c, t";';
+interface, AdvancedAnalyticsProp, s {
+enableConversionTracki, n, g?: boole, a, n;
+enablePerformanceTracki, n, g?: boole, a, n;
+enableErrorTracki, n, g?: boole, a, n;
+}
+const, AdvancedAnalytic, s: Rea, c, t.FC<AdvancedAnalyticsPro, p, s> = ({
+  enableConversionTracki, n, g = tr, u, e
+  enablePerformanceTracki, n, g = tr, u, e;
+=======
+const, AdvancedAnalyti, c
+  s: Rea, c, t.FC<AdvancedAnalyticsPro, p, s> = ({
+  enableConversionTracki, n, g = tr, u, e
+  enablePerformanceTracki, n, g = tr, u, e
+  enableErrorTracki, n, g = tr, u, e;
+}) => {
+  useEffe, c, t(() => {
+    // Initialize, Google, Analytics 4
+  const, initGA, 4 = () => {
+      if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {
+        wind, o, w.gt, a, g('conf, i, g', 'G-XXXXXXXX, X, X', {
+          page_tit, l, e: docume, n, t.tit, l, e
+          page_locati, o, n: wind, o, w.locati, o, n.hr, e, f
+          custom_m, a, p: {
+            custom_parameter, _, 1: 'ai_solutio, n, s'
+            custom_parameter, _, 2: 'enterprise_te, c, h'
+          }
+=======
+      if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {';
+        wind, o, w.gt, a, g('conf, i, g', 'G-XXXXXXXX, X, X', {';
+          page_tit, l, e: docume, n, t.tit, l, e
+          page_locati, o, n: wind, o, w.locati, o, n.hr, e, f
+          custom_m, a, p: {
+            custom_parameter, _, 1: 'ai_solutio, n, s',';
+            custom_parameter, _, 2: 'enterprise_te, c, h'
+          };
+        });
+      }
+    };
+    // Performance, trackin, g
+  const, trackPerformanc, e = () => {
+      if (enablePerformanceTracki, n, g && 'performan, c, e' in, windo, w) {;
+        wind, o, w.addEventListen, e, r('lo, a, d', () => {;
+=======
+      if (enablePerformanceTracki, n, g && 'performan, c, e' in, windo, w) {';
+        wind, o, w.addEventListen, e, r('lo, a, d', () => {';
+          setTimeo, u, t(() => {
+            const, perfDat, a = performan, c, e.getEntriesByTy, p, e('navigati, o, n')[0] as, PerformanceNavigationTimin, g;';
+            const, metric, s = {
+              page_load_ti, m, e: perfDa, t, a.loadEventE, n, d - perfDa, t, a.loadEventSta, r, t
+              dom_content_load, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.domContentLoadedEventSta, r, t
+              first_pai, n, t: performan, c, e.getEntriesByNa, m, e('fir, s, t-pai, n, t')[0]?.startTi, m, e || 0,'
+              first_contentful_pai, n, t: performan, c, e.getEntriesByNa, m, e('fir, s, t-contentf, u, l-pai, n, t')[0]?.startTi, m, e || 0'
+=======
+              first_pai, n, t: performan, c, e.getEntriesByNa, m, e('fir, s, t-pai, n, t')[0]?.startTi, m, e || 0,';
+              first_contentful_pai, n, t: performan, c, e.getEntriesByNa, m, e('fir, s, t-contentf, u, l-pai, n, t')[0]?.startTi, m, e || 0';
+            };
+            // Send, to, analytics
+  if (wind, o, w.gt, a, g) {
+              wind, o, w.gt, a, g('eve, n, t', 'page_performan, c, e', {;
+                event_catego, r, y: 'Performan, c, e','
+                event_lab, e, l: 'Page, Load, Metrics','
+=======
+              wind, o, w.gt, a, g('eve, n, t', 'page_performan, c, e', {';
+                event_catego, r, y: 'Performan, c, e',';
+                event_lab, e, l: 'Page, Load, Metrics',';
+                custom_m, a, p: metri, c, s
+              });
+            }
+          }, 0);
+        });
+      }
+    };
+    // Error, trackin, g
+  const, trackError, s = () => {
+      if (enableErrorTracki, n, g) {
+        wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {;
+          if (wind, o, w.gt, a, g) {
+            wind, o, w.gt, a, g('eve, n, t', 'excepti, o, n', {;
+              descripti, o, n: eve, n, t.err, o, r?.messa, g, e || 'Unknown, erro, r','
+              fat, a, l: fal, s, e
+              event_catego, r, y: 'Error, Trackin, g});
+          }
+        });
+        wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {;
+          if (wind, o, w.gt, a, g) {
+            wind, o, w.gt, a, g('eve, n, t', 'excepti, o, n', {;
+              descripti, o, n: eve, n, t.reas, o, n?.messa, g, e || 'Unhandled, promise, rejection','
+              fat, a, l: fal, s, e
+              event_catego, r, y: 'Error, Trackin, g});
+=======
+        wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {';
+          if (wind, o, w.gt, a, g) {
+            wind, o, w.gt, a, g('eve, n, t', 'excepti, o, n', {';
+              descripti, o, n: eve, n, t.err, o, r?.messa, g, e || 'Unknown, erro, r',';
+              fat, a, l: fal, s, e
+              event_catego, r, y: 'Error, Trackin, g'
+            });
+          }
+        });
+        wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {';
+          if (wind, o, w.gt, a, g) {
+            wind, o, w.gt, a, g('eve, n, t', 'excepti, o, n', {';
+              descripti, o, n: eve, n, t.reas, o, n?.messa, g, e || 'Unhandled, promise, rejection',';
+              fat, a, l: fal, s, e
+              event_catego, r, y: 'Error, Trackin, g'
+            });
+          }
+        });
+      }
+    };
+    // Conversion, tracking, setup
+  const, setupConversionTrackin, g = () => {
+      if (enableConversionTracki, n, g) {
+        // Track, form, submissions
+  const, form, s = docume, n, t.querySelectorA, l, l('fo, r, m');';
+        for, m, s.forEa, c, h(fo, r, m => {
+          fo, r, m.addEventListen, e, r('subm, i, t', () => {;
+            if (wind, o, w.gt, a, g) {
+              wind, o, w.gt, a, g('eve, n, t', 'conversi, o, n', {;
+                event_catego, r, y: 'Lead, Generatio, n','
+                event_lab, e, l: 'Contact, Form, Submission});
+=======
+          fo, r, m.addEventListen, e, r('subm, i, t', () => {';
+            if (wind, o, w.gt, a, g) {
+              wind, o, w.gt, a, g('eve, n, t', 'conversi, o, n', {';
+                event_catego, r, y: 'Lead, Generatio, n',';
+                event_lab, e, l: 'Contact, Form, Submission'
+              });
+            }
+          });
+        });
+        // Track, button, clicks
+  const, ctaButton, s = docume, n, t.querySelectorA, l, l('[da, t, a-c, t, a]');';
+        ctaButto, n, s.forEa, c, h(butt, o, n => {
+          butt, o, n.addEventListen, e, r('cli, c, k', () => {;
+            if (wind, o, w.gt, a, g) {
+              wind, o, w.gt, a, g('eve, n, t', 'cli, c, k', {;
+                event_catego, r, y: 'C, T, A','
+                event_lab, e, l: butt, o, n.getAttribu, t, e('da, t, a-c, t, a') || 'Unknown, CT, A});
+=======
+          butt, o, n.addEventListen, e, r('cli, c, k', () => {';
+            if (wind, o, w.gt, a, g) {
+              wind, o, w.gt, a, g('eve, n, t', 'cli, c, k', {';
+                event_catego, r, y: 'C, T, A',';
+                event_lab, e, l: butt, o, n.getAttribu, t, e('da, t, a-c, t, a') || 'Unknown, CT, A'
+              });
+            }
+          });
+        });
+      }
+    };
+    // Initialize, all, tracking
+  initG, A, 4();
+    trackPerforman, c, e();
+    trackErro, r, s();
+    setupConversionTracki, n, g();
+    // Clean, u, p
+  return () => {
+      // Remove, event, listeners if, neede, d;
+    };
+  }, [enableConversionTracki, n, g, enablePerformanceTracki, n, g, enableErrorTracki, n, g]);
+  return, nul, l; // This, component, doesn't, render, anything;
+=======
+  return, nul, l; // This, component, doesn't, render, anything';
+};
+// Extend, Window, interface for, TypeScrip, t
+  declare, globa, l {
+  interface, Windo, w {
+    gt, a, g: (...a, r, g
+  s: unkno, w, n[]) => vo, i, d
+=======
+    gt, a, g: (...a, r, g
+  s: unkno, w, n[]) => vo, i, d;
+  }
+}
+export default AdvancedAnalytics;

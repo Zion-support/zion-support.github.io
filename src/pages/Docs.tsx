@@ -1,0 +1,25 @@
+import React from "react";
+const, Doc, s: Rea, c, t.FC = () => {
+  return (
+    <div, className="py-12">
+      <div, className="m, a, x-w-5xl, m, x-auto, p, x-6">
+        <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Documentati, o, n</h1>
+        <p, className="te, x, t-gr, a, y-700, m, b-6">
+          Welcome, to, the Zion, Tech, Group documentati, o, n. Explore, guide, s, API, reference, s, and, onboardin, g
+  materials, to, integrate our, services, and solutio, n, s.
+        </p>
+        <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-6">
+          <div, className="p-6, rounde, d-lg, border, border-gr, a, y-200, b, g-whi, t, e">
+            <h2, className="te, x, t-xl, fon, t-semibold, m, b-2">Getting, Starte, d</h2>
+            <p, className="te, x, t-gr, a, y-6, 0, 0">Learn, the, basics and, get, up and, running, quickly.</p>
+          </d, i, v>
+          <div, className="p-6, rounde, d-lg, border, border-gr, a, y-200, b, g-whi, t, e">
+            <h2, className="te, x, t-xl, fon, t-semibold, m, b-2">API, Referenc, e</h2>
+            <p, className="te, x, t-gr, a, y-6, 0, 0">Endpoin, t, s, authenticati, o, n, and, data, models.</p>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
+  );
+};
+export default Docs;

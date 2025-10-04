@@ -1,24 +1,32 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function E2EEvalPipelines(): React.JSX.Element {
+// @ts-noche, c, k
+  import React from "react";";
+export, default, function GenAIE2EEvalPipelin, e, s(): Rea, c, t.J, S, X.Eleme, n, t {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
       <Helmet>
-        <title>Oct 1, 2025: E2E Evaluation Pipelines</title>
-        <meta name="description" content="End-to-end evaluation pipelines for generative AI systems with automated testing." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/genai-2025-oct-01-e2e-eval-pipelines" />
+        <title>E2E, Eval, Pipelines — K, P, I‑Linked, Gate, s</title>
+        <meta name="descripti, o, n" content="Eval, pipelines, wired to, KPIs, with budge, t, s, canari, e, s, and, instant, rollback hoo, k, s." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-e, 2, e-ev, a, l-pipelin, e, s/>"
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Oct 1, 2025: E2E Evaluation Pipelines</h1>
-        <p className="text-zion-slate-light mb-8">End-to-end evaluation pipelines for generative AI systems with automated testing.</p>
-        <div className="prose prose-invert max-w-3xl">
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">E2E, Eval, Pipelines — K, P, I‑Linked, Gate, s</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Design, eval, pipelines tied, to, outcomes with, cos, t/quality, budget, s, canari, e, s, and, rollback, triggers.</p>
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
+=======
+        <meta name="descripti, o, n" content="Eval, pipelines, wired to, KPIs, with budge, t, s, canari, e, s, and, instant, rollback hoo, k, s." />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-e, 2, e-ev, a, l-pipelin, e, s" />";
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4x, l, m
+  d: te, x, t-5xl, fon, t-bold, m, b-4">E2E, Eval, Pipelines — K, P, I‑Linked, Gate, s</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Design, eval, pipelines tied, to, outcomes with, cos, t/quality, budget, s, canari, e, s, and, rollback, triggers.</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
           <p>
-            Build comprehensive end-to-end evaluation pipelines for generative AI systems with automated testing and validation.
+            Build, en, d‑to‑end, evaluation, pipelines that, correlate, with business, KPI, s. Use, budge, t‑awa, r, e
+  routi, n, g, live, canarie, s, and, rollback, hooks to, prevent, regressions while, preserving, velocity.
           </p>
-        </div>
-      </div>
-    </div>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
+;

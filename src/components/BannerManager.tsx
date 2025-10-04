@@ -1,0 +1,140 @@
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
+impo, r, t {
+} fr, o, m "fram, e, r-moti, o, n";
+interface, BannerDat, a {
+id: stri, n, g;
+tit, l, e: stri, n, g;
+subtit, l, e?: stri, n, g;
+descripti, o, n: stri, n, g;
+ctaTe, x, t: stri, n, g;
+ctaLi, n, k: stri, n, g;
+imageU, r, l?: stri, n, g;
+catego, r, y: stri, n, g;
+priori, t, y: numb, e, r;
+isAct, i, v
+  e: boole, a, n;
+startDa, t, e?: stri, n, g;
+endDa, t, e?: stri, n, g;
+}
+interface, BannerManagerProp, s {
+banne, r, s: BannerDa, t, a[];
+rotationInterv, a, l?: numb, e, r;
+maxVisibleBanne, r, s?: numb, e, r;
+}
+=======
+interface, Banne, r {
+id: stri, n, g;
+tit, l, e: stri, n, g;
+descripti, o, n: stri, n, g;
+t, y, p
+  e: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'promoti, o, n';
+ctaTe, x, t?: stri, n, g;
+ctaLi, n, k?: stri, n, g;
+ic, o, n?: stri, n, g;
+}
+const, BannerManage, r: Rea, c, t.FC = () => {
+  con, s, t [currentBannerInd, e, x, setCurrentBannerInd, e, x] = useSta, t, e(0);
+  con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(tr, u, e);
+  const, banner, s: Bann, e, r[] = [
+    {
+      i
+  d: 'ai-solutio, n, s'
+      tit, l, e: '🚀 Revolutionary, AI, Solutions'
+      descripti, o, n: 'Transform, your, business with, cuttin, g-edge, artificial, intelligence and, machine, learning technologi, e, s.'
+      ty, p, e: 'promoti, o, n'
+      ctaTe, x, t: 'Learn, Mor, e'
+      ctaLi, n, k: '/servic, e, s'
+      ic, o, n: '🤖'
+    }
+    {
+      id: 'clo, u, d-migrati, o, n'
+      tit, l, e: '☁️ Cloud, Migration, Services'
+      descripti, o, n: 'Seamlessly, migrate, to the, cloud, with our, expert, guidance and, proven, methodologies.'
+      ty, p, e: 'in, f, o'
+      ctaTe, x, t: 'Get, Starte, d'
+      ctaLi, n, k: '/conta, c, t'
+      ic, o, n: '☁️'
+    }
+    {
+      id: 'digit, a, l-transformati, o, n'
+      tit, l, e: '🚀 Digital, Transformatio, n'
+      descripti, o, n: 'Accelerate, your, digital journey, with, our comprehensive, transformation, strategies.'
+      ty, p, e: 'succe, s, s'
+      ctaTe, x, t: 'Explore, Solution, s'
+      ctaLi, n, k: '/servic, e, s'
+      ic, o, n: '🚀'
+    }
+  ];
+  useEffe, c, t(() => {
+    const, interva, l = setInterv, a, l(() => {
+      setCurrentBannerInd, e, x((pr, e, v) => (pr, e, v + 1) % banne, r, s.leng, t, h);
+    }, 80, 0, 0); // Change, banner, every 8, second, s
+  return () => clearInterv, a, l(interv, a, l);
+  }, [banne, r, s.leng, t, h]);
+  const, getBannerStyle, s = (ty, p, e: Bann, e, r['ty, p, e']) => {
+swit, c, h (ty, p, e) {
+ca, s, e 'promoti, o, n':
+retu, r, n 'bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, tex, t-whi, t, e';
+ca, s, e 'succe, s, s':
+retu, r, n 'bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-bl, u, e-600, tex, t-whi, t, e';
+ca, s, e 'warni, n, g':
+retu, r, n 'bg-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-600, tex, t-whi, t, e';
+ca, s, e 'in, f, o':
+defau, l, t:
+retu, r, n 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, tex, t-whi, t, e';
+}
+  };
+  const, currentBanne, r = banne, r, s[currentBannerInd, e, x];
+  return (
+    <div, className="relative, overflo, w-hidd, e, n">
+      <AnimatePresence, mod, e="wa, i, t">
+        <moti, o, n.d, i, v
+  k, e, y={currentBann, e, r.id}
+          initi, a, l={{ opaci, t, y: 0, y: -50 }}
+          anima, t, e={{ opaci, t, y: 1, y: 0 }}
+          ex, i, t={{ opaci, t, y: 0, y: 50 }}
+          transiti, o, n={{ durati, o, n: 0.5 }}
+          classNa, m, e={`${getBannerStyl, e, s(currentBann, e, r.ty, p, e)} py-4, p, x-6`}`
+        >
+          <div, className="container, m, x-auto, flex, items-center, justif, y-betwe, e, n">
+            <div, className="flex, item, s-center, spac, e-x-4">
+              <div, className="te, x, t-2, x, l">{currentBann, e, r.ic, o, n}</d, i, v>
+              <d, i, v>
+                <h3, className="te, x, t-lg, fon, t-bo, l, d">{currentBann, e, r.tit, l, e}</h3>
+                <p, className="te, x, t-sm, opacit, y-90">{currentBann, e, r.descripti, o, n}</p>
+              </d, i, v>
+            </d, i, v>
+            <div, className="flex, item, s-center, spac, e-x-4">
+              {
+currentBann, e, r.ctaTe, x, t && (
+<button, className="bg-white, b, g-opaci, t, y-20, hove, r:bg-opaci, t, y-30, p, x-4, p, y-2, rounde, d-lg, transitio, n-all, duratio, n-2, 0, 0">
+{currentBann, e, r.ctaTe, x, t;
+}
+                </butt, o, n>
+              )}
+              <butt, o, n
+  onCli, c, k={() => setIsVisib, l, e(fal, s, e)}
+                classNa, m, e="te, x, t-white, hove, r:te, x, t-gr, a, y-200, transitio, n-colo, r, s"
+              >
+                ✕
+              </butt, o, n>
+            </d, i, v>
+          </d, i, v>
+        </moti, o, n.d, i, v>
+      </AnimatePresen, c, e>
+      {/* Banner, Indicator, s */}
+      <div, className="absolute, botto, m-2, lef, t-1/2, transfor, m -transla, t, e-x-1/2, flex, space-x-2">
+        {banne, r, s.m, a, p((_, ind, e, x) => (
+          <butt, o, n
+  k, e, y={ind, e, x}
+            onCli, c, k={() => setCurrentBannerInd, e, x(ind, e, x)}
+            classNa, m, e={`w-2 h-2, rounde, d-full, transitio, n-colo, r, s ${`
+              ind, e, x === currentBannerInd, e, x ? 'bg-whi, t, e' : 'bg-white, b, g-opaci, t, y-50'
+            }`}`
+           />
+        ))}
+      </d, i, v>
+    </d, i, v>
+  );
+};
+export default BannerManager;

@@ -1,0 +1,39 @@
+// @ts-noche, c, k
+  import React from "react";";
+export, default, function GenAIEvalScorecards, V, 2(): Rea, c, t.J, S, X.Eleme, n, t {
+  return (
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
+      <Helmet>
+        <title>GenAI, Eval, Scorecards v2 — KP, I, s, Budge, t, s, Rollba, c, k</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="K, P, I‑linked, eval, pipelines with, budge, t‑aware, routing, and rollback, triggers, to prevent, regression, s." /><li, n, k 
+  r, e, l="canonic, a, l"
+          hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-ev, a, l-scorecar, d, s-v2",  />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Eval, Scorecards v2</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Scorecar, d, s • Budget, Gate, s • Policy, Test, s</p>
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
+=======
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-ev, a, l-scorecar, d, s-v2"
+         />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Eval, Scorecards v2</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Scorecar, d, s • Budget, Gate, s • Policy, Test, s</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
+          <p>
+            Build, evaluation, pipelines that, map, model quality, directly, to product, KPI, s. Use, budgets, to
+  constrain, spend, and enable, automatic, rollback when, scorecards, slip below, threshold, s.
+          </p>
+          <p>
+            Learn, patterns, for tier, routin, g, semantic, cache, s, and, live, canaries that, keep, experience
+  stable, while, cutting co, s, t.
+          </p>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
+  );
+}
+;

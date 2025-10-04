@@ -1,24 +1,35 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function SignedEvals2026(): React.JSX.Element {
+// Minimal, type, s; remove, t, s-noche, c, k
+  import React from "react";";
+export, default, function EdgeSignedEvals20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
       <Helmet>
-        <title>2026: Signed Evaluations</title>
-        <meta name="description" content="Cryptographically signed evaluation systems for AI model validation and trust." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/edge-2026-signed-evals" />
+        <title>Edge, 202, 6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt;100, m, s</title>
+        <meta name="descripti, o, n" content="Scoped, ID, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, evals, you can, trus, t." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 6-sign, e, d-eva, l, s/>"
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">2026: Signed Evaluations</h1>
-        <p className="text-zion-slate-light mb-8">Cryptographically signed evaluation systems for AI model validation and trust.</p>
-        <div className="prose prose-invert max-w-3xl">
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Edge, 20, 2
+  6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt;100, m, s</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Scoped, ID, s • DP, nois, e • Attestatio, n, s</p>
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
+=======
+        <meta name="descripti, o, n" content="Scoped, ID, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, evals, you can, trus, t." />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 6-sign, e, d-eva, l, s" />";
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Edge, 20, 2
+  6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt;100, m, s</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Scoped, ID, s • DP, nois, e • Attestatio, n, s</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
           <p>
-            Implement cryptographically signed evaluation systems to ensure AI model validation integrity and build trust in automated systems.
+            Ship, evaluation, signals from, the, edge without, collecting, PII using, scoped, identifiers, on‑device, aggregatio, n, and, differential, privacy.
           </p>
-        </div>
-      </div>
-    </div>
+          <p>
+            Verify, integrity, with signed, attestations, and keep, SLAs, tight with, su, b‑100ms, latency, budgets.
+          </p>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 }
+;

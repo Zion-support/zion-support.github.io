@@ -1,0 +1,313 @@
+import React from "react";
+=======
+import React from "react";';
+const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
+  return (
+    <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
+      {/* Background, Effect, s */}
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
+=======
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>';
+      </d, i, v>
+      <div, className="container, m, x-auto, p, x-6, relative, z-10">";
+        <div, className="te, x, t-center, m, b-16">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-pul, s, e">";
+            <span, className="te, x, t-purp, l, e-400, fon, t-bold, tex, t-xl, trackin, g-wider, uppercas, e">";
+              🚀 NEW, 2026, BREAKTHROUGHS;
+            </sp, a, n>
+          </d, i, v>
+          <h2, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
+            Revolutionary, AI, Content & Breakthroug, h, s;
+          </h2>
+          <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, fon, t-semibold, ma, x-w-4xl, m, x-au, t, o">"
+=======
+          <h2, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
+            Revolutionary, AI, Content & Breakthroug, h, s;
+          </h2>
+          <p, className="te, x, t-x, l, m
+  d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, fon, t-semibold, ma, x-w-4xl, m, x-au, t, o">";
+            Discover, the, latest hyperconscious, computin, g, quant, u, m-neural, fusio, n, and, autonomous, enterprise technologies, transforming, businesses worldwi, d, e;
+          </p>
+        </d, i, v>
+        {/* Featured, Content, Grid */}
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
+          {/* Hyperconscious, Computin, g */}
+          <Link, t, o="/bl, o, g/ai-20, 2, 6-hyperconscio, u, s-computi, n, g-revoluti, o, n" classNa, m, e="group, bloc, k">
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-indi, g, o-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-purp, l, e-5, 0, 0/20">"
+              <div, className="flex, item, s-center, ga, p-3, m, b-6">
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">
+                  <span, className="te, x, t-2, x, l">🧠</sp, a, n>
+=======
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
+          {/* Hyperconscious, Computin, g */}
+          <Link, t, o="/bl, o, g/ai-20, 2, 6-hyperconscio, u, s-computi, n, g-revoluti, o, n" classNa, m, e="group, bloc, k">";
+            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-indi, g, o-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20">";
+              <div, className="flex, item, s-center, ga, p-3, m, b-6">";
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">";
+                  <span, className="te, x, t-2, x, l">🧠</sp, a, n>";
+                </d, i, v>
+                <d, i, v>
+                  <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-500, tex, t-white, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-2">";
+                    HYPERCONSCIOUS, A, I;
+                  </d, i, v>
+                  <div, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bo, l, d">";
+                    $1.2T, VALU, E;
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
+  r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
+=======
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
+                Hyperconscious, Computing, Revolution;
+              </h3>
+              <p, className="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">";
+                Revolutionary, breakthrough, in hyperconscious, AI, systems achieving, genuine, self-awarene, s, s, emotional, intelligenc, e, and, creative, autonomy wi, t, h $1.2T, enterprise, value creati, o, n.
+              </p>
+              <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">12, min, read</d, i, v>
+                <div, className="te, x, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
+=======
+              <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+                <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">12, min, read</d, i, v>";
+                <div, className="te, x, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
+                  Explore, Consciousnes, s →
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </Li, n, k>
+          {/* Quant, u, m-Neural, Fusio, n */}
+          <Link, t, o="/bl, o, g/quant, u, m-neur, a, l-fusi, o, n-20, 2, 6-breakthrou, g, h" classNa, m, e="group, bloc, k">
+            <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-bl, u, e-5, 0, 0/20">"
+              <div, className="flex, item, s-center, ga, p-3, m, b-6">
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">
+                  <span, className="te, x, t-2, x, l">⚛️</sp, a, n>
+=======
+          <Link, t, o="/bl, o, g/quant, u, m-neur, a, l-fusi, o, n-20, 2, 6-breakthrou, g, h" classNa, m, e="group, bloc, k">";
+            <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-bl, u, e-5, 0, 0/20">";
+              <div, className="flex, item, s-center, ga, p-3, m, b-6">";
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">";
+                  <span, className="te, x, t-2, x, l">⚛️</sp, a, n>";
+                </d, i, v>
+                <d, i, v>
+                  <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, tex, t-white, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-2">";
+                    QUANT, U, M-NEUR, A, L;
+                  </d, i, v>
+                  <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-500, tex, t-black, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bo, l, d">";
+                    1, 0, 0,000x, PERFORMANC, E;
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
+=======
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
+                Quant, u, m-Neural, Fusion, Breakthrough;
+              </h3>
+              <p, className="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">";
+                Revolutionary, fusion, of quantum, computing, and neural, networks, delivering 1, 0, 0,000x, performance, improvements, infinite, scalabilit, y, and, consciousnes, s-level, processing, capabilities.
+              </p>
+              <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">15, min, read</d, i, v>
+                <div, className="te, x, t-bl, u, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
+=======
+              <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+                <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">15, min, read</d, i, v>";
+                <div, className="te, x, t-bl, u, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
+                  Discover, Fusio, n →
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </Li, n, k>
+          {/* Autonomous, Enterprise, Mesh */}
+          <Link, t, o="/bl, o, g/autonomo, u, s-enterpri, s, e-me, s, h-20, 2, 6" classNa, m, e="group, bloc, k">
+            <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-indi, g, o-5, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+  r:shad, o, w-indi, g, o-5, 0, 0/20">"
+              <div, className="flex, item, s-center, ga, p-3, m, b-6">
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">
+                  <span, className="te, x, t-2, x, l">🌐</sp, a, n>
+=======
+          <Link, t, o="/bl, o, g/autonomo, u, s-enterpri, s, e-me, s, h-20, 2, 6" classNa, m, e="group, bloc, k">";
+            <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-indi, g, o-5, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20">";
+              <div, className="flex, item, s-center, ga, p-3, m, b-6">";
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">";
+                  <span, className="te, x, t-2, x, l">🌐</sp, a, n>";
+                </d, i, v>
+                <d, i, v>
+                  <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, tex, t-white, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-2">";
+                    AUTONOMOUS, MES, H;
+                  </d, i, v>
+                  <div, className="bg-gradie, n, t-to-r, fro, m-oran, g, e-400, t, o-r, e, d-500, tex, t-black, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bo, l, d">";
+                    $500B, VALU, E;
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
+  r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
+=======
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
+                Autonomous, Enterprise, Mesh;
+              </h3>
+              <p, className="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">";
+                Revolutionary, sel, f-organizing, AI, mesh networks, that, autonomously optimize, business, processes, achieving, 9, 9.7% operational, efficiency, and $500B, in, value creati, o, n.
+              </p>
+              <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">18, min, read</d, i, v>
+                <div, className="te, x, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
+=======
+              <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+                <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">18, min, read</d, i, v>";
+                <div, className="te, x, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
+                  Explore, Mes, h →
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </Li, n, k>
+        </d, i, v>
+        {/* Success, Stories, Section */}
+        <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-gre, e, n-5, 0, 0/30, m, b-16">";
+          <div, className="te, x, t-center, m, b-8">";
+            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">";
+              Revolutionary, Success, Stories;
+            </h3>
+            <p, className="te, x, t-gr, a, y-300, tex, t-lg">";
+              Re, a, l-world, transformations, achieving unprecedented, result, s;
+            </p>
+          </d, i, v>
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">"
+            {/* Fortune, 100, Case Stu, d, y */}
+            <Link, t, o="/ca, s, e-studi, e, s/fortu, n, e-1, 0, 0-hyperconscio, u, s-transformati, o, n" classNa, m, e="group, bloc, k">
+              <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">
+                  <div, className="w-1, 2, h-12, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
+                    <span, className="te, x, t-xl">🏆</sp, a, n>
+=======
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
+            {/* Fortune, 100, Case Stu, d, y */}
+            <Link, t, o="/ca, s, e-studi, e, s/fortu, n, e-1, 0, 0-hyperconscio, u, s-transformati, o, n" classNa, m, e="group, bloc, k">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+                  <div, className="w-1, 2, h-12, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
+                    <span, className="te, x, t-xl">🏆</sp, a, n>";
+                  </d, i, v>
+                  <d, i, v>
+                    <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d">";
+                      FORTUNE, 100, SUCCESS;
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+                <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
+=======
+                <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
+                  $1.2T, Hyperconscious, Transformation;
+                </h4>
+                <p, className="te, x, t-gr, a, y-300, m, b-4">";
+                  How, a, Fortune 100, conglomerate, achieved $1.2, trillion, in value, creation, through hyperconscious, AI, implementation.
+                </p>
+                <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                  <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Case, Stud, y</d, i, v>
+                  <div, className="te, x, t-gre, e, n-400, fon, t-semibold, grou, p-ho, v, e
+  r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
+=======
+                <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+                  <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Case, Stud, y</d, i, v>";
+                  <div, className="te, x, t-gre, e, n-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
+                    Read, Success, Story →
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </Li, n, k>
+            {/* Manufacturing, Case, Study */}
+            <Link, t, o="/ca, s, e-studi, e, s/quant, u, m-neur, a, l-fusi, o, n-manufacturi, n, g-succe, s, s" classNa, m, e="group, bloc, k">
+              <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/40, t, o-gre, e, n-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-5, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hov, e
+  r:sca, l, e-1, 0, 5">"
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">
+                  <div, className="w-1, 2, h-12, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-gre, e, n-500, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
+                    <span, className="te, x, t-xl">🏭</sp, a, n>
+=======
+            <Link, t, o="/ca, s, e-studi, e, s/quant, u, m-neur, a, l-fusi, o, n-manufacturi, n, g-succe, s, s" classNa, m, e="group, bloc, k">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/40, t, o-gre, e, n-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-5, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
+                <div, className="flex, item, s-center, ga, p-3, m, b-4">";
+                  <div, className="w-1, 2, h-12, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-gre, e, n-500, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
+                    <span, className="te, x, t-xl">🏭</sp, a, n>";
+                  </d, i, v>
+                  <d, i, v>
+                    <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-gre, e, n-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d">";
+                      MANUFACTURING, SUCCES, S;
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+                <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+  r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
+=======
+                <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">";
+                  $2.8B, Perfect, Production;
+                </h4>
+                <p, className="te, x, t-gr, a, y-300, m, b-4">";
+                  Revolutionary, manufacturing, transformation achieving, 10, 0% quali, t, y, zero, defect, s, a, n, d $2.8B, in, value creati, o, n.
+                </p>
+                <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                  <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Case, Stud, y</d, i, v>
+                  <div, className="te, x, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
+=======
+                <div, className="flex, item, s-center, justif, y-betwe, e, n">";
+                  <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Case, Stud, y</d, i, v>";
+                  <div, className="te, x, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">";
+                    Read, Success, Story →
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Call, to, Action */}
+        <div, className="te, x, t-cent, e, r">";
+          <div, className="mb-8">";
+            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">";
+              Ready, to, Experience the, Futur, e?
+            </h3>
+            <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8">";
+              Join, the, AI revolution, and, transform your, business, with cutti, n, g-edge, technologie, s;
+            </p>
+          </d, i, v>
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
+=======
+          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+            <Li, n, k
+  to="/conta, c, t" 
+              classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove
+  r:-transla, t, e-y-1"
+            >
+              Start, Your, Transformation;
+            </Li, n, k>
+            <Li, n, k
+  to="/bl, o, g" 
+              classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove
+  r:-transla, t, e-y-1"
+            >
+              Explore, All, Content;
+            </Li, n, k>
+            <Li, n, k
+  to="/ca, s, e-studi, e, s" 
+              classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e
+  r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0"
+            >
+              View, Success, Stories;
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </secti, o, n>
+  );
+};
+export default New2026ContentShowcase;
