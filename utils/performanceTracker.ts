@@ -223,7 +223,8 @@ export class PerformanceTracker {
     const totalSize = resources.reduce((sum, r) => sum + r.size, 0);
     report += `Total Resource Size: ${(totalSize / 1024).toFixed(2)} KB\n\n`;
 
-    if (memory)       report += 'Memory Usage:\n';
+    if (memory) {
+      report += 'Memory Usage:\n';
       report += `- Used: ${memory.usedJSHeapSize.toFixed(2)} MB\n`;
       report += `- Total: ${memory.totalJSHeapSize.toFixed(2)} MB\n`;
       report += `- Limit: ${memory.jsHeapSizeLimit.toFixed(2)} MB\n`;
@@ -260,26 +261,33 @@ export class PerformanceTracker {
   /**
    * Send metrics to analytics endpoint
    */
-  async sendToAnalytics(endpoint: string)     const metrics = this.getMetrics();
-    const data =       metrics,
+  async sendToAnalytics(endpoint: string) {
+    const metrics = this.getMetrics();
+    const data = {
+      metrics,
       timestamp: new Date().toISOString(),
       url: window.location.href,
       userAgent: navigator.userAgent,
     };
 
-    try       await fetch(endpoint,         method: 'POST',
-        headers:           'Content-Type': 'application/json',
+    try {
+      await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
-    } catch (error)       console.error('Failed to send performance metrics', error);
+    } catch (error) {
+      console.error('Failed to send performance metrics', error);
     }
   }
 
   /**
    * Cleanup observers
    */
-  cleanup()     this.observers.forEach((observer) => observer.disconnect());
+  cleanup() {
+    this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
   }
 }

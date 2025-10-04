@@ -176,7 +176,8 @@ export const getErrorMetrics = (): ErrorMetrics => {
   
   // Count errors by type
   const errorsByType: Record<string, number> = {};
-  errors.forEach(error =>     const type = error.message.split(':')[0] || 'Unknown';
+  errors.forEach(error => {
+    const type = error.message.split(':')[0] || 'Unknown';
     errorsByType[type] = (errorsByType[type] || 0) + 1;
   });
   
@@ -185,7 +186,8 @@ export const getErrorMetrics = (): ErrorMetrics => {
   const recentErrors = errors.filter(e => e.timestamp > hourAgo);
   const errorRate = recentErrors.length / 60;
   
-  return     totalErrors: errors.length,
+  return {
+    totalErrors: errors.length,
     errorsByType,
     lastError: errors[errors.length - 1],
     errorRate,
@@ -195,14 +197,17 @@ export const getErrorMetrics = (): ErrorMetrics => {
 /**
  * Check if error rate is too high
  */
-export const isErrorRateTooHigh = (threshold: number = 5): boolean =>   const metrics = getErrorMetrics();
+export const isErrorRateTooHigh = (threshold: number = 5): boolean => {
+  const metrics = getErrorMetrics();
   return metrics.errorRate > threshold;
 };
 
 /**
  * Clear error logs
  */
-export const clearErrorLogs = () =>   if (typeof window !== 'undefined')     localStorage.removeItem(ERROR_LOG_KEY);
+export const clearErrorLogs = () => {
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem(ERROR_LOG_KEY);
     console.log('Error logs cleared');
   }
 };

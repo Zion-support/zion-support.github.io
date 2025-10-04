@@ -144,17 +144,22 @@ export class CodeQualityAnalyzer {
     report.push(`**Generated**: ${new Date().toISOString()}\n`);
     report.push(`**Total Improvements**: ${results.length}\n\n`);
 
-    const byCategory = results.reduce((acc, result) =>       if (!acc[result.category])         acc[result.category] = [];
+    const byCategory = results.reduce((acc, result) => {
+      if (!acc[result.category]) {
+        acc[result.category] = [];
       }
       acc[result.category].push(result);
       return acc;
     }, {} as Record<string, OptimizationResult[]>);
 
-    for (const [category, items] of Object.entries(byCategory))       report.push(`## ${category}\n\n`);
-      items.forEach((item) =>         const status = item.implemented ? '✅' : '⏳';
+    for (const [category, items] of Object.entries(byCategory)) {
+      report.push(`## ${category}\n\n`);
+      items.forEach((item) => {
+        const status = item.implemented ? '✅' : '⏳';
         const impact = item.impact.toUpperCase();
         report.push(`${status} **[${impact}]** ${item.improvement}\n`);
-        if (item.metrics)           report.push(`   Metrics: ${JSON.stringify(item.metrics)}\n`);
+        if (item.metrics) {
+          report.push(`   Metrics: ${JSON.stringify(item.metrics)}\n`);
         }
       });
       report.push('\n');
@@ -175,27 +180,33 @@ export class CodeQualityAnalyzer {
   /**
    * Get current metrics
    */
-  getMetrics(): CodeQualityMetrics     return { ...this.metrics };
+  getMetrics(): CodeQualityMetrics {
+    return { ...this.metrics };
   }
 
   /**
    * Update metrics after improvements
    */
-  updateMetrics(updates: Partial<CodeQualityMetrics>): void     this.metrics = { ...this.metrics, ...updates };
+  updateMetrics(updates: Partial<CodeQualityMetrics>): void {
+    this.metrics = { ...this.metrics, ...updates };
   }
 }
 
 /**
  * Bundle size optimizer
  */
-export class BundleOptimizer   /**
+export class BundleOptimizer {
+  /**
    * Analyze and optimize bundle size
    */
-  async optimize(): Promise<    originalSize: number;
+  async optimize(): Promise<{
+    originalSize: number;
     optimizedSize: number;
     reduction: number;
     strategies: string[];
-  }>     return       originalSize: 1200, // KB
+  }> {
+    return {
+      originalSize: 1200, // KB
       optimizedSize: 450, // KB
       reduction: 62.5, // %
       strategies: [
