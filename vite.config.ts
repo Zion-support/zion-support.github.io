@@ -19,8 +19,8 @@ export default defineConfig({
   publicDir: 'public',
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'components'),
+      '@': resolve(__dirname, 'app'),
+      '@components': resolve(__dirname, 'app/components'),
       '@app': resolve(__dirname, 'app'),
     },
   },
@@ -71,7 +71,7 @@ export default defineConfig({
           }
           
           // App chunks - lazy load pages
-          if (id.includes('src/pages/')) {
+          if (id.includes('app/')) {
             // Split large page bundles
             if (id.includes('services/')) {
               return 'pages-services';
@@ -86,7 +86,7 @@ export default defineConfig({
           }
           
           // Component chunks
-          if (id.includes('src/components/')) {
+          if (id.includes('app/components/')) {
             if (id.includes('banner') || id.includes('Banner')) {
               return 'components-banners';
             }
