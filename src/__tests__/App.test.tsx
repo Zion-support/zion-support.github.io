@@ -22,43 +22,32 @@ jest.mock('react-helmet-async', () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
-const renderApp = (component: React.ReactElement) => {
-  return render(component);
-};
-
 describe('App Component', () => {
   test('renders without crashing', () => {
-    renderApp(<App />);
+    render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   test('renders header component', () => {
-    renderApp(<App />);
+    render(<App />);
     expect(screen.getByRole('banner')).toBeInTheDocument();
   });
 
   test('renders footer component', () => {
-    renderApp(<App />);
+    render(<App />);
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 
-  test('renders performance monitor', () => {
-    renderApp(<App />);
-    // Check for accessibility features that indicate the accessibility enhancer is working
-    const skipLinks = screen.getAllByText('Skip to main content');
-    expect(skipLinks.length).toBeGreaterThan(0);
-  });
-
-  test('renders accessibility enhancer', () => {
-    renderApp(<App />);
-    // Check for accessibility features that indicate the accessibility enhancer is working
-    const skipLinks = screen.getAllByText('Skip to main content');
-    expect(skipLinks.length).toBeGreaterThan(0);
-  });
-
-  test('renders app without errors', () => {
-    renderApp(<App />);
-    // Just check that the app renders without throwing errors
+  test('renders performance monitor (hidden in production)', () => {
+    render(<App />);
+    // PerformanceMonitor returns null in production mode, so we just verify the app renders
     expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+
+  test('renders accessibility enhancer (DOM manipulation)', () => {
+    render(<App />);
+    // AccessibilityEnhancer manipulates DOM but doesn't render visible elements
+    // We can verify skip links are added to the document
+    expect(document.querySelector('a[href="#main-content"]')).toBeInTheDocument();
   });
 });

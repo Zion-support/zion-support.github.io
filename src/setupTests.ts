@@ -74,6 +74,17 @@ Object.defineProperty(window, 'performance', {
   },
 });
 
+// Mock PerformanceObserver
+class MockPerformanceObserver {
+  constructor() {}
+  observe() {}
+  disconnect() {}
+  takeRecords() { return []; }
+}
+
+// @ts-ignore
+global.PerformanceObserver = MockPerformanceObserver;
+
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;

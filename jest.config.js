@@ -66,6 +66,7 @@ export default {
     '/backup-problematic-files/',
     '/automation_backup/',
     '/ai-optimization-backups/',
+    '/automation/backups/',
   ],
   watchPathIgnorePatterns: [
     '/node_modules/',
