@@ -65,7 +65,7 @@ Object.defineProperty(window, 'performance', {
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
-  constructor(callback: PerformanceObserverCallback) {}
+  constructor() {}
   observe() {}
   disconnect() {}
   takeRecords() { return []; }
