@@ -1,4 +1,4 @@
-interface AccessibilityConfig 
+interface AccessibilityConfig {
   enableAnnouncements: boolean;
   enableFormLabels: boolean;
   enableSkipLinks: boolean;
@@ -12,17 +12,17 @@ interface AccessibilityConfig
   enableTouchAccessibility: boolean;
 }
 
-interface AccessibilityMetrics 
+interface AccessibilityMetrics {
   score: number;
   issues: string[];
   recommendations: string[];
 }
 
-export class EnhancedAccessibility 
+export class EnhancedAccessibility {
   private config: AccessibilityConfig;
 
   constructor() {
-    this.config = 
+    this.config = {
       enableAnnouncements: true,
       enableFormLabels: true,
       enableSkipLinks: true,

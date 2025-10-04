@@ -106,7 +106,6 @@ const NewestContent2025Banner = () => {
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left">
             <div className="text-left">
               <div className="text-left">
-              <div className="text-left">
                 <div className="text-left">
                   <div className="text-left">
                     🧠
