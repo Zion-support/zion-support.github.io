@@ -421,7 +421,7 @@ class DocumentationGenerator {
   private async generateDeploymentDocumentation(): Promise<void> {
     console.log('🚀 Generating deployment documentation...');
 
-    const deploymentDoc = {
+    const _deploymentDoc = {
       title: 'Deployment Guide',
       sections: [
         {
@@ -465,7 +465,7 @@ class DocumentationGenerator {
   private async generateUserGuides(): Promise<void> {
     console.log('👥 Generating user guides...');
 
-    const userGuides = [
+    const _userGuides = [
       {
         title: 'Getting Started',
         content:
@@ -491,7 +491,7 @@ class DocumentationGenerator {
   private async generateDeveloperGuides(): Promise<void> {
     console.log('👨‍💻 Generating developer guides...');
 
-    const developerGuides = [
+    const _developerGuides = [
       {
         title: 'Development Setup',
         content: 'How to set up the development environment.',
@@ -519,7 +519,7 @@ class DocumentationGenerator {
   private async generateTroubleshootingDocumentation(): Promise<void> {
     console.log('🔧 Generating troubleshooting documentation...');
 
-    const troubleshooting = [
+    const _troubleshooting = [
       {
         title: 'Build Issues',
         issues: [
@@ -560,7 +560,7 @@ class DocumentationGenerator {
   private async generateChangelog(): Promise<void> {
     console.log('📝 Generating changelog...');
 
-    const changelog = {
+    const _changelog = {
       version: '1.0.0',
       date: new Date().toISOString().split('T')[0],
       changes: [
