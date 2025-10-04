@@ -13,7 +13,7 @@ try {
     // @ts-ignore
     global.TextDecoder = TextDecoder;
   }
-} catch (_) {
+} catch {
   // ignore if util not available
 }
 
