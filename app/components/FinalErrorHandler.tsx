@@ -103,7 +103,9 @@ class FinalErrorHandler extends Component<Props, State> {
         analyticsData: this.state.analyticsData
       };
       
-      console.log('Error logged to service:', errorData);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Error logged to service:', errorData);
+      }
       
       // Example: Send to error reporting service
       if (this.props.enableReporting) {
