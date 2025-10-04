@@ -32,21 +32,9 @@
       "@types/*": ["./src/types/*"]
     }
   },
-  "include": ["app"],
+  "include": ["src"],
   "exclude": [
-    "app/blog/**/*",
-    "app/components/**/*",
-    "app/contact/**/*",
-    "app/enterprise/**/*",
-    "app/guides/**/*",
-    "app/services/**/*",
-    "app/services-advertising/**/*",
-    "app/not-found.tsx",
-    "app/page-minimal.tsx",
-    "app/page-optimized.tsx",
-    "app/page-old.tsx",
-    "app/careers/page.tsx",
-    "src/**/*",
+    "app/**/*",
     "utils/**/*",
     "_pages_disabled/**/*",
     "_app_disabled/**/*",
