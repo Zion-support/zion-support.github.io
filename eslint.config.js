@@ -68,9 +68,24 @@ export default [
       '**/*.broken/**',
       '**/*.corrupted/**',
       '**/*.temp/**',
+      '__tests__/**',
       'tests/**',
       'scripts/**',
       'pages/**',
+      '_app_disabled/**',
+      '_conflicted_disabled/**',
+      '_pages_api_disabled/**',
+      '_pages_disabled/**',
+      'admin-api-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api.disabled.temp/**',
+      'apps.backup/**',
+      'api-backup/**',
+      'ai-optimization-backups/**',
+      '*.js',
+      '*.cjs',
+      '*.mjs',
       // Temporarily ignore known heavy TSX pages with pending fixes
       'src/pages/**',
       'src/components/Revolutionary2026ContentMegaBanner.tsx',
@@ -92,10 +107,16 @@ export default [
 
   // Simplified TypeScript configuration (non type-aware)
   {
-    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}", "app/**/*.{ts,tsx}"],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       parser: tsParser,
-      parserOptions: {},
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       globals: { ...globals.browser },
     },
     plugins: {
@@ -108,6 +129,29 @@ export default [
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
+    },
+  },
+
+  // JSX configuration for .jsx files
+  {
+    files: ["**/*.{js,jsx}"],
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: { ...globals.browser },
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...(reactHooks.configs.recommended?.rules || {}),
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     },
   },
 ];
