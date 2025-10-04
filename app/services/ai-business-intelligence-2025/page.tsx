@@ -46,7 +46,6 @@ const AIBusinessIntelligence2025 = React.memo(function AIBusinessIntelligence202
         
         <div className="text-left">
           <span className="text-left">Business Intelligence</span>
-        </div>
           <span className="text-left">Predictive Analytics</span>
           <span className="text-left">Data Visualization</span>
           <span className="text-left">Real-time Insights</span>

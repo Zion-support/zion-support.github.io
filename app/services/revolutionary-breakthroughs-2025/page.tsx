@@ -58,10 +58,10 @@ const RevolutionaryBreakthroughs2025 = React.memo(function RevolutionaryBreakthr
               <span>⏱️ 25 min read</span>
             </div>
 
-            <div className="text-left"></div>
+            <div className="text-left">
               <a 
-                href="#breakthrough-technologies" "
-                className="text-left"></a>
+                href="#breakthrough-technologies"
+                className="text-left">
                 <Sparkles className="text-left" />
                 Explore Breakthroughs
               </a>

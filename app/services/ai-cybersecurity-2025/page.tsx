@@ -47,11 +47,11 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
               <div>
                 <div className="text-left">&lt;10ms</div>
                 <div className="text-left">Response Time</div>
-                </div>
-                <div></div>
-                  <div className="text-left">$80M+</div>"
-                  <div className="text-left">Breach Cost Saved</div>"
-                </div>
+              </div>
+              <div>
+                <div className="text-left">$80M+</div>
+                <div className="text-left">Breach Cost Saved</div>
+              </div>
             </div>
 
           {/* Service Overview */}
