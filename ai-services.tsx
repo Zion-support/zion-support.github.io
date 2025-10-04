@@ -5,7 +5,7 @@ import { MessageSquare, FileText, Users, CheckCircle, Brain, Zap, Shield, BarCha
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
   const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
-
+  
   const aiServices = [
     {
       title: 'AI-Powered Email Responder',
