@@ -1,6 +1,6 @@
 /**
  * Banner Prioritization System
- * 
+ *
  * Manages dynamic banner loading and prioritization based on:
  * - Recency (newer content gets higher priority)
  * - Value proposition (higher $ value gets priority)
@@ -35,16 +35,17 @@ export class BannerPrioritizationEngine {
    */
   private calculateDynamicPriority(banner: BannerMetadata): number {
     const now = new Date();
-    const ageInDays = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
-    
+    const ageInDays =
+      (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+
     // Recency score (0-100): Newer content scores higher
-    const recencyScore = Math.max(0, 100 - (ageInDays * 2));
-    
+    const recencyScore = Math.max(0, 100 - ageInDays * 2);
+
     // Value score (0-100): Higher value content scores higher
     const valueScore = Math.min(100, (banner.value / 100) * 100);
-    
+
     // Weighted combination
-    return (recencyScore * 0.6) + (valueScore * 0.3) + (banner.priority * 0.1);
+    return recencyScore * 0.6 + valueScore * 0.3 + banner.priority * 0.1;
   }
 
   /**
@@ -55,7 +56,7 @@ export class BannerPrioritizationEngine {
       .filter(banner => banner.isVisible)
       .map(banner => ({
         ...banner,
-        dynamicPriority: this.calculateDynamicPriority(banner)
+        dynamicPriority: this.calculateDynamicPriority(banner),
       }))
       .sort((a, b) => b.dynamicPriority - a.dynamicPriority);
 
@@ -65,9 +66,12 @@ export class BannerPrioritizationEngine {
   /**
    * Get banners by load strategy
    */
-  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
-    return Array.from(this.banners.values())
-      .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
+  getBannersByLoadStrategy(
+    strategy: 'immediate' | 'lazy' | 'on-demand',
+  ): BannerMetadata[] {
+    return Array.from(this.banners.values()).filter(
+      banner => banner.loadStrategy === strategy && banner.isVisible,
+    );
   }
 
   /**
@@ -85,16 +89,18 @@ export class BannerPrioritizationEngine {
    * Get banners for above-the-fold rendering
    */
   getAboveFoldBanners(): BannerMetadata[] {
-    return this.getPrioritizedBanners(this.visibilityThreshold)
-      .filter(banner => banner.loadStrategy === 'immediate');
+    return this.getPrioritizedBanners(this.visibilityThreshold).filter(
+      banner => banner.loadStrategy === 'immediate',
+    );
   }
 
   /**
    * Get lazy-load banners
    */
   getLazyLoadBanners(): BannerMetadata[] {
-    return this.getPrioritizedBanners()
-      .filter(banner => banner.loadStrategy === 'lazy');
+    return this.getPrioritizedBanners().filter(
+      banner => banner.loadStrategy === 'lazy',
+    );
   }
 
   /**
@@ -105,7 +111,8 @@ export class BannerPrioritizationEngine {
     const archiveThresholdDays = 90;
 
     this.banners.forEach((banner, id) => {
-      const ageInDays = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+      const ageInDays =
+        (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
       if (ageInDays > archiveThresholdDays) {
         banner.isVisible = false;
         banner.loadStrategy = 'on-demand';
@@ -129,7 +136,7 @@ export class BannerPrioritizationEngine {
   getStatistics() {
     const all = Array.from(this.banners.values());
     const visible = all.filter(b => b.isVisible);
-    
+
     return {
       total: all.length,
       visible: visible.length,
@@ -145,7 +152,7 @@ export class BannerPrioritizationEngine {
         immediate: visible.filter(b => b.loadStrategy === 'immediate').length,
         lazy: visible.filter(b => b.loadStrategy === 'lazy').length,
         'on-demand': visible.filter(b => b.loadStrategy === 'on-demand').length,
-      }
+      },
     };
   }
 }
@@ -164,7 +171,7 @@ export function initializeBannerEngine() {
     publishDate: new Date('2025-10-01'),
     category: 'service',
     isVisible: true,
-    loadStrategy: 'immediate'
+    loadStrategy: 'immediate',
   });
 
   bannerEngine.registerBanner({
@@ -175,7 +182,7 @@ export function initializeBannerEngine() {
     publishDate: new Date('2025-10-01'),
     category: 'service',
     isVisible: true,
-    loadStrategy: 'immediate'
+    loadStrategy: 'immediate',
   });
 
   bannerEngine.registerBanner({
@@ -186,7 +193,7 @@ export function initializeBannerEngine() {
     publishDate: new Date('2025-10-01'),
     category: 'case-study',
     isVisible: true,
-    loadStrategy: 'immediate'
+    loadStrategy: 'immediate',
   });
 
   bannerEngine.registerBanner({
@@ -197,7 +204,7 @@ export function initializeBannerEngine() {
     publishDate: new Date('2025-10-01'),
     category: 'service',
     isVisible: true,
-    loadStrategy: 'lazy'
+    loadStrategy: 'lazy',
   });
 
   bannerEngine.registerBanner({
@@ -208,7 +215,7 @@ export function initializeBannerEngine() {
     publishDate: new Date('2025-10-20'),
     category: 'service',
     isVisible: true,
-    loadStrategy: 'immediate'
+    loadStrategy: 'immediate',
   });
 }
 

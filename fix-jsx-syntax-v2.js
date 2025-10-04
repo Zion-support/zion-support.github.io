@@ -18,29 +18,50 @@ function fixJSXSyntax(filePath) {
     const fixes = [
       // Fix unclosed span tags with specific patterns
       { pattern: /<span([^>]*)>([^<]+)<$/gm, replacement: '<span$1>$2</span>' },
-      
+
       // Fix unclosed span tags in lists
-      { pattern: /<span className="text-left">([^<]+)<$/gm, replacement: '<span className="text-left">$1</span>' },
-      
+      {
+        pattern: /<span className="text-left">([^<]+)<$/gm,
+        replacement: '<span className="text-left">$1</span>',
+      },
+
       // Fix unterminated string literals in JSX attributes
-      { pattern: /className="text-left">([^<"]+)<$/gm, replacement: 'className="text-left">$1</span>' },
-      
+      {
+        pattern: /className="text-left">([^<"]+)<$/gm,
+        replacement: 'className="text-left">$1</span>',
+      },
+
       // Fix malformed JSX closing tags
       { pattern: /<span([^>]*)>([^<]+)<$/gm, replacement: '<span$1>$2</span>' },
-      
+
       // Fix specific patterns found in the error messages
-      { pattern: /<span className="text-left">([^<]+)<$/gm, replacement: '<span className="text-left">$1</span>' },
-      
+      {
+        pattern: /<span className="text-left">([^<]+)<$/gm,
+        replacement: '<span className="text-left">$1</span>',
+      },
+
       // Fix unclosed div tags
-      { pattern: /<div className="text-left">$/gm, replacement: '<div className="text-left">' },
-      
+      {
+        pattern: /<div className="text-left">$/gm,
+        replacement: '<div className="text-left">',
+      },
+
       // Fix unclosed ul/li tags
-      { pattern: /<ul className="text-left">$/gm, replacement: '<ul className="text-left">' },
-      { pattern: /<li className="text-left">$/gm, replacement: '<li className="text-left">' },
-      
+      {
+        pattern: /<ul className="text-left">$/gm,
+        replacement: '<ul className="text-left">',
+      },
+      {
+        pattern: /<li className="text-left">$/gm,
+        replacement: '<li className="text-left">',
+      },
+
       // Fix specific unterminated string patterns
-      { pattern: /<span className="text-left">([^<"]+)<$/gm, replacement: '<span className="text-left">$1</span>' },
-      
+      {
+        pattern: /<span className="text-left">([^<"]+)<$/gm,
+        replacement: '<span className="text-left">$1</span>',
+      },
+
       // Fix malformed closing tags
       { pattern: /<span([^>]*)>([^<]+)<$/gm, replacement: '<span$1>$2</span>' },
     ];
@@ -56,13 +77,19 @@ function fixJSXSyntax(filePath) {
     // Additional specific fixes for common patterns
     const specificFixes = [
       // Fix patterns like: <span className="text-left">text<
-      { pattern: /<span className="text-left">([^<]+)<$/gm, replacement: '<span className="text-left">$1</span>' },
-      
+      {
+        pattern: /<span className="text-left">([^<]+)<$/gm,
+        replacement: '<span className="text-left">$1</span>',
+      },
+
       // Fix patterns like: <span>text<
       { pattern: /<span>([^<]+)<$/gm, replacement: '<span>$1</span>' },
-      
+
       // Fix patterns with specific content
-      { pattern: /<span className="text-left">([^<"]+)<$/gm, replacement: '<span className="text-left">$1</span>' },
+      {
+        pattern: /<span className="text-left">([^<"]+)<$/gm,
+        replacement: '<span className="text-left">$1</span>',
+      },
     ];
 
     specificFixes.forEach(fix => {
@@ -87,14 +114,14 @@ function fixJSXSyntax(filePath) {
 // Function to recursively find all .tsx files
 function findTSXFiles(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         traverse(fullPath);
       } else if (item.endsWith('.tsx')) {
@@ -102,7 +129,7 @@ function findTSXFiles(dir) {
       }
     }
   }
-  
+
   traverse(dir);
   return files;
 }

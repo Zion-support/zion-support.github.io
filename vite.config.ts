@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
-import { visualizer } from 'rollup-plugin-visualizer'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // Optimized Vite configuration for better performance and smaller bundle size
 export default defineConfig({
   plugins: [
     react({
-      jsxRuntime: 'automatic'
+      jsxRuntime: 'automatic',
     }),
     visualizer({
       filename: 'dist/stats.html',
@@ -35,10 +35,10 @@ export default defineConfig({
         moduleSideEffects: false,
         propertyReadSideEffects: false,
         tryCatchDeoptimization: false,
-        preset: 'smallest'
+        preset: 'smallest',
       },
       output: {
-        manualChunks: (id) => {
+        manualChunks: id => {
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             // React core
@@ -102,14 +102,14 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
-        assetFileNames: (assetInfo) => {
+        assetFileNames: assetInfo => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/\.(css)$/.test(assetInfo.name)) {
             return `assets/css/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
-        }
+        },
       },
     },
     chunkSizeWarningLimit: 1000,
@@ -170,4 +170,4 @@ export default defineConfig({
     minifySyntax: true,
     minifyWhitespace: true,
   },
-})
+});

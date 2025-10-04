@@ -15,11 +15,11 @@ const NewestContent2025Banner = () => {
         {/* Header */}
         <div className="text-left">
           <div className="text-left">
-            <span className="text-left">🚀</span>
+            <span className="text-left">🚀</span>/span>/span>/span>
             <span className="text-left">
               BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
-            </span>
-            <span className="text-left">⚡</span>
+            </span>/span>/span>/span>
+            <span className="text-left">⚡</span>/span>/span>/span>
           </div>
 
           <h2 className="text-left">
@@ -46,19 +46,19 @@ const NewestContent2025Banner = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">🔥</span>
+                      <span className="text-left">🔥</span>/span>/span>/span>
                       <span>HOT</span>
                     </div>
                     <span className="text-left">
                       NEW TODAY
-                    </span>
+                    </span>/span>/span>/span>
                   </div>
 
                 {/* Category Tag */}
                 <div className="text-left">
                   <span className="text-left">
                     Edge AI & Real-Time
-                  </span>
+                  </span>/span>/span>/span>
                 </div>
 
                 {/* Title */}
@@ -97,7 +97,7 @@ const NewestContent2025Banner = () => {
                 {/* CTA Button */}
                 <div className="text-left">
                   <span>Read Full Article</span>
-                  <span className="text-left">→</span>
+                  <span className="text-left">→</span>/span>/span>/span>
                 </div>
               </div>
             </div>
@@ -113,18 +113,18 @@ const NewestContent2025Banner = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">🔥</span>
+                      <span className="text-left">🔥</span>/span>/span>/span>
                       <span>HOT</span>
                     </div>
                     <span className="text-left">
                       NEW TODAY
-                    </span>
+                    </span>/span>/span>/span>
                   </div>
 
                 <div className="text-left">
                   <span className="text-left">
                     Neural Networks & AI
-                  </span>
+                  </span>/span>/span>/span>
                 </div>
 
                 <h3 className="text-left">
@@ -158,7 +158,7 @@ const NewestContent2025Banner = () => {
 
                 <div className="text-left">
                   <span>Read Full Article</span>
-                  <span className="text-left">→</span>
+                  <span className="text-left">→</span>/span>/span>/span>
                 </div>
             </div>
           </Link>
@@ -174,18 +174,18 @@ const NewestContent2025Banner = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">🚨</span>
+                      <span className="text-left">🚨</span>/span>/span>/span>
                       <span>CRITICAL</span>
                     </div>
                     <span className="text-left">
                       NEW TODAY
-                    </span>
+                    </span>/span>/span>/span>
                   </div>
 
                 <div className="text-left">
                   <span className="text-left">
                     Quantum Security
-                  </span>
+                  </span>/span>/span>/span>
                 </div>
 
                 <h3 className="text-left">
@@ -219,7 +219,7 @@ const NewestContent2025Banner = () => {
 
                 <div className="text-left">
                   <span>Read Full Article</span>
-                  <span className="text-left">→</span>
+                  <span className="text-left">→</span>/span>/span>/span>
                 </div>
             </div>
           </Link>
@@ -241,13 +241,13 @@ const NewestContent2025Banner = () => {
                 <a
                   href="tel:+13024640950"
                   className="text-left">
-                  <span className="text-left">📞</span>
+                  <span className="text-left">📞</span>/span>/span>/span>
                   <span>Call +1 302 464 0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-left">
-                  <span className="text-left">📧</span>
+                  <span className="text-left">📧</span>/span>/span>/span>
                   <span>Get Expert Consultation</span>
                 </a>
               </div>

@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('content-freshness-score-runner function triggered');
-    
+
     // Content freshness score simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Content freshness score runner executed successfully',
@@ -18,11 +18,11 @@ exports.handler = async function(event, context, callback) {
           status: 'active',
           pagesScored: 0,
           averageScore: 0,
-          lastScore: new Date().toISOString()
-        }
-      })
+          lastScore: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in content-freshness-score-runner:', error);
@@ -30,13 +30,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'content-freshness-score-runner'
-      })
+        function: 'content-freshness-score-runner',
+      }),
     };
   }
 };

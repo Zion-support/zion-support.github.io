@@ -1,7 +1,7 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
 
-export const emergingTechServices2025: MicroSaasService[] = [
+export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services
   
   id: string;
@@ -9,7 +9,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
   tagline: string,
   description: string;
   category: string;
-  price: 
+  price: any;
     monthly: number;
     yearly: number;
     currency: string;
@@ -21,7 +21,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
 
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
-    icon: '⚛️',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/quantum-computing-as-a-service',
@@ -45,7 +45,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     launchDate: '2025-01-10',
     customers: 8,
     rating: 4.9,
-    reviews: 6
+    reviews: 6;
   },
   
       'Hardware standards, Safety protocols, Energy efficiency standards, International computing standards',
@@ -54,15 +54,14 @@ export const emergingTechServices2025: MicroSaasService[] = [
   reviews: number;
 ;
 export const emergingTechServices2025: EmergingTechService[] = [;
-  
     id: 'neuromorphic - computing',
     name: 'Neuromorphic Computing Platform',
-    tagline:;
+    tagline: any;
       'Brain - inspired computing that mimics neural networks for ultra - efficient AI',
-    description:;
+    description: any;
       "Revolutionary computing platform that mimics the human brain's neural structure for ultra - efficient AI processing, enabling edge computing with minimal power consumption and maximum performance.",
     category: 'Emerging Technology',
-    price: 
+    price: any;
       monthly: 3499,
       yearly: 34990,
       currency: 'USD',
@@ -96,14 +95,14 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Government agencies',
       'Automotive companies',
     ],
-    market_position:;
+    market_position: any;
       'Leading neuromorphic computing platform. Competes with Intel Loihi, IBM TrueNorth, and BrainChip. Our advantage: Advanced neural architecture and edge optimization.',
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, Qualcomm, Samsung'],
     tech_stack: [;
       'Neuromorphic Architecture, AI / ML, Python, C++, Hardware Design, FPGA, ASIC',
     ],
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Production - ready neuromorphic platform with custom hardware integration, comprehensive development tools, and edge deployment capabilities.',
     roi: 'Companies see 600% ROI through reduced power costs and improved AI performance. Average payback period: 8 months.',
     use_cases: [;
@@ -117,16 +116,16 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     integrations: [;
       'IoT platforms, Edge computing infrastructure, AI frameworks, Hardware systems, Cloud platforms',
     ],
-    support:;
+    support: any;
       '24 / 7 technical support, dedicated hardware consultants, implementation specialists, and ongoing optimization.',
     compliance: [;
       'Hardware standards, Safety protocols, Energy efficiency standards, International computing standards',
     ],
     link: 'https://ziontechgroup.com / neuromorphic - computing',
-    icon: '🧠',
+    icon: '',
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
-    icon: '🔗',
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/enterprise-blockchain-platform',
@@ -150,7 +149,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-01-15',
     customers: 15,
     rating: 4.8,
-    reviews: 12
+    reviews: 12;
   },
   
     id: 'space-data-analytics-platform',
@@ -159,7 +158,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     price: '$599',
     period: '/month',
     description: 'Comprehensive platform for analyzing satellite imagery, space weather data, and orbital information. Provides insights for agriculture, climate monitoring, urban planning, and space operations.',
-    features: [
+    features: [;
       'Satellite imagery analysis and processing',
       'Space weather monitoring and forecasting',
       'Orbital debris tracking and collision avoidance',
@@ -172,7 +171,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Custom analytics and reporting tools'
     ],
     popular: true,
-    icon: '🛰️',
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/space-data-analytics-platform',
@@ -196,7 +195,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-01-20',
     customers: 12,
     rating: 4.9,
-    reviews: 9
+    reviews: 9;
   },
 
   // Internet of Things (IoT) Services
@@ -207,7 +206,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     price: '$399',
     period: '/month',
     description: 'Enterprise-grade IoT platform that manages connected devices, processes edge data, and provides real-time analytics. Supports industrial IoT, smart cities, and connected consumer applications.',
-    features: [
+    features: [;
       'Device management and provisioning',
       'Edge computing and local data processing',
       'Real-time data streaming and analytics',
@@ -220,7 +219,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Scalable cloud infrastructure'
     ],
     popular: true,
-    icon: '🌐',
+    icon: '',
     color: 'from-green-600 to-blue-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/enterprise-iot-platform',
@@ -244,7 +243,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-01-25',
     customers: 28,
     rating: 4.7,
-    reviews: 22
+    reviews: 22;
   },
 
   // Augmented Reality & Virtual Reality Services
@@ -255,7 +254,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     price: '$549',
     period: '/month',
     description: 'Comprehensive AR/VR platform for enterprise applications including employee training, product design, customer experiences, and remote collaboration. Supports multiple devices and platforms.',
-    features: [
+    features: [;
       '3D content creation and management',
       'Multi-device AR/VR application development',
       'Remote collaboration and virtual meetings',
@@ -268,7 +267,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Custom content development services'
     ],
     popular: true,
-    icon: '🥽',
+    icon: '',
     color: 'from-pink-600 to-purple-700',
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/services/enterprise-ar-vr-platform',
@@ -292,7 +291,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-02-01',
     customers: 19,
     rating: 4.8,
-    reviews: 15
+    reviews: 15;
   },
 
   // Autonomous Systems & Robotics Services
@@ -303,7 +302,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     price: '$899',
     period: '/month',
     description: 'Advanced platform for developing and deploying autonomous systems including robotics, drones, autonomous vehicles, and industrial automation. Features AI-powered decision making and safety systems.',
-    features: [
+    features: [;
       'AI-powered autonomous decision making',
       'Computer vision and object recognition',
       'Path planning and navigation algorithms',
@@ -316,7 +315,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Training and simulation environments'
     ],
     popular: true,
-    icon: '🤖',
+    icon: '',
     color: 'from-gray-600 to-blue-700',
     textColor: 'text-gray-300',
     link: 'https://ziontechgroup.com/services/autonomous-systems-platform',
@@ -340,7 +339,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-02-05',
     customers: 11,
     rating: 4.9,
-    reviews: 8
+    reviews: 8;
   },
 
   // Biotechnology & Synthetic Biology Services
@@ -351,7 +350,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     price: '$1,199',
     period: '/month',
     description: 'Advanced synthetic biology platform combining AI, machine learning, and laboratory automation for drug discovery, bioengineering, and genetic research. Accelerates research and development in biotechnology.',
-    features: [
+    features: [;
       'AI-powered protein design and optimization',
       'Genetic circuit design and simulation',
       'Laboratory automation and high-throughput screening',
@@ -364,7 +363,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Regulatory compliance and documentation'
     ],
     popular: true,
-    icon: '🧬',
+    icon: '',
     color: 'from-green-600 to-blue-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform',
@@ -388,7 +387,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-02-10',
     customers: 7,
     rating: 4.9,
-    reviews: 5
+    reviews: 5;
   },
 
   // Energy & Sustainability Services
@@ -399,7 +398,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     price: '$499',
     period: '/month',
     description: 'Intelligent energy management platform that optimizes renewable energy systems, smart grid operations, and energy storage. Reduces costs and improves sustainability for utilities and energy companies.',
-    features: [
+    features: [;
       'Renewable energy forecasting and optimization',
       'Smart grid management and load balancing',
       'Energy storage optimization and management',
@@ -412,7 +411,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Sustainability reporting and compliance'
     ],
     popular: true,
-    icon: '⚡',
+    icon: '',
     color: 'from-yellow-600 to-green-700',
     textColor: 'text-yellow-300',
     link: 'https://ziontechgroup.com/services/smart-energy-management-platform',
@@ -436,7 +435,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-02-15',
     customers: 16,
     rating: 4.8,
-    reviews: 13
+    reviews: 13;
   },
 
   // Transportation & Mobility Services
@@ -447,7 +446,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     price: '$449',
     period: '/month',
     description: 'Comprehensive transportation platform that optimizes traffic flow, public transportation, logistics, and autonomous vehicle operations. Improves efficiency and reduces congestion in urban areas.',
-    features: [
+    features: [;
       'Traffic flow optimization and congestion management',
       'Public transportation scheduling and optimization',
       'Logistics route planning and fleet management',
@@ -460,7 +459,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'API access for third-party applications'
     ],
     popular: true,
-    icon: '🚗',
+    icon: '',
     color: 'from-blue-600 to-green-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/intelligent-transportation-platform',
@@ -484,7 +483,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-02-20',
     customers: 14,
     rating: 4.8,
-    reviews: 11
+    reviews: 11;
   },
 
   // Cybersecurity & Privacy Services
@@ -495,7 +494,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     price: '$699',
     period: '/month',
     description: 'Advanced cybersecurity platform that implements post-quantum cryptography and quantum-resistant security protocols. Protects against future quantum computing threats while maintaining current security standards.',
-    features: [
+    features: [;
       'Post-quantum cryptography algorithms',
       'Quantum-resistant key management',
       'Advanced threat detection and response',
@@ -508,7 +507,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Expert cybersecurity consultation'
     ],
     popular: true,
-    icon: '🔐',
+    icon: '',
     color: 'from-red-600 to-purple-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-platform',
@@ -532,7 +531,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     launchDate: '2025-02-25',
     customers: 9,
     rating: 4.9,
-    reviews: 7
+    reviews: 7;
   }
 ];
 
@@ -540,31 +539,31 @@ export const emergingTechServices2025: EmergingTechService[] = [;
 };
 
 
-export const getEmergingTechServicesByCategory = (category: string) => 
+export const getEmergingTechServicesByCategory = (category: string) =>;
   return emergingTechServices2025 && emergingTechServices2025.filter(
     service => service && service.category === category
-export const getEmergingTechServicesByCategory = (category: string) => 
+export const getEmergingTechServicesByCategory = (category: string) =>;
   );
 }
 export const getEmergingTechServicesByPriceRange = (
-  minPrice: number
-  maxPrice: number
+  minPrice: number;
+  maxPrice: number;
 ) => 
   website: "https://ziontechgroup.com";
     return price >= minPrice && price <= maxPrice;
   })
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
-const contact = {mobile: "+1 302 464 0950"
-  email: "kleber@ziontechgroup.com"
+const contact = {mobile: "+1 302 464 0950";
+  email: "kleber@ziontechgroup.com";
   address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup.com";
   id: string, name: string,
   tagline: string, description: string,
   category: string,
-  price: 
+  price: any;
     monthly: number, yearly: number,
     currency: string, trialDays: number,
-    setupTime: string
+    setupTime: string;
   
     },
     features: string[], benefits: string[],
@@ -577,7 +576,7 @@ const contact = {mobile: "+1 302 464 0950"
   icon: string, color: string,
   popular: boolean, launchDate: string,
   customers: number, rating: number,
-  reviews: number
+  reviews: number;
 
   return emergingTechServices2025.filter(service => 
     const price = parseInt(service.price.monthly.toString()) |0;
@@ -586,19 +585,19 @@ const contact = {mobile: "+1 302 464 0950"
     return price >= minPrice && price <= maxPrice;
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
-const contact = {mobile: "+1 302 464 0950"
-  email: "kleber@ziontechgroup.com"
+const contact = {mobile: "+1 302 464 0950";
+  email: "kleber@ziontechgroup.com";
   address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup.com";
 
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
-  {id: "quantum-computing-as-a-service"
-    name: "Quantum Computing as a Service"
-    tagline: "Access to quantum computing power for complex problem solving and optimization"
+  {id: "quantum-computing-as-a-service";
+    name: "Quantum Computing as a Service";
+    tagline: "Access to quantum computing power for complex problem solving and optimization";
     price: "$1,299"
-    period: "/month"
+    period: "/month";
     description: "Enterprise quantum computing platform providing access to quantum processors, quantum algorithms, and hybrid quantum-classical computing solutions. Ideal for optimization problems, cryptography, and scientific research."
     features[ "Access to IBM, Google, and AWS quantum processors"
       "Quantum algorithm library and optimization tools"
@@ -610,39 +609,39 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "API access for custom quantum applications"
       "Expert quantum computing consultation"
       "Training and educational resources" ]
-    popular: true
-    icon: "⚛️"
-    color: "from-purple-600 to-pink-700"
-    textColor: "text-purple-300"
-    link: "https://ziontechgroup.com/services/quantum-computing-as-a-service"
-    marketPosition: "Leading quantum computing platform competing with IBM Quantum and Amazon Braket."
+    popular: true;
+    icon: "";
+    color: "from-purple-600 to-pink-700";
+    textColor: "text-purple-300";
+    link: "https://ziontechgroup.com/services/quantum-computing-as-a-service";
+    marketPosition: "Leading quantum computing platform competing with IBM Quantum and Amazon Braket.";
     targetAudience: "Research institutions, pharmaceutical companies, financial services, government agencies"
-    trialDays: 14
-    setupTime: "1-2 weeks"
-    category: "Quantum & Emerging Tech"
-    realService: true
+    trialDays: 14;
+    setupTime: "1-2 weeks";
+    category: "Quantum & Emerging Tech";
+    realService: true;
     technology["Qiskit, Cirq, PennyLane, Python, React, Node.js"]
     integrations["IBM Quantum, Google Quantum, AWS Braket, Azure Quantum"]
     useCases["Drug discovery, Financial modeling, Logistics optimization, Cryptography"]
-    roi: "Solve previously intractable problems 1000x faster than classical computers"
+    roi: "Solve previously intractable problems 1000x faster than classical computers";
     competitors["IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum"]
-    marketSize: "$1.5B Quantum Computing market"
-    growthRate: "45% CAGR"
-    variant: "quantum"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$1.5B Quantum Computing market";
+    growthRate: "45% CAGR";
+    variant: "quantum";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Cloud-based platform with quantum hardware access, custom algorithm development, and dedicated support."
-    launchDate: "2025-01-10"
-    customers: 8
-    rating: 4.9
+    launchDate: "2025-01-10";
+    customers: 8;
+    rating: 4.9;
     reviews: 6;
 }
   // Blockchain & Web3 Services;
-  {id: "enterprise-blockchain-platform"
-    name: "Enterprise Blockchain Platform"
-    tagline: "Scalable blockchain solutions for enterprise applications and DeFi protocols"
-    price: "$799"
-    period: "/month"
+  {id: "enterprise-blockchain-platform";
+    name: "Enterprise Blockchain Platform";
+    tagline: "Scalable blockchain solutions for enterprise applications and DeFi protocols";
+    price: "$799";
+    period: "/month";
     description: "Enterprise-grade blockchain platform supporting multiple consensus mechanisms, smart contracts, and cross-chain interoperability. Built for scalability, security, and regulatory compliance."
     features[ "Multi-consensus blockchain networks (PoS, PoA, DPoS)"
       "Smart contract development and deployment"
@@ -654,39 +653,39 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Blockchain analytics and monitoring"
       "Mobile and web applications"
       "API and SDK for developers" ]
-    popular: true
-    icon: "🔗"
-    color: "from-blue-600 to-cyan-700"
-    textColor: "text-blue-300"
-    link: "https://ziontechgroup.com/services/enterprise-blockchain-platform"
-    marketPosition: "Enterprise blockchain solution competing with Hyperledger and Corda."
+    popular: true;
+    icon: "";
+    color: "from-blue-600 to-cyan-700";
+    textColor: "text-blue-300";
+    link: "https://ziontechgroup.com/services/enterprise-blockchain-platform";
+    marketPosition: "Enterprise blockchain solution competing with Hyperledger and Corda.";
     targetAudience: "Financial institutions, supply chain companies, healthcare organizations, government agencies"
-    trialDays: 30
-    setupTime: "2-4 weeks"
-    category: "Blockchain & Web3"
-    realService: true
+    trialDays: 30;
+    setupTime: "2-4 weeks";
+    category: "Blockchain & Web3";
+    realService: true;
     technology["Ethereum, Solana, Polkadot, Rust, Go, React, Node.js"]
     integrations["AWS, Azure, GCP, Oracle, SAP, Salesforce"]
     useCases["Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols"]
-    roi: "Reduce transaction costs by 80% and increase transparency by 100%"
+    roi: "Reduce transaction costs by 80% and increase transparency by 100%";
     competitors["Hyperledger Fabric, R3 Corda, Ethereum Enterprise, Polygon"]
-    marketSize: "$19B Blockchain market"
-    growthRate: "87% CAGR"
-    variant: "default"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$19B Blockchain market";
+    growthRate: "87% CAGR";
+    variant: "default";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "On-premise or cloud deployment with custom smart contracts, integration services, and dedicated support."
-    launchDate: "2025-01-15"
-    customers: 15
-    rating: 4.8
+    launchDate: "2025-01-15";
+    customers: 15;
+    rating: 4.8;
     reviews: 12;
 }
   // Space Technology Services;
-  {id: "space-data-analytics-platform"
-    name: "Space Data Analytics Platform"
-    tagline: "Satellite data analysis and space technology insights for commercial applications"
-    price: "$599"
-    period: "/month"
+  {id: "space-data-analytics-platform";
+    name: "Space Data Analytics Platform";
+    tagline: "Satellite data analysis and space technology insights for commercial applications";
+    price: "$599";
+    period: "/month";
     description: "Comprehensive platform for analyzing satellite imagery, space weather data, and orbital information. Provides insights for agriculture, climate monitoring, urban planning, and space operations."
     features[ "Satellite imagery analysis and processing"
       "Space weather monitoring and forecasting"
@@ -698,39 +697,39 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Space mission planning and optimization"
       "Real-time data streaming and alerts"
       "Custom analytics and reporting tools" ]
-    popular: true
-    icon: "🛰️"
-    color: "from-indigo-600 to-purple-700"
-    textColor: "text-indigo-300"
-    link: "https://ziontechgroup.com/services/space-data-analytics-platform"
-    marketPosition: "Leading space data analytics platform competing with Planet Labs and Maxar."
+    popular: true;
+    icon: "";
+    color: "from-indigo-600 to-purple-700";
+    textColor: "text-indigo-300";
+    link: "https://ziontechgroup.com/services/space-data-analytics-platform";
+    marketPosition: "Leading space data analytics platform competing with Planet Labs and Maxar.";
     targetAudience: "Agriculture companies, environmental organizations, urban planners, space agencies"
-    trialDays: 21
-    setupTime: "1-2 weeks"
-    category: "Space & Metaverse"
-    realService: true
+    trialDays: 21;
+    setupTime: "1-2 weeks";
+    category: "Space & Metaverse";
+    realService: true;
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"]
     integrations["NASA APIs, ESA data, commercial satellite providers, GIS systems"]
     useCases["Precision agriculture, Environmental monitoring, Urban planning, Space operations"]
-    roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%"
+    roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%";
     competitors["Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky"]
-    marketSize: "$4.5B Space Data market"
-    growthRate: "35% CAGR"
-    variant: "ai-futuristic"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$4.5B Space Data market";
+    growthRate: "35% CAGR";
+    variant: "ai-futuristic";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Cloud-based platform with satellite data access, custom analytics, and dedicated space technology experts."
-    launchDate: "2025-01-20"
-    customers: 12
-    rating: 4.9
+    launchDate: "2025-01-20";
+    customers: 12;
+    rating: 4.9;
     reviews: 9;
 }
   // Internet of Things (IoT) Services;
-  {id: "enterprise-iot-platform"
-    name: "Enterprise IoT Platform"
+  {id: "enterprise-iot-platform";
+    name: "Enterprise IoT Platform";
     tagline: "Scalable IoT platform for connected devices, edge computing, and data analytics"
-    price: "$399"
-    period: "/month"
+    price: "$399";
+    period: "/month";
     description: "Enterprise-grade IoT platform that manages connected devices, processes edge data, and provides real-time analytics. Supports industrial IoT, smart cities, and connected consumer applications."
     features[ "Device management and provisioning"
       "Edge computing and local data processing"
@@ -742,39 +741,39 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Custom dashboard and reporting"
       "API access for third-party integrations"
       "Scalable cloud infrastructure" ]
-    popular: true
-    icon: "🌐"
-    color: "from-green-600 to-blue-700"
-    textColor: "text-green-300"
-    link: "https://ziontechgroup.com/services/enterprise-iot-platform"
-    marketPosition: "Enterprise IoT platform competing with AWS IoT and Azure IoT Hub."
+    popular: true;
+    icon: "";
+    color: "from-green-600 to-blue-700";
+    textColor: "text-green-300";
+    link: "https://ziontechgroup.com/services/enterprise-iot-platform";
+    marketPosition: "Enterprise IoT platform competing with AWS IoT and Azure IoT Hub.";
     targetAudience: "Manufacturing companies, utilities, smart city operators, logistics providers"
-    trialDays: 21
-    setupTime: "1-3 weeks"
-    category: "IoT & Edge Computing"
-    realService: true
+    trialDays: 21;
+    setupTime: "1-3 weeks";
+    category: "IoT & Edge Computing";
+    realService: true;
     technology["Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis"]
     integrations["AWS, Azure, GCP, industrial protocols, enterprise systems"]
     useCases["Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance"]
-    roi: "Reduce operational costs by 30% and improve efficiency by 40%"
+    roi: "Reduce operational costs by 30% and improve efficiency by 40%";
     competitors["AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx"]
-    marketSize: "$1.1T IoT market"
-    growthRate: "25% CAGR"
-    variant: "default"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$1.1T IoT market";
+    growthRate: "25% CAGR";
+    variant: "default";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Cloud-hosted platform with custom device integrations, edge computing deployment, and dedicated support."
-    launchDate: "2025-01-25"
-    customers: 28
-    rating: 4.7
+    launchDate: "2025-01-25";
+    customers: 28;
+    rating: 4.7;
     reviews: 22;
 }
   // Augmented Reality & Virtual Reality Services;
-  {id: "enterprise-ar-vr-platform"
-    name: "Enterprise AR/VR Platform"
+  {id: "enterprise-ar-vr-platform";
+    name: "Enterprise AR/VR Platform";
     tagline: "Immersive technology solutions for training, design, and customer engagement"
-    price: "$549"
-    period: "/month"
+    price: "$549";
+    period: "/month";
     description: "Comprehensive AR/VR platform for enterprise applications including employee training, product design, customer experiences, and remote collaboration. Supports multiple devices and platforms."
     features[ "3D content creation and management"
       "Multi-device AR/VR application development"
@@ -786,39 +785,39 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Integration with enterprise systems"
       "Mobile and web applications"
       "Custom content development services" ]
-    popular: true
-    icon: "🥽"
-    color: "from-pink-600 to-purple-700"
-    textColor: "text-pink-300"
-    link: "https://ziontechgroup.com/services/enterprise-ar-vr-platform"
-    marketPosition: "Enterprise AR/VR platform competing with Unity and Unreal Engine."
+    popular: true;
+    icon: "";
+    color: "from-pink-600 to-purple-700";
+    textColor: "text-pink-300";
+    link: "https://ziontechgroup.com/services/enterprise-ar-vr-platform";
+    marketPosition: "Enterprise AR/VR platform competing with Unity and Unreal Engine.";
     targetAudience: "Manufacturing companies, training organizations, design firms, retail companies"
-    trialDays: 21
-    setupTime: "2-4 weeks"
-    category: "AR/VR & Metaverse"
-    realService: true
+    trialDays: 21;
+    setupTime: "2-4 weeks";
+    category: "AR/VR & Metaverse";
+    realService: true;
     technology["Unity, Unreal Engine, React, Node.js, Python, PostgreSQL"]
     integrations["3D modeling software, enterprise systems, social platforms"]
     useCases["Employee training, Product design, Customer engagement, Remote collaboration"]
-    roi: "Reduce training costs by 50% and improve learning retention by 80%"
+    roi: "Reduce training costs by 50% and improve learning retention by 80%";
     competitors["Unity, Unreal Engine, PTC Vuforia, Magic Leap"]
-    marketSize: "$45B AR/VR market"
-    growthRate: "30% CAGR"
-    variant: "holographic"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$45B AR/VR market";
+    growthRate: "30% CAGR";
+    variant: "holographic";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Cloud-based platform with custom content development, device support, and dedicated AR/VR experts."
-    launchDate: "2025-02-01"
-    customers: 19
-    rating: 4.8
+    launchDate: "2025-02-01";
+    customers: 19;
+    rating: 4.8;
     reviews: 15;
 }
   // Autonomous Systems & Robotics Services;
-  {id: "autonomous-systems-platform"
-    name: "Autonomous Systems Platform"
+  {id: "autonomous-systems-platform";
+    name: "Autonomous Systems Platform";
     tagline: "AI-powered autonomous systems for robotics, drones, and autonomous vehicles"
-    price: "$899"
-    period: "/month"
+    price: "$899";
+    period: "/month";
     description: "Advanced platform for developing and deploying autonomous systems including robotics, drones, autonomous vehicles, and industrial automation. Features AI-powered decision making and safety systems."
     features[ "AI-powered autonomous decision making"
       "Computer vision and object recognition"
@@ -830,39 +829,39 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Integration with existing automation systems"
       "Custom robotics and drone development"
       "Training and simulation environments" ]
-    popular: true
-    icon: "🤖"
-    color: "from-gray-600 to-blue-700"
-    textColor: "text-gray-300"
-    link: "https://ziontechgroup.com/services/autonomous-systems-platform"
-    marketPosition: "Leading autonomous systems platform competing with NVIDIA DRIVE and ROS."
+    popular: true;
+    icon: "";
+    color: "from-gray-600 to-blue-700";
+    textColor: "text-gray-300";
+    link: "https://ziontechgroup.com/services/autonomous-systems-platform";
+    marketPosition: "Leading autonomous systems platform competing with NVIDIA DRIVE and ROS.";
     targetAudience: "Manufacturing companies, logistics providers, agriculture companies, research institutions"
-    trialDays: 30
-    setupTime: "2-6 weeks"
-    category: "Autonomous Systems"
-    realService: true
+    trialDays: 30;
+    setupTime: "2-6 weeks";
+    category: "Autonomous Systems";
+    realService: true;
     technology["Python, TensorFlow, PyTorch, ROS, React, Node.js"]
     integrations["Industrial robots, drones, autonomous vehicles, IoT sensors"]
     useCases["Industrial automation, Autonomous logistics, Precision agriculture, Research and development"]
-    roi: "Increase operational efficiency by 200% and reduce human error by 90%"
+    roi: "Increase operational efficiency by 200% and reduce human error by 90%";
     competitors["NVIDIA DRIVE, ROS, ABB Robotics, KUKA Robotics"]
-    marketSize: "$65B Autonomous Systems market"
-    growthRate: "40% CAGR"
-    variant: "ai-futuristic"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$65B Autonomous Systems market";
+    growthRate: "40% CAGR";
+    variant: "ai-futuristic";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Custom autonomous system development, integration services, and dedicated robotics experts."
-    launchDate: "2025-02-05"
-    customers: 11
-    rating: 4.9
+    launchDate: "2025-02-05";
+    customers: 11;
+    rating: 4.9;
     reviews: 8;
 }
   // Biotechnology & Synthetic Biology Services;
-  {id: "synthetic-biology-platform"
-    name: "Synthetic Biology Platform"
-    tagline: "AI-powered synthetic biology platform for drug discovery and bioengineering"
+  {id: "synthetic-biology-platform";
+    name: "Synthetic Biology Platform";
+    tagline: "AI-powered synthetic biology platform for drug discovery and bioengineering";
     price: "$1,199"
-    period: "/month"
+    period: "/month";
     description: "Advanced synthetic biology platform combining AI, machine learning, and laboratory automation for drug discovery, bioengineering, and genetic research. Accelerates research and development in biotechnology."
     features[ "AI-powered protein design and optimization"
       "Genetic circuit design and simulation"
@@ -874,39 +873,39 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Laboratory information management system"
       "Research collaboration and data sharing"
       "Regulatory compliance and documentation" ]
-    popular: true
-    icon: "🧬"
-    color: "from-green-600 to-blue-700"
-    textColor: "text-green-300"
-    link: "https://ziontechgroup.com/services/synthetic-biology-platform"
-    marketPosition: "Leading synthetic biology platform competing with Ginkgo Bioworks and Twist Bioscience."
+    popular: true;
+    icon: "";
+    color: "from-green-600 to-blue-700";
+    textColor: "text-green-300";
+    link: "https://ziontechgroup.com/services/synthetic-biology-platform";
+    marketPosition: "Leading synthetic biology platform competing with Ginkgo Bioworks and Twist Bioscience.";
     targetAudience: "Pharmaceutical companies, biotechnology startups, research institutions, agricultural companies"
-    trialDays: 30
-    setupTime: "4-8 weeks"
-    category: "Healthcare & Biotech"
-    realService: true
+    trialDays: 30;
+    setupTime: "4-8 weeks";
+    category: "Healthcare & Biotech";
+    realService: true;
     technology["Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL"]
     integrations["Laboratory equipment, DNA synthesis services, research databases"]
     useCases["Drug discovery, Bioengineering, Agricultural biotechnology, Research automation"]
-    roi: "Accelerate drug discovery by 10x and reduce research costs by 70%"
+    roi: "Accelerate drug discovery by 10x and reduce research costs by 70%";
     competitors["Ginkgo Bioworks, Twist Bioscience, Zymergen, Benchling"]
-    marketSize: "$15B Synthetic Biology market"
-    growthRate: "35% CAGR"
-    variant: "neural"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$15B Synthetic Biology market";
+    growthRate: "35% CAGR";
+    variant: "neural";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Custom laboratory integration, AI model training, and dedicated biotechnology experts."
-    launchDate: "2025-02-10"
-    customers: 7
-    rating: 4.9
+    launchDate: "2025-02-10";
+    customers: 7;
+    rating: 4.9;
     reviews: 5;
 }
   // Energy & Sustainability Services;
-  {id: "smart-energy-management-platform"
-    name: "Smart Energy Management Platform"
-    tagline: "AI-powered energy optimization for renewable energy and smart grid management"
-    price: "$499"
-    period: "/month"
+  {id: "smart-energy-management-platform";
+    name: "Smart Energy Management Platform";
+    tagline: "AI-powered energy optimization for renewable energy and smart grid management";
+    price: "$499";
+    period: "/month";
     description: "Intelligent energy management platform that optimizes renewable energy systems, smart grid operations, and energy storage. Reduces costs and improves sustainability for utilities and energy companies."
     features[ "Renewable energy forecasting and optimization"
       "Smart grid management and load balancing"
@@ -918,39 +917,39 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Predictive maintenance for energy infrastructure"
       "Energy trading and market optimization"
       "Sustainability reporting and compliance" ]
-    popular: true
-    icon: "⚡"
-    color: "from-yellow-600 to-green-700"
-    textColor: "text-yellow-300"
-    link: "https://ziontechgroup.com/services/smart-energy-management-platform"
-    marketPosition: "Smart energy platform competing with Schneider Electric and Siemens."
+    popular: true;
+    icon: "";
+    color: "from-yellow-600 to-green-700";
+    textColor: "text-yellow-300";
+    link: "https://ziontechgroup.com/services/smart-energy-management-platform";
+    marketPosition: "Smart energy platform competing with Schneider Electric and Siemens.";
     targetAudience: "Utility companies, renewable energy providers, industrial facilities, smart cities"
-    trialDays: 30
-    setupTime: "2-4 weeks"
-    category: "Energy & Sustainability"
-    realService: true
+    trialDays: 30;
+    setupTime: "2-4 weeks";
+    category: "Energy & Sustainability";
+    realService: true;
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"]
     integrations["Smart meters, renewable energy systems, grid infrastructure, IoT sensors"]
     useCases["Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting"]
-    roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%"
+    roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%";
     competitors["Schneider Electric, Siemens, GE Digital, ABB"]
-    marketSize: "$75B Smart Energy market"
-    growthRate: "20% CAGR"
-    variant: "default"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$75B Smart Energy market";
+    growthRate: "20% CAGR";
+    variant: "default";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Custom energy system integration, AI model training, and dedicated energy experts."
-    launchDate: "2025-02-15"
-    customers: 16
-    rating: 4.8
+    launchDate: "2025-02-15";
+    customers: 16;
+    rating: 4.8;
     reviews: 13;
 }
   // Transportation & Mobility Services;
-  {id: "intelligent-transportation-platform"
-    name: "Intelligent Transportation Platform"
-    tagline: "AI-powered transportation optimization for smart cities and logistics"
-    price: "$449"
-    period: "/month"
+  {id: "intelligent-transportation-platform";
+    name: "Intelligent Transportation Platform";
+    tagline: "AI-powered transportation optimization for smart cities and logistics";
+    price: "$449";
+    period: "/month";
     description: "Comprehensive transportation platform that optimizes traffic flow, public transportation, logistics, and autonomous vehicle operations. Improves efficiency and reduces congestion in urban areas."
     features[ "Traffic flow optimization and congestion management"
       "Public transportation scheduling and optimization"
@@ -962,40 +961,40 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile applications for commuters"
       "Analytics and performance reporting"
       "API access for third-party applications" ]
-    popular: true
-    icon: "🚗"
-    color: "from-blue-600 to-green-700"
-    textColor: "text-blue-300"
-    link: "https://ziontechgroup.com/services/intelligent-transportation-platform"
-    marketPosition: "Smart transportation platform competing with Siemens Mobility and Cubic Corporation."
+    popular: true;
+    icon: "";
+    color: "from-blue-600 to-green-700";
+    textColor: "text-blue-300";
+    link: "https://ziontechgroup.com/services/intelligent-transportation-platform";
+    marketPosition: "Smart transportation platform competing with Siemens Mobility and Cubic Corporation.";
     targetAudience: "City governments, transportation agencies, logistics companies, automotive manufacturers"
-    trialDays: 30
-    setupTime: "2-6 weeks"
-    category: "Transportation & Logistics"
-    realService: true
+    trialDays: 30;
+    setupTime: "2-6 weeks";
+    category: "Transportation & Logistics";
+    realService: true;
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"]
     integrations["Traffic signals, public transportation systems, IoT sensors, automotive systems"]
     useCases["Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles"]
-    roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%"
+    roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%";
     competitors["Siemens Mobility, Cubic Corporation, Kapsch TrafficCom, TomTom"]
-    marketSize: "$45B Intelligent Transportation market"
-    growthRate: "18% CAGR"
-    variant: "default"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$45B Intelligent Transportation market";
+    growthRate: "18% CAGR";
+    variant: "default";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Custom transportation system integration, AI model training, and dedicated mobility experts."
-    launchDate: "2025-02-20"
-    customers: 14
-    rating: 4.8
+    launchDate: "2025-02-20";
+    customers: 14;
+    rating: 4.8;
     reviews: 11;
 }
   // Cybersecurity & Privacy Services;
-  {id: "quantum-cybersecurity-platform"
-    name: "Quantum Cybersecurity Platform"
-    tagline: "Post-quantum cryptography and quantum-resistant security solutions"
-    price: "$699"
-    period: "/month"
-    description: "Advanced cybersecurity platform that implements post-quantum cryptography and quantum-resistant security protocols. Protects against future quantum computing threats while maintaining current security standards."
+  {id: "quantum-cybersecurity-platform";
+    name: "Quantum Cybersecurity Platform";
+    tagline: "Post-quantum cryptography and quantum-resistant security solutions";
+    price: "$699";
+    period: "/month";
+    description: "Advanced cybersecurity platform that implements post-quantum cryptography and quantum-resistant security protocols. Protects against future quantum computing threats while maintaining current security standards.";
     features[ "Post-quantum cryptography algorithms"
       "Quantum-resistant key management"
       "Advanced threat detection and response"
@@ -1006,31 +1005,31 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Integration with existing security infrastructure"
       "Real-time security monitoring and alerts"
       "Expert cybersecurity consultation" ]
-    popular: true
-    icon: "🔐"
-    color: "from-red-600 to-purple-700"
-    textColor: "text-red-300"
-    link: "https://ziontechgroup.com/services/quantum-cybersecurity-platform"
-    marketPosition: "Leading quantum cybersecurity platform competing with ISARA and PQShield."
+    popular: true;
+    icon: "";
+    color: "from-red-600 to-purple-700";
+    textColor: "text-red-300";
+    link: "https://ziontechgroup.com/services/quantum-cybersecurity-platform";
+    marketPosition: "Leading quantum cybersecurity platform competing with ISARA and PQShield.";
     targetAudience: "Financial institutions, government agencies, healthcare organizations, critical infrastructure"
-    trialDays: 30
-    setupTime: "2-4 weeks"
-    category: "Cybersecurity"
-    realService: true
+    trialDays: 30;
+    setupTime: "2-4 weeks";
+    category: "Cybersecurity";
+    realService: true;
     technology["Python, Rust, Go, React, Node.js, PostgreSQL"]
     integrations["Existing security infrastructure, identity management systems, communication platforms"]
     useCases["Post-quantum cryptography, Quantum-resistant security, Advanced threat protection, Compliance"]
-    roi: "Future-proof security infrastructure and maintain compliance with emerging standards"
+    roi: "Future-proof security infrastructure and maintain compliance with emerging standards";
     competitors["ISARA Corporation, PQShield, Crypto Quantique, Qrypt"]
-    marketSize: "$8B Quantum Cybersecurity market"
-    growthRate: "50% CAGR"
-    variant: "quantum"
-    contactInfo: contact
-    realImplementation: true
+    marketSize: "$8B Quantum Cybersecurity market";
+    growthRate: "50% CAGR";
+    variant: "quantum";
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails: "Custom security integration, post-quantum cryptography implementation, and dedicated cybersecurity experts."
-    launchDate: "2025-02-25"
-    customers: 9
-    rating: 4.9
+    launchDate: "2025-02-25";
+    customers: 9;
+    rating: 4.9;
   return emergingTechServices2025 && emergingTechServices2025.filter(service => 
     const price = parseInt(service && service.price.monthly && monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
@@ -1039,14 +1038,14 @@ export const getPopularEmergingTechServices = () =>: any
   return emergingTechServices2025.filter (service => service.popular);
 }
 ;
-export const getEmergingTechServicesByCategory = (category: string) =>: any 
+export const getEmergingTechServicesByCategory = (category: string) =>: any;
   return emergingTechServices2025.filter (
     service => service.category === category);
 }
 ;
 export const getEmergingTechServicesByPriceRange = (
   min_price: number,
-  max_price: number) =>: any 
+  max_price: number) =>: any;
   return emergingTechServices2025.filter (service => 
     const price = parse_int (service.price.monthly.to_string ()) || 0;
     return price >= min_price && price <= max_price;
@@ -1081,7 +1080,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Expert quantum computing consultation",
       "Training and educational resources" ],
     popular: true,
-    icon: "⚛️",
+    icon: "",
 
     color: "from - purple - 600 to - pink - 700",
     text_color: "text - purple - 300",
@@ -1130,7 +1129,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile and web applications",
       "API and SDK for developers" ],
     popular: true,
-    icon: "🔗",
+    icon: "",
 
     color: "from - blue - 600 to - cyan - 700",
     text_color: "text - blue - 300",
@@ -1177,7 +1176,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Real - time data streaming and alerts",
       "Custom analytics and reporting tools" ],
     popular: true,
-    icon: "🛰️",
+    icon: "",
 
     color: "from - indigo - 600 to - purple - 700",
     text_color: "text - indigo - 300",
@@ -1226,7 +1225,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "API access for third - party integrations",
       "Scalable cloud infrastructure" ],
     popular: true,
-    icon: "🌐",
+    icon: "",
 
     color: "from - green - 600 to - blue - 700",
     text_color: "text - green - 300",
@@ -1275,7 +1274,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile and web applications",
       "Custom content development services" ],
     popular: true,
-    icon: "🥽",
+    icon: "",
 
     color: "from - pink - 600 to - purple - 700",
     text_color: "text - pink - 300",
@@ -1322,7 +1321,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Custom robotics and drone development",
       "Training and simulation environments" ],
     popular: true,
-    icon: "🤖",
+    icon: "",
 
     color: "from - gray - 600 to - blue - 700",
     text_color: "text - gray - 300",
@@ -1369,7 +1368,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Research collaboration and data sharing",
       "Regulatory compliance and documentation" ],
     popular: true,
-    icon: "🧬",
+    icon: "",
 
     color: "from - green - 600 to - blue - 700",
     text_color: "text - green - 300",
@@ -1416,7 +1415,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Energy trading and market optimization",
       "Sustainability reporting and compliance" ],
     popular: true,
-    icon: "⚡",
+    icon: "",
 
     color: "from - yellow - 600 to - green - 700",
     text_color: "text - yellow - 300",
@@ -1463,7 +1462,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Analytics and performance reporting",
       "API access for third - party applications" ],
     popular: true,
-    icon: "🚗",
+    icon: "",
 
     color: "from - blue - 600 to - green - 700",
     text_color: "text - blue - 300",
@@ -1510,7 +1509,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Real - time security monitoring and alerts",
       "Expert cybersecurity consultation" ],
     popular: true,
-    icon: "🔐",
+    icon: "",
 
     color: "from - red - 600 to - purple - 700",
     text_color: "text - red - 300",
@@ -1627,7 +1626,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 technical support, dedicated hardware consultants, implementation specialists, and ongoing optimization.',;
     compliance: ['Hardware standards, Safety protocols, Energy efficiency standards, International computing standards'],;
     link: 'https://ziontechgroup.com/neuromorphic-computing',;
-    icon: '🧠',;
+    icon: '',;
     color: 'from-purple-500 to-pink-600',;
     popular: true,;
     launchDate: '2025-02-20',;
@@ -1671,7 +1670,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 security support, dedicated encryption consultants, implementation specialists, and ongoing optimization.',;
     compliance: ['NIST standards, Government security, Financial regulations, Healthcare compliance, International security protocols'],;
     link: 'https://ziontechgroup.com/quantum-encryption',;
-    icon: '🔐',;
+    icon: '',;
     color: 'from-blue-500 to-indigo-600',;
     popular: true,;
     launchDate: '2025-02-25',;
@@ -1715,7 +1714,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 research support, dedicated biology consultants, implementation specialists, and commercialization assistance.',;
     compliance: ['Biosafety standards, Research ethics, Laboratory safety, Government regulations, International standards'],;
     link: 'https://ziontechgroup.com/synthetic-biology-platform',;
-    icon: '🧬',;
+    icon: '',;
     color: 'from-green-500 to-teal-600',;
     popular: true,;
     launchDate: '2025-03-01',;
@@ -1759,7 +1758,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 fusion operations support, dedicated energy consultants, implementation specialists, and commercialization assistance.',;
     compliance: ['Nuclear safety standards, Energy regulations, Government safety protocols, International energy standards'],;
     link: 'https://ziontechgroup.com/fusion-energy-ai',;
-    icon: '⚡',;
+    icon: '',;
     color: 'from-yellow-500 to-orange-600',;
     popular: true,;
     launchDate: '2025-03-05',;
@@ -1803,7 +1802,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 quantum network support, dedicated network consultants, implementation specialists, and ongoing optimization.',;
     compliance: ['Network security standards, Government security, Financial regulations, International communication standards'],;
     link: 'https://ziontechgroup.com/quantum-internet',;
-    icon: '🌐',;
+    icon: '',;
     color: 'from-cyan-500 to-blue-600',;
     popular: true,;
     launchDate: '2025-03-10',;
@@ -1847,7 +1846,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 medical support, dedicated BCI consultants, implementation specialists, and research collaboration.',;
     compliance: ['Medical device regulations, Research ethics, Safety standards, Government approval, International standards'],;
     link: 'https://ziontechgroup.com/brain-computer-interface',;
-    icon: '🧠',;
+    icon: '',;
     color: 'from-pink-500 to-purple-600',;
     popular: true,;
     launchDate: '2025-03-15',;
@@ -1891,7 +1890,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 technical support, dedicated sensor consultants, implementation specialists, and ongoing optimization.',;
     compliance: ['Sensor standards, Safety protocols, Environmental regulations, International measurement standards'],;
     link: 'https://ziontechgroup.com/quantum-sensors',;
-    icon: '📡',;
+    icon: '',;
     color: 'from-indigo-500 to-purple-600',;
     popular: true,;
     launchDate: '2025-03-20',;
@@ -1935,7 +1934,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 robotics support, dedicated robot consultants, implementation specialists, and ongoing optimization.',;
     compliance: ['Robotics safety standards, Industrial regulations, Safety protocols, International robotics standards'],;
     link: 'https://ziontechgroup.com/autonomous-robotics',;
-    icon: '🤖',;
+    icon: '',;
     color: 'from-gray-500 to-slate-600',;
     popular: true,;
     launchDate: '2025-03-25',;
@@ -1979,7 +1978,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 research support, dedicated materials consultants, implementation specialists, and commercialization assistance.',;
     compliance: ['Research ethics, Laboratory safety, Patent compliance, International materials standards'],;
     link: 'https://ziontechgroup.com/quantum-materials',;
-    icon: '🔬',;
+    icon: '',;
     color: 'from-teal-500 to-cyan-600',;
     popular: true,;
     launchDate: '2025-03-30',;
@@ -2023,7 +2022,7 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     support: '24/7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.',;
     compliance: ['Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols'],;
     link: 'https://ziontechgroup.com/quantum-communications',;
-    icon: '📡',;
+    icon: '',;
     color: 'from-blue-500 to-indigo-600',;
     popular: true,;
     launchDate: '2025-04-01',;

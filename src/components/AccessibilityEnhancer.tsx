@@ -13,7 +13,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableReducedMotion = true
+  enableReducedMotion = true,
 }) => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [prefersHighContrast, setPrefersHighContrast] = useState(false);
@@ -93,26 +93,34 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
         
         /* High contrast mode */
-        ${prefersHighContrast ? `
+        ${
+          prefersHighContrast
+            ? `
           *:focus-visible {
             outline: 3px solid #ffffff;
             outline-offset: 2px;
             background-color: #000000;
             color: #ffffff;
           }
-        ` : ''}
+        `
+            : ''
+        }
         
         /* Reduced motion */
-        ${prefersReducedMotion ? `
+        ${
+          prefersReducedMotion
+            ? `
           *, *::before, *::after {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
             scroll-behavior: auto !important;
           }
-        ` : ''}
+        `
+            : ''
+        }
       `;
-      
+
       document.head.appendChild(style);
       return () => {
         if (document.head.contains(style)) {
@@ -143,7 +151,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.className =
+        'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       skipLink.style.cssText = `
         position: absolute;
         top: -40px;
@@ -156,11 +165,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         z-index: 1000;
         transition: top 0.3s;
       `;
-      
+
       skipLink.addEventListener('focus', () => {
         skipLink.style.top = '6px';
       });
-      
+
       skipLink.addEventListener('blur', () => {
         skipLink.style.top = '-40px';
       });
