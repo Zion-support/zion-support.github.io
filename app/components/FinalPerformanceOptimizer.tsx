@@ -164,10 +164,7 @@ const FinalPerformanceOptimizer: React.FC = () => {
     const performanceScore = calculatePerformanceScore(finalMetrics);
     finalMetrics.performanceScore = performanceScore;
     
-    setMetrics(prev => ({
-      ...prev,
-      ...finalMetrics
-    }));
+    setMetrics(finalMetrics);
     
     // Add to history
     setHistory(prev => [
