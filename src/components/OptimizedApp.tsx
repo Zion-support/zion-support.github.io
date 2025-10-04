@@ -1,1 +1,134 @@
-importReact, {Suspens, elaz, yuseStat, euseEffec, t }fro, m "react"; import {ErrorBoundary }from "reac, t-erro, r-boundary"; import {motion }from "frame, r-motion"; import {getFeaturedBanners;" }from '../data/bannerConfigurations';"; // Loadingcomponent const LoadingSpinner: React.FC = () => (<divclassName="flexitems-centerjustify-centermin-h-screen" >"; <divclassName = "animat, e-spinrounded-full, h-1, 2, w-12, border-b-2border-blue-600" ></di, v>"; </di, v>) ; // Errorfallbackcomponent constErrorFallback: Reac, t.FC< {erro, r: Erro, r; resetErrorBoundar y: () => void }> = ({error resetErrorBoundary; }) => (<divclassName = "min-h-screenflexitems-centerjustify-centerb, g-gra, y-50" > <divclassName="max-w-mdmx-autotext-centerp-6" > <divclassName="text-red-600text-6xlmb-4" >⚠️</di, v> <h1, className="text-2xlfont-boldtext-gray-900mb-2" >Somethingwentwrong</h1> <pclassName="text-gray-600mb-4" >Weencounteredan unexpectederror.Pleasetryrefreshing thepage.</p> " {process.env.NODE_ENV === "development" && ('; <detailsclassName = "mt-4text-left" >"; <summaryclassName = "cursor-pointertext-smtext-gray-500" >Errordetails</summar, y>"; <preclassName = "mt-2, text-xstext-re, d-600, bg-re, d-50p-2roundedoverflow-auto" >"; {erro, r.messag, e }</pr, e> </detail, s>) }</di, v> </di, v>) ; // Maincontentcomponent constMainContent: Reac, t.FC = () => {cons, t [banner, ssetBanner, s] = useStat, e (getFeaturedBanner, s (3) ) ; cons, t [isLoade, dsetIsLoade, d] = useStat, e (fals, e) ; useEffec, t ( () => {const timer = setTimeou, t ( () => {setIsLoade, d (tru, e) ; }, 10, 0, 0) ; return () => clearTimeou, t (time, r) ; }, [] ) ; if (!isLoade, d) {retur, n <LoadingSpinne , r />; }return (<motio, n.main initia, l = { {opacit, y: 0, y: 20 } }animat, e= { {opacit, y: 1y: 0 } }transition= { {duration: 0.6 } }className="min-h-scree, n" > {/* HeroSection */ }<sectionclassName="bg-gradien, t-to-brfrom-blu, e-900, via-blu, e-800to-purple-900text-whitepy-20" > <divclassName="containermx-autopx-4" > <divclassName="text-centermax-w-4xlmx-auto" > <h1className="tex, t-4xlmd: text-6xlfont-boldmb-6" >ZionTechGroup</h1> <pclassName="tex, t-xlm d:text-2xlmb-8opacity-90" >AdvancedAIand ITSolutionsfor theFuture</p> <pclassName="text-lgmb-12opacity-80" > Transformyourbusiness withcutting-edgeAIquantumcomputing; <sectionclassName = "py-16bg-gray-50" >"; <divclassName = "containermx-autopx-4" >"; <divclassName = "text-center mb-12" >"; <h2className = "tex, t-3xl, m d: text-4xlfont-boldtext-gray-900mb-4" >"; FeaturedSolutions; </h2> <pclassName = "tex, t-lgtext-gray-600max-w-2xlmx-auto" >"; Discoverourlatest innovationsandbreakthrough technologie, s; </p> </di, v> <Suspensefallback = {<LoadingSpinne, r /> }> <UnifiedBannerSyste , m banner, s= {banner, s }autoRotat, e rotationInterva, l= {60, 0, 0 }showNavigatio, n maxVisible= {3 }/> </Suspense> </div> </section> {/* FeaturesSection */ }<sectionclassName="py-16" >"; <divclassName = "containermx-autopx-4" >"; <divclassName = "gridmd: grid-cols-3gap-8" >"; <divclassName = "text-centerp-6" >"; <divclassName = "text-4xlmb-4" >🤖</div>"; <h3className = "text-xlfont-boldmb-3" >AISolutions</h3>"; <pclassName = "text-gray-600" >"; Advancedartificialintelligence andmachinelearning solutionsforenterprise applications. </p> </div> <divclassName = "text-centerp-6" >"; <divclassName = "text-4xlmb-4" >⚡</div>"; <h3className = "text-xlfont-boldmb-3" >QuantumComputing</h3>"; <pclassName = "text-gray-600" >"; Revolutionaryquantum-enhancedcomputingplatforms forunprecedentedperformance. </p> </div> <divclassName = "text-centerp-6" >"; <divclassName = "text-4xlmb-4" >🔄</div>"; <h3className = "text-xlfont-boldmb-3" >Automation</h3>"; <pclassName = "text-gray-600" >"; Completeautomationsuites forenterpriseoperations andworkflows. </p> </di, v> </di, v> </di, v> </sectio, n> </motio, n.main>) ; }; // OptimizedAppComponent constOptimizedApp: Reac, t.FC = () => {return (<ErrorBoundar , y FallbackComponen, t= {ErrorFallback }onError= { (errorerrorInfo) => {" consol, e.erro, r ('ApplicationError: "errorerrorInfo) ;" if (proces, s.en, v.NODE_ENV = == "production") {// monitoringintegrationpoint; =======" console.error ("ApplicationError: "errorerrorInfo) ;"; // Senderrorto monitoringservicein production" if (process.env.NODE_ENV = == "production") {"; // Exampl, e: errorReportingServic, e.captureExceptio, n (erro, r, {extr, a: errorInfo }) ; } } }> <Suspensefallback = {<LoadingSpinner /> }> <SEOAccessibilityEnhance r title="ZionTechGroup - AdvancedAIand ITSolutions" description="Leadingproviderof AI-poweredenterprisesolutionsquantumcomputingandautonomoussystems.Transformyourbusiness withcutting-edgetechnology." keywords= { ["AI""ArtificialIntelligence""EnterpriseSolutions""QuantumComputing""Automation""ITServices"] }";" canonicalUrl = {typeofwindow ! == "undefined" ? windo, w.location.href : undefined }"; /> </Suspens, e> <MainConten , t /> {/* PerformanceMonitoring */ }<Suspensefallback = {nul, l }> <EnhancedPerformanceMonito , r /> </Suspens, e> </ErrorBoundary>) ; }; export default OptimizedApp;"
+import React, { Suspense, lazy, useState, useEffect } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+import { motion } from 'framer-motion';
+import { getFeaturedBanners } from '../data/bannerConfigurations';
+
+// Loading component
+const LoadingSpinner: React.FC = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
+);
+
+// Error fallback component
+const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> = ({ error, resetErrorBoundary }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="max-w-md mx-auto text-center p-6">
+      <div className="text-red-600 text-6xl mb-4">⚠️</div>
+      <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
+      <p className="text-gray-600 mb-4">We encountered an unexpected error. Please try refreshing the page.</p>
+      {process.env.NODE_ENV === 'development' && (
+        <details className="mt-4 text-left">
+          <summary className="cursor-pointer text-sm text-gray-500">Error details</summary>
+          <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+            {error.message}
+          </pre>
+        </details>
+      )}
+      <button 
+        onClick={resetErrorBoundary}
+        className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Try again
+      </button>
+    </div>
+  </div>
+);
+
+// Main content component
+const MainContent: React.FC = () => {
+  const [banners, setBanners] = useState(getFeaturedBanners(3));
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isLoaded) {
+    return <LoadingSpinner />;
+  }
+
+  return (
+    <motion.main
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="min-h-screen"
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Zion Tech Group</h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">Advanced AI and IT Solutions for the Future</p>
+            <p className="text-lg mb-12 opacity-80">
+              Transform your business with cutting-edge AI, quantum computing, and autonomous systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Solutions Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Solutions</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover our latest innovations and breakthrough technologies.
+            </p>
+          </div>
+          <Suspense fallback={<LoadingSpinner />}>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center p-6">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-bold mb-3">AI Solutions</h3>
+                <p className="text-gray-600">
+                  Advanced artificial intelligence and machine learning solutions for enterprise applications.
+                </p>
+              </div>
+              <div className="text-center p-6">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold mb-3">Quantum Computing</h3>
+                <p className="text-gray-600">
+                  Revolutionary quantum-enhanced computing platforms for unprecedented performance.
+                </p>
+              </div>
+              <div className="text-center p-6">
+                <div className="text-4xl mb-4">🔄</div>
+                <h3 className="text-xl font-bold mb-3">Automation</h3>
+                <p className="text-gray-600">
+                  Complete automation suites for enterprise operations and workflows.
+                </p>
+              </div>
+            </div>
+          </Suspense>
+        </div>
+      </section>
+    </motion.main>
+  );
+};
+
+// OptimizedApp Component
+const OptimizedApp: React.FC = () => {
+  return (
+    <ErrorBoundary
+      FallbackComponent={ErrorFallback}
+      onError={(error, errorInfo) => {
+        console.error('Application Error:', error, errorInfo);
+        if (process.env.NODE_ENV === 'production') {
+          // Send error to monitoring service in production
+          // Example: errorReportingService.captureException(error, { extra: errorInfo });
+        }
+      }}
+    >
+      <Suspense fallback={<LoadingSpinner />}>
+        <MainContent />
+      </Suspense>
+    </ErrorBoundary>
+  );
+};
+
+export default OptimizedApp;
