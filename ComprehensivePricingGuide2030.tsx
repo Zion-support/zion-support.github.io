@@ -44,7 +44,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
 
   const services = INNOVATIVE_SERVICES_2025;
 
-  const categories = useMemo((: unknown) => {
+  const categories = useMemo(() => {
     const cats = services.reduce((acc: unknown, service: unknown) => {
       if (!acc.includes(service.category)) {
         acc.push(service.category);
@@ -56,7 +56,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
 
   const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
 
-  const filteredServices = useMemo((: unknown) => {
+  const filteredServices = useMemo(() => {
     let filtered = services;
 
     if (selectedCategory !== 'all') {
