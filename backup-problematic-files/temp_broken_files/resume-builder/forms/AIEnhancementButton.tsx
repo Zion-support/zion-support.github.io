@@ -29,8 +29,8 @@ interface AIEnhancementButtonProps {;
       disabled={isEnhancing}
     >;
 
-        <Sparkles className="h-3 w-3" />;
+        <Sparkles className="text-left" />;
       )}
-      <span className="text-xs">{buttonText}</span>;
+      <span className="text-left">{buttonText}<;
 
 

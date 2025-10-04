@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export default function AISpaceMissionSuccess2026() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="text-left">
       {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-4">
+      <div className="text-left">
+        <div className="text-left">
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
   return (;
-    <div className="flex justify-between">;
+    <div className="text-left">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;          {backLabel}
         </Button>;

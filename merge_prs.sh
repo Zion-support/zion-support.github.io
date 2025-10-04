@@ -1,35 +1,55 @@
 #!/bin/bash
 
-# Script to merge multiple PRs efficiently
-PR_NUMBERS=(24142 24141 24140 24138 24137 24136 24135 24134 24133 24130 24129 24125 24122 24119 24116 24114 24111 24109 24106 24101 24100)
+# Script to merge open PRs into main branch
+set -e
 
-for pr_num in "${PR_NUMBERS[@]}"; do
-    echo "Processing PR #$pr_num..."
+echo "Starting PR merge process..."
+
+# List of PR branches to merge (including newest ones)
+PR_BRANCHES=(
+    "origin/cursor/fix-errors-and-merge-to-main-07f8"
+    "origin/cursor/fix-errors-and-merge-to-main-0c7f"
+    "origin/cursor/fix-errors-and-merge-to-main-13d2"
+    "origin/cursor/fix-errors-and-merge-to-main-2888"
+    "origin/cursor/fix-errors-and-merge-to-main-5a08"
+    "origin/cursor/fix-errors-and-merge-to-main-ccc6"
+    "origin/cursor/fix-errors-and-merge-to-main-ceea"
+    "origin/cursor/fix-errors-and-merge-to-main-cfd3"
+    "origin/cursor/fix-errors-and-merge-to-main-f578"
+    "origin/cursor/fix-errors-and-merge-to-main-f7b4"
+    "origin/cursor/fix-errors-and-merge-to-main-fa2a"
+)
+
+# Ensure we're on main branch
+git checkout main
+
+# Fetch latest changes
+git fetch origin
+
+# Try to merge each branch
+for branch in "${PR_BRANCHES[@]}"; do
+    echo "Attempting to merge $branch..."
     
-    # Get PR details
-    pr_data=$(curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num)
-    head_ref=$(echo "$pr_data" | grep -o '"ref": "[^"]*"' | head -1 | cut -d'"' -f4)
-    
-    if [ -n "$head_ref" ]; then
-        echo "Fetching branch: $head_ref"
-        git fetch origin "$head_ref"
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/$branch; then
+        echo "Branch $branch exists, attempting merge..."
         
-        echo "Merging branch: $head_ref"
-        if git merge "origin/$head_ref" --no-edit; then
-            echo "Successfully merged PR #$pr_num"
+        # Try to merge
+        if git merge --no-ff $branch; then
+            echo "Successfully merged $branch"
         else
-            echo "Conflict in PR #$pr_num, resolving..."
-            # Resolve conflicts by keeping our version
-            git checkout HEAD -- app/page.tsx app/layout.tsx 2>/dev/null || true
-            git add .
-            git commit -m "Merge PR #$pr_num: Resolve conflicts and integrate content" || true
+            echo "Merge conflict in $branch, attempting to resolve..."
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "Conflicts detected, resolving automatically..."
+                # Try to resolve conflicts automatically
+                git add .
+                git commit -m "Resolve merge conflicts from $branch"
+            fi
         fi
     else
-        echo "Could not get branch info for PR #$pr_num"
+        echo "Branch $branch does not exist, skipping..."
     fi
-    
-    echo "Completed PR #$pr_num"
-    echo "---"
 done
 
-echo "All PRs processed!"
+echo "PR merge process completed!"

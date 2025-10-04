@@ -44,7 +44,7 @@
     return();
       <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>
         {level}
-      </span>) }`
+      <) }`
   return (''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
       {/* Animated Background */}
@@ -94,14 +94,14 @@
           >''
             <div className='flex items-center gap-2 text-cyan-400>'
               <Phone className='w-5 h-5'  />
-              <span>+1 302 464 0950</span>'
+              <span>+1 302 464 0950<'
             </div>''
             <div className='flex items-center gap-2 text-cyan-400>'
               <Mail className='w-5 h-5'  />
-              <span>kleber@ziontechgroup.com</span>'
+              <span>kleber@ziontechgroup.com<'
             </div>''
             <div className='flex items-center gap-2 text-cyan-400>'
-              <MapPin className='w-5 h-5'  />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className='w-5 h-5'  />              <span>364 E Main St STE 1008, Middletown DE 19709<
 
             </div>
           </motion.div>
@@ -120,7 +120,7 @@
               </div>'
               {/* Sort Filter */}
               <div className='flex items-center gap-2>'
-                <span className='text-slate-400 text-sm'>Sort by:</span>
+                <span className='text-slate-400 text-sm'>Sort by:<
                 <select;
                   value={sortBy}
 
@@ -137,7 +137,7 @@
       </section>
 
                       : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white`}`}>{service.innovationLevel}
-                  </span>
+                  <
                 </div>`
                 {/* Title and Description */}
                 <h3 className='text-xl font-bold mb-3 group-hover:text-cyan-300 transition-colors'>
@@ -154,17 +154,17 @@
                       <span'
                         key={idx};
                         className='text-xs bg-slate-800/50 text-slate-300 px-2 py-1 rounded'{feature}
-                      </span>))}, {service.features.length > 3 && (''
+                      <))}, {service.features.length > 3 && (''
                       <span className='text-xs text-slate-400 px-2 py-1'>
                         +{service.features.length - 3} more
-                      </span>) }
+                      <) }
                   </div>
                 </div>'
                 {/* Pricing and ROI */}
                 <div className='flex items-center justify-between mb-4>'
                   <div className='text-2xl font-bold text-cyan-400>
                     ${service.price.toLocaleString()}
-                    <span className='text-sm text-slate-400 font-normal'>/mo</span>'
+                    <span className='text-sm text-slate-400 font-normal'>/mo<'
                   </div>''
                   <div className='text-right>'
                     <div className='text-sm font-semibold text-green-400'>
@@ -181,7 +181,7 @@
                   <ul className='space-y-1>
                     {service.benefits.slice(0, 2).map((benefit, idx) => (''
                       <li key={idx} className='text-xs text-slate-300 flex items-start gap-2>'
-                        <span className='text-cyan-400 mt-1'>•</span>
+                        <span className='text-cyan-400 mt-1'>•<
                         {benefit}
                       </li>) ) }
                   </ul>
@@ -192,7 +192,7 @@
                     <span;
                       key={idx};
                       className='text-xs bg-cyan-400/10 text-cyan-300 px-2 py-1 rounded-full'{tag}
-                    </span>) ) }
+                    <) ) }
                 </div>'
                 {/* Contact and CTA */}
                 <div className='border-t border-slate-700 pt-4>'

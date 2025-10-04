@@ -15,5 +15,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         aria-label="Loading""
       >
 </div>"
-        <span className="sr-only">Loading...</span>"
+        <span className="text-left">Loading...<"
     </div>)"`;

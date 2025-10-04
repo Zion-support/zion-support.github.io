@@ -15,7 +15,7 @@ interface RateOptimizationSectionProps {;
 
 export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({;
 "
-    <div className="space-y-4">;"
+    <div className="text-left">;"
 </div>
       <FormField;
 
@@ -29,12 +29,4 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
 
 
       <Card>;
-        <CardContent className="pt-4">;"
-
-
-
-
-
-
-
-
+        <CardContent className="text-left">;"

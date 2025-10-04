@@ -8,5 +8,5 @@
                             {field.value ? (;
                               format(field.value, "MMM yyyy");
                             ) :(;
-                              <span>Select date</span>;
+                              <span>Select date<;
                             )}

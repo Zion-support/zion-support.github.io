@@ -55,7 +55,7 @@ const 'FloatingContactWidget': React.FC = () => {'
           <div className='mt-4 pt-4 border-t'>'
             <button;'
               onClick={() => window.open('/contact')}
-              <Send className='w-4 h-4' /> <span>Send Message</span>{' '}
+              <Send className='w-4 h-4' /> <span>Send Message<{' '}
 
         <div;
           className='fixed inset-0 z-40 bg-black bg-opacity-25''

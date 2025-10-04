@@ -224,19 +224,14 @@ export class BundleOptimizer {
 /**
  * Accessibility checker
  */
-export class AccessibilityChecker {
-  /**
+export class AccessibilityChecker   /**
    * Check accessibility compliance
    */
-  async check(): Promise<{
-    score: number;
+  async check(): Promise<    score: number;
     issues: Array<{ severity: string; description: string }>;
     recommendations: string[];
-  }> {
-    return {
-      score: 95,
+  }>     return       score: 95,
       issues: [
-        {
           severity: 'minor',
           description: 'Some images missing alt text in legacy components',
         },
@@ -258,15 +253,12 @@ export const bundleOptimizer = new BundleOptimizer();
 export const accessibilityChecker = new AccessibilityChecker();
 
 // Export utility functions
-export const generateQualityReport = async (): Promise<string> => {
-  const results = await codeQualityAnalyzer.analyze();
+export const generateQualityReport = async (): Promise<string> =>   const results = await codeQualityAnalyzer.analyze();
   return codeQualityAnalyzer.generateReport(results);
 };
 
-export const optimizeBundle = async () => {
-  return await bundleOptimizer.optimize();
+export const optimizeBundle = async () =>   return await bundleOptimizer.optimize();
 };
 
-export const checkAccessibility = async () => {
-  return await accessibilityChecker.check();
+export const checkAccessibility = async () =>   return await accessibilityChecker.check();
 };

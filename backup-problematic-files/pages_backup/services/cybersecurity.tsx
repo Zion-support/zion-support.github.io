@@ -53,18 +53,18 @@ export default function CybersecurityPage() {;
     <Layout)
       title="Cybersecurity Services - Zion Tech Group""
       description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."">;
-      <div className="min-h-screen bg-gray-50">";
+      <div className="text-left">";
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">";
-          <div className="container mx-auto px-4">";
+        <section className="text-left">";
+          <div className="text-left">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cybersecurity Services,;
+              className="text-left"">;
+              <h1 className="text-left">", Cybersecurity Services,;
               </h1>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
+              <p className="text-left">",;
                 Protect your business with our comprehensive cybersecurity solutions. ;
                 Stay ahead of threats with advanced security measures and expert support.;
               </p>;
@@ -72,32 +72,32 @@ export default function CybersecurityPage() {;
           </div>;
         </section>;
         {/* Services Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
+        <section className="text-left">";
+          <div className="text-left">";
+            <div className="text-left">",;
               {securityServices && securityServices.map((service, index) => {}
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
                     key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    className="text-left""
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}>,;
-                    <div className="text-red-600 mb-4">";
-                      <IconComponent className="w-10 h-10" />";
+                    <div className="text-left">";
+                      <IconComponent className="text-left" />";
                     </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+                    <h3 className="text-left">";
                       {service && service.title}
                     </h3>,;
-                    <p className="text-gray-600 mb-4">";
+                    <p className="text-left">";
                       {service && service.description}
                     </p>,;
-                    <ul className="space-y-2">";
+                    <ul className="text-left">";
                       {service && service.features.map((feature, featureIndex) => (,;
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+                        <li key={featureIndex} className="text-left">";
+                          <CheckCircle className="text-left" />";
                           {feature}
                         </li>,;
                       ))}
@@ -109,19 +109,19 @@ export default function CybersecurityPage() {;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">";
-          <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Secure Your Business Today,;
+        <section className="text-left">";
+          <div className="text-left">";
+            <h2 className="text-left">", Secure Your Business Today,;
             </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
+            <p className="text-left">";
               Don't wait for a security breach. Let our experts help you build a robust security framework.';
             </p>;
             <motion&& motion.a
               href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
+              className="text-left"",
               whileHover={{ scale: 1 && 1.05 }}>,;
               Get Security Assessment;
-              <ArrowRight className="w-5 h-5 ml-2" />";
+              <ArrowRight className="text-left" />";
             </motion && motion.a>;
           </div>;
         </section>;
@@ -185,7 +185,7 @@ export default function CybersecurityPage() {
       title="Cybersecurity Services - Zion Tech Group"
       description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
-      <div className="min-h-screen bg-white">;
+      <div className="text-left">;
         {/* Hero Section */}
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -222,19 +222,19 @@ export default function CybersecurityPage() {;
     <Layout)
       title="Cybersecurity Services - Zion Tech Group""
       description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."">;
-      <div className="min-h-screen bg-gray-50">";
+      <div className="text-left">";
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">";
-          <div className="container mx-auto px-4">";
+        <section className="text-left">";
+          <div className="text-left">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+              className="text-left"">;
+              <h1 className="text-left">";
                 Cybersecurity Services;
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+              <p className="text-left">";
                 Protect your business with our comprehensive cybersecurity solutions. ;
                 Stay ahead of threats with advanced security measures and expert support.;
               </p>;
@@ -242,32 +242,32 @@ export default function CybersecurityPage() {;
           </div>;
         </section>;
         {/* Services Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+        <section className="text-left">";
+          <div className="text-left">";
+            <div className="text-left">";
               {securityServices && securityServices.map((service, index) => {}
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
                     key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    className="text-left""
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}>,;
-                    <div className="text-red-600 mb-4">";
-                      <IconComponent className="w-10 h-10" />";
+                    <div className="text-left">";
+                      <IconComponent className="text-left" />";
                     </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+                    <h3 className="text-left">";
                       {service && service.title}
                     </h3>,;
-                    <p className="text-gray-600 mb-4">";
+                    <p className="text-left">";
                       {service && service.description}
                     </p>,;
-                    <ul className="space-y-2">";
+                    <ul className="text-left">";
                       {service && service.features.map((feature, featureIndex) => (,;
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+                        <li key={featureIndex} className="text-left">";
+                          <CheckCircle className="text-left" />";
                           {feature}
                         </li>,;
                       ))}
@@ -279,20 +279,20 @@ export default function CybersecurityPage() {;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">";
-          <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
+        <section className="text-left">";
+          <div className="text-left">";
+            <h2 className="text-left">";
               Secure Your Business Today;
             </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
+            <p className="text-left">";
               Don't wait for a security breach. Let our experts help you build a robust security framework.';
             </p>;
             <motion&& motion.a
               href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold""
+              className="text-left""
               whileHover={{ scale: 1 && 1.05 }}>,;
               Get Security Assessment;
-              <ArrowRight className="w-5 h-5 ml-2" />";
+              <ArrowRight className="text-left" />";
             </motion && motion.a>;
           </div>;
         </section>;
@@ -307,13 +307,13 @@ import Layout from "../../components/Layout";";
                 return (
                   <motion&& motion.div)
                     key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    className="text-left""
                     initial={{ opacity: 0;, y: 30 ;}}
                     whileInView={{ opacity: 1;, y: 0 ;}}
                     transition={{ duration: 0 && 0.8;, delay: index * 0 && 0.1 ;}}
                     viewport={{ once: true ;}}>,;
-                    <div className="text-red-600 mb-4">";
-                      <IconComponent className="w-10 h-10" />";
+                    <div className="text-left">";
+                      <IconComponent className="text-left" />";
 
     icon: ArrowRight,
     title: 'Security Training',
@@ -364,19 +364,19 @@ export default function CybersecurityServices() {;
       title="Cybersecurity Services - Zion Tech Group"
       description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
-      <div className="min-h-screen bg-white">;
+      <div className="text-left">;
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-left"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Cybersecurity</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <h1 className="text-left">Cybersecurity</h1>
+              <p className="text-left">
                 Protect your business with our comprehensive cybersecurity solutions designed 
                 to defend against evolving threats.
               </p>
@@ -385,42 +385,42 @@ export default function CybersecurityServices() {;
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
                 Cybersecurity Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 Comprehensive security services designed to protect your business
                 from evolving cyber threats and ensure regulatory compliance.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-left">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-red-600" />
+                <div key={index} className="text-left">
+                  <div className="text-left">
+                    <feature.icon className="text-left" />
 
         {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               {securityServices.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                  className="text-left"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
+                  <div className="text-left">
+                    <service.icon className="text-left" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-left">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-left">
                     {feature.description}
                   </p>
                 </div>
@@ -430,35 +430,35 @@ export default function CybersecurityServices() {;
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-left">
                   Why Choose Our Cybersecurity Services?
                 </h2>
-                <p className="text-xl text-gray-600 mb-8">
+                <p className="text-left">
                   Our cybersecurity experts provide comprehensive protection against
                   evolving threats while ensuring compliance with industry regulations.
                 </p>
-                <ul className="space-y-4">
+                <ul className="text-left">
                   {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
+                    <li key={index} className="text-left">
+                      <CheckCircle className="text-left" />
+                      <span className="text-left">{benefit}<
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">
-                <h3 className="text-2xl font-bold mb-6">Ready to Secure Your Business?</h3>
-                <p className="text-lg mb-6">
+              <div className="text-left">
+                <h3 className="text-left">Ready to Secure Your Business?</h3>
+                <p className="text-left">
                   Let our cybersecurity experts help you implement comprehensive
                   security solutions that protect your business and data.
                 </p>
-                <button className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                <button className="text-left">
                   Schedule Security Audit
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="text-left" />
                 </button>
               </div>
             </div>
@@ -466,30 +466,30 @@ export default function CybersecurityServices() {;
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-left">
                 Secure Your Business Today
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-left">
                 Let's discuss how our cybersecurity services can protect your business from threats.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="text-left">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                  className="text-left"
                 >
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="text-left" />
                 </Link>
                 <Link
                   href="/security"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                  className="text-left"
                 >
                   View Security
                 </Link>

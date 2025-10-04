@@ -360,7 +360,7 @@ const: faqData: FAQItem[] = [
 
                                             <Clock className='w-4 h-4 mr-1'  />
                                             {article.readTime}
-                                          </span>
+                                          <
                                         </div>'
                                       </div>''
                                       <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform'  />                                    </div>
@@ -381,7 +381,7 @@ const: faqData: FAQItem[] = [
 
                                         <Clock className='w-4 h-4 mr-1'  />                                        {article.readTime}
 
-                                      </span>
+                                      <
                                     </div>
                                   </div>) }
                               </motion.div>) ) }
@@ -394,7 +394,7 @@ const: faqData: FAQItem[] = [
           </div>
 
                       {faq.category}
-                    </span>
+                    <
                   </div>
                 </div>
               </motion.div>) ) }

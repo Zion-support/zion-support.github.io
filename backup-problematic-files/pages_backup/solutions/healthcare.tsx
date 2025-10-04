@@ -123,51 +123,51 @@ export default function HealthcareSolutionsPage() {;
     <Layout)
       title="Healthcare Solutions - Zion Tech Group""
       description="Transform healthcare delivery with our HIPAA-compliant solutions, EHR systems, telemedicine platforms, and healthcare analytics."">;
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+      <div className="text-left">";
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">";
-          <div className="container mx-auto px-4">";
-            <div className="max-w-4xl mx-auto text-center">";
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">", Healthcare,;
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";
+        <section className="text-left">";
+          <div className="text-left">";
+            <div className="text-left">";
+              <h1 className="text-left">", Healthcare,;
+                <span className="text-left">";
                   Solutions;
-                </span>;
+                <;
               </h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
+              <p className="text-left">";
                 Transform healthcare delivery with our HIPAA-compliant technology solutions. ;
                 From EHR systems to telemedicine platforms, we help healthcare organizations;
                 deliver better patient care through innovative technology.;
               </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">",;
+              <div className="text-left">", <button className="text-left">",;
                   Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />";
+                  <ArrowRight className="text-left" />";
                 </button>;
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover: bg-gray-800 transition-colors font-medium">", View Case Studies,;
+                <button className="text-left">", View Case Studies,;
                 </button>;
               </div>;
             </div>;
           </div>;
         </section>;
         {/* Features Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-white mb-4">";
+        <section className="text-left">";
+          <div className="text-left">";
+            <div className="text-left">";
+              <h2 className="text-left">";
                 Comprehensive Healthcare Technology Solutions;
               </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
+              <p className="text-left">";
                 Our healthcare solutions are designed to improve patient outcomes, ;
                 streamline operations, and ensure compliance with healthcare regulations.,;
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
+            <div className="text-left">",;
               {features && features.map((feature, index) => (,;
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">";
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
-                    <feature && feature.icon className="w-6 h-6 text-white" />";
+                <div key={index} className="text-left">";
+                  <div className="text-left">";
+                    <feature && feature.icon className="text-left" />";
                   </div>,;
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";
-                  <p className="text-gray-300">{feature && feature.description}</p>";
+                  <h3 className="text-left">{feature && feature.title}</h3>";
+                  <p className="text-left">{feature && feature.description}</p>";
                 </div>;
 const benefits = [;
   'Improved patient care and outcomes',;
@@ -190,7 +190,7 @@ export default function HealthcareSolutionsPage() {
       title="Healthcare Solutions - Zion Tech Group"
       description="Advanced healthcare technology solutions for hospitals, clinics, and healthcare providers. HIPAA compliant and patient-focused."
       keywords="healthcare solutions, HIPAA compliance, electronic health records, patient management, healthcare technology">;
-      <div className="min-h-screen bg-white">;
+      <div className="text-left">;
         {/* Hero Section */}
     "title": 'Provider Portal',,"description": 'Streamlined workflows for healthcare providers and staff';'
   },{"icon": FileText,"title": 'Electronic Records',,"description": 'Secure electronic health records management system';'
@@ -230,28 +230,28 @@ return (;
     <Layout)
       title="Healthcare Solutions - Zion Tech Group"""
       description="Transform healthcare delivery with our HIPAA-compliant solutions, EHR systems, telemedicine platforms, and healthcare analytics."">;"
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";"
+      <div className="text-left">";"
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">";"
-          <div className="container mx-auto px-4">";"
-            <div className="max-w-4xl mx-auto text-center">";"
-              <h1 className="text-5xl "md":text-6xl font-bold text-white mb-6">";"
+        <section className="text-left">";"
+          <div className="text-left">";"
+            <div className="text-left">";"
+              <h1 className="text-left"md":text-6xl font-bold text-white mb-6">";"
                 Healthcare;
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";"
+                <span className="text-left">";"
                   Solutions;
-                </span>;
+                <;
               </h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";"
+              <p className="text-left">";"
                 Transform healthcare delivery with our HIPAA-compliant technology solutions. ;
                 From EHR systems to telemedicine platforms, we help healthcare organizations;
                 deliver better patient care through innovative technology.;
               </p>;
-              <div className="flex flex-col "sm":flex-row gap-4 justify-center">";"
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg "hover":bg-blue-700 transition-colors font-medium flex items-center justify-center">";"
+              <div className="text-left"sm":flex-row gap-4 justify-center">";"
+                <button className="text-left"hover":bg-blue-700 transition-colors font-medium flex items-center justify-center">";"
                   Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />";"
+                  <ArrowRight className="text-left" />";"
                 </button>;
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg "hover":bg-gray-800 transition-colors font-medium">";"
+                <button className="text-left"hover":bg-gray-800 transition-colors font-medium">";"
                   View Case Studies;
                 </button>;
               </div>;
@@ -259,25 +259,25 @@ return (;
           </div>;
         </section>;
         {/* Features Section */}
-        <section className="py-20">";"
-          <div className="container mx-auto px-4">";"
-            <div className="text-center mb-16">";"
-              <h2 className="text-4xl font-bold text-white mb-4">";"
+        <section className="text-left">";"
+          <div className="text-left">";"
+            <div className="text-left">";"
+              <h2 className="text-left">";"
                 Comprehensive Healthcare Technology Solutions;
               </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">";"
+              <p className="text-left">";"
                 Our healthcare solutions are designed to improve patient outcomes, ;
                 streamline operations, and ensure compliance with healthcare regulations.,;
               </p>;
             </div>;
-            <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">";"
+            <div className="text-left"md":grid-cols-2 "lg":grid-cols-3 gap-8">";"
               {features && features.map((feature, index) => (,;
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 "hover":border-blue-500 transition-colors">";"
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";"
-                    <feature && feature.icon className="w-6 h-6 text-white" />";"
+                <div key={index} className="text-left"hover":border-blue-500 transition-colors">";"
+                  <div className="text-left">";"
+                    <feature && feature.icon className="text-left" />";"
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";"
-                  <p className="text-gray-300">{feature && feature.description}</p>";"
+                  <h3 className="text-left">{feature && feature.title}</h3>";"
+                  <p className="text-left">{feature && feature.description}</p>";"
                 </div>;
   'Improved patient care and outcomes',;'
   'Reduced administrative burden',;'
@@ -323,7 +323,7 @@ export default function HealthcareSolutionsPage() {
         <meta name="description" content="Comprehensive healthcare technology solutions including patient data management, security, analytics, and provider management." />
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="text-left">
         {/* Hero Section */}
 }
 return (;
@@ -331,71 +331,70 @@ return (;
 title="Healthcare Solutions - Zion Tech Group""
       description="Advanced healthcare technology solutions for hospitals, clinics, and healthcare providers. HIPAA compliant and patient-focused.""
       keywords="healthcare solutions, HIPAA compliance, electronic health records, patient management, healthcare technology">;"
-      <div className="min-h-screen bg-white">;"
-
+      <div className="text-left">;"
         {/* Hero Section */}
     >
-      <div className="min-h-screen bg-white">"
+      <div className="text-left">"
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">"
-          <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">"
-            <div className="text-center">"
-              <h1 className="text-4xl "md":text-6xl font-bold mb-6">"
+        <section className="text-left">"
+          <div className="text-left"sm":px-6 "lg":px-8">"
+            <div className="text-left">"
+              <h1 className="text-left"md":text-6xl font-bold mb-6">"
                 Healthcare Solutions
               </h1>
-              <p className="text-xl "md":text-2xl mb-8 max-w-3xl mx-auto">"
+              <p className="text-left"md":text-2xl mb-8 max-w-3xl mx-auto">"
                 Transform healthcare delivery with secure, compliant, and intelligent technology solutions,
 designed for modern healthcare providers.
 
-          <div className="container mx-auto px-4">";
-            <div className="max-w-4xl mx-auto">";
-              <h2 className="text-3xl font-bold text-white text-center mb-12">";
+          <div className="text-left">";
+            <div className="text-left">";
+              <h2 className="text-left">";
                 Our Healthcare Solutions;
               </h2>;
             </div>;
           </div>;
         </section>;
         {/* Compliance Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="bg-gray-800/50 rounded-2xl p-12">";
-              <div className="text-center mb-12">";
-                <h2 className="text-4xl font-bold text-white mb-4">";
+        <section className="text-left">";
+          <div className="text-left">";
+            <div className="text-left">";
+              <div className="text-left">";
+                <h2 className="text-left">";
                   HIPAA Compliant & Secure;
                 </h2>;
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Shield className="w-8 h-8 text-white" />";
+                <p className="text-left">";
+                  <div className="text-left">";
+                    <Shield className="text-left" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">HIPAA Compliant</h3>";
-                  <p className="text-gray-300">Built to meet all HIPAA requirements for healthcare data protection.</p>";
+                  <h3 className="text-left">HIPAA Compliant</h3>";
+                  <p className="text-left">Built to meet all HIPAA requirements for healthcare data protection.</p>";
                 </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Database className="w-8 h-8 text-white" />";
+                <div className="text-left">";
+                  <div className="text-left">";
+                    <Database className="text-left" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Secure Infrastructure</h3>";
-                  <p className="text-gray-300">Enterprise-grade security measures to protect sensitive healthcare data.</p>";
+                  <h3 className="text-left">Secure Infrastructure</h3>";
+                  <p className="text-left">Enterprise-grade security measures to protect sensitive healthcare data.</p>";
                 </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Activity className="w-8 h-8 text-white" />";
+                <div className="text-left">";
+                  <div className="text-left">";
+                    <Activity className="text-left" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Real-time Monitoring</h3>";
-                  <p className="text-gray-300">Continuous monitoring and alerting for security and performance.</p>";
+                  <h3 className="text-left">Real-time Monitoring</h3>";
+                  <p className="text-left">Continuous monitoring and alerting for security and performance.</p>";
                 </div>;
               </div>;
             </div>;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
-              <h2 className="text-4xl font-bold text-white mb-6">";
+        <section className="text-left">";
+          <div className="text-left">";
+            <div className="text-left">";
+              <h2 className="text-left">";
                 Ready to Transform Healthcare Delivery?;
               </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
+              <p className="text-left">";
                 Let our healthcare technology experts help you implement solutions that;
                 improve patient care while ensuring compliance and security.;
               </p>;
@@ -410,30 +409,30 @@ designed for modern healthcare providers.
 
         {/* CTA Section */}
 
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-left">
                 Ready for Healthcare Solutions?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-left">
                 Let's discuss how our healthcare solutions can support your organization.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="text-left">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                  className="text-left"
                 >
                   Contact Sales
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="text-left" />
                 </Link>
                 <Link
                   href="/solutions"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                  className="text-left"
                 >
                   View Solutions
                 </Link>

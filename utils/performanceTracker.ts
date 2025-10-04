@@ -297,9 +297,7 @@ export class PerformanceTracker {
  */
 let trackerInstance: PerformanceTracker | null = null;
 
-export function getPerformanceTracker(): PerformanceTracker {
-  if (!trackerInstance) {
-    trackerInstance = new PerformanceTracker();
+export function getPerformanceTracker(): PerformanceTracker   if (!trackerInstance)     trackerInstance = new PerformanceTracker();
   }
   return trackerInstance;
 }
@@ -307,29 +305,24 @@ export function getPerformanceTracker(): PerformanceTracker {
 /**
  * Performance budget recommendations
  */
-export const PERFORMANCE_BUDGETS = {
-  EXCELLENT: {
-    lcp: 2500, // 2.5s
+export const PERFORMANCE_BUDGETS =   EXCELLENT:     lcp: 2500, // 2.5s
     fid: 100, // 100ms
     cls: 0.1,
     ttfb: 600, // 600ms
   },
-  GOOD: {
-    lcp: 4000, // 4s
+  GOOD:     lcp: 4000, // 4s
     fid: 300, // 300ms
     cls: 0.25,
     ttfb: 1000, // 1s
   },
-  NEEDS_IMPROVEMENT: {
-    lcp: 6000, // 6s
+  NEEDS_IMPROVEMENT:     lcp: 6000, // 6s
     fid: 500, // 500ms
     cls: 0.5,
     ttfb: 1500, // 1.5s
   },
 };
 
-export default {
-  PerformanceTracker,
+export default   PerformanceTracker,
   getPerformanceTracker,
   PERFORMANCE_BUDGETS,
 };

@@ -2,104 +2,116 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
-  canonicalUrl?: string;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
   ogImage?: string;
   ogType?: string;
-  keywords?: string[];
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  twitterCard?: string;
+  structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
-export const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  canonicalUrl,
-  ogImage = '/og-image.png',
-  ogType = 'website',
-  keywords = [],
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = "Zion Tech Group - Revolutionary AI Solutions for Enterprise",
+  description = "Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations. Advanced AI solutions for enterprise digital transformation.",
+  keywords = "AI solutions, enterprise AI, machine learning, artificial intelligence, digital transformation, quantum computing, autonomous operations, meta-cognitive AI",
+  canonical,
+  ogImage = "/images/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData,
+  noindex = false,
+  nofollow = false
 }) => {
-  const fullTitle = `${title} | Zion Tech Group`;
-  const currentUrl = canonicalUrl || typeof window !== 'undefined' ? window.location.href : '';
+  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+  const robots = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
+
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Revolutionary AI solutions for enterprise transformation",
+    "url": "https://zion.app",
+    "logo": "https://zion.app/images/logo.png",
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "Customer Service",
+      "availableLanguage": "English"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
+    "industry": "Artificial Intelligence, Information Technology"
+  };
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
+      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
-      {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content={robots} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonical && <link rel="canonical" href={canonical} />}
       
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={currentUrl} />
+      {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical || "https://zion.app"} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map((tag) => (
-        <meta key={tag} property="article:tag" content={tag} />
-      ))}
+      <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={currentUrl} />
-      <meta property="twitter:title" content={fullTitle} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={ogImage} />
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO */}
-      <meta name="theme-color" content="#1e40af" />
-      <meta name="msapplication-TileColor" content="#1e40af" />
+      {/* Additional SEO Tags */}
+      <meta name="theme-color" content="#2563eb" />
+      <meta name="msapplication-TileColor" content="#2563eb" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-      {/* JSON-LD Structured Data */}
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
+      {/* Default Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': ogType === 'article' ? 'Article' : 'WebPage',
-          headline: title,
-          description: description,
-          image: ogImage,
-          datePublished: publishedTime,
-          dateModified: modifiedTime || publishedTime,
-          author: {
-            '@type': 'Organization',
-            name: author,
-            url: 'https://ziontechgroup.com',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Zion Tech Group',
-            logo: {
-              '@type': 'ImageObject',
-              url: 'https://ziontechgroup.com/logo.png',
-            },
-          },
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': currentUrl,
-          },
-        })}
+        {JSON.stringify(defaultStructuredData)}
       </script>
     </Helmet>
   );
