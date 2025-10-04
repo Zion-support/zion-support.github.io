@@ -29,7 +29,8 @@ describe('Footer Component', () => {
   test('renders company information', () => {
     renderWithRouter(<Footer />);
     
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+    const companyElements = screen.getAllByText(/Zion Tech Group/i);
+    expect(companyElements.length).toBeGreaterThan(0);
   });
 
   test('renders social media links', () => {

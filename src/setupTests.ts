@@ -1,5 +1,25 @@
 import '@testing-library/jest-dom';
 
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+if (typeof global.TextEncoder === 'undefined') {
+  const { TextEncoder, TextDecoder } = require('util');
+  global.TextEncoder = TextEncoder;
+  global.TextDecoder = TextDecoder;
+}
+
+// Mock import.meta.env for Jest
+Object.defineProperty(global, 'import', {
+  value: {
+    meta: {
+      env: {
+        DEV: true,
+        PROD: false,
+        MODE: 'test',
+      },
+    },
+  },
+});
+
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -42,6 +62,14 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
+
+// Mock PerformanceObserver
+global.PerformanceObserver = class PerformanceObserver {
+  constructor(callback: PerformanceObserverCallback) {}
+  observe() {}
+  disconnect() {}
+  takeRecords() { return []; }
+} as unknown as typeof PerformanceObserver;
 
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
