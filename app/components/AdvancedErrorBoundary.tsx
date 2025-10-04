@@ -28,7 +28,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('AdvancedErrorBoundary caught an error:', error, errorInfo);
 
     this.setState({ errorInfo });
 
@@ -68,12 +67,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         this.logToServer(errorData),
       ]);
     } catch (loggingError) {
-      console.error('Failed to log error:', loggingError);
+
     }
   };
 
   private logToConsole = async (errorData: Record<string, unknown>) => {
-    console.error('Application Error:', errorData);
+
   };
 
   private logToLocalStorage = async (errorData: Record<string, unknown>) => {
@@ -99,7 +98,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorData)
       // });
     } catch (loggingError) {
-      console.error('Failed to log error:', loggingError);
+
     }
   };
 

@@ -263,10 +263,10 @@ class AdvancedPerformanceOptimizer {
       navigator.serviceWorker
         .register('/sw.js')
         .then(registration => {
-          console.log('Service Worker registered:', registration);
+
         })
         .catch(error => {
-          console.warn('Service Worker registration failed:', error);
+
         });
     });
   }

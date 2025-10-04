@@ -34,7 +34,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
 
     this.setState({ errorInfo });
 
@@ -62,8 +61,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         retryCount: this.state.retryCount,
       };
 
-      console.log('Error logged to service:', errorData);
-
       // Example: Send to error reporting service
       // fetch('/api/errors', {
       //   method: 'POST',
@@ -71,7 +68,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorData)
       // });
     } catch (loggingError) {
-      console.error('Failed to log error:', loggingError);
+
     }
   };
 
@@ -104,7 +101,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         retryCount: this.state.retryCount + 1,
       });
     } catch (recoveryError) {
-      console.error('Recovery failed:', recoveryError);
+
       this.setState({ isRecovering: false });
     }
   };
@@ -115,7 +112,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       localStorage.clear();
       sessionStorage.clear();
     } catch (e) {
-      console.warn('Failed to clear storage:', e);
+
     }
 
     // Strategy 2: Reload critical resources
@@ -130,7 +127,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         document.head.appendChild(newScript);
       });
     } catch (e) {
-      console.warn('Failed to reload critical scripts:', e);
+
     }
 
     // Strategy 3: Reset component state

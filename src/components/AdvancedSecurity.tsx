@@ -55,7 +55,7 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
   const logSecurityEvent = useCallback(
     (event: SecurityEvent) => {
       if (debugMode) {
-        console.warn('Security Event:', event);
+
       }
 
       if (onSecurityEvent) {
@@ -65,7 +65,7 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
       // In production, you would send this to your security monitoring service
       if (process.env.NODE_ENV === 'production') {
         // Example: sendToSecurityService(event);
-        console.warn('Security event detected:', event.type, event.details);
+
       }
     },
     [debugMode, onSecurityEvent],
@@ -115,7 +115,7 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     setSecurityStatus(prev => ({ ...prev, cspEnabled: true }));
 
     if (debugMode) {
-      console.log('Content Security Policy enabled');
+
     }
   }, [contentSecurityPolicyEnabled, logSecurityEvent, debugMode]);
 
@@ -173,7 +173,7 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     setSecurityStatus(prev => ({ ...prev, xssProtectionEnabled: true }));
 
     if (debugMode) {
-      console.log('XSS Protection enabled');
+
     }
   }, [xssProtectionEnabled, logSecurityEvent, debugMode]);
 
@@ -214,7 +214,7 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     }));
 
     if (debugMode) {
-      console.log('Clickjacking Protection enabled');
+
     }
   }, [clickjackingProtectionEnabled, logSecurityEvent, debugMode]);
 
@@ -255,11 +255,11 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
       setSecurityStatus(prev => ({ ...prev, trustedTypesEnabled: true }));
 
       if (debugMode) {
-        console.log('Trusted Types enabled');
+
       }
     } catch (error) {
       if (debugMode) {
-        console.warn('Failed to enable Trusted Types:', error);
+
       }
     }
   }, [trustedTypesEnabled, logSecurityEvent, debugMode]);
@@ -308,7 +308,7 @@ const AdvancedSecurity: React.FC<AdvancedSecurityProps> = ({
     setSecurityStatus(prev => ({ ...prev, sriEnabled: true }));
 
     if (debugMode) {
-      console.log('Subresource Integrity monitoring enabled');
+
     }
 
     return () => observer.disconnect();

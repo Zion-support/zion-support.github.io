@@ -158,7 +158,7 @@ class CodeQualityImprover {
 
       return report;
     } catch (error) {
-      console.error('❌ Code quality analysis failed:', error);
+
       throw error;
     }
   }
@@ -197,7 +197,7 @@ class CodeQualityImprover {
 
       return result;
     } catch (error) {
-      console.warn('Type checking analysis failed:', error);
+
       return result;
     }
   }
@@ -229,7 +229,7 @@ class CodeQualityImprover {
 
       return result;
     } catch (error) {
-      console.warn('Linting analysis failed:', error);
+
       return result;
     }
   }
@@ -264,7 +264,7 @@ class CodeQualityImprover {
 
       return result;
     } catch (error) {
-      console.warn('Performance analysis failed:', error);
+
       return result;
     }
   }
@@ -299,7 +299,7 @@ class CodeQualityImprover {
 
       return result;
     } catch (error) {
-      console.warn('Accessibility analysis failed:', error);
+
       return result;
     }
   }
@@ -331,7 +331,7 @@ class CodeQualityImprover {
 
       return result;
     } catch (error) {
-      console.warn('Security analysis failed:', error);
+
       return result;
     }
   }
@@ -361,7 +361,7 @@ class CodeQualityImprover {
 
       return result;
     } catch (error) {
-      console.warn('Test coverage analysis failed:', error);
+
       return result;
     }
   }

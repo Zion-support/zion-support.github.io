@@ -91,10 +91,7 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 
       // This would typically be done server-side, but we can log for development
       if (process.env.NODE_ENV === 'development') {
-        console.log(
-          'Security headers should be configured server-side:',
-          requiredHeaders,
-        );
+
       }
     };
 

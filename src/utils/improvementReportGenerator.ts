@@ -79,7 +79,6 @@ class ImprovementReportGenerator {
    * Generate comprehensive improvement report
    */
   async generateComprehensiveReport(): Promise<ComprehensiveReport> {
-    console.log('📊 Generating comprehensive improvement report...');
 
     const report: ComprehensiveReport = {
       timestamp: Date.now(),
@@ -161,16 +160,9 @@ class ImprovementReportGenerator {
       // Save report
       this.reports.push(report);
 
-      console.log('✅ Comprehensive improvement report generated successfully');
-      console.log(`📈 Overall Score: ${report.summary.overallScore}/100`);
-      console.log(`🏥 System Health: ${report.summary.systemHealth}`);
-      console.log(
-        `📦 Bundle Optimization: ${report.summary.bundleOptimization}%`,
-      );
-
       return report;
     } catch (error) {
-      console.error('❌ Failed to generate comprehensive report:', error);
+
       throw error;
     }
   }
@@ -181,7 +173,6 @@ class ImprovementReportGenerator {
   private async collectImprovementData(
     report: ComprehensiveReport,
   ): Promise<void> {
-    console.log('📊 Collecting improvement data...');
 
     try {
       const improvementData = improvementOrchestrator.getDashboardData();
@@ -211,7 +202,7 @@ class ImprovementReportGenerator {
       report.summary.totalImprovements = improvementStats.totalActions;
       report.summary.completedActions = improvementStats.completedActions;
     } catch (error) {
-      console.error('❌ Failed to collect improvement data:', error);
+
     }
   }
 
@@ -221,7 +212,6 @@ class ImprovementReportGenerator {
   private async collectOptimizationData(
     report: ComprehensiveReport,
   ): Promise<void> {
-    console.log('🔧 Collecting optimization data...');
 
     try {
       const optimizationStats = advancedOptimizer.getStatistics();
@@ -240,7 +230,7 @@ class ImprovementReportGenerator {
       report.summary.performanceGains =
         optimizationStats.averagePerformanceImprovement;
     } catch (error) {
-      console.error('❌ Failed to collect optimization data:', error);
+
     }
   }
 
@@ -250,7 +240,6 @@ class ImprovementReportGenerator {
   private async collectMonitoringData(
     report: ComprehensiveReport,
   ): Promise<void> {
-    console.log('📊 Collecting monitoring data...');
 
     try {
       const monitoringData = comprehensiveMonitor.getDashboardData();
@@ -275,7 +264,7 @@ class ImprovementReportGenerator {
 
       report.summary.systemHealth = monitoringData.overallHealth;
     } catch (error) {
-      console.error('❌ Failed to collect monitoring data:', error);
+
     }
   }
 
@@ -283,7 +272,6 @@ class ImprovementReportGenerator {
    * Generate recommendations
    */
   private generateRecommendations(report: ComprehensiveReport): void {
-    console.log('💡 Generating recommendations...');
 
     const immediate: string[] = [];
     const shortTerm: string[] = [];
@@ -342,7 +330,6 @@ class ImprovementReportGenerator {
    * Generate next steps
    */
   private generateNextSteps(report: ComprehensiveReport): void {
-    console.log('🎯 Generating next steps...');
 
     const nextSteps: string[] = [];
 
@@ -376,14 +363,13 @@ class ImprovementReportGenerator {
    * Export all data
    */
   private exportAllData(report: ComprehensiveReport): void {
-    console.log('📤 Exporting all data...');
 
     try {
       report.exportData.improvementData = improvementOrchestrator.exportData();
       report.exportData.optimizationData = advancedOptimizer.exportData();
       report.exportData.monitoringData = comprehensiveMonitor.exportData();
     } catch (error) {
-      console.error('❌ Failed to export data:', error);
+
     }
   }
 
@@ -391,7 +377,6 @@ class ImprovementReportGenerator {
    * Calculate summary
    */
   private calculateSummary(report: ComprehensiveReport): void {
-    console.log('📊 Calculating summary...');
 
     // Calculate overall score
     const weights = {

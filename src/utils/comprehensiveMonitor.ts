@@ -113,7 +113,6 @@ class ComprehensiveMonitor {
    * Initialize the monitoring system
    */
   async initialize(): Promise<void> {
-    console.log('🚀 Initializing Comprehensive Monitoring System...');
 
     // Initialize performance monitoring
     if (this.config.enablePerformanceMonitoring) {
@@ -140,14 +139,12 @@ class ComprehensiveMonitor {
       this.startRealTimeMonitoring();
     }
 
-    console.log('✅ Comprehensive Monitoring System initialized successfully');
   }
 
   /**
    * Initialize performance monitoring
    */
   private async initializePerformanceMonitoring(): Promise<void> {
-    console.log('⚡ Initializing performance monitoring...');
 
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
@@ -212,7 +209,6 @@ class ComprehensiveMonitor {
    * Initialize error monitoring
    */
   private async initializeErrorMonitoring(): Promise<void> {
-    console.log('🚨 Initializing error monitoring...');
 
     if (typeof window !== 'undefined') {
       // Global error handler
@@ -252,7 +248,6 @@ class ComprehensiveMonitor {
    * Initialize user behavior monitoring
    */
   private async initializeUserBehaviorMonitoring(): Promise<void> {
-    console.log('👤 Initializing user behavior monitoring...');
 
     if (typeof window !== 'undefined') {
       // Track page views
@@ -317,7 +312,6 @@ class ComprehensiveMonitor {
    * Initialize system health monitoring
    */
   private async initializeSystemHealthMonitoring(): Promise<void> {
-    console.log('🏥 Initializing system health monitoring...');
 
     // Monitor system resources
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -351,7 +345,7 @@ class ComprehensiveMonitor {
       try {
         await this.generateMonitoringReport();
       } catch (error) {
-        console.error('❌ Monitoring cycle failed:', error);
+
       }
     }, this.config.reportInterval);
 
@@ -369,14 +363,13 @@ class ComprehensiveMonitor {
       this.intervalId = undefined;
     }
     this.isRunning = false;
-    console.log('⏹️ Real-time monitoring stopped');
+
   }
 
   /**
    * Generate monitoring report
    */
   async generateMonitoringReport(): Promise<MonitoringReport> {
-    console.log('📊 Generating monitoring report...');
 
     const report: MonitoringReport = {
       timestamp: Date.now(),
@@ -403,10 +396,6 @@ class ComprehensiveMonitor {
 
     // Clean up old reports
     this.cleanupOldReports();
-
-    console.log(
-      `📈 Monitoring report generated. Overall health: ${report.overallHealth}`,
-    );
 
     return report;
   }
@@ -508,7 +497,7 @@ class ComprehensiveMonitor {
    */
   private recordPerformanceMetric(metric: string, value: number): void {
     // Store metric for later analysis
-    console.log(`📊 Performance metric recorded: ${metric} = ${value}ms`);
+
   }
 
   /**
@@ -519,7 +508,7 @@ class ComprehensiveMonitor {
     message: string,
     details: Record<string, unknown>,
   ): void {
-    console.error(`🚨 Error recorded: ${type} - ${message}`, details);
+
   }
 
   /**
@@ -530,7 +519,7 @@ class ComprehensiveMonitor {
     data: Record<string, unknown>,
   ): void {
     if (Math.random() < this.config.samplingRate) {
-      console.log(`👤 User behavior recorded: ${action}`, data);
+
     }
   }
 
@@ -541,7 +530,7 @@ class ComprehensiveMonitor {
     metric: string,
     value: Record<string, unknown>,
   ): void {
-    console.log(`🏥 System health recorded: ${metric}`, value);
+
   }
 
   /**
@@ -724,7 +713,7 @@ class ComprehensiveMonitor {
     this.stopRealTimeMonitoring();
     this.eventListeners.forEach(cleanup => cleanup());
     this.eventListeners = [];
-    console.log('🧹 Comprehensive Monitor cleaned up');
+
   }
 }
 

@@ -156,7 +156,6 @@ class ImprovementOrchestrator {
    */
   async initialize(): Promise<void> {
     try {
-      console.log('🚀 Initializing Improvement Orchestrator...');
 
       // Initialize all subsystems
       if (this.config.enablePerformanceOptimization) {
@@ -183,9 +182,8 @@ class ImprovementOrchestrator {
       // Run initial improvement analysis
       await this.runImprovementAnalysis();
 
-      console.log('✅ Improvement Orchestrator initialized successfully');
     } catch (error) {
-      console.error('❌ Failed to initialize Improvement Orchestrator:', error);
+
       throw error;
     }
   }
@@ -195,7 +193,6 @@ class ImprovementOrchestrator {
    */
   async runImprovementAnalysis(): Promise<ImprovementReport> {
     try {
-      console.log('📊 Running comprehensive improvement analysis...');
 
       const report: ImprovementReport = {
         timestamp: Date.now(),
@@ -297,13 +294,9 @@ class ImprovementOrchestrator {
       // Save report
       this.reports.push(report);
 
-      console.log(
-        `📈 Improvement analysis completed. Overall score: ${report.overallScore}/100`,
-      );
-
       return report;
     } catch (error) {
-      console.error('❌ Improvement analysis failed:', error);
+
       throw error;
     }
   }
@@ -468,9 +461,9 @@ class ImprovementOrchestrator {
     this.intervalId = setInterval(async () => {
       try {
         await this.runImprovementAnalysis();
-        console.log('📊 Continuous monitoring cycle completed');
+
       } catch (error) {
-        console.error('❌ Monitoring cycle failed:', error);
+
       }
     }, interval);
 
@@ -486,7 +479,7 @@ class ImprovementOrchestrator {
       this.intervalId = undefined;
     }
     this.isRunning = false;
-    console.log('⏹️ Continuous monitoring stopped');
+
   }
 
   /**
@@ -511,13 +504,12 @@ class ImprovementOrchestrator {
   async executeImprovementAction(actionId: string): Promise<boolean> {
     const action = this.actions.find(a => a.id === actionId);
     if (!action) {
-      console.error(`❌ Action not found: ${actionId}`);
+
       return false;
     }
 
     try {
       action.status = 'in_progress';
-      console.log(`🔄 Executing improvement action: ${action.description}`);
 
       switch (action.type) {
         case 'performance':
@@ -539,14 +531,11 @@ class ImprovementOrchestrator {
 
       action.status = 'completed';
       action.completedAt = Date.now();
-      console.log(`✅ Improvement action completed: ${action.description}`);
+
       return true;
     } catch (error) {
       action.status = 'failed';
-      console.error(
-        `❌ Improvement action failed: ${action.description}`,
-        error,
-      );
+
       return false;
     }
   }
@@ -558,7 +547,7 @@ class ImprovementOrchestrator {
     _action: ImprovementAction,
   ): Promise<void> {
     // Simulate performance improvement execution
-    console.log('🚀 Executing performance improvements...');
+
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
@@ -569,7 +558,7 @@ class ImprovementOrchestrator {
     _action: ImprovementAction,
   ): Promise<void> {
     // Simulate quality improvement execution
-    console.log('🔧 Executing quality improvements...');
+
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
@@ -580,7 +569,7 @@ class ImprovementOrchestrator {
     _action: ImprovementAction,
   ): Promise<void> {
     // Simulate security improvement execution
-    console.log('🔒 Executing security improvements...');
+
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
@@ -591,7 +580,7 @@ class ImprovementOrchestrator {
     _action: ImprovementAction,
   ): Promise<void> {
     // Simulate testing improvement execution
-    console.log('🧪 Executing testing improvements...');
+
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
@@ -602,7 +591,7 @@ class ImprovementOrchestrator {
     _action: ImprovementAction,
   ): Promise<void> {
     // Simulate documentation improvement execution
-    console.log('📚 Executing documentation improvements...');
+
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
@@ -685,7 +674,7 @@ class ImprovementOrchestrator {
   cleanup(): void {
     this.stopContinuousMonitoring();
     performanceOptimizer.cleanup();
-    console.log('🧹 Improvement Orchestrator cleaned up');
+
   }
 }
 

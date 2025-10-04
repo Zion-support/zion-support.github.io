@@ -32,8 +32,7 @@ class UserFriendlyErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-    
+
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -65,10 +64,9 @@ class UserFriendlyErrorBoundary extends Component<Props, State> {
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorData),
       // });
-      
-      console.log('Error logged:', errorData);
+
     } catch (loggingError) {
-      console.error('Failed to log error:', loggingError);
+
     }
   };
 

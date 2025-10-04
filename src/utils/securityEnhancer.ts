@@ -188,9 +188,9 @@ class SecurityEnhancer {
         'SECURITY_INITIALIZED',
         'Security enhancer initialized successfully',
       );
-      console.log('🔒 Security Enhancer initialized successfully');
+
     } catch (error) {
-      console.error('❌ Failed to initialize Security Enhancer:', error);
+
       throw error;
     }
   }
@@ -212,7 +212,7 @@ class SecurityEnhancer {
 
       this.logSecurityEvent('CSP_INITIALIZED', `CSP initialized: ${cspString}`);
     } catch (error) {
-      console.warn('CSP initialization failed:', error);
+
     }
   }
 
@@ -227,7 +227,7 @@ class SecurityEnhancer {
         this.logSecurityEvent('SECURE_HEADER_SET', `${header}: ${value}`);
       });
     } catch (error) {
-      console.warn('Secure headers initialization failed:', error);
+
     }
   }
 
@@ -247,7 +247,7 @@ class SecurityEnhancer {
         'XSS protection initialized',
       );
     } catch (error) {
-      console.warn('XSS protection initialization failed:', error);
+
     }
   }
 
@@ -268,7 +268,7 @@ class SecurityEnhancer {
         'CSRF protection initialized',
       );
     } catch (error) {
-      console.warn('CSRF protection initialization failed:', error);
+
     }
   }
 
@@ -288,7 +288,7 @@ class SecurityEnhancer {
         'Input validation initialized',
       );
     } catch (error) {
-      console.warn('Input validation initialization failed:', error);
+
     }
   }
 
@@ -311,7 +311,7 @@ class SecurityEnhancer {
         'Threat detection initialized',
       );
     } catch (error) {
-      console.warn('Threat detection initialization failed:', error);
+
     }
   }
 
@@ -326,7 +326,7 @@ class SecurityEnhancer {
         'Audit logging initialized',
       );
     } catch (error) {
-      console.warn('Audit logging initialization failed:', error);
+
     }
   }
 
@@ -637,7 +637,7 @@ class SecurityEnhancer {
     };
 
     this.auditLog.push(event);
-    console.log(`🔒 [${type}] ${message}`);
+
   }
 
   /**

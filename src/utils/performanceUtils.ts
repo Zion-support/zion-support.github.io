@@ -144,14 +144,14 @@ export const startPerformanceMonitoring = (): void => {
     if (getTTFB) getTTFB(console.log);
   }).catch(() => {
     // web-vitals not available, skip monitoring
-    console.log('Web Vitals not available');
+
   });
 
   // Monitor memory usage
   setInterval(() => {
     const memory = getMemoryUsage();
     if (memory && memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-      console.warn('High memory usage detected:', memory);
+
     }
   }, 30000);
 };

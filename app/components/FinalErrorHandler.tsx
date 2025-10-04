@@ -39,7 +39,6 @@ class FinalErrorHandler extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('FinalErrorHandler caught an error:', error, errorInfo);
 
     this.setState({ errorInfo });
 
@@ -103,8 +102,6 @@ class FinalErrorHandler extends Component<Props, State> {
         analyticsData: this.state.analyticsData,
       };
 
-      console.log('Error logged to service:', errorData);
-
       // Example: Send to error reporting service
       if (this.props.enableReporting) {
         // fetch('/api/errors', {
@@ -114,7 +111,7 @@ class FinalErrorHandler extends Component<Props, State> {
         // });
       }
     } catch (loggingError) {
-      console.error('Failed to log error:', loggingError);
+
     }
   };
 
@@ -149,7 +146,7 @@ class FinalErrorHandler extends Component<Props, State> {
         retryCount: this.state.retryCount + 1,
       });
     } catch (recoveryError) {
-      console.error('Recovery failed:', recoveryError);
+
       this.setState({ isRecovering: false });
     }
   };
@@ -163,7 +160,7 @@ class FinalErrorHandler extends Component<Props, State> {
       sessionStorage.clear();
       strategies.push('Cleared browser storage');
     } catch (e) {
-      console.warn('Failed to clear storage:', e);
+
     }
 
     try {
@@ -179,7 +176,7 @@ class FinalErrorHandler extends Component<Props, State> {
       });
       strategies.push('Reloaded critical scripts');
     } catch (e) {
-      console.warn('Failed to reload critical scripts:', e);
+
     }
 
     try {
@@ -187,7 +184,7 @@ class FinalErrorHandler extends Component<Props, State> {
       // This would be implemented based on specific component needs
       strategies.push('Reset component state');
     } catch (e) {
-      console.warn('Failed to reset component state:', e);
+
     }
 
     try {
@@ -198,7 +195,7 @@ class FinalErrorHandler extends Component<Props, State> {
         strategies.push('Cleared browser caches');
       }
     } catch (e) {
-      console.warn('Failed to clear caches:', e);
+
     }
 
     return strategies;

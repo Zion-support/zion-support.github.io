@@ -133,8 +133,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ pageData, children }) => {
     });
   }, [seoData]);
 
-
-
   return (
     <>
       <Helmet>

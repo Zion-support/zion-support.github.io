@@ -40,7 +40,6 @@ class UltimateErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error details
-    console.error('UltimateErrorBoundary caught an error:', error, errorInfo);
 
     // Update state with error info
     this.setState({
@@ -77,7 +76,7 @@ class UltimateErrorBoundary extends Component<Props, State> {
     };
 
     // For now, just log to console
-    console.log('Error Report:', errorReport);
+
   };
 
   private handleRetry = () => {

@@ -166,7 +166,6 @@ class AdvancedTestingFramework implements TestRunner {
     const results: TestResult[] = [];
 
     try {
-      console.log(`🧪 Running test suite: ${suite.name}`);
 
       // Setup
       if (suite.setup) {
@@ -194,9 +193,8 @@ class AdvancedTestingFramework implements TestRunner {
         await suite.teardown();
       }
 
-      console.log(`✅ Test suite ${suite.name} completed`);
     } catch (error) {
-      console.error(`❌ Test suite ${suite.name} failed:`, error);
+
     }
 
     return results;
@@ -420,10 +418,10 @@ class AdvancedTestingFramework implements TestRunner {
       type: 'unit',
       tests,
       setup: async () => {
-        console.log(`Setting up unit tests for ${name}`);
+
       },
       teardown: async () => {
-        console.log(`Tearing down unit tests for ${name}`);
+
       },
     };
   }
@@ -437,10 +435,10 @@ class AdvancedTestingFramework implements TestRunner {
       type: 'integration',
       tests,
       setup: async () => {
-        console.log(`Setting up integration tests for ${name}`);
+
       },
       teardown: async () => {
-        console.log(`Tearing down integration tests for ${name}`);
+
       },
     };
   }
@@ -454,10 +452,10 @@ class AdvancedTestingFramework implements TestRunner {
       type: 'e2e',
       tests,
       setup: async () => {
-        console.log(`Setting up E2E tests for ${name}`);
+
       },
       teardown: async () => {
-        console.log(`Tearing down E2E tests for ${name}`);
+
       },
     };
   }
@@ -471,10 +469,10 @@ class AdvancedTestingFramework implements TestRunner {
       type: 'performance',
       tests,
       setup: async () => {
-        console.log(`Setting up performance tests for ${name}`);
+
       },
       teardown: async () => {
-        console.log(`Tearing down performance tests for ${name}`);
+
       },
     };
   }
@@ -488,10 +486,10 @@ class AdvancedTestingFramework implements TestRunner {
       type: 'accessibility',
       tests,
       setup: async () => {
-        console.log(`Setting up accessibility tests for ${name}`);
+
       },
       teardown: async () => {
-        console.log(`Tearing down accessibility tests for ${name}`);
+
       },
     };
   }
@@ -505,10 +503,10 @@ class AdvancedTestingFramework implements TestRunner {
       type: 'security',
       tests,
       setup: async () => {
-        console.log(`Setting up security tests for ${name}`);
+
       },
       teardown: async () => {
-        console.log(`Tearing down security tests for ${name}`);
+
       },
     };
   }

@@ -88,10 +88,10 @@ export const usePerformanceOptimization = (
     const handleVisibilityChange = () => {
       if (document.hidden) {
         // Page is hidden, pause non-critical operations
-        console.log('[Performance] Page hidden, pausing operations');
+
       } else {
         // Page is visible, resume operations
-        console.log('[Performance] Page visible, resuming operations');
+
       }
     };
 

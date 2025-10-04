@@ -32,9 +32,6 @@ const App: React.FC = () => {
     // Initialize performance optimizer
     performanceOptimizer.clearMetrics();
 
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
   }, []);
 
   return (

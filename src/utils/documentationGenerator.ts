@@ -171,7 +171,6 @@ class DocumentationGenerator {
    */
   async generateDocumentation(): Promise<void> {
     try {
-      console.log('📚 Starting documentation generation...');
 
       if (this.config.enableComponentDocs) {
         await this.generateComponentDocumentation();
@@ -209,9 +208,8 @@ class DocumentationGenerator {
       const report = this.generateDocumentationReport();
       this.reports.push(report);
 
-      console.log('✅ Documentation generation completed');
     } catch (error) {
-      console.error('❌ Documentation generation failed:', error);
+
       throw error;
     }
   }
@@ -220,7 +218,6 @@ class DocumentationGenerator {
    * Generate component documentation
    */
   private async generateComponentDocumentation(): Promise<void> {
-    console.log('📝 Generating component documentation...');
 
     // Simulate component analysis
     const components = [
@@ -307,7 +304,6 @@ class DocumentationGenerator {
    * Generate API documentation
    */
   private async generateAPIDocumentation(): Promise<void> {
-    console.log('🔌 Generating API documentation...');
 
     // Simulate API analysis
     const apis = [
@@ -381,7 +377,6 @@ class DocumentationGenerator {
    * Generate architecture documentation
    */
   private async generateArchitectureDocumentation(): Promise<void> {
-    console.log('🏗️ Generating architecture documentation...');
 
     this.architecture = {
       overview:
@@ -419,7 +414,6 @@ class DocumentationGenerator {
    * Generate deployment documentation
    */
   private async generateDeploymentDocumentation(): Promise<void> {
-    console.log('🚀 Generating deployment documentation...');
 
     const _deploymentDoc = {
       title: 'Deployment Guide',
@@ -456,14 +450,12 @@ class DocumentationGenerator {
       ],
     };
 
-    console.log('📋 Deployment documentation generated');
   }
 
   /**
    * Generate user guides
    */
   private async generateUserGuides(): Promise<void> {
-    console.log('👥 Generating user guides...');
 
     const _userGuides = [
       {
@@ -482,14 +474,12 @@ class DocumentationGenerator {
       },
     ];
 
-    console.log('📖 User guides generated');
   }
 
   /**
    * Generate developer guides
    */
   private async generateDeveloperGuides(): Promise<void> {
-    console.log('👨‍💻 Generating developer guides...');
 
     const _developerGuides = [
       {
@@ -510,14 +500,12 @@ class DocumentationGenerator {
       },
     ];
 
-    console.log('🔧 Developer guides generated');
   }
 
   /**
    * Generate troubleshooting documentation
    */
   private async generateTroubleshootingDocumentation(): Promise<void> {
-    console.log('🔧 Generating troubleshooting documentation...');
 
     const _troubleshooting = [
       {
@@ -551,14 +539,12 @@ class DocumentationGenerator {
       },
     ];
 
-    console.log('🛠️ Troubleshooting documentation generated');
   }
 
   /**
    * Generate changelog
    */
   private async generateChangelog(): Promise<void> {
-    console.log('📝 Generating changelog...');
 
     const _changelog = {
       version: '1.0.0',
@@ -594,7 +580,6 @@ class DocumentationGenerator {
       ],
     };
 
-    console.log('📋 Changelog generated');
   }
 
   /**

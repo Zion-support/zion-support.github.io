@@ -65,7 +65,7 @@ const ComprehensiveMonitoringDashboard: React.FC<
       setData(newData);
       setLastRefresh(new Date());
     } catch (error) {
-      console.error('Failed to collect monitoring data:', error);
+
     } finally {
       setIsRefreshing(false);
     }
@@ -361,7 +361,7 @@ const ComprehensiveMonitoringDashboard: React.FC<
                   data: data,
                   overallScore: calculateOverallScore(),
                 };
-                console.log('Comprehensive Monitoring Report:', report);
+
                 alert('Monitoring report logged to console');
               }}
               className='w-full bg-green-600 hover:bg-green-700 text-white py-1 px-2 rounded text-xs'
