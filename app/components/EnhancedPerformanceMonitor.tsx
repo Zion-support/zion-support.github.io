@@ -61,11 +61,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const handleMetric = useCallback((metric: any) => {
     const performanceInfo = getEnhancedPerformanceInfo();
     const enhancedMetrics: EnhancedMetrics = {
-      cls: 0,
-      inp: 0,
-      fcp: 0,
-      lcp: 0,
-      ttfb: 0,
+      cls: metrics?.cls || 0,
+      inp: metrics?.inp || 0,
+      fcp: metrics?.fcp || 0,
+      lcp: metrics?.lcp || 0,
+      ttfb: metrics?.ttfb || 0,
       ...performanceInfo,
       [metric.name]: metric.value
     };
@@ -80,7 +80,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         metrics: enhancedMetrics
       }
     ]);
-  }, [getEnhancedPerformanceInfo]);
+  }, [getEnhancedPerformanceInfo, metrics]);
 
   const getStatusColor = (value: number, threshold: number) => {
     if (value <= threshold * 0.5) return 'text-green-600';
