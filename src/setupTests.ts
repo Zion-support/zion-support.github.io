@@ -7,8 +7,14 @@ global.TextDecoder = TextDecoder;
 
 // Mock PerformanceObserver for Jest environment
 global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  observe() {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(_callback: (list: PerformanceEntryList) => void) {
+    // Mock constructor - callback parameter intentionally unused
+  }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  observe(_options?: PerformanceObserverInit) {
+    // Mock observe method - options parameter intentionally unused
+  }
   disconnect() {}
   takeRecords() { return []; }
 } as unknown as typeof PerformanceObserver;
