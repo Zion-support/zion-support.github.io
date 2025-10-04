@@ -6,8 +6,7 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div>/* content */}
-  const popularPages = [
-    
+  const popularPages = [{
       title: 'AI Services',
       description: 'Explore our comprehensive AI and IT solutions',
       href: '/services',

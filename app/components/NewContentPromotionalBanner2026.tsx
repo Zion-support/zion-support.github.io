@@ -3,8 +3,21 @@ import Link from 'next/link';
 import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
+<<<<<<< HEAD
   const featuredContent = [
     {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const featuredContent = [{
+=======
+  const featuredContent = [
+    {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3825
+=======
+  const featuredContent = [{
+>>>>>>> origin/main
+>>>>>>> main
       id: 1,
       title: 'AI Autonomous Workflows 2026',
       slug: 'ai-autonomous-workflows-2026',

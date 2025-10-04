@@ -2,8 +2,25 @@ import React from 'react';
 
 const ContactPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-slate-50 py-16">
       <div className="container mx-auto px-4">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div>
+    <div className="min-h-screen bg-slate-50 py-16"></div>
+      <div className="container mx-auto px-4"></div>
+=======
+    <div className="min-h-screen bg-slate-50 py-16">
+      <div className="container mx-auto px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-3825
+=======
+    <div>
+    <div className="min-h-screen bg-slate-50 py-16"></div>
+      <div className="container mx-auto px-4"></div>
+>>>>>>> origin/main
+>>>>>>> main
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
           Contact Us
         </h1>

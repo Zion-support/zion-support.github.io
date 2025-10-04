@@ -10,8 +10,7 @@ export const metadata = {
     description: 'Transform your enterprise with breakthrough AI 2027 technologies. Achieve 500% ROI, 1000x faster processing, and 99.9% accuracy.',
     type: 'website',
     url: 'https://ziontechgroup.com/services/ai-2027-breakthrough-solutions',
-    images: [
-      
+    images: [{
         url: '/og-ai-2027-solutions.jpg',
         width: 1200,
         height: 630,

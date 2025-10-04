@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
 
 const September30NewContent2025Banner: React.FC = () => {
-  const newArticles = [
+  const newArticles = [{
     {
       id: 0,
       title: 'AI-Accelerated Customer Experience 2025',
@@ -249,9 +249,13 @@ const September30NewContent2025Banner: React.FC = () => {
               </div>
           </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
         {/* Stats Section */}
         <div className="text-left">
-          {[
+          {[{
             { value='500+', label: 'Enterprise Clients', icon: '🏢' },
             { value='$2.5B+', label: 'Value Delivered', icon: '💎' },
             { value='99.99%', label: 'System Reliability', icon: '⚡' },
@@ -261,6 +265,36 @@ const September30NewContent2025Banner: React.FC = () => {
               <div className="text-left">{stat.icon}</div>"
               <div className="text-left">
                 {stat.value}
+<<<<<<< HEAD
+=======
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+              <Link
+                href="/contact"
+                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                <Sparkles className="w-5 h-5" />
+                <span>Start Your AI Journey</span>
+              </Link>
+              
+              <Link
+                href="/blog"
+                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
+                <span>Explore All Content</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">
+                  500+
+                </div>
+                <div className="text-gray-300 font-semibold">
+                  Enterprise Clients
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3825
+=======
+>>>>>>> origin/main
               </div>
               <div className="text-left">
                 {stat.label}

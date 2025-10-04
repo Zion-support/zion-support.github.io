@@ -9,88 +9,134 @@ export const metadata = {
 
 export default function EnterprisePage() {
   return (
-    <div>/* content */}
-  return (
-    <div>
-      <div></div>
-    <div className="text-left"></div>
-      {/* Hero Section */}</div>
-      <header className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
-          <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        </div>
-        
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <span className="text-left"></span>
-                🏢 Enterprise AI Solutions
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <header className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-6xl font-extrabold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Enterprise Solutions
               </span>
-            </div>
-            
-            <h1 className="text-left">
-              Enterprise Solutions
             </h1>
-            
-            <p className="text-left"></p>
-              Trusted by 500+ Fortune 500 Companies Worldwide
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.
             </p>
-            
-            <p className="text-left"></p>
-              Transform your enterprise with our proven AI solutions. Achieve $100M+ cost savings, 
-              500% productivity gains, and 99.9% system uptime with enterprise-grade security and compliance.
-            </p>
-            
-            <div className="text-left"></div>
-              <a 
-                href="/"
-                className="text-left"></a>
-                Schedule Enterprise Demo
-              </a>
-              <a 
-                href="#solutions"
-                className="text-left"
-              ></a>
-                View Solutions
-              </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                Get Started
+              </Link>
+              <Link
+                href="/services"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
+                View Services
+              </Link>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Solutions Section */}
-      <section id="solutions" className="text-left"></section>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <h2 className="text-left">Enterprise Solutions</h2>"
-            <p className="text-left">Comprehensive AI solutions for enterprise needs</p>"
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Enterprise AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced AI technologies designed for enterprise-scale operations and transformation.
+            </p>
           </div>
-          
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <h3 className="text-left">AI Automation</h3>"
-              <p className="text-left">Automate complex business processes with AI</p>"
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI Autonomous Operations */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Autonomous Operations</h3>
+              <p className="text-gray-300 mb-6">
+                End-to-end automation with 99.9% reliability, 300% efficiency gains, and self-healing infrastructure.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-cyan-400 font-semibold">99.9% Uptime</div>
+                <div className="text-purple-400 font-semibold">300% Efficiency</div>
+                <div className="text-green-400 font-semibold">Self-Healing</div>
+              </div>
+              <Link
+                href="/services/ai-autonomous-operations"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                Learn More
+              </Link>
             </div>
-            
-            <div className="text-left"></div>
-              <h3 className="text-left">Data Analytics</h3>"
-              <p className="text-left">Advanced analytics and insights for decision making</p>"
+
+            {/* Quantum Computing */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
+              <p className="text-gray-300 mb-6">
+                Next-generation quantum algorithms processing 1000x faster with quantum supremacy capabilities.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-cyan-400 font-semibold">1000x Faster</div>
+                <div className="text-purple-400 font-semibold">Quantum Supremacy</div>
+                <div className="text-green-400 font-semibold">Advanced Algorithms</div>
+              </div>
+              <Link
+                href="/services/quantum-computing"
+                className="block w-full bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-600 hover:to-fuchsia-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                Learn More
+              </Link>
             </div>
-            
-            <div className="text-left"></div>
-              <h3 className="text-left">Security</h3>"
-              <p className="text-left">Enterprise-grade security and compliance</p>"
+
+            {/* Enterprise Security */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced threat detection with 99.99% accuracy, autonomous response, and zero-trust architecture.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-cyan-400 font-semibold">99.99% Accuracy</div>
+                <div className="text-purple-400 font-semibold">Zero-Trust</div>
+                <div className="text-green-400 font-semibold">Autonomous Response</div>
+              </div>
+              <Link
+                href="/services/enterprise-security"
+                className="block w-full bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                Learn More
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="text-left">
-        <div className="text-left"></div>
-          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Enterprise?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join 500+ Fortune 500 companies already implementing our cutting-edge AI solutions with proven results and exceptional ROI.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                Start Your Transformation
+              </Link>
+              <Link
+                href="/case-studies"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
+                View Case Studies
+              </Link>
+            </div>
+          </div>
         </div>
-      </footer>
+      </section>
     </div>
   );
-})
+}

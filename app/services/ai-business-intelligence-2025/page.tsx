@@ -11,8 +11,7 @@ export const metadata: Metadata =
     description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards.',
     type: 'website',
     url: 'https://ziontechgroup.com/services/ai-business-intelligence-2025',
-    images: [
-      
+    images: [{
         url: '/og-images/ai-business-intelligence-2025.jpg',
         width: 1200,
         height: 630,
