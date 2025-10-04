@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import App from '../App';
 
 // Mock the improvement runner to prevent side effects during testing
@@ -22,35 +22,52 @@ jest.mock('react-helmet-async', () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
+// Mock react-router-dom
+jest.mock('react-router-dom', () => ({
+  BrowserRouter: ({ children }: { children: React.ReactNode }) => <div data-testid="router">{children}</div>,
+  Routes: ({ children }: { children: React.ReactNode }) => <div data-testid="routes">{children}</div>,
+  Route: ({ element }: { element: React.ReactNode }) => <div data-testid="route">{element}</div>,
+}));
+
 const renderApp = (component: React.ReactElement) => {
   return render(component);
 };
 
 describe('App Component', () => {
-  test('renders without crashing', () => {
+  test('renders without crashing', async () => {
     renderApp(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByRole('main')).toBeInTheDocument();
+    }, { timeout: 2000 });
   });
 
-  test('renders header component', () => {
+  test('renders header component', async () => {
     renderApp(<App />);
-    expect(screen.getByRole('banner')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByRole('banner')).toBeInTheDocument();
+    }, { timeout: 2000 });
   });
 
-  test('renders footer component', () => {
+  test('renders footer component', async () => {
     renderApp(<App />);
-    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    }, { timeout: 2000 });
   });
 
-  test('renders performance monitor (no visible element)', () => {
+  test('renders performance monitor (no visible element)', async () => {
     renderApp(<App />);
     // PerformanceMonitor doesn't render visible elements in production
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByRole('main')).toBeInTheDocument();
+    }, { timeout: 2000 });
   });
 
-  test('renders accessibility enhancer (no visible element)', () => {
+  test('renders accessibility enhancer (no visible element)', async () => {
     renderApp(<App />);
     // AccessibilityEnhancer doesn't render visible elements
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByRole('main')).toBeInTheDocument();
+    }, { timeout: 2000 });
   });
 });
