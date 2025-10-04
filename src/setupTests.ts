@@ -1,35 +1,24 @@
 import '@testing-library/jest-dom';
 
-// Polyfill TextEncoder/TextDecoder for react-router in Jest (Node environment)
-try {
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+if (typeof global.TextEncoder === 'undefined') {
   const { TextEncoder, TextDecoder } = require('util');
-  // @ts-ignore
-  if (typeof global.TextEncoder === 'undefined') {
-    // @ts-ignore
-    global.TextEncoder = TextEncoder;
-  }
-  // @ts-ignore
-  if (typeof global.TextDecoder === 'undefined') {
-    // @ts-ignore
-    global.TextDecoder = TextDecoder;
-  }
-} catch {
-  // ignore if util not available
+  global.TextEncoder = TextEncoder;
+  global.TextDecoder = TextDecoder;
 }
 
-// Mock PerformanceObserver for Jest environment
-global.PerformanceObserver = class PerformanceObserver {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  constructor(_callback: (list: PerformanceEntryList) => void) {
-    // Mock constructor - callback parameter intentionally unused
-  }
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  observe(_options?: PerformanceObserverInit) {
-    // Mock observe method - options parameter intentionally unused
-  }
-  disconnect() {}
-  takeRecords() { return []; }
-} as unknown as typeof PerformanceObserver;
+// Mock import.meta.env for Jest
+Object.defineProperty(global, 'import', {
+  value: {
+    meta: {
+      env: {
+        DEV: true,
+        PROD: false,
+        MODE: 'test',
+      },
+    },
+  },
+});
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
@@ -75,15 +64,12 @@ Object.defineProperty(window, 'performance', {
 });
 
 // Mock PerformanceObserver
-class MockPerformanceObserver {
-  constructor() {}
+global.PerformanceObserver = class PerformanceObserver {
+  constructor(callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
   takeRecords() { return []; }
-}
-
-// @ts-ignore
-global.PerformanceObserver = MockPerformanceObserver;
+} as unknown as typeof PerformanceObserver;
 
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
