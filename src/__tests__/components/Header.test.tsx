@@ -28,11 +28,11 @@ describe('Header Component', () => {
     expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 
-  test('renders logo', () => {
+  test('renders company name', () => {
     renderWithRouter(<Header />);
     
-    const logo = screen.getByAltText('Zion Tech Group');
-    expect(logo).toBeInTheDocument();
+    const companyName = screen.getByText('Zion Tech Group');
+    expect(companyName).toBeInTheDocument();
   });
 
   test('renders navigation links', () => {
@@ -44,10 +44,10 @@ describe('Header Component', () => {
     expect(screen.getByText('Contact')).toBeInTheDocument();
   });
 
-  test('renders mobile menu button', () => {
+  test('renders get started button', () => {
     renderWithRouter(<Header />);
     
-    const menuButton = screen.getByRole('button', { name: /menu/i });
-    expect(menuButton).toBeInTheDocument();
+    const getStartedButton = screen.getByText('Get Started');
+    expect(getStartedButton).toBeInTheDocument();
   });
 });
