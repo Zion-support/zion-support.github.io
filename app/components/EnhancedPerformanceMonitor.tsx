@@ -2,11 +2,19 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface EnhancedMetrics {
+<<<<<<< HEAD
   cls?: number;
   inp?: number;
   fcp?: number;
   lcp?: number;
   ttfb?: number;
+=======
+  cls: number;
+  inp: number;
+  fcp: number;
+  lcp: number;
+  ttfb: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-443e
   memory?: number;
   connection?: string;
   devicePixelRatio?: number;
@@ -66,8 +74,13 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       fcp: metrics?.fcp || 0,
       lcp: metrics?.lcp || 0,
       ttfb: metrics?.ttfb || 0,
+<<<<<<< HEAD
       ...performanceInfo,
       [metric.name]: metric.value
+=======
+      [metric.name]: metric.value,
+      ...getEnhancedPerformanceInfo()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-443e
     };
     
     setMetrics(enhancedMetrics);
@@ -159,8 +172,13 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div className="flex justify-between">
               <span>INP:</span>
+<<<<<<< HEAD
               <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
                 {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+=======
+              <span className={getStatusColor(metrics.inp, thresholds.inp)}>
+                {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-443e
               </span>
             </div>
             <div className="flex justify-between">
