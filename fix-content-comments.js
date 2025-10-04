@@ -1,0 +1,58 @@
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+console.log('🔧 Fixing malformed content comments in codebase...');
+
+// Find all files with the problematic pattern
+const result = execSync(
+  'grep -r "{/\* content \*/}" --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js" . | cut -d: -f1 | sort | uniq',
+  { encoding: 'utf8' },
+);
+const files = result
+  .trim()
+  .split('\n')
+  .filter(f => f);
+
+console.log(`Found ${files.length} files with malformed content comments`);
+
+let fixedCount = 0;
+
+files.forEach(file => {
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+
+    // Fix the malformed content comments
+    let fixedContent = content
+      // Fix {/* content */} -> {}
+      .replace(/\{\/\*\s*content\s*\*\/\}/g, '{}')
+      // Fix any remaining malformed patterns
+      .replace(/\{\/\*\s*content\s*\*\/\s*\}/g, '{}')
+      // Fix any other variations
+      .replace(/\{\/\*\s*content\s*\*\/\s*\}/g, '{}');
+
+    if (content !== fixedContent) {
+      fs.writeFileSync(file, fixedContent, 'utf8');
+      fixedCount++;
+      console.log(`✅ Fixed: ${file}`);
+    }
+  } catch (error) {
+    console.error(`❌ Error fixing ${file}:`, error.message);
+  }
+});
+
+console.log(`\n🎉 Fixed ${fixedCount} files!`);
+
+// Now let's run a quick check to see if there are any remaining issues
+console.log('\n🔍 Checking for remaining issues...');
+try {
+  const remaining = execSync(
+    'grep -r "{/\* content \*/}" --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js" . | wc -l',
+    { encoding: 'utf8' },
+  );
+  console.log(`Remaining malformed comments: ${remaining.trim()}`);
+} catch (error) {
+  console.log('✅ No remaining malformed comments found!');
+}

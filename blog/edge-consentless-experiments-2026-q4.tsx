@@ -1,13 +1,15 @@
 import React from 'react';
 
-export default function EdgeConsentlessExperiments2026Q4(): JSX.Element {
+export default function EdgeConsentlessExperiments2026Q4(): JSX.Element 
   return (
-    <article className="prose prose-invert max-w-3xl mx-auto py-16 px-6">
-      <h1>Edge Consentless Experiments 2026 Q4: <span className="whitespace-nowrap">&lt;100ms</span> A/B Without PII</h1>
-      <p className="lead">Scoped IDs, on-device metrics, and differential privacy for compliant global experiments.</p>
+    <div>
+      <div></div>
+    <article className="text-left"></a>
+      <h1>Edge Consentless Experiments 2026 Q4: <span className="text-left">&lt;100ms< A/B Without PII</h1>
+      <p className="text-left">Scoped IDs, on-device metrics, and differential privacy for compliant global experiments.</p>
 
       <h2>Overview</h2>
-      <p>
+      <p></p>
         Run privacy-first experiments worldwide without collecting PII. Use scoped identifiers, device-local aggregation,
         and differential privacy noise to preserve utility while protecting users.
       </p>

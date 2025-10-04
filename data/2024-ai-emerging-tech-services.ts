@@ -5,7 +5,7 @@ export interface AIEmergingTechService {
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
@@ -27,11 +27,11 @@ export interface AIEmergingTechService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
-    website: string
+    website: string;
 };
   realImplementation: boolean;
   implementationDetails: string;
@@ -41,15 +41,14 @@ export interface AIEmergingTechService {
   reviews: number;
 }
 
-export const aiEmergingTechServices: AIEmergingTechService[] = [
-  {
-    id: "ai-video-generation-platform"
-    name: "AI Video Generation Platform"
-    tagline: "Create professional videos with AI in minutes"
-    price: "$499"
-    period: "/month"
+export const aiEmergingTechServices: AIEmergingTechService[] = [;
+    id: "ai-video-generation-platform";
+    name: "AI Video Generation Platform";
+    tagline: "Create professional videos with AI in minutes";
+    price: "$499";
+    period: "/month";
     description: "Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses."
-    features: [
+    features: [;
       "Text-to-video generation"
       "Image-to-video conversion"
       "AI voice synthesis"
@@ -61,47 +60,46 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       "Social media optimization"
       "API access for developers"
     ]
-    popular: true
-    icon: "🎬"
-    color: "from-purple-500 to-pink-600"
-    textColor: "text-purple-400"
-    link: "https://ziontechgroup.com/ai-video-generation"
+    popular: true;
+    icon: "";
+    color: "from-purple-500 to-pink-600";
+    textColor: "text-purple-400";
+    link: "https://ziontechgroup.com/ai-video-generation";
     marketPosition: "Competitive with Runway ML ($35/month), Synthesia ($30/month), and Lumen5 ($19/month). Our advantage: Better quality, more features, and professional-grade output."
     targetAudience: "Content creators, Marketing teams, Video producers, Social media managers, Businesses"
-    trialDays: 7
-    setupTime: "30 minutes"
-    category: "AI & Content Creation"
-    realService: true
+    trialDays: 7;
+    setupTime: "30 minutes";
+    category: "AI & Content Creation";
+    realService: true;
     technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "AWS", "GPU clusters"]
     integrations: ["YouTube", "Vimeo", "Facebook", "Instagram", "TikTok", "Adobe Premiere"]
     useCases: ["Marketing videos", "Social media content", "Product demos", "Training videos", "Brand storytelling"]
-    roi: "Average customer sees 500% ROI within 3 months through increased engagement and reduced production costs."
+    roi: "Average customer sees 500% ROI within 3 months through increased engagement and reduced production costs.";
     competitors: ["Runway ML", "Synthesia", "Lumen5", "InVideo", "Pictory"]
-    marketSize: "$3.2B market"
-    growthRate: "45% annual growth"
-    variant: "ai-futuristic"
-    contactInfo: {
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-      website: "https://ziontechgroup.com"
+    marketSize: "$3.2B market";
+    growthRate: "45% annual growth";
+    variant: "ai-futuristic";
+    contactInfo: mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+      website: "https://ziontechgroup.com";
     }
-    realImplementation: true
+    realImplementation: true;
     implementationDetails: "Production-ready AI video generation platform with state-of-the-art models, GPU acceleration, and comprehensive video editing tools. Includes mobile apps and API access."
-    launchDate: "2024-02-01"
-    customers: 3200
-    rating: 4.8
-    reviews: 1800
+    launchDate: "2024-02-01";
+    customers: 3200;
+    rating: 4.8;
+    reviews: 1800;
   },
   // Quantum Machine Learning Platform
-  {
+  
     id: 'quantum-machine-learning-platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Harness quantum computing for advanced ML',
     price: '$1,999',
     period: '/month',
     description: 'Cutting-edge quantum machine learning platform that leverages quantum computing principles to solve complex optimization problems and accelerate AI model training.',
-    features: [
+    features: [;
       'Quantum neural networks',
       'Quantum optimization algorithms',
       'Hybrid classical-quantum models',
@@ -114,7 +112,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Educational resources'
     ],
     popular: true,
-    icon: '⚛️',
+    icon: '',
     color: 'from-indigo-500 to-blue-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
@@ -132,28 +130,28 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.8B market',
     growthRate: '65% annual growth',
     variant: 'quantum-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.',
     launchDate: '2024-01-15',
     customers: 450,
     rating: 4.9,
-    reviews: 280
+    reviews: 280;
   },
   // AI-Powered Cybersecurity Platform
-  {
+  
     id: 'ai-cybersecurity-platform',
     name: 'AI-Powered Cybersecurity Platform',
     tagline: 'Next-generation threat detection and response',
     price: '$799',
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and predictive security analytics to protect your digital assets.',
-    features: [
+    features: [;
       'AI-powered threat detection',
       'Behavioral analysis',
       'Automated incident response',
@@ -166,7 +164,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Cloud security integration'
     ],
     popular: true,
-    icon: '🛡️',
+    icon: '',
     color: 'from-red-500 to-orange-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-cybersecurity-platform',
@@ -184,28 +182,28 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$173.5B market',
     growthRate: '18.3% annual growth',
     variant: 'enterprise-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready cybersecurity platform with advanced AI models, real-time threat detection, and automated response capabilities. Includes comprehensive reporting and compliance tools.',
     launchDate: '2024-01-20',
     customers: 1800,
     rating: 4.7,
-    reviews: 950
+    reviews: 950;
   },
   // Autonomous Robotics Platform
-  {
+  
     id: 'autonomous-robotics-platform',
     name: 'Autonomous Robotics Platform',
     tagline: 'Build and deploy intelligent robots',
     price: '$2,499',
     period: '/month',
     description: 'Comprehensive autonomous robotics platform that enables businesses to develop, deploy, and manage intelligent robots for various industrial and commercial applications.',
-    features: [
+    features: [;
       'Robot development framework',
       'AI-powered navigation',
       'Computer vision integration',
@@ -218,7 +216,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Integration APIs'
     ],
     popular: true,
-    icon: '🤖',
+    icon: '',
     color: 'from-gray-500 to-slate-600',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/autonomous-robotics-platform',
@@ -236,28 +234,28 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$23.9B market',
     growthRate: '25.8% annual growth',
     variant: 'autonomous-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced robotics platform with AI-powered navigation, computer vision, and comprehensive fleet management. Includes development tools, safety monitoring, and cloud-based control.',
     launchDate: '2024-01-10',
     customers: 320,
     rating: 4.8,
-    reviews: 180
+    reviews: 180;
   },
   // Blockchain AI Platform
-  {
+  
     id: 'blockchain-ai-platform',
     name: 'Blockchain AI Platform',
     tagline: 'Decentralized AI for the future',
     price: '$899',
     period: '/month',
     description: 'Innovative blockchain AI platform that combines decentralized computing with artificial intelligence to create secure, transparent, and efficient AI solutions.',
-    features: [
+    features: [;
       'Decentralized AI training',
       'Smart contract AI execution',
       'Federated learning networks',
@@ -270,7 +268,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'AI audit trails'
     ],
     popular: true,
-    icon: '🔗',
+    icon: '',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/blockchain-ai-platform',
@@ -288,28 +286,28 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$2.1B market',
     growthRate: '52% annual growth',
     variant: 'blockchain-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain AI platform with decentralized computing, smart contract execution, and comprehensive AI tools. Includes marketplace, governance, and cross-chain capabilities.',
     launchDate: '2024-02-15',
     customers: 680,
     rating: 4.7,
-    reviews: 420
+    reviews: 420;
   },
   // Edge AI Computing Platform
-  {
+  
     id: 'edge-ai-computing-platform',
     name: 'Edge AI Computing Platform',
     tagline: 'AI at the edge for real-time processing',
     price: '$599',
     period: '/month',
     description: 'Advanced edge AI computing platform that brings artificial intelligence to edge devices, enabling real-time processing, reduced latency, and improved privacy for IoT applications.',
-    features: [
+    features: [;
       'Edge AI model deployment',
       'Real-time inference engine',
       'Smartphone optimization tools',
@@ -322,7 +320,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'API for edge applications'
     ],
     popular: true,
-    icon: '🌐',
+    icon: '',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/edge-ai-computing-platform',
@@ -340,28 +338,28 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$12.1B market',
     growthRate: '38.9% annual growth',
     variant: 'edge-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced edge AI platform with optimized models, real-time processing, and comprehensive device management. Includes security features, cloud synchronization, and multi-device coordination.',
     launchDate: '2024-01-25',
     customers: 950,
     rating: 4.6,
-    reviews: 580
+    reviews: 580;
   },
   // AI-Powered Drug Discovery Platform
-  {
+  
     id: 'ai-drug-discovery-platform',
     name: 'AI-Powered Drug Discovery Platform',
     tagline: 'Accelerate drug discovery with AI',
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary AI-powered drug discovery platform that accelerates the development of new pharmaceuticals through machine learning, molecular modeling, and predictive analytics.',
-    features: [
+    features: [;
       'AI molecular modeling',
       'Drug target identification',
       'Virtual screening',
@@ -374,7 +372,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Research collaboration network'
     ],
     popular: true,
-    icon: '🧬',
+    icon: '',
     color: 'from-emerald-500 to-green-600',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-drug-discovery-platform',
@@ -392,28 +390,28 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.2B market',
     growthRate: '42% annual growth',
     variant: 'biotech-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced drug discovery platform with AI molecular modeling, comprehensive research tools, and collaboration features. Includes regulatory compliance, patent analysis, and research network.',
     launchDate: '2024-01-05',
     customers: 180,
     rating: 4.9,
-    reviews: 120
+    reviews: 120;
   },
   // AI-Powered Climate Modeling Platform
-  {
+  
     id: 'ai-climate-modeling-platform',
     name: 'AI-Powered Climate Modeling Platform',
     tagline: 'Predict climate change with AI precision',
     price: '$1,299',
     period: '/month',
     description: 'Advanced AI-powered climate modeling platform that provides accurate predictions, risk assessments, and adaptation strategies for climate change impacts.',
-    features: [
+    features: [;
       'AI climate prediction models',
       'Risk assessment algorithms',
       'Adaptation strategy planning',
@@ -426,7 +424,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Public awareness tools'
     ],
     popular: true,
-    icon: '🌍',
+    icon: '',
     color: 'from-teal-500 to-cyan-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-climate-modeling-platform',
@@ -444,17 +442,17 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.8B market',
     growthRate: '35% annual growth',
     variant: 'simulation-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced climate modeling platform with AI prediction models, comprehensive risk assessment, and adaptation planning tools. Includes real-time monitoring, scenario modeling, and policy recommendations.',
     launchDate: '2024-02-01',
     customers: 420,
     rating: 4.8,
-    reviews: 280
+    reviews: 280;
   }
 ];

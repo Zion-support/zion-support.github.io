@@ -26,7 +26,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: {
+  contact_info: any;
     mobile: string;
     email: string;
     address: string;
@@ -47,8 +47,7 @@
   market_advantage: string;
 ;
 
-const contact = {
-
+const contact = 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -58,7 +57,7 @@ const contact = {
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
     },;
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
-    features: [
+    features: [;
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
       'Advanced pattern recognitionCustom neuromorphic algorithms'
       benefits: [;
@@ -73,7 +72,7 @@ const contact = {
         'Hardware integration',
         'Custom algorithms',
       ],
-      market_advantage:;
+      market_advantage: any;
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
     },
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.';
@@ -82,7 +81,7 @@ const contact = {
       'Advanced pattern recognition_custom neuromorphic algorithms';
     ];
 
-    popular: true, icon: '🧠',
+    popular: true, icon: '',
 
   }
 ];
@@ -90,7 +89,7 @@ const contact = {
   }
 ];
 ;
-    popular: true, icon: '🧠',
+    popular: true, icon: '',
     color: 'from - pink - 600 to - rose - 600', text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / neuromorphic - computing - platform', market_position: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
     target_audience: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions',
@@ -98,15 +97,15 @@ const contact = {
     category: 'Neuromorphic Computing', real_service: true,
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
-    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'
+    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities';
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
-    variant: 'ai-futuristic', contactInfo: contact
-    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
-    launchDate: '2024-02-15', customers: 45
-    rating: 4.8, reviews: 34
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth';
+    variant: 'ai-futuristic', contactInfo: contact;
+    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities';
+    launchDate: '2024-02-15', customers: 45;
+    rating: 4.8, reviews: 34;
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
+    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
   }
 ];
 
@@ -155,13 +154,13 @@ export interface SpecializedEmergingTechService {;
   marketAdvantage: string;
 }
 ;
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
-    variant: 'ai-futuristic', contactInfo: contact
-    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
-    launchDate: '2024-02-15', customers: 45
-    rating: 4.8, reviews: 34
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth';
+    variant: 'ai-futuristic', contactInfo: contact;
+    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities';
+    launchDate: '2024-02-15', customers: 45;
+    rating: 4.8, reviews: 34;
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
+    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
@@ -182,7 +181,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       'Custom avatar and environment creationE-commerce integration for virtual stores';
     ],;
     popular: true,;
-    icon: '🥽',;
+    icon: '',;
     color: 'from-purple-600 to-pink-600',;
     textColor: 'text-purple-400',;
     link: 'https://ziontechgroup.com/ar-vr-metaverse-platform',;
@@ -224,7 +223,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       'Network capacity planningIntegration with major telecom equipment';
     ],;
     popular: true,;
-    icon: '📡',;
+    icon: '',;
     color: 'from-blue-600 to-cyan-600',;
     textColor: 'text-blue-400',;
     link: 'https://ziontechgroup.com/5g-6g-network-optimization',;
@@ -266,7 +265,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       'Regulatory compliance monitoringPatent analysis and intellectual property management';
     ],;
     popular: true,;
-    icon: '🧬',;
+    icon: '',;
     color: 'from-green-600 to-emerald-600',;
     textColor: 'text-green-400',;
     link: 'https://ziontechgroup.com/ai-biotechnology-platform',;
@@ -308,7 +307,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       'Real-time energy analyticsMulti-energy source management';
     ],;
     popular: true,;
-    icon: '⚡',;
+    icon: '',;
     color: 'from-yellow-600 to-orange-600',;
     textColor: 'text-yellow-400',;
     link: 'https://ziontechgroup.com/ai-renewable-energy-optimization',;
@@ -350,7 +349,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       'Real-time monitoring and alertsCustom edge AI applications';
     ],;
     popular: true,;
-    icon: '🌐',;
+    icon: '',;
     color: 'from-indigo-600 to-purple-600',;
     textColor: 'text-indigo-400',;
     link: 'https://ziontechgroup.com/edge-ai-computing-platform',;
@@ -392,7 +391,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       'Integration with classical networksQuantum internet applications';
     ],;
     popular: true,;
-    icon: '🌍',;
+    icon: '',;
     color: 'from-violet-600 to-purple-600',;
     textColor: 'text-violet-400',;
     link: 'https://ziontechgroup.com/quantum-internet-platform',;
@@ -434,7 +433,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       'Advanced pattern recognitionCustom neuromorphic algorithms';
     ],;
     popular: true,;
-    icon: '🧠',;
+    icon: '',;
     color: 'from-pink-600 to-rose-600',;
     textColor: 'text-pink-400',;
     link: 'https://ziontechgroup.com/neuromorphic-computing-platform',;
@@ -466,7 +465,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 ];
     ];
 
-    popular: true, icon: '🧠',
+    popular: true, icon: '',
 
   }
 ];

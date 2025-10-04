@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useState } from 'react';
 
-interface Notification {
+interface Notification {/* content */}
   id: string;
   message: string;
   type: 'success' | 'error' | 'warning' | 'info';
 }
 
-interface NotificationContextType {
+interface NotificationContextType {/* content */}
   notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>) => void;
   removeNotification: (id: string) => void;
@@ -14,40 +14,41 @@ interface NotificationContextType {
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
-export const useNotifications = () => {
+export const useNotifications = () => {/* content */}
   const context = useContext(NotificationContext);
-  if (!context) {
+  if (!context) {/* content */}
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
 };
 
-interface NotificationProviderProps {
+interface NotificationProviderProps {/* content */}
   children: React.ReactNode;
 }
 
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {/* content */}
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (notification: Omit<Notification, 'id'>) => {
-    const newNotification: Notification = {
+  const addNotification = (notification: Omit<Notification, 'id'>) => {/* content */}
+    const newNotification: Notification = {/* content */}
       ...notification,
       id: Date.now().toString(),
     };
     setNotifications(prev => [...prev, newNotification]);
   };
 
-  const removeNotification = (id: string) => {
+  const removeNotification = (id: string) => {/* content */}
     setNotifications(prev => prev.filter(notification => notification.id !== id));
   };
 
-  const value: NotificationContextType = {
+  const value: NotificationContextType = {/* content */}
     notifications,
     addNotification,
     removeNotification,
   };
 
   return (
+  <div></div>
     <NotificationContext.Provider value={value}>
       {children}
     </NotificationContext.Provider>

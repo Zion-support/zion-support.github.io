@@ -34,7 +34,7 @@ export class PerformanceTracker {
     // Observe Largest Contentful Paint
     if ('PerformanceObserver' in window) {
       try {
-        const lcpObserver = new PerformanceObserver((list) => {
+        const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1] as any;
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime;
@@ -47,7 +47,7 @@ export class PerformanceTracker {
 
       // Observe First Input Delay
       try {
-        const fidObserver = new PerformanceObserver((list) => {
+        const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
@@ -62,7 +62,7 @@ export class PerformanceTracker {
       // Observe Cumulative Layout Shift
       try {
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
+        const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
@@ -90,7 +90,9 @@ export class PerformanceTracker {
         // Get FCP from Paint Timing API
         if (window.performance.getEntriesByType) {
           const paintEntries = window.performance.getEntriesByType('paint');
-          const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
+          const fcpEntry = paintEntries.find(
+            entry => entry.name === 'first-contentful-paint',
+          );
           if (fcpEntry) {
             this.metrics.fcp = fcpEntry.startTime;
           }
@@ -114,8 +116,10 @@ export class PerformanceTracker {
       return [];
     }
 
-    const resources = window.performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    return resources.map((resource) => ({
+    const resources = window.performance.getEntriesByType(
+      'resource',
+    ) as PerformanceResourceTiming[];
+    return resources.map(resource => ({
       name: resource.name,
       duration: resource.duration,
       size: resource.transferSize || 0,
@@ -287,7 +291,7 @@ export class PerformanceTracker {
    * Cleanup observers
    */
   cleanup() {
-    this.observers.forEach((observer) => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
 }

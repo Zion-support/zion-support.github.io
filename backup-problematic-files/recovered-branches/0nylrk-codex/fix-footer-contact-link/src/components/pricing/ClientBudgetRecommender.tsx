@@ -73,7 +73,7 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
   },;
 ;
   return (;
-    <div className="space-y-4">;
+    <div className="text-left">;
       <div>;
         {!suggestion && !isLoading ? (;
           <Button;
@@ -81,9 +81,9 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
             variant="outline";
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className="w-full";
+            className="text-left";
           >;
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
+            <Sparkles className="text-left" /> Get Budget Recommendation;
           </Button>;
         ) :(;
           <PricingSuggestionBox;
@@ -143,7 +143,7 @@ trackPricingSuggestion ({
 }
 }
 };
-return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
+return (<div className="text-left" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="text-left" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
 }</div> </div>) ;
 :temp_broken_files/pricing/ClientBudgetRecommender.tsx
 };"'"

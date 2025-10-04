@@ -1,22 +1,22 @@
 import { UnifiedService } from '../types/unified-service-types';
 
-export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
+export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
   // ENTERPRISE SOLUTIONS
-  {
+  
     id: 'ai-powered-enterprise-risk-management',
     name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
-    price: {
+    price: any;
       monthly: 899,
       yearly: 8990,
       currency: 'USD',
       trialDays: 30,
       setupTime: '2-3 weeks',
-      enterprise: 'Custom pricing available'
+      enterprise: 'Custom pricing available';
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     category: 'Enterprise Solutions',
-    features: [
+    features: [;
       'Real-time risk monitoring',
       'AI risk assessment',
       'Automated mitigation',
@@ -28,7 +28,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Integration capabilities',
       'Custom workflows'
     ],
-    benefits: [
+    benefits: [;
       'Reduce risk exposure by 60%',
       'Improve compliance by 85%',
       'Cut risk management costs by 40%',
@@ -47,7 +47,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     support: '24/7 support with dedicated risk management specialists',
     compliance: ['SOX', 'GDPR', 'HIPAA', 'PCI DSS', 'Industry-specific regulations'],
     link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
-    icon: '⚠️',
+    icon: '',
     color: 'from-orange-600 via-red-600 to-pink-600',
     popular: true,
     launchDate: '2025-01-15',
@@ -56,28 +56,28 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 128,
     marketSize: '$12.8B enterprise risk management market',
     growthRate: '25% annual growth',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
   },
-  {
+  
     id: 'ai-enterprise-platform',
     name: 'AI Enterprise Platform',
     tagline: 'Enterprise-grade AI platform that scales with your business',
     description: 'Comprehensive AI platform designed for enterprise use, featuring advanced machine learning, natural language processing, computer vision, and predictive analytics capabilities.',
     category: 'Enterprise Solutions',
-    price: {
+    price: any;
       monthly: 999,
       yearly: 9990,
       currency: 'USD',
       trialDays: 30,
       setupTime: '2-4 weeks',
-      enterprise: 'Custom enterprise pricing'
+      enterprise: 'Custom enterprise pricing';
     },
-    features: [
+    features: [;
       'Advanced ML model management',
       'Real-time AI processing',
       'Custom model development',
@@ -89,14 +89,14 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Custom integrations',
       'Advanced analytics dashboard'
     ],
-    benefits: [
+    benefits: [;
       'Reduce AI development time by 70%',
       'Improve model accuracy by 25%',
       'Scale AI operations efficiently',
       'Ensure enterprise security',
       'Accelerate AI adoption'
     ],
-    targetAudience: [
+    targetAudience: [;
       'Data science teams',
       'AI engineers',
       'Business analysts',
@@ -110,7 +110,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     realImplementation: true,
     implementationDetails: 'Production-ready enterprise AI platform with advanced ML capabilities, enterprise security, and scalable infrastructure. Includes custom development and integration services.',
     roi: 'Average enterprise customer sees 500% ROI within 18 months through improved AI capabilities and operational efficiency.',
-    useCases: [
+    useCases: [;
       'Predictive analytics',
       'Natural language processing',
       'Computer vision applications',
@@ -122,7 +122,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     support: '24/7 enterprise support, dedicated AI engineers, and ongoing optimization services.',
     compliance: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'CCPA', 'HIPAA', 'PCI DSS'],
     link: 'https://ziontechgroup.com/ai-enterprise-platform',
-    icon: '🧠',
+    icon: '',
     color: 'from-blue-500 to-cyan-600',
     popular: true,
     launchDate: '2025-01-20',
@@ -131,22 +131,22 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 72,
     marketSize: '$42.8B enterprise AI market',
     growthRate: '34% annual growth',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
   },
 
   // DIGITAL TRANSFORMATION
-  {
+  
     id: 'smart-city-solutions',
     name: 'Smart City Solutions',
     tagline: 'Transform your city with intelligent infrastructure and data-driven insights',
     description: 'Comprehensive smart city implementation service that helps municipalities leverage IoT, AI, and data analytics to improve urban services, reduce costs, and enhance citizen experience.',
     category: 'Digital Transformation',
-    price: {
+    price: any;
       monthly: 0,
       yearly: 0,
       currency: 'USD',
@@ -154,7 +154,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       setupTime: '12-24 weeks',
       enterprise: 'Project-based pricing: $100,000 - $2,000,000'
     },
-    features: [
+    features: [;
       'Smart infrastructure planning',
       'IoT sensor deployment',
       'Data analytics platform',
@@ -166,14 +166,14 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Environmental monitoring',
       'Performance dashboard'
     ],
-    benefits: [
+    benefits: [;
       'Reduce operational costs by 25%',
       'Improve citizen satisfaction by 40%',
       'Enhance public safety',
       'Optimize resource utilization',
       'Create sustainable cities'
     ],
-    targetAudience: [
+    targetAudience: [;
       'City governments',
       'Municipalities',
       'Urban planners',
@@ -187,7 +187,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     realImplementation: true,
     implementationDetails: 'Comprehensive smart city implementation with IoT deployment, data analytics, and citizen engagement platforms. Includes ongoing maintenance and optimization.',
     roi: 'Cities typically see 400% ROI through reduced operational costs and improved services.',
-    useCases: [
+    useCases: [;
       'Traffic management',
       'Energy optimization',
       'Waste management',
@@ -199,7 +199,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     support: '24/7 city operations support, dedicated city managers, and ongoing optimization.',
     compliance: ['Government regulations', 'Data privacy', 'Security standards', 'Environmental compliance'],
     link: 'https://ziontechgroup.com/smart-city-solutions',
-    icon: '🏙️',
+    icon: '',
     color: 'from-green-500 to-teal-600',
     popular: true,
     launchDate: '2025-01-25',
@@ -208,22 +208,22 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 10,
     marketSize: '$225B smart city market',
     growthRate: '18% annual growth',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
   },
 
   // INNOVATION SERVICES
-  {
+  
     id: 'innovation-lab-as-a-service',
     name: 'Innovation Lab as a Service',
     tagline: 'Accelerate innovation with our turnkey innovation lab solution',
     description: 'Complete innovation lab setup and management service that helps organizations foster creativity, develop new products, and stay ahead of market trends through structured innovation processes.',
     category: 'Innovation Services',
-    price: {
+    price: any;
       monthly: 0,
       yearly: 0,
       currency: 'USD',
@@ -231,7 +231,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       setupTime: '4-8 weeks',
       enterprise: 'Project-based pricing: $75,000 - $300,000'
     },
-    features: [
+    features: [;
       'Innovation lab design and setup',
       'Innovation methodology training',
       'Ideation and brainstorming tools',
@@ -243,14 +243,14 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Ongoing innovation support',
       'Innovation culture development'
     ],
-    benefits: [
+    benefits: [;
       'Accelerate innovation by 60%',
       'Increase R&D efficiency by 40%',
       'Foster creative culture',
       'Generate new revenue streams',
       'Stay ahead of competition'
     ],
-    targetAudience: [
+    targetAudience: [;
       'Technology companies',
       'Manufacturing firms',
       'Healthcare organizations',
@@ -264,7 +264,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     realImplementation: true,
     implementationDetails: 'Complete innovation lab setup with methodology training, tools, and ongoing support. Includes innovation culture development and project management.',
     roi: 'Clients typically see 500% ROI through accelerated innovation and new revenue streams.',
-    useCases: [
+    useCases: [;
       'Product development',
       'Service innovation',
       'Process improvement',
@@ -276,7 +276,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     support: '24/7 innovation support, dedicated innovation managers, and ongoing methodology training.',
     compliance: ['Intellectual property protection', 'Data security', 'Regulatory compliance', 'Industry standards'],
     link: 'https://ziontechgroup.com/innovation-lab-as-a-service',
-    icon: '🔬',
+    icon: '',
     color: 'from-yellow-500 to-orange-600',
     popular: true,
     launchDate: '2025-02-01',
@@ -285,22 +285,22 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 28,
     marketSize: '$15.2B innovation consulting market',
     growthRate: '16% annual growth',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
   },
 
   // STRATEGIC CONSULTING
-  {
+  
     id: 'strategic-technology-advisory',
     name: 'Strategic Technology Advisory',
     tagline: 'Strategic technology guidance to drive business transformation and competitive advantage',
     description: 'High-level technology advisory service that helps executive teams make strategic technology decisions, align IT with business goals, and create technology roadmaps for future growth.',
     category: 'Strategic Consulting',
-    price: {
+    price: any;
       monthly: 0,
       yearly: 0,
       currency: 'USD',
@@ -308,7 +308,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       setupTime: '2-4 weeks',
       enterprise: 'Project-based pricing: $25,000 - $200,000'
     },
-    features: [
+    features: [;
       'Technology strategy development',
       'IT governance and alignment',
       'Technology roadmap planning',
@@ -320,14 +320,14 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Executive technology training',
       'Ongoing strategic guidance'
     ],
-    benefits: [
+    benefits: [;
       'Align technology with business goals',
       'Reduce technology costs by 20%',
       'Improve technology ROI',
       'Mitigate technology risks',
       'Accelerate digital transformation'
     ],
-    targetAudience: [
+    targetAudience: [;
       'C-level executives',
       'IT directors',
       'Technology leaders',
@@ -341,7 +341,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     realImplementation: true,
     implementationDetails: 'Comprehensive strategic advisory service with proven methodologies, experienced consultants, and ongoing guidance. Includes executive training and implementation support.',
     roi: 'Clients typically see 400% ROI through improved technology alignment and cost optimization.',
-    useCases: [
+    useCases: [;
       'Technology strategy development',
       'Digital transformation planning',
       'IT governance improvement',
@@ -353,7 +353,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     support: '24/7 strategic support, dedicated technology advisors, and ongoing guidance.',
     compliance: ['Industry regulations', 'Technology standards', 'Risk management', 'Governance requirements'],
     link: 'https://ziontechgroup.com/strategic-technology-advisory',
-    icon: '🎯',
+    icon: '',
     color: 'from-red-500 to-pink-600',
     popular: true,
     launchDate: '2025-01-30',
@@ -362,11 +362,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 38,
     marketSize: '$48.5B technology consulting market',
     growthRate: '12% annual growth',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
   }
 ];
@@ -378,8 +378,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     growth_rate: '28% annual growth';
     customers: 29;
     rating: 4.6;
-    reviews: 41
-    contactInfo: contact
+    reviews: 41;
+    contactInfo: contact;
   }
 ];
 
@@ -428,7 +428,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     support: '24/7 enterprise support with dedicated risk management specialists.',;
     compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],;
     link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',;
-    icon: '⚠️',;
+    icon: '',;
     color: 'from-orange-600 via-red-600 to-pink-600',;
     popular: true,;
     launchDate: '2025-01-15',;
@@ -481,7 +481,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     support: '24/7 enterprise support with process optimization specialists.',;
     compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],;
     link: 'https://ziontechgroup.com/autonomous-business-process-optimization',;
-    icon: '⚙️',;
+    icon: '',;
     color: 'from-blue-600 via-cyan-600 to-teal-600',;
     popular: true,;
     launchDate: '2025-01-15',;
@@ -510,7 +510,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       'Integration capabilitiesMobile access';
     ],;
     popular: true,;
-    icon: '🧠',;
+    icon: '',;
     color: 'from-purple-600 via-violet-600 to-indigo-600',;
     textColor: 'text-purple-400',;
     link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management',;
@@ -531,7 +531,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: contact;
   }
 ];
-    contactInfo: contact
+    contactInfo: contact;
   }
 ];
 
@@ -580,7 +580,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     support: '24/7 enterprise support with dedicated risk management specialists.',;
     compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],;
     link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',;
-    icon: '⚠️',;
+    icon: '',;
     color: 'from-orange-600 via-red-600 to-pink-600',;
     popular: true,;
     launchDate: '2025-01-15',;
@@ -633,7 +633,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     support: '24/7 enterprise support with process optimization specialists.',;
     compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'],;
     link: 'https://ziontechgroup.com/autonomous-business-process-optimization',;
-    icon: '⚙️',;
+    icon: '',;
     color: 'from-blue-600 via-cyan-600 to-teal-600',;
     popular: true,;
     launchDate: '2025-01-15',;
@@ -662,7 +662,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       'Integration capabilitiesMobile access';
     ],;
     popular: true,;
-    icon: '🧠',;
+    icon: '',;
     color: 'from-purple-600 via-violet-600 to-indigo-600',;
     textColor: 'text-purple-400',;
     link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management',;

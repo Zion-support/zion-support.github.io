@@ -10,22 +10,26 @@ export const metadata = {
 
 export default function October2025EnterpriseMultiAgentSystems() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">Architecture · October 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <article className="text-left"></a>
+      <header className="text-left">
+        <div className="text-left"></div>
+          <p className="text-left">Architecture · October 2025</p>
+          <h1 className="text-left">
             Enterprise Multi-Agent Systems Architecture
           </h1>
-          <p className="mt-4 text-purple-50 text-lg">
+          <p className="text-left"></p>
             Production-proven patterns for orchestrating autonomous AI agents at scale—with safety, observability,
             and cost control built in from day one.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-purple">
-        <p>
+      <div className="text-left"></div>
+        <p></p>
           Multi-agent systems represent the next evolution of enterprise AI—moving from single-purpose models
           to collaborative networks of specialized agents. Here's how to build them right.
         </p>
@@ -33,7 +37,7 @@ export default function October2025EnterpriseMultiAgentSystems() {
         <h2>Core Architecture Principles</h2>
 
         <h3>1) Hierarchical Orchestration</h3>
-        <p>
+        <p></p>
           Deploy three tiers: <strong>Orchestrator agents</strong> decompose high-level goals, <strong>specialist
           agents</strong> execute domain-specific tasks, and <strong>verifier agents</strong> validate outputs
           against business rules and quality thresholds.
@@ -45,13 +49,13 @@ export default function October2025EnterpriseMultiAgentSystems() {
         </ul>
 
         <h3>2) Communication Protocols</h3>
-        <p>
+        <p></p>
           Standardize inter-agent messaging with structured schemas, versioning, and backward compatibility.
           Implement message queues with retry logic, dead-letter handling, and circuit breakers.
         </p>
 
         <h3>3) Shared Context Management</h3>
-        <p>
+        <p></p>
           Deploy distributed context stores (Redis, Memcached) with TTL policies and access controls. Agents
           publish discoveries to shared context; orchestrators maintain conversation history and decision trails.
         </p>
@@ -59,7 +63,7 @@ export default function October2025EnterpriseMultiAgentSystems() {
         <h2>Safety & Governance</h2>
 
         <h3>Policy-Driven Constraints</h3>
-        <p>
+        <p></p>
           Encode business rules, regulatory requirements, and risk tolerances as executable policies. Every
           agent action passes through policy enforcement points before execution.
         </p>
@@ -70,7 +74,7 @@ export default function October2025EnterpriseMultiAgentSystems() {
         </ul>
 
         <h3>Human-in-Loop Gates</h3>
-        <p>
+        <p></p>
           Define approval workflows for high-stakes actions. Agents queue decisions for human review with
           full context: reasoning chain, confidence scores, alternative options, and rollback procedures.
         </p>
@@ -78,7 +82,7 @@ export default function October2025EnterpriseMultiAgentSystems() {
         <h2>Observability Framework</h2>
 
         <h3>Distributed Tracing</h3>
-        <p>
+        <p></p>
           Instrument every agent interaction with OpenTelemetry spans. Trace request flows across the agent
           mesh, measure latency at each hop, and identify bottlenecks.
         </p>
@@ -92,7 +96,7 @@ export default function October2025EnterpriseMultiAgentSystems() {
         </ul>
 
         <h3>Anomaly Detection</h3>
-        <p>
+        <p></p>
           Deploy ML models that learn normal agent behavior patterns. Flag deviations: unusual API access,
           unexpected task routing, or degraded performance. Auto-pause agents exhibiting anomalies.
         </p>
@@ -125,7 +129,7 @@ export default function October2025EnterpriseMultiAgentSystems() {
           <li><strong>Scale:</strong> Remove gates, horizontal expansion, continuous learning (6-12 months)</li>
         </ol>
 
-        <p className="text-sm text-gray-500">28 min read · Published October 2025</p>
+        <p className="text-left">28 min read · Published October 2025</p>
       </div>
     </article>
   );

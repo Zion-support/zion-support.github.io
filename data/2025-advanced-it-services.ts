@@ -3,8 +3,7 @@
 
 
 export const advancedITServices2025 = [
-  {
-
+  
     };
     marketSize: '$15 && 15.7B',
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
@@ -14,9 +13,9 @@ export const advancedITServices2025 = [
 
 
     market_size: '$15.7B',
-    target_audience:;
+    target_audience: any;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
-    competitive_advantage:;
+    competitive_advantage: any;
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration',
   },
 ];      phone: '+1 302 464 0950';
@@ -241,14 +240,14 @@ export const advancedITServices2025 = [
 ;
 export const advancedITServices2025 = [
     }
-    category: 'IT Operations'
-    tags: [
+    category: 'IT Operations';
+    tags: [;
       'AI',
       'Autonomous Operations',
       'Infrastructure Management',
       'Automation',
     ],
-    contact: {
+    contact: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -257,12 +256,12 @@ export const advancedITServices2025 = [
     competitiveAdvantage:
       'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration'
   }
-  {
-    id: 'quantum-data-center-platform'
-    name: 'QuantumDataCenter Pro'
+  
+    id: 'quantum-data-center-platform';
+    name: 'QuantumDataCenter Pro';
     description:
       'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
-    features: [
+    features: [;
       'Quantum-enhanced computing'
       'Advanced cooling and power management'
       'Ultra-secure quantum storage'
@@ -272,30 +271,27 @@ export const advancedITServices2025 = [
       'Custom quantum solutions'
       '24/7 data center support'
     ]
-    pricing: {
-      starter: {
-        price: 499
-        period: 'month'
-        features: [
+    pricing: starter: any;
+        price: 499;
+        period: 'month';
+        features: [;
           'Up to 100 racks'
           'Basic quantum features'
           'Standard support'
         ]
       }
-      professional: {
-        price: 1299
-        period: 'month'
-        features: [
+      professional: price: 1299;
+        period: 'month';
+        features: [;
           'Up to 500 racks'
           'Advanced quantum features'
           'Custom solutions'
           'Priority support'
         ]
       }
-      enterprise: {
-        price: 2999
-        period: 'month'
-        features: [
+      enterprise: price: 2999;
+        period: 'month';
+        features: [;
           'Unlimited racks'
           'Custom quantum solutions'
           'White-label platform'
@@ -303,14 +299,14 @@ export const advancedITServices2025 = [
         ]
       }
     }
-    category: 'Data Center'
-    tags: [
+    category: 'Data Center';
+    tags: [;
       'Quantum Computing',
       'Data Center',
       'Infrastructure',
       'Energy Efficiency',
     ],
-    contact: {
+    contact: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -319,12 +315,12 @@ export const advancedITServices2025 = [
     competitiveAdvantage:
       'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration'
   }
-  {
-    id: 'quantum-cybersecurity-platform'
-    name: 'QuantumCyber Pro'
+  
+    id: 'quantum-cybersecurity-platform';
+    name: 'QuantumCyber Pro';
     description:
       'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
-    features: [
+    features: [;
       'Quantum-resistant encryption'
       'Advanced threat detection'
       'Quantum key distribution'
@@ -334,30 +330,27 @@ export const advancedITServices2025 = [
       'Custom security solutions'
       '24/7 quantum security operations'
     ]
-    pricing: {
-      starter: {
-        price: 299
-        period: 'month'
-        features: [
+    pricing: starter: any;
+        price: 299;
+        period: 'month';
+        features: [;
           'Up to 100 endpoints'
           'Basic quantum security'
           'Standard monitoring'
         ]
       }
-      professional: {
-        price: 799
-        period: 'month'
-        features: [
+      professional: price: 799;
+        period: 'month';
+        features: [;
           'Up to 1,000 endpoints'
           'Advanced quantum features'
           'Custom solutions'
           'Priority support'
         ]
       }
-      enterprise: {
-        price: 1999
-        period: 'month'
-        features: [
+      enterprise: price: 1999;
+        period: 'month';
+        features: [;
           'Unlimited endpoints'
           'Custom quantum security'
           'White-label solution'
@@ -365,14 +358,14 @@ export const advancedITServices2025 = [
         ]
       }
     }
-    category: 'Quantum Cybersecurity'
-    tags: [
+    category: 'Quantum Cybersecurity';
+    tags: [;
       'Quantum Computing',
       'Cybersecurity',
       'Encryption',
       'Threat Detection',
     ],
-    contact: {
+    contact: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -381,12 +374,11 @@ export const advancedITServices2025 = [
     competitiveAdvantage:
       'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection'
   }
-  {
-    id: 'quantum-cloud-migration-platform'
-    name: 'QuantumMigration Pro'
-    description:
-      'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.'
-    features: [
+  
+    id: 'quantum-cloud-migration-platform';
+    name: 'QuantumMigration Pro';
+    description: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.';
+    features: [;
       'AI-powered migration planning'
       'Quantum-enhanced migration tools'
       'Zero-downtime migration'
@@ -396,30 +388,27 @@ export const advancedITServices2025 = [
       'Custom migration strategies'
       '24/7 migration support'
     ]
-    pricing: {
-      starter: {
-        price: 199
-        period: 'month'
-        features: [
+    pricing: starter: any;
+        price: 199;
+        period: 'month';
+        features: [;
           'Up to 100 workloads'
           'Basic migration tools'
           'Standard support'
         ]
       }
-      professional: {
-        price: 599
-        period: 'month'
-        features: [
+      professional: price: 599;
+        period: 'month';
+        features: [;
           'Up to 1,000 workloads'
           'Advanced quantum features'
           'Custom strategies'
           'Priority support'
         ]
       }
-      enterprise: {
-        price: 1499
-        period: 'month'
-        features: [
+      enterprise: price: 1499;
+        period: 'month';
+        features: [;
           'Unlimited workloads',
           'Custom quantum solutions',
           'White - label platform',
@@ -429,11 +418,10 @@ export const advancedITServices2025 = [
     },
     category: 'Cloud Migration',
     tags: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
+    contact: phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
     }
-    marketSize: '$15.7B'
+    marketSize: '$15.7B';
     targetAudience:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage:
@@ -450,9 +438,9 @@ export const advancedITServices2025 = [
 
   }
 ];
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com';
     }
-    marketSize: '$15.7B'
+    marketSize: '$15.7B';
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
 
@@ -461,7 +449,7 @@ export const advancedITServices2025 = [
 ];
 ;
 
-export const advancedITServices2025 = [;
+export const advancedITServices2025 = [
   {;
     id: 'quantum-cloud-infrastructure-platform',;
     name: 'QuantumCloud Infrastructure',;
@@ -696,9 +684,9 @@ export const advancedITServices2025 = [;
   }
 ];
     market_size: '$15.7B',
-    target_audience:;
+    target_audience: any;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
-    competitive_advantage:;
+    competitive_advantage: any;
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration',
   },
 ];      phone: '+1 302 464 0950';

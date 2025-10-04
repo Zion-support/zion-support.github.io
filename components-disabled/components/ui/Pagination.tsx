@@ -19,7 +19,7 @@ export type PaginationProps = any;
       {/* Previous Button */}
 
           Previous;
-        </span>;
+        <;
       )}
       {/* Page Numbers */}'
 
@@ -83,7 +83,7 @@ if (return null) {}
       {current_page > 1 ? (
 
                 ...;
-              </span>);
+              <);
 }
           const page_number = page as number;
           const isCurrentPage = page_number === current_page;
@@ -105,6 +105,6 @@ if (return null) {}
       {/* Next Button */}
       {current_page < total_pages ? (
 
-        </span>)}
+        <)}
     </nav>);
 });

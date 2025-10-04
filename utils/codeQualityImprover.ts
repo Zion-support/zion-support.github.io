@@ -144,17 +144,20 @@ export class CodeQualityAnalyzer {
     report.push(`**Generated**: ${new Date().toISOString()}\n`);
     report.push(`**Total Improvements**: ${results.length}\n\n`);
 
-    const byCategory = results.reduce((acc, result) => {
-      if (!acc[result.category]) {
-        acc[result.category] = [];
-      }
-      acc[result.category].push(result);
-      return acc;
-    }, {} as Record<string, OptimizationResult[]>);
+    const byCategory = results.reduce(
+      (acc, result) => {
+        if (!acc[result.category]) {
+          acc[result.category] = [];
+        }
+        acc[result.category].push(result);
+        return acc;
+      },
+      {} as Record<string, OptimizationResult[]>,
+    );
 
     for (const [category, items] of Object.entries(byCategory)) {
       report.push(`## ${category}\n\n`);
-      items.forEach((item) => {
+      items.forEach(item => {
         const status = item.implemented ? '✅' : '⏳';
         const impact = item.impact.toUpperCase();
         report.push(`${status} **[${impact}]** ${item.improvement}\n`);
@@ -166,8 +169,8 @@ export class CodeQualityAnalyzer {
     }
 
     // Summary statistics
-    const implemented = results.filter((r) => r.implemented).length;
-    const highImpact = results.filter((r) => r.impact === 'high').length;
+    const implemented = results.filter(r => r.implemented).length;
+    const highImpact = results.filter(r => r.impact === 'high').length;
 
     report.push('## Summary\n\n');
     report.push(`- **Implemented**: ${implemented}/${results.length}\n`);

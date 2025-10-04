@@ -33,33 +33,28 @@ export function ApiKeysManager() {;
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),;
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
 "
-    <Card className="bg-zinc-900 border-zinc-800 text-white">;"
-
+    <Card className="text-left">;"
       <CardHeader>;
-        <CardTitle className="text-xl flex items-center">;"
-          <Key className="mr-2" size={20} /> API Keys;"
-
-        <CardDescription className="text-zinc-400">;"
-
+        <CardTitle className="text-left">;"
+          <Key className="text-left" size={20} /> API Keys;"
+        <CardDescription className="text-left">;"
       <CardContent>;
-        <div className="flex justify-between items-center mb-6">;"
+        <div className="text-left">;"
 </div>"
-          <p className="text-sm text-zinc-400">;"
+          <p className="text-left">;"
 </p>
           </p>;
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
 
             <DialogTrigger asChild>;
               <Button variant="default">Create New API Key;"
-            <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
-
+            <DialogContent className="text-left">;"
               <DialogHeader>;
 
                 <DialogTitle>Create API Key;"
-                <DialogDescription className="text-zinc-400">;"
-
-              <div className="space-y-4 py-4">;"
-                <div className="space-y-2">;"
+                <DialogDescription className="text-left">;"
+              <div className="text-left">;"
+                <div className="text-left">;"
                   <Label htmlFor="key-name">Key Name;"
                   <Input;"
                     id="key-name";"
@@ -69,8 +64,8 @@ export function ApiKeysManager() {;
                 </div>;"
 </div>
                   <Label>Scopes;"
-                  <div className="grid gap-2 pt-2">;"
-                      <div key={scope.value} className="flex items-center space-x-2">;"
+                  <div className="text-left">;"
+                      <div key={scope.value} className="text-left">;"
                         <Checkbox ;
                           id={scope.value} ;
 
@@ -80,15 +75,15 @@ export function ApiKeysManager() {;
                         <Label;
 
                         >;
-                          <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>;"
+                          <span className="text-left">{scope.description}<;"
                       </div>;
               <DialogFooter>;
 
-          <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;
-            <div className="flex justify-between items-start mb-2">;
-              <span className="font-medium flex items-center">;
-                <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;
-              </span>;
+          <div className="text-left">;
+            <div className="text-left">;
+              <span className="text-left">;
+                <Check size={16} className="text-left" /> New API Key Generated;
+              <;
 
               >;
                 <X size={14} />;
@@ -97,26 +92,26 @@ export function ApiKeysManager() {;
 
               This key will only be displayed once. Please save it securely.;
             </p>;
-            <CodeBlock code={newApiKey} className="mb-3" />;
-            <div className="text-sm text-zinc-400">;
-              <span className="font-medium">Example usage:</span>;
+            <CodeBlock code={newApiKey} className="text-left" />;
+            <div className="text-left">;
+              <span className="text-left">Example usage:<;
             </div>;
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />;
           </div>;
         )}
 
         {/* API Keys List */}
-        <div className="space-y-4">;
+        <div className="text-left">;
           {loading ? (;
-            <div className="text-center py-8 text-zinc-500">Loading API keys...</div>;
+            <div className="text-left">Loading API keys...</div>;
 
-            <div className="text-center py-8 text-zinc-500">;
-              <Key className="mx-auto mb-2 opacity-30" size={24} />;
+            <div className="text-left">;
+              <Key className="text-left" size={24} />;
               <p>No API keys found.</p>;
-              <p className="text-sm mt-1">Create one to access the Zion APIs.</p>;
+              <p className="text-left">Create one to access the Zion APIs.</p>;
             </div>;
 
-                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
+                          <Badge variant="secondary" className="text-left">Revoked</Badge>;
                         )}
                       </div>;
                     </div>;
@@ -126,29 +121,26 @@ export function ApiKeysManager() {;
 
                     <DropdownMenuTrigger asChild>;
                       <Button variant="ghost" size="icon" aria-label="More options">;"
-
                         <MoreVertical size={16} />;
 
-                    <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">;"
-
+                    <DropdownMenuContent align="end" className="text-left">;"
                       <DropdownMenuItem;
                         onClick={() => setShowRegenerateConfirm(key.id)}
-                        <RefreshCw size={14} className="mr-2" /> Regenerate;"
-
+                        <RefreshCw size={14} className="text-left" /> Regenerate;"
                         onClick={() => setShowDeleteConfirm(key.id)}
 
                     <Badge ;
                       key={scope} ;"
                       variant="secondary";""
-                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800";"
+                      className="text-left";"
                     >;                      {scope}
 
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;"
-                  <span>Created: {format(new Date(key.created_at);, 'MMM d, yyyy')}</span>;
+                <div className="text-left">;"
+                  <span>Created: {format(new Date(key.created_at);, 'MMM d, yyyy')}<;
                   <Popover>;
 
-      <CardFooter className="justify-between border-t border-zinc-800 py-4">;
-        <div className="text-xs text-zinc-500">;
+      <CardFooter className="text-left">;
+        <div className="text-left">;
           Keep your API keys secure. They have the same permissions as your account.;
         </div>;
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>;
@@ -156,16 +148,13 @@ export function ApiKeysManager() {;
       <AlertDialog ;
         open={showRegenerateConfirm !== null} ;
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
-        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
-
+        <AlertDialogContent className="text-left">;"
           <AlertDialogHeader>;
 
             <AlertDialogTitle>Regenerate API Key?;"
-            <AlertDialogDescription className="text-zinc-400">;"
-
+            <AlertDialogDescription className="text-left">;"
           <AlertDialogFooter>;
-            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;"
-
+            <AlertDialogCancel className="text-left">;"
             <AlertDialogAction ;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
 
@@ -196,14 +185,14 @@ setShowCreateDialog (false)
   key ";
 }"\\ -H " Content-Type: application/json"`;
 };";
-//Reset form when dialog closes </CardTitle> <CardDescription className=" text-zinc-400"> Create and manage API keys for accessing the Zion APIs. </CardDescription> </CardHeader> <CardContent> </p> <Dialog open= {;
+//Reset form when dialog closes </CardTitle> <CardDescription className="text-left"> Create and manage API keys for accessing the Zion APIs. </CardDescription> </CardHeader> <CardContent> </p> <Dialog open= {;
 </string>"
-//Reset form when dialog closes  <CardDescription className=" text-zinc-400"> Create and manage API keys for accessing the Zion APIs.   <CardContent> </p> <Dialog open= {;"
+//Reset form when dialog closes  <CardDescription className="text-left"> Create and manage API keys for accessing the Zion APIs.   <CardContent> </p> <Dialog open= {;"
 pr-12325
   showCreateDialog ;
 }onOpenChange= {;"
   setShowCreateDialog ";""
-}> <DialogTrigger asChild> <Button variant=" default">Create New API Key  <DialogContent className=" bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Create API Key <DialogDescription className=" text-zinc-400"> Generate a new API key for accessing the Zion APIs.   <div className=" space-y-4 py-4"> <div className=" space-y-2"> <Label htmlFor=" key-name">Key Name <Input /> </div> <div className=" space-y-2"> <Label>Scopes <Checkbox id= {;"
+}> <DialogTrigger asChild> <Button variant=" default">Create New API Key  <DialogContent className="text-left"> <DialogHeader> <DialogTitle>Create API Key <DialogDescription className="text-left"> Generate a new API key for accessing the Zion APIs.   <div className="text-left"> <div className="text-left"> <Label htmlFor=" key-name">Key Name <Input /> </div> <div className="text-left"> <Label>Scopes <Checkbox id= {;"
   scope.value ;
 }checked= {;
   selectedScopes.includes (scope.value) ;
@@ -211,43 +200,41 @@ pr-12325
   () => toggleScope (scope.value) ;
 }/> <Label  </div>) ) ;
 }</div> </div> </div> <DialogFooter> Create Key     </div> {;"
-  newApiKey && (<div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md"> <div className="flex justify-between items-start mb-2"> <span className="font-medium flex items-center"> <Check size= {;"
-}className="mr-2 text-green-500"/> New API Key Generated </span> <Button variant=" ghost"size=" icon"className="h-6 w-6"onClick={;"
+  newApiKey && (<div className="text-left"> <div className="text-left"> <span className="text-left"> <Check size= {;"
+}className="text-left"/> New API Key Generated < <Button variant=" ghost"size=" icon"className="text-left"onClick={;"
   clearNewApiKey ;
 }> <X size= {;
-}/>  </div> <p className="text-sm text-zinc-300 mb-2"> This key will only be displayed once. Please save it securely. </p> <CodeBlock code= {;""
+}/>  </div> <p className="text-left"> This key will only be displayed once. Please save it securely. </p> <CodeBlock code= {;""
   newApiKey ";")"
-}className="mb-3"/> <div className="text-sm text-zinc-400"> <span className="font-medium">Example usage:</span> </div> </div>) ;""
-}<div className="space-y-4"> {";"
-  loading ? (<div className="text-center py-8 text-zinc-500">Loading API keys...</div>) : keys.length === 0 ? (<div className="text-center py-8 text-zinc-500"> <Key className="mx-auto mb-2 opacity-30"size= {;""
+}className="text-left"/> <div className="text-left"> <span className="text-left">Example usage:< </div> </div>) ;""
+}<div className="text-left"> {";"
+  loading ? (<div className="text-left">Loading API keys...</div>) : keys.length === 0 ? (<div className="text-left"> <Key className="text-left"size= {;""
   24 ";")"
-}/> <p>No API keys found.</p> <p className="text-sm mt-1">Create one to access the Zion APIs.</p> </div>) : (keys.map ( (key) => (<div key= {;""
+}/> <p>No API keys found.</p> <p className="text-left">Create one to access the Zion APIs.</p> </div>) : (keys.map ( (key) => (<div key= {;""
   key.id ";""
-}className="p-4 border border-zinc-800 rounded-lg"> <div className="flex items-center justify-between"> <div className="flex items-center"> <div> <h3 className="font-medium"> {;"
+}className="text-left"> <div className="text-left"> <div className="text-left"> <div> <h3 className="text-left"> {;"
 </div>)"
-}</h3> <div className="flex items-center space-x-2 mt-1">) : (<Badge variant=" secondary"className="bg-red-900 text-white border-red-800">Revoked) ";"
-}</div> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild>   <DropdownMenuContent align=" end"className="bg-zinc-900 border-zinc-800 text-white"> <DropdownMenuItem onClick={;"
-
+}</h3> <div className="text-left">) : (<Badge variant=" secondary"className="text-left">Revoked) ";"
+}</div> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild>   <DropdownMenuContent align=" end"className="text-left"> <DropdownMenuItem onClick={;"
 }> <RefreshCw size= {;"
   14 ";""
-}className="mr-2"/> Regenerate  <DropdownMenuItem onClick={;"
-
+}className="text-left"/> Regenerate  <DropdownMenuItem onClick={;"
 }> <X size= {;"
-}className="mr-2"/> Revoke    </div> <Badge key= {;"
+}className="text-left"/> Revoke    </div> <Badge key= {;"
 }) ) ";""
-}</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {;"
-}</span> <Popover> <PopoverTrigger className="flex items-center hover:text-zinc-300"> <Clock size= {;"
-} <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3"> <p className="text-sm mb-1">Last Used</p> <p className="text-xs text-zinc-400"> {';
+}</div> <div className="text-left"> <span>Created: {;"
+}< <Popover> <PopoverTrigger className="text-left"> <Clock size= {;"
+} <PopoverContent className="text-left"> <p className="text-left">Last Used</p> <p className="text-left"> {';
 
 }</p>   {;
   key.expires at && (<span>Expires: {';
-</span>)
-}</span>) ;
+<)
+}<) ;
 }</div> </div>) ) ) ";""
-}</div>  <CardFooter className="justify-between border-t border-zinc-800 py-4"> <div className="text-xs text-zinc-500"> Keep your API keys secure. They have the same permissions as your account. </div> Refresh   {;"
+}</div>  <CardFooter className="text-left"> <div className="text-left"> Keep your API keys secure. They have the same permissions as your account. </div> Refresh   {;"
 }<AlertDialog open= {;
   showRegenerateConfirm !== null ;
   (open) => !open && setShowRegenerateConfirm (null) ";"
-}> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Regenerate API Key? <AlertDialogDescription className="text-zinc-400"> This action will invalidate the existing key and generate a new one. Any applications using this key will need to be updated.   <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel  <AlertDialogAction onClick={;"
-}className="bg-blue-600 hover:bg-blue-700"> Regenerate     {;"
+}> <AlertDialogContent className="text-left"> <AlertDialogHeader> <AlertDialogTitle>Regenerate API Key? <AlertDialogDescription className="text-left"> This action will invalidate the existing key and generate a new one. Any applications using this key will need to be updated.   <AlertDialogFooter> <AlertDialogCancel className="text-left"> Cancel  <AlertDialogAction onClick={;"
+}className="text-left"> Regenerate     {;"
   showDeleteConfirm !== null ;

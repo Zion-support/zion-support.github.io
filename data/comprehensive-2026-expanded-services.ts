@@ -9,7 +9,7 @@ export interface ComprehensiveService {
   category: string;
   subcategory: string;
   realImplementation: boolean;
-  contactInfo: {
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string};
@@ -34,22 +34,22 @@ export interface ComprehensiveService {
   rating: number;
   reviews: number}
 
-const contact = {
+const contact = 
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  address: "364 E Main St STE 1008 Middletown DE 19709";
 };
 
-export const comprehensiveExpandedServices: ComprehensiveService[] = [
+export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   // AI & Machine Learning Services
-  {
+  
     id: 'ai-autonomous-customer-success',
     name: 'AI Autonomous Customer Success',
     tagline: 'Predictive customer health scoring with automated interventions',
     price: '$299',
     period: '/month',
     description: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.',
-    features: [
+    features: [;
       'Predictive churn scoring',
       'Automated intervention workflows',
       'Customer health dashboards',
@@ -61,7 +61,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-autonomous-customer-success',
-    icon: '🤖',
+    icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
     popular: true,
@@ -79,15 +79,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 85,
     rating: 4.8,
-    reviews: 47
-  }, {
+    reviews: 47;
+  }, 
     id: 'ai-powered-sales-intelligence',
     name: 'AI Sales Intelligence Platform',
     tagline: 'Real-time sales coaching and opportunity scoring',
     price: '$199',
     period: '/month',
     description: 'Intelligent sales platform that analyzes calls, emails, and meetings to provide real-time coaching and opportunity insights.',
-    features: [
+    features: [;
       'Call transcription and analysis',
       'Real-time sales coaching',
       'Opportunity scoring',
@@ -99,7 +99,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-powered-sales-intelligence',
-    icon: '📊',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     popular: false,
@@ -117,15 +117,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 62,
     rating: 4.6,
-    reviews: 38
-  }, {
+    reviews: 38;
+  }, 
     id: 'ai-content-personalization-engine',
     name: 'AI Content Personalization Engine',
     tagline: 'Dynamic content adaptation based on user behavior',
     price: '$149',
     period: '/month',
     description: 'AI engine that automatically personalizes website content, emails, and marketing materials based on user behavior and preferences.',
-    features: [
+    features: [;
       'Real-time content adaptation',
       'Behavioral analysis',
       'A/B testing automation',
@@ -137,7 +137,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-content-personalization-engine',
-    icon: '🎯',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     popular: false,
@@ -155,18 +155,18 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-20',
     customers: 73,
     rating: 4.7,
-    reviews: 41
+    reviews: 41;
   },
 
   // Cloud & Infrastructure Services
-  {
+  
     id: 'autonomous-cloud-cost-optimization',
     name: 'Autonomous Cloud Cost Optimization',
     tagline: 'AI-driven cloud spending optimization and FinOps automation',
     price: '$399',
     period: '/month',
     description: 'Intelligent platform that automatically optimizes cloud costs across AWS, Azure, and GCP using machine learning and predictive analytics.',
-    features: [
+    features: [;
       'Multi-cloud cost optimization',
       'Predictive cost forecasting',
       'Automated resource scaling',
@@ -178,7 +178,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/autonomous-cloud-cost-optimization',
-    icon: '💰',
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-300',
     popular: true,
@@ -196,15 +196,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-10',
     customers: 128,
     rating: 4.9,
-    reviews: 89
-  }, {
+    reviews: 89;
+  }, 
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero-trust architecture implementation',
     price: '$599',
     period: '/month',
     description: 'Enterprise-grade zero-trust security platform that implements continuous verification and least-privilege access across all systems.',
-    features: [
+    features: [;
       'Identity verification and management',
       'Continuous monitoring and analytics',
       'Micro-segmentation',
@@ -216,7 +216,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/zero-trust-security-platform',
-    icon: '🔒',
+    icon: '',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-300',
     popular: true,
@@ -234,15 +234,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-05',
     customers: 156,
     rating: 4.8,
-    reviews: 112
-  }, {
+    reviews: 112;
+  }, 
     id: 'kubernetes-autonomous-operations',
     name: 'Kubernetes Autonomous Operations',
     tagline: 'Self-healing Kubernetes clusters with AI-driven optimization',
     price: '$299',
     period: '/month',
     description: 'AI-powered Kubernetes management platform that automatically optimizes, scales, and heals clusters while providing comprehensive monitoring.',
-    features: [
+    features: [;
       'Autonomous cluster optimization',
       'Self-healing capabilities',
       'Intelligent scaling',
@@ -254,7 +254,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/kubernetes-autonomous-operations',
-    icon: '☸️',
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-300',
     popular: false,
@@ -272,18 +272,18 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-15',
     customers: 94,
     rating: 4.7,
-    reviews: 67
+    reviews: 67;
   },
 
   // Data & Analytics Services
-  {
+  
     id: 'real-time-data-pipeline-platform',
     name: 'Real-Time Data Pipeline Platform',
     tagline: 'Streaming data processing with real-time analytics',
     price: '$449',
     period: '/month',
     description: 'High-performance streaming data platform that processes millions of events per second with real-time analytics and machine learning capabilities.',
-    features: [
+    features: [;
       'Real-time stream processing',
       'ML model serving',
       'Data quality monitoring',
@@ -295,7 +295,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/real-time-data-pipeline-platform',
-    icon: '⚡',
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     popular: true,
@@ -313,15 +313,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-25',
     customers: 78,
     rating: 4.8,
-    reviews: 56
-  }, {
+    reviews: 56;
+  }, 
     id: 'ai-powered-business-intelligence',
     name: 'AI-Powered Business Intelligence',
     tagline: 'Intelligent insights and automated reporting',
     price: '$199',
     period: '/month',
     description: 'AI-driven BI platform that automatically generates insights, creates reports, and provides predictive analytics without manual intervention.',
-    features: [
+    features: [;
       'Automated insight generation',
       'Natural language queries',
       'Predictive analytics',
@@ -333,7 +333,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-powered-business-intelligence',
-    icon: '📈',
+    icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     popular: false,
@@ -351,18 +351,18 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-10',
     customers: 112,
     rating: 4.6,
-    reviews: 78
+    reviews: 78;
   },
 
   // Developer Tools & DevOps
-  {
+  
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
     tagline: 'Automated code quality analysis and improvement suggestions',
     price: '$99',
     period: '/month',
     description: 'Intelligent code review platform that automatically analyzes code quality, suggests improvements, and identifies potential security vulnerabilities.',
-    features: [
+    features: [;
       'Automated code analysis',
       'Security vulnerability detection',
       'Code quality scoring',
@@ -374,7 +374,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-code-review-assistant',
-    icon: '🔍',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     popular: false,
@@ -392,15 +392,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-20',
     customers: 156,
     rating: 4.7,
-    reviews: 98
-  }, {
+    reviews: 98;
+  }, 
     id: 'autonomous-deployment-platform',
     name: 'Autonomous Deployment Platform',
     tagline: 'Self-managing CI/CD with intelligent rollback and monitoring',
     price: '$349',
     period: '/month',
     description: 'AI-powered deployment platform that automatically manages CI/CD pipelines, monitors deployments, and intelligently rolls back when issues are detected.',
-    features: [
+    features: [;
       'Automated CI/CD management',
       'Intelligent rollback',
       'Performance monitoring',
@@ -412,7 +412,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/autonomous-deployment-platform',
-    icon: '🚀',
+    icon: '',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-300',
     popular: true,
@@ -430,18 +430,18 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-30',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67;
   },
 
   // Industry-Specific Solutions
-  {
+  
     id: 'healthcare-ai-compliance-platform',
     name: 'Healthcare AI Compliance Platform',
     tagline: 'Automated HIPAA compliance and medical data security',
     price: '$799',
     period: '/month',
     description: 'AI-powered platform that automatically ensures HIPAA compliance, monitors data access, and provides audit trails for healthcare organizations.',
-    features: [
+    features: [;
       'HIPAA compliance automation',
       'Data access monitoring',
       'Audit trail generation',
@@ -453,7 +453,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/healthcare-ai-compliance-platform',
-    icon: '🏥',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     popular: true,
@@ -471,15 +471,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 45,
     rating: 4.9,
-    reviews: 34
-  }, {
+    reviews: 34;
+  }, 
     id: 'fintech-fraud-detection-ai',
     name: 'FinTech Fraud Detection AI',
     tagline: 'Real-time fraud detection for financial transactions',
     price: '$599',
     period: '/month',
     description: 'Advanced AI platform that detects fraudulent transactions in real-time using machine learning and behavioral analysis for financial institutions.',
-    features: [
+    features: [;
       'Real-time fraud detection',
       'Behavioral analysis',
       'Risk scoring',
@@ -491,7 +491,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/fintech-fraud-detection-ai',
-    icon: '💳',
+    icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
     popular: true,
@@ -509,18 +509,18 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 67,
     rating: 4.8,
-    reviews: 52
+    reviews: 52;
   },
 
   // Micro SaaS Services
-  {
+  
     id: 'ai-email-automation-suite',
     name: 'AI Email Automation Suite',
     tagline: 'Intelligent email marketing with AI-powered personalization',
     price: '$79',
     period: '/month',
     description: 'Complete email marketing automation platform with AI-driven content generation, send time optimization, and behavioral targeting.',
-    features: [
+    features: [;
       'AI content generation',
       'Send time optimization',
       'Behavioral targeting',
@@ -532,7 +532,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-email-automation-suite',
-    icon: '📧',
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-300',
     popular: true,
@@ -550,15 +550,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-20',
     customers: 234,
     rating: 4.8,
-    reviews: 156
-  }, {
+    reviews: 156;
+  }, 
     id: 'smart-inventory-management',
     name: 'Smart Inventory Management',
     tagline: 'AI-powered inventory optimization and demand forecasting',
     price: '$149',
     period: '/month',
     description: 'Intelligent inventory management system that predicts demand, optimizes stock levels, and prevents stockouts using machine learning.',
-    features: [
+    features: [;
       'Demand forecasting',
       'Stock optimization',
       'Reorder automation',
@@ -570,7 +570,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/smart-inventory-management',
-    icon: '📦',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     popular: true,
@@ -588,15 +588,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-15',
     customers: 189,
     rating: 4.7,
-    reviews: 134
-  }, {
+    reviews: 134;
+  }, 
     id: 'ai-customer-support-chatbot',
     name: 'AI Customer Support Chatbot',
     tagline: 'Intelligent chatbot with natural language understanding',
     price: '$99',
     period: '/month',
     description: 'Advanced AI chatbot that handles customer inquiries, provides instant support, and escalates complex issues to human agents.',
-    features: [
+    features: [;
       'Natural language processing',
       'Multi-language support',
       'Integration with CRM',
@@ -608,7 +608,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-customer-support-chatbot',
-    icon: '🤖',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     popular: true,
@@ -626,15 +626,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-10',
     customers: 312,
     rating: 4.6,
-    reviews: 198
-  }, {
+    reviews: 198;
+  }, 
     id: 'automated-social-media-manager',
     name: 'Automated Social Media Manager',
     tagline: 'AI-powered social media scheduling and content optimization',
     price: '$69',
     period: '/month',
     description: 'Intelligent social media management platform that schedules posts, optimizes content, and analyzes performance across all platforms.',
-    features: [
+    features: [;
       'AI content optimization',
       'Multi-platform scheduling',
       'Hashtag research',
@@ -646,7 +646,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/automated-social-media-manager',
-    icon: '📱',
+    icon: '',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-300',
     popular: false,
@@ -664,18 +664,18 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-01',
     customers: 167,
     rating: 4.5,
-    reviews: 112
+    reviews: 112;
   },
 
   // IT Services
-  {
+  
     id: 'managed-it-support-services',
     name: 'Managed IT Support Services',
     tagline: '24/7 IT support and infrastructure management',
     price: '$299',
     period: '/month',
     description: 'Comprehensive managed IT services including helpdesk support, network monitoring, security management, and cloud migration.',
-    features: [
+    features: [;
       '24/7 helpdesk support',
       'Network monitoring',
       'Security management',
@@ -687,7 +687,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/managed-it-support-services',
-    icon: '🛠️',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     popular: true,
@@ -705,15 +705,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-05',
     customers: 145,
     rating: 4.8,
-    reviews: 98
-  }, {
+    reviews: 98;
+  }, 
     id: 'cybersecurity-assessment-platform',
     name: 'Cybersecurity Assessment Platform',
     tagline: 'Comprehensive security audits and compliance monitoring',
     price: '$199',
     period: '/month',
     description: 'Automated cybersecurity assessment platform that scans for vulnerabilities, monitors compliance, and provides remediation guidance.',
-    features: [
+    features: [;
       'Vulnerability scanning',
       'Compliance monitoring',
       'Security reporting',
@@ -725,7 +725,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/cybersecurity-assessment-platform',
-    icon: '🔒',
+    icon: '',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-300',
     popular: true,
@@ -743,15 +743,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-12',
     customers: 98,
     rating: 4.7,
-    reviews: 67
-  }, {
+    reviews: 67;
+  }, 
     id: 'cloud-migration-consulting',
     name: 'Cloud Migration Consulting',
     tagline: 'Expert cloud migration and optimization services',
     price: '$499',
     period: '/month',
     description: 'Professional cloud migration services including assessment, planning, execution, and optimization for AWS, Azure, and GCP.',
-    features: [
+    features: [;
       'Migration assessment',
       'Architecture planning',
       'Data migration',
@@ -763,7 +763,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/cloud-migration-consulting',
-    icon: '☁️',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     popular: false,
@@ -781,18 +781,18 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-25',
     customers: 67,
     rating: 4.9,
-    reviews: 45
+    reviews: 45;
   },
 
   // Advanced AI Services
-  {
+  
     id: 'ai-document-processing-platform',
     name: 'AI Document Processing Platform',
     tagline: 'Intelligent document extraction and data processing',
     price: '$179',
     period: '/month',
     description: 'Advanced AI platform that extracts data from documents, processes forms, and automates document workflows using OCR and NLP.',
-    features: [
+    features: [;
       'OCR and text extraction',
       'Form processing',
       'Data validation',
@@ -804,7 +804,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-document-processing-platform',
-    icon: '📄',
+    icon: '',
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-300',
     popular: true,
@@ -822,15 +822,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-01-18',
     customers: 156,
     rating: 4.8,
-    reviews: 89
-  }, {
+    reviews: 89;
+  }, 
     id: 'ai-predictive-maintenance',
     name: 'AI Predictive Maintenance',
     tagline: 'Machine learning-powered equipment maintenance prediction',
     price: '$399',
     period: '/month',
     description: 'AI platform that predicts equipment failures, optimizes maintenance schedules, and reduces downtime using IoT sensors and machine learning.',
-    features: [
+    features: [;
       'Failure prediction',
       'Maintenance scheduling',
       'IoT integration',
@@ -842,7 +842,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/ai-predictive-maintenance',
-    icon: '⚙️',
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-300',
     popular: false,
@@ -860,18 +860,18 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-05',
     customers: 78,
     rating: 4.7,
-    reviews: 56
+    reviews: 56;
   },
 
   // Emerging Technology Services
-  {
+  
     id: 'quantum-computing-simulation-platform',
     name: 'Quantum Computing Simulation Platform',
     tagline: 'Quantum algorithm testing and optimization platform',
     price: '$1,299',
     period: '/month',
     description: 'Advanced platform for simulating quantum algorithms, optimizing quantum circuits, and preparing for quantum computing adoption.',
-    features: [
+    features: [;
       'Quantum algorithm simulation',
       'Circuit optimization',
       'Performance benchmarking',
@@ -883,7 +883,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/quantum-computing-simulation-platform',
-    icon: '⚛️',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     popular: false,
@@ -901,15 +901,15 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-03-01',
     customers: 23,
     rating: 4.9,
-    reviews: 18
-  }, {
+    reviews: 18;
+  }, 
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise-grade blockchain infrastructure and smart contracts',
     price: '$899',
     period: '/month',
     description: 'Scalable blockchain platform for enterprises with smart contract development, tokenization, and decentralized application support.',
-    features: [
+    features: [;
       'Enterprise blockchain infrastructure',
       'Smart contract development',
       'Tokenization platform',
@@ -921,7 +921,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     realImplementation: true,
     contactInfo: contact,
     link: 'https://ziontechgroup.com/services/blockchain-enterprise-platform',
-    icon: '⛓️',
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-300',
     popular: false,
@@ -939,58 +939,57 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     launchDate: '2025-02-15',
     customers: 34,
     rating: 4.7,
-    reviews: 28
+    reviews: 28;
   }
 ];
 
-export const serviceCategories = [
-  {
-    name: 'Micro SaaS',
+export const serviceCategories = [{
+  name: 'Micro SaaS',
     description: 'Affordable, specialized software solutions for small businesses',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
-    icon: '💼',
-    color: 'from-blue-600 to-cyan-700'
-  }, {
+    icon: '',
+    color: 'from-blue-600 to-cyan-700';
+  }, 
     name: 'AI & Machine Learning',
     description: 'Intelligent automation and decision-making systems',
     services: comprehensiveExpandedServices.filter(s => s.category === 'AI & Machine Learning'),
-    icon: '🤖',
-    color: 'from-purple-600 to-pink-700'
-  }, {
+    icon: '',
+    color: 'from-purple-600 to-pink-700';
+  }, 
     name: 'IT Services',
     description: 'Comprehensive IT support and infrastructure management',
     services: comprehensiveExpandedServices.filter(s => s.category === 'IT Services'),
-    icon: '🛠️',
-    color: 'from-indigo-600 to-blue-700'
-  }, {
+    icon: '',
+    color: 'from-indigo-600 to-blue-700';
+  }, 
     name: 'Cloud & Infrastructure',
     description: 'Scalable cloud solutions and infrastructure management',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Cloud & Infrastructure'),
-    icon: '☁️',
-    color: 'from-green-600 to-emerald-700'
-  }, {
+    icon: '',
+    color: 'from-green-600 to-emerald-700';
+  }, 
     name: 'Data & Analytics',
     description: 'Real-time data processing and business intelligence',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Data & Analytics'),
-    icon: '📊',
-    color: 'from-teal-600 to-green-700'
-  }, {
+    icon: '',
+    color: 'from-teal-600 to-green-700';
+  }, 
     name: 'Developer Tools & DevOps',
     description: 'Development automation and operational excellence',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Developer Tools & DevOps'),
-    icon: '⚙️',
-    color: 'from-cyan-600 to-blue-700'
-  }, {
+    icon: '',
+    color: 'from-cyan-600 to-blue-700';
+  }, 
     name: 'Industry Solutions',
     description: 'Specialized solutions for specific industries',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Industry Solutions'),
-    icon: '🏢',
-    color: 'from-orange-600 to-red-700'
-  }, {
+    icon: '',
+    color: 'from-orange-600 to-red-700';
+  }, 
     name: 'Emerging Technology',
     description: 'Cutting-edge technology solutions and platforms',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),
-    icon: '🚀',
-    color: 'from-violet-600 to-purple-700'
+    icon: '',
+    color: 'from-violet-600 to-purple-700';
   }
 ];

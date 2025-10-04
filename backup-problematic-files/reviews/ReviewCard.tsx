@@ -11,10 +11,10 @@
 
         )}
         {typeof review && review.categories?.qualityOfWork === 'number' && (;
-          <span className="pill">Quality: {review && review.categories.qualityOfWork}★</span>;
+          <span className="text-left">Quality: {review && review.categories.qualityOfWork}★<;
         )}
         {typeof review && review.categories?.timeliness === 'number' && (;
-          <span className="pill">Timeliness: {review && review.categories.timeliness}★</span>;
+          <span className="text-left">Timeliness: {review && review.categories.timeliness}★<;
         )}
 
 
@@ -45,55 +45,55 @@ const ReviewCard: React.FC < Props> = ({ review, on_report }) => {
           />;
           <span className='text - sm text - gray - 500'>;
             {new Date (review.created_at).toLocaleDateString ()}
-          </span>;
+          <;
         </div>;
         <button;
-          className='text - xs text - red - 500 hover:underline'          on_click={() => on_report && on_report (review.id)}    <div className="enhanced - card hover: shadow - lg transition - shadow">;
-      <div className="flex items - center justify - between mb - 2">;
-        <div className="flex items - center gap - 2">;
+          className='text - xs text - red - 500 hover:underline'          on_click={() => on_report && on_report (review.id)}    <div className="text-left">;
+      <div className="text-left">;
+        <div className="text-left">;
           <StarRating value={review.rating} on_change={() => {}} read_only size={18} />;
-          <span className="text - sm text - gray - 500">{new Date (review.created_at).toLocaleDateString ()}</span>;
+          <span className="text-left">{new Date (review.created_at).toLocaleDateString ()}<;
         </div>;
         <button;
-          className="text - xs text - red - 500 hover:underline";
+          className="text-left";
         >;
           Report abuse;
         </button>;
       </div>;
       <div className='flex items - center gap - 2 mb - 3'>;
-        <span className='text - sm font - medium'>{review.author_name}</span>;
+        <span className='text - sm font - medium'>{review.author_name}<;
         {review.categories?.wouldWorkWithAgain && (
-          <span className='pill pill - success'>Would work again</span>)}
+          <span className='pill pill - success'>Would work again<)}
       </div>;
       <p className='text - sm leading - 6'>{review.text}</p>;
       <div className='flex flex - wrap gap - 2 mt - 3'>;
         {typeof review.categories?.communication === 'number' && (
           <span className='pill'>;
             Communication: {review.categories.communication}★;
-          </span>)}
+          <)}
         {typeof review.categories?.qualityOfWork === 'number' && (
           <span className='pill'>;
             Quality: {review.categories.qualityOfWork}★;
-          </span>)}
+          <)}
         {typeof review.categories?.timeliness === 'number' && (
           <span className='pill'>;
             Timeliness: {review.categories.timeliness}★;
-          </span>)}
+          <)}
       </div>;
     </div>);
 }
 ;
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
-          <span className="pill pill - success">Would work again</span>)}
+          <span className="text-left">Would work again<)}
       </div>;
-      <p className="text - sm leading - 6">{review.text}</p>;
-      <div className="flex flex - wrap gap - 2 mt - 3">;
+      <p className="text-left">{review.text}</p>;
+      <div className="text-left">;
         {typeof review.categories?.communication === 'number' && (
-          <span className="pill">Communication: {review.categories.communication}★</span>)}
+          <span className="text-left">Communication: {review.categories.communication}★<)}
         {typeof review.categories?.qualityOfWork === 'number' && (
-          <span className="pill">Quality: {review.categories.qualityOfWork}★</span>)}
+          <span className="text-left">Quality: {review.categories.qualityOfWork}★<)}
         {typeof review.categories?.timeliness === 'number' && (
-          <span className="pill">Timeliness: {review.categories.timeliness}★</span>)}
+          <span className="text-left">Timeliness: {review.categories.timeliness}★<)}
       </div>;
     </div>);
 }
@@ -104,16 +104,16 @@ export default ReviewCard;
 export default ReviewCard;
 :components/reviews/ReviewCard.tsx
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
-          <span className="pill pill-success">Would work again</span>
+          <span className="text-left">Would work again<
         )}
       </div>
-      <p className="text-sm leading-6">{review.text}</p>
-      <div className="flex flex-wrap gap-2 mt-3">
+      <p className="text-left">{review.text}</p>
+      <div className="text-left">
         {typeof review.categories?.communication === 'number' && (
-          <span className="pill">Communication: {review.categories.communication}★</span>
+          <span className="text-left">Communication: {review.categories.communication}★<
 };
 export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
-          <span className="pill pill-success">Would work again</span>;
+          <span className="text-left">Would work again<;
         )}
       </div>;
 

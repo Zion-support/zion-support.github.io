@@ -1,4 +1,4 @@
-export interface NextGenerationAIService {
+export interface NextGenerationAIService 
 export interface NextGenerationAIService {;
   id: string;
   name: string;
@@ -26,7 +26,7 @@ export interface NextGenerationAIService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
@@ -41,14 +41,14 @@ export interface NextGenerationAIService {;
   reviews: number;    mobile: string,
     email: string,
     address: string,
-    website: string
+    website: string;
   },
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number
+  reviews: number;
 }
   id: string,;
   name: string,;
@@ -90,29 +90,29 @@ export interface NextGenerationAIService {;
   reviews: number;
 }
 
-  reviews: number;    mobile: string
-    email: string
-    address: string
-    website: string
+  reviews: number;    mobile: string;
+    email: string;
+    address: string;
+    website: string;
   }
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
 
-  reviews: number
+  reviews: number;
 }
-export const nextGenerationAIServices: NextGenerationAIService[] = [
+export const nextGenerationAIServices: NextGenerationAIService[] = [;
   // Advanced AI Agents & Autonomous Systems
-  {
+  
     id: 'ai-autonomous-business-agent',
     name: 'AI Autonomous Business Agent',
     tagline: 'Fully autonomous AI agent that runs your business operations',
     price: '$2,999',
     period: '/month',
     description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
-    features: [
+    features: [;
       'Autonomous decision-making engine',
       'Natural language business communication',
       'Multi-platform task execution',
@@ -125,7 +125,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Performance optimization'
     ],
     popular: true,
-    icon: '🤖',
+    icon: '',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-business-agent',
@@ -143,29 +143,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$50B autonomous systems market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
-    reviews: 89
+    reviews: 89;
   },
 
   // Quantum AI Computing Platform
-  {
+  
     id: 'quantum-ai-computing-platform',
     name: 'Quantum AI Computing Platform',
     tagline: 'Quantum-powered AI computing for breakthrough discoveries',
     price: '$15,999',
     period: '/month',
     description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
-    features: [
+    features: [;
       'Quantum AI algorithm optimization',
       'Hybrid quantum-classical computing',
       'Quantum machine learning models',
@@ -178,7 +178,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum financial modeling'
     ],
     popular: true,
-    icon: '⚛️',
+    icon: '',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-computing-platform',
@@ -196,29 +196,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$1.5B quantum computing market',
     growthRate: '500% annual growth',
     variant: 'quantum-advanced',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum computing platform with custom quantum algorithms, hybrid computing capabilities, and comprehensive quantum AI tools. Includes quantum error correction and optimization.',
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
-    reviews: 45
+    reviews: 45;
   },
 
   // Neural Interface Development Platform
-  {
+  
     id: 'neural-interface-development-platform',
     name: 'Neural Interface Development Platform',
     tagline: 'Build next-generation brain-computer interfaces',
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
-    features: [
+    features: [;
       'Neural signal processing',
       'Brain-computer interface SDK',
       'Real-time neural data analysis',
@@ -231,7 +231,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       '24/7 neural interface support'
     ],
     popular: true,
-    icon: '🧠',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/neural-interface-development-platform',
@@ -249,29 +249,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$2.5B brain-computer interface market',
     growthRate: '350% annual growth',
     variant: 'neural-quantum',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced neural interface platform with real-time signal processing, machine learning capabilities, and comprehensive safety protocols. Includes medical device compliance and testing tools.',
     launchDate: '2024-10-01',
     customers: 120,
     rating: 4.7,
-    reviews: 67
+    reviews: 67;
   },
 
   // AI-Powered Space Exploration Platform
-  {
+  
     id: 'ai-space-exploration-platform',
     name: 'AI-Powered Space Exploration Platform',
     tagline: 'Autonomous AI systems for space exploration and satellite operations',
     price: '$25,999',
     period: '/month',
     description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
-    features: [
+    features: [;
       'Autonomous satellite operations',
       'AI-powered mission planning',
       'Real-time space data analysis',
@@ -284,7 +284,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Space weather monitoring'
     ],
     popular: true,
-    icon: '🚀',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-space-exploration-platform',
@@ -302,29 +302,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$400B space economy',
     growthRate: '250% annual growth',
     variant: 'quantum-space',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI space platform with autonomous decision-making, real-time optimization, and comprehensive space operations management. Includes safety protocols and mission planning tools.',
     launchDate: '2024-09-15',
     customers: 45,
     rating: 4.9,
-    reviews: 28
+    reviews: 28;
   },
 
   // Biotech AI Drug Discovery Platform
-  {
+  
     id: 'biotech-ai-drug-discovery',
     name: 'Biotech AI Drug Discovery Platform',
     tagline: 'AI-powered drug discovery and pharmaceutical research',
     price: '$19,999',
     period: '/month',
     description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
-    features: [
+    features: [;
       'AI molecular modeling',
       'Drug target identification',
       'Predictive toxicity analysis',
@@ -337,7 +337,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Regulatory compliance tools'
     ],
     popular: true,
-    icon: '🧬',
+    icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/biotech-ai-drug-discovery',
@@ -355,29 +355,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$50B AI drug discovery market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, predictive analytics, and comprehensive research tools. Includes regulatory compliance and clinical trial optimization.',
     launchDate: '2024-08-01',
     customers: 85,
     rating: 4.8,
-    reviews: 52
+    reviews: 52;
   },
 
   // Quantum Financial Trading Platform
-  {
+  
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum-powered algorithmic trading and financial optimization',
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.',
-    features: [
+    features: [;
       'Quantum algorithmic trading',
       'Real-time risk assessment',
       'Portfolio optimization algorithms',
@@ -390,7 +390,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       '24/7 trading operations'
     ],
     popular: true,
-    icon: '💰',
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading-platform',
@@ -408,29 +408,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$15B algorithmic trading market',
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum trading platform with real-time optimization, risk management, and comprehensive trading tools. Includes regulatory compliance and performance analytics.',
     launchDate: '2024-07-15',
     customers: 95,
     rating: 4.7,
-    reviews: 58
+    reviews: 58;
   },
 
   // AI-Powered Metaverse Development Platform
-  {
+  
     id: 'ai-metaverse-development-platform',
     name: 'AI-Powered Metaverse Development Platform',
     tagline: 'Create immersive metaverse experiences with AI-driven content and interactions',
     price: '$6,999',
     period: '/month',
     description: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
-    features: [
+    features: [;
       'AI-powered NPC generation',
       'Dynamic content creation',
       'Real-time environment adaptation',
@@ -443,7 +443,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Analytics and insights'
     ],
     popular: true,
-    icon: '🌐',
+    icon: '',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-metaverse-development-platform',
@@ -461,29 +461,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$800B metaverse market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced metaverse platform with AI-powered content generation, intelligent interactions, and comprehensive development tools. Includes VR/AR integration and performance optimization.',
     launchDate: '2024-06-01',
     customers: 180,
     rating: 4.6,
-    reviews: 95
+    reviews: 95;
   },
 
   // Autonomous Vehicle AI Platform
-  {
+  
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
     tagline: 'Next-generation AI for autonomous vehicles and transportation systems',
     price: '$18,999',
     period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and performance.',
-    features: [
+    features: [;
       'Advanced computer vision',
       'Real-time decision making',
       'Predictive safety systems',
@@ -496,7 +496,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Performance analytics'
     ],
     popular: true,
-    icon: '🚗',
+    icon: '',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -514,29 +514,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$100B autonomous vehicle market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced autonomous vehicle platform with comprehensive safety systems, real-time decision-making, and regulatory compliance. Includes fleet management and performance analytics.',
     launchDate: '2024-05-15',
     customers: 65,
     rating: 4.8,
-    reviews: 42
+    reviews: 42;
   },
 
   // Quantum Internet Security Platform
-  {
+  
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum-secured internet infrastructure',
     price: '$22,999',
     period: '/month',
     description: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.',
-    features: [
+    features: [;
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography',
       'Quantum entanglement security',
@@ -549,7 +549,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Unhackable communication channels'
     ],
     popular: true,
-    icon: '🔒',
+    icon: '',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-internet-security-platform',
@@ -567,29 +567,29 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$150B cybersecurity market',
     growthRate: '400% annual growth',
     variant: 'quantum-cyberpunk',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum security platform with quantum key distribution, post-quantum cryptography, and comprehensive security tools. Includes government compliance and monitoring systems.',
     launchDate: '2024-04-01',
     customers: 55,
     rating: 4.9,
-    reviews: 33
+    reviews: 33;
   },
 
   // AI-Powered Manufacturing Platform
-  {
+  
     id: 'ai-manufacturing-platform',
     name: 'AI-Powered Manufacturing Platform',
     tagline: 'Intelligent manufacturing with AI-driven optimization and automation',
     price: '$9,999',
     period: '/month',
     description: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real-time optimization.',
-    features: [
+    features: [;
       'Predictive maintenance',
       'Quality control automation',
       'Process optimization',
@@ -602,7 +602,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Compliance management'
     ],
     popular: true,
-    icon: '🏭',
+    icon: '',
     color: 'from-orange-600 to-amber-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-manufacturing-platform',
@@ -620,14 +620,14 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$200B Industry 4.0 market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
 
 
     },
@@ -636,6 +636,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-03-15',
     customers: 220,
     rating: 4.7,
-    reviews: 125
+    reviews: 125;
   }
 ];

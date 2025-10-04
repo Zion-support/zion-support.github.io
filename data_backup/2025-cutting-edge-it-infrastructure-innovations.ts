@@ -1,5 +1,3 @@
+string;
 
-  id: string;
-
-
-  realImplementation: boolean;
+boolean;

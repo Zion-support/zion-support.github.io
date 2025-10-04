@@ -1,5 +1,5 @@
-describe('profile page placeholder', () => {
-  it('passes', () => {
+describe('profile page placeholder', () => 
+  it('passes', () => 
     expect(1 + 1).toBe(2);
   });
 });

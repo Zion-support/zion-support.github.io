@@ -10,26 +10,23 @@ export interface AdditionalRealService {
   link: string;
   category: string;
   real_implementation: boolean;
-  contact_info: {
+  contact_info: any;
     mobile: string;
     email: string;
 }
 
     address: string;
   }
-export const additionalEnhancedServices: AdditionalRealService[] = [
-  {
-
+export const additionalEnhancedServices: AdditionalRealService[] = [;
     address: string;
   }
 ;
 export const additionalEnhancedServices: AdditionalRealService[] = [;
-  {
     id: 'ai - automation - suite',
     name: 'AI Automation Suite',
     tagline: 'Intelligent automation for modern businesses',
     price: '$79 / month',
-    description:;
+    description: any;
       'Comprehensive AI - powered automation platform that streamlines business processes and increases efficiency.',
     features: [;
       'Workflow automation',
@@ -41,22 +38,21 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     link: '/services / ai - automation - suite',
     category: 'AI & Automation',
     real_implementation: true,
-    contact_info: {
-
+    contact_info: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
-  {
+  
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: {
+  contactInfo: any;
     mobile: string, email: string,
-    address: string
+    address: string;
   id: string;
   name: string;
   tagline: string;
@@ -66,7 +62,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
@@ -76,53 +72,46 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
 
     address: string;
   }
-export const additionalEnhancedServices: AdditionalRealService[] = [
-  {
-
-
-    id: 'ai-automation-suite'
-    name: 'AI Automation Suite'
-    tagline: 'Intelligent automation for modern businesses'
-    price: '$79/month'
-    description:
-      'Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.'
-    features: [
+export const additionalEnhancedServices: AdditionalRealService[] = [;
+    id: 'ai-automation-suite';
+    name: 'AI Automation Suite';
+    tagline: 'Intelligent automation for modern businesses';
+    price: '$79/month';
+    description: 'Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.';
+    features: [;
       'Workflow automation'
       'AI decision making'
       'Integration APIs'
       'Custom workflows'
       'Analytics dashboard'
     ]
-    link: '/services/ai-automation-suite'
-    category: 'AI & Automation'
-    realImplementation: true
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+    link: '/services/ai-automation-suite';
+    category: 'AI & Automation';
+    realImplementation: true;
+    contactInfo: mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-  {
-    id: 'data-warehouse-solution'
-    name: 'Data Warehouse Solution'
-    tagline: 'Enterprise-grade data management and analytics'
-    price: '$149/month'
-    description:
-      'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.'
-    features: [
+  
+    id: 'data-warehouse-solution';
+    name: 'Data Warehouse Solution';
+    tagline: 'Enterprise-grade data management and analytics';
+    price: '$149/month';
+    description: 'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.';
+    features: [;
       'Data integration'
       'Real-time processing'
       'Advanced analytics'
       'Scalable architecture'
       'Security compliance'
     ]
-    link: '/services/data-warehouse-solution'
-    category: 'Data & Analytics'
-    realImplementation: true
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+    link: '/services/data-warehouse-solution';
+    category: 'Data & Analytics';
+    realImplementation: true;
+    contactInfo: mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ];      mobile: "+1 302 464 0950";
@@ -131,7 +120,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     name: 'Data Warehouse Solution',
     tagline: 'Enterprise - grade data management and analytics',
     price: '$149 / month',
-    description:;
+    description: any;
       'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.',
     features: [;
       'Data integration',
@@ -143,7 +132,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     link: '/services / data - warehouse - solution',
     category: 'Data & Analytics',
     real_implementation: true,
-    contact_info: {
+    contact_info: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -158,7 +147,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     tagline: "Intelligent automation for modern businesses",
     price: "$79/month",
     description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",
-    features: [
+    features: [;
       "Workflow automation",
       "AI decision making",
       "Integration APIs",
@@ -168,19 +157,19 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     link: "/services/ai-automation-suite",
     category: "AI & Automation",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: any;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   },
-  {
+  
     id: "data-warehouse-solution",
     name: "Data Warehouse Solution",
     tagline: "Enterprise-grade data management and analytics",
     price: "$149/month",
     description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",
-    features: [
+    features: [;
       "Data integration",
       "Real-time processing",
       "Advanced analytics",
@@ -190,8 +179,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     link: "/services/data-warehouse-solution",
     category: "Data & Analytics",
     realImplementation: true,
-    contactInfo: {
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -206,7 +194,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     tagline: "Intelligent automation for modern businesses",
     price: "$79/month",
     description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",
-    features: [
+    features: [;
       "Workflow automation",
       "AI decision making",
       "Integration APIs",
@@ -216,27 +204,27 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     link: "/services/ai-automation-suite",
     category: "AI & Automation",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: any;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   },
-  {
+  
     id: 'mobile-first-survey',
     name: 'Mobile-First Survey Tool',
     tagline: 'Tap-friendly micro-surveys with AI insights',
     price: '$19',
     period: '/month',
     description: 'Launch branded, mobile-optimized surveys with AI-based insight clustering and churn-risk flags.',
-    features: [
+    features: [;
       'One-tap answers and NPS',
       'AI clustering and summaries',
       'Embeddable widgets',
       'Export CSV/Sheets'
     ],
     popular: false,
-    icon: '📱',
+    icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/mobile-first-survey',
@@ -260,23 +248,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-05-15',
     customers: 55,
     rating: 4.5,
-    reviews: 18
+    reviews: 18;
   },
-  {
+  
     id: 'event-management-dashboard',
     name: 'Event Management Dashboard',
     tagline: 'Tickets, check-in, schedules, feedback in one place',
     price: '$89',
     period: '/month',
     description: 'All-in-one portal to sell tickets, manage RSVPs, schedule sessions, and analyze attendee feedback.',
-    features: [
+    features: [;
       'Tickets and invoices',
       'QR check-in and badges',
       'Speaker and agenda planner',
       'Post-event feedback analytics'
     ],
     popular: true,
-    icon: '🎟️',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/event-management-dashboard',
@@ -300,23 +288,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-04-10',
     customers: 35,
     rating: 4.6,
-    reviews: 24
+    reviews: 24;
   },
-  {
+  
     id: 'churn-risk-alerts',
     name: 'Churn Risk Alerts for Slack',
     tagline: 'Behavior + sentiment = proactive retention pings',
     price: '$49',
     period: '/month',
     description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.',
-    features: [
+    features: [;
       'Usage anomaly detection',
       'Sentiment from tickets/reviews',
       'Playbooks and tasks',
       'Owner assignment'
     ],
     popular: false,
-    icon: '⚠️',
+    icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/churn-risk-alerts',
@@ -329,7 +317,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['Segment, Webhooks, LLMs'],
     integrations: ['Slack, HubSpot, Salesforce'],
     useCases: ['Churn prevention, Expansion triggers'],
-    roi: 'Improves retention by 2–5 pts',
+    roi: 'Improves retention by 25 pts',
     competitors: ['Vitally, Gainsight'],
     marketSize: '$4.2B CS tools',
     growthRate: '17% CAGR',
@@ -340,23 +328,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-03-01',
     customers: 28,
     rating: 4.5,
-    reviews: 15
+    reviews: 15;
   },
-  {
+  
     id: 'subscription-revenue-analytics',
     name: 'Subscription Revenue Analytics',
     tagline: 'MRR, churn, cohorts with anomaly flags',
     price: '$59',
     period: '/month',
     description: 'Self-serve dashboards for MRR, churn, LTV/CAC, and cohorts with anomaly detection and revenue projections.',
-    features: [
+    features: [;
       'MRR/ARR trends and cohorts',
       'Anomaly flags and forecasts',
       'CSV/Stripe imports',
       'Board-ready reports'
     ],
     popular: true,
-    icon: '📈',
+    icon: '',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/services/subscription-revenue-analytics',
@@ -380,23 +368,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-07-01',
     customers: 22,
     rating: 4.6,
-    reviews: 12
+    reviews: 12;
   },
-  {
+  
     id: 'iso-27001-evidence-kit',
     name: 'ISO 27001 Evidence Kit',
     tagline: 'Prebuilt controls, evidence collectors, and audit packs',
     price: '$149',
     period: '/month',
     description: 'Automate common ISO 27001 evidence with connectors, control mappings, timelines, and exportable audit packs.',
-    features: [
+    features: [;
       'Control library and mappings',
       'Evidence collectors and snapshots',
       'Exceptions and approvals',
       'Audit-ready exports'
     ],
     popular: false,
-    icon: '🛡️',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/iso-27001-evidence-kit',
@@ -420,23 +408,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       launchDate: '2025-06-15',
       customers: 18,
       rating: 4.5,
-      reviews: 10
+      reviews: 10;
   },
-  {
+  
     id: 'api-changelog-notifier',
     name: 'API Changelog Notifier',
     tagline: 'Diffs, deprecations, and alerts for your integrators',
     price: '$19',
     period: '/month',
     description: 'Monitor OpenAPI/GraphQL changes and send release notes, breaking-change alerts, and migration timelines.',
-    features: [
+    features: [;
       'Schema diffing and impact',
       'Release notes generator',
       'Deprecation timelines',
       'Email/Slack/webhook alerts'
     ],
     popular: false,
-    icon: '🔔',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/api-changelog-notifier',
@@ -460,23 +448,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-05-01',
     customers: 30,
     rating: 4.6,
-    reviews: 14
+    reviews: 14;
   },
-  {
+  
     id: 'runbook-generator',
     name: 'Runbook Generator',
     tagline: 'Generate, version, and validate ops runbooks with AI',
     price: '$29',
     period: '/month',
     description: 'Create consistent runbooks from incident timelines and postmortems; validate steps and link to on-call.',
-    features: [
+    features: [;
       'Templates and versioning',
       'AI draft from incidents',
       'Step validation checklists',
       'On-call links and owners'
     ],
     popular: false,
-    icon: '📘',
+    icon: '',
     color: 'from-sky-600 to-blue-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/services/runbook-generator',
@@ -489,7 +477,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['LLMs, Incident APIs'],
     integrations: ['PagerDuty, Jira, Slack'],
     useCases: ['SRE runbooks, On-call playbooks'],
-    roi: 'Faster incident resolution by 20–30%',
+    roi: 'Faster incident resolution by 2030%',
     competitors: ['Blameless (partial), Notion'],
     marketSize: '$7.2B DevOps',
     growthRate: '19% CAGR',
@@ -500,23 +488,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       launchDate: '2025-02-20',
       customers: 26,
       rating: 4.5,
-      reviews: 11
+      reviews: 11;
   },
-  {
+  
     id: 'incident-timeline-composer',
     name: 'Incident Timeline Composer',
     tagline: 'Auto-build timelines and comms from alerts and chat',
     price: '$19',
     period: '/month',
     description: 'Aggregates alerts, changes, and chat to build a single incident timeline for comms and postmortems.',
-    features: [
+    features: [;
       'Alert + change aggregation',
       'Chat timeline extraction',
       'Customer comms templates',
       'Postmortem export'
     ],
     popular: false,
-    icon: '🧩',
+    icon: '',
     color: 'from-rose-600 to-pink-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/incident-timeline-composer',
@@ -540,23 +528,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-03-15',
     customers: 19,
     rating: 4.5,
-    reviews: 9
+    reviews: 9;
   },
-  {
+  
     id: 'ad-creative-generator',
     name: 'Ad Creative Generator',
     tagline: 'Generate on-brand ads with variants and A/B insights',
     price: '$49',
     period: '/month',
     description: 'Create compliant, on-brand image and text ads with variants, audiences, and performance tips.',
-    features: [
+    features: [;
       'Brand presets and guardrails',
       'Multi-platform variants',
       'Headlines and copy suggestions',
       'Performance tips and tags'
     ],
     popular: true,
-    icon: '🎯',
+    icon: '',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ad-creative-generator',
@@ -569,7 +557,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['LLMs, Vision models'],
     integrations: ['Meta, Google Ads (export)'],
     useCases: ['Ad variants, Landing page assets'],
-    roi: 'Improves CTR by 10–20% on average',
+    roi: 'Improves CTR by 1020% on average',
     competitors: ['Canva (partial), Jasper'],
     marketSize: '$8.9B martech genAI',
     growthRate: '22% CAGR',
@@ -580,16 +568,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-07-15',
     customers: 33,
     rating: 4.6,
-    reviews: 13
+    reviews: 13;
   },
-  {
+  
     id: 'cloud-cost-optimizer-pro',
     name: 'Cloud Cost Optimizer Pro',
     tagline: 'Automated rightsizing, lifecycle policies, and anomaly detection',
     price: '$99',
     period: '/month',
     description: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.',
-    features: [
+    features: [;
       "Data integration",
       "Real-time processing",
       "Advanced analytics",
@@ -603,23 +591,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-01-15',
     customers: 90,
     rating: 4.6,
-    reviews: 54
+    reviews: 54;
   },
-  {
+  
     id: 'database-performance-monitor',
     name: 'Database Performance Monitor',
     tagline: 'Proactive Postgres/MySQL insights and AI index suggestions',
     price: '$79',
     period: '/month',
     description: 'Capture slow queries, rank impact, generate index and query tuning suggestions with capacity forecasting and SLA/SLO dashboards.',
-    features: [
+    features: [;
       'Slow query capture',
       'AI index suggestions',
       'Connection pool tuning',
       'Capacity forecasting'
     ],
     popular: true,
-    icon: '🗄️',
+    icon: '',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/database-performance-monitor',
@@ -632,7 +620,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['PostgreSQL', 'MySQL', 'OpenTelemetry'],
     integrations: ['Grafana', 'Datadog', 'New Relic'],
     useCases: ['Performance tuning', 'SLO management', 'Incident response'],
-    roi: 'Reduce p95 latency by 20–50% in month 1',
+    roi: 'Reduce p95 latency by 2050% in month 1',
     competitors: ['Percona PMM', 'Datadog APM', 'New Relic'],
     marketSize: '$6B DB monitoring',
     growthRate: '15% CAGR',
@@ -643,23 +631,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-12-12',
     customers: 60,
     rating: 4.6,
-    reviews: 38
+    reviews: 38;
   },
-  {
+  
     id: 'api-documentation-generator',
     name: 'API Documentation Generator',
     tagline: 'Generate beautiful, accurate API docs from OpenAPI/GraphQL/Proto',
     price: '$49',
     period: '/month',
     description: 'Convert schemas into polished docs with SDK snippets, changelogs, and search. Publish instantly with versioning.',
-    features: [
+    features: [;
       'Schema parsing (OAS/GraphQL/Proto)',
       'SDK snippets and examples',
       'Changelogs and versions',
       'Full-text search and themes'
     ],
     popular: true,
-    icon: '📘',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/api-documentation-generator',
@@ -683,23 +671,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-10-05',
     customers: 110,
     rating: 4.7,
-    reviews: 81
+    reviews: 81;
   },
-  {
+  
     id: 'email-deliverability-monitor',
     name: 'Email Deliverability Monitor',
     tagline: 'Inbox placement, DMARC/SPF/DKIM checks, and blocklist alerts',
     price: '$39',
     period: '/month',
     description: 'Continuously verify email authentication, track inbox placement, and detect blocklist events with actionable recommendations.',
-    features: [
+    features: [;
       'DMARC/SPF/DKIM verification',
       'Inbox placement checks',
       'Blocklist monitoring',
       'Domain reputation score'
     ],
     popular: false,
-    icon: '✉️',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/email-deliverability-monitor',
@@ -712,7 +700,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['DNS', 'Postfix/SES APIs'],
     integrations: ['SendGrid', 'SES', 'Mailgun'],
     useCases: ['Auth compliance', 'Reputation monitoring', 'Alerting'],
-    roi: 'Improve inbox rate by 5–15%',
+    roi: 'Improve inbox rate by 515%',
     competitors: ['MailMonitor', 'Postmaster Tools'],
     marketSize: '$2B email tools',
     growthRate: '12% CAGR',
@@ -723,23 +711,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-01-01',
     customers: 45,
     rating: 4.5,
-    reviews: 22
+    reviews: 22;
   },
-  {
+  
     id: 'gdpr-dsar-automation',
     name: 'GDPR DSAR Automation',
     tagline: 'Automate data subject access requests with auditable workflows',
     price: '$129',
     period: '/month',
     description: 'Intake, verify, and fulfill DSAR requests with identity verification, data discovery connectors, and audit logs.',
-    features: [
+    features: [;
       'Secure request intake portal',
       'Identity verification',
       'Data discovery connectors',
       'Audit logs and exports'
     ],
     popular: false,
-    icon: '🛡️',
+    icon: '',
     color: 'from-rose-600 to-fuchsia-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/gdpr-dsar-automation',
@@ -763,23 +751,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-09-20',
     customers: 33,
     rating: 4.6,
-    reviews: 19
+    reviews: 19;
   },
-  {
+  
     id: 'api-security-scanner',
     name: 'API Security Scanner',
     tagline: 'Automated OpenAPI fuzzing, auth checks, and OWASP API Top 10',
     price: '$99',
     period: '/month',
     description: 'Scan APIs against schemas, validate auth and rate limits, and detect common vulnerabilities with CI integration.',
-    features: [
+    features: [;
       'OpenAPI-based scanning',
       'Auth and rate limit tests',
       'OWASP API Top 10 checks',
       'CI pipeline integration'
     ],
     popular: true,
-    icon: '🛡️',
+    icon: '',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/api-security-scanner',
@@ -803,16 +791,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-10',
     customers: 52,
     rating: 4.5,
-    reviews: 28
+    reviews: 28;
   },
-  {
+  
     id: 'api-observability-starter',
     name: 'API Observability Starter',
     tagline: 'OpenTelemetry traces, logs and metrics with redaction and sampling',
     price: '$59',
     period: '/month',
     description: 'Instrument services quickly with OTel SDKs and get request traces, error analytics, and SLO dashboards. Includes PII redaction, sampling controls, and ready-made Grafana boards.',
-    features: [
+    features: [;
       'One-line middleware for Node/Go/Python',
       'PII redaction and sampling policies',
       'Error and latency analytics',
@@ -821,7 +809,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Auto-ingest OpenAPI metadata'
     ],
     popular: false,
-    icon: '📈',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/api-observability-starter',
@@ -834,7 +822,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['OpenTelemetry', 'Grafana', 'Tempo/Loki/Prom', 'Node.js'],
     integrations: ['Datadog', 'Honeycomb', 'Grafana Cloud', 'New Relic'],
     useCases: ['Error triage', 'Latency analysis', 'SLO tracking'],
-    roi: 'Reduce MTTR by 30–50% with basic but effective telemetry.',
+    roi: 'Reduce MTTR by 3050% with basic but effective telemetry.',
     competitors: ['Datadog APM', 'New Relic', 'Elastic APM'],
     marketSize: '$30B+ observability',
     growthRate: '18% CAGR',
@@ -845,23 +833,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-01',
     customers: 33,
     rating: 4.5,
-    reviews: 11
+    reviews: 11;
   },
-  {
+  
     id: 'status-pages-slo',
     name: 'Status Pages & SLO',
     tagline: 'Beautiful status pages and SLO dashboards for your services',
     price: '$39',
     period: '/month',
     description: 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.',
-    features: [
+    features: [;
       'Custom branded status pages',
       'SLO dashboards',
       'Incident posts & timelines',
       'Subscriber notifications'
     ],
     popular: false,
-    icon: '📊',
+    icon: '',
     color: 'from-teal-600 to-emerald-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/status-pages-slo',
@@ -885,23 +873,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-07-22',
     customers: 75,
     rating: 4.6,
-    reviews: 35
+    reviews: 35;
   },
-  {
+  
     id: 'uptime-slo-monitor',
     name: 'Uptime & SLO Monitor',
     tagline: 'Synthetic checks with SLO dashboards and multi-region probes',
     price: '$49',
     period: '/month',
     description: 'Run multi-region synthetic checks, calculate SLOs, and receive proactive alerts with error budgets and burn rate alerts.',
-    features: [
+    features: [;
       'Multi-region checks',
       'SLO calculation',
       'Error budget policy',
       'Burn rate alerts'
     ],
     popular: true,
-    icon: '📈',
+    icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/uptime-slo-monitor',
@@ -925,23 +913,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-11-10',
     customers: 130,
     rating: 4.7,
-    reviews: 64
+    reviews: 64;
   },
-  {
+  
     id: 'webhook-relay-replay',
     name: 'Webhook Relay & Replay',
     tagline: 'Capture, inspect, and replay webhooks with retries and signatures',
     price: '$29',
     period: '/month',
     description: 'Reliable webhook intake with HMAC verification, replay, and dead-letter queues. Perfect for testing and resilience.',
-    features: [
+    features: [;
       'HMAC verification',
       'Retry with backoff',
       'Replay & DLQ',
       'Traffic mirroring'
     ],
     popular: false,
-    icon: '🔁',
+    icon: '',
     color: 'from-sky-600 to-cyan-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/webhook-relay-replay',
@@ -965,23 +953,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-06-30',
     customers: 58,
     rating: 4.6,
-    reviews: 27
+    reviews: 27;
   },
-  {
+  
     id: 'feature-flags-edge',
     name: 'Feature Flags at the Edge',
     tagline: 'Safe rollouts with ultra-low-latency edge evaluation',
     price: '$69',
     period: '/month',
     description: 'Manage feature flags, experiments, and kill switches evaluated at the edge with audit trails and SDKs.',
-    features: [
+    features: [;
       'Edge evaluation',
       'Targeting & experiments',
       'SDKs and audit logs',
       'Kill switches'
     ],
     popular: false,
-    icon: '🚦',
+    icon: '',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/feature-flags-edge',
@@ -1005,23 +993,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-09-01',
     customers: 42,
     rating: 4.5,
-    reviews: 23
+    reviews: 23;
   },
-  {
+  
     id: 'sso-in-a-box',
     name: 'SSO in a Box',
     tagline: 'Turnkey SAML/OIDC SSO with SCIM for your app',
     price: '$79',
     period: '/month',
     description: 'Offer enterprise SSO with SAML/OIDC, JIT provisioning, SCIM user sync, and branding with minimal code.',
-    features: [
+    features: [;
       'SAML/OIDC providers',
       'SCIM provisioning',
       'Branding & JIT',
       'User/role sync'
     ],
     popular: true,
-    icon: '🔐',
+    icon: '',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/sso-in-a-box',
@@ -1045,23 +1033,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-10-30',
     customers: 150,
     rating: 4.8,
-    reviews: 96
+    reviews: 96;
   },
-  {
+  
     id: 'vector-search-starter',
     name: 'Vector Search Starter',
     tagline: 'Production-ready embeddings, vector DB, and semantic search',
     price: '$59',
     period: '/month',
     description: 'Drop-in semantic search with multi-model embeddings, hybrid search, and relevance tuning.',
-    features: [
+    features: [;
       'Multi-model embeddings',
       'Hybrid and rerank search',
       'SDKs and relevance tuning',
       'Observability and quotas'
     ],
     popular: false,
-    icon: '🔎',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/vector-search-starter',
@@ -1074,7 +1062,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['Embeddings', 'FAISS/PGV', 'Rerankers'],
     integrations: ['Pinecone', 'Weaviate', 'Postgres'],
     useCases: ['Product search', 'Knowledge base', 'Recommendations'],
-    roi: 'Increase discovery and conversion 5–12%',
+    roi: 'Increase discovery and conversion 512%',
     competitors: ['Algolia Neural', 'Pinecone serverless'],
     marketSize: '$3B search AI',
     growthRate: '22% CAGR',
@@ -1085,23 +1073,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-08-15',
     customers: 70,
     rating: 4.6,
-    reviews: 33
+    reviews: 33;
   },
-  {
+  
     id: 'data-quality-monitor',
     name: 'Data Quality Monitor',
     tagline: 'Schema drift, null spikes, and anomaly detection for pipelines',
     price: '$69',
     period: '/month',
     description: 'Detect data quality issues in pipelines using rules and ML-based anomaly detection. Alert teams before downstream breakage.',
-    features: [
+    features: [;
       'Schema and contract checks',
       'Null spike detection',
       'Anomaly alerts',
       'Dashboard and lineage hints'
     ],
     popular: false,
-    icon: '🧪',
+    icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/data-quality-monitor',
@@ -1125,23 +1113,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-09-05',
     customers: 39,
     rating: 4.5,
-    reviews: 20
+    reviews: 20;
   },
-  {
+  
     id: 'data-pipeline-observability',
     name: 'Data Pipeline Observability',
     tagline: 'Track pipeline runs, SLAs, and lineage with proactive alerts',
     price: '$79',
     period: '/month',
     description: 'Observe pipeline health and SLAs across tools, with lineage insights and predictive failure detection.',
-    features: [
+    features: [;
       'Run tracking & SLAs',
       'Lineage & impact analysis',
       'Predictive failure alerts',
       'Dashboards & reports'
     ],
     popular: true,
-    icon: '📦',
+    icon: '',
     color: 'from-blue-700 to-indigo-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/data-pipeline-observability',
@@ -1165,23 +1153,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-10-10',
     customers: 44,
     rating: 4.6,
-    reviews: 26
+    reviews: 26;
   },
-  {
+  
     id: 'ai-guardrails-suite',
     name: 'AI Guardrails Suite',
     tagline: 'Prompt policy registry, safety checks, and red team testing',
     price: '$89',
     period: '/month',
     description: 'Centrally manage prompt policies, enforce safety checks, and run red team evaluations across AI apps.',
-    features: [
+    features: [;
       'Central policy registry',
       'Toxicity and PII guards',
       'Eval and red team runs',
       'Audit and exceptions'
     ],
     popular: true,
-    icon: '🧩',
+    icon: '',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/ai-guardrails',
@@ -1205,23 +1193,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-12-01',
     customers: 36,
     rating: 4.5,
-    reviews: 18
+    reviews: 18;
   },
-  {
+  
     id: 'ai-sales-automation',
     name: 'AI Sales Automation',
     tagline: 'Lead scoring, outreach sequences, and meeting prep copilot',
     price: '$99',
     period: '/month',
     description: 'Score leads with behavioral signals, orchestrate multi-channel outreach, and prep reps with account intel summaries.',
-    features: [
+    features: [;
       'Behavioral lead scoring',
       'Email/LinkedIn sequences',
       'Meeting prep copilot',
       'Pipeline analytics'
     ],
     popular: false,
-    icon: '🎯',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/ai-sales-automation',
@@ -1234,7 +1222,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['LLM APIs', 'CRM APIs'],
     integrations: ['Salesforce', 'HubSpot'],
     useCases: ['Pipeline growth', 'Outbound automation'],
-    roi: 'Increase qualified meetings by 20–35%',
+    roi: 'Increase qualified meetings by 2035%',
     competitors: ['Apollo', 'Outreach'],
     marketSize: '$4B sales tech',
     growthRate: '18% CAGR',
@@ -1245,23 +1233,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-08-28',
     customers: 66,
     rating: 4.5,
-    reviews: 31
+    reviews: 31;
   },
-  {
+  
     id: 'synthetic-data-generator',
     name: 'Synthetic Data Generator',
     tagline: 'Privacy-safe synthetic data for analytics, testing, and ML',
     price: '$119',
     period: '/month',
     description: 'Generate high-utility synthetic tabular, time-series, and text datasets with differential privacy and utility/drift reports. Ideal for analytics, product testing, and ML model development without exposing sensitive data.',
-    features: [
+    features: [;
       'Differential privacy & PII masking',
       'Tabular/time-series/text modes',
       'Utility and drift reports',
       'REST API & SDKs (Python/JS)'
     ],
     popular: true,
-    icon: '🧪',
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/synthetic-data-generator',
@@ -1285,23 +1273,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-01',
     customers: 25,
     rating: 4.6,
-    reviews: 12
+    reviews: 12;
   },
-  {
+  
     id: 'email-parsing-routing-api',
     name: 'Email Parsing & Routing API',
     tagline: 'Inbound email to structured events with attachments and DLQ',
     price: '$39',
     period: '/month',
     description: 'Convert inbound emails into structured JSON with attachments, signatures stripped, and webhook delivery with retries, DLQ, and replay.',
-    features: [
+    features: [;
       'Signature stripping & normalization',
       'Attachment handling & virus scan',
       'Webhook delivery with retries & DLQ',
       'Inspector and secure replays'
     ],
     popular: false,
-    icon: '📥',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/email-parsing-routing-api',
@@ -1325,23 +1313,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-10',
     customers: 18,
     rating: 4.5,
-    reviews: 9
+    reviews: 9;
   },
-  {
+  
     id: 'kubernetes-cost-analyzer',
     name: 'Kubernetes Cost Analyzer',
-    tagline: 'Allocation, rightsizing, and bin‑packing insights by team/namespace',
+    tagline: 'Allocation, rightsizing, and binpacking insights by team/namespace',
     price: '$99',
     period: '/month',
-    description: 'Analyze workload cost allocation, detect overprovisioning, and generate bin‑packing suggestions with chargeback reports and FinOps dashboards.',
-    features: [
+    description: 'Analyze workload cost allocation, detect overprovisioning, and generate binpacking suggestions with chargeback reports and FinOps dashboards.',
+    features: [;
       'Allocation by namespace/team',
       'Requests/limits advisor',
-      'Bin‑packing recommendations',
+      'Binpacking recommendations',
       'Chargeback/showback reports'
     ],
     popular: true,
-    icon: '☸️',
+    icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/kubernetes-cost-analyzer',
@@ -1354,7 +1342,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['Prometheus', 'Kube-state-metrics', 'Grafana'],
     integrations: ['Datadog', 'New Relic', 'Slack'],
     useCases: ['Rightsizing', 'Budget governance'],
-    roi: 'Save 10–25% cluster spend in 60 days',
+    roi: 'Save 1025% cluster spend in 60 days',
     competitors: ['Kubecost', 'CAST AI'],
     marketSize: '$2B K8s mgmt',
     growthRate: '20% CAGR',
@@ -1365,30 +1353,30 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-05',
     customers: 22,
     rating: 4.6,
-    reviews: 11
+    reviews: 11;
   },
-  {
+  
     id: 'cloud-landing-zone',
     name: 'Cloud Landing Zone Builder',
     tagline: 'Secure multi-account AWS/Azure/GCP foundations via GitOps',
     price: '$349',
     period: '/month',
     description: 'Blueprint your cloud orgs with guardrails, IAM, networks, audit trails, and budgets. Delivered as code with repeatable GitOps.',
-    features: [
+    features: [;
       'Org setup & SCPs/IAM policies',
       'VPC/VNet baselines',
       'Audit logging & SIEM hooks',
       'Budgets & anomaly alerts'
     ],
     popular: true,
-    icon: '☁️',
+    icon: '',
     color: 'from-sky-600 to-blue-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/cloud-landing-zone',
     marketPosition: 'Faster time-to-compliance vs. bespoke landing zones.',
     targetAudience: 'Platform, security, compliance',
     trialDays: 7,
-    setupTime: '3–5 days',
+    setupTime: '35 days',
     category: 'Cloud & Infrastructure',
     realService: true,
     technology: ['Terraform', 'Guardrails', 'CI/CD'],
@@ -1405,23 +1393,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-01-22',
     customers: 14,
     rating: 4.7,
-    reviews: 8
+    reviews: 8;
   },
-  {
+  
     id: 'security-headers-scanner',
     name: 'Security Headers Scanner',
     tagline: 'CSP, HSTS, and cookie flags auditing with fix guidance',
     price: '$19',
     period: '/month',
     description: 'Continuously scan web properties for security headers and cookie attributes with actionable diffs and CI annotations.',
-    features: [
+    features: [;
       'CSP/HSTS/X-Frame-Options checks',
       'Cookie flags & SameSite audit',
       'PR annotations & diffs',
       'Alerting & weekly reports'
     ],
     popular: false,
-    icon: '🛡️',
+    icon: '',
     color: 'from-rose-600 to-fuchsia-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/security-headers-scanner',
@@ -1445,23 +1433,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-12',
     customers: 10,
     rating: 4.5,
-    reviews: 6
+    reviews: 6;
   },
-  {
+  
     id: 'frontend-bundle-analyzer-ci',
     name: 'Frontend Bundle Analyzer CI',
     tagline: 'Budgets, PR diffs, and insights for JS/CSS bundles',
     price: '$29',
     period: '/month',
     description: 'Track bundle budgets and surface PR diffs with suggestions for code splitting, image optimization, and dependency pruning.',
-    features: [
+    features: [;
       'Budget enforcement',
       'PR diffs & flamecharts',
       'Actionable suggestions',
       'Dashboards & trends'
     ],
     popular: false,
-    icon: '📦',
+    icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/frontend-bundle-analyzer-ci',
@@ -1485,23 +1473,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-01-30',
     customers: 12,
     rating: 4.5,
-    reviews: 7
+    reviews: 7;
   },
-  {
+  
     id: 's3-to-snowflake-ingestion',
     name: 'S3 to Snowflake Ingestion',
     tagline: 'Reliable file ingestion, schema mapping, and backfills',
     price: '$59',
     period: '/month',
     description: 'Automate ingestion from S3 to Snowflake with schema inference, partitioning, historical backfills, and monitoring.',
-    features: [
+    features: [;
       'Schema inference & mapping',
       'Partitioning & upserts',
       'Backfills & reprocess',
       'Lineage & monitoring'
     ],
     popular: false,
-    icon: '🧊',
+    icon: '',
     color: 'from-blue-700 to-indigo-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/s3-to-snowflake-ingestion',
@@ -1525,23 +1513,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-08',
     customers: 9,
     rating: 4.4,
-    reviews: 5
+    reviews: 5;
   },
-  {
+  
     id: 'visual-regression-monitor',
     name: 'Visual Regression Monitor',
     tagline: 'Screenshot diffs, thresholds, and CI annotations',
     price: '$39',
     period: '/month',
     description: 'Catch visual regressions with screenshot comparisons, tolerances, and smart masking integrated into CI and PRs.',
-    features: [
+    features: [;
       'Smart masking & thresholds',
       'PR/CI annotations',
       'Baselines & environments',
       'Alerting & history'
     ],
     popular: false,
-    icon: '🖼️',
+    icon: '',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/visual-regression-monitor',
@@ -1565,23 +1553,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-03',
     customers: 15,
     rating: 4.5,
-    reviews: 7
+    reviews: 7;
   },
-  {
+  
     id: 'data-masking-proxy',
     name: 'Data Masking Proxy',
     tagline: 'PII/PHI tokenization for lower environments and analytics',
     price: '$89',
     period: '/month',
     description: 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.',
-    features: [
+    features: [;
       'Tokenization & masking policies',
       'Format-preserving encryption',
       'Schema-aware transforms',
       'Audit logs & approvals'
     ],
     popular: true,
-    icon: '🗝️',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/data-masking-proxy',
@@ -1605,23 +1593,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-06',
     customers: 13,
     rating: 4.6,
-    reviews: 6
+    reviews: 6;
   },
-  {
+  
     id: 'ai-meeting-notes-agent',
     name: 'AI Meeting Notes Agent',
     tagline: 'Recordings, action items, and CRM/PM sync',
     price: '$69',
     period: '/month',
     description: 'Transcribe meetings, extract decisions and action items, and sync summaries to CRM and project management tools.',
-    features: [
+    features: [;
       'Accurate transcripts',
       'Action items & owners',
       'Summaries & highlights',
       'CRM/PM sync'
     ],
     popular: true,
-    icon: '🎧',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-meeting-notes-agent',
@@ -1645,23 +1633,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-04',
     customers: 28,
     rating: 4.6,
-    reviews: 13
+    reviews: 13;
   },
-  {
+  
     id: 'compliance-policy-as-code',
     name: 'Compliance Policy as Code',
     tagline: 'OPA/Rego and cloud policies with CI gates and reports',
     price: '$129',
     period: '/month',
     description: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.',
-    features: [
+    features: [;
       'Policy packs (SOC2, ISO)',
       'CI gates & PR comments',
       'Evidence reports',
       'Drift detection'
     ],
     popular: true,
-    icon: '📜',
+    icon: '',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/compliance-policy-as-code',
@@ -1685,16 +1673,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-07',
     customers: 17,
     rating: 4.6,
-    reviews: 8
+    reviews: 8;
   },
-  {
+  
     id: 'pdf-render-api',
     name: 'PDF Render API',
     tagline: 'Reliable HTML-to-PDF at scale with templates, assets and callbacks',
     price: '$29',
     period: '/month',
     description: 'Generate pixel-perfect PDFs from HTML/URL with font embedding, asset hosting, async callbacks and storage destinations. Great for invoices, contracts and reports.',
-    features: [
+    features: [;
       'Chromium-based renderer with fonts',
       'Templates and asset hosting',
       'Async rendering and callbacks',
@@ -1703,7 +1691,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Usage analytics and quotas'
     ],
     popular: true,
-    icon: '📄',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/services/pdf-render-api',
@@ -1727,16 +1715,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-01',
     customers: 75,
     rating: 4.7,
-    reviews: 28
+    reviews: 28;
   },
-  {
+  
     id: 'invoice-ocr-extraction-api',
     name: 'Invoice OCR & Extraction API',
     tagline: 'Parse invoices/receipts to structured JSON with high accuracy',
     price: '$69',
     period: '/month',
     description: 'Extract vendors, line items, totals, taxes and dates from invoices and receipts. Includes validation rules, human-in-the-loop review and export to accounting systems.',
-    features: [
+    features: [;
       'Multi-language OCR (Tesseract/Cloud OCR)',
       'Template-free field detection',
       'Confidence scores and validation rules',
@@ -1745,7 +1733,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Native integrations (Xero/QuickBooks)'
     ],
     popular: true,
-    icon: '🧾',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/invoice-ocr-extraction-api',
@@ -1758,7 +1746,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['Python', 'Tesseract/Cloud Vision', 'FastAPI/Node', 'Postgres'],
     integrations: ['Xero', 'QuickBooks', 'Webhook', 'S3'],
     useCases: ['AP automation', 'Expense processing', 'Reconciliation'],
-    roi: 'Reduce manual data entry by 80–95%',
+    roi: 'Reduce manual data entry by 8095%',
     competitors: ['Veryfi', 'Rossum', 'Nanonets'],
     marketSize: '$1B+ document AI',
     growthRate: '32% CAGR',
@@ -1769,16 +1757,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-15',
     customers: 29,
     rating: 4.6,
-    reviews: 9
+    reviews: 9;
   },
-  {
+  
     id: 'log-archive-search',
     name: 'Log Archive & Search',
     tagline: 'Hot-warm-cold log storage with fast search and lifecycle controls',
     price: '$79',
     period: '/month',
     description: 'Ingest application logs with dynamic sampling, hot/warm retention tiers and S3 archival. Query recent data quickly and archive the rest cheaply.',
-    features: [
+    features: [;
       'Ingestion with dynamic sampling',
       'Hot/warm/cold retention policies',
       'S3-compatible archival',
@@ -1787,7 +1775,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'PII redaction and tokenization'
     ],
     popular: false,
-    icon: '🪵',
+    icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/log-archive-search',
@@ -1800,7 +1788,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['Vector/FluentBit', 'ClickHouse/OpenSearch', 'S3', 'Node/Go'],
     integrations: ['Grafana', 'Promtail', 'CloudWatch', 'Stackdriver'],
     useCases: ['Incident triage', 'Audit retention', 'Cost control'],
-    roi: 'Cut log bills by 40–70% with tiered retention',
+    roi: 'Cut log bills by 4070% with tiered retention',
     competitors: ['Datadog Logs', 'Splunk', 'Elastic Cloud'],
     marketSize: '$15B+ log analytics',
     growthRate: '18% CAGR',
@@ -1811,16 +1799,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-20',
     customers: 21,
     rating: 4.5,
-    reviews: 7
+    reviews: 7;
   },
-  {
+  
     id: 'gdpr-privacyops-suite',
     name: 'GDPR PrivacyOps Suite',
     tagline: 'Automate DSAR, consent and retention with audit-ready workflows',
     price: '$249',
     period: '/month',
     description: 'End-to-end privacy operations covering data subject access requests, consent management, data mapping, and retention policies with audit trails.',
-    features: [
+    features: [;
       'Automated DSAR intake and processing',
       'Consent and preference center SDK',
       'Data mapping across SaaS and data stores',
@@ -1828,7 +1816,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Evidence export for auditors'
     ],
     popular: true,
-    icon: '🛡️',
+    icon: '',
     color: 'from-purple-600 to-fuchsia-700',
     textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/gdpr-privacyops',
@@ -1852,16 +1840,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-03-01',
     customers: 18,
     rating: 4.6,
-    reviews: 11
+    reviews: 11;
   },
-  {
+  
     id: 'ai-code-review-copilot',
     name: 'AI Code Review Copilot',
     tagline: 'Static+LLM reviews with custom rules, SARIF, and fix suggestions',
     price: '$129',
     period: '/month',
     description: 'Blends static analysis with LLM reasoning to flag issues, suggest fixes, enforce architectural rules, and output SARIF to your CI.',
-    features: [
+    features: [;
       'Language-aware static checks',
       'LLM reasoning with guardrails',
       'Custom policy rules (OPA-style)',
@@ -1869,7 +1857,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Risk heatmaps and trends'
     ],
     popular: false,
-    icon: '🧑‍💻',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-code-review-copilot',
@@ -1893,23 +1881,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-15',
     customers: 42,
     rating: 4.5,
-    reviews: 29
+    reviews: 29;
   },
-  {
+  
     id: 'm365-security-hardening-kit',
     name: 'M365 Security Hardening Kit',
     tagline: 'Turnkey baseline hardening, continuous drift detection, and auto-remediation',
     price: '$199',
     period: '/month',
     description: 'Enforce recommended security baselines in Microsoft 365 and Azure AD with drift monitoring, alerting, and optional auto-remediation.',
-    features: [
+    features: [;
       'Secure baseline as code',
       'Misconfiguration detection',
       'Auto-remediation playbooks',
       'Executive reporting'
     ],
     popular: true,
-    icon: '🔒',
+    icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/m365-security-hardening',
@@ -1933,23 +1921,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-03-10',
     customers: 15,
     rating: 4.4,
-    reviews: 8
+    reviews: 8;
   },
-  {
+  
     id: 'ai-customer-qa-benchmark',
     name: 'AI Customer QA Benchmark',
     tagline: 'Continuously test your AI agents with real-world scripts and red teams',
     price: '$99',
     period: '/month',
     description: 'Scenario-based QA and red-teaming for AI agents and chatbots with regression baselines, hallucination checks, and compliance scenarios.',
-    features: [
+    features: [;
       'Scripted and generative test suites',
       'Hallucination and toxicity checks',
       'RAG source attribution validation',
       'Compliance and brand guardrails'
     ],
     popular: false,
-    icon: '🔬',
+    icon: '',
     color: 'from-indigo-600 to-violet-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/ai-customer-qa-benchmark',
@@ -1973,16 +1961,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-01-30',
     customers: 22,
     rating: 4.3,
-    reviews: 13
+    reviews: 13;
   },
-  {
+  
     id: 'quantum-ai-fusion-platform',
     name: 'Quantum AI Fusion Platform',
     tagline: 'Quantum computing meets AI for breakthrough insights',
     price: '$299',
     period: '/month',
     description: 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.',
-    features: [
+    features: [;
       'Quantum-inspired algorithms',
       'AI model acceleration',
       'Optimization solvers',
@@ -1990,7 +1978,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'API integration'
     ],
     popular: true,
-    icon: '⚛️',
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/quantum-ai-fusion-platform',
@@ -2014,16 +2002,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-08-01',
     customers: 15,
     rating: 4.8,
-    reviews: 8
+    reviews: 8;
   },
-  {
+  
     id: 'ai-cybersecurity-sentinel',
     name: 'AI Cybersecurity Sentinel',
     tagline: 'Intelligent threat detection and response',
     price: '$199',
     period: '/month',
     description: 'AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
-    features: [
+    features: [;
       'AI threat detection',
       'Automated incident response',
       'Behavioral analytics',
@@ -2031,7 +2019,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Compliance reporting'
     ],
     popular: true,
-    icon: '🛡️',
+    icon: '',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-sentinel',
@@ -2055,16 +2043,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-07-15',
     customers: 45,
     rating: 4.7,
-    reviews: 32
+    reviews: 32;
   },
-  {
+  
     id: 'autonomous-devops-orchestrator',
     name: 'Autonomous DevOps Orchestrator',
     tagline: 'Self-healing infrastructure and deployment automation',
     price: '$159',
     period: '/month',
     description: 'Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance.',
-    features: [
+    features: [;
       'Self-healing infrastructure',
       'Intelligent deployment',
       'Performance optimization',
@@ -2072,7 +2060,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Multi-cloud orchestration'
     ],
     popular: false,
-    icon: '🤖',
+    icon: '',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/autonomous-devops-orchestrator',
@@ -2096,16 +2084,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-06-20',
     customers: 28,
     rating: 4.6,
-    reviews: 19
+    reviews: 19;
   },
-  {
+  
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise-grade blockchain solutions for business',
     price: '$399',
     period: '/month',
     description: 'Comprehensive blockchain platform enabling enterprises to build, deploy, and manage blockchain applications with enterprise features.',
-    features: [
+    features: [;
       'Multi-chain support',
       'Smart contract development',
       'Enterprise security',
@@ -2113,7 +2101,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Integration APIs'
     ],
     popular: true,
-    icon: '🔗',
+    icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/blockchain-enterprise-platform',
@@ -2137,16 +2125,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-05-10',
     customers: 22,
     rating: 4.5,
-    reviews: 15
+    reviews: 15;
   },
-  {
+  
     id: 'ai-content-intelligence-suite',
     name: 'AI Content Intelligence Suite',
     tagline: 'Intelligent content creation and optimization',
     price: '$89',
     period: '/month',
     description: 'AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO performance.',
-    features: [
+    features: [;
       'AI content generation',
       'SEO optimization',
       'Content analytics',
@@ -2154,7 +2142,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Brand voice consistency'
     ],
     popular: false,
-    icon: '✍️',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/ai-content-intelligence-suite',
@@ -2178,16 +2166,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-04-25',
     customers: 67,
     rating: 4.4,
-    reviews: 41
+    reviews: 41;
   },
-  {
+  
     id: 'iot-enterprise-platform',
     name: 'IoT Enterprise Platform',
     tagline: 'Scalable IoT infrastructure for enterprise',
     price: '$249',
     period: '/month',
     description: 'Enterprise IoT platform providing device management, data collection, analytics, and automation for large-scale IoT deployments.',
-    features: [
+    features: [;
       'Smartphone management',
       'Real-time analytics',
       'Data visualization',
@@ -2195,7 +2183,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Security & compliance'
     ],
     popular: true,
-    icon: '🌐',
+    icon: '',
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/iot-enterprise-platform',
@@ -2219,16 +2207,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-03-15',
     customers: 38,
     rating: 4.6,
-    reviews: 25
+    reviews: 25;
   },
-  {
+  
     id: 'ai-customer-success-platform',
     name: 'AI Customer Success Platform',
     tagline: 'Intelligent customer success automation',
     price: '$129',
     period: '/month',
     description: 'AI-powered customer success platform that predicts churn, automates engagement, and optimizes customer lifecycle management.',
-    features: [
+    features: [;
       'Churn prediction',
       'Automated engagement',
       'Customer health scoring',
@@ -2236,7 +2224,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Analytics dashboard'
     ],
     popular: true,
-    icon: '🎯',
+    icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/ai-customer-success-platform',
@@ -2260,16 +2248,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-20',
     customers: 52,
     rating: 4.7,
-    reviews: 38
+    reviews: 38;
   },
-  {
+  
     id: 'quantum-cryptography-suite',
     name: 'Quantum Cryptography Suite',
     tagline: 'Future-proof cryptography for quantum era',
     price: '$179',
     period: '/month',
     description: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.',
-    features: [
+    features: [;
       'Post-quantum cryptography',
       'Quantum key distribution',
       'Hybrid encryption',
@@ -2277,7 +2265,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Compliance standards'
     ],
     popular: false,
-    icon: '🔐',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/quantum-cryptography-suite',
@@ -2301,16 +2289,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-01-15',
     customers: 18,
     rating: 4.8,
-    reviews: 12
+    reviews: 12;
   },
-  {
+  
     id: 'ai-supply-chain-optimizer',
     name: 'AI Supply Chain Optimizer',
     tagline: 'Intelligent supply chain optimization and forecasting',
     price: '$199',
     period: '/month',
     description: 'AI-powered supply chain platform that optimizes inventory, predicts demand, and automates procurement decisions.',
-    features: [
+    features: [;
       'Demand forecasting',
       'Inventory optimization',
       'Procurement automation',
@@ -2318,7 +2306,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Real-time analytics'
     ],
     popular: true,
-    icon: '📦',
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimizer',
@@ -2342,16 +2330,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-12-01',
     customers: 41,
     rating: 4.6,
-    reviews: 28
+    reviews: 28;
   },
-  {
+  
     id: 'autonomous-financial-advisor',
     name: 'Autonomous Financial Advisor',
     tagline: 'AI-powered financial planning and investment advice',
     price: '$149',
     period: '/month',
     description: 'Intelligent financial advisory platform that provides personalized investment advice, portfolio optimization, and financial planning.',
-    features: [
+    features: [;
       'Portfolio optimization',
       'Risk assessment',
       'Tax optimization',
@@ -2359,7 +2347,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Real-time monitoring'
     ],
     popular: true,
-    icon: '💰',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/autonomous-financial-advisor',
@@ -2383,16 +2371,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-11-15',
     customers: 35,
     rating: 4.7,
-    reviews: 22
+    reviews: 22;
   },
-  {
+  
     id: 'ai-consciousness-evolution-platform',
     name: 'AI Consciousness Evolution Platform',
     tagline: 'Advanced AI consciousness and emotional intelligence',
     price: '$599',
     period: '/month',
     description: 'Revolutionary platform for developing AI systems with advanced consciousness, emotional intelligence, and creative capabilities.',
-    features: [
+    features: [;
       'Consciousness simulation',
       'Emotional intelligence',
       'Creative problem solving',
@@ -2400,7 +2388,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Ethical decision making'
     ],
     popular: true,
-    icon: '🧠',
+    icon: '',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ai-consciousness-evolution-platform',
@@ -2424,16 +2412,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-09-01',
     customers: 8,
     rating: 4.9,
-    reviews: 5
+    reviews: 5;
   },
-  {
+  
     id: 'quantum-space-technology-suite',
     name: 'Quantum Space Technology Suite',
     tagline: 'Quantum computing for space exploration and satellite operations',
     price: '$799',
     period: '/month',
     description: 'Advanced quantum computing platform optimized for space applications, satellite communications, and orbital calculations.',
-    features: [
+    features: [;
       'Quantum orbital calculations',
       'Satellite optimization',
       'Space weather prediction',
@@ -2441,7 +2429,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Mission planning'
     ],
     popular: false,
-    icon: '🚀',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/quantum-space-technology-suite',
@@ -2465,16 +2453,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-10-01',
     customers: 12,
     rating: 4.7,
-    reviews: 8
+    reviews: 8;
   },
-  {
+  
     id: 'autonomous-manufacturing-ai',
     name: 'Autonomous Manufacturing AI',
     tagline: 'Self-optimizing manufacturing with AI and robotics',
     price: '$349',
     period: '/month',
     description: 'Intelligent manufacturing platform that autonomously optimizes production processes, quality control, and supply chain management.',
-    features: [
+    features: [;
       'Production optimization',
       'Quality control AI',
       'Predictive maintenance',
@@ -2482,7 +2470,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Real-time analytics'
     ],
     popular: true,
-    icon: '🏭',
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/autonomous-manufacturing-ai',
@@ -2506,16 +2494,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-08-15',
     customers: 31,
     rating: 4.6,
-    reviews: 24
+    reviews: 24;
   },
-  {
+  
     id: 'biotech-ai-research-platform',
     name: 'Biotech AI Research Platform',
     tagline: 'AI-powered biotechnology research and drug discovery',
     price: '$499',
     period: '/month',
     description: 'Advanced AI platform for biotechnology research, drug discovery, genetic analysis, and personalized medicine development.',
-    features: [
+    features: [;
       'Drug discovery AI',
       'Genetic analysis',
       'Protein folding',
@@ -2523,7 +2511,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Personalized medicine'
     ],
     popular: true,
-    icon: '🧬',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/biotech-ai-research-platform',
@@ -2547,16 +2535,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-07-20',
     customers: 19,
     rating: 4.8,
-    reviews: 15
+    reviews: 15;
   },
-  {
+  
     id: 'metaverse-enterprise-platform',
     name: 'Metaverse Enterprise Platform',
     tagline: 'Enterprise metaverse solutions for business collaboration',
     price: '$299',
     period: '/month',
     description: 'Comprehensive metaverse platform enabling enterprises to create virtual workspaces, conduct meetings, and collaborate in immersive 3D environments.',
-    features: [
+    features: [;
       'Virtual workspaces',
       '3D collaboration tools',
       'Avatar customization',
@@ -2564,7 +2552,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Integration APIs'
     ],
     popular: false,
-    icon: '🌐',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/metaverse-enterprise-platform',
@@ -2588,16 +2576,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-06-25',
     customers: 26,
     rating: 4.5,
-    reviews: 18
+    reviews: 18;
   },
-  {
+  
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum computing for high-frequency trading and risk management',
     price: '$899',
     period: '/month',
     description: 'Advanced quantum computing platform optimized for financial trading, risk assessment, and portfolio optimization with quantum algorithms.',
-    features: [
+    features: [;
       'Quantum trading algorithms',
       'Risk assessment',
       'Portfolio optimization',
@@ -2605,7 +2593,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'High-frequency trading'
     ],
     popular: true,
-    icon: '💹',
+    icon: '',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform',
@@ -2629,16 +2617,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-09-15',
     customers: 15,
     rating: 4.9,
-    reviews: 12
+    reviews: 12;
   },
-  {
+  
     id: 'ai-autonomous-vehicle-platform',
     name: 'AI Autonomous Vehicle Platform',
     tagline: 'Intelligent autonomous vehicle management and optimization',
     price: '$449',
     period: '/month',
     description: 'AI-powered platform for managing autonomous vehicle fleets, optimizing routes, and ensuring safety in autonomous transportation systems.',
-    features: [
+    features: [;
       'Fleet management',
       'Route optimization',
       'Safety monitoring',
@@ -2646,7 +2634,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Real-time tracking'
     ],
     popular: false,
-    icon: '🚗',
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/ai-autonomous-vehicle-platform',
@@ -2670,16 +2658,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-07-30',
     customers: 22,
     rating: 4.6,
-    reviews: 16
+    reviews: 16;
   },
-  {
+  
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Quantum-resistant cybersecurity for the post-quantum era',
     price: '$379',
     period: '/month',
     description: 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.',
-    features: [
+    features: [;
       'Post-quantum cryptography',
       'Quantum-resistant algorithms',
       'Threat detection',
@@ -2687,7 +2675,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Migration tools'
     ],
     popular: true,
-    icon: '🔒',
+    icon: '',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-suite',
@@ -2711,16 +2699,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-08-25',
     customers: 28,
     rating: 4.7,
-    reviews: 20
+    reviews: 20;
   },
-  {
+  
     id: 'enterprise-data-governance-platform',
     name: 'Enterprise Data Governance Platform',
     tagline: 'Comprehensive data governance and compliance management',
     price: '$279',
     period: '/month',
     description: 'Enterprise-grade data governance platform that ensures data quality, compliance, and security across all organizational data assets.',
-    features: [
+    features: [;
       'Data quality management',
       'Compliance monitoring',
       'Data lineage tracking',
@@ -2728,7 +2716,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Audit reporting'
     ],
     popular: false,
-    icon: '📊',
+    icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
     link: 'https://ziontechgroup.com/services/enterprise-data-governance-platform',
@@ -2752,16 +2740,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-05-20',
     customers: 34,
     rating: 4.5,
-    reviews: 22
+    reviews: 22;
   },
-  {
+  
     id: 'ai-powered-hr-analytics-suite',
     name: 'AI-Powered HR Analytics Suite',
     tagline: 'Intelligent HR analytics and workforce optimization',
     price: '$189',
     period: '/month',
     description: 'AI-driven HR analytics platform that provides insights into workforce performance, retention, and optimization strategies.',
-    features: [
+    features: [;
       'Workforce analytics',
       'Retention prediction',
       'Performance insights',
@@ -2769,7 +2757,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Recruitment optimization'
     ],
     popular: true,
-    icon: '👥',
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/ai-powered-hr-analytics-suite',
@@ -2793,16 +2781,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-04-15',
     customers: 47,
     rating: 4.6,
-    reviews: 31
+    reviews: 31;
   },
-  {
+  
     id: 'cloud-migration-automation-platform',
     name: 'Cloud Migration Automation Platform',
     tagline: 'Automated cloud migration and optimization',
     price: '$399',
     period: '/month',
     description: 'Intelligent platform that automates cloud migration processes, optimizes costs, and ensures smooth transitions to cloud infrastructure.',
-    features: [
+    features: [;
       'Migration automation',
       'Cost optimization',
       'Performance monitoring',
@@ -2810,7 +2798,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Multi-cloud support'
     ],
     popular: true,
-    icon: '☁️',
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/cloud-migration-automation-platform',
@@ -2834,16 +2822,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-03-25',
     customers: 29,
     rating: 4.7,
-    reviews: 19
+    reviews: 19;
   },
-  {
+  
     id: 'digital-transformation-consulting',
     name: 'Digital Transformation Consulting',
     tagline: 'Strategic digital transformation and change management',
     price: '$1500',
     period: '/day',
     description: 'Expert consulting services for digital transformation, helping organizations navigate technological change and achieve digital maturity.',
-    features: [
+    features: [;
       'Strategy development',
       'Change management',
       'Technology assessment',
@@ -2851,7 +2839,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Implementation support'
     ],
     popular: false,
-    icon: '🔄',
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-300',
     link: 'https://ziontechgroup.com/services/digital-transformation-consulting',
@@ -2875,16 +2863,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-02-10',
     customers: 12,
     rating: 4.9,
-    reviews: 8
+    reviews: 8;
   },
-  {
+  
     id: 'ai-ethics-compliance-framework',
     name: 'AI Ethics & Compliance Framework',
     tagline: 'Ethical AI development and compliance management',
     price: '$249',
     period: '/month',
     description: 'Comprehensive framework for ensuring ethical AI development, compliance with regulations, and responsible AI deployment.',
-    features: [
+    features: [;
       'Ethics guidelines',
       'Compliance monitoring',
       'Bias detection',
@@ -2892,7 +2880,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Audit frameworks'
     ],
     popular: true,
-    icon: '⚖️',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/ai-ethics-compliance-framework',
@@ -2916,16 +2904,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2025-01-20',
     customers: 18,
     rating: 4.8,
-    reviews: 12
+    reviews: 12;
   },
-  {
+  
     id: 'edge-computing-optimization-platform',
     name: 'Edge Computing Optimization Platform',
     tagline: 'Intelligent edge computing and IoT optimization',
     price: '$199',
     period: '/month',
     description: 'Advanced platform for optimizing edge computing deployments, managing IoT devices, and reducing latency in distributed systems.',
-    features: [
+    features: [;
       'Edge optimization',
       'IoT management',
       'Latency reduction',
@@ -2933,7 +2921,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Performance monitoring'
     ],
     popular: false,
-    icon: '🌐',
+    icon: '',
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/edge-computing-optimization-platform',
@@ -2957,16 +2945,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-12-15',
     customers: 25,
     rating: 4.5,
-    reviews: 17
+    reviews: 17;
   },
-  {
+  
     id: 'zero-trust-security-implementation',
     name: 'Zero Trust Security Implementation',
     tagline: 'Comprehensive zero trust security framework',
     price: '$329',
     period: '/month',
     description: 'Complete zero trust security implementation platform that provides identity verification, network segmentation, and continuous monitoring.',
-    features: [
+    features: [;
       'Identity verification',
       'Network segmentation',
       'Continuous monitoring',
@@ -2974,7 +2962,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Compliance reporting'
     ],
     popular: true,
-    icon: '🔐',
+    icon: '',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/zero-trust-security-implementation',
@@ -2998,16 +2986,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-11-25',
     customers: 36,
     rating: 4.7,
-    reviews: 25
+    reviews: 25;
   },
-  {
+  
     id: 'ai-powered-customer-experience-platform',
     name: 'AI-Powered Customer Experience Platform',
     tagline: 'Intelligent customer experience optimization',
     price: '$179',
     period: '/month',
     description: 'AI-driven platform that optimizes customer experiences across all touchpoints, providing personalized interactions and predictive insights.',
-    features: [
+    features: [;
       'Personalization engine',
       'Customer journey mapping',
       'Predictive analytics',
@@ -3015,7 +3003,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'Experience optimization'
     ],
     popular: true,
-    icon: '🎯',
+    icon: '',
     color: 'from-pink-600 to-purple-700',
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/services/ai-powered-customer-experience-platform',
@@ -3039,23 +3027,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     launchDate: '2024-10-30',
     customers: 53,
     rating: 4.6,
-    reviews: 38
+    reviews: 38;
   },
-  {
+  
     id: 'ai-sales-agent-suite',
     name: 'AI Sales Agent Suite',
     tagline: '24/7 multi-channel outbound with human-like conversations',
     price: '$249',
     period: '/month',
     description: 'Autonomous AI agents that prospect, qualify, and book meetings across email, SMS, and LinkedIn with brand-safe guardrails.',
-    features: [
+    features: [;
       'Multi-channel outreach (email/SMS/LinkedIn)',
       'Lead enrichment and scoring',
       'Calendar booking and routing',
       'Compliance and opt-out handling'
     ],
     popular: true,
-    icon: '🤖',
+    icon: '',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/ai-sales-agent-suite',
@@ -3068,12 +3056,12 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     technology: ['LLMs', 'RAG', 'Email APIs', 'LinkedIn automation'],
     integrations: ['HubSpot', 'Salesforce', 'Pipedrive', 'Outreach'],
     useCases: ['Outbound prospecting', 'Lead qualification', 'Meeting booking'],
-    roi: '2–4x meetings per rep',
+    roi: '24x meetings per rep',
     competitors: ['Regie.ai', 'Lyne.ai'],
     marketSize: '$12B sales tech',
     growthRate: '19% CAGR',
     variant: 'agentic-suite',
-    contactInfo: {
+    contactInfo: any;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
@@ -3086,7 +3074,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
 
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];

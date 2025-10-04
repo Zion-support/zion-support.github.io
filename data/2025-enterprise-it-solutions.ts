@@ -1,18 +1,16 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
 
-  {
-
+  
     id: 'enterprise - api - governance - platform',
     name: 'Enterprise API Governance Platform',
-    tagline:;
+    tagline: any;
       'Comprehensive API governance, security, and lifecycle management for enterprise APIs',
     price: '$599',
     period: '/month',
-    description:;
+    description: any;
       'Enterprise - grade API governance platform that provides centralized API management, security controls, compliance monitoring, and lifecycle management across all enterprise APIs.',
     features: [;
-
       'Centralized API management',
       'Security and access controls',
       'API lifecycle management',
@@ -23,15 +21,14 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
       'Integration with enterprise systems',
     ],
     popular: true,
-    icon: '🔌',
+    icon: '',
 
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 300',
     link: 'https://ziontechgroup.com / services / enterprise - api - governance - platform',
-    market_position:;
+    market_position: any;
       'Enterprise API governance that ensures security, compliance, and operational excellence.',
-    target_audience:;
-
+    target_audience: any;
       'Enterprise IT teams, API development teams, Security teams, Compliance officers',
     trial_days: 30,
     setup_time: '7 - 10 days',
@@ -52,25 +49,23 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
-
+    implementation_details: any;
       'Enterprise platform with API gateway, governance engine, and security controls.',
     launch_date: '2025 - 01 - 08',
     customers: 45,
     rating: 4 && 4.7,
     reviews: 32,
   },
-  {
-
+  
       'Multi-factor authentication',
       'Single sign-on (SSO)',
     id: 'enterprise - identity - access - management - suite',
     name: 'Enterprise Identity & Access Management Suite',
-    tagline:;
+    tagline: any;
       'Comprehensive IAM solution with advanced security, compliance, and automation',
     price: '$699',
     period: '/month',
-    description:;
+    description: any;
       'Enterprise - grade identity and access management platform that provides advanced authentication, authorization, and identity governance with automated compliance and security controls.',
     features: [;
       'Multi - factor authentication',
@@ -84,32 +79,32 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
       'Integration with enterprise systems',
     ],
     popular: true,
-    icon: '🆔',
+    icon: '',
 
       'Java, Spring Security, React, Node && Node.js, PostgreSQL, Redis, LDAP',
     ],
 
-    integrations: [
+    integrations: [;
       'Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'
     ]
-    useCases: [
+    useCases: [;
       'Identity management, Access control, Security compliance, User provisioning'
     ]
-    roi: 'Reduce security incidents by 60% and improve compliance by 80%'
+    roi: 'Reduce security incidents by 60% and improve compliance by 80%';
     competitors: ['Okta, Azure AD, AWS IAM, Ping Identity']
-    marketSize: '$15B IAM market'
-    growthRate: '28% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
+    marketSize: '$15B IAM market';
+    growthRate: '28% CAGR';
+    variant: 'ai-futuristic';
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails:
 
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 300',
     link: 'https://ziontechgroup.com / services / enterprise - identity - access - management - suite',
-    market_position:;
+    market_position: any;
       'Enterprise IAM that combines security, compliance, and automation for comprehensive identity management.',
-    target_audience:;
+    target_audience: any;
       'Enterprise security teams, IT administrators, Compliance officers, HR teams',
     trial_days: 30,
     setup_time: '10 - 15 days',
@@ -131,24 +126,22 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
-
+    implementation_details: any;
       'Enterprise platform with identity engine, security controls, and compliance monitoring.',
     launch_date: '2025 - 01 - 12',
     customers: 67,
     rating: 4 && 4.8,
     reviews: 45,
   },
-  {
-
+  
       'AI-powered workflow optimization',
     id: 'enterprise - workflow - automation - platform',
     name: 'Enterprise Workflow Automation Platform',
-    tagline:;
+    tagline: any;
       'Advanced workflow automation with AI - powered optimization and enterprise integration',
     price: '$899',
     period: '/month',
-    description:;
+    description: any;
       'Enterprise - grade workflow automation platform that uses AI to optimize business processes, automate complex workflows, and integrate with enterprise systems for seamless operations.',
     features: [;
       'AI - powered workflow optimization',
@@ -162,34 +155,34 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
       'Real - time monitoring and alerts',
     ],
     popular: true,
-    icon: '⚙️',
+    icon: '',
 
       'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Apache Airflow',
     ],
 
-    integrations: [
+    integrations: [;
       'SAP, Oracle, Salesforce, Workday, Custom enterprise systems'
     ]
-    useCases: [
+    useCases: [;
       'Process automation, Workflow optimization, Enterprise integration, Operational efficiency'
     ]
-    roi: 'Increase operational efficiency by 40% and reduce process costs by 30%'
-    competitors: [
+    roi: 'Increase operational efficiency by 40% and reduce process costs by 30%';
+    competitors: [;
       'UiPath, Automation Anywhere, Microsoft Power Automate, Pega'
     ]
-    marketSize: '$25B workflow automation market'
-    growthRate: '35% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
+    marketSize: '$25B workflow automation market';
+    growthRate: '35% CAGR';
+    variant: 'ai-futuristic';
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails:
 
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 300',
     link: 'https://ziontechgroup.com / services / enterprise - workflow - automation - platform',
-    market_position:;
+    market_position: any;
       'Enterprise workflow automation that combines AI intelligence with enterprise - grade reliability.',
-    target_audience:;
+    target_audience: any;
       'Enterprise operations teams, Process improvement teams, IT teams, Business analysts',
     trial_days: 30,
     setup_time: '10 - 15 days',
@@ -213,26 +206,23 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
-
+    implementation_details: any;
       'Enterprise platform with AI engine, workflow automation, and system integrations.',
     launch_date: '2025 - 01 - 15',
     customers: 34,
     rating: 4 && 4.7,
     reviews: 26,
   },
-  {
-
+  
     id: 'enterprise - monitoring - and - observability - suite',
     name: 'Enterprise Monitoring & Observability Suite',
-    tagline:;
+    tagline: any;
       'Comprehensive monitoring, observability, and alerting for enterprise infrastructure',
     price: '$799',
     period: '/month',
-    description:;
+    description: any;
       'Enterprise - grade monitoring and observability platform that provides comprehensive visibility into infrastructure, applications, and business metrics with intelligent alerting and automated incident response.',
     features: [;
-
       'Infrastructure monitoring',
       'Application performance monitoring',
       'Business metrics tracking',
@@ -243,24 +233,24 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
       'Integration with enterprise systems',
     ],
     popular: true,
-    icon: '📊',
+    icon: '',
 
       'Go, Prometheus, Grafana, Elasticsearch, React, Node && Node.js, PostgreSQL',
     ],
 
-    integrations: [
+    integrations: [;
       'AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems'
     ]
-    useCases: [
+    useCases: [;
       'Infrastructure monitoring, Application monitoring, Business intelligence, Incident response'
     ]
-    roi: 'Reduce downtime by 70% and improve incident response time by 80%'
+    roi: 'Reduce downtime by 70% and improve incident response time by 80%';
     competitors: ['Datadog, New Relic, Splunk, Dynatrace']
-    marketSize: '$18B monitoring and observability market'
-    growthRate: '32% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
+    marketSize: '$18B monitoring and observability market';
+    growthRate: '32% CAGR';
+    variant: 'ai-futuristic';
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails:
 
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
@@ -272,35 +262,31 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
   },;
 
 
-];	{
-
+];	
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
     customers: 56,
     rating: 4.8,
     reviews: 38,
   },;
-];	{
-const contact = {
+];	
+const contact = 
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
+	website: 'https://ziontechgroup.com';
 };
 
-export const enterpriseITSolutions: MicroSaasService[] = [
-	{
+export const enterpriseITSolutions: MicroSaasService[] = [;
 		id: 'enterprise-data-governance-automation', name: 'Enterprise Data Governance Automation',
 		tagline: 'Automated data governance, compliance, and quality management for enterprise data',
     price: '$799', period: '/month',
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
-    features: [
-
-
-];	{
+    features: [;
+];	
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
 		];
 		popular: true;
-		icon: '🏛️';
+		icon: '';
 		color: 'from-blue-600 to-indigo-700';
 		textColor: 'text-blue-300';
 
@@ -327,20 +313,20 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-05',
 		customers: 23,
 		rating: 4.8,
-		reviews: 18
+		reviews: 18;
 	}
-	{
+	
 		id: 'enterprise-api-governance-platform';
-		name: 'Enterprise API Governance Platform'
+		name: 'Enterprise API Governance Platform';
 		tagline: 'Comprehensive API governance, security, and lifecycle management for enterprise APIs';
 		price: '$599';
-		period: '/month'
+		period: '/month';
 		description: 'Enterprise-grade API governance platform that provides centralized API management, security controls, compliance monitoring, and lifecycle management across all enterprise APIs.';
-		features: [
+		features: [;
 			'Centralized API managementSecurity and access controlsAPI lifecycle managementCompliance and audit trailsAPI performance monitoringDeveloper portal and documentationAPI versioning and deprecationIntegration with enterprise systems'
 		];
 		popular: true;
-		icon: '🔌';
+		icon: '';
 		color: 'from-green-600 to-emerald-700';
 		textColor: 'text-green-300';
 
@@ -367,20 +353,20 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-08',
 		customers: 45,
 		rating: 4.7,
-		reviews: 32
+		reviews: 32;
 	}
-	{
+	
 		id: 'enterprise-identity-access-management-suite';
-		name: 'Enterprise Identity & Access Management Suite'
+		name: 'Enterprise Identity & Access Management Suite';
 		tagline: 'Comprehensive IAM solution with advanced security, compliance, and automation';
 		price: '$699';
-		period: '/month'
+		period: '/month';
 		description: 'Enterprise-grade identity and access management platform that provides advanced authentication, authorization, and identity governance with automated compliance and security controls.';
-		features: [
+		features: [;
 			'Multi-factor authenticationSingle sign-on (SSO)Identity governance and administrationPrivileged access managementCompliance and audit reportingAutomated provisioning and deprovisioningRisk-based access controlsIntegration with enterprise systems'
 		];
 		popular: true;
-		icon: '🆔';
+		icon: '';
 		color: 'from-purple-600 to-pink-700';
 		textColor: 'text-purple-300';
 
@@ -407,20 +393,20 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-12',
 		customers: 67,
 		rating: 4.8,
-		reviews: 45
+		reviews: 45;
 	}
-	{
+	
 		id: 'enterprise-workflow-automation-platform';
 		name: 'Enterprise Workflow Automation Platform';
 		tagline: 'Advanced workflow automation with AI-powered optimization and enterprise integration';
 		price: '$899';
-		period: '/month'
+		period: '/month';
 		description: 'Enterprise-grade workflow automation platform that uses AI to optimize business processes, automate complex workflows, and integrate with enterprise systems for seamless operations.';
-		features: [
+		features: [;
 			'AI-powered workflow optimizationComplex process automationEnterprise system integrationWorkflow analytics and insightsCompliance and audit trailsMulti-tenant architectureAdvanced workflow designerReal-time monitoring and alerts'
 		];
 		popular: true;
-		icon: '⚙️';
+		icon: '';
 		color: 'from-orange-600 to-red-700';
 		textColor: 'text-orange-300';
 
@@ -447,20 +433,20 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-15',
 		customers: 34,
 		rating: 4.7,
-		reviews: 26
+		reviews: 26;
 	}
-	{
+	
 		id: 'enterprise-monitoring-and-observability-suite';
-		name: 'Enterprise Monitoring & Observability Suite'
+		name: 'Enterprise Monitoring & Observability Suite';
 		tagline: 'Comprehensive monitoring, observability, and alerting for enterprise infrastructure';
 		price: '$799';
-		period: '/month'
+		period: '/month';
 		description: 'Enterprise-grade monitoring and observability platform that provides comprehensive visibility into infrastructure, applications, and business metrics with intelligent alerting and automated incident response.';
-		features: [
+		features: [;
 			'Infrastructure monitoringApplication performance monitoringBusiness metrics trackingIntelligent alerting and escalationAutomated incident responseDistributed tracingLog aggregation and analysisIntegration with enterprise systems'
 		];
 		popular: true;
-		icon: '📊';
+		icon: '';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
 
@@ -487,7 +473,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-18',
 		customers: 56,
 		rating: 4.8,
-		reviews: 38
+		reviews: 38;
 	}
 ];
 
@@ -502,7 +488,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   'Automated data quality monitoring_compliance and regulatory tracking_data lineage and cataloging_privacy and security controls_master data management_data stewardship workflows_real - time compliance reporting_integration with enterprise systems';
   ];
   popular: true;
-  icon: '🏛️';
+  icon: '';
   color: 'from - blue - 600 to - indigo - 700';
   text_color: 'text - blue - 300';
   link: 'https://ziontechgroup.com / services / enterprise - data - governance - automation';
@@ -528,7 +514,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.8,
   reviews: 18;
 }
-{
+
   id: 'enterprise - api - governance - platform';
   name: 'Enterprise API Governance Platform',
   tagline: 'Comprehensive API governance, security, and lifecycle management for enterprise APIs';
@@ -539,7 +525,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   'Centralized API management_security and access controlsAPI lifecycle management_compliance and audit trailsAPI performance monitoring_developer portal and documentationAPI versioning and deprecation_integration with enterprise systems';
   ];
   popular: true;
-  icon: '🔌';
+  icon: '';
   color: 'from - green - 600 to - emerald - 700';
   text_color: 'text - green - 300';
   link: 'https://ziontechgroup.com / services / enterprise - api - governance - platform',
@@ -565,7 +551,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.7,
   reviews: 32;
 }
-{
+
   id: 'enterprise - identity - access - management - suite';
   name: 'Enterprise Identity & Access Management Suite',
   tagline: 'Comprehensive IAM solution with advanced security, compliance, and automation';
@@ -576,7 +562,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   'Multi - factor authentication_single sign - on (SSO)Identity governance and administration_privileged access management_compliance and audit reporting_automated provisioning and deprovisioning_risk - based access controls_integration with enterprise systems';
   ];
   popular: true;
-  icon: '🆔';
+  icon: '';
   color: 'from - purple - 600 to - pink - 700';
   text_color: 'text - purple - 300';
   link: 'https://ziontechgroup.com / services / enterprise - identity - access - management - suite',
@@ -602,7 +588,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.8,
   reviews: 45;
 }
-{
+
   id: 'enterprise - workflow - automation - platform';
   name: 'Enterprise Workflow Automation Platform';
   tagline: 'Advanced workflow automation with AI - powered optimization and enterprise integration';
@@ -613,7 +599,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   'AI - powered workflow optimization_complex process automation_enterprise system integration_workflow analytics and insights_compliance and audit trails_multi - tenant architecture_advanced workflow designer_real - time monitoring and alerts';
   ];
   popular: true;
-  icon: '⚙️';
+  icon: '';
   color: 'from - orange - 600 to - red - 700';
   text_color: 'text - orange - 300';
   link: 'https://ziontechgroup.com / services / enterprise - workflow - automation - platform';
@@ -639,7 +625,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.7,
   reviews: 26;
 }
-{
+
   id: 'enterprise - monitoring - and - observability - suite';
   name: 'Enterprise Monitoring & Observability Suite',
   tagline: 'Comprehensive monitoring, observability, and alerting for enterprise infrastructure';
@@ -650,7 +636,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   'Infrastructure monitoring_application performance monitoring_business metrics tracking_intelligent alerting and escalation_automated incident response_distributed tracing_log aggregation and analysis_integration with enterprise systems';
   ];
   popular: true;
-  icon: '📊';
+  icon: '';
   color: 'from - cyan - 600 to - blue - 700';
   text_color: 'text - cyan - 300';
   link: 'https://ziontechgroup.com / services / enterprise - monitoring - and - observability - suite';
@@ -676,8 +662,8 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.8,
   reviews: 38;
 }
-		rating: 4.8
-		reviews: 38
+		rating: 4.8;
+		reviews: 38;
 
 
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
@@ -699,7 +685,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems';
 		],;
 		popular: true,;
-		icon: '🏛️',;
+		icon: '',;
 		color: 'from-blue-600 to-indigo-700',;
 		textColor: 'text-blue-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-data-governance-automation',;
@@ -736,7 +722,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'Centralized API managementSecurity and access controlsAPI lifecycle managementCompliance and audit trailsAPI performance monitoringDeveloper portal and documentationAPI versioning and deprecationIntegration with enterprise systems';
 		],;
 		popular: true,;
-		icon: '🔌',;
+		icon: '',;
 		color: 'from-green-600 to-emerald-700',;
 		textColor: 'text-green-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-api-governance-platform',;
@@ -773,7 +759,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'Multi-factor authenticationSingle sign-on (SSO)Identity governance and administrationPrivileged access managementCompliance and audit reportingAutomated provisioning and deprovisioningRisk-based access controlsIntegration with enterprise systems';
 		],;
 		popular: true,;
-		icon: '🆔',;
+		icon: '',;
 		color: 'from-purple-600 to-pink-700',;
 		textColor: 'text-purple-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-identity-access-management-suite',;
@@ -810,7 +796,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'AI-powered workflow optimizationComplex process automationEnterprise system integrationWorkflow analytics and insightsCompliance and audit trailsMulti-tenant architectureAdvanced workflow designerReal-time monitoring and alerts';
 		],;
 		popular: true,;
-		icon: '⚙️',;
+		icon: '',;
 		color: 'from-orange-600 to-red-700',;
 		textColor: 'text-orange-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-workflow-automation-platform',;
@@ -847,7 +833,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'Infrastructure monitoringApplication performance monitoringBusiness metrics trackingIntelligent alerting and escalationAutomated incident responseDistributed tracingLog aggregation and analysisIntegration with enterprise systems';
 		],;
 		popular: true,;
-		icon: '📊',;
+		icon: '',;
 		color: 'from-cyan-600 to-blue-700',;
 		textColor: 'text-cyan-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-monitoring-and-observability-suite',;
@@ -897,7 +883,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems';
 		],;
 		popular: true,;
-		icon: '🏛️',;
+		icon: '',;
 		color: 'from-blue-600 to-indigo-700',;
 		textColor: 'text-blue-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-data-governance-automation',;
@@ -934,7 +920,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'Centralized API managementSecurity and access controlsAPI lifecycle managementCompliance and audit trailsAPI performance monitoringDeveloper portal and documentationAPI versioning and deprecationIntegration with enterprise systems';
 		],;
 		popular: true,;
-		icon: '🔌',;
+		icon: '',;
 		color: 'from-green-600 to-emerald-700',;
 		textColor: 'text-green-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-api-governance-platform',;
@@ -971,7 +957,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'Multi-factor authenticationSingle sign-on (SSO)Identity governance and administrationPrivileged access managementCompliance and audit reportingAutomated provisioning and deprovisioningRisk-based access controlsIntegration with enterprise systems';
 		],;
 		popular: true,;
-		icon: '🆔',;
+		icon: '',;
 		color: 'from-purple-600 to-pink-700',;
 		textColor: 'text-purple-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-identity-access-management-suite',;
@@ -1008,7 +994,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'AI-powered workflow optimizationComplex process automationEnterprise system integrationWorkflow analytics and insightsCompliance and audit trailsMulti-tenant architectureAdvanced workflow designerReal-time monitoring and alerts';
 		],;
 		popular: true,;
-		icon: '⚙️',;
+		icon: '',;
 		color: 'from-orange-600 to-red-700',;
 		textColor: 'text-orange-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-workflow-automation-platform',;
@@ -1045,7 +1031,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 			'Infrastructure monitoringApplication performance monitoringBusiness metrics trackingIntelligent alerting and escalationAutomated incident responseDistributed tracingLog aggregation and analysisIntegration with enterprise systems';
 		],;
 		popular: true,;
-		icon: '📊',;
+		icon: '',;
 		color: 'from-cyan-600 to-blue-700',;
 		textColor: 'text-cyan-300',;
 		link: 'https://ziontechgroup.com/services/enterprise-monitoring-and-observability-suite',;

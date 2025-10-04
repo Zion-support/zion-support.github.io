@@ -1,8 +1,0 @@
-
-    return}
-  try {;
-    // Authentication would normally be checked here;
-    res.statusCode = 200;
-
-  , err);
-    res.statusCode = 500;

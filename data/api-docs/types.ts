@@ -13,7 +13,7 @@ export interface ErrorCode {
   message: string;
 
 ;
-export interface EndpointSpec {
+export interface EndpointSpec 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -61,8 +61,7 @@ export interface SectionSpec {;
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
-export interface SectionSpec {
-
+export interface SectionSpec 
 export interface SectionSpec {;
 export interface SectionSpec {
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
@@ -77,17 +76,12 @@ export interface SectionSpec {
 
 ;
 
-export interface ApiDocsSpec {
-
-
+export interface ApiDocsSpec 
 export interface ApiDocsSpec {;
 
-export interface ApiDocsSpec {
-
+export interface ApiDocsSpec 
 export interface ApiDocsSpec {;
-export interface ApiDocsSpec {
-
-
+export interface ApiDocsSpec 
 export interface ApiDocsSpec {;
   product: 'Zion OS';
   versions: string[]; // available versions;
@@ -97,8 +91,8 @@ export interface ApiDocsSpec {;
 
 export type Visibility = 'public' | 'partner' | 'internal';
 export interface CodeSample {
-  language: 'curl' | 'javascript' | 'python'
-  code: string
+  language: 'curl' | 'javascript' | 'python';
+  code: string;
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
   lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
@@ -128,11 +122,11 @@ export interface EndpointSpec {
   responseBodySchema?: unknown;
 
 
-  lastUpdatedIso: string
+  lastUpdatedIso: string;
 
 }
 
-  lastUpdatedIso: string
+  lastUpdatedIso: string;
 
 
 }

@@ -1,11 +1,11 @@
-export type Service = {
+export type Service = 
   id: string;
   name: string;
   category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics';
   description: string;
   features: string[];
   benefits: string[];
-  pricing: {
+  pricing: any;
     starter: number;
     professional: number;
     enterprise: number;
@@ -16,9 +16,9 @@ export type Service = {
   isPopular?: boolean;
   isNew?: boolean}
 
-export const services: Service[] = [
+export const services: Service[] = [;
   // AI Services
-  {
+  
     id: 'ai-chatbot-platform',
     name: 'AI Chatbot Platform',
     category: 'AI',
@@ -37,18 +37,18 @@ export const services: Service[] = [
       'Improve customer satisfaction by 40%',
       '24/7 availability without human intervention'
     ],
-    pricing: {
+    pricing: any;
       starter: 99,
       professional: 299,
       enterprise: 999,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/ai-chatbot-platform',
-    icon: '🤖',
-    isPopular: true
+    icon: '',
+    isPopular: true;
   },
-  {
+  
     id: 'ai-content-generator',
     name: 'AI Content Generator',
     category: 'AI',
@@ -67,17 +67,17 @@ export const services: Service[] = [
       'Generate 100+ articles per month',
       'Maintain consistent brand voice'
     ],
-    pricing: {
+    pricing: any;
       starter: 49,
       professional: 149,
       enterprise: 499,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/ai-content-generator',
-    icon: '✍️'
+    icon: '';
   },
-  {
+  
     id: 'ai-data-analytics',
     name: 'AI-Powered Data Analytics',
     category: 'AI',
@@ -96,20 +96,20 @@ export const services: Service[] = [
       'Predict trends with 90% accuracy',
       'Automate routine reporting tasks'
     ],
-    pricing: {
+    pricing: any;
       starter: 199,
       professional: 499,
       enterprise: 1499,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/ai-data-analytics',
-    icon: '📊',
-    isNew: true
+    icon: '',
+    isNew: true;
   },
 
   // IT Services
-  {
+  
     id: 'managed-it-services',
     name: 'Managed IT Services',
     category: 'IT',
@@ -128,17 +128,17 @@ export const services: Service[] = [
       'Improve system reliability',
       'Focus on core business activities'
     ],
-    pricing: {
+    pricing: any;
       starter: 299,
       professional: 599,
       enterprise: 1499,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/managed-it-services',
-    icon: '🖥️'
+    icon: '';
   },
-  {
+  
     id: 'cybersecurity-suite',
     name: 'Cybersecurity Suite',
     category: 'Security',
@@ -157,18 +157,18 @@ export const services: Service[] = [
       'Reduce security breach risk by 80%',
       '24/7 security monitoring'
     ],
-    pricing: {
+    pricing: any;
       starter: 399,
       professional: 799,
       enterprise: 1999,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/cybersecurity-suite',
-    icon: '🔒',
-    isPopular: true
+    icon: '',
+    isPopular: true;
   },
-  {
+  
     id: 'cloud-migration',
     name: 'Cloud Migration Services',
     category: 'Cloud',
@@ -187,19 +187,19 @@ export const services: Service[] = [
       'Enhanced disaster recovery',
       'Access to latest technologies'
     ],
-    pricing: {
+    pricing: any;
       starter: 2999,
       professional: 7999,
       enterprise: 19999,
       currency: 'USD',
-      period: 'one-time'
+      period: 'one-time';
     },
     link: '/services/cloud-migration',
-    icon: '☁️'
+    icon: '';
   },
 
   // SAAS Services
-  {
+  
     id: 'project-management-platform',
     name: 'Project Management Platform',
     category: 'SAAS',
@@ -218,17 +218,17 @@ export const services: Service[] = [
       'Improve communication efficiency',
       'Centralized project information'
     ],
-    pricing: {
+    pricing: any;
       starter: 29,
       professional: 79,
       enterprise: 199,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/project-management-platform',
-    icon: '📋'
+    icon: '';
   },
-  {
+  
     id: 'crm-system',
     name: 'Customer Relationship Management',
     category: 'SAAS',
@@ -247,18 +247,18 @@ export const services: Service[] = [
       'Streamline sales processes',
       'Better customer insights'
     ],
-    pricing: {
+    pricing: any;
       starter: 39,
       professional: 99,
       enterprise: 299,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/crm-system',
-    icon: '👥',
-    isPopular: true
+    icon: '',
+    isPopular: true;
   },
-  {
+  
     id: 'hr-management-system',
     name: 'HR Management System',
     category: 'SAAS',
@@ -277,19 +277,19 @@ export const services: Service[] = [
       'Ensure compliance with regulations',
       'Better workforce analytics'
     ],
-    pricing: {
+    pricing: any;
       starter: 49,
       professional: 129,
       enterprise: 399,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/hr-management-system',
-    icon: '👨‍💼'
+    icon: '';
   },
 
   // Development Services
-  {
+  
     id: 'web-development',
     name: 'Custom Web Development',
     category: 'Development',
@@ -308,17 +308,17 @@ export const services: Service[] = [
       'Better search engine rankings',
       'Scalable and maintainable code'
     ],
-    pricing: {
+    pricing: any;
       starter: 2999,
       professional: 7999,
       enterprise: 19999,
       currency: 'USD',
-      period: 'one-time'
+      period: 'one-time';
     },
     link: '/services/web-development',
-    icon: '🌐'
+    icon: '';
   },
-  {
+  
     id: 'mobile-app-development',
     name: 'Mobile App Development',
     category: 'Development',
@@ -337,17 +337,17 @@ export const services: Service[] = [
       'Increase brand visibility',
       'Generate additional revenue streams'
     ],
-    pricing: {
+    pricing: any;
       starter: 4999,
       professional: 14999,
       enterprise: 49999,
       currency: 'USD',
-      period: 'one-time'
+      period: 'one-time';
     },
     link: '/services/mobile-app-development',
-    icon: '📱'
+    icon: '';
   },
-  {
+  
     id: 'api-development',
     name: 'API Development & Integration',
     category: 'Development',
@@ -366,19 +366,19 @@ export const services: Service[] = [
       'Reduce development time',
       'Enhance user experience'
     ],
-    pricing: {
+    pricing: any;
       starter: 1999,
       professional: 5999,
       enterprise: 14999,
       currency: 'USD',
-      period: 'one-time'
+      period: 'one-time';
     },
     link: '/services/api-development',
-    icon: '🔌'
+    icon: '';
   },
 
   // Analytics Services
-  {
+  
     id: 'business-intelligence',
     name: 'Business Intelligence Solutions',
     category: 'Analytics',
@@ -397,23 +397,23 @@ export const services: Service[] = [
       'Improve operational efficiency',
       'Gain competitive advantage'
     ],
-    pricing: {
+    pricing: any;
       starter: 399,
       professional: 899,
       enterprise: 2499,
       currency: 'USD',
-      period: 'month'
+      period: 'month';
     },
     link: '/services/business-intelligence',
-    icon: '📈'
+    icon: '';
   }
 ];
 
-export const getServicesByCategory = (category: Service['category']) => {
+export const getServicesByCategory = (category: Service['category']) =>;
   return services.filter(service => service.category === category)};
 
-export const getPopularServices = () => {
+export const getPopularServices = () => 
   return services.filter(service => service.isPopular)};
 
-export const getNewServices = () => {
+export const getNewServices = () => 
   return services.filter(service => service.isNew)};

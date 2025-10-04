@@ -34,55 +34,55 @@ export default function SignUpPage() {;
   },;
 ;
   return (;
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
-      <div className="max-w-md w-full space-y-8 p-8">;
-        <div className="text-center">;
-          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
-          <p className="text-zinc-400 mb-4">;
+    <div className="text-left">;
+      <div className="text-left">;
+        <div className="text-left">;
+          <h1 className="text-left">Join Zion OS</h1>;
+          <p className="text-left">;
             Start your free trial and launch sovereign AI-powered digital economies;
           </p>;
           ;
           {/* Free Trial Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full">;
-            <span className="text-green-400 text-sm font-medium">;
+          <div className="text-left">;
+            <span className="text-left">;
                Free Trial Available;
-            </span>;
+            <;
           </div>;
         </div>;
 ;
         {/* What You Get Section */}
-        <div className="bg-zinc-800/30 rounded-lg p-4 border border-zinc-700/30">;
-          <h3 className="text-sm font-semibold text-zinc-300 mb-3">What you'll get:</h3>;
-          <ul className="space-y-2 text-sm text-zinc-400">;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400"></span>;
+        <div className="text-left">;
+          <h3 className="text-left">What you'll get:</h3>;
+          <ul className="text-left">;
+            <li className="text-left">;
+              <span className="text-left"><;
               Launch new instances in minutes;
             </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400"></span>;
+            <li className="text-left">;
+              <span className="text-left"><;
               Access to marketplace templates;
             </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400"></span>;
+            <li className="text-left">;
+              <span className="text-left"><;
               Governance and identity tools;
             </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400"></span>;
+            <li className="text-left">;
+              <span className="text-left"><;
               Full admin dashboard access;
             </li>;
           </ul>;
         </div>;
 ;
-        <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">;
-          <form onSubmit={handleSubmit} className="space-y-6">;
+        <div className="text-left">;
+          <form onSubmit={handleSubmit} className="text-left">;
             {error && (;
-              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">;
-                <p className="text-red-400 text-sm">{error}</p>;
+              <div className="text-left">;
+                <p className="text-left">{error}</p>;
               </div>;
             )}
 ;
             <div>;
-              <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">;
+              <label htmlFor="name" className="text-left">;
                 Full Name;
               </label>;
               <input;
@@ -91,13 +91,13 @@ export default function SignUpPage() {;
                 required;
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                className="text-left";
                 placeholder="Enter your full name";
               />;
             </div>;
 ;
             <div>;
-              <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">;
+              <label htmlFor="email" className="text-left">;
                 Email Address;
               </label>;
               <input;
@@ -106,13 +106,13 @@ export default function SignUpPage() {;
                 required;
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                className="text-left";
                 placeholder="Enter your email address";
               />;
             </div>;
 ;
             <div>;
-              <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">;
+              <label htmlFor="password" className="text-left">;
                 Password;
               </label>;
               <input;
@@ -121,14 +121,14 @@ export default function SignUpPage() {;
                 required;
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                className="text-left";
                 placeholder="Create a strong password";
               />;
-              <p className="text-xs text-zinc-500 mt-1">Must be at least 8 characters</p>;
+              <p className="text-left">Must be at least 8 characters</p>;
             </div>;
 ;
             <div>;
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-zinc-300 mb-2">;
+              <label htmlFor="confirmPassword" className="text-left">;
                 Confirm Password;
               </label>;
               <input;
@@ -137,7 +137,7 @@ export default function SignUpPage() {;
                 required;
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+                className="text-left";
                 placeholder="Confirm your password";
               />;
             </div>;
@@ -145,69 +145,69 @@ export default function SignUpPage() {;
             <button;
               type="submit";
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200";
+              className="text-left";
             >;
               {isLoading ? "Creating Account..." :"Start Free Trial"}
             </button>;
           </form>;
 ;
-          <div className="mt-6 text-center">;
-            <p className="text-zinc-400 text-sm">;
+          <div className="text-left">;
+            <p className="text-left">;
               Already have an account?{" "}
-              <Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium">;
+              <Link href="/auth/signin" className="text-left">;
                 Sign in;
               </Link>;
             </p>;
           </div>;
         </div>;
 ;
-        <div className="text-center">;
-          <p className="text-zinc-500 text-xs">;
+        <div className="text-left">;
+          <p className="text-left">;
             By signing up, you agree to our{" "}
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">;
+            <Link href="/terms" className="text-left">;
               Terms of Service;
             </Link>{" "}
             and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover:text-zinc-300">;
+            <Link href="/privacy" className="text-left">;
               Privacy Policy;
             </Link>;
           </p>;
         </div>;
       </div>;
     </div>;
-  ); return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800"> <div className="max-w-md w-full space-y-8 p-8"> <div className="text-center"> <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1> <p className="text-zinc-400 mb-4"> Start your free trial and launch sovereign AI-powered digital economies </p> {
+  ); return (<div className="text-left"> <div className="text-left"> <div className="text-left"> <h1 className="text-left">Join Zion OS</h1> <p className="text-left"> Start your free trial and launch sovereign AI-powered digital economies </p> {
   /* Free Trial Badge */ 
-}<div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full"> <span className="text-green-400 text-sm font-medium"> 🚀 Free Trial Available </span> </div> </div> {
+}<div className="text-left"> <span className="text-left"> 🚀 Free Trial Available < </div> </div> {
   /* What You Get Section */ 
-}<div className="bg-zinc-800/30 rounded-lg p-4 border border-zinc-700/30"> <h3 className="text-sm font-semibold text-zinc-300 mb-3">What you'll get:</h3> <ul className="space-y-2 text-sm text-zinc-400"> <li className="flex items-center gap-2"> <span className="text-green-400">✓</span> Launch new instances in minutes </li> <li className="flex items-center gap-2"> <span className="text-green-400">✓</span> Access to marketplace templates </li> <li className="flex items-center gap-2"> <span className="text-green-400">✓</span> Governance and identity tools </li> <li className="flex items-center gap-2"> <span className="text-green-400">✓</span> Full admin dashboard access </li> </ul> </div> <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50"> <form onSubmit= {
+}<div className="text-left"> <h3 className="text-left">What you'll get:</h3> <ul className="text-left"> <li className="text-left"> <span className="text-left">✓< Launch new instances in minutes </li> <li className="text-left"> <span className="text-left">✓< Access to marketplace templates </li> <li className="text-left"> <span className="text-left">✓< Governance and identity tools </li> <li className="text-left"> <span className="text-left">✓< Full admin dashboard access </li> </ul> </div> <div className="text-left"> <form onSubmit= {
   handleSubmit 
-}className="space-y-6"> {
-  error && (<div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3"> <p className="text-red-400 text-sm"> {
+}className="text-left"> {
+  error && (<div className="text-left"> <p className="text-left"> {
   error 
 }</p> </div>) 
-}<div> <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2"> Full Name </label> <input id="name" type="text" required value= {
+}<div> <label htmlFor="name" className="text-left"> Full Name </label> <input id="name" type="text" required value= {
   name 
 }onChange= {
   (e) => setName (e.target.value) 
-}className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your full name" /> </div> <div> <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2"> Email Address </label> <input id="email" type="email" required value= {
+}className="text-left" placeholder="Enter your full name" /> </div> <div> <label htmlFor="email" className="text-left"> Email Address </label> <input id="email" type="email" required value= {
   email 
 }onChange= {
   (e) => setEmail (e.target.value) 
-}className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your email address" /> </div> <div> <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2"> Password </label> <input id="password" type="password" required value= {
+}className="text-left" placeholder="Enter your email address" /> </div> <div> <label htmlFor="password" className="text-left"> Password </label> <input id="password" type="password" required value= {
   password 
 }onChange= {
   (e) => setPassword (e.target.value) 
-}className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Create a strong password" /> <p className="text-xs text-zinc-500 mt-1">Must be at least 8 characters</p> </div> <div> <label htmlFor="confirmPassword" className="block text-sm font-medium text-zinc-300 mb-2"> Confirm Password </label> <input id="confirmPassword" type="password" required value= {
+}className="text-left" placeholder="Create a strong password" /> <p className="text-left">Must be at least 8 characters</p> </div> <div> <label htmlFor="confirmPassword" className="text-left"> Confirm Password </label> <input id="confirmPassword" type="password" required value= {
   confirmPassword 
 }onChange= {
   (e) => setConfirmPassword (e.target.value) 
-}className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Confirm your password" /> </div> <button type="submit" disabled= {
+}className="text-left" placeholder="Confirm your password" /> </div> <button type="submit" disabled= {
   isLoading 
-}className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200" > {
-  isLoading ? "Creating Account..." : "Start Free Trial" 
-}</button> </form> <div className="mt-6 text-center"> <p className="text-zinc-400 text-sm"> Already have an account? {
-  " " 
-}<Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium"> Sign in </Link> </p> </div> </div> <div className="text-center"> <p className="text-zinc-500 text-xs"> By signing up, you agree to our {
-  " " 
-}<Link href="/terms" className="text-zinc-400 hover:text-zinc-300"> Terms of Service Privacy Policy </Link> </p> </div> </div> </div>) 
+}className="text-left" > {
+  isLoading ? "Creating Account..." : "Start Free Trial"
+}</button> </form> <div className="text-left"> <p className="text-left"> Already have an account? {
+  " "
+}<Link href="/auth/signin" className="text-left"> Sign in </Link> </p> </div> </div> <div className="text-left"> <p className="text-left"> By signing up, you agree to our {
+  " "
+}<Link href="/terms" className="text-left"> Terms of Service Privacy Policy </Link> </p> </div> </div> </div>) 
 }

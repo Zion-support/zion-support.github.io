@@ -11,32 +11,32 @@ const AVAILABILITY_OPTIONS = [;
 ;
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen } AvailabilityFilterProps) {;
   return (;
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
+    <div className="text-left">;
       <button;
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium";
+        className="text-left";
       >;
-        <span>Availability</span>;
+        <span>Availability<;
         {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronUp className="text-left" />;
         ) :(;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronDown className="text-left" />;
         )}
       </button>;
       ;
       {expanded && (;
-        <div className="mt-4 space-y-2">;
+        <div className="text-left">;
           {AVAILABILITY_OPTIONS.map(option => (;
-            <div key={option.id} className="flex items-center">;
+            <div key={option.id} className="text-left">;
               <Checkbox;
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
+                className="text-left";
               />;
               <label;
                 htmlFor={`availability-${option.id}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
+                className="text-left";
               >;
                 {option.label}
               </label>;
@@ -50,9 +50,9 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
   toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}className="text-left" > <span>Availability<) : (<ChevronDown className="text-left" />) ;
 }</button> {;
-  AVAILABILITY OPTIONS.map (option => (<div key= {;"  option.id ";"}className="flex items-center" > <Checkbox > {;
+  AVAILABILITY OPTIONS.map (option => (<div key= {;"  option.id ";"}className="text-left" > <Checkbox > {;
   option.label ;
 }</label> </div>) ) ;
 }</div>) ;

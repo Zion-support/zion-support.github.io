@@ -27,7 +27,7 @@ export interface InnovativeEnergyService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
@@ -41,22 +41,21 @@ export interface InnovativeEnergyService {
   reviews: number;
 }
 
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
-export const innovativeEnergyServices: InnovativeEnergyService[] = [
-  {
+export const innovativeEnergyServices: InnovativeEnergyService[] = [;
     id: 'ai-powered-energy-optimization',
     name: 'AI-Powered Energy Optimization',
     tagline: 'Intelligent energy optimization with AI-powered analytics and smart grid management',
     price: '$4,999',
     period: '/month',
     description: 'Advanced AI-powered energy optimization platform that uses machine learning to optimize energy consumption, manage smart grids, and improve renewable energy integration.',
-    features: [
+    features: [;
       'AI-powered analytics',
       'Smart grid management',
       'Energy optimization',
@@ -68,7 +67,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
       'Compliance management'
     ],
     popular: true,
-    icon: '⚡',
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-powered-energy-optimization',
@@ -92,16 +91,16 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     launchDate: '2025-01-01',
     customers: 234,
     rating: 4.8,
-    reviews: 189
+    reviews: 189;
   },
-  {
+  
     id: 'quantum-energy-storage',
     name: 'Quantum Energy Storage Platform',
     tagline: 'Quantum-powered energy storage with advanced battery optimization and grid stabilization',
     price: '$28,999',
     period: '/month',
     description: 'Revolutionary quantum energy storage platform that uses quantum computing to optimize battery performance, manage energy storage systems, and stabilize power grids.',
-    features: [
+    features: [;
       'Quantum algorithms',
       'Battery optimization',
       'Energy storage management',
@@ -113,7 +112,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
       'Compliance management'
     ],
     popular: false,
-    icon: '🔋',
+    icon: '',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-energy-storage',
@@ -137,16 +136,16 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     launchDate: '2025-01-08',
     customers: 8,
     rating: 4.6,
-    reviews: 6
+    reviews: 6;
   },
-  {
+  
     id: 'solar-energy-optimization',
     name: 'Solar Energy Optimization Platform',
     tagline: 'Advanced solar energy optimization with AI-powered panel management and efficiency tracking',
     price: '$2,999',
     period: '/month',
     description: 'Advanced solar energy optimization platform that uses AI to optimize solar panel performance, track efficiency, and maximize renewable energy generation.',
-    features: [
+    features: [;
       'AI-powered optimization',
       'Panel management',
       'Efficiency tracking',
@@ -158,7 +157,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
       'Compliance management'
     ],
     popular: true,
-    icon: '☀️',
+    icon: '',
     color: 'from-orange-600 to-yellow-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/solar-energy-optimization',
@@ -182,16 +181,16 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     launchDate: '2025-01-15',
     customers: 189,
     rating: 4.7,
-    reviews: 156
+    reviews: 156;
   },
-  {
+  
     id: 'wind-energy-management',
     name: 'Wind Energy Management Platform',
     tagline: 'Intelligent wind energy management with AI-powered turbine optimization and predictive maintenance',
     price: '$3,999',
     period: '/month',
     description: 'Advanced wind energy management platform that uses AI to optimize wind turbine performance, predict maintenance needs, and maximize wind energy generation.',
-    features: [
+    features: [;
       'AI-powered optimization',
       'Turbine management',
       'Predictive maintenance',
@@ -203,7 +202,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
       'Compliance management'
     ],
     popular: true,
-    icon: '💨',
+    icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/wind-energy-management',
@@ -227,16 +226,16 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     launchDate: '2025-01-22',
     customers: 167,
     rating: 4.6,
-    reviews: 134
+    reviews: 134;
   },
-  {
+  
     id: 'sustainability-analytics-platform',
     name: 'Sustainability Analytics Platform',
     tagline: 'Comprehensive sustainability analytics with carbon tracking and environmental impact assessment',
     price: '$2,499',
     period: '/month',
     description: 'Advanced sustainability analytics platform that provides comprehensive carbon tracking, environmental impact assessment, and sustainability reporting for organizations.',
-    features: [
+    features: [;
       'Carbon tracking',
       'Environmental impact assessment',
       'Sustainability reporting',
@@ -248,7 +247,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
       'Regulatory compliance'
     ],
     popular: true,
-    icon: '🌱',
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/sustainability-analytics-platform',
@@ -272,6 +271,6 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     launchDate: '2025-01-29',
     customers: 145,
     rating: 4.7,
-    reviews: 123
+    reviews: 123;
   }
 ];

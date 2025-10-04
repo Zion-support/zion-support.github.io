@@ -26,7 +26,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: {
+  contact_info: any;
     mobile: string;
     email: string;
     address: string;
@@ -46,15 +46,15 @@
 
   market_advantage: string;
 ;
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -62,7 +62,7 @@ const contact = {
   website: 'https://ziontechgroup && ziontechgroup.com',};  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com';
 
 import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEnterpriseService {
@@ -79,44 +79,41 @@ export interface SpecializedEnterpriseService {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: any;
     mobile: string, email: string,
     address: string,
-    website: string
+    website: string;
   
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number, reviews: number,
   benefits: string[], capabilities: string[],
-  marketAdvantage: string
+  marketAdvantage: string;
 }
 
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
 };
 
-export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
+export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
   // Advanced AI & Consciousness Services
-  {
-
-
+  
       'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
   website: 'https://ziontechgroup.com';
 }
 ;
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
   // Advanced AI & Consciousness Services;
-  {
+  
     id: 'ai - consciousness - research - platform',
     name: 'AI Consciousness Research Platform',
     tagline: 'Advanced AI consciousness simulation and research',
     price: '$5, 999',
     period: '/month',
-    description:;
+    description: any;
       'Cutting - edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
@@ -130,39 +127,38 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Expert consultation services',
     ],
     popular: true,
-    icon: '🧠',
+    icon: '',
 
-    marketPosition:
-      'Leading AI consciousness research platform for scientific institutions'
+    marketPosition: 'Leading AI consciousness research platform for scientific institutions';
     targetAudience:
       'Research institutions, Universities, AI labs, Government agencies, Tech companies'
-    trialDays: 14
-    setupTime: '6-8 weeks'
-    category: 'Advanced AI & Consciousness'
-    realService: true
-    technology: [
+    trialDays: 14;
+    setupTime: '6-8 weeks';
+    category: 'Advanced AI & Consciousness';
+    realService: true;
+    technology: [;
       'Advanced AI/ML, Neural networks, Cognitive science, Python, TensorFlow, PyTorch'
     ]
-    integrations: [
+    integrations: [;
       'Research platforms, Academic databases, AI frameworks, Collaboration tools'
     ]
-    useCases: [
+    useCases: [;
       'Consciousness research, AGI development, Psychology studies, AI ethics research, Cognitive modeling'
     ]
-    roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits'
-    competitors: ['No direct competitors in consciousness simulation']
-    marketSize: 'Emerging research market'
-    growthRate: 'Projected 500% annual growth'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
+    roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits';
+    competitors: ['No direct competitors in consciousness simulation'];
+    marketSize: 'Emerging research market';
+    growthRate: 'Projected 500% annual growth';
+    variant: 'ai-futuristic';
+    contactInfo: contact;
+    realImplementation: true;
     implementationDetails:
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
-    market_position:;
+    market_position: any;
       'Leading AI consciousness research platform for scientific institutions',
-    target_audience:;
+    target_audience: any;
       'Research institutions, Universities, AI labs, Government agencies, Tech companies',
     trial_days: 14,
     setup_time: '6 - 8 weeks',
@@ -184,8 +180,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
-
+    implementation_details: any;
       'Advanced research platform with custom AI models and collaborative research tools',
     launch_date: '2024 - 11 - 01',
     customers: 23,
@@ -207,17 +202,17 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Research collaboration',
       'Advanced analytics',
     ],
-    market_advantage:;
+    market_advantage: any;
       'Only comprehensive AI consciousness research platform available',
   },
   // Quantum Computing Services;
-  {
+  
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Quantum - enhanced machine learning and optimization',
     price: '$4, 499',
     period: '/month',
-    description:;
+    description: any;
       'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.',
     features: [;
       'Quantum - enhanced ML algorithms',
@@ -233,16 +228,16 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Expert quantum consulting',
     ],
     popular: true,
-    icon: '⚛️',
+    icon: '',
 
       'Multi-quantum backend platform with hybrid computing capabilities',
     launchDate: '2024-10-01',
     color: 'from - blue - 600 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - machine - learning',
-    market_position:;
+    market_position: any;
       'Leading quantum machine learning platform for research and enterprise',
-    target_audience:;
+    target_audience: any;
       'Research institutions, Financial services, Pharmaceutical companies, Logistics companies',
     trial_days: 21,
     setup_time: '4 - 6 weeks',
@@ -264,7 +259,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     variant: 'quantum - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Multi - quantum backend platform with hybrid computing capabilities',
     launch_date: '2024 - 10 - 01',
 
@@ -290,17 +285,17 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Error correction',
       'Research tools',
     ],
-    market_advantage:;
+    market_advantage: any;
       'Advanced quantum ML platform with hybrid computing capabilities',
   },
   // Advanced Cybersecurity Services;
-  {
+  
     id: 'quantum - resistant - cryptography',
     name: 'Quantum - Resistant Cryptography Platform',
     tagline: 'Future - proof cryptography for the quantum era',
     price: '$2, 999',
     period: '/month',
-    description:;
+    description: any;
       'Advanced cryptography platform that implements post - quantum cryptographic algorithms, ensuring data security against future quantum computing threats.',
     features: [;
       'Post - quantum cryptographic algorithms',
@@ -316,16 +311,16 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Expert security consulting',
     ],
     popular: true,
-    icon: '🔒',
+    icon: '',
 
       'Enterprise-grade quantum-resistant cryptography platform with migration tools',
     launchDate: '2024-09-01',
     color: 'from - red - 600 to - orange - 600',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / quantum - resistant - cryptography',
-    market_position:;
+    market_position: any;
       'Leading quantum - resistant cryptography platform for enterprise security',
-    target_audience:;
+    target_audience: any;
       'Financial institutions, Government agencies, Healthcare organizations, Defense contractors',
     trial_days: 30,
     setup_time: '3 - 4 weeks',
@@ -347,7 +342,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     variant: 'cybersecurity - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Enterprise - grade quantum - resistant cryptography platform with migration tools',
     launch_date: '2024 - 09 - 01',
 
@@ -369,20 +364,19 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Migration tools',
       'Compliance support',
     ],
-    market_advantage:;
+    market_advantage: any;
       'Comprehensive quantum - resistant cryptography platform with migration support',
   },
   // Space Technology Services;
-  {
+  
     id: 'satellite - ai - orchestration',
     name: 'Satellite AI Orchestration Platform',
     tagline: 'Intelligent satellite constellation management',
     price: '$6, 999',
     period: '/month',
-    description:;
+    description: any;
       'Advanced AI platform for satellite constellation management, enabling autonomous satellite operations, data processing, and mission optimization.',
     features: [;
-
       'Autonomous satellite operations',
       'Constellation optimization',
       'AI - powered mission planning',
@@ -395,16 +389,16 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Expert space consulting',
     ],
     popular: false,
-    icon: '🛰️',
+    icon: '',
 
       'Custom satellite orchestration platform with AI-powered optimization',
     launchDate: '2024-08-01',
     color: 'from - indigo - 600 to - purple - 600',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / satellite - ai - orchestration',
-    market_position:;
+    market_position: any;
       'Leading AI satellite orchestration platform for space companies',
-    target_audience:;
+    target_audience: any;
       'Satellite companies, Space agencies, Telecommunications, Earth observation companies',
     trial_days: 14,
     setup_time: '8 - 12 weeks',
@@ -426,7 +420,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     variant: 'space - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Custom satellite orchestration platform with AI - powered optimization',
     launch_date: '2024 - 08 - 01',
 
@@ -448,20 +442,19 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Data processing',
       'Collision avoidance',
     ],
-    market_advantage:;
+    market_advantage: any;
       'Advanced AI satellite orchestration with autonomous capabilities',
   },
   // Neural Interface Services;
-  {
+  
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Advanced neural interface technology',
     price: '$7, 999',
     period: '/month',
-    description:;
+    description: any;
       'Cutting - edge brain - computer interface platform that enables direct communication between the human brain and computers for research and medical applications.',
     features: [;
-
       'Neural signal processing',
       'Brain - computer communication',
       'Cognitive enhancement tools',
@@ -474,16 +467,16 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Clinical trial support',
     ],
     popular: true,
-    icon: '🧬',
+    icon: '',
 
       'Advanced BCI platform with medical-grade hardware and research tools',
     launchDate: '2024-07-01',
     color: 'from - pink - 600 to - rose - 600',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / brain - computer - interface',
-    market_position:;
+    market_position: any;
       'Leading brain - computer interface platform for research and medical applications',
-    target_audience:;
+    target_audience: any;
       'Research institutions, Medical centers, Rehabilitation facilities, Technology companies',
     trial_days: 7,
     setup_time: '12 - 16 weeks',
@@ -505,7 +498,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     variant: 'neural - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Advanced BCI platform with medical - grade hardware and research tools',
     launch_date: '2024 - 07 - 01',
 
@@ -527,20 +520,19 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Medical applications',
       'Research tools',
     ],
-    market_advantage:;
+    market_advantage: any;
       'Advanced BCI platform with medical - grade capabilities and research tools',
   },
   // Advanced IoT Services;
-  {
+  
     id: 'autonomous - iot - ecosystem',
     name: 'Autonomous IoT Ecosystem Platform',
     tagline: 'Self - managing IoT infrastructure',
     price: '$1, 599',
     period: '/month',
-    description:;
+    description: any;
       'Revolutionary IoT platform that autonomously manages, optimizes, and secures IoT devices and networks using advanced AI and machine learning.',
     features: [;
-
       'Autonomous device management',
       'Self - healing networks',
       'AI - powered optimization',
@@ -553,16 +545,16 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Expert IoT consultation',
     ],
     popular: false,
-    icon: '🌐',
+    icon: '',
 
       'Industrial-grade autonomous IoT platform with AI-powered management',
     launchDate: '2024-06-01',
     color: 'from - teal - 600 to - cyan - 600',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / autonomous - iot - ecosystem',
-    market_position:;
+    market_position: any;
       'Advanced autonomous IoT platform for industrial and enterprise applications',
-    target_audience:;
+    target_audience: any;
       'Manufacturing companies, Smart cities, Energy companies, Industrial IoT providers',
     trial_days: 30,
     setup_time: '4 - 6 weeks',
@@ -584,7 +576,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     variant: 'iot - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Industrial - grade autonomous IoT platform with AI - powered management',
     launch_date: '2024 - 06 - 01',
 
@@ -606,28 +598,27 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Predictive maintenance',
       'Security automation',
     ],
-    market_advantage:;
+    market_advantage: any;
       'Advanced autonomous IoT platform with AI - powered management capabilities',
   },
   // Advanced Analytics Services;
-  {
+  
     id: 'predictive - analytics - engine',
     name: 'Predictive Analytics Engine',
     tagline: 'AI - powered predictive insights and forecasting',
     price: '$2, 199',
     period: '/month',
-    description:;
+    description: any;
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.',
     features: [;
-
-    id: 'predictive-analytics-engine'
-    name: 'Predictive Analytics Engine'
-    tagline: 'AI-powered predictive insights and forecasting'
+    id: 'predictive-analytics-engine';
+    name: 'Predictive Analytics Engine';
+    tagline: 'AI-powered predictive insights and forecasting';
     price: '$2,199'
-    period: '/month'
+    period: '/month';
     description:
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.'
-    features: [
+    features: [;
       'Advanced ML algorithms',
       'Predictive modeling',
       'Time series forecasting',
@@ -640,15 +631,14 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Expert data consultation',
     ],
     popular: true,
-    icon: '📊',
+    icon: '',
 
     color: 'from - green - 600 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / predictive - analytics - engine',
-    market_position:;
+    market_position: any;
       'Leading AI - powered predictive analytics platform for enterprise',
-    target_audience:;
-
+    target_audience: any;
       'Businesses, Financial services, Retail companies, Manufacturing companies',
     trial_days: 21,
     setup_time: '2 - 3 weeks',
@@ -671,7 +661,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     variant: 'analytics - futuristic',
     contact_info: contact,
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Enterprise - grade predictive analytics platform with custom model development',
     launch_date: '2024 - 05 - 01',
 
@@ -698,7 +688,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Anomaly detection',
       'Scenario modeling',
     ],
-    market_advantage:;
+    market_advantage: any;
       'Advanced predictive analytics platform with custom ML model development',
   },
       'Advanced predictive analytics platform with custom ML model development',
@@ -721,7 +711,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Anomaly detection',
       'Scenario modeling',
     ],
-    market_advantage:;
+    market_advantage: any;
       'Advanced predictive analytics platform with custom ML model development',
   },
 ];
@@ -734,12 +724,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
 
 
-    features: [
+    features: [;
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting'
     ];
     popular: true;
-    icon: '⚛️';
+    icon: '';
     color: 'from-blue-600 to-cyan-600';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-machine-learning';
@@ -752,7 +742,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Research and development tools_expert quantum consulting';
     ];
     popular: true;
-    icon: '⚛️';
+    icon: '';
     color: 'from - blue - 600 to - cyan - 600';
     text_color: 'text - blue - 400';
     link: 'https://ziontechgroup.com / quantum - machine - learning';
@@ -789,7 +779,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced Cybersecurity Services;
 
-  {
+  
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
     tagline: 'Future - proof cryptography for the quantum era';
@@ -801,7 +791,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Compliance and certification_expert security consulting';
     ];
     popular: true;
-    icon: '🔒';
+    icon: '';
 
     color: 'from - red - 600 to - orange - 600';
     text_color: 'text - red - 400';
@@ -840,7 +830,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Space Technology Services;
 
-  {
+  
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -852,7 +842,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Mission analytics dashboard_expert space consulting';
     ];
     popular: false;
-    icon: '🛰️';
+    icon: '';
 
     color: 'from - indigo - 600 to - purple - 600';
     text_color: 'text - indigo - 400';
@@ -891,7 +881,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Neural Interface Services;
 
-  {
+  
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
     tagline: 'Advanced neural interface technology';
@@ -903,7 +893,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Expert neural consultation_clinical trial support';
     ];
     popular: true;
-    icon: '🧬';
+    icon: '';
 
     color: 'from - pink - 600 to - rose - 600';
     text_color: 'text - pink - 400';
@@ -942,7 +932,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced IoT Services;
 
-  {
+  
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
     tagline: 'Self - managing IoT infrastructure';
@@ -954,7 +944,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Custom IoT applications_expert IoT consultation';
     ];
     popular: false;
-    icon: '🌐';
+    icon: '';
 
     color: 'from - teal - 600 to - cyan - 600';
     text_color: 'text - teal - 400';
@@ -993,7 +983,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced Analytics Services;
 
-  {
+  
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
     tagline: 'AI - powered predictive insights and forecasting';
@@ -1005,7 +995,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Performance analytics_expert data consultation';
     ];
     popular: true;
-    icon: '📊';
+    icon: '';
 
     color: 'from - green - 600 to - emerald - 600';
     text_color: 'text - green - 400';
@@ -1120,7 +1110,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'API for research integrationExpert consultation services';
     ],;
     popular: true,;
-    icon: '🧠',;
+    icon: '',;
     color: 'from-purple-600 to-pink-600',;
     textColor: 'text-purple-400',;
     link: 'https://ziontechgroup.com/ai-consciousness-research',;
@@ -1166,7 +1156,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Research and development toolsExpert quantum consulting';
     ],;
     popular: true,;
-    icon: '⚛️',;
+    icon: '',;
     color: 'from-blue-600 to-cyan-600',;
     textColor: 'text-blue-400',;
     link: 'https://ziontechgroup.com/quantum-machine-learning',;
@@ -1212,7 +1202,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Compliance and certificationExpert security consulting';
     ],;
     popular: true,;
-    icon: '🔒',;
+    icon: '',;
     color: 'from-red-600 to-orange-600',;
     textColor: 'text-red-400',;
     link: 'https://ziontechgroup.com/quantum-resistant-cryptography',;
@@ -1258,7 +1248,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Mission analytics dashboardExpert space consulting';
     ],;
     popular: false,;
-    icon: '🛰️',;
+    icon: '',;
     color: 'from-indigo-600 to-purple-600',;
     textColor: 'text-indigo-400',;
     link: 'https://ziontechgroup.com/satellite-ai-orchestration',;
@@ -1304,7 +1294,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Expert neural consultationClinical trial support';
     ],;
     popular: true,;
-    icon: '🧬',;
+    icon: '',;
     color: 'from-pink-600 to-rose-600',;
     textColor: 'text-pink-400',;
     link: 'https://ziontechgroup.com/brain-computer-interface',;
@@ -1350,7 +1340,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Custom IoT applicationsExpert IoT consultation';
     ],;
     popular: false,;
-    icon: '🌐',;
+    icon: '',;
     color: 'from-teal-600 to-cyan-600',;
     textColor: 'text-teal-400',;
     link: 'https://ziontechgroup.com/autonomous-iot-ecosystem',;
@@ -1396,7 +1386,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Performance analyticsExpert data consultation';
     ],;
     popular: true,;
-    icon: '📊',;
+    icon: '',;
     color: 'from-green-600 to-emerald-600',;
     textColor: 'text-green-400',;
     link: 'https://ziontechgroup.com/predictive-analytics-engine',;

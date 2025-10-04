@@ -232,18 +232,15 @@ export class PerformanceOptimizer {
   /**
    * Export performance data
    */
-  exportMetrics(): string {
-    const summary = this.getPerformanceSummary();
+  exportMetrics(): string     const summary = this.getPerformanceSummary();
     const slowComponents = this.getSlowComponents();
     const leaks = this.detectMemoryLeaks();
 
-    return JSON.stringify({
-      timestamp: new Date().toISOString(),
+    return JSON.stringify(      timestamp: new Date().toISOString(),
       summary,
       slowComponents,
       potentialLeaks: leaks,
-      detailedMetrics: Array.from(this.metrics.entries()).map(([component, metrics]) => ({
-        component,
+      detailedMetrics: Array.from(this.metrics.entries()).map(([component, metrics]) => (        component,
         metrics: metrics.slice(-20) // Last 20 renders
       }))
     }, null, 2);
@@ -252,8 +249,7 @@ export class PerformanceOptimizer {
   /**
    * Clear all metrics
    */
-  clearMetrics(): void {
-    this.metrics.clear();
+  clearMetrics(): void     this.metrics.clear();
     this.renderStartTimes.clear();
     this.observedComponents.clear();
   }
@@ -264,24 +260,18 @@ export class PerformanceOptimizer {
   monitorComponent<T extends React.ComponentType<any>>(
     Component: T,
     componentName: string
-  ): T {
-    const optimizer = this;
+  ): T     const optimizer = this;
     
-    return class MonitoredComponent extends React.Component {
-      componentDidMount() {
-        optimizer.endRender(componentName);
+    return class MonitoredComponent extends React.Component       componentDidMount()         optimizer.endRender(componentName);
       }
 
-      componentDidUpdate() {
-        optimizer.endRender(componentName);
+      componentDidUpdate()         optimizer.endRender(componentName);
       }
 
-      componentWillUnmount() {
-        // Component unmounting - good time to check for cleanup
+      componentWillUnmount()         // Component unmounting - good time to check for cleanup
       }
 
-      render() {
-        optimizer.startRender(componentName);
+      render()         optimizer.startRender(componentName);
         return React.createElement(Component, this.props);
       }
     } as any;
@@ -294,17 +284,13 @@ export const performanceOptimizer = new PerformanceOptimizer();
 /**
  * React Hook for performance monitoring
  */
-export function usePerformanceMonitor(componentName: string) {
-  React.useEffect(() => {
-    performanceOptimizer.startRender(componentName);
+export function usePerformanceMonitor(componentName: string)   React.useEffect(() =>     performanceOptimizer.startRender(componentName);
     
-    return () => {
-      performanceOptimizer.endRender(componentName);
+    return () =>       performanceOptimizer.endRender(componentName);
     };
   });
 
-  return {
-    getMetrics: () => performanceOptimizer.getAverageRenderTime(componentName),
+  return     getMetrics: () => performanceOptimizer.getAverageRenderTime(componentName),
     getSummary: () => performanceOptimizer.getPerformanceSummary()
   };
 }
@@ -315,11 +301,9 @@ export function usePerformanceMonitor(componentName: string) {
 export function withPerformanceMonitoring<P extends object>(
   Component: React.ComponentType<P>,
   componentName?: string
-): React.ComponentType<P> {
-  const name = componentName || Component.displayName || Component.name || 'Unknown';
+): React.ComponentType<P>   const name = componentName || Component.displayName || Component.name || 'Unknown';
   
-  return (props: P) => {
-    usePerformanceMonitor(name);
+  return (props: P) =>     usePerformanceMonitor(name);
     return React.createElement(Component, props);
   };
 }

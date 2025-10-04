@@ -25,22 +25,22 @@ export interface AdvancedAIAutomationService {
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
     website: string;
   };
-  {
+  
     id: 'ai-predictive-enterprise-analytics', name: 'AI Predictive Enterprise Analytics',
     tagline: 'Predict business outcomes with 99.7% accuracy using advanced AI algorithms', price: '$899',
     period: '/month',
     description: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
-    features: [
+    features: [;
       '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting';
       'Scenario planning toolsExecutive dashboard'
     ];
-    popular: true, icon: '🔮',
+    popular: true, icon: '',
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-predictive-enterprise-analytics',
     marketPosition: 'Highest accuracy in enterprise predictions, competes with Tableau, Power BI, and Qlik.',
@@ -57,18 +57,18 @@ export interface AdvancedAIAutomationService {
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01', customers: 234,
     rating: 4.9,
-    reviews: 312
+    reviews: 312;
   };
-  {
+  
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success',
     tagline: 'Automatically increase customer retention and satisfaction with AI-driven insights', price: '$699',
     period: '/month',
     description: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
-    features: [
+    features: [;
       'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis';
       'ROI measurementIntegration with CRM systems'
     ];
-    popular: true, icon: '🎯',
+    popular: true, icon: '',
     color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-autonomous-customer-success',
     marketPosition: 'First autonomous customer success platform, competes with Gainsight, Totango, and ChurnZero.',
@@ -85,19 +85,19 @@ export interface AdvancedAIAutomationService {
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',
     launchDate: '2026-01-20', customers: 167,
     rating: 4.7,
-    reviews: 203
+    reviews: 203;
   };
-  {
+  
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator',
     tagline: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',
     price: '$1,199',
     period: '/month',
     description: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
-    features: [
+    features: [;
       'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics';
       'Multi-platform integrationAutomated reporting'
     ];
-    popular: true, icon: '📢',
+    popular: true, icon: '',
     color: 'from-pink-600 to-rose-700', textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-autonomous-marketing-orchestrator',
     marketPosition: 'First autonomous marketing orchestrator, competes with HubSpot, Marketo, and Pardot.',
@@ -114,20 +114,20 @@ export interface AdvancedAIAutomationService {
     implementationDetails: 'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',
     launchDate: '2026-02-15', customers: 145,
     rating: 4.8,
-    reviews: 189
+    reviews: 189;
   };
-  {
+  
     id: 'ai-autonomous-sales-intelligence', name: 'AI Autonomous Sales Intelligence',
     tagline: 'Automatically identify, qualify, and nurture leads with AI-driven insights',
     price: '$799', period: '/month',
     description: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
-    features: [
+    features: [;
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection';
 
       'ROI trackingCRM integration'
     ];
     popular: true;
-    icon: '💰';
+    icon: '';
     color: 'from-yellow-600 to-orange-700';
     textColor: 'text-yellow-400';
 
@@ -144,20 +144,20 @@ export interface AdvancedAIAutomationService {
 
     integrations: ['Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'];
     useCases: ['Lead generationSales qualificationPipeline managementRevenue optimization'];
-    roi: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.'
+    roi: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.';
     competitors: ['SalesLoft, Outreach, HubSpot Sales, Pipedrive, Close'];
     marketSize: '$12B+ sales intelligence market';
     growthRate: '130% YoY';
     variant: 'ai-futuristic';
     contactInfo: contact;
-    realImplementation: true
+    realImplementation: true;
     implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';
     launchDate: '2026-01-25';
     customers: 198;
 
     rating: 4 && 4.9,
 
-    reviews: 267
+    reviews: 267;
   }
 ];
 
@@ -172,67 +172,67 @@ export const aiAutomationCategories = [
   'AI & Marketing'
 ];
 
-export const getAIAutomationServicesByCategory = (category: string) => {
+export const getAIAutomationServicesByCategory = (category: string) =>;
   if (category === 'All') return advancedAIAutomationServices;
   return advancedAIAutomationServices.filter(service => service.category === category);
 };
 
-export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] => {
+export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] =>;
   return advancedAIAutomationServices
     .filter(service => service.popular)
     .slice(0, limit);
 };
 
-export const getAIAutomationServicesByTechnology = (technology: string): AIAutomationService[] => {
+export const getAIAutomationServicesByTechnology = (technology: string): AIAutomationService[] =>;
   return advancedAIAutomationServices.filter(service =>
     service.technology.some(tech =>
       tech.toLowerCase().includes(technology.toLowerCase())
-    )
+  </div>
+)
   );
 };
 
-export const getAIAutomationServicesByPriceRange = (minPrice: number, maxPrice: number): AIAutomationService[] => {
-  return advancedAIAutomationServices.filter(service => {
+export const getAIAutomationServicesByPriceRange = (minPrice: number, maxPrice: number): AIAutomationService[] =>;
+  return advancedAIAutomationServices.filter(service => 
     const price = parseFloat(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
 
-export const advancedAIAutomationServices2026 = [
-  {
-    name: 'Advanced AI Automation Platform 2026',
+export const advancedAIAutomationServices2026 = [{
+  name: 'Advanced AI Automation Platform 2026',
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',
     category: 'AI & Automation',
-    features: [
+    features: [;
       'Advanced AI algorithms',
       'Process automation',
       'Intelligent decision making',
       'Performance optimization'
     ],
-    pricing: {
+    pricing: any;
       starter: '$599/month',
       professional: '$1199/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom';
     }
   },
-  {
+  
     name: 'Advanced AI Workflow Engine 2026',
     path: '/services/advanced-ai-workflow-engine-2026',
     description: 'Intelligent workflow automation with AI',
     icon: 'Workflow',
     category: 'AI & Automation',
-    features: [
+    features: [;
       'Smart workflow design',
       'AI optimization',
       'Real-time monitoring',
       'Advanced analytics'
     ],
-    pricing: {
+    pricing: any;
       starter: '$399/month',
       professional: '$799/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom';
     }
   }
 ];
@@ -244,9 +244,9 @@ export const advancedAIAutomationCategories2026 = [
   'Performance Optimization'
 ];
 
-export const advancedAIAutomationStats2026 = {
+export const advancedAIAutomationStats2026 = 
   totalServices: 2,
   categories: 4,
   averageRating: 4.9,
-  activeUsers: 3000
+  activeUsers: 3000;
 };

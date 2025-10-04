@@ -12,24 +12,24 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ name, role, company, content, avatar, rating = 5 }: TestimonialCardProps) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-      <div className="flex items-center mb-4">
+    <div className="text-left">
+      <div className="text-left">
         {avatar ? (
-          <Image src={avatar} alt={name || 'User'} width={48} height={48} className="w-12 h-12 rounded-full mr-4" />
+          <Image src={avatar} alt={name || 'User'} width={48} height={48} className="text-left" />
         ) : (
-          <div className="w-12 h-12 bg-gray-300 rounded-full mr-4 flex items-center justify-center">
-            <span className="text-gray-600 font-semibold">{name ? name.charAt(0) : 'U'}</span>
+          <div className="text-left">
+            <span className="text-left">{name ? name.charAt(0) : 'U'}<
           </div>
         )}
         <div>
-          <h4 className="font-semibold text-gray-900">{name}</h4>
-          <p className="text-sm text-gray-600">
+          <h4 className="text-left">{name}</h4>
+          <p className="text-left">
             {role} at {company}
           </p>
         </div>
       </div>
 
-      <div className="flex items-center mb-3">
+      <div className="text-left">
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
@@ -42,7 +42,7 @@ export default function TestimonialCard({ name, role, company, content, avatar, 
         ))}
       </div>
 
-      <blockquote className="text-gray-700 italic">&ldquo;{content}&rdquo</blockquote>
+      <blockquote className="text-left">&ldquo;{content}&rdquo</blockquote>
     </div>
   );
 }

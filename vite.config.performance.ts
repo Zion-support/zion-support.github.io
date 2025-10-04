@@ -14,26 +14,26 @@ export default defineConfig({
       babel: {
         plugins: [
           // Remove console.log in production
-          ['transform-remove-console', { exclude: ['error', 'warn'] }]
-        ]
-      }
+          ['transform-remove-console', { exclude: ['error', 'warn'] }],
+        ],
+      },
     }),
     // Bundle analyzer
     visualizer({
       filename: './dist/stats.html',
       open: false,
       gzipSize: true,
-      brotliSize: true
-    })
+      brotliSize: true,
+    }),
   ],
-  
+
   build: {
     // Target modern browsers
     target: 'es2020',
-    
+
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
-    
+
     // Rollup options for better code splitting
     rollupOptions: {
       output: {
@@ -43,24 +43,19 @@ export default defineConfig({
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-ui': ['lucide-react', 'framer-motion'],
           'vendor-utils': ['clsx', 'tailwind-merge'],
-          
+
           // Feature chunks
-          'blog': [
-            './src/pages/blog',
-            './src/content/blog-posts'
-          ],
-          'components': [
-            './src/components'
-          ]
+          blog: ['./src/pages/blog', './src/content/blog-posts'],
+          components: ['./src/components'],
         },
-        
+
         // Naming pattern for chunks
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
-      }
+        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+      },
     },
-    
+
     // Minification options
     minify: 'terser',
     terserOptions: {
@@ -68,29 +63,29 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2
+        passes: 2,
       },
       mangle: {
-        safari10: true
+        safari10: true,
       },
       format: {
-        comments: false
-      }
+        comments: false,
+      },
     },
-    
+
     // Source maps for production debugging
     sourcemap: false,
-    
+
     // CSS code splitting
     cssCodeSplit: true,
-    
+
     // Report compressed size
     reportCompressedSize: true,
-    
+
     // Increase chunk size limit before warning
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
   },
-  
+
   // Optimize dependencies
   optimizeDeps: {
     include: [
@@ -98,11 +93,11 @@ export default defineConfig({
       'react-dom',
       'react-router-dom',
       'lucide-react',
-      'framer-motion'
+      'framer-motion',
     ],
-    exclude: []
+    exclude: [],
   },
-  
+
   // Server configuration
   server: {
     port: 3000,
@@ -111,18 +106,18 @@ export default defineConfig({
     open: false,
     // HMR configuration
     hmr: {
-      overlay: true
-    }
+      overlay: true,
+    },
   },
-  
+
   // Preview configuration
   preview: {
     port: 4173,
     strictPort: false,
     host: true,
-    open: false
+    open: false,
   },
-  
+
   // Performance hints
   esbuild: {
     // Minify identifiers
@@ -134,19 +129,19 @@ export default defineConfig({
     // Drop console logs in production
     drop: ['console', 'debugger'],
     // Target modern browsers
-    target: 'es2020'
+    target: 'es2020',
   },
-  
+
   // CSS configuration
   css: {
     devSourcemap: true,
     modules: {
-      localsConvention: 'camelCaseOnly'
+      localsConvention: 'camelCaseOnly',
     },
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/styles/variables.scss";`
-      }
-    }
-  }
+        additionalData: `@import "./src/styles/variables.scss";`,
+      },
+    },
+  },
 });

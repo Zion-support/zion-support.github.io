@@ -21,16 +21,16 @@
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}"
-          className="mb-12"
+          className="text-left"
         >"
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">"
-            <Sparkles className="w-5 h-5 text-cyan-400 mr-2"  />"            <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
+          <div className="text-left">"
+            <Sparkles className="text-left"  />"            <span className="text-left">2025 Innovation Hub<
           </div>
           "
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-left">
             Zion Tech Group
           </h1>"
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-left">
             Leading the future of technology with cutting-edge AI solutions, quantum computing, 
             and innovative micro SAAS services that transform businesses worldwide.
           </p>'
@@ -42,7 +42,7 @@
     s:ring-offset-2 focu,
     s:ring-offset-zion-slate-dark';
               aria-label='Explore our services>
-              <span>Explore Services</span>''
+              <span>Explore Services<''
               <ArrowRight className='w-5 h-5'  />            </Link>
             <button'
               onClick={onGetStarted};
@@ -50,7 +50,7 @@
     s:ring-offset-2 focu,
     s:ring-offset-zion-slate-dark';
               aria-label='Get started with Zion Tech>
-              <span>Get Started</span>''
+              <span>Get Started<''
               <ArrowRight className='w-5 h-5'  />            </button>
 
           </div>
@@ -58,7 +58,7 @@
         {/* Hero: Slides *,/}
         <motion.div;
 
-                    </span>) ) }
+                    <) ) }
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -83,17 +83,17 @@
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}"
-          className="text-center mb-16"
+          className="text-left"
         >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-left">
             Why Choose Zion Tech Group?
           </h2>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-left">
             We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.
           </p>
         </motion.div>
 "
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="text-left">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -156,7 +156,7 @@ const: EnhancedHome: React.FC: = () => {
         description='Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.'';
         keywords='AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services''        type='website'/>
       <FuturisticBackground  />
-      "      <div className="relative z-10">
+      "      <div className="text-left">
         <HeroSection onGetStarted={handleGetStarted}   />
 
         <LazyLoadWrapper>

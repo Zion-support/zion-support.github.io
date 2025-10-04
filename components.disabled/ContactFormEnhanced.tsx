@@ -50,10 +50,10 @@ type='submit''            disabled={isSubmitting}            whileHover={{ scale
             className='w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable,
     d:opacity-50 flex items-center justify-center space-x-2''          >'            {isSubmitting ? (
               <>'
-                <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>'                <span>Sending...</span>'</>
+                <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>'                <span>Sending...<'</>
             ) : (
               <>'
-                <Send className='w-4 h-4' />                <span>Send Message</span>'</>
+                <Send className='w-4 h-4' />                <span>Send Message<'</>
             )}
           </motion.button>
           {submitStatus ==='
@@ -61,7 +61,7 @@ type='submit''            disabled={isSubmitting}            whileHover={{ scale
   '            <motion.div'              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className='p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dar,
-    k:text-green-200 rounded-lg flex items-center space-x-2''            >'              <CheckCircle className='w-5 h-5' />              <span>Message sent successfully!</span>"            </motion.div>)}
+    k:text-green-200 rounded-lg flex items-center space-x-2''            >'              <CheckCircle className='w-5 h-5' />              <span>Message sent successfully!<"            </motion.div>)}
 
         </form>
       </motion.div>

@@ -18,46 +18,46 @@ export const metadata: Metadata = {
 
 export default function Fortune500AITransformation2025() {
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="text-left">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 py-20">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left"></div>
+          <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-8">
-              <TrendingUp className="w-5 h-5 text-green-400" />
-              <span className="text-green-400 font-bold text-sm tracking-wider uppercase">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <TrendingUp className="text-left" />
+              <span className="text-left">
                 🏆 SUCCESS STORY • Fortune 500 Manufacturing • January 30, 2025
-              </span>
+              <
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-left">
               Fortune 500 AI Autonomous Transformation
             </h1>
             
-            <p className="text-2xl text-gray-300 mb-8 font-semibold">
+            <p className="text-left">
               $2.3B Cost Savings • 99.97% Uptime • Complete Operational Autonomy
             </p>
             
-            <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-left">
               A global manufacturing leader transformed their entire operation with AI-powered autonomous systems, 
               achieving unprecedented efficiency, reliability, and cost savings across 47 facilities worldwide.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <a 
-                href="#transformation-results" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                href="#transformation-results"
+                className="text-left"
               >
                 View Results
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/contact"
+                className="text-left"
               >
                 Start Your Transformation
               </a>
@@ -67,53 +67,53 @@ export default function Fortune500AITransformation2025() {
       </section>
 
       {/* Key Results Section */}
-      <section id="transformation-results" className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+      <section id="transformation-results" className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Transformation Results: 6 Months
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-left">
             {[
               {
-                icon: <DollarSign className="w-12 h-12 text-green-400" />,
+                icon: <DollarSign className="text-left" />,
                 value: '$2.3B',
                 label: 'Total Cost Savings',
                 description: 'Annual operational cost reduction',
                 change: '+340% ROI'
               },
               {
-                icon: <Shield className="w-12 h-12 text-blue-400" />,
+                icon: <Shield className="text-left" />,
                 value: '99.97%',
                 label: 'System Uptime',
                 description: 'Continuous operation across all facilities',
                 change: '+15% improvement'
               },
               {
-                icon: <Zap className="w-12 h-12 text-purple-400" />,
+                icon: <Zap className="text-left" />,
                 value: '87%',
                 label: 'Faster Operations',
                 description: 'Average process acceleration',
                 change: '+3.2x efficiency'
               },
               {
-                icon: <Users className="w-12 h-12 text-orange-400" />,
+                icon: <Users className="text-left" />,
                 value: '95%',
                 label: 'Automation Level',
                 description: 'Operations requiring no human intervention',
                 change: '+78% autonomous'
               }
             ].map((result, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300">
-                <div className="mb-6">{result.icon}</div>
-                <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
+              <div key={index} className="text-left">
+                <div className="text-left">{result.icon}</div>
+                <div className="text-left">
                   {result.value}
                 </div>
-                <div className="text-xl font-bold text-white mb-2">{result.label}</div>
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed">{result.description}</p>
-                <div className="text-green-400 text-sm font-semibold">{result.change}</div>
+                <div className="text-left">{result.label}</div>
+                <p className="text-left">{result.description}</p>
+                <div className="text-left">{result.change}</div>
               </div>
             ))}
           </div>
@@ -121,16 +121,16 @@ export default function Fortune500AITransformation2025() {
       </section>
 
       {/* Challenge Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h2 className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                <h2 className="text-left">
                   The Challenge: Legacy Operations at Scale
                 </h2>
                 
-                <div className="space-y-6">
+                <div className="text-left">
                   {[
                     {
                       problem: 'Manual Operations',
@@ -153,18 +153,18 @@ export default function Fortune500AITransformation2025() {
                       impact: '35% higher operational costs'
                     }
                   ].map((challenge, index) => (
-                    <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                      <h3 className="text-xl font-bold text-white mb-3">{challenge.problem}</h3>
-                      <p className="text-gray-400 mb-2">{challenge.description}</p>
-                      <p className="text-red-400 text-sm font-semibold">Impact: {challenge.impact}</p>
+                    <div key={index} className="text-left">
+                      <h3 className="text-left">{challenge.problem}</h3>
+                      <p className="text-left">{challenge.description}</p>
+                      <p className="text-left">Impact: {challenge.impact}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-red-900/30 to-orange-900/30 rounded-2xl p-8 border border-red-500/20">
-                <h3 className="text-2xl font-bold text-white mb-6">Pre-Transformation Metrics</h3>
-                <div className="space-y-4">
+              <div className="text-left">
+                <h3 className="text-left">Pre-Transformation Metrics</h3>
+                <div className="text-left">
                   {[
                     { metric: 'System Uptime', value: '82.3%' },
                     { metric: 'Manual Operations', value: '78%' },
@@ -173,9 +173,9 @@ export default function Fortune500AITransformation2025() {
                     { metric: 'Energy Efficiency', value: '65%' },
                     { metric: 'Response Time', value: '4.2 hours' }
                   ].map((metric, index) => (
-                    <div key={index} className="flex items-center justify-between">
-                      <span className="text-gray-300">{metric.metric}</span>
-                      <span className="text-red-400 font-bold">{metric.value}</span>
+                    <div key={index} className="text-left">
+                      <span className="text-left">{metric.metric}<
+                      <span className="text-left">{metric.value}<
                     </div>
                   ))}
                 </div>
@@ -186,15 +186,15 @@ export default function Fortune500AITransformation2025() {
       </section>
 
       {/* Solution Implementation */}
-      <section className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               AI Transformation Solution
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-12">
-              <div className="space-y-8">
+            <div className="text-left">
+              <div className="text-left">
                 {[
                   {
                     phase: 'Phase 1: Foundation (Weeks 1-4)',
@@ -241,18 +241,18 @@ export default function Fortune500AITransformation2025() {
                     ]
                   }
                 ].map((phase, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                    <div className="mb-4">
-                      <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 text-sm font-semibold border border-green-500/30">
+                  <div key={index} className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">
                         {phase.phase}
-                      </span>
+                      <
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
-                    <p className="text-gray-400 mb-4 leading-relaxed">{phase.description}</p>
-                    <ul className="space-y-2">
+                    <h3 className="text-left">{phase.title}</h3>
+                    <p className="text-left">{phase.description}</p>
+                    <ul className="text-left">
                       {phase.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
+                        <li key={idx} className="text-left">
+                          <CheckCircle className="text-left" />
                           {achievement}
                         </li>
                       ))}
@@ -261,10 +261,10 @@ export default function Fortune500AITransformation2025() {
                 ))}
               </div>
 
-              <div className="space-y-8">
-                <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-2xl p-8 border border-green-500/20">
-                  <h3 className="text-2xl font-bold text-white mb-6">Implementation Timeline</h3>
-                  <div className="space-y-4">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Implementation Timeline</h3>
+                  <div className="text-left">
                     {[
                       { week: 'Weeks 1-4', activity: 'Infrastructure Setup', progress: '100%' },
                       { week: 'Weeks 5-8', activity: 'AI Model Deployment', progress: '100%' },
@@ -272,23 +272,23 @@ export default function Fortune500AITransformation2025() {
                       { week: 'Weeks 13-16', activity: 'Optimization & Tuning', progress: '100%' },
                       { week: 'Ongoing', activity: 'Continuous Learning', progress: 'Active' }
                     ].map((milestone, index) => (
-                      <div key={index} className="flex items-center gap-4">
-                        <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full"></div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-white font-semibold">{milestone.activity}</span>
-                            <span className="text-green-400 text-sm font-bold">{milestone.progress}</span>
+                      <div key={index} className="text-left">
+                        <div className="text-left"></div>
+                        <div className="text-left">
+                          <div className="text-left">
+                            <span className="text-left">{milestone.activity}<
+                            <span className="text-left">{milestone.progress}<
                           </div>
-                          <span className="text-gray-400 text-sm">{milestone.week}</span>
+                          <span className="text-left">{milestone.week}<
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                  <h3 className="text-2xl font-bold text-white mb-6">Technology Stack</h3>
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="text-left">
+                  <h3 className="text-left">Technology Stack</h3>
+                  <div className="text-left">
                     {[
                       'Kubernetes Orchestration',
                       'TensorFlow/PyTorch',
@@ -299,9 +299,9 @@ export default function Fortune500AITransformation2025() {
                       'PostgreSQL Database',
                       'Docker Containers'
                     ].map((tech, index) => (
-                      <div key={index} className="flex items-center gap-2 text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        <span className="text-sm">{tech}</span>
+                      <div key={index} className="text-left">
+                        <CheckCircle className="text-left" />
+                        <span className="text-left">{tech}<
                       </div>
                     ))}
                   </div>
@@ -313,14 +313,14 @@ export default function Fortune500AITransformation2025() {
       </section>
 
       {/* Results Deep Dive */}
-      <section className="py-20 bg-gradient-to-br from-green-900/30 to-emerald-900/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-extrabold mb-12 text-center text-white">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Detailed Results & Impact Analysis
             </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-left">
               {[
                 {
                   category: 'Operational Excellence',
@@ -347,17 +347,17 @@ export default function Fortune500AITransformation2025() {
                   ]
                 }
               ].map((category, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                  <h3 className="text-xl font-bold text-white mb-6">{category.category}</h3>
-                  <div className="space-y-4">
+                <div key={index} className="text-left">
+                  <h3 className="text-left">{category.category}</h3>
+                  <div className="text-left">
                     {category.metrics.map((metric, idx) => (
-                      <div key={idx} className="border-b border-white/10 pb-4 last:border-b-0">
-                        <div className="text-gray-400 text-sm mb-2">{metric.name}</div>
-                        <div className="flex items-center justify-between mb-1">
-                          <span className="text-red-400 text-sm">Before: {metric.before}</span>
-                          <span className="text-green-400 text-sm font-bold">{metric.improvement}</span>
+                      <div key={idx} className="text-left">
+                        <div className="text-left">{metric.name}</div>
+                        <div className="text-left">
+                          <span className="text-left">Before: {metric.before}<
+                          <span className="text-left">{metric.improvement}<
                         </div>
-                        <div className="text-white font-semibold">After: {metric.after}</div>
+                        <div className="text-left">After: {metric.after}</div>
                       </div>
                     ))}
                   </div>
@@ -369,72 +369,72 @@ export default function Fortune500AITransformation2025() {
       </section>
 
       {/* ROI Analysis */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-extrabold mb-8 text-white">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Return on Investment Analysis
             </h2>
             
-            <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-2xl p-8 border border-green-500/20 mb-8">
-              <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-left">
+              <div className="text-left">
                 <div>
-                  <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-left">
                     $340M
                   </div>
-                  <div className="text-gray-400 text-sm font-medium">Total Investment</div>
+                  <div className="text-left">Total Investment</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-left">
                     $2.3B
                   </div>
-                  <div className="text-gray-400 text-sm font-medium">Annual Savings</div>
+                  <div className="text-left">Annual Savings</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-left">
                     676%
                   </div>
-                  <div className="text-gray-400 text-sm font-medium">ROI</div>
+                  <div className="text-left">ROI</div>
                 </div>
               </div>
             </div>
 
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-left">
               The transformation paid for itself in just 2.1 months, with projected savings 
               of $11.5B over the next 5 years.
             </p>
             
             <a 
-              href="/contact" 
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+              href="/contact"
+              className="text-left"
             >
-              <span>Start Your Transformation</span>
-              <ArrowRight className="w-5 h-5" />
+              <span>Start Your Transformation<
+              <ArrowRight className="text-left" />
             </a>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-extrabold mb-6 text-white">
+      <section className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
             Ready to Achieve Similar Results?
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+          <p className="text-left">
             Our AI transformation experts can help your organization achieve similar breakthrough results. 
             Schedule a consultation to discuss your specific needs and challenges.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-left">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+              href="/contact"
+              className="text-left"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/services" 
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/services"
+              className="text-left"
             >
               Explore Our Services
             </a>
@@ -443,14 +443,14 @@ export default function Fortune500AITransformation2025() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-slate-950 border-t border-white/10">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-gray-400">
-            <p className="mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
-            <div className="flex justify-center gap-6 text-sm">
-              <a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-              <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+      <footer className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
+            <div className="text-left">
+              <a href="/privacy" className="text-left">Privacy Policy</a>
+              <a href="/terms" className="text-left">Terms of Service</a>
+              <a href="/contact" className="text-left">Contact Us</a>
             </div>
           </div>
         </div>

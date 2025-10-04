@@ -63,11 +63,11 @@ class ErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <svg
-                className="w-6 h-6 text-red-600"
+                className="text-left"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -81,37 +81,37 @@ class ErrorBoundary extends Component<Props, State> {
                 />
               </svg>
             </div>
-            <h1 className="text-xl font-semibold text-gray-900 text-center mb-2">
+            <h1 className="text-left">
               Something went wrong
             </h1>
-            <p className="text-gray-600 text-center mb-6">
+            <p className="text-left">
               We&apos;re sorry, but something unexpected happened. Please try
               refreshing the page.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="text-left">
               <button
                 onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                className="text-left"
               >
                 Try Again
               </button>
               <button
                 onClick={() => window.location.reload()}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
+                className="text-left"
               >
                 Refresh Page
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 p-4 bg-gray-100 rounded-md">
-                <summary className="cursor-pointer font-medium text-gray-700">
+              <details className="text-left">
+                <summary className="text-left">
                   Error Details (Development Only)
                 </summary>
-                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+                <pre className="text-left">
                   {this.state.error.stack}
                 </pre>
                 {this.state.errorInfo && (
-                  <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+                  <pre className="text-left">
                     {this.state.errorInfo.componentStack}
                   </pre>
                 )}

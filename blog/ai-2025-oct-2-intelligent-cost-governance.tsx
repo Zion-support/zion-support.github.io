@@ -11,20 +11,24 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <article className="text-left"></a>
       <h1>💰 Intelligent AI Cost Governance: Autonomous FinOps Platform for 2025</h1>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">🚀 Revolutionary Cost Control</h3>
-        <p className="text-lg">
-          <strong>Autonomous AI cost governance platform</strong> achieving <span className="text-green-400 font-bold">87% reduction in cloud spend</span>, 
-          <span className="text-green-400 font-bold"> real-time optimization</span>, and <span className="text-green-400 font-bold">99.8% budget accuracy</span>. 
-          Transform your AI economics with <span className="text-green-400 font-bold">intelligent, self-optimizing FinOps</span> that works while you sleep.
+      <div className="text-left"></div>
+        <h3 className="text-left">🚀 Revolutionary Cost Control</h3>
+        <p className="text-left"></p>
+          <strong>Autonomous AI cost governance platform</strong> achieving <span className="text-left">87% reduction in cloud spend<, 
+          <span className="text-left"> real-time optimization<, and <span className="text-left">99.8% budget accuracy<. 
+          Transform your AI economics with <span className="text-left">intelligent, self-optimizing FinOps< that works while you sleep.
         </p>
       </div>
 
       <h2>🎯 The AI Cost Crisis</h2>
-      <p>
+      <p></p>
         Enterprise AI spending is spiraling out of control. Companies spend $2.5M-$15M annually on LLM APIs, 
         cloud infrastructure, and data processing—with 60-80% being wasteful or redundant. Traditional cost 
         management tools are reactive and manual. Intelligent AI cost governance changes everything with 
@@ -92,7 +96,7 @@ export default function BlogPost() {
       <h2>⚡ Technical Architecture</h2>
 
       <h3>Intelligent Cost Governance Platform</h3>
-      <pre className="bg-black/50 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left"></p>
 {`# Autonomous FinOps Architecture
 
 ┌─────────────────────────────────────────────┐
@@ -136,7 +140,7 @@ export default function BlogPost() {
       </pre>
 
       <h3>Cost Optimization Decision Tree</h3>
-      <pre className="bg-black/50 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left"></p>
 {`Incoming AI Request
     │
     ├─→ Check Cache (70% hit rate)
@@ -168,45 +172,45 @@ export default function BlogPost() {
 
       <h2>📊 Cost Optimization Impact</h2>
 
-      <table className="min-w-full divide-y divide-gray-700">
+      <table className="text-left">
         <thead>
           <tr>
             <th className="text-left">Cost Category</th>
-            <th className="text-right">Before Optimization</th>
-            <th className="text-right">After Optimization</th>
-            <th className="text-right">Savings</th>
+            <th className="text-left">Before Optimization</th>
+            <th className="text-left">After Optimization</th>
+            <th className="text-left">Savings</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>LLM API Calls</td>
-            <td className="text-right">$450K/month</td>
-            <td className="text-right text-green-400 font-bold">$78K/month</td>
-            <td className="text-right text-green-400">82% ↓</td>
+            <td className="text-left">$450K/month</td>
+            <td className="text-left">$78K/month</td>
+            <td className="text-left">82% ↓</td>
           </tr>
           <tr>
             <td>Cloud Infrastructure</td>
-            <td className="text-right">$320K/month</td>
-            <td className="text-right text-green-400 font-bold">$29K/month</td>
-            <td className="text-right text-green-400">91% ↓</td>
+            <td className="text-left">$320K/month</td>
+            <td className="text-left">$29K/month</td>
+            <td className="text-left">91% ↓</td>
           </tr>
           <tr>
             <td>Data Processing</td>
-            <td className="text-right">$180K/month</td>
-            <td className="text-right text-green-400 font-bold">$22K/month</td>
-            <td className="text-right text-green-400">88% ↓</td>
+            <td className="text-left">$180K/month</td>
+            <td className="text-left">$22K/month</td>
+            <td className="text-left">88% ↓</td>
           </tr>
           <tr>
             <td>Storage & Transfer</td>
-            <td className="text-right">$95K/month</td>
-            <td className="text-right text-green-400 font-bold">$14K/month</td>
-            <td className="text-right text-green-400">85% ↓</td>
+            <td className="text-left">$95K/month</td>
+            <td className="text-left">$14K/month</td>
+            <td className="text-left">85% ↓</td>
           </tr>
-          <tr className="font-bold">
+          <tr className="text-left">
             <td>Total Monthly Spend</td>
-            <td className="text-right">$1.045M</td>
-            <td className="text-right text-green-400">$143K</td>
-            <td className="text-right text-green-400">87% ↓</td>
+            <td className="text-left">$1.045M</td>
+            <td className="text-left">$143K</td>
+            <td className="text-left">87% ↓</td>
           </tr>
         </tbody>
       </table>
@@ -253,7 +257,7 @@ export default function BlogPost() {
         <li><strong>Cloud infrastructure efficiency:</strong> $3.49M annual savings</li>
         <li><strong>Data processing optimization:</strong> $1.90M annual savings</li>
         <li><strong>Storage and transfer:</strong> $970K annual savings</li>
-        <li><strong>Total Annual Savings:</strong> <span className="text-green-400 font-bold">$10.82M</span></li>
+        <li><strong>Total Annual Savings:</strong> <span className="text-left">$10.82M<</li>
       </ul>
 
       <h3>Investment Required</h3>
@@ -261,26 +265,26 @@ export default function BlogPost() {
         <li><strong>Platform licensing:</strong> $180K annually</li>
         <li><strong>Implementation services:</strong> $120K one-time</li>
         <li><strong>Integration and training:</strong> $50K one-time</li>
-        <li><strong>Payback period:</strong> <span className="text-green-400 font-bold">1.2 months</span></li>
-        <li><strong>First-year ROI:</strong> <span className="text-green-400 font-bold">3,095%</span></li>
+        <li><strong>Payback period:</strong> <span className="text-left">1.2 months<</li>
+        <li><strong>First-year ROI:</strong> <span className="text-left">3,095%<</li>
       </ul>
 
       <h2>🏆 Customer Success Stories</h2>
 
-      <div className="bg-gradient-to-r from-blue-600/10 to-green-600/10 border border-blue-500/30 rounded-lg p-6 my-6">
-        <h4 className="text-xl font-bold text-blue-300">Global E-Commerce Platform</h4>
-        <p>
+      <div className="text-left"></div>
+        <h4 className="text-left">Global E-Commerce Platform</h4>
+        <p></p>
           Deployed intelligent cost governance across 50M+ AI-powered customer interactions monthly.
-          <strong className="text-green-400"> Results:</strong> 89% reduction in AI costs ($8.2M annual savings), 
+          <strong className="text-left"> Results:</strong> 89% reduction in AI costs ($8.2M annual savings), 
           zero quality degradation, 99.8% budget forecast accuracy, payback in 28 days.
         </p>
       </div>
 
-      <div className="bg-gradient-to-r from-green-600/10 to-purple-600/10 border border-green-500/30 rounded-lg p-6 my-6">
-        <h4 className="text-xl font-bold text-green-300">Fortune 500 Financial Services</h4>
-        <p>
+      <div className="text-left"></div>
+        <h4 className="text-left">Fortune 500 Financial Services</h4>
+        <p></p>
           Implemented autonomous FinOps for 200+ AI models in production serving 12M customers.
-          <strong className="text-green-400"> Results:</strong> $14.3M first-year savings, 
+          <strong className="text-left"> Results:</strong> $14.3M first-year savings, 
           automated 95% of cost optimization decisions, eliminated budget overruns completely.
         </p>
       </div>
@@ -288,21 +292,21 @@ export default function BlogPost() {
       <h2>🚀 Quick Start Guide</h2>
 
       <h3>Week 1: Install and Baseline</h3>
-      <pre className="bg-black/50 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left"></p>
 {`# Step 1: Deploy cost intelligence proxy
 npm install @ziontechgroup/cost-governance
 
 # Step 2: Instrument your AI services
 import { CostGovernance } from '@ziontechgroup/cost-governance';
 
-const costGov = new CostGovernance({
+const costGov = new CostGovernance(
   apiKey: process.env.ZTG_COST_GOV_KEY,
   services: ['openai', 'anthropic', 'aws', 'azure'],
   realTimeMonitoring: true
 });
 
 # Step 3: Wrap your AI calls
-const response = await costGov.optimize({
+const response = await costGov.optimize(
   provider: 'openai',
   model: 'gpt-4',
   prompt: userQuery,
@@ -368,13 +372,13 @@ const response = await costGov.optimize({
         <li>Multi-company federated cost optimization</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300">🎯 Stop Wasting Money on AI</h3>
-        <p className="text-lg">
+      <div className="text-left"></div>
+        <h3 className="text-left">🎯 Stop Wasting Money on AI</h3>
+        <p className="text-left"></p>
           Every day without intelligent cost governance, your organization burns thousands of dollars 
           on redundant API calls, over-provisioned infrastructure, and inefficient prompts. 
         </p>
-        <p className="text-lg mt-4">
+        <p className="text-left"></p>
           <strong>Companies deploying our platform see 87% cost reductions</strong> within 60 days, 
           with payback periods measured in weeks, not months. The question isn't whether you can afford 
           intelligent cost governance—it's whether you can afford NOT to deploy it.
@@ -383,11 +387,12 @@ const response = await costGov.optimize({
 
       <h2>📚 Additional Resources</h2>
       <ul>
-        <li><a href="/blog/ai-2025-october-autonomous-cloud-cost-intelligence" className="text-blue-400 hover:text-blue-300">Autonomous Cloud Cost Intelligence</a></li>
-        <li><a href="/blog/ai-2025-october-enterprise-finops-optimization" className="text-blue-400 hover:text-blue-300">Enterprise FinOps Optimization Guide</a></li>
-        <li><a href="/blog/llm-cost-optimization-enterprise-2025" className="text-blue-400 hover:text-blue-300">LLM Cost Optimization Strategies</a></li>
-        <li><a href="/contact" className="text-blue-400 hover:text-blue-300">Request Cost Assessment</a></li>
+        <li><a href="/blog/ai-2025-october-autonomous-cloud-cost-intelligence" className="text-left">Autonomous Cloud Cost Intelligence</a></li>
+        <li><a href="/blog/ai-2025-october-enterprise-finops-optimization" className="text-left">Enterprise FinOps Optimization Guide</a></li>
+        <li><a href="/blog/llm-cost-optimization-enterprise-2025" className="text-left">LLM Cost Optimization Strategies</a></li>
+        <li><a href="/contact" className="text-left">Request Cost Assessment</a></li>
       </ul>
     </article>
   );
 }
+)

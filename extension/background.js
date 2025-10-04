@@ -1,4 +1,3 @@
-
 const OPENAI_API_KEY = '';
 // Base URL for opening Zion pages in a new tab
 const BASE_URL = 'https://app.ziontechgroup.com';
@@ -11,12 +10,12 @@ async function askZionGPT(prompt) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${OPENAI_API_KEY}`
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
-        messages: [{ role: 'user', content: prompt }]
-      })
+        messages: [{ role: 'user', content: prompt }],
+      }),
     });
 
     if (!res.ok) {
