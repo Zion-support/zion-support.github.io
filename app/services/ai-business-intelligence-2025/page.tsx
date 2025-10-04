@@ -30,18 +30,14 @@ export const metadata: Metadata = {
 const AIBusinessIntelligence2025 = React.memo(function AIBusinessIntelligence2025() {
   return (
     <div>
-      <div></div>
-    <div className="text-left"></div>
-      {/* Header */}</div>
+      {/* Header */}
       <div className="text-left">
-        <div className="text-left"></div>
+        <div className="text-left">
           <Link href="/services" className="text-left">
             ← Back to Services
           </Link>
-          <span className="text-left">|<
-          <span className="text-left"></span>
-            NEW 2025
-          </span>
+          <span className="text-left">|</span>
+          <span className="text-left">NEW 2025</span>
         </div>
         
         <h1 className="text-left">

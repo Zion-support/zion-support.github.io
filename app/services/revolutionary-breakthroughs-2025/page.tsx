@@ -3,10 +3,8 @@ import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, 
 import { revolutionaryBreakthroughs2025, breakthroughServices2025, latestCaseStudies2025 } from '../../../src/content/revolutionary-ai-breakthroughs-2025';
 
 const RevolutionaryBreakthroughs2025 = React.memo(function RevolutionaryBreakthroughs2025() {
-  return (
-    <div>/* content */}
-  const getIconComponent = (icon: string) => 
-    const iconMap: { [key: string]: React.ComponentType<any> } = 
+  const getIconComponent = (icon: string) => {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {
       '🧠': Brain,
       '⚛️': Atom,
       '🤖': Bot,
@@ -19,30 +17,26 @@ const RevolutionaryBreakthroughs2025 = React.memo(function RevolutionaryBreakthr
 
   return (
     <div>
-      <div></div>
-    <div className="text-left"></div>
       {/* Hero Section */}
-      <section className="text-left"></section>
+      <section className="text-left">
         <div className="text-left">
-        <div className="text-left"></div>"
-          <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        </div>
-        
-        <div className="text-left">
-        <div className="text-left"></div>
-            <div className="text-left">
-        <div className="text-left"></div>
+          <div className="text-left">
+            <div className="text-left" style={{ animationDelay: '2s' }}>
+              <div className="text-left">
                 <Sparkles className="text-left" />
                 <span className="text-left">REVOLUTIONARY BREAKTHROUGHS</span>
               </div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 <TrendingUp className="text-left" />
                 <span className="text-left">6 BREAKTHROUGH TECHNOLOGIES</span>
               </div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 <Star className="text-left" />
                 <span className="text-left">LIMITED EARLY ACCESS</span>
               </div>
+            </div>
+          </div>
+        </div>
 
             <h1 className="text-left">
               Revolutionary AI Breakthroughs 2025
