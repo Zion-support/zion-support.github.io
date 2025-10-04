@@ -74,7 +74,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ pageData, children }) => {
     ],
   };
 
-  const seoData = useMemo(() => ({ ...defaultSEO, ...pageData }), [pageData]);
+  const seoData = useMemo(() => ({ ...defaultSEO, ...pageData }), [defaultSEO, pageData]);
 
   // Calculate SEO score
   useEffect(() => {

@@ -73,7 +73,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     debounce((newMetrics: AdvancedMetrics) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     }, 100),
-    [],
+    [setMetrics],
   );
 
   // Throttled real-time monitoring
@@ -88,7 +88,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         ...customMetrics,
       });
     }, 1000),
-    [],
+    [setRealTimeMetrics],
   );
 
   const calculatePerformanceScore = useCallback(

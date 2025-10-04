@@ -421,7 +421,7 @@ class DocumentationGenerator {
   private async generateDeploymentDocumentation(): Promise<void> {
     console.log('🚀 Generating deployment documentation...');
 
-    const _deploymentDoc = {
+    const deploymentDoc = {
       title: 'Deployment Guide',
       sections: [
         {
@@ -560,7 +560,7 @@ class DocumentationGenerator {
   private async generateChangelog(): Promise<void> {
     console.log('📝 Generating changelog...');
 
-    const _changelog = {
+    const changelog = {
       version: '1.0.0',
       date: new Date().toISOString().split('T')[0],
       changes: [
