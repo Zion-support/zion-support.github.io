@@ -4,14 +4,13 @@
 
 export const real2027Q3Additions = [
   
-export const real2027Q3Additions = [;
-  
-    id: 'it - asset - discovery - agent',
+export const real2027Q3Additions = [{
+  id: 'it - asset - discovery - agent',
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
     period: '/month',
-    description:;
+    description: any;
       'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
       'Agentless subnet scanning and SaaS discovery',
       'OS, version, and CVE enrichment',
@@ -29,7 +28,7 @@ export const real2027Q3Additions = [;
     tagline: 'High availability PostgreSQL with SRE runbooks',
     price: '$1, 200',
     period: '/month',
-    description:;
+    description: any;
       'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.',
     features: [;
       'Streaming replication and automatic failover',
@@ -48,7 +47,7 @@ export const real2027Q3Additions = [;
     tagline: 'Production RAG foundation with evals and ops',
     price: '$89',
     period: '/month',
-    description:;
+    description: any;
       'Deploy a proven RAG baseline with embeddings, chunking, evaluation harness, and observability for fast iteration.',
     features: [;
       'Pinecone / Weaviate / Elastic integrations',
@@ -67,7 +66,7 @@ export const real2027Q3Additions = [;
     tagline: 'Reliable jobs with retries, idempotency, and alerting',
     price: '$39',
     period: '/month',
-    description:;
+    description: any;
       'Schedule and run serverless jobs at scale with observability, concurrency controls, and guaranteed delivery semantics.',
     features: [;
       'Idempotent job execution',
@@ -86,7 +85,7 @@ export const real2027Q3Additions = [;
     tagline: 'Proactive domain health and expiry guardrails',
     price: '$19',
     period: '/month',
-    description:;
+    description: any;
       'Monitor WHOIS, DNS records, TLS health, and name server changes with instant alerts and audit trails.',
     features: [;
       'WHOIS expiry and registrar checks',
@@ -105,7 +104,7 @@ export const real2027Q3Additions = [;
     tagline: 'Synthetic checks with SLOs and error budgets',
     price: '$29',
     period: '/month',
-    description:;
+    description: any;
       'Track service uptime with user - centric SLOs, burn rates, and multi - location synthetic checks.',
     features: [;
       'SLO templates and burn - rate alerts',
@@ -124,7 +123,7 @@ export const real2027Q3Additions = [;
     tagline: 'Provisioning, deprovisioning, and access reviews',
     price: '$199',
     period: '/month',
-    description:;
+    description: any;
       'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta / Auth0 / WorkOS.',
     features: [;
       'Just - in - time provisioning',
@@ -143,7 +142,7 @@ export const real2027Q3Additions = [;
     tagline: 'Traces, metrics, logs for APIs in minutes',
     price: '$49',
     period: '/month',
-    description:;
+    description: any;
       'One - click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.',
     features: [;
       'Automatic instrumentation presets',
@@ -162,7 +161,7 @@ export const real2027Q3Additions = [;
     tagline: 'Least - privilege insights and drift detection',
     price: '$79',
     period: '/month',
-    description:;
+    description: any;
       'Continuously analyze RBAC bindings, detect excessive privileges, and auto - generate least - privilege policies.',
     features: [;
       'RBAC graph analysis and reports',
@@ -181,7 +180,7 @@ export const real2027Q3Additions = [;
     tagline: 'Detect and reconcile infra drift automatically',
     price: '$69',
     period: '/month',
-    description:;
+    description: any;
       'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto - remediation.',
     features: [;
       'Terraform plan diffs as PR comments',
@@ -200,7 +199,7 @@ export const real2027Q3Additions = [;
     tagline: 'AI - assisted incident response and postmortems',
     price: '$99',
     period: '/month',
-    description:;
+    description: any;
       'Triage, summarize, and coordinate incidents with auto - generated timelines and draft postmortems.',
     features: [;
       'Auto triage and severity suggestion',
@@ -219,7 +218,7 @@ export const real2027Q3Additions = [;
     tagline: 'Automated landscape scans and insight briefs',
     price: '$79',
     period: '/month',
-    description:;
+    description: any;
       'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.',
     features: [;
       'Web and doc ingestion with citations',
@@ -238,7 +237,7 @@ export const real2027Q3Additions = [;
     tagline: 'Sequencing, enrichment, and AI reply drafting',
     price: '$59',
     period: '/month',
-    description:;
+    description: any;
       'Automate prospecting, enrichment, and multi - channel outreach with AI - drafted replies and meeting booking.',
     features: [;
       'Lead enrichment and routing',
@@ -257,7 +256,7 @@ export const real2027Q3Additions = [;
     tagline: 'Clause extraction, risk flags, and playbooks',
     price: '$99',
     period: '/month',
-    description:;
+    description: any;
       'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.',
     features: [;
       'Smart clause detection and summaries',
@@ -276,7 +275,7 @@ export const real2027Q3Additions = [;
     tagline: 'SEO - optimized content with brand voice',
     price: '$49',
     period: '/month',
-    description:;
+    description: any;
       'High - quality SEO content in your brand voice with templates, approvals, and CMS integrations.',
     features: [;
       'Templates and brand voices',
@@ -295,7 +294,7 @@ export const real2027Q3Additions = [;
     tagline: 'DMARC, DKIM, SPF reporting and policy help',
     price: '$29',
     period: '/month',
-    description:;
+    description: any;
       'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.',
     features: [;
       'Aggregate and forensic reports',
@@ -314,7 +313,7 @@ export const real2027Q3Additions = [;
     tagline: 'API discovery and vuln scanning with CI gates',
     price: '$199',
     period: '/month',
-    description:;
+    description: any;
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [;
     ];
@@ -347,7 +346,7 @@ export const real2027Q3Additions = [;
 ];
 ;
 
-export const real2027Q3Additions = [;
+export const real2027Q3Additions = [
   {;
     id: 'it-asset-discovery-agent',;
     name: 'IT Asset Discovery Agent',;

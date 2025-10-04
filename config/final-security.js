@@ -28,7 +28,7 @@ export const finalSecurityConfig = {
     'Cross-Origin-Embedder-Policy': 'require-corp',
     'Cross-Origin-Opener-Policy': 'same-origin',
     'Cross-Origin-Resource-Policy': 'same-origin',
-    'Content-Security-Policy-Report-Only': 'default-src 'self'; report-uri /api/csp-report'
+    'Content-Security-Policy-Report-Only': 'default-src \'self\'; report-uri /api/csp-report'
   },
   
   // Rate limiting

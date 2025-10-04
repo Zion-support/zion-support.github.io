@@ -14,7 +14,7 @@
   customers?: number;
   trial_days?: number;
   setup_time?: string;
-  contact_info: 
+  contact_info: any;
     mobile: string;
     email: string;
     address: string;
@@ -38,10 +38,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Branded copilot with RAG, guardrails, and analytics',
     price: '$149',
     period: '/month',
-    description:;
+    description: any;
       'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
     features: [;
-
       'RAG over your docs with hybrid search',
       'Guardrails: PII / PHI redaction, jailbreak detection',
       'Human handoff + conversation analytics',
@@ -62,11 +61,11 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Eval datasets/versioning',
     id: 'ai - evals - observability',
     name: 'AI Evals & Observability',
-    tagline:;
+    tagline: any;
       'Regression testing, safety checks, and live metrics for LLM features',
     price: '$99',
     period: '/month',
-    description:;
+    description: any;
       'Ship reliable LLM apps with dataset management, prompt diffing, red - teaming, and production KPIs for quality, latency, and costs.',
     features: [;
       'Eval datasets / versioning',
@@ -93,7 +92,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Production RAG with hybrid search, chunking, tools, and evals',
     price: '$179',
     period: '/month',
-    description:;
+    description: any;
       'Ingest and index your knowledge with hybrid search + reranking, enable tool - using agents, and validate responses with reference checks and citations.',
     features: [;
       'Hybrid vector + BM25 + reranker',
@@ -122,7 +121,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'OpenAPI / GraphQL scanning, auth / Z checks, dependency audit',
     price: '$59',
     period: '/month',
-    description:;
+    description: any;
       'Automatically scan APIs for OWASP issues, auth / z misconfigurations, and dependency CVEs with CI gating and fix guidance.',
     features: [;
       'Auth / Z misconfig checks',
@@ -149,7 +148,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'OTel tracing, SLOs, and error budgets for services',
     price: '$69',
     period: '/month',
-    description:;
+    description: any;
       'Collect traces / metrics / logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.',
     features: [;
       'OTel traces / metrics / logs',
@@ -177,10 +176,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Rightsizing, lifecycle, anomaly detection, and k8s bin - packing',
     price: '$99',
     period: '/month',
-    description:;
+    description: any;
       'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
     features: [;
-
       'Auto rightsizing',
       'Idle cleanup',
       'Spot orchestration',
@@ -203,10 +201,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Slow query capture, AI index suggestions, capacity forecasting',
     price: '$79',
     period: '/month',
-    description:;
+    description: any;
       'Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',
     features: [;
-
       'Slow query ranking',
       'AI index advice',
       'Pool tuning',
@@ -229,10 +226,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Highly - available Postgres with backups, failover, and guardrails',
     price: '$499',
     period: '/month',
-    description:;
+    description: any;
       'Production - ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.',
     features: [;
-
       'Automated backups',
       'Failover & replication',
       'Performance tuning',
@@ -257,10 +253,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Synthetic checks, error budgets, and incident automation',
     price: '$39',
     period: '/month',
-    description:;
+    description: any;
       'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',
     features: [;
-
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
@@ -283,10 +278,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Auto - renewal checks and expiry alerts across your fleet',
     price: '$19',
     period: '/month',
-    description:;
+    description: any;
       'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
     features: [;
-
       'Expiry alerts',
       'Issuer checks',
       'Auto - renew validation',
@@ -309,10 +303,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Track DNS changes, TTLs, and misconfigurations',
     price: '$29',
     period: '/month',
-    description:;
+    description: any;
       'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',
     features: [;
-
       'Change detection',
       'Misconfig alerts',
       'TTL insights',
@@ -339,7 +332,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'High - fidelity serverless PDF rendering and watermarking',
     price: '$49',
     period: '/month',
-    description:;
+    description: any;
       'Generate pixel - perfect PDFs from HTML / Markdown with headers, footers, and watermarking using a simple API.',
     features: [;
       'HTML / Markdown to PDF',
@@ -365,10 +358,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'RUM metrics, Core Web Vitals, and UX waterfall analysis',
     price: '$39',
     period: '/month',
-    description:;
+    description: any;
       'Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',
     features: [;
-
       'RUM collection',
       'CWV dashboards',
       'Waterfall analysis',
@@ -391,10 +383,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Targeting, rollouts, and experiments at CDN edge',
     price: '$69',
     period: '/month',
-    description:;
+    description: any;
       'Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.',
     features: [;
-
       'Edge evaluation',
       'Targeting & segments',
       'Experiments',
@@ -417,10 +408,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Reliable scheduled jobs with retries and observability',
     price: '$29',
     period: '/month',
-    description:;
+    description: any;
       'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.',
     features: [;
-
       'Cron & schedules',
       'Retries & DLQs',
       'Logs & traces',
@@ -445,10 +435,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Collect and map controls with change tracking',
     price: '$149',
     period: '/month',
-    description:;
+    description: any;
       'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
     features: [;
-
       'Control mapping',
       'Evidence collection',
       'Change tracking',
@@ -471,10 +460,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Automate VRM workflows, DDQs, and risk scoring',
     price: '$99',
     period: '/month',
-    description:;
+    description: any;
       'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.',
     features: [;
-
       'DDQs and questionnaires',
       'Risk scoring',
       'Continuous monitoring',
@@ -499,10 +487,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Capture, inspect, and replay webhooks reliably',
     price: '$19',
     period: '/month',
-    description:;
+    description: any;
       'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
     features: [;
-
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
@@ -525,10 +512,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Tamper - evident logs with retention and export',
     price: '$39',
     period: '/month',
-    description:;
+    description: any;
       'Centralize audit logs with WORM retention, export APIs, and fine - grained access for investigations.',
     features: [;
-
       'WORM retention',
       'Export APIs',
       'Fine - grained access',
@@ -553,8 +539,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     tagline: 'Voice IVR and call handling with CRM handoff',
     price: '$129',
     period: '/month',
-    description:;
-
+    description: any;
       'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
     features: ['Natural TTS / ASR', 'Routing & handoff', 'CRM sync', 'Analytics'],
     category: 'AI & Assistants',
@@ -587,41 +572,39 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '2 hours',
     contact_info,
   },
-    id: 'vector-search-starter'
-    name: 'Vector Search Starter'
-    tagline: 'Deploy a production-grade vector database and APIs'
-    price: '$89'
-    period: '/month'
+    id: 'vector-search-starter';
+    name: 'Vector Search Starter';
+    tagline: 'Deploy a production-grade vector database and APIs';
+    price: '$89';
+    period: '/month';
     description:
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
-    features: [
+    features: [;
       'Managed vector DB'
       'Ingestion pipelines'
       'Metadata filters'
       'Access controls'
     ]
-    category: 'AI & Search'
-    link: 'https://ziontechgroup.com/vector-search-starter'
-    variant: 'quantum'
-    rating: 4.6
-    customers: 410
-    trialDays: 14
-    setupTime: '2 hours'
+    category: 'AI & Search';
+    link: 'https://ziontechgroup.com/vector-search-starter';
+    variant: 'quantum';
+    rating: 4.6;
+    customers: 410;
+    trialDays: 14;
+    setupTime: '2 hours';
     contactInfo
   }
 ];import { ServiceVariant  } from "../types/service-variants";
 
-export interface MarketValidatedService 
-    id: 'vector - search - starter',
+export interface MarketValidatedService {
+  id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
     price: '$89',
     period: '/month',
-    description:;
+    description: any;
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
     features: [;
-
-
       'WORM retention',
       'Export APIs',
       'Fine - grained access',
@@ -690,7 +673,7 @@ export interface MarketValidatedService {;
 	address: "364 E Main St STE 1008 Middletown DE 19709";
 
   website: "https://ziontechgroup && ziontechgroup.com";,
-	contactInfo: 
+	contactInfo: any;
 		mobile: string;
 		email: string;
 		address: string;
@@ -1040,8 +1023,8 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		trialDays: 14,
 
 ];import { ServiceVariant   } from '../types / service - variants';
-export interface MarketValidatedService 
-id: string;
+export interface MarketValidatedService {
+  id: string;
 name: string;
 tagline: string;
 price: string;
@@ -1055,7 +1038,7 @@ rating?: number;
 customers?: number;
 trial_days?: number;
 setup_time?: string;
-contact_info: 
+contact_info: any;
   mobile: string;
   email: string;
   address: string;

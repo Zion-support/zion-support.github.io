@@ -6,8 +6,7 @@ export type Job =
   createdAt: string;
 };
 
-export const JOBS: Job[] = [
-  
+export const JOBS: Job[] = [;
     id: 'job-llm-eng-001',
     title: 'LLM Engineer (RAG + Eval)',
     clientId: 'client-demo-001',
@@ -18,7 +17,7 @@ export const JOBS: Job[] = [
     id: 'job-devops-002',
     title: 'Senior DevOps Engineer',
     clientId: 'client-demo-001',
-    location: 'Hybrid — Toronto, CA',
+    location: 'Hybrid  Toronto, CA',
     createdAt: '2025-07-28T13:30:00Z',
   },
 ];
