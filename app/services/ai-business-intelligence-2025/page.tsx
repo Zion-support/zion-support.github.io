@@ -49,13 +49,10 @@ const AIBusinessIntelligence2025 = React.memo(function AIBusinessIntelligence202
         </div>
           <span className="text-left">Predictive Analytics</span>
           <span className="text-left">Data Visualization</span>
-          </span>
-          <span className="text-left"></span>
-            Real-time Insights
-          </span>
+          <span className="text-left">Real-time Insights</span>
         </div>
         
-        <p className="text-left"></p>
+        <p className="text-left">
           Transform your business with AI-powered business intelligence. Our advanced analytics platform delivers 
           predictive insights, real-time dashboards, and intelligent automation that drives 300% ROI and enables 
           data-driven decision making at scale.

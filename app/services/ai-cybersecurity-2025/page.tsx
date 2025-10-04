@@ -34,20 +34,19 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
 
           {/* Success Metrics */}
           <div className="text-left">
-        <div className="text-left"></div>
-              <h2 className="text-left">Security Performance</h2>"
-              <div className="text-left"></div>
-                <div></div>
-                  <div className="text-left">99.99%</div>"
-                  <div className="text-left">Threat Detection</div>"
-                </div>
-                <div></div>
-                  <div className="text-left">100%</div>"
-                  <div className="text-left">Ransomware Prevention</div>"
-                </div>
-                <div></div>
-                  <div className="text-left">&lt;10ms</div>"
-                  <div className="text-left">Response Time</div>"
+            <h2 className="text-left">Security Performance</h2>
+            <div className="text-left">
+              <div>
+                <div className="text-left">99.99%</div>
+                <div className="text-left">Threat Detection</div>
+              </div>
+              <div>
+                <div className="text-left">100%</div>
+                <div className="text-left">Ransomware Prevention</div>
+              </div>
+              <div>
+                <div className="text-left">&lt;10ms</div>
+                <div className="text-left">Response Time</div>
                 </div>
                 <div></div>
                   <div className="text-left">$80M+</div>"

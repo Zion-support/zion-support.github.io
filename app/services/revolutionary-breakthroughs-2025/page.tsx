@@ -49,11 +49,11 @@ const RevolutionaryBreakthroughs2025 = React.memo(function RevolutionaryBreakthr
               </span>
             </p>
 
-            <div className="text-left"></div>
-              <span className="text-left"></span>
+            <div className="text-left">
+              <span className="text-left">
                 <Brain className="text-left" />
                 AI Innovation
-              <
+              </span>
               <span>📅 January 28, 2025</span>
               <span>⏱️ 25 min read</span>
             </div>
