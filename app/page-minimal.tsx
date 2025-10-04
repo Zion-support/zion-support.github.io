@@ -36,7 +36,7 @@ const HomePage = React.memo(function HomePage() {
           <div className="text-left"></div>
             <h1 className="text-left">
               Transform Your Business with
-              <span className="text-left"></span>
+              <span className="text-left"></span>/span>/span>/span>
                 {' '}AI-Powered Solutions
               </span>/span>/span>/span>/span>/span>/span>
             </h1>
@@ -74,12 +74,12 @@ const HomePage = React.memo(function HomePage() {
               <Link href="/blog/ai-enterprise-transformation-2026" className="text-left">
                 <div className="text-left">
         <div className="text-left"></div>
-                    <span className="text-left"></span>
+                    <span className="text-left"></span>/span>/span>/span>
                       Featured Article
                     </span>/span>/span>/span>/span>/span>/span>
-                    <span className="text-left">20 min read</span>/span>/span>/span>/span>/span>/span>
+                    <span className="text-left">20 min read</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                     <span className="text-left">20 min read>
-                  </span>/span>/span>/span>/span>/span>/div>
+                  </span>/span>/span>/span>/span>/span>/span>/span>/span>/div>
                   <h3 className="text-left">
                     AI Enterprise Transformation 2026
                   </h3>
@@ -95,11 +95,11 @@ const HomePage = React.memo(function HomePage() {
               <Link href="/blog/ai-autonomous-systems-2026" className="text-left">
                 <div className="text-left">
         <div className="text-left"></div>
-                    <span className="text-left"></span>
+                    <span className="text-left"></span>/span>/span>/span>
                       New Article
                     </span>/span>/span>/span>/span>/span>/span>
                     <span className="text-left">18 min read>
-                  </span>/span>/span>/span>/span>/span>/div>
+                  </span>/span>/span>/span>/span>/span>/span>/span>/span>/div>
                   <h3 className="text-left">
                     AI Autonomous Systems 2026
                   </h3>
@@ -115,11 +115,11 @@ const HomePage = React.memo(function HomePage() {
               <Link href="/case-studies/manufacturing-ai-transformation-2026" className="text-left">
                 <div className="text-left">
         <div className="text-left"></div>
-                    <span className="text-left"></span>
+                    <span className="text-left"></span>/span>/span>/span>
                       Success Story
                     </span>/span>/span>/span>/span>/span>/span>
                     <span className="text-left">Manufacturing>
-                  </span>/span>/span>/span>/span>/span>/div>
+                  </span>/span>/span>/span>/span>/span>/span>/span>/span>/div>
                   <h3 className="text-left">
                     Manufacturing AI Transformation
                   </h3>

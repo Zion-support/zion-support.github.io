@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number;
@@ -20,11 +20,11 @@ const PerformanceMonitor: React.FC = () => {
       }));
     };
 
-    getCLS(handleMetric);
-    getFID(handleMetric);
-    getFCP(handleMetric);
-    getLCP(handleMetric);
-    getTTFB(handleMetric);
+    onCLS(handleMetric);
+    onFID(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
   }, []);
 
   if (process.env.NODE_ENV === 'development') {

@@ -32,7 +32,7 @@
       "@types/*": ["./src/types/*"]
     }
   },
-  "include": ["app"],
+  "include": ["src", "app"],
   "exclude": [
     "app/blog/**/*",
     "app/components/**/*",
