@@ -19,7 +19,7 @@ import {
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 // Styles
-import '../index.css';
+import '../src/index.css';
 
 const App: React.FC = () => {
   useEffect(() => {
