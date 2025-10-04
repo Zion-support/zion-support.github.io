@@ -5,7 +5,7 @@
  * while preventing banner fatigue.
  */
 
-interface BannerConfig {/* content */}
+interface BannerConfig {
   id: string;
   component: string;
   priority: number;
@@ -15,7 +15,7 @@ interface BannerConfig {/* content */}
   abTestGroup?: 'A' | 'B' | 'control';
 }
 
-interface BannerImpression {/* content */}
+interface BannerImpression {
   bannerId: string;
   timestamp: number;
   sessionId: string;
@@ -46,12 +46,12 @@ const getSessionId = (): string => {/* content */}
 /**
  * Get banner impressions from storage
  */
-const getBannerImpressions = (): BannerImpression[] => {/* content */}
+const getBannerImpressions = (): BannerImpression[] => {
   if (typeof window === 'undefined') return [];
   
-  try {/* content */}
+  try {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {/* content */}
+    if (stored) {
       const impressions = JSON.parse(stored) as BannerImpression[];
       // Filter out impressions older than 7 days
       const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
