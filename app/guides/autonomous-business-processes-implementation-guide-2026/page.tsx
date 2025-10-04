@@ -52,7 +52,7 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
           
           <h1 className="text-left">
             Complete Guide to Implementing
-            <span className="text-left"></span>
+            <span className="text-left"></span>/span>/span>/span>
               Autonomous Business Processes in 2026
             </span>/span>/span>/span>/span>/span>/span>
           </h1>
@@ -88,62 +88,62 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
             <div className="text-left"></div>
               <ol className="text-left">
                 <li className="text-left">
-                  <span className="text-left">1</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">1</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#introduction" className="text-left">Introduction</Link></li>
                 <li className="text-left">
-                  <span className="text-left">2</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">2</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#prerequisites" className="text-left">Prerequisites and Readiness Assessment</Link></li>
                 <li className="text-left">
-                  <span className="text-left">3</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">3</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#strategic-planning" className="text-left">Strategic Planning and Architecture</Link></li>
                 <li className="text-left">
-                  <span className="text-left">4</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">4</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#technology-stack" className="text-left">Technology Stack Selection</Link></li>
                 <li className="text-left">
-                  <span className="text-left">5</span>/span>/span>/span>/span>/span>/span>
-                  <span className="text-left">1</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">5</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">1</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#introduction" className="text-left">Introduction</Link></li>
                 <li className="text-left">
-                  <span className="text-left">2</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">2</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#prerequisites" className="text-left">Prerequisites and Readiness Assessment</Link></li>
                 <li className="text-left">
-                  <span className="text-left">3</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">3</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#strategic-planning" className="text-left">Strategic Planning and Architecture</Link></li>
                 <li className="text-left">
-                  <span className="text-left">4</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">4</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#technology-stack" className="text-left">Technology Stack Selection</Link></li>
                 <li className="text-left">
-                  <span className="text-left">5</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">5</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#implementation" className="text-left">Implementation Methodology</Link></li>
               </ol>
               <ol className="text-left">
                 <li className="text-left">
-                  <span className="text-left">6</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">6</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#change-management" className="text-left">Change Management Strategy</Link></li>
                 <li className="text-left">
-                  <span className="text-left">7</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">7</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#risk-management" className="text-left">Risk Management and Mitigation</Link></li>
                 <li className="text-left">
-                  <span className="text-left">8</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">8</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#monitoring" className="text-left">Monitoring and Optimization</Link></li>
                 <li className="text-left">
-                  <span className="text-left">9</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">9</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#scaling" className="text-left">Scaling and Evolution</Link></li>
                 <li className="text-left">
-                  <span className="text-left">10</span>/span>/span>/span>/span>/span>/span>
-                  <span className="text-left">6</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">10</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">6</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#change-management" className="text-left">Change Management Strategy</Link></li>
                 <li className="text-left">
-                  <span className="text-left">7</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">7</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#risk-management" className="text-left">Risk Management and Mitigation</Link></li>
                 <li className="text-left">
-                  <span className="text-left">8</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">8</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#monitoring" className="text-left">Monitoring and Optimization</Link></li>
                 <li className="text-left">
-                  <span className="text-left">9</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">9</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#scaling" className="text-left">Scaling and Evolution</Link></li>
                 <li className="text-left">
-                  <span className="text-left">10</span>/span>/span>/span>/span>/span>
+                  <span className="text-left">10</span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <Link href="#best-practices" className="text-left">Best Practices and Lessons Learned</Link></li>
               </ol>
             </div>
@@ -170,40 +170,40 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
             <ul className="text-left">
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-analyze</strong> and identify optimization opportunities</span>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-analyze</strong> and identify optimization opportunities</span>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-optimize</strong> based on real-time performance data</span>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-optimize</strong> based on real-time performance data</span>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-heal</strong> from disruptions and adapt to changes</span>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-heal</strong> from disruptions and adapt to changes</span>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-evolve</strong> through continuous learning and improvement</span>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-evolve</strong> through continuous learning and improvement</span>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-govern</strong> within defined parameters and constraints</span>
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-analyze</strong> and identify optimization opportunities>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-govern</strong> within defined parameters and constraints</span>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-analyze</strong> and identify optimization opportunities>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-optimize</strong> based on real-time performance data>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-optimize</strong> based on real-time performance data>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-heal</strong> from disruptions and adapt to changes>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-heal</strong> from disruptions and adapt to changes>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-evolve</strong> through continuous learning and improvement>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-evolve</strong> through continuous learning and improvement>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Self-govern</strong> within defined parameters and constraints>
+                <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Self-govern</strong> within defined parameters and constraints>
               </li>
             </ul>
           </div>
@@ -222,33 +222,33 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Executive sponsorship with clear vision</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Executive sponsorship with clear vision</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Cross-functional collaboration</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Cross-functional collaboration</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Long-term commitment (18-24 months)</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Long-term commitment (18-24 months)</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Investment willingness</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Investment willingness</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <span className="text-left">Executive sponsorship with clear vision>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">Cross-functional collaboration>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">Long-term commitment (18-24 months)>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">Investment willingness>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
               </ul>
             </div>
 
@@ -257,33 +257,33 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Modern data architecture</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Modern data architecture</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">API-first systems</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">API-first systems</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Cloud-native infrastructure</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Cloud-native infrastructure</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Robust security framework</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Robust security framework</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <span className="text-left">Modern data architecture>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">API-first systems>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">Cloud-native infrastructure>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">Robust security framework>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
               </ul>
             </div>
 
@@ -292,33 +292,33 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Clean, consistent data</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Clean, consistent data</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Data governance policies</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Data governance policies</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Real-time data processing</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Real-time data processing</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Data lineage and audit trails</span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Data lineage and audit trails</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <span className="text-left">Clean, consistent data>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">Data governance policies>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">Real-time data processing>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
                   <span className="text-left">Data lineage and audit trails>
-                </span>/span>/span>/span>/span>/span>/li>
+                </span>/span>/span>/span>/span>/span>/span>/span>/span>/li>
               </ul>
             </div>
           </div>
@@ -400,32 +400,32 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Clear business objectives</strong> aligned with autonomous capabilities</span>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Clear business objectives</strong> aligned with autonomous capabilities</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Executive commitment</strong> with adequate resources</span>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Executive commitment</strong> with adequate resources</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Phased approach</strong> with measurable milestones</span>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Phased approach</strong> with measurable milestones</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Continuous communication</strong> and stakeholder engagement</span>
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Clear business objectives</strong> aligned with autonomous capabilities>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Continuous communication</strong> and stakeholder engagement</span>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Clear business objectives</strong> aligned with autonomous capabilities>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Executive commitment</strong> with adequate resources>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Executive commitment</strong> with adequate resources>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Phased approach</strong> with measurable milestones>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Phased approach</strong> with measurable milestones>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Continuous communication</strong> and stakeholder engagement>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Continuous communication</strong> and stakeholder engagement>
                 </li>
               </ul>
             </div>
@@ -435,32 +435,32 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Insufficient testing</strong> leading to system failures</span>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Insufficient testing</strong> leading to system failures</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Poor data quality</strong> causing incorrect decisions</span>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Poor data quality</strong> causing incorrect decisions</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Integration complexity</strong> delaying implementation</span>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Integration complexity</strong> delaying implementation</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Insufficient change management</strong> causing resistance</span>
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Insufficient testing</strong> leading to system failures>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Insufficient change management</strong> causing resistance</span>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Insufficient testing</strong> leading to system failures>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Poor data quality</strong> causing incorrect decisions>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Poor data quality</strong> causing incorrect decisions>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Integration complexity</strong> delaying implementation>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Integration complexity</strong> delaying implementation>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"></span>/span>/span>/span>/span>/span>strong>Insufficient change management</strong> causing resistance>
+                  <span className="text-left"></span>/span>/span>/span>/span>/span>/span>/span>/span>strong>Insufficient change management</strong> causing resistance>
                 </li>
               </ul>
             </div>
@@ -504,9 +504,9 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
                 <h3 className="text-left">AI-Powered Autonomous Business Processes</h3>"
                 <p className="text-left">Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026.</p>"
                 <div className="text-left"></div>
-                  <span className="text-left">Read article</span>/span>/span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Read article</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 <div className="text-left"></div>
-                  <span className="text-left">Read article</span>/span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">Read article</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <ArrowLeft className="text-left" />
                 </div>
               </div>
@@ -517,9 +517,9 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
                 <h3 className="text-left">Global Manufacturing Case Study</h3>"
                 <p className="text-left">See how a Fortune 500 manufacturer achieved 85% process automation with our solution.</p>"
                 <div className="text-left"></div>
-                  <span className="text-left">View case study</span>/span>/span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">View case study</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                 <div className="text-left"></div>
-                  <span className="text-left">View case study</span>/span>/span>/span>/span>/span>/span>/span>
+                  <span className="text-left">View case study</span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>/span>
                   <ArrowLeft className="text-left" />
                 </div>
               </div>

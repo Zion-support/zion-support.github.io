@@ -1,4 +1,4 @@
-export interface ZionInnovativeService2025 
+export interface ZionInnovativeService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -13,7 +13,7 @@ export interface ZionInnovativeService2025
   isPopular?: boolean;
   isNew?: boolean;
   link: string;
-  contactInfo: 
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
@@ -33,7 +33,7 @@ export interface ZionInnovativeService2025
   reviews: number;
 }
 
-export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
+export const zionInnovativeServices2025: ZionInnovativeService2025[] = [;
   // AI-Powered Quantum Edge Computing
   
     id: 'quantum-edge-ai-platform',
@@ -42,7 +42,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$4,999',
     period: '/month',
     description: 'Revolutionary platform combining quantum computing with edge AI to deliver real-time intelligence processing at the network edge, enabling instant decision-making for autonomous systems.',
-    features: [
+    features: [;
       'Quantum-enhanced edge computing',
       'Real-time AI inference at edge',
       'Quantum error correction',
@@ -52,7 +52,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Quantum-secure communications',
       'Edge device optimization'
     ],
-    benefits: [
+    benefits: [;
       '1000x faster edge processing',
       'Real-time autonomous decisions',
       'Quantum-level security',
@@ -61,15 +61,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$4,999/month (Enterprise), $2,499/month (Professional), $999/month (Starter)',
     category: 'Quantum',
-    icon: '⚛️',
+    icon: '',
     isPopular: true,
     isNew: true,
     link: 'https://ziontechgroup.com/services/quantum-edge-ai-platform',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['IBM Qiskit', 'Google Cirq', 'TensorFlow Quantum', 'Edge Computing', '5G Networks'],
@@ -82,7 +82,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2024-03-15',
     customers: 28,
     rating: 4.9,
-    reviews: 15
+    reviews: 15;
   },
 
   // AI-Powered Carbon Footprint Analytics
@@ -93,7 +93,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$1,299',
     period: '/month',
     description: 'Advanced AI-powered platform that automatically tracks, analyzes, and optimizes carbon footprints across organizations, providing actionable insights for sustainability initiatives.',
-    features: [
+    features: [;
       'Automated carbon tracking',
       'AI-powered optimization recommendations',
       'Real-time sustainability metrics',
@@ -103,7 +103,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Predictive sustainability modeling',
       'Stakeholder communication tools'
     ],
-    benefits: [
+    benefits: [;
       'Reduce carbon footprint by 30-50%',
       'Achieve ESG compliance automatically',
       'Improve brand reputation',
@@ -112,15 +112,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$1,299/month (Enterprise), $699/month (Professional), $299/month (Starter)',
     category: 'GreenTech',
-    icon: '🌱',
+    icon: '',
     isPopular: true,
     isNew: true,
     link: 'https://ziontechgroup.com/services/ai-carbon-intelligence-suite',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['Machine Learning', 'IoT Sensors', 'Blockchain', 'Cloud Computing', 'Data Analytics'],
@@ -133,7 +133,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2024-02-20',
     customers: 156,
     rating: 4.8,
-    reviews: 89
+    reviews: 89;
   },
 
   // Autonomous AI DevOps Platform
@@ -144,7 +144,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$2,499',
     period: '/month',
     description: 'Next-generation DevOps platform that uses AI to autonomously manage, monitor, and optimize infrastructure, automatically resolving issues before they impact users.',
-    features: [
+    features: [;
       'AI-powered incident prediction',
       'Autonomous problem resolution',
       'Self-optimizing infrastructure',
@@ -154,7 +154,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Performance optimization',
       'Cost optimization'
     ],
-    benefits: [
+    benefits: [;
       '99.99% uptime guarantee',
       '90% reduction in manual interventions',
       '50% faster deployment cycles',
@@ -163,15 +163,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$2,499/month (Enterprise), $1,299/month (Professional), $599/month (Starter)',
     category: 'Automation',
-    icon: '🤖',
+    icon: '',
     isPopular: true,
     isNew: true,
     link: 'https://ziontechgroup.com/services/autonomous-ai-devops-platform',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['Machine Learning', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus', 'Grafana'],
@@ -184,7 +184,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2024-01-10',
     customers: 342,
     rating: 4.9,
-    reviews: 234
+    reviews: 234;
   },
 
   // AI-Powered Financial Crime Detection
@@ -195,7 +195,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$3,999',
     period: '/month',
     description: 'Advanced AI platform that detects financial crimes, fraud, and money laundering in real-time using machine learning and behavioral analysis.',
-    features: [
+    features: [;
       'Real-time transaction monitoring',
       'Behavioral pattern analysis',
       'Anomaly detection',
@@ -205,7 +205,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Machine learning models',
       'Regulatory compliance'
     ],
-    benefits: [
+    benefits: [;
       '99.9% fraud detection accuracy',
       'Real-time threat prevention',
       'Regulatory compliance',
@@ -214,15 +214,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$3,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)',
     category: 'Fintech',
-    icon: '🕵️',
+    icon: '',
     isPopular: true,
     isNew: false,
     link: 'https://ziontechgroup.com/services/ai-financial-crime-detection',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Graph Databases', 'Real-time Processing'],
@@ -235,7 +235,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2023-11-15',
     customers: 189,
     rating: 4.8,
-    reviews: 156
+    reviews: 156;
   },
 
   // Quantum-Secure Communication Network
@@ -246,7 +246,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$5,999',
     period: '/month',
     description: 'Revolutionary quantum-secured communication network that provides unbreakable encryption using quantum key distribution and post-quantum cryptography.',
-    features: [
+    features: [;
       'Quantum key distribution',
       'Post-quantum cryptography',
       'End-to-end encryption',
@@ -256,7 +256,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Quantum network monitoring',
       'Compliance certifications'
     ],
-    benefits: [
+    benefits: [;
       'Unbreakable encryption',
       'Future-proof security',
       'Regulatory compliance',
@@ -265,15 +265,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$5,999/month (Enterprise), $2,999/month (Professional), $1,499/month (Starter)',
     category: 'Security',
-    icon: '🔐',
+    icon: '',
     isPopular: true,
     isNew: true,
     link: 'https://ziontechgroup.com/services/quantum-secure-communication',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Networks', 'Quantum Sensors'],
@@ -286,7 +286,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2024-04-01',
     customers: 45,
     rating: 4.9,
-    reviews: 23
+    reviews: 23;
   },
 
   // AI-Powered Healthcare Predictive Analytics
@@ -297,7 +297,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$2,999',
     period: '/month',
     description: 'Advanced AI platform that analyzes patient data to predict health issues, recommend preventive measures, and optimize treatment plans.',
-    features: [
+    features: [;
       'Predictive health modeling',
       'Patient risk assessment',
       'Treatment optimization',
@@ -307,7 +307,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Real-time monitoring',
       'HIPAA compliance'
     ],
-    benefits: [
+    benefits: [;
       'Early disease detection',
       'Improved patient outcomes',
       'Reduced healthcare costs',
@@ -316,15 +316,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$2,999/month (Enterprise), $1,499/month (Professional), $699/month (Starter)',
     category: 'Healthcare',
-    icon: '🏥',
+    icon: '',
     isPopular: true,
     isNew: false,
     link: 'https://ziontechgroup.com/services/ai-healthcare-predictive-analytics',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Big Data Analytics'],
@@ -337,7 +337,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2023-09-20',
     customers: 267,
     rating: 4.8,
-    reviews: 189
+    reviews: 189;
   },
 
   // Edge AI IoT Platform
@@ -348,7 +348,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$1,999',
     period: '/month',
     description: 'Comprehensive IoT platform that processes AI algorithms at the edge, enabling real-time intelligence and decision-making for connected devices.',
-    features: [
+    features: [;
       'Edge AI processing',
       'Real-time analytics',
       'Device management',
@@ -358,7 +358,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Scalable architecture',
       'Multi-protocol support'
     ],
-    benefits: [
+    benefits: [;
       'Real-time decision making',
       'Reduced latency',
       'Lower bandwidth costs',
@@ -367,15 +367,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$1,999/month (Enterprise), $999/month (Professional), $499/month (Starter)',
     category: 'IoT',
-    icon: '🌐',
+    icon: '',
     isPopular: true,
     isNew: false,
     link: 'https://ziontechgroup.com/services/edge-ai-iot-platform',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['Edge Computing', 'Machine Learning', 'IoT Protocols', '5G Networks', 'Cloud Computing'],
@@ -388,7 +388,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2023-12-10',
     customers: 423,
     rating: 4.7,
-    reviews: 298
+    reviews: 298;
   },
 
   // AI-Powered Content Generation Suite
@@ -399,7 +399,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$899',
     period: '/month',
     description: 'Comprehensive AI platform that generates high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.',
-    features: [
+    features: [;
       'Multi-format content generation',
       'SEO optimization',
       'Brand voice consistency',
@@ -409,7 +409,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Plagiarism detection',
       'Content scheduling'
     ],
-    benefits: [
+    benefits: [;
       '10x faster content creation',
       'Improved SEO performance',
       'Consistent brand messaging',
@@ -418,15 +418,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$899/month (Enterprise), $499/month (Professional), $199/month (Starter)',
     category: 'AI',
-    icon: '✍️',
+    icon: '',
     isPopular: true,
     isNew: false,
     link: 'https://ziontechgroup.com/services/ai-content-generation-suite',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['GPT Models', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Content Analytics'],
@@ -439,7 +439,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2023-10-15',
     customers: 567,
     rating: 4.6,
-    reviews: 423
+    reviews: 423;
   },
 
   // Blockchain Supply Chain Transparency
@@ -450,7 +450,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$2,299',
     period: '/month',
     description: 'Blockchain-powered platform that provides complete transparency and traceability across supply chains, ensuring authenticity and compliance.',
-    features: [
+    features: [;
       'End-to-end traceability',
       'Smart contract automation',
       'Real-time tracking',
@@ -460,7 +460,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Multi-stakeholder access',
       'Immutable records'
     ],
-    benefits: [
+    benefits: [;
       'Complete supply chain visibility',
       'Reduced fraud and counterfeiting',
       'Improved compliance',
@@ -469,15 +469,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$2,299/month (Enterprise), $1,199/month (Professional), $599/month (Starter)',
     category: 'Blockchain',
-    icon: '⛓️',
+    icon: '',
     isPopular: true,
     isNew: false,
     link: 'https://ziontechgroup.com/services/blockchain-supply-chain-transparency',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['Blockchain', 'Smart Contracts', 'IoT Sensors', 'Cloud Computing', 'Data Analytics'],
@@ -490,7 +490,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2023-08-20',
     customers: 234,
     rating: 4.7,
-    reviews: 167
+    reviews: 167;
   },
 
   // AI-Powered Customer Experience Platform
@@ -501,7 +501,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     price: '$1,799',
     period: '/month',
     description: 'Intelligent platform that uses AI to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.',
-    features: [
+    features: [;
       'Customer behavior analysis',
       'Personalized recommendations',
       'Omnichannel engagement',
@@ -511,7 +511,7 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
       'Real-time personalization',
       'Performance analytics'
     ],
-    benefits: [
+    benefits: [;
       'Improved customer satisfaction',
       'Increased customer loyalty',
       'Higher conversion rates',
@@ -520,15 +520,15 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     ],
     marketPrice: '$1,799/month (Enterprise), $899/month (Professional), $399/month (Starter)',
     category: 'AI',
-    icon: '💬',
+    icon: '',
     isPopular: true,
     isNew: false,
     link: 'https://ziontechgroup.com/services/ai-customer-experience-platform',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Customer Data Platforms'],
@@ -541,6 +541,6 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
     launchDate: '2023-07-15',
     customers: 445,
     rating: 4.8,
-    reviews: 312
+    reviews: 312;
   }
 ];

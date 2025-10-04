@@ -24,26 +24,32 @@ console.log(`Found ${errorFiles.length} files with JSX errors`);
 function fixJSXErrors(content) {
   // Fix missing closing tags by adding them at the end of the component
   // This is a simplified approach - in practice, you'd want more sophisticated parsing
-  
+
   // Fix common patterns
   content = content.replace(/<div>\s*$/gm, '<div></div>');
   content = content.replace(/<article>\s*$/gm, '<article></article>');
   content = content.replace(/<header>\s*$/gm, '<header></header>');
-  
+
   // Fix malformed JSX expressions
   content = content.replace(/{\s*>\s*}/g, '>');
   content = content.replace(/{\s*>\s*}/g, '>');
-  
+
   // Fix missing commas in objects
   content = content.replace(/twitter:\s*{\s*card:/g, 'twitter: {\n    card:');
-  content = content.replace(/description: '([^']*)',\s*\n\s*},/g, 'description: \'$1\',\n  },\n};');
-  
+  content = content.replace(
+    /description: '([^']*)',\s*\n\s*},/g,
+    "description: '$1',\n  },\n};",
+  );
+
   // Fix malformed expressions
   content = content.replace(/{\s*$/gm, '');
-  
+
   // Fix incomplete JSX elements
-  content = content.replace(/<div className="\$1">\s*$/gm, '<div className=""></div>');
-  
+  content = content.replace(
+    /<div className="\$1">\s*$/gm,
+    '<div className=""></div>',
+  );
+
   return content;
 }
 
@@ -52,21 +58,24 @@ function addMissingClosingTags(content) {
   const lines = content.split('\n');
   const fixedLines = [];
   const openTags = [];
-  
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     fixedLines.push(line);
-    
+
     // Check for opening tags
     const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?>/);
     if (openTagMatch) {
       const tagName = openTagMatch[1];
       // Skip self-closing tags
-      if (!line.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
+      if (
+        !line.includes('/>') &&
+        !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)
+      ) {
         openTags.push(tagName);
       }
     }
-    
+
     // Check for closing tags
     const closeTagMatch = line.match(/<\/(\w+)>/);
     if (closeTagMatch) {
@@ -77,12 +86,12 @@ function addMissingClosingTags(content) {
       }
     }
   }
-  
+
   // Add missing closing tags
   for (let i = openTags.length - 1; i >= 0; i--) {
     fixedLines.push(`</${openTags[i]}>`);
   }
-  
+
   return fixedLines.join('\n');
 }
 
@@ -92,11 +101,11 @@ for (const filePath of errorFiles) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
-    
+
     // Apply fixes
     content = fixJSXErrors(content);
     content = addMissingClosingTags(content);
-    
+
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');

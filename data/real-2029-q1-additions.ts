@@ -6,24 +6,22 @@
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
     period: '/month',
-    description:;
+    description: any;
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     features: [;
-
       'Idle detection',
       'Schedule generator',
       'IaC export',
       'Alerting',
     ],
     popular: true,
-    icon: '💸',
+    icon: '',
 
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',
-    market_position:;
-
-      'Actionable, low‑touch FinOps that pays for itself within 90 days.',
+    market_position: any;
+      'Actionable, lowtouch FinOps that pays for itself within 90 days.',
     target_audience: 'Platform, SRE, Finance',
     trial_days: 14,
     setup_time: '2 hours',
@@ -32,7 +30,7 @@
     technology: ['AWS / GCP / Azure APIs', 'Terraform'],
     integrations: ['Datadog', 'Slack'],
     use_cases: ['Cost reduction', 'Budget governance'],
-    roi: '10–35% cloud savings in 3 months',
+    roi: '1035% cloud savings in 3 months',
     competitors: ['Zesty', 'CAST AI'],
     market_size: '$18B FinOps',
     growth_rate: '19% CAGR',
@@ -51,24 +49,22 @@
     tagline: 'AI index recommendations for Postgres / MySQL',
     price: '$79',
     period: '/month',
-    description:;
+    description: any;
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
     features: [;
-
       'Slow query capture',
       'Index suggestions',
       'Impact simulation',
       'Capacity forecast',
     ],
     popular: false,
-    icon: '🗄️',
+    icon: '',
 
     color: 'from - indigo - 600 to - violet - 700',
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / db - index - advisor',
-    market_position:;
-
-      'Modern alternative to legacy APM add‑ons with focused insights.',
+    market_position: any;
+      'Modern alternative to legacy APM addons with focused insights.',
     target_audience: 'DBA, Backend, Platform',
     trial_days: 14,
     setup_time: '30 minutes',
@@ -77,7 +73,7 @@
     technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
     integrations: ['Grafana', 'Datadog'],
     use_cases: ['Performance tuning', 'Incident prevention'],
-    roi: '20–50% p95 reduction month 1',
+    roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM'],
     market_size: '$7B DB Ops',
     growth_rate: '12% CAGR',
@@ -92,29 +88,29 @@
 
   },;
 
-      'Modern alternative to legacy APM add‑ons with focused insights.'
+      'Modern alternative to legacy APM addons with focused insights.'
     targetAudience: 'DBA, Backend, Platform'
-    trialDays: 14
-    setupTime: '30 minutes'
-    category: 'Observability'
-    realService: true
+    trialDays: 14;
+    setupTime: '30 minutes';
+    category: 'Observability';
+    realService: true;
     technology: ['Postgres', 'MySQL', 'OpenTelemetry']
     integrations: ['Grafana', 'Datadog']
     useCases: ['Performance tuning', 'Incident prevention']
-    roi: '20–50% p95 reduction month 1'
+    roi: '2050% p95 reduction month 1';
     competitors: ['Percona PMM', 'Datadog APM']
-    marketSize: '$7B DB Ops'
-    growthRate: '12% CAGR'
-    variant: 'quantum'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Agent + collector with secure export.'
-    launchDate: '2025-02-12'
-    customers: 18
-    rating: 4.5
-    reviews: 9
+    marketSize: '$7B DB Ops';
+    growthRate: '12% CAGR';
+    variant: 'quantum';
+    contactInfo: contact;
+    realImplementation: true;
+    implementationDetails: 'Agent + collector with secure export.';
+    launchDate: '2025-02-12';
+    customers: 18;
+    rating: 4.5;
+    reviews: 9;
   }
-      'Modern alternative to legacy APM add‑ons with focused insights.',
+      'Modern alternative to legacy APM addons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -123,7 +119,7 @@
     technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
     integrations: ['Grafana', 'Datadog'],
     useCases: ['Performance tuning', 'Incident prevention'],
-    roi: '20–50% p95 reduction month 1',
+    roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM'],
     marketSize: '$7B DB Ops',
     growthRate: '12% CAGR',
@@ -140,18 +136,18 @@
 
 
 ];	
-		period: '/month'
+		period: '/month';
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
 		popular: true;
-		icon: '🛡️';
+		icon: '';
 		color: 'from-rose-600 to-red-700';
 		textColor: 'text-rose-300';
 
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
     features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
-		icon: '🛡️', color: 'from-rose-600 to-red-700',
+		icon: '', color: 'from-rose-600 to-red-700',
 		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 		targetAudience: 'AI platform, Security, Compliance';
@@ -175,7 +171,7 @@
 
 		rating: 4 && 4.7,
 
-		reviews: 18
+		reviews: 18;
 	}
 	
 		id: 'finops-scheduler-optimizer';
@@ -186,13 +182,13 @@
 		description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.';
 		features: ['Idle detectionSchedule generatorIaC exportAlerting'];
 		popular: true;
-		icon: '💸';
+		icon: '';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 
-		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
+		marketPosition: 'Actionable, lowtouch FinOps that pays for itself within 90 days.';
 		targetAudience: 'Platform, SRE, Finance';
 		trialDays: 14;
 		setupTime: '2 hours';
@@ -201,7 +197,7 @@
 		technology: ['AWS/GCP/Azure APIsTerraform'];
 		integrations: ['DatadogSlack'];
 		useCases: ['Cost reductionBudget governance'];
-		roi: '10–35% cloud savings in 3 months';
+		roi: '1035% cloud savings in 3 months';
 		competitors: ['ZestyCAST AI'];
 		marketSize: '$18B FinOps';
 		growthRate: '19% CAGR';
@@ -214,7 +210,7 @@
 
 		rating: 4 && 4.6,
 
-		reviews: 12
+		reviews: 12;
 	}
 	
 		id: 'db-index-advisor';
@@ -225,12 +221,12 @@
 		description: 'Collects slow queries and proposes safe index changes with before/after impact analysis.';
 		features: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast'];
 		popular: false;
-		icon: '🗄️';
+		icon: '';
 		color: 'from-indigo-600 to-violet-700';
 		textColor: 'text-indigo-300';
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
-		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
+		marketPosition: 'Modern alternative to legacy APM addons with focused insights.',
 
 		targetAudience: 'DBA, Backend, Platform';
 		trialDays: 14;
@@ -240,7 +236,7 @@
 		technology: ['PostgresMySQLOpenTelemetry'];
 		integrations: ['GrafanaDatadog'];
 		useCases: ['Performance tuningIncident prevention'];
-		roi: '20–50% p95 reduction month 1';
+		roi: '2050% p95 reduction month 1';
 		competitors: ['Percona PMMDatadog APM'];
 		marketSize: '$7B DB Ops';
 		growthRate: '12% CAGR';
@@ -253,20 +249,20 @@
 
 		rating: 4 && 4.5,
 
-		reviews: 9
+		reviews: 9;
 	}
 ];
 
 
   id: 'ai - redteam - evaluator';
-  name: 'AI Red‑Team Evaluator';
-  tagline: 'Continuous LLM red‑teaming and safety scoring';
+  name: 'AI RedTeam Evaluator';
+  tagline: 'Continuous LLM redteaming and safety scoring';
   price: '$149';
   period: '/month',
   description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
   features: ['Policy suites_jailbreak corpora_regression gates_dashboard & alerts'];
   popular: true;
-  icon: '🛡️';
+  icon: '';
   color: 'from - rose - 600 to - red - 700';
   text_color: 'text - rose - 300';
   link: 'https://ziontechgroup.com / services / ai - redteam - evaluator';
@@ -301,11 +297,11 @@
   description: 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.';
   features: ['Idle detection_schedule generatorIaC export_alerting'];
   popular: true;
-  icon: '💸';
+  icon: '';
   color: 'from - emerald - 600 to - teal - 700';
   text_color: 'text - emerald - 300';
   link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',
-  market_position: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
+  market_position: 'Actionable, lowtouch FinOps that pays for itself within 90 days.';
   target_audience: 'Platform, SRE, Finance';
   trial_days: 14;
   setup_time: '2 hours';
@@ -314,7 +310,7 @@
   technology: ['AWS / GCP / Azure APIsTerraform'];
   integrations: ['DatadogSlack'];
   use_cases: ['Cost reduction_budget governance'];
-  roi: '10–35% cloud savings in 3 months';
+  roi: '1035% cloud savings in 3 months';
   competitors: ['ZestyCAST AI'];
   market_size: '$18B FinOps';
   growth_rate: '19% CAGR';
@@ -336,11 +332,11 @@
   description: 'Collects slow queries and proposes safe index changes with before / after impact analysis.';
   features: ['Slow query capture_index suggestions_impact simulation_capacity forecast'];
   popular: false;
-  icon: '🗄️';
+  icon: '';
   color: 'from - indigo - 600 to - violet - 700';
   text_color: 'text - indigo - 300';
   link: 'https://ziontechgroup.com / services / db - index - advisor';
-  market_position: 'Modern alternative to legacy APM add‑ons with focused insights.',
+  market_position: 'Modern alternative to legacy APM addons with focused insights.',
   target_audience: 'DBA, Backend, Platform';
   trial_days: 14;
   setup_time: '30 minutes';
@@ -349,7 +345,7 @@
   technology: ['PostgresMySQLOpenTelemetry'];
   integrations: ['GrafanaDatadog'];
   use_cases: ['Performance tuning_incident prevention'];
-  roi: '20–50% p95 reduction month 1';
+  roi: '2050% p95 reduction month 1';
   competitors: ['Percona PMMDatadog APM'];
   market_size: '$7B DB Ops';
   growth_rate: '12% CAGR';
@@ -362,8 +358,8 @@
   rating: 4.5,
   reviews: 9;
 }
-		rating: 4.5
-		reviews: 9
+		rating: 4.5;
+		reviews: 9;
 
 
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
@@ -376,14 +372,14 @@ const contact = {;
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{;
 		id: 'ai-redteam-evaluator',;
-		name: 'AI Red‑Team Evaluator',;
-		tagline: 'Continuous LLM red‑teaming and safety scoring',;
+		name: 'AI RedTeam Evaluator',;
+		tagline: 'Continuous LLM redteaming and safety scoring',;
 		price: '$149',;
 		period: '/month',,
   description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',;
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'],;
 		popular: true,;
-		icon: '🛡️',;
+		icon: '',;
 		color: 'from-rose-600 to-red-700',;
 		textColor: 'text-rose-300',;
 		link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',;
@@ -418,11 +414,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.',;
 		features: ['Idle detectionSchedule generatorIaC exportAlerting'],;
 		popular: true,;
-		icon: '💸',;
+		icon: '',;
 		color: 'from-emerald-600 to-teal-700',;
 		textColor: 'text-emerald-300',;
 		link: 'https://ziontechgroup.com/services/finops-scheduler-optimizer',;
-		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.',;
+		marketPosition: 'Actionable, lowtouch FinOps that pays for itself within 90 days.',;
 		targetAudience: 'Platform, SRE, Finance',;
 		trialDays: 14,;
 		setupTime: '2 hours',;
@@ -431,7 +427,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		technology: ['AWS/GCP/Azure APIsTerraform'],;
 		integrations: ['DatadogSlack'],;
 		useCases: ['Cost reductionBudget governance'],;
-		roi: '10–35% cloud savings in 3 months',;
+		roi: '1035% cloud savings in 3 months',;
 		competitors: ['ZestyCAST AI'],;
 		marketSize: '$18B FinOps',;
 		growthRate: '19% CAGR',;
@@ -453,11 +449,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		description: 'Collects slow queries and proposes safe index changes with before/after impact analysis.',;
 		features: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast'],;
 		popular: false,;
-		icon: '🗄️',;
+		icon: '',;
 		color: 'from-indigo-600 to-violet-700',;
 		textColor: 'text-indigo-300',;
 		link: 'https://ziontechgroup.com/services/db-index-advisor',;
-		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',;
+		marketPosition: 'Modern alternative to legacy APM addons with focused insights.',;
 		targetAudience: 'DBA, Backend, Platform',;
 		trialDays: 14,;
 		setupTime: '30 minutes',;
@@ -466,7 +462,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		technology: ['PostgresMySQLOpenTelemetry'],;
 		integrations: ['GrafanaDatadog'],;
 		useCases: ['Performance tuningIncident prevention'],;
-		roi: '20–50% p95 reduction month 1',;
+		roi: '2050% p95 reduction month 1',;
 		competitors: ['Percona PMMDatadog APM'],;
 		marketSize: '$7B DB Ops',;
 		growthRate: '12% CAGR',;
@@ -494,14 +490,14 @@ const contact = {;
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{;
 		id: 'ai-redteam-evaluator',;
-		name: 'AI Red‑Team Evaluator',;
-		tagline: 'Continuous LLM red‑teaming and safety scoring',;
+		name: 'AI RedTeam Evaluator',;
+		tagline: 'Continuous LLM redteaming and safety scoring',;
 		price: '$149',;
 		period: '/month',;
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',;
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'],;
 		popular: true,;
-		icon: '🛡️',;
+		icon: '',;
 		color: 'from-rose-600 to-red-700',;
 		textColor: 'text-rose-300',;
 		link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',;
@@ -536,11 +532,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.',;
 		features: ['Idle detectionSchedule generatorIaC exportAlerting'],;
 		popular: true,;
-		icon: '💸',;
+		icon: '',;
 		color: 'from-emerald-600 to-teal-700',;
 		textColor: 'text-emerald-300',;
 		link: 'https://ziontechgroup.com/services/finops-scheduler-optimizer',;
-		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.',;
+		marketPosition: 'Actionable, lowtouch FinOps that pays for itself within 90 days.',;
 		targetAudience: 'Platform, SRE, Finance',;
 		trialDays: 14,;
 		setupTime: '2 hours',;
@@ -549,7 +545,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		technology: ['AWS/GCP/Azure APIsTerraform'],;
 		integrations: ['DatadogSlack'],;
 		useCases: ['Cost reductionBudget governance'],;
-		roi: '10–35% cloud savings in 3 months',;
+		roi: '1035% cloud savings in 3 months',;
 		competitors: ['ZestyCAST AI'],;
 		marketSize: '$18B FinOps',;
 		growthRate: '19% CAGR',;
@@ -571,11 +567,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		description: 'Collects slow queries and proposes safe index changes with before/after impact analysis.',;
 		features: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast'],;
 		popular: false,;
-		icon: '🗄️',;
+		icon: '',;
 		color: 'from-indigo-600 to-violet-700',;
 		textColor: 'text-indigo-300',;
 		link: 'https://ziontechgroup.com/services/db-index-advisor',;
-		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',;
+		marketPosition: 'Modern alternative to legacy APM addons with focused insights.',;
 		targetAudience: 'DBA, Backend, Platform',;
 		trialDays: 14,;
 		setupTime: '30 minutes',;
@@ -584,7 +580,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		technology: ['PostgresMySQLOpenTelemetry'],;
 		integrations: ['GrafanaDatadog'],;
 		useCases: ['Performance tuningIncident prevention'],;
-		roi: '20–50% p95 reduction month 1',;
+		roi: '2050% p95 reduction month 1',;
 		competitors: ['Percona PMMDatadog APM'],;
 		marketSize: '$7B DB Ops',;
 		growthRate: '12% CAGR',;

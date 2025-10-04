@@ -16,7 +16,7 @@ export const comprehensivePricingAnalysis2025 = [
     implementationTime: '8-12 weeks',
     supportLevel: '24/7',
     customizationOptions: ['Full', 'Partial', 'Standard'],
-    industryFit: ['Technology', 'Finance', 'Healthcare', 'Manufacturing']
+    industryFit: ['Technology', 'Finance', 'Healthcare', 'Manufacturing'],
   },
   {
     serviceId: 'cybersecurity-suite',
@@ -35,7 +35,7 @@ export const comprehensivePricingAnalysis2025 = [
     implementationTime: '6-10 weeks',
     supportLevel: '24/7',
     customizationOptions: ['Full', 'Partial', 'Standard'],
-    industryFit: ['Finance', 'Healthcare', 'Government', 'Technology']
+    industryFit: ['Finance', 'Healthcare', 'Government', 'Technology'],
   },
   {
     serviceId: 'cloud-infrastructure',
@@ -54,8 +54,8 @@ export const comprehensivePricingAnalysis2025 = [
     implementationTime: '4-8 weeks',
     supportLevel: 'Business Hours',
     customizationOptions: ['Full', 'Partial', 'Standard'],
-    industryFit: ['Technology', 'E-commerce', 'SaaS', 'Enterprises']
-  }
+    industryFit: ['Technology', 'E-commerce', 'SaaS', 'Enterprises'],
+  },
 ];
 
 export function getMarketInsights() {
@@ -70,8 +70,8 @@ export function getMarketInsights() {
       'AI adoption accelerating',
       'Cloud migration increasing',
       'Security concerns growing',
-      'Digital transformation expanding'
-    ]
+      'Digital transformation expanding',
+    ],
   };
 }
 
@@ -82,21 +82,21 @@ export function getCompetitiveLandscape() {
       'Microsoft Azure AI',
       'Google Cloud AI',
       'Amazon SageMaker',
-      'OpenAI Enterprise'
+      'OpenAI Enterprise',
     ],
     'Cybersecurity Suite': [
       'CrowdStrike',
       'Palo Alto Networks',
       'Fortinet',
       'Check Point',
-      'Trend Micro'
+      'Trend Micro',
     ],
     'Cloud Infrastructure': [
       'AWS',
       'Microsoft Azure',
       'Google Cloud',
       'IBM Cloud',
-      'Oracle Cloud'
-    ]
+      'Oracle Cloud',
+    ],
   };
 }

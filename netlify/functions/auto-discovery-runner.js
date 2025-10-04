@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('auto-discovery-runner function triggered');
-    
+
     // Auto-discovery simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Auto-discovery runner executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         discovery: {
           status: 'scanning',
           itemsFound: 0,
-          lastScan: new Date().toISOString()
-        }
-      })
+          lastScan: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in auto-discovery-runner:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'auto-discovery-runner'
-      })
+        function: 'auto-discovery-runner',
+      }),
     };
   }
 };

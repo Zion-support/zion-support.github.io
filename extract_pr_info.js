@@ -6,7 +6,7 @@ function extractPRInfo() {
   try {
     const data = fs.readFileSync('open_prs.json', 'utf8');
     const prs = JSON.parse(data);
-    
+
     console.log('Open PRs:');
     prs.forEach(pr => {
       if (pr.state === 'open') {

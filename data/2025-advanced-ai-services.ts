@@ -6,7 +6,7 @@ export const advancedAIServices2025 = [
     price: '$2,500',
     period: 'month',
     description: 'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
-    features: [
+    features: [;
       'Natural language query processing',
       'AI-powered data visualization',
       'Predictive analytics and forecasting',
@@ -17,10 +17,10 @@ export const advancedAIServices2025 = [
       'Advanced security and compliance'
     ],
     popular: true,
-    icon: '📊',
+    icon: '',
     color: 'blue',
     textColor: 'white',
-    link: '/services/ai-business-intelligence-platform'
+    link: '/services/ai-business-intelligence-platform';
   },
   {
     id: 'ai-automation-suite',
@@ -29,7 +29,7 @@ export const advancedAIServices2025 = [
     price: '$1,800',
     period: 'month',
     description: 'Comprehensive AI automation platform that streamlines business operations through intelligent process automation and workflow optimization.',
-    features: [
+    features: [;
       'Intelligent process automation',
       'Workflow optimization',
       'Document processing automation',
@@ -40,10 +40,10 @@ export const advancedAIServices2025 = [
       'Custom automation workflows'
     ],
     popular: false,
-    icon: '🤖',
+    icon: '',
     color: 'green',
     textColor: 'white',
-    link: '/services/ai-automation-suite'
+    link: '/services/ai-automation-suite';
   },
   {
     id: 'ai-predictive-analytics',
@@ -52,7 +52,7 @@ export const advancedAIServices2025 = [
     price: '$3,200',
     period: 'month',
     description: 'Advanced predictive analytics platform powered by machine learning algorithms to forecast business trends and outcomes.',
-    features: [
+    features: [;
       'Machine learning models',
       'Trend forecasting',
       'Risk assessment',
@@ -63,9 +63,9 @@ export const advancedAIServices2025 = [
       'Custom model development'
     ],
     popular: true,
-    icon: '🔮',
+    icon: '',
     color: 'purple',
     textColor: 'white',
-    link: '/services/ai-predictive-analytics'
+    link: '/services/ai-predictive-analytics';
   }
 ];

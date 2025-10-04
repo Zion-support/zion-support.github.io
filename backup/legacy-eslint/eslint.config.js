@@ -60,17 +60,17 @@ export default [
         PerformanceNavigationTiming: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
-        exports: 'readonly'
+        exports: 'readonly',
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
-      }
+          jsx: true,
+        },
+      },
     },
     plugins: {
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -79,7 +79,7 @@ export default [
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
-    }
+    },
   },
   {
     files: ['**/*.{ts,tsx}'],
@@ -140,13 +140,13 @@ export default [
         __filename: 'readonly',
         Buffer: 'readonly',
         setImmediate: 'readonly',
-        clearImmediate: 'readonly'
-      }
+        clearImmediate: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': tseslint,
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -157,8 +157,8 @@ export default [
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
+      'react/react-in-jsx-scope': 'off',
+    },
   },
   {
     ignores: [
@@ -355,7 +355,7 @@ export default [
       '*.war',
       '*.ear',
       '*.sar',
-      '*.nar'
-    ]
-  }
+      '*.nar',
+    ],
+  },
 ];

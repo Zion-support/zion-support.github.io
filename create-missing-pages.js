@@ -15,14 +15,26 @@ const requiredPages = [
   { path: '/ai-services', file: 'app/ai-services/page.tsx', exists: true },
   { path: '/solutions', file: 'app/solutions/page.tsx', exists: true },
   { path: '/enterprise', file: 'app/enterprise/page.tsx', exists: true },
-  { path: '/innovative-it-solutions', file: 'app/innovative-it-solutions/page.tsx', exists: true },
-  { path: '/advanced-ai-solutions', file: 'app/advanced-ai-solutions/page.tsx', exists: true },
+  {
+    path: '/innovative-it-solutions',
+    file: 'app/innovative-it-solutions/page.tsx',
+    exists: true,
+  },
+  {
+    path: '/advanced-ai-solutions',
+    file: 'app/advanced-ai-solutions/page.tsx',
+    exists: true,
+  },
   { path: '/case-studies', file: 'app/case-studies/page.tsx', exists: true },
   { path: '/blog', file: 'app/blog/page.tsx', exists: true },
   { path: '/resources', file: 'app/resources/page.tsx', exists: false },
   { path: '/guides', file: 'app/guides/page.tsx', exists: false },
   { path: '/content-hub', file: 'app/content-hub/page.tsx', exists: true },
-  { path: '/enhanced-services-catalog', file: 'app/enhanced-services-catalog/page.tsx', exists: true },
+  {
+    path: '/enhanced-services-catalog',
+    file: 'app/enhanced-services-catalog/page.tsx',
+    exists: true,
+  },
   { path: '/about', file: 'app/about/page.tsx', exists: true },
   { path: '/contact', file: 'app/contact/page.tsx', exists: true },
   { path: '/pricing', file: 'app/pricing/page.tsx', exists: true },
@@ -31,10 +43,18 @@ const requiredPages = [
   { path: '/terms', file: 'app/terms/page.tsx', exists: true },
   { path: '/security', file: 'app/security/page.tsx', exists: false },
   { path: '/sitemap', file: 'app/sitemap/page.tsx', exists: true },
-  
+
   // Additional services pages
-  { path: '/additional-services', file: 'app/additional-services/page.tsx', exists: true },
-  { path: '/comprehensive-services', file: 'app/comprehensive-services/page.tsx', exists: true },
+  {
+    path: '/additional-services',
+    file: 'app/additional-services/page.tsx',
+    exists: true,
+  },
+  {
+    path: '/comprehensive-services',
+    file: 'app/comprehensive-services/page.tsx',
+    exists: true,
+  },
   { path: '/partners', file: 'app/partners/page.tsx', exists: true },
   { path: '/portfolio', file: 'app/portfolio/page.tsx', exists: true },
 ];
@@ -122,14 +142,14 @@ export default function ${title.replace(/\s+/g, '')}Page() {
 // Check which pages exist and create missing ones
 function createMissingPages() {
   console.log('🔍 Checking for missing pages...');
-  
+
   const missingPages = [];
   const createdPages = [];
 
   requiredPages.forEach(page => {
     const fullPath = join(__dirname, page.file);
     const exists = existsSync(fullPath);
-    
+
     if (!exists) {
       missingPages.push(page);
     }
@@ -149,39 +169,46 @@ function createMissingPages() {
   missingPages.forEach(page => {
     const fullPath = join(__dirname, page.file);
     const dir = dirname(fullPath);
-    
+
     // Create directory if it doesn't exist
     if (!existsSync(dir)) {
       mkdirSync(dir, { recursive: true });
     }
-    
+
     // Generate content based on page type
     let title, description;
-    
+
     switch (page.path) {
       case '/resources':
         title = 'Resources';
-        description = 'Comprehensive technology resources, guides, and tools to help you succeed with your digital transformation journey.';
+        description =
+          'Comprehensive technology resources, guides, and tools to help you succeed with your digital transformation journey.';
         break;
       case '/guides':
         title = 'Guides';
-        description = 'Step-by-step guides and tutorials to help you implement and optimize technology solutions for your business.';
+        description =
+          'Step-by-step guides and tutorials to help you implement and optimize technology solutions for your business.';
         break;
       case '/privacy':
         title = 'Privacy Policy';
-        description = 'Learn how Zion Tech Group protects your privacy and handles your personal information with the highest standards of security.';
+        description =
+          'Learn how Zion Tech Group protects your privacy and handles your personal information with the highest standards of security.';
         break;
       case '/security':
         title = 'Security';
-        description = 'Our comprehensive security framework and commitment to protecting your data and systems with enterprise-grade security measures.';
+        description =
+          'Our comprehensive security framework and commitment to protecting your data and systems with enterprise-grade security measures.';
         break;
       default:
-        title = page.path.replace('/', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        title = page.path
+          .replace('/', '')
+          .replace(/-/g, ' ')
+          .replace(/\b\w/g, l => l.toUpperCase());
         description = `Professional ${title.toLowerCase()} solutions tailored to your business needs.`;
     }
-    
+
     const content = pageTemplate(title, description, page.path);
-    
+
     try {
       writeFileSync(fullPath, content);
       createdPages.push(page);
@@ -191,8 +218,10 @@ function createMissingPages() {
     }
   });
 
-  console.log(`\n🎉 Successfully created ${createdPages.length} missing pages!`);
-  
+  console.log(
+    `\n🎉 Successfully created ${createdPages.length} missing pages!`,
+  );
+
   // Generate report
   const report = {
     timestamp: new Date().toISOString(),
@@ -200,14 +229,14 @@ function createMissingPages() {
     existingPages: requiredPages.length - missingPages.length,
     missingPages: missingPages.length,
     createdPages: createdPages.length,
-    createdPageList: createdPages.map(p => ({ path: p.path, file: p.file }))
+    createdPageList: createdPages.map(p => ({ path: p.path, file: p.file })),
   };
-  
+
   writeFileSync(
     join(__dirname, 'missing-pages-creation-report.json'),
-    JSON.stringify(report, null, 2)
+    JSON.stringify(report, null, 2),
   );
-  
+
   console.log('📄 Report saved to: missing-pages-creation-report.json');
 }
 
