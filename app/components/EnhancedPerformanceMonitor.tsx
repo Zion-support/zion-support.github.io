@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
 interface EnhancedMetrics {
-  cls: number;
-  fid: number;
-  fcp: number;
-  lcp: number;
-  ttfb: number;
+  cls?: number;
+  fcp?: number;
+  lcp?: number;
+  ttfb?: number;
+  inp?: number;
   memory?: number;
   connection?: string;
   devicePixelRatio?: number;
@@ -18,10 +18,10 @@ interface EnhancedMetrics {
 
 interface PerformanceThresholds {
   cls: number;
-  fid: number;
   fcp: number;
   lcp: number;
   ttfb: number;
+  inp: number;
 }
 
 interface PerformanceHistory {
@@ -34,10 +34,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const [history, setHistory] = useState<PerformanceHistory[]>([]);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
-    fid: 100,
     fcp: 1800,
     lcp: 2500,
-    ttfb: 800
+    ttfb: 800,
+    inp: 200
   });
   const [isVisible, setIsVisible] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -59,8 +59,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const handleMetric = useCallback((metric: any) => {
-    const enhancedMetrics = {
-      [metric.name]: metric.value,
+    const enhancedMetrics: EnhancedMetrics = {
+      [metric.name.toLowerCase()]: metric.value,
       ...getEnhancedPerformanceInfo()
     };
     
@@ -96,11 +96,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   };
 
   useEffect(() => {
-    getCLS(handleMetric);
-    getFID(handleMetric);
-    getFCP(handleMetric);
-    getLCP(handleMetric);
-    getTTFB(handleMetric);
+    onCLS(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
+    onINP(handleMetric);
 
     // Enhanced performance monitoring
     const observer = new PerformanceObserver((list) => {
@@ -155,9 +155,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
               </span>
             </div>
             <div className="flex justify-between">
-              <span>FID:</span>
-              <span className={getStatusColor(metrics.fid, thresholds.fid)}>
-                {getStatusIcon(metrics.fid, thresholds.fid)} {metrics.fid?.toFixed(1)}ms
+              <span>INP:</span>
+              <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
+                {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
               </span>
             </div>
             <div className="flex justify-between">
