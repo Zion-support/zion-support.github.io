@@ -15,7 +15,8 @@ export interface ContentValidationResult {
   score: number; // 0-100
 }
 
-export interface ContentMetadata   title: string;
+export interface ContentMetadata {
+  title: string;
   description?: string;
   value?: number; // In billions
   roi?: number; // Percentage
@@ -27,7 +28,8 @@ export interface ContentMetadata   title: string;
   hasCode?: boolean;
 }
 
-export class ContentValidator   private readonly minTitleLength = 10;
+export class ContentValidator {
+  private readonly minTitleLength = 10;
   private readonly maxTitleLength = 120;
   private readonly minDescriptionLength = 50;
   private readonly maxDescriptionLength = 300;
@@ -37,66 +39,88 @@ export class ContentValidator   private readonly minTitleLength = 10;
   /**
    * Validate content metadata
    */
-  validateMetadata(metadata: ContentMetadata): ContentValidationResult     const errors: string[] = [];
+  validateMetadata(metadata: ContentMetadata): ContentValidationResult {
+    const errors: string[] = [];
     const warnings: string[] = [];
     let score = 100;
 
     // Title validation
-    if (!metadata.title || metadata.title.trim().length === 0)       errors.push('Title is required');
+    if (!metadata.title || metadata.title.trim().length === 0) {
+      errors.push('Title is required');
       score -= 20;
-    } else if (metadata.title.length < this.minTitleLength)       errors.push(`Title too short (min ${this.minTitleLength} characters)`);
+    } else if (metadata.title.length < this.minTitleLength) {
+      errors.push(`Title too short (min ${this.minTitleLength} characters)`);
       score -= 10;
-    } else if (metadata.title.length > this.maxTitleLength)       warnings.push(`Title too long (max ${this.maxTitleLength} characters recommended)`);
+    } else if (metadata.title.length > this.maxTitleLength) {
+      warnings.push(`Title too long (max ${this.maxTitleLength} characters recommended)`);
       score -= 5;
     }
 
     // Description validation
-    if (metadata.description)       if (metadata.description.length < this.minDescriptionLength)         warnings.push(`Description too short (min ${this.minDescriptionLength} characters recommended)`);
+    if (metadata.description) {
+      if (metadata.description.length < this.minDescriptionLength) {
+        warnings.push(`Description too short (min ${this.minDescriptionLength} characters recommended)`);
         score -= 5;
-      } else if (metadata.description.length > this.maxDescriptionLength)         warnings.push(`Description too long (max ${this.maxDescriptionLength} characters recommended)`);
+      } else if (metadata.description.length > this.maxDescriptionLength) {
+        warnings.push(`Description too long (max ${this.maxDescriptionLength} characters recommended)`);
         score -= 3;
       }
-    } else       warnings.push('Description missing - recommended for SEO');
+    } else {
+      warnings.push('Description missing - recommended for SEO');
       score -= 10;
     }
 
     // Value proposition validation
-    if (metadata.value !== undefined)       if (metadata.value <= 0)         errors.push('Value must be positive');
+    if (metadata.value !== undefined) {
+      if (metadata.value <= 0) {
+        errors.push('Value must be positive');
         score -= 15;
-      } else if (metadata.value > 10000)         warnings.push('Extremely high value - verify accuracy');
+      } else if (metadata.value > 10000) {
+        warnings.push('Extremely high value - verify accuracy');
         score -= 2;
       }
     }
 
     // ROI validation
-    if (metadata.roi !== undefined)       if (metadata.roi <= 0)         errors.push('ROI must be positive');
+    if (metadata.roi !== undefined) {
+      if (metadata.roi <= 0) {
+        errors.push('ROI must be positive');
         score -= 15;
-      } else if (metadata.roi > 50000)         warnings.push('Extremely high ROI - verify accuracy');
+      } else if (metadata.roi > 50000) {
+        warnings.push('Extremely high ROI - verify accuracy');
         score -= 2;
       }
     }
 
     // Publish date validation
     const now = new Date();
-    if (metadata.publishDate > now)       warnings.push('Future publish date detected');
+    if (metadata.publishDate > now) {
+      warnings.push('Future publish date detected');
       score -= 5;
-    } else       const ageInDays = (now.getTime() - metadata.publishDate.getTime()) / (1000 * 60 * 60 * 24);
-      if (ageInDays > 365)         warnings.push('Content is over 1 year old - consider updating');
+    } else {
+      const ageInDays = (now.getTime() - metadata.publishDate.getTime()) / (1000 * 60 * 60 * 24);
+      if (ageInDays > 365) {
+        warnings.push('Content is over 1 year old - consider updating');
         score -= 3;
       }
     }
 
     // Tags validation
-    if (!metadata.tags || metadata.tags.length === 0)       warnings.push('No tags specified - add tags for better discoverability');
+    if (!metadata.tags || metadata.tags.length === 0) {
+      warnings.push('No tags specified - add tags for better discoverability');
       score -= 8;
-    } else if (metadata.tags.length > 10)       warnings.push('Too many tags (max 10 recommended)');
+    } else if (metadata.tags.length > 10) {
+      warnings.push('Too many tags (max 10 recommended)');
       score -= 3;
     }
 
     // Word count validation
-    if (metadata.wordCount !== undefined)       if (metadata.wordCount < this.minWordCount)         warnings.push(`Content too short (min ${this.minWordCount} words recommended)`);
+    if (metadata.wordCount !== undefined) {
+      if (metadata.wordCount < this.minWordCount) {
+        warnings.push(`Content too short (min ${this.minWordCount} words recommended)`);
         score -= 10;
-      } else if (metadata.wordCount < this.recommendedWordCount)         warnings.push(`Consider expanding content (${this.recommendedWordCount}+ words optimal for SEO)`);
+      } else if (metadata.wordCount < this.recommendedWordCount) {
+        warnings.push(`Consider expanding content (${this.recommendedWordCount}+ words optimal for SEO)`);
         score -= 5;
       }
     }

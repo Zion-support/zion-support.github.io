@@ -32,10 +32,12 @@ const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance
 /**
  * Get or create session ID
  */
-const getSessionId = (): string =>   if (typeof window === 'undefined') return 'server';
+const getSessionId = (): string => {
+  if (typeof window === 'undefined') return 'server';
   
   let sessionId = sessionStorage.getItem(SESSION_KEY);
-  if (!sessionId)     sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  if (!sessionId) {
+    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     sessionStorage.setItem(SESSION_KEY, sessionId);
   }
   return sessionId;
@@ -55,7 +57,8 @@ const getBannerImpressions = (): BannerImpression[] => {
       const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
       return impressions.filter(imp => imp.timestamp > weekAgo);
     }
-  } catch (error)     console.error('Error reading banner impressions:', error);
+  } catch (error) {
+    console.error('Error reading banner impressions:', error);
   }
   return [];
 };
@@ -63,10 +66,13 @@ const getBannerImpressions = (): BannerImpression[] => {
 /**
  * Save banner impression
  */
-export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) =>   if (typeof window === 'undefined') return;
+export const recordBannerImpression = (impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>) => {
+  if (typeof window === 'undefined') return;
   
-  try     const impressions = getBannerImpressions();
-    const newImpression: BannerImpression =       ...impression,
+  try {
+    const impressions = getBannerImpressions();
+    const newImpression: BannerImpression = {
+      ...impression,
       timestamp: Date.now(),
       sessionId: getSessionId(),
     };
@@ -74,18 +80,21 @@ export const recordBannerImpression = (impression: Omit<BannerImpression, 'times
     impressions.push(newImpression);
     
     // Keep only last 1000 impressions
-    if (impressions.length > 1000)       impressions.splice(0, impressions.length - 1000);
+    if (impressions.length > 1000) {
+      impressions.splice(0, impressions.length - 1000);
     }
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(impressions));
-  } catch (error)     console.error('Error saving banner impression:', error);
+  } catch (error) {
+    console.error('Error saving banner impression:', error);
   }
 };
 
 /**
  * Get impression count for a banner in the last 24 hours
  */
-const getDailyImpressions = (bannerId: string): number =>   const impressions = getBannerImpressions();
+const getDailyImpressions = (bannerId: string): number => {
+  const impressions = getBannerImpressions();
   const dayAgo = Date.now() - 24 * 60 * 60 * 1000;
   return impressions.filter(
     imp => imp.bannerId === bannerId && imp.timestamp > dayAgo
@@ -95,18 +104,22 @@ const getDailyImpressions = (bannerId: string): number =>   const impressions = 
 /**
  * Calculate banner score for rotation
  */
-const calculateBannerScore = (banner: BannerConfig): number =>   let score = banner.priority * 100;
+const calculateBannerScore = (banner: BannerConfig): number => {
+  let score = banner.priority * 100;
   
   // Reduce score based on recent impressions (diminishing returns)
   const recentImpressions = getDailyImpressions(banner.id);
-  if (banner.maxDailyImpressions)     const impressionRatio = recentImpressions / banner.maxDailyImpressions;
+  if (banner.maxDailyImpressions) {
+    const impressionRatio = recentImpressions / banner.maxDailyImpressions;
     score *= Math.max(0.1, 1 - impressionRatio);
-  } else     // Apply general fatigue factor
+  } else {
+    // Apply general fatigue factor
     score *= Math.max(0.3, 1 - (recentImpressions * 0.1));
   }
   
   // Boost for A/B test variants
-  if (banner.abTestGroup === 'A' || banner.abTestGroup === 'B')     score *= 1.2;
+  if (banner.abTestGroup === 'A' || banner.abTestGroup === 'B') {
+    score *= 1.2;
   }
   
   return score;
@@ -118,8 +131,10 @@ const calculateBannerScore = (banner: BannerConfig): number =>   let score = ban
 export const selectBannersForRotation = (
   allBanners: BannerConfig[],
   maxBanners: number = MAX_VISIBLE_BANNERS
-): BannerConfig[] =>   // Calculate scores for all banners
-  const scoredBanners = allBanners.map(banner => (    banner,
+): BannerConfig[] => {
+  // Calculate scores for all banners
+  const scoredBanners = allBanners.map(banner => ({
+    banner,
     score: calculateBannerScore(banner),
   }));
   
@@ -133,13 +148,16 @@ export const selectBannersForRotation = (
 /**
  * Get banner analytics
  */
-export const getBannerAnalytics = (bannerId?: string) =>   const impressions = getBannerImpressions();
+export const getBannerAnalytics = (bannerId?: string) => {
+  const impressions = getBannerImpressions();
   
-  if (bannerId)     const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
+  if (bannerId) {
+    const bannerImpressions = impressions.filter(imp => imp.bannerId === bannerId);
     const clicks = bannerImpressions.filter(imp => imp.clicked).length;
     const avgTimeVisible = bannerImpressions.reduce((sum, imp) => sum + (imp.timeVisible || 0), 0) / bannerImpressions.length || 0;
     
-    return       totalImpressions: bannerImpressions.length,
+    return {
+      totalImpressions: bannerImpressions.length,
       clicks,
       ctr: bannerImpressions.length > 0 ? (clicks / bannerImpressions.length) * 100 : 0,
       avgTimeVisible: Math.round(avgTimeVisible),
@@ -148,7 +166,8 @@ export const getBannerAnalytics = (bannerId?: string) =>   const impressions = g
   
   // Overall analytics
   const totalClicks = impressions.filter(imp => imp.clicked).length;
-  return     totalImpressions: impressions.length,
+  return {
+    totalImpressions: impressions.length,
     totalClicks,
     overallCtr: impressions.length > 0 ? (totalClicks / impressions.length) * 100 : 0,
     uniqueBanners: new Set(impressions.map(imp => imp.bannerId)).size,

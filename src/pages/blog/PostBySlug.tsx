@@ -191,4 +191,4 @@ const PostBySlug = React.memo(function PostBySlug(): React.JSX.Element {
       </div>
     </>
   );
-}
+});
