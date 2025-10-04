@@ -2,21 +2,11 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
-<<<<<<< HEAD
-// Import core components (always loaded)
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import LoadingSpinner from './components/LoadingSpinner';
-// import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-=======
 // Components
 import ErrorBoundary from './components/ErrorBoundary';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
 
 // Pages
 import HomePage from './page';
@@ -32,18 +22,6 @@ import { performanceOptimizer } from '../utils/performanceOptimizer';
 import '../src/index.css';
 
 const App: React.FC = () => {
-<<<<<<< HEAD
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  // const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics | null>(null);
-
-  // Performance monitoring toggle
-  const togglePerformanceMonitor = useCallback(() => {
-    setShowPerformanceMonitor(prev => !prev);
-  }, []);
-
-  // Performance metrics collection
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6f5b
   useEffect(() => {
     // Initialize global error handling
     setupGlobalErrorHandling();
