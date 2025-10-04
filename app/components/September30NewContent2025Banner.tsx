@@ -249,7 +249,6 @@ const September30NewContent2025Banner: React.FC = () => {
               </div>
           </div>
 
->>>>>>> origin/main
         {/* Stats Section */}
         <div className="text-left">
           {[{
@@ -287,8 +286,6 @@ const September30NewContent2025Banner: React.FC = () => {
                 <div className="text-gray-300 font-semibold">
                   Enterprise Clients
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3825
->>>>>>> origin/main
               </div>
               <div className="text-left">
                 {stat.label}
