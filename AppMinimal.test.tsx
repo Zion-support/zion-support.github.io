@@ -6,3 +6,7 @@ import React from "react";
 
 describe("AppMinimal", () => {
   it("renders without crashing", () => {
+    render(<AppMinimal />);
+    expect(screen.getByText(/zion/i)).toBeInTheDocument();
+  });
+});

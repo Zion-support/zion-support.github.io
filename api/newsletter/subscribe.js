@@ -1,4 +1,3 @@
-
 const { withSentry } = require('../withSentry.cjs');
 const { isValidEmail } = require('../emailUtils.cjs');
 const fs = require('fs');
@@ -16,3 +15,33 @@ async function handler(req, res) {
     const { email } = req.body || {};
     
     if (!email) {
+      res.statusCode = 400;
+      res.json({ error: 'Email is required' });
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.json({ error: 'Invalid email format' });
+      return;
+    }
+
+    // Save subscription logic here
+    const subscription = {
+      email,
+      subscribedAt: new Date().toISOString(),
+      status: 'active'
+    };
+
+    res.statusCode = 200;
+    res.json({ 
+      message: 'Successfully subscribed to newsletter',
+      subscription 
+    });
+  } catch (error) {
+    res.statusCode = 500;
+    res.json({ error: 'Failed to subscribe to newsletter' });
+  }
+}
+
+module.exports = withSentry(handler);
