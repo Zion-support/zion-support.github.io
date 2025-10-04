@@ -5,6 +5,10 @@ import { motion } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import SEOHead from './components/SEOHead';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Animation variants
 const pageVariants = {
@@ -71,6 +75,14 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
+          {/* SEO and Performance Monitoring */}
+          <SEOHead />
+          <PerformanceMonitor 
+            reportToAnalytics={process.env.NODE_ENV === 'production'} 
+            logToConsole={process.env.NODE_ENV === 'development'} 
+          />
+          <AccessibilityEnhancer />
+          
           <div className="min-h-screen bg-gray-50">
             <EnhancedErrorBoundary>
               <Header />
@@ -85,14 +97,13 @@ function App() {
                 className="relative z-10"
               >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div id="main-content" className="flex-1">
+                  <div id="main-content" className="flex-1" tabIndex={-1}>
                     <React.Suspense fallback={
-                      <div className="min-h-screen flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                          <p className="text-gray-600">Loading...</p>
-                        </div>
-                      </div>
+                      <LoadingSpinner 
+                        size="lg" 
+                        text="Loading page..." 
+                        className="min-h-screen"
+                      />
                     }>
                       <Routes>
                         <Route path="/" element={<HomePage />} />
@@ -112,7 +123,7 @@ function App() {
                                 <p className="text-xl text-gray-600 mb-8">Page not found</p>
                                 <a
                                   href="/"
-                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                 >
                                   Return Home
                                 </a>
