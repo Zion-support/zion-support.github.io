@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { CheckCircle, 
   Star, 
   Zap, 
@@ -34,7 +34,7 @@ import { CheckCircle,
   Lock,
   Heart,
   Sparkles
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
 import { SEO  } from '@/components/SEO';
 
@@ -44,7 +44,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
 
   const services = INNOVATIVE_SERVICES_2025;
 
-  const categories = useMemo((: unknown) => {
+  const categories = useMemo(() => {
     const cats = services.reduce((acc: unknown, service: unknown) => {
       if (!acc.includes(service.category)) {
         acc.push(service.category);
@@ -56,7 +56,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
 
   const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
 
-  const filteredServices = useMemo((: unknown) => {
+  const filteredServices = useMemo(() => {
     let filtered = services;
 
     if (selectedCategory !== 'all') {
@@ -491,7 +491,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-slate-400 text-lg mb-4">No services found matching your criteria</div>
               <button
-                onClick={(: unknown) => {
+                onClick={() => {
                   setSelectedCategory('all');
                   setSelectedPricingModel('all');
                 }}
