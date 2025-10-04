@@ -215,17 +215,22 @@ export const clearErrorLogs = () => {
 /**
  * Global error handler setup
  */
-export const setupGlobalErrorHandling = () =>   if (typeof window === 'undefined') return;
+export const setupGlobalErrorHandling = () => {
+  if (typeof window === 'undefined') return;
   
   // Handle uncaught errors
-  window.addEventListener('error', (event) =>     logError(event.error || event.message,       filename: event.filename,
+  window.addEventListener('error', (event) => {
+    logError(event.error || event.message, {
+      filename: event.filename,
       lineno: event.lineno,
       colno: event.colno,
     });
   });
   
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) =>     logError(event.reason || 'Unhandled Promise Rejection',       promise: event.promise,
+  window.addEventListener('unhandledrejection', (event) => {
+    logError(event.reason || 'Unhandled Promise Rejection', {
+      promise: event.promise,
     });
   });
   
@@ -241,14 +246,19 @@ export const setupGlobalErrorHandling = () =>   if (typeof window === 'undefined
 /**
  * Performance monitoring
  */
-export const monitorPerformance = () =>   if (typeof window === 'undefined' || !('performance' in window)) return;
+export const monitorPerformance = () => {
+  if (typeof window === 'undefined' || !('performance' in window)) return;
   
   // Monitor page load performance
-  window.addEventListener('load', () =>     setTimeout(() =>       const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData)         const loadTime = perfData.loadEventEnd - perfData.fetchStart;
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (perfData) {
+        const loadTime = perfData.loadEventEnd - perfData.fetchStart;
         
         if (loadTime > 3000) { // Slow page load (>3s)
-          logError('Slow page load detected',             loadTime,
+          logError('Slow page load detected', {
+            loadTime,
             domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
             type: 'performance',
           }, 'warn');
