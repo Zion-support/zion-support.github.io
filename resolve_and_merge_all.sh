@@ -5,7 +5,7 @@ set -e
 
 echo "🚀 Starting comprehensive merge resolution process..."
 echo "⏰ Started at: $(date)"
-echo "=========================================="
+echo ""
 
 # Function to log with timestamp
 log() {
@@ -25,7 +25,7 @@ resolve_file_conflicts() {
     fi
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
+    if grep -q "" "$file"; then
         log "⚠️  Found conflicts in $file"
         
         # Create backup
@@ -137,9 +137,9 @@ failed_merges=0
 # Process each branch
 for branch in $unmerged_branches; do
     echo ""
-    echo "=========================================="
+    echo ""
     log "🔄 Processing branch: $branch"
-    echo "=========================================="
+    echo ""
     
     if merge_branch "$branch"; then
         successful_merges=$((successful_merges + 1))
@@ -149,7 +149,7 @@ for branch in $unmerged_branches; do
         log "❌ Branch $branch processing failed"
     fi
     
-    echo "=========================================="
+    echo ""
     
     # Push every 3 successful merges
     if [ $((successful_merges % 3)) -eq 0 ] && [ $successful_merges -gt 0 ]; then
@@ -172,7 +172,7 @@ echo "📊 Summary:"
 echo "   ✅ Successful merges: $successful_merges"
 echo "   ❌ Failed merges: $failed_merges"
 echo "⏰ Completed at: $(date)"
-echo "=========================================="
+echo ""
 
 # Verify final state
 log "🔍 Verifying final state..."

@@ -1,1 +1,5 @@
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SEOEnhancer from '../components/SEOEnhancer';
 import React from 'react';' import { render, screen, fireEvent } from '@testing-library/react';' import '@testing-library/jest-dom';' import SEOEnhancer from '../components/SEOEnhancer'; '

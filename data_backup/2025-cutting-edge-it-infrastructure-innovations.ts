@@ -1,1 +1,4 @@
+string;
+
+boolean;
 string; boolean;

@@ -1,1 +1,35 @@
+// Advanced Analytics Configuration
+export const analyticsConfig = {
+  // Performance monitoring
+  performance: {
+    webVitals: true,
+    coreMetrics: ['LCP', 'FID', 'CLS', 'FCP', 'TTFB'],
+    customMetrics: ['pageLoad', 'apiResponse', 'userInteraction'],
+    samplingRate: 1.0,
+  },
+
+  // Error tracking
+  errorTracking: {
+    captureErrors: true,
+    captureUnhandledRejections: true,
+    captureConsoleErrors: true,
+    maxErrorReports: 100,
+  },
+
+  // User behavior
+  userBehavior: {
+    trackClicks: true,
+    trackScroll: true,
+    trackFormSubmissions: true,
+    trackPageViews: true,
+  },
+
+  // Business metrics
+  businessMetrics: {
+    conversionTracking: true,
+    goalTracking: true,
+    funnelAnalysis: true,
+    cohortAnalysis: true,
+  },
+};
 // Advanced Analytics Configuration export const analyticsConfig = { // Performance monitoring performance: { webVitals: true, coreMetrics: ['LCP', 'FID', 'CLS', 'FCP', 'TTFB'],' customMetrics: ['pageLoad', 'apiResponse', 'userInteraction'], samplingRate: 1.0 }, // Error tracking errorTracking: { captureErrors: true, captureUnhandledRejections: true, captureConsoleErrors: true, maxErrorReports: 100 }, // User behavior userBehavior: { trackClicks: true, trackScroll: true, trackFormSubmissions: true, trackPageViews: true }, // Business metrics businessMetrics: { conversionTracking: true, goalTracking: true, funnelAnalysis: true, cohortAnalysis: true } }; '

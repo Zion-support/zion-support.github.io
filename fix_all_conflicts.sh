@@ -4,7 +4,7 @@
 echo "Starting comprehensive merge conflict resolution..."
 
 # Find all files with merge conflicts (excluding backups)
-conflict_files=$(find /workspace/app/blog -name "*.tsx" -not -name "*.backup" -exec grep -l "^<<<<<<< HEAD" {} \;)
+conflict_files=$(find /workspace/app/blog -name "*.tsx" -not -name "*.backup" -exec grep -l "^" {} \;)
 
 count=0
 for file in $conflict_files; do
@@ -12,8 +12,7 @@ for file in $conflict_files; do
     echo "Processing ($count): $file"
     
     # Remove merge conflict markers and keep HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> .*/d' "$file"
-done
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^done
 
 echo "Merge conflict resolution completed for $count files."

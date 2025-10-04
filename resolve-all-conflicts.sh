@@ -9,9 +9,8 @@ resolve_conflicts() {
         echo "Resolving conflicts in: $file"
         
         # Remove all conflict markers and keep both versions where possible
-        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-        
+        sed -i '/^/,/^/d' "$file"
+        sed -i '/^        
         echo "✅ Resolved conflicts in: $file"
     fi
 }
