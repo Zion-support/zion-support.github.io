@@ -8,6 +8,7 @@ async function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
   try {
     const { amount, currency = 'usd' } = req.body || {};
     
@@ -32,6 +33,30 @@ async function handler(req, res) {
   } catch (err) {
     res.statusCode = 500;
     res.json({ error: err.message });
+=======
+  const { amount, currency = 'usd', userId } = req.body || {};
+
+  try {
+    // Create payment intent logic here
+    const paymentIntent = {
+      id: `pi_${Date.now()}`,
+      amount,
+      currency,
+      userId,
+      status: 'requires_payment_method',
+      createdAt: new Date().toISOString()
+    };
+
+    res.status(200).json({
+      success: true,
+      paymentIntent
+    });
+  } catch (error) {
+    console.error('Payment intent creation error:', error);
+    res.status(500).json({ 
+      error: error.message || 'Failed to create payment intent' 
+    });
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7ef
   }
 }
 

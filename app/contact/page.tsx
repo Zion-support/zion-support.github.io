@@ -29,15 +29,6 @@ export default function ContactPage() {
       [e.target.name]: e.target.value
     });
   };
-=======
-import React from 'react';
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'Contact Us - Zion Tech Group',
-  description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT solutions. Contact our expert team for consultation and support.',
-  keywords: 'contact Zion Tech Group, AI consultation, IT support, business inquiry',
-};
 
 export default function ContactPage() {
   return (

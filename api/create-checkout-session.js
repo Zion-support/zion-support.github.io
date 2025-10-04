@@ -1,8 +1,14 @@
+import { withErrorLogging } from './withErrorLogging.cjs';
 
+<<<<<<< HEAD
 import { withErrorLogging } from './withErrorLogging.cjs';
 
 const PROD_DOMAIN = 'ziontechgroup.com';
 
+=======
+const PROD_DOMAIN = process.env.PROD_DOMAIN || 'https://ziontechgroup.com';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7ef
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -10,6 +16,7 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
+<<<<<<< HEAD
   const { productId, userId } = req.body || {};
   if (!productId || !userId) {
     res.statusCode = 400;
@@ -51,4 +58,31 @@ async function handler(req, res) {
 }
 
 export default withErrorLogging(handler);
+=======
 
+  const { productId, userId } = req.body || {};
+
+  try {
+    // Create checkout session logic here
+    const session = {
+      id: `cs_${Date.now()}`,
+      productId,
+      userId,
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7ef
+
+    res.status(200).json({
+      success: true,
+      session
+    });
+  } catch (error) {
+    console.error('Checkout session creation error:', error);
+    res.status(500).json({ 
+      error: error.message || 'Failed to create checkout session' 
+    });
+  }
+}
+
+export default withErrorLogging(handler);

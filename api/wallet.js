@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const { withErrorLogging } = require('./withErrorLogging.cjs');
+=======
+import { withErrorLogging } from './withErrorLogging.cjs';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7ef
 
 async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -8,6 +12,7 @@ async function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
   try {
     const { userId } = req.query || {};
     
@@ -42,3 +47,31 @@ async function handler(req, res) {
 }
 
 module.exports = withErrorLogging(handler);
+=======
+  const { userId } = req.query || {};
+
+  try {
+    // Fetch wallet data logic here
+    const wallet = {
+      id: `wallet_${userId}`,
+      userId,
+      balance: 0,
+      currency: 'usd',
+      transactions: [],
+      createdAt: new Date().toISOString()
+    };
+
+    res.status(200).json({
+      success: true,
+      wallet
+    });
+  } catch (error) {
+    console.error('Wallet fetch error:', error);
+    res.status(500).json({ 
+      error: error.message || 'Failed to fetch wallet' 
+    });
+  }
+}
+
+export default withErrorLogging(handler);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e7ef
