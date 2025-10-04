@@ -171,7 +171,11 @@ class FinalErrorHandler extends Component<Props, State> {
       const criticalScripts = document.querySelectorAll('script[data-critical]');
       criticalScripts.forEach(script => {
         const newScript = document.createElement('script');
+<<<<<<< HEAD
         newScript.src = (script as HTMLScriptElement).src;
+=======
+        newScript.src = script.src;
+>>>>>>> main
         newScript.setAttribute('data-critical', 'true');
         document.head.appendChild(newScript);
       });
