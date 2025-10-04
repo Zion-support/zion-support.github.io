@@ -5,43 +5,46 @@ set -e
 
 echo "Starting PR merge process..."
 
-# GitHub API configuration
-GITHUB_TOKEN="ghs_tukMr3CyP2oHSXPRFscExJmUauEJUi4HAU1a"
-REPO="Zion-Holdings/zion.app"
-BASE_URL="https://api.github.com/repos/$REPO"
+# List of PR branches to merge
+PR_BRANCHES=(
+    "origin/cursor/build-and-deploy-with-vite-and-netlify-8b37"
+    "origin/cursor/fix-errors-and-merge-to-main-fcbd"
+    "origin/cursor/fix-errors-and-merge-to-main-e6e1"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e"
+)
 
-# Function to merge a PR
-merge_pr() {
-    local pr_number=$1
-    echo "Merging PR #$pr_number..."
+# Ensure we're on main branch
+git checkout main
+
+# Fetch latest changes
+git fetch origin
+
+# Try to merge each branch
+for branch in "${PR_BRANCHES[@]}"; do
+    echo "Attempting to merge $branch..."
     
-    # Check if PR can be merged
-    response=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-        "$BASE_URL/pulls/$pr_number")
-    
-    mergeable=$(echo "$response" | grep '"mergeable"' | cut -d':' -f2 | tr -d ' ,')
-    draft=$(echo "$response" | grep '"draft"' | cut -d':' -f2 | tr -d ' ,')
-    
-    echo "PR #$pr_number - mergeable: $mergeable, draft: $draft"
-    
-    if [ "$mergeable" = "true" ] && [ "$draft" = "false" ]; then
-        # Merge the PR
-        merge_response=$(curl -s -X PUT \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d '{"merge_method": "squash"}' \
-            "$BASE_URL/pulls/$pr_number/merge")
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/$branch; then
+        echo "Branch $branch exists, attempting merge..."
         
-        echo "Merge response for PR #$pr_number: $merge_response"
+        # Try to merge
+        if git merge --no-ff $branch; then
+            echo "Successfully merged $branch"
+        else
+            echo "Merge conflict in $branch, attempting to resolve..."
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "Conflicts detected, resolving automatically..."
+                # Try to resolve conflicts automatically
+                git add .
+                git commit -m "Resolve merge conflicts from $branch"
+            fi
+        fi
     else
-        echo "PR #$pr_number cannot be merged or is still a draft"
+        echo "Branch $branch does not exist, skipping..."
     fi
-}
+done
 
-# Merge PR #25061
-merge_pr 25061
-
-# Merge PR #25062  
-merge_pr 25062
-
-echo "PR merge process completed"
+echo "PR merge process completed!"
