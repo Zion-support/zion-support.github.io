@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number;
-  fid: number;
+  inp: number;
   fcp: number;
   lcp: number;
   ttfb: number;
@@ -21,7 +21,7 @@ const PerformanceMonitor: React.FC = () => {
     };
 
     onCLS(handleMetric);
-    onFID(handleMetric);
+    onINP(handleMetric);
     onFCP(handleMetric);
     onLCP(handleMetric);
     onTTFB(handleMetric);
@@ -31,7 +31,7 @@ const PerformanceMonitor: React.FC = () => {
     return (
       <div className="fixed bottom-4 right-4 bg-black text-white p-2 rounded text-xs">
         <div>CLS: {metrics?.cls?.toFixed(3)}</div>
-        <div>FID: {metrics?.fid?.toFixed(1)}ms</div>
+        <div>INP: {metrics?.inp?.toFixed(1)}ms</div>
         <div>FCP: {metrics?.fcp?.toFixed(1)}ms</div>
         <div>LCP: {metrics?.lcp?.toFixed(1)}ms</div>
         <div>TTFB: {metrics?.ttfb?.toFixed(1)}ms</div>
