@@ -16,8 +16,8 @@ Object.defineProperty(global, 'import', {
         DEV: true,
         PROD: false,
         MODE: 'test'
-      }
-    }
+      },
+    },
   }
 });
 
@@ -48,8 +48,8 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
+    dispatchEvent: jest.fn(),
+  })),
 });
 
 // Mock performance API
@@ -61,7 +61,7 @@ Object.defineProperty(window, 'performance', {
     measure: jest.fn(),
     getEntriesByType: jest.fn(() => []),
     getEntriesByName: jest.fn(() => [])
-  }
+  },
 });
 
 // Mock PerformanceObserver
@@ -302,104 +302,7 @@ jest.mock('lucide-react', () => ({
   Stopwatch: () => React.createElement('div', { 'data-testid': 'stopwatch-icon' }),
   Hourglass: () => React.createElement('div', { 'data-testid': 'hourglass-icon' }),
   Calendar2: () => React.createElement('div', { 'data-testid': 'calendar2-icon' }),
-  Calendar3: () => React.createElement('div', { 'data-testid': 'calendar3-icon' }),
-  Calendar4: () => React.createElement('div', { 'data-testid': 'calendar4-icon' }),
-  Calendar5: () => React.createElement('div', { 'data-testid': 'calendar5-icon' }),
-  Calendar6: () => React.createElement('div', { 'data-testid': 'calendar6-icon' }),
-  Calendar7: () => React.createElement('div', { 'data-testid': 'calendar7-icon' }),
-  Calendar8: () => React.createElement('div', { 'data-testid': 'calendar8-icon' }),
-  Calendar9: () => React.createElement('div', { 'data-testid': 'calendar9-icon' }),
-  Calendar10: () => React.createElement('div', { 'data-testid': 'calendar10-icon' }),
-  Calendar11: () => React.createElement('div', { 'data-testid': 'calendar11-icon' }),
-  Calendar12: () => React.createElement('div', { 'data-testid': 'calendar12-icon' }),
-  Calendar13: () => React.createElement('div', { 'data-testid': 'calendar13-icon' }),
-  Calendar14: () => React.createElement('div', { 'data-testid': 'calendar14-icon' }),
-  Calendar15: () => React.createElement('div', { 'data-testid': 'calendar15-icon' }),
-  Calendar16: () => React.createElement('div', { 'data-testid': 'calendar16-icon' }),
-  Calendar17: () => React.createElement('div', { 'data-testid': 'calendar17-icon' }),
-  Calendar18: () => React.createElement('div', { 'data-testid': 'calendar18-icon' }),
-  Calendar19: () => React.createElement('div', { 'data-testid': 'calendar19-icon' }),
-  Calendar20: () => React.createElement('div', { 'data-testid': 'calendar20-icon' }),
-  Calendar21: () => React.createElement('div', { 'data-testid': 'calendar21-icon' }),
-  Calendar22: () => React.createElement('div', { 'data-testid': 'calendar22-icon' }),
-  Calendar23: () => React.createElement('div', { 'data-testid': 'calendar23-icon' }),
-  Calendar24: () => React.createElement('div', { 'data-testid': 'calendar24-icon' }),
-  Calendar25: () => React.createElement('div', { 'data-testid': 'calendar25-icon' }),
-  Calendar26: () => React.createElement('div', { 'data-testid': 'calendar26-icon' }),
-  Calendar27: () => React.createElement('div', { 'data-testid': 'calendar27-icon' }),
-  Calendar28: () => React.createElement('div', { 'data-testid': 'calendar28-icon' }),
-  Calendar29: () => React.createElement('div', { 'data-testid': 'calendar29-icon' }),
-  Calendar30: () => React.createElement('div', { 'data-testid': 'calendar30-icon' }),
-  Calendar31: () => React.createElement('div', { 'data-testid': 'calendar31-icon' }),
-  Calendar32: () => React.createElement('div', { 'data-testid': 'calendar32-icon' }),
-  Calendar33: () => React.createElement('div', { 'data-testid': 'calendar33-icon' }),
-  Calendar34: () => React.createElement('div', { 'data-testid': 'calendar34-icon' }),
-  Calendar35: () => React.createElement('div', { 'data-testid': 'calendar35-icon' }),
-  Calendar36: () => React.createElement('div', { 'data-testid': 'calendar36-icon' }),
-  Calendar37: () => React.createElement('div', { 'data-testid': 'calendar37-icon' }),
-  Calendar38: () => React.createElement('div', { 'data-testid': 'calendar38-icon' }),
-  Calendar39: () => React.createElement('div', { 'data-testid': 'calendar39-icon' }),
-  Calendar40: () => React.createElement('div', { 'data-testid': 'calendar40-icon' }),
-  Calendar41: () => React.createElement('div', { 'data-testid': 'calendar41-icon' }),
-  Calendar42: () => React.createElement('div', { 'data-testid': 'calendar42-icon' }),
-  Calendar43: () => React.createElement('div', { 'data-testid': 'calendar43-icon' }),
-  Calendar44: () => React.createElement('div', { 'data-testid': 'calendar44-icon' }),
-  Calendar45: () => React.createElement('div', { 'data-testid': 'calendar45-icon' }),
-  Calendar46: () => React.createElement('div', { 'data-testid': 'calendar46-icon' }),
-  Calendar47: () => React.createElement('div', { 'data-testid': 'calendar47-icon' }),
-  Calendar48: () => React.createElement('div', { 'data-testid': 'calendar48-icon' }),
-  Calendar49: () => React.createElement('div', { 'data-testid': 'calendar49-icon' }),
-  Calendar50: () => React.createElement('div', { 'data-testid': 'calendar50-icon' }),
-  Calendar51: () => React.createElement('div', { 'data-testid': 'calendar51-icon' }),
-  Calendar52: () => React.createElement('div', { 'data-testid': 'calendar52-icon' }),
-  Calendar53: () => React.createElement('div', { 'data-testid': 'calendar53-icon' }),
-  Calendar54: () => React.createElement('div', { 'data-testid': 'calendar54-icon' }),
-  Calendar55: () => React.createElement('div', { 'data-testid': 'calendar55-icon' }),
-  Calendar56: () => React.createElement('div', { 'data-testid': 'calendar56-icon' }),
-  Calendar57: () => React.createElement('div', { 'data-testid': 'calendar57-icon' }),
-  Calendar58: () => React.createElement('div', { 'data-testid': 'calendar58-icon' }),
-  Calendar59: () => React.createElement('div', { 'data-testid': 'calendar59-icon' }),
-  Calendar60: () => React.createElement('div', { 'data-testid': 'calendar60-icon' }),
-  Calendar61: () => React.createElement('div', { 'data-testid': 'calendar61-icon' }),
-  Calendar62: () => React.createElement('div', { 'data-testid': 'calendar62-icon' }),
-  Calendar63: () => React.createElement('div', { 'data-testid': 'calendar63-icon' }),
-  Calendar64: () => React.createElement('div', { 'data-testid': 'calendar64-icon' }),
-  Calendar65: () => React.createElement('div', { 'data-testid': 'calendar65-icon' }),
-  Calendar66: () => React.createElement('div', { 'data-testid': 'calendar66-icon' }),
-  Calendar67: () => React.createElement('div', { 'data-testid': 'calendar67-icon' }),
-  Calendar68: () => React.createElement('div', { 'data-testid': 'calendar68-icon' }),
-  Calendar69: () => React.createElement('div', { 'data-testid': 'calendar69-icon' }),
-  Calendar70: () => React.createElement('div', { 'data-testid': 'calendar70-icon' }),
-  Calendar71: () => React.createElement('div', { 'data-testid': 'calendar71-icon' }),
-  Calendar72: () => React.createElement('div', { 'data-testid': 'calendar72-icon' }),
-  Calendar73: () => React.createElement('div', { 'data-testid': 'calendar73-icon' }),
-  Calendar74: () => React.createElement('div', { 'data-testid': 'calendar74-icon' }),
-  Calendar75: () => React.createElement('div', { 'data-testid': 'calendar75-icon' }),
-  Calendar76: () => React.createElement('div', { 'data-testid': 'calendar76-icon' }),
-  Calendar77: () => React.createElement('div', { 'data-testid': 'calendar77-icon' }),
-  Calendar78: () => React.createElement('div', { 'data-testid': 'calendar78-icon' }),
-  Calendar79: () => React.createElement('div', { 'data-testid': 'calendar79-icon' }),
-  Calendar80: () => React.createElement('div', { 'data-testid': 'calendar80-icon' }),
-  Calendar81: () => React.createElement('div', { 'data-testid': 'calendar81-icon' }),
-  Calendar82: () => React.createElement('div', { 'data-testid': 'calendar82-icon' }),
-  Calendar83: () => React.createElement('div', { 'data-testid': 'calendar83-icon' }),
-  Calendar84: () => React.createElement('div', { 'data-testid': 'calendar84-icon' }),
-  Calendar85: () => React.createElement('div', { 'data-testid': 'calendar85-icon' }),
-  Calendar86: () => React.createElement('div', { 'data-testid': 'calendar86-icon' }),
-  Calendar87: () => React.createElement('div', { 'data-testid': 'calendar87-icon' }),
-  Calendar88: () => React.createElement('div', { 'data-testid': 'calendar88-icon' }),
-  Calendar89: () => React.createElement('div', { 'data-testid': 'calendar89-icon' }),
-  Calendar90: () => React.createElement('div', { 'data-testid': 'calendar90-icon' }),
-  Calendar91: () => React.createElement('div', { 'data-testid': 'calendar91-icon' }),
-  Calendar92: () => React.createElement('div', { 'data-testid': 'calendar92-icon' }),
-  Calendar93: () => React.createElement('div', { 'data-testid': 'calendar93-icon' }),
-  Calendar94: () => React.createElement('div', { 'data-testid': 'calendar94-icon' }),
-  Calendar95: () => React.createElement('div', { 'data-testid': 'calendar95-icon' }),
-  Calendar96: () => React.createElement('div', { 'data-testid': 'calendar96-icon' }),
-  Calendar97: () => React.createElement('div', { 'data-testid': 'calendar97-icon' }),
-  Calendar98: () => React.createElement('div', { 'data-testid': 'calendar98-icon' }),
-  Calendar99: () => React.createElement('div', { 'data-testid': 'calendar99-icon' }),
-  Calendar100: () => React.createElement('div', { 'data-testid': 'calendar100-icon' })
+  AlertTriangle: () => React.createElement('div', { 'data-testid': 'alert-triangle-icon' }),
 }));
 
 // Mock console methods to reduce noise in tests
@@ -411,9 +314,7 @@ beforeAll(() => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning: ReactDOM.render is no longer supported') ||
-        args[0].includes(
-          'Warning: A suspended resource finished loading inside a test'
-        ))
+        args[0].includes('Warning: A suspended resource finished loading inside a test'))
     ) {
       return;
     }

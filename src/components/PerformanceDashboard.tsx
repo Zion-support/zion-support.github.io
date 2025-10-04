@@ -1,56 +1,79 @@
 import React, { useState, useEffect } from 'react';
 
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
+
 const PerformanceDashboard: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
-    memoryUsage: 0
+    memoryUsage: 0,
+    fps: 0
   });
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV !== 'development') {
-      return;
-    }
-
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
       
-      setMetrics({
-        loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
-        renderTime: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0,
-        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0
-      });
+      const memory = (performance as any).memory;
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        memoryUsage
+      }));
     };
 
-    // Update metrics after page load
-    setTimeout(updateMetrics, 1000);
+    // Update metrics on load
+    updateMetrics();
 
-    // Toggle visibility with Ctrl+Shift+P
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
-      }
-    };
+    // Update metrics periodically
+    const interval = setInterval(updateMetrics, 1000);
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return () => clearInterval(interval);
   }, []);
 
-  if (!isVisible || process.env.NODE_ENV !== 'development') {
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="mb-2 font-bold">Performance Metrics</div>
-      <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
-      <div className="mt-2 text-gray-400">Press Ctrl+Shift+P to toggle</div>
+    <div className="fixed bottom-4 right-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+        aria-label="Toggle performance dashboard"
+      >
+        Perf
+      </button>
+      
+      {isVisible && (
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
+          <h3 className="text-sm font-semibold text-gray-900 mb-3">Performance Metrics</h3>
+          <div className="space-y-2 text-xs">
+            <div className="flex justify-between">
+              <span className="text-gray-600">Load Time:</span>
+              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Memory:</span>
+              <span className="font-mono">{metrics.memoryUsage.toFixed(2)}MB</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">FPS:</span>
+              <span className="font-mono">{metrics.fps.toFixed(1)}</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

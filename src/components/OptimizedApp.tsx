@@ -1,6 +1,6 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
-import { motion } from 'framer-motion';
+import React, { Suspense, lazy, useState, useEffect } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import { motion } from "framer-motion";
 import { getFeaturedBanners } from '../data/bannerConfigurations';
 
 // Loading component
@@ -17,7 +17,7 @@ const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> 
       <div className="text-red-600 text-6xl mb-4">⚠️</div>
       <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
       <p className="text-gray-600 mb-4">We encountered an unexpected error. Please try refreshing the page.</p>
-      {process.env.NODE_ENV === 'development' && (
+      {process.env.NODE_ENV === "development" && (
         <details className="mt-4 text-left">
           <summary className="cursor-pointer text-sm text-gray-500">Error details</summary>
           <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
@@ -65,7 +65,7 @@ const MainContent: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Zion Tech Group</h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">Advanced AI and IT Solutions for the Future</p>
             <p className="text-lg mb-12 opacity-80">
-              Transform your business with cutting-edge AI, quantum computing, and autonomous systems.
+              Transform your business with cutting-edge AI, quantum computing, and automation solutions.
             </p>
           </div>
         </div>
@@ -75,9 +75,11 @@ const MainContent: React.FC = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Solutions
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover our latest innovations and breakthrough technologies.
+              Discover our latest innovations and breakthrough technologies
             </p>
           </div>
           <Suspense fallback={<LoadingSpinner />}>
@@ -118,7 +120,7 @@ const OptimizedApp: React.FC = () => {
       FallbackComponent={ErrorFallback}
       onError={(error, errorInfo) => {
         console.error('Application Error:', error, errorInfo);
-        if (process.env.NODE_ENV === 'production') {
+        if (process.env.NODE_ENV === "production") {
           // Send error to monitoring service in production
           // Example: errorReportingService.captureException(error, { extra: errorInfo });
         }
