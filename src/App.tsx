@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
 // Animation variants
@@ -24,6 +25,7 @@ const HomePage = React.lazy(() => import('./pages/HomePage'));
 const AboutPage = React.lazy(() => import('./pages/About'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ServicesPage = React.lazy(() => import('./pages/Services'));
+const BlogPage = React.lazy(() => import('./pages/Blog'));
 
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
@@ -97,6 +99,8 @@ function App() {
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/services/*" element={<ServicesPage />} />
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/blog/:slug" element={<BlogPage />} />
 
                         {/* 404 Fallback */}
                         <Route
@@ -120,6 +124,9 @@ function App() {
                   </div>
                 </div>
               </motion.main>
+              
+              {/* Footer */}
+              <Footer />
             </EnhancedErrorBoundary>
           </div>
         </Router>
