@@ -1,1 +1,359 @@
-/** * Error, Tracking, and Monitoring, Utilit, y; * * Comprehensive, error, tracking system, for, production monitori, n, g; * error, reportin, g, and, debugging, assistance. * * Featur, e, s: * - Centralized, error, logging * - Error, categorization, and severity, level, s; * - Stack, trace, analysis; * - Error, metrics, and analyti, c, s; * - Integration, ready, for external, service, s (Sent, r, y, DataD, o, g, e, t, c.) */ export, enum, ErrorSeverity { L, O, W = 'l, o, w'' MEDI, U, M = 'medi, u, m'' HI, G, H = 'hi, g, h'' CRITIC, A, L = 'critic, a, l' } export, enum, ErrorCategory {' NETWO, R, K = 'netwo, r, k'' RENDERI, N, G = 'renderi, n, g'' STA, T, E = 'sta, t, e'' THIRD_PAR, T, Y = 'third_par, t, y'' USER_INP, U, T = 'user_inp, u, t'' PERMISSI, O, N = 'permissi, o, n'' UNKNO, W, N = 'unkno, w, n' =======' L, O, W = 'l, o, w',';' MEDI, U, M = 'medi, u, m',';' HI, G, H = 'hi, g, h',';' CRITIC, A, L = 'critic, a, l','; } export, enum, ErrorCategory {' NETWO, R, K = 'netwo, r, k',';' RENDERI, N, G = 'renderi, n, g',';' STA, T, E = 'sta, t, e',';' THIRD_PAR, T, Y = 'third_par, t, y',';' USER_INP, U, T = 'user_inp, u, t',';' PERMISSI, O, N = 'permissi, o, n',';' UNKNO, W, N = 'unkno, w, n','; } export, interface, ErrorContext { user, I, d?: stri, n, g; session, I, d?: stri, n, g; rou, t, e?: stri, n, g; compone, n, t?: stri, n, g; acti, o, n?: stri, n, g; metada, t, a?: Reco, r, d<stri, n, g, a, n, y>; } export, interface, TrackedError { id: stri, n, g; mess, a, g e: stri, n, g; sta, c, k?: stri, n, g; severi, t, y: ErrorSeveri, t, y; catego, r, y: ErrorCatego, r, y; timesta, m, p: Da, t, e; conte, x, t: ErrorConte, x, t; userAge, n, t: stri, n, g; resol, v, e d: boole, a, n; } class, ErrorTracke, r { private, error, s: TrackedErr, o, r[] = [] private, maxError, s = 1, 0, 0; private, listener, s: ((er, r, o r: TrackedErr, o, r) => vo, i, d)[] = [] ======= private, error, s: TrackedErr, o, r[] = []; private, maxError, s = 1, 0, 0; private, listener, s: ((err, o, r: TrackedErr, o, r) => vo, i, d)[] = []; /** * Track, an, error; */ trackErr, o, r( er, r, o r: Err, o, r | stri, n, g severi, t, y: ErrorSeveri, t, y = ErrorSeveri, t, y.MEDI, U, M catego, r, y: ErrorCatego, r, y = ErrorCatego, r, y.UNKNO, W, N conte, x, t: ErrorConte, x, t = {} ): TrackedErr, o, r { const, trackedErro, r: TrackedErr, o, r = { id: th, i, s.generateError, I, d()' messa, g, e: typeof, erro, r === 'stri, n, g' ? err, o, r : err, o, r.messa, g, e,'' sta, c, k: typeof, erro, r === 'stri, n, g' ? undefin, e, d : err, o, r.sta, c, k,' severi, t, y catego, r, y timesta, m, p: new, Dat, e() conte, x, t: th, i, s.enrichConte, x, t(conte, x, t) userAge, n, t: navigat, o, r.userAge, n, t resolv, e, d: fal, s, e; ======= mess, a, g' e: typeof, erro, r === 'stri, n, g' ? err, o, r : err, o, r.messa, g, e,';' sta, c, k: typeof, erro, r === 'stri, n, g' ? undefin, e, d : err, o, r.sta, c, k,'; severi, t, y catego, r, y timesta, m, p: new, Dat, e() conte, x, t: th, i, s.enrichConte, x, t(conte, x, t) userAge, n, t: navigat, o, r.userAge, n, t resolv, e, d: fal, s, e }; th, i, s.erro, r, s.pu, s, h(trackedErr, o, r); // Keep, only, recent erro, r, s if (th, i, s.erro, r, s.leng, t, h > th, i, s.maxErro, r, s) { th, i, s.erro, r, s = th, i, s.erro, r, s.sli, c, e(-th, i, s.maxErro, r, s); } // Notify, listener, s th, i, s.notifyListene, r, s(trackedErr, o, r); // Log, to, console in, developmen, t' if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;' conso, l, e.err, o, r('[ErrorTrack, e, r]', trackedErr, o, r); } // Send, to, external service, in, production' if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {; =======' if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';' conso, l, e.err, o, r('[ErrorTrack, e, r]', trackedErr, o, r);'; } // Send, to, external service, in, production' if (proce, s, s.e, n, v.NODE_E, N, V === 'producti, o, n') {'; th, i, s.sendToExternalServi, c, e(trackedErr, o, r); } return, trackedErro, r; } /** * Track, network, errors; */ trackNetworkErr, o, r( err, o, r: Err, o, r u, r, l: stri, n, g meth, o, d: stri, n, g stat, u, s?: numb, e, r; ======= err, o, r: Err, o, r u, r, l: stri, n, g meth, o, d: stri, n, g stat, u, s?: numb, e, r conte, x, t: ErrorConte, x, t = {} ): TrackedErr, o, r { return, thi, s.trackErr, o, r( err, o, r stat, u, s && stat, u, s >= 5, 0, 0 ? ErrorSeveri, t, y.HI, G, H : ErrorSeveri, t, y.MEDI, U, M ErrorCatego, r, y.NETWO, R, K; { ...conte, x, t metada, t, a: { ...conte, x, t.metada, t, a; ======= ...conte, x, t metada, t, a: { ...conte, x, t.metada, t, a u, r, l meth, o, d stat, u, s; } } ); } /** * Track, rendering, errors; */ trackRenderErr, o, r( err, o, r: Err, o, r componentNa, m, e: stri, n, g pro, p, s?: Reco, r, d<stri, n, g, a, n, y> ======= err, o, r: Err, o, r componentNa, m, e: stri, n, g pro, p, s?: Reco, r, d<stri, n, g, a, n, y> conte, x, t: ErrorConte, x, t = {} ): TrackedErr, o, r { return, thi, s.trackErr, o, r( err, o, r ErrorSeveri, t, y.HI, G, H ErrorCatego, r, y.RENDERI, N, G; { ...conte, x, t compone, n, t: componentNa, m, e metada, t, a: { ...conte, x, t.metada, t, a pro, p, s; } ======= ...conte, x, t compone, n, t: componentNa, m, e metada, t, a: { ...conte, x, t.metada, t, a pro, p, s } } ); } /** * Get, all, errors; */ getErro, r, s(): TrackedErr, o, r[] { retu, r, n [...th, i, s.erro, r, s]; } /** * Get, errors, by severi, t, y; */ getErrorsBySeveri, t, y(severi, t, y: ErrorSeveri, t, y): TrackedErr, o, r[] { return, thi, s.erro, r, s.filt, e, r(err, o, r => err, o, r.severi, t, y === severi, t, y); } /** * Get, errors, by catego, r, y; */ getErrorsByCatego, r, y(catego, r, y: ErrorCatego, r, y): TrackedErr, o, r[] { return, thi, s.erro, r, s.filt, e, r(err, o, r => err, o, r.catego, r, y === catego, r, y); } /** * Get, unresolved, errors; */ getUnresolvedErro, r, s(): TrackedErr, o, r[] { return, thi, s.erro, r, s.filt, e, r(err, o, r => !err, o, r.resolv, e, d); } /** * Mark, error, as resolv, e, d; */ resolveErr, o, r(error, I, d: stri, n, g): vo, i, d { const, erro, r = th, i, s.erro, r, s.fi, n, d(e => e.id === error, I, d); if (err, o, r) { err, o, r.resolv, e, d = tr, u, e; } } /** * Clear, all, errors; */ clearErro, r, s(): vo, i, d { th, i, s.erro, r, s = []; } /** * Subscribe, to, error even, t, s; */ subscri, b, e(listen, e, r: (er, r, o r: TrackedErr, o, r) => vo, i, d): () => vo, i, d { th, i, s.listene, r, s.pu, s, h(listen, e, r); return () => { th, i, s.listene, r, s = th, i, s.listene, r, s.filt, e, r(l => l !== listen, e, r); }; } /** * Get, error, statistics; */ getStatisti, c, s() { const, tota, l = th, i, s.erro, r, s.leng, t, h; const, unresolve, d = th, i, s.getUnresolvedErro, r, s().leng, t, h; const, bySeverit, y = { [ErrorSeveri, t, y.L, O, W]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.L, O, W).leng, t, h; [ErrorSeveri, t, y.MEDI, U, M]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.MEDI, U, M).leng, t, h; [ErrorSeveri, t, y.HI, G, H]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.HI, G, H).leng, t, h; [ErrorSeveri, t, y.CRITIC, A, L]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.CRITIC, A, L).leng, t, h; }; const, byCategor, y = Obje, c, t.valu, e, s(ErrorCatego, r, y).redu, c, e((a, c, c, catego, r, y) => { a, c, c[catego, r, y] = th, i, s.getErrorsByCatego, r, y(catego, r, y).leng, t, h; return, ac, c; }, {} as, Recor, d<ErrorCatego, r, y, numb, e, r>); retu, r, n { tot, a, l unresolv, e, d resolv, e, d: tot, a, l - unresolv, e, d bySeveri, t, y byCatego, r, y lastErr, o, r: th, i, s.erro, r, s[th, i, s.erro, r, s.leng, t, h - 1] ======= lastEr, r, o r: th, i, s.erro, r, s[th, i, s.erro, r, s.leng, t, h - 1] }; } /** * Generate, unique, error ID; */ private, generateErrorI, d(): stri, n, g { retu, r, n `err, o, r-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;`;` } /** * Enrich, context, with additional, informatio, n; */ private, enrichContex, t(conte, x, t: ErrorConte, x, t): ErrorConte, x, t { retu, r, n { ...conte, x, t rou, t, e: conte, x, t.rou, t, e || wind, o, w.locati, o, n.pathna, m, e metada, t, a: { ...conte, x, t.metada, t, a viewpo, r, t: { wid, t, h: wind, o, w.innerWid, t, h heig, h, t: wind, o, w.innerHeig, h, t; } timesta, m, p: new, Dat, e().toISOStri, n, g() } ======= ...conte, x, t rou, t, e: conte, x, t.rou, t, e || wind, o, w.locati, o, n.pathna, m, e metada, t, a: { ...conte, x, t.metada, t, a viewpo, r, t: { wid, t, h: wind, o, w.innerWid, t, h heig, h, t: wind, o, w.innerHeig, h, t } timesta, m, p: new, Dat, e().toISOStri, n, g() } }; } /** * Notify, all, listeners; */ private, notifyListener, s(err, o, r: TrackedErr, o, r): vo, i, d { th, i, s.listene, r, s.forEa, c, h(listen, e, r => { t, r, y { listen, e, r(err, o, r); } cat, c, h (e, r, r) {' conso, l, e.err, o, r('Error, in, error listen, e, r: ', e, r, r);' =======' conso, l, e.err, o, r('Error, in, error listen, e, r: ', e, r, r);'; } }); } /** * Send, error, to external, monitoring, service; */ private, sendToExternalServic, e(err, o, r: TrackedErr, o, r): vo, i, d { // Integration, point, for external, service, s; // Examp, l, e: Sent, r, y, DataD, o, g, New, Reli, c, e, t, c. // Uncomment, and, configure based, on, your monitoring, servic, e: // if (wind, o, w.Sent, r, y) { // wind, o, w.Sent, r, y.captureExcepti, o, n(new, Erro, r(err, o, r.messa, g, e), { // lev, e, l: err, o, r.severi, t, y; // ta, g, s: { // categ, o, r y: err, o, r.catego, r, y; // } // ext, r, a: err, o, r.conte, x, t; ======= // le, v, e l: err, o, r.severi, t, y // ta, g, s: { // catego, r, y: err, o, r.catego, r, y // } // ext, r, a: err, o, r.conte, x, t // }); // } // For, no, w, we, can, send to, a, custom endpoi, n, t if (proce, s, s.e, n, v.REACT_APP_ERROR_ENDPOI, N, T) { fet, c, h(proce, s, s.e, n, v.REACT_APP_ERROR_ENDPOI, N, T, {' meth, o, d: 'PO, S, T' heade, r, s: {' 'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n' } bo, d, y: JS, O, N.stringi, f, y(err, o, r) }).cat, c, h(e, r, r => {' conso, l, e.err, o, r('Failed, to, send error, to, monitoring servi, c, e: ', e, r, r);' =======' meth, o, d: 'PO, S, T','; heade, r, s: {' 'Conte, n, t-Ty, p, e': 'applicati, o, n/js, o, n','; } bo, d, y: JS, O, N.stringi, f, y(err, o, r) }).cat, c, h(e, r, r => {' conso, l, e.err, o, r('Failed, to, send error, to, monitoring servi, c, e: ', e, r, r);'; }); } } } // Singleton, instanc, e export, const, errorTracker = new, ErrorTracke, r(); /** * React, Error, Boundary help, e, r; */ export, function, handleComponentError( err, o, r: Err, o, r errorIn, f, o: { componentSt, a, c k: stri, n, g } componentNa, m, e: stri, n, g ): vo, i, d { errorTrack, e, r.trackRenderErr, o, r(err, o, r, componentNa, m, e, { componentSta, c, k: errorIn, f, o.componentSta, c, k; ======= componentSt, a, c k: errorIn, f, o.componentSta, c, k }); } /** * Global, error, handler set, u, p; */ export, function, setupGlobalErrorHandling(): vo, i, d { // Handle, unhandled, promise rejectio, n, s' wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {; =======' wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {'; errorTrack, e, r.trackErr, o, r( new, Erro, r(eve, n, t.reas, o, n) ErrorSeveri, t, y.HI, G, H ErrorCatego, r, y.UNKNO, W, N; { metada, t, a: {' ty, p, e: 'unhandledRejecti, o, n' promi, s, e: eve, n, t.promi, s, e; } =======' ty, p, e: 'unhandledRejecti, o, n','; promi, s, e: eve, n, t.promi, s, e } } ); }); // Handle, global, errors' wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {; =======' wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {'; errorTrack, e, r.trackErr, o, r( eve, n, t.err, o, r || new, Erro, r(eve, n, t.messa, g, e) ErrorSeveri, t, y.HI, G, H ErrorCatego, r, y.UNKNO, W, N; { metada, t, a: { filena, m, e: eve, n, t.filena, m, e line, n, o: eve, n, t.line, n, o col, n, o: eve, n, t.col, n, o; } ======= filena, m, e: eve, n, t.filena, m, e line, n, o: eve, n, t.line, n, o col, n, o: eve, n, t.col, n, o } } ); }); } export default errorTracker;'
+/**
+ * Error Tracking and Monitoring Utility
+ * 
+ * Comprehensive error tracking system for production monitoring,
+ * error reporting, and debugging assistance.
+ * 
+ * Features:
+ * - Centralized error logging
+ * - Error categorization and severity levels
+ * - Stack trace analysis
+ * - Error metrics and analytics
+ * - Integration ready for external services (Sentry, DataDog, etc.)
+ */
+
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
+}
+
+export enum ErrorCategory {
+  NETWORK = 'network',
+  RENDERING = 'rendering',
+  STATE = 'state',
+  THIRD_PARTY = 'third_party',
+  USER_INPUT = 'user_input',
+  PERMISSION = 'permission',
+  UNKNOWN = 'unknown',
+}
+
+export interface ErrorContext {
+  userId?: string;
+  sessionId?: string;
+  route?: string;
+  component?: string;
+  action?: string;
+  metadata?: Record<string, any>;
+}
+
+export interface TrackedError {
+  id: string;
+  message: string;
+  stack?: string;
+  severity: ErrorSeverity;
+  category: ErrorCategory;
+  timestamp: Date;
+  context: ErrorContext;
+  userAgent: string;
+  resolved: boolean;
+}
+
+class ErrorTracker {
+  private errors: TrackedError[] = [];
+  private maxErrors = 100;
+  private listeners: ((error: TrackedError) => void)[] = [];
+
+  /**
+   * Track an error
+   */
+  trackError(
+    error: Error | string,
+    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+    category: ErrorCategory = ErrorCategory.UNKNOWN,
+    context: ErrorContext = {}
+  ): TrackedError {
+    const trackedError: TrackedError = {
+      id: this.generateErrorId(),
+      message: typeof error === 'string' ? error : error.message,
+      stack: typeof error === 'string' ? undefined : error.stack,
+      severity,
+      category,
+      timestamp: new Date(),
+      context: this.enrichContext(context),
+      userAgent: navigator.userAgent,
+      resolved: false,
+    };
+
+    this.errors.push(trackedError);
+    
+    // Keep only recent errors
+    if (this.errors.length > this.maxErrors) {
+      this.errors = this.errors.slice(-this.maxErrors);
+    }
+
+    // Notify listeners
+    this.notifyListeners(trackedError);
+
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('[ErrorTracker]', trackedError);
+    }
+
+    // Send to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.sendToExternalService(trackedError);
+    }
+
+    return trackedError;
+  }
+
+  /**
+   * Track network errors
+   */
+  trackNetworkError(
+    error: Error,
+    url: string,
+    method: string,
+    status?: number,
+    context: ErrorContext = {}
+  ): TrackedError {
+    return this.trackError(
+      error,
+      status && status >= 500 ? ErrorSeverity.HIGH : ErrorSeverity.MEDIUM,
+      ErrorCategory.NETWORK,
+      {
+        ...context,
+        metadata: {
+          ...context.metadata,
+          url,
+          method,
+          status,
+        },
+      }
+    );
+  }
+
+  /**
+   * Track rendering errors
+   */
+  trackRenderError(
+    error: Error,
+    componentName: string,
+    props?: Record<string, any>,
+    context: ErrorContext = {}
+  ): TrackedError {
+    return this.trackError(
+      error,
+      ErrorSeverity.HIGH,
+      ErrorCategory.RENDERING,
+      {
+        ...context,
+        component: componentName,
+        metadata: {
+          ...context.metadata,
+          props,
+        },
+      }
+    );
+  }
+
+  /**
+   * Get all errors
+   */
+  getErrors(): TrackedError[] {
+    return [...this.errors];
+  }
+
+  /**
+   * Get errors by severity
+   */
+  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
+    return this.errors.filter(error => error.severity === severity);
+  }
+
+  /**
+   * Get errors by category
+   */
+  getErrorsByCategory(category: ErrorCategory): TrackedError[] {
+    return this.errors.filter(error => error.category === category);
+  }
+
+  /**
+   * Get unresolved errors
+   */
+  getUnresolvedErrors(): TrackedError[] {
+    return this.errors.filter(error => !error.resolved);
+  }
+
+  /**
+   * Mark error as resolved
+   */
+  resolveError(errorId: string): void {
+    const error = this.errors.find(e => e.id === errorId);
+    if (error) {
+      error.resolved = true;
+    }
+  }
+
+  /**
+   * Clear all errors
+   */
+  clearErrors(): void {
+    this.errors = [];
+  }
+
+  /**
+   * Subscribe to error events
+   */
+  subscribe(listener: (error: TrackedError) => void): () => void {
+    this.listeners.push(listener);
+    return () => {
+      this.listeners = this.listeners.filter(l => l !== listener);
+    };
+  }
+
+  /**
+   * Get error statistics
+   */
+  getStatistics() {
+    const total = this.errors.length;
+    const unresolved = this.getUnresolvedErrors().length;
+    
+    const bySeverity = {
+      [ErrorSeverity.LOW]: this.getErrorsBySeverity(ErrorSeverity.LOW).length,
+      [ErrorSeverity.MEDIUM]: this.getErrorsBySeverity(ErrorSeverity.MEDIUM).length,
+      [ErrorSeverity.HIGH]: this.getErrorsBySeverity(ErrorSeverity.HIGH).length,
+      [ErrorSeverity.CRITICAL]: this.getErrorsBySeverity(ErrorSeverity.CRITICAL).length,
+    };
+
+    const byCategory = Object.values(ErrorCategory).reduce((acc, category) => {
+      acc[category] = this.getErrorsByCategory(category).length;
+      return acc;
+    }, {} as Record<ErrorCategory, number>);
+
+    return {
+      total,
+      unresolved,
+      resolved: total - unresolved,
+      bySeverity,
+      byCategory,
+      lastError: this.errors[this.errors.length - 1],
+    };
+  }
+
+  /**
+   * Generate unique error ID
+   */
+  private generateErrorId(): string {
+    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  /**
+   * Enrich context with additional information
+   */
+  private enrichContext(context: ErrorContext): ErrorContext {
+    return {
+      ...context,
+      route: context.route || window.location.pathname,
+      metadata: {
+        ...context.metadata,
+        viewport: {
+          width: window.innerWidth,
+          height: window.innerHeight,
+        },
+        timestamp: new Date().toISOString(),
+      },
+    };
+  }
+
+  /**
+   * Notify all listeners
+   */
+  private notifyListeners(error: TrackedError): void {
+    this.listeners.forEach(listener => {
+      try {
+        listener(error);
+      } catch (err) {
+        console.error('Error in error listener:', err);
+      }
+    });
+  }
+
+  /**
+   * Send error to external monitoring service
+   */
+  private sendToExternalService(error: TrackedError): void {
+    // Integration point for external services
+    // Example: Sentry, DataDog, New Relic, etc.
+    
+    // Uncomment and configure based on your monitoring service:
+    // if (window.Sentry) {
+    //   window.Sentry.captureException(new Error(error.message), {
+    //     level: error.severity,
+    //     tags: {
+    //       category: error.category,
+    //     },
+    //     extra: error.context,
+    //   });
+    // }
+
+    // For now, we can send to a custom endpoint
+    if (process.env.REACT_APP_ERROR_ENDPOINT) {
+      fetch(process.env.REACT_APP_ERROR_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(error),
+      }).catch(err => {
+        console.error('Failed to send error to monitoring service:', err);
+      });
+    }
+  }
+}
+
+// Singleton instance
+export const errorTracker = new ErrorTracker();
+
+/**
+ * React Error Boundary helper
+ */
+export function handleComponentError(
+  error: Error,
+  errorInfo: { componentStack: string },
+  componentName: string
+): void {
+  errorTracker.trackRenderError(error, componentName, {
+    componentStack: errorInfo.componentStack,
+  });
+}
+
+/**
+ * Global error handler setup
+ */
+export function setupGlobalErrorHandling(): void {
+  // Handle unhandled promise rejections
+  window.addEventListener('unhandledrejection', (event) => {
+    errorTracker.trackError(
+      new Error(event.reason),
+      ErrorSeverity.HIGH,
+      ErrorCategory.UNKNOWN,
+      {
+        metadata: {
+          type: 'unhandledRejection',
+          promise: event.promise,
+        },
+      }
+    );
+  });
+
+  // Handle global errors
+  window.addEventListener('error', (event) => {
+    errorTracker.trackError(
+      event.error || new Error(event.message),
+      ErrorSeverity.HIGH,
+      ErrorCategory.UNKNOWN,
+      {
+        metadata: {
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+        },
+      }
+    );
+  });
+}
+
+export default errorTracker;

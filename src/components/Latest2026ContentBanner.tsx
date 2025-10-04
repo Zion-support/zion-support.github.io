@@ -1,1 +1,8 @@
-// Compatibility, default, export so, imports, like "../componen, t, s/Latest2026ContentBann, e, r" wo, r, k"; export, default, function Latest2026ContentBann, e, r(pro, p, s: Reco, r, d<stri, n, g, unkno, w, n>): vo, i, d { retu, r, n <Latest2026ContentBannerNam, e, d {...pro, p, s} />; } ;
+import React from "react";
+import { Latest2026ContentBanner as Latest2026ContentBannerNamed } from "./NewContent2026Banners";
+
+// Compatibility default export so imports like "../components/Latest2026ContentBanner" work
+export default function Latest2026ContentBanner(props: Record<string, unknown>) {
+  return <Latest2026ContentBannerNamed {...props} />;
+}
+

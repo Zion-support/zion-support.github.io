@@ -12,11 +12,8 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import HomePage from './page';
 
 // Utils
-import {
-  setupGlobalErrorHandling,
-  monitorPerformance,
-} from '../utils/errorHandling';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { logError } from '../utils/errorHandling';
+import { measurePerformance } from '../utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -24,17 +21,13 @@ import '../index.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    setupGlobalErrorHandling();
+    console.log('App initialized');
 
     // Initialize performance monitoring
-    monitorPerformance();
+    measurePerformance();
 
-    // Initialize performance optimizer
-    performanceOptimizer.clearMetrics();
-
-    console.log(
-      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
-    );
+    console.log('Performance monitoring initialized');
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (

@@ -1,1 +1,279 @@
-import React from "react"; interface, FeaturedConten, t { id: numb, e, r; tit, l, e: stri, n, g; catego, r, y: stri, n, g; readTi, m, e: stri, n, g; rati, n, g: numb, e, r; reade, r, s: stri, n, g; bad, g, e: stri, n, g; gradie, n, t: stri, n, g; ic, o, n: Rea, c, t.ReactNo, d, e; l, i, n k: stri, n, g; } const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => { const, featuredConte, n t: FeaturedConte, n, t[] = [ { id: 0 tit, l, e: 'Governed, Agent, Rollbacks','' catego, r, y: 'AI, Operation, s','' readTi, m, e: '7, mi, n',' rati, n, g: 5.0' reade, r, s: '2, 5, K+','' bad, g, e: 'N, E, W','' gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0',' ic, o, n: <Sparkles, className="w-6 h-6/>," ' li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s} { id: 7' tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)','' catego, r, y: 'Edge, Computin, g','' readTi, m, e: '6, mi, n',' rati, n, g: 4.9' reade, r, s: '1, 9, K+','' bad, g, e: 'FEATUR, E, D','' gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',' ic, o, n: <TrendingUp, className="w-6 h-6/>,"' li, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t} { id: 1' tit, l, e: 'AI, 20, 2' 7: Operational, Trust, Blueprint','' catego, r, y: 'AI, Strateg, y','' readTi, m, e: '8, mi, n',' rati, n, g: 4.9' reade, r, s: '5, 8, K+','' bad, g, e: 'N, E, W','' gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',' ic, o, n: <Star, className="w-6 h-6/>," ' li, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t} { id: 2' tit, l, e: 'Edge, 20, 2' 6: Private, Feature, Flags','' catego, r, y: 'Architectu, r, e','' readTi, m, e: '7, mi, n',' rati, n, g: 4.8' reade, r, s: '4, 1, K+','' bad, g, e: 'TRENDI, N, G','' gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',' ic, o, n: <TrendingUp, className="w-6 h-6/>,"' li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s} { id: 3' tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)','' catego, r, y: 'Gen, A, I','' readTi, m, e: '8, mi, n',' rati, n, g: 4.9' reade, r, s: '4, 7, K+','' bad, g, e: 'FEATUR, E, D','' gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',' ic, o, n: <Award, className="w-6 h-6/>," ' li, n, k: '/bl, o, g/gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6} ]; const, achievement, s = [' { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-8 h-8" /> }' { val, u, e: '98%', lab, e, l: 'Customer, Satisfactio, n', ic, o, n: <Star, className="w-8 h-8" /> }' { val, u, e: '2, 0, 0+', lab, e, l: 'Expert, Article, s', ic, o, n: <Award, className="w-8 h-8" /> }' { val, u, e: '50+', lab, e, l: 'Industry, Award, s', ic, o, n: <Target, className="w-8 h-8" /> } =======' tit, l, e: 'Governed, Agent, Rollbacks',';' catego, r, y: 'AI, Operation, s',';' readTi, m, e: '7, mi, n','; rati, n, g: 5.0' reade, r, s: '2, 5, K+',';' bad, g, e: 'N, E, W',';' gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0','; ic, o, n: <Sparkles, className="w-6 h-6" />,";' li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s' } { id: 7' tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)',';' catego, r, y: 'Edge, Computin, g',';' readTi, m, e: '6, mi, n','; rati, n, g: 4.9' reade, r, s: '1, 9, K+',';' bad, g, e: 'FEATUR, E, D',';' gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','; ic, o, n: <TrendingUp, className="w-6 h-6" />,";' li, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t' } { id: 1' tit, l, e: 'AI, 20, 2' 7: Operational, Trust, Blueprint',';' catego, r, y: 'AI, Strateg, y',';' readTi, m, e: '8, mi, n','; rati, n, g: 4.9' reade, r, s: '5, 8, K+',';' bad, g, e: 'N, E, W',';' gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','; ic, o, n: <Star, className="w-6 h-6" />,";' li, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t' } { id: 2' tit, l, e: 'Edge, 20, 2' 6: Private, Feature, Flags',';' catego, r, y: 'Architectu, r, e',';' readTi, m, e: '7, mi, n','; rati, n, g: 4.8' reade, r, s: '4, 1, K+',';' bad, g, e: 'TRENDI, N, G',';' gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','; ic, o, n: <TrendingUp, className="w-6 h-6" />,";' li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s' } { id: 3' tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)',';' catego, r, y: 'Gen, A, I',';' readTi, m, e: '8, mi, n','; rati, n, g: 4.9' reade, r, s: '4, 7, K+',';' bad, g, e: 'FEATUR, E, D',';' gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','; ic, o, n: <Award, className="w-6 h-6" />,";' li, n, k: '/bl, o, g/gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6' } ]; const, achievement, s = [' { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-8 h-8" /> },";' { val, u, e: '98%', lab, e, l: 'Customer, Satisfactio, n', ic, o, n: <Star, className="w-8 h-8" /> },";' { val, u, e: '2, 0, 0+', lab, e, l: 'Expert, Article, s', ic, o, n: <Award, className="w-8 h-8" /> },";' { val, u, e: '50+', lab, e, l: 'Industry, Award, s', ic, o, n: <Target, className="w-8 h-8" /> }"; ]; return ( <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n" >"; {/* Animated, background, effects */} <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" > <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" ></d, i, v>' <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;' <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>; ======= <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" >"; <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" ></d, i, v>";' <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';' <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>'; </d, i, v> <div, className="container, m, x-auto, p, x-6, relative, z-10" >"; {/* Header, Sectio, n */} <div, className="te, x, t-center, m, b-16" > <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in" > <Sparkles, className="w-5 h-5, tex, t-indi, g, o-400, animat, e-pul, s, e /> <span, className=" te, x, t-indi, g, o-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"> 🚀 NEW, CONTENT, LAUNCH • Sept, 3, 0, 20, 2, 5; </sp, a, n> <Sparkles, className="w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e /> </d, i, v> <h2, className=" te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">" ======= <div, className="te, x, t-center, m, b-16" >"; <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in" >"; <Sparkles, className="w-5 h-5, tex, t-indi, g, o-400, animat, e-pul, s, e" />"; <span, className="te, x, t-indi, g, o-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e" >"; 🚀 NEW, CONTENT, LAUNCH • Sept, 3, 0, 20, 2, 5; </sp, a, n> <Sparkles, className="w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e" />"; </d, i, v> <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in" >"; Revolutionary, New, Content H, u, b; </h2> <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8" >"; Discover, groundbreaking, insights, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve. </p> {/* Achievement, Stat, s */} <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o" >" ======= <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o" >"; {achievemen, t, s.m, a, p((achieveme, n, t, ind, e, x) => ( <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">"; <div, className="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r" >"; {achieveme, n, t.ic, o, n} </d, i, v> <div, className="te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1" >"; {achieveme, n, t.val, u, e} </d, i, v> <div, className="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m" >"; {achieveme, n, t.lab, e, l} </d, i, v> </d, i, v> ))} </d, i, v> </d, i, v> {/* Featured, Content, Cards */} <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16" >" ======= <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16" >"; {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => ( <d, i, v k, e, y={conte, n, t.id} classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e r:shad, o, w-indi, g, o-5, 0, 0/20" sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}`;` > {/* Card, glow, effect */} <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-all, duratio, n-5, 0, 0`}></d, i, v>`;` <div, className="relativ, e, p-8" >"; {/* Bad, g, e */} <div, className="flex, item, s-center, justif, y-between, m, b-6" >"; <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-4, 0, 0" >"; {conte, n, t.ic, o, n} </d, i, v> <div, className={`px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}>`;` {conte, n, t.bad, g, e} </d, i, v> </d, i, v> {/* Catego, r, y */} <div, className="mb-4" >"; <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-indi, g, o-400, tex, t-xs, fon, t-semibold, border, border-indi, g, o-5, 0, 0/30" >"; {conte, n, t.catego, r, y} </sp, a, n> </d, i, v> {/* Tit, l, e */} <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t" >" ======= <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t" >"; {conte, n, t.tit, l, e} </h3> {/* Meta, Inf, o */} <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10" > <span, className="flex, item, s-center, ga, p-2" > <Zap, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0 /> {conte, n, t.readTi, m, e} </sp, a, n> <span, className=" flex, item, s-center, ga, p-1"> <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t /> ======= <div, className=" flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">"; <span, className="flex, item, s-center, ga, p-2" >"; <Zap, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />"; {conte, n, t.readTi, m, e} </sp, a, n> <span, className="flex, item, s-center, ga, p-1" >"; <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />"; {conte, n, t.rati, n, g} </sp, a, n> </d, i, v> {/* Reader, Coun, t */} <div, className="mb-6" > <div, className="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0" > <Users, className="w-4 h-4 /> <span, className=" te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n> ======= <div, className="mb-6" >"; <div, className="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0" >"; <Users, className="w-4 h-4" />"; <span, className="te, x, t-sm" >{conte, n, t.reade, r, s} reade, r, s</sp, a, n>"; </d, i, v> </d, i, v> {/* CTA, Butto, n */} <a' hr, e, f={conte, n, t.li, n, k || '/bl, o, g'}; classNa, m, e={`gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hove,` r:-transla, t, e-y-1`}`;` > <sp, a, n>Read, No, w</sp, a, n> <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>" =======' hr, e, f={conte, n, t.li, n, k || '/bl, o, g'}'; classNa, m, e={`gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hove,` r:-transla, t, e-y-1`}`;` > <sp, a, n>Read, No, w</sp, a, n> <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />"; </a> </d, i, v> </d, i, v> ))} </d, i, v> {/* Special, Offer, Section */} <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-indi, g, o-5, 0, 0/20, m, b-16" >" <div, className="te, x, t-cent, e, r" > <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6" > <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t /> <span, className=" te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"> ======= <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-indi, g, o-5, 0, 0/20, m, b-16" >"; <div, className="te, x, t-cent, e, r" >"; <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6" >"; <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />"; <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e" >"; LIMITED, TIME, OFFER; </sp, a, n> </d, i, v> <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4" >"; Get, Premium, Access to, All, Content; </h3> <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o" >"; Unlock, exclusive, articles, early, access, to new, conten, t, and, premium, research repor, t, s. Join, our, elite community, of, technology leaders, and, innovators. </p> <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r" >" <div, className="te, x, t-cent, e, r" > <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-indi, g, o-400, lin, e-through, opacit, y-50" >$2, 9, 9/mon, t, h</d, i, v> <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e" >$99/mon, t, h</d, i, v> <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0" >First, 3, months</d, i, v> </d, i, v> <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4" >" ======= <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r" >"; <div, className="te, x, t-cent, e, r" >"; <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-indi, g, o-400, lin, e-through, opacit, y-50" >$2, 9, 9/mon, t, h</d, i, v>"; <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e" >$99/mon, t, h</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0" >First, 3, months</d, i, v>"; </d, i, v> <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4" >"; <a, titl, e="Internal, lin, k" hr, e, f="/subscri, b, e" classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2" > <Sparkles, className="w-5 h-5 /> ======= <Sparkles, className=" w-5 h-5" />"; <sp, a, n>Get, Premium, Access</sp, a, n> </a> <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="bord, e, r-2, borde, r-indi, g, o-500, tex, t-indi, g, o-400, hove, r: bg-indi, g, o-500, hov, e r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2" > <sp, a, n>Contact, Sale, s</sp, a, n> <ArrowRight, className="w-5 h-5 /> ======= <ArrowRight, className=" w-5 h-5" />"; </a> </d, i, v> </d, i, v> </d, i, v> </d, i, v> {/* Newsletter, Signu, p */} <div, className="te, x, t-cent, e, r" >"; <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, vi, a-purp, l, e-500, t, o-pi, n, k-5, 0, 0" >"; <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10" >"; <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4" >"; Stay, Ahead, with Our, Newslette, r; </h3> <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o" >"; Get, weekly, insights, exclusive, content, previews, and, early, access to, new, articles. Join, 100, K+ subscribers, who, never miss, a, breakthrough. </p> <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o" >" ======= <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o" >"; <inp, u, t ty, p, e="ema, i, l" placehold, e, r="Enter, your, email" classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s: outli, n, e-none, focu, s:bord, e, r-indi, g, o-500, foc, u s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0", /> <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2" >" <sp, a, n>Subscri, b, e</sp, a, n> <ArrowRight, className="w-5 h-5 /> ======= <button, className=" bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">"; <sp, a, n>Subscri, b, e</sp, a, n> <ArrowRight, className="w-5 h-5" />"; </butt, o, n> </d, i, v> <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4" >"; No, spa, m, unsubscribe, at, any ti, m, e. We, respect, your priva, c, y. </p> </d, i, v> </d, i, v> </d, i, v> </d, i, v> </d, i, v> ); }; export default NewContentAdvertisingBanner;'
+import React from 'react';
+import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
+
+interface FeaturedContent {
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  rating: number;
+  readers: string;
+  badge: string;
+  gradient: string;
+  icon: React.ReactNode;
+  link: string;
+}
+
+const NewContentAdvertisingBanner: React.FC = () => {
+  const featuredContent: FeaturedContent[] = [
+    {
+      id: 0,
+      title: 'Governed Agent Rollbacks',
+      category: 'AI Operations',
+      readTime: '7 min',
+      rating: 5.0,
+      readers: '25K+',
+      badge: 'NEW',
+      gradient: 'from-pink-500 to-red-500',
+      icon: <Sparkles className="w-6 h-6" />,
+      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
+    },
+    {
+      id: 7,
+      title: 'Consentless Personalization (Edge)',
+      category: 'Edge Computing',
+      readTime: '6 min',
+      rating: 4.9,
+      readers: '19K+',
+      badge: 'FEATURED',
+      gradient: 'from-teal-500 to-cyan-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
+    },
+    {
+      id: 1,
+      title: 'AI 2027: Operational Trust Blueprint',
+      category: 'AI Strategy',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '58K+',
+      badge: 'NEW',
+      gradient: 'from-blue-500 to-purple-500',
+      icon: <Star className="w-6 h-6" />,
+      link: '/blog/ai-2027-operational-trust-blueprint'
+    },
+    {
+      id: 2,
+      title: 'Edge 2026: Private Feature Flags',
+      category: 'Architecture',
+      readTime: '7 min',
+      rating: 4.8,
+      readers: '41K+',
+      badge: 'TRENDING',
+      gradient: 'from-cyan-500 to-blue-500',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/blog/edge-2026-private-feature-flags'
+    },
+    {
+      id: 3,
+      title: 'GenAI Quality Tiers v2 (2026)',
+      category: 'GenAI',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '47K+',
+      badge: 'FEATURED',
+      gradient: 'from-green-500 to-emerald-500',
+      icon: <Award className="w-6 h-6" />,
+      link: '/blog/genai-quality-tiers-v2-2026'
+    }
+  ];
+
+  const achievements = [
+    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> },
+    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> },
+    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },
+    { value: '50+', label: 'Industry Awards', icon: <Target className="w-8 h-8" /> }
+  ];
+
+  return (
+    <div className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 mb-8 animate-fade-in">
+            <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
+            <span className="text-indigo-400 font-bold text-sm tracking-wider uppercase">
+              🚀 NEW CONTENT LAUNCH • Sept 30, 2025
+            </span>
+            <Sparkles className="w-5 h-5 text-pink-400 animate-pulse" />
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
+            Revolutionary New Content Hub
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            Discover groundbreaking insights, cutting-edge research, and revolutionary AI breakthroughs. 
+            Join 500K+ professionals who trust our content to stay ahead of the technology curve.
+          </p>
+
+          {/* Achievement Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="text-center">
+                <div className="text-indigo-400 mb-2 flex justify-center">
+                  {achievement.icon}
+                </div>
+                <div className="text-3xl font-extrabold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent mb-1">
+                  {achievement.value}
+                </div>
+                <div className="text-gray-400 text-sm font-medium">
+                  {achievement.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Featured Content Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {featuredContent.map((content, index) => (
+            <div 
+              key={content.id}
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
+              {/* Card glow effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
+              
+              <div className="relative p-8">
+                {/* Badge */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-2 text-indigo-400">
+                    {content.icon}
+                  </div>
+                  <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
+                    {content.badge}
+                  </div>
+                </div>
+
+                {/* Category */}
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-400 text-xs font-semibold border border-indigo-500/30">
+                    {content.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors duration-300 leading-tight">
+                  {content.title}
+                </h3>
+
+                {/* Meta Info */}
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
+                  <span className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-indigo-400" />
+                    {content.readTime}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    {content.rating}
+                  </span>
+                </div>
+
+                {/* Reader Count */}
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 text-gray-400">
+                    <Users className="w-4 h-4" />
+                    <span className="text-sm">{content.readers} readers</span>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <a
+                  href={content.link || '/blog'}
+                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
+                >
+                  <span>Read Now</span>
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Special Offer Section */}
+        <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-indigo-500/20 mb-16">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
+              <Star className="w-5 h-5 text-yellow-400 fill-current" />
+              <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
+                LIMITED TIME OFFER
+              </span>
+            </div>
+            
+            <h3 className="text-4xl font-extrabold text-white mb-4">
+              Get Premium Access to All Content
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Unlock exclusive articles, early access to new content, and premium research reports. 
+              Join our elite community of technology leaders and innovators.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="text-center">
+                <div className="text-3xl font-extrabold text-indigo-400 line-through opacity-50">$299/month</div>
+                <div className="text-2xl font-bold text-white">$99/month</div>
+                <div className="text-sm text-gray-400">First 3 months</div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/subscribe"
+                  className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2"
+                >
+                  <Sparkles className="w-5 h-5" />
+                  <span>Get Premium Access</span>
+                </a>
+                <a
+                  href="/contact"
+                  className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <span>Contact Sales</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="text-center">
+          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+            <div className="bg-slate-900 rounded-xl px-12 py-10">
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Stay Ahead with Our Newsletter
+              </h3>
+              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Get weekly insights, exclusive content previews, and early access to new articles. 
+                Join 100K+ subscribers who never miss a breakthrough.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300"
+                />
+                <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
+                  <span>Subscribe</span>
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+              <p className="text-xs text-gray-500 mt-4">
+                No spam, unsubscribe at any time. We respect your privacy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewContentAdvertisingBanner;

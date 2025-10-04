@@ -1,1 +1,90 @@
-/** * Lazy, Banner, Loader; * Optimizes, banner, loading by, implementing, lazy loading, and, code splitti, n, g; */ interface, BannerComponen, t { defau, l, t: ComponentTy, p, e<a, n, y>; } /** * Lazy, load, banner components, to, reduce initial, bundle, size; * Only, load, banners when, the, y're, neede, d; =======' * Only, load, banners when, the, y're, neede, d'; */ export, const, lazyLoadBanner = (import, F, n: () => Promi, s, e<BannerCompone, n, t>) => { return, laz, y(import, F, n); }; /** * Preload, critical, banners for, better, performance; */ export, const, preloadCriticalBanners = () => { // Preload, top, 3 most, important, banners const, criticalBanner, s = [' () => impo, r, t('../componen, t, s/January2026RevolutionaryAutonomousIntelligenceBann, e, r')' () => impo, r, t('../componen, t, s/January2026QuantumAIConsciousnessRevolutionBann, e, r')' () => impo, r, t('../componen, t, s/October2025NeuralQuantumOrchestrationBann, e, r') =======' () => impo, r, t('../componen, t, s/January2026RevolutionaryAutonomousIntelligenceBann, e, r'),';' () => impo, r, t('../componen, t, s/January2026QuantumAIConsciousnessRevolutionBann, e, r'),';' () => impo, r, t('../componen, t, s/October2025NeuralQuantumOrchestrationBann, e, r'),'; ]; criticalBanne, r, s.forEa, c, h(bann, e, r => { bann, e, r().cat, c, h(() => {' // Silently, fail, if preload, does, n't, wor, k; =======' // Silently, fail, if preload, does, n't, wor, k'; }); }); }; /** * Lazy, load, banner with, retry, logic; */ export, const, lazyLoadBannerWithRetry = ( import, F, n: () => Promi, s, e<BannerCompone, n, t> retri, e, s = 3; ): ReturnTy, p, e<typeof, laz, y> => { return, laz, y(() => { return, new, Promise((resol, v, e, reje, c, t) => { let, attempt, s = 0; const, attemptLoa, d = () => { import, F, n() .th, e, n(resol, v, e) .cat, c, h(err, o, r => { attemp, t, s++; if (attemp, t, s < retri, e, s) { setTimeo, u, t(attemptLo, a, d, 10, 0, 0 * attemp, t, s); } el, s, e { reje, c, t(err, o, r); } }); }; attemptLo, a, d(); }); }); }; /** * Check, if, banner should, be, displayed based, on, viewport; */ export, const, shouldDisplayBanner = (ind, e, x: numb, e, r): boole, a, n => { // Only, show, first 10, banners, initially on, mobil, e' if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.innerWid, t, h < 7, 6, 8) {; =======' if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.innerWid, t, h < 7, 6, 8) {'; return, inde, x < 10; } return, tru, e; }; /** * Banner, performance, metrics; */ export, const, trackBannerPerformance = (bannerNa, m, e: stri, n, g) => {' if (typeof, windo, w !== 'undefin, e, d' && 'performan, c, e' in, windo, w) {;' const, perfDat, a = performan, c, e.getEntriesByTy, p, e('resour, c, e'); .filt, e, r(ent, r, y => ent, r, y.na, m, e.includ, e, s(bannerNa, m, e)); if (perfDa, t, a.leng, t, h > 0) {' conso, l, e.l, o, g(`Bann, e, r ${bannerNa, m, e} load, tim, e: `, perfDa, t, a[0].durati, o, n, 'ms');',`;` =======' if (typeof, windo, w !== 'undefin, e, d' && 'performan, c, e' in, windo, w) {';' const, perfDat, a = performan, c, e.getEntriesByTy, p, e('resour, c, e')'; .filt, e, r(ent, r, y => ent, r, y.na, m, e.includ, e, s(bannerNa, m, e)); if (perfDa, t, a.leng, t, h > 0) {' conso, l, e.l, o, g(`Bann, e, r ${bannerNa, m, e} load, tim, e: `, perfDa, t, a[0].durati, o, n, 'ms');';,`;` } } };'
+/**
+ * Lazy Banner Loader
+ * Optimizes banner loading by implementing lazy loading and code splitting
+ */
+
+import { lazy, ComponentType } from 'react';
+
+interface BannerComponent {
+  default: ComponentType<any>;
+}
+
+/**
+ * Lazy load banner components to reduce initial bundle size
+ * Only load banners when they're needed
+ */
+export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {
+  return lazy(importFn);
+};
+
+/**
+ * Preload critical banners for better performance
+ */
+export const preloadCriticalBanners = () => {
+  // Preload top 3 most important banners
+  const criticalBanners = [
+    () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner'),
+    () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),
+    () => import('../components/October2025NeuralQuantumOrchestrationBanner'),
+  ];
+
+  criticalBanners.forEach(banner => {
+    banner().catch(() => {
+      // Silently fail if preload doesn't work
+    });
+  });
+};
+
+/**
+ * Lazy load banner with retry logic
+ */
+export const lazyLoadBannerWithRetry = (
+  importFn: () => Promise<BannerComponent>,
+  retries = 3
+): ReturnType<typeof lazy> => {
+  return lazy(() => {
+    return new Promise((resolve, reject) => {
+      let attempts = 0;
+      
+      const attemptLoad = () => {
+        importFn()
+          .then(resolve)
+          .catch(error => {
+            attempts++;
+            if (attempts < retries) {
+              setTimeout(attemptLoad, 1000 * attempts);
+            } else {
+              reject(error);
+            }
+          });
+      };
+      
+      attemptLoad();
+    });
+  });
+};
+
+/**
+ * Check if banner should be displayed based on viewport
+ */
+export const shouldDisplayBanner = (index: number): boolean => {
+  // Only show first 10 banners initially on mobile
+  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+    return index < 10;
+  }
+  return true;
+};
+
+/**
+ * Banner performance metrics
+ */
+export const trackBannerPerformance = (bannerName: string) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const perfData = performance.getEntriesByType('resource')
+      .filter(entry => entry.name.includes(bannerName));
+    
+    if (perfData.length > 0) {
+      console.log(`Banner ${bannerName} load time:`, perfData[0].duration, 'ms');
+    }
+  }
+};

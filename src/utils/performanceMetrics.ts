@@ -1,1 +1,424 @@
-/** * Performance, Metrics, Dashboard Utili, t, y; * * Comprehensive, performance, monitoring and, metrics, collection f, o, r; * web, vital, s, resource, timin, g, and, custom, performance marke, r, s. * * Featur, e, s: * - Core, Web, Vitals tracki, n, g (L, C, P, F, I, D, C, L, S, F, C, P, TT, F, B) * - Custom, performance, markers; * - Resource, timing, analysis; * - Performance, budgets, and aler, t, s; * - Re, a, l-time, performance, dashboard da, t, a; */ export, interface, PerformanceMetric { na, m, e: stri, n, g; val, u, e: numb, e, r; rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'; timest, a, m p: numb, e, r; } export, interface, ResourceTiming { na, m, e: stri, n, g; durati, o, n: numb, e, r; si, z, e: numb, e, r; t, y, p e: stri, n, g; } export, interface, PerformanceBudget { metr, i, c: stri, n, g; budg, e, t: numb, e, r; curre, n, t: numb, e, r;' stat, u, s: 'pa, s, s' | 'wa, r, n' | 'fa, i, l'; ======= metr, i, c: stri, n, g; budg, e, t: numb, e, r; curre, n, t: numb, e, r; sta, t, u' s: 'pa, s, s' | 'wa, r, n' | 'fa, i, l';'; } export, interface, PerformanceReport { webVita, l, s: { l, c, p?: PerformanceMetr, i, c; f, i, d?: PerformanceMetr, i, c; c, l, s?: PerformanceMetr, i, c; f, c, p?: PerformanceMetr, i, c; tt, f, b?: PerformanceMetr, i, c; }; customMetri, c, s: PerformanceMetr, i, c[] resourceTimin, g, s: ResourceTimi, n, g[] budge, t, s: PerformanceBudg, e, t[] ======= customMetri, c, s: PerformanceMetr, i, c[]; resourceTimin, g, s: ResourceTimi, n, g[]; budge, t, s: PerformanceBudg, e, t[]; timest, a, m p: Da, t, e; } class, PerformanceMetricsTracke, r { private, metric, s: M, a, p<stri, n, g, PerformanceMetr, i, c> = new, Ma, p() private, customMarker, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p() private, budget, s: PerformanceBudg, e, t[] = [] private, observer, s: PerformanceObserv, e, r[] = [] ======= private, metric, s: M, a, p<stri, n, g, PerformanceMetr, i, c> = new, Ma, p(); private, customMarker, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p(); private, budget, s: PerformanceBudg, e, t[] = []; private, observe, r s: PerformanceObserv, e, r[] = []; construct, o, r() { th, i, s.setupObserve, r, s(); th, i, s.trackWebVita, l, s(); } /** * Setup, performance, observers; */ private, setupObserver, s(): vo, i, d { // Observe, resource, timing' if ('PerformanceObserv, e, r' in, windo, w) {; t, r, y { const, resourceObserve, r = new, PerformanceObserve, r((li, s, t) => { f, o, r (const, entry, of li, s, t.getEntri, e, s()) {' if (ent, r, y.entryTy, p, e === 'resour, c, e') {; =======' if ('PerformanceObserv, e, r' in, windo, w) {'; t, r, y { const, resourceObserve, r = new, PerformanceObserve, r((li, s, t) => { f, o, r (const, entry, of li, s, t.getEntri, e, s()) {' if (ent, r, y.entryTy, p, e === 'resour, c, e') {'; th, i, s.trackResourceTimi, n, g(entry, as, PerformanceResourceTiming); } } });' resourceObserv, e, r.obser, v, e({ entryTyp, e, s: ['resour, c, e'] });'; th, i, s.observe, r, s.pu, s, h(resourceObserv, e, r); } cat, c, h (e) {' conso, l, e.wa, r, n('Failed, to, setup resource, observe, r: ', e);' =======' conso, l, e.wa, r, n('Failed, to, setup resource, observe, r: ', e);'; } } } /** * Track, Core, Web Vita, l, s; */ private, trackWebVital, s(): vo, i, d { // L, C, P - Largest, Contentful, Paint th, i, s.observeL, C, P(); // F, I, D - First, Input, Delay th, i, s.observeF, I, D(); // C, L, S - Cumulative, Layout, Shift th, i, s.observeC, L, S(); // F, C, P - First, Contentful, Paint th, i, s.observeF, C, P(); // TT, F, B - Time, to, First By, t, e th, i, s.trackTT, F, B(); } /** * Observe, Largest, Contentful Pai, n, t (L, C, P) */ private, observeLC, P(): vo, i, d {' if ('PerformanceObserv, e, r' in, windo, w) {; =======' if ('PerformanceObserv, e, r' in, windo, w) {'; t, r, y { const, observe, r = new, PerformanceObserve, r((li, s, t) => { const, entrie, s = li, s, t.getEntri, e, s(); const, lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1] as, PerformanceEntr, y & { renderTi, m, e: numb, e, r; loadT, i, m e: numb, e, r }; const, lc, p = lastEnt, r, y.renderTi, m, e || lastEnt, r, y.loadTi, m, e;' th, i, s.recordMetr, i, c('L, C, P', l, c, p, th, i, s.getRatingForL, C, P(l, c, p));'; });' observ, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pai, n, t'] });'; th, i, s.observe, r, s.pu, s, h(observ, e, r); } cat, c, h (e) {' conso, l, e.wa, r, n('Failed, to, observe L, C, P: ', e);' =======' conso, l, e.wa, r, n('Failed, to, observe L, C, P: ', e);'; } } } /** * Observe, First, Input Del, a, y (F, I, D) */ private, observeFI, D(): vo, i, d {' if ('PerformanceObserv, e, r' in, windo, w) {; =======' if ('PerformanceObserv, e, r' in, windo, w) {'; t, r, y { const, observe, r = new, PerformanceObserve, r((li, s, t) => { const, entrie, s = li, s, t.getEntri, e, s(); const, firstInpu, t = entri, e, s[0] as, PerformanceEventTimin, g; const, fi, d = firstInp, u, t.processingSta, r, t - firstInp, u, t.startTi, m, e;' th, i, s.recordMetr, i, c('F, I, D', f, i, d, th, i, s.getRatingForF, I, D(f, i, d));'; });' observ, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-inp, u, t'] });'; th, i, s.observe, r, s.pu, s, h(observ, e, r); } cat, c, h (e) {' conso, l, e.wa, r, n('Failed, to, observe F, I, D: ', e);' =======' conso, l, e.wa, r, n('Failed, to, observe F, I, D: ', e);'; } } } /** * Observe, Cumulative, Layout Shi, f, t (C, L, S) */ private, observeCL, S(): vo, i, d {' if ('PerformanceObserv, e, r' in, windo, w) {; =======' if ('PerformanceObserv, e, r' in, windo, w) {'; t, r, y { let, clsValu, e = 0; const, observe, r = new, PerformanceObserve, r((li, s, t) => { f, o, r (const, entry, of li, s, t.getEntri, e, s()) { if (!(entry, as, any).hadRecentInp, u, t) { clsVal, u, e += (entry, as, any).val, u, e;' th, i, s.recordMetr, i, c('C, L, S', clsVal, u, e, th, i, s.getRatingForC, L, S(clsVal, u, e));'; } } });' observ, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-shi, f, t'] });'; th, i, s.observe, r, s.pu, s, h(observ, e, r); } cat, c, h (e) {' conso, l, e.wa, r, n('Failed, to, observe C, L, S: ', e);' =======' conso, l, e.wa, r, n('Failed, to, observe C, L, S: ', e);'; } } } /** * Observe, First, Contentful Pai, n, t (F, C, P) */ private, observeFC, P(): vo, i, d {' if ('PerformanceObserv, e, r' in, windo, w) {; =======' if ('PerformanceObserv, e, r' in, windo, w) {'; t, r, y { const, observe, r = new, PerformanceObserve, r((li, s, t) => { const, entrie, s = li, s, t.getEntri, e, s(); const, fc, p = entri, e, s[0]?.startTi, m, e; if (f, c, p) {' th, i, s.recordMetr, i, c('F, C, P', f, c, p, th, i, s.getRatingForF, C, P(f, c, p));'; } });' observ, e, r.obser, v, e({ entryTyp, e, s: ['pai, n, t'] });'; th, i, s.observe, r, s.pu, s, h(observ, e, r); } cat, c, h (e) {' conso, l, e.wa, r, n('Failed, to, observe F, C, P: ', e);' =======' conso, l, e.wa, r, n('Failed, to, observe F, C, P: ', e);'; } } } /** * Track, Time, to First, Byt, e (TT, F, B) */ private, trackTTF, B(): vo, i, d { if (wind, o, w.performan, c, e && wind, o, w.performan, c, e.timi, n, g) { const, ttf, b = wind, o, w.performan, c, e.timi, n, g.responseSta, r, t - wind, o, w.performan, c, e.timi, n, g.requestSta, r, t;' th, i, s.recordMetr, i, c('TT, F, B', tt, f, b, th, i, s.getRatingForTT, F, B(tt, f, b));'; } } /** * Record, a, performance metr, i, c; */ private, recordMetri, c( na, m, e: stri, n, g val, u, e: numb, e, r' rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r): vo, i, d { ======= rat, i, n' g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' ): vo, i, d { const, metri, c: PerformanceMetr, i, c = { na, m, e val, u, e: Ma, t, h.rou, n, d(val, u, e) rati, n, g timesta, m, p: Da, t, e.n, o, w() ======= timest, a, m p: Da, t, e.n, o, w() }; th, i, s.metri, c, s.s, e, t(na, m, e, metr, i, c); // Check, budget, s th, i, s.checkBudge, t, s(); // Log, in, development' if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {; =======' if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {'; conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${metr, i, c.val, u, e}ms (${rati, n, g})`);`;` } } /** * Track, custom, performance mark, e, r; */ startMa, r, k(na, m, e: stri, n, g): vo, i, d { th, i, s.customMarke, r, s.s, e, t(na, m, e, performan, c, e.n, o, w()); performan, c, e.ma, r, k(`${na, m, e}-sta, r, t`);`;` } /** * End, custom, performance marker, and, record metr, i, c; */ endMa, r, k(na, m, e: stri, n, g): numb, e, r | nu, l, l { const, startTim, e = th, i, s.customMarke, r, s.g, e, t(na, m, e); if (!startTi, m, e) { conso, l, e.wa, r, n(`No, start, mark found, fo, r: ${na, m, e}`);`;` return, nul, l; } const, endTim, e = performan, c, e.n, o, w(); const, duratio, n = endTi, m, e - startTi, m, e; performan, c, e.ma, r, k(`${na, m, e}-e, n, d`);`;` performan, c, e.measu, r, e(na, m, e, `${na, m, e}-sta, r, t`, `${na, m, e}-e, n, d`);`;` th, i, s.recordMetr, i, c(na, m, e, durati, o, n, th, i, s.getRatingForCustomMetr, i, c(durati, o, n)); th, i, s.customMarke, r, s.dele, t, e(na, m, e); return, duratio, n; } /** * Track, resource, timing; */ private, trackResourceTimin, g(ent, r, y: PerformanceResourceTimi, n, g): vo, i, d { // const, resourceTyp, e = th, i, s.getResourceTy, p, e(ent, r, y.na, m, e); // Available, for, future u, s, e const, siz, e = ent, r, y.transferSi, z, e || 0; // Track, large, resources if (si, z, e > 1000, 0, 0) { // 100, K, B conso, l, e.wa, r, n(`Large, resource, detected: ${ent, r, y.na, m, e} (${Ma, t, h.rou, n, d(si, z, e / 10, 2, 4)}KB)`);`;` } } /** * Get, resource, type from, UR, L; */ private, getResourceTyp, e(u, r, l: stri, n, g): stri, n, g {' if (u, r, l.mat, c, h(/\.(js|m, j, s)$/)) retu, r, n 'scri, p, t';' if (u, r, l.mat, c, h(/\.c, s, s$/)) retu, r, n 'styleshe, e, t';' if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) retu, r, n 'ima, g, e';' if (u, r, l.mat, c, h(/\.(wo, f, f|wof, f, 2|t, t, f|e, o, t)$/)) retu, r, n 'fo, n, t';' retu, r, n 'oth, e, r'; =======' if (u, r, l.mat, c, h(/\.(js|m, j, s)$/)) retu, r, n 'scri, p, t';';' if (u, r, l.mat, c, h(/\.c, s, s$/)) retu, r, n 'styleshe, e, t';';' if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) retu, r, n 'ima, g, e';';' if (u, r, l.mat, c, h(/\.(wo, f, f|wof, f, 2|t, t, f|e, o, t)$/)) retu, r, n 'fo, n, t';';' retu, r, n 'oth, e, r';'; } /** * Set, performance, budget; */ setBudg, e, t(metr, i, c: stri, n, g, budg, e, t: numb, e, r): vo, i, d { const, existingBudge, t = th, i, s.budge, t, s.fi, n, d(b => b.metr, i, c === metr, i, c); if (existingBudg, e, t) { existingBudg, e, t.budg, e, t = budg, e, t; } el, s, e { th, i, s.budge, t, s.pu, s, h({ metr, i, c budg, e, t curre, n, t: 0' stat, u, s: 'pa, s, s' ======= curr, e, n t: 0' stat, u, s: 'pa, s, s','; }); } th, i, s.checkBudge, t, s(); } /** * Check, performance, budgets; */ private, checkBudget, s(): vo, i, d { th, i, s.budge, t, s.forEa, c, h(budg, e, t => { const, metri, c = th, i, s.metri, c, s.g, e, t(budg, e, t.metr, i, c); if (metr, i, c) { budg, e, t.curre, n, t = metr, i, c.val, u, e; if (metr, i, c.val, u, e > budg, e, t.budg, e, t * 1.2) {' budg, e, t.stat, u, s = 'fa, i, l';'; } else, i, f (metr, i, c.val, u, e > budg, e, t.budg, e, t) {' budg, e, t.stat, u, s = 'wa, r, n';'; } el, s, e {' budg, e, t.stat, u, s = 'pa, s, s';'; } } }); } /** * Get, performance, report; */ getRepo, r, t(): PerformanceRepo, r, t { retu, r, n { webVita, l, s: {' l, c, p: th, i, s.metri, c, s.g, e, t('L, C, P')' f, i, d: th, i, s.metri, c, s.g, e, t('F, I, D')' c, l, s: th, i, s.metri, c, s.g, e, t('C, L, S')' f, c, p: th, i, s.metri, c, s.g, e, t('F, C, P')' tt, f, b: th, i, s.metri, c, s.g, e, t('TT, F, B') } customMetri, c, s: Arr, a, y.fr, o, m(th, i, s.metri, c, s.valu, e, s()).filt, e, r(' m => !['L, C, P', 'F, I, D', 'C, L, S', 'F, C, P', 'TT, F, B'].includ, e, s(m.na, m, e) ) resourceTimin, g, s: th, i, s.getResourceTimin, g, s() budge, t, s: [...th, i, s.budge, t, s] timesta, m, p: new, Dat, e() ======= lc' p: th, i, s.metri, c, s.g, e, t('L, C, P'),';' f, i, d: th, i, s.metri, c, s.g, e, t('F, I, D'),';' c, l, s: th, i, s.metri, c, s.g, e, t('C, L, S'),';' f, c, p: th, i, s.metri, c, s.g, e, t('F, C, P'),';' tt, f, b: th, i, s.metri, c, s.g, e, t('TT, F, B'),'; } customMetri, c, s: Arr, a, y.fr, o, m(th, i, s.metri, c, s.valu, e, s()).filt, e, r(' m => !['L, C, P', 'F, I, D', 'C, L, S', 'F, C, P', 'TT, F, B'].includ, e, s(m.na, m, e)'; ) resourceTimin, g, s: th, i, s.getResourceTimin, g, s() budge, t, s: [...th, i, s.budge, t, s] timesta, m, p: new, Dat, e() }; } /** * Get, resource, timings; */ private, getResourceTiming, s(): ResourceTimi, n, g[] {' const, resource, s = performan, c, e.getEntriesByTy, p, e('resour, c, e') as, PerformanceResourceTimin, g[];'; return, resource, s.m, a, p(resour, c, e => ({ na, m, e: resour, c, e.na, m, e durati, o, n: Ma, t, h.rou, n, d(resour, c, e.durati, o, n) si, z, e: resour, c, e.transferSi, z, e || 0 ty, p, e: th, i, s.getResourceTy, p, e(resour, c, e.na, m, e) ======= n, a, m e: resour, c, e.na, m, e durati, o, n: Ma, t, h.rou, n, d(resour, c, e.durati, o, n) si, z, e: resour, c, e.transferSi, z, e || 0 ty, p, e: th, i, s.getResourceTy, p, e(resour, c, e.na, m, e) })); } /** * Get, rating, for L, C, P; */' private, getRatingForLC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'' if (val, u, e <= 25, 0, 0) retu, r, n 'go, o, d';' if (val, u, e <= 40, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';' retu, r, n 'po, o, r'; =======' private, getRatingForLC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';' if (val, u, e <= 25, 0, 0) retu, r, n 'go, o, d';';' if (val, u, e <= 40, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';' retu, r, n 'po, o, r';'; } /** * Get, rating, for F, I, D; */' private, getRatingForFI, D(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'' if (val, u, e <= 1, 0, 0) retu, r, n 'go, o, d';' if (val, u, e <= 3, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';' retu, r, n 'po, o, r'; =======' private, getRatingForFI, D(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';' if (val, u, e <= 1, 0, 0) retu, r, n 'go, o, d';';' if (val, u, e <= 3, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';' retu, r, n 'po, o, r';'; } /** * Get, rating, for C, L, S; */' private, getRatingForCL, S(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'' if (val, u, e <= 0.1) retu, r, n 'go, o, d';' if (val, u, e <= 0.25) retu, r, n 'nee, d, s-improveme, n, t';' retu, r, n 'po, o, r'; =======' private, getRatingForCL, S(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';' if (val, u, e <= 0.1) retu, r, n 'go, o, d';';' if (val, u, e <= 0.25) retu, r, n 'nee, d, s-improveme, n, t';';' retu, r, n 'po, o, r';'; } /** * Get, rating, for F, C, P; */' private, getRatingForFC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'' if (val, u, e <= 18, 0, 0) retu, r, n 'go, o, d';' if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';' retu, r, n 'po, o, r'; =======' private, getRatingForFC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';' if (val, u, e <= 18, 0, 0) retu, r, n 'go, o, d';';' if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';' retu, r, n 'po, o, r';'; } /** * Get, rating, for TT, F, B; */' private, getRatingForTTF, B(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'' if (val, u, e <= 8, 0, 0) retu, r, n 'go, o, d';' if (val, u, e <= 18, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';' retu, r, n 'po, o, r'; =======' private, getRatingForTTF, B(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';' if (val, u, e <= 8, 0, 0) retu, r, n 'go, o, d';';' if (val, u, e <= 18, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';' retu, r, n 'po, o, r';'; } /** * Get, rating, for custom, metric, s; */' private, getRatingForCustomMetri, c(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'' if (val, u, e <= 10, 0, 0) retu, r, n 'go, o, d';' if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';' retu, r, n 'po, o, r'; =======' private, getRatingForCustomMetri, c(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';' if (val, u, e <= 10, 0, 0) retu, r, n 'go, o, d';';' if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';' retu, r, n 'po, o, r';'; } /** * Cleanup, observer, s; */ disconne, c, t(): vo, i, d { th, i, s.observe, r, s.forEa, c, h(observ, e, r => observ, e, r.disconne, c, t()); th, i, s.observe, r, s = []; } } // Singleton, instanc, e export, const, performanceMetrics = new, PerformanceMetricsTracke, r(); // Setup, default, budgets' performanceMetri, c, s.setBudg, e, t('L, C, P', 25, 0, 0);' performanceMetri, c, s.setBudg, e, t('F, I, D', 1, 0, 0);' performanceMetri, c, s.setBudg, e, t('C, L, S', 0.1);' performanceMetri, c, s.setBudg, e, t('F, C, P', 18, 0, 0);' performanceMetri, c, s.setBudg, e, t('TT, F, B', 8, 0, 0); =======' performanceMetri, c, s.setBudg, e, t('L, C, P', 25, 0, 0);';' performanceMetri, c, s.setBudg, e, t('F, I, D', 1, 0, 0);';' performanceMetri, c, s.setBudg, e, t('C, L, S', 0.1);';' performanceMetri, c, s.setBudg, e, t('F, C, P', 18, 0, 0);';' performanceMetri, c, s.setBudg, e, t('TT, F, B', 8, 0, 0);'; export default performanceMetrics;'
+/**
+ * Performance Metrics Dashboard Utility
+ * 
+ * Comprehensive performance monitoring and metrics collection for
+ * web vitals, resource timing, and custom performance markers.
+ * 
+ * Features:
+ * - Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB)
+ * - Custom performance markers
+ * - Resource timing analysis
+ * - Performance budgets and alerts
+ * - Real-time performance dashboard data
+ */
+
+export interface PerformanceMetric {
+  name: string;
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+  timestamp: number;
+}
+
+export interface ResourceTiming {
+  name: string;
+  duration: number;
+  size: number;
+  type: string;
+}
+
+export interface PerformanceBudget {
+  metric: string;
+  budget: number;
+  current: number;
+  status: 'pass' | 'warn' | 'fail';
+}
+
+export interface PerformanceReport {
+  webVitals: {
+    lcp?: PerformanceMetric;
+    fid?: PerformanceMetric;
+    cls?: PerformanceMetric;
+    fcp?: PerformanceMetric;
+    ttfb?: PerformanceMetric;
+  };
+  customMetrics: PerformanceMetric[];
+  resourceTimings: ResourceTiming[];
+  budgets: PerformanceBudget[];
+  timestamp: Date;
+}
+
+class PerformanceMetricsTracker {
+  private metrics: Map<string, PerformanceMetric> = new Map();
+  private customMarkers: Map<string, number> = new Map();
+  private budgets: PerformanceBudget[] = [];
+  private observers: PerformanceObserver[] = [];
+
+  constructor() {
+    this.setupObservers();
+    this.trackWebVitals();
+  }
+
+  /**
+   * Setup performance observers
+   */
+  private setupObservers(): void {
+    // Observe resource timing
+    if ('PerformanceObserver' in window) {
+      try {
+        const resourceObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'resource') {
+              this.trackResourceTiming(entry as PerformanceResourceTiming);
+            }
+          }
+        });
+        resourceObserver.observe({ entryTypes: ['resource'] });
+        this.observers.push(resourceObserver);
+      } catch (e) {
+        console.warn('Failed to setup resource observer:', e);
+      }
+    }
+  }
+
+  /**
+   * Track Core Web Vitals
+   */
+  private trackWebVitals(): void {
+    // LCP - Largest Contentful Paint
+    this.observeLCP();
+
+    // FID - First Input Delay
+    this.observeFID();
+
+    // CLS - Cumulative Layout Shift
+    this.observeCLS();
+
+    // FCP - First Contentful Paint
+    this.observeFCP();
+
+    // TTFB - Time to First Byte
+    this.trackTTFB();
+  }
+
+  /**
+   * Observe Largest Contentful Paint (LCP)
+   */
+  private observeLCP(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime: number; loadTime: number };
+          const lcp = lastEntry.renderTime || lastEntry.loadTime;
+          
+          this.recordMetric('LCP', lcp, this.getRatingForLCP(lcp));
+        });
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+        this.observers.push(observer);
+      } catch (e) {
+        console.warn('Failed to observe LCP:', e);
+      }
+    }
+  }
+
+  /**
+   * Observe First Input Delay (FID)
+   */
+  private observeFID(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const firstInput = entries[0] as PerformanceEventTiming;
+          const fid = firstInput.processingStart - firstInput.startTime;
+          
+          this.recordMetric('FID', fid, this.getRatingForFID(fid));
+        });
+        observer.observe({ entryTypes: ['first-input'] });
+        this.observers.push(observer);
+      } catch (e) {
+        console.warn('Failed to observe FID:', e);
+      }
+    }
+  }
+
+  /**
+   * Observe Cumulative Layout Shift (CLS)
+   */
+  private observeCLS(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        let clsValue = 0;
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+              this.recordMetric('CLS', clsValue, this.getRatingForCLS(clsValue));
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+        this.observers.push(observer);
+      } catch (e) {
+        console.warn('Failed to observe CLS:', e);
+      }
+    }
+  }
+
+  /**
+   * Observe First Contentful Paint (FCP)
+   */
+  private observeFCP(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fcp = entries[0]?.startTime;
+          if (fcp) {
+            this.recordMetric('FCP', fcp, this.getRatingForFCP(fcp));
+          }
+        });
+        observer.observe({ entryTypes: ['paint'] });
+        this.observers.push(observer);
+      } catch (e) {
+        console.warn('Failed to observe FCP:', e);
+      }
+    }
+  }
+
+  /**
+   * Track Time to First Byte (TTFB)
+   */
+  private trackTTFB(): void {
+    if (window.performance && window.performance.timing) {
+      const ttfb = window.performance.timing.responseStart - window.performance.timing.requestStart;
+      this.recordMetric('TTFB', ttfb, this.getRatingForTTFB(ttfb));
+    }
+  }
+
+  /**
+   * Record a performance metric
+   */
+  private recordMetric(
+    name: string,
+    value: number,
+    rating: 'good' | 'needs-improvement' | 'poor'
+  ): void {
+    const metric: PerformanceMetric = {
+      name,
+      value: Math.round(value),
+      rating,
+      timestamp: Date.now(),
+    };
+    
+    this.metrics.set(name, metric);
+    
+    // Check budgets
+    this.checkBudgets();
+    
+    // Log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[Performance] ${name}: ${metric.value}ms (${rating})`);
+    }
+  }
+
+  /**
+   * Track custom performance marker
+   */
+  startMark(name: string): void {
+    this.customMarkers.set(name, performance.now());
+    performance.mark(`${name}-start`);
+  }
+
+  /**
+   * End custom performance marker and record metric
+   */
+  endMark(name: string): number | null {
+    const startTime = this.customMarkers.get(name);
+    if (!startTime) {
+      console.warn(`No start mark found for: ${name}`);
+      return null;
+    }
+
+    const endTime = performance.now();
+    const duration = endTime - startTime;
+    
+    performance.mark(`${name}-end`);
+    performance.measure(name, `${name}-start`, `${name}-end`);
+    
+    this.recordMetric(name, duration, this.getRatingForCustomMetric(duration));
+    this.customMarkers.delete(name);
+    
+    return duration;
+  }
+
+  /**
+   * Track resource timing
+   */
+  private trackResourceTiming(entry: PerformanceResourceTiming): void {
+    const resourceType = this.getResourceType(entry.name);
+    const size = entry.transferSize || 0;
+    
+    // Track large resources
+    if (size > 100000) { // 100KB
+      console.warn(`Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`);
+    }
+  }
+
+  /**
+   * Get resource type from URL
+   */
+  private getResourceType(url: string): string {
+    if (url.match(/\.(js|mjs)$/)) return 'script';
+    if (url.match(/\.css$/)) return 'stylesheet';
+    if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';
+    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';
+    return 'other';
+  }
+
+  /**
+   * Set performance budget
+   */
+  setBudget(metric: string, budget: number): void {
+    const existingBudget = this.budgets.find(b => b.metric === metric);
+    if (existingBudget) {
+      existingBudget.budget = budget;
+    } else {
+      this.budgets.push({
+        metric,
+        budget,
+        current: 0,
+        status: 'pass',
+      });
+    }
+    this.checkBudgets();
+  }
+
+  /**
+   * Check performance budgets
+   */
+  private checkBudgets(): void {
+    this.budgets.forEach(budget => {
+      const metric = this.metrics.get(budget.metric);
+      if (metric) {
+        budget.current = metric.value;
+        
+        if (metric.value > budget.budget * 1.2) {
+          budget.status = 'fail';
+        } else if (metric.value > budget.budget) {
+          budget.status = 'warn';
+        } else {
+          budget.status = 'pass';
+        }
+      }
+    });
+  }
+
+  /**
+   * Get performance report
+   */
+  getReport(): PerformanceReport {
+    return {
+      webVitals: {
+        lcp: this.metrics.get('LCP'),
+        fid: this.metrics.get('FID'),
+        cls: this.metrics.get('CLS'),
+        fcp: this.metrics.get('FCP'),
+        ttfb: this.metrics.get('TTFB'),
+      },
+      customMetrics: Array.from(this.metrics.values()).filter(
+        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)
+      ),
+      resourceTimings: this.getResourceTimings(),
+      budgets: [...this.budgets],
+      timestamp: new Date(),
+    };
+  }
+
+  /**
+   * Get resource timings
+   */
+  private getResourceTimings(): ResourceTiming[] {
+    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+    return resources.map(resource => ({
+      name: resource.name,
+      duration: Math.round(resource.duration),
+      size: resource.transferSize || 0,
+      type: this.getResourceType(resource.name),
+    }));
+  }
+
+  /**
+   * Get rating for LCP
+   */
+  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 2500) return 'good';
+    if (value <= 4000) return 'needs-improvement';
+    return 'poor';
+  }
+
+  /**
+   * Get rating for FID
+   */
+  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 100) return 'good';
+    if (value <= 300) return 'needs-improvement';
+    return 'poor';
+  }
+
+  /**
+   * Get rating for CLS
+   */
+  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 0.1) return 'good';
+    if (value <= 0.25) return 'needs-improvement';
+    return 'poor';
+  }
+
+  /**
+   * Get rating for FCP
+   */
+  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 1800) return 'good';
+    if (value <= 3000) return 'needs-improvement';
+    return 'poor';
+  }
+
+  /**
+   * Get rating for TTFB
+   */
+  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 800) return 'good';
+    if (value <= 1800) return 'needs-improvement';
+    return 'poor';
+  }
+
+  /**
+   * Get rating for custom metrics
+   */
+  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 1000) return 'good';
+    if (value <= 3000) return 'needs-improvement';
+    return 'poor';
+  }
+
+  /**
+   * Cleanup observers
+   */
+  disconnect(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+}
+
+// Singleton instance
+export const performanceMetrics = new PerformanceMetricsTracker();
+
+// Setup default budgets
+performanceMetrics.setBudget('LCP', 2500);
+performanceMetrics.setBudget('FID', 100);
+performanceMetrics.setBudget('CLS', 0.1);
+performanceMetrics.setBudget('FCP', 1800);
+performanceMetrics.setBudget('TTFB', 800);
+
+export default performanceMetrics;

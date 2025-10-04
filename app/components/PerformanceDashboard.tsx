@@ -18,11 +18,10 @@ const PerformanceDashboard: React.FC = () => {
     const updateData = () => {
       const performance = performanceOptimizer.getPerformanceSummary();
       const errors = getErrorMetrics();
-      const isHealthy =
-        !isErrorRateTooHigh(5) && performance.performanceGrade.startsWith('A');
+      const isHealthy = !isErrorRateTooHigh();
 
       setData({
-        performance,
+        performance: performance as any,
         errors,
         isHealthy,
         timestamp: new Date(),

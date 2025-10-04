@@ -1,1 +1,375 @@
-/** * Accessibility, Enhancement, Utilities; * Provides, comprehensive, accessibility improvements, for, the applicati, o, n; */ interface, AccessibilityConfi, g { enableKeyboardNavigati, o, n: boole, a, n; enableScreenReaderSuppo, r, t: boole, a, n; enableHighContra, s, t: boole, a, n; enableReducedMoti, o, n: boole, a, n; enableFocusIndicato, r, s: boole, a, n; enableAriaLab, e, l s: boole, a, n; } class, AccessibilityEnhance, r { private, confi, g: AccessibilityConf, i, g private, observer, s: MutationObserv, e, r[] = [] private, keyboardListener, s: M, a, p<stri, n, g, (eve, n, t: KeyboardEve, n, t) => vo, i, d> = new, Ma, p() construct, o, r(conf, i, g: AccessibilityConf, i, g = { enableKeyboardNavigat, i, o n: tr, u, e enableScreenReaderSuppo, r, t: tr, u, e enableHighContra, s, t: tr, u, e enableReducedMoti, o, n: tr, u, e enableFocusIndicato, r, s: tr, u, e enableAriaLabe, l, s: tr, u, e; ======= private, confi, g: AccessibilityConf, i, g; private, observer, s: MutationObserv, e, r[] = []; private, keyboardListene, r s: M, a, p<stri, n, g, (eve, n, t: KeyboardEve, n, t) => vo, i, d> = new, Ma, p(); construct, o, r(con, f, i g: AccessibilityConf, i, g = { enableKeyboardNavigati, o, n: tr, u, e enableScreenReaderSuppo, r, t: tr, u, e enableHighContra, s, t: tr, u, e enableReducedMoti, o, n: tr, u, e enableFocusIndicato, r, s: tr, u, e enableAriaLabe, l, s: tr, u, e }) { th, i, s.conf, i, g = conf, i, g; th, i, s.initializeAccessibili, t, y(); } /** * Initialize, accessibility, features; */ private, initializeAccessibilit, y(): vo, i, d { if (th, i, s.conf, i, g.enableKeyboardNavigati, o, n) { th, i, s.setupKeyboardNavigati, o, n(); } if (th, i, s.conf, i, g.enableScreenReaderSuppo, r, t) { th, i, s.setupScreenReaderSuppo, r, t(); } if (th, i, s.conf, i, g.enableHighContra, s, t) { th, i, s.setupHighContrastSuppo, r, t(); } if (th, i, s.conf, i, g.enableReducedMoti, o, n) { th, i, s.setupReducedMotionSuppo, r, t(); } if (th, i, s.conf, i, g.enableFocusIndicato, r, s) { th, i, s.setupFocusIndicato, r, s(); } if (th, i, s.conf, i, g.enableAriaLabe, l, s) { th, i, s.setupAriaLabe, l, s(); } th, i, s.setupLiveRegi, o, n(); } /** * Setup, keyboard, navigation; */ private, setupKeyboardNavigatio, n(): vo, i, d { // Skip, links, for keyboard, navigatio, n const, skipLin, k = docume, n, t.createEleme, n, t('a');' skipLi, n, k.hr, e, f = '#ma, i, n-conte, n, t';' skipLi, n, k.textConte, n, t = 'Skip, to, main conte, n, t';' skipLi, n, k.classNa, m, e = 'sr-only, focu, s: n, o, t-sr-only, focu, s:absolute, focu, s:t, o, p-4, foc, u' s:le, f, t-4, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded, z-50';' =======' const, skipLin, k = docume, n, t.createEleme, n, t('a');';' skipLi, n, k.hr, e, f = '#ma, i, n-conte, n, t';';' skipLi, n, k.textConte, n, t = 'Skip, to, main conte, n, t';';' skipLi, n, k.classNa, m, e = 'sr-only, focu, s: n, o, t-sr-only, focu, s:absolute, focu, s:t, o, p-4, foc, u' s:le, f, t-4, b, g-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounded, z-50';'; docume, n, t.bo, d, y.insertBefo, r, e(skipLi, n, k, docume, n, t.bo, d, y.firstChi, l, d); // Tab, navigation, improvements const, handleTabNavigatio, n = (eve, n, t: KeyboardEve, n, t) => {' if (eve, n, t.k, e, y === 'T, a, b') {;' docume, n, t.bo, d, y.classLi, s, t.a, d, d('keyboa, r, d-navigati, o, n'); =======' if (eve, n, t.k, e, y === 'T, a, b') {';' docume, n, t.bo, d, y.classLi, s, t.a, d, d('keyboa, r, d-navigati, o, n');'; }; }; const, handleMouseNavigatio, n = () => {' docume, n, t.bo, d, y.classLi, s, t.remo, v, e('keyboa, r, d-navigati, o, n');'; };' docume, n, t.addEventListen, e, r('keydo, w, n', handleTabNavigati, o, n);' docume, n, t.addEventListen, e, r('mousedo, w, n', handleMouseNavigati, o, n);' th, i, s.keyboardListene, r, s.s, e, t('t, a, b-navigati, o, n', handleTabNavigati, o, n);' th, i, s.keyboardListene, r, s.s, e, t('mou, s, e-navigati, o, n', handleMouseNavigati, o, n); =======' docume, n, t.addEventListen, e, r('keydo, w, n', handleTabNavigati, o, n);';' docume, n, t.addEventListen, e, r('mousedo, w, n', handleMouseNavigati, o, n);';' th, i, s.keyboardListene, r, s.s, e, t('t, a, b-navigati, o, n', handleTabNavigati, o, n);';' th, i, s.keyboardListene, r, s.s, e, t('mou, s, e-navigati, o, n', handleMouseNavigati, o, n);'; } /** * Setup, screen, reader suppo, r, t; */ private, setupScreenReaderSuppor, t(): vo, i, d { // Add, screen, reader only, text, for visual, element, s' th, i, s.addScreenReaderTe, x, t('bann, e, r-secti, o, n', 'Main, content, banners and, announcement, s');' th, i, s.addScreenReaderTe, x, t('navigati, o, n', 'Main, navigation, menu');' th, i, s.addScreenReaderTe, x, t('foot, e, r', 'Footer, with, contact information, and, links'); =======' th, i, s.addScreenReaderTe, x, t('bann, e, r-secti, o, n', 'Main, content, banners and, announcement, s');';' th, i, s.addScreenReaderTe, x, t('navigati, o, n', 'Main, navigation, menu');';' th, i, s.addScreenReaderTe, x, t('foot, e, r', 'Footer, with, contact information, and, links');'; // Setup, ARIA, landmarks th, i, s.setupAriaLandmar, k, s(); // Setup, live, regions for, dynamic, content th, i, s.setupLiveRegio, n, s(); } /** * Setup, high, contrast suppo, r, t; */ private, setupHighContrastSuppor, t(): vo, i, d {' // Detect, use, r's, high, contrast preferen, c, e' const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)'); const, handleContrastChang, e = (e: MediaQueryListEve, n, t) => { =======' // Detect, use, r's, high, contrast preferen, c, e';' const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-contr, a, s' t: hi, g, h)');'; const, handleContrastChang, e = (e: MediaQueryListEve, n, t) => { if (e.match, e, s) {' docume, n, t.documentEleme, n, t.classLi, s, t.a, d, d('hi, g, h-contra, s, t');'; } el, s, e {' docume, n, t.documentEleme, n, t.classLi, s, t.remo, v, e('hi, g, h-contra, s, t');'; } };' mediaQue, r, y.addEventListen, e, r('chan, g, e', handleContrastChan, g, e); =======' mediaQue, r, y.addEventListen, e, r('chan, g, e', handleContrastChan, g, e);'; // Apply, initial, state if (mediaQue, r, y.match, e, s) {' docume, n, t.documentEleme, n, t.classLi, s, t.a, d, d('hi, g, h-contra, s, t');'; } } /** * Setup, reduced, motion suppo, r, t; */ private, setupReducedMotionSuppor, t(): vo, i, d {' const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)'); const, handleMotionChang, e = (e: MediaQueryListEve, n, t) => { =======' const, mediaQuer, y = wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-mot, i, o' n: redu, c, e)');'; const, handleMotionChang, e = (e: MediaQueryListEve, n, t) => { if (e.match, e, s) {' docume, n, t.documentEleme, n, t.classLi, s, t.a, d, d('redu, c, e-moti, o, n');'; } el, s, e {' docume, n, t.documentEleme, n, t.classLi, s, t.remo, v, e('redu, c, e-moti, o, n');'; } };' mediaQue, r, y.addEventListen, e, r('chan, g, e', handleMotionChan, g, e); =======' mediaQue, r, y.addEventListen, e, r('chan, g, e', handleMotionChan, g, e);'; // Apply, initial, state if (mediaQue, r, y.match, e, s) {' docume, n, t.documentEleme, n, t.classLi, s, t.a, d, d('redu, c, e-moti, o, n');'; } } /** * Setup, focus, indicators; */ private, setupFocusIndicator, s(): vo, i, d {' const, styl, e = docume, n, t.createEleme, n, t('sty, l, e');'; sty, l, e.textConte, n, t = `` .keyboa, r, d-navigati, o, n *:foc, u, s { outli, n, e: 2px, soli, d #3b82, f, 6 !importa, n, t; outli, n, e-off, s, e t: 2, p, x !importa, n, t; } .hi, g, h-contra, s, t *:foc, u, s { outli, n, e: 3px, soli, d #ffff, f, f !importa, n, t; outli, n, e-off, s, e t: 3, p, x !importa, n, t; } .redu, c, e-moti, o, n * { animati, o, n-durati, o, n: 0.01, m, s !importa, n, t; animati, o, n-iterati, o, n-cou, n, t: 1 !importa, n, t; transiti, o, n-durat, i, o n: 0.01, m, s !importa, n, t; } `;`;` docume, n, t.he, a, d.appendChi, l, d(sty, l, e); } /** * Setup, ARIA, labels for, interactive, elements; */ private, setupAriaLabel, s(): vo, i, d { const, observe, r = new, MutationObserve, r((mutatio, n, s) => { mutatio, n, s.forEa, c, h((mutati, o, n) => { mutati, o, n.addedNod, e, s.forEa, c, h((no, d, e) => { if (no, d, e.nodeTy, p, e === No, d, e.ELEMENT_NO, D, E) { th, i, s.addAriaLabe, l, s(node, as, Element); } }); }); }); observ, e, r.obser, v, e(docume, n, t.bo, d, y, { childLi, s, t: tr, u, e subtr, e, e: tr, u, e; ======= childL, i, s t: tr, u, e subtr, e, e: tr, u, e }); th, i, s.observe, r, s.pu, s, h(observ, e, r); // Add, ARIA, labels to, existing, elements th, i, s.addAriaLabe, l, s(docume, n, t.bo, d, y); } /** * Add, ARIA, labels to, element, s; */ private, addAriaLabel, s(eleme, n, t: Eleme, n, t): vo, i, d { // Add, ARIA, labels to, buttons, without te, x, t' const, button, s = eleme, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');' =======' const, button, s = eleme, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');'; butto, n, s.forEa, c, h((butt, o, n) => {' const, ico, n = butt, o, n.querySelect, o, r('s, v, g, i, [cla, s, s*="ic, o, n"]');'; if (ic, o, n && !butt, o, n.textConte, n, t?.tr, i, m()) {' butt, o, n.setAttribu, t, e('ar, i, a-lab, e, l', th, i, s.generateButtonLab, e, l(butt, o, n));'; } }); // Add, ARIA, labels to, links, without descriptive, tex, t' const, link, s = eleme, n, t.querySelectorA, l, l('a: n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');' =======' const, link, s = eleme, n, t.querySelectorA, l, l('a: n, o, t([ar, i, a-lab, e, l]):n, o, t([ar, i, a-labelled, b, y])');'; lin, k, s.forEa, c, h((li, n, k) => { if (!li, n, k.textConte, n, t?.tr, i, m() || li, n, k.textConte, n, t.tr, i, m().leng, t, h < 3) {' li, n, k.setAttribu, t, e('ar, i, a-lab, e, l', th, i, s.generateLinkLab, e, l(li, n, k));'; } }); // Add, ARIA, labels to, images, without alt, tex, t' const, image, s = eleme, n, t.querySelectorA, l, l('i, m, g: n, o, t([a, l, t])');' =======' const, image, s = eleme, n, t.querySelectorA, l, l('i, m, g: n, o, t([a, l, t])');'; imag, e, s.forEa, c, h((i, m, g) => {' i, m, g.setAttribu, t, e('a, l, t', th, i, s.generateImageA, l, t(i, m, g));'; }); } /** * Setup, ARIA, landmarks; */ private, setupAriaLandmark, s(): vo, i, d {' const, mai, n = docume, n, t.querySelect, o, r('ma, i, n');' if (ma, i, n && !ma, i, n.getAttribu, t, e('ro, l, e')) {;' ma, i, n.setAttribu, t, e('ro, l, e', 'ma, i, n'); }' const, na, v = docume, n, t.querySelect, o, r('n, a, v');' if (n, a, v && !n, a, v.getAttribu, t, e('ro, l, e')) {;' n, a, v.setAttribu, t, e('ro, l, e', 'navigati, o, n'); }' const, foote, r = docume, n, t.querySelect, o, r('foot, e, r');' if (foot, e, r && !foot, e, r.getAttribu, t, e('ro, l, e')) {;' foot, e, r.setAttribu, t, e('ro, l, e', 'contentin, f, o'); =======' const, mai, n = docume, n, t.querySelect, o, r('ma, i, n');';' if (ma, i, n && !ma, i, n.getAttribu, t, e('ro, l, e')) {';' ma, i, n.setAttribu, t, e('ro, l, e', 'ma, i, n');'; }' const, na, v = docume, n, t.querySelect, o, r('n, a, v');';' if (n, a, v && !n, a, v.getAttribu, t, e('ro, l, e')) {';' n, a, v.setAttribu, t, e('ro, l, e', 'navigati, o, n');'; }' const, foote, r = docume, n, t.querySelect, o, r('foot, e, r');';' if (foot, e, r && !foot, e, r.getAttribu, t, e('ro, l, e')) {';' foot, e, r.setAttribu, t, e('ro, l, e', 'contentin, f, o');'; } } /** * Setup, live, regions for, announcement, s; */ private, setupLiveRegion, s(): vo, i, d {' const, liveRegio, n = docume, n, t.createEleme, n, t('d, i, v');';' liveRegi, o, n.setAttribu, t, e('ar, i, a-li, v, e', 'poli, t, e');';' liveRegi, o, n.setAttribu, t, e('ar, i, a-atom, i, c', 'tr, u, e');';' liveRegi, o, n.classNa, m, e = 'sr-on, l, y';';' liveRegi, o, n.id = 'li, v, e-regi, o, n';'; docume, n, t.bo, d, y.appendChi, l, d(liveRegi, o, n); } /** * Setup, live, region for, dynamic, content; */ private, setupLiveRegio, n(): vo, i, d {' const, liveRegio, n = docume, n, t.getElementBy, I, d('li, v, e-regi, o, n');'; if (!liveRegi, o, n) { th, i, s.setupLiveRegio, n, s(); } } /** * Announce, message, to screen, reader, s; */ announ, c, e(messa, g, e: stri, n, g): vo, i, d {' const, liveRegio, n = docume, n, t.getElementBy, I, d('li, v, e-regi, o, n'); =======' const, liveRegio, n = docume, n, t.getElementBy, I, d('li, v, e-regi, o, n');'; if (liveRegi, o, n) { liveRegi, o, n.textConte, n, t = messa, g, e; // Clear, after, announcement setTimeo, u, t(() => {' liveRegi, o, n.textConte, n, t = '';'; }, 10, 0, 0); } } /** * Add, screen, reader only, tex, t; */ private, addScreenReaderTex, t(elementSelect, o, r: stri, n, g, te, x, t: stri, n, g): vo, i, d { const, elemen, t = docume, n, t.querySelect, o, r(`[cla, s, s*="${elementSelect, o, r}"], #${elementSelect, o, r}`);`;` if (eleme, n, t) {' const, srTex, t = docume, n, t.createEleme, n, t('sp, a, n');';' srTe, x, t.classNa, m, e = 'sr-on, l, y';'; srTe, x, t.textConte, n, t = te, x, t; eleme, n, t.insertBefo, r, e(srTe, x, t, eleme, n, t.firstChi, l, d); } } /** * Generate, button, label; */ private, generateButtonLabe, l(butt, o, n: Eleme, n, t): stri, n, g { const, classNam, e = butt, o, n.classNa, m, e;' const, contex, t = butt, o, n.close, s, t('[cla, s, s*="bann, e, r"], [cla, s, s*="ca, r, d"], [cla, s, s*="secti, o, n"]');' if (classNa, m, e.includ, e, s('clo, s, e')) retu, r, n 'Clo, s, e';' if (classNa, m, e.includ, e, s('me, n, u')) retu, r, n 'Me, n, u';' if (classNa, m, e.includ, e, s('sear, c, h')) retu, r, n 'Sear, c, h';' if (classNa, m, e.includ, e, s('ne, x, t')) retu, r, n 'Ne, x, t';' if (classNa, m, e.includ, e, s('pr, e, v')) retu, r, n 'Previo, u, s';' retu, r, n 'Butt, o, n'; =======' const, contex, t = butt, o, n.close, s, t('[cla, s, s*="bann, e, r"], [cla, s, s*="ca, r, d"], [cla, s, s*="secti, o, n"]');';' if (classNa, m, e.includ, e, s('clo, s, e')) retu, r, n 'Clo, s, e';';' if (classNa, m, e.includ, e, s('me, n, u')) retu, r, n 'Me, n, u';';' if (classNa, m, e.includ, e, s('sear, c, h')) retu, r, n 'Sear, c, h';';' if (classNa, m, e.includ, e, s('ne, x, t')) retu, r, n 'Ne, x, t';';' if (classNa, m, e.includ, e, s('pr, e, v')) retu, r, n 'Previo, u, s';';' retu, r, n 'Butt, o, n';'; } /** * Generate, link, label; */ private, generateLinkLabe, l(li, n, k: Eleme, n, t): stri, n, g {' const, hre, f = li, n, k.getAttribu, t, e('hr, e, f');' if (hr, e, f?.startsWi, t, h('#')) retu, r, n `Go, t, o ${hr, e, f.substri, n, g(1)}`;`;`' if (hr, e, f?.startsWi, t, h('ht, t, p')) retu, r, n 'External, lin, k';' retu, r, n 'Li, n, k'; =======' const, hre, f = li, n, k.getAttribu, t, e('hr, e, f');';' if (hr, e, f?.startsWi, t, h('#')) retu, r, n `Go, t, o ${hr, e, f.substri, n, g(1)}`;`;`' if (hr, e, f?.startsWi, t, h('ht, t, p')) retu, r, n 'External, lin, k';';' retu, r, n 'Li, n, k';'; } /** * Generate, image, alt te, x, t; */ private, generateImageAl, t(i, m, g: Eleme, n, t): stri, n, g {' const, sr, c = i, m, g.getAttribu, t, e('s, r, c') || ''; const, classNam, e = i, m, g.classNa, m, e;' if (s, r, c.includ, e, s('lo, g, o')) retu, r, n 'Company, log, o';' if (s, r, c.includ, e, s('bann, e, r')) retu, r, n 'Promotional, banne, r';' if (s, r, c.includ, e, s('ic, o, n')) retu, r, n 'Ic, o, n';' if (classNa, m, e.includ, e, s('decorati, o, n')) retu, r, n 'Decorative, imag, e';' retu, r, n 'Ima, g, e'; =======' const, sr, c = i, m, g.getAttribu, t, e('s, r, c') || '';'; const, classNam, e = i, m, g.classNa, m, e;' if (s, r, c.includ, e, s('lo, g, o')) retu, r, n 'Company, log, o';';' if (s, r, c.includ, e, s('bann, e, r')) retu, r, n 'Promotional, banne, r';';' if (s, r, c.includ, e, s('ic, o, n')) retu, r, n 'Ic, o, n';';' if (classNa, m, e.includ, e, s('decorati, o, n')) retu, r, n 'Decorative, imag, e';';' retu, r, n 'Ima, g, e';'; } /** * Cleanup, observers, and listene, r, s; */ clean, u, p(): vo, i, d { th, i, s.observe, r, s.forEa, c, h(observ, e, r => observ, e, r.disconne, c, t()); th, i, s.observe, r, s = []; th, i, s.keyboardListene, r, s.forEa, c, h((listen, e, r, ty, p, e) => {' if (ty, p, e === 't, a, b-navigati, o, n') {;' docume, n, t.removeEventListen, e, r('keydo, w, n', listen, e, r);' } else, i, f (ty, p, e === 'mou, s, e-navigati, o, n') {;' docume, n, t.removeEventListen, e, r('mousedo, w, n', listen, e, r); =======' if (ty, p, e === 't, a, b-navigati, o, n') {';' docume, n, t.removeEventListen, e, r('keydo, w, n', listen, e, r);';' } else, i, f (ty, p, e === 'mou, s, e-navigati, o, n') {';' docume, n, t.removeEventListen, e, r('mousedo, w, n', listen, e, r);'; } }); th, i, s.keyboardListene, r, s.cle, a, r(); } } // Export, singleton, instance export, const, accessibilityEnhancer = new, AccessibilityEnhance, r(); // Export, types, and cla, s, s expo, r, t { AccessibilityEnhanc, e, r, type, AccessibilityConfi, g };'
+/**
+ * Advanced Accessibility Enhancement System
+ * Provides comprehensive accessibility features and monitoring
+ */
+
+export interface AccessibilityConfig {
+  keyboardNavigation: boolean;
+  screenReaderSupport: boolean;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  focusManagement: boolean;
+  ariaLabels: boolean;
+  colorContrast: 'AA' | 'AAA';
+}
+
+export interface AccessibilityMetric {
+  type: 'color_contrast' | 'keyboard_navigation' | 'aria_labels' | 'focus_management';
+  score: number;
+  issues: string[];
+  timestamp: number;
+}
+
+class AccessibilityEnhancer {
+  private config: AccessibilityConfig;
+  private metrics: AccessibilityMetric[] = [];
+  private isInitialized = false;
+  private focusTrapElements: HTMLElement[] = [];
+
+  constructor() {
+    this.config = this.getDefaultConfig();
+  }
+
+  private getDefaultConfig(): AccessibilityConfig {
+    return {
+      keyboardNavigation: true,
+      screenReaderSupport: true,
+      highContrast: false,
+      reducedMotion: false,
+      focusManagement: true,
+      ariaLabels: true,
+      colorContrast: 'AA'
+    };
+  }
+
+  public initialize(): void {
+    if (this.isInitialized || typeof window === 'undefined') return;
+    
+    this.isInitialized = true;
+    this.setupKeyboardNavigation();
+    this.setupFocusManagement();
+    this.setupAriaLabels();
+    this.setupColorContrast();
+    this.setupReducedMotion();
+    this.observeAccessibility();
+  }
+
+  private setupKeyboardNavigation(): void {
+    if (!this.config.keyboardNavigation) return;
+
+    document.addEventListener('keydown', (event) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && document.activeElement === document.body) {
+        const skipLink = document.querySelector('[data-skip-link]');
+        if (skipLink) {
+          (skipLink as HTMLElement).focus();
+          event.preventDefault();
+        }
+      }
+
+      // Escape key handling
+      if (event.key === 'Escape') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]');
+        if (modal) {
+          this.closeModal(modal as HTMLElement);
+        }
+      }
+
+      // Arrow key navigation for menus
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const menu = document.querySelector('[role="menu"]:focus-within') as HTMLElement | null;
+        if (menu) {
+          this.handleMenuNavigation(event as KeyboardEvent, menu);
+        }
+      }
+    });
+  }
+
+  private setupFocusManagement(): void {
+    if (!this.config.focusManagement) return;
+
+    // Trap focus in modals
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        const modal = document.querySelector('[role="dialog"][aria-hidden="false"]') as HTMLElement | null;
+        if (modal) {
+          this.trapFocus(event as KeyboardEvent, modal);
+        }
+      }
+    });
+
+    // Restore focus after modal closes
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.hasAttribute('data-close-modal')) {
+        this.restoreFocus();
+      }
+    });
+  }
+
+  private setupAriaLabels(): void {
+    if (!this.config.ariaLabels) return;
+
+    // Add aria-labels to interactive elements without labels
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    
+    interactiveElements.forEach(element => {
+      const el = element as HTMLElement;
+      if (!el.getAttribute('aria-label') && !el.getAttribute('aria-labelledby')) {
+        const text = el.textContent?.trim();
+        if (!text || text.length < 3) {
+          el.setAttribute('aria-label', `Interactive element`);
+        }
+      }
+    });
+
+    // Add role attributes where needed
+    const clickableElements = document.querySelectorAll('[onclick], [data-action]');
+    clickableElements.forEach(element => {
+      const el = element as HTMLElement;
+      if (!el.getAttribute('role')) {
+        el.setAttribute('role', 'button');
+      }
+    });
+  }
+
+  private setupColorContrast(): void {
+    if (typeof window === 'undefined') return;
+
+    // Check color contrast ratios
+    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
+    const contrastIssues: string[] = [];
+
+    elements.forEach(element => {
+      const el = element as HTMLElement;
+      const computedStyle = window.getComputedStyle(el);
+      const color = computedStyle.color;
+      const backgroundColor = computedStyle.backgroundColor;
+      
+      if (color && backgroundColor) {
+        const ratio = this.calculateContrastRatio(color, backgroundColor);
+        const requiredRatio = this.config.colorContrast === 'AAA' ? 7 : 4.5;
+        
+        if (ratio < requiredRatio) {
+          contrastIssues.push(`Low contrast on ${el.tagName}: ${ratio.toFixed(2)}:1`);
+        }
+      }
+    });
+
+    if (contrastIssues.length > 0) {
+      this.recordMetric({
+        type: 'color_contrast',
+        score: Math.max(0, 100 - (contrastIssues.length * 10)),
+        issues: contrastIssues,
+        timestamp: Date.now()
+      });
+    }
+  }
+
+  private setupReducedMotion(): void {
+    if (typeof window === 'undefined') return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      // Disable animations
+      const style = document.createElement('style');
+      style.textContent = `
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
+  private observeAccessibility(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor focus changes
+    document.addEventListener('focusin', (event) => {
+      const target = event.target as HTMLElement;
+      if (target.tabIndex < 0 && target.hasAttribute('tabindex')) {
+        console.warn('Element with negative tabindex received focus:', target);
+      }
+    });
+
+    // Monitor aria-label changes
+    const observer = new MutationObserver((mutations: MutationRecord[]) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
+          const element = mutation.target as Element;
+          const el = element as HTMLElement;
+          if (!el.getAttribute('aria-label')) {
+            console.warn('Element lost aria-label:', el);
+          }
+        }
+      });
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['aria-label', 'aria-labelledby', 'role']
+    });
+  }
+
+  private handleMenuNavigation(event: KeyboardEvent, menu: HTMLElement): void {
+    const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
+    const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
+    
+    if (currentIndex === -1) return;
+
+    let nextIndex: number;
+    if (event.key === 'ArrowDown') {
+      nextIndex = (currentIndex + 1) % menuItems.length;
+    } else {
+      nextIndex = currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1;
+    }
+
+    (menuItems[nextIndex] as HTMLElement).focus();
+    event.preventDefault();
+  }
+
+  private trapFocus(event: KeyboardEvent, modal: HTMLElement): void {
+    const focusableElements = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    if (focusableElements.length === 0) return;
+
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    if (event.shiftKey) {
+      if (document.activeElement === firstElement) {
+        lastElement.focus();
+        event.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastElement) {
+        firstElement.focus();
+        event.preventDefault();
+      }
+    }
+  }
+
+  private closeModal(modal: HTMLElement): void {
+    modal.setAttribute('aria-hidden', 'true');
+    modal.style.display = 'none';
+    this.restoreFocus();
+  }
+
+  private restoreFocus(): void {
+    const lastFocusedElement = document.querySelector('[data-last-focused]') as HTMLElement;
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement.removeAttribute('data-last-focused');
+    }
+  }
+
+  private calculateContrastRatio(color1: string, color2: string): number {
+    // Simplified contrast ratio calculation
+    // In a real implementation, you'd convert colors to RGB and calculate luminance
+    return 4.5; // Placeholder
+  }
+
+  private recordMetric(metric: AccessibilityMetric): void {
+    this.metrics.push(metric);
+    
+    // Keep only last 50 metrics
+    if (this.metrics.length > 50) {
+      this.metrics = this.metrics.slice(-50);
+    }
+  }
+
+  public getMetrics(): AccessibilityMetric[] {
+    return [...this.metrics];
+  }
+
+  public getAccessibilityScore(): number {
+    if (this.metrics.length === 0) return 100;
+    
+    const totalScore = this.metrics.reduce((sum, metric) => sum + metric.score, 0);
+    return Math.round(totalScore / this.metrics.length);
+  }
+
+  public runAccessibilityAudit(): {
+    score: number;
+    issues: string[];
+    recommendations: string[];
+  } {
+    const issues: string[] = [];
+    const recommendations: string[] = [];
+
+    // Check for missing alt attributes
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      const imageEl = img as HTMLImageElement;
+      if (!imageEl.getAttribute('alt')) {
+        issues.push(`Image missing alt attribute: ${imageEl.src}`);
+        recommendations.push('Add descriptive alt text to images');
+      }
+    });
+
+    // Check for proper heading hierarchy
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
+    headings.forEach(heading => {
+      const level = parseInt((heading as HTMLElement).tagName.charAt(1));
+      if (level > lastLevel + 1) {
+        issues.push(`Heading hierarchy skip: ${heading.tagName}`);
+        recommendations.push('Maintain proper heading hierarchy (h1 > h2 > h3...)');
+      }
+      lastLevel = level;
+    });
+
+    // Check for form labels
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      const el = input as HTMLElement;
+      const id = el.getAttribute('id');
+      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
+      const ariaLabel = el.getAttribute('aria-label');
+      
+      if (!label && !ariaLabel) {
+        issues.push(`Form input missing label: ${(el as HTMLElement).tagName}`);
+        recommendations.push('Add labels or aria-label to form inputs');
+      }
+    });
+
+    const score = Math.max(0, 100 - (issues.length * 5));
+    
+    return {
+      score,
+      issues,
+      recommendations: [...new Set(recommendations)]
+    };
+  }
+
+  public updateConfig(newConfig: Partial<AccessibilityConfig>): void {
+    this.config = { ...this.config, ...newConfig };
+  }
+
+  public disconnect(): void {
+    this.isInitialized = false;
+    this.metrics = [];
+    this.focusTrapElements = [];
+  }
+}
+
+// Export singleton instance
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+
+// Auto-initialize on DOM ready
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      accessibilityEnhancer.initialize();
+    });
+  } else {
+    accessibilityEnhancer.initialize();
+  }
+}

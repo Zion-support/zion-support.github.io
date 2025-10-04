@@ -1,1 +1,458 @@
-/** * Testing, Helpers, and Utiliti, e, s; * * Comprehensive, testing, utilities for, React, components, hoo, k, s; * and, integration, tests with, support, for async, operation, s. * * Featur, e, s: * - Component, rendering, helpers * - Mock, data, generators; * - Async, testing, utilities; * - DOM, testing, helpers; * - Performance, testing, utilities; * - Accessibility, testing, helpers; */ export, interface, MockComponentProps { id?: stri, n, g; classNa, m, e?: stri, n, g; childr, e, n?: Rea, c, t.ReactNo, d, e; [k, e, y: stri, n, g]: a, n, y; } export, interface, TestSetupOptions { mockLocalStora, g, e?: boole, a, n; mockSessionStora, g, e?: boole, a, n; mockFet, c, h?: boole, a, n; mockConso, l, e?: boole, a, n; } /** * Wait, for, specified millisecon, d, s; */ export, const, wait = (ms: numb, e, r): Promi, s, e<vo, i, d> => { return, new, Promise(resol, v, e => setTimeo, u, t(resol, v, e, ms)); }; /** * Wait, for, condition to, be, true; */ export, const, waitFor = asy, n, c ( conditi, o, n: () => boole, a, n | Promi, s, e<boole, a, n> timeo, u, t = 50, 0, 0; ======= conditi, o, n: () => boole, a, n | Promi, s, e<boole, a, n> timeo, u, t = 50, 0, 0 interv, a, l = 50; ): Promi, s, e<vo, i, d> => { const, startTim, e = Da, t, e.n, o, w(); whi, l, e (!(await, Promis, e.resol, v, e(conditi, o, n()))) { if (Da, t, e.n, o, w() - startTi, m, e > timeo, u, t) { throw, new, Error(`Timeout, waiting, for condition, afte, r ${timeo, u, t}ms`);`;` } await, wai, t(interv, a, l); } }; /** * Wait, for, element to, appear, in D, O, M; */ export, const, waitForElement = asy, n, c ( select, o, r: stri, n, g timeo, u, t = 50, 0, 0; ): Promi, s, e<Eleme, n, t> => { await, waitFo, r(() => !!docume, n, t.querySelect, o, r(select, o, r), timeo, u, t); return, documen, t.querySelect, o, r(select, o, r)!; }; /** * Wait, for, element to, disappear, from D, O, M; */ export, const, waitForElementToBeRemoved = asy, n, c ( select, o, r: stri, n, g timeo, u, t = 50, 0, 0; ): Promi, s, e<vo, i, d> => { await, waitFo, r(() => !docume, n, t.querySelect, o, r(select, o, r), timeo, u, t); }; /** * Simulate, user, click; */ export, const, click = (eleme, n, t: Eleme, n, t): vo, i, d => { const, clickEven, t = new, MouseEven, t('cli, c, k', { bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e vi, e, w: wind, o, w; ======= export, const, click = (elem, e, n t: Eleme, n, t): vo, i, d => {' const, clickEven, t = new, MouseEven, t('cli, c, k', {'; bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e vi, e, w: wind, o, w }); eleme, n, t.dispatchEve, n, t(clickEve, n, t); }; /** * Simulate, user, typing; */ export, const, type = (eleme, n, t: HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t, te, x, t: stri, n, g): vo, i, d => { eleme, n, t.foc, u, s(); eleme, n, t.val, u, e = te, x, t;' const, inputEven, t = new, Even, t('inp, u, t', { bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e; }); eleme, n, t.dispatchEve, n, t(inputEve, n, t);' const, changeEven, t = new, Even, t('chan, g, e', { bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e; =======' const, inputEven, t = new, Even, t('inp, u, t', {'; bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e }); eleme, n, t.dispatchEve, n, t(inputEve, n, t);' const, changeEven, t = new, Even, t('chan, g, e', {'; bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e }); eleme, n, t.dispatchEve, n, t(changeEve, n, t); }; /** * Clear, input, value; */ export, const, clear = (eleme, n, t: HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t): vo, i, d => {' eleme, n, t.val, u, e = '';' const, changeEven, t = new, Even, t('chan, g, e', { bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e; =======' eleme, n, t.val, u, e = '';';' const, changeEven, t = new, Even, t('chan, g, e', {'; bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e }); eleme, n, t.dispatchEve, n, t(changeEve, n, t); }; /** * Select, option, in select, elemen, t; */ export, const, selectOption = (eleme, n, t: HTMLSelectEleme, n, t, val, u, e: stri, n, g): vo, i, d => { eleme, n, t.val, u, e = val, u, e;' const, changeEven, t = new, Even, t('chan, g, e', { bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e; =======' const, changeEven, t = new, Even, t('chan, g, e', {'; bubbl, e, s: tr, u, e cancelab, l, e: tr, u, e }); eleme, n, t.dispatchEve, n, t(changeEve, n, t); }; /** * Mock, fetch, API; */ export, class, FetchMock { private, response, s: M, a, p<stri, n, g, a, n, y> = new, Ma, p() private, originalFetc, h: typeof, fetc, h ======= private, response, s: M, a, p<stri, n, g, a, n, y> = new, Ma, p(); private, originalFetc, h: typeof, fetc, h; construct, o, r() { th, i, s.originalFet, c, h = globalTh, i, s.fet, c, h; } mockRespon, s, e(u, r, l: stri, n, g, respon, s, e: a, n, y, optio, n, s?: { stat, u, s?: numb, e, r; statusTe, x, t?: stri, n, g; heade, r, s?: Reco, r, d<stri, n, g, stri, n, g>; }): vo, i, d { th, i, s.respons, e, s.s, e, t(u, r, l, { respon, s, e stat, u, s: optio, n, s?.stat, u, s || 2, 0, 0' statusTe, x, t: optio, n, s?.statusTe, x, t || 'OK' heade, r, s: optio, n, s?.heade, r, s || {} ======= stat, u, s: optio, n, s?.stat, u, s || 2, 0, 0' statusTe, x, t: optio, n, s?.statusTe, x, t || 'OK','; heade, r, s: optio, n, s?.heade, r, s || {} }); } mockResponseOn, c, e(u, r, l: stri, n, g, respon, s, e: a, n, y, optio, n, s?: { stat, u, s?: numb, e, r; statusTe, x, t?: stri, n, g; heade, r, s?: Reco, r, d<stri, n, g, stri, n, g>; }): vo, i, d { th, i, s.mockRespon, s, e(u, r, l, respon, s, e, optio, n, s); // Remove, after, first ca, l, l const, origina, l = th, i, s.respons, e, s.g, e, t(u, r, l); if (origin, a, l) { th, i, s.respons, e, s.s, e, t(u, r, l, { ...origin, a, l on, c, e: tr, u, e; ======= ...origin, a, l on, c, e: tr, u, e }); } } insta, l, l(): vo, i, d { globalTh, i, s.fet, c, h = asy, n, c (inp, u, t: RequestIn, f, o | U, R, L, in, i, t?: RequestIn, i, t): Promi, s, e<Respon, s, e> => {' const, ur, l = typeof, inpu, t === 'stri, n, g' ? inp, u, t : inp, u, t.toStri, n, g(); =======' const, ur, l = typeof, inpu, t === 'stri, n, g' ? inp, u, t : inp, u, t.toStri, n, g();'; const, mockDat, a = th, i, s.respons, e, s.g, e, t(u, r, l); if (mockDa, t, a) { if (mockDa, t, a.on, c, e) { th, i, s.respons, e, s.dele, t, e(u, r, l); } return, new, Response(JS, O, N.stringi, f, y(mockDa, t, a.respon, s, e), { stat, u, s: mockDa, t, a.stat, u, s statusTe, x, t: mockDa, t, a.statusTe, x, t heade, r, s: mockDa, t, a.heade, r, s; ======= sta, t, u s: mockDa, t, a.stat, u, s statusTe, x, t: mockDa, t, a.statusTe, x, t heade, r, s: mockDa, t, a.heade, r, s }); } return, thi, s.originalFet, c, h(inp, u, t, in, i, t); }; } resto, r, e(): vo, i, d { globalTh, i, s.fet, c, h = th, i, s.originalFet, c, h; th, i, s.respons, e, s.cle, a, r(); } } /** * Mock, localStorag, e; */ export, class, LocalStorageMock { private, stor, e: Reco, r, d<stri, n, g, stri, n, g> = {}; getIt, e, m(k, e, y: stri, n, g): stri, n, g | nu, l, l { return, thi, s.sto, r, e[k, e, y] || nu, l, l; } setIt, e, m(k, e, y: stri, n, g, val, u, e: stri, n, g): vo, i, d { th, i, s.sto, r, e[k, e, y] = val, u, e; } removeIt, e, m(k, e, y: stri, n, g): vo, i, d { delete, thi, s.sto, r, e[k, e, y]; } cle, a, r(): vo, i, d { th, i, s.sto, r, e = {}; } get, lengt, h(): numb, e, r { return, Objec, t.ke, y, s(th, i, s.sto, r, e).leng, t, h; } k, e, y(ind, e, x: numb, e, r): stri, n, g | nu, l, l { const, key, s = Obje, c, t.ke, y, s(th, i, s.sto, r, e); return, key, s[ind, e, x] || nu, l, l; } } /** * Mock, console, methods; */ export, class, ConsoleMock { private, originalConsol, e: typeof, consol, e; lo, g, s: a, n, y[] = []; warnin, g, s: a, n, y[] = []; err, o, r s: a, n, y[] = []; construct, o, r() { th, i, s.originalConso, l, e = conso, l, e; } insta, l, l(): vo, i, d { conso, l, e.l, o, g = (...ar, g, s: a, n, y[]) => th, i, s.lo, g, s.pu, s, h(ar, g, s); conso, l, e.wa, r, n = (...ar, g, s: a, n, y[]) => th, i, s.warnin, g, s.pu, s, h(ar, g, s); conso, l, e.err, o, r = (...a, r, g s: a, n, y[]) => th, i, s.erro, r, s.pu, s, h(ar, g, s); } resto, r, e(): vo, i, d { conso, l, e.l, o, g = th, i, s.originalConso, l, e.l, o, g; conso, l, e.wa, r, n = th, i, s.originalConso, l, e.wa, r, n; conso, l, e.err, o, r = th, i, s.originalConso, l, e.err, o, r; } cle, a, r(): vo, i, d { th, i, s.lo, g, s = []; th, i, s.warnin, g, s = []; th, i, s.erro, r, s = []; } } /** * Generate, mock, data; */ export, const, generateMockData = { stri, n, g: (leng, t, h = 10): stri, n, g => { return, Mat, h.rand, o, m().toStri, n, g(36).substri, n, g(2, 2 + leng, t, h); } numb, e, r: (m, i, n = 0, m, a, x = 1, 0, 0): numb, e, r => { return, Mat, h.flo, o, r(Ma, t, h.rand, o, m() * (m, a, x - m, i, n + 1)) + m, i, n; } boole, a, n: (): boole, a, n => { return, Mat, h.rand, o, m() > 0.5; } ema, i, l: (): stri, n, g => { retu, r, n `te, s, t${generateMockDa, t, a.numb, e, r()}@examp, l, e.c, o, m`;` } u, r, l: (): stri, n, g => { retu, r, n `htt, p, s://examp, l, e.c, o, m/${generateMockDa, t, a.stri, n, g()}`;` } da, t, e: (): Da, t, e => { return, new, Date(Da, t, e.n, o, w() - generateMockDa, t, a.numb, e, r(0, 3, 6, 5) * 24 * 60 * 60 * 10, 0, 0); } ======= } numb, e, r: (m, i, n = 0, m, a, x = 1, 0, 0): numb, e, r => { return, Mat, h.flo, o, r(Ma, t, h.rand, o, m() * (m, a, x - m, i, n + 1)) + m, i, n; } boole, a, n: (): boole, a, n => { return, Mat, h.rand, o, m() > 0.5; } ema, i, l: (): stri, n, g => { retu, r, n `te, s, t${generateMockDa, t, a.numb, e, r()}@examp, l, e.c, o, m`;`;` } u, r, l: (): stri, n, g => { retu, r, n `htt, p, s://examp, l, e.c, o, m/${generateMockDa, t, a.stri, n, g()}`;`;` } da, t, e: (): Da, t, e => { return, new, Date(Da, t, e.n, o, w() - generateMockDa, t, a.numb, e, r(0, 3, 6, 5) * 24 * 60 * 60 * 10, 0, 0); } arr, a, y: <T>(genera, t, o r: () => T, leng, t, h = 5): T[] => { return, Arra, y.fr, o, m({ leng, t, h }, generat, o, r); } obje, c, t: <T, extends, Record<stri, n, g, a, n, y>>(sche, m, a: { [K, in, keyof T]: () => T[K] }): T => { const, resul, t = {} a, s, T; Obje, c, t.ke, y, s(sche, m, a).forEa, c, h(k, e, y => { resu, l, t[key, as, keyof T] = sche, m, a[key, as, keyof T](); }); return, resul, t; } }; /** * Performance, testing, helper; */ export, class, PerformanceTester { private, startTim, e: numb, e, r = 0 private, measurement, s: M, a, p<stri, n, g, numb, e, r[]> = new, Ma, p() ======= private, startTim, e: numb, e, r = 0; private, measuremen, t s: M, a, p<stri, n, g, numb, e, r[]> = new, Ma, p(); sta, r, t(lab, e, l: stri, n, g): vo, i, d { th, i, s.startTi, m, e = performan, c, e.n, o, w(); performan, c, e.ma, r, k(`${lab, e, l}-sta, r, t`);`;` } e, n, d(lab, e, l: stri, n, g): numb, e, r { performan, c, e.ma, r, k(`${lab, e, l}-e, n, d`);`;` performan, c, e.measu, r, e(lab, e, l, `${lab, e, l}-sta, r, t`, `${lab, e, l}-e, n, d`);`;` const, duratio, n = performan, c, e.n, o, w() - th, i, s.startTi, m, e; if (!th, i, s.measuremen, t, s.h, a, s(lab, e, l)) { th, i, s.measuremen, t, s.s, e, t(lab, e, l, []); } th, i, s.measuremen, t, s.g, e, t(lab, e, l)!.pu, s, h(durati, o, n); return, duratio, n; } getAvera, g, e(lab, e, l: stri, n, g): numb, e, r { const, measurement, s = th, i, s.measuremen, t, s.g, e, t(lab, e, l) || []; if (measuremen, t, s.leng, t, h === 0) retur, n, 0; const, su, m = measuremen, t, s.redu, c, e((a, c, c, v, a, l) => a, c, c + v, a, l, 0); return, su, m / measuremen, t, s.leng, t, h; } getMedi, a, n(lab, e, l: stri, n, g): numb, e, r { const, measurement, s = th, i, s.measuremen, t, s.g, e, t(lab, e, l) || []; if (measuremen, t, s.leng, t, h === 0) retur, n, 0; const, sorte, d = [...measuremen, t, s].so, r, t((a, b) => a - b); const, mi, d = Ma, t, h.flo, o, r(sort, e, d.leng, t, h / 2); if (sort, e, d.leng, t, h % 2 === 0) { return (sort, e, d[m, i, d - 1] + sort, e, d[m, i, d]) / 2; } return, sorte, d[m, i, d]; } cle, a, r(): vo, i, d { th, i, s.measuremen, t, s.cle, a, r(); performan, c, e.clearMar, k, s(); performan, c, e.clearMeasur, e, s(); } } /** * Accessibility, testing, helper; */ export, const, checkAccessibility = { hasAriaLab, e, l: (elem, e, n t: Eleme, n, t): boole, a, n => {' return, elemen, t.hasAttribu, t, e('ar, i, a-lab, e, l') || eleme, n, t.hasAttribu, t, e('ar, i, a-labelled, b, y'); } hasRo, l, e: (elem, e, n t: Eleme, n, t, ro, l, e: stri, n, g): boole, a, n => {' return, elemen, t.getAttribu, t, e('ro, l, e') === ro, l, e; } isFocusab, l, e: (elem, e, n t: Eleme, n, t): boole, a, n => {' const, tabinde, x = eleme, n, t.getAttribu, t, e('tabind, e, x');' return, tabinde, x !== '-1' && (element, as, HTMLElement).tabInd, e, x >= 0; } hasAltTe, x, t: (im g: HTMLImageEleme, n, t): boole, a, n => { return, Boolea, n(i, m, g.a, l, t && i, m, g.a, l, t.tr, i, m().leng, t, h > 0); } =======' return, elemen, t.hasAttribu, t, e('ar, i, a-lab, e, l') || eleme, n, t.hasAttribu, t, e('ar, i, a-labelled, b, y');'; } hasRo, l, e: (elem, e, n t: Eleme, n, t, ro, l, e: stri, n, g): boole, a, n => {' return, elemen, t.getAttribu, t, e('ro, l, e') === ro, l, e;'; } isFocusab, l, e: (elem, e, n t: Eleme, n, t): boole, a, n => {' const, tabinde, x = eleme, n, t.getAttribu, t, e('tabind, e, x');';' return, tabinde, x !== '-1' && (element, as, HTMLElement).tabInd, e, x >= 0;'; } hasAltTe, x, t: (im g: HTMLImageEleme, n, t): boole, a, n => { return, Boolea, n(i, m, g.a, l, t && i, m, g.a, l, t.tr, i, m().leng, t, h > 0); } hasValidContra, s, t: (elem, e, n t: Eleme, n, t): boole, a, n => { const, compute, d = wind, o, w.getComputedSty, l, e(eleme, n, t); const, colo, r = comput, e, d.col, o, r; const, backgroun, d = comput, e, d.backgroundCol, o, r; // This, is, a simplified, chec, k - real, implementation, would calculate, contrast, ratio return, colo, r !== backgrou, n, d; } }; /** * Setup, test, environment; */ export, const, setupTestEnvironment = (optio, n, s: TestSetupOptio, n, s = {}): { clean, u, p: () => vo, i, d; fetchMo, c, k: FetchMo, c, k; consoleM, o, c k: ConsoleMo, c, k; } => { const, fetchMoc, k = new, FetchMoc, k(); const, consoleMoc, k = new, ConsoleMoc, k(); const, localStorageMoc, k = new, LocalStorageMoc, k(); if (optio, n, s.mockFet, c, h) { fetchMo, c, k.insta, l, l(); } if (optio, n, s.mockConso, l, e) { consoleMo, c, k.insta, l, l(); } if (optio, n, s.mockLocalStora, g, e) {' Obje, c, t.defineProper, t, y(wind, o, w, 'localStora, g, e', { val, u, e: localStorageMo, c, k writab, l, e: tr, u, e; =======' Obje, c, t.defineProper, t, y(wind, o, w, 'localStora, g, e', {'; val, u, e: localStorageMo, c, k writab, l, e: tr, u, e }); } if (optio, n, s.mockSessionStora, g, e) {' Obje, c, t.defineProper, t, y(wind, o, w, 'sessionStora, g, e', { val, u, e: new, LocalStorageMoc, k() writab, l, e: tr, u, e; =======' Obje, c, t.defineProper, t, y(wind, o, w, 'sessionStora, g, e', {'; val, u, e: new, LocalStorageMoc, k() writab, l, e: tr, u, e }); } const, cleanu, p = () => { if (optio, n, s.mockFet, c, h) { fetchMo, c, k.resto, r, e(); }; if (optio, n, s.mockConso, l, e) { consoleMo, c, k.resto, r, e(); } }; retu, r, n { clean, u, p fetchMo, c, k consoleMo, c, k; }; }; export, defaul, t { wa, i, t waitF, o, r waitForEleme, n, t waitForElementToBeRemov, e, d cli, c, k ty, p, e cle, a, r selectOpti, o, n FetchMo, c, k LocalStorageMo, c, k ConsoleMo, c, k generateMockDa, t, a PerformanceTest, e, r checkAccessibili, t, y setupTestEnvironme, n, t; };'
+/**
+ * Testing Helpers and Utilities
+ * 
+ * Comprehensive testing utilities for React components, hooks,
+ * and integration tests with support for async operations.
+ * 
+ * Features:
+ * - Component rendering helpers
+ * - Mock data generators
+ * - Async testing utilities
+ * - DOM testing helpers
+ * - Performance testing utilities
+ * - Accessibility testing helpers
+ */
+
+import { ReactElement } from 'react';
+
+export interface MockComponentProps {
+  id?: string;
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: any;
+}
+
+export interface TestSetupOptions {
+  mockLocalStorage?: boolean;
+  mockSessionStorage?: boolean;
+  mockFetch?: boolean;
+  mockConsole?: boolean;
+}
+
+/**
+ * Wait for specified milliseconds
+ */
+export const wait = (ms: number): Promise<void> => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
+
+/**
+ * Wait for condition to be true
+ */
+export const waitFor = async (
+  condition: () => boolean | Promise<boolean>,
+  timeout = 5000,
+  interval = 50
+): Promise<void> => {
+  const startTime = Date.now();
+  
+  while (!(await Promise.resolve(condition()))) {
+    if (Date.now() - startTime > timeout) {
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+    }
+    await wait(interval);
+  }
+};
+
+/**
+ * Wait for element to appear in DOM
+ */
+export const waitForElement = async (
+  selector: string,
+  timeout = 5000
+): Promise<Element> => {
+  await waitFor(() => !!document.querySelector(selector), timeout);
+  return document.querySelector(selector)!;
+};
+
+/**
+ * Wait for element to disappear from DOM
+ */
+export const waitForElementToBeRemoved = async (
+  selector: string,
+  timeout = 5000
+): Promise<void> => {
+  await waitFor(() => !document.querySelector(selector), timeout);
+};
+
+/**
+ * Simulate user click
+ */
+export const click = (element: Element): void => {
+  const clickEvent = new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+    view: window,
+  });
+  element.dispatchEvent(clickEvent);
+};
+
+/**
+ * Simulate user typing
+ */
+export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: string): void => {
+  element.focus();
+  element.value = text;
+  
+  const inputEvent = new Event('input', {
+    bubbles: true,
+    cancelable: true,
+  });
+  element.dispatchEvent(inputEvent);
+  
+  const changeEvent = new Event('change', {
+    bubbles: true,
+    cancelable: true,
+  });
+  element.dispatchEvent(changeEvent);
+};
+
+/**
+ * Clear input value
+ */
+export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => {
+  element.value = '';
+  const changeEvent = new Event('change', {
+    bubbles: true,
+    cancelable: true,
+  });
+  element.dispatchEvent(changeEvent);
+};
+
+/**
+ * Select option in select element
+ */
+export const selectOption = (element: HTMLSelectElement, value: string): void => {
+  element.value = value;
+  const changeEvent = new Event('change', {
+    bubbles: true,
+    cancelable: true,
+  });
+  element.dispatchEvent(changeEvent);
+};
+
+/**
+ * Mock fetch API
+ */
+export class FetchMock {
+  private responses: Map<string, any> = new Map();
+  private originalFetch: typeof fetch;
+
+  constructor() {
+    this.originalFetch = globalThis.fetch;
+  }
+
+  mockResponse(url: string, response: any, options?: {
+    status?: number;
+    statusText?: string;
+    headers?: Record<string, string>;
+  }): void {
+    this.responses.set(url, {
+      response,
+      status: options?.status || 200,
+      statusText: options?.statusText || 'OK',
+      headers: options?.headers || {},
+    });
+  }
+
+  mockResponseOnce(url: string, response: any, options?: {
+    status?: number;
+    statusText?: string;
+    headers?: Record<string, string>;
+  }): void {
+    this.mockResponse(url, response, options);
+    
+    // Remove after first call
+    const original = this.responses.get(url);
+    if (original) {
+      this.responses.set(url, {
+        ...original,
+        once: true,
+      });
+    }
+  }
+
+  install(): void {
+    globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+      const url = typeof input === 'string' ? input : input.toString();
+      const mockData = this.responses.get(url);
+
+      if (mockData) {
+        if (mockData.once) {
+          this.responses.delete(url);
+        }
+
+        return new Response(JSON.stringify(mockData.response), {
+          status: mockData.status,
+          statusText: mockData.statusText,
+          headers: mockData.headers,
+        });
+      }
+
+      return this.originalFetch(input, init);
+    };
+  }
+
+  restore(): void {
+    globalThis.fetch = this.originalFetch;
+    this.responses.clear();
+  }
+}
+
+/**
+ * Mock localStorage
+ */
+export class LocalStorageMock {
+  private store: Record<string, string> = {};
+
+  getItem(key: string): string | null {
+    return this.store[key] || null;
+  }
+
+  setItem(key: string, value: string): void {
+    this.store[key] = value;
+  }
+
+  removeItem(key: string): void {
+    delete this.store[key];
+  }
+
+  clear(): void {
+    this.store = {};
+  }
+
+  get length(): number {
+    return Object.keys(this.store).length;
+  }
+
+  key(index: number): string | null {
+    const keys = Object.keys(this.store);
+    return keys[index] || null;
+  }
+}
+
+/**
+ * Mock console methods
+ */
+export class ConsoleMock {
+  private originalConsole: typeof console;
+  logs: any[] = [];
+  warnings: any[] = [];
+  errors: any[] = [];
+
+  constructor() {
+    this.originalConsole = console;
+  }
+
+  install(): void {
+    console.log = (...args: any[]) => this.logs.push(args);
+    console.warn = (...args: any[]) => this.warnings.push(args);
+    console.error = (...args: any[]) => this.errors.push(args);
+  }
+
+  restore(): void {
+    console.log = this.originalConsole.log;
+    console.warn = this.originalConsole.warn;
+    console.error = this.originalConsole.error;
+  }
+
+  clear(): void {
+    this.logs = [];
+    this.warnings = [];
+    this.errors = [];
+  }
+}
+
+/**
+ * Generate mock data
+ */
+export const generateMockData = {
+  string: (length = 10): string => {
+    return Math.random().toString(36).substring(2, 2 + length);
+  },
+
+  number: (min = 0, max = 100): number => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+
+  boolean: (): boolean => {
+    return Math.random() > 0.5;
+  },
+
+  email: (): string => {
+    return `test${generateMockData.number()}@example.com`;
+  },
+
+  url: (): string => {
+    return `https://example.com/${generateMockData.string()}`;
+  },
+
+  date: (): Date => {
+    return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
+  },
+
+  array: <T>(generator: () => T, length = 5): T[] => {
+    return Array.from({ length }, generator);
+  },
+
+  object: <T extends Record<string, any>>(schema: { [K in keyof T]: () => T[K] }): T => {
+    const result = {} as T;
+    Object.keys(schema).forEach(key => {
+      result[key as keyof T] = schema[key as keyof T]();
+    });
+    return result;
+  },
+};
+
+/**
+ * Performance testing helper
+ */
+export class PerformanceTester {
+  private startTime: number = 0;
+  private measurements: Map<string, number[]> = new Map();
+
+  start(label: string): void {
+    this.startTime = performance.now();
+    performance.mark(`${label}-start`);
+  }
+
+  end(label: string): number {
+    performance.mark(`${label}-end`);
+    performance.measure(label, `${label}-start`, `${label}-end`);
+    
+    const duration = performance.now() - this.startTime;
+    
+    if (!this.measurements.has(label)) {
+      this.measurements.set(label, []);
+    }
+    this.measurements.get(label)!.push(duration);
+    
+    return duration;
+  }
+
+  getAverage(label: string): number {
+    const measurements = this.measurements.get(label) || [];
+    if (measurements.length === 0) return 0;
+    
+    const sum = measurements.reduce((acc, val) => acc + val, 0);
+    return sum / measurements.length;
+  }
+
+  getMedian(label: string): number {
+    const measurements = this.measurements.get(label) || [];
+    if (measurements.length === 0) return 0;
+    
+    const sorted = [...measurements].sort((a, b) => a - b);
+    const mid = Math.floor(sorted.length / 2);
+    
+    if (sorted.length % 2 === 0) {
+      return (sorted[mid - 1] + sorted[mid]) / 2;
+    }
+    return sorted[mid];
+  }
+
+  clear(): void {
+    this.measurements.clear();
+    performance.clearMarks();
+    performance.clearMeasures();
+  }
+}
+
+/**
+ * Accessibility testing helper
+ */
+export const checkAccessibility = {
+  hasAriaLabel: (element: Element): boolean => {
+    return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
+  },
+
+  hasRole: (element: Element, role: string): boolean => {
+    return element.getAttribute('role') === role;
+  },
+
+  isFocusable: (element: Element): boolean => {
+    const tabindex = element.getAttribute('tabindex');
+    return tabindex !== '-1' && (element as HTMLElement).tabIndex >= 0;
+  },
+
+  hasAltText: (img: HTMLImageElement): boolean => {
+    return Boolean(img.alt && img.alt.trim().length > 0);
+  },
+
+  hasValidContrast: (element: Element): boolean => {
+    const computed = window.getComputedStyle(element);
+    const color = computed.color;
+    const background = computed.backgroundColor;
+    
+    // This is a simplified check - real implementation would calculate contrast ratio
+    return color !== background;
+  },
+};
+
+/**
+ * Setup test environment
+ */
+export const setupTestEnvironment = (options: TestSetupOptions = {}): {
+  cleanup: () => void;
+  fetchMock: FetchMock;
+  consoleMock: ConsoleMock;
+} => {
+  const fetchMock = new FetchMock();
+  const consoleMock = new ConsoleMock();
+  const localStorageMock = new LocalStorageMock();
+
+  if (options.mockFetch) {
+    fetchMock.install();
+  }
+
+  if (options.mockConsole) {
+    consoleMock.install();
+  }
+
+  if (options.mockLocalStorage) {
+    Object.defineProperty(window, 'localStorage', {
+      value: localStorageMock,
+      writable: true,
+    });
+  }
+
+  if (options.mockSessionStorage) {
+    Object.defineProperty(window, 'sessionStorage', {
+      value: new LocalStorageMock(),
+      writable: true,
+    });
+  }
+
+  const cleanup = () => {
+    if (options.mockFetch) {
+      fetchMock.restore();
+    }
+    if (options.mockConsole) {
+      consoleMock.restore();
+    }
+  };
+
+  return {
+    cleanup,
+    fetchMock,
+    consoleMock,
+  };
+};
+
+export default {
+  wait,
+  waitFor,
+  waitForElement,
+  waitForElementToBeRemoved,
+  click,
+  type,
+  clear,
+  selectOption,
+  FetchMock,
+  LocalStorageMock,
+  ConsoleMock,
+  generateMockData,
+  PerformanceTester,
+  checkAccessibility,
+  setupTestEnvironment,
+};

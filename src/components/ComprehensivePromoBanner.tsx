@@ -1,1 +1,147 @@
-import React from "react"; ======= import React from "react";'; interface, ComprehensivePromoBannerProp, s {' varia, n, t?: 'he, r, o' | 'compa, c, t' | 'featur, e, d'; showCou, n, t?: numb, e, r; classNa, m, e?: stri, n, g; } const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, s> = ({ ' varia, n, t = 'he, r, o' showCou, n, t = 4; ======= const, ComprehensivePromoBann, e r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, s> = ({ ' varia, n, t = 'he, r, o', '; showCou, n, t = 4' classNa, m, e = '' }) => { const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featur, e, d).sli, c, e(0, showCou, n, t); const, latestService, s = newServices20, 2, 6.filt, e, r(s => s.featur, e, d).sli, c, e(0, showCou, n, t);' if (varia, n, t === 'compa, c, t') {; return ( <div, className={`bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, rounde, d-x, l, p-6 ${classNa, m, e}`}>`;` <div, className="flex, item, s-center, justif, y-betwe, e, n" > =======' if (varia, n, t === 'compa, c, t') {'; return ( <div, className={`bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, rounde, d-x, l, p-6 ${classNa, m, e}`}>`;` <div, className="flex, item, s-center, justif, y-betwe, e, n" >"; <d, i, v> <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2" >"; 🚀 N, e, w: {latestArticl, e, s.leng, t, h} Articl, e, s + {latestServic, e, s.leng, t, h} Servic, e, s; </h3> <p, className="te, x, t-indi, g, o-1, 0, 0" >"; Multimodal, A, I, Blockcha, i, n-AI, Green, A, I, Auto, M, L & Mo, r, e! </p> </d, i, v> <Li, n, k to="/bl, o, g" classNa, m, e="bg-white, tex, t-indi, g, o-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-indi, g, o-50, transitio, n-colors, flex, items-center, ga, p-2" > Explore, No, w; <ArrowRight, className="w-5 h-5 /> ======= <ArrowRight, className=" w-5 h-5" />"; </Li, n, k> </d, i, v> </d, i, v> ); }' if (varia, n, t === 'featur, e, d') {; return ( <div, className={`bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidd, e, n ${classNa, m, e}`}>`;` <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-60, 0, p-8" > <div, className="flex, item, s-center, ga, p-3, m, b-4" > <Sparkles, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0 /> <h2, className=" te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Latest, Innovation, s</h2> =======' if (varia, n, t === 'featur, e, d') {'; return ( <div, className={`bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidd, e, n ${classNa, m, e}`}>`;` <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-60, 0, p-8" >"; <div, className="flex, item, s-center, ga, p-3, m, b-4" >"; <Sparkles, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />"; <h2, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e" >Latest, Innovation, s</h2>"; </d, i, v> <p, className="te, x, t-purp, l, e-100, tex, t-lg" >"; Discover, our, newest articles, and, services transforming, industrie, s; </p> </d, i, v> <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6 p-8" >" {latestArticl, e, s.sli, c, e(0, 2).m, a, p((artic, l, e) => ( <div, ke, y={artic, l, e.id} classNa, m, e="border, borde, r-gr, a, y-200, rounde, d-x, l, p-6, hove, r: shad, o, w-lg, transitio, n-a, l, l">" <div, className="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2" >{artic, l, e.catego, r, y}</d, i, v> <h4, className="te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-2" >{artic, l, e.tit, l, e}</h4> <p, className="te, x, t-gr, a, y-600, m, b-4" >{artic, l, e.descripti, o, n}</p> <Link, t, o={artic, l, e.li, n, k} classNa, m, e="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">" Read, Mor, e <ArrowRight, className="w-4 h-4 /> ======= <div, className=" grid, m, d: gr, i, d-co, l, s-2, ga, p-6 p-8">"; {latestArticl, e, s.sli, c, e(0, 2).m, a, p((artic, l, e) => ( <div, ke, y={artic, l, e.id} classNa, m, e="border, borde, r-gr, a, y-200, rounde, d-x, l, p-6, hove, r: shad, o, w-lg, transitio, n-a, l, l">"; <div, className="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2" >{artic, l, e.catego, r, y}</d, i, v>"; <h4, className="te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-2" >{artic, l, e.tit, l, e}</h4>"; <p, className="te, x, t-gr, a, y-600, m, b-4" >{artic, l, e.descripti, o, n}</p>"; <Link, t, o={artic, l, e.li, n, k} classNa, m, e="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">"; Read, Mor, e <ArrowRight, className="w-4 h-4" />"; </Li, n, k> </d, i, v> ))} </d, i, v> </d, i, v> ); } // Hero, varian, t (defau, l, t) return ( <div, className={`bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, rounde, d-3x, l, p-8, m, d:p-12, tex, t-whi, t, e ${classNa, m, e}`}>`;` <div, className="max-w-6xl mx-auto" > <div, className="te, x, t-center, m, b-10" > <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6" > <Zap, className="w-5 h-5, m, r-2 /> <span, className=" fo, n, t-bo, l, d">OCTOBER, 202, 5: BREAKTHROUGH, CONTENT, RELEASE</sp, a, n>" </d, i, v> <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4" >" {latestArticl, e, s.leng, t, h} New, Article, s + {latestServic, e, s.leng, t, h} Revolutionary, Service, s; </h2> <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o" > Multimodal, A, I, Blockchain, Integratio, n, Green, A, I, Auto, M, L, Predictive, Maintenanc, e; ======= <div, className="max-w-6xl mx-auto" >"; <div, className="te, x, t-center, m, b-10" >"; <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6" >"; <Zap, className="w-5 h-5, m, r-2" />"; <span, className="fo, n, t-bo, l, d" >OCTOBER, 202, 5: BREAKTHROUGH, CONTENT, RELEASE</sp, a, n>"; </d, i, v> <h2, className="te, x, t-4x, l, m d: te, x, t-5xl, fon, t-bold, m, b-4" >"; {latestArticl, e, s.leng, t, h} New, Article, s + {latestServic, e, s.leng, t, h} Revolutionary, Service, s; </h2> <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o" >"; Multimodal, A, I, Blockchain, Integratio, n, Green, A, I, Auto, M, L, Predictive, Maintenanc, e AI, Talent, Acquisition, Fraud, Preventio, n & Mo, r, e! </p> </d, i, v> <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8" >" <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6" > <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2" > <Sparkles, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0 /> ======= <div, className=" grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"; <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6" >"; <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2" >"; <Sparkles, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />"; Latest, Article, s; </h3> <div, className="spa, c, e-y-3" >"; {latestArticl, e, s.sli, c, e(0, 3).m, a, p((artic, l, e) => ( <Li, n, k k, e, y={artic, l, e.id} to={artic, l, e.li, n, k} classNa, m, e="block, b, g-whi, t, e/5, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/15, transitio, n-a, l, l" > <div, className="te, x, t-sm, tex, t-purp, l, e-300, m, b-1" >{artic, l, e.catego, r, y}</d, i, v>"; <div, className="fo, n, t-semibo, l, d" >{artic, l, e.tit, l, e}</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-1" >{artic, l, e.readTi, m, e}</d, i, v>"; </Li, n, k> ))} </d, i, v> </d, i, v> <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6" > <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2" > <Zap, className="w-6 h-6, tex, t-gre, e, n-3, 0, 0 /> ======= <div, className=" bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6">"; <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2" >"; <Zap, className="w-6 h-6, tex, t-gre, e, n-3, 0, 0" />"; New, Service, s; </h3> <div, className="spa, c, e-y-3" >"; {latestServic, e, s.sli, c, e(0, 3).m, a, p((servi, c, e) => ( <Li, n, k k, e, y={servi, c, e.id} to={servi, c, e.li, n, k} classNa, m, e="block, b, g-whi, t, e/5, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/15, transitio, n-a, l, l" > <div, className="te, x, t-sm, tex, t-gre, e, n-300, m, b-1" >{servi, c, e.catego, r, y}</d, i, v>"; <div, className="fo, n, t-semibo, l, d" >{servi, c, e.tit, l, e}</d, i, v>"; <div, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-1" >{servi, c, e.prici, n, g}</d, i, v>"; </Li, n, k> ))} </d, i, v> </d, i, v> </d, i, v> <div, className="te, x, t-cent, e, r" >"; <Li, n, k to="/bl, o, g" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-indi, g, o-900, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-50, transitio, n-all, hov, e r:sca, l, e-1, 0, 5" > Explore, All, Content; <ArrowRight, className="w-6 h-6 /> ======= <ArrowRight, className=" w-6 h-6" />"; </Li, n, k> </d, i, v> </d, i, v> </d, i, v> ); }; export default ComprehensivePromoBanner;'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Sparkles, Zap } from 'lucide-react';
+import { newArticles2025 } from '../content/new-articles-2025';
+import { newServices2026 } from '../content/new-services-2026';
+
+interface ComprehensivePromoBannerProps {
+  variant?: 'hero' | 'compact' | 'featured';
+  showCount?: number;
+  className?: string;
+}
+
+const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ 
+  variant = 'hero', 
+  showCount = 4,
+  className = '' 
+}) => {
+  const latestArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
+  const latestServices = newServices2026.filter(s => s.featured).slice(0, showCount);
+
+  if (variant === 'compact') {
+    return (
+      <div className={`bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 ${className}`}>
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-xl font-bold text-white mb-2">
+              🚀 New: {latestArticles.length} Articles + {latestServices.length} Services
+            </h3>
+            <p className="text-indigo-100">
+              Multimodal AI, Blockchain-AI, Green AI, AutoML & More!
+            </p>
+          </div>
+          <Link
+            to="/blog"
+            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors flex items-center gap-2"
+          >
+            Explore Now
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  if (variant === 'featured') {
+    return (
+      <div className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}>
+        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-8">
+          <div className="flex items-center gap-3 mb-4">
+            <Sparkles className="w-8 h-8 text-yellow-300" />
+            <h2 className="text-3xl font-bold text-white">Latest Innovations</h2>
+          </div>
+          <p className="text-purple-100 text-lg">
+            Discover our newest articles and services transforming industries
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 p-8">
+          {latestArticles.slice(0, 2).map((article) => (
+            <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
+              <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
+              <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
+              <p className="text-gray-600 mb-4">{article.description}</p>
+              <Link to={article.link} className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2">
+                Read More <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Hero variant (default)
+  return (
+    <div className={`bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-3xl p-8 md:p-12 text-white ${className}`}>
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
+            <Zap className="w-5 h-5 mr-2" />
+            <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            {latestArticles.length} New Articles + {latestServices.length} Revolutionary Services
+          </h2>
+          <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+            Multimodal AI, Blockchain Integration, Green AI, AutoML, Predictive Maintenance, 
+            AI Talent Acquisition, Fraud Prevention & More!
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <Sparkles className="w-6 h-6 text-yellow-300" />
+              Latest Articles
+            </h3>
+            <div className="space-y-3">
+              {latestArticles.slice(0, 3).map((article) => (
+                <Link
+                  key={article.id}
+                  to={article.link}
+                  className="block bg-white/5 rounded-lg p-4 hover:bg-white/15 transition-all"
+                >
+                  <div className="text-sm text-purple-300 mb-1">{article.category}</div>
+                  <div className="font-semibold">{article.title}</div>
+                  <div className="text-sm text-gray-300 mt-1">{article.readTime}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <Zap className="w-6 h-6 text-green-300" />
+              New Services
+            </h3>
+            <div className="space-y-3">
+              {latestServices.slice(0, 3).map((service) => (
+                <Link
+                  key={service.id}
+                  to={service.link}
+                  className="block bg-white/5 rounded-lg p-4 hover:bg-white/15 transition-all"
+                >
+                  <div className="text-sm text-green-300 mb-1">{service.category}</div>
+                  <div className="font-semibold">{service.title}</div>
+                  <div className="text-sm text-gray-300 mt-1">{service.pricing}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition-all hover:scale-105"
+          >
+            Explore All Content
+            <ArrowRight className="w-6 h-6" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ComprehensivePromoBanner;

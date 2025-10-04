@@ -1,1 +1,147 @@
-export, type, InsightArticle = { id: stri, n, g tit, l, e: stri, n, g summa, r, y: stri, n, g catego, r, y: stri, n, g ======= id: stri, n, g; tit, l, e: stri, n, g; summa, r, y: stri, n, g; catego, r, y: stri, n, g; d, a, t e: stri, n, g; // ISO, date, string readMinut, e, s: numb, e, r; }; export, const, latestInsights: InsightArtic, l, e[] = [ { id: "ai-20, 2, 5-o, c, t-enterpri, s, e-r, a, g-architectu, r, e-bluepri, n, t" tit, l, e: "Enterprise, RAG, Architecture Bluepr, i, n t: 99.9% Precision, at, Scale" summa, r, y: "Reference, architectures, for multimodal, RAG, with co, s, t-aware, routin, g, hybrid, searc, h, and, governance, that scales, across, business uni, t, s." catego, r, y: "RAG, Architectur, e" da, t, e: "20, 2, 5-10-01" readMinut, e, s: 11; } { id: "ai-20, 2, 5-o, c, t-age, n, t-observabili, t, y-gui, d, e" tit, l, e: "Agent, Observabili, t y: Production, Guide, for Sa, f, e, Reliable, Autonomous, Systems" summa, r, y: "Implement, structured, traces, safety, score, s, and, action, audits for, agent, systems to, reach, enterprise SLOs, and, compliance." catego, r, y: "AI, Agent, s" da, t, e: "20, 2, 5-10-01" readMinut, e, s: 9; } { id: "ai-20, 2, 5-o, c, t-ed, g, e-inferen, c, e-patter, n, s-producti, o, n-gui, d, e" tit, l, e: "Edge, Inference, Pattern s: Producti, o, n-Ready, AI, Deployment Guide, 202, 5" summa, r, y: "Master, productio, n-ready, edge, inference with, rea, l-world, deployment, strategies, performance, optimizatio, n, and, cos, t-effective, scaling, for enterprise, A, I." catego, r, y: "Edge, A, I" da, t, e: "20, 2, 5-10-01" readMinut, e, s: 12; } { id: "ai-20, 2, 5-o, c, t-northst, a, r-metri, c, s-ai-produ, c, t-succe, s, s" tit, l, e: "North, Star, Metrics for, AI, Product Succ, e, s s: The, Complete, 2025 Framewo, r, k" summa, r, y: "Learn, the, proven framework, used, by top, AI, companies to, measure, product succe, s, s. Discover, metrics, that correlate, with, revenue and, retentio, n." categ, o, r y: "AI, Strateg, y" da, t, e: "20, 2, 5-10-01" readMinut, e, s: 10; } { id: "observabili, t, y-ot, e, l-trac, e, s-th, a, t-matt, e, r" tit, l, e: "OpenTelemetry, in, Productio n: Traces, That, Engineers Actually, Us, e" summa, r, y: "Sampling, strategie, s, semantic, convention, s, and, dashboards, that shrink, MTTR, for complex, stack, s." catego, r, y: "Observabili, t, y" da, t, e: "20, 2, 5-09-29" readMinut, e, s: 6; } { id: "ed, g, e-inferen, c, e-patter, n, s" tit, l, e: "Edge, Inference, Patterns That, Actually, Reduce Laten, c, y" summa, r, y: "Concrete, deployment, topologies, batching, trick, s, and, cache, strategies that, cut, P95 by, 4, 0%." catego, r, y: "AI, Infrastructur, e" da, t, e: "20, 2, 5-09-28" readMinut, e, s: 7; } { id: "secu, r, e-ml-pipelin, e, s" tit, l, e: "Securing, Machine, Learning Pipelines, in, Production" summa, r, y: "Practical, steps, to harden, data, flows, model, registrie, s, and, deployment, targets for, ML, systems." catego, r, y: "Securi, t, y" da, t, e: "20, 2, 5-08-20" readMinut, e, s: 7; } { id: "nor, t, h-st, a, r-engineeri, n, g-metri, c, s" tit, l, e: "Nor, t, h‑Star, Engineering, Metric s: Fewer, KPI, s, Better, Outcome, s" summa, r, y: "How, to, pick three, metrics, that align, deliver, y, reliabili, t, y, and, cost, without dashboard, bloa, t." catego, r, y: "Leadersh, i, p" da, t, e: "20, 2, 5-08-30" readMinut, e, s: 5; } { id: "clo, u, d-co, s, t-optimizati, o, n" tit, l, e: "Cloud, Cost, Optimizatio n: 9, Wins, in 90, Day, s" summa, r, y: "How, we, helped three, clients, reduce cloud, spend, by 32% on, average, without sacrificing, performanc, e." categ, o, r y: "Clo, u, d" da, t, e: "20, 2, 5-08-05" readMinut, e, s: 5; } { id: "da, t, a-governan, c, e-start, e, r" tit, l, e: "Data, Governance, Starter Guide, for, Mid‑Market, Team, s" summa, r, y: "A, n, o‑nonsense, playbook, for data, qualit, y, linea, g, e, and, access, controls you, can, adopt this, quarte, r." catego, r, y: "Da, t, a" da, t, e: "20, 2, 5-07-18" readMinut, e, s: 8; } { id: "kubernet, e, s-runti, m, e-securi, t, y-essentia, l, s" tit, l, e: "Kubernetes, Securi, t y: Runtime, Protection, Essentials" summa, r, y: "Secure, your, K8s clusters, with, RBAC, network, policie, s, pod, security, standards, and, rea, l-time, threat, detection." catego, r, y: "Securi, t, y" da, t, e: "20, 2, 5-09-30" readMinut, e, s: 9; } { id: "gre, e, n-ml-carb, o, n-optimizati, o, n" tit, l, e: "Gree, n, M L: Optimizing, AI, Carbon Footprint, in, Production" summa, r, y: "Measure, and, reduce ML, carbon, emissions with, efficient, training, model, compressio, n, and, renewabl, e-powered, inferenc, e." catego, r, y: "AI & Sustainabili, t, y" da, t, e: "20, 2, 5-09-30" readMinut, e, s: 7; } { id: "distribut, e, d-traci, n, g-microservic, e, s" tit, l, e: "Distributed, Traci, n g: Debugging, Microservices, at Sca, l, e" summa, r, y: "Implement, OpenTelemetry, tracing with, smart, sampling, context, propagatio, n, and, dashboards, that reduce, MTTR, by 60%." catego, r, y: "Observabili, t, y" da, t, e: "20, 2, 5-09-30" readMinut, e, s: 8; } { id: "realti, m, e-ml-inferen, c, e-patter, n, s" tit, l, e: "Re, a, l-Time, ML, Inferenc e: S, u, b-100ms, Latency, Patterns" summa, r, y: "Achieve, ultr, a-low, latency, ML serving, with, model optimizati, o, n, batching, strategie, s, and, edge, deployment." catego, r, y: "ML, Engineerin, g" da, t, e: "20, 2, 5-09-30" readMinut, e, s: 10; } { id: "ai-co, s, t-governan, c, e-framewo, r, k" tit, l, e: "AI, Cost, Governanc e: FinOps, Framework, for ML, Team, s" summa, r, y: "Control, AI, spend with, token, budgets, model, righ, t-sizi, n, g, and, automated, cost alerts, tied, to business, KPI, s." catego, r, y: "AI, FinOp, s" da, t, e: "20, 2, 5-09-30" readMinut, e, s: 6; } ======= id: "ai-20, 2, 5-o, c, t-enterpri, s, e-r, a, g-architectu, r, e-bluepri, n, t","; tit, l, e: "Enterprise, RAG, Architecture Bluepr, i, n t: 99.9% Precision, at, Scale","; summa, r, y: "Reference, architectures, for multimodal, RAG, with co, s, t-aware, routin, g, hybrid, searc, h, and, governance, that scales, across, business uni, t, s.","; catego, r, y: "RAG, Architectur, e","; da, t, e: "20, 2, 5-10-01","; readMinut, e, s: 11 } { id: "ai-20, 2, 5-o, c, t-age, n, t-observabili, t, y-gui, d, e","; tit, l, e: "Agent, Observabili, t y: Production, Guide, for Sa, f, e, Reliable, Autonomous, Systems","; summa, r, y: "Implement, structured, traces, safety, score, s, and, action, audits for, agent, systems to, reach, enterprise SLOs, and, compliance.","; catego, r, y: "AI, Agent, s","; da, t, e: "20, 2, 5-10-01","; readMinut, e, s: 9 } { id: "ai-20, 2, 5-o, c, t-ed, g, e-inferen, c, e-patter, n, s-producti, o, n-gui, d, e","; tit, l, e: "Edge, Inference, Pattern s: Producti, o, n-Ready, AI, Deployment Guide, 202, 5","; summa, r, y: "Master, productio, n-ready, edge, inference with, rea, l-world, deployment, strategies, performance, optimizatio, n, and, cos, t-effective, scaling, for enterprise, A, I.","; catego, r, y: "Edge, A, I","; da, t, e: "20, 2, 5-10-01","; readMinut, e, s: 12 } { id: "ai-20, 2, 5-o, c, t-northst, a, r-metri, c, s-ai-produ, c, t-succe, s, s","; tit, l, e: "North, Star, Metrics for, AI, Product Succ, e, s s: The, Complete, 2025 Framewo, r, k","; summa, r, y: "Learn, the, proven framework, used, by top, AI, companies to, measure, product succe, s, s. Discover, metrics, that correlate, with, revenue and, retentio, n.","; catego, r, y: "AI, Strateg, y","; da, t, e: "20, 2, 5-10-01","; readMinut, e, s: 10 } { id: "observabili, t, y-ot, e, l-trac, e, s-th, a, t-matt, e, r","; tit, l, e: "OpenTelemetry, in, Productio n: Traces, That, Engineers Actually, Us, e","; summa, r, y: "Sampling, strategie, s, semantic, convention, s, and, dashboards, that shrink, MTTR, for complex, stack, s.","; catego, r, y: "Observabili, t, y","; da, t, e: "20, 2, 5-09-29","; readMinut, e, s: 6 } { id: "ed, g, e-inferen, c, e-patter, n, s","; tit, l, e: "Edge, Inference, Patterns That, Actually, Reduce Laten, c, y","; summa, r, y: "Concrete, deployment, topologies, batching, trick, s, and, cache, strategies that, cut, P95 by, 4, 0%.","; catego, r, y: "AI, Infrastructur, e","; da, t, e: "20, 2, 5-09-28","; readMinut, e, s: 7 } { id: "secu, r, e-ml-pipelin, e, s","; tit, l, e: "Securing, Machine, Learning Pipelines, in, Production","; summa, r, y: "Practical, steps, to harden, data, flows, model, registrie, s, and, deployment, targets for, ML, systems.","; catego, r, y: "Securi, t, y","; da, t, e: "20, 2, 5-08-20","; readMinut, e, s: 7 } { id: "nor, t, h-st, a, r-engineeri, n, g-metri, c, s","; tit, l, e: "Nor, t, h‑Star, Engineering, Metric s: Fewer, KPI, s, Better, Outcome, s","; summa, r, y: "How, to, pick three, metrics, that align, deliver, y, reliabili, t, y, and, cost, without dashboard, bloa, t.","; catego, r, y: "Leadersh, i, p","; da, t, e: "20, 2, 5-08-30","; readMinut, e, s: 5 } { id: "clo, u, d-co, s, t-optimizati, o, n","; tit, l, e: "Cloud, Cost, Optimizatio n: 9, Wins, in 90, Day, s","; summa, r, y: "How, we, helped three, clients, reduce cloud, spend, by 32% on, average, without sacrificing, performanc, e.","; catego, r, y: "Clo, u, d","; da, t, e: "20, 2, 5-08-05","; readMinut, e, s: 5 } { id: "da, t, a-governan, c, e-start, e, r","; tit, l, e: "Data, Governance, Starter Guide, for, Mid‑Market, Team, s","; summa, r, y: "A, n, o‑nonsense, playbook, for data, qualit, y, linea, g, e, and, access, controls you, can, adopt this, quarte, r.","; catego, r, y: "Da, t, a","; da, t, e: "20, 2, 5-07-18","; readMinut, e, s: 8 } { id: "kubernet, e, s-runti, m, e-securi, t, y-essentia, l, s","; tit, l, e: "Kubernetes, Securi, t y: Runtime, Protection, Essentials","; summa, r, y: "Secure, your, K8s clusters, with, RBAC, network, policie, s, pod, security, standards, and, rea, l-time, threat, detection.","; catego, r, y: "Securi, t, y","; da, t, e: "20, 2, 5-09-30","; readMinut, e, s: 9 } { id: "gre, e, n-ml-carb, o, n-optimizati, o, n","; tit, l, e: "Gree, n, M L: Optimizing, AI, Carbon Footprint, in, Production","; summa, r, y: "Measure, and, reduce ML, carbon, emissions with, efficient, training, model, compressio, n, and, renewabl, e-powered, inferenc, e.","; catego, r, y: "AI & Sustainabili, t, y","; da, t, e: "20, 2, 5-09-30","; readMinut, e, s: 7 } { id: "distribut, e, d-traci, n, g-microservic, e, s","; tit, l, e: "Distributed, Traci, n g: Debugging, Microservices, at Sca, l, e","; summa, r, y: "Implement, OpenTelemetry, tracing with, smart, sampling, context, propagatio, n, and, dashboards, that reduce, MTTR, by 60%.","; catego, r, y: "Observabili, t, y","; da, t, e: "20, 2, 5-09-30","; readMinut, e, s: 8 } { id: "realti, m, e-ml-inferen, c, e-patter, n, s","; tit, l, e: "Re, a, l-Time, ML, Inferenc e: S, u, b-100ms, Latency, Patterns","; summa, r, y: "Achieve, ultr, a-low, latency, ML serving, with, model optimizati, o, n, batching, strategie, s, and, edge, deployment.","; catego, r, y: "ML, Engineerin, g","; da, t, e: "20, 2, 5-09-30","; readMinut, e, s: 10 } { id: "ai-co, s, t-governan, c, e-framewo, r, k","; tit, l, e: "AI, Cost, Governanc e: FinOps, Framework, for ML, Team, s","; summa, r, y: "Control, AI, spend with, token, budgets, model, righ, t-sizi, n, g, and, automated, cost alerts, tied, to business, KPI, s.","; catego, r, y: "AI, FinOp, s","; da, t, e: "20, 2, 5-09-30","; readMinut, e, s: 6 } ];
+export type InsightArticle = {
+  id: string;
+  title: string;
+  summary: string;
+  category: string;
+  date: string; // ISO date string
+  readMinutes: number;
+};
+
+export const latestInsights: InsightArticle[] = [
+  {
+    id: "ai-2025-oct-enterprise-rag-architecture-blueprint",
+    title: "Enterprise RAG Architecture Blueprint: 99.9% Precision at Scale",
+    summary:
+      "Reference architectures for multimodal RAG with cost-aware routing, hybrid search, and governance that scales across business units.",
+    category: "RAG Architecture",
+    date: "2025-10-01",
+    readMinutes: 11,
+  },
+  {
+    id: "ai-2025-oct-agent-observability-guide",
+    title: "Agent Observability: Production Guide for Safe, Reliable Autonomous Systems",
+    summary:
+      "Implement structured traces, safety scores, and action audits for agent systems to reach enterprise SLOs and compliance.",
+    category: "AI Agents",
+    date: "2025-10-01",
+    readMinutes: 9,
+  },
+  {
+    id: "ai-2025-oct-edge-inference-patterns-production-guide",
+    title: "Edge Inference Patterns: Production-Ready AI Deployment Guide 2025",
+    summary:
+      "Master production-ready edge inference with real-world deployment strategies, performance optimization, and cost-effective scaling for enterprise AI.",
+    category: "Edge AI",
+    date: "2025-10-01",
+    readMinutes: 12,
+  },
+  {
+    id: "ai-2025-oct-northstar-metrics-ai-product-success",
+    title: "North Star Metrics for AI Product Success: The Complete 2025 Framework",
+    summary:
+      "Learn the proven framework used by top AI companies to measure product success. Discover metrics that correlate with revenue and retention.",
+    category: "AI Strategy",
+    date: "2025-10-01",
+    readMinutes: 10,
+  },
+  {
+    id: "observability-otel-traces-that-matter",
+    title: "OpenTelemetry in Production: Traces That Engineers Actually Use",
+    summary:
+      "Sampling strategies, semantic conventions, and dashboards that shrink MTTR for complex stacks.",
+    category: "Observability",
+    date: "2025-09-29",
+    readMinutes: 6,
+  },
+  {
+    id: "edge-inference-patterns",
+    title: "Edge Inference Patterns That Actually Reduce Latency",
+    summary:
+      "Concrete deployment topologies, batching tricks, and cache strategies that cut P95 by 40%.",
+    category: "AI Infrastructure",
+    date: "2025-09-28",
+    readMinutes: 7,
+  },
+  {
+    id: "secure-ml-pipelines",
+    title: "Securing Machine Learning Pipelines in Production",
+    summary:
+      "Practical steps to harden data flows, model registries, and deployment targets for ML systems.",
+    category: "Security",
+    date: "2025-08-20",
+    readMinutes: 7,
+  },
+  {
+    id: "north-star-engineering-metrics",
+    title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
+    summary:
+      "How to pick three metrics that align delivery, reliability, and cost without dashboard bloat.",
+    category: "Leadership",
+    date: "2025-08-30",
+    readMinutes: 5,
+  },
+  {
+    id: "cloud-cost-optimization",
+    title: "Cloud Cost Optimization: 9 Wins in 90 Days",
+    summary:
+      "How we helped three clients reduce cloud spend by 32% on average without sacrificing performance.",
+    category: "Cloud",
+    date: "2025-08-05",
+    readMinutes: 5,
+  },
+  {
+    id: "data-governance-starter",
+    title: "Data Governance Starter Guide for Mid‑Market Teams",
+    summary:
+      "A no‑nonsense playbook for data quality, lineage, and access controls you can adopt this quarter.",
+    category: "Data",
+    date: "2025-07-18",
+    readMinutes: 8,
+  },
+  {
+    id: "kubernetes-runtime-security-essentials",
+    title: "Kubernetes Security: Runtime Protection Essentials",
+    summary:
+      "Secure your K8s clusters with RBAC, network policies, pod security standards, and real-time threat detection.",
+    category: "Security",
+    date: "2025-09-30",
+    readMinutes: 9,
+  },
+  {
+    id: "green-ml-carbon-optimization",
+    title: "Green ML: Optimizing AI Carbon Footprint in Production",
+    summary:
+      "Measure and reduce ML carbon emissions with efficient training, model compression, and renewable-powered inference.",
+    category: "AI & Sustainability",
+    date: "2025-09-30",
+    readMinutes: 7,
+  },
+  {
+    id: "distributed-tracing-microservices",
+    title: "Distributed Tracing: Debugging Microservices at Scale",
+    summary:
+      "Implement OpenTelemetry tracing with smart sampling, context propagation, and dashboards that reduce MTTR by 60%.",
+    category: "Observability",
+    date: "2025-09-30",
+    readMinutes: 8,
+  },
+  {
+    id: "realtime-ml-inference-patterns",
+    title: "Real-Time ML Inference: Sub-100ms Latency Patterns",
+    summary:
+      "Achieve ultra-low latency ML serving with model optimization, batching strategies, and edge deployment.",
+    category: "ML Engineering",
+    date: "2025-09-30",
+    readMinutes: 10,
+  },
+  {
+    id: "ai-cost-governance-framework",
+    title: "AI Cost Governance: FinOps Framework for ML Teams",
+    summary:
+      "Control AI spend with token budgets, model right-sizing, and automated cost alerts tied to business KPIs.",
+    category: "AI FinOps",
+    date: "2025-09-30",
+    readMinutes: 6,
+  },
+];
+

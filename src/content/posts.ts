@@ -1,1 +1,1444 @@
-export, interface, BlogPost { sl, u, g: stri, n, g; tit, l, e: stri, n, g; descripti, o, n: stri, n, g; catego, r, y: stri, n, g; publishe, d, A t: stri, n, g; featur, e, d?: boole, a, n; readTi, m, e?: stri, n, g; } export, const, posts: BlogPo, s, t[] = [ { s, l, u g: "ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t" tit, l, e: "AI, 20, 2 7: Operational, Trust, Blueprint" descripti, o, n: "SLIs, wired, to KPIs, with, budgets, canari, e, s, and, instant, rollback." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 7-02-07" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s" tit, l, e: "Edge, 20, 2 6: Private, Feature, Flags" descripti, o, n: "Signed, config, s, scoped, ID, s, and, o, n‑device, metrics, for ze, r, o‑PII, rollout, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 7-02-06" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6" tit, l, e: "GenAI, Quality, Tiers v2 (20, 2, 6)" descripti, o, n: "Predictable, cost, and stable, UX, using quality, tier, s + cach, e, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 7-02-05" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-20, 2, 8-autonomo, u, s-enterpri, s, e-revoluti, o, n" tit, l, e: "AI, 20, 2 8: Autonomous, Enterprise, Revolution" descripti, o, n: "From, reactive, ops to, sel, f‑optimizing, enterpris, e s: budge, t, s, guardrai, l, s, and, KP, I‑linked, autonomy, that scales, safel, y." catego, r, y: "Enterprise, A, I" published, A, t: "20, 2, 7-02-06" featur, e, d: tr, u, e readTi, m, e: "12, min, read" } { sl, u, g: "ai-20, 2, 7-quant, u, m-enhanc, e, d-machi, n, e-learni, n, g" tit, l, e: "Quant, u, m‑Enhanced, Machine, Learning 2, 0, 2 7: Secu, r, e, Scalab, l, e, R, O, I‑Prov, e, n" descripti, o, n: "Hybrid, quantu, m‑classical, pipelines, with verifiable, speedup, s, enterprise, securit, y, and, measurable, ROI." catego, r, y: "AI, Researc, h" published, A, t: "20, 2, 7-02-04" featur, e, d: tr, u, e readTi, m, e: "10, min, read" } { sl, u, g: "ai-20, 2, 8-realti, m, e-multimod, a, l-assistan, t, s" tit, l, e: "Realtime, Multimodal, Assistants 2, 0, 2 8: <100, m, s, Private, by, Design" descripti, o, n: "Visi, o, n+spee, c, h+text, assistants, with edge, personalizatio, n, tiered, model, s, and, budge, t‑aware, routing, under 100, m, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 7-02-03" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ai-20, 2, 7-executi, v, e-ai-fundi, n, g-bluepri, n, t" tit, l, e: "Executive, AI, Funding Blueprint, 20, 2 7: KP, I, s, Budge, t, s, Governan, c, e" descripti, o, n: "Secure, funding, and sustain, AI, programs with, KP, I-linked, scorecard, s, budget, guard, s, and, governance, gates that, prove, ROI." catego, r, y: "Strate, g, y" published, A, t: "20, 2, 7-02-01" featur, e, d: tr, u, e readTi, m, e: "12, min, read" } { sl, u, g: "ed, g, e-20, 2, 7-ze, r, o-p, i, i-analyti, c, s-v3" tit, l, e: "Ze, r, o‑PII, Edge, Analytics v3 (20, 2, 7): Scoped, ID, s, On‑Device, D, P, <100, m, s" descripti, o, n: "Ne, x, t‑gen, privacy, analytic s: scoped, identifier, s, local, aggregatio, n, and, differential, privacy delivering, actionable, insights under, 100m, s." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 7-02-01" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-enterpri, s, e-transformati, o, n-20, 2, 7" tit, l, e: "AI, Enterprise, Transformation 2, 0, 2 7: Executive, Playboo, k" descripti, o, n: "Practical, blueprint, to pl, a, n, fu, n, d, and, scale, enterprise AI, with, measurable ROI, and, safety." catego, r, y: "Enterprise, A, I" published, A, t: "20, 2, 7-01-25" featur, e, d: tr, u, e readTi, m, e: "10, min, read" } { sl, u, g: "ai-20, 2, 7-revolutiona, r, y-breakthrou, g, h" tit, l, e: "AI, 2027, Revolutionary Breakthrou, g, h" descripti, o, n: "Quant, u, m‑neural, advances, drive 95% automation, and, 1000x performance, for, enterprises." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 7-01-15" featur, e, d: tr, u, e readTi, m, e: "10, min, read" } { sl, u, g: "agent, i, c-workfl, o, w-orchestrati, o, n-20, 2, 6" tit, l, e: "Agentic, Workflow, Orchestration 2, 0, 2 6: Budget, e, d, Observab, l, e, Sa, f, e" descripti, o, n: "Design, agentic, workflows with, budget, s, K, P, I‑linked, canarie, s, and, on, e‑click, rollback, for safe, velocit, y." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 6-10-15" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ai-20, 2, 7-hyp, e, r-automati, o, n-bluepri, n, t" tit, l, e: "AI, 2027, Hyper‑Automation, Blueprin, t" descripti, o, n: "E, n, d‑to‑end, autonomous, operations with, budget, s, guar, d, s, and, instant, rollback." catego, r, y: "Automati, o, n" published, A, t: "20, 2, 7-01-10" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "gen, a, i-reliabili, t, y-scorecar, d, s-20, 2, 7" tit, l, e: "GenAI, Reliability, Scorecards 2, 0, 2 7: KP, I, s, Budge, t, s, Rollba, c, k" descripti, o, n: "Live, KPIs, with budgeted, actions, and instant, rollback, to keep, GenAI, reliable and, affordabl, e." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 7-01-20" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-20, 2, 7-quant, u, m-breakthrou, g, h-enterpri, s, e" tit, l, e: "Quantum, Breakthrough, 2027 for, the, Enterprise" descripti, o, n: "Enterpri, s, e‑ready, quantu, m‑neural, syste, m s: secu, r, e, scalab, l, e, and, RO, I‑prov, e, n." catego, r, y: "AI, Researc, h" published, A, t: "20, 2, 7-01-08" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "re, a, l-ti, m, e-decisi, o, n-engin, e, s-20, 2, 6" tit, l, e: "Re, a, l‑Time, Decision, Engines 2, 0, 2 6: 1, 0, M/sec, under, 1ms" descripti, o, n: "Edge, warm, pools, intent, prefetchin, g, and, semantic, caches for, deterministi, c, l, o, w‑latency, decision, s." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "10, min, read" } { sl, u, g: "federat, e, d-learni, n, g-enterpri, s, e-20, 2, 6" tit, l, e: "Federated, Learning, 202 6: Enterpri, s, e‑Grade, Privacy, by Desi, g, n" descripti, o, n: "Train, across, subsidiaries without, centralizing, data using, scoped, IDs, secure, aggregatio, n, and, DP, noise." catego, r, y: "Machine, Learnin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "cogniti, v, e-financi, a, l-modeli, n, g-20, 2, 7" tit, l, e: "AI, Financial, Modeling 2, 0, 2 7: 95% Prediction, Accuracy, with Guardrai, l, s" descripti, o, n: "Budg, e, t‑aware, forecasting, with K, P, I‑linked, scorecard, s, eva, l, s, and, instant, rollback for, safet, y." catego, r, y: "FinTech, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "11, min, read" } { sl, u, g: "ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s" tit, l, e: "Edge, 20, 2 6: Private, Feature, Flags" descripti, o, n: "Signed, config, s, scoped, ID, s, and, o, n‑device, metrics, for ze, r, o‑PII, rollouts, at <100, m, s." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "10, min, read" } { sl, u, g: "ai-governan, c, e-pr-poli, c, y-tes, t, s-20, 2, 7-q4" tit, l, e: "AI, Governan, c e: PR, Policy, Tests Q4, 202, 7 — Ship, Fas, t, Stay, Saf, e" descripti, o, n: "CI, policy, tests wired, to, KPIs to, prevent, regressions while, preserving, velocity." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "age, n, t-relea, s, e-guardrai, l, s-20, 2, 6" tit, l, e: "Agent, Release, Guardrails 20, 2, 6" descripti, o, n: "Budge, t, s, approva, l, s, K, P, I‑linked, canarie, s, and, instant, rollback for, safe, automation." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-tru, s, t-scorecar, d, s-v5-20, 2, 7" tit, l, e: "AI, Trust, Scorecards v5 (20, 2, 7): KP, I, s, Budge, t, s, Guardrai, l, s" descripti, o, n: "Ne, x, t‑gen, scorecards, linking SLIs, to, KPIs with, budgeted, actions, PR, policy, tests, and, instant, rollback." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 6-12-01" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ed, g, e-priva, t, e-eva, l, s-20, 2, 6" tit, l, e: "Private, Evals, at the, Edg, e (20, 2, 6): <100, m, s, Ze, r, o‑P, I, I" descripti, o, n: "On‑device, evals, with scoped, ID, s, local, aggregatio, n, and, DP, noise for, saf, e, fast, feedback, loops." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 6-12-01" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "agento, p, s-runboo, k, s-v3-20, 2, 6" tit, l, e: "AgentOps, Runbooks, v3 (20, 2, 6): Approva, l, s, Budge, t, s, O, n, e‑Click, Recover, y" descripti, o, n: "Batt, l, e‑tested, operational, runbooks for, agents, with K, P, I‑linked, canaries, and instant, rollbac, k." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 6-12-01" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ed, g, e-consentle, s, s-analyti, c, s-20, 2, 7" tit, l, e: "Edge, Consentless, Analytics 2, 0, 2 7: Ze, r, o‑PII, Insights, at <100, m, s" descripti, o, n: "Scoped, ID, s, on‑device, aggregatio, n, and, DP, noise for, global, analytics without, PI, I." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-cac, h, e-playbo, o, k-20, 2, 6" tit, l, e: "GenAI, Cache, Playbook 2, 0, 2 6: Semant, i, c, Programmat, i, c, and, Tiered, Caches" descripti, o, n: "Stabilize, UX, and cut, costs, 30–70% with, semantic, caches and, budge, t‑aware, routin, g." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ai-enterpri, s, e-co, s, t-guardrai, l, s-20, 2, 6" tit, l, e: "AI, Enterprise, Cost Guardrails, 20, 2 6: Budge, t, s, Tie, r, s, Approva, l, s" descripti, o, n: "Cost, SLO, s, quality, tier, s, and, approvals, that keep, spend, predictable without, hurting, quality." catego, r, y: "FinO, p, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-operation, a, l-scorecar, d, s-v4-20, 2, 6" tit, l, e: "AI, Operational, Scorecards v4 (20, 2, 6)" descripti, o, n: "SLIs, mapped, to KPIs, with, budgeted actions, and, instant rollba, c, k." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-ze, r, o-p, i, i-insigh, t, s-20, 2, 6" tit, l, e: "Edge, Zer, o‑PII, Insights, 2026" descripti, o, n: "Scoped, ID, s, on‑device, aggregatio, n, and, DP, noise—zero, PI, I." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6" tit, l, e: "GenAI, Quality, Tiers v2 (20, 2, 6)" descripti, o, n: "Quality, tiers, and caches, for, predictable cost, and, stable UX." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ed, g, e-r, a, g-priva, c, y-preservi, n, g-20, 2, 6" tit, l, e: "Edge, RAG, 202 6: Priva, c, y‑Preserving, Answer, s" descripti, o, n: "Hybrid, edge, retrieval with, TTL, freshness and, o, n‑device, caches, for <100, m, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-governan, c, e-pr-poli, c, y-tes, t, s-20, 2, 6" tit, l, e: "PR, Policy, Tests 20, 2, 6" descripti, o, n: "Lightweight, CI, policy tests, wired, to product, KPI, s." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-governan, c, e-li, v, e-metri, c, s-20, 2, 5" tit, l, e: "AI, Governance, Live Metrics, 20, 2 5: Ship, Faster, Without Regressio, n, s" descripti, o, n: "CI, policy, tests + K, P, I‑linked, canaries, to prevent, regressions, before they, shi, p." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-ze, r, o-p, i, i-personalizati, o, n-20, 2, 5" tit, l, e: "Edge, Zer, o‑PII, Personalization, 202 5: <100, m, s, Private, by, Design" descripti, o, n: "Scoped, ID, s, on‑device, model, s, and, DP, noise for, rea, l‑time, personalization, without P, I, I." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-executi, v, e-scorecar, d, s-20, 2, 7" tit, l, e: "AI, Executive, Scorecards 2, 0, 2 7: Proving, ROI, with Live, KPI, s" descripti, o, n: "Design, exe, c-ready, AI, scorecards tying, model, spend to, KPIs, with guardrails, and, SLIs." catego, r, y: "Strate, g, y" published, A, t: "20, 2, 7-01-05" featur, e, d: tr, u, e readTi, m, e: "11, min, read" } { sl, u, g: "ai-20, 2, 5-co, s, t-controlle, r, s-v1" tit, l, e: "AI, Cost, Controllers v1 (20, 2, 5): Budge, t, s, Tie, r, s, and, Guardrail, s" descripti, o, n: "Practical, cost, governanc e: route, by, quality ti, e, r, enforce, budget, s, and, prevent, overruns with, policy, tests." catego, r, y: "FinO, p, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ed, g, e-20, 2, 5-realti, m, e-personalizati, o, n" tit, l, e: "Realtime, Personalization, 2025 at, the, Edg e: <100, m, s, Ze, r, o‑P, I, I" descripti, o, n: "Edge, feature, flags, scoped, ID, s, and, o, n‑device, telemetry, to deliver, privat, e, s, u, b‑100ms, personalizatio, n." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-20, 2, 5-autonomo, u, s-infrastructu, r, e-bluepri, n, t" tit, l, e: "Autonomous, Infrastructure, 202 5: Se, l, f‑Heali, n, g, Se, l, f‑Optimizi, n, g, Se, l, f‑Scali, n, g" descripti, o, n: "Design, an, AI‑driven, infra, platform with, predictive, autoscaling, policy, test, s, and, instant, rollback for, 9, 9.99% upti, m, e." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "12, min, read" } { sl, u, g: "ed, g, e-20, 2, 5-ze, r, o-p, i, i-experimen, t, s" tit, l, e: "Edge, Experiments, 202 5: Ze, r, o‑PII, Global, A/B, a, t <100, m, s" descripti, o, n: "Scoped, ID, s, on‑device, metric, s, and, DP, noise for, compliant, experimentation with, su, b‑100ms, reads, worldwide." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "gen, a, i-20, 2, 5-routi, n, g-cach, e, s-v1" tit, l, e: "GenAI, Routing, v1 (20, 2, 5): Tiered, Model, s + Semantic, Cache, s" descripti, o, n: "Predictable, cost, and stable, UX, using route, guard, s, tiered, model, s, and, cache, hits tied, to, product KP, I, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "10, min, read" } { sl, u, g: "ai-20, 2, 7-ed, g, e-nati, v, e-agen, t, s" tit, l, e: "Ed, g, e‑Native, Agents, 202 7: Private, Tools, at <100, m, s" descripti, o, n: "Design, agents, that run, close, to users, with, scoped permissio, n, s, on‑device, tool, s, and, instant, rollback." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-20, 2, 7-operation, a, l-scorecar, d, s" tit, l, e: "Operational, AI, Scorecards 2, 0, 2 7: KP, I, s, Budge, t, s, Rollba, c, k" descripti, o, n: "Live, scorecards, that link, SLIs, to product, KPIs, with budgeted, actions, and o, n, e‑click, recover, y." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "gen, a, i-20, 2, 7-quali, t, y-tie, r, s-at-sca, l, e" tit, l, e: "GenAI, 20, 2 7: Quality, Tiers, at Scale, with, Semantic Cach, e, s" descripti, o, n: "Predictable, cost, and stable, UX, using tiered, model, s, semantic, cache, s, and, KP, I‑aware, routin, g." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ai-20, 2, 6-reliab, l, e-gen, a, i-platfo, r, m" tit, l, e: "Reliable, GenAI, Platform 2, 0, 2 6: SL, A, s, Budge, t, s, and, Rollbac, k" descripti, o, n: "Blueprint, for, a dependable, GenAI, platform with, quality, tiers, budge, t, s, eva, l, s, and, instant, rollback tied, to, KPIs." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "12, min, read" } { sl, u, g: "ed, g, e-priva, c, y-insigh, t, s-20, 2, 6" tit, l, e: "Edge, Privacy, Insights 2, 0, 2 6: Scoped, ID, s, On‑Device, Telemetr, y, DP, Nois, e" descripti, o, n: "Priva, c, y‑first, insights, with scoped, identifier, s, device, aggregatio, n, and, differential, privacy at <100, m, s." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ed, g, e-consentle, s, s-experimen, t, s-20, 2, 6-q4" tit, l, e: "Edge, Consentless, Experiments Q4, 20, 2 6: Globa, l, A/B, i, n <100, m, s" descripti, o, n: "Complia, n, t, fast, experimentation, with scoped, ID, s, on‑device, metric, s, and, DP, noise—zero, PI, I." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-s, l, a-scorecar, d, s-20, 2, 6-q1" tit, l, e: "AI, SLA, Scorecards 202, 6, Q 1: SL, I, s, Budge, t, s, Rollba, c, k" descripti, o, n: "Wire, SLIs, to product, KPIs, with budgeted, actions, and instant, rollback, for safe, velocit, y." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 6-04-01" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-priva, t, e-insigh, t, s-v2-20, 2, 6" tit, l, e: "Edge, Private, Insights v2 (20, 2, 6): Ze, r, o‑PII, Metrics, at <100, m, s" descripti, o, n: "Scoped, ID, s, on‑device, aggregatio, n, and, DP, noise for, actionable, insights without, PI, I." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 6-04-01" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "age, n, t-relea, s, e-runboo, k, s-v2-20, 2, 6" tit, l, e: "Agent, Release, Runbooks v2 (20, 2, 6): Budge, t, s + O, n, e‑Click, Recover, y" descripti, o, n: "Batt, l, e‑tested, runbooks, with approva, l, s, K, P, I‑linked, canarie, s, and, instant, rollback." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 6-04-01" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-operation, a, l-scorecar, d, s-q4-20, 2, 6" tit, l, e: "AI, Operational, Scorecards Q4, 20, 2 6: SLIs, Wired, to KP, I, s" descripti, o, n: "SLIs, mapped, to KPIs, with, budgeted actio, n, s, live, canarie, s, and, instant, rollback for, safe, autonomy." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-operation, a, l-tru, s, t-q4-20, 2, 5" tit, l, e: "AI, Operational, Trust Q4, 20, 2 5: Live, Scorecards, that Sh, i, p" descripti, o, n: "K, P, I‑linked, guardrails, with PR, check, s, budgeted, action, s, and, instant, rollback to, ship, faster with, confidenc, e." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-20, 2, 6-reliab, l, e-age, n, t-relea, s, e-runboo, k, s" tit, l, e: "Reliable, Agent, Release Runbooks, 20, 2 6: Approva, l, s, Budge, t, s, Rollbac, k, s" descripti, o, n: "Template, runbooks, with budgeted, action, s, hum, a, n-in-t, h, e-loop, approval, s, and, instant, rollbacks mapped, to, KPIs." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ed, g, e-consentle, s, s-metri, c, s-20, 2, 6" tit, l, e: "Edge, Consentless, Metrics 2, 0, 2 6: Scoped, ID, s, On‑Device, Aggregatio, n" descripti, o, n: "Ze, r, o‑PII, telemetry, with scoped, identifier, s, local, aggregatio, n, and, DP, noise under, 100m, s." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-budg, e, t-awa, r, e-routi, n, g-20, 2, 6" tit, l, e: "GenAI, Budge, t‑Aware, Routing, 202 6: Quality, Tiers, with Cost, Guard, s" descripti, o, n: "Deterministic, routing, using tiered, model, s, cach, e, s, and, budget, controllers to, stabilize, cost and, U, X." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ed, g, e-consentle, s, s-analyti, c, s-q4-20, 2, 5" tit, l, e: "Consentless, Edge, Analytics Q4, 20, 2 5: Private, Metrics, Under 100, m, s" descripti, o, n: "Scoped, ID, s, on‑device, aggregatio, n, and, differential, privacy for, complian, t, l, o, w‑latency, analytics, with zero, PI, I." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-routi, n, g-quali, t, y-tie, r, s-q4-20, 2, 5" tit, l, e: "GenAI, Routing, Quality Tiers, Q4, 202 5: Predictable, Cos, t, Stable, U, X" descripti, o, n: "Tiered, model, s, cachi, n, g, and, budge, t‑aware, routes, mapped to, SLOs, to keep, quality, high and, costs, predictable." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-governan, c, e-re, a, l-ti, m, e-20, 2, 6" tit, l, e: "AI, Governance, in Real, Time, 202 6: Live, Canarie, s + PR, Policy, Tests" descripti, o, n: "Wire, KP, I‑linked, canaries, and CI, policy, tests so, teams, ship weekly, without, regressions." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-inferen, c, e-wa, r, m-poo, l, s-20, 2, 6" tit, l, e: "Edge, Inference, Warm Pools, 20, 2 6: S, u, b‑100ms, Global, with Predictable, Cos, t" descripti, o, n: "Warm, pool, s, intent, prefetchin, g, and, tiered, caches for, fas, t, affordable, inference, worldwide." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "age, n, t-relea, s, e-guardrai, l, s-20, 2, 6" tit, l, e: "Agent, Release, Guardrails 2, 0, 2 6: Budge, t, s, Approva, l, s, and, Instant, Rollback" descripti, o, n: "Batt, l, e‑tested, checklists, for safe, agent, updates with, budgeted, actions and, on, e‑click, rollbac, k." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-governan, c, e-runti, m, e-scorecar, d, s-20, 2, 6" tit, l, e: "AI, Governance, Runtime Scorecards, 20, 2 6: KP, I, s, Budge, t, s, Rollba, c, k" descripti, o, n: "Live, guardrails, wired to, KPIs, with PR, check, s, budge, t, s, and, instant, rollback that, speed, delivery." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-experimen, t, s-und, e, r-100, m, s-quicksta, r, t-20, 2, 6" tit, l, e: "Edge, Experiments, Quickstart 2, 0, 2 6: Privat, e, A/B, a, t <100, m, s" descripti, o, n: "Scoped, ID, s, on-device, metric, s, and, DP, noise for, compliant, global experimentation, without, latency t, a, x." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "age, n, t-relea, s, e-guardrai, l, s-checkli, s, t-20, 2, 6-v2" tit, l, e: "Agent, Release, Guardrails 202, 6, v 2: Budge, t, s, Approva, l, s, Instant, Rollbac, k" descripti, o, n: "Batt, l, e‑tested, checklist, for safe, agent, releases with, budgeted, actions and, KP, I‑linked, canarie, s." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-ethi, c, s-operation, a, l-bluepri, n, t-20, 2, 6" tit, l, e: "AI, Ethics, Operational Blueprint, 20, 2 6: Bi, a, s, Fairne, s, s, Auditabili, t, y" descripti, o, n: "A, pragmatic, guide to, operationalizing, AI eth, i, c s: bias, test, s, fairness, SLA, s, r, e, d-team, drill, s, and, audi, t-ready, trail, s." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ed, g, e-r, a, g-bluepri, n, t-20, 2, 6" tit, l, e: "Edge, RAG, Blueprint 2, 0, 2 6: Fre, s, h, Private, Answers, in <100, m, s" descripti, o, n: "Signed, config, s, TTL, freshnes, s, hybrid, retrieva, l, and, o, n-device, caches, for trustworthy, su, b-100ms, answer, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "platfo, r, m-r, o, i-scorecar, d, s-20, 2, 6" tit, l, e: "Platform, ROI, Scorecards 2, 0, 2 6: From, Golden, Paths to, Revenu, e" descripti, o, n: "Lightweight, scorecards, that connect, platform, capabilities to, adoptio, n, SL, O, s, and, measurable, business impa, c, t." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-e, 2, e-traci, n, g-20, 2, 5" tit, l, e: "E2E, AI, Tracin g: From, Prompt, to Outcome, KPI, s" descripti, o, n: "Connect, prompt, s, too, l, s, and, UX, to measurable, KPIs, to prove, ROI, and prevent, regression, s." catego, r, y: "Observabili, t, y" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-personalizati, o, n-20, 2, 6" tit, l, e: "Edge, Personalizati, o n: Priva, c, y‑Fir, s, t, S, u, b‑100ms, Experience, s" descripti, o, n: "On‑device, signal, s, signed, config, s, and, micr, o‑models, for, private, fast, personalizatio, n." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-10-15" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "poli, c, y-tes, t, s-quicksta, r, t-20, 2, 5" tit, l, e: "Policy, Tests, Quickstar t: Ship, Fas, t, Stay, Saf, e" descripti, o, n: "Lightweight, CI, policy tests, that, catch risks, while, preserving engineering, velocit, y." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-unifi, e, d-observabili, t, y-platfo, r, m-20, 2, 5" tit, l, e: "Unified, AI, Observability Platf, o, r m: Complete, Stack, Visibility in, 202, 5" descripti, o, n: "Master, en, d-to-end, AI, observability with, distributed, tracing, re, a, l-time, metric, s, and, intelligent, alerting. Achieve, 9, 9.9% system, reliability, with unified, monitoring, across your, entire, AI sta, c, k." catego, r, y: "AI, Observabilit, y" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "18, min, read" } { sl, u, g: "ai-mod, e, l-governan, c, e-complian, c, e-20, 2, 5" tit, l, e: "AI, Model, Governance & Compliance, 20, 2 5: Enterprise, Framework, s" descripti, o, n: "Implement, comprehensive, AI governance, achieving, 100% regulatory, compliance, with EU, AI, Act, GD, P, R, and, SOC, 2. Learn, model, versioning, bias, detectio, n, and, automated, compliance reporti, n, g." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-ed, g, e-inferen, c, e-optimizati, o, n-20, 2, 5" tit, l, e: "Edge, AI, Inference Optimizat, i, o n: 1000x, Performance, Gains" descripti, o, n: "Achieve, su, b-10ms, inference, at the, edge, with model, quantizatio, n, pruni, n, g, and, neuromorphic, computing. Deploy, AI, on resour, c, e-constrained, devices, with 1000x, better, energy efficien, c, y." catego, r, y: "Edge, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "20, min, read" } { sl, u, g: "ai-da, t, a-pipeli, n, e-automati, o, n-20, 2, 5" tit, l, e: "Autonomous, AI, Data Pipeli, n, e s: Se, l, f-Healing, Infrastructur, e" descripti, o, n: "Build, sel, f-managing, data, pipelines with, A, I-powered, anomaly, detection, automatic, schema, evolution, and, intelligent, data quality, validatio, n. Achieve, 9, 9.99% pipeline, reliabilit, y." catego, r, y: "MLO, p, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "19, min, read" } { sl, u, g: "ai-securi, t, y-thre, a, t-detecti, o, n-20, 2, 5" tit, l, e: "AI-Powered, Securi, t y: Re, a, l-Time, Threat, Detection & Respon, s, e" descripti, o, n: "Deploy, autonomous, security operations, with, AI achieving, su, b-30s, incident, response, 99.8% threat, detection, accuracy, and, zer, o-trust, architectur, e. Prevent, breaches, before they, happe, n." catego, r, y: "AI, Securit, y" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "21, min, read" } { sl, u, g: "ai-e, 2, e-traci, n, g-20, 2, 5" tit, l, e: "E2E, AI, Tracin g: From, Prompt, to Outcome, KPI, s" descripti, o, n: "Connect, prompt, s, too, l, s, and, UX, to measurable, KPIs, to prove, ROI, and prevent, regression, s." catego, r, y: "Observabili, t, y" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-personalizati, o, n-20, 2, 5" tit, l, e: "Edge, Personalizati, o n: Priva, c, y‑Fir, s, t, S, u, b‑100ms, Experience, s" descripti, o, n: "On‑device, signal, s, signed, config, s, and, micr, o‑models, for, private, fast, personalizatio, n." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "poli, c, y-tes, t, s-quicksta, r, t-20, 2, 5" tit, l, e: "Policy, Tests, Quickstar t: Ship, Fas, t, Stay, Saf, e" descripti, o, n: "Lightweight, CI, policy tests, that, catch risks, while, preserving engineering, velocit, y." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "secu, r, e-ml-supp, l, y-cha, i, n-20, 2, 6" tit, l, e: "Secure, ML, Supply Chain, 20, 2 6: SBO, M, s, Linea, g, e, and, Policy, Gates" descripti, o, n: "Continuous, SBOMs, for mode, l, s, datase, t, s, and, prompts, with attestations, and, CI policy, check, s." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "gen, a, i-routi, n, g-und, e, r-budge, t, s-20, 2, 6" tit, l, e: "Quali, t, y‑Tiered, GenAI, Routin g: SLAs, Without, Bill Sho, c, k" descripti, o, n: "Route, prompts, across model, tiers, with budge, t, s, cach, e, s, and, eval, signals to, control, cost." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "platfo, r, m-gold, e, n-pat, h, s-kp, i, s-20, 2, 6" tit, l, e: "Golden, Paths, That Move, KP, I s: Platform, Engineering, That Pa, y, s" descripti, o, n: "Adoption, metric, s, TT, F, X, and, SLOs, as leading, indicators, of platform, ROI, in 20, 2, 6." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-platfo, r, m-sl, o, s-20, 2, 6" tit, l, e: "AI, Platform, SLOs 2, 0, 2 6: Budge, t, s, Rollbac, k, s, Live, Canarie, s" descripti, o, n: "Design, SLOs, and risk, budgets, for AI, systems, with instant, rollbacks, and K, P, I‑linked, canarie, s." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ed, g, e-l, l, m-laten, c, y-patter, n, s" tit, l, e: "Edge, LLM, Latency Patte, r, n s: S, u, b‑200ms, Interaction, s" descripti, o, n: "Streami, n, g, prefet, c, h, and, edge, compute patterns, for, instant‑feel, AI, UX." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-10-15" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-reliab, l, e-r, a, g-o, p, s-20, 2, 6" tit, l, e: "Reliable, RAG, Ops 2, 0, 2 6: Freshness, Window, s, Drift, Alert, s, Budge, t, s" descripti, o, n: "Keep, RAG, quality high, with, TTL windo, w, s, drift, detector, s, and, KP, I‑tied, quality, budgets." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-autonomo, u, s-infrastructu, r, e-20, 2, 6" tit, l, e: "AI, Autonomous, Infrastructure 2, 0, 2 6: Se, l, f‑Heali, n, g, Se, l, f‑Optimizi, n, g, Se, l, f‑Scali, n, g" descripti, o, n: "Blueprints, and, scorecards to, operate, self‑healing, platforms, with budgets, and, safe automati, o, n." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "quant, u, m-ai-hybr, i, d-bluepri, n, t-20, 2, 6" tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 2, 0, 2 6: Practical, Wins, in 12, Month, s" descripti, o, n: "Ne, a, r‑term, plays, that combine, QC, libraries with, AI, orchestration for, measurable, ROI." catego, r, y: "Quantum, Computin, g" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "platfo, r, m-engineeri, n, g-kp, i, s-20, 2, 6" tit, l, e: "Platform, Engineering, KPIs 2, 0, 2 6: Adopti, o, n, Golden, Path, s, SL, O, s" descripti, o, n: "Scorecards, that, shift the, convo, from costs, to, shipped val, u, e—adopti, o, n, TT, F, X, SL, O, s." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-incide, n, t-respon, s, e-playboo, k, s-20, 2, 5" tit, l, e: "AI, Incident, Response Playbooks, 20, 2 5: Contain, i, n <60s, with, Confidence" descripti, o, n: "From, detections, to safe, actio, n s: poli, c, y-tested, playbooks, and rollba, c, k-ready, automation, s." catego, r, y: "Cybersecuri, t, y" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "quant, u, m-ai-hybr, i, d-bluepri, n, t-20, 2, 6" tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 2, 0, 2 6: Practical, Wins, in 12, Month, s" descripti, o, n: "Ne, a, r‑term, plays, that combine, QC, libraries with, AI, orchestration for, measurable, ROI." catego, r, y: "Quantum, Computin, g" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ze, r, o-tru, s, t-f, o, r-gen, a, i-20, 2, 6" tit, l, e: "Ze, r, o‑Trust, for, GenA I: Prompt, Firewall, s, Egress, Policie, s, and, Audit, Trails" descripti, o, n: "Contain, risks, with au, t, h‑aware, retrieva, l, policy, gate, s, and, signed, outputs at, scal, e." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-12" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "platfo, r, m-engineeri, n, g-scorecar, d, s-20, 2, 6" tit, l, e: "Platform, Engineering, Scorecards 2, 0, 2 6: From, Golden, Paths to, Outcome, s" descripti, o, n: "Measure, what, matter s: adopti, o, n, gold, e, n-path, TTF, X, SL, O, s, and, shipped, value—without, slowing, delivery." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-10-09" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-cybersecuri, t, y-automati, o, n-20, 2, 5" tit, l, e: "AI, Cybersecurity, Automatio n: From, Detections, to Autonomic, Respons, e" descripti, o, n: "Behavioral, detection, s, policy, test, s, and, runbooks, that au, t, o-contain, incidents, under 60, second, s." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-09" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-ai-bluepri, n, t-20, 2, 6" tit, l, e: "Edge, AI, Blueprint 2, 0, 2 6: Priva, t, e, Re, a, l‑Time, Intelligence, at Sca, l, e" descripti, o, n: "Signed, config, s, tiny, model, s, and, geo, budgets f, o, r <100ms, o, n‑device, decisions, with privacy, by, design." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-10-09" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ai-platfo, r, m-r, o, i-20, 2, 5" tit, l, e: "AI, Platform, ROI Scoreca, r, d s: Proving, Value, Quarter by, Quarte, r" descripti, o, n: "Lightweight, scorecards, that link, capabilities, to adopti, o, n, golden, path, s, SL, O, s, and, outcome, s." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-10-03" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "secu, r, e-ml-supp, l, y-cha, i, n-20, 2, 5" tit, l, e: "Secure, ML, Supply Ch, a, i n: From, SBOMs, to Model, Lineag, e" descripti, o, n: "E, n, d-to-end, provenance, and controls, for, datasets, mode, l, s, and, inference, routes." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-03" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "ed, g, e-c, d, n-ml-personalizati, o, n-20, 2, 5" tit, l, e: "Edge, CD, N + On‑Devic, e, M L: Personalization, Under, 100ms" descripti, o, n: "Combine, edge, KV, signed, config, s, and, tiny, models for, privat, e, re, a, l‑time, personalizatio, n." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-sal, e, s-copil, o, t-20, 2, 5" tit, l, e: "AI, Sales, Copilo t: Grounded, Prompt, s, CRM, Contex, t, Reliable, Eval, s" descripti, o, n: "Wire, CRM, s, build, prompt, libraries, and, add, evals that, correlate, with w, i, n‑rat, e, s." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-eva, l, s-in-producti, o, n-20, 2, 5" tit, l, e: "GenAI, Evals, in Product, i, o n: Policy, Tests, That Sca, l, e" descripti, o, n: "Layered, evaluati, o n: offline, suite, s, p, r, e-merge, check, s, and, online, canaries tied, to, KPIs." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "featu, r, e-fla, g, s-ed, g, e-20, 2, 5" tit, l, e: "Feature, Flags, at the, Ed, g e: <100ms, Global, Releases" descripti, o, n: "Consistency, model, s, cache, strategie, s, and, validation, flows for, instant, global rollou, t, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "secu, r, e-agen, t, s-runti, m, e-20, 2, 6" tit, l, e: "Secure, AI, Agents Runt, i, m e: Sandbox, e, s, Egress, Policie, s, and, Trace, s" descripti, o, n: "A, production, checklist for, running, AI agents, safely, with isolati, o, n, policy, gate, s, and, observabilit, y." catego, r, y: "AI, Securit, y" published, A, t: "20, 2, 5-10-09" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ed, g, e-e, 2, e-observabili, t, y-20, 2, 6" tit, l, e: "Edge, E2E, Observabilit y: Us, e, r-Centric, Tracing, and <100ms, Telemetr, y" descripti, o, n: "Blueprint, for, capturing us, e, r-centric, telemetry, across ed, g, e, C, D, N, and, app, layers without, latency, tax." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-10-09" featur, e, d: fal, s, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-co, s, t-controlle, r, s-20, 2, 6" tit, l, e: "AI, Cost, Controller s: Budge, t, s, Tiered, Qualit, y, and, Guardrail, s" descripti, o, n: "Keep, GenAI, spend predictable, with, dynamic budge, t, s, tiered, model, s, and, polic, y‑backed, route, s." catego, r, y: "Clo, u, d" published, A, t: "20, 2, 5-10-09" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-governan, c, e-bluepri, n, t-20, 2, 5" tit, l, e: "AI, Governance, Blueprint 2, 0, 2 5: Practical, Guardrails, That Sh, i, p" descripti, o, n: "Scorecar, d, s, policy, test, s, and, chang, e-control, that, keep AI, initiatives, fast and, complian, t." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "re, a, l-ti, m, e-gen, a, i-guardrai, l, s-20, 2, 5" tit, l, e: "Re, a, l‑Time, GenAI, Guardrail s: Inline, Filter, s, Canari, e, s, and, Eval, s" descripti, o, n: "How, to, run fast, with, live canari, e, s, inline, moderatio, n, and, KP, I‑linked, evals, at sca, l, e." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-29" featur, e, d: fal, s, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-governan, c, e-scorecar, d, s-20, 2, 6" tit, l, e: "AI, Governance, 202 6: Scorecards, Engineers, Actually U, s, e" descripti, o, n: "Guardrails, wired, to product, KPIs, with PR, checks, and online, canaries, that speed, teams, up." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-10-07" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "freshne, s, s-awa, r, e-r, a, g-v2" tit, l, e: "Freshne, s, s‑Aware, RAG, v 2: TTL, Budgets, and Versioned, Corpor, a" descripti, o, n: "Keep, answers, accurate with, freshness, windows, async, warmup, s, and, KP, I‑aligned, evaluatio, n." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-07" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-platfo, r, m-roadma, p, s-20, 2, 6" tit, l, e: "AI, Product, Roadmaps 2, 0, 2 6: From, Bet, to Business, Impac, t" descripti, o, n: "Outco, m, e-led, roadmaps, that connect, bets, to scorecar, d, s, trai, n, s, and, shipped, value." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-10-06" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "gen, a, i-guardrai, l, s-blueprin, t, s-20, 2, 6" tit, l, e: "GenAI, Guardrails, Blueprint s: Policy, Test, s, Canari, e, s, and, SLA, s" descripti, o, n: "Composable, guardrail, patterns that, scale, across products, without, slowing tea, m, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-06" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "clo, u, d-fino, p, s-scorecar, d, s-20, 2, 6" tit, l, e: "Cloud, FinOps, Scorecard s: Guardrails, Engineers, Actually U, s, e" descripti, o, n: "PR, gate, s, aler, t, s, and, budgets, that cut, waste, 25–40% while, keeping, velocity hi, g, h." catego, r, y: "Clo, u, d" published, A, t: "20, 2, 5-10-06" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-platfo, r, m-bluepri, n, t-20, 2, 5" tit, l, e: "GenAI, Platform, Blueprin t: Shipping, Weekly, With Guardrai, l, s" descripti, o, n: "Reference, architecture, for promp, t, s, too, l, s, eva, l, s, and, policy, tests that, let, teams move, fast, safely." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "co, s, t-optimiz, e, d-vect, o, r-sear, c, h" tit, l, e: "Co, s, t‑Optimized, Vector, Searc h: Hybr, i, d, Cachi, n, g, and, Freshnes, s" descripti, o, n: "Design, decisions, to cut, retrieval, cost 40%+ while, improving, answer quality, with, hybrid search, and, freshness windo, w, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-09-29" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-ri, s, k-regist, e, r-outcom, e, s-20, 2, 5" tit, l, e: "AI, Risk, Register That, Drives, Outcome s: Owne, r, s, SL, A, s, and, Policy, Tests" descripti, o, n: "Make, risk, programs actionable, with, owned mitigatio, n, s, CI, policy, checks, and, measurable, SLAs." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ze, r, o-regr, e, t-rollou, t, s-ed, g, e-fla, g, s-20, 2, 5" tit, l, e: "Ze, r, o‑Regret, Rollou, t s: Edge, Flags, with Budgets, and, Instant Rollba, c, k" descripti, o, n: "Segmented, rollouts, with risk, budget, s, telemet, r, y, and, rollback, triggers under, 100m, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "onli, n, e-gen, a, i-eva, l, s-canari, e, s-20, 2, 5" tit, l, e: "Online, GenAI, Eval s: Canary, Checks, That Keep, Velocity, High" descripti, o, n: "Run, lightweigh, t, K, P, I‑linked, canaries, in prod, to, prevent regressions, while, shipping week, l, y." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } // New, additions, to ensure, advertised, links resolve, across, homepage and, banner, s; { sl, u, g: "ai-autonomo, u, s-infrastructu, r, e-20, 2, 6" tit, l, e: "AI, Autonomous, Infrastructure 2, 0, 2 6: Se, l, f‑Heali, n, g, Se, l, f‑Optimizi, n, g, Se, l, f‑Scali, n, g" descripti, o, n: "Design, platform, primitives with, budget, s, safety, gate, s, and, traces, for reliable, autonom, y." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-10-14" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ze, r, o-tru, s, t-f, o, r-gen, a, i-20, 2, 6" tit, l, e: "Ze, r, o‑Trust, for, GenAI 2, 0, 2 6: Prompt, Firewall, s, Egress, Policie, s, Signed, Output, s" descripti, o, n: "Ship, GenAI, safely at, scale, with isolati, o, n, redacti, o, n, and, verifiable, outputs." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-14" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "quant, u, m-ai-hybr, i, d-bluepri, n, t-20, 2, 6" tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 2, 0, 2 6: Ne, a, r‑Term, Wins, with Orchestrated, Q, C" descripti, o, n: "Combine, quantum, libraries with, AI, orchestration for, practica, l, measurable, impac, t." catego, r, y: "Quant, u, m" published, A, t: "20, 2, 5-10-14" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-20, 2, 6" tit, l, e: "Edge, LLM, Caching Blueprint, 20, 2 6: S, u, b‑100ms, at, Scale" descripti, o, n: "Tiered, cache, s, signed, config, s, and, freshness, windows for, fas, t, affordable, prompt, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-10-14" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "reliab, l, e-r, a, g-o, p, s-20, 2, 6" tit, l, e: "Reliable, RAG, Ops 2, 0, 2 6: Freshne, s, s, Dri, f, t, and, Quality, Budgets" descripti, o, n: "Operate, RAG, at scale, with, TTL windo, w, s, drift, monitor, s, and, KP, I‑tied, budget, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "platfo, r, m-kp, i, s-20, 2, 6" tit, l, e: "Platform, KPIs, 202 6: Adopti, o, n, Golden, Path, s, and, SLO, s" descripti, o, n: "Scorecards, engineers, adopt—link, platform, telemetry to, shipped, business outcom, e, s." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-incide, n, t-budge, t, s-20, 2, 6" tit, l, e: "AI, Incident, Budgets 2, 0, 2 6: Playbooks, That, Contain in <6, 0, s" descripti, o, n: "Budgeted, action, s, approva, l, s, and, rollback, triggers for, safe, automation under, pressur, e." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-12" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "l, l, m-poli, c, y-testi, n, g-20, 2, 5" tit, l, e: "LLM, Policy, Testing i, n, C I: Ship, Fas, t, Stay, Saf, e" descripti, o, n: "Automate, governance, with lightweight, policy, tests on, every, PR and, release, train." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-10-08" readTi, m, e: "7, min, read" } { sl, u, g: "ai-roadma, p, s" tit, l, e: "Designing, Hig, h-Impact, AI, Roadmaps" descripti, o, n: "A, practical, framework to, align, AI investments, with, measurable business, outcomes, and reduce, tim, e-to-val, u, e." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-09-15" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "clo, u, d-fino, p, s-tacti, c, s" tit, l, e: "Cutting, Cloud, Spend Without, Slowing, Teams" descripti, o, n: "Proven, tactics, for rig, h, t-sizi, n, g, demand, shapin, g, and, engineerin, g-friendly, guardrails, that keep, velocity, high." catego, r, y: "Cloud, FinOp, s" published, A, t: "20, 2, 5-09-22" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "ze, r, o-tru, s, t-f, o, r-sa, a, s" tit, l, e: "Ze, r, o-Trust, in, Practice for, Saa, S" descripti, o, n: "A, pragmatic, guide to, rolling, out lea, s, t-privile, g, e, continuous, verificatio, n, and, blast, radius contro, l, s." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-09-25" featur, e, d: fal, s, e readTi, m, e: "7, min, read" } { sl, u, g: "generati, v, e-ai-enterpri, s, e" tit, l, e: "Generative, AI, in Enterpr, i, s e: Re, a, l-World, Success, Stories" descripti, o, n: "Case, studies, from Fortune, 500, companies showing, how, GenAI is, transforming, customer servi, c, e, content, creatio, n, and, business, operations." catego, r, y: "AI, Innovatio, n" published, A, t: "20, 2, 5-01-20" featur, e, d: fal, s, e readTi, m, e: "9, min, read" } { sl, u, g: "clo, u, d-migrati, o, n-be, s, t-practic, e, s" tit, l, e: "Cloud, Migration, Best Practi, c, e s: Lessons, from, 100+ Projec, t, s" descripti, o, n: "Essential, strategies, for successful, cloud, migration, including, risk, mitigation, cost, optimizatio, n, and, timeline, management." catego, r, y: "Cloud, Strateg, y" published, A, t: "20, 2, 5-01-18" featur, e, d: fal, s, e readTi, m, e: "7, min, read" } { sl, u, g: "cybersecuri, t, y-20, 2, 5-tren, d, s" tit, l, e: "Cybersecurity, Trends, 202 5: What, Every, CISO Needs, to, Know" descripti, o, n: "Emerging, threat, s, new, defense, strategies, and, the, latest security, technologies, shaping the, cybersecurity, landscape." catego, r, y: "Cybersecuri, t, y" published, A, t: "20, 2, 5-01-15" featur, e, d: fal, s, e readTi, m, e: "8, min, read" } { sl, u, g: "da, t, a-analyti, c, s-automati, o, n" tit, l, e: "Automating, Data, Analytic s: From, Insight, to Acti, o, n" descripti, o, n: "How, A, I-powered, analytics, platforms are, revolutionizing, business intelligence, and, enabling re, a, l-time, decision, making." catego, r, y: "Data, Scienc, e" published, A, t: "20, 2, 5-01-12" featur, e, d: fal, s, e readTi, m, e: "8, min, read" } { sl, u, g: "devo, p, s-automati, o, n-gui, d, e" tit, l, e: "The, Complete, Guide to, DevOps, Automation" descripti, o, n: "Comprehensive, strategies, for automating, C, I/CD, pipeline, s, infrastructure, managemen, t, and, deployment, processes." catego, r, y: "DevO, p, s" published, A, t: "20, 2, 5-01-10" featur, e, d: fal, s, e readTi, m, e: "10, min, read" } { sl, u, g: "microservic, e, s-architectu, r, e" tit, l, e: "Microservices, Architectu, r e: Design, Patterns, and Best, Practice, s" descripti, o, n: "Essential, patterns, for building, scalabl, e, maintainable, microservices, architectures in, modern, applications." catego, r, y: "Software, Architectur, e" published, A, t: "20, 2, 5-01-08" featur, e, d: fal, s, e readTi, m, e: "9, min, read" } { sl, u, g: "ai-ethi, c, s-complian, c, e" tit, l, e: "AI, Ethics, and Complia, n, c e: Building, Responsible, AI Syste, m, s" descripti, o, n: "Framework, for, developing AI, systems, that are, fai, r, transpare, n, t, and, compliant, with emerging, regulation, s." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-01-05" featur, e, d: fal, s, e readTi, m, e: "8, min, read" } // removed, conflicting, branch entri, e, s; { sl, u, g: "fino, p, s-scorecar, d, s-20, 2, 5" tit, l, e: "FinOps, Scorecar, d s: Guardrails, Engineers, Actually U, s, e" descripti, o, n: "Budge, t, s, PR, check, s, and, alerts, that cut, cloud, waste 25–40% without, slowing, teams." catego, r, y: "Clo, u, d" published, A, t: "20, 2, 5-10-08" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "enterpri, s, e-r, a, g-bluepri, n, t-20, 2, 5" tit, l, e: "Enterprise, RAG, Blueprint v 2: Freshne, s, s, Hybrid, Searc, h, Au, t, h" descripti, o, n: "A, pragmatic, blueprint for, RAG, at scale, with, freshness windows, and, layered eva, l, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-08" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ai-governan, c, e-scorecar, d, s-quicksta, r, t-20, 2, 6" tit, l, e: "AI, Governance, Scorecards Quickstart, 20, 2 6: Ship, Fas, t, Stay, Saf, e" descripti, o, n: "Set, up, KPI‑linked, scorecard, s, PR, check, s, and, rollbac, k‑ready, canaries, in wee, k, s." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "priva, c, y-fir, s, t-agen, t, s-20, 2, 6" tit, l, e: "Priva, c, y‑First, Agents, 202 6: On‑Device, Tool, s, Scoped, ID, s, Retention, Control, s" descripti, o, n: "Design, assistants, with local, tool, s, fie, l, d‑level, filter, s, and, polic, y‑backed, telemetr, y." catego, r, y: "AI, Securit, y" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "serverle, s, s-inferen, c, e-co, s, t-playbo, o, k-20, 2, 6" tit, l, e: "Serverless, Inference, Cost Playbook, 20, 2 6: Budgets, Without, P95 Pa, i, n" descripti, o, n: "Adaptive, batchin, g, warm, pool, s, and, tiered, quality under, explicit, budgets." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "agent, i, c-workflo, w, s-bluepri, n, t-20, 2, 6" tit, l, e: "Agentic, Workflows, Blueprint 2, 0, 2 6: Too, l, s, Trac, e, s, and, Safety, Budgets" descripti, o, n: "Design, reliable, multi‑tool, agents, with deterministic, tool, s, live, trace, s, and, risk, budgets." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-10" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "priva, c, y-fir, s, t-observabili, t, y-20, 2, 6" tit, l, e: "Priva, c, y‑First, Observabili, t y: Us, e, r‑Centric, Traces, Without PII, Leak, s" descripti, o, n: "Implement, privacy, filters, scoped, ID, s, and, retention, policies that, keep, signals rich, and, safe." catego, r, y: "Observabili, t, y" published, A, t: "20, 2, 5-10-10" featur, e, d: fal, s, e readTi, m, e: "7, min, read" } { sl, u, g: "on-devi, c, e-agen, t, s-20, 2, 6" tit, l, e: "On‑Device, Agents, 202 6: Private, Tools, That Work, Offlin, e" descripti, o, n: "Ship, fas, t, priva, c, y‑first, assistants, with on‑device, tool, s, local, cache, s, and, fallback, routes." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-10-11" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "gen, a, i-budge, t, s-a, n, d-quali, t, y-tie, r, s-20, 2, 6" tit, l, e: "GenAI, Budgets, and Quality, Tie, r s: Control, Cost, Without Hurting, U, X" descripti, o, n: "Tier, model, s, cache, prompt, s, and, budget, traffic by, SLA, to cut, spend, 30–60%." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-11" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "secu, r, e-too, l, s-marketpla, c, e-20, 2, 6" tit, l, e: "Secure, Tools, Marketplac e: Vetti, n, g, Sandbox, e, s, and, Attestation, s" descripti, o, n: "Bring, thir, d‑party, tools, safely with, policy, checks, sandbox, e, s, and, signed, attestations." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-11" featur, e, d: fal, s, e readTi, m, e: "8, min, read" } { sl, u, g: "ri, s, k-budge, t, s-f, o, r-age, n, t-releas, e, s-20, 2, 6" tit, l, e: "Risk, Budgets, for Agent, Releas, e s: Ship, Fast, Without Surpris, e, s" descripti, o, n: "Budget, risky, actions, add, PR, checks, and, wire, rollbacks for, reliable, agent releas, e, s." catego, r, y: "AI, Engineerin, g" published, A, t: "20, 2, 5-10-11" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "priva, c, y-fir, s, t-telemet, r, y-20, 2, 6" tit, l, e: "Priva, c, y‑First, Telemet, r y: Sign, a, l‑Ri, c, h, P, I, I‑Safe, Observabilit, y" descripti, o, n: "Scoped, ID, s, fie, l, d‑level, filter, s, and, retention, policies that, keep, insights high, and, risk l, o, w." catego, r, y: "Observabili, t, y" published, A, t: "20, 2, 5-10-11" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "co, s, t-awa, r, e-inferen, c, e-routi, n, g-20, 2, 6" tit, l, e: "Co, s, t‑Aware, Inference, Routin g: Quality, Tiers, Under Budg, e, t" descripti, o, n: "Dynamically, route, prompts across, model, tiers based, on, budgets, SL, A, s, and, eval, signals." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-10-11" featur, e, d: fal, s, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-governan, c, e-scorecar, d, s-quicksta, r, t-20, 2, 5" tit, l, e: "AI, Governance, Scorecards Quickst, a, r t: Ship, Fas, t, Stay, Saf, e" descripti, o, n: "A, practical, starter for, scorecard, s, PR, check, s, and, KP, I‑linked, canaries, teams adopt, in, weeks." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-20, 2, 6" tit, l, e: "Edge, LLM, Caching Blueprint, 20, 2 6: S, u, b‑100ms, at, Scale" descripti, o, n: "Tiered, cache, s, signed, config, s, and, freshness, windows for, fas, t, affordable, prompt, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-10-10" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-age, n, t-s, l, o-playboo, k, s-20, 2, 6" tit, l, e: "AI, Agent, SLO Playbo, o, k s: Budge, t, s, Rollbac, k, s, and, Live, Traces" descripti, o, n: "Turn, agent, incidents into, fas, t, measurable, recoveries, with SLOs, and, budgeted actio, n, s." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-12" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "hybr, i, d-vect, o, r-sear, c, h-patter, n, s-20, 2, 6" tit, l, e: "Hybrid, Vector, Search Patte, r, n s: Quality, Under, Cost and, Freshness, Budgets" descripti, o, n: "Blend, spars, e + dense, retrieval, with TTL, windows, to improve, answer, quality at, lower, cost." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-12" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-autonomo, u, s-incide, n, t-runboo, k, s-20, 2, 5" tit, l, e: "AI, Autonomous, Incident Runbo, o, k s: Budgeted, Actions, and Instant, Rollbac, k" descripti, o, n: "Design, incident, playbooks with, explicit, budgets, approva, l, s, and, safe, automated rollba, c, k." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "priva, c, y-fir, s, t-featu, r, e-fla, g, s-20, 2, 5" tit, l, e: "Priva, c, y‑First, Feature, Flag s: Ze, r, o‑Regret, Rollouts, at the, Edg, e" descripti, o, n: "Scoped, ID, s, on‑device, filter, s, and, geo, budgets for, safe, global releases, under, 100ms." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "platfo, r, m-r, o, i-scorecar, d, s-quicksta, r, t-20, 2, 5" tit, l, e: "Platform, ROI, Scorecard s: A, Practical, Quickstart" descripti, o, n: "Link, platform, telemetry to, adoption, and revenue, with, scorecards engineers, actually, use." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-supp, l, y-cha, i, n-optimizati, o, n-20, 2, 5" tit, l, e: "AI, Supply, Chain Optimizat, i, o n: 65% Faster, Deliveries, Under Budg, e, t" descripti, o, n: "From, demand, sensing to, route, optimization—AI, patterns, that cut, costs, and boost, OTI, F." catego, r, y: "Applied, A, I" published, A, t: "20, 2, 5-09-29" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "priva, c, y-fir, s, t-observabili, t, y-quicksta, r, t-20, 2, 5" tit, l, e: "Priva, c, y‑First, Observability, Quickstar t: Scoped, IDs, and Redacti, o, n" descripti, o, n: "Ship, signa, l‑rich, telemetry, without PII, risk, using scoped, identifiers, and fie, l, d‑level, filter, s." catego, r, y: "Observabili, t, y" published, A, t: "20, 2, 5-09-29" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-s, r, e-blueprin, t, s-20, 2, 6" tit, l, e: "AI, SRE, Blueprints 2, 0, 2 6: Error, Budget, s, Rollbac, k, s, and, Live, Traces" descripti, o, n: "Design, SRE, guardrails for, AI, system s: quali, t, y/error, budget, s, rollback, trigger, s, and, trac, e-driven, remediatio, n." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-29" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "priva, c, y-fir, s, t-ab-testi, n, g-20, 2, 6" tit, l, e: "Priva, c, y‑Firs, t, A/B, Testing, 202 6: Insights, Without, PII" descripti, o, n: "Scoped, ID, s, on‑device, metric, s, and, DP, noise for, compliant, experiments that, still, drive decisio, n, s." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-10-29" featur, e, d: fal, s, e readTi, m, e: "7, min, read" } { sl, u, g: "ai-thre, a, t-hunti, n, g-wi, t, h-ll, m, s-20, 2, 6" tit, l, e: "AI, Threat, Hunting with, LLMs, 202 6: Signa, l, s, Sandbox, e, s, and, Spee, d" descripti, o, n: "Operational, playbooks, to augment, analysts, with safe, LLM, tooling, live, trace, s, and, budgeted, actions." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "l, l, m-producti, o, n-runboo, k, s-20, 2, 6" tit, l, e: "LLM, Production, Runbooks 2, 0, 2 6: Rollbac, k, s, Budge, t, s, and, Canary, Evals" descripti, o, n: "Batt, l, e-tested, runbooks, for safe, LLM, releases—risk, budget, s, rollback, trigger, s, and, KP, I-linked, canarie, s." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-operation, a, l-scorecar, d, s-v4-20, 2, 6" tit, l, e: "AI, Operational, Scorecards v4 (20, 2, 6): SL, I, s, Budge, t, s, Rollba, c, k" descripti, o, n: "Four, t, h‑gen, scorecards, wiring SLIs, to, KPIs with, budgeted, actions and, instant, rollback teams, adopt, fast." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-ze, r, o-p, i, i-insigh, t, s-20, 2, 6" tit, l, e: "Edge, Zer, o‑PII, Insights, 202 6: Actionable, Metrics, at <100, m, s" descripti, o, n: "On‑device, aggregatio, n, scoped, ID, s, and, DP, noise enabling, trustworthy, analytics without, collecting, PII." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6" tit, l, e: "GenAI, Quality, Tiers v2 (20, 2, 6): Predictable, Cos, t, Stable, U, X" descripti, o, n: "Tier, model, s, add, semantic, caches, and, route, by SLA, using, eval signals, to, cut spend, 3, 0–60%." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-operation, a, l-tru, s, t-scorecar, d, s-v2-20, 2, 6" tit, l, e: "AI, Operational, Trust Scorecards, v, 2 (20, 2, 6): SL, I, s, Budge, t, s, Rollba, c, k" descripti, o, n: "Seco, n, d‑gen, scorecards, wiring SLIs, to, KPIs with, budgeted, actions and, instant, rollback." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-priva, t, e-insigh, t, s-bluepri, n, t-20, 2, 6" tit, l, e: "Edge, Private, Insights Blueprint, 20, 2 6: Ze, r, o‑PII, Analytics, at <100, m, s" descripti, o, n: "On‑device, aggregatio, n, scoped, ID, s, and, DP, noise that, unlock, compliant insights, without, latency t, a, x." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-routi, n, g-quali, t, y-tie, r, s-20, 2, 6" tit, l, e: "GenAI, Routing, Quality Tiers, 20, 2 6: Stable, UX, Under Budg, e, t" descripti, o, n: "Tier, model, s, add, cache, s, and, route, by SLA, using, eval signals, to, cut spend, 3, 0–60%." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-operation, a, l-ri, s, k-budge, t, s-20, 2, 6" tit, l, e: "AI, Operational, Risk Budgets, 20, 2 6: Ship, Faste, r, Stay, Saf, e" descripti, o, n: "Budget, actions, and toke, n, s, wire, canaries, to KP, I, s, and, enable, instant rollback, for, safe autonomy, at, scale." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 6-04-01" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-ze, r, o-p, i, i-personalizati, o, n-20, 2, 6" tit, l, e: "Edge, Zer, o‑PII, Personalization, 202 6: Priva, t, e <100ms, Experience, s" descripti, o, n: "Scoped, ID, s, on‑device, model, s, and, DP, noise for, complian, t, s, u, b‑100ms, personalization, worldwide." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 6-04-01" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-quali, t, y-tie, r, s-at-sca, l, e-20, 2, 6" tit, l, e: "GenAI, Quality, Tiers at, Scale, 202 6: Predictable, Cos, t, Stable, U, X" descripti, o, n: "Tier, model, s, add, semantic, caches, and, route, by SLA, using, eval signals, to, cut spend, 3, 0–60% without, hurting, UX." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 6-04-01" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-ri, s, k-budge, t, s-bluepri, n, t-20, 2, 6" tit, l, e: "AI, Risk, Budgets Blueprint, 20, 2 6: Ship, Faste, r, Stay, Saf, e" descripti, o, n: "Budget, actions, and toke, n, s, wire, canaries, to KP, I, s, and, enable, instant rollback, for, safe autono, m, y." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 6-01-05" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-conse, n, t-mo, d, e-20, 2, 6" tit, l, e: "Edge, Consent, Mode 2, 0, 2 6: Private, Analytics, Without P, I, I" descripti, o, n: "Scoped, ID, s, on‑device, aggregatio, n, and, DP, noise that, power, compliant insights, a, t <100, m, s." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 6-01-05" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-quali, t, y-tie, r, s-bluepri, n, t-20, 2, 6" tit, l, e: "GenAI, Quality, Tiers Blueprint, 20, 2 6: Predictable, Cos, t, Stable, U, X" descripti, o, n: "Tier, model, s, add, semantic, caches, and, route, by SLA, using, eval signals, to, cut spend, 3, 0–60%." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 6-01-05" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-s, l, o-scorecar, d, s-20, 2, 6" tit, l, e: "AI, SLO, Scorecards 2, 0, 2 6: Prove, Reliability, Week by, Wee, k" descripti, o, n: "Define, SLI, s, error, budget, s, and, rollback, triggers tied, to, product KP, I, s." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-priva, t, e-insigh, t, s-20, 2, 6" tit, l, e: "Edge, Private, Insights 2, 0, 2 6: Actionable, Metrics, Without P, I, I" descripti, o, n: "Scoped, ID, s, on‑device, aggregatio, n, and, DP, noise that, deliver, insights without, collecting, PII." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-budge, t, s-routi, n, g-20, 2, 6" tit, l, e: "GenAI, Budget, s & Routing, 20, 2 6: Predictable, Cos, t, Stable, U, X" descripti, o, n: "Tier, model, s, cache, prompt, s, and, route, by SLA, using, eval signals, to, cut spend, 4, 0–70%." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } ]); // Sept, 3, 0, 20, 2, 5 – Fresh, articles, to add, and, advertise on, homepag, e pos, t, s.pu, s, h([ { sl, u, g: "ai-safe, t, y-scorecar, d, s-20, 2, 6" tit, l, e: "AI, Safety, Scorecards 2, 0, 2 6: KP, I, s, Budge, t, s, Rollbac, k, s" descripti, o, n: "Operational, scorecards, that connect, safety, SLIs to, product, KPIs with, rollback, triggers." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-govern, e, d-fla, g, s-20, 2, 6" tit, l, e: "Ed, g, e‑Governed, Flags, 202 6: Policies, a, t <100, m, s" descripti, o, n: "Geo, budget, s, scoped, ID, s, and, signed, configs to, ship, compliant features, worldwide, under 100, m, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-cac, h, e-playbo, o, k-20, 2, 6" tit, l, e: "GenAI, Cache, Playbook 2, 0, 2 6: Cut, Spend, 40–70%" descripti, o, n: "Prompt, cache, s, semantic, d, e‑du, p, e, and, TTL, windows that, keep, quality high, under, strict budge, t, s." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } ); // Sept, 3, 0, 20, 2, 5 – New, articles, to expand, catalog, and promote, on, homepage pos, t, s.pu, s, h( ======= // Sept, 3, 0, 20, 2, 5 – New, articles, to expand, catalog, and promote, on, homepage; { sl, u, g: "ai-governan, c, e-acti, o, n-scorecar, d, s-20, 2, 6" tit, l, e: "AI, Governance, Action Scorecards, 20, 2 6: Guardrails, That, Ship" descripti, o, n: "Wire, CI, policy tes, t, s, live, canarie, s, and, rollback, triggers to, KPIs, teams actually, us, e." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-priva, t, e-experimentati, o, n-20, 2, 6" tit, l, e: "Edge, Private, Experimentation 2, 0, 2 6: <100m, s, A/B, Without, PII" descripti, o, n: "Scoped, ID, s, on-device, metric, s, and, DP, noise for, complian, t, global, experimentation, under budg, e, t." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "age, n, t-relea, s, e-ze, r, o-regr, e, t-20, 2, 6" tit, l, e: "Agent, Releases, 202 6: Ze, r, o‑Regret, with, Budgets & Rollba, c, k" descripti, o, n: "Budget, risky, actions, add, approval, s, and, wire, instant rollback, with, KPI‑linked, canarie, s." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-enterpri, s, e-autono, m, y-bluepri, n, t-20, 2, 6" tit, l, e: "Enterprise, Autonomy, Blueprint 2, 0, 2 6: From, Pilots, to Producti, o, n" descripti, o, n: "Reference, playbooks, for taking, autonomous, systems from, PoCs, to govern, e, d, reliable, production, at sca, l, e." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } { sl, u, g: "ed, g, e-trustle, s, s-analyti, c, s-20, 2, 6" tit, l, e: "Edge, Trustless, Analytics 2, 0, 2 6: Verifiab, l, e, P, I, I‑Safe, Insight, s" descripti, o, n: "Scoped, ID, s, on‑device, aggregatio, n, and, signed, attestations for, analytics, teams—no, PII, collection requir, e, d." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "agent, i, c-contr, o, l-plan, e, s-bluepri, n, t-20, 2, 7" tit, l, e: "Agentic, Control, Planes 2, 0, 2 7: Budge, t, s, Polici, e, s, Instant, Recover, y" descripti, o, n: "Operate, fleets, of agents, with, budgeted actio, n, s, policy, gate, s, live, canarie, s, and, on, e‑click, rollbac, k." catego, r, y: "AI, Engineerin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } // Sept, 3, 0, 20, 2, 5 – New, posts, for homepage, promotion, and advertisi, n, g (add, e, d) { sl, u, g: "ai-governan, c, e-scorecar, d, s-q1-20, 2, 6" tit, l, e: "AI, Governance, Scorecards Q1, 20, 2 6: Guardrails, Wired, to KP, I, s" descripti, o, n: "Lightweight, scorecards, with CI, policy, tests and, live, canaries tied, to, outcomes." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-experimen, t, s-quicksta, r, t-20, 2, 6" tit, l, e: "Edge, Experiments, Quickstart 2, 0, 2 6: Privat, e, A/B, a, t <100, m, s" descripti, o, n: "Scoped, ID, s, on‑device, metric, s, and, DP, noise for, complian, t, fast, experimentatio, n." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "age, n, t-relea, s, e-guardrai, l, s-checkli, s, t-20, 2, 6" tit, l, e: "Agent, Release, Guardrails 2, 0, 2 6: Budge, t, s, Approva, l, s, Rollba, c, k" descripti, o, n: "Batt, l, e‑tested, checklist, for safe, agent, releases with, budgeted, actions and, instant, rollback." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } // Sept, 3, 0, 20, 2, 5 – Bra, n, d-new, trio, for immediate, homepage, promotion; { sl, u, g: "ai-chan, g, e-manageme, n, t-20, 2, 6" tit, l, e: "AI, Change, Management 2, 0, 2 6: From, Pilot, to O, r, g-Wide, Adoptio, n" descripti, o, n: "Playboo, k, s, scorecar, d, s, and, rollout, trains that, turn, pilots into, durable, adoption across, BU, s." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-governan, c, e-quicksta, r, t-20, 2, 6" tit, l, e: "Edge, Governance, Quickstart 2, 0, 2 6: Policies, Without, Latency Penalti, e, s" descripti, o, n: "Au, t, h-aware, route, s, scoped, ID, s, and, signed, outputs that, enforce, policy at <100, m, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "gen, a, i-eva, l, s-bluepri, n, t-20, 2, 6" tit, l, e: "GenAI, Evals, Blueprint 2, 0, 2 6: Offline, Suite, s, PR, Gate, s, Live, Canarie, s" descripti, o, n: "Layered, evaluation, patterns wired, to, KPIs so, teams, ship fast, without, regressions." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } // N, e, w: Sept, 3, 0, 20, 2, 5 – Fresh, trio, to advertise, on, homepage; { sl, u, g: "re, a, l-ti, m, e-decisi, o, n-engin, e, s-20, 2, 7" tit, l, e: "Re, a, l-Time, Decision, Engines 2, 0, 2 7: 10M, Decision, s/sec, unde, r <1, m, s" descripti, o, n: "Architect, decision, systems that, process, millions of, events, per second, with, explainability, audit, trail, s, and, rollback, triggers." catego, r, y: "Re, a, l-Time, A, I" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "10, min, read" } { sl, u, g: "age, n, t-me, s, h-governan, c, e-20, 2, 7" tit, l, e: "Agent, Mesh, Governance 2, 0, 2 7: Polici, e, s, Budge, t, s, and, Live, Canaries" descripti, o, n: "Govern, hundreds, of collaborating, agents, with K, P, I-linked, policie, s, budgeted, action, s, and, production, canaries." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "enterpri, s, e-ai-co, s, t-controlle, r, s-20, 2, 7" tit, l, e: "Enterprise, AI, Cost Controllers, 20, 2 7: Predictable, Spen, d, Stable, U, X" descripti, o, n: "Tiered, qualit, y, semantic, cache, s, and, budge, t-aware, routing, that cut, cost, 40–70% without, hurting, experience." catego, r, y: "AI, Engineerin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "9, min, read" } // Sept, 3, 0, 20, 2, 5 – New, promotional, articles to, surface, on homepa, g, e; { sl, u, g: "ai-governan, c, e-li, v, e-scorecar, d, s-20, 2, 6" tit, l, e: "AI, Governance, Live Scorecards, 20, 2 6: Guardrails, Wired, to KP, I, s" descripti, o, n: "Operational, scorecards, with PR, checks, and live, canaries, that speed, delivery, while staying, complian, t." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-re, a, l-ti, m, e-personalizati, o, n-20, 2, 6" tit, l, e: "Edge, Rea, l‑Time, Personalization, 202 6: <100ms, Experiences, Without P, I, I" descripti, o, n: "Signed, config, s, scoped, ID, s, and, o, n‑device, models, for priva, t, e, s, u, b‑100ms, personalization, at sca, l, e." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "age, n, t-relea, s, e-runboo, k, s-20, 2, 6" tit, l, e: "Agent, Release, Runbooks 2, 0, 2 6: Budge, t, s, Eva, l, s, Instant, Rollbac, k" descripti, o, n: "Batt, l, e‑tested, runbooks, for safe, agent, releases wired, to, KPIs and, error, budgets." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-31" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } // Mar, 202, 6 – Bra, n, d-new, posts, to advertise, and, surface on, Hom, e; { sl, u, g: "ai-governan, c, e-pr-poli, c, y-tes, t, s-20, 2, 6" tit, l, e: "PR, Policy, Tests 2, 0, 2 6: Guardrails, That, Accelerate Delive, r, y" descripti, o, n: "Lightweight, CI, policy tests, wired, to product, KPI, s—catch, risks, without slowing, team, s." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-10-31" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-ze, r, o-p, i, i-analyti, c, s-20, 2, 6" tit, l, e: "Ze, r, o‑PII, Edge, Analytics 2, 0, 2 6: Insights, Under, 100ms" descripti, o, n: "Scoped, ID, s, on‑device, aggregatio, n, and, DP, noise for, actionable, analytics with, zero, PII collecti, o, n." catego, r, y: "Analyti, c, s" published, A, t: "20, 2, 5-10-31" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "age, n, t-relea, s, e-ze, r, o-regr, e, t-20, 2, 6" tit, l, e: "Ze, r, o‑Regret, Agent, Releases 2, 0, 2 6: Budge, t, s, Canari, e, s, Rollba, c, k" descripti, o, n: "Budget, risky, actions, add, KP, I‑linked, canarie, s, and, enable, instant rollback, for, safe automati, o, n." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-31" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } // Sept, 3, 0, 20, 2, 5 – Additional, new, posts to, advertise, on homepa, g, e; { sl, u, g: "ai-age, n, t-reliabili, t, y-playbo, o, k-20, 2, 6" tit, l, e: "AI, Agent, Reliability Playbook, 20, 2 6: SL, O, s, Budge, t, s, Rollbac, k, s" descripti, o, n: "Design, reliable, agent systems, with, explicit SL, O, s, budgeted, action, s, and, instant, rollback trigge, r, s." catego, r, y: "AI, Engineerin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "priva, c, y-sa, f, e-featu, r, e-fla, g, s-20, 2, 6" tit, l, e: "Priva, c, y‑Safe, Feature, Flags 2, 0, 2 6: S, u, b‑100ms, Global, Releases" descripti, o, n: "Edge, flags, with scoped, ID, s, geo, budget, s, and, DP, noise for, complian, t, fast, rollout, s." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "platfo, r, m-r, o, i-scorecar, d, s-quicksta, r, t-20, 2, 6" tit, l, e: "Platform, ROI, Scorecards Quickstart, 20, 2 6: Prove, Value, Fast" descripti, o, n: "Lightweight, scorecards, that link, golden, paths to, adoptio, n, SL, O, s, and, revenu, e." catego, r, y: "Platform, Engineerin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } // Sept, 3, 0, 20, 2, 5 – Brand, new, posts to, advertise, on homepa, g, e; { sl, u, g: "ai-governan, c, e-re, a, l-ti, m, e-guardrai, l, s-20, 2, 5" tit, l, e: "AI, Governance, 202 5: Re, a, l-Time, Guardrails, that D, o, n't, Slow, Teams" descripti, o, n: "Inline, policy, checks, K, P, I-linked, canarie, s, and, instant, rollback that, keep, shipping velocity, hig, h." catego, r, y: "AI, Governanc, e" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-inferen, c, e-budge, t, s-20, 2, 5" tit, l, e: "Edge, Inference, Budgets 2, 0, 2 5: Quality, Under, Cost and, Latency, SLAs" descripti, o, n: "Tiered, model, s, warm, pool, s, and, cache, strategy to, delive, r <100ms, UX, within strict, budget, s." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "age, n, t-observabili, t, y-li, v, e-trac, e, s-20, 2, 5" tit, l, e: "Agent, Observability, 202 5: Live, Trace, s, SL, I, s, and, Safe, Actions" descripti, o, n: "E, n, d-to-end, visibility, for agent, tools, with K, P, I-linked, SLIs, and budgeted, actions, you can, trus, t." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-09-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } // Jan, 1, 5, 20, 2, 6 – Fresh, posts, to advertise, on, homepage; { sl, u, g: "gen, a, i-routi, n, g-playbo, o, k-20, 2, 6" tit, l, e: "GenAI, Routing, Playbook 2, 0, 2 6: Quality, Tiers, Under Budg, e, t" descripti, o, n: "Tier, model, s, cache, prompt, s, and, route, by SLA, to, cut spend, 3, 0–60% with, stable, UX." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "age, n, t-runboo, k, s-ze, r, o-regr, e, t-20, 2, 6" tit, l, e: "Agent, Runbooks, 202 6: Ze, r, o‑Regret, Releases, with Budge, t, s & Rollba, c, k" descripti, o, n: "Budgeted, action, s, approva, l, s, and, instant, rollback so, agent, updates are, safe, at sca, l, e." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "ed, g, e-r, a, g-priva, c, y-preservi, n, g-20, 2, 6" tit, l, e: "Edge, RAG, 202 6: Private, Retrieval, with S, u, b‑100ms, Answer, s" descripti, o, n: "Hybrid, edge, retrieval with, signed, configs, TTL, window, s, and, o, n‑device, cache, s. Fast, answers, without PII, ris, k." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-30" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } // Oct, 3, 1, 20, 2, 5 – Fresh, featured, posts to, surface, on homepa, g, e; { sl, u, g: "age, n, t-observabili, t, y-bluepri, n, t-20, 2, 6" tit, l, e: "Agent, Observability, Blueprint 2, 0, 2 6: Trac, e, s, SL, I, s, and, Rollback, s" descripti, o, n: "E, n, d-to-end, traces, for agent, tool, s, K, P, I-linked, SLI, s, and, instant, rollback triggers, that, keep reliability, hig, h." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-31" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "secu, r, e-gen, a, i-da, t, a-guardrai, l, s-20, 2, 6" tit, l, e: "Secure, GenAI, Data Guardrails, 20, 2 6: Scoped, Acces, s, Redacti, o, n, Attestatio, n, s" descripti, o, n: "Protect, data, with au, t, h-aware, retrieva, l, fie, l, d-level, redactio, n, and, signed, outputs enforced, by, policy tes, t, s." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-10-31" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "s, l, a-awa, r, e-inferen, c, e-routi, n, g-20, 2, 6" tit, l, e: "S, L, A‑Aware, Inference, Routing 2, 0, 2 6: Quality, Tiers, Under Budg, e, t" descripti, o, n: "Dynamically, route, prompts by, SLA, using model, tier, s, cach, e, s, and, KP, I‑linked, budget, s—stable, UX, at lower, cos, t." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-10-31" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } // Additional, freshly, published articl, e, s; { sl, u, g: "ai-reliabili, t, y-scorecar, d, s-20, 2, 6" tit, l, e: "AI, Reliability, Scorecards 2, 0, 2 6: SL, I, s, Error, Budget, s, Rollbac, k, s" descripti, o, n: "Operationalize, AI, quality with, SLI, s, K, P, I-linked, error, budgets, and, instant, rollback trigge, r, s." catego, r, y: "AI, Operation, s" published, A, t: "20, 2, 5-10-14" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ai-e, 2, e-traci, n, g-bluepri, n, t-20, 2, 5" tit, l, e: "AI, E2E, Tracing Blueprint, 20, 2 5: From, Prompt, to K, P, I" descripti, o, n: "Instrument, prompt, s, too, l, s, and, UX, to business, KPIs, with robust, traces, and eva, l, s." catego, r, y: "Observabili, t, y" published, A, t: "20, 2, 5-10-13" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "gen, a, i-routi, n, g-und, e, r-budge, t, s-20, 2, 6" tit, l, e: "Quali, t, y‑Tiered, GenAI, Routing 2, 0, 2 6: SLAs, Without, Surprise Bil, l, s" descripti, o, n: "Route, prompts, across model, tiers, with caches, and, eval signals, to, control cost, without, hurting UX." catego, r, y: "Gen, A, I" published, A, t: "20, 2, 5-11-01" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } { sl, u, g: "on-devi, c, e-agen, t, s-offli, n, e-too, l, s-20, 2, 6" tit, l, e: "On‑Device, Agents, 202 6: Offli, n, e‑Capable, Tools, and Private, Cache, s" descripti, o, n: "Design, assistants, that work, offline, with local, tool, s, secure, storag, e, and, seamless, fallbacks." catego, r, y: "Edge, Computin, g" published, A, t: "20, 2, 5-11-01" featur, e, d: tr, u, e readTi, m, e: "8, min, read" } { sl, u, g: "ze, r, o-tru, s, t-observabili, t, y-20, 2, 6" tit, l, e: "Ze, r, o‑Trust, Observability, 202 6: Signed, Traces, and Lea, s, t‑Privilege, Telemetr, y" descripti, o, n: "Ship, audi, t‑ready, traces, with scoped, ID, s, signed, span, s, and, rol, e‑aware, data, access." catego, r, y: "Securi, t, y" published, A, t: "20, 2, 5-11-01" featur, e, d: fal, s, e readTi, m, e: "6, min, read" } { sl, u, g: "ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-20, 2, 5" tit, l, e: "Edge, LLM, Cachin g: Latency, Budget, s, KV, Pattern, s, and, Cost, Control" descripti, o, n: "S, u, b‑100ms, prompts, with tiered, cache, s, signed, config, s, and, freshness, windows." catego, r, y: "Architectu, r, e" published, A, t: "20, 2, 5-10-09" featur, e, d: tr, u, e readTi, m, e: "6, min, read" } { sl, u, g: "ai-operation, a, l-scorecar, d, s-20, 2, 6" tit, l, e: "AI, Operational, Scorecards 2, 0, 2 6: Guardrails, That, Drive Outcom, e, s" descripti, o, n: "Guardrails, wired, to KPIs, with, PR chec, k, s, canari, e, s, and, SLOs, engineers ado, p, t." catego, r, y: "AI, Strateg, y" published, A, t: "20, 2, 5-10-09" featur, e, d: tr, u, e readTi, m, e: "7, min, read" } ]; '
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  publishedAt: string;
+  featured?: boolean;
+  readTime?: string;
+}
+
+export const posts: BlogPost[] = [
+  {
+    slug: "ai-2027-operational-trust-blueprint",
+    title: "AI 2027: Operational Trust Blueprint",
+    description: "SLIs wired to KPIs with budgets, canaries, and instant rollback.",
+    category: "AI Strategy",
+    publishedAt: "2027-02-07",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts.",
+    category: "Architecture",
+    publishedAt: "2027-02-06",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026)",
+    description: "Predictable cost and stable UX using quality tiers + caches.",
+    category: "GenAI",
+    publishedAt: "2027-02-05",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2028-autonomous-enterprise-revolution",
+    title: "AI 2028: Autonomous Enterprise Revolution",
+    description: "From reactive ops to self‑optimizing enterprises: budgets, guardrails, and KPI‑linked autonomy that scales safely.",
+    category: "Enterprise AI",
+    publishedAt: "2027-02-06",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "ai-2027-quantum-enhanced-machine-learning",
+    title: "Quantum‑Enhanced Machine Learning 2027: Secure, Scalable, ROI‑Proven",
+    description: "Hybrid quantum‑classical pipelines with verifiable speedups, enterprise security, and measurable ROI.",
+    category: "AI Research",
+    publishedAt: "2027-02-04",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2028-realtime-multimodal-assistants",
+    title: "Realtime Multimodal Assistants 2028: <100ms, Private by Design",
+    description: "Vision+speech+text assistants with edge personalization, tiered models, and budget‑aware routing under 100ms.",
+    category: "GenAI",
+    publishedAt: "2027-02-03",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2027-executive-ai-funding-blueprint",
+    title: "Executive AI Funding Blueprint 2027: KPIs, Budgets, Governance",
+    description: "Secure funding and sustain AI programs with KPI-linked scorecards, budget guards, and governance gates that prove ROI.",
+    category: "Strategy",
+    publishedAt: "2027-02-01",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-2027-zero-pii-analytics-v3",
+    title: "Zero‑PII Edge Analytics v3 (2027): Scoped IDs, On‑Device DP, <100ms",
+    description: "Next‑gen privacy analytics: scoped identifiers, local aggregation, and differential privacy delivering actionable insights under 100ms.",
+    category: "Analytics",
+    publishedAt: "2027-02-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-enterprise-transformation-2027",
+    title: "AI Enterprise Transformation 2027: Executive Playbook",
+    description: "Practical blueprint to plan, fund, and scale enterprise AI with measurable ROI and safety.",
+    category: "Enterprise AI",
+    publishedAt: "2027-01-25",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2027-revolutionary-breakthrough",
+    title: "AI 2027 Revolutionary Breakthrough",
+    description: "Quantum‑neural advances drive 95% automation and 1000x performance for enterprises.",
+    category: "AI Strategy",
+    publishedAt: "2027-01-15",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "agentic-workflow-orchestration-2026",
+    title: "Agentic Workflow Orchestration 2026: Budgeted, Observable, Safe",
+    description: "Design agentic workflows with budgets, KPI‑linked canaries, and one‑click rollback for safe velocity.",
+    category: "AI Operations",
+    publishedAt: "2026-10-15",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2027-hyper-automation-blueprint",
+    title: "AI 2027 Hyper‑Automation Blueprint",
+    description: "End‑to‑end autonomous operations with budgets, guards, and instant rollback.",
+    category: "Automation",
+    publishedAt: "2027-01-10",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-reliability-scorecards-2027",
+    title: "GenAI Reliability Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live KPIs with budgeted actions and instant rollback to keep GenAI reliable and affordable.",
+    category: "AI Governance",
+    publishedAt: "2027-01-20",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2027-quantum-breakthrough-enterprise",
+    title: "Quantum Breakthrough 2027 for the Enterprise",
+    description: "Enterprise‑ready quantum‑neural systems: secure, scalable, and ROI‑proven.",
+    category: "AI Research",
+    publishedAt: "2027-01-08",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "real-time-decision-engines-2026",
+    title: "Real‑Time Decision Engines 2026: 10M/sec under 1ms",
+    description: "Edge warm pools, intent prefetching, and semantic caches for deterministic, low‑latency decisions.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "federated-learning-enterprise-2026",
+    title: "Federated Learning 2026: Enterprise‑Grade Privacy by Design",
+    description: "Train across subsidiaries without centralizing data using scoped IDs, secure aggregation, and DP noise.",
+    category: "Machine Learning",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "cognitive-financial-modeling-2027",
+    title: "AI Financial Modeling 2027: 95% Prediction Accuracy with Guardrails",
+    description: "Budget‑aware forecasting with KPI‑linked scorecards, evals, and instant rollback for safety.",
+    category: "FinTech AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "edge-2026-private-feature-flags",
+    title: "Edge 2026: Private Feature Flags",
+    description: "Signed configs, scoped IDs, and on‑device metrics for zero‑PII rollouts at <100ms.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026",
+    description: "Budgets, approvals, KPI‑linked canaries, and instant rollback for safe automation.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-trust-scorecards-v5-2027",
+    title: "AI Trust Scorecards v5 (2027): KPIs, Budgets, Guardrails",
+    description: "Next‑gen scorecards linking SLIs to KPIs with budgeted actions, PR policy tests, and instant rollback.",
+    category: "AI Governance",
+    publishedAt: "2026-12-01",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-private-evals-2026",
+    title: "Private Evals at the Edge (2026): <100ms, Zero‑PII",
+    description: "On‑device evals with scoped IDs, local aggregation, and DP noise for safe, fast feedback loops.",
+    category: "Analytics",
+    publishedAt: "2026-12-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agentops-runbooks-v3-2026",
+    title: "AgentOps Runbooks v3 (2026): Approvals, Budgets, One‑Click Recovery",
+    description: "Battle‑tested operational runbooks for agents with KPI‑linked canaries and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2026-12-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-operational-scorecards-v4-2026",
+    title: "AI Operational Scorecards v4 (2026)",
+    description: "SLIs mapped to KPIs with budgeted actions and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-zero-pii-insights-2026",
+    title: "Edge Zero‑PII Insights 2026",
+    description: "Scoped IDs, on‑device aggregation, and DP noise—zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-quality-tiers-v2-2026",
+    title: "GenAI Quality Tiers v2 (2026)",
+    description: "Quality tiers and caches for predictable cost and stable UX.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-rag-privacy-preserving-2026",
+    title: "Edge RAG 2026: Privacy‑Preserving Answers",
+    description: "Hybrid edge retrieval with TTL freshness and on‑device caches for <100ms.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-governance-pr-policy-tests-2026",
+    title: "PR Policy Tests 2026",
+    description: "Lightweight CI policy tests wired to product KPIs.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-governance-live-metrics-2025",
+    title: "AI Governance Live Metrics 2025: Ship Faster Without Regressions",
+    description: "CI policy tests + KPI‑linked canaries to prevent regressions before they ship.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-zero-pii-personalization-2025",
+    title: "Edge Zero‑PII Personalization 2025: <100ms, Private by Design",
+    description: "Scoped IDs, on‑device models, and DP noise for real‑time personalization without PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-executive-scorecards-2027",
+    title: "AI Executive Scorecards 2027: Proving ROI with Live KPIs",
+    description: "Design exec-ready AI scorecards tying model spend to KPIs with guardrails and SLIs.",
+    category: "Strategy",
+    publishedAt: "2027-01-05",
+    featured: true,
+    readTime: "11 min read"
+  },
+  {
+    slug: "ai-2025-cost-controllers-v1",
+    title: "AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails",
+    description: "Practical cost governance: route by quality tier, enforce budgets, and prevent overruns with policy tests.",
+    category: "FinOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-2025-realtime-personalization",
+    title: "Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII",
+    description: "Edge feature flags, scoped IDs, and on‑device telemetry to deliver private, sub‑100ms personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2025-autonomous-infrastructure-blueprint",
+    title: "Autonomous Infrastructure 2025: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Design an AI‑driven infra platform with predictive autoscaling, policy tests, and instant rollback for 99.99% uptime.",
+    category: "Platform Engineering",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-2025-zero-pii-experiments",
+    title: "Edge Experiments 2025: Zero‑PII Global A/B at <100ms",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant experimentation with sub‑100ms reads worldwide.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-2025-routing-caches-v1",
+    title: "GenAI Routing v1 (2025): Tiered Models + Semantic Caches",
+    description: "Predictable cost and stable UX using route guards, tiered models, and cache hits tied to product KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "10 min read"
+  },
+  {
+    slug: "ai-2027-edge-native-agents",
+    title: "Edge‑Native Agents 2027: Private Tools at <100ms",
+    description: "Design agents that run close to users with scoped permissions, on‑device tools, and instant rollback.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-2027-operational-scorecards",
+    title: "Operational AI Scorecards 2027: KPIs, Budgets, Rollback",
+    description: "Live scorecards that link SLIs to product KPIs with budgeted actions and one‑click recovery.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-2027-quality-tiers-at-scale",
+    title: "GenAI 2027: Quality Tiers at Scale with Semantic Caches",
+    description: "Predictable cost and stable UX using tiered models, semantic caches, and KPI‑aware routing.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-2026-reliable-genai-platform",
+    title: "Reliable GenAI Platform 2026: SLAs, Budgets, and Rollback",
+    description: "Blueprint for a dependable GenAI platform with quality tiers, budgets, evals, and instant rollback tied to KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "12 min read"
+  },
+  {
+    slug: "edge-privacy-insights-2026",
+    title: "Edge Privacy Insights 2026: Scoped IDs, On‑Device Telemetry, DP Noise",
+    description: "Privacy‑first insights with scoped identifiers, device aggregation, and differential privacy at <100ms.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-consentless-experiments-2026-q4",
+    title: "Edge Consentless Experiments Q4 2026: Global A/B in <100ms",
+    description: "Compliant, fast experimentation with scoped IDs, on‑device metrics, and DP noise—zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-sla-scorecards-2026-q1",
+    title: "AI SLA Scorecards 2026 Q1: SLIs, Budgets, Rollback",
+    description: "Wire SLIs to product KPIs with budgeted actions and instant rollback for safe velocity.",
+    category: "AI Governance",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-private-insights-v2-2026",
+    title: "Edge Private Insights v2 (2026): Zero‑PII Metrics at <100ms",
+    description: "Scoped IDs, on‑device aggregation, and DP noise for actionable insights without PII.",
+    category: "Analytics",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-runbooks-v2-2026",
+    title: "Agent Release Runbooks v2 (2026): Budgets + One‑Click Recovery",
+    description: "Battle‑tested runbooks with approvals, KPI‑linked canaries, and instant rollback.",
+    category: "AI Operations",
+    publishedAt: "2026-04-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-operational-scorecards-q4-2026",
+    title: "AI Operational Scorecards Q4 2026: SLIs Wired to KPIs",
+    description: "SLIs mapped to KPIs with budgeted actions, live canaries, and instant rollback for safe autonomy.",
+    category: "AI Operations",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-operational-trust-q4-2025",
+    title: "AI Operational Trust Q4 2025: Live Scorecards that Ship",
+    description: "KPI‑linked guardrails with PR checks, budgeted actions, and instant rollback to ship faster with confidence.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-2026-reliable-agent-release-runbooks",
+    title: "Reliable Agent Release Runbooks 2026: Approvals, Budgets, Rollbacks",
+    description: "Template runbooks with budgeted actions, human-in-the-loop approvals, and instant rollbacks mapped to KPIs.",
+    category: "AI Operations",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-consentless-metrics-2026",
+    title: "Edge Consentless Metrics 2026: Scoped IDs, On‑Device Aggregation",
+    description: "Zero‑PII telemetry with scoped identifiers, local aggregation, and DP noise under 100ms.",
+    category: "Analytics",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-budget-aware-routing-2026",
+    title: "GenAI Budget‑Aware Routing 2026: Quality Tiers with Cost Guards",
+    description: "Deterministic routing using tiered models, caches, and budget controllers to stabilize cost and UX.",
+    category: "GenAI",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-consentless-analytics-q4-2025",
+    title: "Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms",
+    description: "Scoped IDs, on‑device aggregation, and differential privacy for compliant, low‑latency analytics with zero PII.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-routing-quality-tiers-q4-2025",
+    title: "GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX",
+    description: "Tiered models, caching, and budget‑aware routes mapped to SLOs to keep quality high and costs predictable.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-governance-real-time-2026",
+    title: "AI Governance in Real Time 2026: Live Canaries + PR Policy Tests",
+    description: "Wire KPI‑linked canaries and CI policy tests so teams ship weekly without regressions.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-inference-warm-pools-2026",
+    title: "Edge Inference Warm Pools 2026: Sub‑100ms Global with Predictable Cost",
+    description: "Warm pools, intent prefetching, and tiered caches for fast, affordable inference worldwide.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-guardrails-2026",
+    title: "Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback",
+    description: "Battle‑tested checklists for safe agent updates with budgeted actions and one‑click rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-governance-runtime-scorecards-2026",
+    title: "AI Governance Runtime Scorecards 2026: KPIs, Budgets, Rollback",
+    description: "Live guardrails wired to KPIs with PR checks, budgets, and instant rollback that speed delivery.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-experiments-under-100ms-quickstart-2026",
+    title: "Edge Experiments Quickstart 2026: Private A/B at <100ms",
+    description: "Scoped IDs, on-device metrics, and DP noise for compliant global experimentation without latency tax.",
+    category: "Analytics",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "agent-release-guardrails-checklist-2026-v2",
+    title: "Agent Release Guardrails 2026 v2: Budgets, Approvals, Instant Rollback",
+    description: "Battle‑tested checklist for safe agent releases with budgeted actions and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-ethics-operational-blueprint-2026",
+    title: "AI Ethics Operational Blueprint 2026: Bias, Fairness, Auditability",
+    description: "A pragmatic guide to operationalizing AI ethics: bias tests, fairness SLAs, red-team drills, and audit-ready trails.",
+    category: "AI Governance",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-rag-blueprint-2026",
+    title: "Edge RAG Blueprint 2026: Fresh, Private Answers in <100ms",
+    description: "Signed configs, TTL freshness, hybrid retrieval, and on-device caches for trustworthy sub-100ms answers.",
+    category: "GenAI",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-2026",
+    title: "Platform ROI Scorecards 2026: From Golden Paths to Revenue",
+    description: "Lightweight scorecards that connect platform capabilities to adoption, SLOs, and measurable business impact.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-e2e-tracing-2025",
+    title: "E2E AI Tracing: From Prompt to Outcome KPIs",
+    description: "Connect prompts, tools, and UX to measurable KPIs to prove ROI and prevent regressions.",
+    category: "Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-2026",
+    title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",
+    description: "On‑device signals, signed configs, and micro‑models for private, fast personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "policy-tests-quickstart-2025",
+    title: "Policy Tests Quickstart: Ship Fast, Stay Safe",
+    description: "Lightweight CI policy tests that catch risks while preserving engineering velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-unified-observability-platform-2025",
+    title: "Unified AI Observability Platform: Complete Stack Visibility in 2025",
+    description: "Master end-to-end AI observability with distributed tracing, real-time metrics, and intelligent alerting. Achieve 99.9% system reliability with unified monitoring across your entire AI stack.",
+    category: "AI Observability",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "18 min read"
+  },
+  {
+    slug: "ai-model-governance-compliance-2025",
+    title: "AI Model Governance & Compliance 2025: Enterprise Frameworks",
+    description: "Implement comprehensive AI governance achieving 100% regulatory compliance with EU AI Act, GDPR, and SOC 2. Learn model versioning, bias detection, and automated compliance reporting.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-edge-inference-optimization-2025",
+    title: "Edge AI Inference Optimization: 1000x Performance Gains",
+    description: "Achieve sub-10ms inference at the edge with model quantization, pruning, and neuromorphic computing. Deploy AI on resource-constrained devices with 1000x better energy efficiency.",
+    category: "Edge AI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "20 min read"
+  },
+  {
+    slug: "ai-data-pipeline-automation-2025",
+    title: "Autonomous AI Data Pipelines: Self-Healing Infrastructure",
+    description: "Build self-managing data pipelines with AI-powered anomaly detection, automatic schema evolution, and intelligent data quality validation. Achieve 99.99% pipeline reliability.",
+    category: "MLOps",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "19 min read"
+  },
+  {
+    slug: "ai-security-threat-detection-2025",
+    title: "AI-Powered Security: Real-Time Threat Detection & Response",
+    description: "Deploy autonomous security operations with AI achieving sub-30s incident response, 99.8% threat detection accuracy, and zero-trust architecture. Prevent breaches before they happen.",
+    category: "AI Security",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "21 min read"
+  },
+  {
+    slug: "ai-e2e-tracing-2025",
+    title: "E2E AI Tracing: From Prompt to Outcome KPIs",
+    description: "Connect prompts, tools, and UX to measurable KPIs to prove ROI and prevent regressions.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-personalization-2025",
+    title: "Edge Personalization: Privacy‑First, Sub‑100ms Experiences",
+    description: "On‑device signals, signed configs, and micro‑models for private, fast personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "policy-tests-quickstart-2025",
+    title: "Policy Tests Quickstart: Ship Fast, Stay Safe",
+    description: "Lightweight CI policy tests that catch risks while preserving engineering velocity.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-2026",
+    title: "Secure ML Supply Chain 2026: SBOMs, Lineage, and Policy Gates",
+    description: "Continuous SBOMs for models, datasets, and prompts with attestations and CI policy checks.",
+    category: "Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing: SLAs Without Bill Shock",
+    description: "Route prompts across model tiers with budgets, caches, and eval signals to control cost.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-golden-paths-kpis-2026",
+    title: "Golden Paths That Move KPIs: Platform Engineering That Pays",
+    description: "Adoption metrics, TTFX, and SLOs as leading indicators of platform ROI in 2026.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-platform-slos-2026",
+    title: "AI Platform SLOs 2026: Budgets, Rollbacks, Live Canaries",
+    description: "Design SLOs and risk budgets for AI systems with instant rollbacks and KPI‑linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "edge-llm-latency-patterns",
+    title: "Edge LLM Latency Patterns: Sub‑200ms Interactions",
+    description: "Streaming, prefetch, and edge compute patterns for instant‑feel AI UX.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-15",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-reliable-rag-ops-2026",
+    title: "Reliable RAG Ops 2026: Freshness Windows, Drift Alerts, Budgets",
+    description: "Keep RAG quality high with TTL windows, drift detectors, and KPI‑tied quality budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-autonomous-infrastructure-2026",
+    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Blueprints and scorecards to operate self‑healing platforms with budgets and safe automation.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
+    description: "Near‑term plays that combine QC libraries with AI orchestration for measurable ROI.",
+    category: "Quantum Computing",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "platform-engineering-kpis-2026",
+    title: "Platform Engineering KPIs 2026: Adoption, Golden Paths, SLOs",
+    description: "Scorecards that shift the convo from costs to shipped value—adoption, TTFX, SLOs.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-incident-response-playbooks-2025",
+    title: "AI Incident Response Playbooks: Contain in <60s with Confidence",
+    description: "From detections to safe actions: policy-tested playbooks and rollback-ready automations.",
+    category: "Cybersecurity",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Practical Wins in 12 Months",
+    description: "Near‑term plays that combine QC libraries with AI orchestration for measurable ROI.",
+    category: "Quantum Computing",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI: Prompt Firewalls, Egress Policies, and Audit Trails",
+    description: "Contain risks with auth‑aware retrieval, policy gates, and signed outputs at scale.",
+    category: "Security",
+    publishedAt: "2025-10-12",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-engineering-scorecards-2026",
+    title: "Platform Engineering Scorecards 2026: From Golden Paths to Outcomes",
+    description: "Measure what matters: adoption, golden-path TTFX, SLOs, and shipped value—without slowing delivery.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-cybersecurity-automation-2025",
+    title: "AI Cybersecurity Automation: From Detections to Autonomic Response",
+    description: "Behavioral detections, policy tests, and runbooks that auto-contain incidents under 60 seconds.",
+    category: "Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "edge-ai-blueprint-2026",
+    title: "Edge AI Blueprint 2026: Private, Real‑Time Intelligence at Scale",
+    description: "Signed configs, tiny models, and geo budgets for <100ms on‑device decisions with privacy by design.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "ai-platform-roi-2025",
+    title: "AI Platform ROI Scorecards: Proving Value Quarter by Quarter",
+    description: "Lightweight scorecards that link capabilities to adoption, golden paths, SLOs, and outcomes.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "secure-ml-supply-chain-2025",
+    title: "Secure ML Supply Chain: From SBOMs to Model Lineage",
+    description: "End-to-end provenance and controls for datasets, models, and inference routes.",
+    category: "Security",
+    publishedAt: "2025-10-03",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-cdn-ml-personalization-2025",
+    title: "Edge CDN + On‑Device ML: Personalization Under 100ms",
+    description: "Combine edge KV, signed configs, and tiny models for private, real‑time personalization.",
+    category: "Edge Computing",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-sales-copilot-2025",
+    title: "AI Sales Copilot: Grounded Prompts, CRM Context, Reliable Evals",
+    description: "Wire CRMs, build prompt libraries, and add evals that correlate with win‑rates.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-evals-in-production-2025",
+    title: "GenAI Evals in Production: Policy Tests That Scale",
+    description: "Layered evaluation: offline suites, pre-merge checks, and online canaries tied to KPIs.",
+    category: "GenAI",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "feature-flags-edge-2025",
+    title: "Feature Flags at the Edge: <100ms Global Releases",
+    description: "Consistency models, cache strategies, and validation flows for instant global rollouts.",
+    category: "Architecture",
+    publishedAt: "2025-09-30",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "secure-agents-runtime-2026",
+    title: "Secure AI Agents Runtime: Sandboxes, Egress Policies, and Traces",
+    description: "A production checklist for running AI agents safely with isolation, policy gates, and observability.",
+    category: "AI Security",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "edge-e2e-observability-2026",
+    title: "Edge E2E Observability: User-Centric Tracing and <100ms Telemetry",
+    description: "Blueprint for capturing user-centric telemetry across edge, CDN, and app layers without latency tax.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-cost-controllers-2026",
+    title: "AI Cost Controllers: Budgets, Tiered Quality, and Guardrails",
+    description: "Keep GenAI spend predictable with dynamic budgets, tiered models, and policy‑backed routes.",
+    category: "Cloud",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-governance-blueprint-2025",
+    title: "AI Governance Blueprint 2025: Practical Guardrails That Ship",
+    description: "Scorecards, policy tests, and change-control that keep AI initiatives fast and compliant.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "real-time-genai-guardrails-2025",
+    title: "Real‑Time GenAI Guardrails: Inline Filters, Canaries, and Evals",
+    description: "How to run fast with live canaries, inline moderation, and KPI‑linked evals at scale.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-governance-scorecards-2026",
+    title: "AI Governance 2026: Scorecards Engineers Actually Use",
+    description: "Guardrails wired to product KPIs with PR checks and online canaries that speed teams up.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "freshness-aware-rag-v2",
+    title: "Freshness‑Aware RAG v2: TTL Budgets and Versioned Corpora",
+    description: "Keep answers accurate with freshness windows, async warmups, and KPI‑aligned evaluation.",
+    category: "GenAI",
+    publishedAt: "2025-10-07",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "ai-platform-roadmaps-2026",
+    title: "AI Product Roadmaps 2026: From Bet to Business Impact",
+    description: "Outcome-led roadmaps that connect bets to scorecards, trains, and shipped value.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "genai-guardrails-blueprints-2026",
+    title: "GenAI Guardrails Blueprints: Policy Tests, Canaries, and SLAs",
+    description: "Composable guardrail patterns that scale across products without slowing teams.",
+    category: "GenAI",
+    publishedAt: "2025-10-06",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "cloud-finops-scorecards-2026",
+    title: "Cloud FinOps Scorecards: Guardrails Engineers Actually Use",
+    description: "PR gates, alerts, and budgets that cut waste 25–40% while keeping velocity high.",
+    category: "Cloud",
+    publishedAt: "2025-10-06",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "genai-platform-blueprint-2025",
+    title: "GenAI Platform Blueprint: Shipping Weekly With Guardrails",
+    description:
+      "Reference architecture for prompts, tools, evals, and policy tests that let teams move fast safely.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "cost-optimized-vector-search",
+    title: "Cost‑Optimized Vector Search: Hybrid, Caching, and Freshness",
+    description:
+      "Design decisions to cut retrieval cost 40%+ while improving answer quality with hybrid search and freshness windows.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "ai-risk-register-outcomes-2025",
+    title: "AI Risk Register That Drives Outcomes: Owners, SLAs, and Policy Tests",
+    description: "Make risk programs actionable with owned mitigations, CI policy checks, and measurable SLAs.",
+    category: "AI Governance",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "zero-regret-rollouts-edge-flags-2025",
+    title: "Zero‑Regret Rollouts: Edge Flags with Budgets and Instant Rollback",
+    description: "Segmented rollouts with risk budgets, telemetry, and rollback triggers under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "online-genai-evals-canaries-2025",
+    title: "Online GenAI Evals: Canary Checks That Keep Velocity High",
+    description: "Run lightweight, KPI‑linked canaries in prod to prevent regressions while shipping weekly.",
+    category: "GenAI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read",
+  },
+  // New additions to ensure advertised links resolve across homepage and banners
+  {
+    slug: "ai-autonomous-infrastructure-2026",
+    title: "AI Autonomous Infrastructure 2026: Self‑Healing, Self‑Optimizing, Self‑Scaling",
+    description: "Design platform primitives with budgets, safety gates, and traces for reliable autonomy.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "9 min read",
+  },
+  {
+    slug: "zero-trust-for-genai-2026",
+    title: "Zero‑Trust for GenAI 2026: Prompt Firewalls, Egress Policies, Signed Outputs",
+    description: "Ship GenAI safely at scale with isolation, redaction, and verifiable outputs.",
+    category: "Security",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "quantum-ai-hybrid-blueprint-2026",
+    title: "Quantum‑AI Hybrid Blueprint 2026: Near‑Term Wins with Orchestrated QC",
+    description: "Combine quantum libraries with AI orchestration for practical, measurable impact.",
+    category: "Quantum",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2026",
+    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
+    description: "Tiered caches, signed configs, and freshness windows for fast, affordable prompts.",
+    category: "Architecture",
+    publishedAt: "2025-10-14",
+    featured: true,
+    readTime: "6 min read",
+  },
+  {
+    slug: "reliable-rag-ops-2026",
+    title: "Reliable RAG Ops 2026: Freshness, Drift, and Quality Budgets",
+    description: "Operate RAG at scale with TTL windows, drift monitors, and KPI‑tied budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "8 min read",
+  },
+  {
+    slug: "platform-kpis-2026",
+    title: "Platform KPIs 2026: Adoption, Golden Paths, and SLOs",
+    description: "Scorecards engineers adopt—link platform telemetry to shipped business outcomes.",
+    category: "Platform Engineering",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read",
+  },
+  {
+    slug: "ai-incident-budgets-2026",
+    title: "AI Incident Budgets 2026: Playbooks That Contain in <60s",
+    description: "Budgeted actions, approvals, and rollback triggers for safe automation under pressure.",
+    category: "Security",
+    publishedAt: "2025-10-12",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "llm-policy-testing-2025",
+    title: "LLM Policy Testing in CI: Ship Fast, Stay Safe",
+    description: "Automate governance with lightweight policy tests on every PR and release train.",
+    category: "AI Governance",
+    publishedAt: "2025-10-08",
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-roadmaps",
+    title: "Designing High-Impact AI Roadmaps",
+    description:
+      "A practical framework to align AI investments with measurable business outcomes and reduce time-to-value.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-15",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "cloud-finops-tactics",
+    title: "Cutting Cloud Spend Without Slowing Teams",
+    description:
+      "Proven tactics for right-sizing, demand shaping, and engineering-friendly guardrails that keep velocity high.",
+    category: "Cloud FinOps",
+    publishedAt: "2025-09-22",
+    featured: false,
+    readTime: "6 min read",
+  },
+  {
+    slug: "zero-trust-for-saas",
+    title: "Zero-Trust in Practice for SaaS",
+    description:
+      "A pragmatic guide to rolling out least-privilege, continuous verification, and blast radius controls.",
+    category: "Security",
+    publishedAt: "2025-09-25",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "generative-ai-enterprise",
+    title: "Generative AI in Enterprise: Real-World Success Stories",
+    description:
+      "Case studies from Fortune 500 companies showing how GenAI is transforming customer service, content creation, and business operations.",
+    category: "AI Innovation",
+    publishedAt: "2025-01-20",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "cloud-migration-best-practices",
+    title: "Cloud Migration Best Practices: Lessons from 100+ Projects",
+    description:
+      "Essential strategies for successful cloud migration, including risk mitigation, cost optimization, and timeline management.",
+    category: "Cloud Strategy",
+    publishedAt: "2025-01-18",
+    featured: false,
+    readTime: "7 min read",
+  },
+  {
+    slug: "cybersecurity-2025-trends",
+    title: "Cybersecurity Trends 2025: What Every CISO Needs to Know",
+    description:
+      "Emerging threats, new defense strategies, and the latest security technologies shaping the cybersecurity landscape.",
+    category: "Cybersecurity",
+    publishedAt: "2025-01-15",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "data-analytics-automation",
+    title: "Automating Data Analytics: From Insight to Action",
+    description:
+      "How AI-powered analytics platforms are revolutionizing business intelligence and enabling real-time decision making.",
+    category: "Data Science",
+    publishedAt: "2025-01-12",
+    featured: false,
+    readTime: "8 min read",
+  },
+  {
+    slug: "devops-automation-guide",
+    title: "The Complete Guide to DevOps Automation",
+    description:
+      "Comprehensive strategies for automating CI/CD pipelines, infrastructure management, and deployment processes.",
+    category: "DevOps",
+    publishedAt: "2025-01-10",
+    featured: false,
+    readTime: "10 min read",
+  },
+  {
+    slug: "microservices-architecture",
+    title: "Microservices Architecture: Design Patterns and Best Practices",
+    description:
+      "Essential patterns for building scalable, maintainable microservices architectures in modern applications.",
+    category: "Software Architecture",
+    publishedAt: "2025-01-08",
+    featured: false,
+    readTime: "9 min read",
+  },
+  {
+    slug: "ai-ethics-compliance",
+    title: "AI Ethics and Compliance: Building Responsible AI Systems",
+    description:
+      "Framework for developing AI systems that are fair, transparent, and compliant with emerging regulations.",
+    category: "AI Governance",
+    publishedAt: "2025-01-05",
+    featured: false,
+    readTime: "8 min read",
+  },
+  // removed conflicting branch entries
+  {
+    slug: "finops-scorecards-2025",
+    title: "FinOps Scorecards: Guardrails Engineers Actually Use",
+    description: "Budgets, PR checks, and alerts that cut cloud waste 25–40% without slowing teams.",
+    category: "Cloud",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "enterprise-rag-blueprint-2025",
+    title: "Enterprise RAG Blueprint v2: Freshness, Hybrid Search, Auth",
+    description: "A pragmatic blueprint for RAG at scale with freshness windows and layered evals.",
+    category: "GenAI",
+    publishedAt: "2025-10-08",
+    featured: true,
+    readTime: "9 min read"
+  }
+  ,
+  {
+    slug: "ai-governance-scorecards-quickstart-2026",
+    title: "AI Governance Scorecards Quickstart 2026: Ship Fast, Stay Safe",
+    description: "Set up KPI‑linked scorecards, PR checks, and rollback‑ready canaries in weeks.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-agents-2026",
+    title: "Privacy‑First Agents 2026: On‑Device Tools, Scoped IDs, Retention Controls",
+    description: "Design assistants with local tools, field‑level filters, and policy‑backed telemetry.",
+    category: "AI Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "serverless-inference-cost-playbook-2026",
+    title: "Serverless Inference Cost Playbook 2026: Budgets Without P95 Pain",
+    description: "Adaptive batching, warm pools, and tiered quality under explicit budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "agentic-workflows-blueprint-2026",
+    title: "Agentic Workflows Blueprint 2026: Tools, Traces, and Safety Budgets",
+    description: "Design reliable multi‑tool agents with deterministic tools, live traces, and risk budgets.",
+    category: "GenAI",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "9 min read"
+  },
+  {
+    slug: "privacy-first-observability-2026",
+    title: "Privacy‑First Observability: User‑Centric Traces Without PII Leaks",
+    description: "Implement privacy filters, scoped IDs, and retention policies that keep signals rich and safe.",
+    category: "Observability",
+    publishedAt: "2025-10-10",
+    featured: false,
+    readTime: "7 min read"
+  }
+  ,
+  {
+    slug: "on-device-agents-2026",
+    title: "On‑Device Agents 2026: Private Tools That Work Offline",
+    description: "Ship fast, privacy‑first assistants with on‑device tools, local caches, and fallback routes.",
+    category: "Edge Computing",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-budgets-and-quality-tiers-2026",
+    title: "GenAI Budgets and Quality Tiers: Control Cost Without Hurting UX",
+    description: "Tier models, cache prompts, and budget traffic by SLA to cut spend 30–60%.",
+    category: "AI Operations",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "secure-tools-marketplace-2026",
+    title: "Secure Tools Marketplace: Vetting, Sandboxes, and Attestations",
+    description: "Bring third‑party tools safely with policy checks, sandboxes, and signed attestations.",
+    category: "Security",
+    publishedAt: "2025-10-11",
+    featured: false,
+    readTime: "8 min read"
+  },
+  {
+    slug: "risk-budgets-for-agent-releases-2026",
+    title: "Risk Budgets for Agent Releases: Ship Fast Without Surprises",
+    description: "Budget risky actions, add PR checks, and wire rollbacks for reliable agent releases.",
+    category: "AI Engineering",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-telemetry-2026",
+    title: "Privacy‑First Telemetry: Signal‑Rich, PII‑Safe Observability",
+    description: "Scoped IDs, field‑level filters, and retention policies that keep insights high and risk low.",
+    category: "Observability",
+    publishedAt: "2025-10-11",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "cost-aware-inference-routing-2026",
+    title: "Cost‑Aware Inference Routing: Quality Tiers Under Budget",
+    description: "Dynamically route prompts across model tiers based on budgets, SLAs, and eval signals.",
+    category: "Architecture",
+    publishedAt: "2025-10-11",
+    featured: false,
+    readTime: "8 min read"
+  }
+  ,
+  {
+    slug: "ai-governance-scorecards-quickstart-2025",
+    title: "AI Governance Scorecards Quickstart: Ship Fast, Stay Safe",
+    description: "A practical starter for scorecards, PR checks, and KPI‑linked canaries teams adopt in weeks.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2026",
+    title: "Edge LLM Caching Blueprint 2026: Sub‑100ms at Scale",
+    description: "Tiered caches, signed configs, and freshness windows for fast, affordable prompts.",
+    category: "Architecture",
+    publishedAt: "2025-10-10",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-agent-slo-playbooks-2026",
+    title: "AI Agent SLO Playbooks: Budgets, Rollbacks, and Live Traces",
+    description: "Turn agent incidents into fast, measurable recoveries with SLOs and budgeted actions.",
+    category: "AI Operations",
+    publishedAt: "2025-10-12",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "hybrid-vector-search-patterns-2026",
+    title: "Hybrid Vector Search Patterns: Quality Under Cost and Freshness Budgets",
+    description: "Blend sparse + dense retrieval with TTL windows to improve answer quality at lower cost.",
+    category: "GenAI",
+    publishedAt: "2025-10-12",
+    featured: false,
+    readTime: "6 min read"
+  }
+  ,
+  {
+    slug: "ai-autonomous-incident-runbooks-2025",
+    title: "AI Autonomous Incident Runbooks: Budgeted Actions and Instant Rollback",
+    description: "Design incident playbooks with explicit budgets, approvals, and safe automated rollback.",
+    category: "AI Operations",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-feature-flags-2025",
+    title: "Privacy‑First Feature Flags: Zero‑Regret Rollouts at the Edge",
+    description: "Scoped IDs, on‑device filters, and geo budgets for safe global releases under 100ms.",
+    category: "Architecture",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "platform-roi-scorecards-quickstart-2025",
+    title: "Platform ROI Scorecards: A Practical Quickstart",
+    description: "Link platform telemetry to adoption and revenue with scorecards engineers actually use.",
+    category: "AI Strategy",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  }
+  ,
+  {
+    slug: "ai-supply-chain-optimization-2025",
+    title: "AI Supply Chain Optimization: 65% Faster Deliveries Under Budget",
+    description: "From demand sensing to route optimization—AI patterns that cut costs and boost OTIF.",
+    category: "Applied AI",
+    publishedAt: "2025-09-29",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "privacy-first-observability-quickstart-2025",
+    title: "Privacy‑First Observability Quickstart: Scoped IDs and Redaction",
+    description: "Ship signal‑rich telemetry without PII risk using scoped identifiers and field‑level filters.",
+    category: "Observability",
+    publishedAt: "2025-09-29",
+    featured: false,
+    readTime: "6 min read"
+  }
+  ,
+  {
+    slug: "ai-sre-blueprints-2026",
+    title: "AI SRE Blueprints 2026: Error Budgets, Rollbacks, and Live Traces",
+    description: "Design SRE guardrails for AI systems: quality/error budgets, rollback triggers, and trace-driven remediation.",
+    category: "AI Operations",
+    publishedAt: "2025-10-29",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "privacy-first-ab-testing-2026",
+    title: "Privacy‑First A/B Testing 2026: Insights Without PII",
+    description: "Scoped IDs, on‑device metrics, and DP noise for compliant experiments that still drive decisions.",
+    category: "Analytics",
+    publishedAt: "2025-10-29",
+    featured: false,
+    readTime: "7 min read"
+  },
+  {
+    slug: "ai-threat-hunting-with-llms-2026",
+    title: "AI Threat Hunting with LLMs 2026: Signals, Sandboxes, and Speed",
+    description: "Operational playbooks to augment analysts with safe LLM tooling, live traces, and budgeted actions.",
+    category: "Security",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "llm-production-runbooks-2026",
+    title: "LLM Production Runbooks 2026: Rollbacks, Budgets, and Canary Evals",
+    description: "Battle-tested runbooks for safe LLM releases—risk budgets, rollback triggers, and KPI-linked canaries.",
+    category: "AI Operations",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "agentic-observability-scorecards-2026",
+    title: "Agentic Observability Scorecards 2026: Traces that Predict Outcomes",
+    description: "Design KPI‑linked traces and scorecards that prevent regressions without slowing teams.",
+    category: "Observability",
+    publishedAt: "2025-10-13",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "genai-routing-under-budgets-2026",
+    title: "Quality‑Tiered GenAI Routing 2026: SLAs Without Surprise Bills",
+    description: "Route prompts across model tiers with caches and eval signals to control cost without hurting UX.",
+    category: "GenAI",
+    publishedAt: "2025-11-01",
+    featured: true,
+    readTime: "7 min read"
+  },
+  {
+    slug: "on-device-agents-offline-tools-2026",
+    title: "On‑Device Agents 2026: Offline‑Capable Tools and Private Caches",
+    description: "Design assistants that work offline with local tools, secure storage, and seamless fallbacks.",
+    category: "Edge Computing",
+    publishedAt: "2025-11-01",
+    featured: true,
+    readTime: "8 min read"
+  },
+  {
+    slug: "zero-trust-observability-2026",
+    title: "Zero‑Trust Observability 2026: Signed Traces and Least‑Privilege Telemetry",
+    description: "Ship audit‑ready traces with scoped IDs, signed spans, and role‑aware data access.",
+    category: "Security",
+    publishedAt: "2025-11-01",
+    featured: false,
+    readTime: "6 min read"
+  },
+  {
+    slug: "edge-llm-caching-blueprint-2025",
+    title: "Edge LLM Caching: Latency Budgets, KV Patterns, and Cost Control",
+    description: "Sub‑100ms prompts with tiered caches, signed configs, and freshness windows.",
+    category: "Architecture",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "6 min read"
+  },
+  {
+    slug: "ai-operational-scorecards-2026",
+    title: "AI Operational Scorecards 2026: Guardrails That Drive Outcomes",
+    description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs engineers adopt.",
+    category: "AI Strategy",
+    publishedAt: "2025-10-09",
+    featured: true,
+    readTime: "7 min read"
+  }
+];

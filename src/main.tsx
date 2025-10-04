@@ -1,75 +1,53 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import ThemeProvider from "./components/ThemeProvider";
+import App from "./App";
+import "./index.css";
 
-async function reportWebVitals() {
-  try {
-    const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
-    const log = (metric: { name: string; value: number }) => {
-      if (process.env.NODE_ENV === 'production') {
-        console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
-      }
-    };
-    onCLS(log);
-    onLCP(log);
-    onFCP(log);
-    onTTFB(log);
-  } catch {
-    // ignore in unsupported environments
-  }
-}
-
-createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
-
-reportWebVitals();
-import App from './App';
-
-// Report web vitals to help monitor performance in production
-async function reportWebVitals() {
-  try {
-    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import('web-vitals');
-    const log = (metric: { name: string; value: number }) => {
-      // Replace with analytics endpoint if available
-      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
-    };
-    onCLS(log);
-    onFID(log);
-    onLCP(log);
-    onFCP(log);
-    onTTFB(log);
-    // @ts-ignore web-vitals v4 also exports onINP
-    if (onINP) onINP(log);
-  } catch {
-    // no-op in dev or if unsupported
-  }
-}
-
-const container = document.getElementById('root');
-if (container) {
-  const root = createRoot(container);
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-  
-  if (import.meta.env.PROD) {
-    void reportWebVitals();
-  }
-}
-
-// Register service worker for basic offline support if available
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
+// Register enhanced service worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register('/sw.js')
+      .register("/sw-enhanced.js")
+      .then((registration) => {
+        // console.log("🚀 Enhanced Service Worker registered successfully:", registration.scope);
+
+        // Check for updates
+        registration.addEventListener("updatefound", () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener("statechange", () => {
+              if (
+                newWorker.state === "installed" &&
+                navigator.serviceWorker.controller
+              ) {
+                // console.log("🔄 New service worker available. Reloading...");
+                window.location.reload();
+              }
+            });
+          }
+        });
+      })
       .catch(() => {
-        // no-op: registration failed; proceed without SW
+        // console.error("❌ Service Worker registration failed:", error);
       });
   });
 }
+
+const root = ReactDOM.createRoot(document.getElementById("root")!);
+root.render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </BrowserRouter>
+    </HelmetProvider>
+  </React.StrictMode>,
+);
+
+// Export for testing purposes
+export { root };

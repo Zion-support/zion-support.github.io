@@ -1,1 +1,88 @@
-import React from "react"; ======= import React from "react";'; const, LatestArticlesShowcas, e: Rea, c, t.FC = () => { const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featur, e, d).sli, c, e(0, 6); return ( <section, className="py-20, b, g-whi, t, e" >"; <div, className="container, m, x-auto, p, x-6" >"; <div, className="text-center mb-12" >"; <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4" >"; Latest, Article, s & Resear, c, h; </h2> <p, className="text-xl text-gray-600 max-w-3xl mx-auto" >"; Explore, cuttin, g-edge, insights, on AI, automati, o, n, and, emerging, technologies; </p> </d, i, v> <div, className="grid, m, d: gr, i, d-co, l, s-2 l g:gr, i, d-co, l, s-3, ga, p-8" >" ======= <div, className="grid, m, d: gr, i, d-co, l, s-2 l g:gr, i, d-co, l, s-3, ga, p-8" >"; {latestArticl, e, s.m, a, p((artic, l, e) => ( <Li, n, k k, e, y={artic, l, e.id} to={artic, l, e.li, n, k} classNa, m, e="group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hov, e r:bord, e, r-indi, g, o-3, 0, 0" > <div, className="p-6" >"; <div, className="flex, item, s-center, justif, y-between, m, b-3" >"; <span, className="te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-600, uppercase, tracking-wi, d, e" >"; {artic, l, e.catego, r, y} </sp, a, n> {artic, l, e.featur, e, d && ( <span, className="bg-yell, o, w-100, tex, t-yell, o, w-800, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m" >"; Featur, e, d; </sp, a, n> )} </d, i, v> <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s" >" ======= <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s" >"; {artic, l, e.tit, l, e} </h3> <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-4, lin, e-cla, m, p-3" >"; {artic, l, e.descripti, o, n} </p> <div, className="flex, item, s-center, justif, y-between, tex, t-sm" > <div, className="flex, item, s-center, tex, t-gr, a, y-5, 0, 0" > <Clock, className="w-4 h-4, m, r-1 /> {artic, l, e.readTi, m, e} </d, i, v> <div, className=" te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l">" Read, Mor, e; <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>" ======= <div, className="flex, item, s-center, justif, y-between, tex, t-sm">"; <div, className="flex, item, s-center, tex, t-gr, a, y-5, 0, 0" >"; <Clock, className="w-4 h-4, m, r-1" />"; {artic, l, e.readTi, m, e} </d, i, v> <div, className="te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l" >"; Read, Mor, e; <ArrowRight, className="w-4 h-4, grou, p-ho, v, e r: transla, t, e-x-1, transitio, n-transfo, r, m" />"; </d, i, v> </d, i, v> <div, className="flex, fle, x-wrap, ga, p-2, m, t-4" >"; {artic, l, e.ta, g, s.sli, c, e(0, 3).m, a, p((t, a, g) => ( <sp, a, n k, e, y={t, a, g} classNa, m, e="te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l" > {t, a, g} </sp, a, n> ))} </d, i, v> </d, i, v> </Li, n, k> ))} </d, i, v> <div, className="te, x, t-center, m, t-12" >"; <Li, n, k to="/bl, o, g" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hov, e r:sca, l, e-105, shado, w-lg" > View, All, Articles; <ArrowRight, className="w-6 h-6 /> ======= <ArrowRight, className=" w-6 h-6" />"; </Li, n, k> </d, i, v> </d, i, v> </secti, o, n> ); }; export default LatestArticlesShowcase;'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Clock } from 'lucide-react';
+import { newArticles2025 } from '../content/new-articles-2025';
+
+const LatestArticlesShowcase: React.FC = () => {
+  const latestArticles = newArticles2025.filter(a => a.featured).slice(0, 6);
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Latest Articles & Research
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore cutting-edge insights on AI, automation, and emerging technologies
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {latestArticles.map((article) => (
+            <Link
+              key={article.id}
+              to={article.link}
+              className="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-indigo-300"
+            >
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wide">
+                    {article.category}
+                  </span>
+                  {article.featured && (
+                    <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-medium">
+                      Featured
+                    </span>
+                  )}
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                  {article.title}
+                </h3>
+                
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  {article.description}
+                </p>
+                
+                <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center text-gray-500">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {article.readTime}
+                  </div>
+                  <div className="text-indigo-600 font-semibold group-hover:gap-2 flex items-center transition-all">
+                    Read More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {article.tags.slice(0, 3).map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
+          >
+            View All Articles
+            <ArrowRight className="w-6 h-6" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default LatestArticlesShowcase;

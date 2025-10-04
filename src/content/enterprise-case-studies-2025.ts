@@ -1,1 +1,198 @@
-// Enterprise, case, studies showcasing, rea, l-world, AI, implementations and, result, s export, interface, EnterpriseCaseStudy { id: stri, n, g sl, u, g?: stri, n, g; tit, l, e: stri, n, g compa, n, y: stri, n, g indust, r, y: stri, n, g descripti, o, n: stri, n, g challen, g, e: stri, n, g soluti, o, n: stri, n, g resul, t, s: { metri, c, s: { performan, c, e: stri, n, g savin, g, s: stri, n, g accura, c, y: stri, n, g r, o, i: stri, n, g; }; timefra, m, e: stri, n, g sca, l, e: stri, n, g }; technologi, e, s: stri, n, g[] featur, e, d: boole, a, n da, t, e: stri, n, g auth, o, r: stri, n, g ======= id: stri, n, g; sl, u, g?: stri, n, g; tit, l, e: stri, n, g; compa, n, y: stri, n, g; indust, r, y: stri, n, g; descripti, o, n: stri, n, g; challen, g, e: stri, n, g; soluti, o, n: stri, n, g; resu, l, t s: { metri, c, s: { performan, c, e: stri, n, g; savin, g, s: stri, n, g; accura, c, y: stri, n, g; ro i: stri, n, g; }; timefra, m, e: stri, n, g; sc, a, l e: stri, n, g; }; technologi, e, s: stri, n, g[]; featur, e, d: boole, a, n; da, t, e: stri, n, g; aut, h, o r: stri, n, g; ima, g, e?: stri, n, g; newBad, g, e?: boole, a, n; trendi, n, g?: boole, a, n; } export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [ { id: "fortu, n, e-5, 0, 0-ai-transformati, o, n" sl, u, g: "fortu, n, e-5, 0, 0-ai-transformati, o, n" tit, l, e: "Fortune, 500, Global Manufactur, i, n g: Complete, AI, Transformation" compa, n, y: "Global, Manufacturing, Corp" indust, r, y: "Manufacturi, n, g" descripti, o, n: "Complete, enterprise, AI transformation, achieving, 99.99% operational, autonom, y, $3.7B, value, creation, and, zero, human error, operation, s." challen, g, e: "Manual, processe, s, operational, inefficiencie, s, and, high, error rates, across, 450 global, facilitie, s" soluti, o, n: "Implemented, comprehensive, AI mesh, network, with autonomous, decisio, n-making, and, self-healing, infrastructur, e" resul, t, s: { metri, c, s: { performan, c, e: "99.99% upti, m, e" savin, g, s: "$3.7B, annuall, y" accura, c, y: "Zero, error, s" r, o, i: "2,4, 0, 0%" } timefra, m, e: "18, month, s" sca, l, e: "450, facilities, globally" } technologi, e, s: ["Autonomous, A, I", "Se, l, f-Healing, Infrastructur, e", "Predictive, Analytic, s", "IoT, Integratio, n"] featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20" auth, o, r: "Zion, Tech, Group Te, a, m" ima, g, e: "/imag, e, s/fortu, n, e-5, 0, 0-ai-transformati, o, n.j, p, g" newBad, g, e: tr, u, e trendi, n, g: tr, u, e; } { id: "financi, a, l-servic, e, s-fra, u, d-preventi, o, n" sl, u, g: "financi, a, l-servic, e, s-fra, u, d-preventi, o, n" tit, l, e: "Leading, Financial, Service s: AI-Powered, Fraud, Prevention" compa, n, y: "Global, Financial, Services" indust, r, y: "Financial, Service, s" descripti, o, n: "Advanced, AI, fraud detection, system, preventing $47B, in, fraudulent transactions, with, 99.94% accuracy, and, real-time, processin, g." challen, g, e: "Sophisticated, fraud, schemes causi, n, g $20, 0, M+ annual, losses, and regulatory, compliance, requirements" soluti, o, n: "Deployed, quantu, m-enhanced, neural, networks with, rea, l-time, behavioral, analysis and, predictive, modeling" resul, t, s: { metri, c, s: { performan, c, e: "99.94% accura, c, y" savin, g, s: "$47B, prevente, d" accura, c, y: "S, u, b-1ms, detectio, n" r, o, i: "3,2, 0, 0%" } timefra, m, e: "12, month, s" sca, l, e: "5, 0, M+ transactions, dail, y" } technologi, e, s: ["Quantum, A, I", "Re, a, l-time, Analytic, s", "Behavioral, Analysi, s", "Predictive, Modelin, g"] featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20" auth, o, r: "Zion, Tech, Group Te, a, m" ima, g, e: "/imag, e, s/financi, a, l-fra, u, d-preventi, o, n.j, p, g" newBad, g, e: tr, u, e trendi, n, g: tr, u, e; } { id: "healthca, r, e-ai-diagnost, i, c-syst, e, m" sl, u, g: "healthca, r, e-ai-diagnost, i, c-syst, e, m" tit, l, e: "Major, Healthcare, Syste m: AI, Diagnostic, Excellence" compa, n, y: "Regional, Healthcare, Network" indust, r, y: "Healthca, r, e" descripti, o, n: "AI-powered, diagnostic, system achieving, 9, 4% diagnostic, accurac, y, 252, lives, saved, and, 49, 7% ROI, in, healthcare delive, r, y." challen, g, e: "Diagnostic, delay, s, accuracy, issue, s, and, resource, constraints affecting, patient, outcomes" soluti, o, n: "Implemented, multimodal, AI diagnostic, platform, with re, a, l-time, analysis, and clinical, decision, support" resul, t, s: { metri, c, s: { performan, c, e: "94% accura, c, y" savin, g, s: "$1.5B, valu, e" accura, c, y: "252, lives, saved" r, o, i: "4, 9, 7%" } timefra, m, e: "15, month, s" sca, l, e: "25, hospital, s, 500K, patient, s" } technologi, e, s: ["Multimodal, A, I", "Diagnostic, Imagin, g", "Clinical, Decision, Support", "Re, a, l-time, Analytic, s"] featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20" auth, o, r: "Zion, Tech, Group Te, a, m" ima, g, e: "/imag, e, s/healthca, r, e-ai-diagnosti, c, s.j, p, g" newBad, g, e: tr, u, e trendi, n, g: tr, u, e; } { id: "reta, i, l-supp, l, y-cha, i, n-optimizati, o, n" sl, u, g: "reta, i, l-supp, l, y-cha, i, n-optimizati, o, n" tit, l, e: "Global, Retail, Chai n: AI, Supply, Chain Revoluti, o, n" compa, n, y: "Global, Retail, Corporation" indust, r, y: "Reta, i, l" descripti, o, n: "AI-driven, supply, chain optimization, achieving, 65% faster, deliverie, s, 40% cost, reductio, n, and, 9, 5% inventory, accurac, y." challen, g, e: "Supply, chain, inefficiencies, stockou, t, s, and, delivery, delays affecting, customer, satisfaction" soluti, o, n: "Deployed, autonomous, supply chain, AI, with predictive, analytics, and dynamic, optimizatio, n" resul, t, s: { metri, c, s: { performan, c, e: "65% faster, deliver, y" savin, g, s: "40% cost, reductio, n" accura, c, y: "95% inventory, accurac, y" r, o, i: "2,8, 0, 0%" } timefra, m, e: "10, month, s" sca, l, e: "2,0, 0, 0+ stores, globall, y" } technologi, e, s: ["Supply, Chain, AI", "Predictive, Analytic, s", "Autonomous, Optimizatio, n", "IoT, Sensor, s"] featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20" auth, o, r: "Zion, Tech, Group Te, a, m" ima, g, e: "/imag, e, s/reta, i, l-supp, l, y-cha, i, n-ai.j, p, g" newBad, g, e: tr, u, e trendi, n, g: tr, u, e; } { id: "ener, g, y-sect, o, r-sma, r, t-gr, i, d" sl, u, g: "ener, g, y-sect, o, r-sma, r, t-gr, i, d" tit, l, e: "Energy, Utili, t y: Smart, Grid, AI Implementati, o, n" compa, n, y: "Regional, Energy, Utility" indust, r, y: "Ener, g, y" descripti, o, n: "Smart, grid, AI system, achieving, 99.97% upti, m, e, 60% energy, efficiency, improvement, a, n, d $890M, annual, savings." challen, g, e: "Grid, instabilit, y, energy, wast, e, and, maintenance, inefficiencies in, aging, infrastructure" soluti, o, n: "Implemented, A, I-powered, smart, grid with, predictive, maintenance and, autonomous, energy distributi, o, n" resul, t, s: { metri, c, s: { performan, c, e: "99.97% upti, m, e" savin, g, s: "$890M, annuall, y" accura, c, y: "60% efficiency, gai, n" r, o, i: "1,6, 0, 0%" } timefra, m, e: "20, month, s" sca, l, e: "5M+ customers, serve, d" } technologi, e, s: ["Smart, Grid, AI", "Predictive, Maintenanc, e", "Energy, Optimizatio, n", "IoT, Integratio, n"] featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20" auth, o, r: "Zion, Tech, Group Te, a, m" ima, g, e: "/imag, e, s/ener, g, y-sma, r, t-gr, i, d-ai.j, p, g" newBad, g, e: tr, u, e trendi, n, g: tr, u, e; } { id: "logisti, c, s-autonomo, u, s-fle, e, t" sl, u, g: "logisti, c, s-autonomo, u, s-fle, e, t" tit, l, e: "Logistics, Compa, n y: Autonomous, Fleet, Management" compa, n, y: "Global, Logistics, Provider" indust, r, y: "Logisti, c, s" descripti, o, n: "Autonomous, fleet, management achieving, 9, 9.8% delivery, accurac, y, 45% fuel, saving, s, a, n, d $2.3B, operational, value." challen, g, e: "Fleet, inefficiencie, s, fuel, cost, s, and, delivery, accuracy issues, across, global operatio, n, s" soluti, o, n: "Deployed, autonomous, fleet AI, with, route optimization, and, predictive maintenance, system, s" resul, t, s: { metri, c, s: { performan, c, e: "99.8% accura, c, y" savin, g, s: "$2.3B, valu, e" accura, c, y: "45% fuel, saving, s" r, o, i: "1,9, 0, 0%" } timefra, m, e: "14, month, s" sca, l, e: "50,0, 0, 0+ vehicles, globall, y" } technologi, e, s: ["Autonomous, Flee, t", "Route, Optimizatio, n", "Predictive, Maintenanc, e", "IoT, Sensor, s"] featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20" auth, o, r: "Zion, Tech, Group Te, a, m" ima, g, e: "/imag, e, s/logisti, c, s-autonomo, u, s-fle, e, t.j, p, g" newBad, g, e: tr, u, e trendi, n, g: tr, u, e; ======= i d: "fortu, n, e-5, 0, 0-ai-transformati, o, n","; sl, u, g: "fortu, n, e-5, 0, 0-ai-transformati, o, n","; tit, l, e: "Fortune, 500, Global Manufactur, i, n g: Complete, AI, Transformation","; compa, n, y: "Global, Manufacturing, Corp","; indust, r, y: "Manufacturi, n, g","; descripti, o, n: "Complete, enterprise, AI transformation, achieving, 99.99% operational, autonom, y, $3.7B, value, creation, and, zero, human error, operation, s.","; challen, g, e: "Manual, processe, s, operational, inefficiencie, s, and, high, error rates, across, 450 global, facilitie, s","; soluti, o, n: "Implemented, comprehensive, AI mesh, network, with autonomous, decisio, n-making, and, self-healing, infrastructur, e","; resul, t, s: { metri, c, s: { performan, c, e: "99.99% upti, m, e","; savin, g, s: "$3.7B, annuall, y","; accura, c, y: "Zero, error, s","; r, o, i: "2,4, 0, 0%" } timefra, m, e: "18, month, s","; sca, l, e: "450, facilities, globally" } technologi, e, s: ["Autonomous, A, I", "Se, l, f-Healing, Infrastructur, e", "Predictive, Analytic, s", "IoT, Integratio, n"],"; featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20","; auth, o, r: "Zion, Tech, Group Te, a, m","; ima, g, e: "/imag, e, s/fortu, n, e-5, 0, 0-ai-transformati, o, n.j, p, g","; newBad, g, e: tr, u, e trendi, n, g: tr, u, e } { id: "financi, a, l-servic, e, s-fra, u, d-preventi, o, n","; sl, u, g: "financi, a, l-servic, e, s-fra, u, d-preventi, o, n","; tit, l, e: "Leading, Financial, Service s: AI-Powered, Fraud, Prevention","; compa, n, y: "Global, Financial, Services","; indust, r, y: "Financial, Service, s","; descripti, o, n: "Advanced, AI, fraud detection, system, preventing $47B, in, fraudulent transactions, with, 99.94% accuracy, and, real-time, processin, g.","; challen, g, e: "Sophisticated, fraud, schemes causi, n, g $20, 0, M+ annual, losses, and regulatory, compliance, requirements","; soluti, o, n: "Deployed, quantu, m-enhanced, neural, networks with, rea, l-time, behavioral, analysis and, predictive, modeling","; resul, t, s: { metri, c, s: { performan, c, e: "99.94% accura, c, y","; savin, g, s: "$47B, prevente, d","; accura, c, y: "S, u, b-1ms, detectio, n","; r, o, i: "3,2, 0, 0%" } timefra, m, e: "12, month, s","; sca, l, e: "5, 0, M+ transactions, dail, y" } technologi, e, s: ["Quantum, A, I", "Re, a, l-time, Analytic, s", "Behavioral, Analysi, s", "Predictive, Modelin, g"],"; featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20","; auth, o, r: "Zion, Tech, Group Te, a, m","; ima, g, e: "/imag, e, s/financi, a, l-fra, u, d-preventi, o, n.j, p, g","; newBad, g, e: tr, u, e trendi, n, g: tr, u, e } { id: "healthca, r, e-ai-diagnost, i, c-syst, e, m","; sl, u, g: "healthca, r, e-ai-diagnost, i, c-syst, e, m","; tit, l, e: "Major, Healthcare, Syste m: AI, Diagnostic, Excellence","; compa, n, y: "Regional, Healthcare, Network","; indust, r, y: "Healthca, r, e","; descripti, o, n: "AI-powered, diagnostic, system achieving, 9, 4% diagnostic, accurac, y, 252, lives, saved, and, 49, 7% ROI, in, healthcare delive, r, y.","; challen, g, e: "Diagnostic, delay, s, accuracy, issue, s, and, resource, constraints affecting, patient, outcomes","; soluti, o, n: "Implemented, multimodal, AI diagnostic, platform, with re, a, l-time, analysis, and clinical, decision, support","; resul, t, s: { metri, c, s: { performan, c, e: "94% accura, c, y","; savin, g, s: "$1.5B, valu, e","; accura, c, y: "252, lives, saved","; r, o, i: "4, 9, 7%" } timefra, m, e: "15, month, s","; sca, l, e: "25, hospital, s, 500K, patient, s" } technologi, e, s: ["Multimodal, A, I", "Diagnostic, Imagin, g", "Clinical, Decision, Support", "Re, a, l-time, Analytic, s"],"; featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20","; auth, o, r: "Zion, Tech, Group Te, a, m","; ima, g, e: "/imag, e, s/healthca, r, e-ai-diagnosti, c, s.j, p, g","; newBad, g, e: tr, u, e trendi, n, g: tr, u, e } { id: "reta, i, l-supp, l, y-cha, i, n-optimizati, o, n","; sl, u, g: "reta, i, l-supp, l, y-cha, i, n-optimizati, o, n","; tit, l, e: "Global, Retail, Chai n: AI, Supply, Chain Revoluti, o, n","; compa, n, y: "Global, Retail, Corporation","; indust, r, y: "Reta, i, l","; descripti, o, n: "AI-driven, supply, chain optimization, achieving, 65% faster, deliverie, s, 40% cost, reductio, n, and, 9, 5% inventory, accurac, y.","; challen, g, e: "Supply, chain, inefficiencies, stockou, t, s, and, delivery, delays affecting, customer, satisfaction","; soluti, o, n: "Deployed, autonomous, supply chain, AI, with predictive, analytics, and dynamic, optimizatio, n","; resul, t, s: { metri, c, s: { performan, c, e: "65% faster, deliver, y","; savin, g, s: "40% cost, reductio, n","; accura, c, y: "95% inventory, accurac, y","; r, o, i: "2,8, 0, 0%" } timefra, m, e: "10, month, s","; sca, l, e: "2,0, 0, 0+ stores, globall, y" } technologi, e, s: ["Supply, Chain, AI", "Predictive, Analytic, s", "Autonomous, Optimizatio, n", "IoT, Sensor, s"],"; featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20","; auth, o, r: "Zion, Tech, Group Te, a, m","; ima, g, e: "/imag, e, s/reta, i, l-supp, l, y-cha, i, n-ai.j, p, g","; newBad, g, e: tr, u, e trendi, n, g: tr, u, e } { id: "ener, g, y-sect, o, r-sma, r, t-gr, i, d","; sl, u, g: "ener, g, y-sect, o, r-sma, r, t-gr, i, d","; tit, l, e: "Energy, Utili, t y: Smart, Grid, AI Implementati, o, n","; compa, n, y: "Regional, Energy, Utility","; indust, r, y: "Ener, g, y","; descripti, o, n: "Smart, grid, AI system, achieving, 99.97% upti, m, e, 60% energy, efficiency, improvement, a, n, d $890M, annual, savings.","; challen, g, e: "Grid, instabilit, y, energy, wast, e, and, maintenance, inefficiencies in, aging, infrastructure","; soluti, o, n: "Implemented, A, I-powered, smart, grid with, predictive, maintenance and, autonomous, energy distributi, o, n","; resul, t, s: { metri, c, s: { performan, c, e: "99.97% upti, m, e","; savin, g, s: "$890M, annuall, y","; accura, c, y: "60% efficiency, gai, n","; r, o, i: "1,6, 0, 0%" } timefra, m, e: "20, month, s","; sca, l, e: "5M+ customers, serve, d" } technologi, e, s: ["Smart, Grid, AI", "Predictive, Maintenanc, e", "Energy, Optimizatio, n", "IoT, Integratio, n"],"; featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20","; auth, o, r: "Zion, Tech, Group Te, a, m","; ima, g, e: "/imag, e, s/ener, g, y-sma, r, t-gr, i, d-ai.j, p, g","; newBad, g, e: tr, u, e trendi, n, g: tr, u, e } { id: "logisti, c, s-autonomo, u, s-fle, e, t","; sl, u, g: "logisti, c, s-autonomo, u, s-fle, e, t","; tit, l, e: "Logistics, Compa, n y: Autonomous, Fleet, Management","; compa, n, y: "Global, Logistics, Provider","; indust, r, y: "Logisti, c, s","; descripti, o, n: "Autonomous, fleet, management achieving, 9, 9.8% delivery, accurac, y, 45% fuel, saving, s, a, n, d $2.3B, operational, value.","; challen, g, e: "Fleet, inefficiencie, s, fuel, cost, s, and, delivery, accuracy issues, across, global operatio, n, s","; soluti, o, n: "Deployed, autonomous, fleet AI, with, route optimization, and, predictive maintenance, system, s","; resul, t, s: { metri, c, s: { performan, c, e: "99.8% accura, c, y","; savin, g, s: "$2.3B, valu, e","; accura, c, y: "45% fuel, saving, s","; r, o, i: "1,9, 0, 0%" } timefra, m, e: "14, month, s","; sca, l, e: "50,0, 0, 0+ vehicles, globall, y" } technologi, e, s: ["Autonomous, Flee, t", "Route, Optimizatio, n", "Predictive, Maintenanc, e", "IoT, Sensor, s"],"; featur, e, d: tr, u, e da, t, e: "20, 2, 5-01-20","; auth, o, r: "Zion, Tech, Group Te, a, m","; ima, g, e: "/imag, e, s/logisti, c, s-autonomo, u, s-fle, e, t.j, p, g","; newBad, g, e: tr, u, e trendi, n, g: tr, u, e } ]; export, const, featuredCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(caseStu, d, y => caseStu, d, y.featur, e, d); export, const, trendingCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(caseStu, d, y => caseStu, d, y.trendi, n, g); export, const, newCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(caseStu, d, y => caseStu, d, y.newBad, g, e);
+// Enterprise case studies showcasing real-world AI implementations and results
+
+export interface EnterpriseCaseStudy {
+  id: string;
+  slug?: string;
+  title: string;
+  company: string;
+  industry: string;
+  description: string;
+  challenge: string;
+  solution: string;
+  results: {
+    metrics: {
+      performance: string;
+      savings: string;
+      accuracy: string;
+      roi: string;
+    };
+    timeframe: string;
+    scale: string;
+  };
+  technologies: string[];
+  featured: boolean;
+  date: string;
+  author: string;
+  image?: string;
+  newBadge?: boolean;
+  trending?: boolean;
+}
+
+export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
+  {
+    id: "fortune-500-ai-transformation",
+    slug: "fortune-500-ai-transformation",
+    title: "Fortune 500 Global Manufacturing: Complete AI Transformation",
+    company: "Global Manufacturing Corp",
+    industry: "Manufacturing",
+    description: "Complete enterprise AI transformation achieving 99.99% operational autonomy, $3.7B value creation, and zero human error operations.",
+    challenge: "Manual processes, operational inefficiencies, and high error rates across 450 global facilities",
+    solution: "Implemented comprehensive AI mesh network with autonomous decision-making and self-healing infrastructure",
+    results: {
+      metrics: {
+        performance: "99.99% uptime",
+        savings: "$3.7B annually",
+        accuracy: "Zero errors",
+        roi: "2,400%"
+      },
+      timeframe: "18 months",
+      scale: "450 facilities globally"
+    },
+    technologies: ["Autonomous AI", "Self-Healing Infrastructure", "Predictive Analytics", "IoT Integration"],
+    featured: true,
+    date: "2025-01-20",
+    author: "Zion Tech Group Team",
+    image: "/images/fortune-500-ai-transformation.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "financial-services-fraud-prevention",
+    slug: "financial-services-fraud-prevention",
+    title: "Leading Financial Services: AI-Powered Fraud Prevention",
+    company: "Global Financial Services",
+    industry: "Financial Services",
+    description: "Advanced AI fraud detection system preventing $47B in fraudulent transactions with 99.94% accuracy and real-time processing.",
+    challenge: "Sophisticated fraud schemes causing $200M+ annual losses and regulatory compliance requirements",
+    solution: "Deployed quantum-enhanced neural networks with real-time behavioral analysis and predictive modeling",
+    results: {
+      metrics: {
+        performance: "99.94% accuracy",
+        savings: "$47B prevented",
+        accuracy: "Sub-1ms detection",
+        roi: "3,200%"
+      },
+      timeframe: "12 months",
+      scale: "50M+ transactions daily"
+    },
+    technologies: ["Quantum AI", "Real-time Analytics", "Behavioral Analysis", "Predictive Modeling"],
+    featured: true,
+    date: "2025-01-20",
+    author: "Zion Tech Group Team",
+    image: "/images/financial-fraud-prevention.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "healthcare-ai-diagnostic-system",
+    slug: "healthcare-ai-diagnostic-system",
+    title: "Major Healthcare System: AI Diagnostic Excellence",
+    company: "Regional Healthcare Network",
+    industry: "Healthcare",
+    description: "AI-powered diagnostic system achieving 94% diagnostic accuracy, 252 lives saved, and 497% ROI in healthcare delivery.",
+    challenge: "Diagnostic delays, accuracy issues, and resource constraints affecting patient outcomes",
+    solution: "Implemented multimodal AI diagnostic platform with real-time analysis and clinical decision support",
+    results: {
+      metrics: {
+        performance: "94% accuracy",
+        savings: "$1.5B value",
+        accuracy: "252 lives saved",
+        roi: "497%"
+      },
+      timeframe: "15 months",
+      scale: "25 hospitals, 500K patients"
+    },
+    technologies: ["Multimodal AI", "Diagnostic Imaging", "Clinical Decision Support", "Real-time Analytics"],
+    featured: true,
+    date: "2025-01-20",
+    author: "Zion Tech Group Team",
+    image: "/images/healthcare-ai-diagnostics.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "retail-supply-chain-optimization",
+    slug: "retail-supply-chain-optimization",
+    title: "Global Retail Chain: AI Supply Chain Revolution",
+    company: "Global Retail Corporation",
+    industry: "Retail",
+    description: "AI-driven supply chain optimization achieving 65% faster deliveries, 40% cost reduction, and 95% inventory accuracy.",
+    challenge: "Supply chain inefficiencies, stockouts, and delivery delays affecting customer satisfaction",
+    solution: "Deployed autonomous supply chain AI with predictive analytics and dynamic optimization",
+    results: {
+      metrics: {
+        performance: "65% faster delivery",
+        savings: "40% cost reduction",
+        accuracy: "95% inventory accuracy",
+        roi: "2,800%"
+      },
+      timeframe: "10 months",
+      scale: "2,000+ stores globally"
+    },
+    technologies: ["Supply Chain AI", "Predictive Analytics", "Autonomous Optimization", "IoT Sensors"],
+    featured: true,
+    date: "2025-01-20",
+    author: "Zion Tech Group Team",
+    image: "/images/retail-supply-chain-ai.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "energy-sector-smart-grid",
+    slug: "energy-sector-smart-grid",
+    title: "Energy Utility: Smart Grid AI Implementation",
+    company: "Regional Energy Utility",
+    industry: "Energy",
+    description: "Smart grid AI system achieving 99.97% uptime, 60% energy efficiency improvement, and $890M annual savings.",
+    challenge: "Grid instability, energy waste, and maintenance inefficiencies in aging infrastructure",
+    solution: "Implemented AI-powered smart grid with predictive maintenance and autonomous energy distribution",
+    results: {
+      metrics: {
+        performance: "99.97% uptime",
+        savings: "$890M annually",
+        accuracy: "60% efficiency gain",
+        roi: "1,600%"
+      },
+      timeframe: "20 months",
+      scale: "5M+ customers served"
+    },
+    technologies: ["Smart Grid AI", "Predictive Maintenance", "Energy Optimization", "IoT Integration"],
+    featured: true,
+    date: "2025-01-20",
+    author: "Zion Tech Group Team",
+    image: "/images/energy-smart-grid-ai.jpg",
+    newBadge: true,
+    trending: true
+  },
+  {
+    id: "logistics-autonomous-fleet",
+    slug: "logistics-autonomous-fleet",
+    title: "Logistics Company: Autonomous Fleet Management",
+    company: "Global Logistics Provider",
+    industry: "Logistics",
+    description: "Autonomous fleet management achieving 99.8% delivery accuracy, 45% fuel savings, and $2.3B operational value.",
+    challenge: "Fleet inefficiencies, fuel costs, and delivery accuracy issues across global operations",
+    solution: "Deployed autonomous fleet AI with route optimization and predictive maintenance systems",
+    results: {
+      metrics: {
+        performance: "99.8% accuracy",
+        savings: "$2.3B value",
+        accuracy: "45% fuel savings",
+        roi: "1,900%"
+      },
+      timeframe: "14 months",
+      scale: "50,000+ vehicles globally"
+    },
+    technologies: ["Autonomous Fleet", "Route Optimization", "Predictive Maintenance", "IoT Sensors"],
+    featured: true,
+    date: "2025-01-20",
+    author: "Zion Tech Group Team",
+    image: "/images/logistics-autonomous-fleet.jpg",
+    newBadge: true,
+    trending: true
+  }
+];
+
+export const featuredCaseStudies = enterpriseCaseStudies2025.filter(caseStudy => caseStudy.featured);
+export const trendingCaseStudies = enterpriseCaseStudies2025.filter(caseStudy => caseStudy.trending);
+export const newCaseStudies = enterpriseCaseStudies2025.filter(caseStudy => caseStudy.newBadge);
