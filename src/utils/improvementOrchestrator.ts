@@ -5,17 +5,14 @@
 
 import {
   performanceOptimizer,
-  PerformanceOptimizer,
 } from './performanceOptimizer';
 import {
   codeQualityImprover,
-  CodeQualityImprover,
 } from './codeQualityImprover';
-import { securityEnhancer, SecurityEnhancer } from './securityEnhancer';
-import { testingFramework, AdvancedTestingFramework } from './testingFramework';
+import { securityEnhancer } from './securityEnhancer';
+import { testingFramework } from './testingFramework';
 import {
   documentationGenerator,
-  DocumentationGenerator,
 } from './documentationGenerator';
 
 interface ImprovementConfig {
@@ -564,7 +561,7 @@ class ImprovementOrchestrator {
    * Execute performance improvement
    */
   private async executePerformanceImprovement(
-    action: ImprovementAction,
+    _action: ImprovementAction,
   ): Promise<void> {
     // Simulate performance improvement execution
     console.log('🚀 Executing performance improvements...');
@@ -575,7 +572,7 @@ class ImprovementOrchestrator {
    * Execute quality improvement
    */
   private async executeQualityImprovement(
-    action: ImprovementAction,
+    _action: ImprovementAction,
   ): Promise<void> {
     // Simulate quality improvement execution
     console.log('🔧 Executing quality improvements...');
@@ -586,7 +583,7 @@ class ImprovementOrchestrator {
    * Execute security improvement
    */
   private async executeSecurityImprovement(
-    action: ImprovementAction,
+    _action: ImprovementAction,
   ): Promise<void> {
     // Simulate security improvement execution
     console.log('🔒 Executing security improvements...');
@@ -597,7 +594,7 @@ class ImprovementOrchestrator {
    * Execute testing improvement
    */
   private async executeTestingImprovement(
-    action: ImprovementAction,
+    _action: ImprovementAction,
   ): Promise<void> {
     // Simulate testing improvement execution
     console.log('🧪 Executing testing improvements...');
@@ -608,7 +605,7 @@ class ImprovementOrchestrator {
    * Execute documentation improvement
    */
   private async executeDocumentationImprovement(
-    action: ImprovementAction,
+    _action: ImprovementAction,
   ): Promise<void> {
     // Simulate documentation improvement execution
     console.log('📚 Executing documentation improvements...');
