@@ -1,6 +1,5 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-const PROD_DOMAIN = process.env.PROD_DOMAIN || 'https://ziontechgroup.com';
 const PROD_DOMAIN = 'https://ziontechgroup.com';
 
 async function handler(req, res) {
@@ -12,49 +11,27 @@ async function handler(req, res) {
   }
 
   const { productId, userId } = req.body || {};
-  if (!productId || !userId) {
+
+  if (!productId) {
     res.statusCode = 400;
-    res.json({ error: 'Missing productId or userId' });
+    res.json({ error: 'Product ID is required' });
     return;
   }
 
   try {
     // Create checkout session logic here
-    const session = {
-      id: `cs_${Date.now()}`,
+    const sessionData = {
       productId,
       userId,
-      status: 'pending',
-      createdAt: new Date().toISOString()
+      successUrl: `${PROD_DOMAIN}/success`,
+      cancelUrl: `${PROD_DOMAIN}/cancel`
     };
 
-    res.status(200).json({
-      success: true,
-      session
-    });
+    res.statusCode = 200;
+    res.json({ sessionId: 'session_' + Date.now(), ...sessionData });
   } catch (error) {
-    console.error('Checkout session creation error:', error);
-    res.status(500).json({ 
-      error: error.message || 'Failed to create checkout session' 
-    });
-  }
-}
-
-  const { productId, userId } = req.body || {};
-
-  try {
-    // Create checkout session logic here
-    const session = {
-      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
-      url: `${PROD_DOMAIN}/checkout/success`,
-      productId,
-      userId
-    };
-
-    res.status(200).json({ session });
-  } catch (err) {
-    console.error('Checkout session error:', err);
-    res.status(500).json({ error: err.message });
+    res.statusCode = 500;
+    res.json({ error: 'Failed to create checkout session' });
   }
 }
 

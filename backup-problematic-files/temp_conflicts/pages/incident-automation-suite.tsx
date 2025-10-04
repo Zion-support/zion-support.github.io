@@ -1,9 +1,1 @@
-
-
-  if (!service) return null;
-
-  return (
-
-  return (
-    <UltraAdvancedFuturisticBackground>
-
+if (!service) return null; return ( return ( <UltraAdvancedFuturisticBackground>

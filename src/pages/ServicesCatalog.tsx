@@ -1,71 +1,15 @@
-import React from "react";
-import, EnhancedSEOHead, from "../componen, t, s/EnhancedSEOHe, a, d";
-const, row, s = [
-  { gro, u, p: 'AI', na, m, e: 'RAG, Chatbot, for Documen, t, s', pri, c, e: 'Set, u, p $2k–$8k + $99–$4, 9, 9/mo', li, n, k: '/servic, e, s/ai-virtu, a, l-assista, n, t' }
-  { gro, u, p: 'AI', na, m, e: 'Predictive, Analytic, s', pri, c, e: 'Proje, c, t $3k–$1, 2, k', li, n, k: '/servic, e, s/ai-da, t, a-analyti, c, s' }
-  { gro, u, p: 'AI', na, m, e: 'Intelligent, Document, Processing (I, D, P)', pri, c, e: 'Proje, c, t $4k–$1, 5, k', li, n, k: '/servic, e, s/ai-intellige, n, t-docume, n, t-processi, n, g' }
-  { gro, u, p: 'Automati, o, n', na, m, e: 'Workflow, Automatio, n', pri, c, e: 'Proje, c, t $1.5k–$8k', li, n, k: '/servic, e, s/ai-workfl, o, w-automati, o, n' }
-  { gro, u, p: 'Automati, o, n', na, m, e: 'Appointment, Schedule, r (Healthca, r, e)', pri, c, e: '$99–$4, 9, 9/mo', li, n, k: '/servic, e, s/sma, r, t-appointme, n, t-schedul, e, r' }
-  { gro, u, p: 'IT', na, m, e: 'Cloud, Cost, Optimization', pri, c, e: 'Proje, c, t $1.5k–$8k', li, n, k: '/servic, e, s/clo, u, d' }
-  { gro, u, p: 'IT', na, m, e: 'Landing, Zon, e + I, a, C', pri, c, e: 'Proje, c, t $5k–$2, 0, k', li, n, k: '/servic, e, s/clo, u, d' }
-  { gro, u, p: 'Securi, t, y', na, m, e: 'Security, Assessmen, t', pri, c, e: 'Proje, c, t $2k–$1, 0, k', li, n, k: '/servic, e, s/securi, t, y' }
-  { gro, u, p: 'Securi, t, y', na, m, e: 'S, O, C-li, t, e (24/5)', pri, c, e: '$9, 9, 9–$3,9, 9, 9/mo', li, n, k: '/servic, e, s/securi, t, y' }
-];
-const, ServicesCatalo, g: Rea, c, t.FC = () => {
-  return (
-    <>
-      <EnhancedSEOHe, a, d 
-  tit, l, e="Services, Catalo, g - Zion, Tech, Group"
-        descripti, o, n="Catalog, of, AI, automati, o, n, micro, Saa, S, and, IT, services with, transparent, pricing."
-        keywor, d, s="services, pricin, g, AI, pricin, g, IT, rate, s, micro, SaaS, pricing" 
-        canonic, a, l="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/catal, o, g"  />
-      <main, className="py-12, s, m:py-16">
-        <div, className="container, m, x-auto, p, x-6">
-          <div, className="m, a, x-w-7xl, m, x-au, t, o">
-            <h1, className="te, x, t-3x, l, s
-  m:te, x, t-4xl, fon, t-bold, m, b-6">Services, Catalo, g</h1>
-            <p, className="te, x, t-gr, a, y-700, m, b-6">Average, market, prices sho, w, n; final, quotes, depend on, scope, and SL, A, s.</p>
-            <div, className="overfl, o, w-x-auto, b, g-white, border, rounded-lg, shado, w-sm">
-              <table, className="m, i, n-w-fu, l, l">
-                <the, a, d>
-                  <tr, className="bg-gr, a, y-50, tex, t-left, tex, t-sm, tex, t-gr, a, y-6, 0, 0">
-                    <th, className="px-4, p, y-3, fon, t-medi, u, m">Gro, u, p</th>
-                    <th, className="px-4, p, y-3, fon, t-medi, u, m">Servi, c, e</th>
-                    <th, className="px-4, p, y-3, fon, t-medi, u, m">Typical, Pric, e</th>
-                    <th, className="px-4, p, y-3, fon, t-medi, u, m">Acti, o, n</th>
-                  </tr>
-                </the, a, d>
-                <tbo, d, y>
-                  {ro, w, s.m, a, p((r) => (
-                    <tr, ke, y={r.gro, u, p + r.na, m, e} classNa, m, e="bord, e, r-t">
-                      <td, className="px-4, p, y-3, tex, t-sm, tex, t-gr, a, y-7, 0, 0">{r.gro, u, p}</td>
-                      <td, className="px-4, p, y-3, tex, t-sm, tex, t-gr, a, y-9, 0, 0">{r.na, m, e}</td>
-                      <td, className="px-4, p, y-3, tex, t-sm, tex, t-gr, a, y-700, whitespac, e-nowr, a, p">{r.pri, c, e}</td>
-                      <td, className="px-4, p, y-3, tex, t-sm">
-                        <a, hre, f={r.li, n, k} classNa, m, e="te, x, t-bl, u, e-600, hove, r: underline, m, r-4">Learn, mor, e</a>
-                        <a, hre, f="/conta, c, t" classNa, m, e="te, x, t-bl, u, e-600, hov, e
-  r:underli, n, e">Get, a, quote</a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbo, d, y>
-              </tab, l, e>
-            </d, i, v>
-            <div, className="mt-8, b, g-bl, u, e-50, border, border-bl, u, e-100, rounde, d-l, g, p-6, flex, flex-col, s, m: fl, e, x-row, s, m:ite, m, s-center, s, m:justi, f, y-between, ga, p-4">
-              <d, i, v>
-                <p, className="te, x, t-lg, fon, t-semibold, tex, t-bl, u, e-9, 0, 0">Need, custom, pricing or, a, bundled off, e, r?</p>
-                <p, className="te, x, t-bl, u, e-8, 0, 0">Ca, l, l +1, 302, 464 0950, or, email kleb, e, r@ziontechgro, u, p.c, o, m</p>
-              </d, i, v>
-              <div, className="flex, ga, p-3">
-                <a, hre, f="/conta, c, t" classNa, m, e="px-5, p, y-2, rounde, d-md, b, g-bl, u, e-600, tex, t-white, hove, r:bg-bl, u, e-7, 0, 0">Contact, Sale, s</a>
-                <a, hre, f="/de, m, o" classNa, m, e="px-5, p, y-2, rounde, d-md, border, border-bl, u, e-600, tex, t-bl, u, e-600, hov, e
-  r:bg-bl, u, e-50">Book, a, Demo</a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </ma, i, n>
-    < />
-  );
-};
-export default ServicesCatalog;
+
+
+      <main className="py-12 sm:py-16"
+        <div className="container mx-auto px-6"
+          <div className="max-w-7xl mx-auto"
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Services Catalog</h1>";,"
+            <p className="text-gray-700 mb-6">Average market prices shown; final quotes depend on scope and SLAs.</p>";,"
+            <div className="overflow-x-auto bg-white border rounded-lg shadow-sm"
+              <table className="min-w-full"
+                <thead >
+                  <tr className="bg-gray-50 text-left text-sm text-gray-600"
+                    <th className="px-4 py-3 font-medium">Group</th>";,"
+                    <th className="px-4 py-3 font-medium">Service</th>";,"
+                    <th className="px-4 py-3 font-medium">Typical Price</th>";,"
+                    <th className="px-4 py-3 font-medium">Action</th>";,"

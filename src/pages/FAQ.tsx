@@ -1,19 +1,11 @@
-import React from "react";
-const, FA, Q: Rea, c, t.FC = () => {
-    return (
-        <section, className="m, i, n-h-[40, v, h]">
-            <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Frequently, Asked, Questions</h1>
-            <div, className="spa, c, e-y-4, tex, t-gr, a, y-7, 0, 0">
-                <d, i, v>
-                    <h2, className="fo, n, t-semibo, l, d">What, services, do you, offe, r?</h2>
-                    <p>AI, micro, Saa, S, cybersecuri, t, y, clo, u, d/DevO, p, s, analyti, c, s, and, mor, e.</p>
-                </d, i, v>
-                <d, i, v>
-                    <h2, className="fo, n, t-semibo, l, d">How, do, I start, a, project?</h2>
-                    <p>Contact, us, via the, contact, page to, request, a discovery, cal, l.</p>
-                </d, i, v>
-            </d, i, v>
-        </secti, o, n>
-    );
-};
-export default FAQ;
+
+
+        <section className="min-h-[40vh]"
+            <h1 className="text-3xl font-bold mb-4">Frequently Asked Questions</h1>";,"
+            <div className="space-y-4 text-gray-700"
+                <div >
+                    <h2 className="font-semibold">What services do you offer?</h2>";,"
+                    <p >AI, micro SaaS, cybersecurity, cloud/DevOps, analytics, and more.</p>
+                </div>
+                <div >
+                    <h2 className="font-semibold">How do I start a project?</h2>";,"

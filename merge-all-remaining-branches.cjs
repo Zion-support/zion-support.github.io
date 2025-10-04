@@ -38,10 +38,9 @@ function resolveConflicts() {
             try {
                 let content = fs.readFileSync(file, 'utf8');
                 
-                if (content.includes('<<<<<<< HEAD')) {
+                if (content.includes('')) {
                     // Simple conflict resolution - choose the version with proper syntax
-                    const sections = content.split(/<<<<<<< HEAD|=======|>>>>>>> /);
-                    
+                    const sections = content.split(/||                    
                     if (sections.length === 4) {
                         const headSection = sections[1].trim();
                         const remoteSection = sections[2].trim();

@@ -1,116 +1,295 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calendar, TrendingUp, Star } from 'lucide-react';
 
-const NewestContent2025Banner: React.FC = () => {
-  const featuredContent = [
-    {
-      id: 1,
-      title: 'AI Autonomous Workflows 2025',
-      slug: 'ai-autonomous-workflows-2025',
-      excerpt: 'Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration',
-      category: 'Enterprise Automation',
-      icon: '🤖',
-      badge: 'NEW',
-      readTime: '8 min read',
-      publishDate: '2025-01-15'
-    },
-    {
-      id: 2,
-      title: 'Quantum-Neural Fusion Systems',
-      slug: 'quantum-neural-fusion-systems',
-      excerpt: 'Revolutionary AI that combines quantum computing with neural networks for unprecedented performance',
-      category: 'Quantum AI',
-      icon: '⚡',
-      badge: 'BREAKTHROUGH',
-      readTime: '12 min read',
-      publishDate: '2025-01-14'
-    },
-    {
-      id: 3,
-      title: 'Meta-Cognitive Intelligence Platform',
-      slug: 'meta-cognitive-intelligence-platform',
-      excerpt: 'AI that thinks about thinking - the next evolution in artificial intelligence',
-      category: 'Advanced AI',
-      icon: '🧠',
-      badge: 'REVOLUTIONARY',
-      readTime: '15 min read',
-      publishDate: '2025-01-13'
-    }
-  ];
-
+const NewestContent2025Banner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-6">
-            <TrendingUp className="w-5 h-5 text-purple-400" />
-            <span className="text-purple-400 font-semibold text-sm uppercase tracking-wider">
-              Latest Content 2025
-            </span>
+    <section className="text-left">
+      {/* Animated Background Effects */}
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>
+        <div className="text-left" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="text-left">
+        {/* Header */}
+        <div className="text-left">
+          <div className="text-left">
+            <span className="text-left">🚀</span>/span>/span>/span>
+            <span className="text-left">
+              BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
+            </span>/span>/span>/span>
+            <span className="text-left">⚡</span>/span>/span>/span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Revolutionary AI Insights
+
+          <h2 className="text-left">
+            September 30, 2025 — Cutting-Edge AI Insights
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Discover breakthrough technologies and cutting-edge solutions that are reshaping enterprise operations.
+          <p className="text-left">
+            Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content) => (
-            <Link
-              key={content.id}
-              href={`/blog/${content.slug}`}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className="absolute top-4 right-4">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-purple-500 to-blue-600 text-white">
-                  {content.badge}
-                </span>
-              </div>
-              
-              <div className="mb-6">
-                <div className="text-4xl mb-4">{content.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  {content.title}
+        {/* Featured Articles Grid */}
+        <div className="text-left">
+          {/* Article 1: AI Edge Computing */}
+          <Link href="/blog/ai-edge-computing-real-time-2025" className="text-left">
+            <div className="text-left">
+              {/* Card glow effect */}
+              <div className="text-left">
+              <div className="text-left">
+                {/* Icon & Badges */}
+                <div className="text-left">
+                  <div className="text-left">
+                    ⚡
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">🔥</span>/span>/span>/span>
+                      <span>HOT</span>
+                    </div>
+                    <span className="text-left">
+                      NEW TODAY
+                    </span>/span>/span>/span>
+                  </div>
+
+                {/* Category Tag */}
+                <div className="text-left">
+                  <span className="text-left">
+                    Edge AI & Real-Time
+                  </span>/span>/span>/span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-left">
+                  AI Edge Computing Real-Time Intelligence 2025
                 </h3>
-                <p className="text-gray-300 text-sm mb-4">{content.excerpt}</p>
-                
-                <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full bg-white/10 text-purple-300">
-                    {content.category}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {content.readTime}
-                  </span>
+
+                {/* Excerpt */}
+                <p className="text-left">
+                  Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 
+                  87% cost savings, and enhanced privacy compliance at enterprise scale.
+                </p>
+
+                {/* Key Stats */}
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">&lt;10ms</div>
+                    <div className="text-left">Latency</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">95%</div>
+                    <div className="text-left">Bandwidth ↓</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">87%</div>
+                    <div className="text-left">Cost ↓</div>
+                  </div>
+                </div>
+
+                {/* Meta Info */}
+                <div className="text-left">
+                  <span>⏱️ 35 min read</span>
+                  <span>📅 Sep 30, 2025</span>
+                </div>
+
+                {/* CTA Button */}
+                <div className="text-left">
+                  <span>Read Full Article</span>
+                  <span className="text-left">→</span>/span>/span>/span>
                 </div>
               </div>
-              
-              <div className="flex items-center gap-2 text-purple-400 font-semibold transition-colors group-hover:text-purple-300">
-                Read More
-                <ArrowRight className="w-4 h-4" />
-              </div>
-            </Link>
-          ))}
+            </div>
+          </Link>
+
+          {/* Article 2: Neural Networks */}
+          <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    🧠
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">🔥</span>/span>/span>/span>
+                      <span>HOT</span>
+                    </div>
+                    <span className="text-left">
+                      NEW TODAY
+                    </span>/span>/span>/span>
+                  </div>
+
+                <div className="text-left">
+                  <span className="text-left">
+                    Neural Networks & AI
+                  </span>/span>/span>/span>
+                </div>
+
+                <h3 className="text-left">
+                  AI Neural Networks Enterprise Transformation 2025
+                </h3>
+
+                <p className="text-left">
+                  Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 
+                  10x ROI, and 85% operational efficiency gains.
+                </p>
+
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">98.5%</div>
+                    <div className="text-left">Accuracy</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">10x</div>
+                    <div className="text-left">ROI</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">85%</div>
+                    <div className="text-left">Efficiency</div>
+                  </div>
+                </div>
+
+                <div className="text-left">
+                  <span>⏱️ 40 min read</span>
+                  <span>📅 Sep 30, 2025</span>
+                </div>
+
+                <div className="text-left">
+                  <span>Read Full Article</span>
+                  <span className="text-left">→</span>/span>/span>/span>
+                </div>
+            </div>
+          </Link>
+
+          {/* Article 3: Quantum Security */}
+          <Link href="/blog/ai-quantum-security-protocols-2026" className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    ⚛️
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">🚨</span>/span>/span>/span>
+                      <span>CRITICAL</span>
+                    </div>
+                    <span className="text-left">
+                      NEW TODAY
+                    </span>/span>/span>/span>
+                  </div>
+
+                <div className="text-left">
+                  <span className="text-left">
+                    Quantum Security
+                  </span>/span>/span>/span>
+                </div>
+
+                <h3 className="text-left">
+                  AI Quantum Security Protocols 2026
+                </h3>
+
+                <p className="text-left">
+                  Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical 
+                  and quantum attacks with sub-millisecond overhead.
+                </p>
+
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">99.99%</div>
+                    <div className="text-left">Security</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">&lt;1ms</div>
+                    <div className="text-left">Overhead</div>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">Zero</div>
+                    <div className="text-left">Breaches</div>
+                  </div>
+                </div>
+
+                <div className="text-left">
+                  <span>⏱️ 45 min read</span>
+                  <span>📅 Sep 30, 2025</span>
+                </div>
+
+                <div className="text-left">
+                  <span>Read Full Article</span>
+                  <span className="text-left">→</span>/span>/span>/span>
+                </div>
+            </div>
+          </Link>
+
         </div>
 
-        <div className="text-center">
+        {/* Call-to-Action Section */}
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">
+                Transform Your Enterprise with Cutting-Edge AI
+              </h3>
+              <p className="text-left">
+                Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance 
+                from Zion Tech Group's AI transformation specialists.
+              </p>
+              <div className="text-left">
+                <a
+                  href="tel:+13024640950"
+                  className="text-left">
+                  <span className="text-left">📞</span>/span>/span>/span>
+                  <span>Call +1 302 464 0950</span>
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-left">
+                  <span className="text-left">📧</span>/span>/span>/span>
+                  <span>Get Expert Consultation</span>
+                </a>
+              </div>
+          </div>
+
+        {/* Stats Section */}
+        <div className="text-left">
+          {[
+            { value: '500+', label: 'Enterprise Clients' },
+            { value: '10B+', label: 'Data Points Processed Daily' },
+            { value: '99.9%', label: 'System Uptime' },
+            { value: '5M+', label: 'Autonomous Operations Hours' }
+          ].map((stat, index) => (
+            <div key={index} className="text-left">
+              <div className="text-left">
+                {stat.value}
+              </div>
+              <div className="text-left">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <Link
+            href="/contact"
+            className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+            <span>Start Your AI Transformation</span>
+          </Link>
+          
           <Link
             href="/blog"
-            className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-          >
-            View All Articles
+            className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
+            <span>Explore All Articles</span>
+            <span>→</span>
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default NewestContent2025Banner;
+import React from 'react';' import Link from 'next/link'; const NewestContent2025Banner = () => { return ( <section className="text-left" > {/* Animated Background Effects */} <div className="text-left" > <div></div>' <div></div>' <div></div> <div className="text-left" > {/* Header */} <div className="text-left" > <div className="text-left" > <span className="text-left" >🚀</span> <span className="text-left" > BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED! </span> <span className="text-left" >⚡</span> </div> <h2 className="text-left" > September 30, 2025 — Cutting-Edge AI Insights </h2> <p className="text-left" > Edge Computing • Neural Networks • Quantum Security — The future of enterprise AI starts here </p> </div> {/* Featured Articles Grid */} <div className="text-left" > {/* Article 1: AI Edge Computing */} <Link href="/blog/ai-edge-computing-real-time-2025" className="text-left" > <div className="text-left" > {/* Card glow effect */} <div className="text-left" > <div className="text-left" > {/* Icon & Badges */} <div className="text-left" > <div className="text-left" > ⚡ </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🔥</span> <span>HOT</span> </div> <span className="text-left" > NEW TODAY </span> </div> {/* Category Tag */} <div className="text-left" > <span className="text-left" > Edge AI & Real-Time </span> </div> {/* Title */} <h3 className="text-left" > AI Edge Computing Real-Time Intelligence 2025 </h3> {/* Excerpt */} <p className="text-left" > Deploy intelligence at the source with &lt;10ms latency. Achieve 95% bandwidth reduction, 87% cost savings, and enhanced privacy compliance at enterprise scale. </p> {/* Key Stats */} <div className="text-left" > <div className="text-left" > <div className="text-left" >&lt;10ms</div> <div className="text-left" >Latency</div> </div> <div className="text-left" > <div className="text-left" >95%</div> <div className="text-left" >Bandwidth ↓</div> </div> <div className="text-left" > <div className="text-left" >87%</div> <div className="text-left" >Cost ↓</div> </div> </div> {/* Meta Info */} <div className="text-left" > <span>⏱️ 35 min read</span> <span>📅 Sep 30, 2025</span> </div> {/* CTA Button */} <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </div> </Link> {/* Article 2: Neural Networks */} <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > 🧠 </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🔥</span> <span>HOT</span> </div> <span className="text-left" > NEW TODAY </span> </div> <div className="text-left" > <span className="text-left" > Neural Networks & AI </span> </div> <h3 className="text-left" > AI Neural Networks Enterprise Transformation 2025 </h3> <p className="text-left" > Deploy advanced neural network architectures. Fortune 500 implementations achieving 98.5% accuracy, 10x ROI, and 85% operational efficiency gains. </p> <div className="text-left" > <div className="text-left" > <div className="text-left" >98.5%</div> <div className="text-left" >Accuracy</div> </div> <div className="text-left" > <div className="text-left" >10x</div> <div className="text-left" >ROI</div> </div> <div className="text-left" > <div className="text-left" >85%</div> <div className="text-left" >Efficiency</div> </div> </div> <div className="text-left" > <span>⏱️ 40 min read</span> <span>📅 Sep 30, 2025</span> </div> <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </Link> {/* Article 3: Quantum Security */} <Link href="/blog/ai-quantum-security-protocols-2026" className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > ⚛️ </div> <div className="text-left" > <div className="text-left" > <span className="text-left" >🚨</span> <span>CRITICAL</span> </div> <span className="text-left" > NEW TODAY </span> </div> <div className="text-left" > <span className="text-left" > Quantum Security </span> </div> <h3 className="text-left" > AI Quantum Security Protocols 2026 </h3> <p className="text-left" > Protect AI systems with quantum-resistant cryptography. Achieve 99.99% security against classical and quantum attacks with sub-millisecond overhead. </p> <div className="text-left" > <div className="text-left" > <div className="text-left" >99.99%</div> <div className="text-left" >Security</div> </div> <div className="text-left" > <div className="text-left" >&lt;1ms</div> <div className="text-left" >Overhead</div> </div> <div className="text-left" > <div className="text-left" >Zero</div> <div className="text-left" >Breaches</div> </div> </div> <div className="text-left" > <span>⏱️ 45 min read</span> <span>📅 Sep 30, 2025</span> </div> <div className="text-left" > <span>Read Full Article</span> <span className="text-left" >→</span> </div> </div> </Link> </div> {/* Call-to-Action Section */} <div className="text-left" > <div className="text-left" > <div className="text-left" > <h3 className="text-left" > Transform Your Enterprise with Cutting-Edge AI </h3> <p className="text-left" > Join 50,000+ AI leaders implementing these breakthrough technologies. Get expert guidance ' from Zion Tech Group's AI transformation specialists. </p> <div className="text-left" > <a href="tel:+13024640950" className="text-left" > <span className="text-left" >📞</span> <span>Call +1 302 464 0950</span> </a> <a href="mailto:kleber@ziontechgroup.com" className="text-left" > <span className="text-left" >📧</span> <span>Get Expert Consultation</span> </a> </div> </div>    

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Code, Shield, Zap, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function API() {
@@ -15,7 +16,7 @@ export default function API() {
       name: 'User Authentication',
       method: 'POST',
       endpoint: '/api/auth/login',
-      description: 'Authenticate user and get access token',
+      description: 'Authenticate user credentials',
       parameters: ['email', 'password'],
       response: 'JWT token and user data'
     },
@@ -23,7 +24,7 @@ export default function API() {
       name: 'Analytics Data',
       method: 'GET',
       endpoint: '/api/analytics',
-      description: 'Get analytics and reporting data',
+      description: 'Get analytics and metrics',
       parameters: ['date_range', 'metrics'],
       response: 'Analytics data object'
     }
@@ -121,14 +122,14 @@ export default function API() {
               Ready to integrate with our APIs? Get your API key and start building amazing applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+              <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                 Get API Key
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a href="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
+              </Link>
+              <Link href="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
                 View Full Documentation
                 <ExternalLink className="ml-2 w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -491,7 +491,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-slate-400 text-lg mb-4">No services found matching your criteria</div>
               <button
-                onClick={() => {
+                onClick={(: unknown) => {
                   setSelectedCategory('all');
                   setSelectedPricingModel('all');
                 }}

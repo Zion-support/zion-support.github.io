@@ -1,3 +1,2 @@
-
-
+// Accessibility utilities
 // Accessibility utilities

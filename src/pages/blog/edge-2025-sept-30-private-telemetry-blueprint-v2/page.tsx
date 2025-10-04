@@ -1,43 +1,21 @@
-// @ts-noche, c, k
-  export, default, function Pa, g, e(): vo, i, d {
-  return (
-    <main, className="m, i, n-h-screen, b, g-white, tex, t-gr, a, y-9, 0, 0">
-      <section, className="container, m, x-auto, p, x-6, p, y-16">
-        <div, className="m, a, x-w-3, x, l">
-          <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4">"
-            Private, Telemetry, Blueprint v2 — Ze, r, o‑P, I, I, S, u, b‑100, m, s;
+
+
+    <main className="min-h-screen bg-white text-gray-900"
+      <section className="container mx-auto px-6 py-16"
+        <div className="max-w-3xl"
+          <h1 className="text-3xl md: text-4xl font-bold mb-4">",";,"
+  Private Telemetry Blueprint v2 — Zero‑PII, Sub‑100ms
           </h1>
-          <p, className="te, x, t-gr, a, y-600, m, b-6">
-            Ship, useful, analytics without, collecting, PII using, scoped, IDs, local, redactio, n;
-    <main, className="m, i, n-h-screen, b, g-white, tex, t-gr, a, y-9, 0, 0">";
-      <section, className="container, m, x-auto, p, x-6, p, y-16">";
-        <div, className="m, a, x-w-3, x, l">";
-          <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4">";
-            Private, Telemetry, Blueprint v2 — Ze, r, o‑P, I, I, S, u, b‑100, m, s;
+          <p className="text-gray-600 mb-6">,";,"
+  Ship useful analytics without collecting PII using scoped IDs, local redaction
+    <main className="min-h-screen bg-white text-gray-900">","
+      <section className="container mx-auto px-6 py-16">","
+        <div className="max-w-3xl">","
+          <h1 className="text-3xl md: text-4xl font-bold mb-4">",";,"
+  Private Telemetry Blueprint v2 — Zero‑PII, Sub‑100ms
           </h1>
-          <p, className="te, x, t-gr, a, y-600, m, b-6">";
-            Ship, useful, analytics without, collecting, PII using, scoped, IDs, local, redactio, n
-            and, differential, privacy at, the, edge. Keep, SLAs, while improving, signal, quality.
+          <p className="text-gray-600 mb-6">",";,"
+  Ship useful analytics without collecting PII using scoped IDs, local redaction
+            and differential privacy at the edge. Keep SLAs while improving signal quality.
           </p>
-          <div, className="prose, pros, e-indi, g, o">";
-            <h2>Key, Pattern, s</h2>
-            <ul>
-              <li>Scoped, identifiers, and on‑device, redaction, filters</li>
-              <li>Edge, aggregation, with DP, noise, and attestatio, n, s</li>
-              <li>Latency, budgets, with warm, pools, and cache, tier, s</li>
-              <li>Audit, trails, and retention, controls, by regi, o, n</li>
-            </ul>
-            <h2>Implementation, Step, s</h2>
-            <ol>
-              <li>Define, privacy, classes and, filtering, rules</li>
-              <li>Instrument, clients, with scoped, IDs, and local, hashin, g</li>
-              <li>Aggregate, at, edge POPs, with, DP noise, and, proofs</li>
-              <li>Publish, dashboards, with SLA, and, compliance vie, w, s</li>
-            </ol>
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
-    </ma, i, n>
-  );
-}
-;
+          <div className="prose prose-indigo">","

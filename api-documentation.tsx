@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const APIDocumentation: React.FC = () => {
   return (
@@ -12,8 +13,7 @@ const APIDocumentation: React.FC = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Available Endpoints</h2>
-          
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">API Endpoints</h2>
           <div className="space-y-6">
             <div className="border-l-4 border-blue-500 pl-4">
               <h3 className="text-lg font-medium text-gray-800 mb-2">Content Management</h3>
@@ -55,17 +55,20 @@ const APIDocumentation: React.FC = () => {
               <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
 {`const axios = require('axios');
 
-const apiClient = axios.create({
-  baseURL: 'https://api.ziontechgroup.com',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
-  }
-});
+const apiKey = 'your-api-key';
+const baseUrl = 'https://api.ziontechgroup.com';
 
-const getContent = async () => {
+const createContent = async () => {
   try {
-    const response = await apiClient.get('/content');
+    const response = await axios.post(\`\${baseUrl}/content\`, {
+      title: 'New Content',
+      body: 'Content body here'
+    }, {
+      headers: {
+        'Authorization': \`Bearer \${apiKey}\`,
+        'Content-Type': 'application/json'
+      }
+    });
     console.log(response.data);
   } catch (error) {
     console.error('Error:', error.response.data);
@@ -79,8 +82,8 @@ const getContent = async () => {
               <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
 {`import requests
 
+api_key = 'your-api-key'
 base_url = 'https://api.ziontechgroup.com'
-api_key = 'YOUR_API_KEY'
 
 headers = {
     'Authorization': f'Bearer {api_key}',
@@ -128,9 +131,9 @@ else:
           <p className="text-blue-600 mb-4">
             Our developer support team is here to help you integrate successfully.
           </p>
-          <a href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+          <Link href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Contact Support
-          </a>
+          </Link>
         </div>
       </div>
     </div>

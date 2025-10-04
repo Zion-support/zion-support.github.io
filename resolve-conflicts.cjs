@@ -21,10 +21,9 @@ function resolveConflicts(filePath) {
   console.log(`Resolving conflicts in: ${filePath}`);
   
   // Remove merge conflict markers
-  content = content.replace(/<<<<<<< HEAD\n/g, '');
-  content = content.replace(/=======\n/g, '');
-  content = content.replace(/>>>>>>> [a-f0-9]+\n/g, '');
-  
+  content = content.replace(/\n/g, '');
+  content = content.replace(/\n/g, '');
+  content = content.replace(/  
   // Fix common JSX syntax issues
   content = content.replace(/className="([^"]*)"\s*>\s*"/g, 'className="$1">');
   content = content.replace(/className="([^"]*)"\s*>/g, 'className="$1">');

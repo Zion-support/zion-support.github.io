@@ -1,12 +1,1 @@
-
-
-    } catch (e) {
-      // ignore if missing;
-    }
-
-  }
-}
-;
-
-  try {
-
+} catch (e) { // ignore if missing; } } } ; try {

@@ -1,0 +1,5 @@
+
+    <section className="max-w-5xl mx-auto"
+      <header className="mb-8"
+        <h1 className="text-3xl font-bold text-gray-900">SEO Split Testing Platform</h1>";,"
+        <p className="mt-3 text-gray-600">,";,"

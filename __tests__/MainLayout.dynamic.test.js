@@ -1,11 +1,1 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import @testing-library/jest-dom';
-import MainLayoutdynamic from "../components/MainLayout.dynamic";
-
-  test('renders without crashing', () => {
-    render(<MainLayoutDynamic />);
-    expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()})
-'
-  test('displays correct content', () => {
-    render(<MainLayoutDynamic />);
-
+import { render, screen, fireEvent } from '@testing-library/react';' import @testing-library/jest-dom'; import MainLayoutdynamic from "../components/MainLayout.dynamic"; ' test('renders without crashing', () => { render(<MainLayoutDynamic />);' expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()})' '' test('displays correct content', () => { render(<MainLayoutDynamic />); '

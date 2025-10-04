@@ -1,25 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-  MessageSquare, 
-  FileText, 
-  Users, 
-  CheckCircle, 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Star,
-  TrendingUp,
-  Smartphone,
-  Network
-} from 'lucide-react';
+import { MessageSquare, FileText, Users, CheckCircle, Brain, Zap, Shield, BarChart3, ArrowRight, DollarSign, Clock, Star, TrendingUp, Smartphone, Network } from 'lucide-react';
 
-const AIServices: React.FC = () => {
-  const services = [
+export default function AIServices() {
+  const title = 'AI Services — Zion Tech Group';
+  const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
+  
+  const aiServices = [
     {
       title: 'AI-Powered Email Responder',
       description: 'Automated email responses with sentiment analysis and intelligent categorization',
@@ -85,12 +72,11 @@ const AIServices: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Services — Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation." />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -98,19 +84,17 @@ const AIServices: React.FC = () => {
               AI Services
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.
+              {description}
             </p>
           </section>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {aiServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-slate-300 mb-6">{service.description}</p>
-                
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-slate-300">
@@ -119,7 +103,6 @@ const AIServices: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-cyan-400 font-medium">{service.pricing}</span>
                   <span className="text-slate-400">{service.delivery}</span>
@@ -131,6 +114,4 @@ const AIServices: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default AIServices;
+}

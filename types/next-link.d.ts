@@ -1,6 +1,7 @@
 declare module 'next/link' {
   import * as React from 'react';
-  export interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  export interface LinkProps
+    extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     href: string;
     children?: React.ReactNode;
     className?: string;
@@ -8,3 +9,4 @@ declare module 'next/link' {
   const Link: React.FC<LinkProps>;
   export default Link;
 }
+declare module 'next/link' {' import * as React from 'react'; export interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> { href: string; children?: React.ReactNode; className?: string; } const Link: React.FC<LinkProps>; export default Link; }'

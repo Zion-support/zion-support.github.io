@@ -1,4 +1,3 @@
-
 import { describe, it, expect } from '@jest/globals';
 
 describe('usePostsByCategory', () => {
@@ -6,4 +5,4 @@ describe('usePostsByCategory', () => {
     expect(true).toBe(true);
   });
 });
-
+import { describe, it, expect } from '@jest/globals'; ' describe('usePostsByCategory', () => {' it('should work', () => { expect(true).toBe(true); }); }); '

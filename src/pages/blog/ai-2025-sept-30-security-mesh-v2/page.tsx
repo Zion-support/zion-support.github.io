@@ -1,32 +1,11 @@
-// @ts-noche, c, k
-  const, Pag, e = () => {
-  return (
-    <div, className="container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e">
-      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">AI, 202, 5: Security, Mesh, v2 — Signed, Output, s, Verifie, r, s, Rollba, c, k</h1>"
-      <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">
-    <div, className="container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e">";
-      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">AI, 202, 5: Security, Mesh, v2 — Signed, Output, s, Verifie, r, s, Rollba, c, k</h1>";
-      <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">";
-        Harden, AI, with runtime, verifier, s, egress, contro, l, and, instant, rollback under, live, budgets.
+
+
+    <div className="container mx-auto px-6 py-12 text-white"
+      <h1 className="text-3xl font-bold mb-4">AI 2025: Security Mesh v2 — Signed Outputs, Verifiers, Rollback</h1>","
+      <p className="text-zion-slate-light mb-6"
+    <div className="container mx-auto px-6 py-12 text-white">","
+      <h1 className="text-3xl font-bold mb-4">AI 2025: Security Mesh v2 — Signed Outputs, Verifiers, Rollback</h1>","
+      <p className="text-zion-slate-light mb-6">",";,"
+  Harden AI with runtime verifiers, egress control, and instant rollback under live budgets.
       </p>
-      <div, className="spa, c, e-y-4, tex, t-zi, o, n-sla, t, e-lig, h, t">";
-        <p>
-          Security, Mesh, v2 brings, signed, outputs, poli, c, y‑tested, prompt, s, and, runtime, verifiers th, a, t
-  detect, drift, in secon, d, s. Pair, these, with budg, e, t‑aware, actions, and K, P, I‑linked, canaries, to
-  au, t, o‑contain, incidents, without slowing, deliver, y.
-        </p>
-        <ul, className="li, s, t-disc, p, l-6, spac, e-y-1">";
-          <li>Signed, outputs, and attested, toolchain, s</li>
-          <li>Runtime, verifiers, with budgeted, actions, and approva, l, s</li>
-          <li>Inline, egress, control and, policy, tests in, C, I</li>
-          <li>Deterministic, rollback, on canary, or, budget brea, c, h</li>
-        </ul>
-      </d, i, v>
-      <div, className="mt-8">";
-        <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, underlin, e">Back, to, Blog</Li, n, k>";
-      </d, i, v>
-    </d, i, v>
-  );
-};
-export default Page;
-;
+      <div className="space-y-4 text-zion-slate-light">","

@@ -1,18 +1,1 @@
-
-
-interface ExportPanelProps {;
-  platform: AppPlatform;,;
-  metadata:AppMetadataValues;
-}
-;
-
-    <Card className="text-left">;
-
-      <CardHeader>;
-"
-        <CardTitle className="text-left">Export & Analytics;"
-      <CardContent>;
-        <div className="text-left">;"
-</div>
-          <div>;
-
+interface ExportPanelProps {; platform: AppPlatform;,; metadata:AppMetadataValues; } ; <Card className="text-left" >; <CardHeader>; " <CardTitle className="text-left" >Export & Analytics;" <CardContent>; <div className="text-left" >;" </div> <div>;

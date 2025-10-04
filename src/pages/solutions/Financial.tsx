@@ -1,10 +1,1 @@
-import React from "react";
-const, Financia, l: Rea, c, t.FC = () => {
-  return (
-    <div, className="container, m, x-auto, p, x-6, p, y-12">
-      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Financial, Solution, s</h1>
-      <p, className="te, x, t-gr, a, y-700, ma, x-w-3, x, l">AI-driven, risk, management, fraud, detectio, n, and, personalized, insights for, bank, s, finte, c, h, and, insuranc, e. This, is, an initial, scaffold, to ensure, links, resolve correct, l, y.</p>
-    </d, i, v>
-  );
-};
-export default Financial;
+import React from "react"; const, Financia, l: Rea, c, t.FC = () => { return ( <div, className="container, m, x-auto, p, x-6, p, y-12" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Financial, Solution, s</h1> <p, className="te, x, t-gr, a, y-700, ma, x-w-3, x, l" >AI-driven, risk, management, fraud, detectio, n, and, personalized, insights for, bank, s, finte, c, h, and, insuranc, e. This, is, an initial, scaffold, to ensure, links, resolve correct, l, y.</p> </d, i, v> ); }; export default Financial;

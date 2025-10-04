@@ -1,4 +1,3 @@
-
 import { createRequest, createResponse } from 'node-mocks-http';
 import sgMail from '@sendgrid/mail';
 
@@ -7,3 +6,4 @@ describe('Auth Controller', () => {
     expect(true).toBe(true);
   });
 });
+import { createRequest, createResponse } from 'node-mocks-http';' import sgMail from '@sendgrid/mail'; ' describe('Auth Controller', () => {' test('should handle authentication', () => { expect(true).toBe(true); }); }); '

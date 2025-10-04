@@ -6,7 +6,7 @@
 echo "Starting merge conflict resolution..."
 
 # Find all files with merge conflicts
-conflict_files=$(grep -l "^<<<<<<< HEAD" /workspace/app/blog -r | head -50)
+conflict_files=$(grep -l "^" /workspace/app/blog -r | head -50)
 
 for file in $conflict_files; do
     echo "Processing: $file"
@@ -15,10 +15,9 @@ for file in $conflict_files; do
     cp "$file" "$file.backup"
     
     # Remove merge conflict markers and keep HEAD version
-    # This removes everything from <<<<<<< HEAD to ======= and from ======= to >>>>>>> branch
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> .*/d' "$file"
-    
+    # This removes everything from  to  and from  to ranch
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^    
     echo "Fixed: $file"
 done
 
