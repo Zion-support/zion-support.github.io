@@ -152,24 +152,27 @@ class ComprehensiveMonitor {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           this.recordPerformanceMetric('firstContentfulPaint', entry.startTime);
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        this.recordPerformanceMetric('largestContentfulPaint', lastEntry.startTime);
+        this.recordPerformanceMetric(
+          'largestContentfulPaint',
+          lastEntry.startTime,
+        );
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list => {
         let clsValue = 0;
         list.getEntries().forEach((entry: any) => {
           if (!entry.hadRecentInput) {
@@ -181,9 +184,12 @@ class ComprehensiveMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list => {
         list.getEntries().forEach((entry: any) => {
-          this.recordPerformanceMetric('firstInputDelay', entry.processingStart - entry.startTime);
+          this.recordPerformanceMetric(
+            'firstInputDelay',
+            entry.processingStart - entry.startTime,
+          );
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -219,9 +225,13 @@ class ComprehensiveMonitor {
 
       // Unhandled promise rejection handler
       const rejectionHandler = (event: PromiseRejectionEvent) => {
-        this.recordError('promise', event.reason?.message || 'Unhandled promise rejection', {
-          stack: event.reason?.stack,
-        });
+        this.recordError(
+          'promise',
+          event.reason?.message || 'Unhandled promise rejection',
+          {
+            stack: event.reason?.stack,
+          },
+        );
       };
 
       window.addEventListener('error', errorHandler);
@@ -343,7 +353,9 @@ class ComprehensiveMonitor {
       }
     }, this.config.reportInterval);
 
-    console.log(`🔄 Real-time monitoring started (interval: ${this.config.reportInterval}ms)`);
+    console.log(
+      `🔄 Real-time monitoring started (interval: ${this.config.reportInterval}ms)`,
+    );
   }
 
   /**
@@ -390,7 +402,9 @@ class ComprehensiveMonitor {
     // Clean up old reports
     this.cleanupOldReports();
 
-    console.log(`📈 Monitoring report generated. Overall health: ${report.overallHealth}`);
+    console.log(
+      `📈 Monitoring report generated. Overall health: ${report.overallHealth}`,
+    );
 
     return report;
   }
@@ -413,11 +427,16 @@ class ComprehensiveMonitor {
     };
 
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType(
+        'navigation',
+      )[0] as PerformanceNavigationTiming;
       if (navigation) {
         metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        metrics.renderTime = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-        metrics.timeToInteractive = navigation.domInteractive - navigation.fetchStart;
+        metrics.renderTime =
+          navigation.domContentLoadedEventEnd -
+          navigation.domContentLoadedEventStart;
+        metrics.timeToInteractive =
+          navigation.domInteractive - navigation.fetchStart;
       }
 
       const memory = (performance as any).memory;
@@ -568,15 +587,21 @@ class ComprehensiveMonitor {
     const recommendations: string[] = [];
 
     if (report.performance.loadTime > 2000) {
-      recommendations.push('Optimize page load time by reducing bundle size and implementing lazy loading');
+      recommendations.push(
+        'Optimize page load time by reducing bundle size and implementing lazy loading',
+      );
     }
 
     if (report.performance.firstContentfulPaint > 1000) {
-      recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');
+      recommendations.push(
+        'Improve First Contentful Paint by optimizing critical rendering path',
+      );
     }
 
     if (report.errors.errorRate > 0.005) {
-      recommendations.push('Investigate and fix JavaScript errors to improve user experience');
+      recommendations.push(
+        'Investigate and fix JavaScript errors to improve user experience',
+      );
     }
 
     recommendations.push('Implement continuous monitoring and alerting');
@@ -588,7 +613,9 @@ class ComprehensiveMonitor {
   /**
    * Determine overall health
    */
-  private determineOverallHealth(report: MonitoringReport): 'excellent' | 'good' | 'fair' | 'poor' | 'critical' {
+  private determineOverallHealth(
+    report: MonitoringReport,
+  ): 'excellent' | 'good' | 'fair' | 'poor' | 'critical' {
     let score = 100;
 
     // Deduct points for performance issues
@@ -616,7 +643,8 @@ class ComprehensiveMonitor {
    * Clean up old reports
    */
   private cleanupOldReports(): void {
-    const cutoffTime = Date.now() - (this.config.retentionPeriod * 24 * 60 * 60 * 1000);
+    const cutoffTime =
+      Date.now() - this.config.retentionPeriod * 24 * 60 * 60 * 1000;
     this.reports = this.reports.filter(report => report.timestamp > cutoffTime);
   }
 
@@ -641,9 +669,11 @@ class ComprehensiveMonitor {
   } {
     const latestReport = this.reports[this.reports.length - 1];
     const totalReports = this.reports.length;
-    const averageLoadTime = totalReports > 0 
-      ? this.reports.reduce((sum, r) => sum + r.performance.loadTime, 0) / totalReports 
-      : 0;
+    const averageLoadTime =
+      totalReports > 0
+        ? this.reports.reduce((sum, r) => sum + r.performance.loadTime, 0) /
+          totalReports
+        : 0;
     const errorRate = latestReport?.errors.errorRate || 0;
     const uptime = latestReport?.systemHealth.uptime || 0;
 
@@ -664,11 +694,15 @@ class ComprehensiveMonitor {
    * Export monitoring data
    */
   exportData(): string {
-    return JSON.stringify({
-      config: this.config,
-      reports: this.reports,
-      dashboardData: this.getDashboardData(),
-    }, null, 2);
+    return JSON.stringify(
+      {
+        config: this.config,
+        reports: this.reports,
+        dashboardData: this.getDashboardData(),
+      },
+      null,
+      2,
+    );
   }
 
   /**

@@ -166,7 +166,9 @@ class CodeQualityImprover {
   /**
    * Analyze TypeScript type checking
    */
-  private async analyzeTypeChecking(): Promise<CodeQualityReport['typeChecking']> {
+  private async analyzeTypeChecking(): Promise<
+    CodeQualityReport['typeChecking']
+  > {
     const result = {
       score: 0,
       issues: [] as string[],
@@ -215,7 +217,10 @@ class CodeQualityImprover {
       // Simulate linting analysis
       result.errors = 0;
       result.warnings = 2;
-      result.score = Math.max(0, 100 - (result.errors * 10) - (result.warnings * 2));
+      result.score = Math.max(
+        0,
+        100 - result.errors * 10 - result.warnings * 2,
+      );
       result.suggestions = [
         'Fix unused imports',
         'Add missing prop types',
@@ -232,7 +237,9 @@ class CodeQualityImprover {
   /**
    * Analyze performance metrics
    */
-  private async analyzePerformance(): Promise<CodeQualityReport['performance']> {
+  private async analyzePerformance(): Promise<
+    CodeQualityReport['performance']
+  > {
     const result = {
       score: 0,
       bundleSize: 0,
@@ -244,7 +251,10 @@ class CodeQualityImprover {
       // Simulate performance analysis
       result.bundleSize = 450000; // 450KB
       result.loadTime = 1200; // 1.2s
-      result.score = Math.max(0, 100 - (result.bundleSize / 10000) - (result.loadTime / 100));
+      result.score = Math.max(
+        0,
+        100 - result.bundleSize / 10000 - result.loadTime / 100,
+      );
       result.suggestions = [
         'Implement code splitting for large components',
         'Optimize images and assets',
@@ -262,7 +272,9 @@ class CodeQualityImprover {
   /**
    * Analyze accessibility compliance
    */
-  private async analyzeAccessibility(): Promise<CodeQualityReport['accessibility']> {
+  private async analyzeAccessibility(): Promise<
+    CodeQualityReport['accessibility']
+  > {
     const result = {
       score: 0,
       violations: [] as string[],
@@ -276,7 +288,7 @@ class CodeQualityImprover {
         'Low contrast ratios',
         'Missing ARIA labels',
       ];
-      result.score = Math.max(0, 100 - (result.violations.length * 15));
+      result.score = Math.max(0, 100 - result.violations.length * 15);
       result.suggestions = [
         'Add alt text to all images',
         'Improve color contrast ratios',
@@ -308,7 +320,7 @@ class CodeQualityImprover {
         'Potential XSS vulnerability',
         'Missing CSP headers',
       ];
-      result.score = Math.max(0, 100 - (result.vulnerabilities.length * 20));
+      result.score = Math.max(0, 100 - result.vulnerabilities.length * 20);
       result.suggestions = [
         'Implement Content Security Policy',
         'Sanitize user inputs',
@@ -327,7 +339,9 @@ class CodeQualityImprover {
   /**
    * Analyze test coverage
    */
-  private async analyzeTestCoverage(): Promise<CodeQualityReport['testCoverage']> {
+  private async analyzeTestCoverage(): Promise<
+    CodeQualityReport['testCoverage']
+  > {
     const result = {
       score: 0,
       coverage: 0,
@@ -391,7 +405,9 @@ class CodeQualityImprover {
     }
 
     // Accessibility recommendations
-    if (report.accessibility.score < this.config.thresholds.accessibilityScore) {
+    if (
+      report.accessibility.score < this.config.thresholds.accessibilityScore
+    ) {
       recommendations.push('Enhance accessibility compliance');
     }
 
@@ -411,7 +427,10 @@ class CodeQualityImprover {
   /**
    * Analyze React component quality
    */
-  analyzeComponent(componentName: string, componentCode: string): ComponentAnalysis {
+  analyzeComponent(
+    componentName: string,
+    componentCode: string,
+  ): ComponentAnalysis {
     const analysis: ComponentAnalysis = {
       name: componentName,
       complexity: this.calculateComplexity(componentCode),
@@ -430,7 +449,9 @@ class CodeQualityImprover {
     // Analyze complexity
     if (analysis.complexity > 10) {
       analysis.issues.push('High cyclomatic complexity');
-      analysis.suggestions.push('Consider breaking down into smaller components');
+      analysis.suggestions.push(
+        'Consider breaking down into smaller components',
+      );
     }
 
     // Analyze dependencies
@@ -454,9 +475,20 @@ class CodeQualityImprover {
    */
   private calculateComplexity(code: string): number {
     const complexityKeywords = [
-      'if', 'else', 'for', 'while', 'do', 'switch', 'case', 'catch', '&&', '||', '?', ':'
+      'if',
+      'else',
+      'for',
+      'while',
+      'do',
+      'switch',
+      'case',
+      'catch',
+      '&&',
+      '||',
+      '?',
+      ':',
     ];
-    
+
     let complexity = 1; // Base complexity
     complexityKeywords.forEach(keyword => {
       const regex = new RegExp(`\\b${keyword}\\b`, 'g');

@@ -164,7 +164,9 @@ class ImprovementReportGenerator {
       console.log('✅ Comprehensive improvement report generated successfully');
       console.log(`📈 Overall Score: ${report.summary.overallScore}/100`);
       console.log(`🏥 System Health: ${report.summary.systemHealth}`);
-      console.log(`📦 Bundle Optimization: ${report.summary.bundleOptimization}%`);
+      console.log(
+        `📦 Bundle Optimization: ${report.summary.bundleOptimization}%`,
+      );
 
       return report;
     } catch (error) {
@@ -176,7 +178,9 @@ class ImprovementReportGenerator {
   /**
    * Collect improvement data
    */
-  private async collectImprovementData(report: ComprehensiveReport): Promise<void> {
+  private async collectImprovementData(
+    report: ComprehensiveReport,
+  ): Promise<void> {
     console.log('📊 Collecting improvement data...');
 
     try {
@@ -184,23 +188,28 @@ class ImprovementReportGenerator {
       const improvementStats = improvementOrchestrator.getStatistics();
 
       report.improvement.score = improvementData.overallScore;
-      report.improvement.performance = improvementData.monitoring.performance.loadTime;
-      report.improvement.codeQuality = improvementData.monitoring.quality.typeCoverage;
-      report.improvement.security = improvementData.monitoring.security.complianceScore;
+      report.improvement.performance =
+        improvementData.monitoring.performance.loadTime;
+      report.improvement.codeQuality =
+        improvementData.monitoring.quality.typeCoverage;
+      report.improvement.security =
+        improvementData.monitoring.security.complianceScore;
       report.improvement.testing = improvementData.monitoring.testing.coverage;
-      report.improvement.documentation = improvementData.monitoring.documentation.coverage;
+      report.improvement.documentation =
+        improvementData.monitoring.documentation.coverage;
 
-      report.improvement.actions = improvementData.recentActions.map(action => ({
-        id: action.id,
-        type: action.type,
-        priority: action.priority,
-        description: action.description,
-        status: action.status,
-      }));
+      report.improvement.actions = improvementData.recentActions.map(
+        action => ({
+          id: action.id,
+          type: action.type,
+          priority: action.priority,
+          description: action.description,
+          status: action.status,
+        }),
+      );
 
       report.summary.totalImprovements = improvementStats.totalActions;
       report.summary.completedActions = improvementStats.completedActions;
-
     } catch (error) {
       console.error('❌ Failed to collect improvement data:', error);
     }
@@ -209,20 +218,27 @@ class ImprovementReportGenerator {
   /**
    * Collect optimization data
    */
-  private async collectOptimizationData(report: ComprehensiveReport): Promise<void> {
+  private async collectOptimizationData(
+    report: ComprehensiveReport,
+  ): Promise<void> {
     console.log('🔧 Collecting optimization data...');
 
     try {
       const optimizationStats = advancedOptimizer.getStatistics();
 
-      report.optimization.bundleSizeReduction = optimizationStats.averageBundleReduction;
-      report.optimization.performanceImprovement = optimizationStats.averagePerformanceImprovement;
-      report.optimization.securityEnhancements = optimizationStats.totalVulnerabilitiesFixed;
-      report.optimization.qualityImprovements = optimizationStats.totalOptimizations;
+      report.optimization.bundleSizeReduction =
+        optimizationStats.averageBundleReduction;
+      report.optimization.performanceImprovement =
+        optimizationStats.averagePerformanceImprovement;
+      report.optimization.securityEnhancements =
+        optimizationStats.totalVulnerabilitiesFixed;
+      report.optimization.qualityImprovements =
+        optimizationStats.totalOptimizations;
 
-      report.summary.bundleOptimization = optimizationStats.averageBundleReduction;
-      report.summary.performanceGains = optimizationStats.averagePerformanceImprovement;
-
+      report.summary.bundleOptimization =
+        optimizationStats.averageBundleReduction;
+      report.summary.performanceGains =
+        optimizationStats.averagePerformanceImprovement;
     } catch (error) {
       console.error('❌ Failed to collect optimization data:', error);
     }
@@ -231,7 +247,9 @@ class ImprovementReportGenerator {
   /**
    * Collect monitoring data
    */
-  private async collectMonitoringData(report: ComprehensiveReport): Promise<void> {
+  private async collectMonitoringData(
+    report: ComprehensiveReport,
+  ): Promise<void> {
     console.log('📊 Collecting monitoring data...');
 
     try {
@@ -256,7 +274,6 @@ class ImprovementReportGenerator {
       }));
 
       report.summary.systemHealth = monitoringData.overallHealth;
-
     } catch (error) {
       console.error('❌ Failed to collect monitoring data:', error);
     }
@@ -277,7 +294,10 @@ class ImprovementReportGenerator {
       immediate.push('Address critical improvement actions immediately');
     }
 
-    if (report.monitoring.overallHealth === 'critical' || report.monitoring.overallHealth === 'poor') {
+    if (
+      report.monitoring.overallHealth === 'critical' ||
+      report.monitoring.overallHealth === 'poor'
+    ) {
       immediate.push('Investigate and resolve system health issues');
     }
 
@@ -331,7 +351,9 @@ class ImprovementReportGenerator {
       nextSteps.push('Prioritize immediate recommendations');
     }
 
-    if (report.improvement.actions.some(action => action.status === 'pending')) {
+    if (
+      report.improvement.actions.some(action => action.status === 'pending')
+    ) {
       nextSteps.push('Execute pending improvement actions');
     }
 
@@ -380,10 +402,18 @@ class ImprovementReportGenerator {
 
     let overallScore = 0;
     overallScore += report.improvement.score * weights.improvement;
-    overallScore += (report.optimization.bundleSizeReduction + report.optimization.performanceImprovement / 10) * weights.optimization;
-    overallScore += this.getMonitoringScore(report.monitoring.overallHealth) * weights.monitoring;
+    overallScore +=
+      (report.optimization.bundleSizeReduction +
+        report.optimization.performanceImprovement / 10) *
+      weights.optimization;
+    overallScore +=
+      this.getMonitoringScore(report.monitoring.overallHealth) *
+      weights.monitoring;
 
-    report.summary.overallScore = Math.min(100, Math.max(0, Math.round(overallScore)));
+    report.summary.overallScore = Math.min(
+      100,
+      Math.max(0, Math.round(overallScore)),
+    );
   }
 
   /**
@@ -391,12 +421,18 @@ class ImprovementReportGenerator {
    */
   private getMonitoringScore(health: string): number {
     switch (health) {
-      case 'excellent': return 100;
-      case 'good': return 80;
-      case 'fair': return 60;
-      case 'poor': return 40;
-      case 'critical': return 20;
-      default: return 50;
+      case 'excellent':
+        return 100;
+      case 'good':
+        return 80;
+      case 'fair':
+        return 60;
+      case 'poor':
+        return 40;
+      case 'critical':
+        return 20;
+      default:
+        return 50;
     }
   }
 
@@ -575,18 +611,22 @@ ${report.nextSteps.map(step => `- ${step}`).join('\n')}
     scoreTrend: 'up' | 'down' | 'stable';
   } {
     const totalReports = this.reports.length;
-    const averageScore = totalReports > 0 
-      ? this.reports.reduce((sum, r) => sum + r.summary.overallScore, 0) / totalReports 
-      : 0;
-    const latestScore = this.reports.length > 0 
-      ? this.reports[this.reports.length - 1].summary.overallScore 
-      : 0;
+    const averageScore =
+      totalReports > 0
+        ? this.reports.reduce((sum, r) => sum + r.summary.overallScore, 0) /
+          totalReports
+        : 0;
+    const latestScore =
+      this.reports.length > 0
+        ? this.reports[this.reports.length - 1].summary.overallScore
+        : 0;
 
     // Calculate trend
     let scoreTrend: 'up' | 'down' | 'stable' = 'stable';
     if (this.reports.length >= 2) {
       const latest = this.reports[this.reports.length - 1].summary.overallScore;
-      const previous = this.reports[this.reports.length - 2].summary.overallScore;
+      const previous =
+        this.reports[this.reports.length - 2].summary.overallScore;
       if (latest > previous) scoreTrend = 'up';
       else if (latest < previous) scoreTrend = 'down';
     }
@@ -603,10 +643,14 @@ ${report.nextSteps.map(step => `- ${step}`).join('\n')}
    * Export all reports
    */
   exportAllReports(): string {
-    return JSON.stringify({
-      reports: this.reports,
-      statistics: this.getReportStatistics(),
-    }, null, 2);
+    return JSON.stringify(
+      {
+        reports: this.reports,
+        statistics: this.getReportStatistics(),
+      },
+      null,
+      2,
+    );
   }
 }
 
@@ -614,7 +658,5 @@ ${report.nextSteps.map(step => `- ${step}`).join('\n')}
 export const improvementReportGenerator = new ImprovementReportGenerator();
 
 // Export types and class for advanced usage
-export type {
-  ComprehensiveReport,
-};
+export type { ComprehensiveReport };
 export { ImprovementReportGenerator };
