@@ -16,8 +16,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-[200px]'>
-      <div className={`${sizeClasses[size]} animate-spin`}>
+    <div className='flex flex-col items-center justify-center min-h-[200px]' role='status' aria-live='polite'>
+      <div className={`${sizeClasses[size]} animate-spin`} aria-hidden='true'>
         <svg className='w-full h-full' viewBox='0 0 24 24'>
           <circle
             className='opacity-25'
@@ -38,6 +38,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {message && (
         <p className='mt-4 text-gray-600 text-sm font-medium'>{message}</p>
       )}
+      <span className='sr-only'>{message}</span>
     </div>
   );
 };

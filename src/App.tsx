@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
 import SEOHead from './components/SEOHead';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -28,63 +29,102 @@ const pageTransition = {
   duration: 0.4,
 };
 
-// Lazy loaded components for better performance
-const HomePage = React.lazy(() => import('./pages/HomePage'));
-const AboutPage = React.lazy(() => import('./pages/About'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
-const ServicesPage = React.lazy(() => import('./pages/Services'));
-const BlogPage = React.lazy(() => import('./pages/Blog'));
+// Lazy loaded components for better performance with error boundaries
+const HomePage = React.lazy(() => 
+  import('./pages/HomePage').catch(() => ({
+    default: () => (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Failed to load page</h2>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    )
+  }))
+);
 
-// Simple Error Boundary
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean }
-> {
-  constructor(props: {
-    children: React.ReactNode;
-    fallback?: React.ReactNode;
-  }) {
-    super(props);
-    this.state = { hasError: false };
-  }
+const AboutPage = React.lazy(() => 
+  import('./pages/About').catch(() => ({
+    default: () => (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Failed to load page</h2>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    )
+  }))
+);
 
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
+const ContactPage = React.lazy(() => 
+  import('./pages/Contact').catch(() => ({
+    default: () => (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Failed to load page</h2>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    )
+  }))
+);
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
+const ServicesPage = React.lazy(() => 
+  import('./pages/Services').catch(() => ({
+    default: () => (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Failed to load page</h2>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    )
+  }))
+);
 
-  render() {
-    if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-            <div className='text-center'>
-              <h1 className='text-2xl font-bold text-gray-900 mb-4'>
-                Something went wrong
-              </h1>
-              <button
-                onClick={() => this.setState({ hasError: false })}
-                className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
-              >
-                Try again
-              </button>
-            </div>
-          </div>
-        )
-      );
-    }
+const BlogPage = React.lazy(() => 
+  import('./pages/Blog').catch(() => ({
+    default: () => (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Failed to load page</h2>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    )
+  }))
+);
 
-    return this.props.children;
-  }
-}
 
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary fallback={<div>Error occurred</div>}>
+      <UserFriendlyErrorBoundary>
         <Router>
           {/* SEO and Performance Monitoring */}
           <SEOHead />
@@ -171,7 +211,7 @@ function App() {
             </EnhancedErrorBoundary>
           </div>
         </Router>
-      </ErrorBoundary>
+      </UserFriendlyErrorBoundary>
     </HelmetProvider>
   );
 }
