@@ -194,20 +194,25 @@ export function generateSEORecommendations(
 /**
  * Optimize images for web by adding proper attributes
  */
-export function optimizeImageTags(html: string): string   const parser = new DOMParser();
+export function optimizeImageTags(html: string): string {
+  const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   
   const images = doc.querySelectorAll('img');
-  images.forEach((img) =>     // Add lazy loading
-    if (!img.getAttribute('loading'))       img.setAttribute('loading', 'lazy');
+  images.forEach((img) => {
+    // Add lazy loading
+    if (!img.getAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
     }
     
     // Add decoding hint
-    if (!img.getAttribute('decoding'))       img.setAttribute('decoding', 'async');
+    if (!img.getAttribute('decoding')) {
+      img.setAttribute('decoding', 'async');
     }
     
     // Ensure alt text exists
-    if (!img.getAttribute('alt'))       img.setAttribute('alt', 'Image');
+    if (!img.getAttribute('alt')) {
+      img.setAttribute('alt', 'Image');
     }
   });
   
