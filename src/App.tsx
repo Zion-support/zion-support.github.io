@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Import core components
 import Header from './components/Header';
 import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
+// import SEOHead from './components/SEOHead';
 
 // Simple Home component
 const Home: React.FC = () => {
@@ -47,7 +47,7 @@ const App: React.FC = () => {
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-gray-50">
-          <SEOHead />
+          {/* <SEOHead /> */}
           <Header />
           
           <main className="flex-1">
