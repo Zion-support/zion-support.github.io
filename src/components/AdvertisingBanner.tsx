@@ -1,1 +1,76 @@
-import React from "react"; const, AdvertisingBanne, r: Rea, c, t.FC = () => { return ( <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-3, shado, w-lg, animat, e-gradie, n, t-x" > <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l g:px-8" >" <div, className="flex, item, s-center, justif, y-center, ga, p-4, fle, x-wr, a, p" > <div, className="flex, item, s-center, ga, p-2" > <Sparkles, className="w-5 h-5, animat, e-pul, s, e /> <span, className=" te, x, t-sm, fon, t-bold, uppercase, tracking-wi, d, e">🚀 N, E, W - Octobe, r, 1, 20, 2, 5</sp, a, n> </d, i, v> <div, className="hidden, s, m: bloc, k, h-6 w-px, b, g-whi, t, e/30" ></d, i, v>" <p, className="te, x, t-sm, fon, t-medi, u, m" > <span, className="fo, n, t-bo, l, d" >NEW, THIS, WEEK: </sp, a, n> Vector, DB, Optimization at, 100, B+ sca, l, e & Enterprise, Agent, Uptime 99.9%" ======= import React from "react";'; const, AdvertisingBanne, r: Rea, c, t.FC = () => { return ( <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-3, shado, w-lg, animat, e-gradie, n, t-x" >"; <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l g:px-8" >"; <div, className="flex, item, s-center, justif, y-center, ga, p-4, fle, x-wr, a, p" >"; <div, className="flex, item, s-center, ga, p-2" >"; <Sparkles, className="w-5 h-5, animat, e-pul, s, e" />"; <span, className="te, x, t-sm, fon, t-bold, uppercase, tracking-wi, d, e" >🚀 N, E, W - Octobe, r, 1, 20, 2, 5</sp, a, n>"; </d, i, v> <div, className="hidden, s, m: bloc, k, h-6 w-px, b, g-whi, t, e/30" ></d, i, v>"; <p, className="te, x, t-sm, fon, t-medi, u, m" >"; <span, className="fo, n, t-bo, l, d" >NEW, THIS, WEEK: </sp, a, n> Vector, DB, Optimization at, 100, B+ sca, l, e & Enterprise, Agent, Uptime 99.9%"; </p> <Li, n, k to="/bl, o, g/ai-20, 2, 5-o, c, t-01-vect, o, r-databa, s, e-optimizati, o, n-enterpri, s, e" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-1, b, g-white, tex, t-purp, l, e-700, hove, r: bg-purp, l, e-50, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibold, transitio, n-all, duratio, n-300, hov, e r:sca, l, e-105, shado, w-md" > <Zap, className="w-4 h-4 /> ======= <Zap, className=" w-4 h-4" />"; Vector, DB, Guide; </Li, n, k> <Li, n, k to="/bl, o, g/ai-20, 2, 5-o, c, t-02-enterpri, s, e-age, n, t-syste, m, s-upti, m, e-9, 9, 9" classNa, m, e="inli, n, e-flex, item, s-center, ga, p-1, b, g-white, tex, t-purp, l, e-700, hove, r: bg-purp, l, e-50, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibold, transitio, n-all, duratio, n-300, hov, e r:sca, l, e-105, shado, w-md" > <Shield, className="w-4 h-4 /> ======= <Shield, className=" w-4 h-4" />"; Agent, Uptim, e; </Li, n, k> </d, i, v> </d, i, v> </d, i, v> ); }; export default AdvertisingBanner;'
+import React from 'react';
+
+const AdvertisingBanner: React.FC = () => {
+  return (
+    <div className="py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 mb-8">
+            <span className="text-white font-bold text-lg tracking-wider uppercase">
+              🚀 SPECIAL OFFER
+            </span>
+          </div>
+          
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 text-white">
+            Transform Your Business Today
+          </h2>
+          
+          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+            Get exclusive access to our premium AI solutions and accelerate your digital transformation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-6">What You Get</h3>
+            <ul className="space-y-4">
+              {[
+                'Advanced AI Integration',
+                '24/7 Expert Support',
+                'Custom Solutions',
+                'Performance Optimization',
+                'Security & Compliance'
+              ].map((feature, index) => (
+                <li key={index} className="flex items-center gap-3 text-white">
+                  <span className="text-green-400 text-xl">✓</span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-6">Limited Time Offer</h3>
+            <div className="text-center mb-6">
+              <div className="text-4xl font-extrabold text-yellow-400 mb-2">50% OFF</div>
+              <div className="text-white/80">First 100 customers only</div>
+            </div>
+            
+            <div className="space-y-4">
+              <a
+                href="/contact"
+                className="w-full bg-white text-blue-600 font-bold py-4 px-6 rounded-xl hover:bg-gray-100 transition-colors text-center block"
+              >
+                Get Started Now
+              </a>
+              <a
+                href="/demo"
+                className="w-full border-2 border-white text-white font-bold py-4 px-6 rounded-xl hover:bg-white hover:text-blue-600 transition-colors text-center block"
+              >
+                Schedule Demo
+              </a>
+            </div>
+            
+            <div className="text-center mt-6">
+              <p className="text-white/70 text-sm">
+                ⏰ Offer expires in 48 hours
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AdvertisingBanner;
