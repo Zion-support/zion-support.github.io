@@ -68,7 +68,7 @@ export default [
       '**/*.broken/**',
       '**/*.corrupted/**',
       '**/*.temp/**',
-      'tests/**',
+      '__tests__/**',
       'scripts/**',
       'pages/**',
       // Temporarily ignore known heavy TSX pages with pending fixes
@@ -77,7 +77,17 @@ export default [
       'store/**',
       'jest.setup.js',
       '*.config.js',
-      '*.config.ts'
+      '*.config.ts',
+      // Ignore disabled and backup directories
+      '_app_disabled/**',
+      '_conflicted_disabled/**',
+      '_pages_api_disabled/**',
+      '_pages_disabled/**',
+      'admin-api-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api.disabled.temp/**',
+      'apps.backup/**'
     ]
   },
 
@@ -90,12 +100,42 @@ export default [
     ...js.configs.recommended,
   },
 
-  // Simplified TypeScript configuration (non type-aware)
+  // JSX configuration for React components
   {
-    files: ["src/**/*.{ts,tsx}", "pages/**/*.{ts,tsx}", "app/**/*.{ts,tsx}"],
+    files: ["**/*.{jsx}"],
     languageOptions: {
       parser: tsParser,
-      parserOptions: {},
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: { ...globals.browser },
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...(reactHooks.configs.recommended?.rules || {}),
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+    },
+  },
+
+  // Simplified TypeScript configuration (non type-aware)
+  {
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       globals: { ...globals.browser },
     },
     plugins: {
