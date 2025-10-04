@@ -44,8 +44,8 @@ export default function RealTimeAIAnalytics2026() {
         {/* Key Stats */}
         <div className="text-left"></div>
           <h2 className="text-left">Performance Benchmarks</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;100ms</div>
               <div className="text-left">Processing Latency</div>
             </div>
@@ -78,8 +78,8 @@ export default function RealTimeAIAnalytics2026() {
 
           <section></section>
             <h2 className="text-left">Architecture Components</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">⚡ Stream Processing Engine</h3>
                 <p className="text-left"></p>
                   Distributed event processing systems (Apache Flink, Kafka Streams, Spark Streaming) that handle 
@@ -136,8 +136,8 @@ export default function RealTimeAIAnalytics2026() {
           <section></section>
             <h2 className="text-left">Enterprise Use Cases</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🛡️<
                   <h3 className="text-left">Fraud Detection & Prevention</h3>
@@ -155,8 +155,8 @@ export default function RealTimeAIAnalytics2026() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">📱<
                   <h3 className="text-left">Personalized Customer Experiences</h3>
                 </div>
@@ -173,8 +173,8 @@ export default function RealTimeAIAnalytics2026() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🏭<
                   <h3 className="text-left">Predictive Maintenance</h3>
                 </div>
@@ -191,8 +191,8 @@ export default function RealTimeAIAnalytics2026() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🚚<
                   <h3 className="text-left">Supply Chain Optimization</h3>
                 </div>
@@ -213,8 +213,8 @@ export default function RealTimeAIAnalytics2026() {
 
           <section></section>
             <h2 className="text-left">Key Technologies & Tools</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <span className="text-left">🔄<
                   Stream Processing
@@ -263,8 +263,8 @@ export default function RealTimeAIAnalytics2026() {
 
           <section></section>
             <h2 className="text-left">Implementation Strategy</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <div className="text-left">1</div>
                   <div></div>
@@ -277,8 +277,8 @@ export default function RealTimeAIAnalytics2026() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">2</div>
                   <div></div>
                     <h3 className="text-left">Build Streaming Infrastructure</h3>
@@ -290,8 +290,8 @@ export default function RealTimeAIAnalytics2026() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">3</div>
                   <div></div>
                     <h3 className="text-left">Deploy AI Models</h3>
@@ -303,8 +303,8 @@ export default function RealTimeAIAnalytics2026() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">4</div>
                   <div></div>
                     <h3 className="text-left">Establish Monitoring & Optimization</h3>
@@ -323,12 +323,12 @@ export default function RealTimeAIAnalytics2026() {
             <p className="text-left"></p>
               Organizations implementing real-time AI analytics see transformational business outcomes:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Cost Savings</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Infrastructure optimization:<
                       <span className="text-left">40%<
                     </div>
@@ -344,8 +344,8 @@ export default function RealTimeAIAnalytics2026() {
                 </div>
                 <div></div>
                   <h3 className="text-left">Revenue Impact</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Conversion rate increase:<
                       <span className="text-left">45%<
                     </div>
@@ -365,8 +365,8 @@ export default function RealTimeAIAnalytics2026() {
 
           <section></section>
             <h2 className="text-left">Best Practices & Pitfalls</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <span className="text-left">✅<
                   Do This

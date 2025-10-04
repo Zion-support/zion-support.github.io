@@ -223,8 +223,8 @@ const SyntheticDataGenerationAITraining2025 = () =>
                 Production Use Cases
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Healthcare Diagnostics</h3>
                   <p className="text-left">Generate synthetic medical images and patient records for rare disease diagnosis.</p>
                   <ul className="text-left">
@@ -273,8 +273,8 @@ const SyntheticDataGenerationAITraining2025 = () =>
             <section className="text-left"></section>
               <h2 className="text-left">Implementation Blueprint</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Data Assessment (Week 1-2)</h3>
                   <ul className="text-left">
                     <li>• Analyze existing real data: size, quality, imbalance, rare events</li>

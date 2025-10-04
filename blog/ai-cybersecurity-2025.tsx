@@ -59,8 +59,8 @@ export default function AICybersecurity2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Key AI Security Capabilities</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Real-Time Threat Detection</h3>
                     <p className="text-left">Identify and neutralize threats within milliseconds</p>
                   </div>
@@ -81,8 +81,8 @@ export default function AICybersecurity2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Advanced Threat Protection</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">AI-Powered Malware Detection</h3>
                     <p className="text-left"></p>
                       Advanced machine learning models that can identify zero-day threats and polymorphic malware.
@@ -121,8 +121,8 @@ export default function AICybersecurity2025() {
                 <h2 className="text-left">Autonomous Incident Response</h2>
                 <div className="text-left"></div>
                   <h3 className="text-left">Automated Security Operations</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">1<
                       <div></div>
                         <h4 className="text-left">Threat Identification</h4>
@@ -160,8 +160,8 @@ export default function AICybersecurity2025() {
                   Our zero-trust architecture ensures that no user or device is trusted by default. 
                   Every access request is verified, and privileges are granted on a need-to-know basis.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Identity Verification</h3>
                     <ul className="text-left">
                       <li>• Multi-factor authentication</li>
@@ -182,8 +182,8 @@ export default function AICybersecurity2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.7%</div>
                     <div className="text-left">Threat Detection</div>
                   </div>
@@ -216,8 +216,8 @@ export default function AICybersecurity2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Systems
                 </div>
                 <div className="text-left"></div>

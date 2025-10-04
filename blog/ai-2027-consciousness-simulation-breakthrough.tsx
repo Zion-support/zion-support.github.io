@@ -27,8 +27,8 @@ export default function AIConsciousnessSimulationBreakthrough2027() {
 
         <div className="text-left"></div>
           <h2 className="text-left">🧠 Consciousness Breakthrough Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.7%</div>
               <div className="text-left">Awareness Accuracy</div>
             </div>
@@ -133,8 +133,8 @@ export default function AIConsciousnessSimulationBreakthrough2027() {
             capabilities in understanding, empathy, and complex reasoning:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎭 Customer Experience Revolution</h3>
               <p className="text-left"></p>
                 Conscious AI systems are transforming customer service with genuine empathy, 
@@ -265,8 +265,8 @@ export default function AIConsciousnessSimulationBreakthrough2027() {
 
           <div className="text-left"></div>
             <h3 className="text-left">🏆 Implementation Success Stories</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Global Customer Service Leader</h4>
                 <p className="text-left"></p>
                   Implemented conscious AI customer service agents across 47 countries
@@ -339,8 +339,8 @@ export default function AIConsciousnessSimulationBreakthrough2027() {
 
           <div className="text-left"></div>
             <h3 className="text-left">Implementation Roadmap</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Ethical Framework Development</h4>
@@ -411,8 +411,8 @@ export default function AIConsciousnessSimulationBreakthrough2027() {
           </div>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Link href="/blog" className="text-left">
               ← Back to All Articles
             </Link>

@@ -55,8 +55,8 @@ export default function AdvancedReasoningModels2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🎯 Breakthrough Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">95%+</div>
                     <div className="text-left">Complex Task Accuracy</div>
                   </div>

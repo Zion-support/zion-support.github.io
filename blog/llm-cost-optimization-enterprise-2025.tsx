@@ -65,8 +65,8 @@ export default function LLMCostOptimizationEnterprise2025() {
 
             <section></section>
               <h2 className="text-left">Practical Optimizations</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Prompt & Request Layer</h3>
                   <ul className="text-left">
                     <li>• Semantic and exact-match caching with invalidation policies</li>
@@ -87,8 +87,8 @@ export default function LLMCostOptimizationEnterprise2025() {
 
             <section></section>
               <h2 className="text-left">Routing Architecture</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Cost-Quality Routing Gateway</h3>
                   <ul className="text-left">
                     <li>• Policies per task: classification → small OSS, reasoning → premium</li>
@@ -162,7 +162,7 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">Executive Summary</h2>
           <p className="text-left"></p>
@@ -171,8 +171,8 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
             guide reveals proven strategies that Fortune 500 companies use to achieve 73-89% cost reduction while maintaining 
             or improving model performance, response times, and user satisfaction.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$18B</div>
               <div className="text-left">Enterprise LLM Spending 2025</div>
             </div>
@@ -195,8 +195,8 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
 
         <div className="text-left"></div>
           <h3 className="text-left">Cost Breakdown Analysis</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">💰</div>
               <div className="text-left"></div>
                 <h4 className="text-left">Inference Compute (45-60% of total cost)</h4>
@@ -265,15 +265,15 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
           battle-tested optimization techniques. Most organizations achieve 40-60% savings within the first 90 days.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Strategy 1: Intelligent Model Selection & Routing</h3>
             <p className="text-left"></p>
               Not every request requires your most expensive model. Implement tiered routing based on task complexity, 
               automatically directing queries to the most cost-effective model that meets quality requirements.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Model Tier Architecture</h4>
                 <ul className="text-left">
                   <li>🟢 <strong>Tier 1 - Small (60% of queries):</strong> 7B params, $0.0001/req</li>
@@ -306,8 +306,8 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
               30-50% of enterprise LLM queries are semantically similar or identical. Implement multi-layer caching to serve 
               repeated queries from cache instead of recomputing, reducing costs by 40-60%.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Layer 1: Exact Match Cache</h4>
                 <p className="text-left"></p>
                   Redis/Memcached for identical query strings. Sub-millisecond lookups, 15-25% hit rate.
@@ -343,8 +343,8 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
               Reduce model size and inference costs by 40-75% through quantization (FP16→INT8→INT4), pruning, and distillation 
               while maintaining 95-99% of original performance.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">INT8 Quantization</h4>
                 <ul className="text-left">
                   <li>• 2x speedup</li>
@@ -386,8 +386,8 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
               Costs scale linearly with tokens. Optimize prompts to reduce input/output length by 30-60% without sacrificing 
               quality through compression, few-shot optimization, and output format engineering.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Input Optimization</h4>
                 <ul className="text-left">
                   <li>✓ Remove verbose instructions, use concise formatting</li>
@@ -458,8 +458,8 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
           Roll out cost optimization systematically to achieve quick wins while building toward comprehensive savings.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left">Phase 1</div>
               <div className="text-left"></div>
@@ -471,8 +471,8 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
               </div>
             </div>
           </div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">Phase 2</div>
               <div className="text-left"></div>
                 <h4 className="text-left">Strategic Optimization (Weeks 5-12): Additional 25-35%</h4>
@@ -483,8 +483,8 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
               </div>
             </div>
           </div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">Phase 3</div>
               <div className="text-left"></div>
                 <h4 className="text-left">Advanced Techniques (Months 4-6): Additional 10-20%</h4>

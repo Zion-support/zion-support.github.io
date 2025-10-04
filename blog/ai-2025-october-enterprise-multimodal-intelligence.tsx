@@ -65,8 +65,8 @@ export default function AIEnterpriseMultimodalIntelligence2025() {
               <p className="text-left"></p>
                 Modern multimodal systems leverage transformer architectures with specialized encoders for each modality, unified in a shared embedding space that enables cross-modal reasoning.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">👁️ Vision Encoder</h3>
                   <ul className="text-left">
                     <li>• ViT (Vision Transformer) backbone</li>
@@ -110,8 +110,8 @@ export default function AIEnterpriseMultimodalIntelligence2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">Enterprise Use Cases</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🛍️ E-Commerce & Retail</h3>
                   <ul className="text-left">
                     <li>→ <strong>Visual search</strong>: Find products from photos ("search by image")</li>
@@ -159,8 +159,8 @@ export default function AIEnterpriseMultimodalIntelligence2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">Implementation Roadmap</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                   <ul className="text-left">
                     <li>→ Assess multimodal data availability and quality</li>
@@ -199,8 +199,8 @@ export default function AIEnterpriseMultimodalIntelligence2025() {
                 <p className="text-left"></p>
                   A Fortune 500 retailer deployed multimodal AI for visual search, personalized recommendations, and automated content moderation—achieving breakthrough business results.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">156%</div>
                     <div className="text-left">Conversion Increase</div>
                   </div>

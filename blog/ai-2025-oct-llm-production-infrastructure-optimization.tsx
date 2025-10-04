@@ -23,8 +23,8 @@ const LLMProductionInfrastructure = () =>
       <article className="text-left"></a>
         <div className="text-left"></div>
           {/* Header */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 🔧 Technical Deep Dive
               <
@@ -41,8 +41,8 @@ const LLMProductionInfrastructure = () =>
               playbook covering model optimization, inference acceleration, and infrastructure architecture.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                 <div></div>
                   <div className="text-left">Alex Chen, PhD</div>
@@ -53,8 +53,8 @@ const LLMProductionInfrastructure = () =>
           </div>
 
           {/* Key Stats Banner */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Real-World Results</h2>
               <div className="text-left"></div>
                 <div></div>
@@ -78,8 +78,8 @@ const LLMProductionInfrastructure = () =>
           </div>
 
           {/* Main Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <h2 className="text-left">
                   <Server className="text-left" />
@@ -90,8 +90,8 @@ const LLMProductionInfrastructure = () =>
                   can cost $500K-1M monthly. But with the right architecture, you can achieve:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">❌ Common Approach (Expensive)</h3>
                     <ul className="text-left">
                       <li>• Direct API calls to GPT-4: $0.03/1K tokens</li>
@@ -119,8 +119,8 @@ const LLMProductionInfrastructure = () =>
                   The 7-Layer Optimization Stack
                 </h2>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Layer 1: Intelligent Caching</h3>
                     <p className="text-left"></p>
                       <strong className="text-left">The Opportunity:</strong> 30-60% of LLM requests are semantically 
@@ -138,8 +138,8 @@ const LLMProductionInfrastructure = () =>
                       </pre>
                     </div>
 
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Implementation</div>
                         <ul className="text-left">
                           <li>• Vector DB: Pinecone, Weaviate, or Qdrant</li>
@@ -269,11 +269,11 @@ const LLMProductionInfrastructure = () =>
                       queries to smaller models, complex ones to large models. 60% cost reduction with zero quality loss.
                     </p>
 
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Cascading Architecture</div>
-                        <div className="text-left"></div>
-                          <div className="text-left"></div>
+                        <div className="text-left">
+        <div className="text-left"></div>
                             <div className="text-left">1</div>
                             <div className="text-left"></div>
                               <div className="text-left">Classifier (1ms, $0.0001/request)</div>
@@ -324,8 +324,8 @@ const LLMProductionInfrastructure = () =>
                 <div className="text-left"></div>
                   <h3 className="text-left">Production-Ready LLM Architecture</h3>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Layer 1: API Gateway & Load Balancing</div>
                       <ul className="text-left">
                         <li className="text-left">
@@ -486,8 +486,8 @@ const LLMProductionInfrastructure = () =>
                   Common Pitfalls & How to Avoid Them
                 </h2>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Pitfall #1: Over-Optimizing Prematurely</h3>
                     <p className="text-left"></p>
                       Starting with INT4 quantization and complex model cascading before validating quality impact.
@@ -561,8 +561,8 @@ const LLMProductionInfrastructure = () =>
                 </ul>
 
                 <h2 className="text-left">Implementation Checklist</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <label className="text-left">
                       <input type="checkbox" className="text-left" />
                       <span className="text-left"></span>
@@ -605,8 +605,8 @@ const LLMProductionInfrastructure = () =>
             </div>
 
             {/* CTA Section */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   Need Help Optimizing Your LLM Infrastructure?
                 </h3>

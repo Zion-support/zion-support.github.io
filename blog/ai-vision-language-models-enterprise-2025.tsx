@@ -46,8 +46,8 @@ export default function VisionLanguageModelsEnterprise2025() {
       {/* Executive Summary */}
       <section className="text-left"></section>
         <h2 className="text-left">Executive Summary</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">98%</div>
             <div className="text-left">Accuracy in image-text understanding</div>
           </div>
@@ -127,8 +127,8 @@ export default function VisionLanguageModelsEnterprise2025() {
         </div>
 
         <h2 className="text-left">Leading VLM Architectures</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">CLIP (OpenAI)</h4>
             <ul className="text-left">
               <li>Zero-shot image classification</li>
@@ -167,8 +167,8 @@ export default function VisionLanguageModelsEnterprise2025() {
         </div>
 
         <h2 className="text-left">Implementation Roadmap</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Phase 1: Pilot (Weeks 1-4)</h4>
             <ul className="text-left">
               <li>Identify high-impact use cases</li>
@@ -219,8 +219,8 @@ export default function VisionLanguageModelsEnterprise2025() {
             <strong>Solution:</strong> Deployed VLM-powered damage assessment system analyzing photos from delivery drivers. 
             The system automatically categorizes damage severity, generates incident reports, and routes claims to appropriate teams.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$35M</div>
               <div className="text-left">Annual ROI</div>
             </div>
@@ -248,8 +248,8 @@ export default function VisionLanguageModelsEnterprise2025() {
         </ul>
 
         <h2 className="text-left">Future Trends: 2025-2026</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🎥 Video Understanding</h4>
             <p className="text-left"></p>
               Next-generation VLMs will process entire videos, understanding temporal relationships and generating 

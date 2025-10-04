@@ -31,7 +31,7 @@ export default function AI2025OctoberPredictiveAnalyticsRevolution() {
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">Executive Summary</h2>
           <p className="text-left"></p>
@@ -67,8 +67,8 @@ export default function AI2025OctoberPredictiveAnalyticsRevolution() {
             </ul>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">📊 Business Impact</h4>
               <ul className="text-left">
                 <li>• $2.8B in cost savings (Fortune 500)</li>
@@ -118,8 +118,8 @@ export default function AI2025OctoberPredictiveAnalyticsRevolution() {
         <section className="text-left"></section>
           <h2 className="text-left">Real-World Success Stories</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏭 Manufacturing Excellence</h3>
               <p className="text-left"></p>
                 Global manufacturer deployed predictive maintenance system analyzing 10,000 sensors across 
@@ -152,8 +152,8 @@ export default function AI2025OctoberPredictiveAnalyticsRevolution() {
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Phase 1: Foundation (Weeks 1-4)</h4>
               <p className="text-left"></p>
                 Data infrastructure setup, quality assessment, baseline model development, and KPI definition

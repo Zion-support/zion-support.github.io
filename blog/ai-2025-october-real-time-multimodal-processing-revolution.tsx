@@ -50,8 +50,8 @@ const RealTimeMultimodalProcessingRevolution = () =>
             </p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 <Zap className="text-left" />
                 Executive Summary
@@ -150,8 +150,8 @@ class MultimodalProcessor
                 Real-Time Fusion Techniques
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     Cross-Modal Attention Mechanisms
                   </h3>
@@ -209,8 +209,8 @@ class CrossModalAttention
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">
                       Early Fusion
                     </h3>
@@ -302,8 +302,8 @@ class CrossModalAttention
                 Performance Optimization
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     Low-Latency Processing Pipeline
                   </h3>
@@ -311,8 +311,8 @@ class CrossModalAttention
                     Achieving real-time performance requires careful optimization at every stage of the
                     multimodal processing pipeline.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">&lt;50ms</div>
                       <div className="text-left">End-to-end Latency</div>
                     </div>

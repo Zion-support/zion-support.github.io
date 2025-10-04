@@ -105,16 +105,16 @@ const AI2025OctoberAgentMeshNetworksEnterpriseCoordination = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Use Cases</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏭 Manufacturing Operations</h3>
                 <p className="text-left"></p>
                   A Fortune 500 manufacturer deployed 5,000 agents across 47 factories, coordinating production scheduling, 
                   quality control, supply chain optimization, and predictive maintenance. Results: 32% throughput increase, 
                   $47M annual savings, 91% reduction in production delays.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">32%</div>
                     <div className="text-left">Throughput Increase</div>
                   </div>
@@ -136,8 +136,8 @@ const AI2025OctoberAgentMeshNetworksEnterpriseCoordination = () =>
                   executing trades, managing risk, and sharing market intelligence. Achieved 99.97% uptime, 8.3x ROI, 
                   and processing 2.8 million transactions per second.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.97%</div>
                     <div className="text-left">System Uptime</div>
                   </div>
@@ -159,8 +159,8 @@ const AI2025OctoberAgentMeshNetworksEnterpriseCoordination = () =>
                   scheduling, and clinical decision support across 89 facilities. Reduced wait times 67%, improved patient 
                   outcomes 43%, saved $28M annually.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">67%</div>
                     <div className="text-left">Wait Time Reduction</div>
                   </div>
@@ -234,8 +234,8 @@ spec:
           <section className="text-left"></section>
             <h2 className="text-left">Advanced Features</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🔄 Self-Healing Topology</h3>
                 <p className="text-left"></p>
                   Agents automatically detect failed peers, redistribute workloads, and reform network connections 
@@ -293,8 +293,8 @@ spec:
                 neuromorphic computing integration for ultra-low latency coordination, federated learning across 
                 agent populations, and cross-organizational mesh federation enabling inter-enterprise agent collaboration.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Q1 2026</div>
                   <div className="text-left">Quantum-Safe Protocols</div>
                 </div>

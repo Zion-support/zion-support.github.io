@@ -76,8 +76,8 @@ export default function EnterpriseAIGovernanceFramework2025() {
                   Zion Tech Group's AI Governance Framework is built on five interconnected pillars:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Ethics & Fairness</h3>
                     <p className="text-left"></p>
                       Establish clear ethical principles and implement technical controls to ensure AI 
@@ -153,8 +153,8 @@ export default function EnterpriseAIGovernanceFramework2025() {
                   four-phase approach:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Assessment (Weeks 1-4)</h3>
                     <p className="text-left"></p>
                       Inventory existing AI systems, assess current governance maturity, identify gaps, 
@@ -217,8 +217,8 @@ export default function EnterpriseAIGovernanceFramework2025() {
                     innovation velocity.
                   </p>
                   <h4 className="text-left">Implementation Results:</h4>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">100%</div>
                       <div className="text-left">Regulatory compliance</div>
                     </div>
@@ -236,8 +236,8 @@ export default function EnterpriseAIGovernanceFramework2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Best Practices</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Start with High-Risk Applications</h3>
                     <p className="text-left">Focus initial governance efforts on AI systems with highest potential impact and risk.</p>
                   </div>
@@ -271,8 +271,8 @@ export default function EnterpriseAIGovernanceFramework2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group AI Governance Practice
                 </div>
                 <div className="text-left"></div>

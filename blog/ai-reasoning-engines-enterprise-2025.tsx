@@ -101,8 +101,8 @@ export default function AIReasoningEngines2025() {
                 <h2 className="text-left">Reasoning Engine Architecture</h2>
                 
                 <h3 className="text-left">Core Reasoning Components</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Chain-of-Thought (CoT)</h4>
                     <p className="text-left"></p>
                       Break complex problems into sequential reasoning steps
@@ -159,8 +159,8 @@ export default function AIReasoningEngines2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Use Cases</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Legal Document Analysis</h3>
                     <p className="text-left"></p>
                       Analyze contracts, identify risks, and explain legal implications with full reasoning chains.
@@ -247,8 +247,8 @@ export default function AIReasoningEngines2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Production Success Stories</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global Law Firm</h3>
                     <p className="text-left">97% Accuracy, 80% Faster Contract Review</p>
                     <p className="text-left"></p>

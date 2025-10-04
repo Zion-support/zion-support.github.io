@@ -7,7 +7,7 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
     <div className="text-left">
       {/* Animated background elements */}
       <div className="text-left">
-        <div className="text-left"></div>
+        <div className="text-left">
         <div className="text-left"></div>
         <div className="text-left" style={{ animationDelay: '1s' }}></div>
       </div>
@@ -104,8 +104,8 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
             </div>
 
             {/* Background glow effects */}
-            <div className="text-left"></div>
-            <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
           </div>
         </div>
 

@@ -50,8 +50,8 @@ const CognitiveAIArchitectures2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Executive Summary</h3>
             <ul className="text-left">
               <li><strong>92% Reasoning Accuracy:</strong> Match or exceed human performance on complex multi-step problem-solving</li>
@@ -154,8 +154,8 @@ const CognitiveAIArchitectures2025: React.FC = () =>
 
           <div className="text-left"></div>
             <h3 className="text-left">Why Cognitive Architectures Win</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Sample Efficiency</h4>
                 <p className="text-left">Learn from 10-100x fewer examples by leveraging prior knowledge and reasoning. Where traditional deep 
                 learning might need 100,000 labeled examples, cognitive architectures achieve similar performance with 1,000.</p>
@@ -274,8 +274,8 @@ const CognitiveAIArchitectures2025: React.FC = () =>
           </p>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Share this article:</h4>
               <div className="text-left"></div>

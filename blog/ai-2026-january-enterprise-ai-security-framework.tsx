@@ -107,8 +107,8 @@ const AI2026JanuaryEnterpriseAISecurityFramework = () =>
               The framework provides defense-in-depth protection against all major AI-specific threats and attack vectors.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Adversarial Attack Defense</h4>
                 <p className="text-left"></p>
                   Advanced detection and mitigation of adversarial inputs designed to manipulate AI model outputs.
@@ -168,8 +168,8 @@ const AI2026JanuaryEnterpriseAISecurityFramework = () =>
               Navigate the complex landscape of AI regulations with automated compliance across 127 global frameworks.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🌍 Global Regulatory Coverage</h4>
                 <p className="text-left"></p>
                   Comprehensive support for major regulatory frameworks including EU AI Act, GDPR, CCPA, HIPAA, SOC 2, and 122 others.
@@ -208,8 +208,8 @@ const AI2026JanuaryEnterpriseAISecurityFramework = () =>
               Our security framework integrates cutting-edge threat intelligence and automated response capabilities.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Real-Time Threat Detection</h4>
                 <ul className="text-left">
                   <li>• ML-powered anomaly detection</li>
@@ -237,8 +237,8 @@ const AI2026JanuaryEnterpriseAISecurityFramework = () =>
               Deploy enterprise-grade AI security with our proven implementation methodology.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Security Assessment (Weeks 1-2)</h4>
                 <p className="text-left"></p>
                   Comprehensive security audit, risk assessment, and gap analysis of existing AI systems.
@@ -276,8 +276,8 @@ const AI2026JanuaryEnterpriseAISecurityFramework = () =>
             
             <div className="text-left"></div>
               <h3 className="text-left">Security Metrics</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">94%</div>
                   <div className="text-left">Incident Reduction</div>
                 </div>

@@ -56,8 +56,8 @@ export default function ConversationalAIEnterpriseRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🗣️ Key Conversational AI Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">87%</div>
                     <div className="text-left">Autonomous Resolution Rate</div>
                   </div>
@@ -172,8 +172,8 @@ export default function ConversationalAIEnterpriseRevolution2025() {
                 <p className="text-left"></p>
                   Leading retailer with 200M+ customers deployed enterprise conversational AI across all channels:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$47M</div>
                     <div className="text-left">Annual Support Cost Savings</div>
                   </div>
@@ -205,8 +205,8 @@ export default function ConversationalAIEnterpriseRevolution2025() {
 
               <h2 className="text-left">Use Cases & Applications</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Customer Support</h3>
                   <ul className="text-left">
                     <li className="text-left">• Order tracking and status updates</li>
@@ -280,8 +280,8 @@ export default function ConversationalAIEnterpriseRevolution2025() {
               <h2 className="text-left">ROI & Business Impact</h2>
               <div className="text-left"></div>
                 <h3 className="text-left">Financial Analysis (3-Year Projection)</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Customer Service Cost Reduction<
                     <span className="text-left">$47M+<
                   </div>

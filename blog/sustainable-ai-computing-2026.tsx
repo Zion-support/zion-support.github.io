@@ -12,7 +12,7 @@ const SustainableAIComputing2026 = () =>
         <meta name="keywords" content="green AI, sustainable computing, carbon-neutral AI, energy-efficient ML, renewable energy, AI sustainability" />
       </Helmet>
       
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link to="/blog" className="text-left">
             <ArrowLeft className="text-left" />
@@ -21,8 +21,8 @@ const SustainableAIComputing2026 = () =>
 
           <article className="text-left"></a>
             {/* Header */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   Green AI & Sustainability
                 <
@@ -42,8 +42,8 @@ const SustainableAIComputing2026 = () =>
             </div>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">90%</div>
                 <div className="text-left">Carbon Reduction</div>
               </div>
@@ -86,8 +86,8 @@ const SustainableAIComputing2026 = () =>
                   <h2 className="text-left">Energy-Efficient Algorithms</h2>
                 </div>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Model Pruning & Compression</h3>
                     <p className="text-left"></p>
                       Remove redundant parameters and compress models without significant accuracy loss. Techniques 
@@ -143,8 +143,8 @@ const SustainableAIComputing2026 = () =>
                   <Battery className="text-left" />
                   <h2 className="text-left">Energy-Efficient Hardware</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">⚡ Specialized AI Chips</h4>
                     <p className="text-left"></p>
                       Purpose-built AI accelerators (Google TPU v5, NVIDIA H100, AWS Trainium) deliver 
@@ -208,10 +208,10 @@ const SustainableAIComputing2026 = () =>
                   power purchase agreements (PPAs), and strategic data center placement.
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <Wind className="text-left" />
                       </div>
                       <div className="text-left"></div>
@@ -227,8 +227,8 @@ const SustainableAIComputing2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left"></div>
                         <Droplet className="text-left" />
                       </div>
@@ -245,8 +245,8 @@ const SustainableAIComputing2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left"></div>
                         <Zap className="text-left" />
                       </div>
@@ -333,8 +333,8 @@ const SustainableAIComputing2026 = () =>
                   <Leaf className="text-left" />
                   <h2 className="text-left">Practical Implementation Guide</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       1
                     </div>
@@ -347,8 +347,8 @@ const SustainableAIComputing2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       2
                     </div>
                     <div></div>
@@ -360,8 +360,8 @@ const SustainableAIComputing2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       3
                     </div>
                     <div></div>
@@ -373,8 +373,8 @@ const SustainableAIComputing2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       4
                     </div>
                     <div></div>
@@ -386,8 +386,8 @@ const SustainableAIComputing2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       5
                     </div>
                     <div></div>
@@ -399,8 +399,8 @@ const SustainableAIComputing2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       6
                     </div>
                     <div></div>
@@ -419,8 +419,8 @@ const SustainableAIComputing2026 = () =>
                   <TrendingDown className="text-left" />
                   <h2 className="text-left">Business Case for Green AI</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">💰 Cost Savings</h4>
                     <ul className="text-left">
                       <li>• 60-75% reduction in energy bills</li>

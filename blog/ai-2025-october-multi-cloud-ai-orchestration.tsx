@@ -55,8 +55,8 @@ export default function MultiCloudAIOrchestration2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">⚡ Platform Performance</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">63%</div>
                     <div className="text-left">Cost Reduction</div>
                   </div>
@@ -202,8 +202,8 @@ export default function MultiCloudAIOrchestration2025() {
 
               <h2 className="text-left">Technology Stack</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div></div>
                     <h4 className="text-left">Orchestration Platforms</h4>
                     <p className="text-left">Kubernetes (EKS, AKS, GKE), KubeFlow, Ray, Anyscale</p>
@@ -255,8 +255,8 @@ export default function MultiCloudAIOrchestration2025() {
 
               <h2 className="text-left">Real-World Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🚀 Global SaaS Company</h4>
                   <p className="text-left"></p>
                     Deployed AI models across 15 regions on AWS, Azure, and GCP for sub-50ms latency worldwide

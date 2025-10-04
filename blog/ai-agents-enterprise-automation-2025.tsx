@@ -79,8 +79,8 @@ export default function AIAgentsEnterpriseAutomation2025() {
                   Organizations are implementing AI agents across critical business functions:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">📞 Customer Service Agents</h3>
                     <p className="text-left"></p>
                       Handle 85% of customer inquiries autonomously with AI agents that understand context, access 
@@ -160,8 +160,8 @@ export default function AIAgentsEnterpriseAutomation2025() {
                 <p className="text-left"></p>
                   Follow this proven approach to deploy AI agents successfully:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       1
                     </div>
@@ -174,8 +174,8 @@ export default function AIAgentsEnterpriseAutomation2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       2
                     </div>
                     <div></div>
@@ -187,8 +187,8 @@ export default function AIAgentsEnterpriseAutomation2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       3
                     </div>
                     <div></div>
@@ -200,8 +200,8 @@ export default function AIAgentsEnterpriseAutomation2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       4
                     </div>
                     <div></div>
@@ -213,8 +213,8 @@ export default function AIAgentsEnterpriseAutomation2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       5
                     </div>
                     <div></div>
@@ -230,8 +230,8 @@ export default function AIAgentsEnterpriseAutomation2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Average productivity improvement across use cases</div>
                   </div>

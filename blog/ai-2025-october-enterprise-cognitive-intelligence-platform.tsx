@@ -58,8 +58,8 @@ export default function EnterpriseCognitiveIntelligencePlatform2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Transformative Business Impact</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">10x</div>
                       <div className="text-left">Faster Decision Insights</div>
                     </div>
@@ -88,8 +88,8 @@ export default function EnterpriseCognitiveIntelligencePlatform2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core Cognitive Capabilities</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Contextual Understanding</h3>
                     <p className="text-left"></p>
                       The platform comprehends not just data points, but the business context, relationships, 
@@ -153,8 +153,8 @@ export default function EnterpriseCognitiveIntelligencePlatform2025() {
                 <div className="text-left"></div>
                   <h3 className="text-left">Layered Intelligence Framework</h3>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <h4 className="text-left">Layer 1: Data Foundation</h4>
                       <p className="text-left"></p>
                         Unified data fabric integrating structured, unstructured, and real-time data 
@@ -200,8 +200,8 @@ export default function EnterpriseCognitiveIntelligencePlatform2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Use Cases</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Strategic Planning & Forecasting</h3>
                     <p className="text-left"></p>
                       AI-powered scenario planning that considers thousands of variables, market dynamics, 
@@ -253,8 +253,8 @@ export default function EnterpriseCognitiveIntelligencePlatform2025() {
                 <div className="text-left"></div>
                   <h3 className="text-left">Success Factors</h3>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">1</div>
                       <div></div>
                         <h4 className="text-left">Start with High-Impact Use Cases</h4>

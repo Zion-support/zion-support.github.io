@@ -29,8 +29,8 @@ const LLMSecurityPromptInjectionDefense = () =>
         </Link>
 
         <header className="text-left">
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Shield className="text-left" />
             </div>
             <div></div>
@@ -46,8 +46,8 @@ const LLMSecurityPromptInjectionDefense = () =>
           </p>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               <AlertTriangle className="text-left" />
               Critical Security Landscape
@@ -84,8 +84,8 @@ const LLMSecurityPromptInjectionDefense = () =>
               In 2025, we're seeing increasingly sophisticated attack vectors:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <Code className="text-left" />
                   Direct Prompt Injection
@@ -176,8 +176,8 @@ const LLMSecurityPromptInjectionDefense = () =>
               Advanced Defense Techniques
             </h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">1. Delimiter-Based Separation</h3>
                 <p className="text-left"></p>
                   Use unique, randomized delimiters to clearly separate system instructions from user inputs, making injection significantly harder:
@@ -230,8 +230,8 @@ const LLMSecurityPromptInjectionDefense = () =>
               <p className="text-left"></p>
                 Implemented comprehensive LLM security framework protecting patient data across AI-powered clinical decision support systems serving 15 million patients.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <p className="text-left">99.8%</p>
                   <p className="text-left">Attack prevention rate</p>
                 </div>

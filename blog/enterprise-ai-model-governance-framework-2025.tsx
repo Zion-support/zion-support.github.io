@@ -82,8 +82,8 @@ export default function EnterpriseAIModelGovernance2025() {
                   Effective AI governance requires coordinated processes across the entire model lifecycle:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Model Development Governance</h3>
                     <p className="text-left">Establish standards and controls from the start:</p>
                     <ul className="text-left">
@@ -243,8 +243,8 @@ export default function EnterpriseAIModelGovernance2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Essential Governance Tools</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Model Registry & Catalog</h3>
                     <p className="text-left">MLflow, Weights & Biases, Neptune.ai, Domino Model Monitor</p>
                   </div>
@@ -275,8 +275,8 @@ export default function EnterpriseAIModelGovernance2025() {
                 <h2 className="text-left">Measuring Governance Success</h2>
                 <p className="text-left">Track these KPIs to assess governance maturity:</p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Compliance Metrics</h3>
                     <ul className="text-left">
                       <li>% models with complete documentation</li>

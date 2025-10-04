@@ -12,7 +12,7 @@ const AIRegulatoryFrameworks2026 = () =>
         <meta name="keywords" content="AI regulation, EU AI Act, AI compliance, AI governance, risk management, algorithmic accountability" />
       </Helmet>
       
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link to="/blog" className="text-left">
             <ArrowLeft className="text-left" />
@@ -21,8 +21,8 @@ const AIRegulatoryFrameworks2026 = () =>
 
           <article className="text-left"></a>
             {/* Header */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   AI Governance & Policy
                 <
@@ -41,8 +41,8 @@ const AIRegulatoryFrameworks2026 = () =>
             </div>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">50+</div>
                 <div className="text-left">Countries with AI Laws</div>
               </div>
@@ -90,8 +90,8 @@ const AIRegulatoryFrameworks2026 = () =>
                   AI systems into four tiers:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <AlertTriangle className="text-left" />
                       <h3 className="text-left">Unacceptable Risk - PROHIBITED</h3>
@@ -107,8 +107,8 @@ const AIRegulatoryFrameworks2026 = () =>
                     </ul>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <Shield className="text-left" />
                       <h3 className="text-left">High Risk - STRICT REQUIREMENTS</h3>
                     </div>
@@ -127,8 +127,8 @@ const AIRegulatoryFrameworks2026 = () =>
                     </ul>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <FileText className="text-left" />
                       <h3 className="text-left">Limited Risk - TRANSPARENCY OBLIGATIONS</h3>
                     </div>
@@ -142,8 +142,8 @@ const AIRegulatoryFrameworks2026 = () =>
                     </ul>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <CheckCircle className="text-left" />
                       <h3 className="text-left">Minimal Risk - NO OBLIGATIONS</h3>
                     </div>
@@ -163,8 +163,8 @@ const AIRegulatoryFrameworks2026 = () =>
                   The United States has adopted a sector-specific approach rather than comprehensive federal legislation:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Executive Order 14110 (2023)</h4>
                     <p className="text-left"></p>
                       Establishes safety & security standards for AI systems, particularly foundation models. 
@@ -207,8 +207,8 @@ const AIRegulatoryFrameworks2026 = () =>
                   <h2 className="text-left">Other Major Jurisdictions</h2>
                 </div>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">🇨🇳 China</h4>
                     <p className="text-left"></p>
                       Comprehensive regulations covering algorithms, deep synthesis (deepfakes), and generative AI. 
@@ -267,8 +267,8 @@ const AIRegulatoryFrameworks2026 = () =>
                   Building a robust AI governance program requires a systematic approach:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">1. AI Inventory & Risk Classification</h4>
                     <p className="text-left"></p>
                       Maintain comprehensive inventory of all AI systems with risk ratings, data flows, and 

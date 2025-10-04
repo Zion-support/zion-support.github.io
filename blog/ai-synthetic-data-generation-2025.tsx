@@ -56,8 +56,8 @@ export default function AISyntheticDataGeneration2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Core Technology Stack</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Generative Adversarial Networks (GANs)</h3>
                     <p className="text-left"></p>
                       Advanced GAN architectures learn the underlying distribution of real data and generate 
@@ -114,8 +114,8 @@ export default function AISyntheticDataGeneration2025() {
                     without accessing real patient records. Generated 42M synthetic patient profiles spanning 
                     847 conditions and 12,400 biomarkers.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <p className="text-left">84%</p>
                       <p className="text-left">Faster model development</p>
                     </div>
@@ -141,8 +141,8 @@ export default function AISyntheticDataGeneration2025() {
                     exposing customer financial information. Created 2.7B synthetic transactions preserving 
                     complex fraud patterns while ensuring individual privacy.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <p className="text-left">97.8%</p>
                       <p className="text-left">Fraud detection accuracy</p>
                     </div>
@@ -261,8 +261,8 @@ class SyntheticDataValidator
 
               <section className="text-left"></section>
                 <h2 className="text-left">Advanced Applications</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Data Augmentation</h4>
                     <p className="text-left"></p>
                       Generate synthetic examples of rare events to balance training datasets and improve model performance

@@ -35,8 +35,8 @@ export default function EnterpriseAIComplianceFrameworkOctober2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100%</div>
               <div className="text-left">Compliance Coverage</div>
             </div>
@@ -99,8 +99,8 @@ export default function EnterpriseAIComplianceFrameworkOctober2025() {
 
           <h2 className="text-left">EU AI Act Compliance</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📋 Risk Classification</h3>
               <p className="text-left"></p>
                 Systematically assess and classify AI systems according to EU AI Act risk categories 
@@ -136,8 +136,8 @@ export default function EnterpriseAIComplianceFrameworkOctober2025() {
           <div className="text-left"></div>
             <h3 className="text-left">🤖 Continuous Compliance Automation</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Policy Enforcement</h4>
@@ -222,15 +222,15 @@ export default function EnterpriseAIComplianceFrameworkOctober2025() {
 
           <h2 className="text-left">Explainability & Transparency</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔍 Model Explainability</h3>
               <p className="text-left"></p>
                 Implement explainable AI (XAI) techniques that provide human-understandable 
                 explanations for AI decisions, meeting transparency requirements.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">SHAP Values</div>
                   <div className="text-left">Feature importance</div>
                 </div>
@@ -309,33 +309,33 @@ export default function EnterpriseAIComplianceFrameworkOctober2025() {
 
           <h2 className="text-left">Compliance Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <span className="text-left"><strong className="text-left">Gap Analysis:</strong> Assess current AI systems against regulatory requirements<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2</div>
                 <span className="text-left"><strong className="text-left">Framework Deployment:</strong> Implement compliance automation tools and processes<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">3</div>
                 <span className="text-left"><strong className="text-left">Documentation:</strong> Generate required documentation and audit trails<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">4</div>
                 <span className="text-left"><strong className="text-left">Training:</strong> Educate teams on compliance requirements and best practices<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">5</div>
                 <span className="text-left"><strong className="text-left">Monitoring:</strong> Establish continuous compliance monitoring and reporting<
               </div>

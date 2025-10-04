@@ -50,8 +50,8 @@ const RAGAtScaleEnterpriseImplementation2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 What You'll Achieve</h3>
             <ul className="text-left">
               <li><strong>95% Answer Accuracy:</strong> Production RAG systems outperforming standalone LLMs by 40%</li>
@@ -228,8 +228,8 @@ const RAGAtScaleEnterpriseImplementation2025: React.FC = () =>
 
           <div className="text-left"></div>
             <h3 className="text-left">🏗️ Production Architecture Blueprint</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <strong className="text-left">Layer 1: API Gateway</strong>
                 <p className="text-left">Load balancing, rate limiting, authentication (Kong, AWS API Gateway)</p>
               </div>
@@ -371,8 +371,8 @@ const RAGAtScaleEnterpriseImplementation2025: React.FC = () =>
           </p>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Share this article:</h4>
               <div className="text-left"></div>

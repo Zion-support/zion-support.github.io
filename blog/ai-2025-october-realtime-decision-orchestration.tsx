@@ -58,8 +58,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Performance at Scale</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">&lt;50ms</div>
                       <div className="text-left">Median Decision Latency</div>
                     </div>
@@ -89,8 +89,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core Architecture Components</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Streaming Data Ingestion</h3>
                     <p className="text-left"></p>
                       High-throughput data pipelines that capture and process events from diverse sources 
@@ -151,8 +151,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Use Cases</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Real-Time Personalization</h3>
                     <p className="text-left"></p>
                       Deliver hyper-personalized content, product recommendations, and experiences in 
@@ -161,8 +161,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
                     <div className="text-left"></div>
                       <p className="text-left">Results: 85% improvement in engagement, 45% increase in conversion rates</p>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">✓<
                         <span>Dynamic homepage personalization for millions of users<
                       </div>
@@ -186,8 +186,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
                     <div className="text-left"></div>
                       <p className="text-left">Results: 92% fraud detection rate, 70% reduction in false positives, $50M+ losses prevented</p>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">✓<
                         <span>Sub-50ms transaction scoring at scale<
                       </div>
@@ -211,8 +211,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
                     <div className="text-left"></div>
                       <p className="text-left">Results: 40% latency reduction, 50% cost savings through optimal resource utilization</p>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">✓<
                         <span>Predictive auto-scaling ahead of demand spikes<
                       </div>
@@ -236,8 +236,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
                     <div className="text-left"></div>
                       <p className="text-left">Results: 65% reduction in operational costs, 99.9% SLA achievement</p>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">✓<
                         <span>Dynamic inventory optimization and replenishment<
                       </div>
@@ -260,8 +260,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
                 <div className="text-left"></div>
                   <h3 className="text-left">Technology Stack</h3>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <h4 className="text-left">Streaming Platform</h4>
                       <ul className="text-left">
                         <li>• Apache Kafka / Pulsar for event streaming</li>
@@ -307,8 +307,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Performance Optimization Strategies</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Model Optimization</h3>
                     <p className="text-left">Quantization, pruning, and knowledge distillation to reduce model size by 10x while maintaining accuracy</p>
                   </div>
@@ -338,8 +338,8 @@ export default function RealTimeAIDecisionOrchestration2025() {
                   and accuracy at scale. Key metrics to track include:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Performance Metrics</h4>
                     <ul className="text-left">
                       <li>• P50, P95, P99 latency percentiles</li>

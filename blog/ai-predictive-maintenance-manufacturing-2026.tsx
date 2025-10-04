@@ -53,8 +53,8 @@ const AIPredictiveMaintenanceManufacturing2026 = () =>
               Deploy AI-powered predictive maintenance achieving 80% downtime reduction, 95% failure prediction accuracy, and 40% cost savings. Master sensor analytics, anomaly detection, and proactive equipment management.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -70,8 +70,8 @@ const AIPredictiveMaintenanceManufacturing2026 = () =>
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">
                 <Zap className="text-left" />
                 Executive Summary
@@ -105,10 +105,10 @@ const AIPredictiveMaintenanceManufacturing2026 = () =>
               Traditional reactive and preventive maintenance approaches cost manufacturers billions annually in unnecessary downtime, premature part replacements, and catastrophic failures. AI-powered predictive maintenance fundamentally changes this paradigm by:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <BarChart3 className="text-left" />
                   </div>
                   <h3 className="text-left">Continuous Monitoring</h3>
@@ -118,8 +118,8 @@ const AIPredictiveMaintenanceManufacturing2026 = () =>
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Shield className="text-left" />
                   </div>
@@ -216,8 +216,8 @@ const AIPredictiveMaintenanceManufacturing2026 = () =>
 
             <h2 className="text-left">Real-World Results</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">80%</div>
                 <div className="text-left">Downtime Reduction</div>
               </div>

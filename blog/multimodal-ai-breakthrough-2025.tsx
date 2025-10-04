@@ -169,8 +169,8 @@ export default function MultimodalAIBreakthrough2025() {
               </section>
             </div>
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Research Team
                 </div>
                 <div className="text-left"></div>

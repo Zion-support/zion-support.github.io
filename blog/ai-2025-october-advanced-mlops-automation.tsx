@@ -58,8 +58,8 @@ export default function AdvancedMLOpsAutomation2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Key Performance Indicators</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">95%</div>
                       <div className="text-left">Faster Model Iteration</div>
                     </div>
@@ -88,8 +88,8 @@ export default function AdvancedMLOpsAutomation2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Zero-Touch Pipeline Architecture</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Automated Data Validation</h3>
                     <p className="text-left"></p>
                       AI-powered data quality checks automatically detect schema drift, data anomalies, 
@@ -136,8 +136,8 @@ export default function AdvancedMLOpsAutomation2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Success Stories</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global Financial Services</h3>
                     <p className="text-left"></p>
                       Implemented zero-touch MLOps for fraud detection models serving 50M+ transactions daily.
@@ -205,8 +205,8 @@ export default function AdvancedMLOpsAutomation2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Roadmap</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                     <p className="text-left"></p>
                       Establish core infrastructure, implement version control, set up automated testing frameworks

@@ -35,8 +35,8 @@ export default function AIOctober2025SovereignAIPrivacyRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100%</div>
               <div className="text-left">Data Sovereignty</div>
             </div>
@@ -99,8 +99,8 @@ export default function AIOctober2025SovereignAIPrivacyRevolution() {
 
           <h2 className="text-left">Regulatory Compliance Framework</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🌍 Global Compliance</h3>
               <p className="text-left"></p>
                 Built-in support for GDPR, CCPA, HIPAA, and emerging AI regulations across 
@@ -141,8 +141,8 @@ export default function AIOctober2025SovereignAIPrivacyRevolution() {
               and zero patient data breaches.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">12.4M</div>
                 <div className="text-left">Patients Protected</div>
               </div>
@@ -163,8 +163,8 @@ export default function AIOctober2025SovereignAIPrivacyRevolution() {
 
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Local Model Deployment</h3>
               <p className="text-left"></p>
                 Deploy state-of-the-art LLMs and ML models entirely on-premise with optimized inference 

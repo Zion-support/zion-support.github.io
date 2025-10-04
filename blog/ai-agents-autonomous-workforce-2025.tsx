@@ -70,8 +70,8 @@ export default function AIAgentsAutonomousWorkforce2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Types of AI Agents</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🤖 Task Execution Agents</h3>
                     <p className="text-left"></p>
                       Specialized agents that autonomously complete specific tasks like data entry, report 
@@ -125,8 +125,8 @@ export default function AIAgentsAutonomousWorkforce2025() {
                   <p className="text-left"></p>
                     A financial services company deployed a multi-agent system for customer acquisition:
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <strong className="text-left">Lead Research Agent:</strong> Identifies and qualifies 
                       potential customers from various data sources
                     </div>
@@ -147,8 +147,8 @@ export default function AIAgentsAutonomousWorkforce2025() {
                       process, escalates to humans when needed
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">5x</div>
                       <div className="text-left">Lead conversion rate</div>
                     </div>
@@ -170,8 +170,8 @@ export default function AIAgentsAutonomousWorkforce2025() {
                   Building production-ready AI agents requires careful architectural decisions:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Perception Layer</h3>
                     <p className="text-left"></p>
                       Data ingestion, preprocessing, and real-time monitoring systems that enable agents 
@@ -219,8 +219,8 @@ export default function AIAgentsAutonomousWorkforce2025() {
                   Deploying AI agents in production comes with unique challenges:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">⚠️ Reliability & Safety</h3>
                     <p className="text-left"></p>
                       Agents can take unexpected actions. Implement guardrails, approval workflows for 
@@ -305,8 +305,8 @@ export default function AIAgentsAutonomousWorkforce2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group AI Agents Practice
                 </div>
                 <div className="text-left"></div>

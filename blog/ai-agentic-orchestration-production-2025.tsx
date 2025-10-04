@@ -50,8 +50,8 @@ const AIAgenticOrchestrationProduction2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">🎯 Executive Summary</h2>
             <p className="text-left"></p>
               AI agent orchestration is revolutionizing enterprise automation. Leading organizations are deploying multi-agent systems that coordinate autonomous AI agents to handle complex workflows with unprecedented reliability and efficiency.

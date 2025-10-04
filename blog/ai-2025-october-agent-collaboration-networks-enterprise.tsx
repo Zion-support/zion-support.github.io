@@ -55,8 +55,8 @@ export default function AIAgentCollaborationNetworksEnterprise2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Breakthrough Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$840M</div>
                     <div className="text-left">Annual Cost Savings</div>
                   </div>
@@ -172,8 +172,8 @@ export default function AIAgentCollaborationNetworksEnterprise2025() {
 
               <h2 className="text-left">Enterprise Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏢 Enterprise Operations</h4>
                   <ul className="text-left">
                     <li>• Autonomous workflow orchestration across departments</li>

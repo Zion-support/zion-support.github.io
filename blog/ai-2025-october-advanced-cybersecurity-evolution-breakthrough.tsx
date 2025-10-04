@@ -60,8 +60,8 @@ export default function AdvancedCybersecurityEvolutionBreakthrough() {
         <section className="text-left"></section>
           <h2 className="text-left">🤖 AI-Powered Security Capabilities</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Autonomous Threat Detection</h3>
               <ul className="text-left">
                 <li className="text-left">
@@ -133,8 +133,8 @@ export default function AdvancedCybersecurityEvolutionBreakthrough() {
           <h2 className="text-left">🏢 Enterprise Success Story</h2>
           <div className="text-left"></div>
             <h3 className="text-left">Global Healthcare Enterprise</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$1.8B</div>
                 <div className="text-left">Breach Prevention Value</div>
               </div>
@@ -165,8 +165,8 @@ export default function AdvancedCybersecurityEvolutionBreakthrough() {
         <section className="text-left"></section>
           <h2 className="text-left">🎯 Implementation Framework</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Assessment & Planning (Months 1-2)</h3>
               <ul className="text-left">
                 <li>• Comprehensive security posture assessment and gap analysis</li>
@@ -200,8 +200,8 @@ export default function AdvancedCybersecurityEvolutionBreakthrough() {
 
         <section className="text-left"></section>
           <h2 className="text-left">💡 Strategic Advantages</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🛡️ Advanced Protection</h3>
               <ul className="text-left">
                 <li>• 99.98% threat prevention success rate</li>

@@ -172,8 +172,8 @@ export default function AIMultiCloudOrchestration2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group AI Research Team
                 </div>
                 <div className="text-left"></div>

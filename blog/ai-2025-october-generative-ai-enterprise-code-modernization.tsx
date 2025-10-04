@@ -113,8 +113,8 @@ const AI2025OctoberGenerativeAIEnterpriseCodeModernization = () =>
                 cloud-native architecture in 18 months (originally estimated 7 years).
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$290M</div>
                   <div className="text-left">Cost Savings vs. Manual Migration</div>
                 </div>
@@ -146,8 +146,8 @@ const AI2025OctoberGenerativeAIEnterpriseCodeModernization = () =>
               translation to architecture refactoring, database migration, and cloud platform optimization.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">💻 Language Modernization</h3>
                 <p className="text-left"></p>
                   Automated translation from legacy languages (COBOL, PL/I, RPG) to modern platforms 
@@ -237,8 +237,8 @@ const AI2025OctoberGenerativeAIEnterpriseCodeModernization = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Discovery & Assessment (Weeks 1-4)</h3>
                 <ul className="text-left">
                   <li>• Comprehensive legacy application inventory and analysis</li>

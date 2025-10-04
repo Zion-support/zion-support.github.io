@@ -65,8 +65,8 @@ export default function AIQuantumHybridComputing2025() {
               <p className="text-left"></p>
                 Modern hybrid systems leverage quantum processors for specific computational bottlenecks while using classical systems for data preparation, result post-processing, and orchestration.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">⚛️ Quantum Layer</h3>
                   <ul className="text-left">
                     <li>• Quantum annealing for optimization</li>
@@ -89,8 +89,8 @@ export default function AIQuantumHybridComputing2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">Enterprise Use Cases</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">📦 Supply Chain Optimization</h3>
                   <p className="text-left">Solve complex routing, scheduling, and inventory optimization problems with quantum advantage</p>
                   <ul className="text-left">
@@ -130,8 +130,8 @@ export default function AIQuantumHybridComputing2025() {
               <p className="text-left"></p>
                 Successfully deploying quantum-hybrid systems requires careful problem selection, architecture design, and gradual integration.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Step 1: Problem Assessment (Weeks 1-2)</h3>
                   <ul className="text-left">
                     <li>→ Identify optimization bottlenecks in existing workflows</li>
@@ -170,8 +170,8 @@ export default function AIQuantumHybridComputing2025() {
                 <p className="text-left"></p>
                   A Fortune 100 logistics company deployed quantum-hybrid optimization for fleet routing, achieving breakthrough cost reductions and operational efficiency.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1000x</div>
                     <div className="text-left">Faster Optimization</div>
                   </div>

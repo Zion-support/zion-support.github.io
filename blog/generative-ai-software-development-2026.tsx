@@ -201,8 +201,8 @@ export default function GenerativeAISoftwareDevelopment2026() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group Engineering Excellence Team
                 </div>
                 <div className="text-left"></div>

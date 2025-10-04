@@ -171,8 +171,8 @@ export default function GenerativeAIEnterprise2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Enterprise AI Division
                 </div>
                 <div className="text-left"></div>

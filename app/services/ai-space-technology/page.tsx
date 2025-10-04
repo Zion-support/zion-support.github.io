@@ -13,8 +13,8 @@ const AISpaceTechnologyServices = React.memo(function AISpaceTechnologyServices(
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <div className="text-left"></div>
           <span className="text-left"></span>
             🚀 Revolutionary Service
@@ -42,7 +42,7 @@ const AISpaceTechnologyServices = React.memo(function AISpaceTechnologyServices(
           </a>
         </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <span className="text-left">🛰️>
@@ -62,8 +62,8 @@ const AISpaceTechnologyServices = React.memo(function AISpaceTechnologyServices(
           <div className="text-left">Per satellite constellation</div>"
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left">🧠>
           </div>
           <h3 className="text-left">Intelligent Mission Planning</h3>"
@@ -81,8 +81,8 @@ const AISpaceTechnologyServices = React.memo(function AISpaceTechnologyServices(
           <div className="text-left">Per mission planning system</div>"
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left">🌍>
           </div>
           <h3 className="text-left">Earth Observation AI</h3>"
@@ -102,8 +102,8 @@ const AISpaceTechnologyServices = React.memo(function AISpaceTechnologyServices(
 
       <div className="text-left"></div>
         <h2 className="text-left">Why Choose Our AI Space Technology?</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">99.9%</div>"
             <div className="text-left">Mission Success Rate</div>"
           </div>
@@ -123,8 +123,8 @@ const AISpaceTechnologyServices = React.memo(function AISpaceTechnologyServices(
 
       <div className="text-left"></div>
         <h2 className="text-left">Implementation Process</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">1</div>"
             <h3 className="text-left">Assessment</h3>"
             <p className="text-left">Analyze current space operations and identify AI opportunities</p>"
@@ -148,16 +148,16 @@ const AISpaceTechnologyServices = React.memo(function AISpaceTechnologyServices(
 
       <div className="text-left"></div>
         <h2 className="text-left">Success Story</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">SpaceTech Global: $50M ROI Achievement</h3>"
             <p className="text-left"></p>
               "Zion Tech Group's AI space technology transformed our operations completely. We achieved 99.9% mission "
               success rate and saved $50M annually while reducing our ground control requirements by 80%. The autonomous 
               systems work flawlessly 24/7."
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">🚀>
               </div>
               <div></div>

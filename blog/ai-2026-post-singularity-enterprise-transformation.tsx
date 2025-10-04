@@ -17,13 +17,13 @@ export default function PostSingularityEnterpriseTransformation() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 🚀 Post-Singularity AI Revolution
@@ -54,8 +54,8 @@ export default function PostSingularityEnterpriseTransformation() {
             </div>
             
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.99%</div>
                 <div className="text-left">Automation Rate</div>
               </div>
@@ -100,8 +100,8 @@ export default function PostSingularityEnterpriseTransformation() {
               Revolutionary Post-Singularity Technologies
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Universal Intelligence Systems</h3>
                 <p className="text-left"></p>
                   AI systems that have achieved universal intelligence, capable of understanding and solving any problem across all domains with superhuman capabilities.
@@ -161,8 +161,8 @@ export default function PostSingularityEnterpriseTransformation() {
               Transformative Success Stories
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left"></span>
                     $1 TRILLION SUCCESS
@@ -175,8 +175,8 @@ export default function PostSingularityEnterpriseTransformation() {
                 <p className="text-left"></p>
                   A Fortune 10 global manufacturing conglomerate achieved $1 trillion in value creation through post-singularity AI transformation, achieving 99.99% operational automation and universal intelligence integration.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.99%</div>
                     <div className="text-left">Automation</div>
                   </div>
@@ -195,8 +195,8 @@ export default function PostSingularityEnterpriseTransformation() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left"></span>
                     $500B SUCCESS
                   <
@@ -208,8 +208,8 @@ export default function PostSingularityEnterpriseTransformation() {
                 <p className="text-left"></p>
                   A leading global financial institution transformed its operations with post-singularity AI, achieving $500 billion in value creation through universal intelligence and autonomous decision-making systems.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">100%</div>
                     <div className="text-left">Accuracy</div>
                   </div>
@@ -236,8 +236,8 @@ export default function PostSingularityEnterpriseTransformation() {
               Post-Singularity Transformation Roadmap
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -249,8 +249,8 @@ export default function PostSingularityEnterpriseTransformation() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <div></div>
@@ -261,8 +261,8 @@ export default function PostSingularityEnterpriseTransformation() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <div></div>
@@ -273,8 +273,8 @@ export default function PostSingularityEnterpriseTransformation() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   4
                 </div>
                 <div></div>

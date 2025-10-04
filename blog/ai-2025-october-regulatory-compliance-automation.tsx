@@ -136,8 +136,8 @@ export default function AIRegulatoryCompliance2025() {
                   Industry-Specific Compliance Solutions
                 </h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Financial Services</h3>
                     <p className="text-left"></p>
                       Comprehensive coverage for banking regulations, securities laws, and financial reporting:
@@ -205,8 +205,8 @@ export default function AIRegulatoryCompliance2025() {
                     operations across 65 countries. The 24-month transformation yielded extraordinary results:
                   </p>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">78%</div>
                       <div className="text-left">Compliance cost reduction</div>
                     </div>
@@ -273,8 +273,8 @@ export default function AIRegulatoryCompliance2025() {
                   Our accelerated implementation methodology gets you to full compliance automation in 120 days:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <div className="text-left">Days</div>
                       <div className="text-left">1-30</div>
@@ -288,8 +288,8 @@ export default function AIRegulatoryCompliance2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Days</div>
                       <div className="text-left">31-60</div>
                     </div>
@@ -301,8 +301,8 @@ export default function AIRegulatoryCompliance2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Days</div>
                       <div className="text-left">61-90</div>
                     </div>
@@ -314,8 +314,8 @@ export default function AIRegulatoryCompliance2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Days</div>
                       <div className="text-left">91-120</div>
                     </div>
@@ -362,8 +362,8 @@ export default function AIRegulatoryCompliance2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Compliance & Governance Team
                 </div>
                 <div className="text-left"></div>

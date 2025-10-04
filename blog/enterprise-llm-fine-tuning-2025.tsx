@@ -45,8 +45,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
               Transform foundation models into domain experts with LoRA, QLoRA, and RLHF. Learn production-ready fine-tuning strategies achieving 95%+ accuracy on specialized tasks at 90% lower cost than training from scratch.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <User className="text-left" />
                 <span>Zion Tech Group Team<
               </div>
@@ -75,8 +75,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
               <p className="text-left"></p>
                 Off-the-shelf LLMs like GPT-4 are powerful general-purpose models, but struggle with specialized domains—legal contracts, medical diagnoses, financial analysis, technical documentation. Fine-tuning adapts foundation models to your specific use case, dramatically improving accuracy, reducing hallucinations, and cutting costs.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">❌ Generic Foundation Model</h3>
                   <ul className="text-left">
                     <li>• 60-75% accuracy on domain tasks</li>
@@ -104,8 +104,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
               <p className="text-left"></p>
                 Three main approaches dominate enterprise fine-tuning today, each with distinct trade-offs:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Brain className="text-left" />
                     <h3 className="text-left">1. LoRA (Low-Rank Adaptation)</h3>
@@ -138,8 +138,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Zap className="text-left" />
                     <h3 className="text-left">2. QLoRA (Quantized LoRA)</h3>
                   </div>
@@ -170,8 +170,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Brain className="text-left" />
                     <h3 className="text-left">3. RLHF (Reinforcement Learning from Human Feedback)</h3>
                   </div>
@@ -249,8 +249,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
                   }
                 ].map((item) => (
                   <div key={item.step} className="text-left"></div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         {item.step}
                       </div>
                       <h3 className="text-left">{item.title}</h3>
@@ -269,12 +269,12 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
               <p className="text-left"></p>
                 When does fine-tuning make economic sense? Run the ROI calculation:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Example: Legal Document Analysis</h3>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <h4 className="text-left">Option 1: GPT-4 with Few-Shot Prompts</h4>
                       <ul className="text-left">
@@ -309,14 +309,14 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Real-World Success Stories</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🏥 Healthcare: Medical Coding Assistant</h3>
                   <p className="text-left"></p>
                     A health tech company fine-tuned Llama-3-70B on 10K medical records to automate ICD-10 coding.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <strong className="text-left">Accuracy</strong>
                       <p className="text-left">63% → 94%</p>
                     </div>
@@ -336,8 +336,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
                   <p className="text-left"></p>
                     Law firm fine-tuned GPT-3.5 on 5K contract reviews to identify non-standard clauses and risks.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <strong className="text-left">Recall (Risks Found)</strong>
                       <p className="text-left">71% → 96%</p>
                     </div>
@@ -357,8 +357,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () =>
                   <p className="text-left"></p>
                     Investment firm fine-tuned Claude-3 on 2K analyst reports to generate investment thesis summaries.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <strong className="text-left">Analyst Rating</strong>
                       <p className="text-left">4.7/5</p>
                     </div>

@@ -52,8 +52,8 @@ export default function RetrievalAugmentedGenerationEnterpriseBreakthrough2025()
           <section className="text-left"></section>
             <h2 className="text-left">Advanced RAG Architecture</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Hybrid Search: Best of Both Worlds</h3>
                 <p className="text-left"></p>
                   Combine dense vector embeddings (semantic meaning) with sparse keyword search (exact matches) 
@@ -118,8 +118,8 @@ export default function RetrievalAugmentedGenerationEnterpriseBreakthrough2025()
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise RAG Success Stories</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Fortune 500 Legal: $20M Annual Savings</h3>
                 <p className="text-left"></p>
                   Global legal department deployed RAG system over 500K contracts and 2M legal documents, 

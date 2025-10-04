@@ -45,8 +45,8 @@ const AgenticAIMultiAgentCollaboration2026 = () =>
           Modern multi-agent systems employ hierarchical architectures with specialized roles:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🎯 Coordinator Agents</h4>
             <p className="text-left"></p>
               Orchestrate overall strategy, delegate tasks, and manage agent resources dynamically based on workload and priorities.
@@ -81,8 +81,8 @@ const AgenticAIMultiAgentCollaboration2026 = () =>
           Leading enterprises across industries are deploying multi-agent systems for transformative business outcomes:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">💼 Financial Services</h4>
             <p className="text-left"></p>
               A multinational bank deployed 200+ specialized agents for fraud detection, compliance monitoring, and customer service. Results: 99.8% fraud detection accuracy, 76% reduction in false positives, and $23M annual savings.
@@ -196,8 +196,8 @@ const AgenticAIMultiAgentCollaboration2026 = () =>
         </div>
 
         <footer className="text-left">
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               Published: January 15, 2026 | Reading Time: 18 minutes
             </div>
             <div className="text-left"></div>

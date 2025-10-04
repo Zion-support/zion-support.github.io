@@ -58,8 +58,8 @@ export default function MultimodalAISystems2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Market Impact & Adoption</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">85%</div>
                       <div className="text-left">Improved Accuracy</div>
                     </div>
@@ -88,8 +88,8 @@ export default function MultimodalAISystems2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core Capabilities</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Vision-Language Understanding</h3>
                     <p className="text-left"></p>
                       Advanced models that can analyze images and videos while generating natural language 
@@ -150,8 +150,8 @@ export default function MultimodalAISystems2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Applications</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Intelligent Customer Service</h3>
                     <p className="text-left"></p>
                       AI agents that understand customer queries across chat, voice, and screen-sharing 

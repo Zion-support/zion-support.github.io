@@ -110,8 +110,8 @@ const AutonomousAIGovernanceCompliance = () =>
               The regulatory environment has evolved dramatically, creating compliance complexity that demands automation:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🇪🇺 EU AI Act (Enforced 2025)</h3>
                 <p className="text-left">Mandatory risk assessments, transparency requirements, prohibited AI practices, strict penalties up to €30M</p>
               </div>
@@ -143,8 +143,8 @@ const AutonomousAIGovernanceCompliance = () =>
                 detection. Achieved 100% compliance with OCC, Fed, and GDPR requirements, avoided $2.1B in potential fines, 
                 reduced compliance staff by 65%.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">2000+</div>
                   <div className="text-left">Models Governed</div>
                 </div>
@@ -166,8 +166,8 @@ const AutonomousAIGovernanceCompliance = () =>
                 patient triage systems. Maintained 100% HIPAA compliance, passed FDA audits, reduced compliance 
                 review time from 90 days to 2 hours.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">100%</div>
                   <div className="text-left">HIPAA Compliance</div>
                 </div>
@@ -189,8 +189,8 @@ const AutonomousAIGovernanceCompliance = () =>
                 functions. Achieved compliance with NHTSA, EU Type Approval, ISO 26262 standards, 
                 avoided $890M in potential recall costs.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">100%</div>
                   <div className="text-left">Safety Compliance</div>
                 </div>
@@ -258,8 +258,8 @@ const AutonomousAIGovernanceCompliance = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Key Governance Capabilities</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">📝 Documentation Automation</h3>
                 <ul className="text-left">
                   <li>• Auto-generate model cards</li>
@@ -336,8 +336,8 @@ const AutonomousAIGovernanceCompliance = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Leading Governance Platforms 2026</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏢 Enterprise Solutions</h3>
                 <p className="text-left">Datarobot, Fiddler AI, Arthur AI, Credo AI - comprehensive governance for large-scale deployments</p>
               </div>
@@ -360,8 +360,8 @@ const AutonomousAIGovernanceCompliance = () =>
               Autonomous governance will become increasingly sophisticated throughout 2026-2027:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🤖 AI-Powered Governance Agents</h3>
                 <p className="text-left">Intelligent agents that reason about regulatory intent and adapt policies autonomously</p>
               </div>

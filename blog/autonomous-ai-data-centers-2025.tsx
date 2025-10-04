@@ -66,8 +66,8 @@ const AutonomousAIDataCenters2025 = () =>
             parameters, predict issues before they become problems, and automatically optimize operations 24/7/365.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 AI-Powered Capabilities</h3>
               <ul className="text-left">
                 <li>• Predictive failure detection (24-72 hours ahead)</li>
@@ -95,16 +95,16 @@ const AutonomousAIDataCenters2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Core AI Systems Powering Autonomy</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔮 Predictive Maintenance AI</h3>
               <p className="text-left"></p>
                 Machine learning models analyze telemetry from 10,000+ sensors per rack—temperature, vibration, power draw, 
                 network throughput, disk I/O patterns. By detecting anomalies 24-72 hours before failure, the system 
                 automatically schedules maintenance, migrates workloads, and orders replacement parts.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">96%</div>
                   <div className="text-left">Failures Prevented</div>
                 </div>
@@ -126,8 +126,8 @@ const AutonomousAIDataCenters2025 = () =>
                 and energy prices. One hyperscale operator reduced cooling energy by 40% while maintaining optimal temperatures—
                 saving $35M annually across their global data center footprint.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">40%</div>
                   <div className="text-left">Energy Savings</div>
                 </div>
@@ -149,8 +149,8 @@ const AutonomousAIDataCenters2025 = () =>
                 utilization, network locality, power efficiency, thermal constraints, and SLA requirements. This achieves 
                 40-60% better resource utilization than manual or rule-based approaches.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">55%</div>
                   <div className="text-left">Better Utilization</div>
                 </div>
@@ -170,8 +170,8 @@ const AutonomousAIDataCenters2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Real-World Success Stories</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left">🏦<
                 <div></div>
@@ -204,8 +204,8 @@ const AutonomousAIDataCenters2025 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">🎮<
                 <div></div>
                   <h3 className="text-left">Global Gaming Platform</h3>
@@ -242,8 +242,8 @@ const AutonomousAIDataCenters2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Roadmap: 120-Day Transformation</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
               <ul className="text-left">
                 <li>✓ Deploy comprehensive sensor infrastructure across racks</li>
@@ -314,8 +314,8 @@ const AutonomousAIDataCenters2025 = () =>
             Beyond financial returns, autonomous AI data centers deliver massive sustainability benefits:
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">70%</div>
               <div className="text-left">Energy Reduction</div>
               <p className="text-left">Equivalent to powering 50,000 homes annually</p>

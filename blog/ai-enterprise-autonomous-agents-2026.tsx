@@ -71,8 +71,8 @@ export default function AIEnterpriseAutonomousAgents2026() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">KPIs & Outcomes</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">400%</div>
                     <div className="text-left">Efficiency gain across priority workflows</div>
                   </div>

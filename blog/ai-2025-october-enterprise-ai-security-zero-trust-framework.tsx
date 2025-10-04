@@ -50,8 +50,8 @@ const EnterpriseAISecurityZeroTrustFramework = () =>
             </p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 <Shield className="text-left" />
                 Executive Summary
@@ -77,8 +77,8 @@ const EnterpriseAISecurityZeroTrustFramework = () =>
                   inference manipulation.
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">
                       Core Principles
                     </h3>
@@ -166,8 +166,8 @@ class AISecurityFramework
                 Model Protection Strategies
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     Model Encryption and Access Control
                   </h3>
@@ -222,8 +222,8 @@ class SecureModelLoader
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">At Rest</h4>
                     <ul className="text-left">
                       <li>AES-256 encryption</li>
@@ -333,8 +333,8 @@ class AIThreatDetector
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Detection Capabilities</h4>
                     <ul className="text-left">
                       <li>Adversarial input detection</li>
@@ -366,8 +366,8 @@ class AIThreatDetector
                 Data Pipeline Security
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     Secure Data Ingestion and Processing
                   </h3>
@@ -375,8 +375,8 @@ class AIThreatDetector
                     Protect data throughout the AI pipeline—from ingestion through preprocessing, training,
                     and inference—ensuring data integrity and preventing poisoning attacks.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <h4 className="text-left">Input Validation</h4>
                       <p className="text-left"></p>
                         Implement comprehensive input validation, sanitization, and anomaly detection at
@@ -416,8 +416,8 @@ class AIThreatDetector
                   automated compliance monitoring, policy enforcement, and comprehensive documentation.
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">
                       Compliance Automation
                     </h3>
@@ -447,8 +447,8 @@ class AIThreatDetector
                   <h3 className="text-left">
                     Key Performance Indicators
                   </h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">99.98%</div>
                       <div className="text-left">Security Uptime</div>
                     </div>

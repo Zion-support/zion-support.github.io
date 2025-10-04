@@ -56,8 +56,8 @@ export default function AIDrivenObservabilityPlatform2026() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">MTTR Reduction</div>
                   </div>

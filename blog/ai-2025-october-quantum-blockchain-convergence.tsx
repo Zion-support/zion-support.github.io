@@ -31,8 +31,8 @@ export default function QuantumBlockchainConvergencePost() {
             Leading enterprises are now deploying quantum-resistant blockchain architectures that 
             provide unprecedented security, transparency, and scalability.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.99%</div>
               <div className="text-left">Threat Prevention Rate</div>
             </div>
@@ -49,8 +49,8 @@ export default function QuantumBlockchainConvergencePost() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Core Technologies</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔐 Post-Quantum Cryptography</h3>
               <p className="text-left"></p>
                 Implementing lattice-based encryption algorithms that remain secure against both 
@@ -105,8 +105,8 @@ export default function QuantumBlockchainConvergencePost() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Business Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">Measurable Results</h3>
                 <ul className="text-left">

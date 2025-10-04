@@ -55,8 +55,8 @@ export default function ConversationalAICustomerExperience2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🎯 Key Customer Experience Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">93%</div>
                     <div className="text-left">Customer Satisfaction</div>
                   </div>
@@ -87,8 +87,8 @@ export default function ConversationalAICustomerExperience2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">🎯 Advanced AI Capabilities</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Context-Aware Conversations</h4>
                     <p className="text-left"></p>
                       AI systems maintain conversation state, customer history, and business context to deliver coherent 
@@ -151,8 +151,8 @@ export default function ConversationalAICustomerExperience2025() {
                   Fortune 100 telco serving 127M subscribers deployed conversational AI across chat, voice, and mobile 
                   app channels, handling 450M+ customer interactions annually.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$2.7B</div>
                     <div className="text-left">Annual Cost Savings</div>
                   </div>
@@ -177,8 +177,8 @@ export default function ConversationalAICustomerExperience2025() {
                   Top 10 global bank transformed customer service with AI-powered virtual assistants handling inquiries 
                   across banking, loans, investments, and fraud detection for 45M customers.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$1.9B</div>
                     <div className="text-left">Three-Year Cost Reduction</div>
                   </div>

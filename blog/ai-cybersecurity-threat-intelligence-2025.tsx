@@ -36,8 +36,8 @@ export default function AICybersecurityThreatIntelligence2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.7%</div>
               <div className="text-left">Detection Accuracy</div>
             </div>
@@ -73,8 +73,8 @@ export default function AICybersecurityThreatIntelligence2025() {
 
           <h2 className="text-left">Advanced Threat Detection</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 AI-Powered Detection Methods</h3>
               <ul className="text-left">
                 <li>✓ Anomaly detection with unsupervised learning</li>
@@ -97,8 +97,8 @@ export default function AICybersecurityThreatIntelligence2025() {
 
           <h2 className="text-left">Automated Incident Response</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚡ Level 1: Immediate Containment</h3>
               <p className="text-left"></p>
                 AI automatically isolates affected systems, blocks malicious IPs, and quarantines suspicious files 
@@ -153,8 +153,8 @@ export default function AICybersecurityThreatIntelligence2025() {
 
           <h2 className="text-left">Zero Trust Security Framework</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔐 Identity & Access Management</h3>
               <ul className="text-left">
                 <li>✓ AI-driven adaptive authentication</li>
@@ -177,15 +177,15 @@ export default function AICybersecurityThreatIntelligence2025() {
 
           <h2 className="text-left">Real-World Deployment Examples</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏦 Fortune 500 Financial Institution</h3>
               <p className="text-left"></p>
                 Deployed AI-powered SOC protecting 100,000+ endpoints. Reduced mean time to detect (MTTD) 
                 from 4 hours to 45 seconds and achieved 92% reduction in security analyst workload.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">45s</div>
                   <div className="text-left">Mean Time to Detect</div>
                 </div>
@@ -206,8 +206,8 @@ export default function AICybersecurityThreatIntelligence2025() {
                 Protected 50+ hospitals with AI threat intelligence. Prevented 1,200+ ransomware attempts 
                 in first year, maintaining HIPAA compliance with 99.99% uptime.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">1,200+</div>
                   <div className="text-left">Attacks Prevented</div>
                 </div>

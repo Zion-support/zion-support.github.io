@@ -15,8 +15,8 @@ const AIDataQualityEngineering2026 = () =>
       
       <div className="text-left"></div>
         <article className="text-left"></a>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 Data Engineering
               <
@@ -42,8 +42,8 @@ const AIDataQualityEngineering2026 = () =>
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Database className="text-left" />
               <div className="text-left">99%+</div>
               <div className="text-left">Data Quality Achievement</div>
@@ -80,8 +80,8 @@ const AIDataQualityEngineering2026 = () =>
 
             <h2 className="text-left">The Data Quality Engineering Framework</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">1. Automated Data Validation</h3>
                 <p className="text-left"></p>
                   Define data contracts and validate every batch automatically. Catch issues before bad data enters models.
@@ -147,8 +147,8 @@ if not results["success"]:
 
             <h2 className="text-left">Real-World Results</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">E-commerce: 85% Accuracy Improvement</h4>
                 <p className="text-left"></p>
                   Implemented automated data validation catching label errors before training. Model accuracy improved from 72% to 94%.

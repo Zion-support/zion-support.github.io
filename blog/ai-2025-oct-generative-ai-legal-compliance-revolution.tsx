@@ -23,8 +23,8 @@ const GenAILegalCompliance = () =>
       <article className="text-left"></a>
         <div className="text-left"></div>
           {/* Header */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 Legal Tech
               <
@@ -41,8 +41,8 @@ const GenAILegalCompliance = () =>
               Complete guide to contract analysis, compliance automation, and risk prediction with real ROI data.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                 <div></div>
                   <div className="text-left">Rachel Thompson, JD</div>
@@ -53,8 +53,8 @@ const GenAILegalCompliance = () =>
           </div>
 
           {/* Key Stats Banner */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Impact Metrics</h2>
               <div className="text-left"></div>
                 <div></div>
@@ -78,8 +78,8 @@ const GenAILegalCompliance = () =>
           </div>
 
           {/* Main Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <h2 className="text-left">
                   <Brain className="text-left" />
@@ -90,8 +90,8 @@ const GenAILegalCompliance = () =>
                   in legal operations. Leading organizations are deploying AI for:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Contract Intelligence</h3>
                     <ul className="text-left">
                       <li className="text-left">
@@ -226,8 +226,8 @@ const GenAILegalCompliance = () =>
                   continuous compliance monitoring that was previously impossible:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Regulatory Intelligence</h3>
                     <p className="text-left"></p>
                       AI monitors 10,000+ regulatory sources globally, identifying relevant changes and 
@@ -269,8 +269,8 @@ const GenAILegalCompliance = () =>
 
                 <div className="text-left"></div>
                   <h3 className="text-left">Predictive Analytics Dashboard</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div></div>
                         <div className="text-left">Contract Dispute Risk</div>
                         <div className="text-left">Vendor Agreement #A-2847</div>
@@ -294,8 +294,8 @@ const GenAILegalCompliance = () =>
                 </div>
 
                 <h2 className="text-left">Implementation Roadmap</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       1
                     </div>
@@ -306,8 +306,8 @@ const GenAILegalCompliance = () =>
                       </p>
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       2
                     </div>
                     <div></div>
@@ -317,8 +317,8 @@ const GenAILegalCompliance = () =>
                       </p>
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       3
                     </div>
                     <div></div>
@@ -361,8 +361,8 @@ const GenAILegalCompliance = () =>
             </div>
 
             {/* CTA Section */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   Transform Your Legal Operations with AI
                 </h3>

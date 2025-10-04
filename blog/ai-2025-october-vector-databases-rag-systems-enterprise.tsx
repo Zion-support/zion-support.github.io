@@ -29,8 +29,8 @@ const VectorDatabasesRAGSystemsEnterprise = () =>
         </Link>
 
         <header className="text-left">
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Database className="text-left" />
             </div>
             <div></div>
@@ -46,8 +46,8 @@ const VectorDatabasesRAGSystemsEnterprise = () =>
           </p>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               <Target className="text-left" />
               Enterprise Impact Overview
@@ -84,8 +84,8 @@ const VectorDatabasesRAGSystemsEnterprise = () =>
               This enables powerful capabilities like:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <Search className="text-left" />
                   Semantic Search
@@ -136,8 +136,8 @@ const VectorDatabasesRAGSystemsEnterprise = () =>
               Retrieval-Augmented Generation (RAG) represents the gold standard for grounding LLMs in enterprise knowledge. The architecture consists of three core components:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">1. Ingestion & Embedding Pipeline</h3>
                 <ul className="text-left">
                   <li>• Document parsing and chunking strategies (sliding window, semantic, hierarchical)</li>
@@ -260,8 +260,8 @@ const VectorDatabasesRAGSystemsEnterprise = () =>
               <p className="text-left"></p>
                 Deployed enterprise RAG system indexing 2.5 million technical documents, enabling engineers to instantly find answers across 40 years of manufacturing knowledge.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <p className="text-left">2.5M</p>
                   <p className="text-left">Documents indexed</p>
                 </div>

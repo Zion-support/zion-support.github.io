@@ -43,8 +43,8 @@ export default function MultimodalEnterpriseTransformation() {
               to understand and process multiple types of data simultaneously—text, images, video, audio, 
               and sensor data—creating unified intelligent experiences that mirror human perception.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">340%</div>
                 <div className="text-left">Average ROI</div>
               </div>
@@ -73,8 +73,8 @@ export default function MultimodalEnterpriseTransformation() {
           </p>
           
           <h3 className="text-left">Core Modalities</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">📝 Text & Language</h4>
               <ul className="text-left">
                 <li>• Natural language understanding and generation</li>
@@ -122,8 +122,8 @@ export default function MultimodalEnterpriseTransformation() {
           <div className="text-left"></div>
             <h3 className="text-left">Modern Multimodal Stack</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Foundation Models Layer</h4>
                 <p className="text-left"></p>
                   Pre-trained models that understand multiple modalities out of the box:
@@ -141,8 +141,8 @@ export default function MultimodalEnterpriseTransformation() {
                 <p className="text-left"></p>
                   How different modalities are combined:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <strong className="text-left">Early Fusion:</strong>
                     <span className="text-left">Combine raw inputs before processing (best for tightly coupled data)<
                   </div>
@@ -176,8 +176,8 @@ export default function MultimodalEnterpriseTransformation() {
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left">🏭<
                 <div></div>
@@ -187,8 +187,8 @@ export default function MultimodalEnterpriseTransformation() {
                   </p>
                 </div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">99.4%</div>
                   <div className="text-left">Defect Detection Rate</div>
                 </div>
@@ -207,8 +207,8 @@ export default function MultimodalEnterpriseTransformation() {
               </p>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">🏥<
                 <div></div>
                   <h3 className="text-left">Healthcare Diagnostic Assistant</h3>
@@ -217,8 +217,8 @@ export default function MultimodalEnterpriseTransformation() {
                   </p>
                 </div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">94%</div>
                   <div className="text-left">Diagnostic Accuracy</div>
                 </div>
@@ -237,8 +237,8 @@ export default function MultimodalEnterpriseTransformation() {
               </p>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">🛍️<
                 <div></div>
                   <h3 className="text-left">Retail Customer Experience</h3>
@@ -247,8 +247,8 @@ export default function MultimodalEnterpriseTransformation() {
                   </p>
                 </div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">215%</div>
                   <div className="text-left">Conversion Increase</div>
                 </div>
@@ -272,8 +272,8 @@ export default function MultimodalEnterpriseTransformation() {
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Best Practices</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">1. Data Pipeline Engineering</h3>
               <ul className="text-left">
                 <li>• <strong>Synchronization:</strong> Timestamp alignment across modalities (critical for video+audio, sensor fusion)</li>
@@ -364,8 +364,8 @@ config =
         <section className="text-left"></section>
           <h2 className="text-left">Cost Optimization Strategies</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">Reduce Compute Costs</h3>
                 <ul className="text-left">
@@ -419,8 +419,8 @@ config =
 
         <section className="text-left"></section>
           <h2 className="text-left">Future Directions</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🧠</div>
               <h3 className="text-left">Any-to-Any Models</h3>
               <p className="text-left"></p>

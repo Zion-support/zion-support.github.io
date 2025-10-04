@@ -45,8 +45,8 @@ export default function SovereignAIEnterpriseDeployment() {
               <strong className="text-left"> unprecedented security</strong> while maintaining 
               full control over their AI infrastructure.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$180M</div>
                 <div className="text-left">Annual Value Created</div>
               </div>
@@ -97,8 +97,8 @@ export default function SovereignAIEnterpriseDeployment() {
           
           <div className="text-left"></div>
             <h3 className="text-left">Infrastructure Stack</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Hardware Layer</h4>
                 <ul className="text-left">
                   <li>• On-premises GPU clusters (NVIDIA H100/A100 or AMD MI300)</li>
@@ -134,15 +134,15 @@ export default function SovereignAIEnterpriseDeployment() {
         <section className="text-left"></section>
           <h2 className="text-left">Deployment Strategies</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏢 Full On-Premises</h3>
               <p className="text-left"></p>
                 Complete control with all infrastructure in private data centers. 
                 Ideal for highly regulated industries and government agencies.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Control:<
                   <span className="text-left">Maximum<
                 </div>
@@ -163,8 +163,8 @@ export default function SovereignAIEnterpriseDeployment() {
                 Leverage sovereign cloud providers (AWS Outposts, Azure Stack, Google Anthos) 
                 with dedicated tenancy and regional data residency.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Control:<
                   <span className="text-left">High<
                 </div>
@@ -264,8 +264,8 @@ export default function SovereignAIEnterpriseDeployment() {
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
               <ul className="text-left">
                 <li>✓ Assess regulatory requirements and data residency needs</li>
@@ -338,8 +338,8 @@ export default function SovereignAIEnterpriseDeployment() {
             As data privacy regulations continue to evolve globally, sovereign AI will become the 
             standard for enterprise AI deployment. Emerging trends include:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🔐</div>
               <h3 className="text-left">Confidential Computing</h3>
               <p className="text-left">Hardware-based secure enclaves for processing encrypted data without exposing it</p>

@@ -32,8 +32,8 @@ const RAGOptimizationMastery = () =>
           </Link>
 
           {/* Hero Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 RAG Systems
               <
@@ -93,8 +93,8 @@ const RAGOptimizationMastery = () =>
               unacceptable for user-facing applications. This guide shows how to achieve production-grade performance.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Zap className="text-left" />
                 <div></div>
                   <h4 className="text-left">Production Success Story</h4>
@@ -295,8 +295,8 @@ const RAGOptimizationMastery = () =>
               </li>
             </ul>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <AlertCircle className="text-left" />
                 <div></div>
                   <h4 className="text-left">Critical Success Metrics</h4>
@@ -312,8 +312,8 @@ const RAGOptimizationMastery = () =>
 
             <h2 className="text-left">Advanced Techniques</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Iterative Retrieval</h4>
                 <p className="text-left"></p>
                   Implement multi-hop retrieval where the system iteratively refines its search based on 

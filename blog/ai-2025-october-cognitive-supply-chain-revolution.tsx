@@ -38,14 +38,14 @@ export default function CognitiveSupplyChainRevolution2025() {
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               <Zap className="text-left" />
               Impact Summary: $18.7M Value Delivered
             </h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">76%</div>
                 <div className="text-left">Demand Forecast Accuracy</div>
               </div>
@@ -121,11 +121,11 @@ export default function CognitiveSupplyChainRevolution2025() {
               Our cognitive supply chain platform integrates seamlessly with your existing systems while 
               providing advanced AI capabilities across every aspect of supply chain operations.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Core Modules</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Cognitive Demand Engine</h4>
                     <p className="text-left"></p>
                       Advanced forecasting using neural networks, market signals, weather patterns, economic 
@@ -175,11 +175,11 @@ export default function CognitiveSupplyChainRevolution2025() {
               <Globe className="text-left" />
               Real-World Success Stories
             </h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Global Retail Corporation</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$12.3M</div>
                     <div className="text-left">Annual Savings</div>
                   </div>
@@ -204,8 +204,8 @@ export default function CognitiveSupplyChainRevolution2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Manufacturing Leader</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$6.4M</div>
                     <div className="text-left">Annual Savings</div>
                   </div>
@@ -238,8 +238,8 @@ export default function CognitiveSupplyChainRevolution2025() {
             </h2>
             <div className="text-left"></div>
               <h3 className="text-left">Rapid Deployment Timeline</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     Week 1-2
                   </div>
@@ -248,8 +248,8 @@ export default function CognitiveSupplyChainRevolution2025() {
                     data pipeline setup, stakeholder alignment
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     Week 3-4
                   </div>
                   <div className="text-left"></div>
@@ -257,8 +257,8 @@ export default function CognitiveSupplyChainRevolution2025() {
                     AI model training, baseline establishment
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     Week 5-6
                   </div>
                   <div className="text-left"></div>
@@ -266,8 +266,8 @@ export default function CognitiveSupplyChainRevolution2025() {
                     user training, feedback collection
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     Week 7-8
                   </div>
                   <div className="text-left"></div>

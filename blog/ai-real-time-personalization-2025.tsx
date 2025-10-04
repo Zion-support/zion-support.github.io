@@ -101,8 +101,8 @@ export default function RealTimePersonalization2025() {
                 <h2 className="text-left">Real-Time Personalization Architecture</h2>
                 
                 <h3 className="text-left">System Components</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Data Collection Layer</h4>
                     <ul className="text-left">
                       <li>• Real-time event streaming (Kafka)</li>
@@ -147,8 +147,8 @@ export default function RealTimePersonalization2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Personalization Strategies</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Content Personalization</h3>
                     <p className="text-left"></p>
                       Dynamically select and rank content based on individual user preferences and behavior.
@@ -274,8 +274,8 @@ export default function RealTimePersonalization2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Success Stories</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">E-Commerce Leader</h3>
                     <p className="text-left">5.2x Engagement, 420% Revenue Increase</p>
                     <p className="text-left"></p>

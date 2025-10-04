@@ -64,8 +64,8 @@ export default function AISustainabilityGreenTech2026() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Key Sustainable AI Technologies</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Smart Energy Management</h3>
                     <p className="text-left"></p>
                       AI-powered energy optimization systems that automatically adjust consumption 
@@ -121,8 +121,8 @@ export default function AISustainabilityGreenTech2026() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Success Stories: AI Driving Environmental Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Smart Grid Optimization</h3>
                     <p className="text-left"></p>
                       A major utility company implemented our AI-powered smart grid system, resulting in:
@@ -165,8 +165,8 @@ export default function AISustainabilityGreenTech2026() {
                 <p className="text-left"></p>
                   At Zion Tech Group, we believe that AI itself must be sustainable. Our green AI principles include:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Energy Efficiency</h3>
                     <p className="text-left"></p>
                       Optimizing AI algorithms to minimize computational requirements and energy consumption
@@ -206,8 +206,8 @@ export default function AISustainabilityGreenTech2026() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Sustainability Team
                 </div>
                 <div className="text-left"></div>

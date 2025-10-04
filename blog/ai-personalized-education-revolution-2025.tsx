@@ -51,13 +51,13 @@ const AIPersonalizedEducationRevolution2025 = () =>
             </p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Sparkles className="text-left" />
               <h2 className="text-left">Transformative Learning Outcomes</h2>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <CheckCircle className="text-left" />
                 <div></div>
                   <h3 className="text-left">10× Faster Learning</h3>
@@ -102,8 +102,8 @@ const AIPersonalizedEducationRevolution2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">How AI Personalized Learning Works</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">1</div>
                     <div></div>
@@ -138,8 +138,8 @@ const AIPersonalizedEducationRevolution2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Transformative Features</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Socratic AI Tutors</h3>
                   <p className="text-left">AI engages in natural conversation, asking thought-provoking questions that guide students to discover answers themselves, fostering deep understanding and critical thinking</p>
                 </div>
@@ -160,8 +160,8 @@ const AIPersonalizedEducationRevolution2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Real-World Impact</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <TrendingUp className="text-left" />
                   <h3 className="text-left">Elementary School District</h3>
                   <p className="text-left"></p>
@@ -213,8 +213,8 @@ const AIPersonalizedEducationRevolution2025 = () =>
                 The AI platform covers all academic subjects from kindergarten through graduate school, plus professional 
                 certifications and corporate training:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div></div>
                     <h3 className="text-left">Core Subjects</h3>
                     <ul className="text-left">

@@ -56,8 +56,8 @@ export default function RAG2ProductionScalePipelines2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">📊 Production Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Retrieval Accuracy</div>
                   </div>
@@ -307,8 +307,8 @@ export default function RAG2ProductionScalePipelines2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Enterprise Knowledge Management</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Internal Documentation</div>
                     <div className="text-left">Confluence, SharePoint, Google Workspace integration—employees find answers across 100K+ documents instantly</div>
                   </div>

@@ -36,8 +36,8 @@ export default function AI2025OctoberLLMFineTuningMastery() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">89%</div>
               <div className="text-left">Accuracy Improvement</div>
             </div>
@@ -129,8 +129,8 @@ export default function AI2025OctoberLLMFineTuningMastery() {
         {/* Data Preparation */}
         <section className="text-left"></section>
           <h2 className="text-left">Data Preparation & Curation</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               {[
                 
                   step: "Data Collection
@@ -279,8 +279,8 @@ export default function AI2025OctoberLLMFineTuningMastery() {
         {/* Tools & Frameworks */}
         <section className="text-left"></section>
           <h2 className="text-left">Fine-Tuning Ecosystem</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Frameworks & Libraries</h3>
               <ul className="text-left">
                 {["Hugging Face Transformers + PEFT", "Axolotl (unified fine-tuning)", "LLaMA Factory", "FastChat", "DeepSpeed + ZeRO", "FSDP (PyTorch native)"].map((tool, i) => (

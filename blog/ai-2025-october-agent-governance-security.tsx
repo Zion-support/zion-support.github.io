@@ -35,8 +35,8 @@ export default function AI2025OctoberAgentGovernanceSecurity() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100%</div>
               <div className="text-left">Audit Coverage</div>
             </div>
@@ -99,8 +99,8 @@ export default function AI2025OctoberAgentGovernanceSecurity() {
 
           <h2 className="text-left">Security Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔐 Zero-Trust Framework</h3>
               <p className="text-left"></p>
                 Every agent request is authenticated, authorized, and validated regardless of origin. 
@@ -163,15 +163,15 @@ export default function AI2025OctoberAgentGovernanceSecurity() {
 
           <h2 className="text-left">Compliance Framework</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📋 Regulatory Standards</h3>
               <p className="text-left"></p>
                 Meet global AI regulations including EU AI Act, GDPR, CCPA, HIPAA, SOC 2, and 
                 industry-specific requirements through automated compliance checks and documentation.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">EU AI Act</div>
                   <div className="text-left">Risk Classification</div>
                 </div>
@@ -224,8 +224,8 @@ export default function AI2025OctoberAgentGovernanceSecurity() {
           <div className="text-left"></div>
             <h3 className="text-left">🎯 Risk Assessment Framework</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Risk Identification</h4>
@@ -318,33 +318,33 @@ export default function AI2025OctoberAgentGovernanceSecurity() {
 
           <h2 className="text-left">Implementation Checklist</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Establish AI governance committee with cross-functional leadership<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Define AI ethics principles and responsible AI guidelines<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Implement zero-trust security architecture<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Deploy comprehensive audit logging and monitoring<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Establish incident response playbooks and escalation paths<
               </div>

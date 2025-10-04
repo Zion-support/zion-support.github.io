@@ -37,8 +37,8 @@ export default function AutonomousDataEngineering() {
         {/* Executive Summary */}
         <section className="text-left"></section>
           <h2 className="text-left">Executive Summary</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.95%</div>
               <div className="text-left">Data Pipeline Reliability</div>
             </div>
@@ -174,8 +174,8 @@ export default function AutonomousDataEngineering() {
               <strong>Solution:</strong> Deployed autonomous data engineering platform with self-healing capabilities, 
               ML-powered data quality monitoring, and intelligent orchestration.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">92%</div>
                 <div className="text-left">Fewer Pipeline Failures</div>
               </div>
@@ -204,8 +204,8 @@ export default function AutonomousDataEngineering() {
               <strong>Solution:</strong> Implemented AI-powered data quality framework with automated profiling, 
               validation, and anomaly detection across all regulatory datasets.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.97%</div>
                 <div className="text-left">Data Quality Score</div>
               </div>

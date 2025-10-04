@@ -55,8 +55,8 @@ export default function SovereignAIEnterpriseDataControl2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🛡️ Sovereign AI Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.9%</div>
                     <div className="text-left">Compliance Rate</div>
                   </div>
@@ -107,8 +107,8 @@ export default function SovereignAIEnterpriseDataControl2025() {
                   achieving complete regulatory compliance across 47 jurisdictions while reducing AI operational costs by 68%.
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Technical Implementation</h4>
                     <ul className="text-left">
                       <li>✓ On-premises AI training infrastructure</li>
@@ -162,8 +162,8 @@ export default function SovereignAIEnterpriseDataControl2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">ROI Breakdown</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Regulatory Compliance Cost Reduction<
                     <span className="text-left">$850M<
                   </div>
@@ -184,8 +184,8 @@ export default function SovereignAIEnterpriseDataControl2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Infrastructure Setup (Months 1-3)</h3>
                   <ul className="text-left">
                     <li>• Deploy on-premises AI training infrastructure</li>

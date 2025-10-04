@@ -6,7 +6,7 @@ const AutonomousSecurityAIAgents2025: React.FC = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -32,8 +32,8 @@ const AutonomousSecurityAIAgents2025: React.FC = () =>
             Learn how autonomous security AI agents detect and neutralize cyber threats in milliseconds, achieving 99.98% attack prevention rates across 500,000+ enterprise endpoints while reducing security team workload by 89%.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Calendar className="text-left" />
               <span>September 30, 2025<
             </div>
@@ -50,7 +50,7 @@ const AutonomousSecurityAIAgents2025: React.FC = () =>
       </div>
 
       {/* Content Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <article className="text-left"></a>
             <h2 className="text-left">The New Era of Autonomous Cybersecurity</h2>
@@ -101,8 +101,8 @@ const AutonomousSecurityAIAgents2025: React.FC = () =>
 
             <h2 className="text-left">Real-World Threat Neutralization</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🎯 Ransomware Defense</h4>
                 <p className="text-left">Detecting and blocking ransomware encryption attempts in under 10ms, preventing $120M+ in losses annually.</p>
               </div>

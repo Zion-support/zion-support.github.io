@@ -35,8 +35,8 @@ export default function AIOctober2025NeuralNetworkCompressionEfficiency() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">98%</div>
               <div className="text-left">Model Size Reduction</div>
             </div>
@@ -107,8 +107,8 @@ export default function AIOctober2025NeuralNetworkCompressionEfficiency() {
               reducing infrastructure costs by $421M annually.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">18,000</div>
                 <div className="text-left">Edge Devices</div>
               </div>
@@ -129,8 +129,8 @@ export default function AIOctober2025NeuralNetworkCompressionEfficiency() {
 
           <h2 className="text-left">Technical Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Automated Compression</h3>
               <p className="text-left"></p>
                 AI-powered AutoML pipeline automatically discovers optimal compression strategies 
@@ -163,8 +163,8 @@ export default function AIOctober2025NeuralNetworkCompressionEfficiency() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Week 1-2: Model Analysis</h3>
               <p className="text-left"></p>
                 Profile existing models, identify compression opportunities, and establish 

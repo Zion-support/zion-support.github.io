@@ -36,8 +36,8 @@ export default function QuantumSafeCryptographyImplementation2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">2030</div>
               <div className="text-left">Est. Q-Day Arrival</div>
             </div>
@@ -73,8 +73,8 @@ export default function QuantumSafeCryptographyImplementation2025() {
 
           <h2 className="text-left">NIST Post-Quantum Algorithms</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">CRYSTALS-Kyber</h3>
               <p className="text-left"><strong>Use Case:</strong> Key Encapsulation Mechanism (KEM)</p>
               <ul className="text-left">
@@ -191,8 +191,8 @@ export default function QuantumSafeCryptographyImplementation2025() {
 
           <h2 className="text-left">Technology Stack & Tools</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">PQC Libraries</h3>
               <ul className="text-left">
                 <li>• liboqs (Open Quantum Safe)</li>
@@ -293,8 +293,8 @@ export default function QuantumSafeCryptographyImplementation2025() {
         <section className="text-left"></section>
           <h2 className="text-left">Business Impact & Compliance</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Risk Mitigation</h3>
               <ul className="text-left">
                 <li>• Protect against harvest-now-decrypt-later attacks</li>

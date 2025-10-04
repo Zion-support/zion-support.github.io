@@ -70,8 +70,8 @@ const HyperIntelligentAutonomousMeshArchitectureOctober2025: React.FC = () =>
             </p>
             
             <h3 className="text-left">Core Components</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Autonomous Intelligence Nodes</h4>
                 <p>Self-contained processing units with advanced ML capabilities, real-time decision-making, and predictive analytics.</p>
               </div>
@@ -175,8 +175,8 @@ const HyperIntelligentAutonomousMeshArchitectureOctober2025: React.FC = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Competitive Advantages</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Unprecedented Resilience</h3>
                 <p>Autonomous self-healing eliminates single points of failure, achieving 99.99%+ uptime even during major disruptions.</p>
               </div>

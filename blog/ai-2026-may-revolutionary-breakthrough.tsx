@@ -20,11 +20,11 @@ export default function May2026RevolutionaryBreakthrough() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Hero Section */}
+        <div className="text-left">
+        <div className="text-left"></div>
             <span className="text-left"></span>
               🚀 May 2026 Revolutionary Breakthrough
             <
@@ -47,8 +47,8 @@ export default function May2026RevolutionaryBreakthrough() {
         </div>
 
         {/* Key Metrics */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">10,000x</div>
             <div className="text-left">Processing Speed Improvement</div>
           </div>
@@ -67,8 +67,8 @@ export default function May2026RevolutionaryBreakthrough() {
         </div>
 
         {/* Main Content */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">The Meta-Conscious Computing Breakthrough</h2>
             
             <p className="text-left"></p>
@@ -108,8 +108,8 @@ export default function May2026RevolutionaryBreakthrough() {
               quantum computing paradigms.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Quantum-Neural Hybrid Core</h4>
                 <p className="text-left"></p>
                   The system's core processing unit combines quantum computing principles with advanced neural networks, 
@@ -149,8 +149,8 @@ export default function May2026RevolutionaryBreakthrough() {
                 A leading Fortune 500 company implemented our meta-conscious AI system for strategic decision-making, 
                 resulting in:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$5.2B</div>
                   <div className="text-left">Total Value Generated</div>
                 </div>

@@ -42,8 +42,8 @@ const AIAutomationSecurityZeroTrust2025 = () =>
 
         <h2 className="text-left">Core Pillars of AI Zero Trust Architecture</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🔐 Continuous Verification</h4>
             <p className="text-left"></p>
               AI agents continuously verify every user, device, and service attempting to access resources. Dynamic trust scores adapt based on behavioral patterns, context, and risk assessment.
@@ -78,8 +78,8 @@ const AIAutomationSecurityZeroTrust2025 = () =>
           Successful Zero Trust AI security implementations follow a structured approach across three phases:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">📊 Phase 1: Discovery & Assessment (Weeks 1-4)</h4>
             <p className="text-left"></p>
               AI-powered discovery tools map your entire digital estate, identifying all users, devices, applications, and data flows. Automated risk scoring prioritizes critical assets and vulnerabilities.
@@ -121,8 +121,8 @@ const AIAutomationSecurityZeroTrust2025 = () =>
 
         <h2 className="text-left">Real-World Success Stories</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🏦 Global Financial Institution</h4>
             <p className="text-left"></p>
               Deployed AI Zero Trust across 50,000+ employees and 200+ cloud applications. Results: 94% reduction in breach attempts, 0 successful intrusions in 18 months, $67M in avoided losses, and 85% faster compliance audits.
@@ -199,8 +199,8 @@ const AIAutomationSecurityZeroTrust2025 = () =>
           Organizations implementing AI Zero Trust architecture typically achieve remarkable returns:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">$42M+</div>
             <div className="text-left">Average annual savings from prevented breaches and reduced insurance premiums</div>
           </div>

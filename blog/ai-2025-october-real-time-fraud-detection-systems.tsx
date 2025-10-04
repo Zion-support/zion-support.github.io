@@ -55,8 +55,8 @@ export default function RealTimeFraudDetection2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🛡️ Key Security Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.4%</div>
                     <div className="text-left">Detection Accuracy</div>
                   </div>
@@ -87,8 +87,8 @@ export default function RealTimeFraudDetection2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">🎯 Core Detection Capabilities</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Behavioral Biometric Analysis</h4>
                     <p className="text-left"></p>
                       AI models analyze unique user interaction patterns—typing rhythm, mouse movements, device handling—
@@ -150,8 +150,8 @@ export default function RealTimeFraudDetection2025() {
                   Top 5 global bank processing 3.2B transactions monthly deployed AI-powered fraud detection across 
                   their digital banking, credit card, and wire transfer systems.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$4.3B</div>
                     <div className="text-left">Fraud Prevented Annually</div>
                   </div>
@@ -176,8 +176,8 @@ export default function RealTimeFraudDetection2025() {
                   Leading online marketplace handling $89B in annual gross merchandise value transformed their 
                   fraud prevention with AI-powered real-time detection.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$2.1B</div>
                     <div className="text-left">Annual Fraud Prevention</div>
                   </div>

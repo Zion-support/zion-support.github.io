@@ -55,8 +55,8 @@ export default function AISyntheticDataGenerationPrivacy2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🎯 Breakthrough Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.8%</div>
                     <div className="text-left">Model Accuracy</div>
                   </div>
@@ -194,8 +194,8 @@ export default function AISyntheticDataGenerationPrivacy2025() {
 
               <h2 className="text-left">Quality Validation & Testing</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Statistical Fidelity</h4>
                   <p className="text-left"></p>
                     Validate that synthetic data matches real data distributions using Kolmogorov-Smirnov 
@@ -222,8 +222,8 @@ export default function AISyntheticDataGenerationPrivacy2025() {
 
               <h2 className="text-left">Implementation Best Practices</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Data Analysis & Profiling</h4>
                   <ul className="text-left">
                     <li>• Analyze real data distributions and relationships</li>

@@ -55,8 +55,8 @@ export default function VectorDatabaseOptimization2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">📊 Performance Benchmarks</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">&lt;2ms</div>
                     <div className="text-left">Query Latency</div>
                   </div>
@@ -105,8 +105,8 @@ export default function VectorDatabaseOptimization2025() {
                   A Fortune 50 retailer optimized their vector database powering product recommendations 
                   across 8.2B product embeddings and 500M customer preference vectors:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1.8ms</div>
                     <div className="text-left">Average query latency (from 45ms)</div>
                   </div>
@@ -176,8 +176,8 @@ const vectorStore = new OptimizedVectorDB(
 
               <div className="text-left"></div>
                 <h2 className="text-left">⚡ Performance Optimization Checklist</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">✓<
                     <div></div>
                       <h4 className="text-left">Index Selection</h4>

@@ -24,15 +24,15 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
       <div></div>
     <div className="text-left"></div>
       {/* Header */}</div>
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link href="/guides" className="text-left">
             <ArrowLeft className="text-left" />
             Back to Guides
           </Link>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Clock className="text-left" />
               January 15, 2026
             </div>
@@ -62,8 +62,8 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
             that can independently manage, optimize, and evolve your business workflows.
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">80%+</div>"
               <div className="text-left">Process Automation</div></div>
             <div className="text-left"></div>
@@ -216,8 +216,8 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
             Prerequisites and Readiness Assessment
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Organizational Readiness</h3>"
               <ul className="text-left">
                 <li className="text-left">
@@ -351,8 +351,8 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
             Implementation Methodology
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>"
               <h3 className="text-left">Foundation (Months 1-3)</h3>"
               <ul className="text-left">
@@ -394,8 +394,8 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
             Best Practices and Lessons Learned
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Success Factors</h3>"
               <ul className="text-left">
                 <li className="text-left">
@@ -495,7 +495,7 @@ const ImplementationGuide = React.memo(function ImplementationGuide() {
       </div>
 
       {/* Related Content */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">Related Content</h2>"
           <div className="text-left"></div>

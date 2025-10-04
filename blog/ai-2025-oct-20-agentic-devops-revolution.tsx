@@ -32,8 +32,8 @@ const AgenticDevOpsRevolution = () =>
           </Link>
 
           {/* Hero Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 AI DevOps
               <
@@ -92,8 +92,8 @@ const AgenticDevOpsRevolution = () =>
               tasks intelligently, learning from each deployment and continuously improving operations.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Zap className="text-left" />
                 <div></div>
                   <h4 className="text-left">Real-World Impact</h4>
@@ -228,8 +228,8 @@ const AgenticDevOpsRevolution = () =>
               </li>
             </ul>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <AlertCircle className="text-left" />
                 <div></div>
                   <h4 className="text-left">Critical Success Factors</h4>
@@ -245,8 +245,8 @@ const AgenticDevOpsRevolution = () =>
 
             <h2 className="text-left">Measuring Success</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Deployment Velocity Metrics</h4>
                 <ul className="text-left">
                   <li>• Lead time for changes: Target &lt; 1 hour</li>

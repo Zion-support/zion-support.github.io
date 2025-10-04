@@ -31,7 +31,7 @@ export default function AI2025OctoberZeroLatencyDecisionSystems() {
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">Executive Summary</h2>
           <p className="text-left"></p>
@@ -73,8 +73,8 @@ export default function AI2025OctoberZeroLatencyDecisionSystems() {
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">&lt;0.5ms</h4>
               <p className="text-left">Average inference latency</p>
             </div>
@@ -92,8 +92,8 @@ export default function AI2025OctoberZeroLatencyDecisionSystems() {
         <section className="text-left"></section>
           <h2 className="text-left">Architecture Deep Dive</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏗️ Edge-First Architecture</h3>
               <p className="text-left"></p>
                 Deploy lightweight models at the edge (IoT devices, mobile, edge servers) for 
@@ -112,8 +112,8 @@ export default function AI2025OctoberZeroLatencyDecisionSystems() {
               <p className="text-left"></p>
                 Advanced techniques to achieve sub-millisecond inference without sacrificing accuracy:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Quantization</h4>
                   <p className="text-left">INT8/FP16 precision for 4x speedup</p>
                 </div>
@@ -155,16 +155,16 @@ export default function AI2025OctoberZeroLatencyDecisionSystems() {
         <section className="text-left"></section>
           <h2 className="text-left">Industry Success Stories</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">💳 Fintech: Real-Time Fraud Prevention</h3>
               <p className="text-left"></p>
                 Global payment processor deployed zero-latency fraud detection analyzing 500M transactions 
                 daily. System detects 99.8% of fraud attempts in &lt;0.3ms, preventing $4.2B in losses 
                 while reducing false positives by 94%.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$4.2B</div>
                   <div className="text-left">Fraud Prevented</div>
                 </div>
@@ -200,8 +200,8 @@ export default function AI2025OctoberZeroLatencyDecisionSystems() {
                 System processes 100+ camera/sensor feeds at 60 FPS with &lt;8ms end-to-end latency, 
                 enabling Level 4 autonomy with 99.99% safety record.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">&lt;8ms</div>
                   <div className="text-left">E2E Latency</div>
                 </div>
@@ -221,8 +221,8 @@ export default function AI2025OctoberZeroLatencyDecisionSystems() {
         <section className="text-left"></section>
           <h2 className="text-left">Best Practices & Recommendations</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h4 className="text-left">1. Start with Latency Budget</h4>
                 <p className="text-left"></p>

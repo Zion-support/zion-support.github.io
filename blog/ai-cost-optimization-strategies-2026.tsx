@@ -45,8 +45,8 @@ const AICostOptimizationStrategies2026 = () =>
               Reduce AI infrastructure costs 70% with battle-tested strategies used by top companies: intelligent routing, semantic caching, and quality-tiered serving.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -61,8 +61,8 @@ const AICostOptimizationStrategies2026 = () =>
             </div>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Key Takeaways</h3>
               <ul className="text-left">
                 <li>✅ Reduce AI costs 60-80% with intelligent model routing</li>

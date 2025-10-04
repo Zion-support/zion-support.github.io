@@ -55,8 +55,8 @@ export default function AIDevSecOpsAutomationRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🛡️ Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.9%</div>
                     <div className="text-left">Security Coverage</div>
                   </div>
@@ -107,8 +107,8 @@ export default function AIDevSecOpsAutomationRevolution2025() {
               
               <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Security Baseline Assessment</h4>
                     <p className="text-left"></p>
                       Deploy AI scanning agents across entire codebase to establish vulnerability baseline and prioritize remediation targets
@@ -136,8 +136,8 @@ export default function AIDevSecOpsAutomationRevolution2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Phase 2: Automation (Weeks 5-8)</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">AI Model Training & Calibration</h4>
                     <p className="text-left"></p>
                       Train custom security models on your codebase patterns, reducing false positives by 89% while improving detection accuracy
@@ -155,8 +155,8 @@ export default function AIDevSecOpsAutomationRevolution2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Phase 3: Optimization (Weeks 9-12)</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Continuous Learning & Adaptation</h4>
                     <p className="text-left"></p>
                       Enable feedback loops where security incidents automatically retrain AI models, improving detection over time
@@ -174,14 +174,14 @@ export default function AIDevSecOpsAutomationRevolution2025() {
 
               <h2 className="text-left">Real-World Success Stories</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Global Financial Services Provider</h3>
                   <p className="text-left"></p>
                     Deployed AI-powered DevSecOps across 2,500+ microservices, processing 100K+ daily deployments with zero security incidents in production
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">98%</div>
                       <div className="text-left">Reduction in Security Backlog</div>
                     </div>
@@ -201,8 +201,8 @@ export default function AIDevSecOpsAutomationRevolution2025() {
                   <p className="text-left"></p>
                     Achieved HIPAA compliance automation with AI-powered continuous monitoring across 50+ distributed applications
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">100%</div>
                       <div className="text-left">Compliance Audit Pass Rate</div>
                     </div>
@@ -222,8 +222,8 @@ export default function AIDevSecOpsAutomationRevolution2025() {
               
               <div className="text-left"></div>
                 <h3 className="text-left">Core AI Security Platform</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">AI/ML Frameworks</div>
                     <div className="text-left">TensorFlow Security, PyTorch Guard, Hugging Face Transformers</div>
                   </div>
@@ -248,8 +248,8 @@ export default function AIDevSecOpsAutomationRevolution2025() {
                 Organizations report dramatic improvements in developer productivity, time to market, and overall risk posture.
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">💰 Financial Benefits</h3>
                   <ul className="text-left">
                     <li className="text-left">• 85% reduction in security tooling costs</li>
@@ -276,8 +276,8 @@ export default function AIDevSecOpsAutomationRevolution2025() {
                   Ready to achieve zero-touch security operations? Zion Tech Group's AI-powered DevSecOps platform 
                   delivers enterprise-grade automation that scales with your organization.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">✅<
                     <span className="text-left">30-day pilot program with full production deployment roadmap<
                   </div>

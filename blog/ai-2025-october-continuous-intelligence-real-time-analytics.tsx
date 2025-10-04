@@ -37,8 +37,8 @@ export default function ContinuousIntelligenceRealTimeAnalytics() {
         {/* Executive Summary */}
         <section className="text-left"></section>
           <h2 className="text-left">Executive Summary</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;100ms</div>
               <div className="text-left">End-to-End Latency for Real-Time Insights</div>
             </div>
@@ -229,8 +229,8 @@ export default function ContinuousIntelligenceRealTimeAnalytics() {
                 </p>
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">73%</div>
                 <div className="text-left">Faster Time-to-Market</div>
               </div>

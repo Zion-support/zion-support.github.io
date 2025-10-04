@@ -146,8 +146,8 @@ const AutonomousResilienceSystemsArticle = () =>
           <p></p>
             Organizations implementing autonomous resilience systems report transformative results:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Reliability Metrics</h3>
               <ul className="text-left">
                 <li>• 99.99%+ uptime achievement</li>

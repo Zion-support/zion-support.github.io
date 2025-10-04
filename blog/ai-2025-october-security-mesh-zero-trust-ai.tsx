@@ -56,8 +56,8 @@ export default function AISecurityMeshZeroTrust2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔒 Security Excellence Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">98%</div>
                     <div className="text-left">Threat Detection Rate</div>
                   </div>
@@ -226,8 +226,8 @@ export default function AISecurityMeshZeroTrust2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Reference Architecture Components</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1. Service Mesh Layer (Istio / Linkerd)</div>
                     <div className="text-left">Manage service-to-service communication with mTLS, traffic control, and observability</div>
                   </div>
@@ -282,8 +282,8 @@ export default function AISecurityMeshZeroTrust2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Common AI Security Threats</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Prompt Injection Attacks</div>
                     <div className="text-left"><strong>Threat:</strong> Malicious prompts manipulate LLM behavior or extract sensitive information</div>
                     <div className="text-left"><strong>Defense:</strong> Input validation, prompt sandboxing, output filtering, and content moderation layers</div>
@@ -308,8 +308,8 @@ export default function AISecurityMeshZeroTrust2025() {
 
               <h2 className="text-left">Best Practices for Implementation</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Start with Risk Assessment</h3>
                   <p className="text-left"></p>
                     Conduct comprehensive threat modeling for your AI systems. Identify critical assets, potential 

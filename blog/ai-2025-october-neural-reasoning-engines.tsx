@@ -36,8 +36,8 @@ export default function AI2025OctoberNeuralReasoningEngines() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">98.5%</div>
               <div className="text-left">Reasoning Accuracy</div>
             </div>
@@ -91,8 +91,8 @@ export default function AI2025OctoberNeuralReasoningEngines() {
           </div>
 
           <h2 className="text-left">Enterprise Applications</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Strategic Planning</h3>
               <p className="text-left"></p>
                 Neural reasoning engines analyze market conditions, competitive landscapes, and internal 
@@ -122,8 +122,8 @@ export default function AI2025OctoberNeuralReasoningEngines() {
               Deployed neural reasoning engines across their supply chain and production planning systems. 
               The system reasons about thousands of constraints and variables to optimize operations in real-time.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">92%</div>
                 <div className="text-left">Better Predictions</div>
               </div>

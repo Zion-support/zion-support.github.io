@@ -55,8 +55,8 @@ export default function IntelligentDataFabricRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Enterprise Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.99%</div>
                     <div className="text-left">Data Availability</div>
                   </div>
@@ -115,8 +115,8 @@ export default function IntelligentDataFabricRevolution2025() {
               <h2 className="text-left">Intelligent Data Fabric Architecture</h2>
               
               <h3 className="text-left">Key Architectural Layers</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">1. Semantic Data Layer</h4>
                   <p className="text-left"></p>
                     AI-powered semantic understanding creates a unified view of data across all sources. Natural 
@@ -171,8 +171,8 @@ const placement = await orchestrator.optimizeDataPlacement(
                     Continuous monitoring with AI-driven anomaly detection automatically identifies and resolves 
                     data quality issues, performance degradation, and availability problems.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Auto-Remediation</div>
                       <ul className="text-left">
                         <li>• Data quality issue detection</li>
@@ -194,8 +194,8 @@ const placement = await orchestrator.optimizeDataPlacement(
 
               <h2 className="text-left">Enterprise Implementation Patterns</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏦 Financial Services</h4>
                   <p className="text-left">Real-time risk analytics across trading, lending, and customer data</p>
                   <ul className="text-left">
@@ -277,8 +277,8 @@ const placement = await orchestrator.optimizeDataPlacement(
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span className="text-left">Phase 1<
                     <span className="text-left">(Months 1-3)<
@@ -289,8 +289,8 @@ const placement = await orchestrator.optimizeDataPlacement(
                   </p>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Phase 2<
                     <span className="text-left">(Months 4-6)<
                   </div>
@@ -300,8 +300,8 @@ const placement = await orchestrator.optimizeDataPlacement(
                   </p>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Phase 3<
                     <span className="text-left">(Months 7-9)<
                   </div>
@@ -311,8 +311,8 @@ const placement = await orchestrator.optimizeDataPlacement(
                   </p>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Phase 4<
                     <span className="text-left">(Months 10-12)<
                   </div>

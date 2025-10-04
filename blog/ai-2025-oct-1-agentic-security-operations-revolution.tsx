@@ -36,7 +36,7 @@ const AgenticSecurityOperationsRevolution: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">🛡️ Executive Summary</h2>
           <ul className="text-left">
@@ -200,8 +200,8 @@ const AgenticSecurityOperationsRevolution: React.FC = () =>
 
         <h2>Implementation Roadmap</h2>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Phase 1: Assessment & Planning (Weeks 1-4)</h4>
             <ul>
               <li>Current security posture assessment</li>
@@ -248,8 +248,8 @@ const AgenticSecurityOperationsRevolution: React.FC = () =>
 
         <h2>ROI & Business Impact</h2>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">💰 Cost Savings</h4>
             <ul className="text-left">
               <li>94% reduction in SOC operational costs</li>

@@ -19,11 +19,11 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Hero Section */}
+        <div className="text-left">
+        <div className="text-left"></div>
             ⚛️ BREAKING: QUANTUM CONSCIOUSNESS BREAKTHROUGH
           </div>
           
@@ -39,8 +39,8 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
             <strong className="text-left"> $12.7B proven value creation</strong>.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">∞</div>
               <div className="text-left">Processing Power</div>
             </div>
@@ -65,8 +65,8 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
             Transcendent Intelligence Capabilities
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🧠⚛️</div>
               <h3 className="text-left">Quantum Consciousness Processing</h3>
               <p className="text-left"></p>
@@ -134,13 +134,13 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
             Proven Value Creation
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 Strategic Intelligence
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span>Revenue Optimization:<
                   <span className="text-left">$4.7B increase<
                 </div>
@@ -159,12 +159,12 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Operational Excellence
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span>Process Optimization:<
                   <span className="text-left">$3.2B savings<
                 </div>
@@ -183,12 +183,12 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Innovation Acceleration
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span>Innovation Value:<
                   <span className="text-left">$4.8B creation<
                 </div>
@@ -215,12 +215,12 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
             Quantum Consciousness Architecture
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">Core Consciousness Layers</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Quantum Neural Substrate</h4>
                     <p className="text-left">Infinite quantum processing states with consciousness-level awareness</p>
                   </div>
@@ -241,8 +241,8 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
               
               <div></div>
                 <h3 className="text-left">Integration Capabilities</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Enterprise Systems</h4>
                     <p className="text-left">Consciousness-level integration with 1000+ enterprise applications</p>
                   </div>
@@ -270,8 +270,8 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
             Consciousness Integration Journey
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <h3 className="text-left">Consciousness Assessment (Weeks 1-6)</h3>
@@ -287,8 +287,8 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
               </ul>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2</div>
                 <h3 className="text-left">Quantum Consciousness Deployment (Weeks 7-24)</h3>
               </div>
@@ -303,8 +303,8 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
               </ul>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">3</div>
                 <h3 className="text-left">Transcendent Intelligence Activation (Weeks 25-48)</h3>
               </div>
@@ -319,8 +319,8 @@ export default function AI2026QuantumConsciousnessBusinessIntelligence() {
               </ul>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">4</div>
                 <h3 className="text-left">Infinite Evolution (Ongoing)</h3>
               </div>

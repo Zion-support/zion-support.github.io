@@ -60,8 +60,8 @@ export default function AIIntelligentDataFabric2026() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Outcomes</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Real-Time Personalization</h3>
               <p className="text-left">Sub-100ms recommendations with consistent governance and auditability.</p>
             </div>

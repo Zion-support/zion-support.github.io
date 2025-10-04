@@ -149,8 +149,8 @@ export default function AISecurityPostureManagement2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Roadmap</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Assessment & Planning (Week 1-2)</h3>
                     <p className="text-left"></p>
                       Comprehensive security posture assessment, asset discovery, and baseline establishment 
@@ -183,8 +183,8 @@ export default function AISecurityPostureManagement2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Why Choose Zion Tech Group?</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Enterprise Expertise</h3>
                     <p className="text-left"></p>
                       15+ years securing Fortune 500 companies across finance, healthcare, retail, and technology sectors.

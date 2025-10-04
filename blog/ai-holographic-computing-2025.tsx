@@ -50,13 +50,13 @@ const AIHolographicComputing2025 = () =>
             </p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Sparkles className="text-left" />
               <h2 className="text-left">Revolutionary Capabilities</h2>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <CheckCircle className="text-left" />
                 <div></div>
                   <h3 className="text-left">8K Holographic Resolution</h3>
@@ -101,8 +101,8 @@ const AIHolographicComputing2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Enterprise Applications</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Cpu className="text-left" />
                     <div></div>
@@ -116,8 +116,8 @@ const AIHolographicComputing2025 = () =>
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Eye className="text-left" />
                     <div></div>
                       <h3 className="text-left">Data Analytics & BI</h3>
@@ -130,8 +130,8 @@ const AIHolographicComputing2025 = () =>
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Layers className="text-left" />
                     <div></div>
                       <h3 className="text-left">Medical Imaging & Healthcare</h3>
@@ -173,8 +173,8 @@ const AIHolographicComputing2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Real-World Success Stories</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Global Manufacturing Leader</h3>
                   <p className="text-left"></p>
                     Reduced product development time by 87% using holographic design reviews. Engineers across 15 countries 

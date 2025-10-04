@@ -60,8 +60,8 @@ export default function NextGenAutonomousDataCentersRevolution() {
         <section className="text-left"></section>
           <h2 className="text-left">🤖 Core Autonomous Capabilities</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔄 Self-Healing Infrastructure</h3>
               <ul className="text-left">
                 <li className="text-left">
@@ -133,8 +133,8 @@ export default function NextGenAutonomousDataCentersRevolution() {
           <h2 className="text-left">🏭 Fortune 500 Success Story</h2>
           <div className="text-left"></div>
             <h3 className="text-left">Global Financial Services Leader</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$2.3B</div>
                 <div className="text-left">3-Year Cost Savings</div>
               </div>
@@ -165,8 +165,8 @@ export default function NextGenAutonomousDataCentersRevolution() {
         <section className="text-left"></section>
           <h2 className="text-left">🎯 Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
               <ul className="text-left">
                 <li>• Deploy comprehensive infrastructure monitoring and telemetry systems</li>
@@ -200,8 +200,8 @@ export default function NextGenAutonomousDataCentersRevolution() {
 
         <section className="text-left"></section>
           <h2 className="text-left">💡 Key Benefits</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🚀 Operational Excellence</h3>
               <ul className="text-left">
                 <li>• 99.9999% uptime with autonomous operations</li>

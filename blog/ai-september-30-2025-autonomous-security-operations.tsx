@@ -62,8 +62,8 @@ export default function AISeptember302025AutonomousSecurityOperations() {
 
           <h3 className="text-left">Core Capabilities</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🎯 Intelligent Threat Detection</h4>
               <p className="text-left"></p>
                 AI models continuously analyze network traffic, user behavior, and system logs to identify threats with 99.9% accuracy – including zero-day attacks and advanced persistent threats (APTs).
@@ -122,8 +122,8 @@ export default function AISeptember302025AutonomousSecurityOperations() {
             Our autonomous security platform employs multiple AI techniques to achieve industry-leading detection accuracy:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Deep Learning Models</h4>
               <p className="text-left"></p>
                 Neural networks trained on billions of security events to recognize attack patterns, even novel variations that evade traditional defenses.

@@ -66,8 +66,8 @@ const NeuroSymbolicAIEnterprise2025 = () =>
             The result is AI that can both learn and reason—and explain every step of its decision-making process.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Neural Component</h3>
               <ul className="text-left">
                 <li>• Pattern recognition from raw data</li>
@@ -105,16 +105,16 @@ const NeuroSymbolicAIEnterprise2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Use Cases Delivering ROI</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚖️ Legal Contract Analysis & Risk Assessment</h3>
               <p className="text-left"></p>
                 Law firms use neuro-symbolic AI to analyze contracts: neural networks extract clauses and entities, 
                 symbolic reasoning applies legal logic and identifies conflicts. One AmLaw 100 firm reduced contract 
                 review time from 8 hours to 20 minutes per contract with 97.5% accuracy—and full audit trails.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">97.5%</div>
                   <div className="text-left">Accuracy</div>
                 </div>
@@ -137,8 +137,8 @@ const NeuroSymbolicAIEnterprise2025 = () =>
                 diagnostic accuracy with full explanations for every recommendation—critical for physician trust and 
                 regulatory compliance.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">94.8%</div>
                   <div className="text-left">Accuracy</div>
                 </div>
@@ -160,8 +160,8 @@ const NeuroSymbolicAIEnterprise2025 = () =>
                 apply regulatory rules and business logic. One global bank reduced false positives by 85%, caught 30% more 
                 actual fraud, and can explain every alert to regulators—achieving full SOX and Basel III compliance.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">85%</div>
                   <div className="text-left">Fewer False+</div>
                 </div>
@@ -181,8 +181,8 @@ const NeuroSymbolicAIEnterprise2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Key Advantages Over Pure Neural Approaches</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">✅ What You Gain</h3>
               <ul className="text-left">
                 <li>• <strong>Explainability:</strong> Every decision has clear reasoning</li>
@@ -210,8 +210,8 @@ const NeuroSymbolicAIEnterprise2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Implementation: 100-Day Neuro-Symbolic Transformation</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Knowledge Engineering (Weeks 1-5)</h3>
               <ul className="text-left">
                 <li>✓ Map domain knowledge, rules, and ontologies</li>

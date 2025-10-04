@@ -36,7 +36,7 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">🎯 Executive Summary</h2>
           <ul className="text-left">
@@ -160,8 +160,8 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () =>
           <h3 className="text-left">🏛️ Production-Grade Design</h3>
           
           <h4 className="text-left">Hot-Warm-Cold Data Tiering</h4>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h5 className="text-left">Hot Tier (In-Memory)</h5>
               <p>Most frequently accessed 1% of vectors</p>
               <ul className="text-left">
@@ -201,8 +201,8 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () =>
 
         <h2>Advanced RAG Optimization Techniques</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Retrieval Strategies</h3>
             
             <h4 className="text-left">1. Hierarchical Retrieval</h4>
@@ -237,8 +237,8 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () =>
             <h3 className="text-left">📦 Chunking Strategies</h3>
             
             <h4 className="text-left">Smart Chunking Approaches</h4>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h5 className="text-left">Fixed-Size Chunks</h5>
                 <p className="text-left">• Size: 256-512 tokens with 50-100 token overlap</p>
                 <p className="text-left">• Best for: General documents, consistent structure</p>
@@ -331,8 +331,8 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () =>
 
         <h2>Real-World Case Studies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">💼 Enterprise Software Company</h3>
             <p className="text-left"></p>
               <strong>Challenge:</strong> 50M document knowledge base, 500ms query times, $80K/month costs
@@ -499,8 +499,8 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () =>
         <div className="text-left"></div>
           <h3 className="text-left">🗓️ Fast-Track Implementation</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Weeks 1-2: Baseline & Quick Wins</h4>
               <ul className="text-left">
                 <li>✅ Benchmark current performance (latency, recall, costs)</li>

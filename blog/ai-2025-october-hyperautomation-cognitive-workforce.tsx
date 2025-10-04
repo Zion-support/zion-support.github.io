@@ -51,8 +51,8 @@ export default function HyperautomationCognitiveWorkforce2025() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Measurable Business Outcomes</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">75%</div>
               <div className="text-left">Of knowledge work automated</div>
             </div>
@@ -77,11 +77,11 @@ export default function HyperautomationCognitiveWorkforce2025() {
             Our platform enables enterprises to build, deploy, and manage cognitive workers at scale:
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Cognitive Worker Types</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Data Analysts</h4>
                   <p className="text-left"></p>
                     Process vast datasets, identify trends, generate insights, and create 
@@ -131,15 +131,15 @@ export default function HyperautomationCognitiveWorkforce2025() {
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏢 Finance: Intelligent Financial Operations</h3>
               <p className="text-left"></p>
                 A Fortune 100 financial services company deployed 2,500 cognitive workers to handle 
                 accounts payable, receivable, reconciliation, and financial reporting.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">89%</div>
                   <div className="text-left">Processing cost reduction</div>
                 </div>
@@ -165,8 +165,8 @@ export default function HyperautomationCognitiveWorkforce2025() {
                 A major retailer integrated 5,000 cognitive customer service agents across web, mobile, 
                 chat, email, and social media channels.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">93%</div>
                   <div className="text-left">Customer satisfaction score</div>
                 </div>
@@ -192,8 +192,8 @@ export default function HyperautomationCognitiveWorkforce2025() {
                 A hospital network deployed cognitive workers for scheduling, insurance verification, 
                 medical record management, and clinical documentation.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">87%</div>
                   <div className="text-left">Reduction in admin burden</div>
                 </div>
@@ -249,8 +249,8 @@ export default function HyperautomationCognitiveWorkforce2025() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Platform Capabilities</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🚀 Rapid Deployment</h3>
               <p className="text-left"></p>
                 Pre-built cognitive worker templates for 200+ common business processes. 

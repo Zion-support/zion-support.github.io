@@ -65,8 +65,8 @@ const QuantumSafeCryptography = () =>
               Quantum Computing Threat Landscape
             </h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <AlertTriangle className="text-left" />
                 <div></div>
                   <h3 className="text-left">
@@ -116,8 +116,8 @@ const QuantumSafeCryptography = () =>
               Post-Quantum Cryptography Standards
             </h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   1. ML-KEM (Module-Lattice Key Encapsulation)
                 </h3>
@@ -263,8 +263,8 @@ const QuantumSafeCryptography = () =>
               Implementation Roadmap & Best Practices
             </h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   Critical Infrastructure Priority
                 </h3>
@@ -382,8 +382,8 @@ const QuantumSafeCryptography = () =>
               Real-World Implementation Examples
             </h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   🏦 Financial Services: Hybrid TLS for Trading Platforms
                 </h3>

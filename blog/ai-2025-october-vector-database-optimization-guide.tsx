@@ -36,8 +36,8 @@ export default function AI2025OctoberVectorDatabaseOptimization() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;8ms</div>
               <div className="text-left">Query Latency</div>
             </div>
@@ -436,8 +436,8 @@ class QdrantOptimizer
           </div>
 
           <h2 className="text-left">Best Practices Checklist</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">✅ Performance Optimization</h3>
               <ul className="text-left">
                 <li className="text-left">

@@ -71,8 +71,8 @@ export default function AIDataPrivacyCompliance2025() {
                 Align legal requirements to actionable controls across data lifecycle, model lifecycle, and platform
                 operations.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Data Lifecycle Controls</h3>
                   <ul className="text-left">
                     <li>• Data minimization, purpose limitation, retention automation</li>
@@ -96,8 +96,8 @@ export default function AIDataPrivacyCompliance2025() {
             <section></section>
               <h2 className="text-left">Operational Architecture</h2>
               <p className="text-left">Reference blueprint for enterprise implementation.</p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">1. Policy-as-Code & Evidence</h3>
                   <ul className="text-left">
                     <li>• Central policy repo with OPA/Conftest for enforcement</li>
@@ -231,8 +231,8 @@ export default function AIDataPrivacyCompliance2025() {
             <section></section>
               <h2 className="text-left">Complete Compliance Framework</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">1. Data Governance Foundation</h3>
                   <ul className="text-left">
                     <li>• <strong className="text-left">Automated Data Classification:</strong> ML-powered PII/PHI detection across all data sources</li>
@@ -294,8 +294,8 @@ export default function AIDataPrivacyCompliance2025() {
             <section></section>
               <h2 className="text-left">Technical Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Quarter 1: Assessment & Foundation</h3>
                   <ul className="text-left">
                     <li>✅ Conduct comprehensive data inventory and classification</li>
@@ -348,14 +348,14 @@ export default function AIDataPrivacyCompliance2025() {
             <section></section>
               <h2 className="text-left">Real-World Success Stories</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🏥 Global Healthcare Provider: Zero Breaches, Full Compliance</h3>
                   <p className="text-left"></p>
                     Implemented comprehensive AI privacy framework protecting 250M patient records across 40 countries.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">100%</div>
                       <div className="text-left">GDPR Compliance</div>
                     </div>
@@ -375,8 +375,8 @@ export default function AIDataPrivacyCompliance2025() {
                   <p className="text-left"></p>
                     Proactive compliance program prevented regulatory violations across EU and US markets.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">$2.8B</div>
                       <div className="text-left">Avoided Fines</div>
                     </div>
@@ -396,8 +396,8 @@ export default function AIDataPrivacyCompliance2025() {
             <section></section>
               <h2 className="text-left">Essential Tools & Platforms</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Privacy & Consent Management</h3>
                   <ul className="text-left">
                     <li>• <strong>OneTrust</strong> - Enterprise privacy management</li>
@@ -441,8 +441,8 @@ export default function AIDataPrivacyCompliance2025() {
 
             <section></section>
               <h2 className="text-left">Critical Success Factors</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">✅ Executive Sponsorship</h3>
                   <p className="text-left"></p>
                     Privacy compliance requires CEO and board-level commitment. Make it a strategic priority, 
@@ -514,8 +514,8 @@ export default function AIDataPrivacyCompliance2025() {
           </div>
 
           <footer className="text-left">
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Written by Zion Tech Group Privacy & Compliance Team
               </div>
               <div className="text-left"></div>

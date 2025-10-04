@@ -36,8 +36,8 @@ const CyberResilienceZeroDayDefense = () =>
               <p className="text-left"></p>
                 Traditional cybersecurity approaches fail against zero-day exploits and advanced persistent threats. AI-powered cyber resilience systems use autonomous agents, behavioral analytics, and predictive intelligence to detect and neutralize threats before damage occurs. This comprehensive guide reveals how enterprises achieve 99.7% threat detection rates while preventing billions in damages.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">99.7%</div>
                   <div className="text-left">Threat Detection Rate</div>
                 </div>
@@ -189,8 +189,8 @@ class AutonomousSecurityOrchestrator:
           <section className="text-left"></section>
             <h2 className="text-left">🎯 Advanced Defense Capabilities</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🔍 Deceptive Defense (Honeypots 2.0)</h3>
                 <p className="text-left">AI-generated decoy environments that adapt to attacker behavior:</p>
                 <ul className="text-left">
@@ -228,12 +228,12 @@ class AutonomousSecurityOrchestrator:
           <section className="text-left"></section>
             <h2 className="text-left">📊 Enterprise Success Stories</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏦 Global Banking Institution</h3>
                 <p className="text-left">Deployed AI-powered cyber resilience across 87 countries:</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$3.2B</div>
                     <div className="text-left">Attacks Prevented</div>
                   </div>
@@ -255,8 +255,8 @@ class AutonomousSecurityOrchestrator:
               <div className="text-left"></div>
                 <h3 className="text-left">⚕️ Healthcare Network</h3>
                 <p className="text-left">Protected 250 hospitals and 18M patient records:</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Zero</div>
                     <div className="text-left">Successful Breaches</div>
                   </div>
@@ -278,8 +278,8 @@ class AutonomousSecurityOrchestrator:
               <div className="text-left"></div>
                 <h3 className="text-left">🛒 E-Commerce Platform</h3>
                 <p className="text-left">Defended against 12 million daily attack attempts:</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">12M</div>
                     <div className="text-left">Daily Attacks Blocked</div>
                   </div>
@@ -331,8 +331,8 @@ class AutonomousSecurityOrchestrator:
           <section className="text-left"></section>
             <h2 className="text-left">🚀 Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Foundation (Months 1-2)</h3>
                 <ul className="text-left">
                   <li>✓ Security posture assessment</li>
@@ -379,8 +379,8 @@ class AutonomousSecurityOrchestrator:
             
             <div className="text-left"></div>
               <h3 className="text-left">Critical Success Factors</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">1️⃣<
                   <div></div>
                     <h4 className="text-left">Start with High-Value Targets</h4>
@@ -414,8 +414,8 @@ class AutonomousSecurityOrchestrator:
 
           <section className="text-left"></section>
             <h2 className="text-left">🔮 The Future of Cyber Defense</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🧠 Cognitive Security</h3>
                 <p>AI systems that reason about threats like human experts, making strategic defense decisions autonomously.</p>
               </div>

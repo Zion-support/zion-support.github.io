@@ -47,8 +47,8 @@ const RealTimePersonalizationEdge2026 = () =>
               Deliver hyper-personalized experiences with &lt;50ms latency using edge computing. Master on-device models, privacy-preserving personalization, and real-time adaptation achieving 3-5x engagement lift.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -64,8 +64,8 @@ const RealTimePersonalizationEdge2026 = () =>
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚡ Key Outcomes</h3>
               <ul className="text-left">
                 <li>✅ Deliver personalized experiences in &lt;50ms latency</li>
@@ -384,8 +384,8 @@ const RealTimePersonalizationEdge2026 = () =>
             </div>
 
             {/* Share Section */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <Tag className="text-left" />
                   <div className="text-left"></div>

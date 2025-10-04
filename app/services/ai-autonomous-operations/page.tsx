@@ -21,13 +21,13 @@ const AIAutonomousOperationsService = React.memo(function AIAutonomousOperations
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <section className="text-left"></section>
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
+        <div className="text-left">
+        <div className="text-left"></div>"
           <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 ⚡ New Service • January 20, 2025
@@ -66,8 +66,8 @@ const AIAutonomousOperationsService = React.memo(function AIAutonomousOperations
             <p className="text-left"></p>
               Our AI Autonomous Operations service revolutionizes how enterprises operate by implementing intelligent automation systems that can make decisions, learn from data, and optimize processes without human intervention. This cutting-edge solution delivers unprecedented efficiency, cost savings, and competitive advantage.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">95%</div>"
                 <div className="text-left">Automation Rate</div>"
               </div>
@@ -84,8 +84,8 @@ const AIAutonomousOperationsService = React.memo(function AIAutonomousOperations
           {/* Key Features */}
           <section id="features" className="text-left"></section>
             <h2 className="text-left">🚀 Key Features</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🤖</div>"
                 <h3 className="text-left">Autonomous Decision-Making</h3>"
                 <p className="text-left"></p>
@@ -137,8 +137,8 @@ const AIAutonomousOperationsService = React.memo(function AIAutonomousOperations
           {/* Implementation Process */}
           <section className="text-left"></section>
             <h2 className="text-left">📋 Implementation Process</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>"
                 <div></div>
                   <h3 className="text-left">Discovery & Assessment</h3>"
@@ -203,8 +203,8 @@ const AIAutonomousOperationsService = React.memo(function AIAutonomousOperations
           {/* Pricing Tiers */}
           <section className="text-left"></section>
             <h2 className="text-left">💰 Pricing Tiers</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Starter</h3>"
                 <div className="text-left">$50K<span className="text-left">/month<</div>"
                 <ul className="text-left">
@@ -232,8 +232,8 @@ const AIAutonomousOperationsService = React.memo(function AIAutonomousOperations
                 </a>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Most Popular</div>
                 </div>
                 <h3 className="text-left">Professional</h3>"

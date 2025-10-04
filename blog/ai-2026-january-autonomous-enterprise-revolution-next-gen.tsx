@@ -6,10 +6,10 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h1 className="text-left">
               <span className="text-left"></span>
                 AI 2026: The Autonomous Enterprise Revolution
@@ -53,8 +53,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
                   human oversight and ethical compliance.
                 </p>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Average ROI</h3>
                   <p className="text-left">15,847%</p>
                 </div>
@@ -74,8 +74,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
         {/* Key Technologies */}
         <section className="text-left"></section>
           <h2 className="text-left">Revolutionary Technologies</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left">🧠<
               </div>
@@ -85,8 +85,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
                 enabling seamless autonomous decision-making with 99.97% accuracy.
               </p>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">⚡<
               </div>
               <h3 className="text-left">Quantum-Enhanced Processing</h3>
@@ -95,8 +95,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
                 enterprise operations, reducing computation time by 99.9%.
               </p>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">🔮<
               </div>
               <h3 className="text-left">Predictive Autonomy</h3>
@@ -111,8 +111,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
         {/* Success Stories */}
         <section className="text-left"></section>
           <h2 className="text-left">Success Stories</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <h3 className="text-left">Fortune 100 Manufacturing Giant</h3>
                 <span className="text-left"></span>
@@ -123,8 +123,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
                 Implemented autonomous production systems across 127 facilities worldwide, achieving 
                 complete supply chain autonomy with zero human intervention in routine operations.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <p className="text-left">18,400%</p>
                   <p className="text-left">ROI</p>
                 </div>
@@ -143,8 +143,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Global Financial Services Leader</h3>
                 <span className="text-left"></span>
                   $38.7B Value Created
@@ -154,8 +154,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
                 Deployed autonomous trading systems and risk management AI across 89 countries, 
                 achieving unprecedented market performance and regulatory compliance.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <p className="text-left">12,847%</p>
                   <p className="text-left">ROI</p>
                 </div>
@@ -179,10 +179,10 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
         {/* Implementation Roadmap */}
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Roadmap</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">1<
                 </div>
                 <h3 className="text-left">Assessment</h3>
@@ -190,8 +190,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
                   Comprehensive analysis of current systems and identification of automation opportunities
                 </p>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">2<
                 </div>
                 <h3 className="text-left">Pilot Deployment</h3>
@@ -199,8 +199,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
                   Small-scale implementation to validate technology and refine processes
                 </p>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">3<
                 </div>
                 <h3 className="text-left">Scale Up</h3>
@@ -208,8 +208,8 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () =>
                   Gradual expansion across departments with continuous optimization
                 </p>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">4<
                 </div>
                 <h3 className="text-left">Full Autonomy</h3>

@@ -55,8 +55,8 @@ export default function EdgeAIRealTimeAnalyticsRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">50M+</div>
                     <div className="text-left">Events Per Second</div>
                   </div>
@@ -195,8 +195,8 @@ export default function EdgeAIRealTimeAnalyticsRevolution2025() {
 
               <h2 className="text-left">Industry Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏭 Manufacturing & Industrial IoT</h4>
                   <ul className="text-left">
                     <li>• Predictive maintenance with real-time vibration analysis</li>

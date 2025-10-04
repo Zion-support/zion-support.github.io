@@ -65,8 +65,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
 
             <h3 className="text-left">Advanced Resilience Patterns</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">⚡ Multi-Region Failover</h4>
                 <ul className="text-left">
                   <li>• Active-active deployment across 3+ cloud regions</li>
@@ -91,8 +91,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Case Studies</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏦 Financial Services: Real-Time Fraud Detection</h3>
                 <p className="text-left"></p>
                   <strong>Challenge:</strong> Global payment processor handling 50,000 transactions/second with strict 
@@ -102,8 +102,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
                   <strong>Solution:</strong> Implemented chaos engineering pipeline with weekly automated experiments. 
                   Built multi-tier model serving with instant failover to faster models during GPU outages.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.997%</div>
                     <div className="text-left">Annual Uptime</div>
                   </div>
@@ -132,8 +132,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
                   <strong>Solution:</strong> Triple-redundant AI compute with hardware-level failover. Chaos experiments 
                   run continuously in shadow mode to validate safety mechanisms without impacting operations.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">100%</div>
                     <div className="text-left">Safety System Uptime</div>
                   </div>
@@ -157,8 +157,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Building Your Chaos Engineering Pipeline</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -173,8 +173,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <div></div>
@@ -188,8 +188,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <div></div>
@@ -203,8 +203,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   4
                 </div>
                 <div></div>
@@ -256,8 +256,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
               Effective chaos engineering requires comprehensive observability to detect failures before customers experience them:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🔍 Real-Time Monitoring</h4>
                 <ul className="text-left">
                   <li>• Golden signals: latency, traffic, errors, saturation for every service</li>
@@ -320,8 +320,8 @@ export default function AIInfrastructureResilienceChaosEngineering2025() {
               and ensure your AI systems remain resilient under any conditions.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🎯</div>
                 <h3 className="text-left">Expert Guidance</h3>
                 <p className="text-left">SRE and chaos engineering experts with 10+ years building resilient systems</p>

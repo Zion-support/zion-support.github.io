@@ -106,16 +106,16 @@ const AI2025OctoberNeuroSymbolicAIReasoningRevolution = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Applications</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">⚕️ Medical Diagnosis Systems</h3>
                 <p className="text-left"></p>
                   A major healthcare provider deployed neuro-symbolic AI for diagnostic assistance, combining 
                   medical imaging analysis with clinical knowledge graphs and diagnostic rules. Achieved 96.2% 
                   diagnostic accuracy with full reasoning transparency, enabling doctors to validate every decision.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">96.2%</div>
                     <div className="text-left">Diagnostic Accuracy</div>
                   </div>
@@ -137,8 +137,8 @@ const AI2025OctoberNeuroSymbolicAIReasoningRevolution = () =>
                   understanding with legal knowledge graphs and formal logic for clause interpretation. Reduced 
                   review time 73%, identified 98.5% of risks, saved $18M annually.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">73%</div>
                     <div className="text-left">Faster Review</div>
                   </div>
@@ -160,8 +160,8 @@ const AI2025OctoberNeuroSymbolicAIReasoningRevolution = () =>
                   pattern detection with regulatory rules and financial logic. Achieved 94.7% prediction accuracy 
                   while maintaining full regulatory compliance and audit transparency.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94.7%</div>
                     <div className="text-left">Risk Prediction</div>
                   </div>
@@ -250,8 +250,8 @@ perception_model.train(
           <section className="text-left"></section>
             <h2 className="text-left">Key Advantages</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">📖 Complete Explainability</h3>
                 <p className="text-left"></p>
                   Every decision includes a human-readable reasoning chain showing how the system arrived at its 
@@ -287,8 +287,8 @@ perception_model.train(
 
           <section className="text-left"></section>
             <h2 className="text-left">Technical Challenges</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">⚡ Scalability</h4>
                 <p></p>
                   Symbolic reasoning can be computationally expensive. Solutions include optimized logic engines, 
@@ -322,8 +322,8 @@ perception_model.train(
                 speedup, neural-symbolic co-evolution for automatic rule learning, multimodal symbolic grounding, 
                 and federation of knowledge graphs across organizations.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Q1 2026</div>
                   <div className="text-left">Quantum Symbolic Reasoning</div>
                 </div>

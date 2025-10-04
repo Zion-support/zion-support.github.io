@@ -52,8 +52,8 @@ const CloudFinOpsAICostOptimization2025: React.FC = () =>
 
         <div className="text-left"></div>
           <p className="text-left"><strong className="text-left">Real-World Impact:</strong></p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">✓<
               <p><strong className="text-left">Before AI:</strong> Database instance running at 12% average CPU 
               utilization, costing $18,000/month</p>
@@ -99,8 +99,8 @@ const CloudFinOpsAICostOptimization2025: React.FC = () =>
 
         <h2 className="text-left">Enterprise Transformation Stories</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Media Streaming: $42M Annual Cloud Savings</h4>
             <p className="text-left"></p>
               Global streaming service deployed AI FinOps across $84M annual cloud infrastructure spend. Achieved 
@@ -131,8 +131,8 @@ const CloudFinOpsAICostOptimization2025: React.FC = () =>
 
         <h2 className="text-left">Advanced FinOps Capabilities</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">💰 Multi-Cloud Cost Optimization</h4>
             <p className="text-left"></p>
               AI analyzes workload requirements and costs across AWS, Azure, GCP, and private clouds. Automatically 

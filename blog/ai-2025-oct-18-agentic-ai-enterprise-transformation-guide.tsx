@@ -47,8 +47,8 @@ export default function AgenticAIEnterpriseTransformation2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Real-World Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">600%</div>
                     <div className="text-left">Average ROI</div>
                   </div>
@@ -104,8 +104,8 @@ export default function AgenticAIEnterpriseTransformation2025() {
                   Leading e-commerce company deployed AI agents that handle 92% of customer inquiries end-to-end, 
                   achieving 94% CSAT scores while reducing support costs by $18M annually.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Challenge</div>
                     <div className="text-left">450 support agents handling 2M+ monthly tickets, 48-hour average resolution time, 72% CSAT</div>
                   </div>
@@ -130,8 +130,8 @@ export default function AgenticAIEnterpriseTransformation2025() {
                   Global bank deployed AI agents for fraud detection, compliance monitoring, and financial analysis—
                   catching 99.7% of fraudulent transactions while reducing false positives by 87% and saving $47M annually.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Challenge</div>
                     <div className="text-left">$2.3B annual fraud losses, 95% false positive rate overwhelming analysts, regulatory pressure</div>
                   </div>
@@ -157,8 +157,8 @@ export default function AgenticAIEnterpriseTransformation2025() {
                   logistics coordination—reducing stockouts by 94%, cutting carrying costs by 62%, and improving 
                   delivery reliability to 99.2%.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Challenge</div>
                     <div className="text-left">$420M tied up in excess inventory, 28% stockout rate, 73% on-time delivery, 45-day forecasting lag</div>
                   </div>
@@ -278,8 +278,8 @@ export default function AgenticAIEnterpriseTransformation2025() {
 
               <h2 className="text-left">Implementation Roadmap: 0 to Production in 90 Days</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Foundation (Weeks 1-3)</h3>
                   <ul className="text-left">
                     <li>• Define high-impact use case with clear success metrics ($1M+ value potential)</li>
@@ -322,8 +322,8 @@ export default function AgenticAIEnterpriseTransformation2025() {
               </div>
 
               <h2 className="text-left">Measuring Success: Key Metrics</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Operational Metrics</h3>
                   <ul className="text-left">
                     <li>• <strong className="text-left">Task Success Rate:</strong> % of tasks completed without errors or escalation</li>
@@ -350,8 +350,8 @@ export default function AgenticAIEnterpriseTransformation2025() {
                   Join the Fortune 500 companies achieving 600% ROI with production AI agents. Our team has deployed 
                   agents for enterprises across 12 industries, delivering $850M+ in measurable value.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Free Assessment</div>
                     <div className="text-left">45-minute consultation to identify your highest-ROI use case</div>
                   </div>

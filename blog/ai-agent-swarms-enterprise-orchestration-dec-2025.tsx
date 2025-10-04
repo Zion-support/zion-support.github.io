@@ -112,8 +112,8 @@ const AIAgentSwarmsEnterpriseOrchestration = () =>
                 Global retailer deployed 500+ agent swarm managing end-to-end supply chain operations across 
                 150 countries. Results: 82% reduction in stockouts, 65% lower logistics costs, $890M annual savings.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">82%</div>
                   <div className="text-left">Stockout Reduction</div>
                 </div>
@@ -134,8 +134,8 @@ const AIAgentSwarmsEnterpriseOrchestration = () =>
                 Investment bank implemented 1,200-agent trading swarm processing 50M+ market signals daily. 
                 Achieved 94% accuracy in price predictions, 40% higher returns, sub-millisecond trade execution.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">94%</div>
                   <div className="text-left">Prediction Accuracy</div>
                 </div>
@@ -156,8 +156,8 @@ const AIAgentSwarmsEnterpriseOrchestration = () =>
                 Hospital network deployed 800-agent swarm coordinating patient care, resource allocation, and 
                 clinical workflows. Results: 70% faster diagnoses, 55% reduction in wait times, 99.2% patient satisfaction.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">70%</div>
                   <div className="text-left">Faster Diagnoses</div>
                 </div>
@@ -222,8 +222,8 @@ const AIAgentSwarmsEnterpriseOrchestration = () =>
               productivity multipliers, cost reduction, and new revenue opportunities.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">💡 Productivity Gains</h3>
                 <ul className="text-left">
                   <li>• 15x increase in task completion rates</li>
@@ -248,8 +248,8 @@ const AIAgentSwarmsEnterpriseOrchestration = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Best Practices for Swarm Deployment</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">✅ Start with Bounded Domains</h3>
                 <p className="text-left">Begin with well-defined problem spaces before expanding to complex cross-functional orchestration</p>
               </div>
@@ -277,8 +277,8 @@ const AIAgentSwarmsEnterpriseOrchestration = () =>
               The agent swarm paradigm is rapidly evolving with breakthrough capabilities expected throughout 2026:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🧬 Self-Evolving Swarms</h3>
                 <p className="text-left">Agents that autonomously refine their strategies through continuous learning and meta-optimization</p>
               </div>

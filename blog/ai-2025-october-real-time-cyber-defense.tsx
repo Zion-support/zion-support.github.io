@@ -80,8 +80,8 @@ export default function AI2025OctoberRealTimeCyberDefense() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Advanced Threat Detection Capabilities</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Eye className="text-left" />
                 <div></div>
                   <h3 className="text-left">Behavioral Anomaly Detection</h3>
@@ -126,8 +126,8 @@ export default function AI2025OctoberRealTimeCyberDefense() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Security Outcomes</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Financial Institution</h3>
                 <p className="text-left"></p>
                   Major bank prevented $842M in fraud losses by detecting and blocking sophisticated attack campaigns
@@ -232,8 +232,8 @@ export default function AI2025OctoberRealTimeCyberDefense() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Deployment Strategy</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Assessment (Week 1-2)</h3>
                 <p className="text-left"></p>
                   Comprehensive security posture evaluation, asset discovery, and baseline threat analysis. Deploy
@@ -266,8 +266,8 @@ export default function AI2025OctoberRealTimeCyberDefense() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Compliance & Certifications</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Shield className="text-left" />
                 <p className="text-left">SOC 2 Type II</p>
                 <p className="text-left">Certified</p>

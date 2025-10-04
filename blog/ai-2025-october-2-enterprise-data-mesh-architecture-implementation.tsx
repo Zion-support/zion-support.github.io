@@ -53,11 +53,11 @@ export default function EnterpriseDataMeshArchitecture2025() {
               </p>
             </header>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">📈 Business Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Faster Time-to-Insight</div>
                   </div>
@@ -88,8 +88,8 @@ export default function EnterpriseDataMeshArchitecture2025() {
                 A successful data mesh implementation is built on four foundational principles:
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">1. Domain-Oriented Data Ownership</h4>
                   <p className="text-left"></p>
                     Domain teams own their data products end-to-end, from ingestion to serving. This creates 

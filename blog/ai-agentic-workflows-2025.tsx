@@ -53,8 +53,8 @@ const AIAgenticWorkflows2025 = () =>
 
         <section className="text-left"></section>
           <h2 className="text-left">Key Capabilities of AI Agents</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Autonomous Decision-Making</h3>
               <p className="text-left"></p>
                 AI agents analyze context, evaluate options, and make decisions without human intervention, 
@@ -88,8 +88,8 @@ const AIAgenticWorkflows2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Customer Service Automation</h3>
               <p className="text-left"></p>
                 AI agents handle customer inquiries across multiple channels, escalating complex issues to human agents 

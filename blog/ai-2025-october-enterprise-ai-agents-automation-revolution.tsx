@@ -29,8 +29,8 @@ const EnterpriseAIAgentsAutomationRevolution = () =>
         </Link>
 
         <header className="text-left">
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Bot className="text-left" />
             </div>
             <div></div>
@@ -46,8 +46,8 @@ const EnterpriseAIAgentsAutomationRevolution = () =>
           </p>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               <Target className="text-left" />
               Executive Summary
@@ -133,8 +133,8 @@ const EnterpriseAIAgentsAutomationRevolution = () =>
               <p className="text-left"></p>
                 Deployed AI agents to automate fraud detection, risk assessment, and customer onboarding processes across 47 countries.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <p className="text-left">$1.2B</p>
                   <p className="text-left">Annual savings achieved</p>
                 </div>
@@ -150,8 +150,8 @@ const EnterpriseAIAgentsAutomationRevolution = () =>
               <p className="text-left"></p>
                 Implemented multi-agent system for supply chain optimization, inventory management, and dynamic pricing across 200+ distribution centers.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <p className="text-left">$2.1B</p>
                   <p className="text-left">Value created in year 1</p>
                 </div>

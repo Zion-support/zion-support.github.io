@@ -50,8 +50,8 @@ const AIPoweredInfrastructureAsCode2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Revolutionary Outcomes</h3>
             <ul className="text-left">
               <li><strong>Natural Language IaC:</strong> Generate production-ready Terraform/CDK from plain English descriptions</li>
@@ -200,8 +200,8 @@ const AIPoweredInfrastructureAsCode2025: React.FC = () =>
 
           <div className="text-left"></div>
             <h3 className="text-left">🏗️ AI Infrastructure Platform Architecture</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <strong className="text-left">Natural Language Interface</strong>
                 <p className="text-left">Engineers describe infrastructure in Slack, web UI, or CI/CD pipelines</p>
               </div>
@@ -372,8 +372,8 @@ const AIPoweredInfrastructureAsCode2025: React.FC = () =>
           </p>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Share this article:</h4>
               <div className="text-left"></div>

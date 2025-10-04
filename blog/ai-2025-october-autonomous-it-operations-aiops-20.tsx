@@ -55,8 +55,8 @@ export default function AutonomousITOperationsAIOps202025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">⚡ Autonomous Operations Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">98%</div>
                     <div className="text-left">Incidents Prevented</div>
                   </div>
@@ -106,8 +106,8 @@ export default function AutonomousITOperationsAIOps202025() {
 
               <h2 className="text-left">Autonomous AIOps Architecture</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🔮 Predictive Intelligence Layer</h3>
                   <p className="text-left"></p>
                     Advanced ML models analyze billions of data points across metrics, logs, traces, and events to 
@@ -180,8 +180,8 @@ export default function AutonomousITOperationsAIOps202025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span className="text-left">Phase 1<
                     <h3 className="text-left">Foundation & Data Integration</h3>
@@ -191,8 +191,8 @@ export default function AutonomousITOperationsAIOps202025() {
                     Establish unified observability platform ingesting all telemetry data—metrics, logs, traces, 
                     events, and topology from existing tools.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">✓ Metrics Integration</div>
                       <div className="text-left">Prometheus, Datadog, New Relic</div>
                     </div>
@@ -211,8 +211,8 @@ export default function AutonomousITOperationsAIOps202025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Phase 2<
                     <h3 className="text-left">ML Model Training & Validation</h3>
                     <span className="text-left">Weeks 5-8<
@@ -221,8 +221,8 @@ export default function AutonomousITOperationsAIOps202025() {
                     Train predictive models on historical data to establish baselines and validate anomaly 
                     detection accuracy before production deployment.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Baseline Establishment<
                       <span className="text-left">2 weeks<
                     </div>
@@ -237,8 +237,8 @@ export default function AutonomousITOperationsAIOps202025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Phase 3<
                     <h3 className="text-left">Autonomous Actions Rollout</h3>
                     <span className="text-left">Weeks 9-16<
@@ -247,23 +247,23 @@ export default function AutonomousITOperationsAIOps202025() {
                     Gradually enable autonomous remediation starting with low-risk actions, expanding to complex 
                     workflows as confidence builds.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left"></div>
                         <span className="text-left">●<
                         <span className="text-left">Low Risk (Weeks 9-10)<
                       </div>
                       <div className="text-left">Alerts, notifications, ticket creation</div>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">●<
                         <span className="text-left">Medium Risk (Weeks 11-13)<
                       </div>
                       <div className="text-left">Service restarts, auto-scaling, cache operations</div>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">●<
                         <span className="text-left">High Impact (Weeks 14-16)<
                       </div>
@@ -272,8 +272,8 @@ export default function AutonomousITOperationsAIOps202025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Phase 4<
                     <h3 className="text-left">Continuous Optimization</h3>
                     <span className="text-left">Ongoing<
@@ -287,15 +287,15 @@ export default function AutonomousITOperationsAIOps202025() {
 
               <h2 className="text-left">Enterprise Success Metrics</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Global E-Commerce Platform</h3>
                   <p className="text-left"></p>
                     Deployed AIOps 2.0 across 15,000+ microservices handling 2B+ daily transactions, achieving 
                     99.995% uptime during peak shopping seasons.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">97%</div>
                       <div className="text-left">Reduction in P1/P2 Incidents</div>
                     </div>
@@ -316,8 +316,8 @@ export default function AutonomousITOperationsAIOps202025() {
                     Transformed operations for critical trading platforms processing $500B+ daily volume with 
                     zero-tolerance for downtime.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">99.998%</div>
                       <div className="text-left">Platform Availability</div>
                     </div>
@@ -339,8 +339,8 @@ export default function AutonomousITOperationsAIOps202025() {
                   Ready to achieve autonomous operations? Zion Tech Group delivers enterprise-grade AIOps 2.0 
                   platforms that predict, prevent, and automatically resolve infrastructure issues at machine speed.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">✅<
                       <span className="text-left">60-day pilot with measurable ROI<
@@ -354,8 +354,8 @@ export default function AutonomousITOperationsAIOps202025() {
                       <span className="text-left">Seamless tool integration<
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">✅<
                       <span className="text-left">Gradual autonomous rollout<
                     </div>

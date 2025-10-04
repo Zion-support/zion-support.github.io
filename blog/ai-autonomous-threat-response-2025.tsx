@@ -25,7 +25,7 @@ const AIAutonomousThreatResponse2025 = () =>
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-autonomous-threat-response-2025" />
       </Helmet>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           {/* Back Button */}
           <Link
@@ -38,8 +38,8 @@ const AIAutonomousThreatResponse2025 = () =>
 
           {/* Article Header */}
           <article className="text-left"></a>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   Cybersecurity
                 <
@@ -65,8 +65,8 @@ const AIAutonomousThreatResponse2025 = () =>
             </div>
 
             {/* Article Content */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <Zap className="text-left" />
                   Executive Summary
@@ -81,8 +81,8 @@ const AIAutonomousThreatResponse2025 = () =>
                 Traditional Security Operations Centers (SOCs) struggle with alert fatigue, skilled analyst shortages, and response times measured in hours or days. AI autonomous threat response eliminates these bottlenecks by:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <CheckCircle className="text-left" />
                   <h4 className="text-left">99.8% Detection Accuracy</h4>
                   <p className="text-left"></p>
@@ -162,8 +162,8 @@ const AIAutonomousThreatResponse2025 = () =>
               </p>
 
               <h2 className="text-left">Measurable Business Impact</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">95%</div>
                   <div className="text-left">Reduction in MTTR</div>
                 </div>
@@ -178,8 +178,8 @@ const AIAutonomousThreatResponse2025 = () =>
               </div>
 
               <h2 className="text-left">Implementation Roadmap</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Phase 1: Assessment & Design (Weeks 1-2)</h4>
                   <p className="text-left">Map attack surface, identify critical assets, establish baseline behavior, and design custom playbooks.</p>
                 </div>

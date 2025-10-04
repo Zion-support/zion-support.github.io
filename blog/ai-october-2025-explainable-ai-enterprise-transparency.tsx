@@ -35,8 +35,8 @@ export default function AIOctober2025ExplainableAIEnterpriseTransparency() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">97%</div>
               <div className="text-left">Model Accuracy</div>
             </div>
@@ -107,8 +107,8 @@ export default function AIOctober2025ExplainableAIEnterpriseTransparency() {
               risk reduction through better-informed decisions.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">8.7M</div>
                 <div className="text-left">Annual Decisions</div>
               </div>
@@ -129,8 +129,8 @@ export default function AIOctober2025ExplainableAIEnterpriseTransparency() {
 
           <h2 className="text-left">Implementation Framework</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📊 Interpretable Models</h3>
               <p className="text-left"></p>
                 Deploy inherently interpretable models or apply post-hoc explanation techniques 
@@ -163,8 +163,8 @@ export default function AIOctober2025ExplainableAIEnterpriseTransparency() {
 
           <h2 className="text-left">Regulatory Compliance</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">EU AI Act Readiness</h3>
               <p className="text-left"></p>
                 Built-in compliance with EU AI Act requirements including risk categorization, 

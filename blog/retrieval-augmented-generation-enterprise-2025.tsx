@@ -50,8 +50,8 @@ const RetrievalAugmentedGenerationEnterprise2025 = () =>
             system? Architecture, optimization, and operational excellence.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🎯</div>
               <h4 className="text-left">Factual Accuracy</h4>
               <p className="text-left">Ground responses in your verified knowledge base, reducing hallucinations by 80%+</p>
@@ -72,8 +72,8 @@ const RetrievalAugmentedGenerationEnterprise2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">RAG Architecture: The Complete Pipeline</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div className="text-left"></div>
@@ -182,14 +182,14 @@ const RetrievalAugmentedGenerationEnterprise2025 = () =>
             incomplete context, broken sentences, and irrelevant retrievals.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Semantic Chunking</h3>
               <p className="text-left"></p>
                 Instead of fixed-size chunks, split on semantic boundaries: paragraphs, sections, topics.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">✅ Benefits</h4>
                   <ul className="text-left">
                     <li>• Preserves complete thoughts</li>
@@ -257,14 +257,14 @@ const RetrievalAugmentedGenerationEnterprise2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Optimizing Retrieval Quality</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Hybrid Search</h3>
               <p className="text-left"></p>
                 Combine dense vector search with sparse keyword search (BM25) for best results:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Vector Search</h4>
                   <p className="text-left">Semantic similarity, understands concepts and synonyms</p>
                   <div className="text-left">Best for: Conceptual queries, natural language</div>
@@ -316,8 +316,8 @@ const RetrievalAugmentedGenerationEnterprise2025 = () =>
               <p className="text-left"></p>
                 After initial retrieval (top 100), use cross-encoder models to rerank top candidates:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Retrieval Stage<
                   <span className="text-left">Fast, less accurate<
                 </div>

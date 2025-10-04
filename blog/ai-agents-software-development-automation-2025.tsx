@@ -50,8 +50,8 @@ const AIAgentsSoftwareDevelopmentAutomation2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Key Outcomes</h3>
             <ul className="text-left">
               <li><strong>10x Faster Development:</strong> AI agents write production code 10x faster than human developers</li>
@@ -331,8 +331,8 @@ const AIAgentsSoftwareDevelopmentAutomation2025: React.FC = () =>
           </p>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Share this article:</h4>
               <div className="text-left"></div>

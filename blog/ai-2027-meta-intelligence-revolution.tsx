@@ -27,8 +27,8 @@ export default function AIMetaIntelligenceRevolution2027() {
 
         <div className="text-left"></div>
           <h2 className="text-left">🚀 Key Breakthroughs</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">10,000x</div>
               <div className="text-left">Cognitive Enhancement</div>
             </div>
@@ -66,8 +66,8 @@ export default function AIMetaIntelligenceRevolution2027() {
         <section className="text-left"></section>
           <h2 className="text-left">Revolutionary Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Enterprise Meta-Strategy</h3>
               <p className="text-left"></p>
                 Meta-Intelligence AI systems are revolutionizing enterprise strategy by analyzing not just data, 
@@ -158,8 +158,8 @@ export default function AIMetaIntelligenceRevolution2027() {
               A leading global manufacturer implemented Meta-Intelligence AI systems across their entire 
               operation, achieving unprecedented results:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$2.3B</div>
                 <div className="text-left">Annual Savings</div>
               </div>
@@ -206,8 +206,8 @@ export default function AIMetaIntelligenceRevolution2027() {
 
           <div className="text-left"></div>
             <h3 className="text-left">Implementation Roadmap</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Meta-Assessment</h4>
@@ -274,8 +274,8 @@ export default function AIMetaIntelligenceRevolution2027() {
           </div>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Link href="/blog" className="text-left">
               ← Back to All Articles
             </Link>

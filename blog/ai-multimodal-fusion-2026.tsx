@@ -73,8 +73,8 @@ export default function AIMultimodalFusion2026() {
                 <h2 className="text-left">
                   Breakthrough Performance Metrics
                 </h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">500%</div>
                     <p className="text-left">Accuracy improvement in complex decision-making tasks</p>
                   </div>
@@ -97,8 +97,8 @@ export default function AIMultimodalFusion2026() {
                   Multimodal AI fusion is transforming enterprise operations across industries:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">🏥<
                       <h3 className="text-left">Healthcare Diagnostics</h3>
@@ -114,8 +114,8 @@ export default function AIMultimodalFusion2026() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">🛡️<
                       <h3 className="text-left">Security & Surveillance</h3>
                     </div>
@@ -130,8 +130,8 @@ export default function AIMultimodalFusion2026() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">🛒<
                       <h3 className="text-left">Retail Customer Experience</h3>
                     </div>
@@ -146,8 +146,8 @@ export default function AIMultimodalFusion2026() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">🏭<
                       <h3 className="text-left">Smart Manufacturing</h3>
                     </div>
@@ -249,8 +249,8 @@ export default function AIMultimodalFusion2026() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Multimodal AI Team
                 </div>
                 <div className="text-left"></div>

@@ -55,8 +55,8 @@ export default function AdvancedAIObservabilityPlatform2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Platform Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">95%</div>
                     <div className="text-left">Earlier Issue Detection</div>
                   </div>
@@ -190,8 +190,8 @@ export default function AdvancedAIObservabilityPlatform2025() {
 
               <h2 className="text-left">Enterprise Implementation</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏢 Fortune 500 Deployment</h4>
                   <ul className="text-left">
                     <li>• 500+ models monitored 24/7</li>

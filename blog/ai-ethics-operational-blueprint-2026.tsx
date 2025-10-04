@@ -32,8 +32,8 @@ const AIEthicsOperationalBlueprint2026 = () =>
             <p className="text-left">Bias tests, fairness SLAs, red‑team drills, and audit‑ready trails that teams actually adopt.</p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <Shield className="text-left" />
                 <div></div>

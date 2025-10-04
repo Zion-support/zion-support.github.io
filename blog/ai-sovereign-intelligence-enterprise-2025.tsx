@@ -101,8 +101,8 @@ export default function SovereignAIEnterprise2025() {
                 <h2 className="text-left">Sovereign AI Architecture</h2>
                 
                 <h3 className="text-left">Core Infrastructure Components</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Model Hosting Layer</h4>
                     <ul className="text-left">
                       <li>• Container orchestration (Kubernetes)</li>
@@ -147,8 +147,8 @@ export default function SovereignAIEnterprise2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Deployment Patterns</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Pattern 1: On-Premises Deployment</h3>
                     <p className="text-left"></p>
                       Deploy LLMs and AI models on your own hardware for maximum control and lowest latency.
@@ -232,8 +232,8 @@ export default function SovereignAIEnterprise2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Success Stories</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Major European Bank</h3>
                     <p className="text-left">85% Cost Reduction, 100% Data Sovereignty</p>
                     <p className="text-left"></p>

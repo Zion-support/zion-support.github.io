@@ -109,8 +109,8 @@ const AI2025OctCustomerIntentPredictionBreakthrough = () =>
                 serving 200M+ monthly visitors and achieving transformative business results.
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$4.7B</div>
                   <div className="text-left">Additional Revenue</div>
                 </div>
@@ -132,8 +132,8 @@ const AI2025OctCustomerIntentPredictionBreakthrough = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Intent Prediction Use Cases</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Purchase Intent</h3>
                 <ul className="text-left">
                   <li>• Real-time buying signal detection</li>
@@ -177,8 +177,8 @@ const AI2025OctCustomerIntentPredictionBreakthrough = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Business Impact & Revenue Growth</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Revenue Acceleration</h3>
                   <ul className="text-left">
@@ -212,8 +212,8 @@ const AI2025OctCustomerIntentPredictionBreakthrough = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Data Foundation (Weeks 1-3)</h3>
                 <ul className="text-left">
                   <li>• Implement behavioral tracking infrastructure</li>
@@ -251,8 +251,8 @@ const AI2025OctCustomerIntentPredictionBreakthrough = () =>
               Next-generation intent prediction brings even more powerful features:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🔮 Multi-Session Intelligence</h3>
                 <p className="text-left"></p>
                   Tracking customer intent across devices, channels, and sessions to build comprehensive 

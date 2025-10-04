@@ -10,8 +10,8 @@ export default function AIEnterpriseCostOptimization2025() {
     <div className="text-left"></div>
       <main className="text-left">
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left"></span>
               OCTOBER 2025
             <
@@ -40,8 +40,8 @@ export default function AIEnterpriseCostOptimization2025() {
         </div>
 
         {/* Key Metrics */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">70%</div>
             <div className="text-left">Cost Reduction</div>
           </div>
@@ -78,8 +78,8 @@ export default function AIEnterpriseCostOptimization2025() {
           <section className="text-left"></section>
             <h2 className="text-left">The Seven Pillars of AI Cost Optimization</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">💰 1. Intelligent Resource Allocation</h3>
                 <p className="text-left"></p>
                   Modern AI workloads demand dynamic resource allocation that matches computational power to actual needs. 
@@ -254,8 +254,8 @@ export default function AIEnterpriseCostOptimization2025() {
           <section className="text-left"></section>
             <h2 className="text-left">90-Day Implementation Plan</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Days 1-30: Foundation</h4>
                 <ul className="text-left">
                   <li>• Establish baseline metrics and current cost analysis</li>
@@ -290,8 +290,8 @@ export default function AIEnterpriseCostOptimization2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Tools & Technologies</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Cost Monitoring</h4>
                 <ul className="text-left">
                   <li>• Datadog AI Cost Tracking</li>

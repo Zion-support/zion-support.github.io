@@ -97,8 +97,8 @@ export default function QuantumEdgeConvergenceBreakthrough() {
 
         <section className="text-left"></section>
           <h2 className="text-left">💼 Enterprise Applications</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏭 Manufacturing & Industrial IoT</h3>
               <p className="text-left"></p>
                 Real-time quality control with quantum-enhanced computer vision achieving 99.97% defect 
@@ -183,8 +183,8 @@ export default function QuantumEdgeConvergenceBreakthrough() {
 
         <section className="text-left"></section>
           <h2 className="text-left">🚀 Implementation Roadmap</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Assessment & Planning (Weeks 1-4)</h3>
               <p className="text-left"></p>
                 Infrastructure audit, use case identification, quantum readiness evaluation, and architecture design.
@@ -228,8 +228,8 @@ export default function QuantumEdgeConvergenceBreakthrough() {
 
         <section className="text-left"></section>
           <h2 className="text-left">🎯 Strategic Value Proposition</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <div className="text-left">⚡</div>
                 <h3 className="text-left">Unprecedented Performance</h3>

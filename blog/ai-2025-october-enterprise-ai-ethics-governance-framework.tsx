@@ -60,8 +60,8 @@ export default function EnterpriseAIEthicsGovernanceFramework() {
         <section className="text-left"></section>
           <h2 className="text-left">🏛️ Governance Framework Pillars</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📋 Ethics & Compliance</h3>
               <ul className="text-left">
                 <li className="text-left">
@@ -155,8 +155,8 @@ export default function EnterpriseAIEthicsGovernanceFramework() {
           <h2 className="text-left">🏆 Enterprise Implementation Success</h2>
           <div className="text-left"></div>
             <h3 className="text-left">Global Insurance Leader</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$890M</div>
                 <div className="text-left">Risk Mitigation Value</div>
               </div>
@@ -187,8 +187,8 @@ export default function EnterpriseAIEthicsGovernanceFramework() {
         <section className="text-left"></section>
           <h2 className="text-left">🎯 Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
               <ul className="text-left">
                 <li>• Establish AI ethics board and governance structure</li>
@@ -222,8 +222,8 @@ export default function EnterpriseAIEthicsGovernanceFramework() {
 
         <section className="text-left"></section>
           <h2 className="text-left">💡 Strategic Benefits</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚖️ Regulatory Excellence</h3>
               <ul className="text-left">
                 <li>• 99.4% compliance with global regulations</li>
@@ -264,8 +264,8 @@ export default function EnterpriseAIEthicsGovernanceFramework() {
 
         <section className="text-left"></section>
           <h2 className="text-left">🔍 Governance Technology Stack</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">Bias Detection</h3>
                 <ul className="text-left">

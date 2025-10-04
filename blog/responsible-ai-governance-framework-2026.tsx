@@ -16,8 +16,8 @@ const ResponsibleAIGovernanceFramework2026 = () =>
       
       <div className="text-left"></div>
         <article className="text-left"></a>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 AI Governance
               <
@@ -43,8 +43,8 @@ const ResponsibleAIGovernanceFramework2026 = () =>
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Shield className="text-left" />
               <div className="text-left">100%</div>
               <div className="text-left">Regulatory Compliance</div>
@@ -83,8 +83,8 @@ const ResponsibleAIGovernanceFramework2026 = () =>
 
             <h2 className="text-left">The Four Pillars of Responsible AI</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <Shield className="text-left" />
                   1. Fairness & Bias Mitigation
@@ -151,8 +151,8 @@ const ResponsibleAIGovernanceFramework2026 = () =>
 
             <h2 className="text-left">Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Foundation (Months 1-2)</h4>
                 <p className="text-left"></p>
                   Establish AI ethics board, define principles, create governance policies, train teams on responsible AI

@@ -98,8 +98,8 @@ export default function AIPoweredDevSecOpsAutomation2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Impact & ROI</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🚀 Development Velocity</h3>
                     <ul className="text-left">
                       <li>10x faster security reviews</li>
@@ -170,8 +170,8 @@ export default function AIPoweredDevSecOpsAutomation2025() {
                 <p className="text-left"></p>
                   Implementing AI-powered DevSecOps requires a strategic approach:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Assessment & Planning (2-4 weeks)</h3>
                     <p className="text-left"></p>
                       Map current security processes, identify automation opportunities, and establish baseline metrics 

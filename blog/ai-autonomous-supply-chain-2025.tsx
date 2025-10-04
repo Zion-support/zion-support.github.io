@@ -25,7 +25,7 @@ const AIAutonomousSupplyChain2025: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <p className="text-left"></p>
             <strong>Executive Summary:</strong> Autonomous supply chain AI represents the evolution from reactive logistics 
@@ -70,8 +70,8 @@ const AIAutonomousSupplyChain2025: React.FC = () =>
           of operations:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Demand Forecasting Agents</h4>
             <p className="text-left"></p>
               Predict demand across products, regions, and time horizons using ensemble ML models processing point-of-sale 
@@ -284,8 +284,8 @@ await supplyChain.activate();`}
 
         <h2 className="text-left">ROI Analysis & Business Impact</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Cost Savings</h4>
             <ul className="text-left">
               <li>• 78% logistics cost reduction</li>
@@ -316,8 +316,8 @@ await supplyChain.activate();`}
 
         <h2 className="text-left">Implementation Roadmap</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Phase 1: Data Foundation (Months 1-3)</h4>
             <p className="text-left"></p>
               Consolidate data from ERP, TMS, WMS, and external sources. Establish data quality standards and real-time 

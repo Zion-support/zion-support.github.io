@@ -106,8 +106,8 @@ const AI2025DecemberAdvancedAutonomousSystems = () =>
                 infrastructure, achieving remarkable results within 90 days.
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$2.8B</div>
                   <div className="text-left">Annual Cost Savings</div>
                 </div>
@@ -125,8 +125,8 @@ const AI2025DecemberAdvancedAutonomousSystems = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Foundation (Days 1-30)</h3>
                 <ul className="text-left">
                   <li>• Deploy intelligent monitoring infrastructure</li>
@@ -284,8 +284,8 @@ const AI2025DecemberAdvancedAutonomousSystems = () =>
         </div>
 
         <footer className="text-left">
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               Published: December 15, 2025 | Updated: December 15, 2025
             </div>
             <div className="text-left"></div>

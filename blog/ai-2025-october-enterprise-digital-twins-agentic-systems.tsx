@@ -50,8 +50,8 @@ const AIEnterpriseDigitalTwinsAgenticSystems2025 = () =>
           Modern digital twin systems require sophisticated multi-agent architectures where specialized AI agents collaborate to maintain real-time synchronization between physical and digital assets. Our proven architecture includes:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Data Ingestion Agents</h4>
             <p className="text-left"></p>
               Continuously collect and validate data from IoT sensors, SCADA systems, and enterprise databases with 99.9% reliability.
@@ -84,8 +84,8 @@ const AIEnterpriseDigitalTwinsAgenticSystems2025 = () =>
           <p className="text-left"></p>
             Global automotive manufacturer deployed agentic digital twins across 47 production facilities, achieving:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">89%</div>
               <div className="text-left">Downtime Reduction</div>
             </div>
@@ -108,8 +108,8 @@ const AIEnterpriseDigitalTwinsAgenticSystems2025 = () =>
           <p className="text-left"></p>
             Major utility provider manages 150+ power stations with autonomous digital twins:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">92%</div>
               <div className="text-left">Efficiency Gain</div>
             </div>
@@ -144,8 +144,8 @@ const AIEnterpriseDigitalTwinsAgenticSystems2025 = () =>
         </div>
 
         <h2 className="text-left">Best Practices & Lessons Learned</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Start with High-Value Use Cases</h4>
             <p className="text-left"></p>
               Focus initial deployments on critical assets with high failure costs and clear ROI potential. Manufacturing lines, power generation, and logistics hubs are ideal starting points.

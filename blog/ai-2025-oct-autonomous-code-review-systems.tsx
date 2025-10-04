@@ -55,8 +55,8 @@ export default function AutonomousCodeReviewSystems2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Quality Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">97%</div>
                     <div className="text-left">Bug Detection Rate</div>
                   </div>
@@ -298,8 +298,8 @@ export default function AutonomousCodeReviewSystems2025() {
               </div>
 
               <h2 className="text-left">ROI & Business Impact</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Velocity & Quality</h4>
                   <ul className="text-left">
                     <li>• 85% faster review cycles (4.2 days → 38 minutes)</li>

@@ -20,10 +20,10 @@ const Fortune500AI2026BreakthroughMegaSuccess = () =>
       <div className="text-left"></div>
         {/* Hero Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   💰 Fortune 500 Success Story
                 <
@@ -38,8 +38,8 @@ const Fortune500AI2026BreakthroughMegaSuccess = () =>
                 <span className="text-left"> breakthrough AI technologies< and autonomous operations
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">$2.3B Saved<
                 </div>
                 <div className="text-left"></div>
@@ -70,8 +70,8 @@ const Fortune500AI2026BreakthroughMegaSuccess = () =>
 
         {/* Case Study Details */}
         <section id="case-study-details" className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <h2 className="text-left">
                   The Challenge
@@ -113,8 +113,8 @@ const Fortune500AI2026BreakthroughMegaSuccess = () =>
               </div>
 
               {/* Solution Implementation */}
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Our Solution</h3>
                   <div className="text-left"></div>
                     {[

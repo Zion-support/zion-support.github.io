@@ -19,11 +19,11 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}</div>
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Header */}</div>
+        <div className="text-left">
+        <div className="text-left"></div>
             <Link href="/services" className="text-left">
               ← Back to Services
             </Link>
@@ -38,8 +38,8 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
           </div>
 
           {/* Success Metrics */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Security Performance</h2>"
               <div className="text-left"></div>
                 <div></div>
@@ -68,8 +68,8 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
               and zero-trust architecture to create an impenetrable defense against modern cyber threats.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Security Features</h3>"
                 <ul className="text-left">
                   <li className="text-left">
@@ -133,8 +133,8 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
           {/* Technology Stack */}
           <section className="text-left"></section>
             <h2 className="text-left">Advanced Security Technologies</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🛡️</div>"
                 <h3 className="text-left">AI Threat Intelligence</h3>"
                 <p className="text-left"></p>
@@ -168,8 +168,8 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
           {/* Threat Protection */}
           <section className="text-left"></section>
             <h2 className="text-left">Comprehensive Threat Protection</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🦠</div>"
                 <div></div>
                   <h3 className="text-left">Ransomware Defense</h3>"
@@ -218,8 +218,8 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
           {/* Success Story */}
           <section className="text-left"></section>
             <h2 className="text-left">Client Success Story</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Global Financial Institution Protected</h3>"
                   <p className="text-left"></p>
@@ -228,8 +228,8 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
                     three major ransomware attempts that could have cost us $200M+. This technology 
                     is absolutely game-changing."
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">MJ>
                     </div>
                     <div></div>
@@ -237,8 +237,8 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
                       <div className="text-left">CISO, GlobalBank Financial</div>"
                     </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Attacks Blocked<
                     <span className="text-left">50,000+>
                   </div>
@@ -322,6 +322,10 @@ const AICybersecurity2025Page = React.memo(function AICybersecurity2025Page() {
           </section>
     </div>
   );
+<<<<<<< HEAD
 });</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
 
 export default $1;
+=======
+}</div></div></div></div>)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-edcb

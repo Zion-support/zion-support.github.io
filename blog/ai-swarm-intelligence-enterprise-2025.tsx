@@ -6,7 +6,7 @@ const AISwarmIntelligenceEnterprise2025: React.FC = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -32,8 +32,8 @@ const AISwarmIntelligenceEnterprise2025: React.FC = () =>
             Discover how enterprise swarm intelligence systems coordinate 10,000+ AI agents in real-time, achieving 99.7% efficiency in distributed decision-making and reducing operational complexity by 92%.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Calendar className="text-left" />
               <span>September 30, 2025<
             </div>
@@ -50,7 +50,7 @@ const AISwarmIntelligenceEnterprise2025: React.FC = () =>
       </div>
 
       {/* Content Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <article className="text-left"></a>
             <h2 className="text-left">The Dawn of Swarm Intelligence in Enterprise</h2>
@@ -101,8 +101,8 @@ const AISwarmIntelligenceEnterprise2025: React.FC = () =>
 
             <h2 className="text-left">Real-World Enterprise Applications</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🏭 Manufacturing Optimization</h4>
                 <p className="text-left">10,000+ agents optimize production lines in real-time, reducing downtime by 87% and increasing throughput by 156%.</p>
               </div>

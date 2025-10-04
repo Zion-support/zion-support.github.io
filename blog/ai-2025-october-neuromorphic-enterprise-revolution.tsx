@@ -26,8 +26,8 @@ export default function NeuromorphicEnterpriseRevolution2025() {
       <main className="text-left">
         <article className="text-left"></a>
           {/* Hero Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Brain className="text-left" />
               NEUROMORPHIC AI · OCTOBER 2025
             </div>
@@ -42,8 +42,8 @@ export default function NeuromorphicEnterpriseRevolution2025() {
             </p>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">100x</div>
                 <div className="text-left">Energy Efficiency</div>
               </div>
@@ -63,8 +63,8 @@ export default function NeuromorphicEnterpriseRevolution2025() {
           </div>
 
           {/* Main Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Executive Summary</h2>
               <p className="text-left"></p>
                 Traditional AI architectures face fundamental limits in energy efficiency and real-time processing. 
@@ -90,8 +90,8 @@ export default function NeuromorphicEnterpriseRevolution2025() {
                   20 watts—1 million times more efficient than GPUs. Neuromorphic chips replicate this efficiency through 
                   asynchronous, event-driven computation.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Traditional AI (GPU/TPU)</div>
                     <ul className="text-left">
                       <li>• 300W per inference chip</li>
@@ -115,8 +115,8 @@ export default function NeuromorphicEnterpriseRevolution2025() {
 
             <h2 className="text-left">Core Neuromorphic Technologies</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <Brain className="text-left" />
                   Spiking Neural Networks (SNNs)
@@ -196,15 +196,15 @@ export default function NeuromorphicEnterpriseRevolution2025() {
 
             <h2 className="text-left">Enterprise Use Cases</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🚗 Autonomous Vehicles</h3>
                 <p className="text-left"></p>
                   BMW deploys Intel Loihi chips for real-time obstacle detection and path planning with 95% lower 
                   power consumption than GPU-based systems.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <div className="text-left">0.5ms</div>
                       <div className="text-left">Reaction Time</div>
@@ -223,8 +223,8 @@ export default function NeuromorphicEnterpriseRevolution2025() {
                   Siemens uses neuromorphic vision sensors for defect detection on production lines, achieving 
                   99.9% accuracy at 1000 FPS with minimal latency.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <div className="text-left">99.9%</div>
                       <div className="text-left">Defect Detection</div>
@@ -243,8 +243,8 @@ export default function NeuromorphicEnterpriseRevolution2025() {
                   NASA's Mars rovers use neuromorphic processors for autonomous navigation in extreme environments 
                   with limited power budgets.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <div className="text-left">5W</div>
                       <div className="text-left">Power Budget</div>
@@ -263,8 +263,8 @@ export default function NeuromorphicEnterpriseRevolution2025() {
                   BrainChip Akida powers implantable brain-computer interfaces for epilepsy detection and 
                   prosthetic control with ultra-low power consumption.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <div className="text-left">100μW</div>
                       <div className="text-left">Power Draw</div>
@@ -336,8 +336,8 @@ gestures = edge_ai.process_event_stream(dvs_camera.stream())
 
             <h2 className="text-left">Migration Roadmap</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Pilot Projects (2-3 months)</h3>
                 <ul className="text-left">
                   <li>• Identify edge AI workloads with strict latency/power constraints</li>

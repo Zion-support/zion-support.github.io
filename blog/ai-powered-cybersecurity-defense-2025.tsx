@@ -96,8 +96,8 @@ const AIPoweredCybersecurityDefense2025: React.FC = () =>
 
         <h2 className="text-left">Enterprise Success Stories</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Global Bank: $180M in Prevented Fraud</h4>
             <p className="text-left"></p>
               Major financial institution deployed AI-powered cybersecurity across 12,000 endpoints and 500+ applications. 
@@ -127,8 +127,8 @@ const AIPoweredCybersecurityDefense2025: React.FC = () =>
 
         <h2 className="text-left">Advanced AI Security Capabilities</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🔍 Deep Packet Inspection at Scale</h4>
             <p className="text-left"></p>
               AI analyzes network traffic at wire speed, identifying malicious payloads, data exfiltration attempts, 

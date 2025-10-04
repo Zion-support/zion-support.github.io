@@ -36,8 +36,8 @@ export default function AI2025OctoberUnifiedIntelligencePlatform() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">85%</div>
               <div className="text-left">Faster Development</div>
             </div>
@@ -73,8 +73,8 @@ export default function AI2025OctoberUnifiedIntelligencePlatform() {
 
           <h2 className="text-left">Implementation Strategy</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation</h3>
               <ul className="text-left">
                 <li>✓ Deploy core platform infrastructure</li>
@@ -158,8 +158,8 @@ export default function AI2025OctoberUnifiedIntelligencePlatform() {
 
           <h2 className="text-left">Enterprise Adoption Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Week 1-2: Assessment & Planning</h3>
               <p className="text-left"></p>
                 Conduct comprehensive audit of existing AI capabilities, identify integration points, 
@@ -194,8 +194,8 @@ export default function AI2025OctoberUnifiedIntelligencePlatform() {
 
           <h2 className="text-left">Real-World Success Stories</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Financial Services</h3>
               <p className="text-left"></p>
                 Global bank unified 47 AI models across risk, fraud, and customer service

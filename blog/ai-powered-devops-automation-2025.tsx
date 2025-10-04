@@ -99,8 +99,8 @@ export default function AIPoweredDevOpsAutomation2025() {
                     A leading e-commerce platform processing 50M transactions daily implemented our 
                     AI-powered incident management system:
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">99.99%</div>
                       <div className="text-left">Uptime achieved</div>
                     </div>
@@ -206,8 +206,8 @@ export default function AIPoweredDevOpsAutomation2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group DevOps Innovation Team
                 </div>
                 <div className="text-left"></div>

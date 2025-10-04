@@ -6,7 +6,7 @@ export default function AutonomousEnterprise2027Banner() {
     <div className="text-left">
       {/* Background Pattern */}
       <div className="text-left">
-        <div className="text-left"></div>
+        <div className="text-left">
         <div className="text-left"></div>
       </div>
 
@@ -111,8 +111,8 @@ export default function AutonomousEnterprise2027Banner() {
       </div>
 
       {/* Floating Elements */}
-      <div className="text-left"></div>
-      <div className="text-left"></div>
+      <div className="text-left">
+        <div className="text-left"></div>
     </div>
   );
 }

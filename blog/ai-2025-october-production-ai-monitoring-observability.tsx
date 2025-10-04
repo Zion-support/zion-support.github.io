@@ -36,8 +36,8 @@ export default function AI2025OctoberProductionAIMonitoring() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.95%</div>
               <div className="text-left">AI Uptime SLA</div>
             </div>
@@ -364,8 +364,8 @@ export class DriftMonitor
           <h2 className="text-left">Intelligent Alerting Strategy</h2>
           <div className="text-left"></div>
             <h3 className="text-left">🚨 Alert Configuration</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Critical Alerts (P0)</h4>
                 <ul className="text-left">
                   <li>• API error rate &gt; 5% for 2 minutes</li>
@@ -410,8 +410,8 @@ export class DriftMonitor
           </div>
 
           <h2 className="text-left">Observability Dashboard</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Real-Time Metrics</h3>
               <div className="text-left"></div>
                 <div></div>
@@ -481,8 +481,8 @@ export class DriftMonitor
           </div>
 
           <h2 className="text-left">Recommended Tools & Platforms</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">LangSmith / LangFuse</h4>
               <p className="text-left"></p>
                 Purpose-built LLM observability with prompt versioning, trace analysis, and evaluation frameworks.

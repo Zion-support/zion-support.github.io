@@ -43,8 +43,8 @@ export default function AI2026FebruaryAdvancedAutonomousSystems() {
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🚀 Executive Summary</h3>
             <p className="text-left"></p>
               February 2026 marks a revolutionary milestone in autonomous AI systems. We've achieved 99.9% self-governing operations 
@@ -63,8 +63,8 @@ export default function AI2026FebruaryAdvancedAutonomousSystems() {
 
           <h3 className="text-left">Key Breakthrough Features</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Meta-Cognitive Framework</h4>
               <p className="text-left"></p>
                 Advanced self-awareness capabilities enabling AI systems to monitor, analyze, and optimize their own performance 
@@ -164,8 +164,8 @@ export default function AI2026FebruaryAdvancedAutonomousSystems() {
             Our proven methodology ensures successful deployment while maintaining operational stability.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">Phase 1</div>
               <h4 className="text-left">Foundation & Assessment</h4>
               <p className="text-left"></p>

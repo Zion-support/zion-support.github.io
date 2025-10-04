@@ -181,8 +181,8 @@ const AIModelCompressionQuantizationEdge2025 = () =>
                 Real-World Impact
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Retail Video Analytics</h3>
                   <p className="text-left">Compressed object detection models process 30 FPS at 1080p on edge cameras.</p>
                   <ul className="text-left">
@@ -234,8 +234,8 @@ const AIModelCompressionQuantizationEdge2025 = () =>
                 Getting Started: 90-Day Implementation Roadmap
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Days 1-30: Baseline & PTQ</h3>
                   <ul className="text-left">
                     <li>• Profile existing model performance (latency, memory, accuracy)</li>

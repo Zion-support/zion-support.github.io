@@ -107,8 +107,8 @@ onToken((token) =>
         <section className="text-left"></section>
           <h2 className="text-left">Performance Optimization</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Warm Pools</h4>
               <p className="text-left">Keep model instances warm to eliminate cold start latency:</p>
               <p className="text-left"></p>
@@ -204,8 +204,8 @@ onToken((token) =>
 
         <section className="text-left"></section>
           <h2 className="text-left">Measured Outcomes</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">2.5x</div>
               <div className="text-left">Perceived Performance</div>
             </div>

@@ -10,8 +10,8 @@ export default function AIMultiAgentCollaboration2025() {
     <div className="text-left"></div>
       <main className="text-left">
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left"></span>
               OCTOBER 2025
             <
@@ -40,8 +40,8 @@ export default function AIMultiAgentCollaboration2025() {
         </div>
 
         {/* Key Metrics */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">10x</div>
             <div className="text-left">Productivity Increase</div>
           </div>
@@ -78,8 +78,8 @@ export default function AIMultiAgentCollaboration2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Core Components of Multi-Agent Systems</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🎯 Agent Orchestration Layer</h3>
                 <p className="text-left"></p>
                   The orchestration layer coordinates agent interactions, manages task distribution, and ensures 
@@ -127,8 +127,8 @@ export default function AIMultiAgentCollaboration2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Use Cases</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏭 Manufacturing Optimization</h3>
                 <p className="text-left"></p>
                   Multiple agents monitor production lines, predict maintenance needs, optimize supply chains, 
@@ -169,8 +169,8 @@ export default function AIMultiAgentCollaboration2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Assessment & Planning (Weeks 1-4)</h4>
                 <p className="text-left"></p>
                   Identify high-value use cases, assess current infrastructure, and design agent architecture. 

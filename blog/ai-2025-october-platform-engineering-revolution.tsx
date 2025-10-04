@@ -35,8 +35,8 @@ export default function AI2025OctoberPlatformEngineeringRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">10x</div>
               <div className="text-left">Faster Deployments</div>
             </div>
@@ -99,8 +99,8 @@ export default function AI2025OctoberPlatformEngineeringRevolution() {
 
           <h2 className="text-left">Building Your IDP</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏗️ Platform Architecture</h3>
               <p className="text-left"></p>
                 Modern IDPs leverage cloud-native technologies with Kubernetes, service mesh, and 
@@ -163,11 +163,11 @@ export default function AI2025OctoberPlatformEngineeringRevolution() {
 
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🛠️ Platform Core</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Backstage</div>
                   <div className="text-left">Developer Portal</div>
                 </div>
@@ -188,8 +188,8 @@ export default function AI2025OctoberPlatformEngineeringRevolution() {
 
             <div className="text-left"></div>
               <h3 className="text-left">🤖 AI Layer</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">GitHub Copilot</div>
                   <div className="text-left">Code Assistant</div>
                 </div>
@@ -214,8 +214,8 @@ export default function AI2025OctoberPlatformEngineeringRevolution() {
           <div className="text-left"></div>
             <h3 className="text-left">🗓️ 90-Day Platform Launch</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Weeks 1-4: Foundation</h4>

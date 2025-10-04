@@ -67,8 +67,8 @@ export default function ExplainableAITransparencyRevolution2025() {
                   interpretability. The solution: Explainable AI (XAI) techniques that provide human-understandable insights 
                   into model decisions without sacrificing performance.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.2%</div>
                     <div className="text-left">Decision Transparency</div>
                   </div>
@@ -86,8 +86,8 @@ export default function ExplainableAITransparencyRevolution2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core XAI Techniques & Methods</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Model-Agnostic Explanations</h3>
                     <ul className="text-left">
                       <li className="text-left">
@@ -157,8 +157,8 @@ export default function ExplainableAITransparencyRevolution2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Implementation Success Stories</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global Bank (Lending Decisions)</h3>
                     <p className="text-left"></p>
                       <strong>Challenge:</strong> Regulatory scrutiny of credit scoring model, 0% explanation capability, legal risk
@@ -205,8 +205,8 @@ export default function ExplainableAITransparencyRevolution2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">XAI Implementation Framework</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Assessment & Strategy (Weeks 1-4)</h3>
                     <ul className="text-left">
                       <li>• Audit existing AI systems for explainability gaps</li>
@@ -242,8 +242,8 @@ export default function ExplainableAITransparencyRevolution2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Best Practices for Enterprise XAI</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">👥<
                       <div></div>
@@ -266,8 +266,8 @@ export default function ExplainableAITransparencyRevolution2025() {
                       </div>
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">🔍<
                       <div></div>
                         <h4 className="text-left">Global & Local</h4>
@@ -297,8 +297,8 @@ export default function ExplainableAITransparencyRevolution2025() {
                 <p className="text-left"></p>
                   Our XAI solutions ensure compliance with global AI regulations:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">EU AI Act</h4>
                     <ul className="text-left">
                       <li>✓ Transparency obligations for high-risk AI</li>
@@ -325,8 +325,8 @@ export default function ExplainableAITransparencyRevolution2025() {
                   Zion Tech Group's Explainable AI practice helps enterprises transform black box models into transparent, 
                   trustworthy systems. Our comprehensive approach delivers:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <div className="text-left">98.8%</div>
                       <div className="text-left">Avg Transparency</div>

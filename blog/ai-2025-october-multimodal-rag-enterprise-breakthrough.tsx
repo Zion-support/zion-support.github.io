@@ -113,8 +113,8 @@ export default function AI2025OctoberMultimodalRAGBreakthrough() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Use Cases</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Healthcare Intelligence</h3>
                 <p className="text-left"></p>
                   Retrieve relevant medical images, research papers, and patient records simultaneously to support
@@ -175,8 +175,8 @@ export default function AI2025OctoberMultimodalRAGBreakthrough() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Strategy</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                 <p className="text-left"></p>
                   Deploy core infrastructure, integrate existing data sources, and establish embedding pipelines for

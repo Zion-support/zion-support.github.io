@@ -190,8 +190,8 @@ const DigitalTwinsEnterpriseOperationsArticle = () =>
 
         <section></section>
           <h2>🛠️ Technology Stack</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h4 className="text-left">IoT & Edge Computing</h4>
                 <ul className="text-left">
@@ -238,8 +238,8 @@ const DigitalTwinsEnterpriseOperationsArticle = () =>
 
         <section></section>
           <h2>📈 Measurable Business Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$4.8B</div>
               <div className="text-left">Total value created across operations</div>
             </div>
@@ -268,8 +268,8 @@ const DigitalTwinsEnterpriseOperationsArticle = () =>
 
         <section></section>
           <h2>🎓 Key Lessons & Best Practices</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Start with High-Value Assets</h4>
               <p className="text-left">Focus initial efforts on assets with highest downtime costs and failure rates</p>
             </div>

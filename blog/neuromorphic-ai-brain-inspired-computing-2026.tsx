@@ -19,8 +19,8 @@ export default function NeuromorphicAIBrainInspiredComputing2026() {
 
       <article className="text-left"></a>
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Brain className="text-left" />
             <span className="text-left">NEUROMORPHIC BREAKTHROUGH<
           </div>
@@ -34,8 +34,8 @@ export default function NeuromorphicAIBrainInspiredComputing2026() {
             1000x less energy while enabling real-time learning and adaptation impossible with traditional architectures.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Clock className="text-left" />
               <span>27 min read<
             </div>
@@ -52,8 +52,8 @@ export default function NeuromorphicAIBrainInspiredComputing2026() {
         </div>
 
         {/* Key Metrics Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">1000x</div>
             <div className="text-left">Energy Efficiency</div>
           </div>
@@ -180,8 +180,8 @@ export default function NeuromorphicAIBrainInspiredComputing2026() {
             Leading Neuromorphic Systems in 2026
           </h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Intel Loihi 3</h4>
               <p className="text-left"></p>
                 Intel's third-generation neuromorphic chip packs 2 billion transistors implementing 2 million neurons with 

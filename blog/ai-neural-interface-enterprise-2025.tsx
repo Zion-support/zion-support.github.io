@@ -25,7 +25,7 @@ const AINetworkInterfaceEnterprise2025: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <p className="text-left"></p>
             <strong>Executive Summary:</strong> Neural interface technology is revolutionizing enterprise AI interaction. 
@@ -189,8 +189,8 @@ enterpriseNeuralSystem.on('cognitiveIntent', async (intent) =>
           Enterprise neural interface deployments typically achieve ROI within 8-12 months:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Productivity Gains</h4>
             <ul className="text-left">
               <li>• 65% faster task completion</li>

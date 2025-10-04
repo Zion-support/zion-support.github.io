@@ -9,7 +9,7 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
     <div>
       <div></div>
     <article className="text-left"></a>
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Calendar className="text-left" />
           <span className="text-left">January 20, 2025<
@@ -30,7 +30,7 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">
             <Atom className="text-left" />
@@ -52,10 +52,10 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
           and interference—to process information in ways that classical computers simply cannot match.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Zap className="text-left" />
               </div>
               <h3 className="text-left">Exponential Speedup</h3>
@@ -66,8 +66,8 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <Cpu className="text-left" />
               </div>
@@ -79,8 +79,8 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <Target className="text-left" />
               </div>
@@ -154,8 +154,8 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
 
         <h2 className="text-left">The Technology Behind the Breakthrough</h2>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Quantum Machine Learning</h3>
             <p className="text-left"></p>
               Quantum machine learning algorithms leverage quantum properties to process data 
@@ -214,8 +214,8 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
           transformative era. In the coming years, we can expect to see:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Near-term (2025-2027)</h3>
             <ul className="text-left">
               <li>Quantum advantage in specific optimization problems</li>
@@ -253,7 +253,7 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <span className="text-left">#QuantumComputing<
           <span className="text-left">#QuantumAI<

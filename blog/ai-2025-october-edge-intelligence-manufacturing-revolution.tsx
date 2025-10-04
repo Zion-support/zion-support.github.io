@@ -35,8 +35,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">0.3ms</div>
               <div className="text-left">Response Time</div>
             </div>
@@ -146,8 +146,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
               transforming their manufacturing operations:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$847M</div>
                 <div className="text-left">Annual Cost Savings</div>
                 <div className="text-left"></div>
@@ -188,8 +188,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
           
           <div className="text-left"></div>
             {/* Phase 1 */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">Phase 1</div>
                 <h3 className="text-left">Assessment & Planning (Weeks 1-4)</h3>
               </div>
@@ -202,8 +202,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
             </div>
 
             {/* Phase 2 */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">Phase 2</div>
                 <h3 className="text-left">Pilot Deployment (Weeks 5-12)</h3>
               </div>
@@ -216,8 +216,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
             </div>
 
             {/* Phase 3 */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">Phase 3</div>
                 <h3 className="text-left">Full-Scale Rollout (Weeks 13-24)</h3>
               </div>
@@ -235,8 +235,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
         <section className="text-left"></section>
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Edge Hardware</h3>
               <ul className="text-left">
                 <li>• NVIDIA Jetson AGX Orin</li>
@@ -275,8 +275,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
           <div className="text-left"></div>
             <div></div>
               <h3 className="text-left">Cost Savings</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Defect Reduction<
                   <span className="text-left">$2.1M/year<
                 </div>
@@ -301,8 +301,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
 
             <div></div>
               <h3 className="text-left">Implementation Investment</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Edge Hardware<
                   <span className="text-left">$890K<
                 </div>
@@ -318,8 +318,8 @@ export default function AI2025OctoberEdgeIntelligenceManufacturingRevolution() {
                   <span className="text-left">Training & Support<
                   <span className="text-left">$240K<
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Total Investment<
                     <span className="text-left">$2.2M<
                   </div>

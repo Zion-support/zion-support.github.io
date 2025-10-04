@@ -62,8 +62,8 @@ export default function LLMFineTuningEnterprise2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Key Benefits of Fine-Tuned LLMs</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🎯 Domain Expertise</h3>
                     <p className="text-left"></p>
                       Models understand your industry jargon, internal processes, and business context. No more 
@@ -96,8 +96,8 @@ export default function LLMFineTuningEnterprise2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Fine-Tuning Use Cases</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Customer Service & Support</h3>
                     <p className="text-left"></p>
                       Fine-tune models on your support tickets, product documentation, and customer interactions to 
@@ -148,8 +148,8 @@ export default function LLMFineTuningEnterprise2025() {
                 <p className="text-left"></p>
                   Different scenarios call for different fine-tuning approaches. Here are the most effective methods:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Full Fine-Tuning</h4>
                     <p className="text-left"></p>
                       Update all model parameters on your dataset. Best for maximum customization when you have 
@@ -284,8 +284,8 @@ export default function LLMFineTuningEnterprise2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Systems
                 </div>
                 <div className="text-left"></div>

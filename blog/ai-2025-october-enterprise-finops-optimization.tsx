@@ -35,8 +35,8 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">54%</div>
               <div className="text-left">Average Cost Reduction</div>
             </div>
@@ -99,8 +99,8 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
 
           <h2 className="text-left">AI-Powered Optimization Strategies</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🤖 Intelligent Right-Sizing</h3>
               <ul className="text-left">
                 <li>
@@ -139,16 +139,16 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
 
           <h2 className="text-left">High-Impact Optimization Tactics</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">💸 Commitment-Based Discounts</h3>
               <p className="text-left"></p>
                 Leverage reserved instances, savings plans, and committed use discounts to reduce costs by 40-70% 
                 for predictable workloads. AI models analyze usage patterns to recommend optimal commitment levels 
                 and durations, balancing savings with flexibility.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">63%</div>
                   <div className="text-left">Average Savings</div>
                 </div>
@@ -170,8 +170,8 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
                 bidding strategies, automatic fallback to on-demand, and workload orchestration to maximize savings 
                 while maintaining reliability.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">78%</div>
                   <div className="text-left">Cost Reduction</div>
                 </div>
@@ -193,8 +193,8 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
                 ML models predict traffic patterns and pre-scale infrastructure, reducing both over-provisioning 
                 and performance degradation.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">42%</div>
                   <div className="text-left">Infrastructure Reduction</div>
                 </div>
@@ -216,8 +216,8 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
                 AI analyzes access patterns to automatically move data to cost-effective tiers (Hot → Cool → Archive) 
                 while maintaining required performance SLAs.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">68%</div>
                   <div className="text-left">Storage Cost Savings</div>
                 </div>
@@ -261,8 +261,8 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
 
           <h2 className="text-left">Organizational Best Practices</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">1. Build a FinOps Culture</h3>
                 <p className="text-left"></p>
@@ -303,8 +303,8 @@ export default function AI2025OctoberEnterpriseFinOpsOptimization() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">Month 1-2</div>
               <h4 className="text-left">Foundation</h4>
               <ul className="text-left">

@@ -114,8 +114,8 @@ const EdgeNativeQuantumIntelligenceArticle = () =>
           <h2>🏗️ Edge-Native Quantum Intelligence Architecture</h2>
           <h3 className="text-left">Core Architecture Components</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">1. Quantum Edge Processors</h4>
               <ul className="text-left">
                 <li>Compact quantum processing units optimized for edge deployment</li>
@@ -170,8 +170,8 @@ const EdgeNativeQuantumIntelligenceArticle = () =>
         <section></section>
           <h2>🎯 Industry Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Autonomous Vehicles</h3>
               <ul className="text-left">
                 <li>✓ Real-time path planning and obstacle avoidance</li>

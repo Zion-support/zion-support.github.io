@@ -55,8 +55,8 @@ export default function MultiModalAIEnterpriseKnowledgeManagement2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">💎 Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Faster Knowledge Retrieval</div>
                   </div>
@@ -149,8 +149,8 @@ export default function MultiModalAIEnterpriseKnowledgeManagement2025() {
                   </ul>
                   
                   <p className="text-left">Multi-Modal AI Knowledge Platform Deployment:</p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <h4 className="text-left">System Capabilities</h4>
                       <ul className="text-left">
                         <li>• Natural language search across all modalities</li>
@@ -179,8 +179,8 @@ export default function MultiModalAIEnterpriseKnowledgeManagement2025() {
 
               <h2 className="text-left">Architecture & Implementation</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Layer 1: Multi-Modal Data Ingestion</h3>
                   <p className="text-left"></p>
                     Connect to all enterprise knowledge sources with intelligent extraction:
@@ -239,8 +239,8 @@ export default function MultiModalAIEnterpriseKnowledgeManagement2025() {
 
               <h2 className="text-left">Key Use Cases Across Industries</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Financial Services</h4>
                   <ul className="text-left">
                     <li>• Compliance knowledge for regulatory queries</li>
@@ -314,8 +314,8 @@ export default function MultiModalAIEnterpriseKnowledgeManagement2025() {
               </div>
 
               <h2 className="text-left">Technology Stack Recommendations</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div></div>
                     <h4 className="text-left">Multi-Modal AI Models:</h4>
                     <ul className="text-left">
@@ -361,8 +361,8 @@ export default function MultiModalAIEnterpriseKnowledgeManagement2025() {
               </ul>
 
               <h2 className="text-left">Measuring Success: KPIs</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Efficiency Metrics</h4>
                   <ul className="text-left">
                     <li>• Time to find information</li>

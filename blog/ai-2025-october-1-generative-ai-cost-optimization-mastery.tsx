@@ -55,8 +55,8 @@ export default function GenerativeAICostOptimization2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">💰 Cost Reduction Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Cost Reduction</div>
                   </div>
@@ -155,8 +155,8 @@ export default function GenerativeAICostOptimization2025() {
                 <p className="text-left"></p>
                   Not every task needs GPT-4. Route intelligently based on complexity:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Simple Tasks (60-70% of requests)</h4>
                     <p className="text-left">Classification, extraction, formatting, simple Q&A</p>
                     <p className="text-left">Use: GPT-3.5, Claude Instant, or fine-tuned models (10x cheaper)</p>
@@ -350,8 +350,8 @@ export default function GenerativeAICostOptimization2025() {
                 <p className="text-left"></p>
                   Track these KPIs to maintain cost efficiency:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Cost Metrics</h4>
                     <ul className="text-left">
                       <li>• Cost per request (by model)</li>

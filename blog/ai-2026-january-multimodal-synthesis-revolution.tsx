@@ -108,8 +108,8 @@ const AI2026JanuaryMultimodalSynthesisRevolution = () =>
               operations, and innovation initiatives.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Customer Experience</h4>
                 <p className="text-left"></p>
                   Unified understanding of customer interactions across all touchpoints and communication channels.
@@ -170,8 +170,8 @@ const AI2026JanuaryMultimodalSynthesisRevolution = () =>
               cross-modal understanding and reasoning capabilities.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🔗 Cross-Modal Attention Mechanism</h4>
                 <p className="text-left"></p>
                   Advanced attention mechanisms that dynamically learn relationships between different data modalities,
@@ -211,8 +211,8 @@ const AI2026JanuaryMultimodalSynthesisRevolution = () =>
               Our proven deployment methodology ensures successful multimodal AI integration with measurable business impact.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Data Integration (Weeks 1-6)</h4>
                 <p className="text-left"></p>
                   Integrate existing data sources, establish multimodal data pipelines, and implement preprocessing workflows.
@@ -250,8 +250,8 @@ const AI2026JanuaryMultimodalSynthesisRevolution = () =>
             
             <div className="text-left"></div>
               <h3 className="text-left">Success Metrics</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">92%</div>
                   <div className="text-left">Customer Satisfaction Increase</div>
                 </div>

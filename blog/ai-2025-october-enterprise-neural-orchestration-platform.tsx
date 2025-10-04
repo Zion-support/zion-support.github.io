@@ -38,14 +38,14 @@ export default function EnterpriseNeuralOrchestrationPlatform2025() {
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               <Zap className="text-left" />
               Executive Summary: $12.4M Annual Value
             </h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">89%</div>
                 <div className="text-left">Faster AI Deployment</div>
               </div>
@@ -117,8 +117,8 @@ export default function EnterpriseNeuralOrchestrationPlatform2025() {
             </p>
             <div className="text-left"></div>
               <h3 className="text-left">Key Components</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Neural Control Plane</h4>
                   <p className="text-left"></p>
                     Central intelligence hub that monitors, analyzes, and orchestrates all AI workloads 
@@ -159,8 +159,8 @@ export default function EnterpriseNeuralOrchestrationPlatform2025() {
               Security and compliance are built into every layer of our platform. We provide comprehensive 
               controls, audit trails, and compliance frameworks to meet the most stringent enterprise requirements.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Security Features</h4>
                 <ul className="text-left">
                   <li>• Zero-trust architecture</li>
@@ -188,11 +188,11 @@ export default function EnterpriseNeuralOrchestrationPlatform2025() {
               <TrendingUp className="text-left" />
               Real-World Impact: Case Studies
             </h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Global Financial Institution</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$8.2M</div>
                     <div className="text-left">Annual Savings</div>
                   </div>
@@ -213,8 +213,8 @@ export default function EnterpriseNeuralOrchestrationPlatform2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Healthcare Technology Leader</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$4.7M</div>
                     <div className="text-left">Annual Savings</div>
                   </div>

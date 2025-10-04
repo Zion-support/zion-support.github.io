@@ -53,8 +53,8 @@ export default function AIAgenticSwarmIntelligence2025() {
               500% productivity gains through emergent behaviors and collective intelligence. Complete guide to production deployment.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>December 1, 2025<
               </div>
@@ -70,8 +70,8 @@ export default function AIAgenticSwarmIntelligence2025() {
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">🤖 Breakthrough Achievements</h2>
               <ul className="text-left">
                 <li>✅ <strong>500% Productivity Gains</strong> — Self-coordinating agent networks</li>
@@ -269,8 +269,8 @@ export default function AIAgenticSwarmIntelligence2025() {
           </div>
 
           {/* Social Share */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">Share this article:<
               <button className="text-left">
                 <Share2 className="text-left" />

@@ -103,8 +103,8 @@ export default function AISovereignAgentsEnterprise2025() {
             <section className="text-left"></section>
               <h2 className="text-left">💡 Enterprise Use Cases</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Financial Operations</h3>
                   <p className="text-left"></p>
                     Autonomous treasury management, dynamic pricing optimization, and real-time risk assessment
@@ -182,8 +182,8 @@ export default function AISovereignAgentsEnterprise2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">📊 Implementation Roadmap</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
                   <p className="text-left">Establish governance framework, identify use cases, deploy pilot agents, and build integration infrastructure</p>
                 </div>
@@ -216,8 +216,8 @@ export default function AISovereignAgentsEnterprise2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">💼 Enterprise Benefits</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$45M+</div>
                   <div className="text-left">Annual operational cost savings through autonomous decision-making</div>
                 </div>

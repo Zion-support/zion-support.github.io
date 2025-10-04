@@ -51,8 +51,8 @@ const AIZeroTrustSecurityArchitecture2026 = () =>
               Deploy AI-powered Zero Trust achieving 99.97% breach prevention, sub-100ms authentication, and continuous verification. Master identity-centric security, micro-segmentation, and autonomous threat response.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -67,8 +67,8 @@ const AIZeroTrustSecurityArchitecture2026 = () =>
             </div>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">
                 <Shield className="text-left" />
                 The Zero Trust Imperative
@@ -120,8 +120,8 @@ const AIZeroTrustSecurityArchitecture2026 = () =>
             <p className="text-left"></p>
               AI analyzes 100+ contextual signals for every access decision:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h5 className="text-left">Identity Signals:</h5>
                   <ul className="text-left">
@@ -176,8 +176,8 @@ const AIZeroTrustSecurityArchitecture2026 = () =>
 
             <h2 className="text-left">AI-Powered Zero Trust Stack</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">
                   <Lock className="text-left" />
                   Identity & Access Management (IAM)
@@ -232,8 +232,8 @@ const AIZeroTrustSecurityArchitecture2026 = () =>
 
             <h2 className="text-left">Enterprise Success Stories</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Global Financial Services</h4>
                 <p className="text-left">Major bank deployed AI-enhanced Zero Trust:</p>
                 <ul className="text-left">
@@ -284,8 +284,8 @@ const AIZeroTrustSecurityArchitecture2026 = () =>
 
             <div className="text-left"></div>
               <h3 className="text-left">12-Month Transformation Plan</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Q1: Foundation & Assessment</h4>
                   <ul className="text-left">
                     <li>• Map data flows, users, devices, and applications</li>

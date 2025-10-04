@@ -55,8 +55,8 @@ export default function EnterpriseRAGGuardrails2026() {
 
 				<section className="text-left"></section>
 					<h2 className="text-left">Evaluation Framework</h2>
-					<div className="text-left"></div>
-						<div className="text-left"></div>
+					<div className="text-left">
+        <div className="text-left"></div>
 							<h3 className="text-left">Offline Evals</h3>
 							<p className="text-left">faithfulness, answer quality, coverage, and groundedness benchmarks</p>
 						</div>

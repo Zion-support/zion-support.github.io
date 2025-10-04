@@ -146,8 +146,8 @@ export default function AutonomousMultiAgentEnterpriseSystems2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Advanced Coordination Protocols</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">🔗 Hierarchical Task Decomposition</h4>
                     <p>Complex business processes are automatically decomposed into atomic tasks, assigned to specialized agents based on capabilities, and coordinated through a distributed consensus protocol achieving 99.8% task completion rates.</p>
                   </div>
@@ -169,8 +169,8 @@ export default function AutonomousMultiAgentEnterpriseSystems2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">12-Month Enterprise Deployment Roadmap</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Phase 1: Foundation (Months 1-3)</div>
                       <ul className="text-left">
                         <li>• Agent orchestration platform deployment</li>
@@ -218,8 +218,8 @@ export default function AutonomousMultiAgentEnterpriseSystems2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Financial Impact Breakdown</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left"></div>
                         <div className="text-left">OPERATIONAL SAVINGS</div>
                         <div className="text-left">$180M/year</div>

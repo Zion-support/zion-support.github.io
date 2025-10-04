@@ -81,8 +81,8 @@ const AI2026JanuaryUltraAutonomousEnterpriseRevolution = () =>
               operational environment.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Autonomous Infrastructure</h3>
                 <p className="text-left"></p>
                   Self-healing infrastructure that automatically scales, optimizes, and maintains systems 
@@ -178,8 +178,8 @@ const AI2026JanuaryUltraAutonomousEnterpriseRevolution = () =>
               autonomous operations.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Implementation Phases</h3>
                 <ol className="text-left">
                   <li>1. <strong>Assessment & Planning:</strong> Comprehensive enterprise analysis</li>

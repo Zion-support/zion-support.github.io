@@ -164,8 +164,8 @@ const HomePage = React.memo(function HomePage() {
 
         {/* Enhanced Newsletter Signup */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               {/* Newsletter Signup */}</div>
               <div className="text-left"></div>
                 <h2 className="text-left">

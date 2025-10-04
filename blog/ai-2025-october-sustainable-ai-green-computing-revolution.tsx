@@ -36,8 +36,8 @@ const SustainableAIGreenComputingRevolution = () =>
               <p className="text-left"></p>
                 As AI workloads consume increasingly massive amounts of energy, sustainable AI infrastructure has become a critical business imperative. This comprehensive guide reveals how leading enterprises are achieving carbon-neutral AI operations while reducing costs by up to 70%.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">70%</div>
                   <div className="text-left">Energy Reduction</div>
                 </div>
@@ -158,12 +158,12 @@ def schedule_training_job(model, data):
           <section className="text-left"></section>
             <h2 className="text-left">📊 Real-World Success Stories</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏢 Global Financial Services</h3>
                 <p className="text-left">Implemented sustainable AI infrastructure for fraud detection:</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">68%</div>
                     <div className="text-left">Energy Reduction</div>
                   </div>
@@ -185,8 +185,8 @@ def schedule_training_job(model, data):
               <div className="text-left"></div>
                 <h3 className="text-left">🛒 E-Commerce Giant</h3>
                 <p className="text-left">Optimized recommendation engines for sustainability:</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">72%</div>
                     <div className="text-left">Carbon Reduction</div>
                   </div>
@@ -210,8 +210,8 @@ def schedule_training_job(model, data):
           <section className="text-left"></section>
             <h2 className="text-left">🚀 Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Assessment (Months 1-2)</h3>
                 <ul className="text-left">
                   <li>✓ Energy consumption baseline</li>
@@ -287,8 +287,8 @@ def schedule_training_job(model, data):
 
           <section className="text-left"></section>
             <h2 className="text-left">🔮 Future Trends</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🧠 Neuromorphic Computing</h3>
                 <p>Brain-inspired chips consuming 1000x less power will revolutionize AI inference by 2027.</p>
               </div>

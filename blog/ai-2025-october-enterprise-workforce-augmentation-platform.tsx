@@ -35,8 +35,8 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">4.7x</div>
               <div className="text-left">Productivity Increase</div>
             </div>
@@ -102,14 +102,14 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
 
           <h2 className="text-left">Platform Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Personal AI Copilot</h3>
               <p className="text-left"></p>
                 Every employee gets a personalized AI assistant that learns their work patterns, preferences, and expertise:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Core Functions</h4>
                   <ul className="text-left">
                     <li>• Calendar & meeting management</li>
@@ -137,8 +137,8 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
               <p className="text-left"></p>
                 Intelligent automation that handles repetitive tasks across departments and systems:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Automation Types</h4>
                   <ul className="text-left">
                     <li>• Robotic Process Automation (RPA)</li>
@@ -166,8 +166,8 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
               <p className="text-left"></p>
                 Real-time insights into workforce productivity, AI utilization, and business impact:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Metrics & KPIs</h4>
                   <ul className="text-left">
                     <li>• Productivity gains by team/individual</li>
@@ -193,8 +193,8 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
 
           <h2 className="text-left">Department-Specific AI Assistants</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">💼 Sales & Marketing</h3>
               <ul className="text-left">
                 <li className="text-left">
@@ -269,8 +269,8 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
 
           <h2 className="text-left">Real-World Success Story</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 🏢
               </div>
@@ -280,8 +280,8 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$12.8M</div>
                 <div className="text-left">Annual Cost Savings</div>
               </div>
@@ -313,8 +313,8 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Pilot Deployment (Weeks 1-4)</h3>
               <p className="text-left"></p>
                 Deploy AI copilots to 2-3 pilot teams, gather feedback, and establish baseline productivity metrics.
@@ -338,8 +338,8 @@ export default function AI2025OctoberEnterpriseWorkforceAugmentationPlatform() {
 
           <h2 className="text-left">Key Technologies</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">AI & NLP</h4>
               <ul className="text-left">
                 <li>• GPT-4 / Claude / Gemini</li>

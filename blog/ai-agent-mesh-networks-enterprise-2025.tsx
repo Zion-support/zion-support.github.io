@@ -56,8 +56,8 @@ export default function AIAgentMeshNetworksEnterprise2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Core Architecture Components</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Distributed Agent Nodes</h3>
                     <p className="text-left"></p>
                       Each node operates autonomously with specialized capabilities—from data analysis and 
@@ -114,8 +114,8 @@ export default function AIAgentMeshNetworksEnterprise2025() {
                     The mesh network optimizes production scheduling, quality control, supply chain coordination, 
                     and predictive maintenance in real-time.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <p className="text-left">94%</p>
                       <p className="text-left">Reduction in production bottlenecks</p>
                     </div>
@@ -140,8 +140,8 @@ export default function AIAgentMeshNetworksEnterprise2025() {
                     A global investment bank deployed 12,700 agents for real-time risk assessment, fraud detection, 
                     trading optimization, and regulatory compliance across 89 markets and 247 asset classes.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <p className="text-left">99.84%</p>
                       <p className="text-left">Fraud detection accuracy</p>
                     </div>
@@ -243,8 +243,8 @@ class AgentNode
                 <p className="text-left"></p>
                   The agent mesh paradigm continues to evolve rapidly. Our 2026 roadmap includes:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Quantum-Enhanced Coordination</h4>
                     <p className="text-left"></p>
                       Quantum algorithms for optimal agent coalition formation and resource allocation

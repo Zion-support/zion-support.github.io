@@ -17,13 +17,13 @@ const ServicesAdvertisingPage = React.memo(function ServicesAdvertisingPage() {
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <header className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
+        <div className="text-left">
+        <div className="text-left"></div>"
           <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 🎯 AI-Powered Advertising Solutions
@@ -70,8 +70,8 @@ const ServicesAdvertisingPage = React.memo(function ServicesAdvertisingPage() {
 
       {/* Footer */}
       <footer className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
             <div className="text-left"></div>
               <a href="/privacy" className="text-left">Privacy Policy</a>"

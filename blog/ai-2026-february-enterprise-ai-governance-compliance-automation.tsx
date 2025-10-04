@@ -52,8 +52,8 @@ export default function AIEnterpriseGovernanceComplianceAutomation2026() {
               Comprehensive enterprise AI governance framework achieving 99.8% regulatory confidence across 247 global compliance requirements. Master automated monitoring, risk assessment, and audit trails that reduce compliance costs by 75% while ensuring full regulatory adherence.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>February 1, 2026<
               </div>
@@ -69,8 +69,8 @@ export default function AIEnterpriseGovernanceComplianceAutomation2026() {
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">🚀 Governance Excellence Achieved</h2>
               <ul className="text-left">
                 <li>✅ <strong>247 Regulation Coverage</strong> — Global compliance across all major frameworks</li>
@@ -319,8 +319,8 @@ export default function AIEnterpriseGovernanceComplianceAutomation2026() {
           </div>
 
           {/* Share Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left">Share this article:<
                 <button className="text-left">

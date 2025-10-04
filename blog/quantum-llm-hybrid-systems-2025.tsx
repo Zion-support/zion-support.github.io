@@ -6,7 +6,7 @@ const QuantumLLMHybridSystems2025: React.FC = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -32,8 +32,8 @@ const QuantumLLMHybridSystems2025: React.FC = () =>
             Discover how quantum-enhanced large language models achieve 10,000x speedups in complex reasoning tasks, processing trillion-parameter models in seconds while consuming 95% less energy than classical systems.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Calendar className="text-left" />
               <span>September 30, 2025<
             </div>
@@ -50,7 +50,7 @@ const QuantumLLMHybridSystems2025: React.FC = () =>
       </div>
 
       {/* Content Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <article className="text-left"></a>
             <h2 className="text-left">The Quantum-AI Convergence Revolution</h2>
@@ -101,8 +101,8 @@ const QuantumLLMHybridSystems2025: React.FC = () =>
 
             <h2 className="text-left">Enterprise Applications Transforming Industries</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">💊 Drug Discovery</h4>
                 <p className="text-left">Simulating molecular interactions at quantum level, reducing drug development cycles from 10 years to 6 months.</p>
               </div>

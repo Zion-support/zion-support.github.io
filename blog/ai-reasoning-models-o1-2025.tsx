@@ -102,8 +102,8 @@ export default function AIReasoningModelsO12025() {
                 <p className="text-left"></p>
                   The o1 model has demonstrated remarkable performance across multiple benchmarks:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">89th</div>
                     <div className="text-left">Percentile on competitive programming challenges (Codeforces)</div>
                   </div>

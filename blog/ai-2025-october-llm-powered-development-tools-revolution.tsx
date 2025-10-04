@@ -55,8 +55,8 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">5x</div>
                     <div className="text-left">Development Speed</div>
                   </div>
@@ -105,11 +105,11 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
 
               <h2 className="text-left">The AI Development Tool Landscape</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">1. AI Code Completion & Generation</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">GitHub Copilot</div>
                       <div className="text-left">OpenAI-powered, IDE-integrated, 55% code acceptance rate</div>
                       <div className="text-left">Best for: General development, multi-language support</div>
@@ -137,8 +137,8 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
 
                 <div className="text-left"></div>
                   <h3 className="text-left">2. AI Code Review & Security</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">CodeRabbit</div>
                       <div className="text-left">AI PR reviews, security scanning, best practice suggestions</div>
                       <div className="text-left">85% of teams report improved code quality</div>
@@ -156,8 +156,8 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
 
                 <div className="text-left"></div>
                   <h3 className="text-left">3. AI Testing & QA Automation</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Testim AI</div>
                       <div className="text-left">Self-healing tests, visual regression, AI-powered locators</div>
                       <div className="text-left">90% reduction in test maintenance time</div>
@@ -175,8 +175,8 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
 
                 <div className="text-left"></div>
                   <h3 className="text-left">4. AI Documentation & Knowledge Management</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Mintlify</div>
                       <div className="text-left">Auto-generated docs, code-to-doc sync, API documentation</div>
                       <div className="text-left">82% reduction in documentation time</div>
@@ -197,8 +197,8 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Prompt Engineering for Code Generation</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">✓ GOOD PROMPT:</div>
                     <div className="text-left"></div>
                       "Create a React component for user authentication with email/password login. Include form validation 
@@ -243,14 +243,14 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
 
               <h2 className="text-left">Real-World Success Stories</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Fintech Startup: 10-Person Team, Enterprise-Scale Output</h4>
                   <p className="text-left"></p>
                     Payments platform leveraged Cursor AI and GitHub Copilot to build complex financial infrastructure
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">6.2x</div>
                       <div className="text-left">Development Velocity</div>
                     </div>
@@ -270,8 +270,8 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
                   <p className="text-left"></p>
                     Healthcare software company used AI tools to migrate 500K+ lines of legacy code to modern stack
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">78%</div>
                       <div className="text-left">Time Saved vs Manual Migration</div>
                     </div>
@@ -289,8 +289,8 @@ export default function LLMPoweredDevelopmentToolsRevolution2025() {
 
               <h2 className="text-left">Implementation Strategy</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Week 1: Team Evaluation & Tool Selection</h4>
                   <ul className="text-left">
                     <li>• Assess team needs, tech stack compatibility, and security requirements</li>

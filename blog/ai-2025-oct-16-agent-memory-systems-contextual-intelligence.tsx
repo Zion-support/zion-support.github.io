@@ -53,8 +53,8 @@ export default function AIAgentMemorySystemsContextualIntelligence2025() {
               </p>
             </header>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">🚀 Why AI Agent Memory Matters in 2025</h2>
                 <p className="text-left"></p>
                   Traditional stateless AI agents lose context between interactions, creating frustrating user experiences 
@@ -545,8 +545,8 @@ def prune_memory_store(vector_store, threshold=0.3):
 
               <h2 className="text-left">Real-World Success Metrics</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">E-Commerce Platform</h4>
                   <ul className="text-left">
                     <li>✓ 73% reduction in repeated product questions</li>

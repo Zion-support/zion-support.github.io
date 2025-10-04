@@ -56,8 +56,8 @@ export default function AIMultimodalFusionSystems2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Fusion Architecture Components</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Modality Encoders</h3>
                     <p className="text-left"></p>
                       Specialized neural networks transform each data modality into standardized embeddings in a 
@@ -114,8 +114,8 @@ export default function AIMultimodalFusionSystems2025() {
                     e-commerce behavior, voice interactions, product images, and transaction data. The system provides 
                     comprehensive customer insights and personalized recommendations.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <p className="text-left">87%</p>
                       <p className="text-left">Increase in recommendation relevance</p>
                     </div>
@@ -141,8 +141,8 @@ export default function AIMultimodalFusionSystems2025() {
                     vitals, lab results, clinical notes, and genetic data for comprehensive diagnostic decision support 
                     across 847 conditions.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <p className="text-left">96.7%</p>
                       <p className="text-left">Diagnostic accuracy achieved</p>
                     </div>
@@ -168,8 +168,8 @@ export default function AIMultimodalFusionSystems2025() {
                     thermal cameras, vibration monitors, and production logs for comprehensive quality control and 
                     predictive maintenance across 247 production lines.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <p className="text-left">97.4%</p>
                       <p className="text-left">Defect detection accuracy</p>
                     </div>
@@ -285,8 +285,8 @@ class CrossModalAttentionFusion
 
               <section className="text-left"></section>
                 <h2 className="text-left">Advanced Capabilities</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Cross-Modal Generation</h4>
                     <p className="text-left"></p>
                       Generate content in one modality from inputs in another (text→image, audio→video, etc.)

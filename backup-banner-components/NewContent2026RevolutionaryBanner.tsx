@@ -79,9 +79,9 @@ export default function NewContent2026RevolutionaryBanner() {
       </div>
       {/* Animated background elements */}
       <div className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-        <div className="text-left"></div>
-        <div className="text-left"></div>
+        <div className="text-left">
         <div className="text-left"></div>
       </div>
     </div>

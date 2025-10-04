@@ -50,8 +50,8 @@ const AIBusinessIntelligenceRevolution2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Key Outcomes</h3>
             <ul className="text-left">
               <li><strong>10x Faster Insights:</strong> AI analyzes data and surfaces insights in seconds vs. days</li>
@@ -211,8 +211,8 @@ const AIBusinessIntelligenceRevolution2025: React.FC = () =>
 
           <h2 className="text-left">Implementation Roadmap</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Phase 1: Data Foundation (Weeks 1-4)</h4>
               <ul className="text-left">
                 <li>Connect data sources (databases, APIs, warehouses, SaaS tools)</li>
@@ -255,8 +255,8 @@ const AIBusinessIntelligenceRevolution2025: React.FC = () =>
 
           <h2 className="text-left">Key Metrics to Track</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h4 className="text-left">Adoption Metrics</h4>
                 <ul className="text-left">

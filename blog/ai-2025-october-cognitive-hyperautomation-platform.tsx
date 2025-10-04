@@ -32,8 +32,8 @@ export default function CognitiveHyperautomationPlatform() {
               The Next Evolution in Enterprise Intelligence & Automation
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$38.5B</div>
                 <div className="text-left">Total Value Creation</div>
               </div>
@@ -71,8 +71,8 @@ export default function CognitiveHyperautomationPlatform() {
           {/* Key Capabilities */}
           <section className="text-left"></section>
             <h2 className="text-left">Revolutionary Capabilities</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <Brain className="text-left" />
                   <h3 className="text-left">Cognitive Intelligence Engine</h3>
@@ -87,8 +87,8 @@ export default function CognitiveHyperautomationPlatform() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <Network className="text-left" />
                   <h3 className="text-left">Autonomous Orchestration</h3>
                 </div>
@@ -102,8 +102,8 @@ export default function CognitiveHyperautomationPlatform() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <Zap className="text-left" />
                   <h3 className="text-left">Real-Time Adaptation</h3>
                 </div>
@@ -117,8 +117,8 @@ export default function CognitiveHyperautomationPlatform() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <Shield className="text-left" />
                   <h3 className="text-left">Enterprise-Grade Security</h3>
                 </div>
@@ -146,8 +146,8 @@ export default function CognitiveHyperautomationPlatform() {
                 Global manufacturing leader transformed operations with $14.7B business impact
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$14.7B</div>
                   <div className="text-left">Total Business Value</div>
                 </div>
@@ -192,8 +192,8 @@ export default function CognitiveHyperautomationPlatform() {
           {/* Technical Architecture */}
           <section className="text-left"></section>
             <h2 className="text-left">Platform Architecture</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Core Components:</h3>
                   <ul className="text-left">
@@ -226,8 +226,8 @@ export default function CognitiveHyperautomationPlatform() {
           {/* Business Impact */}
           <section className="text-left"></section>
             <h2 className="text-left">Proven Business Impact</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Operational Excellence</h3>
                 <ul className="text-left">
                   <li>• 98.9% average automation rate across processes</li>
@@ -251,8 +251,8 @@ export default function CognitiveHyperautomationPlatform() {
           {/* Implementation Approach */}
           <section className="text-left"></section>
             <h2 className="text-left">Strategic Implementation</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Assessment & Design (Months 1-3)</h3>
                 <p className="text-left"></p>
                   Comprehensive analysis of business processes, workflow mapping, AI model selection, 

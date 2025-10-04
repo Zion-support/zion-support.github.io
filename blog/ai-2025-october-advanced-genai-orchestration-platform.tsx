@@ -50,8 +50,8 @@ const AIAdvancedGenAIOrchestrationPlatform = () =>
             </p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 <Sparkles className="text-left" />
                 Executive Summary
@@ -71,8 +71,8 @@ const AIAdvancedGenAIOrchestrationPlatform = () =>
                 Platform Architecture
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     Core Orchestration Layer
                   </h3>
@@ -183,8 +183,8 @@ class AdaptiveWorkflowEngine
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">
                       Workflow Patterns
                     </h4>
@@ -310,8 +310,8 @@ class MultiAgentCoordinator
                 Performance Optimization
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     Resource Management
                   </h3>
@@ -319,8 +319,8 @@ class MultiAgentCoordinator
                     Efficient resource management is critical for cost-effective GenAI orchestration. This includes
                     GPU allocation, memory management, network bandwidth optimization, and intelligent caching strategies.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <h4 className="text-left">Dynamic Resource Allocation</h4>
                       <p className="text-left"></p>
                         Implement predictive resource allocation based on historical patterns, current workload,
@@ -339,8 +339,8 @@ class MultiAgentCoordinator
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">3.2x</div>
                     <div className="text-left">Throughput Improvement</div>
                   </div>

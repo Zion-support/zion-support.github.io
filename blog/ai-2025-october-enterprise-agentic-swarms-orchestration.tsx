@@ -49,8 +49,8 @@ export default function EnterpriseAgenticSwarmsOrchestration2025() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Transformative Business Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">340%</div>
               <div className="text-left">Average productivity improvement</div>
             </div>
@@ -75,8 +75,8 @@ export default function EnterpriseAgenticSwarmsOrchestration2025() {
             Our Enterprise Agentic Swarms Platform orchestrates four key layers:
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">1. Agent Specialization Layer</h3>
               <p className="text-left"></p>
                 Each agent is purpose-built for specific tasks: data analysis, decision-making, 
@@ -136,15 +136,15 @@ export default function EnterpriseAgenticSwarmsOrchestration2025() {
         <section className="text-left"></section>
           <h2 className="text-left">Real-World Success Stories</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏢 Global Manufacturing: $2.1B Cost Reduction</h3>
               <p className="text-left"></p>
                 A Fortune 100 manufacturer deployed 5,000 AI agents across 47 factories worldwide, 
                 coordinating supply chain, production scheduling, quality control, and logistics in real-time.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">87%</div>
                   <div className="text-left">Reduction in supply chain delays</div>
                 </div>
@@ -165,8 +165,8 @@ export default function EnterpriseAgenticSwarmsOrchestration2025() {
                 A leading investment bank uses 3,000 specialized agents to monitor markets, assess risks, 
                 execute trades, and ensure regulatory compliance across global operations 24/7.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">95%</div>
                   <div className="text-left">Faster risk assessment</div>
                 </div>
@@ -187,8 +187,8 @@ export default function EnterpriseAgenticSwarmsOrchestration2025() {
                 An online retailer deployed 8,000 agents managing personalization, inventory, pricing, 
                 customer service, and fraud detection, creating a seamlessly orchestrated experience.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">420%</div>
                   <div className="text-left">Revenue growth year-over-year</div>
                 </div>
@@ -243,8 +243,8 @@ export default function EnterpriseAgenticSwarmsOrchestration2025() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Why Choose Our Platform</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">✅ Enterprise-Ready from Day One</h3>
               <p className="text-left"></p>
                 Built-in security, compliance, audit trails, and integration with existing IT infrastructure. 

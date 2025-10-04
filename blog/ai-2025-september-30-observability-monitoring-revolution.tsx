@@ -36,8 +36,8 @@ export default function AI2025September30ObservabilityMonitoringRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.9%</div>
               <div className="text-left">Model Uptime</div>
             </div>
@@ -104,8 +104,8 @@ export default function AI2025September30ObservabilityMonitoringRevolution() {
 
           <h2 className="text-left">Real-Time Monitoring Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📊 Trace Collection</h3>
               <p className="text-left"></p>
                 Capture every request, response, and intermediate step with distributed tracing. 
@@ -171,8 +171,8 @@ export default function AI2025September30ObservabilityMonitoringRevolution() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 Deployment Architecture</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Instrumentation Layer</h4>
                 <p className="text-left"></p>
                   Instrument your LLM calls with minimal overhead. Capture prompts, completions, 
@@ -213,8 +213,8 @@ const completion = await trace.llm.call(
                   Visualize metrics in real-time dashboards. Configure intelligent alerts 
                   for anomalies, cost spikes, and quality degradation.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Key Metrics</div>
                     <ul className="text-left">
                       <li>• Request volume & latency</li>
@@ -239,8 +239,8 @@ const completion = await trace.llm.call(
 
           <h2 className="text-left">Advanced Capabilities</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 LLM Chain Tracing</h3>
               <p className="text-left"></p>
                 Visualize complex agent workflows with nested traces. Track multi-step reasoning, 
@@ -271,33 +271,33 @@ const completion = await trace.llm.call(
 
           <h2 className="text-left">Implementation Checklist</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Instrument all LLM calls with observability SDK<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Deploy automated quality evaluation pipeline<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Configure real-time dashboards and alerting<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Implement cost tracking and budget enforcement<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Enable LLM chain tracing for complex workflows<
               </div>

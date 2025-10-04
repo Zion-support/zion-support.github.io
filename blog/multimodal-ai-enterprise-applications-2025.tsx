@@ -56,8 +56,8 @@ export default function MultimodalAIEnterpriseApplications2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔥 Transformative Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">96%</div>
                     <div className="text-left">Task Accuracy</div>
                   </div>
@@ -178,8 +178,8 @@ export default function MultimodalAIEnterpriseApplications2025() {
 
               <h2 className="text-left">Leading Multimodal Models</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">GPT-4V (Vision)</h4>
                   <p className="text-left"></p>
                     OpenAI's multimodal model accepting both images and text:
@@ -264,8 +264,8 @@ export default function MultimodalAIEnterpriseApplications2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Step 1: Identify High-Value Use Cases</h4>
                   <p className="text-left"></p>
                     Look for business processes requiring both visual and textual understanding—document 

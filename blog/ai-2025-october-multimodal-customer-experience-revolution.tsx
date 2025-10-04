@@ -81,8 +81,8 @@ export default function MultimodalCustomerExperience2025() {
                   fused through attention mechanisms to create unified customer understanding:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Voice & Audio Analysis</h3>
                     <p className="text-left"></p>
                       Real-time speech-to-text with emotion detection, stress level analysis, and intent classification 
@@ -143,8 +143,8 @@ export default function MultimodalCustomerExperience2025() {
                   creating empathetic interactions that feel genuinely human:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">😤<
                       <div></div>
@@ -157,8 +157,8 @@ export default function MultimodalCustomerExperience2025() {
                     </div>
                   </div>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">🤔<
                       <div></div>
                         <h4 className="text-left">Confusion Pattern Recognition</h4>
@@ -170,8 +170,8 @@ export default function MultimodalCustomerExperience2025() {
                     </div>
                   </div>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">🎯<
                       <div></div>
                         <h4 className="text-left">High-Intent Purchase Signals</h4>
@@ -213,8 +213,8 @@ export default function MultimodalCustomerExperience2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Measurable Business Outcomes</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$18M</div>
                     <div className="text-left">Revenue Lift</div>
                     <div className="text-left">per 100K customers annually</div>

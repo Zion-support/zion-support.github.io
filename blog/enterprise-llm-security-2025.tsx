@@ -216,8 +216,8 @@ const EnterpriseLLMSecurity2025 = () =>
 
           <h2 className="text-left">Best Practices Checklist</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <input type="checkbox" className="text-left" />
                 <span className="text-left">Implement multi-layer input validation and prompt firewalls<

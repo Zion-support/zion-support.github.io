@@ -55,8 +55,8 @@ export default function UnifiedObservabilityPlatform2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Platform Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Faster Incident Resolution</div>
                   </div>
@@ -190,8 +190,8 @@ export default function UnifiedObservabilityPlatform2025() {
 
               <h2 className="text-left">Industry Success Stories</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏦 Global Financial Services</h4>
                   <ul className="text-left">
                     <li>• Consolidated 23 monitoring tools into one platform</li>

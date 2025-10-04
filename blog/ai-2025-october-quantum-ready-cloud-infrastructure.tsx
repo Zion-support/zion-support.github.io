@@ -55,8 +55,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔮 Quantum Readiness Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">256-bit</div>
                     <div className="text-left">Quantum-Safe Security</div>
                   </div>
@@ -101,8 +101,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
                 These algorithms form the foundation of quantum-ready infrastructure:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">CRYSTALS-Kyber (Key Encapsulation)</h4>
                   <p className="text-left"></p>
                     Lattice-based algorithm for secure key exchange, providing 256-bit quantum-resistant security with 
@@ -150,8 +150,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Quantum Computing Use Cases (2025-2030)</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">🧪 Drug Discovery & Molecular Simulation</h4>
                     <p className="text-left"></p>
                       Quantum computers simulate molecular interactions with unprecedented accuracy, reducing drug 
@@ -187,8 +187,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
 
               <h2 className="text-left">Enterprise Migration Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span className="text-left">1️⃣<
                     <h3 className="text-left">Cryptographic Inventory & Risk Assessment</h3>
@@ -200,8 +200,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
                   <div className="text-left">Timeline: 1-2 months | Cost: Low</div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">2️⃣<
                     <h3 className="text-left">Hybrid Cryptography Deployment</h3>
                   </div>
@@ -212,8 +212,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
                   <div className="text-left">Timeline: 3-6 months | Cost: Medium</div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">3️⃣<
                     <h3 className="text-left">Legacy System Hardening</h3>
                   </div>
@@ -224,8 +224,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
                   <div className="text-left">Timeline: 6-12 months | Cost: Medium-High</div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">4️⃣<
                     <h3 className="text-left">Quantum Computing Integration</h3>
                   </div>
@@ -239,8 +239,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
 
               <h2 className="text-left">Quantum-as-a-Service: Cloud Providers Leading the Way</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">AWS Braket</h3>
                   <p className="text-left"></p>
                     Access to IonQ, Rigetti, and Oxford Quantum Circuits hardware. Integrated with AWS services 
@@ -295,8 +295,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
                   Zion Tech Group delivers comprehensive quantum readiness solutions—from post-quantum cryptography 
                   deployment to hybrid quantum-classical architecture design and implementation.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">✅<
                       <span className="text-left">Post-quantum crypto migration<
@@ -310,8 +310,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
                       <span className="text-left">Hybrid architecture design<
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">✅<
                       <span className="text-left">QaaS integration & optimization<
                     </div>

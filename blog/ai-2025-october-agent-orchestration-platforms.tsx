@@ -55,8 +55,8 @@ export default function AIAgentOrchestrationPlatforms2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Process Automation</div>
                   </div>
@@ -105,8 +105,8 @@ export default function AIAgentOrchestrationPlatforms2025() {
                   A global investment bank deployed a multi-agent orchestration platform coordinating 3,200+ 
                   specialized agents across trading, risk management, compliance, and customer service:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">92% Reduction</div>
                     <div className="text-left">in manual processing time</div>
                   </div>
@@ -171,8 +171,8 @@ const orchestrator = new AgentOrchestrator(
 
               <div className="text-left"></div>
                 <h2 className="text-left">🎯 Implementation Roadmap</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Foundation (Weeks 1-4)</h4>
                     <p className="text-left">Deploy orchestration platform, define agent types, establish communication protocols</p>
                   </div>

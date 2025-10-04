@@ -82,8 +82,8 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
                 <p className="text-left"></p>
                   Organizations are deploying swarm intelligence across diverse domains:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Supply Chain Optimization</h3>
                     <p className="text-left"></p>
                       Swarm agents coordinate across global supply networks, dynamically optimizing routes,
@@ -164,8 +164,8 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
                 <p className="text-left"></p>
                   A production swarm intelligence system consists of several key components:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Agent Layer</h3>
                     <p className="text-left"></p>
                       Thousands of lightweight autonomous agents, each with specific capabilities, local
@@ -203,8 +203,8 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
                 <p className="text-left"></p>
                   Deploying swarm intelligence requires a structured approach:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">1<
                       <h3 className="text-left">Problem Definition</h3>
@@ -214,8 +214,8 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
                       sensing, dynamic resource allocation, or pattern recognition across large datasets.
                     </p>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">2<
                       <h3 className="text-left">Agent Design</h3>
                     </div>
@@ -224,8 +224,8 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
                       algorithms. Start simple—complexity emerges from interaction, not individual sophistication.
                     </p>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">3<
                       <h3 className="text-left">Simulation & Testing</h3>
                     </div>
@@ -234,8 +234,8 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
                       optimize parameters. Ensure robustness to agent failures and environmental changes.
                     </p>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">4<
                       <h3 className="text-left">Production Deployment</h3>
                     </div>
@@ -309,8 +309,8 @@ export default function AISwarmIntelligenceEnterpriseRevolution2025() {
               </section>
             </div>
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Swarm Intelligence Lab
                 </div>
                 <div className="text-left"></div>

@@ -53,8 +53,8 @@ const AIInfrastructureAutomation2026 = () =>
 
         <section className="text-left"></section>
           <h2 className="text-left">Core Components of AI Infrastructure Automation</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🤖 Intelligent Auto-Scaling</h3>
               <p className="text-left"></p>
                 Traditional reactive scaling wastes resources and creates performance gaps. AI-powered predictive 
@@ -99,8 +99,8 @@ const AIInfrastructureAutomation2026 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Layer 1: Observability Foundation</h3>
               <p className="text-left"></p>
                 Deploy comprehensive telemetry across all infrastructure layers: metrics, logs, traces, events. 
@@ -155,8 +155,8 @@ const AIInfrastructureAutomation2026 = () =>
 
         <section className="text-left"></section>
           <h2 className="text-left">Deployment Roadmap: 90-Day Sprint</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 30d
               </div>
@@ -171,8 +171,8 @@ const AIInfrastructureAutomation2026 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 60d
               </div>
               <div></div>
@@ -186,8 +186,8 @@ const AIInfrastructureAutomation2026 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 90d
               </div>
               <div></div>
@@ -205,8 +205,8 @@ const AIInfrastructureAutomation2026 = () =>
 
         <section className="text-left"></section>
           <h2 className="text-left">Measured Outcomes: The Business Case</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">💰 Cost Optimization</h3>
               <ul className="text-left">
                 <li>→ 68-72% reduction in infrastructure costs</li>

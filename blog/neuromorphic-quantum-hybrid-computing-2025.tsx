@@ -85,8 +85,8 @@ export default function NeuromorphicQuantumHybridComputing2025() {
                   The hybrid architecture uses a sophisticated orchestration layer that dynamically routes
                   computational tasks to the optimal processor:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Neuromorphic Layer</h3>
                     <p className="text-left"></p>
                       Handles real-time pattern recognition, sensory data processing, continuous learning, and
@@ -131,8 +131,8 @@ export default function NeuromorphicQuantumHybridComputing2025() {
                   Organizations across industries are leveraging neuromorphic-quantum hybrid computing for
                   transformative applications:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Financial Services</h3>
                     <p className="text-left"></p>
                       Portfolio optimization with quantum algorithms, real-time fraud detection using neuromorphic
@@ -173,8 +173,8 @@ export default function NeuromorphicQuantumHybridComputing2025() {
                 <p className="text-left"></p>
                   Successfully deploying neuromorphic-quantum hybrid systems requires a strategic approach:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Stage 1: Infrastructure Assessment (Month 1-2)</h3>
                     <p className="text-left"></p>
                       Evaluate current computational workloads, identify quantum-suitable problems, assess
@@ -210,8 +210,8 @@ export default function NeuromorphicQuantumHybridComputing2025() {
                 <p className="text-left"></p>
                   While the initial investment is substantial, the ROI is compelling:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <h3 className="text-left">Initial Investment</h3>
                       <ul className="text-left">
@@ -272,8 +272,8 @@ export default function NeuromorphicQuantumHybridComputing2025() {
               </section>
             </div>
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Quantum Computing Division
                 </div>
                 <div className="text-left"></div>

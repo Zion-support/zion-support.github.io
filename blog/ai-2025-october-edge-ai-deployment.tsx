@@ -58,8 +58,8 @@ export default function EdgeAIDeployment2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Market Growth & Impact</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">&lt;1ms</div>
                       <div className="text-left">Inference Latency</div>
                     </div>
@@ -88,8 +88,8 @@ export default function EdgeAIDeployment2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Key Architectural Components</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Model Optimization</h3>
                     <p className="text-left"></p>
                       Advanced techniques to compress and optimize models for edge deployment while 
@@ -150,8 +150,8 @@ export default function EdgeAIDeployment2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Industry Applications</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Autonomous Manufacturing</h3>
                     <p className="text-left"></p>
                       Real-time quality inspection, predictive maintenance, and process optimization 
@@ -244,8 +244,8 @@ export default function EdgeAIDeployment2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Deployment Strategy</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Pilot & Validation (Months 1-2)</h3>
                     <p className="text-left"></p>
                       Deploy to limited scope, validate performance metrics, establish monitoring baseline

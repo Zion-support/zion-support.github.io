@@ -66,8 +66,8 @@ export default function AIPoweredDevSecOps2025() {
                   Integrate AI at every stage of your development lifecycle to automate security without creating bottlenecks.
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. AI Code Analysis at Commit Time</h3>
                     <p className="text-left"></p>
                       ML models trained on millions of vulnerabilities detect security issues as developers write code.
@@ -176,8 +176,8 @@ export default function AIPoweredDevSecOps2025() {
                   Organizations implementing AI-powered DevSecOps see transformational improvements:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">95%</div>
                     <div className="text-left">Faster vulnerability detection and remediation</div>
                   </div>

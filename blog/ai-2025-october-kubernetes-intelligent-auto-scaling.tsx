@@ -55,8 +55,8 @@ export default function AIKubernetesIntelligentAutoScaling2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">📊 Key Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">73%</div>
                     <div className="text-left">Infrastructure Cost Reduction</div>
                   </div>
@@ -257,8 +257,8 @@ export default function AIKubernetesIntelligentAutoScaling2025() {
               </div>
 
               <h2 className="text-left">Technology Stack</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Orchestration Platform</h4>
                   <ul className="text-left">
                     <li>• Kubernetes 1.28+</li>

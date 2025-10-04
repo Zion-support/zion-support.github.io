@@ -9,7 +9,7 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
     <div>
       <div></div>
     <article className="text-left"></a>
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Calendar className="text-left" />
           <span className="text-left">January 15, 2025<
@@ -30,7 +30,7 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">
             <Brain className="text-left" />
@@ -52,10 +52,10 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
           intelligence that drives business strategy and execution.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Zap className="text-left" />
               </div>
               <h3 className="text-left">Real-time Decision Making</h3>
@@ -66,8 +66,8 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <Shield className="text-left" />
               </div>
@@ -79,8 +79,8 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <TrendingUp className="text-left" />
               </div>
@@ -145,8 +145,8 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
           <p className="text-left"></p>
             A leading manufacturing company implemented autonomous enterprise systems and achieved:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">45%</div>
               <div className="text-left">Reduction in operational costs</div>
             </div>
@@ -168,8 +168,8 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
           to see even more sophisticated AI systems that can:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Strategic Planning</h3>
             <p className="text-left"></p>
               AI systems that can develop long-term business strategies, considering multiple 
@@ -234,7 +234,7 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <span className="text-left">#AI<
           <span className="text-left">#Automation<

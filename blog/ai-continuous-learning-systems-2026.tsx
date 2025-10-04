@@ -18,7 +18,7 @@ const AIContinuousLearningSystems2026 = () =>
         />
       </Helmet>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link
             to="/blog"
@@ -29,8 +29,8 @@ const AIContinuousLearningSystems2026 = () =>
           </Link>
 
           <article className="text-left"></a>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   Machine Learning
                 <
@@ -53,8 +53,8 @@ const AIContinuousLearningSystems2026 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <p className="text-left"></p>
                   <strong>Executive Summary:</strong> AI Continuous Learning Systems represent a fundamental shift from static models 
                   to self-improving systems that learn from every prediction. Organizations report 99.2% accuracy improvements, 
@@ -68,30 +68,30 @@ const AIContinuousLearningSystems2026 = () =>
                 retrain-and-redeploy cycle. This paradigm enables:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <RefreshCw className="text-left" />
                     <h3 className="text-left">Real-Time Learning</h3>
                   </div>
                   <p className="text-left">Adapt to new patterns within minutes, not months</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Brain className="text-left" />
                     <h3 className="text-left">Zero Downtime Updates</h3>
                   </div>
                   <p className="text-left">Improve models without service interruption</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Target className="text-left" />
                     <h3 className="text-left">Automatic Optimization</h3>
                   </div>
                   <p className="text-left">Self-tuning hyperparameters and architecture</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Sparkles className="text-left" />
                     <h3 className="text-left">Concept Drift Detection</h3>
                   </div>
@@ -175,8 +175,8 @@ class ContinuousLearner:
               <p className="text-left"></p>
                 Continuous learning must maintain safety and reliability:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Canary Deployments</h4>
                   <p className="text-left">Test new model versions on 5% of traffic first</p>
                 </div>
@@ -196,8 +196,8 @@ class ContinuousLearner:
 
               <h2 className="text-left">🏆 Real-World Impact</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🛒 Amazon Recommendations</h4>
                   <p className="text-left"></p>
                     Deployed continuous learning for product recommendations serving 200M+ users
@@ -250,8 +250,8 @@ class ContinuousLearner:
 
               <h2 className="text-left">🚀 Implementation Strategy</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Phase 1: Baseline Setup (1-2 months)</h4>
                   <p className="text-left">Implement monitoring, data pipelines, feedback collection</p>
                 </div>

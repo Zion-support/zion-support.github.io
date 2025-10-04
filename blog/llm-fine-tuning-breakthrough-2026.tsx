@@ -45,8 +45,8 @@ const LLMFineTuningBreakthrough2026 = () =>
               Transform foundation models into domain experts 10x faster with breakthrough fine-tuning techniques achieving 98%+ accuracy on specialized tasks.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -61,8 +61,8 @@ const LLMFineTuningBreakthrough2026 = () =>
             </div>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Key Takeaways</h3>
               <ul className="text-left">
                 <li>✅ Fine-tune 70B parameter models on single GPUs with QLoRA</li>

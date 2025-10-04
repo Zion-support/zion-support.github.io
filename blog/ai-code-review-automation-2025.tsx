@@ -26,8 +26,8 @@ const AICodeReviewAutomation2025: React.FC = () =>
           <p className="text-left"></p>
             Manual code reviews are essential but expensive:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">❌ Traditional Review Pain Points</h3>
               <ul className="text-left">
                 <li>• 2-3 day average review turnaround</li>
@@ -53,8 +53,8 @@ const AICodeReviewAutomation2025: React.FC = () =>
         <section className="text-left"></section>
           <h2 className="text-left">AI Review Layers</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">
                 <span className="text-left">1<
                 Static Analysis Layer
@@ -143,8 +143,8 @@ function selectReviewTier(pr)
         <section className="text-left"></section>
           <h2 className="text-left">Integration Patterns</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">GitHub Actions / GitLab CI</h4>
               <p className="text-left">Run AI reviews as part of CI pipeline:</p>
               <pre className="text-left"></p>
@@ -211,8 +211,8 @@ jobs:
 
         <section className="text-left"></section>
           <h2 className="text-left">Measured Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Mid-Sized SaaS Startup</h3>
               <div className="text-left"></div>
                 <p><strong>Before:</strong> 2.5 day avg review time, 15 bugs/month in prod</p>

@@ -44,8 +44,8 @@ export default function FederatedLearning2026() {
         {/* Key Stats */}
         <div className="text-left"></div>
           <h2 className="text-left">Key Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">95%</div>
               <div className="text-left">Model Accuracy</div>
             </div>
@@ -77,8 +77,8 @@ export default function FederatedLearning2026() {
 
           <section></section>
             <h2 className="text-left">Why Federated Learning Matters in 2026</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🔒 Regulatory Compliance</h3>
                 <p className="text-left"></p>
                   With GDPR, CCPA, HIPAA, and emerging AI regulations, federated learning ensures compliance 
@@ -140,8 +140,8 @@ export default function FederatedLearning2026() {
 
           <section></section>
             <h2 className="text-left">Enterprise Use Cases</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏥 Healthcare Networks</h3>
                 <p className="text-left"></p>
                   Multiple hospitals collaborate to train diagnostic AI models without sharing patient records. 
@@ -211,8 +211,8 @@ export default function FederatedLearning2026() {
             <p className="text-left"></p>
               Based on our experience deploying federated learning systems for Fortune 500 enterprises:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">✅ Do</h3>
                 <ul className="text-left">
                   <li>• Start with a pilot project</li>
@@ -240,8 +240,8 @@ export default function FederatedLearning2026() {
             <p className="text-left"></p>
               Typical federated learning implementation delivers:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Infrastructure Cost Reduction:<
                 <span className="text-left">70%<
               </div>

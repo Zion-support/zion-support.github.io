@@ -65,8 +65,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
 
             <h3 className="text-left">AI Copilot Architecture</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🧠 Context Engine</h4>
                 <ul className="text-left">
                   <li>• Full repository indexing with semantic search</li>
@@ -91,15 +91,15 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Productivity Multipliers: Real-World Impact</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">💻 Code Generation & Completion</h3>
                 <p className="text-left"></p>
                   <strong>Enterprise SaaS Startup (250 engineers):</strong> Deployed AI code completion achieving 43% of 
                   all committed code auto-generated with developer acceptance.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">3.2x</div>
                     <div className="text-left">Faster Feature Delivery</div>
                   </div>
@@ -124,8 +124,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
                   <strong>Fintech Company (500 engineers):</strong> Implemented AI test generation reducing QA bottlenecks 
                   and achieving 92% test coverage across 2M+ lines of code.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">92%</div>
                     <div className="text-left">Test Coverage</div>
                   </div>
@@ -150,8 +150,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
                   <strong>Open Source Project (1000+ contributors):</strong> Auto-generated comprehensive documentation 
                   reducing onboarding time and improving contributor experience dramatically.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">-78%</div>
                     <div className="text-left">Onboarding Time</div>
                   </div>
@@ -175,8 +175,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Advanced AI Development Workflows</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🤝 AI Pair Programming</h4>
                 <p className="text-left"></p>
                   Move beyond autocomplete to true collaborative programming where AI acts as a senior engineer:
@@ -220,8 +220,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -236,8 +236,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <div></div>
@@ -251,8 +251,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <div></div>
@@ -306,8 +306,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Measuring Success</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">📊 Quantitative Metrics</h4>
                 <ul className="text-left">
                   <li>• Commits per developer per day (+180%)</li>
@@ -338,8 +338,8 @@ export default function AIPoweredDevExDeveloperProductivity2025() {
               engineering teams within 8 weeks.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">⚡</div>
                 <h3 className="text-left">Rapid Deployment</h3>
                 <p className="text-left">Full platform deployment in 8 weeks with pre-built integrations for popular IDEs and CI/CD tools</p>

@@ -17,8 +17,8 @@ const AICustomerIntelligencePlatform2026: React.FC = () =>
 
       <article className="text-left"></a>
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left"><
             REVENUE ACCELERATION • SEPTEMBER 30, 2025
           </div>
@@ -31,8 +31,8 @@ const AICustomerIntelligencePlatform2026: React.FC = () =>
             Transform Customer Data into $50M+ Revenue Growth with Predictive Analytics and Hyper-Personalization
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">⏱️<
               <span>28 min read<
             </div>
@@ -48,8 +48,8 @@ const AICustomerIntelligencePlatform2026: React.FC = () =>
         </div>
 
         {/* Key Metrics */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">45%</div>
             <div className="text-left">Conversion Lift</div>
           </div>
@@ -148,8 +148,8 @@ const AICustomerIntelligencePlatform2026: React.FC = () =>
             Machine learning models extract insights and predict behavior:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🔮 Predictive Models</h4>
               <ul className="text-left">
                 <li>• <strong>Churn Prediction:</strong> 14-day advance warning with 91% accuracy</li>
@@ -205,8 +205,8 @@ const AICustomerIntelligencePlatform2026: React.FC = () =>
 
           <h2 className="text-left">💡 Implementation Roadmap</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Weeks 1-6)</h3>
               <ul className="text-left">
                 <li><strong>Week 1-2:</strong> Data audit—catalog all customer data sources and quality</li>
@@ -286,8 +286,8 @@ const AICustomerIntelligencePlatform2026: React.FC = () =>
 
           <h2 className="text-left">🎯 Use Cases by Department</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📢 Marketing</h3>
               <ul className="text-left">
                 <li>• <strong>Campaign Optimization:</strong> AI tests 100+ variations to find best messaging</li>

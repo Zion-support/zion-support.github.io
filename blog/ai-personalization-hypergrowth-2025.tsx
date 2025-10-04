@@ -197,8 +197,8 @@ export default function AIPersonalizationHypergrowth2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Best Practices</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">1. Data Foundation</h4>
                     <p className="text-left"></p>
                       Establish unified customer data platform integrating all touchpoints, behavioral data, 

@@ -49,8 +49,8 @@ export default function AIDigitalTwinEnterprise2026() {
             {/* Executive Summary */}
             <section className="text-left"></section>
               <h2 className="text-left">🎯 Executive Summary</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">99.5%</div>
                   <div className="text-left">Prediction Accuracy</div>
                 </div>
@@ -79,8 +79,8 @@ export default function AIDigitalTwinEnterprise2026() {
                 digital twins evolve alongside their physical counterparts, enabling predictive analytics and optimization.
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🏭 Manufacturing Digital Twins</h3>
                   <ul className="text-left">
                     <li>• Production line optimization</li>
@@ -105,8 +105,8 @@ export default function AIDigitalTwinEnterprise2026() {
             <section className="text-left"></section>
               <h2 className="text-left">Core Technologies Powering Digital Twins</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">1. IoT Sensor Integration</h3>
                   <p className="text-left"></p>
                     Real-time data ingestion from thousands of sensors monitoring temperature, pressure, vibration, 
@@ -168,8 +168,8 @@ export default function AIDigitalTwinEnterprise2026() {
             <section className="text-left"></section>
               <h2 className="text-left">Real-World Use Cases Delivering Results</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span className="text-left">🏭<
                     <h3 className="text-left">Smart Manufacturing</h3>
@@ -177,8 +177,8 @@ export default function AIDigitalTwinEnterprise2026() {
                   <p className="text-left"></p>
                     A Fortune 100 automotive manufacturer deployed digital twins across 12 production facilities:
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">85%</div>
                       <div className="text-left">Downtime Reduction</div>
                     </div>
@@ -199,16 +199,16 @@ export default function AIDigitalTwinEnterprise2026() {
                   </ul>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">🏙️<
                     <h3 className="text-left">Smart City Infrastructure</h3>
                   </div>
                   <p className="text-left"></p>
                     Singapore's digital twin initiative monitors and optimizes city-wide infrastructure:
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">40%</div>
                       <div className="text-left">Traffic Improvement</div>
                     </div>
@@ -233,16 +233,16 @@ export default function AIDigitalTwinEnterprise2026() {
                   </ul>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">🏥<
                     <h3 className="text-left">Personalized Healthcare</h3>
                   </div>
                   <p className="text-left"></p>
                     Cleveland Clinic uses patient digital twins for treatment optimization:
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">92%</div>
                       <div className="text-left">Treatment Success Rate</div>
                     </div>
@@ -269,8 +269,8 @@ export default function AIDigitalTwinEnterprise2026() {
             <section className="text-left"></section>
               <h2 className="text-left">Implementation Roadmap: 12-Week Deployment</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span className="text-left">Weeks 1-3<
                     <h3 className="text-left">Foundation & Data Integration</h3>
@@ -283,8 +283,8 @@ export default function AIDigitalTwinEnterprise2026() {
                   </ul>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Weeks 4-7<
                     <h3 className="text-left">AI Model Development</h3>
                   </div>
@@ -296,8 +296,8 @@ export default function AIDigitalTwinEnterprise2026() {
                   </ul>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Weeks 8-10<
                     <h3 className="text-left">Testing & Validation</h3>
                   </div>
@@ -309,8 +309,8 @@ export default function AIDigitalTwinEnterprise2026() {
                   </ul>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Weeks 11-12<
                     <h3 className="text-left">Deployment & Scaling</h3>
                   </div>
@@ -352,12 +352,12 @@ export default function AIDigitalTwinEnterprise2026() {
             {/* ROI Calculation */}
             <section className="text-left"></section>
               <h2 className="text-left">Expected ROI & Business Impact</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div></div>
                     <h3 className="text-left">Typical Investment</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span>IoT sensors & hardware:<
                         <span className="text-left">$500K - $2M<
                       </div>
@@ -381,8 +381,8 @@ export default function AIDigitalTwinEnterprise2026() {
                   </div>
                   <div></div>
                     <h3 className="text-left">Expected Returns (Annual)</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span>Downtime reduction savings:<
                         <span className="text-left">$8M - $25M<
                       </div>
@@ -416,8 +416,8 @@ export default function AIDigitalTwinEnterprise2026() {
             {/* Challenges & Solutions */}
             <section className="text-left"></section>
               <h2 className="text-left">Overcoming Implementation Challenges</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Challenge: Data Integration Complexity</h3>
                   <p className="text-left"></p>
                     <strong className="text-left">Problem:</strong> Legacy systems with proprietary protocols, inconsistent data formats.
@@ -455,8 +455,8 @@ export default function AIDigitalTwinEnterprise2026() {
             {/* Future Trends */}
             <section className="text-left"></section>
               <h2 className="text-left">The Future: 2026 and Beyond</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🔮 Autonomous Digital Twins</h3>
                   <p className="text-left"></p>
                     Self-optimizing systems that make real-time decisions without human intervention. Reinforcement learning 
@@ -507,8 +507,8 @@ export default function AIDigitalTwinEnterprise2026() {
           </div>
 
           <footer className="text-left">
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Published September 30, 2025 by Zion Tech Group
               </div>
               <div className="text-left"></div>

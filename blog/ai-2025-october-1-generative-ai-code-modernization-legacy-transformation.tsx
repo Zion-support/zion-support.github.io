@@ -55,8 +55,8 @@ export default function GenerativeAICodeModernizationLegacyTransformation2025() 
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">⚡ Transformation Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">50M+</div>
                     <div className="text-left">Lines of Code Modernized</div>
                   </div>
@@ -142,8 +142,8 @@ export default function GenerativeAICodeModernizationLegacyTransformation2025() 
                   </ul>
                   
                   <p className="text-left">AI-Powered Modernization Results (18 months):</p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <h4 className="text-left">Technical Transformation</h4>
                       <ul className="text-left">
                         <li>• 37M lines → 127 cloud-native microservices</li>
@@ -172,8 +172,8 @@ export default function GenerativeAICodeModernizationLegacyTransformation2025() 
 
               <h2 className="text-left">The AI-Powered Modernization Workflow</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Discovery & Assessment (2-4 weeks)</h3>
                   <p className="text-left"></p>
                     AI agents scan and analyze the entire legacy codebase, identifying:
@@ -245,8 +245,8 @@ export default function GenerativeAICodeModernizationLegacyTransformation2025() 
               </div>
 
               <h2 className="text-left">Key Success Factors</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Technical Prerequisites</h4>
                   <ul className="text-left">
                     <li>• Complete source code repository with version history</li>

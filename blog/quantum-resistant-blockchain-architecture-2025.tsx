@@ -80,8 +80,8 @@ export default function QuantumResistantBlockchainArchitecture2025() {
                   These algorithms form the foundation of quantum-safe blockchain infrastructure.
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">CRYSTALS-Dilithium (Digital Signatures)</h4>
                     <p className="text-left">Primary PQC signature scheme for blockchain transactions</p>
                     <div className="text-left"></div>
@@ -118,12 +118,12 @@ export default function QuantumResistantBlockchainArchitecture2025() {
               <div className="text-left"></div>
                 <h3 className="text-left">Key Design Components</h3>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">1. Quantum-Safe Transaction Signatures</h4>
                     <p className="text-left">Replace ECDSA with Dilithium-based signatures for all transactions</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Signature Size</div>
                         <div className="text-left">2,420 bytes</div>
                       </div>
@@ -195,8 +195,8 @@ export default function QuantumResistantBlockchainArchitecture2025() {
 
               <h2 className="text-left">Performance & Scalability Considerations</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">⚡ Challenges</h3>
                   <ul className="text-left">
                     <li className="text-left">
@@ -235,10 +235,10 @@ export default function QuantumResistantBlockchainArchitecture2025() {
 
               <h2 className="text-left">Enterprise Implementation Roadmap</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Q1<
                     </div>
                     <div></div>
@@ -253,8 +253,8 @@ export default function QuantumResistantBlockchainArchitecture2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">Q2<
                     </div>
@@ -270,8 +270,8 @@ export default function QuantumResistantBlockchainArchitecture2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">Q3<
                     </div>
@@ -287,8 +287,8 @@ export default function QuantumResistantBlockchainArchitecture2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">Q4<
                     </div>
@@ -307,8 +307,8 @@ export default function QuantumResistantBlockchainArchitecture2025() {
 
               <h2 className="text-left">Business Value & ROI</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">30+ Years</div>
                     <div className="text-left">Future-proof security guarantee</div>

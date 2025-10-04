@@ -26,8 +26,8 @@ export default function AutonomousMultiAgentGovernance2025() {
       <main className="text-left">
         <article className="text-left"></a>
           {/* Hero Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Users className="text-left" />
               AI GOVERNANCE · OCTOBER 2025
             </div>
@@ -42,8 +42,8 @@ export default function AutonomousMultiAgentGovernance2025() {
             </p>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1000s</div>
                 <div className="text-left">Agents Governed</div>
               </div>
@@ -63,8 +63,8 @@ export default function AutonomousMultiAgentGovernance2025() {
           </div>
 
           {/* Main Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Executive Summary</h2>
               <p className="text-left"></p>
                 As enterprises deploy hundreds or thousands of autonomous AI agents, governance becomes the critical 
@@ -79,8 +79,8 @@ export default function AutonomousMultiAgentGovernance2025() {
             
             <div className="text-left"></div>
               <h3 className="text-left">Why Traditional Governance Fails at Scale</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">
                     <AlertTriangle className="text-left" />
                     Traditional Approach
@@ -111,8 +111,8 @@ export default function AutonomousMultiAgentGovernance2025() {
 
             <h2 className="text-left">Five Pillars of Agent Governance</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <Shield className="text-left" />
                   1. Policy Enforcement Engine
@@ -153,8 +153,8 @@ export default function AutonomousMultiAgentGovernance2025() {
                   Multi-layered safety mechanisms prevent catastrophic agent behaviors: data leaks, unauthorized access, 
                   infinite loops, resource exhaustion, and unintended side effects.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Pre-Execution Checks</div>
                     <ul className="text-left">
                       <li>• Input validation & sanitization</li>
@@ -216,8 +216,8 @@ export default function AutonomousMultiAgentGovernance2025() {
                   Continuous monitoring and reporting against regulatory frameworks (GDPR, HIPAA, SOC 2, ISO 27001) 
                   with automated evidence collection for audits.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <div className="text-left">GDPR Compliance</div>
                       <ul className="text-left">
@@ -380,15 +380,15 @@ await governance.validate_agent_action("agent-42",
 
             <h2 className="text-left">Enterprise Success Stories</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏦 JP Morgan Chase</h3>
                 <p className="text-left"></p>
                   Deployed governance framework for 500+ trading agents, enforcing regulatory compliance (MiFID II, 
                   Dodd-Frank) in real-time. Reduced compliance violations by 92% and audit preparation time by 85%.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">500+</div>
                     <div className="text-left">Agents Governed</div>
                   </div>
@@ -409,8 +409,8 @@ await governance.validate_agent_action("agent-42",
                   Implemented HIPAA-compliant governance for 1200+ clinical decision support agents. Achieved 100% 
                   audit compliance with zero PHI breaches across 8M patient interactions.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1200+</div>
                     <div className="text-left">Clinical Agents</div>
                   </div>
@@ -428,8 +428,8 @@ await governance.validate_agent_action("agent-42",
 
             <h2 className="text-left">Implementation Roadmap</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Month 1-2: Foundation</h3>
                 <ul className="text-left">
                   <li>• Define governance policies for top 10 use cases</li>

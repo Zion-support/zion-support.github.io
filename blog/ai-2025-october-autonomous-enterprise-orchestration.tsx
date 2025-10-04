@@ -83,8 +83,8 @@ export default function AutonomousEnterpriseOrchestration2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core Capabilities of Autonomous Orchestration</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🤖 Intelligent Automation</h3>
                     <ul className="text-left">
                       <li>• Multi-agent AI coordination</li>
@@ -129,8 +129,8 @@ export default function AutonomousEnterpriseOrchestration2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Success Stories: Transformative Results</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global E-Commerce Platform: 99.99% Uptime at Scale</h3>
                     <p className="text-left"></p>
                       A Fortune 50 retailer deployed autonomous orchestration to manage their global infrastructure 
@@ -205,8 +205,8 @@ export default function AutonomousEnterpriseOrchestration2025() {
                   into a cohesive self-managing system:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Multi-Agent AI Coordination</h3>
                     <p className="text-left"></p>
                       Deploy specialized AI agents for different domains (compute, storage, network, security) that 

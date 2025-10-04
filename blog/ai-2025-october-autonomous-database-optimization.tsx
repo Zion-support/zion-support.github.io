@@ -79,8 +79,8 @@ export default function AI2025OctoberAutonomousDatabaseOptimization() {
 
           <section className="text-left"></section>
             <h2 className="text-left">AI-Powered Optimization Features</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Zap className="text-left" />
                 <div></div>
                   <h3 className="text-left">Intelligent Query Optimization</h3>
@@ -125,8 +125,8 @@ export default function AI2025OctoberAutonomousDatabaseOptimization() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Real-World Performance Gains</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Financial Services</h3>
                 <p className="text-left"></p>
                   Leading bank reduced query latency by 96%, enabling real-time fraud detection and saving $42M
@@ -215,8 +215,8 @@ export default function AI2025OctoberAutonomousDatabaseOptimization() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Week 1-2: Assessment & Baseline</h3>
                 <p className="text-left"></p>
                   Deploy monitoring agents, establish performance baselines, and identify initial optimization

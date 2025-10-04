@@ -26,8 +26,8 @@ export default function QuantumSecurityNetworksEnterprise2025() {
       <main className="text-left">
         <article className="text-left"></a>
           {/* Hero Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Shield className="text-left" />
               QUANTUM SECURITY · OCTOBER 2025
             </div>
@@ -42,8 +42,8 @@ export default function QuantumSecurityNetworksEnterprise2025() {
             </p>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.999%</div>
                 <div className="text-left">Security Uptime</div>
               </div>
@@ -63,8 +63,8 @@ export default function QuantumSecurityNetworksEnterprise2025() {
           </div>
 
           {/* Main Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Executive Summary</h2>
               <p className="text-left"></p>
                 As quantum computers advance toward breaking traditional cryptography, enterprises must adopt 
@@ -113,8 +113,8 @@ export default function QuantumSecurityNetworksEnterprise2025() {
 
             <h2 className="text-left">Core Architecture Components</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">1. Post-Quantum Cryptography Layer</h3>
                 <ul className="text-left">
                   <li className="text-left">
@@ -205,8 +205,8 @@ export default function QuantumSecurityNetworksEnterprise2025() {
 
             <h2 className="text-left">Implementation Roadmap</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Assessment & Planning (Months 1-2)</h3>
                 <ul className="text-left">
                   <li>• Inventory all cryptographic assets and dependencies</li>
@@ -249,16 +249,16 @@ export default function QuantumSecurityNetworksEnterprise2025() {
 
             <h2 className="text-left">Real-World Success Stories</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">🏦 Global Financial Institution</h3>
                   <p className="text-left"></p>
                     Deployed PQC-enabled transaction processing across 50 countries, protecting $2T in daily 
                     transaction volume. Achieved 99.999% uptime with &lt;5ms latency overhead.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">92%</div>
                       <div className="text-left">Threat Reduction</div>
                     </div>
@@ -279,8 +279,8 @@ export default function QuantumSecurityNetworksEnterprise2025() {
                     Implemented quantum-safe patient data exchange across 200+ hospitals. AI-powered threat 
                     detection blocked 99.7% of attacks with zero false positives.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">100%</div>
                       <div className="text-left">HIPAA Compliance</div>
                     </div>

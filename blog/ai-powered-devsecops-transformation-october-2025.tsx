@@ -35,8 +35,8 @@ export default function AIPoweredDevSecOpsTransformationOctober2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">95%</div>
               <div className="text-left">Faster Threat Detection</div>
             </div>
@@ -99,8 +99,8 @@ export default function AIPoweredDevSecOpsTransformationOctober2025() {
 
           <h2 className="text-left">Intelligent Vulnerability Management</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔍 AI-Powered Scanning</h3>
               <p className="text-left"></p>
                 Machine learning models analyze code patterns, dependencies, and runtime behavior to 
@@ -136,8 +136,8 @@ export default function AIPoweredDevSecOpsTransformationOctober2025() {
           <div className="text-left"></div>
             <h3 className="text-left">🤖 Autonomous Security Operations</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Threat Intelligence</h4>
@@ -222,33 +222,33 @@ export default function AIPoweredDevSecOpsTransformationOctober2025() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <span className="text-left"><strong className="text-left">Assessment:</strong> Evaluate current security posture and identify automation opportunities<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2</div>
                 <span className="text-left"><strong className="text-left">Pipeline Integration:</strong> Deploy AI security tools into CI/CD workflows<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">3</div>
                 <span className="text-left"><strong className="text-left">Automation:</strong> Implement automated scanning, testing, and remediation<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">4</div>
                 <span className="text-left"><strong className="text-left">Monitoring:</strong> Deploy AI-powered runtime security and observability<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">5</div>
                 <span className="text-left"><strong className="text-left">Optimization:</strong> Continuously improve with ML feedback loops<
               </div>

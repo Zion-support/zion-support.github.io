@@ -73,8 +73,8 @@ export default function ReliableAgentEvals2025() {
 
             <section></section>
               <h2 className="text-left">Evaluation Framework</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Offline Evals</h3>
                   <ul className="text-left">
                     <li>• Simulated tasks with ground truth</li>
@@ -141,7 +141,7 @@ export default function ReliableAgentEvals2025() {
     <div>
       <div></div>
     <article className="text-left"></a>
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link href="/blog" className="text-left">
             ← Back to Blog

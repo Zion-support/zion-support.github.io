@@ -20,11 +20,11 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Hero Section */}
+        <div className="text-left">
+        <div className="text-left"></div>
             <span className="text-left"></span>
               🚀 June 2026 Mega Enterprise Automation
             <
@@ -56,8 +56,8 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
         </div>
 
         {/* Key Metrics */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">99.8%</div>
             <div className="text-left">Automation Rate</div>
           </div>
@@ -81,8 +81,8 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
             Complete Automation Framework
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🤖</div>
               <h3 className="text-left">AI Agent Orchestration</h3>
               <p className="text-left"></p>
@@ -128,8 +128,8 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">📊</div>
               <h3 className="text-left">Intelligent Analytics</h3>
               <p className="text-left"></p>
@@ -167,8 +167,8 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
             Industry-Specific Applications
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">Financial Services</div>
               <p className="text-left"></p>
                 Automated trading, risk assessment, fraud detection, and regulatory compliance 
@@ -254,8 +254,8 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
             Implementation Roadmap
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">Phase 1</div>
               <h3 className="text-left">Assessment</h3>
               <p className="text-left"></p>
@@ -303,8 +303,8 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
             ROI Calculator
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">Calculate Your Potential Savings</h3>
                 <div className="text-left"></div>
@@ -337,8 +337,8 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
               
               <div></div>
                 <h3 className="text-left">Projected Results</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$2.5B</div>
                     <div className="text-left">Annual Value Generated</div>
                   </div>

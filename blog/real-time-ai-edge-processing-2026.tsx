@@ -41,8 +41,8 @@ const RealTimeAIEdgeProcessing2026 = () =>
 
         <h2 className="text-left">Edge AI Architecture & Hardware</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🔥 Neural Processing Units (NPUs)</h4>
             <p className="text-left"></p>
               Specialized AI accelerators optimized for edge inference: Apple Neural Engine (17 TOPS), Google Tensor G4 (12 TOPS), Qualcomm Hexagon 8 Gen 3 (45 TOPS).
@@ -71,8 +71,8 @@ const RealTimeAIEdgeProcessing2026 = () =>
 
         <h2 className="text-left">Transformative Edge AI Use Cases</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🚗 Autonomous Vehicles</h4>
             <p className="text-left"></p>
               Self-driving cars process 40TB of sensor data daily from cameras, LiDAR, and radar. Edge AI enables real-time object detection, path planning, and collision avoidance with &lt;10ms latency—critical for safety at highway speeds (100ms = 3 meters traveled at 65mph).
@@ -255,8 +255,8 @@ const RealTimeAIEdgeProcessing2026 = () =>
 
         <h2 className="text-left">Edge AI Deployment Frameworks & Tools</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🔧 TensorFlow Lite</h4>
             <p className="text-left"></p>
               Google's lightweight ML framework for mobile and edge devices. Supports iOS, Android, Linux, and microcontrollers.
@@ -311,8 +311,8 @@ const RealTimeAIEdgeProcessing2026 = () =>
 
         <h2 className="text-left">Edge AI Security & Privacy Considerations</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🔒 Secure Enclaves & TEEs</h4>
             <p></p>
               Deploy models in Trusted Execution Environments (ARM TrustZone, Intel SGX) to protect intellectual property and prevent model theft or tampering. Critical for proprietary models deployed on millions of devices.
@@ -336,8 +336,8 @@ const RealTimeAIEdgeProcessing2026 = () =>
 
         <h2 className="text-left">The Future of Edge AI (2026-2030)</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left">🧠<
             <div className="text-left"></div>
               <strong className="text-left">Neuromorphic Edge Processors:</strong> Brain-inspired chips (Intel Loihi 3, IBM TrueNorth) delivering 1000x energy efficiency for always-on AI applications, enabling &lt;1mW power consumption for continuous sensing.
@@ -382,8 +382,8 @@ const RealTimeAIEdgeProcessing2026 = () =>
         </div>
 
         <footer className="text-left">
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               Published: January 15, 2026 | Reading Time: 24 minutes
             </div>
             <div className="text-left"></div>

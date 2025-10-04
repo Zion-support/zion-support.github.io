@@ -36,8 +36,8 @@ export default function MultimodalRAGEnterpriseProductionGuide() {
             videos, and audio. Multimodal RAG unlocks this knowledge, enabling AI to understand and reason 
             across all content types simultaneously.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Key Benefits</h3>
               <ul className="text-left">
                 <li>• 94% accuracy across all modalities</li>
@@ -120,8 +120,8 @@ const results = await vectorDB.search(fusedEmbedding,
         {/* Performance Optimization */}
         <section className="text-left"></section>
           <h2 className="text-left">Performance Optimization</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Vector Database Optimization</h3>
               <ul className="text-left">
                 <li>• <strong>HNSW Indexing:</strong> Sub-10ms search at 100M+ vectors</li>
@@ -156,8 +156,8 @@ const results = await vectorDB.search(fusedEmbedding,
         {/* Enterprise Results */}
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Results</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">94%</div>
               <div className="text-left">Cross-Modal Accuracy</div>
             </div>
@@ -175,8 +175,8 @@ const results = await vectorDB.search(fusedEmbedding,
         {/* Implementation Roadmap */}
         <section className="text-left"></section>
           <h2 className="text-left">90-Day Implementation Roadmap</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Days 1-30: Foundation</h3>
               <p className="text-left"></p>
                 Deploy vector database, implement basic embedding pipeline, establish monitoring 

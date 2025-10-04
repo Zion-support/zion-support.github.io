@@ -32,8 +32,8 @@ const EdgeRAGBlueprint2026 = () =>
             <p className="text-left">Fresh, private answers in &lt;100ms with hybrid retrieval and on‑device caches.</p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Timer className="text-left" />
               <div></div>
                 <h3 className="text-left">Sub‑100ms</h3>

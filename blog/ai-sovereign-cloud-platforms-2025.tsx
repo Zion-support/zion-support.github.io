@@ -22,8 +22,8 @@ export default function AISovereignCloudPlatforms2025() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left"></span>
               🆕 PUBLISHED SEPTEMBER 30, 2025
             <
@@ -41,8 +41,8 @@ export default function AISovereignCloudPlatforms2025() {
             with AI-powered sovereign cloud infrastructure
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100%</div>
               <div className="text-left">Data Sovereignty</div>
             </div>
@@ -187,8 +187,8 @@ export default function AISovereignCloudPlatforms2025() {
               while modernizing their cloud infrastructure.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">100%</div>
                 <div className="text-left">Data Sovereignty Achieved</div>
               </div>
@@ -210,8 +210,8 @@ export default function AISovereignCloudPlatforms2025() {
 
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Infrastructure Layer</h4>
               <ul className="text-left">
                 <li>• Kubernetes with sovereign node pools</li>
@@ -237,8 +237,8 @@ export default function AISovereignCloudPlatforms2025() {
           <div className="text-left"></div>
             <h3 className="text-left">Typical 3-Year ROI Breakdown</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Eliminated Compliance Fines<
                 <span className="text-left">€8.5M<
               </div>

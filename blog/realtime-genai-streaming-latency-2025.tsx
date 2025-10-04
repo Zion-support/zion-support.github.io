@@ -45,8 +45,8 @@ const RealtimeGenAIStreamingLatency2025: React.FC = () =>
               Master streaming architectures, edge caching, and latency budgets to deliver blazing-fast GenAI experiences. Learn how top teams achieve sub-100ms first-token latency and maintain responsive UX at scale.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <User className="text-left" />
                 <span>Zion Tech Group Team<
               </div>
@@ -152,8 +152,8 @@ async function* streamLLM(prompt: string)
               <p className="text-left"></p>
                 For frequently-asked questions, cache responses at the edge using semantic similarity matching:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Cache Strategy</h3>
                   <ul className="text-left">
                     <li>→ Embed user queries (384-dim vectors)</li>
@@ -183,8 +183,8 @@ async function* streamLLM(prompt: string)
               </p>
               <div className="text-left"></div>
                 <h3 className="text-left">Three-Tier Model Strategy</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Tier 1: Instant (&lt;100ms) - Small Model</h4>
                     <p className="text-left">Use GPT-3.5-turbo-instruct or Mistral-7B for simple queries, autocompletions, and FAQ. 70% of queries.</p>
                   </div>

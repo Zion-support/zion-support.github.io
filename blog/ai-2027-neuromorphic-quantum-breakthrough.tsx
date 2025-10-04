@@ -27,8 +27,8 @@ export default function AINeuromorphicQuantumBreakthrough2027() {
 
         <div className="text-left"></div>
           <h2 className="text-left">🧠 Neuromorphic Quantum Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1Mx</div>
               <div className="text-left">Energy Efficiency</div>
             </div>
@@ -70,8 +70,8 @@ export default function AINeuromorphicQuantumBreakthrough2027() {
         <section className="text-left"></section>
           <h2 className="text-left">Revolutionary Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Advanced Brain-Computer Interfaces</h3>
               <p className="text-left"></p>
                 Neuromorphic quantum AI is enabling seamless brain-computer interfaces that can interpret 
@@ -185,8 +185,8 @@ export default function AINeuromorphicQuantumBreakthrough2027() {
             that were previously impossible with traditional computing:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Immediate Benefits</h3>
               <ul className="text-left">
                 <li>1,000,000x improvement in energy efficiency</li>
@@ -229,8 +229,8 @@ export default function AINeuromorphicQuantumBreakthrough2027() {
           </div>
         </section>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Link href="/blog" className="text-left">
               Explore More AI Insights
             </Link>

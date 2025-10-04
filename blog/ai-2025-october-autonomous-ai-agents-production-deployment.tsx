@@ -55,8 +55,8 @@ export default function AutonomousAIAgentsProductionDeployment2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Proven Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Task Automation Rate</div>
                   </div>
@@ -150,8 +150,8 @@ export default function AutonomousAIAgentsProductionDeployment2025() {
                 <p className="text-left"></p>
                   Coordinated teams of specialized agents working together on complex objectives:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Researcher Agent</div>
                     <div className="text-left">Gathers information and analyzes data</div>
                   </div>
@@ -207,14 +207,14 @@ export default function AutonomousAIAgentsProductionDeployment2025() {
 
               <h2 className="text-left">Real-World Use Cases & Results</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Customer Support Automation</h4>
                   <p className="text-left"></p>
                     Global SaaS company deployed autonomous support agents handling tier-1 and tier-2 inquiries
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">89%</div>
                       <div className="text-left">Issues Resolved Automatically</div>
                     </div>
@@ -234,8 +234,8 @@ export default function AutonomousAIAgentsProductionDeployment2025() {
                   <p className="text-left"></p>
                     E-commerce platform implemented autonomous agents for infrastructure monitoring and remediation
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">99.97%</div>
                       <div className="text-left">System Uptime</div>
                     </div>
@@ -255,8 +255,8 @@ export default function AutonomousAIAgentsProductionDeployment2025() {
                   <p className="text-left"></p>
                     Tech company deployed coding agents for automated testing, code review, and bug fixes
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">3.2x</div>
                       <div className="text-left">Development Velocity</div>
                     </div>
@@ -274,8 +274,8 @@ export default function AutonomousAIAgentsProductionDeployment2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Phase 1: Foundation (Weeks 1-4)</h4>
                   <ul className="text-left">
                     <li>• Select pilot use case with clear success metrics</li>

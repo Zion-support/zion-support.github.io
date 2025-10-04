@@ -38,8 +38,8 @@ export default function AdvancedEdgeIntelligencePlatform2025() {
               By combining distributed computing, real-time inference engines, and intelligent edge orchestration, organizations 
               are achieving unprecedented performance and cost efficiency.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">&lt;0.5ms</div>
                 <div className="text-left">AI Inference Latency</div>
               </div>
@@ -91,8 +91,8 @@ export default function AdvancedEdgeIntelligencePlatform2025() {
                 processing 10M visual inspections per hour with 99.7% accuracy. The system detected defects in real-time, 
                 reducing product recalls by 89% and saving $12.3M annually.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">10M</div>
                   <div className="text-left">Inspections/Hour</div>
                 </div>
@@ -118,8 +118,8 @@ export default function AdvancedEdgeIntelligencePlatform2025() {
                 The platform processes 100M customer interactions daily, increasing conversion rates by 47% and boosting 
                 revenue by $325M annually.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">5,000</div>
                   <div className="text-left">Stores</div>
                 </div>
@@ -145,8 +145,8 @@ export default function AdvancedEdgeIntelligencePlatform2025() {
                 analyzes vital signs from 50,000 patients simultaneously, detecting critical events 15 minutes earlier than 
                 traditional methods and reducing adverse events by 62%.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">200</div>
                   <div className="text-left">Facilities</div>
                 </div>
@@ -168,8 +168,8 @@ export default function AdvancedEdgeIntelligencePlatform2025() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                 <p className="text-left"></p>
                   Infrastructure assessment, edge node deployment planning, and platform architecture design. 

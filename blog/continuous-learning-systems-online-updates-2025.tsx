@@ -199,8 +199,8 @@ const ContinuousLearningSystemsOnlineUpdates2025 = () =>
                 Production Success Stories
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">E-Commerce Personalization</h3>
                   <p className="text-left">Real-time recommendation engine with continuous learning from user interactions.</p>
                   <ul className="text-left">
@@ -252,8 +252,8 @@ const ContinuousLearningSystemsOnlineUpdates2025 = () =>
                 Implementation Roadmap
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Observability (Weeks 1-3)</h3>
                   <ul className="text-left">
                     <li>• Instrument production models to log predictions, features, and outcomes</li>

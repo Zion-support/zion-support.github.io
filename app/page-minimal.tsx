@@ -14,8 +14,8 @@ const HomePage = React.memo(function HomePage() {
       <div></div>
     <div className="text-left"></div>
       <header className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <Link href="/" className="text-left">
                 Zion Tech Group
@@ -60,8 +60,8 @@ const HomePage = React.memo(function HomePage() {
         </section>
 
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Latest AI Content & Insights
               </h2>
@@ -72,8 +72,8 @@ const HomePage = React.memo(function HomePage() {
             
             <div className="text-left"></div>
               <Link href="/blog/ai-enterprise-transformation-2026" className="text-left">
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left"></span>
                       Featured Article
                     </span>/span>/span>/span>/span>/span>/span>
@@ -93,8 +93,8 @@ const HomePage = React.memo(function HomePage() {
               </Link>
 
               <Link href="/blog/ai-autonomous-systems-2026" className="text-left">
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left"></span>
                       New Article
                     </span>/span>/span>/span>/span>/span>/span>
@@ -113,8 +113,8 @@ const HomePage = React.memo(function HomePage() {
               </Link>
 
               <Link href="/case-studies/manufacturing-ai-transformation-2026" className="text-left">
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left"></span>
                       Success Story
                     </span>/span>/span>/span>/span>/span>/span>
@@ -137,8 +137,8 @@ const HomePage = React.memo(function HomePage() {
       </main>
 
       <footer className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h3 className="text-left">Zion Tech Group</h3>"
               <p className="text-left"></p>

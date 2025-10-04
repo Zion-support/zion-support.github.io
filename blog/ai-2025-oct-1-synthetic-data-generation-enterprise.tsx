@@ -36,7 +36,7 @@ const SyntheticDataGenerationEnterprise: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">📊 Executive Summary</h2>
           <ul className="text-left">
@@ -209,8 +209,8 @@ const SyntheticDataGenerationEnterprise: React.FC = () =>
 
         <h2>Benefits of Synthetic Data</h2>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">💰 Cost Advantages</h4>
             <ul className="text-left">
               <li>97% lower than traditional data collection</li>

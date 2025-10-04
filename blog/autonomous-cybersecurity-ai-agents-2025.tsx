@@ -52,8 +52,8 @@ export default function AutonomousCybersecurityAIAgents2025() {
                 <p className="text-left"></p>
                   Modern enterprises face an unprecedented threat landscape. In 2025:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">47,000+</div>
                     <p className="text-left">Cyber attacks per day globally</p>
                   </div>
@@ -93,8 +93,8 @@ export default function AutonomousCybersecurityAIAgents2025() {
                   Enter autonomous AI security agents—systems that combine advanced machine learning, behavioral 
                   analytics, and automated response capabilities to protect enterprises with superhuman speed and accuracy.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Sub-30 Second Threat Response</h3>
                     <p className="text-left"></p>
                       AI agents detect anomalies in real-time, analyze attack patterns using millions of threat 
@@ -165,8 +165,8 @@ export default function AutonomousCybersecurityAIAgents2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Impact: Case Studies</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🏦 Fortune 500 Financial Institution</h3>
                     <p className="text-left"></p>
                       Deployed Zion's autonomous security platform across 50,000 endpoints and 200+ cloud workloads. 
@@ -217,8 +217,8 @@ export default function AutonomousCybersecurityAIAgents2025() {
                 <p className="text-left"></p>
                   Zion's autonomous security platform combines multiple AI/ML techniques into a cohesive defense system:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Behavioral Analytics & User/Entity Behavior Analytics (UEBA)</h4>
                     <p className="text-left"></p>
                       Machine learning models establish baseline behaviors for users, devices, and applications. 
@@ -326,8 +326,8 @@ export default function AutonomousCybersecurityAIAgents2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation: Your 90-Day Journey to Autonomous Security</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Days 1-30: Discovery & Design</h3>
                     <ul className="text-left">
                       <li>• Infrastructure assessment and asset discovery</li>
@@ -403,8 +403,8 @@ export default function AutonomousCybersecurityAIAgents2025() {
                   As a leader in AI-powered cybersecurity, Zion Tech Group has protected 500+ enterprises from 
                   2.4M+ attacks with our autonomous security platform. Our comprehensive solution includes:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <h4 className="text-left">Platform Capabilities</h4>
                       <ul className="text-left">
@@ -451,8 +451,8 @@ export default function AutonomousCybersecurityAIAgents2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Cybersecurity Research Team
                 </div>
                 <div className="text-left"></div>

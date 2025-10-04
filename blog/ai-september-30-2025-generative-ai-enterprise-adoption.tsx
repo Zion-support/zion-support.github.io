@@ -62,8 +62,8 @@ export default function AISeptember302025GenerativeAIEnterpriseAdoption() {
 
           <h3 className="text-left">The Complete Adoption Framework</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🎯</div>
               <h4 className="text-left">1. Strategic Planning</h4>
               <p className="text-left"></p>
@@ -178,8 +178,8 @@ export default function AISeptember302025GenerativeAIEnterpriseAdoption() {
 
           <h3 className="text-left">Best Practices for Production Scale</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Performance Optimization</h4>
               <p>Implement caching, model quantization, and intelligent batching to reduce latency and costs by up to 80%</p>
             </div>

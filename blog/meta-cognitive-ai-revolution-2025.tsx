@@ -10,15 +10,15 @@ export default function MetaCognitiveAIRevolution2025() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Sparkles className="text-left" />
                 <span className="text-left">REVOLUTIONARY BREAKTHROUGH<
               </div>
@@ -72,8 +72,8 @@ export default function MetaCognitiveAIRevolution2025() {
 
       {/* Breakthrough Overview */}
       <section id="breakthrough-overview" className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h2 className="text-left">
                 🧠 What is Meta-Cognitive AI?
@@ -84,8 +84,8 @@ export default function MetaCognitiveAIRevolution2025() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🧠</div>
                 <h3 className="text-left">Self-Reflection</h3>
                 <p className="text-left"></p>
@@ -156,8 +156,8 @@ export default function MetaCognitiveAIRevolution2025() {
 
       {/* Implementation Case Study */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h2 className="text-left">
                 💰 Fortune 500 Success Story
@@ -168,8 +168,8 @@ export default function MetaCognitiveAIRevolution2025() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Before Implementation</h3>
                   <ul className="text-left">
@@ -215,8 +215,8 @@ export default function MetaCognitiveAIRevolution2025() {
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <h3 className="text-left">
                     🎯 Ready to Implement Meta-Cognitive AI?
@@ -250,8 +250,8 @@ export default function MetaCognitiveAIRevolution2025() {
 
       {/* Footer */}
       <footer className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
             <div className="text-left"></div>
               <a href="/privacy" className="text-left">Privacy Policy</a>

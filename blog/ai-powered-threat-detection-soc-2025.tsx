@@ -45,8 +45,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
               Transform your Security Operations Center with AI-driven threat detection achieving 99.5% accuracy, sub-60s response times, and 90% reduction in false positives. Learn production-ready ML architectures and automated incident response playbooks.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <User className="text-left" />
                 <span>Zion Tech Group Team<
               </div>
@@ -106,8 +106,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
                 <p className="text-left"></p>
                   Modern AI-powered SOCs use a multi-layer detection stack combining behavioral analytics, anomaly detection, and threat intelligence:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <Shield className="text-left" />
                       <h3 className="text-left">Layer 1: Behavioral Anomaly Detection</h3>
@@ -129,8 +129,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <AlertTriangle className="text-left" />
                       <h3 className="text-left">Layer 2: Threat Intelligence Correlation</h3>
                     </div>
@@ -151,8 +151,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <Shield className="text-left" />
                       <h3 className="text-left">Layer 3: ML-Driven Attack Prediction</h3>
                     </div>
@@ -200,11 +200,11 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
                     </li>
                   </ol>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Example: Ransomware Detection</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <strong>Detection (2s):</strong> Behavioral analytics flag mass file encryption
                       </div>
                       <div className="text-left"></div>
@@ -223,8 +223,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
                   </div>
                   <div className="text-left"></div>
                     <h3 className="text-left">Example: Phishing Campaign</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <strong>Detection (1s):</strong> Email analysis flags credential harvesting link
                       </div>
                       <div className="text-left"></div>
@@ -290,14 +290,14 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
 
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Results</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Case Study: Financial Services Company</h3>
                     <p className="text-left"></p>
                       A Fortune 500 bank deployed AI-powered SOC automation to defend against sophisticated attacks. Results after 6 months:
                     </p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <strong className="text-left">Detection Time</strong>
                         <p className="text-left">4 hours → 6 minutes</p>
                         <p className="text-left">40x improvement</p>
@@ -313,8 +313,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
                         <p className="text-left">91% reduction</p>
                       </div>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">✓<
                         <span><strong>Business Impact:</strong> Prevented 47 breaches (estimated $210M in damages), reduced analyst burnout by 65%<
                       </div>
@@ -334,8 +334,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
                     <p className="text-left"></p>
                       A hospital network deployed AI threat detection to protect patient data and critical systems:
                     </p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <strong className="text-left">Ransomware Stopped</strong>
                         <p className="text-left">23 attacks</p>
                         <p className="text-left">100% success rate</p>
@@ -351,8 +351,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () =>
                         <p className="text-left">All pre-damage</p>
                       </div>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">✓<
                         <span><strong>Compliance:</strong> Achieved 100% HIPAA audit score (up from 87%)<
                       </div>

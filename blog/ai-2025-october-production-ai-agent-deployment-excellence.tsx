@@ -171,8 +171,8 @@ const ProductionAIAgentDeploymentExcellenceArticle = () =>
 
         <section></section>
           <h2>📊 Operational Excellence Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Reliability</h3>
               <ul className="text-left">
                 <li>• 99.5-99.9% uptime SLA</li>

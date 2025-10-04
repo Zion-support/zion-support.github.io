@@ -103,8 +103,8 @@ export default function AIQuantumMachineLearning2025() {
             <section className="text-left"></section>
               <h2 className="text-left">💼 Enterprise Use Cases</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Financial Portfolio Optimization</h3>
                   <p className="text-left"></p>
                     Quantum algorithms optimize portfolios with millions of constraints and non-linear risk factors
@@ -201,8 +201,8 @@ export default function AIQuantumMachineLearning2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">📊 Implementation Strategy</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Stage 1: Quantum Readiness (Months 1-2)</h3>
                   <p className="text-left">Problem identification, quantum advantage assessment, team training, and cloud quantum access setup</p>
                 </div>
@@ -239,8 +239,8 @@ export default function AIQuantumMachineLearning2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">🌟 Quantum Advantage Metrics</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">1000x</div>
                   <div className="text-left">Computational speedup for complex optimization problems</div>
                 </div>

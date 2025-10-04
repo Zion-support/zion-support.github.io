@@ -86,8 +86,8 @@ export default function VectorDatabasesAIApplications2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Key Use Cases</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🔍 Semantic Search</h3>
                     <p className="text-left"></p>
                       Search by meaning rather than keywords. Users can ask questions in natural language 
@@ -149,8 +149,8 @@ export default function VectorDatabasesAIApplications2025() {
                   and existing infrastructure:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Pinecone</h3>
                     <p className="text-left">Fully managed, cloud-native vector database</p>
                     <ul className="text-left">
@@ -206,8 +206,8 @@ export default function VectorDatabasesAIApplications2025() {
                   Building production-ready systems with vector databases requires careful architectural decisions:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🏗️ Hybrid Search Architecture</h3>
                     <p className="text-left"></p>
                       Combine vector similarity with traditional filters for best results:
@@ -271,8 +271,8 @@ export default function VectorDatabasesAIApplications2025() {
 
                 <div className="text-left"></div>
                   <h3 className="text-left">Optimization Checklist</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">✓<
                       <div></div>
                         <strong className="text-left">Embedding Quality:</strong>
@@ -315,8 +315,8 @@ export default function VectorDatabasesAIApplications2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">&lt;50ms</div>
                     <div className="text-left">P95 query latency</div>
                   </div>
@@ -337,8 +337,8 @@ export default function VectorDatabasesAIApplications2025() {
                   Vector databases can be expensive at scale. Strategies to reduce costs:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <strong className="text-left">Dimension Reduction:</strong>
                     <span className="text-left">Reduce embedding dimensions from 1536→384 using 
                     Matryoshka embeddings or PCA (60% cost reduction, ~5% accuracy loss)<
@@ -392,8 +392,8 @@ export default function VectorDatabasesAIApplications2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group AI Infrastructure Team
                 </div>
                 <div className="text-left"></div>

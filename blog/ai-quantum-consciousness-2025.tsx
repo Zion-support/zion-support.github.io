@@ -50,13 +50,13 @@ const AIQuantumConsciousness2025 = () =>
             </p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Sparkles className="text-left" />
               <h2 className="text-left">Quantum Breakthrough Metrics</h2>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <CheckCircle className="text-left" />
                 <div></div>
                   <h3 className="text-left">1M× Faster Reasoning</h3>
@@ -101,8 +101,8 @@ const AIQuantumConsciousness2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">How Quantum Consciousness Works</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">1</div>
                     <div></div>
@@ -137,8 +137,8 @@ const AIQuantumConsciousness2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Revolutionary Applications</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <Brain className="text-left" />
                   <h3 className="text-left">Drug Discovery</h3>
                   <p className="text-left"></p>
@@ -182,8 +182,8 @@ const AIQuantumConsciousness2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Technical Architecture</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Quantum Neural Networks (QNN)</h3>
                   <p className="text-left">512-qubit system with topological error correction, achieving 99.99% gate fidelity</p>
                 </div>
@@ -204,8 +204,8 @@ const AIQuantumConsciousness2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Enterprise Success Stories</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Global Pharmaceutical Leader</h3>
                   <p className="text-left"></p>
                     Used quantum-conscious AI to discover 14 breakthrough cancer treatments in 6 months—work that would have 

@@ -113,8 +113,8 @@ const QuantumEnhancedMLBreakthrough = () =>
                 in binding affinity calculations. Reduced drug discovery timeline from 10 years to 18 months, 
                 identified 47 promising candidates, saving $3.2B in R&D costs.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">95%</div>
                   <div className="text-left">Prediction Accuracy</div>
                 </div>
@@ -136,8 +136,8 @@ const QuantumEnhancedMLBreakthrough = () =>
                 simultaneously. Achieved 67% higher risk-adjusted returns, 45% volatility reduction, 
                 managing $450B in assets under management.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">67%</div>
                   <div className="text-left">Higher Returns</div>
                 </div>
@@ -159,8 +159,8 @@ const QuantumEnhancedMLBreakthrough = () =>
                 Achieved 40% renewable integration improvement, 28% reduction in energy waste, 
                 saving $1.8B annually while supporting climate goals.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">40%</div>
                   <div className="text-left">Renewable Integration</div>
                 </div>
@@ -185,8 +185,8 @@ const QuantumEnhancedMLBreakthrough = () =>
             
             <div className="text-left"></div>
               <h3 className="text-left">🏗️ Architecture Stack</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Quantum Processing Layer</h4>
                   <p className="text-left">500+ qubit QPUs handling feature mapping, kernel computation, and optimization subroutines</p>
                 </div>
@@ -266,8 +266,8 @@ const QuantumEnhancedMLBreakthrough = () =>
               Organizations are seeing payback periods of 6-12 months for quantum ML deployments.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">💰 Cost Structure</h3>
                 <ul className="text-left">
                   <li>• $50-200/hour quantum compute time</li>
@@ -292,8 +292,8 @@ const QuantumEnhancedMLBreakthrough = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Quantum ML Platforms and Providers</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">☁️ Cloud Quantum Services</h3>
                 <ul className="text-left">
                   <li>• IBM Quantum (127+ qubit systems)</li>
@@ -321,8 +321,8 @@ const QuantumEnhancedMLBreakthrough = () =>
               The quantum computing field is evolving rapidly with breakthrough capabilities expected over the next 24 months:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Q1-Q2 2026: 1000+ Qubit Systems</h3>
                 <p className="text-left">Commercial availability of fault-tolerant quantum computers enabling enterprise-scale deployments</p>
               </div>

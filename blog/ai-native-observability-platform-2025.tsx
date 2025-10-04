@@ -102,8 +102,8 @@ export default function AINativeObservabilityPlatform2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Impact & ROI</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">⚡ Operational Excellence</h3>
                     <ul className="text-left">
                       <li>95% reduction in Mean Time to Resolution (MTTR)</li>
@@ -131,8 +131,8 @@ export default function AINativeObservabilityPlatform2025() {
                 <p className="text-left"></p>
                   AI-Native Observability enables fully autonomous incident handling:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🚨 Intelligent Detection (0-30 seconds)</h3>
                     <p className="text-left"></p>
                       AI continuously analyzes millions of metrics, logs, and traces across your entire infrastructure. 
@@ -238,8 +238,8 @@ export default function AINativeObservabilityPlatform2025() {
                 <p className="text-left"></p>
                   Successfully deploying AI-Native Observability requires a strategic approach:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                     <p className="text-left"></p>
                       Instrument applications with OpenTelemetry. Establish baseline metrics and SLOs. Deploy AI 

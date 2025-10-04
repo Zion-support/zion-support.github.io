@@ -18,8 +18,8 @@ const AIAutonomousOperationsServices2026 = React.memo(function AIAutonomousOpera
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <div className="text-left"></div>
           <header className="text-left">
             <div className="text-left"></div>
@@ -34,8 +34,8 @@ const AIAutonomousOperationsServices2026 = React.memo(function AIAutonomousOpera
             </p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🔄</div>"
               <h3 className="text-left">Self-Healing Infrastructure</h3>"
               <p className="text-left"></p>
@@ -129,23 +129,23 @@ const AIAutonomousOperationsServices2026 = React.memo(function AIAutonomousOpera
 
           <div className="text-left"></div>
             <h2 className="text-left">Implementation Results</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">95%>
                 </div>
                 <h3 className="text-left">Automation Rate</h3>"
                 <p className="text-left">Average automation achieved across all operations</p>"
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">90%>
                 </div>
                 <h3 className="text-left">Uptime Improvement</h3>"
                 <p className="text-left">Reduction in system downtime and outages</p>"
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">60%>
                 </div>
                 <h3 className="text-left">Cost Reduction</h3>"
@@ -178,8 +178,8 @@ const AIAutonomousOperationsServices2026 = React.memo(function AIAutonomousOpera
                 </div>
             </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Transform Your Operations Today</h2>"
               <p className="text-left"></p>
                 Deploy autonomous AI systems that work 24/7 to optimize, heal, and evolve your operations 

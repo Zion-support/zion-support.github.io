@@ -55,8 +55,8 @@ export default function AIEnterpriseAutomationAgentsRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">95%</div>
                     <div className="text-left">Efficiency Increase</div>
                   </div>
@@ -111,8 +111,8 @@ export default function AIEnterpriseAutomationAgentsRevolution2025() {
                   The autonomous system reads invoices, validates data, handles exceptions, and processes payments—achieving 
                   98.5% accuracy while reducing processing time from 4 days to 2 hours.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$38M Annual Savings</div>
                     <div className="text-left">Reduced manual processing costs</div>
                   </div>
@@ -130,8 +130,8 @@ export default function AIEnterpriseAutomationAgentsRevolution2025() {
                   The intelligent system handles document verification, compliance checks, and personalized product recommendations—
                   reducing onboarding time from 3 weeks to 4 hours while improving customer satisfaction by 87%.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">98% Faster Onboarding</div>
                     <div className="text-left">3 weeks to 4 hours</div>
                   </div>
@@ -145,8 +145,8 @@ export default function AIEnterpriseAutomationAgentsRevolution2025() {
               <h2 className="text-left">Implementation Architecture</h2>
               
               <h3 className="text-left">Core Components of Enterprise AI Agents</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">1. Perception Layer</h4>
                   <p className="text-left"></p>
                     Multi-modal input processing enabling agents to understand documents, emails, forms, and structured data 
@@ -262,8 +262,8 @@ export default function AIEnterpriseAutomationAgentsRevolution2025() {
                     </ul>
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Typical Payback: 3-6 Months</div>
                     <div className="text-left">With 400-800% ROI in Year 1</div>
                   </div>

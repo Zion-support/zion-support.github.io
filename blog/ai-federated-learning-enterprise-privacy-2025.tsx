@@ -55,8 +55,8 @@ export default function AIFederatedLearningEnterprisePrivacy2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔒 Federated Learning Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">98%</div>
                     <div className="text-left">Model Accuracy vs Centralized</div>
                   </div>
@@ -137,8 +137,8 @@ export default function AIFederatedLearningEnterprisePrivacy2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">🏗️ Federated Learning System Components</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Central Aggregation Server</h4>
                     <p className="text-left">Coordinates training rounds, aggregates model updates using secure aggregation protocols (FedAvg, FedProx), and distributes global model to participants.</p>
                   </div>
@@ -249,8 +249,8 @@ export default function AIFederatedLearningEnterprisePrivacy2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Use Case Definition (Weeks 1-4)</h3>
                   <ul className="text-left">
                     <li className="text-left">
@@ -340,8 +340,8 @@ export default function AIFederatedLearningEnterprisePrivacy2025() {
               </div>
 
               <h2 className="text-left">Technology Stack</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Federated Learning Frameworks</h3>
                   <ul className="text-left">
                     <li className="text-left">• TensorFlow Federated (Google)</li>
@@ -364,8 +364,8 @@ export default function AIFederatedLearningEnterprisePrivacy2025() {
               </div>
 
               <h2 className="text-left">Key Challenges & Solutions</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Challenge: Non-IID Data Distribution</h3>
                   <p className="text-left">Data across locations may have different distributions, causing training instability.</p>
                   <p className="text-left"><strong>Solution:</strong> Advanced aggregation algorithms (FedProx, SCAFFOLD) and personalization layers that adapt the global model to local data distributions.</p>

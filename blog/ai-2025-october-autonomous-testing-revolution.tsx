@@ -36,8 +36,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">92%</div>
               <div className="text-left">Bug Detection Rate</div>
             </div>
@@ -73,8 +73,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
 
           <h2 className="text-left">AI-Powered Test Generation</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Code Analysis</h3>
               <ul className="text-left">
                 <li>✓ Automated test case generation from source code</li>
@@ -102,8 +102,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
             <p className="text-left"></p>
               Traditional test automation fails when applications evolve. Our autonomous system adapts automatically:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Smart Element Location</h4>
                 <p className="text-left"></p>
                   ML algorithms identify UI elements using multiple attributes, automatically adjusting 
@@ -155,8 +155,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
 
           <h2 className="text-left">Performance & Load Testing</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Intelligent Load Generation</h3>
               <p className="text-left"></p>
                 AI analyzes production traffic patterns and generates realistic load tests that simulate 
@@ -185,8 +185,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
           
           <div className="text-left"></div>
             <h3 className="text-left">90-Day Transformation Plan</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">1<
                 </div>
@@ -199,8 +199,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">2<
                 </div>
                 <div></div>
@@ -212,8 +212,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">3<
                 </div>
                 <div></div>
@@ -225,8 +225,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">4<
                 </div>
                 <div></div>
@@ -242,8 +242,8 @@ export default function AI2025OctoberAutonomousTestingRevolution() {
 
           <h2 className="text-left">ROI & Business Impact</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">E-Commerce Platform</h3>
               <p className="text-left"></p>
                 Reduced testing time from 48 hours to 4 hours, caught 94% of bugs pre-production

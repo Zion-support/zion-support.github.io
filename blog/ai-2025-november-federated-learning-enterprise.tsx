@@ -101,8 +101,8 @@ export default function FederatedLearningEnterprise2025() {
                 <h2 className="text-left">Federated Learning Architecture</h2>
                 
                 <h3 className="text-left">Core Components</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Central Server</h4>
                     <ul className="text-left">
                       <li>• Global model orchestration</li>
@@ -139,8 +139,8 @@ export default function FederatedLearningEnterprise2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Implementation Patterns</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Cross-Silo Federated Learning</h3>
                     <p className="text-left">Ideal for organizations with multiple data silos (departments, subsidiaries, partners)</p>
                     <div className="text-left"></div>
@@ -195,8 +195,8 @@ export default function FederatedLearningEnterprise2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Privacy-Enhancing Technologies</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Differential Privacy</h3>
                     <p className="text-left">Add calibrated noise to model updates to prevent individual data inference</p>
                     <ul className="text-left">
@@ -231,12 +231,12 @@ export default function FederatedLearningEnterprise2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Success Stories</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Healthcare Consortium</h3>
                     <p className="text-left">15 hospitals collaboratively trained disease prediction models</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">94%</div>
                         <div className="text-left">Diagnostic Accuracy</div>
                       </div>
@@ -257,8 +257,8 @@ export default function FederatedLearningEnterprise2025() {
                   <div className="text-left"></div>
                     <h3 className="text-left">Global Financial Institution</h3>
                     <p className="text-left">Fraud detection across 50+ subsidiaries in 30 countries</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">96%</div>
                         <div className="text-left">Fraud Detection Rate</div>
                       </div>
@@ -281,8 +281,8 @@ export default function FederatedLearningEnterprise2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Best Practices</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Start with Non-IID Data Strategy</h3>
                     <p className="text-left">Client data distributions are rarely identical (non-IID)</p>
                     <ul className="text-left">
@@ -320,8 +320,8 @@ export default function FederatedLearningEnterprise2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Technology Stack</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Open Source Frameworks</h3>
                     <ul className="text-left">
                       <li>• <strong>TensorFlow Federated:</strong> Google's production-ready FL framework</li>
@@ -346,8 +346,8 @@ export default function FederatedLearningEnterprise2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Getting Started Roadmap</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                     <ul className="text-left">
                       <li>✓ Identify privacy-sensitive use cases and data silos</li>

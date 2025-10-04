@@ -55,8 +55,8 @@ const AIGovernanceFramework2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">The Regulatory Landscape: What You Need to Know</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🇪🇺 EU AI Act (Full Effect: 2025)</h3>
               <p className="text-left"></p>
                 The world's first comprehensive AI regulation categorizes systems by risk level and imposes 
@@ -115,8 +115,8 @@ const AIGovernanceFramework2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">The Complete AI Governance Framework</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">1. Governance Structure & Accountability</h3>
               <p className="text-left"></p>
                 Establish clear ownership, decision-making authority, and escalation paths. Successful governance 
@@ -257,8 +257,8 @@ const AIGovernanceFramework2025 = () =>
 
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Roadmap: 10-Week Sprint</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 Weeks<br/>1-2
               </div>
@@ -273,8 +273,8 @@ const AIGovernanceFramework2025 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Weeks<br/>3-5
               </div>
               <div></div>
@@ -288,8 +288,8 @@ const AIGovernanceFramework2025 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Weeks<br/>6-8
               </div>
               <div></div>
@@ -303,8 +303,8 @@ const AIGovernanceFramework2025 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Weeks<br/>9-10
               </div>
               <div></div>

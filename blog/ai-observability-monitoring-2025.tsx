@@ -62,15 +62,15 @@ const AIObservabilityMonitoring2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">The Three Pillars of AI Observability</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">1. 📊 Metrics & Performance Tracking</h3>
               <p className="text-left"></p>
                 Track both traditional and AI-specific metrics to understand system health and model performance.
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Traditional Metrics</h4>
                   <ul className="text-left">
                     <li>• Request latency (P50, P95, P99)</li>
@@ -136,8 +136,8 @@ const AIObservabilityMonitoring2025 = () =>
               
               <div className="text-left"></div>
                 <h4 className="text-left">Essential AI Logs</h4>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">→<
                     <div></div>
                       <strong className="text-left">Input Prompts:</strong>
@@ -179,8 +179,8 @@ const AIObservabilityMonitoring2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Advanced Monitoring Strategies</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Quality Monitoring</h3>
               <p className="text-left"></p>
                 Automated systems to detect when AI outputs degrade in quality:
@@ -210,8 +210,8 @@ const AIObservabilityMonitoring2025 = () =>
               <p className="text-left"></p>
                 Detect and prevent security threats specific to AI systems:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Prompt Injection Detection</h4>
                   <p className="text-left"></p>
                     Identify attempts to manipulate model behavior through crafted inputs. Use pattern matching 
@@ -261,8 +261,8 @@ const AIObservabilityMonitoring2025 = () =>
           <div className="text-left"></div>
             <div></div>
               <h3 className="text-left">Recommended Tool Architecture</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">Metrics:</div>
                     <div className="text-left"></div>
@@ -299,8 +299,8 @@ const AIObservabilityMonitoring2025 = () =>
 
             <div className="text-left"></div>
               <h4 className="text-left">Implementation Checklist</h4>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">☐<
                   <span>Instrument all LLM API calls<
                 </div>
@@ -343,8 +343,8 @@ const AIObservabilityMonitoring2025 = () =>
             When things go wrong (and they will), having the right debugging workflow is critical:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">1. Reproduce the Issue</h4>
               <p className="text-left"></p>
                 Use logged prompts and context to recreate exact conditions. Build a test case that consistently 

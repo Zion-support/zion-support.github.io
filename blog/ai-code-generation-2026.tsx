@@ -44,8 +44,8 @@ export default function AICodeGeneration2026() {
         {/* Key Stats */}
         <div className="text-left"></div>
           <h2 className="text-left">Performance Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">10x</div>
               <div className="text-left">Development Speed</div>
             </div>
@@ -77,8 +77,8 @@ export default function AICodeGeneration2026() {
 
           <section></section>
             <h2 className="text-left">Core Capabilities</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">💡 Intelligent Code Completion</h3>
                 <p className="text-left"></p>
                   Context-aware suggestions that understand your entire codebase, API patterns, and architectural decisions.
@@ -131,8 +131,8 @@ export default function AICodeGeneration2026() {
           <section></section>
             <h2 className="text-left">Real-World Impact: Case Studies</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🏢<
                   <h3 className="text-left">Enterprise SaaS Provider</h3>
@@ -150,8 +150,8 @@ export default function AICodeGeneration2026() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🏦<
                   <h3 className="text-left">Financial Services Company</h3>
                 </div>
@@ -172,8 +172,8 @@ export default function AICodeGeneration2026() {
 
           <section></section>
             <h2 className="text-left">Key Technologies Powering AI Code Generation</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   <span className="text-left">🧠<
                   Large Language Models
@@ -251,8 +251,8 @@ export default function AICodeGeneration2026() {
             <p className="text-left"></p>
               Enterprise organizations implementing AI code generation typically achieve:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <div className="text-left">10x</div>
                   <div className="text-left">Development velocity increase</div>

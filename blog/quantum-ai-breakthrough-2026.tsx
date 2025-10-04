@@ -6,8 +6,8 @@ export default function QuantumAIBreakthrough2026() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <h1 className="text-left">AI 2026 Quantum Computing Breakthrough</h1>
         <p className="text-left">Published January 10, 2026 • 14 min read</p>
         <p className="text-left"></p>
@@ -95,8 +95,8 @@ export default function QuantumAIBreakthrough2026() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Major Breakthroughs of 2026</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Quantum Machine Learning</h3>
                     <p className="text-left"></p>
                       We've developed quantum machine learning algorithms that can identify patterns 
@@ -145,8 +145,8 @@ export default function QuantumAIBreakthrough2026() {
                 <p className="text-left"></p>
                   While quantum AI offers tremendous potential, it also presents unique challenges:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Quantum Decoherence</h3>
                     <p className="text-left"></p>
                       Quantum states are fragile and can be disrupted by environmental factors. 
@@ -195,8 +195,8 @@ export default function QuantumAIBreakthrough2026() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Quantum AI Research Team
                 </div>
                 <div className="text-left"></div>

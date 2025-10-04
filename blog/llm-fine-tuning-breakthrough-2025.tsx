@@ -52,8 +52,8 @@ export default function LLMFineTuningBreakthrough2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Advanced Fine-Tuning Techniques</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">LoRA (Low-Rank Adaptation)</h3>
                 <p className="text-left"></p>
                   Train only 0.1% of model parameters while achieving 95%+ of full fine-tuning performance. 

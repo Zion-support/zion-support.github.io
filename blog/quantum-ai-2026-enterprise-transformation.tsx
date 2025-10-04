@@ -20,10 +20,10 @@ const QuantumAI2026EnterpriseTransformation = () =>
       <div className="text-left"></div>
         {/* Hero Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   ⚛️ Quantum AI Revolution
                 <
@@ -38,8 +38,8 @@ const QuantumAI2026EnterpriseTransformation = () =>
                 <span className="text-left"> breakthrough optimization< for enterprise operations
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Quantum Advantage<
                 </div>
                 <div className="text-left"></div>
@@ -70,8 +70,8 @@ const QuantumAI2026EnterpriseTransformation = () =>
 
         {/* Quantum Capabilities */}
         <section id="quantum-capabilities" className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <h2 className="text-left">
                   Quantum AI Capabilities
@@ -125,8 +125,8 @@ const QuantumAI2026EnterpriseTransformation = () =>
               </div>
 
               {/* Enterprise Applications */}
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Enterprise Applications</h3>
                   <div className="text-left"></div>
                     {[

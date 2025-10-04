@@ -81,8 +81,8 @@ const AI2026JanuaryNeuralQuantumFusionBreakthrough = () =>
               advantages of quantum computing.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Neural Architecture</h3>
                 <p className="text-left"></p>
                   Advanced neural networks with quantum-enhanced processing capabilities that can handle 
@@ -180,8 +180,8 @@ const AI2026JanuaryNeuralQuantumFusionBreakthrough = () =>
               generate novel solutions, artistic creations, and innovative approaches to complex problems.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Creative Capabilities</h3>
                 <ul className="text-left">
                   <li>• Original concept generation</li>

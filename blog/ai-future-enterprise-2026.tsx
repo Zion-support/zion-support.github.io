@@ -15,7 +15,7 @@ export default function AIFutureEnterprise2026() {
       <div></div>
     <div className="text-left"></div>
       {/* Header */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <span>🚀<
           FUTURE ENTERPRISE 2026
@@ -35,7 +35,7 @@ export default function AIFutureEnterprise2026() {
       </div>
 
       {/* Key Metrics */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left">$2.5T</div>
           <div className="text-left">Global AI Market</div>
@@ -57,8 +57,8 @@ export default function AIFutureEnterprise2026() {
       {/* Table of Contents */}
       <div className="text-left"></div>
         <h2 className="text-left">📋 Table of Contents</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Link href="#introduction" className="text-left">1. Introduction to AI Future Enterprise</Link>
             <Link href="#autonomous-systems" className="text-left">2. Autonomous Enterprise Systems</Link>
             <Link href="#quantum-computing" className="text-left">3. Quantum Computing Integration</Link>
@@ -115,8 +115,8 @@ export default function AIFutureEnterprise2026() {
             Modern enterprises are implementing autonomous systems that manage themselves with minimal human oversight:
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🏗️ Infrastructure Automation</h4>
               <ul className="text-left">
                 <li>• Self-healing cloud systems</li>
@@ -138,8 +138,8 @@ export default function AIFutureEnterprise2026() {
         </div>
 
         <h3 className="text-left">Real-World Implementation</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left">🏢<
             </div>
@@ -148,8 +148,8 @@ export default function AIFutureEnterprise2026() {
               <p className="text-left"></p>
                 A leading manufacturer implemented autonomous systems across their entire operation, achieving:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$25M</div>
                   <div className="text-left">Annual Savings</div>
                 </div>
@@ -181,8 +181,8 @@ export default function AIFutureEnterprise2026() {
 
         <div className="text-left"></div>
           <h3 className="text-left">Quantum AI Applications</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🔬 Drug Discovery</h4>
               <p className="text-left">1000x faster molecular simulation and drug development</p>
               <div className="text-left">$2B+</div>
@@ -204,8 +204,8 @@ export default function AIFutureEnterprise2026() {
         </div>
 
         <h3 className="text-left">Implementation Strategy</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Phase 1: Hybrid Systems</h4>
               <ul className="text-left">
@@ -240,8 +240,8 @@ export default function AIFutureEnterprise2026() {
           </p>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Governance Framework</h3>
             <ul className="text-left">
               <li className="text-left">
@@ -264,8 +264,8 @@ export default function AIFutureEnterprise2026() {
           </div>
           <div className="text-left"></div>
             <h3 className="text-left">📊 Key Metrics</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Risk Reduction<
                 <span className="text-left">70%<
               </div>
@@ -293,8 +293,8 @@ export default function AIFutureEnterprise2026() {
         <div className="text-left"></div>
           <h3 className="text-left">12-Month Transformation Plan</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 1
               </div>
@@ -310,8 +310,8 @@ export default function AIFutureEnterprise2026() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 2
               </div>
               <div></div>
@@ -326,8 +326,8 @@ export default function AIFutureEnterprise2026() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 3
               </div>
               <div></div>
@@ -342,8 +342,8 @@ export default function AIFutureEnterprise2026() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 4
               </div>
               <div></div>
@@ -365,8 +365,8 @@ export default function AIFutureEnterprise2026() {
       <section id="case-studies" className="text-left"></section>
         <h2 className="text-left">📊 Real-World Case Studies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left">🏦<
               <div></div>
@@ -377,8 +377,8 @@ export default function AIFutureEnterprise2026() {
             <p className="text-left"></p>
               Implemented autonomous trading systems and quantum-optimized risk management, achieving:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$100M+</div>
                 <div className="text-left">Additional Revenue</div>
               </div>
@@ -389,8 +389,8 @@ export default function AIFutureEnterprise2026() {
             </div>
           </div>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">🏭<
               <div></div>
                 <h3 className="text-left">Manufacturing Giant</h3>
@@ -400,8 +400,8 @@ export default function AIFutureEnterprise2026() {
             <p className="text-left"></p>
               Deployed autonomous manufacturing systems with predictive maintenance:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$50M</div>
                 <div className="text-left">Annual Savings</div>
               </div>
@@ -421,8 +421,8 @@ export default function AIFutureEnterprise2026() {
         <div className="text-left"></div>
           <h3 className="text-left">2027-2030 AI Enterprise Evolution</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🧠 AGI Integration</h4>
               <p className="text-left">Artificial General Intelligence becomes enterprise standard</p>
               <div className="text-left">Expected: 2028</div>
@@ -451,8 +451,8 @@ export default function AIFutureEnterprise2026() {
             The AI future enterprise is not a distant vision—it's happening today. Organizations that act now 
             will secure their position as leaders in the next decade of technological advancement.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">95%</div>
               <div className="text-left">Process Automation</div>
             </div>
@@ -468,8 +468,8 @@ export default function AIFutureEnterprise2026() {
         </div>
 
         <h3 className="text-left">Your Next Steps</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🚀 Immediate Actions</h4>
             <ul className="text-left">
               <li className="text-left">
