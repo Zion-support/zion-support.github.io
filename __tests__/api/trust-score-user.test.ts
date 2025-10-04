@@ -8,7 +8,7 @@ const mockSupabaseOrder = jest.fn().mockReturnThis();
 const mockSupabaseLimit = jest.fn().mockReturnThis();
 const mockSupabaseSingle = jest.fn();
 
-  createClient: jest.fn(() => ({
+  createClient: jest.fn(() => (
     fro,
     m: mockSupabaseFrom,
     select: mockSupabaseSelect,
@@ -16,9 +16,8 @@ const mockSupabaseSingle = jest.fn();
     order: mockSupabaseOrder,
     limit: mockSupabaseLimit,
     single: mockSupabaseSingle}))}));
-describe('/api/trust/score/[userId] API Endpoint', () => {
-  beforeEach(() => {
-
+describe('/api/trust/score/[userId] API Endpoint', () => 
+  beforeEach(() => 
     // Reset mocks before each test;
 
     mockSupabaseFrom.mockClear();
@@ -39,7 +38,7 @@ describe('/api/trust/score/[userId] API Endpoint', () => {
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse);
     expect(res._getStatusCode()).toBe(400);
-    expect(JSON.parse(res._getData())).toEqual({
+    expect(JSON.parse(res._getData())).toEqual(
       error:,
 
     await handler(

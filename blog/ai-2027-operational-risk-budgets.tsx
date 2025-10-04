@@ -1,14 +1,18 @@
 import React from 'react';
 
 export default function AI2027OperationalRiskBudgets() {
+  return (
+    <div>/* content */}
 	return (
-		<div className="text-left">
+    <div>
+      <div></div>
+		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">AI 2027: Operational Risk Budgets</h1>
-				<p className="text-left">
+				<p className="text-left"></p>
 					Budgets, KPI‑linked canaries, and instant rollback enabling safe autonomy at enterprise scale.
 				</p>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Blueprint</h2>
 					<ul className="text-left">
 						<li>Define SLIs mapped to KPIs with budget thresholds</li>
@@ -21,3 +25,4 @@ export default function AI2027OperationalRiskBudgets() {
 	);
 }
 
+)

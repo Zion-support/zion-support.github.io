@@ -23,9 +23,9 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+          setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
+          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as LayoutShift).value }));
         }
       });
     });

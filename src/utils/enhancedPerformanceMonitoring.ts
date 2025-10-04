@@ -32,16 +32,15 @@ class EnhancedPerformanceMonitor {
   private metrics: PerformanceMetrics[] = [];
   private alerts: PerformanceAlert[] = [];
   private observers: PerformanceObserver[] = [];
-  // private _isMonitoring = false;
+  private _isMonitoring = false;
 
   constructor() {
     this.initializeObservers();
   }
 
   private initializeObservers(): void {
-
     // Observe navigation timing
-    if ('PerformanceObserver' in window) {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
         const navObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -62,7 +61,7 @@ class EnhancedPerformanceMonitor {
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - (entry as any).navigationStart,
+      timeToInteractive: entry.domInteractive - entry.fetchStart,
       timestamp: Date.now()
     };
 
@@ -93,7 +92,7 @@ class EnhancedPerformanceMonitor {
 
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
-      if (typeof value === 'number' && value > threshold) {
+      if (value && value > threshold) {
         this.addAlert({
           type: value > threshold * 1.5 ? 'error' : 'warning',
           message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
@@ -121,12 +120,12 @@ class EnhancedPerformanceMonitor {
   }
 
   public startMonitoring(): void {
-    // this._isMonitoring = true;
+    this._isMonitoring = true;
     console.log('Enhanced performance monitoring started');
   }
 
   public stopMonitoring(): void {
-    // this._isMonitoring = false;
+    this._isMonitoring = false;
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     console.log('Enhanced performance monitoring stopped');

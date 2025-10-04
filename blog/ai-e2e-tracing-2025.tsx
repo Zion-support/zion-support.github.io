@@ -11,12 +11,13 @@ export const metadata = {
 	tags: ['Tracing', 'Observability', 'KPIs', 'GenAI']
 };
 
-const AIE2ETracing2025 = () => {
+const AIE2ETracing2025 = () => 
 	return (
-		<article className="text-left">
+  <div></div>
+		<article className="text-left"></a>
 			<header className="text-left">
-				<div className="text-left">
-					<span className="text-left">
+				<div className="text-left"></div>
+					<span className="text-left"></span>
 						{metadata.category}
 					<
 					<span className="text-left">{metadata.readTime} read<
@@ -25,19 +26,19 @@ const AIE2ETracing2025 = () => {
 					{metadata.title}
 				</h1>
 				<p className="text-left">{metadata.description}</p>
-				<div className="text-left">
+				<div className="text-left"></div>
 					<span>By {metadata.author}<
 					<span>•<
 					<time dateTime={metadata.date}>{new Date(metadata.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
 				</div>
 			</header>
 
-			<div className="text-left">
-				<section className="text-left">
+			<div className="text-left"></div>
+				<section className="text-left"></section>
 					<h2 className="text-left">Why E2E Tracing</h2>
 					<p className="text-left">Connect prompts, tools, and UX to measurable KPIs. Capture spans for prompts, tool calls, retrieval, and responses, then attribute impact to conversions and support SLAs.</p>
 				</section>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Implementation Blueprint</h2>
 					<ul className="text-left">
 						<li>Trace context propagation across frontend, gateway, and workers</li>
@@ -46,7 +47,7 @@ const AIE2ETracing2025 = () => {
 						<li>KPI linkage for ROI dashboards</li>
 					</ul>
 				</section>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Results</h2>
 					<p className="text-left">Teams report 300% faster diagnosis, 40% cost reduction through routing, and measurable uplift in conversion from prompt quality improvements.</p>
 				</section>

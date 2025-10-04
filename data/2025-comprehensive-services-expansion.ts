@@ -1,8 +1,7 @@
 
 import { ServiceVariant } from '../types / service - variants';
 
-export interface ComprehensiveService {
-
+export interface ComprehensiveService 
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -13,7 +12,7 @@ export interface ComprehensiveService {
   reviews: number;
 
 ;
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -57,8 +56,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -70,7 +68,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   reviews: number
 }
 
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
@@ -83,14 +81,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 };
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
-  {
-
-
+  
   website: 'https://ziontechgroup.com';
 }
 ;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
-  {
+  
     id: 'ai - powered - code - review - assistant',
     name: 'AI - Powered Code Review Assistant',
     tagline:;
@@ -170,8 +166,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.8,
     reviews: 89,
   },
-  {
-
+  
       'AI-powered anomaly detection',
     id: 'intelligent - incident - response - platform',
     name: 'Intelligent Incident Response Platform',
@@ -224,8 +219,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 67,
   },
-  {
-
+  
       'Post-quantum cryptographic algorithms',
     id: 'quantum - resistant - cryptography - suite',
     name: 'Quantum - Resistant Cryptography Suite',
@@ -279,8 +273,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.9,
     reviews: 18,
   },
-  {
-
+  
     id: 'autonomous - devops - orchestrator',
     name: 'Autonomous DevOps Orchestrator',
     tagline:;
@@ -336,8 +329,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.8,
     reviews: 92,
   },
-  {
-
+  
     id: 'edge - ai - inference - platform',
     name: 'Edge AI Inference Platform',
     tagline:;
@@ -387,8 +379,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.6,
     reviews: 41,
   },
-  {
-
+  
     id: 'blockchain - governance - automation',
     name: 'Blockchain Governance Automation',
     tagline:;
@@ -442,8 +433,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 33,
   },
-  {
-
+  
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
     tagline:;
@@ -497,8 +487,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.8,
     reviews: 124,
   },
-  {
-
+  
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline:;
@@ -551,8 +540,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.9,
     reviews: 22,
   },
-  {
-
+  
     id: 'intelligent - supply - chain - optimizer',
     name: 'Intelligent Supply Chain Optimizer',
     tagline: 'AI - driven supply chain optimization and risk management',
@@ -605,8 +593,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 67,
   },
-  {
-
+  
       'Real-time threat detection',
     id: 'cybersecurity - threat - intelligence - hub',
     name: 'Cybersecurity Threat Intelligence Hub',
@@ -660,8 +647,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.8,
     reviews: 118,
   },
-  {
-
+  
     id: 'ai - powered - content - creation - suite',
     name: 'AI - Powered Content Creation Suite',
     tagline:;
@@ -715,8 +701,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 167,
   },
-  {
-
+  
     id: 'intelligent - data - governance - platform',
     name: 'Intelligent Data Governance Platform',
     tagline: 'Automated data quality, compliance, and lifecycle management',
@@ -769,8 +754,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.6,
     reviews: 56,
   },
-  {
-
+  
     id: 'quantum - financial - trading - engine',
     name: 'Quantum Financial Trading Engine',
     tagline:;
@@ -822,8 +806,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.9,
     reviews: 28,
   },
-  {
-
+  
       'AI-powered candidate screening',
     id: 'ai - powered - hr - automation - suite',
     name: 'AI - Powered HR Automation Suite',
@@ -880,8 +863,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 134,
   },
-  {
-
+  
     id: 'intelligent - iot - platform',
     name: 'Intelligent IoT Platform',
     tagline: 'AI - powered IoT device management, analytics, and automation',
@@ -934,8 +916,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.6,
     reviews: 45,
   },
-  {
-
+  
       'Quantum-resistant algorithms',
       'Post-quantum cryptography',
     id: 'quantum - cybersecurity - platform',
@@ -991,8 +972,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.9,
     reviews: 15,
   },
-  {
-
+  
     id: 'ai - powered - sales - intelligence - platform',
     name: 'AI - Powered Sales Intelligence Platform',
     tagline:;
@@ -1084,7 +1064,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4.8
     reviews: 89
   };
-  {
+  
       'Automated incident classification',
       'Smart escalation routing',
       'Real - time team coordination',
@@ -1101,7 +1081,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 67,
   },
-  {
+  
       'Quantum key distribution (QKD)',
       'Hybrid encryption systems',
       'Quantum - resistant digital signatures',
@@ -1116,7 +1096,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.9,
     reviews: 18,
   },
-  {
+  
       'Autonomous infrastructure management',
       'Self - healing systems',
       'Intelligent deployment strategies',
@@ -1132,7 +1112,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.8,
     reviews: 92,
   },
-  {
+  
       'Edge model deployment',
       'Real - time inference optimization',
       'Model versioning and updates',
@@ -1150,7 +1130,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.6,
     reviews: 41,
   },
-  {
+  
       'Automated compliance monitoring',
       'Risk assessment and scoring',
       'Regulatory reporting automation',
@@ -1166,7 +1146,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 33,
   },
-  {
+  
       'Predictive churn risk scoring',
       'Customer health monitoring',
       'Automated engagement workflows',
@@ -1182,7 +1162,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.8,
     reviews: 124,
   },
-  {
+  
       'Quantum algorithm implementations',
       'Hybrid quantum - classical ML',
       'Optimization problem solving',
@@ -1198,7 +1178,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.9,
     reviews: 22,
   },
-  {
+  
       'Demand forecasting and planning',
       'Inventory optimization',
       'Risk assessment and mitigation',
@@ -1214,7 +1194,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 67,
   },
-  {
+  
       'Threat intelligence sharing',
       'Automated incident response',
       'Vulnerability assessment',
@@ -1229,7 +1209,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.8,
     reviews: 118,
   },
-  {
+  
       'AI content generation',
       'Multi - channel content optimization',
       'SEO optimization tools',
@@ -1252,7 +1232,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 167,
   },
-  {
+  
       'Automated data quality monitoring',
       'Compliance and governance rules',
       'Data lineage tracking',
@@ -1268,7 +1248,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.6,
     reviews: 56,
   },
-  {
+  
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
       'Market analysis tools',
@@ -1286,7 +1266,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.9,
     reviews: 28,
   },
-  {
+  
       'Automated interview scheduling',
       'Employee onboarding workflows',
       'Performance tracking and analytics',
@@ -1301,7 +1281,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.7,
     reviews: 134,
   },
-  {
+  
       'IoT device management',
       'Real - time data analytics',
       'Predictive maintenance',
@@ -1317,7 +1297,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.6,
     reviews: 45,
   },
-  {
+  
       'Quantum key distribution',
       'Hybrid encryption systems',
       'Security assessment tools',
@@ -1331,7 +1311,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     rating: 4 && 4.9,
     reviews: 15,
   },
-  {
+  
     id: 'ai-powered-sales-intelligence-platform', name: 'AI-Powered Sales Intelligence Platform',
     tagline: 'Predictive sales analytics, lead scoring, and revenue optimization',
     price: '$349', period: '/month',

@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeAIServicesExpansion {
+export interface InnovativeAIServicesExpansion 
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeAIServicesExpansion {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: 
     mobile: string;
     email: string;
     address: string;
@@ -42,7 +42,7 @@ export interface InnovativeAIServicesExpansion {
 }
 
 export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
-  {
+  
     id: 'ai-powered-content-generation-suite',
     name: 'AI-Powered Content Generation Suite',
     tagline: 'Create engaging content with AI-driven creativity',
@@ -80,7 +80,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$15B AI content generation market',
     growthRate: '35% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -93,7 +93,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     rating: 4.7,
     reviews: 167
   },
-  {
+  
     id: 'intelligent-customer-service-automation',
     name: 'Intelligent Customer Service Automation',
     tagline: 'AI-powered customer support with human-like interactions',
@@ -131,7 +131,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$18B customer service automation market',
     growthRate: '30% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -144,7 +144,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     rating: 4.8,
     reviews: 134
   },
-  {
+  
     id: 'ai-powered-business-intelligence',
     name: 'AI-Powered Business Intelligence',
     tagline: 'Transform data into actionable business insights',
@@ -182,7 +182,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$22B business intelligence market',
     growthRate: '28% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -195,7 +195,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     rating: 4.7,
     reviews: 98
   },
-  {
+  
     id: 'intelligent-process-automation',
     name: 'Intelligent Process Automation',
     tagline: 'AI-powered workflow automation and optimization',
@@ -233,7 +233,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$13B process automation market',
     growthRate: '32% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -246,7 +246,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     rating: 4.6,
     reviews: 78
   },
-  {
+  
     id: 'ai-powered-cybersecurity-threat-detection',
     name: 'AI-Powered Cybersecurity Threat Detection',
     tagline: 'Advanced threat detection with AI-powered security',
@@ -284,7 +284,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$16B AI cybersecurity market',
     growthRate: '38% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

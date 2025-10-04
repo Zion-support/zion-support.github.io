@@ -2,11 +2,11 @@ import { UnifiedService } from '../types/unified-service-types';
 
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
-  {
+  
     id: 'ai-powered-enterprise-risk-management',
     name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
-    price: {
+    price: 
       monthly: 899,
       yearly: 8990,
       currency: 'USD',
@@ -56,20 +56,20 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 128,
     marketSize: '$12.8B enterprise risk management market',
     growthRate: '25% annual growth',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
+  
     id: 'ai-enterprise-platform',
     name: 'AI Enterprise Platform',
     tagline: 'Enterprise-grade AI platform that scales with your business',
     description: 'Comprehensive AI platform designed for enterprise use, featuring advanced machine learning, natural language processing, computer vision, and predictive analytics capabilities.',
     category: 'Enterprise Solutions',
-    price: {
+    price: 
       monthly: 999,
       yearly: 9990,
       currency: 'USD',
@@ -131,7 +131,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 72,
     marketSize: '$42.8B enterprise AI market',
     growthRate: '34% annual growth',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -140,13 +140,13 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   },
 
   // DIGITAL TRANSFORMATION
-  {
+  
     id: 'smart-city-solutions',
     name: 'Smart City Solutions',
     tagline: 'Transform your city with intelligent infrastructure and data-driven insights',
     description: 'Comprehensive smart city implementation service that helps municipalities leverage IoT, AI, and data analytics to improve urban services, reduce costs, and enhance citizen experience.',
     category: 'Digital Transformation',
-    price: {
+    price: 
       monthly: 0,
       yearly: 0,
       currency: 'USD',
@@ -208,7 +208,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 10,
     marketSize: '$225B smart city market',
     growthRate: '18% annual growth',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -217,13 +217,13 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   },
 
   // INNOVATION SERVICES
-  {
+  
     id: 'innovation-lab-as-a-service',
     name: 'Innovation Lab as a Service',
     tagline: 'Accelerate innovation with our turnkey innovation lab solution',
     description: 'Complete innovation lab setup and management service that helps organizations foster creativity, develop new products, and stay ahead of market trends through structured innovation processes.',
     category: 'Innovation Services',
-    price: {
+    price: 
       monthly: 0,
       yearly: 0,
       currency: 'USD',
@@ -285,7 +285,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 28,
     marketSize: '$15.2B innovation consulting market',
     growthRate: '16% annual growth',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -294,13 +294,13 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   },
 
   // STRATEGIC CONSULTING
-  {
+  
     id: 'strategic-technology-advisory',
     name: 'Strategic Technology Advisory',
     tagline: 'Strategic technology guidance to drive business transformation and competitive advantage',
     description: 'High-level technology advisory service that helps executive teams make strategic technology decisions, align IT with business goals, and create technology roadmaps for future growth.',
     category: 'Strategic Consulting',
-    price: {
+    price: 
       monthly: 0,
       yearly: 0,
       currency: 'USD',
@@ -362,7 +362,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 38,
     marketSize: '$48.5B technology consulting market',
     growthRate: '12% annual growth',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

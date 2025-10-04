@@ -181,8 +181,7 @@ export function generateSEORecommendations(
   });
   
   // Content recommendations
-  if (metrics.wordCount < 300) {
-    recommendations.content.push('Add more content (aim for at least 300 words)');
+  if (metrics.wordCount < 300)     recommendations.content.push('Add more content (aim for at least 300 words)');
   }
   
   if (metrics.seoScore < 70) {
@@ -195,25 +194,20 @@ export function generateSEORecommendations(
 /**
  * Optimize images for web by adding proper attributes
  */
-export function optimizeImageTags(html: string): string {
-  const parser = new DOMParser();
+export function optimizeImageTags(html: string): string   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   
   const images = doc.querySelectorAll('img');
-  images.forEach((img) => {
-    // Add lazy loading
-    if (!img.getAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
+  images.forEach((img) =>     // Add lazy loading
+    if (!img.getAttribute('loading'))       img.setAttribute('loading', 'lazy');
     }
     
     // Add decoding hint
-    if (!img.getAttribute('decoding')) {
-      img.setAttribute('decoding', 'async');
+    if (!img.getAttribute('decoding'))       img.setAttribute('decoding', 'async');
     }
     
     // Ensure alt text exists
-    if (!img.getAttribute('alt')) {
-      img.setAttribute('alt', 'Image');
+    if (!img.getAttribute('alt'))       img.setAttribute('alt', 'Image');
     }
   });
   
@@ -223,8 +217,7 @@ export function optimizeImageTags(html: string): string {
 /**
  * Generate structured data for better SEO
  */
-export function generateStructuredData(data: {
-  type: 'Article' | 'BlogPosting' | 'WebPage' | 'Organization';
+export function generateStructuredData(data:   type: 'Article' | 'BlogPosting' | 'WebPage' | 'Organization';
   title: string;
   description: string;
   image?: string;
@@ -232,35 +225,27 @@ export function generateStructuredData(data: {
   datePublished?: string;
   dateModified?: string;
   url?: string;
-}): string {
-  const structuredData: any = {
-    '@context': 'https://schema.org',
+}): string   const structuredData: any =     '@context': 'https://schema.org',
     '@type': data.type,
     headline: data.title,
     description: data.description,
   };
   
-  if (data.image) {
-    structuredData.image = data.image;
+  if (data.image)     structuredData.image = data.image;
   }
   
-  if (data.author) {
-    structuredData.author = {
-      '@type': 'Person',
+  if (data.author)     structuredData.author =       '@type': 'Person',
       name: data.author,
     };
   }
   
-  if (data.datePublished) {
-    structuredData.datePublished = data.datePublished;
+  if (data.datePublished)     structuredData.datePublished = data.datePublished;
   }
   
-  if (data.dateModified) {
-    structuredData.dateModified = data.dateModified;
+  if (data.dateModified)     structuredData.dateModified = data.dateModified;
   }
   
-  if (data.url) {
-    structuredData.url = data.url;
+  if (data.url)     structuredData.url = data.url;
   }
   
   return JSON.stringify(structuredData);
@@ -269,8 +254,7 @@ export function generateStructuredData(data: {
 /**
  * Extract keywords from content
  */
-export function extractKeywords(text: string, count: number = 10): string[] {
-  // Remove common stop words
+export function extractKeywords(text: string, count: number = 10): string[]   // Remove common stop words
   const stopWords = new Set([
     'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i',
     'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at',
@@ -286,8 +270,7 @@ export function extractKeywords(text: string, count: number = 10): string[] {
     .filter((word) => word.length > 3 && !stopWords.has(word));
   
   const frequency: Record<string, number> = {};
-  words.forEach((word) => {
-    frequency[word] = (frequency[word] || 0) + 1;
+  words.forEach((word) =>     frequency[word] = (frequency[word] || 0) + 1;
   });
   
   // Sort by frequency and return top keywords
@@ -297,8 +280,7 @@ export function extractKeywords(text: string, count: number = 10): string[] {
     .map(([word]) => word);
 }
 
-export default {
-  calculateReadingTime,
+export default   calculateReadingTime,
   countWords,
   analyzeContent,
   generateSEORecommendations,

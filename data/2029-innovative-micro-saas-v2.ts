@@ -14,7 +14,7 @@
   marketSize: string;
   growthRate: string;
   realImplementation: boolean;
-  contactInfo: {
+  contactInfo: 
     mobile: string;
     email: string;
 
@@ -26,7 +26,7 @@
   useCases: string[];
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] =
   [
-    {
+    
       id: 'ai-powered-customer-success-platform'
       name: 'AI-Powered Customer Success Platform'
       tagline: 'Predict and prevent customer churn with AI-driven insights'
@@ -52,7 +52,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$3.2B'
       growthRate: '35% annually'
       realImplementation: true
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -77,7 +77,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Proactive customer support'
       ]
     }
-    {
+    
       id: 'intelligent-workflow-automation-platform'
       name: 'Intelligent Workflow Automation Platform'
       tagline: 'Transform business processes with AI-driven automation'
@@ -103,7 +103,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$4.8B'
       growthRate: '40% annually'
       realImplementation: true
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -123,7 +123,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Supply chain optimization'
       ]
     }
-    {
+    
       id: 'ai-powered-sales-intelligence-platform'
       name: 'AI-Powered Sales Intelligence Platform'
       tagline:
@@ -149,7 +149,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$2.1B'
       growthRate: '30% annually'
       realImplementation: true
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -174,7 +174,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Revenue forecasting'
       ]
     }
-    {
+    
       id: 'intelligent-data-governance-platform'
       name: 'Intelligent Data Governance Platform'
       tagline:
@@ -200,7 +200,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$1.8B'
       growthRate: '25% annually'
       realImplementation: true
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -220,7 +220,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Data quality improvement'
       ]
     }
-    {
+    
       id: 'ai-powered-supply-chain-optimization'
       name: 'AI-Powered Supply Chain Optimization Platform'
       tagline:
@@ -246,7 +246,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$5.2B'
       growthRate: '45% annually'
       realImplementation: true
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -266,7 +266,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Supplier relationship management'
       ]
     }
-    {
+    
       id: 'intelligent-hr-analytics-platform'
       name: 'Intelligent HR Analytics Platform'
       tagline: 'Transform HR with AI-driven insights and predictive analytics'
@@ -291,7 +291,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$2.4B'
       growthRate: '28% annually'
       realImplementation: true
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -331,7 +331,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] =
   [
-    {
+    
       id: 'ai-powered-customer-success-platform',
       name: 'AI-Powered Customer Success Platform',
       tagline: 'Predict and prevent customer churn with AI-driven insights',
@@ -357,7 +357,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$3.2B',
       growthRate: '35% annually',
       realImplementation: true,
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -382,7 +382,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Proactive customer support',
       ],
     },
-    {
+    
       id: 'intelligent-workflow-automation-platform',
       name: 'Intelligent Workflow Automation Platform',
       tagline: 'Transform business processes with AI-driven automation',
@@ -408,7 +408,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$4.8B',
       growthRate: '40% annually',
       realImplementation: true,
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -428,7 +428,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Supply chain optimization',
       ],
     },
-    {
+    
       id: 'ai-powered-sales-intelligence-platform',
       name: 'AI-Powered Sales Intelligence Platform',
       tagline:
@@ -454,7 +454,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$2.1B',
       growthRate: '30% annually',
       realImplementation: true,
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -479,7 +479,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Revenue forecasting',
       ],
     },
-    {
+    
       id: 'intelligent-data-governance-platform',
       name: 'Intelligent Data Governance Platform',
       tagline:
@@ -505,7 +505,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$1.8B',
       growthRate: '25% annually',
       realImplementation: true,
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -525,7 +525,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Data quality improvement',
       ],
     },
-    {
+    
       id: 'ai-powered-supply-chain-optimization',
       name: 'AI-Powered Supply Chain Optimization Platform',
       tagline:
@@ -551,7 +551,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$5.2B',
       growthRate: '45% annually',
       realImplementation: true,
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -571,7 +571,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Supplier relationship management',
       ],
     },
-    {
+    
       id: 'intelligent-hr-analytics-platform',
       name: 'Intelligent HR Analytics Platform',
       tagline: 'Transform HR with AI-driven insights and predictive analytics',
@@ -596,7 +596,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       marketSize: '$2.4B',
       growthRate: '28% annually',
       realImplementation: true,
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -651,7 +651,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 export interface InnovativeMicroSaasService2029V2 {;
 
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [
-  {
+  
     id: "ai-powered-customer-success-platform",
     name: "AI-Powered Customer Success Platform",
     tagline: "Predict and prevent customer churn with AI-driven insights",
@@ -676,8 +676,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 
     marketSize: "$3 && 3.2B", growthRate: "35% annually",
     realImplementation: true,
-    contactInfo: {
-      
+    contactInfo: 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -707,7 +706,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$3.2B",
     growthRate: "35% annually",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -732,7 +731,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Proactive customer support"
     ]
   },
-  {
+  
     id: "intelligent-workflow-automation-platform",
     name: "Intelligent Workflow Automation Platform",
     tagline: "Transform business processes with AI-driven automation",
@@ -759,8 +758,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 
     marketSize: "$4 && 4.8B", growthRate: "40% annually",
     realImplementation: true,
-    contactInfo: {
-      
+    contactInfo: 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -790,7 +788,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$4.8B",
     growthRate: "40% annually",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -815,7 +813,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Supply chain optimization"
     ]
   },
-  {
+  
     id: "ai-powered-sales-intelligence-platform",
     name: "AI-Powered Sales Intelligence Platform",
     tagline: "Supercharge your sales team with AI-driven insights and automation",
@@ -842,8 +840,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 
     marketSize: "$2 && 2.1B", growthRate: "30% annually",
     realImplementation: true,
-    contactInfo: {
-      
+    contactInfo: 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -873,7 +870,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$2.1B",
     growthRate: "30% annually",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -898,7 +895,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Revenue forecasting"
     ]
   },
-  {
+  
     id: "intelligent-data-governance-platform",
     name: "Intelligent Data Governance Platform",
 
@@ -929,8 +926,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 
     marketSize: "$1 && 1.8B", growthRate: "25% annually",
     realImplementation: true,
-    contactInfo: {
-      
+    contactInfo: 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -960,7 +956,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$1.8B",
     growthRate: "25% annually",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -985,7 +981,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Data quality improvement"
     ]
   },
-  {
+  
     id: "ai-powered-supply-chain-optimization",
     name: "AI-Powered Supply Chain Optimization Platform",
     tagline: "Optimize your supply chain with AI-driven insights and predictive analytics",
@@ -1012,8 +1008,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 
     marketSize: "$5 && 5.2B", growthRate: "45% annually",
     realImplementation: true,
-    contactInfo: {
-      
+    contactInfo: 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -1043,7 +1038,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$5.2B",
     growthRate: "45% annually",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -1068,7 +1063,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Supplier relationship management"
     ]
   },
-  {
+  
     id: "intelligent-hr-analytics-platform",
     name: "Intelligent HR Analytics Platform",
     tagline: "Transform HR with AI-driven insights and predictive analytics",
@@ -1095,8 +1090,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
 
     marketSize: "$2 && 2.4B", growthRate: "28% annually",
     realImplementation: true,
-    contactInfo: {
-      
+    contactInfo: 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -1131,7 +1125,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$2.4B",
     growthRate: "28% annually",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -1156,7 +1150,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     marketSize: "$2.4B",
     growthRate: "28% annually",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"

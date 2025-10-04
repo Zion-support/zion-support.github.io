@@ -14,15 +14,19 @@ export const metadata = {
 
 export default function NextGenMultimodalAgents2026() {
   return (
-    <div className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <div className="text-left"></div>
       <main className="text-left">
         <nav className="text-left">
           <a href="/blog" className="text-left">← Back to Blog</a>
         </nav>
 
-        <article className="text-left">
+        <article className="text-left"></a>
           <header className="text-left">
-            <div className="text-left">
+            <div className="text-left"></div>
               <span className="text-left">Multimodal & Agents<
               <span className="text-left">January 15, 2026<
               <span className="text-left">•<
@@ -33,17 +37,17 @@ export default function NextGenMultimodalAgents2026() {
               Next‑Gen Multimodal Agents: Vision + Language + Action
             </h1>
 
-            <p className="text-left">
+            <p className="text-left"></p>
               Build agents that parse scenes, understand context, and execute tasks using tools and
               actuators. This blueprint covers perception stacks, action policies, safety, and ops.
             </p>
           </header>
 
-          <div className="text-left">
-            <section>
+          <div className="text-left"></div>
+            <section></section>
               <h2 className="text-left">Reference Architecture</h2>
               <div className="text-left">
-                <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Perception</h3>
                   <ul className="text-left">
                     <li>• Vision encoders + temporal fusion</li>
@@ -51,7 +55,7 @@ export default function NextGenMultimodalAgents2026() {
                     <li>• Multimodal memory and retrieval</li>
                   </ul>
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <h3 className="text-left">Action</h3>
                   <ul className="text-left">
                     <li>• Tool policies and safety constraints</li>
@@ -62,7 +66,7 @@ export default function NextGenMultimodalAgents2026() {
               </div>
             </section>
 
-            <section>
+            <section></section>
               <h2 className="text-left">Operations & Safety</h2>
               <ul className="text-left">
                 <li>• Red-team scenarios: prompt, vision, and actuator attacks</li>
@@ -71,10 +75,10 @@ export default function NextGenMultimodalAgents2026() {
               </ul>
             </section>
 
-            <section className="text-left">
+            <section className="text-left"></section>
               <h2 className="text-left">Need a Multimodal Agent Strategy?</h2>
               <p className="text-left">We help enterprises design, ship, and operate multimodal agents responsibly.</p>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <a href="/contact" className="text-left">Talk to Experts</a>
                 <a href="/case-studies" className="text-left">See Case Studies</a>
               </div>
@@ -82,9 +86,9 @@ export default function NextGenMultimodalAgents2026() {
           </div>
 
           <footer className="text-left">
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">Written by Zion Tech Group Multimodal Systems Team</div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <a href="/blog" className="text-left">← Back to Blog</a>
                 <a href="/contact" className="text-left">Get in Touch</a>
               </div>
@@ -96,3 +100,4 @@ export default function NextGenMultimodalAgents2026() {
   );
 }
 
+)

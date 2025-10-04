@@ -1,10 +1,12 @@
 import React from 'react';
 
-export default function AIOperationalScorecardsV4_2026(): JSX.Element {
+export default function AIOperationalScorecardsV4_2026(): JSX.Element 
   return (
-    <article className="text-left">
+    <div>
+      <div></div>
+    <article className="text-left"></a>
       <h1>AI Operational Scorecards v4 (2026)</h1>
-      <p>
+      <p></p>
         SLIs mapped to product KPIs with budgeted actions, KPI-linked canaries, and
         instant rollback. This v4 playbook helps teams ship faster without regressions
         by wiring reliability and cost controls directly to business outcomes.
@@ -26,7 +28,7 @@ export default function AIOperationalScorecardsV4_2026(): JSX.Element {
         <li>Automate PR policy tests and progressive delivery gates</li>
       </ol>
 
-      <p>
+      <p></p>
         Ready to adopt scorecards v4? Contact us to get a tailored implementation plan
         and templates your engineers can ship in days, not months.
       </p>

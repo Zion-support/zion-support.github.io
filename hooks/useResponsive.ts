@@ -1,6 +1,5 @@
 
-interface ResponsiveState {
-
+interface ResponsiveState 
   screenWidth: number;
   screenHeight: number;
   orientation: 'landscape' | 'portrait';';
@@ -10,8 +9,8 @@ interface ResponsiveState {
 
 
 
-  useEffect(() => {
-    const updateDimensions = () => {
+  useEffect(() => 
+    const updateDimensions = () => 
       const width = window.innerWidth})};
 
     updateDimensions();

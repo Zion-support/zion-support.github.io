@@ -9,13 +9,17 @@ export const metadata = {
 
 export default function AINextGenerationAutomation2026() {
   return (
-    <div className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <div className="text-left"></div>
       {/* Header */}
-      <div className="text-left">
+      <div className="text-left"></div>
               </div>
             </div>
           </div>
 
     </div>
   );
-}
+})

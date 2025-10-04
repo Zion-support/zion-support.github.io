@@ -1,3 +1,4 @@
+import React from 'react';
 
 const AIPlatformArchitecture: React.FC = () => {
   return (
@@ -51,7 +52,8 @@ const AIPlatformArchitecture: React.FC = () => {
         <div className="text-center">
           <a 
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl"
+          >
             Design Your AI Platform
           </a>
         </div>

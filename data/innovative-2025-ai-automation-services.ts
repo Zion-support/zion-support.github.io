@@ -24,7 +24,7 @@
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {
+  contactInfo: 
     mobile: string;
     email: string;
     address: string;
@@ -44,7 +44,7 @@
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
     // AI-Powered Autonomous Business Process Orchestrator
-    {
+    
       id: 'ai-autonomous-business-orchestrator'
       name: 'AI Autonomous Business Process Orchestrator'
       tagline:
@@ -94,7 +94,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$25B business process automation market'
       growthRate: '300% annual growth'
       variant: 'ai-automation'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -109,7 +109,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       reviews: 45
     }
     // AI-Powered Predictive Customer Intelligence Platform
-    {
+    
       id: 'ai-predictive-customer-intelligence'
       name: 'AI Predictive Customer Intelligence Platform'
       tagline: 'Predict customer behavior before it happens with 95% accuracy'
@@ -156,7 +156,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$18B customer intelligence market'
       growthRate: '280% annual growth'
       variant: 'ai-analytics'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -171,7 +171,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       reviews: 78
     }
     // AI-Powered Autonomous Code Generation & Deployment
-    {
+    
       id: 'ai-autonomous-code-generation'
       name: 'AI Autonomous Code Generation & Deployment'
       tagline: 'Generate, test, and deploy production-ready code automatically'
@@ -218,7 +218,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$12B AI development tools market'
       growthRate: '350% annual growth'
       variant: 'ai-development'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -233,7 +233,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       reviews: 62
     }
     // AI-Powered Autonomous Financial Trading Platform
-    {
+    
       id: 'ai-autonomous-financial-trading'
       name: 'AI Autonomous Financial Trading Platform'
       tagline:
@@ -281,7 +281,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$22B algorithmic trading market'
       growthRate: '320% annual growth'
       variant: 'ai-finance'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -296,7 +296,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       reviews: 38
     }
     // AI-Powered Autonomous Healthcare Diagnosis Platform
-    {
+    
       id: 'ai-autonomous-healthcare-diagnosis'
       name: 'AI Autonomous Healthcare Diagnosis Platform'
       tagline:
@@ -346,7 +346,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$35B AI healthcare market'
       growthRate: '400% annual growth'
       variant: 'ai-healthcare'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -371,7 +371,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     competitors: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
     marketSize: '$35B AI healthcare market', growthRate: '400% annual growth'
     variant: 'ai-healthcare'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -398,7 +398,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   market_size: string;
   growth_rate: string;
   variant: string;
-  contact_info: {
+  contact_info: 
     mobile: string;
     email: string;
     address: string;
@@ -417,7 +417,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
     // AI-Powered Autonomous Business Process Orchestrator
-    {
+    
       id: 'ai-autonomous-business-orchestrator'
       name: 'AI Autonomous Business Process Orchestrator'
       tagline:
@@ -467,7 +467,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$25B business process automation market'
       growthRate: '300% annual growth'
       variant: 'ai-automation'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -482,7 +482,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       reviews: 45
     }
     // AI-Powered Predictive Customer Intelligence Platform
-    {
+    
       id: 'ai-predictive-customer-intelligence'
       name: 'AI Predictive Customer Intelligence Platform'
       tagline: 'Predict customer behavior before it happens with 95% accuracy'
@@ -529,7 +529,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$18B customer intelligence market'
       growthRate: '280% annual growth'
       variant: 'ai-analytics'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -544,7 +544,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       reviews: 78
     }
     // AI-Powered Autonomous Code Generation & Deployment
-    {
+    
       id: 'ai-autonomous-code-generation'
       name: 'AI Autonomous Code Generation & Deployment'
       tagline: 'Generate, test, and deploy production-ready code automatically'
@@ -591,7 +591,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$12B AI development tools market'
       growthRate: '350% annual growth'
       variant: 'ai-development'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -606,7 +606,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       reviews: 62
     }
     // AI-Powered Autonomous Financial Trading Platform
-    {
+    
       id: 'ai-autonomous-financial-trading'
       name: 'AI Autonomous Financial Trading Platform'
       tagline:
@@ -654,7 +654,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$22B algorithmic trading market'
       growthRate: '320% annual growth'
       variant: 'ai-finance'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -669,7 +669,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       reviews: 38
     }
     // AI-Powered Autonomous Healthcare Diagnosis Platform
-    {
+    
       id: 'ai-autonomous-healthcare-diagnosis'
       name: 'AI Autonomous Healthcare Diagnosis Platform'
       tagline:
@@ -719,7 +719,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSize: '$35B AI healthcare market'
       growthRate: '400% annual growth'
       variant: 'ai-healthcare'
-      contactInfo: {
+      contactInfo: 
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -756,7 +756,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     competitors: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
     marketSize: '$35B AI healthcare market', growthRate: '400% annual growth'
     variant: 'ai-healthcare'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'

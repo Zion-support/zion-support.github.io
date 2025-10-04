@@ -14,7 +14,7 @@
   customers?: number;
   trial_days?: number;
   setup_time?: string;
-  contact_info: {
+  contact_info: 
     mobile: string;
     email: string;
     address: string;
@@ -22,8 +22,7 @@
   }
 
 ;
-const contact_info = {
-
+const contact_info = 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -33,7 +32,7 @@ const contact_info = {
 ;
 export const marketValidatedServices: MarketValidatedService[] = [;
   // AI and Assistants;
-  {
+  
     id: 'ai - assistant - pro',
     name: 'AI Assistant Pro',
     tagline: 'Branded copilot with RAG, guardrails, and analytics',
@@ -59,8 +58,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '30 minutes',
     contact_info,
   },
-  {
-
+  
       'Eval datasets/versioning',
     id: 'ai - evals - observability',
     name: 'AI Evals & Observability',
@@ -88,8 +86,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '1 hour',
     contact_info,
   },
-  {
-
+  
       'Hybrid vector+BM25 + reranker',
     id: 'agentic - rag - platform',
     name: 'Agentic RAG Platform',
@@ -119,7 +116,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
       'Auth/Z misconfig checks',
   // Security and APIs;
-  {
+  
     id: 'api - security - scanner',
     name: 'API Security Scanner',
     tagline: 'OpenAPI / GraphQL scanning, auth / Z checks, dependency audit',
@@ -145,8 +142,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '20 minutes',
     contact_info,
   },
-  {
-
+  
       'OTel traces/metrics/logs',
     id: 'api - observability',
     name: 'API Observability & SLA Guard',
@@ -175,7 +171,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
 
   // Cloud and Infra;
-  {
+  
     id: 'cloud - cost - optimizer - pro',
     name: 'Cloud Cost Optimizer Pro',
     tagline: 'Rightsizing, lifecycle, anomaly detection, and k8s bin - packing',
@@ -201,8 +197,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '1 hour',
     contact_info,
   },
-  {
-
+  
     id: 'database - performance - monitor',
     name: 'Database Performance Monitor',
     tagline: 'Slow query capture, AI index suggestions, capacity forecasting',
@@ -228,8 +223,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '45 minutes',
     contact_info,
   },
-  {
-
+  
     id: 'managed - postgres - ha',
     name: 'Managed Postgres HA',
     tagline: 'Highly - available Postgres with backups, failover, and guardrails',
@@ -257,7 +251,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
 
   // Reliability & Monitoring;
-  {
+  
     id: 'uptime - slo - monitor',
     name: 'Uptime & SLO Monitor',
     tagline: 'Synthetic checks, error budgets, and incident automation',
@@ -283,8 +277,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '25 minutes',
     contact_info,
   },
-  {
-
+  
     id: 'tls - certificate - monitor',
     name: 'TLS Certificate Monitor',
     tagline: 'Auto - renewal checks and expiry alerts across your fleet',
@@ -310,8 +303,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '10 minutes',
     contact_info,
   },
-  {
-
+  
     id: 'domain - dns - monitor',
     name: 'Domain & DNS Monitor',
     tagline: 'Track DNS changes, TTLs, and misconfigurations',
@@ -341,7 +333,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'HTML/Markdown to PDF',
       'Headers/footers',
   // Dev & Productivity;
-  {
+  
     id: 'pdf - render - api',
     name: 'PDF Render API',
     tagline: 'High - fidelity serverless PDF rendering and watermarking',
@@ -367,8 +359,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '10 minutes',
     contact_info,
   },
-  {
-
+  
     id: 'browser - performance - monitor',
     name: 'Browser Performance Monitor',
     tagline: 'RUM metrics, Core Web Vitals, and UX waterfall analysis',
@@ -394,8 +385,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '20 minutes',
     contact_info,
   },
-  {
-
+  
     id: 'feature - flags - edge',
     name: 'Feature Flags at the Edge',
     tagline: 'Targeting, rollouts, and experiments at CDN edge',
@@ -421,8 +411,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '30 minutes',
     contact_info,
   },
-  {
-
+  
     id: 'serverless - cron - manager',
     name: 'Serverless Cron Manager',
     tagline: 'Reliable scheduled jobs with retries and observability',
@@ -450,7 +439,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
 
   // Compliance & Risk;
-  {
+  
     id: 'soc2 - evidence - automation',
     name: 'SOC 2 Evidence Automation',
     tagline: 'Collect and map controls with change tracking',
@@ -476,8 +465,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '1 day',
     contact_info,
   },
-  {
-
+  
     id: 'vendor - risk - automation',
     name: 'Vendor Risk Automation',
     tagline: 'Automate VRM workflows, DDQs, and risk scoring',
@@ -505,7 +493,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
 
   // Developer and Ops Utilities;
-  {
+  
     id: 'webhook - relay - replay',
     name: 'Webhook Relay & Replay',
     tagline: 'Capture, inspect, and replay webhooks reliably',
@@ -531,8 +519,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '10 minutes',
     contact_info,
   },
-  {
-
+  
     id: 'audit - log - vault',
     name: 'Audit Log Vault',
     tagline: 'Tamper - evident logs with retention and export',
@@ -560,7 +547,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
 
   // AI Channels;
-  {
+  
     id: 'ai - phone - agent',
     name: 'AI Phone Agent',
     tagline: 'Voice IVR and call handling with CRM handoff',
@@ -583,10 +570,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
 
   // Search and Knowledge;
-  {
+  
   // Search and Knowledge;
-  {
-
+  
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -625,7 +611,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   }
 ];import { ServiceVariant  } from "../types/service-variants";
 
-export interface MarketValidatedService {
+export interface MarketValidatedService 
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
@@ -670,11 +656,11 @@ export interface MarketValidatedService {
   },
 
 
-export interface MarketValidatedService {
+export interface MarketValidatedService 
 export interface MarketValidatedService {;
 
 
-export interface MarketValidatedService {
+export interface MarketValidatedService 
 export interface MarketValidatedService {;
 
     trialDays: 14,
@@ -704,7 +690,7 @@ export interface MarketValidatedService {;
 	address: "364 E Main St STE 1008 Middletown DE 19709";
 
   website: "https://ziontechgroup && ziontechgroup.com";,
-	contactInfo: {
+	contactInfo: 
 		mobile: string;
 		email: string;
 		address: string;
@@ -1054,7 +1040,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		trialDays: 14,
 
 ];import { ServiceVariant   } from '../types / service - variants';
-export interface MarketValidatedService {
+export interface MarketValidatedService 
 id: string;
 name: string;
 tagline: string;
@@ -1069,11 +1055,11 @@ rating?: number;
 customers?: number;
 trial_days?: number;
 setup_time?: string;
-contact_info: {
+contact_info: 
   mobile: string;
   email: string;
   address: string;
-const contact_info = {
+const contact_info = 
   mobile: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 address: "364 E Main St STE 1008 Middletown DE 19709";
@@ -1082,7 +1068,7 @@ address: "364 E Main St STE 1008 Middletown DE 19709";
 }
 export const marketValidatedServices: MarketValidatedService[] = [;
 // AI and Assistants;
-{
+
   id: "ai - assistant - pro",
   name: "AI Assistant Pro",
   tagline: "Branded copilot with RAG, guardrails, and analytics",
@@ -1103,7 +1089,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "30 minutes",
   contact_info;,
 },
-{
+
   id: "ai - evals - observability",
   name: "AI Evals & Observability",
   tagline: "Regression testing, safety checks, and live metrics for LLM features",
@@ -1124,7 +1110,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "1 hour",
   contact_info;,
 },
-{
+
   id: "agentic - rag - platform",
   name: "Agentic RAG Platform",
   tagline: "Production RAG with hybrid search, chunking, tools, and evals",
@@ -1146,7 +1132,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   contact_info;,
 },
 // Security and APIs;
-{
+
   id: "api - security - scanner",
   name: "API Security Scanner",
   tagline: "OpenAPI / GraphQL scanning, auth / Z checks, dependency audit",
@@ -1163,7 +1149,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "20 minutes",
   contact_info;,
 },
-{
+
   id: "api - observability",
   name: "API Observability & SLA Guard",
   tagline: "OTel tracing, SLOs, and error budgets for services",
@@ -1181,7 +1167,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   contact_info;,
 },
 // Cloud and Infra;
-{
+
   id: "cloud - cost - optimizer - pro",
   name: "Cloud Cost Optimizer Pro",
   tagline: "Rightsizing, lifecycle, anomaly detection, and k8s bin - packing",
@@ -1198,7 +1184,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "1 hour",
   contact_info;,
 },
-{
+
   id: "database - performance - monitor",
   name: "Database Performance Monitor",
   tagline: "Slow query capture, AI index suggestions, capacity forecasting",
@@ -1215,7 +1201,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "45 minutes",
   contact_info;,
 },
-{
+
   id: "managed - postgres - ha",
   name: "Managed Postgres HA",
   tagline: "Highly - available Postgres with backups, failover, and guardrails",
@@ -1233,7 +1219,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   contact_info;,
 },
 // Reliability & Monitoring;
-{
+
   id: "uptime - slo - monitor",
   name: "Uptime & SLO Monitor",
   tagline: "Synthetic checks, error budgets, and incident automation",
@@ -1250,7 +1236,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "25 minutes",
   contact_info;,
 },
-{
+
   id: "tls - certificate - monitor",
   name: "TLS Certificate Monitor",
   tagline: "Auto - renewal checks and expiry alerts across your fleet",
@@ -1267,7 +1253,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "10 minutes",
   contact_info;,
 },
-{
+
   id: "domain - dns - monitor",
   name: "Domain & DNS Monitor",
   tagline: "Track DNS changes, TTLs, and misconfigurations",
@@ -1285,7 +1271,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   contact_info;,
 },
 // Dev & Productivity;
-{
+
   id: "pdf - render - api",
   name: "PDF Render API",
   tagline: "High - fidelity serverless PDF rendering and watermarking",
@@ -1302,7 +1288,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "10 minutes",
   contact_info;,
 },
-{
+
   id: "browser - performance - monitor",
   name: "Browser Performance Monitor",
   tagline: "RUM metrics, Core Web Vitals, and UX waterfall analysis",
@@ -1319,7 +1305,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "20 minutes",
   contact_info;,
 },
-{
+
   id: "feature - flags - edge",
   name: "Feature Flags at the Edge",
   tagline: "Targeting, rollouts, and experiments at CDN edge",
@@ -1336,7 +1322,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "30 minutes",
   contact_info;,
 },
-{
+
   id: "serverless - cron - manager",
   name: "Serverless Cron Manager",
   tagline: "Reliable scheduled jobs with retries and observability",
@@ -1354,7 +1340,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   contact_info;,
 },
 // Compliance & Risk;
-{
+
   id: "soc2 - evidence - automation",
   name: "SOC 2 Evidence Automation",
   tagline: "Collect and map controls with change tracking",
@@ -1371,7 +1357,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "1 day",
   contact_info;,
 },
-{
+
   id: "vendor - risk - automation",
   name: "Vendor Risk Automation",
   tagline: "Automate VRM workflows, DDQs, and risk scoring",
@@ -1389,7 +1375,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   contact_info;,
 },
 // Developer and Ops Utilities;
-{
+
   id: "webhook - relay - replay",
   name: "Webhook Relay & Replay",
   tagline: "Capture, inspect, and replay webhooks reliably",
@@ -1406,7 +1392,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   setup_time: "10 minutes",
   contact_info;,
 },
-{
+
   id: "audit - log - vault",
   name: "Audit Log Vault",
   tagline: "Tamper - evident logs with retention and export",
@@ -1424,7 +1410,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   contact_info;,
 },
 // AI Channels;
-{
+
   id: "ai - phone - agent",
   name: "AI Phone Agent",
   tagline: "Voice IVR and call handling with CRM handoff",
@@ -1442,7 +1428,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   contact_info;,
 },
 // Search and Knowledge;
-{
+
   id: "vector - search - starter",
   name: "Vector Search Starter",
   tagline: "Deploy a production - grade vector database and APIs",
@@ -1464,7 +1450,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 }}
 
   // Search and Knowledge;
-{
+
   id: 'vector - search - starter';
   name: 'Vector Search Starter';
   tagline: 'Deploy a production - grade vector database and APIs';

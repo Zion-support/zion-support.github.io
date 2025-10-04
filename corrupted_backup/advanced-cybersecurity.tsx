@@ -1,77 +1,39 @@
-import { useState } from 'react';
-export default function AdvancedCybersecurityServices() {
-  }
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
+import React from 'react';
+import { Metadata } from 'next';
 
-const [searchTerm, setSearchTerm] = useState('');'
+export const metadata: Metadata = {
+  title: 'Advanced Cybersecurity | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Advanced Cybersecurity',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article',
+  },
+};
 
-const [sortBy, setSortBy] = useState<string>('innovation');'
-
-const categories = [{ "id": 'all', "name": 'All Security', "color": 'from-blue-500 to-purple-600' },;'
-    { "id": 'AI Security', "name": 'AI Security', "color": 'from-purple-500 to-pink-600' },'
-    { "id": 'Quantum Security', "name": 'Quantum Security', "color": 'from-indigo-500 to-blue-600' },'
-    { "id": 'Network Security', "name": 'Network Security', "color": 'from-green-500 to-teal-600' },'
-    { "id": 'Endpoint Security', "name": 'Endpoint Security', "color": 'from-orange-500 to-red-600' },'
-    { "id": 'Cloud Security', "name": 'Cloud Security', "color": 'from-yellow-500 to-orange-600' }'
-  ];
-
-const "data": any[] = [];"
-const filteredServices = data.filter((service) => {
-   ;
-  }
-  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;'
-
-const matchesSearch =;
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-const sortedServices = [...filteredServices].sort((a, b) => {
-    }
-    switch (sortBy) {
-
-              >
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-                    {category.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-              </select>
+export default function advancedcybersecurity() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Advanced Cybersecurity</h1>
+            <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
+            <div className="flex justify-center space-x-4">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI</span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">ENTERPRISE</span>
             </div>
           </div>
-        </div>
-
-          {categories.map((category) => (
-            <button
-}
-key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${`                }
-                selectedCategory === category.id
-
-              {category.name}
-            </button>
-          )
-}
-        </div>
-
-              </a>
-            </div>
-          ))}
-        </div>
-
-              📞 Call +1 (302) 464-0950
-            </a>
+          
+          <div className="prose max-w-none">
+            <p className="text-lg text-gray-700 mb-6">
+              This page is currently under development. Please check back soon for the complete content.
+            </p>
           </div>
         </div>
       </div>
     </div>
   );
 }
-import { useState } from 'react'; export default function AdvancedCybersecurityServices() { const [selectedCategory,setSelectedCategory] = useState<string>('all'); const [searchTerm,setSearchTerm] = useState(''); const [sortBy,setSortBy] = useState<string>('innovation'); const categories = [ { id: 'all',name: 'All Security',color: 'from-blue-500 to-purple-600' },{ id: 'AI Security',name: 'AI Security',color: 'from-purple-500 to-pink-600' },{ id: 'Quantum Security',name: 'Quantum Security',color: 'from-indigo-500 to-blue-600' },{ id: 'Network Security',name: 'Network Security',color: 'from-green-500 to-teal-600' },{ id: 'Endpoint Security',name: 'Endpoint Security',color: 'from-orange-500 to-red-600' },{ id: 'Cloud Security',name: 'Cloud Security',color: 'from-yellow-500 to-orange-600' } ]; const data: any[] = []; const filteredServices = data.filter((service) => { const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory; const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()); return matchesCategory && matchesSearch}); const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case 'price': return parseInt(a.price.replace('$','').replace(',','')) - parseInt(b.price.replace('$','').replace(',','')); case 'innovation': return (b.rating || 0) - (a.rating || 0); case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0); default: return 0} }); const getCategoryIcon = (categoryId: string) => { switch (categoryId) { case 'AI Security': return '🤖'; case 'Quantum Security': return '⚛️'; case 'Network Security': return '🌐'; case 'Endpoint Security': return '💻'; case 'Cloud Security': return '☁️'; default: return '🛡️'} }; return ( <div className="text-left"> <div className="text-left"> <div className="text-left"> <h1 className="text-left"> Advanced Cybersecurity Services 2027 </h1> <p className="text-left"> Protect your digital assets with cutting-edge cybersecurity solutions. </p> </div> <div className="text-left"> {[ { icon: '🛡️',label: 'Threats Blocked',value: '99.9%',color: 'from-green-500 to-emerald-600' },{ icon: '👁️',label: '24/7 Monitoring',value: 'Always On',color: 'from-blue-500 to-cyan-600' },{ icon: '🔒',label: 'Encryption',value: 'AES-256',color: 'from-purple-500 to-indigo-600' },{ icon: '🧠',label: 'AI Detection',value: '10x Faster',color: 'from-orange-500 to-red-600' } ].map((stat,index) => ( <div key={index} className="text-left"> <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}> <span className="text-left">{stat.icon}< </div> <div className="text-left">{stat.value}</div> <div className="text-left">{stat.label}</div> </div> ))} </div> <div className="text-left"> <div className="text-left"> <div className="text-left"> <input type="text" placeholder="Search cybersecurity services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="text-left" /> </div> <div className="text-left"> <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="text-left" > {categories.map((category) => ( <option key={category.id} value={category.id}> {category.name} </option> ))} </select> </div> <div className="text-left"> <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="text-left" > <option value="innovation">Sort by Innovation Level</option> <option value="price">Sort by Price</option> <option value="popularity">Sort by Popularity</option> </select> </div> </div> </div> <div className="text-left"> {categories.map((category) => ( <button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${ selectedCategory === category.id ? `bg-gradient-to-r ${category.color} text-white shadow-lg` : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20' }`} > <span className="text-left">{getCategoryIcon(category.id)}< {category.name} </button> ))} </div> <div className="text-left"> {sortedServices.map((service: any,index: number) => ( <div key={service.id || index} className="text-left"> <h3 className="text-left">{service.name}</h3> <p className="text-left">{service.description}</p> <div className="text-left"> <span className="text-left"> {service.category} < </div> <div className="text-left"> <div className="text-left">{service.price}</div> </div> <a href={`/services/${service.id}`} className="text-left"> Learn More </a> </div> ))} </div> <div className="text-left"> <h2 className="text-left">Secure Your Digital Future Today</h2> <p className="text-left"> Contact us to discuss how our advanced cybersecurity solutions can protect your organization. </p> <div className="text-left"> <a href="/contact" className="text-left"> Get Security Assessment </a> <a href="tel:+13024640950" className="text-left"> 📞 Call +1 (302) 464-0950 </a> </div> </div> </div> </div> )}
-import { useState } from 'react'; export default function AdvancedCybersecurityServices() { const [selectedCategory,setSelectedCategory] = useState<string>('all'); const [searchTerm,setSearchTerm] = useState(''); const [sortBy,setSortBy] = useState<string>('innovation'); const categories = [ { id: 'all',name: 'All Security',color: 'from-blue-500 to-purple-600' },{ id: 'AI Security',name: 'AI Security',color: 'from-purple-500 to-pink-600' },{ id: 'Quantum Security',name: 'Quantum Security',color: 'from-indigo-500 to-blue-600' },{ id: 'Network Security',name: 'Network Security',color: 'from-green-500 to-teal-600' },{ id: 'Endpoint Security',name: 'Endpoint Security',color: 'from-orange-500 to-red-600' },{ id: 'Cloud Security',name: 'Cloud Security',color: 'from-yellow-500 to-orange-600' } ]; const data: any[] = []; const filteredServices = data.filter((service) => { const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory; const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()); return matchesCategory && matchesSearch}); const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case 'price': return parseInt(a.price.replace('$','').replace(',','')) - parseInt(b.price.replace('$','').replace(',','')); case 'innovation': return (b.rating || 0) - (a.rating || 0); case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0); default: return 0} }); const getCategoryIcon = (categoryId: string) => { switch (categoryId) { case 'AI Security': return '🤖'; case 'Quantum Security': return '⚛️'; case 'Network Security': return '🌐'; case 'Endpoint Security': return '💻'; case 'Cloud Security': return '☁️'; default: return '🛡️'} }; return ( <div className="text-left"> <div className="text-left"> <div className="text-left"> <h1 className="text-left"> Advanced Cybersecurity Services 2027 </h1> <p className="text-left"> Protect your digital assets with cutting-edge cybersecurity solutions. </p> </div> <div className="text-left"> {[ { icon: '🛡️',label: 'Threats Blocked',value: '99.9%',color: 'from-green-500 to-emerald-600' },{ icon: '👁️',label: '24/7 Monitoring',value: 'Always On',color: 'from-blue-500 to-cyan-600' },{ icon: '🔒',label: 'Encryption',value: 'AES-256',color: 'from-purple-500 to-indigo-600' },{ icon: '🧠',label: 'AI Detection',value: '10x Faster',color: 'from-orange-500 to-red-600' } ].map((stat,index) => ( <div key={index} className="text-left"> <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}> <span className="text-left">{stat.icon}< </div> <div className="text-left">{stat.value}</div> <div className="text-left">{stat.label}</div> </div> ))} </div> <div className="text-left"> <div className="text-left"> <div className="text-left"> <input type="text" placeholder="Search cybersecurity services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="text-left" /> </div> <div className="text-left"> <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="text-left" > {categories.map((category) => ( <option key={category.id} value={category.id}> {category.name} </option> ))} </select> </div> <div className="text-left"> <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="text-left" > <option value="innovation">Sort by Innovation Level</option> <option value="price">Sort by Price</option> <option value="popularity">Sort by Popularity</option> </select> </div> </div> </div> <div className="text-left"> {categories.map((category) => ( <button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${ selectedCategory === category.id ? `bg-gradient-to-r ${category.color} text-white shadow-lg` : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20' }`} > <span className="text-left">{getCategoryIcon(category.id)}< {category.name} </button> ))} </div> <div className="text-left"> {sortedServices.map((service: any,index: number) => ( <div key={service.id || index} className="text-left"> <h3 className="text-left">{service.name}</h3> <p className="text-left">{service.description}</p> <div className="text-left"> <span className="text-left"> {service.category} < </div> <div className="text-left"> <div className="text-left">{service.price}</div> </div> <a href={`/services/${service.id}`} className="text-left"> Learn More </a> </div> ))} </div> <div className="text-left"> <h2 className="text-left">Secure Your Digital Future Today</h2> <p className="text-left"> Contact us to discuss how our advanced cybersecurity solutions can protect your organization. </p> <div className="text-left"> <a href="/contact" className="text-left"> Get Security Assessment </a> <a href="tel:+13024640950" className="text-left"> 📞 Call +1 (302) 464-0950 </a> </div> </div> </div> </div> )}
-import { useState } from 'react'; export default function AdvancedCybersecurityServices() { const [selectedCategory,setSelectedCategory] = useState<string>('all'); const [searchTerm,setSearchTerm] = useState(''); const [sortBy,setSortBy] = useState<string>('innovation'); const categories = [ { id: 'all',name: 'All Security',color: 'from-blue-500 to-purple-600' },{ id: 'AI Security',name: 'AI Security',color: 'from-purple-500 to-pink-600' },{ id: 'Quantum Security',name: 'Quantum Security',color: 'from-indigo-500 to-blue-600' },{ id: 'Network Security',name: 'Network Security',color: 'from-green-500 to-teal-600' },{ id: 'Endpoint Security',name: 'Endpoint Security',color: 'from-orange-500 to-red-600' },{ id: 'Cloud Security',name: 'Cloud Security',color: 'from-yellow-500 to-orange-600' } ]; const data: any[] = []; const filteredServices = data.filter((service) => { const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory; const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()); return matchesCategory && matchesSearch}); const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case 'price': return parseInt(a.price.replace('$','').replace(',','')) - parseInt(b.price.replace('$','').replace(',','')); case 'innovation': return (b.rating || 0) - (a.rating || 0); case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0); default: return 0} }); const getCategoryIcon = (categoryId: string) => { switch (categoryId) { case 'AI Security': return '🤖'; case 'Quantum Security': return '⚛️'; case 'Network Security': return '🌐'; case 'Endpoint Security': return '💻'; case 'Cloud Security': return '☁️'; default: return '🛡️'} }; return ( <div className="text-left"> <div className="text-left"> <div className="text-left"> <h1 className="text-left"> Advanced Cybersecurity Services 2027 </h1> <p className="text-left"> Protect your digital assets with cutting-edge cybersecurity solutions. </p> </div> <div className="text-left"> {[ { icon: '🛡️',label: 'Threats Blocked',value: '99.9%',color: 'from-green-500 to-emerald-600' },{ icon: '👁️',label: '24/7 Monitoring',value: 'Always On',color: 'from-blue-500 to-cyan-600' },{ icon: '🔒',label: 'Encryption',value: 'AES-256',color: 'from-purple-500 to-indigo-600' },{ icon: '🧠',label: 'AI Detection',value: '10x Faster',color: 'from-orange-500 to-red-600' } ].map((stat,index) => ( <div key={index} className="text-left"> <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}> <span className="text-left">{stat.icon}< </div> <div className="text-left">{stat.value}</div> <div className="text-left">{stat.label}</div> </div> ))} </div> <div className="text-left"> <div className="text-left"> <div className="text-left"> <input type="text" placeholder="Search cybersecurity services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="text-left" /> </div> <div className="text-left"> <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="text-left" > {categories.map((category) => ( <option key={category.id} value={category.id}> {category.name} </option> ))} </select> </div> <div className="text-left"> <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="text-left" > <option value="innovation">Sort by Innovation Level</option> <option value="price">Sort by Price</option> <option value="popularity">Sort by Popularity</option> </select> </div> </div> </div> <div className="text-left"> {categories.map((category) => ( <button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${ selectedCategory === category.id ? `bg-gradient-to-r ${category.color} text-white shadow-lg` : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20' }`} > <span className="text-left">{getCategoryIcon(category.id)}< {category.name} </button> ))} </div> <div className="text-left"> {sortedServices.map((service: any,index: number) => ( <div key={service.id || index} className="text-left"> <h3 className="text-left">{service.name}</h3> <p className="text-left">{service.description}</p> <div className="text-left"> <span className="text-left"> {service.category} < </div> <div className="text-left"> <div className="text-left">{service.price}</div> </div> <a href={`/services/${service.id}`} className="text-left"> Learn More </a> </div> ))} </div> <div className="text-left"> <h2 className="text-left">Secure Your Digital Future Today</h2> <p className="text-left"> Contact us to discuss how our advanced cybersecurity solutions can protect your organization. </p> <div className="text-left"> <a href="/contact" className="text-left"> Get Security Assessment </a> <a href="tel:+13024640950" className="text-left"> 📞 Call +1 (302) 464-0950 </a> </div> </div> </div> </div> )}

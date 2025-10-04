@@ -484,7 +484,7 @@ import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Data
     <div className="text-left">
       {/* Animated Background */}
       <div className="text-left">
-        <div className="text-left"></div>
+        <div className="text-left">
         <div className="text-left"></div>
         <div className="text-left"></div>
       </div>

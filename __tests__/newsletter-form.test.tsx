@@ -6,15 +6,14 @@ import { vi, expect, test } from 'vitest';
 
 const mockedApi = api as unknown as { post: any }
 test(,
-  shows success toast when subscription succeeds', async () => {
+  shows success toast when subscription succeeds', async () => 
   mockedApi.post.mockResolvedValue({});
   render(<NewsletterForm />);
-  fireEvent.input(screen.getByPlaceholderText(/enter your email/i) {
-
+  fireEvent.input(screen.getByPlaceholderText(/enter your email/i) 
   'test@example.com }})
   fireEvent.submit(screen.getByRole('
   'button' { name: /subscribe/i }))
-  await waitFor(() => {
+  await waitFor(() => 
     expect(toastHook.toast.success).toHaveBeenCalledWith('
   '¡Gracias por suscribirte!')})})
 
@@ -23,14 +22,15 @@ test(
   shows success toast when subscription succeeds', async () => {'
   mockedApi.post.mockResolvedValue({})
   render(<NewsletterForm  />)
-  fireEvent.input(screen.getByPlaceholderText(/enter your email/i) {
+  fireEvent.input(screen.getByPlaceholderText(/enter your email/i) 
     target: { value:
   'test@example.com }})'
   fireEvent.submit(screen.getByRole(
   'button' { name: /subscribe/i });
-  await waitFor(() => {
+  await waitFor(() => 
     expect(toastHook.toast.success).toHaveBeenCalledWith(
   '¡Gracias por suscribirte!')})})'
 
 
 
+)

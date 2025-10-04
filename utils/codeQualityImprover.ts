@@ -144,22 +144,17 @@ export class CodeQualityAnalyzer {
     report.push(`**Generated**: ${new Date().toISOString()}\n`);
     report.push(`**Total Improvements**: ${results.length}\n\n`);
 
-    const byCategory = results.reduce((acc, result) => {
-      if (!acc[result.category]) {
-        acc[result.category] = [];
+    const byCategory = results.reduce((acc, result) =>       if (!acc[result.category])         acc[result.category] = [];
       }
       acc[result.category].push(result);
       return acc;
     }, {} as Record<string, OptimizationResult[]>);
 
-    for (const [category, items] of Object.entries(byCategory)) {
-      report.push(`## ${category}\n\n`);
-      items.forEach((item) => {
-        const status = item.implemented ? '✅' : '⏳';
+    for (const [category, items] of Object.entries(byCategory))       report.push(`## ${category}\n\n`);
+      items.forEach((item) =>         const status = item.implemented ? '✅' : '⏳';
         const impact = item.impact.toUpperCase();
         report.push(`${status} **[${impact}]** ${item.improvement}\n`);
-        if (item.metrics) {
-          report.push(`   Metrics: ${JSON.stringify(item.metrics)}\n`);
+        if (item.metrics)           report.push(`   Metrics: ${JSON.stringify(item.metrics)}\n`);
         }
       });
       report.push('\n');
@@ -180,33 +175,27 @@ export class CodeQualityAnalyzer {
   /**
    * Get current metrics
    */
-  getMetrics(): CodeQualityMetrics {
-    return { ...this.metrics };
+  getMetrics(): CodeQualityMetrics     return { ...this.metrics };
   }
 
   /**
    * Update metrics after improvements
    */
-  updateMetrics(updates: Partial<CodeQualityMetrics>): void {
-    this.metrics = { ...this.metrics, ...updates };
+  updateMetrics(updates: Partial<CodeQualityMetrics>): void     this.metrics = { ...this.metrics, ...updates };
   }
 }
 
 /**
  * Bundle size optimizer
  */
-export class BundleOptimizer {
-  /**
+export class BundleOptimizer   /**
    * Analyze and optimize bundle size
    */
-  async optimize(): Promise<{
-    originalSize: number;
+  async optimize(): Promise<    originalSize: number;
     optimizedSize: number;
     reduction: number;
     strategies: string[];
-  }> {
-    return {
-      originalSize: 1200, // KB
+  }>     return       originalSize: 1200, // KB
       optimizedSize: 450, // KB
       reduction: 62.5, // %
       strategies: [
@@ -224,19 +213,14 @@ export class BundleOptimizer {
 /**
  * Accessibility checker
  */
-export class AccessibilityChecker {
-  /**
+export class AccessibilityChecker   /**
    * Check accessibility compliance
    */
-  async check(): Promise<{
-    score: number;
+  async check(): Promise<    score: number;
     issues: Array<{ severity: string; description: string }>;
     recommendations: string[];
-  }> {
-    return {
-      score: 95,
+  }>     return       score: 95,
       issues: [
-        {
           severity: 'minor',
           description: 'Some images missing alt text in legacy components',
         },
@@ -258,15 +242,12 @@ export const bundleOptimizer = new BundleOptimizer();
 export const accessibilityChecker = new AccessibilityChecker();
 
 // Export utility functions
-export const generateQualityReport = async (): Promise<string> => {
-  const results = await codeQualityAnalyzer.analyze();
+export const generateQualityReport = async (): Promise<string> =>   const results = await codeQualityAnalyzer.analyze();
   return codeQualityAnalyzer.generateReport(results);
 };
 
-export const optimizeBundle = async () => {
-  return await bundleOptimizer.optimize();
+export const optimizeBundle = async () =>   return await bundleOptimizer.optimize();
 };
 
-export const checkAccessibility = async () => {
-  return await accessibilityChecker.check();
+export const checkAccessibility = async () =>   return await accessibilityChecker.check();
 };

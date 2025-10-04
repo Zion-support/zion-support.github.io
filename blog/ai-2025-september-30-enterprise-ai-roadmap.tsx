@@ -3,22 +3,26 @@ import Link from 'next/link';
 
 export default function EnterpriseAIRoadmap2025() {
   return (
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
     <main className="text-left">
-      <article className="text-left">
+      <article className="text-left"></a>
         <header className="text-left">
           <p className="text-left">September 30, 2025 • 16 min read</p>
           <h1 className="text-left">
             Enterprise AI Roadmap 2025: From Pilots to Measurable Outcomes
           </h1>
-          <p className="text-left">
+          <p className="text-left"></p>
             A pragmatic, budget-aware roadmap to scale reliable AI across the enterprise with guardrails,
             online evaluations, and value stream analytics.
           </p>
         </header>
 
-        <section className="text-left">
+        <section className="text-left"></section>
           <h2>Why Most AI Programs Stall</h2>
-          <p>
+          <p></p>
             Initiatives often stall due to unclear ownership, missing reliability practices, and runaway costs.
             The fix: policy-first guardrails, KPI-linked budgets, and continuous evaluation.
           </p>
@@ -41,7 +45,7 @@ export default function EnterpriseAIRoadmap2025() {
           </ul>
 
           <h2>Getting Started This Quarter</h2>
-          <p>
+          <p></p>
             Start with one critical journey (support, claims, fulfillment). Ship a thin slice with full
             guardrails and publish an ROI scorecard in 30 days.
           </p>
@@ -49,7 +53,7 @@ export default function EnterpriseAIRoadmap2025() {
 
         <hr className="text-left" />
 
-        <aside className="text-left">
+        <aside className="text-left"></a>
           <h3 className="text-left">Next up</h3>
           <ul className="text-left">
             <li>
@@ -69,3 +73,4 @@ export default function EnterpriseAIRoadmap2025() {
   );
 }
 
+)

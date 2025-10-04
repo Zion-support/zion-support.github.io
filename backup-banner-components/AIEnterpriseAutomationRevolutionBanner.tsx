@@ -6,7 +6,7 @@ export default function AIEnterpriseAutomationRevolutionBanner() {
     <section className="text-left">
       {/* Background Pattern */}
       <div className="text-left">
-        <div className="text-left"></div>
+        <div className="text-left">
         <div className="text-left"></div>
       </div>
 

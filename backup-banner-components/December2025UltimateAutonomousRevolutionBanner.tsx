@@ -172,8 +172,8 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
       </div>
 
       {/* Floating Elements */}
-      <div className="text-left"></div>
-      <div className="text-left"></div>
+      <div className="text-left">
+        <div className="text-left"></div>
       <div className="text-left"></div>
     </div>
   );

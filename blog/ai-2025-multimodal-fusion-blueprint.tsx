@@ -2,12 +2,16 @@ import React from 'react';
 
 export default function MultimodalFusionBlueprint2025() {
   return (
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
     <main className="text-left">
       <h1 className="text-left">Multimodal Fusion Blueprint 2025</h1>
       <p className="text-left">98% cross‑modal accuracy via hybrid retrieval and calibrated adapters.</p>
-      <section className="text-left">
+      <section className="text-left"></section>
         <h2>Architecture</h2>
-        <p>
+        <p></p>
           Combine text, image, and voice with shared embeddings, late fusion, and per‑modality adapters.
         </p>
         <h2>Operational Guardrails</h2>
@@ -21,3 +25,4 @@ export default function MultimodalFusionBlueprint2025() {
   );
 }
 
+)
