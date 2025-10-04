@@ -24,9 +24,9 @@ jest.mock('react-helmet-async', () => ({
 
 // Mock react-router-dom
 jest.mock('react-router-dom', () => ({
-  BrowserRouter: ({ children }: { children: React.ReactNode }) => <>{children}</>,
-  Routes: ({ children }: { children: React.ReactNode }) => <>{children}</>,
-  Route: ({ element }: { element: React.ReactNode }) => <>{element}</>,
+  BrowserRouter: ({ children }: { children: React.ReactNode }) => <div data-testid="router">{children}</div>,
+  Routes: ({ children }: { children: React.ReactNode }) => <div data-testid="routes">{children}</div>,
+  Route: ({ element }: { element: React.ReactNode }) => <div data-testid="route">{element}</div>,
 }));
 
 const renderApp = (component: React.ReactElement) => {
