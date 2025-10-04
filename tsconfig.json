@@ -32,7 +32,6 @@
       "@types/*": ["./src/types/*"]
     }
   },
-<<<<<<< HEAD
   "include": ["src", "app"],
   "exclude": [
     "app/blog/**/*",
@@ -54,7 +53,4 @@
     "src/pages/case-studies/fortune-100-autonomous-operations-transformation-2025.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
-=======
-  "include": ["src", "app"]
->>>>>>> origin/main
 }
