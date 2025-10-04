@@ -1,7 +1,7 @@
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js', '<rootDir>/src/setupTests.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -60,6 +60,12 @@ export default {
     '/lib_backup/',
     '/services/',
     '/middleware/',
+  ],
+  modulePathIgnorePatterns: [
+    '/automation/',
+    '/backup-problematic-files/',
+    '/automation_backup/',
+    '/ai-optimization-backups/',
   ],
   watchPathIgnorePatterns: [
     '/node_modules/',

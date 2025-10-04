@@ -1,5 +1,22 @@
 import '@testing-library/jest-dom';
 
+// Polyfill TextEncoder/TextDecoder for react-router in Jest (Node environment)
+try {
+  const { TextEncoder, TextDecoder } = require('util');
+  // @ts-ignore
+  if (typeof global.TextEncoder === 'undefined') {
+    // @ts-ignore
+    global.TextEncoder = TextEncoder;
+  }
+  // @ts-ignore
+  if (typeof global.TextDecoder === 'undefined') {
+    // @ts-ignore
+    global.TextDecoder = TextDecoder;
+  }
+} catch (_) {
+  // ignore if util not available
+}
+
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}

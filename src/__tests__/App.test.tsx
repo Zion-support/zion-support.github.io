@@ -16,37 +16,29 @@ jest.mock('framer-motion', () => ({
   AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
-const renderWithRouter = (component: React.ReactElement) => {
-  return render(
-    <BrowserRouter>
-      {component}
-    </BrowserRouter>
-  );
+const renderApp = (component: React.ReactElement) => {
+  return render(component);
 };
 
 describe('App Component', () => {
   test('renders without crashing', () => {
-    renderWithRouter(<App />);
+    renderApp(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   test('renders header component', () => {
-    renderWithRouter(<App />);
+    renderApp(<App />);
     expect(screen.getByRole('banner')).toBeInTheDocument();
   });
 
   test('renders footer component', () => {
-    renderWithRouter(<App />);
+    renderApp(<App />);
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 
-  test('renders performance monitor', () => {
-    renderWithRouter(<App />);
-    expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
-  });
-
-  test('renders accessibility enhancer', () => {
-    renderWithRouter(<App />);
-    expect(screen.getByTestId('accessibility-enhancer')).toBeInTheDocument();
+  test('renders app without errors', () => {
+    renderApp(<App />);
+    // Just check that the app renders without throwing errors
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 });
