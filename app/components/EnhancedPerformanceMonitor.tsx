@@ -2,11 +2,11 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface EnhancedMetrics {
-  cls: number;
-  inp: number;
-  fcp: number;
-  lcp: number;
-  ttfb: number;
+  cls?: number;
+  inp?: number;
+  fcp?: number;
+  lcp?: number;
+  ttfb?: number;
   memory?: number;
   connection?: string;
   devicePixelRatio?: number;
@@ -59,38 +59,18 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const handleMetric = useCallback((metric: any) => {
+    const performanceInfo = getEnhancedPerformanceInfo();
     const enhancedMetrics: EnhancedMetrics = {
-      cls: 0,
-      inp: 0,
-      fcp: 0,
-      lcp: 0,
-      ttfb: 0,
-      ...getEnhancedPerformanceInfo()
+      cls: metrics?.cls || 0,
+      inp: metrics?.inp || 0,
+      fcp: metrics?.fcp || 0,
+      lcp: metrics?.lcp || 0,
+      ttfb: metrics?.ttfb || 0,
+      ...performanceInfo,
+      [metric.name]: metric.value
     };
     
-    // Map metric name to our interface
-    switch (metric.name) {
-      case 'CLS':
-        enhancedMetrics.cls = metric.value;
-        break;
-      case 'INP':
-        enhancedMetrics.inp = metric.value;
-        break;
-      case 'FCP':
-        enhancedMetrics.fcp = metric.value;
-        break;
-      case 'LCP':
-        enhancedMetrics.lcp = metric.value;
-        break;
-      case 'TTFB':
-        enhancedMetrics.ttfb = metric.value;
-        break;
-    }
-    
-    setMetrics(prev => ({
-      ...prev,
-      ...enhancedMetrics
-    }));
+    setMetrics(enhancedMetrics);
     
     // Add to history
     setHistory(prev => [
@@ -100,7 +80,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         metrics: enhancedMetrics
       }
     ]);
-  }, [getEnhancedPerformanceInfo]);
+  }, [getEnhancedPerformanceInfo, metrics]);
 
   const getStatusColor = (value: number, threshold: number) => {
     if (value <= threshold * 0.5) return 'text-green-600';
@@ -179,8 +159,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div className="flex justify-between">
               <span>INP:</span>
-              <span className={getStatusColor(metrics.inp, thresholds.inp)}>
-                {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+              <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
+                {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
               </span>
             </div>
             <div className="flex justify-between">

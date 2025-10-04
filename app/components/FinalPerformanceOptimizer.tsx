@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
-import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface FinalMetrics {
-  cls: number;
-  inp: number;
-  fcp: number;
-  lcp: number;
-  ttfb: number;
+  cls?: number;
+  inp?: number;
+  fcp?: number;
+  lcp?: number;
+  ttfb?: number;
   memory?: number;
   connection?: string;
   devicePixelRatio?: number;
@@ -73,24 +73,24 @@ const FinalPerformanceOptimizer: React.FC = () => {
     let score = 100;
     
     // CLS scoring (0-25 points)
-    if (currentMetrics.cls <= 0.1) score -= 0;
-    else if (currentMetrics.cls <= 0.25) score -= 5;
-    else score -= 15;
+    if (currentMetrics.cls && currentMetrics.cls <= 0.1) score -= 0;
+    else if (currentMetrics.cls && currentMetrics.cls <= 0.25) score -= 5;
+    else if (currentMetrics.cls) score -= 15;
     
     // INP scoring (0-25 points)
-    if (currentMetrics.inp <= 200) score -= 0;
-    else if (currentMetrics.inp <= 500) score -= 5;
-    else score -= 15;
+    if (currentMetrics.inp && currentMetrics.inp <= 200) score -= 0;
+    else if (currentMetrics.inp && currentMetrics.inp <= 500) score -= 5;
+    else if (currentMetrics.inp) score -= 15;
     
     // FCP scoring (0-25 points)
-    if (currentMetrics.fcp <= 1800) score -= 0;
-    else if (currentMetrics.fcp <= 3000) score -= 5;
-    else score -= 15;
+    if (currentMetrics.fcp && currentMetrics.fcp <= 1800) score -= 0;
+    else if (currentMetrics.fcp && currentMetrics.fcp <= 3000) score -= 5;
+    else if (currentMetrics.fcp) score -= 15;
     
     // LCP scoring (0-25 points)
-    if (currentMetrics.lcp <= 2500) score -= 0;
-    else if (currentMetrics.lcp <= 4000) score -= 5;
-    else score -= 15;
+    if (currentMetrics.lcp && currentMetrics.lcp <= 2500) score -= 0;
+    else if (currentMetrics.lcp && currentMetrics.lcp <= 4000) score -= 5;
+    else if (currentMetrics.lcp) score -= 15;
     
     return Math.max(0, score);
   }, []);
@@ -109,7 +109,7 @@ const FinalPerformanceOptimizer: React.FC = () => {
     }
 
     // INP analysis
-    if (currentMetrics.inp > 500) {
+    if (currentMetrics.inp && currentMetrics.inp > 500) {
       criticalIssues.push('High Interaction to Next Paint (INP)');
       recommendations.push('Reduce JavaScript execution time');
       optimizations.push('Implement code splitting and lazy loading');
@@ -152,21 +152,19 @@ const FinalPerformanceOptimizer: React.FC = () => {
   const handleMetric = useCallback((metric: any) => {
     const performanceInfo = getFinalPerformanceInfo();
     const finalMetrics: FinalMetrics = {
-      cls: metric.name === 'CLS' ? metric.value : 0,
-      inp: metric.name === 'INP' ? metric.value : 0,
-      fcp: metric.name === 'FCP' ? metric.value : 0,
-      lcp: metric.name === 'LCP' ? metric.value : 0,
-      ttfb: metric.name === 'TTFB' ? metric.value : 0,
-      ...performanceInfo
+      cls: 0,
+      inp: 0,
+      fcp: 0,
+      lcp: 0,
+      ttfb: 0,
+      ...performanceInfo,
+      [metric.name]: metric.value
     };
     
     const performanceScore = calculatePerformanceScore(finalMetrics);
     finalMetrics.performanceScore = performanceScore;
     
-    setMetrics(prev => ({
-      ...prev,
-      ...finalMetrics
-    }));
+    setMetrics(finalMetrics);
     
     // Add to history
     setHistory(prev => [
@@ -291,8 +289,8 @@ const FinalPerformanceOptimizer: React.FC = () => {
               </div>
               <div className="flex justify-between">
                 <span>INP:</span>
-                <span className={getStatusColor(metrics.inp, thresholds.inp)}>
-                  {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
+                <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
+                  {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
                 </span>
               </div>
               <div className="flex justify-between">
