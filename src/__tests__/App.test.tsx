@@ -38,11 +38,34 @@ jest.mock('react-helmet-async', () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
+// Mock lucide-react icons
+jest.mock('lucide-react', () => ({
+  Menu: ({ className }: { className?: string }) => <div data-testid="menu-icon" className={className} />,
+  X: ({ className }: { className?: string }) => <div data-testid="x-icon" className={className} />,
+  AlertTriangle: ({ className }: { className?: string }) => <div data-testid="alert-triangle-icon" className={className} />,
+  RefreshCw: ({ className }: { className?: string }) => <div data-testid="refresh-icon" className={className} />,
+  Home: ({ className }: { className?: string }) => <div data-testid="home-icon" className={className} />,
+  Bug: ({ className }: { className?: string }) => <div data-testid="bug-icon" className={className} />,
+  Mail: ({ className }: { className?: string }) => <div data-testid="mail-icon" className={className} />,
+  Target: ({ className }: { className?: string }) => <div data-testid="target-icon" className={className} />,
+  Shield: ({ className }: { className?: string }) => <div data-testid="shield-icon" className={className} />,
+  TrendingUp: ({ className }: { className?: string }) => <div data-testid="trending-up-icon" className={className} />,
+  Globe: ({ className }: { className?: string }) => <div data-testid="globe-icon" className={className} />,
+  ArrowRight: ({ className }: { className?: string }) => <div data-testid="arrow-right-icon" className={className} />,
+  Users: ({ className }: { className?: string }) => <div data-testid="users-icon" className={className} />,
+  Award: ({ className }: { className?: string }) => <div data-testid="award-icon" className={className} />,
+  CheckCircle: ({ className }: { className?: string }) => <div data-testid="check-circle-icon" className={className} />,
+  Zap: ({ className }: { className?: string }) => <div data-testid="zap-icon" className={className} />,
+}));
+
 // Mock react-router-dom
 jest.mock('react-router-dom', () => ({
   BrowserRouter: ({ children }: { children: React.ReactNode }) => <div data-testid="router">{children}</div>,
   Routes: ({ children }: { children: React.ReactNode }) => <div data-testid="routes">{children}</div>,
   Route: ({ element }: { element: React.ReactNode }) => <div data-testid="route">{element}</div>,
+  Link: ({ children, to, ...props }: { children: React.ReactNode; to: string; [key: string]: unknown }) => (
+    <a href={to} {...props}>{children}</a>
+  ),
 }));
 
 const renderApp = (component: React.ReactElement) => {
