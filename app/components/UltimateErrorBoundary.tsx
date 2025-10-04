@@ -99,13 +99,13 @@ class UltimateErrorBoundary extends Component<Props, State> {
   };
 
   private handleReportBug = () => {
-    const errorDetails = {
-      error: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-    };
+    // const _errorDetails = {
+    //   error: this.state.error?.message,
+    //   stack: this.state.error?.stack,
+    //   componentStack: this.state.errorInfo?.componentStack,
+    //   errorId: this.state.errorId,
+    //   timestamp: new Date().toISOString(),
+    // };
 
     // Create a mailto link with error details
     const subject = encodeURIComponent(

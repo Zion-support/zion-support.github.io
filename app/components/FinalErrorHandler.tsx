@@ -19,7 +19,7 @@ interface State {
   retryCount: number;
   isRecovering: boolean;
   recoveryStrategies: string[];
-  analyticsData?: any;
+  analyticsData?: Record<string, unknown>;
 }
 
 class FinalErrorHandler extends Component<Props, State> {

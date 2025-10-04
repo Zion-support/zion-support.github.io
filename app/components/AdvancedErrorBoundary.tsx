@@ -72,11 +72,11 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     }
   };
 
-  private logToConsole = async (errorData: any) => {
+  private logToConsole = async (errorData: Record<string, unknown>) => {
     console.error('Application Error:', errorData);
   };
 
-  private logToLocalStorage = async (errorData: any) => {
+  private logToLocalStorage = async (errorData: Record<string, unknown>) => {
     try {
       const errors = JSON.parse(localStorage.getItem('app_errors') || '[]');
       errors.push(errorData);
@@ -85,12 +85,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         errors.splice(0, errors.length - 10);
       }
       localStorage.setItem('app_errors', JSON.stringify(errors));
-    } catch (e) {
+    } catch {
       // Ignore localStorage errors
     }
   };
 
-  private logToServer = async (errorData: any) => {
+  private logToServer = async () => {
     try {
       // Example: Send to error reporting service
       // await fetch('/api/errors', {

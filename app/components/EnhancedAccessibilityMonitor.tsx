@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 import {
   accessibilityTesting,
   ariaUtils,
-  motionUtils,
 } from '../../utils/accessibilityUtils';
 
 interface AccessibilityReport {
@@ -41,7 +40,7 @@ const EnhancedAccessibilityMonitor: React.FC<AccessibilityMonitorProps> = ({
     }, 1000);
   }, [autoFix]);
 
-  const autoFixAccessibilityIssues = (report: AccessibilityReport) => {
+  const autoFixAccessibilityIssues = () => {
     // Fix missing alt text
     const images = document.querySelectorAll('img');
     images.forEach(img => {
