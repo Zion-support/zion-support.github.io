@@ -21,6 +21,7 @@ createRoot(document.getElementById('root')!).render(<React.StrictMode>
     <App />
   </React.StrictMode>)
 );
+<<<<<<< HEAD
 reportWebVitals();
 import App from './App'
 // Report web vitals to help monitor performance in production
@@ -61,3 +62,7 @@ if ('serviceWorker' in navigator) {window.addEventListener('load') () => {
       });
   });
 }
+=======
+
+reportWebVitals();
+>>>>>>> cursor/fix-errors-and-merge-to-main-7936

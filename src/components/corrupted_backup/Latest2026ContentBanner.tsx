@@ -1,1 +1,0 @@
-// Compatibilitydefaultexport soimportslike "../components/Latest2026ContentBanner" work"; exportdefaultfunction Latest2026ContentBanne, r (prop, s: Recor, d<strin, gunknow, n>) : voi, d {retur, n <Latest2026ContentBannerName , d {...prop, s }/>; };
