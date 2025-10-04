@@ -36,8 +36,8 @@ export default function AI2025OctoberNeuralDataFabricRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$690M</div>
               <div className="text-left">Value Delivered</div>
             </div>
@@ -145,8 +145,8 @@ export default function AI2025OctoberNeuralDataFabricRevolution() {
         <section className="text-left"></section>
           <h2 className="text-left">Platform Capabilities</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Data Integration</h3>
               <ul className="text-left">
                 <li>• 200+ native connectors</li>
@@ -242,8 +242,8 @@ export default function AI2025OctoberNeuralDataFabricRevolution() {
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">360° Customer Intelligence</h3>
               <p className="text-left"></p>
                 Unified customer data platform with real-time behavioral analytics, predictive segmentation, 

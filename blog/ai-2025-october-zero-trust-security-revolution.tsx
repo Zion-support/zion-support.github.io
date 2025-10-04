@@ -55,8 +55,8 @@ export default function AIZeroTrustSecurityRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔒 Key Security Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.7%</div>
                     <div className="text-left">Threat Prevention Rate</div>
                   </div>
@@ -150,8 +150,8 @@ export default function AIZeroTrustSecurityRevolution2025() {
                 <p className="text-left"></p>
                   A top-10 global bank transformed their security posture with AI-powered zero-trust architecture:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$47M</div>
                     <div className="text-left">Annual Security Cost Savings</div>
                   </div>
@@ -254,8 +254,8 @@ export default function AIZeroTrustSecurityRevolution2025() {
               <h2 className="text-left">ROI Analysis & Business Value</h2>
               <div className="text-left"></div>
                 <h3 className="text-left">Financial Impact (3-Year Analysis)</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Reduced Security Incidents & Breach Costs<
                     <span className="text-left">$38M+<
                   </div>

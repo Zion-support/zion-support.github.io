@@ -50,8 +50,8 @@ const AIDrivenIncidentResponse2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Business Impact</h3>
             <ul className="text-left">
               <li><strong>96% Automated Resolution:</strong> AI resolves 96% of incidents without human intervention</li>
@@ -79,8 +79,8 @@ const AIDrivenIncidentResponse2025: React.FC = () =>
 
           <div className="text-left"></div>
             <h3 className="text-left">⚡ The AI Incident Response Workflow</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Anomaly Detection (0-5 seconds)</h4>
                 <p className="text-left">ML models (LSTM, Isolation Forest, autoencoders) detect deviations from baseline behavior across 10,000+ metrics</p>
               </div>
@@ -248,8 +248,8 @@ const AIDrivenIncidentResponse2025: React.FC = () =>
 
           <h2 className="text-left">Measuring Success: Key Metrics</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Operational Metrics</h4>
               <ul className="text-left">
                 <li>• Mean Time To Detect (MTTD)</li>
@@ -308,8 +308,8 @@ const AIDrivenIncidentResponse2025: React.FC = () =>
           </p>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Share this article:</h4>
               <div className="text-left"></div>

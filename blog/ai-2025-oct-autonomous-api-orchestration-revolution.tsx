@@ -109,8 +109,8 @@ const AI2025OctAutonomousAPIOrchestrationRevolution = () =>
                 managing 2,500+ microservices and achieving remarkable operational excellence.
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$2.8B</div>
                   <div className="text-left">Annual Cost Savings</div>
                 </div>
@@ -132,8 +132,8 @@ const AI2025OctAutonomousAPIOrchestrationRevolution = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Autonomous Orchestration Features</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Intelligent Routing</h3>
                 <ul className="text-left">
                   <li>• Multi-criteria optimization (latency, cost, availability)</li>
@@ -177,8 +177,8 @@ const AI2025OctAutonomousAPIOrchestrationRevolution = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Business Impact & Value Creation</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Operational Excellence</h3>
                   <ul className="text-left">
@@ -212,8 +212,8 @@ const AI2025OctAutonomousAPIOrchestrationRevolution = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Strategy</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Assessment & Planning (Weeks 1-2)</h3>
                 <ul className="text-left">
                   <li>• Audit existing microservices architecture</li>
@@ -251,8 +251,8 @@ const AI2025OctAutonomousAPIOrchestrationRevolution = () =>
               The next generation of autonomous API orchestration brings even more powerful capabilities:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🧠 AI-Powered API Composition</h3>
                 <p className="text-left"></p>
                   Intelligent agents that automatically compose and orchestrate APIs based on business intent, 

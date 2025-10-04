@@ -23,8 +23,8 @@ const HybridCloudTransformation = () =>
       <article className="text-left"></a>
         <div className="text-left"></div>
           {/* Header */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 Cloud Strategy
               <
@@ -41,8 +41,8 @@ const HybridCloudTransformation = () =>
               implementations. Complete framework with migration patterns, cost optimization, and security blueprints.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                 <div></div>
                   <div className="text-left">Dr. James Mitchell</div>
@@ -53,8 +53,8 @@ const HybridCloudTransformation = () =>
           </div>
 
           {/* Key Stats Banner */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Key Insights</h2>
               <div className="text-left"></div>
                 <div></div>
@@ -74,8 +74,8 @@ const HybridCloudTransformation = () =>
           </div>
 
           {/* Main Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <h2 className="text-left">
                   <Cloud className="text-left" />
@@ -123,8 +123,8 @@ const HybridCloudTransformation = () =>
                   The 5-Phase Transformation Framework
                 </h2>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Assessment & Discovery (Weeks 1-4)</h3>
                     <p className="text-left"></p>
                       Comprehensive workload analysis and cloud readiness assessment. Identify quick wins 
@@ -196,8 +196,8 @@ const HybridCloudTransformation = () =>
                   The most successful hybrid cloud implementations achieve 50-70% cost reduction through:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Right-sizing Resources</h3>
                     <p className="text-left"></p>
                       AI-powered analytics identify over-provisioned resources, typically saving 30-40% 
@@ -250,8 +250,8 @@ const HybridCloudTransformation = () =>
             </div>
 
             {/* CTA Section */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   Ready to Transform Your Cloud Strategy?
                 </h3>

@@ -25,7 +25,7 @@ const AIPoweredEnterpriseAutomation2025: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">Executive Summary</h2>
           <p className="text-left"></p>
@@ -34,8 +34,8 @@ const AIPoweredEnterpriseAutomation2025: React.FC = () =>
             achieving 85% cost reduction, 10x productivity gains, and 99.7% accuracy in automated processes through 
             advanced AI orchestration platforms.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$47B</div>
               <div className="text-left">Global Market Size by 2026</div>
             </div>
@@ -126,8 +126,8 @@ const AIPoweredEnterpriseAutomation2025: React.FC = () =>
           transformation goals. Our proven methodology has guided 500+ enterprise implementations.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Phase 1: Discovery & Assessment (4-6 weeks)</h4>
             <p className="text-left"></p>
               Comprehensive process mining, stakeholder interviews, and technical infrastructure assessment to identify 
@@ -158,8 +158,8 @@ const AIPoweredEnterpriseAutomation2025: React.FC = () =>
         </div>
 
         <h2 className="text-left">Best Practices & Critical Success Factors</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">✓ DO</h4>
             <ul className="text-left">
               <li>• Start with high-value, low-complexity processes</li>

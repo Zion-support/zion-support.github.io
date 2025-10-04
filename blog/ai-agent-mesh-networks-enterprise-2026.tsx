@@ -19,8 +19,8 @@ const AIAgentMeshNetworksEnterprise2026 = () =>
       <div className="text-left"></div>
         <article className="text-left"></a>
           {/* Header */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 Distributed AI
               <
@@ -47,8 +47,8 @@ const AIAgentMeshNetworksEnterprise2026 = () =>
           </div>
 
           {/* Key Stats */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Network className="text-left" />
               <div className="text-left">10,000+</div>
               <div className="text-left">Agents Coordinated</div>
@@ -206,8 +206,8 @@ class AgentWorker:
               Agents share learned patterns, successful strategies, and problem-solving approaches. Implement gossip protocols for knowledge propagation without overwhelming the network.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Federated Learning Approach</h4>
                 <p className="text-left"></p>
                   Each agent trains local model on its data, then shares gradients (not data) with peers. Aggregate gradients using Byzantine-resilient averaging. Achieves collective intelligence while preserving privacy.
@@ -254,8 +254,8 @@ class AgentWorker:
               Scaling beyond 1,000 agents requires hierarchical organization, intelligent routing, and careful message fan-out control.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Small Scale (10-100 agents)</h4>
                 <ul className="text-left">
                   <li>• Full mesh: every agent knows every other</li>
@@ -278,8 +278,8 @@ class AgentWorker:
 
             <h2 className="text-left">Real-World Use Cases</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🏦 Financial Trading: 5,000-Agent Risk Management Network</h4>
                 <p className="text-left"></p>
                   Agents monitor trades, positions, and market conditions. Coordinate to detect emerging risks and rebalance portfolios in real-time. Achieved 99.99% uptime with sub-50ms decision latency.
@@ -312,8 +312,8 @@ class AgentWorker:
 
             <h2 className="text-left">Implementation Challenges & Solutions</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Challenge: Network Partitions</h4>
                 <p className="text-left"></p>
                   <strong>Solution:</strong> Implement split-brain detection and resolution. Use quorum-based decisions. Allow sub-networks to operate independently and merge when reconnected.

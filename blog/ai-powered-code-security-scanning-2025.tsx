@@ -36,8 +36,8 @@ export default function AIPoweredCodeSecurityScanning2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">90%</div>
               <div className="text-left">Fewer False Positives</div>
             </div>
@@ -104,8 +104,8 @@ export default function AIPoweredCodeSecurityScanning2025() {
 
           <h2 className="text-left">AI Code Analysis Pipeline</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔍 Static Analysis (SAST)</h3>
               <p className="text-left"></p>
                 AI-enhanced static analysis that understands code semantics, control flow, and data flow 
@@ -171,8 +171,8 @@ export default function AIPoweredCodeSecurityScanning2025() {
           <div className="text-left"></div>
             <h3 className="text-left">🤖 AI Code Reviewer Architecture</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Pre-Commit Analysis</h4>
                 <p className="text-left"></p>
                   Catch issues before code is even committed. Run lightning-fast local analysis 
@@ -196,8 +196,8 @@ cursor.execute(query, (user_id,))`}
                   Automated PR reviews that understand business logic, identify security issues, 
                   suggest improvements, and learn from previous reviews to provide better recommendations.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Automated Checks</div>
                     <ul className="text-left">
                       <li>✓ Security vulnerabilities</li>
@@ -256,8 +256,8 @@ cursor.execute(query, (user_id,))`}
 
           <h2 className="text-left">Reducing False Positives</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Context-Aware Analysis</h3>
               <p className="text-left"></p>
                 AI models understand your entire codebase context, not just individual lines. 
@@ -335,33 +335,33 @@ cursor.execute(query, (user_id,))`}
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <span className="text-left">Deploy IDE plugins for real-time security feedback<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2</div>
                 <span className="text-left">Integrate automated PR reviews in GitHub/GitLab<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">3</div>
                 <span className="text-left">Add security gates to CI/CD pipelines<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">4</div>
                 <span className="text-left">Enable auto-remediation for approved issue types<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">5</div>
                 <span className="text-left">Deploy runtime protection and monitoring<
               </div>

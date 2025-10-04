@@ -25,7 +25,7 @@ const DistributedAIMeshNetworks2025: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <p className="text-left"></p>
             <strong>Executive Summary:</strong> Distributed AI mesh networks represent a paradigm shift from centralized 
@@ -182,8 +182,8 @@ await meshNetwork.deployModel('gpt-5-enterprise',
           Distributed architectures require fundamentally different security approaches than centralized systems:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Privacy Technologies</h4>
             <ul className="text-left">
               <li>• <strong>Homomorphic encryption:</strong> Compute on encrypted data</li>
@@ -278,8 +278,8 @@ await meshNetwork.deployModel('gpt-5-enterprise',
 
         <h2 className="text-left">Implementation Roadmap</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Phase 1: Foundation (Months 1-2)</h4>
             <p className="text-left"></p>
               Deploy initial mesh network with 10-50 nodes. Establish consensus mechanisms, security protocols, and monitoring infrastructure. Migrate non-critical workloads.

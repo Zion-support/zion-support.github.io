@@ -76,8 +76,8 @@ export default function AIAgentSwarmsCollectiveIntelligence2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Use Cases: Swarms in Action</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Supply Chain Optimization</h3>
                 <p className="text-left"></p>
                   Deploy agent swarms across global supply networks to optimize routing, inventory, and logistics 

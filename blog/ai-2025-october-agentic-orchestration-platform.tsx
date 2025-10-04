@@ -36,8 +36,8 @@ export default function AI2025OctoberAgenticOrchestrationPlatform() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">10,000+</div>
               <div className="text-left">Concurrent Agents</div>
             </div>
@@ -91,8 +91,8 @@ export default function AI2025OctoberAgenticOrchestrationPlatform() {
           </div>
 
           <h2 className="text-left">Enterprise Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">95%</h3>
               <p className="text-left">Automation Rate</p>
             </div>
@@ -114,8 +114,8 @@ export default function AI2025OctoberAgenticOrchestrationPlatform() {
               portfolio optimization. The orchestration platform coordinates agent activities, shares 
               insights across the organization, and delivers real-time decision support.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$180M</div>
                 <div className="text-left">Annual Savings</div>
               </div>

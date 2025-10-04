@@ -116,8 +116,8 @@ export default function BlogPost() {
       
       <div className="text-left"></div>
         <h3 className="text-left">Real-World Performance Data</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">&lt;10ms</div>
             <div className="text-left">End-to-End Inference Latency</div>
           </div>
@@ -210,8 +210,8 @@ export default function BlogPost() {
       <div className="text-left"></div>
         <h3 className="text-left">Vertical-Specific Solutions</h3>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Healthcare & Medical Devices</h4>
             <p className="text-left"></p>
               Real-time patient monitoring, diagnostic imaging analysis, and clinical decision support at the 

@@ -55,8 +55,8 @@ export default function AIZeroTrustSecurityArchitecture2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔒 Key Security Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">97%</div>
                     <div className="text-left">Threat Detection Accuracy</div>
                   </div>
@@ -247,8 +247,8 @@ export default function AIZeroTrustSecurityArchitecture2025() {
               </div>
 
               <h2 className="text-left">Technology Stack</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Identity & Access</h4>
                   <ul className="text-left">
                     <li>• Okta / Azure AD / Ping Identity</li>

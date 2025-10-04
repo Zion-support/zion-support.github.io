@@ -18,15 +18,15 @@ const NeuroSymbolicAIProduction2025 = () =>
 
       <div className="text-left"></div>
         {/* Header */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Link to="/blog" className="text-left">
               <ArrowLeft className="text-left" />
               Back to Blog
             </Link>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   AI Architecture
                 <
@@ -47,11 +47,11 @@ const NeuroSymbolicAIProduction2025 = () =>
         </div>
 
         {/* Content */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">10x</div>
                 <div className="text-left">Better Explainability</div>
               </div>
@@ -66,8 +66,8 @@ const NeuroSymbolicAIProduction2025 = () =>
             </div>
 
             {/* Article Content */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">
                   <Brain className="text-left" />
                   The Neuro-Symbolic Revolution
@@ -85,8 +85,8 @@ const NeuroSymbolicAIProduction2025 = () =>
                   <Zap className="text-left" />
                   Why Neuro-Symbolic AI Matters
                 </h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <CheckCircle className="text-left" />
                     <div></div>
                       <h3 className="text-left">Explainable Decision-Making</h3>
@@ -176,8 +176,8 @@ const NeuroSymbolicAIProduction2025 = () =>
                   <Lightbulb className="text-left" />
                   Getting Started: Your Implementation Roadmap
                 </h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Identify High-Value Use Cases</h3>
                     <p>Focus on problems requiring reasoning, explainability, or operating with limited data—neuro-symbolic AI's sweet spots.</p>
                   </div>

@@ -56,8 +56,8 @@ export default function AIQuantumComputingIntegration2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1000x</div>
                     <div className="text-left">Optimization Speedup</div>
                   </div>
@@ -111,8 +111,8 @@ export default function AIQuantumComputingIntegration2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">🏗️ System Architecture Components</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Quantum Processing Units (QPUs)</h4>
                     <p className="text-left">50-1000 qubit systems for solving specific optimization and simulation problems</p>
                   </div>
@@ -195,8 +195,8 @@ export default function AIQuantumComputingIntegration2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Problem Identification (Weeks 1-4)</h3>
                   <ul className="text-left">
                     <li className="text-left">
@@ -252,8 +252,8 @@ export default function AIQuantumComputingIntegration2025() {
               </div>
 
               <h2 className="text-left">Technology Stack</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Quantum Platforms</h3>
                   <ul className="text-left">
                     <li className="text-left">• IBM Quantum (127+ qubit systems)</li>
@@ -275,8 +275,8 @@ export default function AIQuantumComputingIntegration2025() {
               </div>
 
               <h2 className="text-left">Key Challenges & Solutions</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Challenge: Quantum Noise & Errors</h3>
                   <p className="text-left">Current quantum systems experience significant noise and decoherence.</p>
                   <p className="text-left"><strong>Solution:</strong> AI-powered error mitigation achieving 95%+ fidelity through learned error correction codes and zero-noise extrapolation.</p>

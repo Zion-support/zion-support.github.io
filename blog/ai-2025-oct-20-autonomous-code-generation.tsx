@@ -32,8 +32,8 @@ const AutonomousCodeGeneration = () =>
           </Link>
 
           {/* Hero Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 AI Development
               <
@@ -92,8 +92,8 @@ const AutonomousCodeGeneration = () =>
               reviews, tests, and security scans. This isn't augmentation; it's autonomous software development at scale.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Zap className="text-left" />
                 <div></div>
                   <h4 className="text-left">Industry Benchmark</h4>
@@ -291,8 +291,8 @@ const AutonomousCodeGeneration = () =>
               </li>
             </ul>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <AlertCircle className="text-left" />
                 <div></div>
                   <h4 className="text-left">Critical Success Factors</h4>
@@ -308,8 +308,8 @@ const AutonomousCodeGeneration = () =>
 
             <h2 className="text-left">Real-World Impact Metrics</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Development Velocity</h4>
                 <ul className="text-left">
                   <li>• Feature delivery time: 10x faster</li>

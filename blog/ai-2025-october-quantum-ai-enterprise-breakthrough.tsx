@@ -87,8 +87,8 @@ export default function QuantumAIEnterpriseBreakthrough2025() {
                   quantum processors for specific computational bottlenecks while using classical AI for the rest:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Quantum Advantage</h3>
                     <ul className="text-left">
                       <li>• Superposition-based parallel search</li>
@@ -113,8 +113,8 @@ export default function QuantumAIEnterpriseBreakthrough2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Impact: Fortune 500 Case Studies</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global Logistics Provider: 92% Efficiency Gain</h3>
                     <p className="text-left"></p>
                       A Fortune 100 logistics company deployed quantum-enhanced route optimization across their global 
@@ -187,8 +187,8 @@ export default function QuantumAIEnterpriseBreakthrough2025() {
                   while maintaining system reliability:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Problem Decomposition</h3>
                     <p className="text-left"></p>
                       Identify computational bottlenecks suitable for quantum acceleration. Use classical AI for 

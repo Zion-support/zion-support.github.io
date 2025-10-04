@@ -46,8 +46,8 @@ export default function QuantumEnhancedAIEnterpriseBreakthrough2026() {
       {/* Executive Summary */}
       <section className="text-left"></section>
         <h2 className="text-left">Executive Summary</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">1000x</div>
             <div className="text-left">Performance improvement</div>
           </div>
@@ -96,8 +96,8 @@ export default function QuantumEnhancedAIEnterpriseBreakthrough2026() {
         
         <div className="text-left"></div>
           <h3 className="text-left">Quantum Advantage Principles</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">⚛️ Superposition</h4>
               <p className="text-left">Quantum bits (qubits) can exist in multiple states simultaneously, enabling parallel computation</p>
             </div>
@@ -113,8 +113,8 @@ export default function QuantumEnhancedAIEnterpriseBreakthrough2026() {
         </div>
 
         <h3 className="text-left">Quantum vs Classical Computing</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h4 className="text-left">Classical Computing Limitations</h4>
               <ul className="text-left">
@@ -202,8 +202,8 @@ export default function QuantumEnhancedAIEnterpriseBreakthrough2026() {
         </div>
 
         <h3 className="text-left">Advanced Quantum AI Techniques</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h4 className="text-left">🔬 Quantum Feature Engineering</h4>
               <p className="text-left"></p>
@@ -252,11 +252,11 @@ class QuantumNeuralNetwork
       <section id="enterprise-applications" className="text-left"></section>
         <h2 className="text-left">3. Enterprise Applications & Use Cases</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏭 Manufacturing & Logistics</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Supply Chain Optimization</h4>
                 <p className="text-left"></p>
                   Quantum algorithms optimize complex supply chains with 1000x faster computation and superior solutions.
@@ -279,8 +279,8 @@ class QuantumNeuralNetwork
 
           <div className="text-left"></div>
             <h3 className="text-left">💰 Financial Services</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Portfolio Optimization</h4>
                 <p className="text-left"></p>
                   Quantum algorithms solve complex portfolio optimization problems with unprecedented accuracy.
@@ -302,11 +302,11 @@ class QuantumNeuralNetwork
           </div>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏥 Healthcare & Life Sciences</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Drug Discovery</h4>
                 <p className="text-left"></p>
                   Quantum-enhanced molecular simulation accelerates drug discovery and development processes.
@@ -329,8 +329,8 @@ class QuantumNeuralNetwork
 
           <div className="text-left"></div>
             <h3 className="text-left">🛒 Retail & E-commerce</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Demand Forecasting</h4>
                 <p className="text-left"></p>
                   Quantum machine learning for ultra-accurate demand prediction and inventory optimization.
@@ -359,8 +359,8 @@ class QuantumNeuralNetwork
         
         <div className="text-left"></div>
           <h3 className="text-left">Quantum Advantage Benchmarks</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1000x</div>
               <div className="text-left">Optimization Speedup</div>
             </div>
@@ -380,8 +380,8 @@ class QuantumNeuralNetwork
         </div>
 
         <h3 className="text-left">Comparative Performance Analysis</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Optimization Problems</h4>
             <div className="text-left"></div>
               <table className="text-left">
@@ -434,11 +434,11 @@ class QuantumNeuralNetwork
       <section id="case-studies" className="text-left"></section>
         <h2 className="text-left">5. Real-World Case Studies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏭 Fortune 500 Manufacturing</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$2.8B</div>
                 <div className="text-left">Annual cost savings</div>
               </div>
@@ -459,8 +459,8 @@ class QuantumNeuralNetwork
 
           <div className="text-left"></div>
             <h3 className="text-left">💰 Global Investment Bank</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">25%</div>
                 <div className="text-left">Better returns</div>
               </div>
@@ -487,8 +487,8 @@ class QuantumNeuralNetwork
         
         <div className="text-left"></div>
           <h3 className="text-left">Quantum AI Evolution Timeline</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">2026</div>
               <div></div>
                 <h4 className="text-left">Quantum Advantage Era</h4>
@@ -553,8 +553,8 @@ class QuantumNeuralNetwork
         
         <div className="text-left"></div>
           <h3 className="text-left">Implementation Roadmap</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>
               <div></div>
                 <h4 className="text-left">Assessment & Planning</h4>
@@ -594,8 +594,8 @@ class QuantumNeuralNetwork
         </div>
 
         <h3 className="text-left">Best Practices & Considerations</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h4 className="text-left">🔧 Technical Considerations</h4>
               <ul className="text-left">
@@ -618,8 +618,8 @@ class QuantumNeuralNetwork
               </ul>
             </div>
           </div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🎯 Business Considerations</h4>
               <ul className="text-left">
                 <li className="text-left">

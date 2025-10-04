@@ -53,8 +53,8 @@ export default function AIQuantumInspiredOptimization2025() {
               optimization problems. Master techniques delivering breakthrough performance without quantum computers.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>December 1, 2025<
               </div>
@@ -70,8 +70,8 @@ export default function AIQuantumInspiredOptimization2025() {
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">⚛️ Breakthrough Results</h2>
               <ul className="text-left">
                 <li>✅ <strong>1000x Speedup</strong> — Solve complex problems in minutes vs. days</li>
@@ -281,8 +281,8 @@ export default function AIQuantumInspiredOptimization2025() {
           </div>
 
           {/* Social Share */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">Share this article:<
               <button className="text-left">
                 <Share2 className="text-left" />

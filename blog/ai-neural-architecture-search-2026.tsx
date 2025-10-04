@@ -138,8 +138,8 @@ export default function AINeural ArchitectureSearch2026()
                   Leading enterprises are achieving remarkable results with our NAS platform:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global Retailer</h3>
                     <p className="text-left"></p>
                       Deployed NAS-optimized recommendation system achieving 85% accuracy improvement 
@@ -210,8 +210,8 @@ export default function AINeural ArchitectureSearch2026()
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Research Team
                 </div>
                 <div className="text-left"></div>

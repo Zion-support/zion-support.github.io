@@ -36,8 +36,8 @@ export default function AIEdgeComputing5GNetworks2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;10ms</div>
               <div className="text-left">Latency Response</div>
             </div>
@@ -73,8 +73,8 @@ export default function AIEdgeComputing5GNetworks2025() {
 
           <h2 className="text-left">5G-Enabled Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Autonomous Vehicles</h3>
               <ul className="text-left">
                 <li>✓ Real-time object detection (2-5ms)</li>
@@ -155,8 +155,8 @@ export default function AIEdgeComputing5GNetworks2025() {
 
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Edge Runtime</h3>
               <ul className="text-left">
                 <li>• TensorFlow Lite / PyTorch Mobile</li>
@@ -205,8 +205,8 @@ export default function AIEdgeComputing5GNetworks2025() {
         <section className="text-left"></section>
           <h2 className="text-left">Business Impact & ROI</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Cost Savings</h3>
               <ul className="text-left">
                 <li>• 80% reduction in bandwidth costs by processing data locally</li>

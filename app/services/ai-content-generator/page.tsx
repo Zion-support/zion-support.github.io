@@ -40,8 +40,8 @@ export default function AIContentGeneratorPage() {
 
       {/* Features Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Powerful AI Content Features
             </h2>
@@ -51,8 +51,8 @@ export default function AIContentGeneratorPage() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">✍️</div>
               <h3 className="text-left">Blog Post Generation</h3>
               <p className="text-left"></p>
@@ -140,8 +140,8 @@ export default function AIContentGeneratorPage() {
 
       {/* Pricing Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               AI Content Generator Pricing
             </h2>
@@ -152,8 +152,8 @@ export default function AIContentGeneratorPage() {
 
           <div className="text-left"></div>
             {/* Basic Plan */}</div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Basic</h3>
                 <div className="text-left">$29</div>
                 <p className="text-left">per month</p>
@@ -192,8 +192,8 @@ export default function AIContentGeneratorPage() {
             </div>
 
             {/* Professional Plan */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Most Popular</span>
               </div>
               <div className="text-left"></div>
@@ -241,8 +241,8 @@ export default function AIContentGeneratorPage() {
             </div>
 
             {/* Enterprise Plan */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Enterprise</h3>
                 <div className="text-left">$299</div>
                 <p className="text-left">per month</p>

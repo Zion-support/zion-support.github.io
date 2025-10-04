@@ -195,8 +195,8 @@ const PredictiveMaintenanceAtScaleArticle = () =>
 
         <section></section>
           <h2>🛠️ Technology Stack</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h4 className="text-left">IoT & Edge Computing</h4>
                 <ul className="text-left">
@@ -243,8 +243,8 @@ const PredictiveMaintenanceAtScaleArticle = () =>
 
         <section></section>
           <h2>📈 Quantified Business Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$3.7B</div>
               <div className="text-left">Total maintenance and operations savings</div>
             </div>
@@ -273,8 +273,8 @@ const PredictiveMaintenanceAtScaleArticle = () =>
 
         <section></section>
           <h2>🎓 Key Success Factors</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Sensor Quality Over Quantity</h4>
               <p className="text-left">Focus on high-fidelity sensors on critical assets rather than basic sensors everywhere</p>
             </div>

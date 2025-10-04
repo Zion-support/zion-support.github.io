@@ -61,14 +61,14 @@ export default function December2025AICostOptimizationMastery() {
           selection to model optimization and operational efficiency.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Layer 1: Infrastructure Optimization</h3>
             <p className="text-left"></p>
               Optimize your cloud infrastructure with right-sizing, auto-scaling, and cost-effective instance selection.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">40%</div>
                 <p className="text-left">Infrastructure cost reduction</p>
               </div>
@@ -88,8 +88,8 @@ export default function December2025AICostOptimizationMastery() {
             <p className="text-left"></p>
               Reduce model size and complexity through quantization, pruning, and knowledge distillation techniques.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">85%</div>
                 <p className="text-left">Model size reduction</p>
               </div>
@@ -109,8 +109,8 @@ export default function December2025AICostOptimizationMastery() {
             <p className="text-left"></p>
               Optimize data processing pipelines with efficient data formats, caching strategies, and batch processing.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">70%</div>
                 <p className="text-left">Data processing cost reduction</p>
               </div>
@@ -130,8 +130,8 @@ export default function December2025AICostOptimizationMastery() {
             <p className="text-left"></p>
               Implement efficient inference strategies including model serving, caching, and request batching.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">65%</div>
                 <p className="text-left">Inference cost reduction</p>
               </div>
@@ -151,8 +151,8 @@ export default function December2025AICostOptimizationMastery() {
             <p className="text-left"></p>
               Implement intelligent resource allocation, auto-scaling, and workload scheduling for optimal cost efficiency.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">55%</div>
                 <p className="text-left">Resource utilization improvement</p>
               </div>
@@ -172,8 +172,8 @@ export default function December2025AICostOptimizationMastery() {
             <p className="text-left"></p>
               Implement comprehensive cost monitoring, usage analytics, and automated optimization recommendations.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">30%</div>
                 <p className="text-left">Additional cost savings</p>
               </div>
@@ -193,8 +193,8 @@ export default function December2025AICostOptimizationMastery() {
             <p className="text-left"></p>
               Establish cost governance policies, automated optimization workflows, and continuous improvement processes.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">50%</div>
                 <p className="text-left">Manual effort reduction</p>
               </div>
@@ -218,8 +218,8 @@ export default function December2025AICostOptimizationMastery() {
             A leading e-commerce platform reduced their AI infrastructure costs by 78% while improving recommendation 
             accuracy by 45% and reducing inference latency by 67%.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">78%</div>
               <p className="text-left">Cost reduction</p>
             </div>
@@ -244,8 +244,8 @@ export default function December2025AICostOptimizationMastery() {
             A major financial services company optimized their fraud detection system, achieving 3x faster processing 
             speeds while reducing infrastructure costs by 50%.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">3x</div>
               <p className="text-left">Speed improvement</p>
             </div>
@@ -270,8 +270,8 @@ export default function December2025AICostOptimizationMastery() {
           or improving performance.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Weeks 1-4: Assessment</h3>
             <ul className="text-left">
               <li>• Current cost analysis and benchmarking</li>

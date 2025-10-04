@@ -55,8 +55,8 @@ export default function IntelligentIncidentResponseRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Incident Response Transformation</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">4.2min</div>
                     <div className="text-left">Mean Time to Resolution</div>
                   </div>
@@ -305,8 +305,8 @@ export default function IntelligentIncidentResponseRevolution2025() {
               </div>
 
               <h2 className="text-left">Business Value & ROI</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Reliability Metrics</h4>
                   <ul className="text-left">
                     <li>• 4.2 minute MTTR (vs. 42 min baseline - 90% improvement)</li>

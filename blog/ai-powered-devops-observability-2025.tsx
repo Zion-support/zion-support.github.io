@@ -6,7 +6,7 @@ const AIPoweredDevOpsObservability2025: React.FC = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -32,8 +32,8 @@ const AIPoweredDevOpsObservability2025: React.FC = () =>
             Discover how AI-driven observability platforms predict system failures 3 hours in advance, reduce MTTR by 94%, and achieve 99.999% uptime across distributed cloud infrastructures serving billions of users.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Calendar className="text-left" />
               <span>September 30, 2025<
             </div>
@@ -50,7 +50,7 @@ const AIPoweredDevOpsObservability2025: React.FC = () =>
       </div>
 
       {/* Content Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <article className="text-left"></a>
             <h2 className="text-left">The Observability Intelligence Revolution</h2>
@@ -105,8 +105,8 @@ const AIPoweredDevOpsObservability2025: React.FC = () =>
 
             <h2 className="text-left">Real-World Impact Across Industries</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🛒 E-Commerce</h4>
                 <p className="text-left">Preventing Black Friday outages by predicting traffic spikes and auto-scaling 45 minutes ahead, protecting $500M+ in revenue.</p>
               </div>
@@ -126,8 +126,8 @@ const AIPoweredDevOpsObservability2025: React.FC = () =>
 
             <h2 className="text-left">The Observability Maturity Ladder</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">❌ Level 0: Reactive (Legacy)</h4>
                 <p className="text-left">Discover failures when users complain. MTTR: 4+ hours. Uptime: 99.0%.</p>
               </div>

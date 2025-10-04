@@ -82,8 +82,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
                   computer attacks. NIST has standardized four PQC algorithms for different use cases:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">CRYSTALS-Kyber (Key Encapsulation)</h3>
                     <p className="text-left"></p>
                       For establishing shared secrets over public channels (TLS, VPN, secure messaging).
@@ -223,8 +223,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
                   PQC algorithms have different performance characteristics than classical cryptography. Plan accordingly:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Larger Key Sizes</h3>
                     <p className="text-left"></p>
                       Kyber public keys: ~1.2 KB (vs 256 bytes for ECC-256)<br/>
@@ -254,8 +254,8 @@ export default function QuantumReadyCloudInfrastructure2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Essential Tools & Technologies</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">PQC Libraries</h3>
                     <p className="text-left">liboqs (Open Quantum Safe), PQClean, BouncyCastle with PQC support</p>
                   </div>

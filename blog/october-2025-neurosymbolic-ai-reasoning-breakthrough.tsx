@@ -97,8 +97,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Explainable AI</h3>
                 <p className="text-left"></p>
                   Every decision comes with clear, logical explanations that humans can understand and verify.
@@ -122,8 +122,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Transformative Enterprise Applications</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Global Healthcare System</h3>
                 <p className="text-left"></p>
                   Deployed across 450 hospitals for clinical decision support, combining medical knowledge with patient data analysis.
@@ -218,8 +218,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Technical Architecture</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">1. Neural Perception Layer</h3>
                 <p className="text-left"></p>
                   Deep neural networks process raw sensory data, extracting features and patterns:
@@ -276,8 +276,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Key Capabilities & Advantages</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <h3 className="text-left">🎯 Complex Problem Solving</h3>
                   <p className="text-left"></p>
@@ -297,8 +297,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
                   </p>
                 </div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🛡️ Robust & Reliable</h3>
                   <p className="text-left"></p>
                     Logical grounding prevents hallucinations and ensures consistency with domain knowledge.
@@ -323,11 +323,11 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Knowledge Engineering (3-6 weeks)</h3>
                   <p className="text-left"></p>
@@ -336,8 +336,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <h3 className="text-left">Phase 2: Neural Model Training (4-8 weeks)</h3>
                   <p className="text-left"></p>
@@ -346,8 +346,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <h3 className="text-left">Phase 3: Integration & Testing (3-5 weeks)</h3>
                   <p className="text-left"></p>
@@ -356,8 +356,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <h3 className="text-left">Phase 4: Deployment & Optimization (2-4 weeks)</h3>
                   <p className="text-left"></p>
@@ -373,8 +373,8 @@ const NeuroSymbolicAIReasoningBreakthroughOctober2025: React.FC = () =>
 
             <div className="text-left"></div>
               <h3 className="text-left">Market Transformation by 2027</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$847B</div>
                   <div className="text-left">Global market value</div>
                 </div>

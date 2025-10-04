@@ -18,7 +18,7 @@ const AISyntheticCreativityEngine2026 = () =>
         />
       </Helmet>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link
             to="/blog"
@@ -29,8 +29,8 @@ const AISyntheticCreativityEngine2026 = () =>
           </Link>
 
           <article className="text-left"></a>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   Generative AI
                 <
@@ -53,8 +53,8 @@ const AISyntheticCreativityEngine2026 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <p className="text-left"></p>
                   <strong>Executive Summary:</strong> AI Synthetic Creativity Engines represent the convergence of generative AI, 
                   neuroscience, and artistic theory to create original, emotionally resonant content. Early adopters report 1000x 
@@ -68,30 +68,30 @@ const AISyntheticCreativityEngine2026 = () =>
                 emotionally resonant works that rival human creativity. Unlike simple generative models, these engines:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Palette className="text-left" />
                     <h3 className="text-left">Artistic Understanding</h3>
                   </div>
                   <p className="text-left">Grasp composition, color theory, and emotional impact</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Wand2 className="text-left" />
                     <h3 className="text-left">Style Transfer</h3>
                   </div>
                   <p className="text-left">Master any artistic style from single examples</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Sparkles className="text-left" />
                     <h3 className="text-left">Creative Evolution</h3>
                   </div>
                   <p className="text-left">Develop unique styles through iterative refinement</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Image className="text-left" />
                     <h3 className="text-left">Multi-Modal Creation</h3>
                   </div>
@@ -122,8 +122,8 @@ const AISyntheticCreativityEngine2026 = () =>
 
               <div className="text-left"></div>
                 <h4 className="text-left">Creative Quality Metrics</h4>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">98%</div>
                     <div className="text-left">Originality Score</div>
                   </div>
@@ -172,8 +172,8 @@ artwork = creativity_engine.create(
               <p className="text-left"></p>
                 Advanced engines understand and evoke specific emotions:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">😊 Sentiment Analysis</h4>
                   <p className="text-left">Understand emotional impact of colors, composition, narrative</p>
                 </div>
@@ -193,8 +193,8 @@ artwork = creativity_engine.create(
 
               <h2 className="text-left">🏆 Transformative Business Impact</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🎬 Netflix Studios</h4>
                   <p className="text-left"></p>
                     Deployed creativity engine for concept art, storyboarding, and promotional materials
@@ -275,8 +275,8 @@ artwork = creativity_engine.create(
                 Implementing AI creativity engines requires strategic planning:
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Step 1: Creative Audit (2-4 weeks)</h4>
                   <p className="text-left">Analyze current creative workflows, identify bottlenecks, define success metrics</p>
                 </div>

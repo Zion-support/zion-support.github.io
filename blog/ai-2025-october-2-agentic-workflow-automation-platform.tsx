@@ -146,8 +146,8 @@ const AgenticWorkflowAutomationPlatformArticle = () =>
           <p></p>
             Organizations implementing agentic workflow platforms report transformative results:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Efficiency Metrics</h3>
               <ul className="text-left">
                 <li>• <strong>97%</strong> automation rate achieved</li>

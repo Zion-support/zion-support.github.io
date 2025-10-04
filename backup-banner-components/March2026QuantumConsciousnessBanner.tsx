@@ -5,8 +5,8 @@ export default function March2026QuantumConsciousnessBanner() {
   return (
     <div className="text-left">
       {/* Animated background elements */}
-      <div className="text-left"></div>
-      <div className="text-left"></div>
+      <div className="text-left">
+        <div className="text-left"></div>
       <div className="text-left"></div>
       
       <div className="text-left">

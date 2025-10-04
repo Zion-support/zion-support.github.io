@@ -19,7 +19,7 @@ const AgentOrchestrationEnterpriseScale2026 = () =>
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-february-agent-orchestration-enterprise-scale" />
       </Helmet>
       
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link
             to="/blog"
@@ -51,8 +51,8 @@ const AgentOrchestrationEnterpriseScale2026 = () =>
               </p>
             </header>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">
                   <Zap className="text-left" />
                   Key Metrics
@@ -206,8 +206,8 @@ const AgentOrchestrationEnterpriseScale2026 = () =>
 
               <h2 className="text-left">Best Practices for Production</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">1. Circuit Breakers and Fallbacks</h3>
                   <p className="text-left"></p>
                     Implement circuit breakers preventing cascade failures when agents become unresponsive. Define 
@@ -268,8 +268,8 @@ const AgentOrchestrationEnterpriseScale2026 = () =>
               </ul>
 
               <h2 className="text-left">Success Metrics</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Technical Metrics</h3>
                   <ul className="text-left">
                     <li>• 99.97% coordination accuracy</li>

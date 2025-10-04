@@ -55,8 +55,8 @@ export default function NeuromorphicComputingEnterprise2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🧠 Breakthrough Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1000x</div>
                     <div className="text-left">Energy Efficiency</div>
                   </div>
@@ -115,8 +115,8 @@ export default function NeuromorphicComputingEnterprise2025() {
 
               <h2 className="text-left">Commercial Neuromorphic Platforms</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <h4 className="text-left">Intel Loihi 2</h4>
                     <span className="text-left">3rd Gen Available<
@@ -125,8 +125,8 @@ export default function NeuromorphicComputingEnterprise2025() {
                     1 million neurons per chip with programmable synaptic learning rules. Ideal for robotics, 
                     optimization problems, and continuous learning applications.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Power Efficiency</div>
                       <div className="text-left">100x vs. GPU</div>
                     </div>
@@ -141,8 +141,8 @@ export default function NeuromorphicComputingEnterprise2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">IBM TrueNorth / NorthPole</h4>
                     <span className="text-left">Production Ready<
                   </div>
@@ -150,8 +150,8 @@ export default function NeuromorphicComputingEnterprise2025() {
                     4096 neurosynaptic cores with 256 million synapses. Designed for ultra-low-power pattern 
                     recognition and sensory processing.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Power Efficiency</div>
                       <div className="text-left">70mW typical</div>
                     </div>
@@ -166,8 +166,8 @@ export default function NeuromorphicComputingEnterprise2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">BrainChip Akida</h4>
                     <span className="text-left">Commercial Deploy<
                   </div>
@@ -175,8 +175,8 @@ export default function NeuromorphicComputingEnterprise2025() {
                     Edge-optimized neuromorphic processor with on-chip learning. Designed for battery-powered devices 
                     and embedded vision systems.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Power Efficiency</div>
                       <div className="text-left">1000x vs. CPU</div>
                     </div>
@@ -194,8 +194,8 @@ export default function NeuromorphicComputingEnterprise2025() {
 
               <h2 className="text-left">Enterprise Use Cases</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🤖 Robotics & Automation</h4>
                   <p className="text-left">Real-time sensory processing and adaptive control</p>
                   <ul className="text-left">
@@ -309,8 +309,8 @@ loihi_process = LIF(shape=(10,), bias=0, du=4095, dv=4095)`}
 
               <h2 className="text-left">Adoption Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span className="text-left">2025<
                     <span className="text-left">Current State<
@@ -321,8 +321,8 @@ loihi_process = LIF(shape=(10,), bias=0, du=4095, dv=4095)`}
                   </p>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">2026-2027<
                     <span className="text-left">Mainstream Adoption<
                   </div>
@@ -332,8 +332,8 @@ loihi_process = LIF(shape=(10,), bias=0, du=4095, dv=4095)`}
                   </p>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">2028+<
                     <span className="text-left">Ubiquitous Deployment<
                   </div>

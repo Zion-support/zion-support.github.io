@@ -46,8 +46,8 @@ export default function NeuromorphicComputingEnterprise2026() {
       {/* Executive Summary */}
       <section className="text-left"></section>
         <h2 className="text-left">Executive Summary</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">1000x</div>
             <div className="text-left">Energy efficiency vs GPUs</div>
           </div>
@@ -77,8 +77,8 @@ export default function NeuromorphicComputingEnterprise2026() {
         <p className="text-left"></p>
           Neuromorphic computing is a revolutionary approach to AI hardware that mimics biological neural networks:
         </p>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Traditional AI (GPUs/TPUs)</h4>
             <ul className="text-left">
               <li>Synchronous clock-based processing</li>
@@ -101,8 +101,8 @@ export default function NeuromorphicComputingEnterprise2026() {
         </div>
 
         <h2 className="text-left">Leading Neuromorphic Platforms 2026</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Intel Loihi 2</h4>
             <p className="text-left"></p>
               Second-generation neuromorphic chip with 1M neurons, 120M synapses, and programmable learning rules.
@@ -250,8 +250,8 @@ export default function NeuromorphicComputingEnterprise2026() {
         </div>
 
         <h2 className="text-left">Implementation Roadmap</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Phase 1: Pilot (Months 1-3)</h4>
             <ul className="text-left">
               <li>Identify use case with high power/latency constraints (e.g., edge AI, real-time processing)</li>
@@ -291,8 +291,8 @@ export default function NeuromorphicComputingEnterprise2026() {
             <strong>Solution:</strong> Replaced GPU inference with Intel Loihi 2 neuromorphic chips in each camera, 
             processing video streams locally with event-based vision.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$40M</div>
               <div className="text-left">Annual Savings</div>
             </div>
@@ -316,8 +316,8 @@ export default function NeuromorphicComputingEnterprise2026() {
         </div>
 
         <h2 className="text-left">Challenges & Considerations</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Limited Software Ecosystem</h4>
             <p className="text-left"></p>
               <strong>Status:</strong> Neuromorphic frameworks (Lava, Nengo, Brian2) are less mature than PyTorch/TensorFlow.
@@ -347,8 +347,8 @@ export default function NeuromorphicComputingEnterprise2026() {
         </div>
 
         <h2 className="text-left">Future Outlook: 2026-2030</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🔮 3D Neuromorphic Chips</h4>
             <p className="text-left"></p>
               Vertical integration of memory and compute enabling 10M+ neurons per chip with near-zero latency.

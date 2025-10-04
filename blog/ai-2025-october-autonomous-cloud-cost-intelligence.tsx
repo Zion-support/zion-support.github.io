@@ -55,8 +55,8 @@ export default function AutonomousCloudCostIntelligence2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">💰 Cost Optimization Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">68%</div>
                     <div className="text-left">Cost Reduction</div>
                   </div>
@@ -213,8 +213,8 @@ export default function AutonomousCloudCostIntelligence2025() {
 
               <h2 className="text-left">Multi-Cloud Cost Intelligence</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">☁️ AWS Cost Optimization</h4>
                   <ul className="text-left">
                     <li>• EC2 Spot Instance orchestration</li>

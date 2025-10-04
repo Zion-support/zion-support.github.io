@@ -17,13 +17,13 @@ export default function SustainableAISolutionsPage() {
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <header className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
+        <div className="text-left">
+        <div className="text-left"></div>"
           <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 🌱 Sustainable AI Solutions
@@ -52,8 +52,8 @@ export default function SustainableAISolutionsPage() {
             </div>
             
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.9%</div>"
                 <div className="text-left">Energy Efficiency</div>"
               </div>
@@ -86,10 +86,10 @@ export default function SustainableAISolutionsPage() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">⚡>
                 </div>
                 <h3 className="text-left">Energy Optimization</h3>"
@@ -120,8 +120,8 @@ export default function SustainableAISolutionsPage() {
               </a>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🌱>
                 </div>
@@ -153,8 +153,8 @@ export default function SustainableAISolutionsPage() {
               </a>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🔄>
                 </div>
@@ -186,8 +186,8 @@ export default function SustainableAISolutionsPage() {
               </a>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🧠>
                 </div>
@@ -219,8 +219,8 @@ export default function SustainableAISolutionsPage() {
               </a>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">📊>
                 </div>
@@ -252,8 +252,8 @@ export default function SustainableAISolutionsPage() {
               </a>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🏢>
                 </div>
@@ -297,8 +297,8 @@ export default function SustainableAISolutionsPage() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left">1>
               </div>
@@ -308,8 +308,8 @@ export default function SustainableAISolutionsPage() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">2>
               </div>
               <h3 className="text-left">Strategy</h3>"
@@ -318,8 +318,8 @@ export default function SustainableAISolutionsPage() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">3>
               </div>
               <h3 className="text-left">Implementation</h3>"
@@ -328,8 +328,8 @@ export default function SustainableAISolutionsPage() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">4>
               </div>
               <h3 className="text-left">Optimization</h3>"
@@ -341,8 +341,8 @@ export default function SustainableAISolutionsPage() {
 
         {/* Success Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Proven Results
               </h2>
@@ -351,8 +351,8 @@ export default function SustainableAISolutionsPage() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$2.5B</div>"
                 <div className="text-left">Average ROI</div>"
                 <div className="text-left">Across all implementations</div>"

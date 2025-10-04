@@ -10,8 +10,8 @@ export default function AIRealTimeOperations2025() {
     <div className="text-left"></div>
       <main className="text-left">
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left"></span>
               OCTOBER 2025
             <
@@ -40,8 +40,8 @@ export default function AIRealTimeOperations2025() {
         </div>
 
         {/* Key Metrics */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">&lt;10ms</div>
             <div className="text-left">Detection Latency</div>
           </div>
@@ -77,8 +77,8 @@ export default function AIRealTimeOperations2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Core Components of Real-Time AI Observability</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🔬 Deep Performance Monitoring</h3>
                 <p className="text-left"></p>
                   Monitor every aspect of AI system performance with granular, real-time metrics that reveal the true 
@@ -143,8 +143,8 @@ export default function AIRealTimeOperations2025() {
           <section className="text-left"></section>
             <h2 className="text-left">The Modern Observability Stack</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Layer 1: Data Collection</h4>
                 <div className="text-left"></div>
                   <div></div>
@@ -251,8 +251,8 @@ export default function AIRealTimeOperations2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Critical Metrics to Monitor</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Performance Metrics</h4>
                 <ul className="text-left">
                   <li>• P50, P95, P99 latency percentiles</li>
@@ -352,8 +352,8 @@ export default function AIRealTimeOperations2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Best Practices for 2025</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Adopt OpenTelemetry Standards</h4>
                 <p className="text-left"></p>
                   Use industry-standard observability protocols for vendor-agnostic instrumentation and maximum flexibility.

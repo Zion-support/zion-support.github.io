@@ -80,8 +80,8 @@ export default function AutonomousNetworkOperationsSDWAN2025() {
                   of network telemetry data points to deliver intent-based networking:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Intelligent Traffic Steering</h3>
                     <p className="text-left"></p>
                       AI models analyze application requirements, network conditions, and business policies in real-time 
@@ -142,8 +142,8 @@ export default function AutonomousNetworkOperationsSDWAN2025() {
                   automatically translated into network policies:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">🎯<
                       <div></div>
@@ -156,8 +156,8 @@ export default function AutonomousNetworkOperationsSDWAN2025() {
                     </div>
                   </div>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">🔒<
                       <div></div>
                         <h4 className="text-left">Intent: "Secure PCI traffic"</h4>
@@ -169,8 +169,8 @@ export default function AutonomousNetworkOperationsSDWAN2025() {
                     </div>
                   </div>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">⚡<
                       <div></div>
                         <h4 className="text-left">Intent: "Optimize cloud costs"</h4>
@@ -242,8 +242,8 @@ export default function AutonomousNetworkOperationsSDWAN2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Proven ROI & Business Value</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$8.4M</div>
                     <div className="text-left">Annual Cost Savings</div>
                     <div className="text-left">reduced downtime + OpEx optimization</div>

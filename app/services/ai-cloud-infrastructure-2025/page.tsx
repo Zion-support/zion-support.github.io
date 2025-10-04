@@ -19,11 +19,11 @@ export default function AICloudInfrastructure2025Page() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}</div>
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Header */}</div>
+        <div className="text-left">
+        <div className="text-left"></div>
             <Link href="/services" className="text-left">
               ← Back to Services
             </Link>
@@ -38,8 +38,8 @@ export default function AICloudInfrastructure2025Page() {
           </div>
 
           {/* Success Metrics */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Infrastructure Performance</h2>"
               <div className="text-left"></div>
                 <div></div>
@@ -69,8 +69,8 @@ export default function AICloudInfrastructure2025Page() {
               business needs in real-time.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Key Capabilities</h3>"
                 <ul className="text-left">
                   <li className="text-left">
@@ -134,8 +134,8 @@ export default function AICloudInfrastructure2025Page() {
           {/* Technology Stack */}
           <section className="text-left"></section>
             <h2 className="text-left">AI-Powered Cloud Technologies</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🔄</div>"
                 <h3 className="text-left">Self-Healing Systems</h3>"
                 <p className="text-left"></p>
@@ -169,8 +169,8 @@ export default function AICloudInfrastructure2025Page() {
           {/* Features Deep Dive */}
           <section className="text-left"></section>
             <h2 className="text-left">Advanced Cloud Features</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🔧</div>"
                 <div></div>
                   <h3 className="text-left">Autonomous Infrastructure Management</h3>"
@@ -219,8 +219,8 @@ export default function AICloudInfrastructure2025Page() {
           {/* Success Story */}
           <section className="text-left"></section>
             <h2 className="text-left">Client Success Story</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">E-Commerce Giant Transforms Cloud Operations</h3>"
                   <p className="text-left"></p>
@@ -229,8 +229,8 @@ export default function AICloudInfrastructure2025Page() {
                     The self-healing capabilities have eliminated 98% of incidents before users even notice. 
                     Deployment speed increased by 500%. This is the future of cloud."
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">SC>
                     </div>
                     <div></div>
@@ -238,8 +238,8 @@ export default function AICloudInfrastructure2025Page() {
                       <div className="text-left">CTO, GlobalShop E-Commerce</div>"
                     </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Annual Savings<
                     <span className="text-left">$45M>
                   </div>
@@ -323,4 +323,4 @@ export default function AICloudInfrastructure2025Page() {
           </section>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+}</div></div></div></div>)

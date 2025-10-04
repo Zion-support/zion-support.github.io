@@ -48,8 +48,8 @@ export default function QuantumNeuralIntegrationBreakthrough2025() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Key Performance Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">10,000x</div>
               <div className="text-left">Faster than classical deep learning</div>
             </div>
@@ -92,8 +92,8 @@ export default function QuantumNeuralIntegrationBreakthrough2025() {
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧬 Pharmaceutical Drug Discovery</h3>
               <p className="text-left"></p>
                 Accelerate molecular simulation and protein folding analysis from months to hours. 
@@ -172,8 +172,8 @@ export default function QuantumNeuralIntegrationBreakthrough2025() {
           <p className="text-left"></p>
             Our platform introduces several groundbreaking technical innovations:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Quantum Error Mitigation Neural Networks</h3>
               <p className="text-left"></p>
                 Deep learning models that predict and correct quantum decoherence in real-time, 

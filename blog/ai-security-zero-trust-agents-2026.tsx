@@ -45,8 +45,8 @@ const AISecurityZeroTrustAgents2026 = () =>
               Secure autonomous AI agents with zero-trust architecture preventing costly mistakes while maintaining development velocity.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -61,8 +61,8 @@ const AISecurityZeroTrustAgents2026 = () =>
             </div>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Key Takeaways</h3>
               <ul className="text-left">
                 <li>✅ Implement zero-trust security for AI agents with sandboxing and attestations</li>

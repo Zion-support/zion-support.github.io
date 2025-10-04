@@ -86,8 +86,8 @@ const GenerativeAICodeCopilots2025: React.FC = () =>
 
         <h2 className="text-left">Enterprise Adoption: Real-World Results</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Fintech Unicorn: 8-Week Feature Development → 2 Weeks</h4>
             <p className="text-left"></p>
               A fast-growing fintech company deployed enterprise AI copilots across 150-person engineering team. 

@@ -225,8 +225,8 @@ const QuantumSupplyChainOptimizationArticle = () =>
         <section></section>
           <h2>🌍 Industry-Specific Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Retail & E-Commerce</h3>
               <ul className="text-left">
                 <li>• Dynamic pricing optimization</li>

@@ -18,7 +18,7 @@ export default function AIRoadmaps2026() {
     <div>
       <div></div>
     <article className="text-left"></a>
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link href="/blog" className="text-left">
             ← Back to Blog

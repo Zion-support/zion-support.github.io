@@ -52,8 +52,8 @@ export default function AIContextAwareReasoningBreakthrough2026() {
               Breakthrough in context-aware reasoning achieving 10M token processing windows with 99.2% accuracy. Master extended context handling, memory-augmented transformers, and intelligent attention mechanisms that deliver human-level comprehension with 85% cost reduction.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>February 1, 2026<
               </div>
@@ -69,8 +69,8 @@ export default function AIContextAwareReasoningBreakthrough2026() {
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">🚀 Revolutionary Achievements</h2>
               <ul className="text-left">
                 <li>✅ <strong>10M Token Windows</strong> — Process entire codebases and documentation sets</li>
@@ -261,8 +261,8 @@ export default function AIContextAwareReasoningBreakthrough2026() {
           </div>
 
           {/* Share Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left">Share this article:<
                 <button className="text-left">

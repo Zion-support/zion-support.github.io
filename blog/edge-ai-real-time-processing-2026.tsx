@@ -19,8 +19,8 @@ export default function EdgeAIRealTimeProcessing2026() {
 
       <article className="text-left"></a>
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Zap className="text-left" />
             <span className="text-left">EDGE AI BREAKTHROUGH<
           </div>
@@ -34,8 +34,8 @@ export default function EdgeAIRealTimeProcessing2026() {
             enabling intelligent decision-making directly at the data source—without cloud dependency.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Clock className="text-left" />
               <span>26 min read<
             </div>
@@ -52,8 +52,8 @@ export default function EdgeAIRealTimeProcessing2026() {
         </div>
 
         {/* Key Metrics Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">&lt;1ms</div>
             <div className="text-left">Response Latency</div>
           </div>
@@ -181,8 +181,8 @@ export default function EdgeAIRealTimeProcessing2026() {
             Modern edge AI deployments follow a hierarchical architecture optimizing for latency, cost, and intelligence:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Tier 1: Device Edge</h4>
               <p className="text-left"></p>
                 Ultra-low-power AI chips (0.5-5W) running lightweight models for immediate responses. Examples: smartwatches, 

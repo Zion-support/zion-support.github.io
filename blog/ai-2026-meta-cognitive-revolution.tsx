@@ -10,13 +10,13 @@ export default function AIMetaCognitiveRevolution2026() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <Brain className="text-left" />
               <span className="text-left"></span>
@@ -57,8 +57,8 @@ export default function AIMetaCognitiveRevolution2026() {
 
       {/* Revolutionary Breakthrough Section */}
       <section id="revolutionary-breakthrough" className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               The Meta-Cognitive AI Breakthrough
             </h2>
@@ -104,8 +104,8 @@ export default function AIMetaCognitiveRevolution2026() {
 
       {/* Enterprise Applications Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Enterprise Meta-Cognitive Applications
             </h2>
@@ -115,11 +115,11 @@ export default function AIMetaCognitiveRevolution2026() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏢 Autonomous Decision Architecture</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <TrendingUp className="text-left" />
                   </div>
@@ -128,8 +128,8 @@ export default function AIMetaCognitiveRevolution2026() {
                     <p className="text-left">Meta-cognitive systems that develop and refine strategic approaches, achieving 85% better decision outcomes than traditional methods.</p>
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Shield className="text-left" />
                   </div>
                   <div></div>
@@ -142,8 +142,8 @@ export default function AIMetaCognitiveRevolution2026() {
 
             <div className="text-left"></div>
               <h3 className="text-left">⚡ Operational Excellence Engine</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Cpu className="text-left" />
                   </div>
@@ -152,8 +152,8 @@ export default function AIMetaCognitiveRevolution2026() {
                     <p className="text-left">Systems that continuously analyze and optimize their own operational procedures, achieving 90% efficiency improvements.</p>
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Users className="text-left" />
                   </div>
                   <div></div>
@@ -169,8 +169,8 @@ export default function AIMetaCognitiveRevolution2026() {
 
       {/* Implementation Roadmap */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Meta-Cognitive AI Implementation Roadmap
             </h2>
@@ -189,8 +189,8 @@ export default function AIMetaCognitiveRevolution2026() {
               { phase: 'Phase 6', title: 'Continuous Evolution', duration: 'Ongoing', description: 'Establish feedback loops for continuous system improvement and adaptation.' }
             ].map((phase, index) => (
               <div key={index} className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     {index + 1}
                   </div>
                   <span className="text-left">{phase.phase}<
@@ -237,8 +237,8 @@ export default function AIMetaCognitiveRevolution2026() {
 
       {/* Footer */}
       <footer className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <p className="text-left">© 2026 Zion Tech Group. All rights reserved.</p>
             <div className="text-left"></div>
               <a href="/privacy" className="text-left">Privacy Policy</a>

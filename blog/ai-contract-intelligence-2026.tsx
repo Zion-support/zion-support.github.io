@@ -47,8 +47,8 @@ const AIContractIntelligence2026 = () =>
               Transform contract management with AI that extracts obligations, identifies risks, and ensures compliance automatically. Reduce legal review time by 90% while improving accuracy to 98%+.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -64,8 +64,8 @@ const AIContractIntelligence2026 = () =>
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚖️ Key Outcomes</h3>
               <ul className="text-left">
                 <li>✅ Reduce contract review time from days to minutes</li>
@@ -380,8 +380,8 @@ const AIContractIntelligence2026 = () =>
             </div>
 
             {/* Share Section */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <Tag className="text-left" />
                   <div className="text-left"></div>

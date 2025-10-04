@@ -52,8 +52,8 @@ export default function SustainableAIGreenComputing2025() {
                 <p className="text-left"></p>
                   As AI adoption explodes, so does its environmental footprint. The numbers are staggering:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">552 tons</div>
                     <p className="text-left">CO₂ emissions from training GPT-3</p>
                   </div>
@@ -92,8 +92,8 @@ export default function SustainableAIGreenComputing2025() {
                   Sustainable AI isn't about doing less—it's about doing more with less. Cutting-edge techniques 
                   achieve equivalent or better model performance while slashing energy consumption:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Efficient Architecture Design</h3>
                     <p className="text-left"></p>
                       Sparse attention mechanisms, mixture-of-experts models, and neural architecture search (NAS) 
@@ -163,8 +163,8 @@ export default function SustainableAIGreenComputing2025() {
                 <p className="text-left"></p>
                   Sustainable AI isn't a trade-off—it delivers better business outcomes:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">75% Energy Cost Reduction</h3>
                     <p className="text-left"></p>
                       Efficient models consume 75% less electricity. For a company running 1,000 inference servers, 
@@ -220,8 +220,8 @@ export default function SustainableAIGreenComputing2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Success Stories</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🌍 Global E-Commerce Platform ($45B GMV)</h3>
                     <p className="text-left"></p>
                       Migrated recommendation engine to efficient sparse transformers:
@@ -273,8 +273,8 @@ export default function SustainableAIGreenComputing2025() {
                 <p className="text-left"></p>
                   Transitioning to sustainable AI requires strategic planning. Zion Tech Group's proven methodology:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Carbon Footprint Assessment (Week 1-2)</h4>
                     <p className="text-left"></p>
                       Measure current AI energy consumption, carbon emissions, and costs. Identify high-impact 
@@ -310,8 +310,8 @@ export default function SustainableAIGreenComputing2025() {
                 <p className="text-left"></p>
                   Track these metrics to quantify sustainable AI impact:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <h4 className="text-left">Environmental Metrics</h4>
                       <ul className="text-left">
@@ -385,8 +385,8 @@ export default function SustainableAIGreenComputing2025() {
                   We've helped 200+ companies reduce AI carbon emissions by 75% average while improving performance 
                   and reducing costs. Our comprehensive green AI services include:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <h4 className="text-left">Assessment & Strategy</h4>
                       <ul className="text-left">
@@ -440,8 +440,8 @@ export default function SustainableAIGreenComputing2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Sustainability & AI Team
                 </div>
                 <div className="text-left"></div>

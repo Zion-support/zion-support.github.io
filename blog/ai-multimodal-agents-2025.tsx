@@ -86,8 +86,8 @@ if (latency_budget < 200ms)
             Traditional evals measure single-modality accuracy. Multimodal agents need cross-modal tests:
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Vision-Text Alignment</h4>
               <p>Does the agent's text description accurately reflect the image content?</p>
               <p className="text-left"></p>
@@ -143,8 +143,8 @@ if (latency_budget < 200ms)
 
         <section className="text-left"></section>
           <h2 className="text-left">Real-World Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">E-Commerce</h3>
               <p className="text-left"></p>
                 Visual product search + voice ordering + action fulfillment

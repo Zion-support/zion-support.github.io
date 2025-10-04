@@ -146,8 +146,8 @@ const AgenticWorkflowOrchestrationMasteryArticle = () =>
           <p></p>
             Organizations implementing agentic workflow orchestration report transformative results:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Operational Efficiency</h3>
               <ul className="text-left">
                 <li>• 70-89% automation rate</li>

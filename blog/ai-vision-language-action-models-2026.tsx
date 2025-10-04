@@ -19,8 +19,8 @@ const AIVisionLanguageActionModels2026 = () =>
       <div className="text-left"></div>
         <article className="text-left"></a>
           {/* Header */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 Multimodal AI
               <
@@ -47,8 +47,8 @@ const AIVisionLanguageActionModels2026 = () =>
           </div>
 
           {/* Key Stats */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Eye className="text-left" />
               <div className="text-left">97%</div>
               <div className="text-left">Visual Understanding Accuracy</div>
@@ -76,8 +76,8 @@ const AIVisionLanguageActionModels2026 = () =>
               VLA models are end-to-end AI systems that combine three capabilities:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <Eye className="text-left" />
                   <div></div>
@@ -89,8 +89,8 @@ const AIVisionLanguageActionModels2026 = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <MessageSquare className="text-left" />
                   <div></div>
                     <h4 className="text-left">2. Language: Understand Natural Language Instructions</h4>
@@ -101,8 +101,8 @@ const AIVisionLanguageActionModels2026 = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <Move className="text-left" />
                   <div></div>
                     <h4 className="text-left">3. Action: Execute Precise Physical or Digital Actions</h4>
@@ -122,8 +122,8 @@ const AIVisionLanguageActionModels2026 = () =>
 
             <div className="text-left"></div>
               <h3 className="text-left">VLA Model Pipeline</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Stage 1: Vision Encoder</h4>
                   <p className="text-left"></p>
                     Process RGB-D images through vision transformer (ViT) or CNN backbone. Extract spatial features, object embeddings, and scene representations.
@@ -161,8 +161,8 @@ const AIVisionLanguageActionModels2026 = () =>
               Training VLA models requires massive diverse datasets and careful curriculum design:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Vision-Language Pre-training (Weeks 1-4)</h4>
                 <ul className="text-left">
                   <li>• Train vision encoder on ImageNet, COCO, and domain-specific images</li>
@@ -256,8 +256,8 @@ const AIVisionLanguageActionModels2026 = () =>
               <p className="text-left"></p>
                 VLA-powered robot helps elderly individuals with daily tasks through natural language interaction:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <p className="text-left">User: "Bring me my reading glasses from the bedroom"</p>
                   <ul className="text-left">
                     <li>→ Vision: Navigate to bedroom, locate glasses on nightstand</li>
@@ -273,8 +273,8 @@ const AIVisionLanguageActionModels2026 = () =>
 
             <h2 className="text-left">Challenges & Solutions</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Challenge: Sim-to-Real Gap</h4>
                 <p className="text-left"></p>
                   <strong>Solution:</strong> Massive domain randomization in simulation (lighting, textures, physics parameters). Fine-tune with 10K+ real-world demos. Use privileged information during training that won't be available at test time.

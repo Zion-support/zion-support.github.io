@@ -83,9 +83,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
     <div className="text-left">
       {/* Animated Background */}
       <div className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-        <div className="text-left"></div>
-        <div className="text-left"></div>
+        <div className="text-left">
         <div className="text-left"></div>
         <div className="text-left"></div>
       </div>

@@ -25,8 +25,8 @@ export default function February2026ConsultingPage() {
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 🎯 AI 2026 February Breakthrough Consulting
@@ -41,8 +41,8 @@ export default function February2026ConsultingPage() {
               Transform your organization with Meta-Cognitive AI, Quantum-Neural Fusion, and Autonomous Operations
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$3.2B+</div>"
                 <div className="text-left">Client Value</div>"
               </div>
@@ -63,8 +63,8 @@ export default function February2026ConsultingPage() {
 
       {/* Content Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">🚀 Revolutionary AI Consulting for the Future</h2>"
             <p className="text-left"></p>
               Transform your organization with Zion Tech Group's cutting-edge AI 2026 February breakthrough consulting services. Our expert consultants deliver proven solutions that have generated over $3.2 billion in client value, featuring Meta-Cognitive AI, Quantum-Neural Fusion, and Autonomous Enterprise Operations.
@@ -167,8 +167,8 @@ export default function February2026ConsultingPage() {
             </ul>
 
             <h3 className="text-left">Success Stories</h3>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Fortune 100 Manufacturing Client</h4>"
                 <ul className="text-left">
                   <li><strong>$3.2B</strong> in value generated</li>

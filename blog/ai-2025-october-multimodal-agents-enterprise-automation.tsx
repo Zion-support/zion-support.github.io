@@ -56,8 +56,8 @@ export default function MultimodalAIAgentsEnterpriseAutomation2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Productivity Increase</div>
                   </div>
@@ -303,8 +303,8 @@ export default function MultimodalAIAgentsEnterpriseAutomation2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Proven Results Across Industries</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Financial Services</div>
                     <div className="text-left">73% reduction in document processing time, 95% accuracy in fraud detection</div>
                   </div>

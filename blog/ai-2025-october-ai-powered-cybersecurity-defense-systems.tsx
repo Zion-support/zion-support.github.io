@@ -112,8 +112,8 @@ const AI2025OctoberAIPoweredCybersecurityDefenseSystems = () =>
                 breach attempts in the first 90 days.
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$450M</div>
                   <div className="text-left">Prevented Breach Costs</div>
                 </div>
@@ -146,8 +146,8 @@ const AI2025OctoberAIPoweredCybersecurityDefenseSystems = () =>
               (APTs), and polymorphic malware.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🔴 Zero-Day Exploit Detection</h3>
                 <p className="text-left"></p>
                   Advanced ML models identify previously unknown vulnerabilities through behavioral analysis 
@@ -207,8 +207,8 @@ const AI2025OctoberAIPoweredCybersecurityDefenseSystems = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Foundation & Assessment (Weeks 1-4)</h3>
                 <ul className="text-left">
                   <li>• Comprehensive security posture assessment</li>

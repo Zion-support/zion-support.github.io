@@ -39,8 +39,8 @@ const AIModelObservabilityMonitoring2025 = () =>
           </p>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <Eye className="text-left" />
               <div></div>
@@ -117,8 +117,8 @@ metrics:
             Track business-relevant metrics continuously. Monitor accuracy, precision, recall, F1 scores, and domain-specific KPIs. Use sliding windows to detect gradual degradation and alert thresholds to catch sudden drops.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <AlertTriangle className="text-left" />
               <div></div>
                 <h4 className="text-left">Critical: Ground Truth Feedback Loops</h4>

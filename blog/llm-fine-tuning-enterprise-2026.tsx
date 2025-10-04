@@ -248,8 +248,8 @@ export default function LLMFineTuningEnterprise2026() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group AI Research & Development Team
                 </div>
                 <div className="text-left"></div>

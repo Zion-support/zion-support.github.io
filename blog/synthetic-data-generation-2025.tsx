@@ -6,7 +6,7 @@ const SyntheticDataGeneration2025: React.FC = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -32,8 +32,8 @@ const SyntheticDataGeneration2025: React.FC = () =>
             Explore how synthetic data generation creates unlimited, privacy-preserving training datasets that outperform real data, reducing AI model training costs by 73% while achieving 99.4% statistical equivalence to production data.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Calendar className="text-left" />
               <span>September 30, 2025<
             </div>
@@ -50,7 +50,7 @@ const SyntheticDataGeneration2025: React.FC = () =>
       </div>
 
       {/* Content Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <article className="text-left"></a>
             <h2 className="text-left">The Synthetic Data Revolution</h2>
@@ -101,8 +101,8 @@ const SyntheticDataGeneration2025: React.FC = () =>
 
             <h2 className="text-left">Enterprise Applications Unleashing Innovation</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🏥 Healthcare AI</h4>
                 <p className="text-left">Training medical diagnosis models on synthetic patient data, achieving 96% accuracy without exposing real health records.</p>
               </div>

@@ -6,8 +6,8 @@ export default function AI2026RevolutionaryTrends() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <h1 className="text-left">AI 2026: Revolutionary Trends Transforming Enterprise</h1>
         <p className="text-left">Published January 15, 2026 • 12 min read</p>
         <p className="text-left"></p>

@@ -80,8 +80,8 @@ export default function AINextGenAgenticAISystems() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Real-World Impact & Results</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">87%</div>
               <div className="text-left">Reduction in operational costs</div>
             </div>
@@ -102,8 +102,8 @@ export default function AINextGenAgenticAISystems() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Roadmap</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
               <p className="text-left"></p>
                 Establish AI infrastructure, define use cases, and begin with pilot programs in low-risk areas.

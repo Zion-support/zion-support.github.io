@@ -19,8 +19,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <div className="text-left"></div>
           <span className="text-left"></span>
             🚀 REVOLUTIONARY BREAKTHROUGH
@@ -44,8 +44,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
       <div className="text-left"></div>
         <div></div>
           <h2 className="text-left">🚀 Revolutionary Capabilities</h2>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚛️ Quantum-Enhanced Processing</h3>"
               <p className="text-left"></p>
                 Leverage quantum computing for 1000x faster decision making and real-time enterprise optimization.
@@ -74,8 +74,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
 
         <div></div>
           <h2 className="text-left">💰 Proven ROI Results</h2>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$2.8B</div>"
               <div className="text-left">Total ROI Achieved</div>"
               <div className="text-left">Fortune 500 companies in Q1 2026</div>"
@@ -101,8 +101,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
 
       <div className="text-left"></div>
         <h2 className="text-left">🏆 Fortune 500 Success Stories</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">🏭</div>"
             <h3 className="text-left">Manufacturing Leader</h3>"
             <div className="text-left">$450M</div>"
@@ -126,8 +126,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
       <div className="text-left"></div>
         <div></div>
           <h2 className="text-left">🔬 Technical Architecture</h2>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>"
               <div></div>
                 <h3 className="text-left">Quantum Neural Networks</h3>"
@@ -160,8 +160,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
 
         <div></div>
           <h2 className="text-left">📋 Implementation Process</h2>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>"
               <div></div>
                 <h3 className="text-left">Enterprise Assessment</h3>"

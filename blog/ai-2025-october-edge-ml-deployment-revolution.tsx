@@ -36,8 +36,8 @@ export default function AI2025OctoberEdgeMLDeploymentRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;1ms</div>
               <div className="text-left">Inference Latency</div>
             </div>
@@ -129,8 +129,8 @@ export default function AI2025OctoberEdgeMLDeploymentRevolution() {
         {/* Implementation Architecture */}
         <section className="text-left"></section>
           <h2 className="text-left">Edge ML Deployment Architecture</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               {[
                 { layer: "Edge Devices Layer", desc: "IoT sensors, cameras, smartphones, edge gateways with AI acceleration" },
                 { layer: "Model Deployment Layer", desc: "Optimized models with TFLite, ONNX Runtime, CoreML for edge inference" },
@@ -176,8 +176,8 @@ export default function AI2025OctoberEdgeMLDeploymentRevolution() {
         {/* ROI & Business Impact */}
         <section className="text-left"></section>
           <h2 className="text-left">Business Impact & ROI</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Cost Savings</h3>
               <ul className="text-left">
                 <li className="text-left">

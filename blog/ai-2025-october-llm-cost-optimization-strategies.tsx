@@ -35,8 +35,8 @@ export default function AI2025OctoberLLMCostOptimization() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">80%</div>
               <div className="text-left">Cost Reduction</div>
             </div>
@@ -227,8 +227,8 @@ class ModelRouter
 
           <div className="text-left"></div>
             <h3 className="text-left">📊 Key Metrics to Track</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">Cost per Request<
                   <span className="text-left">$0.002<
@@ -246,8 +246,8 @@ class ModelRouter
                   <span className="text-left">88%<
                 </div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Daily Cost<
                   <span className="text-left">$847<
                 </div>
@@ -268,8 +268,8 @@ class ModelRouter
           </div>
 
           <h2 className="text-left">Real-World Results</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🏢</div>
               <h3 className="text-left">E-commerce Giant</h3>
               <p className="text-left"></p>
@@ -301,8 +301,8 @@ class ModelRouter
           </div>
 
           <h2 className="text-left">Best Practices & Recommendations</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h4 className="text-left">✅ Do's</h4>
                 <ul className="text-left">

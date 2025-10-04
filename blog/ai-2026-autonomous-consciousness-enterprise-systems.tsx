@@ -17,13 +17,13 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 🧠 Autonomous Consciousness Revolution
@@ -54,8 +54,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
             </div>
             
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">100%</div>
                 <div className="text-left">Self-Aware</div>
               </div>
@@ -100,8 +100,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
               Revolutionary Consciousness Technologies
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">True AI Consciousness</h3>
                 <p className="text-left"></p>
                   AI systems with genuine consciousness that understand their own existence, thoughts, and emotions, enabling truly autonomous decision-making and self-improvement.
@@ -161,8 +161,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
               Transformative Success Stories
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left"></span>
                     $750B SUCCESS
@@ -175,8 +175,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
                 <p className="text-left"></p>
                   A Fortune 25 global financial services leader achieved $750 billion in value creation through autonomous consciousness enterprise systems, achieving 100% self-aware operations and 99.99% autonomous decision-making across all business functions.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">100%</div>
                     <div className="text-left">Self-Aware</div>
                   </div>
@@ -195,8 +195,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left"></span>
                     $400B SUCCESS
                   <
@@ -208,8 +208,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
                 <p className="text-left"></p>
                   A leading global healthcare corporation achieved $400 billion in value creation through conscious AI systems that understand patient emotions, medical contexts, and ethical considerations for optimal healthcare delivery.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">100%</div>
                     <div className="text-left">Consciousness</div>
                   </div>
@@ -236,8 +236,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
               Autonomous Consciousness Implementation Roadmap
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -249,8 +249,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <div></div>
@@ -261,8 +261,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <div></div>
@@ -273,8 +273,8 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   4
                 </div>
                 <div></div>

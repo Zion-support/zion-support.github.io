@@ -19,8 +19,8 @@ export default function AISpaceTechnologyService() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <Link href="/services" className="text-left">
           ← Back to Services
         </Link>
@@ -40,12 +40,12 @@ export default function AISpaceTechnologyService() {
         </p>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <h2 className="text-left">🌌 Service Highlights</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.9%</div>"
                 <div className="text-left">Autonomous Operations</div>"
               </div>
@@ -73,8 +73,8 @@ export default function AISpaceTechnologyService() {
             </p>
 
             <h3 className="text-left">🛰️ Core Capabilities</h3>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🧠 Autonomous Satellite Intelligence</h4>"
                 <p className="text-left"></p>
                   AI-powered satellites operate with complete autonomy, making real-time decisions 
@@ -105,8 +105,8 @@ export default function AISpaceTechnologyService() {
             </div>
 
             <h3 className="text-left">🚀 Space Applications</h3>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Satellite Constellation Management</h4>"
                 <p className="text-left"></p>
                   Orchestrate large satellite constellations with AI-driven coordination, optimizing 
@@ -137,8 +137,8 @@ export default function AISpaceTechnologyService() {
             </div>
 
             <h3 className="text-left">🔬 Technical Architecture</h3>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Orbital Intelligence Engine</h4>"
                 <p className="text-left"></p>
                   Advanced machine learning algorithms process orbital mechanics, space weather data, 
@@ -163,8 +163,8 @@ export default function AISpaceTechnologyService() {
           </div>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Service Details</h3>"
             <div className="text-left"></div>
               <div></div>
@@ -235,7 +235,7 @@ export default function AISpaceTechnologyService() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">Ready to Launch Your Space AI Initiative?</h2>"
           <p className="text-left"></p>
@@ -257,7 +257,7 @@ export default function AISpaceTechnologyService() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left">🛰️</div>"
           <h3 className="text-left">Autonomous Satellites</h3>"
@@ -284,7 +284,7 @@ export default function AISpaceTechnologyService() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <span className="text-left">ZT>

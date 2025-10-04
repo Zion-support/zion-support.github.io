@@ -51,8 +51,8 @@ export default function QuantumNeuralConsensusBreakthrough() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.97%</div>
               <div className="text-left">Consensus Accuracy</div>
             </div>
@@ -122,8 +122,8 @@ export default function QuantumNeuralConsensusBreakthrough() {
               in autonomous operations, supply chain optimization, and real-time decision making.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Manufacturing Excellence</h3>
                 <ul className="text-left">
                   <li>• 99.97% production quality decisions</li>

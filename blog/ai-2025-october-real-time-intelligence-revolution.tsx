@@ -117,8 +117,8 @@ export default function October2025RealTimeIntelligenceRevolution() {
 
         <h2 className="text-left">Real-World Applications Transforming Industries</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏦 Financial Services: Fraud Prevention in Real-Time</h3>
             <p className="text-left"></p>
               Major banks are now detecting and preventing fraud within milliseconds of a transaction attempt, 

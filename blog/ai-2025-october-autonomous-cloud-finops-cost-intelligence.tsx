@@ -112,8 +112,8 @@ const AI2025OctoberAutonomousCloudFinOpsCostIntelligence = () =>
                 resources and achieving remarkable results.
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$380M</div>
                   <div className="text-left">Annual Cost Savings</div>
                 </div>
@@ -146,8 +146,8 @@ const AI2025OctoberAutonomousCloudFinOpsCostIntelligence = () =>
               business priorities and performance requirements.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🖥️ Compute Optimization</h3>
                 <p className="text-left"></p>
                   Intelligent instance rightsizing, spot instance orchestration, and commitment optimization 
@@ -238,8 +238,8 @@ const AI2025OctoberAutonomousCloudFinOpsCostIntelligence = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Discovery & Baseline (Weeks 1-2)</h3>
                 <ul className="text-left">
                   <li>• Multi-cloud environment assessment and discovery</li>
@@ -282,8 +282,8 @@ const AI2025OctoberAutonomousCloudFinOpsCostIntelligence = () =>
               workload placement based on cost and performance requirements.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">☁️</div>
                 <h3 className="text-left">AWS Optimization</h3>
                 <p className="text-left"></p>

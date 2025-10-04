@@ -18,8 +18,8 @@ export default function About() {
       <div className="text-left"></div>
         {/* Hero Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
             <div className="text-left"></div>
               <h1 className="text-left">
                 About <span className="text-left">Zion Tech Group<
@@ -34,8 +34,8 @@ export default function About() {
 
         {/* Mission Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h2 className="text-left">
                   Our <span className="text-left">Mission<
@@ -51,8 +51,8 @@ export default function About() {
                   future growth and innovation.
                 </p>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">100+</div>
                     <div className="text-left">Projects Completed</div>
@@ -77,8 +77,8 @@ export default function About() {
 
         {/* Values Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Our <span className="text-left">Values<
               </h2>
@@ -87,8 +87,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🎯<
                 </div>
@@ -98,8 +98,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🤝<
                 </div>
                 <h3 className="text-left">Collaboration</h3>
@@ -108,8 +108,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">💡<
                 </div>
                 <h3 className="text-left">Innovation</h3>
@@ -118,8 +118,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🔒<
                 </div>
                 <h3 className="text-left">Integrity</h3>
@@ -133,8 +133,8 @@ export default function About() {
 
         {/* Team Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Our <span className="text-left">Team<
               </h2>
@@ -143,8 +143,8 @@ export default function About() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">👨‍💻<
                 </div>
@@ -156,8 +156,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🎨<
                 </div>
                 <h3 className="text-left">Design Team</h3>
@@ -168,8 +168,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🤖<
                 </div>
                 <h3 className="text-left">AI Specialists</h3>

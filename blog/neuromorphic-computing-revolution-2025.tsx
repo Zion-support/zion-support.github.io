@@ -6,7 +6,7 @@ const NeuromorphicComputingRevolution2025: React.FC = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -32,8 +32,8 @@ const NeuromorphicComputingRevolution2025: React.FC = () =>
             Explore how neuromorphic chips mimicking human brain architecture achieve 1000x power efficiency, enabling edge AI deployment at unprecedented scale while consuming just milliwatts.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Calendar className="text-left" />
               <span>September 30, 2025<
             </div>
@@ -50,7 +50,7 @@ const NeuromorphicComputingRevolution2025: React.FC = () =>
       </div>
 
       {/* Content Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <article className="text-left"></a>
             <h2 className="text-left">The Neuromorphic Revolution is Here</h2>
@@ -79,8 +79,8 @@ const NeuromorphicComputingRevolution2025: React.FC = () =>
               Unlike traditional von Neumann architectures that separate memory and computation, neuromorphic chips integrate these functions just like biological neurons:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">
                   <Zap className="text-left" />
                   Spiking Neural Networks (SNNs)
@@ -104,8 +104,8 @@ const NeuromorphicComputingRevolution2025: React.FC = () =>
 
             <h2 className="text-left">Enterprise Applications Transforming Industries</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🤖</div>
                 <h4 className="text-left">Edge AI Robotics</h4>
                 <p className="text-left">Autonomous robots process vision, navigation, and decision-making on-device with battery life measured in weeks, not hours.</p>

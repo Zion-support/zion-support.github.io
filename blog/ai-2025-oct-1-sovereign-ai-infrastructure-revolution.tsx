@@ -36,7 +36,7 @@ const SovereignAIInfrastructureRevolution: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">🚀 Executive Summary</h2>
           <ul className="text-left">
@@ -188,8 +188,8 @@ const SovereignAIInfrastructureRevolution: React.FC = () =>
           Sovereign AI investments deliver substantial economic returns:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">💰 Direct Economic Benefits</h4>
             <ul className="text-left">
               <li>Average 284% ROI within 5 years</li>

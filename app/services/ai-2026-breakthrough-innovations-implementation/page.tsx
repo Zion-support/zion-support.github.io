@@ -24,7 +24,7 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
       <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <span className="text-left"></span>
             IMPLEMENTATION SERVICE
@@ -46,8 +46,8 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
           Transform your enterprise with revolutionary AI breakthrough innovations. Our comprehensive implementation 
           service delivers quantum-neural consciousness fusion, autonomous enterprise systems, and hyper-intelligent analytics.
         </p>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <DollarSign className="text-left" />
             <span className="text-left">$2.8T Value Generated>
           </div>
@@ -64,10 +64,10 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
       {/* Service Overview */}
       <section className="text-left"></section>
         <h2 className="text-left">Comprehensive Implementation Services</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Brain className="text-left" />
               </div>
               <h3 className="text-left">Quantum-Neural Consciousness</h3>"
@@ -92,8 +92,8 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
             </ul>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <Target className="text-left" />
               </div>
@@ -119,8 +119,8 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
             </ul>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <TrendingUp className="text-left" />
               </div>
@@ -150,8 +150,8 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
       {/* Implementation Process */}
       <section className="text-left"></section>
         <h2 className="text-left">Implementation Process</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">1</div>"
             <div></div>
               <h3 className="text-left">Assessment & Strategy</h3>"
@@ -216,8 +216,8 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
       {/* Success Metrics */}
       <section className="text-left"></section>
         <h2 className="text-left">Proven Success Metrics</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <DollarSign className="text-left" />
             <div className="text-left">$2.8T</div>"
             <div className="text-left">Total Value Generated</div>"

@@ -36,8 +36,8 @@ export default function EnterpriseAIAdoptionChangeManagement2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">95%</div>
               <div className="text-left">User Adoption Rate</div>
             </div>
@@ -73,8 +73,8 @@ export default function EnterpriseAIAdoptionChangeManagement2025() {
 
           <h2 className="text-left">Change Management Methodology</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Preparation & Assessment</h3>
               <ul className="text-left">
                 <li>✓ Organizational readiness assessment</li>
@@ -117,8 +117,8 @@ export default function EnterpriseAIAdoptionChangeManagement2025() {
 
           <h2 className="text-left">Overcoming Common Resistance Points</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🚧 "AI Will Replace My Job"</h3>
               <p className="text-left"></p>
                 <strong className="text-left">Solution:</strong> Frame AI as augmentation, not replacement. 
@@ -228,15 +228,15 @@ export default function EnterpriseAIAdoptionChangeManagement2025() {
 
           <h2 className="text-left">Real-World Success Stories</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏦 Global Bank: Enterprise-Wide AI Transformation</h3>
               <p className="text-left"></p>
                 Transformed 50,000+ employee workforce with comprehensive AI adoption program. Achieved 
                 93% user adoption, $500M annual savings, and 60% reduction in processing times.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">93%</div>
                   <div className="text-left">Adoption Rate</div>
                 </div>
@@ -257,8 +257,8 @@ export default function EnterpriseAIAdoptionChangeManagement2025() {
                 Deployed AI across 200+ factories worldwide. Reduced resistance through immersive training 
                 and achieved 40% productivity improvement within 18 months.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">40%</div>
                   <div className="text-left">Productivity Gain</div>
                 </div>

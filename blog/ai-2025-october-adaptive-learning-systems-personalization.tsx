@@ -66,8 +66,8 @@ export default function AdaptiveLearningSystemsPersonalization2025() {
                   8x engagement increases, 73% higher conversion rates, and $78M+ annual revenue growth. These systems 
                   deliver hyper-personalized experiences that feel magical to users while requiring minimal human oversight.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">96%</div>
                     <div className="text-left">Personalization Accuracy</div>
                   </div>
@@ -85,8 +85,8 @@ export default function AdaptiveLearningSystemsPersonalization2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core Components of Adaptive AI Systems</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Real-Time Learning Pipeline</h3>
                     <ul className="text-left">
                       <li className="text-left">
@@ -156,8 +156,8 @@ export default function AdaptiveLearningSystemsPersonalization2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Success Stories</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Streaming Media Platform (180M Subscribers)</h3>
                     <p className="text-left"></p>
                       <strong>Challenge:</strong> Static recommendation model led to 34% weekly churn, declining engagement
@@ -204,8 +204,8 @@ export default function AdaptiveLearningSystemsPersonalization2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Architecture & Implementation</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Technical Stack</h3>
                     <div className="text-left"></div>
                       <div></div>
@@ -243,8 +243,8 @@ export default function AdaptiveLearningSystemsPersonalization2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Key Success Factors</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">🎯<
                       <div></div>
@@ -267,8 +267,8 @@ export default function AdaptiveLearningSystemsPersonalization2025() {
                       </div>
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">🔒<
                       <div></div>
                         <h4 className="text-left">Privacy & Security</h4>
@@ -299,8 +299,8 @@ export default function AdaptiveLearningSystemsPersonalization2025() {
                   Zion Tech Group's Adaptive AI practice helps enterprises build and deploy real-time learning systems 
                   that deliver unprecedented personalization and business results. Our proven methodology includes:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <div className="text-left">94%</div>
                       <div className="text-left">Avg Personalization Accuracy</div>

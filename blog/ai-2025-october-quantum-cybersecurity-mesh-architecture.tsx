@@ -113,8 +113,8 @@ const QuantumCybersecurityMeshArchitectureArticle = () =>
           <h2>🏗️ Quantum Security Mesh Architecture</h2>
           <h3 className="text-left">Core Components</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">1. Quantum Cryptographic Layer</h4>
               <ul className="text-left">
                 <li>Post-quantum cryptography algorithms (CRYSTALS-Kyber, CRYSTALS-Dilithium)</li>
@@ -206,8 +206,8 @@ const QuantumCybersecurityMeshArchitectureArticle = () =>
         <section></section>
           <h2>🎯 Industry-Specific Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Financial Services</h3>
               <ul className="text-left">
                 <li>✓ Transaction security and fraud prevention</li>

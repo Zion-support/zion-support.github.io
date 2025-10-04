@@ -206,8 +206,8 @@ export default function AISupplyChainOptimization2026() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group Supply Chain Intelligence Team
                 </div>
                 <div className="text-left"></div>

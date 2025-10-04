@@ -25,7 +25,7 @@ const QuantumAICryptographyEnterprise2025: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <p className="text-left"></p>
             <strong>Executive Summary:</strong> Quantum computing threatens to break current encryption within 5-10 years, 
@@ -71,8 +71,8 @@ const QuantumAICryptographyEnterprise2025: React.FC = () =>
           standardized several PQC algorithms that enterprises must adopt to secure AI infrastructure:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">CRYSTALS-Kyber: Key Encapsulation</h4>
             <p className="text-left"></p>
               Lattice-based algorithm for secure key exchange. Provides 256-bit quantum security with 2-3x performance 
@@ -224,8 +224,8 @@ const federatedSystem = new SecureFederatedLearning(
           Leading enterprises deploy hybrid approaches combining multiple cryptographic methods for maximum security:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Layer 1: Classical</h4>
             <p className="text-left"></p>
               AES-256, RSA-4096 for immediate security
@@ -312,8 +312,8 @@ const federatedSystem = new SecureFederatedLearning(
 
         <h2 className="text-left">Implementation Roadmap</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Phase 1: Assessment & Planning (Months 1-2)</h4>
             <p className="text-left"></p>
               Inventory cryptographic assets. Identify quantum-vulnerable systems. Prioritize AI models and data requiring 

@@ -51,8 +51,8 @@ const AIQuantumHybridOptimization2026 = () =>
               Harness quantum-classical hybrid computing achieving 10,000x speedup for optimization, drug discovery, and financial modeling. Learn quantum annealing, variational algorithms, and production deployment strategies.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -67,8 +67,8 @@ const AIQuantumHybridOptimization2026 = () =>
             </div>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">
                 <Cpu className="text-left" />
                 The Quantum Advantage is Here
@@ -182,8 +182,8 @@ const AIQuantumHybridOptimization2026 = () =>
 
             <h2 className="text-left">Real-World Success Stories</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Financial Services</h4>
                 <p className="text-left">Major investment bank deployed quantum-hybrid portfolio optimization:</p>
                 <ul className="text-left">
@@ -224,8 +224,8 @@ const AIQuantumHybridOptimization2026 = () =>
 
             <h2 className="text-left">Getting Started: Your 90-Day Quantum Roadmap</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Feasibility (Days 1-30)</h4>
                 <ul className="text-left">
                   <li>• Identify optimization problems suitable for quantum acceleration</li>

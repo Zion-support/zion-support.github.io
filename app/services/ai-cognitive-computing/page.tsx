@@ -13,8 +13,8 @@ export default function AICognitiveComputingServices() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <div className="text-left"></div>
           <span className="text-left"></span>
             🧠 Revolutionary Service
@@ -42,7 +42,7 @@ export default function AICognitiveComputingServices() {
           </a>
         </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <span className="text-left">🧠>
@@ -62,8 +62,8 @@ export default function AICognitiveComputingServices() {
           <div className="text-left">Per reasoning system</div>"
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left">📚>
           </div>
           <h3 className="text-left">Continuous Learning System</h3>"
@@ -81,8 +81,8 @@ export default function AICognitiveComputingServices() {
           <div className="text-left">Per learning system</div>"
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left">💬>
           </div>
           <h3 className="text-left">Natural Language Understanding</h3>"
@@ -102,8 +102,8 @@ export default function AICognitiveComputingServices() {
 
       <div className="text-left"></div>
         <h2 className="text-left">Why Choose Our Cognitive AI?</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">300%</div>"
             <div className="text-left">Productivity Gains</div>"
           </div>
@@ -123,8 +123,8 @@ export default function AICognitiveComputingServices() {
 
       <div className="text-left"></div>
         <h2 className="text-left">Implementation Process</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">1</div>"
             <h3 className="text-left">Assessment</h3>"
             <p className="text-left">Evaluate current AI capabilities and identify cognitive opportunities</p>"
@@ -148,16 +148,16 @@ export default function AICognitiveComputingServices() {
 
       <div className="text-left"></div>
         <h2 className="text-left">Success Story</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">MedTech Solutions: 300% Productivity Gains</h3>"
             <p className="text-left"></p>
               "Zion Tech Group's cognitive AI transformed our diagnostic capabilities. We achieved 300% productivity "
               gains and 95% decision accuracy in medical diagnosis. The system learns continuously and improves 
               its performance with every case."
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">🧠>
               </div>
               <div></div>

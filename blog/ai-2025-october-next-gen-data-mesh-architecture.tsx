@@ -55,8 +55,8 @@ export default function NextGenDataMeshArchitecture2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">📊 Data Mesh Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Faster Data Access</div>
                   </div>
@@ -106,8 +106,8 @@ export default function NextGenDataMeshArchitecture2025() {
 
               <h2 className="text-left">Data Mesh: Four Core Principles</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span className="text-left">1️⃣<
                     <h3 className="text-left">Domain-Oriented Ownership</h3>
@@ -127,8 +127,8 @@ export default function NextGenDataMeshArchitecture2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">2️⃣<
                     <h3 className="text-left">Data as a Product</h3>
                   </div>
@@ -138,8 +138,8 @@ export default function NextGenDataMeshArchitecture2025() {
                   </p>
                   <div className="text-left"></div>
                     <h4 className="text-left">Data Product Requirements:</h4>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">✓<
                         <span className="text-left">Discoverable through data catalog with rich metadata<
                       </div>
@@ -163,8 +163,8 @@ export default function NextGenDataMeshArchitecture2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">3️⃣<
                     <h3 className="text-left">Self-Serve Data Platform</h3>
                   </div>
@@ -174,8 +174,8 @@ export default function NextGenDataMeshArchitecture2025() {
                   </p>
                   <div className="text-left"></div>
                     <h4 className="text-left">Platform Capabilities:</h4>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">🔧 Data Pipeline Builder</div>
                         <div className="text-left">Low-code tools for ingestion, transformation, quality checks</div>
                       </div>
@@ -195,8 +195,8 @@ export default function NextGenDataMeshArchitecture2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">4️⃣<
                     <h3 className="text-left">Federated Computational Governance</h3>
                   </div>
@@ -219,8 +219,8 @@ export default function NextGenDataMeshArchitecture2025() {
 
               <h2 className="text-left">Data Mesh Technology Stack</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Data Product Infrastructure</h3>
                   <div className="text-left"></div>
                     <div></div>
@@ -289,8 +289,8 @@ export default function NextGenDataMeshArchitecture2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Quarter 1: Foundation & Pilot</h3>
                   <ul className="text-left">
                     <li className="text-left">
@@ -359,15 +359,15 @@ export default function NextGenDataMeshArchitecture2025() {
 
               <h2 className="text-left">Real-World Transformations</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Global Streaming Media Company</h3>
                   <p className="text-left"></p>
                     Migrated from monolithic data warehouse to data mesh spanning 25 domains, supporting 500M+ 
                     subscribers with personalized experiences powered by 200+ data products.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">12x</div>
                       <div className="text-left">Faster New Data Product Launch</div>
                     </div>
@@ -388,8 +388,8 @@ export default function NextGenDataMeshArchitecture2025() {
                     Transformed siloed data landscape into federated mesh architecture serving 10,000+ stores and 
                     e-commerce platform with real-time inventory, pricing, and customer insights.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">85%</div>
                       <div className="text-left">Reduction in Data Duplication</div>
                     </div>
@@ -411,8 +411,8 @@ export default function NextGenDataMeshArchitecture2025() {
                   Ready to break free from centralized data bottlenecks? Zion Tech Group delivers comprehensive 
                   data mesh transformations—from architecture design to platform implementation and organizational change management.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <span className="text-left">✅<
                       <span className="text-left">Data mesh maturity assessment<
@@ -426,8 +426,8 @@ export default function NextGenDataMeshArchitecture2025() {
                       <span className="text-left">Self-serve platform implementation<
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">✅<
                       <span className="text-left">Federated governance framework<
                     </div>

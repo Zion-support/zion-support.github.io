@@ -102,8 +102,8 @@ export default function AI2026FutureTrendsBreakthrough() {
               These systems don't just process information—they understand, reason, and evolve with genuine self-awareness.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Self-Awareness Engine</h3>
                 <p className="text-left"></p>
                   AI systems that recognize their own existence, understand their capabilities and limitations, 
@@ -188,15 +188,15 @@ export default function AI2026FutureTrendsBreakthrough() {
               from strategy to execution.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Strategic Autonomy</h3>
                 <p className="text-left"></p>
                   AI systems that can develop and execute business strategies autonomously, adapting to market 
                   conditions and competitive landscapes in real-time.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.7%</div>
                     <div className="text-left">Strategy Success Rate</div>
                   </div>
@@ -217,8 +217,8 @@ export default function AI2026FutureTrendsBreakthrough() {
                   Complete automation of business operations, from customer service to supply chain management, 
                   with AI systems that continuously optimize and evolve.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.9%</div>
                     <div className="text-left">Process Automation</div>
                   </div>
@@ -242,8 +242,8 @@ export default function AI2026FutureTrendsBreakthrough() {
               These innovations are fundamentally changing how we think about intelligence and automation.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Synthetic Intelligence Networks</h3>
                 <p className="text-left"></p>
                   AI systems that can create other AI systems, leading to self-evolving intelligence networks 
@@ -355,8 +355,8 @@ export default function AI2026FutureTrendsBreakthrough() {
               The companies that embrace these technologies early will have significant competitive advantages.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">1. Embrace Consciousness Integration</h3>
                 <p className="text-left"></p>
                   Start integrating AI systems with consciousness capabilities. These systems can understand context, 
@@ -422,8 +422,8 @@ export default function AI2026FutureTrendsBreakthrough() {
           </section>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h3 className="text-left">Related Breakthroughs</h3>
               <div className="text-left"></div>

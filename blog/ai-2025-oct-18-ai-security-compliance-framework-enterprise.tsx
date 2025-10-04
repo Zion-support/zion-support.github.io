@@ -47,8 +47,8 @@ export default function AISecurityComplianceFramework2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔐 Compliance Landscape 2025</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">12</div>
                     <div className="text-left">Major AI Regulations</div>
                   </div>
@@ -71,8 +71,8 @@ export default function AISecurityComplianceFramework2025() {
               </p>
 
               <h3 className="text-left">Major Regulatory Frameworks</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">🇪🇺 EU AI Act (Enforced 2025)</div>
                   <div className="text-left"></div>
                     Risk-based framework classifying AI systems as: unacceptable risk (banned), high risk (strict 
@@ -132,8 +132,8 @@ export default function AISecurityComplianceFramework2025() {
                 <p className="text-left"></p>
                   Protect AI models from adversarial attacks, data poisoning, model extraction, and unauthorized access.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Adversarial Robustness</div>
                     <div className="text-left"></div>
                       • Implement adversarial training with PGD/FGSM attacks<br/>
@@ -169,8 +169,8 @@ export default function AISecurityComplianceFramework2025() {
                   Ensure AI systems respect user privacy, comply with data protection regulations, and maintain 
                   comprehensive data lineage.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Privacy-Preserving ML</div>
                     <div className="text-left"></div>
                       • Implement differential privacy (ε &lt; 1 for sensitive data)<br/>
@@ -205,8 +205,8 @@ export default function AISecurityComplianceFramework2025() {
                 <p className="text-left"></p>
                   Detect and mitigate bias in AI systems to comply with anti-discrimination laws and ethical standards.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Bias Audits</div>
                     <div className="text-left"></div>
                       • Conduct quarterly fairness audits across protected attributes<br/>
@@ -242,8 +242,8 @@ export default function AISecurityComplianceFramework2025() {
                   Provide stakeholders with understanding of how AI systems make decisions—legally required for 
                   regulated industries and high-risk applications.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Model Interpretability Methods</div>
                     <div className="text-left"></div>
                       • SHAP (SHapley Additive exPlanations) for feature importance<br/>
@@ -278,8 +278,8 @@ export default function AISecurityComplianceFramework2025() {
                 <p className="text-left"></p>
                   Maintain comprehensive observability and prepare for regulatory audits and security incidents.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Production Monitoring</div>
                     <div className="text-left"></div>
                       • Track model performance (accuracy, latency, errors) in real-time<br/>
@@ -319,8 +319,8 @@ export default function AISecurityComplianceFramework2025() {
                 </p>
                 
                 <h3 className="text-left">Solution</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <strong className="text-left">Clinical Validation</strong><br/>
                     Conducted prospective multi-site validation study (5 hospitals, 10K patients, 95% sensitivity target)
                   </div>
@@ -343,8 +343,8 @@ export default function AISecurityComplianceFramework2025() {
                 </div>
 
                 <h3 className="text-left">Results</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Regulatory Success</div>
                     <div className="text-left"></div>
                       • FDA 510(k) clearance granted (8-month process)<br/>
@@ -434,8 +434,8 @@ export default function AISecurityComplianceFramework2025() {
                   for AI systems across healthcare, finance, government, and enterprise sectors. Zero regulatory 
                   violations across all clients.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Compliance Assessment</div>
                     <div className="text-left">Free 90-minute audit to identify gaps and create remediation plan</div>
                   </div>

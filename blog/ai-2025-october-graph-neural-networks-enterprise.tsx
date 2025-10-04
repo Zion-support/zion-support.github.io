@@ -36,8 +36,8 @@ export default function AI2025OctoberGraphNeuralNetworksEnterprise() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">23x</div>
               <div className="text-left">Faster Analysis</div>
             </div>
@@ -181,8 +181,8 @@ export default function AI2025OctoberGraphNeuralNetworksEnterprise() {
         {/* Implementation Stack */}
         <section className="text-left"></section>
           <h2 className="text-left">GNN Technology Stack</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               {[
                 { category: "Frameworks", tools: ["PyTorch Geometric", "DGL", "Spektral", "StellarGraph"] },
                 { category: "Graph Databases", tools: ["Neo4j", "TigerGraph", "ArangoDB", "JanusGraph"] },

@@ -16,7 +16,7 @@ export default function AIAutonomousCostIntelligence2025() {
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-autonomous-cost-intelligence-2025" />
       </Helmet>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link to="/blog" className="text-left">
             <ArrowLeft className="text-left" />
@@ -24,8 +24,8 @@ export default function AIAutonomousCostIntelligence2025() {
           </Link>
 
           <article className="text-left"></a>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">FinOps & Cost Intelligence<
                 <span className="text-left">NEW<
               </div>
@@ -39,8 +39,8 @@ export default function AIAutonomousCostIntelligence2025() {
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <TrendingUp className="text-left" />
                 <p className="text-left"></p>
                   Organizations implementing AI-driven cost intelligence report an average 45-60% reduction in cloud spending while improving performance and reliability.
@@ -83,8 +83,8 @@ export default function AIAutonomousCostIntelligence2025() {
                 AI autonomous cost intelligence leverages machine learning, predictive analytics, and real-time optimization to continuously monitor, analyze, and optimize cloud spending without human intervention. This revolutionary approach combines:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Predictive Cost Analytics</h4>
                   <p className="text-left"></p>
                     ML models forecast spending patterns 30-90 days ahead with 95% accuracy, enabling proactive optimization and budget planning.
@@ -118,8 +118,8 @@ export default function AIAutonomousCostIntelligence2025() {
                 Implementation Strategy
               </h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Discovery & Baseline (Weeks 1-2)</h3>
                   <ul className="text-left">
                     <li className="text-left">• Deploy cost intelligence agents across all cloud environments</li>
@@ -154,8 +154,8 @@ export default function AIAutonomousCostIntelligence2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">Case Study: Global E-Commerce Platform</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">58%</div>
                     <div className="text-left">Cost Reduction</div>
                   </div>

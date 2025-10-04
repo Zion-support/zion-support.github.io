@@ -52,8 +52,8 @@ export default function AIGovernanceComplianceAutomation2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Comprehensive Governance Framework</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Model Risk Management</h3>
                 <p className="text-left"></p>
                   Automated assessment and monitoring of AI model risks throughout the entire lifecycle, from 
@@ -139,8 +139,8 @@ export default function AIGovernanceComplianceAutomation2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Success: Governance at Scale</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Global Bank: 100% Regulatory Compliance</h3>
                 <p className="text-left"></p>
                   Top 10 global bank deployed AI governance platform managing 500+ production models across 
@@ -190,8 +190,8 @@ export default function AIGovernanceComplianceAutomation2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Key Regulations & Requirements</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">EU AI Act (Effective 2026)</h3>
                 <ul className="text-left">
                   <li>• Risk-based classification: Unacceptable, High, Limited, Minimal</li>

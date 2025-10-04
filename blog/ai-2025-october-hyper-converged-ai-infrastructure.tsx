@@ -36,8 +36,8 @@ export default function AI2025OctoberHyperConvergedAIInfrastructure() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$1.2B</div>
               <div className="text-left">Production Value</div>
             </div>
@@ -145,8 +145,8 @@ export default function AI2025OctoberHyperConvergedAIInfrastructure() {
         <section className="text-left"></section>
           <h2 className="text-left">Performance Benchmarks</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Training Performance</h3>
               <ul className="text-left">
                 <li>• LLM Training: 10x faster (GPT-3 scale)</li>
@@ -197,8 +197,8 @@ export default function AI2025OctoberHyperConvergedAIInfrastructure() {
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Deployment Success Stories</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Global Financial Services - $450M Value</h3>
               <p className="text-left"></p>
                 Deployed hyper-converged infrastructure for fraud detection and algorithmic trading, processing 
@@ -246,8 +246,8 @@ export default function AI2025OctoberHyperConvergedAIInfrastructure() {
         <section className="text-left"></section>
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Core Components</h3>
               <ul className="text-left">
                 <li>• Kubernetes + KubeFlow for orchestration</li>

@@ -81,8 +81,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Why the Convergence is Happening Now</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">The Pain of Fragmentation</h3>
                     <p className="text-left">Traditional siloed approaches create massive inefficiencies:</p>
                     <ul className="text-left">
@@ -124,12 +124,12 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">The Unified AI Platform Architecture</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Layer 1: Core Infrastructure</h3>
                     <p className="text-left">Foundation built on cloud-native primitives with ML-specific optimizations</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <h4 className="text-left">Compute Orchestration</h4>
                         <ul className="text-left">
                           <li>• Kubernetes with GPU node pools</li>
@@ -153,8 +153,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
                   <div className="text-left"></div>
                     <h3 className="text-left">Layer 2: ML Development & Training</h3>
                     <p className="text-left">Accelerate model development with integrated tooling</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <h4 className="text-left">Development Environment</h4>
                         <ul className="text-left">
                           <li>• Cloud-based notebooks (JupyterLab, VSCode)</li>
@@ -178,8 +178,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
                   <div className="text-left"></div>
                     <h3 className="text-left">Layer 3: Model Deployment & Serving</h3>
                     <p className="text-left">Deploy models to production with one command</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <h4 className="text-left">Serving Infrastructure</h4>
                         <ul className="text-left">
                           <li>• Multi-framework support (TensorFlow, PyTorch, ONNX)</li>
@@ -203,8 +203,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
                   <div className="text-left"></div>
                     <h3 className="text-left">Layer 4: Observability & Governance</h3>
                     <p className="text-left">Monitor, debug, and govern AI systems at scale</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <h4 className="text-left">Monitoring & Alerts</h4>
                         <ul className="text-left">
                           <li>• Model performance drift detection</li>
@@ -235,11 +235,11 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
                   to deploy models without becoming infrastructure experts.
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Golden Path 1: Training → Production</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <h4 className="text-left">What It Provides:</h4>
                         <ul className="text-left">
                           <li>• Pre-configured training pipelines with best practices</li>
@@ -260,8 +260,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Golden Path 2: Data → Features → Training</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <h4 className="text-left">What It Provides:</h4>
                         <ul className="text-left">
                           <li>• Integrated data discovery and lineage tracking</li>
@@ -283,8 +283,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Golden Path 3: Batch Predictions at Scale</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <h4 className="text-left">What It Provides:</h4>
                         <ul className="text-left">
                           <li>• Spark/Dask integration for large-scale inference</li>
@@ -338,8 +338,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
 
                 <div className="text-left"></div>
                   <h3 className="text-left">The Platform Team Evolution</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <h4 className="text-left">Old Model: Ticket-Driven Operations</h4>
                       <p className="text-left"></p>
                         Data scientists file tickets → Platform team implements → Weeks of back-and-forth → Deployment
@@ -360,12 +360,12 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Success Stories</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Uber: Michelangelo ML Platform</h3>
                     <p className="text-left">Unified platform serving 3000+ ML models across 200+ use cases</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">3000+</div>
                         <div className="text-left">Production Models</div>
                       </div>
@@ -394,8 +394,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
                   <div className="text-left"></div>
                     <h3 className="text-left">Netflix: ML Infrastructure</h3>
                     <p className="text-left">Powering recommendations for 250M+ subscribers globally</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">1000+</div>
                         <div className="text-left">ML Engineers</div>
                       </div>
@@ -424,8 +424,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
                   <div className="text-left"></div>
                     <h3 className="text-left">Airbnb: ML Infrastructure (Bighead)</h3>
                     <p className="text-left">End-to-end ML platform used by 200+ ML practitioners</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">150+</div>
                         <div className="text-left">Production Models</div>
                       </div>
@@ -456,11 +456,11 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Technology Stack for Unified Platforms</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Orchestration & Workflow</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Kubeflow</div>
                         <div className="text-left">ML workflows on Kubernetes</div>
                       </div>
@@ -477,8 +477,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Feature Stores</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Feast</div>
                         <div className="text-left">Open-source feature store</div>
                       </div>
@@ -495,8 +495,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Model Serving</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">KServe</div>
                         <div className="text-left">Serverless model serving on K8s</div>
                       </div>
@@ -513,8 +513,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Experiment Tracking & Registry</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">MLflow</div>
                         <div className="text-left">Open-source ML lifecycle platform</div>
                       </div>
@@ -531,8 +531,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Observability & Monitoring</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Evidently AI</div>
                         <div className="text-left">ML monitoring & testing</div>
                       </div>
@@ -552,8 +552,8 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Roadmap</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
                     <ul className="text-left">
                       <li>✓ Establish platform team with product mindset</li>

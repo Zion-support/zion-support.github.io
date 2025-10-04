@@ -89,8 +89,8 @@ export default function LLMReasoningBreakthroughO3_2025() {
                   The secret behind O3's success lies in a revolutionary architecture combining multiple 
                   advanced techniques:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Chain-of-Thought Reasoning at Scale</h3>
                     <p className="text-left"></p>
                       O3 doesn't just generate answers—it constructs elaborate reasoning chains, exploring 
@@ -138,8 +138,8 @@ export default function LLMReasoningBreakthroughO3_2025() {
                   While benchmark scores are impressive, the real revolution happens in practical applications. 
                   O3's reasoning capabilities are transforming enterprise operations:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🔬 Scientific Research Acceleration</h3>
                     <p className="text-left"></p>
                       O3 assists researchers in hypothesis generation, experimental design, and literature synthesis. 
@@ -188,8 +188,8 @@ export default function LLMReasoningBreakthroughO3_2025() {
                   $1,000-$5,000 per task—but for complex problems worth millions, this is a bargain. Zion Tech 
                   Group has developed optimization strategies to maximize value:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Tiered Reasoning Architecture</h4>
                     <p className="text-left"></p>
                       Route simple queries to lighter models, reserving O3's full power for genuinely complex problems. 
@@ -279,8 +279,8 @@ export default function LLMReasoningBreakthroughO3_2025() {
                   Implementing O3 reasoning models requires expertise in prompt engineering, infrastructure 
                   optimization, and enterprise integration. Zion Tech Group provides end-to-end solutions:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <h4 className="text-left">Strategic Assessment</h4>
                       <ul className="text-left">
@@ -371,8 +371,8 @@ export default function LLMReasoningBreakthroughO3_2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Strategy Team
                 </div>
                 <div className="text-left"></div>

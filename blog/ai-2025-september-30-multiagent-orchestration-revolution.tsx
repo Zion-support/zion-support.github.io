@@ -35,8 +35,8 @@ export default function AI2025September30MultiAgentOrchestrationRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">850%</div>
               <div className="text-left">Productivity Increase</div>
             </div>
@@ -81,8 +81,8 @@ export default function AI2025September30MultiAgentOrchestrationRevolution() {
 
           <h2 className="text-left">Enterprise Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">💼 Business Operations</h3>
               <ul className="text-left">
                 <li>• Automated workflow orchestration across departments</li>
@@ -128,8 +128,8 @@ export default function AI2025September30MultiAgentOrchestrationRevolution() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 5-Phase Deployment Model</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Agent Discovery (Weeks 1-2)</h4>
                 <p className="text-left">Identify specialized agent roles and define communication protocols</p>
               </div>
@@ -165,8 +165,8 @@ export default function AI2025September30MultiAgentOrchestrationRevolution() {
               their operations, delivering unprecedented results in just 6 months.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$1.8B</div>
                 <div className="text-left">Annual Value Generated</div>
               </div>

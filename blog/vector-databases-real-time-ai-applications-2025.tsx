@@ -36,8 +36,8 @@ export default function VectorDatabasesRealTimeAIApplications2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;100ms</div>
               <div className="text-left">Query Latency</div>
             </div>
@@ -104,8 +104,8 @@ export default function VectorDatabasesRealTimeAIApplications2025() {
 
           <h2 className="text-left">Vector Database Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📊 Indexing Algorithms</h3>
               <p className="text-left"></p>
                 Choose the right indexing algorithm for your use case. HNSW for ultra-low latency, 
@@ -171,8 +171,8 @@ export default function VectorDatabasesRealTimeAIApplications2025() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 Production RAG Architecture</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Document Ingestion Pipeline</h4>
                 <p className="text-left"></p>
                   Process and chunk documents for optimal retrieval. Handle PDFs, docs, code, 
@@ -246,8 +246,8 @@ response = llm.complete(prompt)`}
 
           <h2 className="text-left">Performance Optimization</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚡ Latency Optimization</h3>
               <div className="text-left"></div>
                 <div></div>
@@ -339,33 +339,33 @@ response = llm.complete(prompt)`}
 
           <h2 className="text-left">Implementation Checklist</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Choose vector database based on scale and latency requirements<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Implement document chunking and embedding pipeline<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Optimize index configuration for your use case<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Deploy monitoring for query latency and accuracy<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">✓</div>
                 <span className="text-left">Implement cost optimization and caching strategies<
               </div>

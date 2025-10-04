@@ -19,11 +19,11 @@ export default function AI2026EnterpriseTransformationPage() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}</div>
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Header */}</div>
+        <div className="text-left">
+        <div className="text-left"></div>
             <Link href="/services" className="text-left">
               ← Back to Services
             </Link>
@@ -38,8 +38,8 @@ export default function AI2026EnterpriseTransformationPage() {
           </div>
 
           {/* Success Metrics */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Proven Results</h2>"
               <div className="text-left"></div>
                 <div></div>
@@ -68,8 +68,8 @@ export default function AI2026EnterpriseTransformationPage() {
               technologies to create a comprehensive solution that addresses every aspect of your business operations.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">What We Deliver</h3>"
                 <ul className="text-left">
                   <li className="text-left">
@@ -133,8 +133,8 @@ export default function AI2026EnterpriseTransformationPage() {
           {/* Technology Stack */}
           <section className="text-left"></section>
             <h2 className="text-left">Advanced AI Technologies</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">⚡</div>"
                 <h3 className="text-left">Quantum AI Computing</h3>"
                 <p className="text-left"></p>
@@ -168,8 +168,8 @@ export default function AI2026EnterpriseTransformationPage() {
           {/* Implementation Process */}
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Process</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>"
                 <div></div>
                   <h3 className="text-left">Assessment & Strategy</h3>"
@@ -218,8 +218,8 @@ export default function AI2026EnterpriseTransformationPage() {
           {/* Success Story */}
           <section className="text-left"></section>
             <h2 className="text-left">Client Success Story</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Fortune 500 Manufacturing Transformation</h3>"
                   <p className="text-left"></p>
@@ -227,8 +227,8 @@ export default function AI2026EnterpriseTransformationPage() {
                     in annual savings and 400% ROI within 18 months. The quantum AI computing and autonomous 
                     systems have fundamentally transformed our operations."
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">JS>
                     </div>
                     <div></div>
@@ -236,8 +236,8 @@ export default function AI2026EnterpriseTransformationPage() {
                       <div className="text-left">CEO, Global Manufacturing Corp</div>"
                     </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Annual Savings<
                     <span className="text-left">$100M>
                   </div>
@@ -321,4 +321,4 @@ export default function AI2026EnterpriseTransformationPage() {
           </section>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+}</div></div></div></div>)

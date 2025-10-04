@@ -36,8 +36,8 @@ export default function AIEdgeComputing5GIntegration2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;10ms</div>
               <div className="text-left">Response Latency</div>
             </div>
@@ -73,8 +73,8 @@ export default function AIEdgeComputing5GIntegration2025() {
 
           <h2 className="text-left">5G Integration Patterns</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Multi-Access Edge Computing (MEC)</h3>
               <ul className="text-left">
                 <li>✓ Deploy AI at cellular base stations</li>
@@ -97,8 +97,8 @@ export default function AIEdgeComputing5GIntegration2025() {
 
           <h2 className="text-left">Real-World Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🚗 Autonomous Vehicles & Smart Transportation</h3>
               <p className="text-left"></p>
                 Deploy AI at the edge for real-time object detection, path planning, and V2X communication. 
@@ -191,8 +191,8 @@ export default function AIEdgeComputing5GIntegration2025() {
 
           <h2 className="text-left">Security & Privacy</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔒 Edge Security Framework</h3>
               <ul className="text-left">
                 <li>✓ Secure boot and trusted execution environments</li>

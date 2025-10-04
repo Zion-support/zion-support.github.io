@@ -89,8 +89,8 @@ export default function AIMLPipelineAutomation2025() {
                 Modern AI/ML pipelines consist of seven critical automated stages:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">1. Automated Data Ingestion & Validation</h3>
                   <ul className="text-left">
                     <li>• Real-time data quality monitoring and anomaly detection</li>
@@ -165,8 +165,8 @@ export default function AIMLPipelineAutomation2025() {
             <section></section>
               <h2 className="text-left">Implementation Strategy: 90-Day Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Weeks 1-4 - Foundation</h3>
                   <ul className="text-left">
                     <li>• Assess current ML workflow and identify bottlenecks</li>
@@ -204,8 +204,8 @@ export default function AIMLPipelineAutomation2025() {
             <section></section>
               <h2 className="text-left">Technology Stack & Tools</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Orchestration & Workflow</h3>
                   <ul className="text-left">
                     <li>• <strong>Kubeflow Pipelines</strong> - Kubernetes-native ML workflows</li>
@@ -250,15 +250,15 @@ export default function AIMLPipelineAutomation2025() {
             <section></section>
               <h2 className="text-left">Real-World Success Stories</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🏦 Global Investment Bank: $85M Annual Savings</h3>
                   <p className="text-left"></p>
                     Implemented end-to-end ML pipeline automation for fraud detection and risk modeling across 
                     2,400 models in production.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">87%</div>
                       <div className="text-left">Faster Deployments</div>
                     </div>
@@ -278,8 +278,8 @@ export default function AIMLPipelineAutomation2025() {
                   <p className="text-left"></p>
                     Automated recommendation engine pipeline serving 500M users with real-time personalization.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">10x</div>
                       <div className="text-left">Developer Productivity</div>
                     </div>
@@ -298,8 +298,8 @@ export default function AIMLPipelineAutomation2025() {
 
             <section></section>
               <h2 className="text-left">Best Practices & Lessons Learned</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">✅ Start Simple, Scale Gradually</h3>
                   <p className="text-left"></p>
                     Begin with automating your most critical bottleneck. Achieve quick wins before expanding 
@@ -372,8 +372,8 @@ export default function AIMLPipelineAutomation2025() {
           </div>
 
           <footer className="text-left">
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Written by Zion Tech Group MLOps Team
               </div>
               <div className="text-left"></div>

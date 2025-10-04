@@ -13,11 +13,11 @@ export default function AI2026HyperintelligenceBreakthroughService() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}</div>
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Header */}</div>
+        <div className="text-left">
+        <div className="text-left"></div>
             <span className="text-left"></span>
               BREAKTHROUGH SERVICE
             </span>
@@ -34,8 +34,8 @@ export default function AI2026HyperintelligenceBreakthroughService() {
         </div>
 
         {/* Key Benefits */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">🧠</div>"
             <h3 className="text-left">10,000x Cognitive Enhancement</h3>"
             <p className="text-left">Achieve unprecedented decision-making speed and accuracy with quantum-enhanced reasoning capabilities.</p>"
@@ -54,8 +54,8 @@ export default function AI2026HyperintelligenceBreakthroughService() {
         {/* Service Components */}
         <div className="text-left"></div>
           <h2 className="text-left">Service Components</h2>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Strategic Decision Engine</h3>"
               <p className="text-left"></p>
                 Hyperintelligent system analyzing market conditions, competitive intelligence, and internal capabilities 
@@ -163,8 +163,8 @@ export default function AI2026HyperintelligenceBreakthroughService() {
         {/* Implementation Process */}
         <div className="text-left"></div>
           <h2 className="text-left">Implementation Process</h2>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>"
               <h3 className="text-left">Assessment & Planning</h3>"
               <p className="text-left"></p>
@@ -217,8 +217,8 @@ export default function AI2026HyperintelligenceBreakthroughService() {
         {/* Pricing */}
         <div className="text-left"></div>
           <h2 className="text-left">Investment Options</h2>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Enterprise Starter</h3>"
               <div className="text-left">$2.5M</div>"
               <p className="text-left">Perfect for mid-size enterprises ready to begin their hyperintelligence transformation.</p>"
@@ -247,8 +247,8 @@ export default function AI2026HyperintelligenceBreakthroughService() {
               </a>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   MOST POPULAR
                 </span>

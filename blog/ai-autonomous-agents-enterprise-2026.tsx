@@ -19,8 +19,8 @@ export default function AIAutonomousAgentsEnterprise2026() {
 
       <article className="text-left"></a>
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Brain className="text-left" />
             <span className="text-left">BREAKTHROUGH TECHNOLOGY<
           </div>
@@ -34,8 +34,8 @@ export default function AIAutonomousAgentsEnterprise2026() {
             and enabling true 24/7 intelligent operations across global enterprises.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Clock className="text-left" />
               <span>28 min read<
             </div>
@@ -52,8 +52,8 @@ export default function AIAutonomousAgentsEnterprise2026() {
         </div>
 
         {/* Key Metrics Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">89%</div>
             <div className="text-left">Efficiency Improvement</div>
           </div>

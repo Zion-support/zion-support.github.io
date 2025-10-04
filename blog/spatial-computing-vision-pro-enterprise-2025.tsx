@@ -84,8 +84,8 @@ export default function SpatialComputingVisionProEnterprise2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Use Cases: From Pilot to Production</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🏭 Industrial Design & Engineering</h3>
                     <p className="text-left"></p>
                       Automotive, aerospace, and manufacturing companies use spatial computing to visualize full-scale 
@@ -162,8 +162,8 @@ export default function SpatialComputingVisionProEnterprise2025() {
                 <p className="text-left"></p>
                   Apple Vision Pro's breakthrough performance stems from revolutionary hardware and software innovations:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">12ms End-to-End Latency</h4>
                     <p className="text-left"></p>
                       From eye movement to pixel update in 12 milliseconds—fast enough to feel instantaneous and prevent 
@@ -236,8 +236,8 @@ export default function SpatialComputingVisionProEnterprise2025() {
                 <p className="text-left"></p>
                   Successful spatial computing deployments follow a structured approach. Zion Tech Group's proven methodology:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Pilot (Weeks 1-4)</h3>
                     <ul className="text-left">
                       <li>• Identify 3-5 high-value use cases with measurable KPIs</li>
@@ -319,8 +319,8 @@ export default function SpatialComputingVisionProEnterprise2025() {
                   As an Apple Enterprise Partner and spatial computing specialist, Zion Tech Group provides 
                   end-to-end implementation services:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <h4 className="text-left">Strategy & Planning</h4>
                       <ul className="text-left">
@@ -374,8 +374,8 @@ export default function SpatialComputingVisionProEnterprise2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Spatial Computing Team
                 </div>
                 <div className="text-left"></div>

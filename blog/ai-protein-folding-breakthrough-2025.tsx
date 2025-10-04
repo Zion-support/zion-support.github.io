@@ -64,8 +64,8 @@ export default function AIProteinFoldingBreakthrough2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">AlphaFold 3 and Beyond: The AI Revolution</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">99.8% Accuracy in Milliseconds</h3>
                     <p className="text-left"></p>
                       The latest generation of AI protein folding models achieves 99.8% accuracy across all 
@@ -131,8 +131,8 @@ export default function AIProteinFoldingBreakthrough2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Breakthrough Applications</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Cancer Therapeutics</h3>
                     <p className="text-left"></p>
                       AI-predicted structures of oncogenic proteins have enabled the design of highly specific 
@@ -171,8 +171,8 @@ export default function AIProteinFoldingBreakthrough2025() {
                 <p className="text-left"></p>
                   Modern AI protein folding systems combine multiple advanced techniques:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Transformer Neural Networks</h4>
                     <p className="text-left"></p>
                       Self-attention mechanisms capture long-range interactions between amino acids, 
@@ -303,8 +303,8 @@ export default function AIProteinFoldingBreakthrough2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Research Team
                 </div>
                 <div className="text-left"></div>

@@ -19,11 +19,11 @@ export default function AIBlockchainIntegration2025Page() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}</div>
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Header */}</div>
+        <div className="text-left">
+        <div className="text-left"></div>
             <Link href="/services" className="text-left">
               ← Back to Services
             </Link>
@@ -38,8 +38,8 @@ export default function AIBlockchainIntegration2025Page() {
           </div>
 
           {/* Success Metrics */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">Blockchain Performance</h2>"
               <div className="text-left"></div>
                 <div></div>
@@ -69,8 +69,8 @@ export default function AIBlockchainIntegration2025Page() {
               business needs in real-time.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Blockchain Features</h3>"
                 <ul className="text-left">
                   <li className="text-left">
@@ -134,8 +134,8 @@ export default function AIBlockchainIntegration2025Page() {
           {/* Technology Stack */}
           <section className="text-left"></section>
             <h2 className="text-left">AI-Enhanced Blockchain Technology</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🤖</div>"
                 <h3 className="text-left">Intelligent Smart Contracts</h3>"
                 <p className="text-left"></p>
@@ -169,8 +169,8 @@ export default function AIBlockchainIntegration2025Page() {
           {/* Use Cases */}
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Blockchain Solutions</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">💰</div>"
                 <div></div>
                   <h3 className="text-left">Supply Chain Transparency</h3>"
@@ -219,8 +219,8 @@ export default function AIBlockchainIntegration2025Page() {
           {/* Success Story */}
           <section className="text-left"></section>
             <h2 className="text-left">Client Success Story</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Global Supply Chain Revolutionized</h3>"
                   <p className="text-left"></p>
@@ -229,8 +229,8 @@ export default function AIBlockchainIntegration2025Page() {
                     Fraud dropped by 95%, efficiency increased 300%, and customers love the transparency. 
                     The AI-powered smart contracts handle everything automatically. Game-changing technology."
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">RL>
                     </div>
                     <div></div>
@@ -238,8 +238,8 @@ export default function AIBlockchainIntegration2025Page() {
                       <div className="text-left">COO, GlobalTrade Logistics</div>"
                     </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Assets Tracked<
                     <span className="text-left">$5B>
                   </div>
@@ -323,4 +323,4 @@ export default function AIBlockchainIntegration2025Page() {
           </section>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div>)
+}</div></div></div></div>)

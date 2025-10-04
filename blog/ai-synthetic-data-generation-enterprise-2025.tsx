@@ -50,8 +50,8 @@ const AISyntheticDataGenerationEnterprise2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">🎯 Executive Summary</h2>
             <p className="text-left"></p>
               Synthetic data generation is transforming enterprise AI. Leading organizations are creating unlimited high-quality training data that preserves privacy, reduces costs, and accelerates model development by 10x.

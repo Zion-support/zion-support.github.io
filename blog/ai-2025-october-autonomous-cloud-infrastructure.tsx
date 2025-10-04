@@ -35,8 +35,8 @@ export default function AI2025OctoberAutonomousCloudInfrastructure() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.99%</div>
               <div className="text-left">Service Uptime</div>
             </div>
@@ -99,8 +99,8 @@ export default function AI2025OctoberAutonomousCloudInfrastructure() {
 
           <h2 className="text-left">Core Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 AI Control Plane</h3>
               <p className="text-left"></p>
                 Centralized AI engine that monitors all infrastructure, predicts issues, and orchestrates 
@@ -163,11 +163,11 @@ export default function AI2025OctoberAutonomousCloudInfrastructure() {
 
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🤖 AI & ML Layer</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">TensorFlow</div>
                   <div className="text-left">Anomaly Detection</div>
                 </div>
@@ -188,8 +188,8 @@ export default function AI2025OctoberAutonomousCloudInfrastructure() {
 
             <div className="text-left"></div>
               <h3 className="text-left">⚙️ Orchestration</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Kubernetes</div>
                   <div className="text-left">Container Orchestration</div>
                 </div>
@@ -210,8 +210,8 @@ export default function AI2025OctoberAutonomousCloudInfrastructure() {
 
             <div className="text-left"></div>
               <h3 className="text-left">📡 Observability</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Prometheus</div>
                   <div className="text-left">Metrics</div>
                 </div>
@@ -236,8 +236,8 @@ export default function AI2025OctoberAutonomousCloudInfrastructure() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 6-Month Transformation</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Month 1-2: Foundation</h4>

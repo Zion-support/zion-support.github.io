@@ -55,8 +55,8 @@ export default function AIObservabilityAPMRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">📊 Intelligent Monitoring Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">95%</div>
                     <div className="text-left">Incident Prediction</div>
                   </div>
@@ -109,8 +109,8 @@ export default function AIObservabilityAPMRevolution2025() {
                   94% of potential outages before customer impact.
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Platform Capabilities</h4>
                     <ul className="text-left">
                       <li>✓ Real-time anomaly detection across 500M+ metrics</li>
@@ -164,8 +164,8 @@ export default function AIObservabilityAPMRevolution2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">ROI Analysis</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Prevented Outage Cost Savings<
                     <span className="text-left">$28M<
                   </div>
@@ -186,8 +186,8 @@ export default function AIObservabilityAPMRevolution2025() {
 
               <h2 className="text-left">Implementation Strategy</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                   <ul className="text-left">
                     <li>• Instrument applications with OpenTelemetry</li>
@@ -220,8 +220,8 @@ export default function AIObservabilityAPMRevolution2025() {
 
               <h2 className="text-left">Advanced Capabilities</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🔮 Predictive Insights</h3>
                   <ul className="text-left">
                     <li>• Capacity planning with 95% accuracy</li>

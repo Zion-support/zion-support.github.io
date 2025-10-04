@@ -36,7 +36,7 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">🎯 Executive Summary</h2>
           <ul className="text-left">
@@ -127,8 +127,8 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
           
           <h4 className="text-left">Core Components</h4>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h5 className="text-left">1. Agent Orchestrator</h5>
               <p className="text-left">Central coordination layer for agent workflows</p>
               <ul className="text-left">
@@ -187,12 +187,12 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
 
         <h2>Reliability Patterns for AI Agents</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🛡️ Production Resilience Strategies</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Pattern 1: Cascading Model Fallbacks</h4>
                 <p className="text-left"></p>
                   Start with fastest/cheapest model, escalate to more capable models on failure
@@ -324,8 +324,8 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
           <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Agent-Specific Metrics</h4>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <p className="text-left">Task Success Rate</p>
                   <p className="text-left">% of tasks completed successfully</p>
                 </div>
@@ -376,8 +376,8 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
 
         <h2>Real-World Implementation Case Studies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏦 Global Investment Bank</h3>
             <p className="text-left"></p>
               <strong>Use Case:</strong> AI agents for trade reconciliation and compliance reporting
@@ -482,8 +482,8 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
 
         <h2>Cost Optimization Strategies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">💡 Strategy 1: Intelligent Caching</h4>
             <p className="text-left"></p>
               Cache agent responses for common queries and scenarios
@@ -589,8 +589,8 @@ const ProductionReadyAIAgentsFramework: React.FC = () =>
         <div className="text-left"></div>
           <h3 className="text-left">🗓️ From Prototype to Production</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Phase 1 (Days 1-30): Foundation</h4>
               <ul className="text-left">
                 <li>✅ Select agent framework and architecture</li>

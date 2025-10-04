@@ -36,8 +36,8 @@ const MultiAgentMeshNetworksCoordination = () =>
               <p className="text-left"></p>
                 Multi-agent mesh networks represent the next evolution in distributed AI systems. By enabling autonomous agents to coordinate in real-time without central control, organizations achieve unprecedented scalability, resilience, and intelligence. This guide reveals how to architect and deploy production-grade mesh networks that power everything from autonomous vehicles to smart cities.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">99.9%</div>
                   <div className="text-left">System Reliability</div>
                 </div>
@@ -123,8 +123,8 @@ class MeshAgent:
             <h3 className="text-left">2. Consensus Mechanisms</h3>
             <div className="text-left"></div>
               <p className="text-left"><strong>Distributed Decision Making:</strong></p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Raft Consensus</h4>
                   <ul className="text-left">
                     <li>• Strong consistency</li>
@@ -189,8 +189,8 @@ class TopologyOptimizer:
           <section className="text-left"></section>
             <h2 className="text-left">🎯 Advanced Coordination Patterns</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🐝 Swarm Coordination</h3>
                 <p className="text-left">Inspired by nature, swarm patterns enable emergent intelligence:</p>
                 <ul className="text-left">
@@ -228,12 +228,12 @@ class TopologyOptimizer:
           <section className="text-left"></section>
             <h2 className="text-left">📊 Production Success Stories</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🚗 Autonomous Vehicle Fleet</h3>
                 <p className="text-left">Mesh network enabling 5,000 self-driving cars to coordinate in real-time:</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">5,000</div>
                     <div className="text-left">Connected Vehicles</div>
                   </div>
@@ -255,8 +255,8 @@ class TopologyOptimizer:
               <div className="text-left"></div>
                 <h3 className="text-left">🏭 Smart Manufacturing</h3>
                 <p className="text-left">200 robotic agents coordinating production in real-time:</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$1.8B</div>
                     <div className="text-left">Annual Value</div>
                   </div>
@@ -278,8 +278,8 @@ class TopologyOptimizer:
               <div className="text-left"></div>
                 <h3 className="text-left">🏙️ Smart City Infrastructure</h3>
                 <p className="text-left">50,000 IoT agents managing city-wide systems:</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">50K</div>
                     <div className="text-left">Active Agents</div>
                   </div>
@@ -329,8 +329,8 @@ class TopologyOptimizer:
           <section className="text-left"></section>
             <h2 className="text-left">🚀 Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                 <ul className="text-left">
                   <li>✓ Define agent interfaces and capabilities</li>
@@ -364,8 +364,8 @@ class TopologyOptimizer:
 
           <section className="text-left"></section>
             <h2 className="text-left">🔮 Future Innovations</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🧬 Self-Evolving Topologies</h3>
                 <p>AI-driven network architectures that evolve based on workload patterns and performance metrics.</p>
               </div>

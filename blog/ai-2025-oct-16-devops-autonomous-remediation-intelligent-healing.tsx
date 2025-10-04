@@ -53,8 +53,8 @@ export default function DevOpsAutonomousRemediationIntelligentHealing2025() {
               </p>
             </header>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">🚀 Why Autonomous Remediation is Critical in 2025</h2>
                 <p className="text-left"></p>
                   Manual incident response is too slow for modern systems. Every minute of downtime costs thousands of dollars. 
@@ -779,8 +779,8 @@ REMEDIATION_PLAYBOOKS = [
 
               <h2 className="text-left">Real-World Success Metrics</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">E-Commerce Platform</h4>
                   <ul className="text-left">
                     <li>✓ 99.99% uptime (from 99.5% before automation)</li>

@@ -56,8 +56,8 @@ export default function NeuralCodeGenerationRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">⚡ Development Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">8.5x</div>
                     <div className="text-left">Development Speed</div>
                   </div>
@@ -191,8 +191,8 @@ export default function NeuralCodeGenerationRevolution2025() {
 
               <h2 className="text-left">Enterprise Adoption</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">💻 Tech Giant Success</h4>
                   <ul className="text-left">
                     <li>• 5,000+ engineers using AI coding tools</li>

@@ -52,8 +52,8 @@ export default function AIRealTimeVideoIntelligenceRevolution2026() {
               Revolutionary breakthrough in real-time video intelligence achieving 60 FPS multi-object tracking with 98.7% accuracy. Master advanced computer vision, edge deployment strategies, and streaming analytics that deliver sub-30ms processing latency with 90% cost reduction.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>February 1, 2026<
               </div>
@@ -69,8 +69,8 @@ export default function AIRealTimeVideoIntelligenceRevolution2026() {
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">🚀 Breakthrough Capabilities</h2>
               <ul className="text-left">
                 <li>✅ <strong>60 FPS Processing</strong> — Real-time analysis without frame dropping</li>
@@ -284,8 +284,8 @@ export default function AIRealTimeVideoIntelligenceRevolution2026() {
           </div>
 
           {/* Share Section */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left">Share this article:<
                 <button className="text-left">

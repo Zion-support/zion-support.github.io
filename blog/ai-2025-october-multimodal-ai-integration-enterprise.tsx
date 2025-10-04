@@ -56,8 +56,8 @@ export default function MultiModalAIIntegration2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🌟 Breakthrough Capabilities</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">92%</div>
                     <div className="text-left">Better Decision Accuracy</div>
                   </div>
@@ -166,8 +166,8 @@ export default function MultiModalAIIntegration2025() {
 
               <h2 className="text-left">Enterprise Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏭 Manufacturing Quality Control</h4>
                   <ul className="text-left">
                     <li>• Visual inspection + acoustic analysis for defect detection</li>

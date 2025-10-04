@@ -25,7 +25,7 @@ const GenerativeAISecurityFramework2025: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">🚨 Executive Summary</h2>
           <p className="text-left"></p>
@@ -34,8 +34,8 @@ const GenerativeAISecurityFramework2025: React.FC = () =>
             threaten to undermine the transformative potential of these technologies. This comprehensive framework provides 
             battle-tested strategies to secure LLM deployments while maintaining business velocity.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">78%</div>
               <div className="text-left">Enterprises Report AI Security Concerns</div>
             </div>
@@ -57,8 +57,8 @@ const GenerativeAISecurityFramework2025: React.FC = () =>
         </p>
 
         <h3 className="text-left">Critical Threat Vectors</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🎯 Prompt Injection Attacks</h4>
             <p className="text-left"></p>
               Malicious users craft inputs that manipulate LLM behavior, bypassing safety guardrails to extract sensitive data, 
@@ -128,8 +128,8 @@ const GenerativeAISecurityFramework2025: React.FC = () =>
           defense-in-depth across the entire AI lifecycle—from data preparation through production deployment.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Layer 1: Input Validation & Sanitization</h3>
             <p className="text-left"></p>
               Every user input must pass through multi-stage validation before reaching the LLM, detecting and neutralizing 
@@ -288,8 +288,8 @@ const GenerativeAISecurityFramework2025: React.FC = () =>
           comprehensive governance frameworks tailored to generative AI.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Data Governance</h4>
             <ul className="text-left">
               <li>• Data classification and labeling systems</li>
@@ -315,8 +315,8 @@ const GenerativeAISecurityFramework2025: React.FC = () =>
         <p className="text-left"></p>
           Establish quantitative metrics to track security posture improvements and demonstrate ROI to stakeholders.
         </p>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Key Performance Indicators</h4>
               <ul className="text-left">

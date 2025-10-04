@@ -56,8 +56,8 @@ export default function RealTimeAIObservabilityRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">500K+</div>
                     <div className="text-left">Metrics Per Second</div>
                   </div>
@@ -166,8 +166,8 @@ export default function RealTimeAIObservabilityRevolution2025() {
                   A leading fintech company deployed AI observability across 12,000 microservices processing 
                   2M transactions per minute, achieving unprecedented reliability and cost savings.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">97%</div>
                     <div className="text-left">Faster mean time to resolution (MTTR)</div>
                   </div>
@@ -192,8 +192,8 @@ export default function RealTimeAIObservabilityRevolution2025() {
                   A global e-commerce platform used predictive observability to handle 10x traffic spikes 
                   during Black Friday without a single customer-impacting incident.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">45 min</div>
                     <div className="text-left">Average prediction lead time before incidents</div>
                   </div>
@@ -214,8 +214,8 @@ export default function RealTimeAIObservabilityRevolution2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Instrumentation (Weeks 1-4)</h3>
                   <ul className="text-left">
                     <li>• Deploy observability agents across infrastructure and applications</li>

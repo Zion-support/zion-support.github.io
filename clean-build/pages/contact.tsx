@@ -43,8 +43,8 @@ export default function Contact() {
       <div className="text-left"></div>
         {/* Hero Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
             <div className="text-left"></div>
               <h1 className="text-left">
                 Get In <span className="text-left">Touch<
@@ -59,13 +59,13 @@ export default function Contact() {
 
         {/* Contact Form Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h2 className="text-left">Contact Information</h2>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left"></div>
                         <span className="text-left">📧<
                       </div>
@@ -74,8 +74,8 @@ export default function Contact() {
                         <p className="text-left">contact@ziontechgroup.com</p>
                       </div>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">📞<
                       </div>
                       <div></div>
@@ -83,8 +83,8 @@ export default function Contact() {
                         <p className="text-left">+1 (555) 123-4567</p>
                       </div>
                     </div>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <span className="text-left">📍<
                       </div>
                       <div></div>
@@ -97,8 +97,8 @@ export default function Contact() {
 
                 <div className="text-left"></div>
                   <h2 className="text-left">Business Hours</h2>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Monday - Friday<
                       <span className="text-left">9:00 AM - 6:00 PM<
                     </div>
@@ -192,15 +192,15 @@ export default function Contact() {
 
         {/* FAQ Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Frequently Asked <span className="text-left">Questions<
               </h2>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">How quickly can you start my project?</h3>
                 <p className="text-left"></p>
                   We typically begin new projects within 1-2 weeks of contract signing. 

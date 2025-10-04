@@ -161,8 +161,8 @@ export default function ConversationalAIEnterprise2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Use Cases by Industry</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🏦 Financial Services</h3>
                     <p className="text-left"></p>
                       Account inquiries, fraud detection, loan applications, investment advice, and secure 
@@ -195,8 +195,8 @@ export default function ConversationalAIEnterprise2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Timeline</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Discovery & Design (2-3 weeks)</h3>
                     <p className="text-left"></p>
                       Use case identification, conversation design, integration planning, and success metrics definition.
@@ -225,8 +225,8 @@ export default function ConversationalAIEnterprise2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Technology & Security</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Enterprise Security</h3>
                     <ul className="text-left">
                       <li>• SOC 2 Type II certified infrastructure</li>

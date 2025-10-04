@@ -46,8 +46,8 @@ export default function AIAgentsAutonomousSupplyChain2026() {
       {/* Executive Summary */}
       <section className="text-left"></section>
         <h2 className="text-left">Executive Summary</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">$200M+</div>
             <div className="text-left">Annual cost savings</div>
           </div>
@@ -189,8 +189,8 @@ export default function AIAgentsAutonomousSupplyChain2026() {
         </div>
 
         <h2 className="text-left">Implementation Roadmap: 6-Month Plan</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Month 1-2: Foundation</h4>
             <ul className="text-left">
               <li>Map current supply chain processes and data sources</li>
@@ -235,8 +235,8 @@ export default function AIAgentsAutonomousSupplyChain2026() {
             <li>Logistics agents cut delivery time from 5 days to 2 days</li>
             <li>Risk agents identified and mitigated 95% of potential disruptions</li>
           </ul>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$200M</div>
               <div className="text-left">Annual Savings</div>
             </div>
@@ -259,8 +259,8 @@ export default function AIAgentsAutonomousSupplyChain2026() {
         </div>
 
         <h2 className="text-left">Challenges & Mitigation Strategies</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Challenge: Trust & Change Management</h4>
             <p className="text-left"></p>
               <strong>Mitigation:</strong> Start with human-in-the-loop mode, gradually increasing agent autonomy as trust 
@@ -284,8 +284,8 @@ export default function AIAgentsAutonomousSupplyChain2026() {
         </div>
 
         <h2 className="text-left">Future Roadmap: 2026-2027</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🌐 Global Agent Networks</h4>
             <p className="text-left"></p>
               Multi-enterprise agent networks where suppliers, manufacturers, and retailers share autonomous agents 
@@ -316,8 +316,8 @@ export default function AIAgentsAutonomousSupplyChain2026() {
         </div>
 
         <h2 className="text-left">Cost-Benefit Analysis</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Initial Investment (6-month implementation)</h4>
               <ul className="text-left">

@@ -87,8 +87,8 @@ export default function NeuralSecurityZeroTrustEvolution2025() {
                   continuously across all digital assets:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🧠 Threat Prediction Engine</h3>
                     <ul className="text-left">
                       <li>• Deep learning on global threat data</li>
@@ -133,8 +133,8 @@ export default function NeuralSecurityZeroTrustEvolution2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Enterprise Impact: Bulletproof Security at Scale</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Fortune 100 Technology Company: Zero Successful Breaches</h3>
                     <p className="text-left"></p>
                       A global tech giant deployed neural security across 500,000+ endpoints and 10,000+ applications, 
@@ -209,8 +209,8 @@ export default function NeuralSecurityZeroTrustEvolution2025() {
                   a cohesive defense framework:
                 </p>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Threat Intelligence Foundation</h3>
                     <p className="text-left"></p>
                       Build comprehensive threat intelligence by aggregating data from global sources, dark web 

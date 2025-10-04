@@ -35,8 +35,8 @@ export default function AI2025OctoberCostOptimizationFinOps() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">68%</div>
               <div className="text-left">Cost Reduction</div>
             </div>
@@ -99,8 +99,8 @@ export default function AI2025OctoberCostOptimizationFinOps() {
 
           <h2 className="text-left">Cost Optimization Strategies</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚡ Right-Sizing Instances</h3>
               <p className="text-left"></p>
                 Match compute resources to actual workload requirements. Use autoscaling, spot instances, 
@@ -163,15 +163,15 @@ export default function AI2025OctoberCostOptimizationFinOps() {
 
           <h2 className="text-left">FinOps Best Practices</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📈 Cost Attribution Model</h3>
               <p className="text-left"></p>
                 Implement comprehensive tagging and cost allocation to track spending by team, project, 
                 model, and environment. Enable accountability and informed decision-making.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Per-Model</div>
                   <div className="text-left">Training & Inference</div>
                 </div>
@@ -192,8 +192,8 @@ export default function AI2025OctoberCostOptimizationFinOps() {
                 Set budgets at project, team, and organizational levels with real-time tracking, 
                 alerts, and automatic enforcement to prevent cost overruns.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Real-Time</div>
                   <div className="text-left">Spend Tracking</div>
                 </div>
@@ -214,8 +214,8 @@ export default function AI2025OctoberCostOptimizationFinOps() {
                 Regular cost reviews, automated recommendations, and continuous right-sizing to adapt 
                 to changing workloads and maintain optimal cost efficiency.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Weekly</div>
                   <div className="text-left">Cost Reviews</div>
                 </div>
@@ -236,8 +236,8 @@ export default function AI2025OctoberCostOptimizationFinOps() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 8-Week FinOps Deployment</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Cost Assessment & Baseline</h4>
@@ -332,8 +332,8 @@ export default function AI2025OctoberCostOptimizationFinOps() {
 
           <h2 className="text-left">Success Metrics</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">68%</div>
               <div className="text-left">Average Cost Reduction</div>
               <div className="text-left">Through comprehensive optimization</div>

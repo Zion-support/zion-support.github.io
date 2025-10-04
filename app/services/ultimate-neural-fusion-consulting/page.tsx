@@ -14,8 +14,8 @@ export default function UltimateNeuralFusionConsulting() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <article className="text-left"></a>
           <header className="text-left">
             <div className="text-left"></div>
@@ -35,8 +35,8 @@ export default function UltimateNeuralFusionConsulting() {
 
           {/* Key Metrics */}
           <section className="text-left"></section>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">500,000x</div>"
                 <div className="text-left">Performance Boost</div>"
               </div>
@@ -114,8 +114,8 @@ export default function UltimateNeuralFusionConsulting() {
           {/* Implementation Process */}
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Process</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">📊</div>"
                 <h3 className="text-left">Assessment & Analysis</h3>"
                 <p className="text-left"></p>
@@ -198,8 +198,8 @@ export default function UltimateNeuralFusionConsulting() {
           {/* Pricing */}
           <section className="text-left"></section>
             <h2 className="text-left">Investment Options</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Enterprise Assessment</h3>"
                 <div className="text-left">$50,000</div>"
                 <ul className="text-left">
@@ -225,8 +225,8 @@ export default function UltimateNeuralFusionConsulting() {
                 </Link>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left"></span>
                     RECOMMENDED
                   </span>

@@ -155,8 +155,8 @@ const IntelligentDocumentProcessingAutomationArticle = () =>
           <p></p>
             Organizations implementing intelligent document processing report transformative results:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Processing Metrics</h3>
               <ul className="text-left">
                 <li>• <strong>99.7%</strong> extraction accuracy</li>

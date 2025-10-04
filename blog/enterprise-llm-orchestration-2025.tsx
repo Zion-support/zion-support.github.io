@@ -50,8 +50,8 @@ const EnterpriseLLMOrchestration2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Why LLM Orchestration Matters</h3>
             <ul className="text-left">
               <li><strong>70% Cost Reduction:</strong> Route simple queries to cheap models, complex ones to premium models</li>
@@ -78,8 +78,8 @@ const EnterpriseLLMOrchestration2025: React.FC = () =>
 
           <div className="text-left"></div>
             <h3 className="text-left">🏗️ Enterprise LLM Architecture</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Layer 1: Application Integration</h4>
                 <p className="text-left">Single API endpoint for all LLM requests from applications, tools, and users</p>
               </div>
@@ -189,8 +189,8 @@ const EnterpriseLLMOrchestration2025: React.FC = () =>
 
           <h2 className="text-left">Implementation Roadmap</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Phase 1: Inventory & Assessment (Week 1)</h4>
               <p className="text-left">Map all current LLM usage across organization. Identify cost drivers, latency bottlenecks, and quality issues. 
               Define success metrics and ROI targets.</p>
@@ -228,8 +228,8 @@ const EnterpriseLLMOrchestration2025: React.FC = () =>
 
           <h2 className="text-left">Measuring Orchestration Success</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Cost Metrics</h4>
               <ul className="text-left">
                 <li>• Total LLM spend ($/month)</li>
@@ -306,8 +306,8 @@ const EnterpriseLLMOrchestration2025: React.FC = () =>
           </p>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Share this article:</h4>
               <div className="text-left"></div>

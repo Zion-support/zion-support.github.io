@@ -53,11 +53,11 @@ export default function IntelligentObservabilityUnifiedPlatform2025() {
               </p>
             </header>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">📊 Transformative Results</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">92%</div>
                     <div className="text-left">MTTR Reduction</div>
                   </div>

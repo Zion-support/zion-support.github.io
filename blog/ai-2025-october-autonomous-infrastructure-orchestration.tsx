@@ -125,8 +125,8 @@ const autonomousHealthSystem =
                   optimization happens in real-time, adjusting to changing demands without manual intervention.
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Cost Optimization</h4>
                     <ul className="text-left">
                       <li>• Dynamic right-sizing of compute resources</li>
@@ -188,8 +188,8 @@ const autonomousHealthSystem =
                   innovation with operational stability. Here's a proven roadmap for Fortune 500 enterprises:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Foundation (Months 1-3)</h4>
                     <p className="text-left"></p>
                       Establish observability infrastructure, implement centralized monitoring, 
@@ -240,8 +240,8 @@ const autonomousHealthSystem =
                   infrastructure orchestration:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Global E-Commerce Platform</h4>
                     <p className="text-left"></p>
                       Reduced infrastructure costs by 91% while handling 10x traffic growth during peak seasons. 

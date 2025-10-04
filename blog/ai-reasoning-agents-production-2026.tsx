@@ -47,8 +47,8 @@ const AIReasoningAgentsProduction2026 = () =>
               Deploy production-ready reasoning agents that think, plan, and execute complex business workflows autonomously with 95%+ success rates.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -64,8 +64,8 @@ const AIReasoningAgentsProduction2026 = () =>
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Key Takeaways</h3>
               <ul className="text-left">
                 <li>✅ Build reasoning agents achieving 95%+ task completion rates</li>

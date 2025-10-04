@@ -46,8 +46,8 @@ export default function AIAgentSwarmsEnterpriseOrchestration2026() {
       {/* Executive Summary */}
       <section className="text-left"></section>
         <h2 className="text-left">Executive Summary</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">10,000x</div>
             <div className="text-left">Scale vs traditional agents</div>
           </div>
@@ -96,8 +96,8 @@ export default function AIAgentSwarmsEnterpriseOrchestration2026() {
         
         <div className="text-left"></div>
           <h3 className="text-left">Core Swarm Principles</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🐝 Emergent Behavior</h4>
               <p className="text-left">Complex behaviors arising from simple agent interactions without central control</p>
             </div>
@@ -113,8 +113,8 @@ export default function AIAgentSwarmsEnterpriseOrchestration2026() {
         </div>
 
         <h3 className="text-left">Swarm Architecture Patterns</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Hierarchical Swarm Architecture</h4>
             <p className="text-left"></p>
               Multi-tiered swarm systems with specialized agent roles and communication protocols:
@@ -214,8 +214,8 @@ class SwarmOrchestrator
         </div>
 
         <h3 className="text-left">Intelligence Amplification Techniques</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h4 className="text-left">🔄 Knowledge Sharing Networks</h4>
               <p className="text-left"></p>
@@ -258,11 +258,11 @@ class SwarmLearningSystem
       <section id="enterprise-applications" className="text-left"></section>
         <h2 className="text-left">3. Enterprise Applications & Use Cases</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏭 Manufacturing & Supply Chain</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Production Optimization</h4>
                 <p className="text-left"></p>
                   Swarm agents coordinate production schedules, resource allocation, and quality control across multiple facilities.
@@ -279,8 +279,8 @@ class SwarmLearningSystem
 
           <div className="text-left"></div>
             <h3 className="text-left">💰 Financial Services</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Risk Assessment</h4>
                 <p className="text-left"></p>
                   Distributed risk analysis through specialized agent swarms monitoring market conditions and portfolio performance.
@@ -296,11 +296,11 @@ class SwarmLearningSystem
           </div>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏥 Healthcare & Life Sciences</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Drug Discovery</h4>
                 <p className="text-left"></p>
                   Collaborative agent swarms accelerate molecular analysis, compound screening, and clinical trial optimization.
@@ -317,8 +317,8 @@ class SwarmLearningSystem
 
           <div className="text-left"></div>
             <h3 className="text-left">🛒 Retail & E-commerce</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Demand Forecasting</h4>
                 <p className="text-left"></p>
                   Swarm intelligence predicts demand patterns, optimizes inventory, and personalizes customer experiences.
@@ -341,8 +341,8 @@ class SwarmLearningSystem
         
         <div className="text-left"></div>
           <h3 className="text-left">Implementation Roadmap</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>
               <div></div>
                 <h4 className="text-left">Foundation Setup</h4>
@@ -382,8 +382,8 @@ class SwarmLearningSystem
         </div>
 
         <h3 className="text-left">Best Practices & Considerations</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h4 className="text-left">🔧 Technical Best Practices</h4>
               <ul className="text-left">
@@ -406,8 +406,8 @@ class SwarmLearningSystem
               </ul>
             </div>
           </div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🎯 Operational Considerations</h4>
               <ul className="text-left">
                 <li className="text-left">
@@ -436,11 +436,11 @@ class SwarmLearningSystem
       <section id="case-studies" className="text-left"></section>
         <h2 className="text-left">5. Real-World Case Studies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏭 Global Manufacturing Corporation</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$2.5B</div>
                 <div className="text-left">Annual cost savings</div>
               </div>
@@ -462,8 +462,8 @@ class SwarmLearningSystem
 
           <div className="text-left"></div>
             <h3 className="text-left">💰 Fortune 500 Financial Services</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.7%</div>
                 <div className="text-left">Fraud detection accuracy</div>
               </div>
@@ -519,8 +519,8 @@ class SwarmLearningSystem
         </div>
 
         <h3 className="text-left">2026-2030 Roadmap</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">2026</div>
             <div></div>
               <h4 className="text-left">Quantum-Swarm Integration</h4>

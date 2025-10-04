@@ -53,13 +53,13 @@ const AINeruralCodingBreakthrough2025 = () =>
           </header>
 
           {/* Key Highlights */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Sparkles className="text-left" />
               <h2 className="text-left">Key Breakthrough Highlights</h2>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <CheckCircle className="text-left" />
                 <div></div>
                   <h3 className="text-left">99.7% Code Accuracy</h3>
@@ -148,8 +148,8 @@ const AINeruralCodingBreakthrough2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Real-World Impact</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <TrendingUp className="text-left" />
                   <h3 className="text-left">Enterprise Success</h3>
                   <p className="text-left"></p>
@@ -172,8 +172,8 @@ const AINeruralCodingBreakthrough2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Key Features & Capabilities</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Multi-Language Mastery</h3>
                   <p className="text-left">Supports 30+ programming languages including Python, JavaScript, Rust, Go, and emerging languages</p>
                 </div>

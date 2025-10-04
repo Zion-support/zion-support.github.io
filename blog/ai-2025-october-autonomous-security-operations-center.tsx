@@ -35,8 +35,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">2.3s</div>
               <div className="text-left">Avg Response Time</div>
             </div>
@@ -191,8 +191,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
               and 340,000 employees, achieving unprecedented security outcomes:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">100%</div>
                 <div className="text-left">Ransomware Prevention</div>
                 <div className="text-left"></div>
@@ -233,8 +233,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
           
           <div className="text-left"></div>
             {/* Phase 1 */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">Phase 1</div>
                 <h3 className="text-left">Foundation (Months 1-3)</h3>
               </div>
@@ -247,8 +247,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
             </div>
 
             {/* Phase 2 */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">Phase 2</div>
                 <h3 className="text-left">Automation (Months 4-6)</h3>
               </div>
@@ -261,8 +261,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
             </div>
 
             {/* Phase 3 */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">Phase 3</div>
                 <h3 className="text-left">Autonomous Operations (Months 7-12)</h3>
               </div>
@@ -280,8 +280,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
         <section className="text-left"></section>
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">SIEM & SOAR</h3>
               <ul className="text-left">
                 <li>• Splunk Enterprise Security</li>
@@ -320,8 +320,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
           <div className="text-left"></div>
             <div></div>
               <h3 className="text-left">Cost Savings (Annual)</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Security Staff Reduction<
                   <span className="text-left">$3.2M/year<
                 </div>
@@ -346,8 +346,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
 
             <div></div>
               <h3 className="text-left">Implementation Investment</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">SIEM/SOAR Platforms<
                   <span className="text-left">$1.2M<
                 </div>
@@ -363,8 +363,8 @@ export default function AI2025OctoberAutonomousSecurityOperationsCenter() {
                   <span className="text-left">Training & Change Management<
                   <span className="text-left">$410K<
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Total Investment<
                     <span className="text-left">$3.4M<
                   </div>

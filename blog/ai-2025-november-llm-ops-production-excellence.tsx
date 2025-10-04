@@ -81,8 +81,8 @@ export default function LLMOpsProductionExcellence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">The LLMOps Maturity Model</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">
                       <span className="text-left">⚠️< Level 0: Chaos (Where Most Teams Start)
                     </h3>
@@ -139,8 +139,8 @@ export default function LLMOpsProductionExcellence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core LLMOps Components</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Prompt Management</h3>
                     <ul className="text-left">
                       <li>• Version control for all prompts</li>
@@ -201,8 +201,8 @@ export default function LLMOpsProductionExcellence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Cost Optimization Strategies</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Intelligent Caching (50-70% savings)</h3>
                     <div className="text-left"></div>
                       <div></div>
@@ -264,8 +264,8 @@ export default function LLMOpsProductionExcellence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Production Deployment Patterns</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Pattern 1: Streaming Architecture</h3>
                     <p className="text-left">Deliver responses progressively for better perceived performance</p>
                     <div className="text-left"></div>
@@ -369,8 +369,8 @@ export default function LLMOpsProductionExcellence2025() {
                 <div className="text-left"></div>
                   <h3 className="text-left">Distributed Tracing for LLMs</h3>
                   <p className="text-left">Track every LLM request end-to-end across your stack</p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <strong className="text-left">Span Structure:</strong>
                       <ul className="text-left">
                         <li>• API Gateway span (authentication, rate limiting)</li>
@@ -387,12 +387,12 @@ export default function LLMOpsProductionExcellence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Case Studies</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">SaaS Startup: Customer Support Automation</h3>
                     <p className="text-left">Built GPT-4 powered support agent serving 50K+ queries/day</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">99.8%</div>
                         <div className="text-left">Uptime SLA</div>
                       </div>
@@ -422,8 +422,8 @@ export default function LLMOpsProductionExcellence2025() {
                   <div className="text-left"></div>
                     <h3 className="text-left">Enterprise: Legal Document Analysis</h3>
                     <p className="text-left">Processing 10K+ contracts monthly with 99.5% accuracy</p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">99.5%</div>
                         <div className="text-left">Extraction Accuracy</div>
                       </div>
@@ -455,11 +455,11 @@ export default function LLMOpsProductionExcellence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">LLMOps Technology Stack</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Orchestration & Frameworks</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">LangChain / LangGraph</div>
                         <div className="text-left">Agent orchestration, chains, tools</div>
                       </div>
@@ -476,8 +476,8 @@ export default function LLMOpsProductionExcellence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Observability & Monitoring</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">LangSmith</div>
                         <div className="text-left">LLM traces, prompt management, testing</div>
                       </div>
@@ -494,8 +494,8 @@ export default function LLMOpsProductionExcellence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Model Gateway & Routing</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">LiteLLM</div>
                         <div className="text-left">Unified API, caching, load balancing</div>
                       </div>
@@ -512,8 +512,8 @@ export default function LLMOpsProductionExcellence2025() {
 
                   <div className="text-left"></div>
                     <h3 className="text-left">Evaluation & Testing</h3>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Promptfoo</div>
                         <div className="text-left">Prompt testing, regression detection</div>
                       </div>
@@ -533,8 +533,8 @@ export default function LLMOpsProductionExcellence2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Roadmap</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Week 1-2: Foundation</h3>
                     <ul className="text-left">
                       <li>✓ Set up centralized prompt management (LangSmith/Langfuse)</li>

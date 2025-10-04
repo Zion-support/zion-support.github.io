@@ -17,8 +17,8 @@ const HybridAIArchitectureMultiModel2026: React.FC = () =>
 
       <article className="text-left"></a>
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left"><
             ARCHITECTURAL INNOVATION • SEPTEMBER 30, 2025
           </div>
@@ -31,8 +31,8 @@ const HybridAIArchitectureMultiModel2026: React.FC = () =>
             Orchestrate Specialized AI Models for 10x Better Results at 60% Lower Cost
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">⏱️<
               <span>26 min read<
             </div>
@@ -48,8 +48,8 @@ const HybridAIArchitectureMultiModel2026: React.FC = () =>
         </div>
 
         {/* Key Metrics */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">95%</div>
             <div className="text-left">Task Accuracy</div>
           </div>
@@ -149,8 +149,8 @@ const HybridAIArchitectureMultiModel2026: React.FC = () =>
             Strategic combination of specialized models for different capabilities:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🔤 Text Processing Layer</h4>
               <ul className="text-left">
                 <li>• Small models (BERT, DistilBERT): Classification, entity extraction</li>
@@ -212,8 +212,8 @@ const HybridAIArchitectureMultiModel2026: React.FC = () =>
 
           <h2 className="text-left">💡 Implementation Roadmap</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
               <ul className="text-left">
                 <li><strong>Week 1:</strong> Audit existing AI usage, identify cost/performance bottlenecks</li>

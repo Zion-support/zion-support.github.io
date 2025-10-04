@@ -55,8 +55,8 @@ export default function AgenticAIOrchestrationRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1,000+</div>
                     <div className="text-left">Coordinated Agents</div>
                   </div>
@@ -115,8 +115,8 @@ export default function AgenticAIOrchestrationRevolution2025() {
               <h2 className="text-left">Agent Orchestration Architecture</h2>
               
               <h3 className="text-left">Core Components</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">1. Agent Registry & Discovery</h4>
                   <p className="text-left"></p>
                     Centralized registry where agents advertise capabilities, update availability, and discover 
@@ -173,8 +173,8 @@ await coordinationBus.negotiate(
 
               <h2 className="text-left">Enterprise Use Cases</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏦 Financial Services</h4>
                   <p className="text-left">Multi-agent fraud detection, trading optimization, customer service</p>
                   <ul className="text-left">
@@ -217,8 +217,8 @@ await coordinationBus.negotiate(
 
               <h2 className="text-left">Implementation Best Practices</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Start with Limited Agent Domains</h4>
                   <p className="text-left"></p>
                     Begin with 5-10 specialized agents in a single domain before expanding. This allows you to 

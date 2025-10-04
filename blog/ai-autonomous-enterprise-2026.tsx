@@ -160,8 +160,8 @@ export default function AIAutonomousEnterprise2026() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Autonomous Systems Team
                 </div>
                 <div className="text-left"></div>

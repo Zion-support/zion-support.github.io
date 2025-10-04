@@ -19,8 +19,8 @@ export default function QuantumAIHybridComputing2026() {
 
       <article className="text-left"></a>
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Atom className="text-left" />
             <span className="text-left">QUANTUM BREAKTHROUGH<
           </div>
@@ -34,8 +34,8 @@ export default function QuantumAIHybridComputing2026() {
             thought impossible—achieving 10,000x speedups for optimization, molecular simulation, and pattern recognition.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Clock className="text-left" />
               <span>30 min read<
             </div>
@@ -52,8 +52,8 @@ export default function QuantumAIHybridComputing2026() {
         </div>
 
         {/* Key Metrics Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">10,000x</div>
             <div className="text-left">Speed Advantage</div>
           </div>
@@ -172,8 +172,8 @@ export default function QuantumAIHybridComputing2026() {
             While quantum-AI hybrid systems deliver remarkable advantages, enterprises face several implementation considerations:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Algorithmic Expertise</h4>
               <p className="text-left"></p>
                 Developing quantum algorithms requires specialized knowledge. Most enterprises partner with quantum computing 

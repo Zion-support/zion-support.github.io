@@ -75,8 +75,8 @@ export default function EnterpriseGenAIAgentPlatform2026() {
 
 				<section className="text-left"></section>
 					<h2 className="text-left">ROI Benchmarks</h2>
-					<div className="text-left"></div>
-						<div className="text-left"></div>
+					<div className="text-left">
+        <div className="text-left"></div>
 							<h3 className="text-left">Time to Resolution</h3>
 							<p className="text-left">-60% MTTR via autonomous triage and remediation.</p>
 						</div>

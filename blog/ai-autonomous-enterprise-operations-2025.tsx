@@ -171,8 +171,8 @@ export default function AIAutonomousEnterpriseOperations2025() {
               </section>
             </div>
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Systems
                 </div>
                 <div className="text-left"></div>

@@ -6,7 +6,7 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -32,8 +32,8 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
             Learn how next-generation explainable AI (XAI) systems achieve 99% decision transparency, meet regulatory compliance across 180+ jurisdictions, and build stakeholder trust through human-understandable reasoning.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Calendar className="text-left" />
               <span>September 30, 2025<
             </div>
@@ -50,7 +50,7 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
       </div>
 
       {/* Content Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <article className="text-left"></a>
             <h2 className="text-left">The Trust Gap in Enterprise AI</h2>
@@ -79,8 +79,8 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
               Modern XAI systems are built on five foundational principles that ensure both technical accuracy and human comprehension:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <CheckCircle className="text-left" />
                   <div></div>
@@ -90,8 +90,8 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <CheckCircle className="text-left" />
                   <div></div>
                     <h4 className="text-left">2. Multi-Level Explanations</h4>
@@ -100,8 +100,8 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <CheckCircle className="text-left" />
                   <div></div>
                     <h4 className="text-left">3. Counterfactual Reasoning</h4>
@@ -110,8 +110,8 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <CheckCircle className="text-left" />
                   <div></div>
                     <h4 className="text-left">4. Uncertainty Quantification</h4>
@@ -120,8 +120,8 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <CheckCircle className="text-left" />
                   <div></div>
                     <h4 className="text-left">5. Continuous Monitoring & Validation</h4>
@@ -133,8 +133,8 @@ const AIExplainabilityEnterpriseTrust2025: React.FC = () =>
 
             <h2 className="text-left">Enterprise Use Cases Driving Adoption</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🏦</div>
                 <h4 className="text-left">Financial Services</h4>
                 <p className="text-left">Credit decisions, fraud detection, and trading algorithms all require regulators-compliant explanations. XAI reduces audit costs by 62% while ensuring fair lending compliance.</p>

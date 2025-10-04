@@ -35,8 +35,8 @@ export default function AI2025OctoberIntelligentEdgeComputingEnterprise() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;1ms</div>
               <div className="text-left">Response Latency</div>
             </div>
@@ -152,8 +152,8 @@ export default function AI2025OctoberIntelligentEdgeComputingEnterprise() {
           </div>
 
           <h2 className="text-left">Industry Applications</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏭 Smart Manufacturing</h3>
               <p className="text-left"></p>
                 Deploy edge AI for predictive maintenance, quality control, and production optimization with 
@@ -212,8 +212,8 @@ export default function AI2025OctoberIntelligentEdgeComputingEnterprise() {
           </div>
 
           <h2 className="text-left">Implementation Roadmap</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <div className="text-left"></div>
                   <div className="text-left">1</div>
@@ -258,8 +258,8 @@ export default function AI2025OctoberIntelligentEdgeComputingEnterprise() {
           </div>
 
           <h2 className="text-left">Success Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">Manufacturing Plant</h3>
                 <div className="text-left"></div>

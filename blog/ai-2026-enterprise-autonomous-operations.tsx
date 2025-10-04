@@ -20,11 +20,11 @@ export default function AI2026EnterpriseAutonomousOperations() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Hero Section */}
+        <div className="text-left">
+        <div className="text-left"></div>
             <span className="text-left"></span>
               🤖 Enterprise Autonomous Operations
             <
@@ -40,8 +40,8 @@ export default function AI2026EnterpriseAutonomousOperations() {
         </div>
 
         {/* Key Benefits */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">100%</div>
             <div className="text-left">Enterprise Autonomy</div>
           </div>
@@ -72,8 +72,8 @@ export default function AI2026EnterpriseAutonomousOperations() {
               This revolutionary approach delivers unprecedented efficiency, reliability, and scalability.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🧠</div>
                 <h3 className="text-left">Self-Aware Systems</h3>
                 <p className="text-left"></p>
@@ -109,8 +109,8 @@ export default function AI2026EnterpriseAutonomousOperations() {
             Implementation Framework
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 1
               </div>
@@ -141,8 +141,8 @@ export default function AI2026EnterpriseAutonomousOperations() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 2
               </div>
               <div className="text-left"></div>
@@ -172,8 +172,8 @@ export default function AI2026EnterpriseAutonomousOperations() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 3
               </div>
               <div className="text-left"></div>
@@ -203,8 +203,8 @@ export default function AI2026EnterpriseAutonomousOperations() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 4
               </div>
               <div className="text-left"></div>
@@ -242,8 +242,8 @@ export default function AI2026EnterpriseAutonomousOperations() {
             Success Metrics
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100%</div>
               <div className="text-left">Enterprise Autonomy</div>
               <div className="text-left">Complete operational independence</div>

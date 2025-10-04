@@ -76,8 +76,8 @@ const AIAgentsMultiAgentOrchestration2025: React.FC = () =>
 
         <h2 className="text-left">Real-World Impact: Enterprise Case Studies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Global Manufacturing: $47M Annual Savings</h4>
             <p className="text-left"></p>
               A Fortune 500 manufacturer deployed multi-agent systems across supply chain, quality control, and 

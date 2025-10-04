@@ -52,8 +52,8 @@ export default function AIRetrievalOptimizationBreakthrough2025() {
               Revolutionary breakthrough achieving 10x faster performance with sub-50ms query latency. Master advanced RAG optimization, hybrid search architectures, and intelligent caching strategies that deliver 97% accuracy with 80% cost reduction.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>December 1, 2025<
               </div>
@@ -69,8 +69,8 @@ export default function AIRetrievalOptimizationBreakthrough2025() {
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">🚀 Key Achievements</h2>
               <ul className="text-left">
                 <li>✅ <strong>10x Faster Performance</strong> — Sub-50ms query latency at scale</li>
@@ -216,8 +216,8 @@ export default function AIRetrievalOptimizationBreakthrough2025() {
           </div>
 
           {/* Social Share */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">Share this article:<
               <button className="text-left">
                 <Share2 className="text-left" />

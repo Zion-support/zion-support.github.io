@@ -17,13 +17,13 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 🚀 January 2027 Ultimate Breakthrough
@@ -54,8 +54,8 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
             </div>
             
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1,000,000x</div>
                 <div className="text-left">Performance Boost</div>
               </div>
@@ -78,8 +78,8 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
 
       {/* Revolutionary Features */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Revolutionary Breakthrough Features
             </h2>
@@ -88,8 +88,8 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
             </p>
           </div>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🧠</div>
               <h3 className="text-left">Transcendent Intelligence</h3>
               <p className="text-left"></p>
@@ -124,8 +124,8 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
 
       {/* Technical Specifications */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Technical Specifications
             </h2>
@@ -134,11 +134,11 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
             </p>
           </div>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Performance Metrics</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Processing Speed<
                   <span className="text-left">1,000,000x<
                 </div>
@@ -159,8 +159,8 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
             
             <div className="text-left"></div>
               <h3 className="text-left">Enterprise Value</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">ROI Potential<
                   <span className="text-left">$500B+<
                 </div>
@@ -184,8 +184,8 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
 
       {/* Success Stories */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Enterprise Success Stories
             </h2>
@@ -194,10 +194,10 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
             </p>
           </div>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🏆<
                 </div>
                 <div></div>
@@ -217,8 +217,8 @@ export default function AI2027JanuaryUltimateBreakthroughRevolution() {
               </Link>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🚀<
                 </div>

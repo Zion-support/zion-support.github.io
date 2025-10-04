@@ -161,8 +161,8 @@ export default function IntelligentDataFabricArchitecture2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Key Use Cases</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🎯 Real-Time Customer 360</h3>
                     <p className="text-left"></p>
                       Unified customer view combining CRM, transaction history, support tickets, social media, 
@@ -195,8 +195,8 @@ export default function IntelligentDataFabricArchitecture2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Approach</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Discovery & Assessment (2-3 weeks)</h3>
                     <p className="text-left"></p>
                       Data source inventory, integration assessment, use case prioritization, and architecture design.
@@ -228,8 +228,8 @@ export default function IntelligentDataFabricArchitecture2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Technology Stack</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Data Integration</h3>
                     <ul className="text-left">
                       <li>• Apache Kafka / Pulsar</li>

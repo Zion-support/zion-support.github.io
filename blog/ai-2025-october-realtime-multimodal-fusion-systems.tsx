@@ -106,16 +106,16 @@ const AI2025OctoberRealtimeMultimodalFusionSystems = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Revolutionary Applications</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🤖 Advanced Virtual Assistants</h3>
                 <p className="text-left"></p>
                   Next-gen virtual assistants process video calls, screen content, documents, and voice simultaneously, 
                   understanding context from all sources. A Fortune 100 company deployed multimodal assistants for 
                   customer support, achieving 91% first-contact resolution, 78% faster issue resolution, $124M savings.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">91%</div>
                     <div className="text-left">First Contact Resolution</div>
                   </div>
@@ -137,8 +137,8 @@ const AI2025OctoberRealtimeMultimodalFusionSystems = () =>
                   and emotions for automated tagging, highlight detection, and personalized recommendations. Increased 
                   engagement 64%, reduced manual tagging costs 95%, improved content discovery 83%.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">64%</div>
                     <div className="text-left">Higher Engagement</div>
                   </div>
@@ -160,8 +160,8 @@ const AI2025OctoberRealtimeMultimodalFusionSystems = () =>
                   and physician notes for comprehensive diagnostics. Achieved 96.8% diagnostic accuracy, 52% faster 
                   diagnosis, $67M in improved outcomes, full clinical explainability.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">96.8%</div>
                     <div className="text-left">Diagnostic Accuracy</div>
                   </div>
@@ -281,8 +281,8 @@ class RealtimeMultimodalSystem:
           <section className="text-left"></section>
             <h2 className="text-left">Technical Innovations</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">⚡ Parallel Stream Processing</h3>
                 <p className="text-left"></p>
                   Each modality encoder runs on dedicated GPU streams with asynchronous execution, processing 
@@ -318,8 +318,8 @@ class RealtimeMultimodalSystem:
 
           <section className="text-left"></section>
             <h2 className="text-left">Deployment Architecture</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">☁️ Cloud Infrastructure</h4>
                 <p></p>
                   High-throughput cloud deployment uses GPU clusters with NVIDIA A100s or H100s, processing 
@@ -349,8 +349,8 @@ class RealtimeMultimodalSystem:
             <h2 className="text-left">Performance Optimization</h2>
             <div className="text-left"></div>
               <h3 className="text-left">Latency Breakdown</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Vision Encoding (60fps video)<
                   <span className="text-left">10ms<
                 </div>
@@ -386,8 +386,8 @@ class RealtimeMultimodalSystem:
                 achieve single-digit millisecond latency through neuromorphic computing, enable multimodal 
                 generation (text-to-video-with-audio), and support 100+ concurrent modality streams.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Q1 2026</div>
                   <div className="text-left">Additional Modalities (Touch/Smell)</div>
                 </div>

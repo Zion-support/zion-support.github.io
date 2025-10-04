@@ -100,8 +100,8 @@ export default function QuantumEdgeComputingBreakthrough2025() {
         <section className="text-left"></section>
           <h2 className="text-left">Industry Transformations</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏭 Manufacturing</h3>
               <p className="text-left"></p>
                 Real-time production optimization achieving 89% efficiency gains with quantum-enhanced scheduling
@@ -154,8 +154,8 @@ export default function QuantumEdgeComputingBreakthrough2025() {
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
               <ul className="text-left">
                 <li>• Assess quantum-ready use cases and workload requirements</li>
@@ -194,8 +194,8 @@ export default function QuantumEdgeComputingBreakthrough2025() {
             Organizations deploying quantum-enhanced edge computing are achieving transformational results:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <div className="text-left">10,000x</div>
                 <div className="text-left">Faster Optimization</div>

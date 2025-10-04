@@ -39,8 +39,8 @@ const KnowledgeGraphsEnterpriseAI2025 = () =>
           </p>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <Brain className="text-left" />
               <div></div>
@@ -274,8 +274,8 @@ class KnowledgeGraphBuilder:
             Real-World Use Cases
           </h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Healthcare: Clinical Knowledge Graph</h4>
               <p className="text-left"></p>
                 Integrate patient records, clinical guidelines, research papers, and drug databases. Enable clinicians to query complex relationships like "patients with condition X, taking medication Y, who showed symptom Z after procedure W."

@@ -213,8 +213,8 @@ const AutonomousEnterpriseAnalyticsArticle = () =>
 
         <section></section>
           <h2>🛠️ Technology Stack</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h4 className="text-left">Data Platform</h4>
                 <ul className="text-left">
@@ -261,8 +261,8 @@ const AutonomousEnterpriseAnalyticsArticle = () =>
 
         <section></section>
           <h2>📈 Measurable Business Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$5.2B</div>
               <div className="text-left">Total business value created in 24 months</div>
             </div>
@@ -291,8 +291,8 @@ const AutonomousEnterpriseAnalyticsArticle = () =>
 
         <section></section>
           <h2>🎓 Critical Success Factors</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Executive Sponsorship & Change Management</h4>
               <p className="text-left">CEO-level commitment required to overcome organizational resistance to AI-driven decisions</p>
             </div>

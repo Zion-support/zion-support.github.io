@@ -17,13 +17,13 @@ export default function NeuralQuantumFusionBreakthrough() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left"></span>
                 ⚛️ Neural-Quantum Fusion Revolution
@@ -54,8 +54,8 @@ export default function NeuralQuantumFusionBreakthrough() {
             </div>
             
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1M+</div>
                 <div className="text-left">Quantum Qubits</div>
               </div>
@@ -100,8 +100,8 @@ export default function NeuralQuantumFusionBreakthrough() {
               Revolutionary Neural-Quantum Technologies
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Quantum Neural Networks</h3>
                 <p className="text-left"></p>
                   Revolutionary neural networks powered by quantum computing, capable of processing infinite data streams simultaneously with unprecedented speed and accuracy.
@@ -161,8 +161,8 @@ export default function NeuralQuantumFusionBreakthrough() {
               Transformative Success Stories
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left"></span>
                     $500B SUCCESS
@@ -175,8 +175,8 @@ export default function NeuralQuantumFusionBreakthrough() {
                 <p className="text-left"></p>
                   A Fortune 50 global technology corporation achieved $500 billion in value creation through neural-quantum fusion implementation, solving previously impossible computational challenges and achieving 99.999% accuracy in all operations.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.999%</div>
                     <div className="text-left">Accuracy</div>
                   </div>
@@ -195,8 +195,8 @@ export default function NeuralQuantumFusionBreakthrough() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left"></span>
                     $250B SUCCESS
                   <
@@ -208,8 +208,8 @@ export default function NeuralQuantumFusionBreakthrough() {
                 <p className="text-left"></p>
                   A leading research institute achieved $250 billion in breakthrough discoveries through neural-quantum fusion, solving complex scientific problems that were previously unsolvable with traditional computing methods.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">100%</div>
                     <div className="text-left">Discovery Rate</div>
                   </div>
@@ -236,8 +236,8 @@ export default function NeuralQuantumFusionBreakthrough() {
               Neural-Quantum Fusion Implementation Roadmap
             </h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -249,8 +249,8 @@ export default function NeuralQuantumFusionBreakthrough() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <div></div>
@@ -261,8 +261,8 @@ export default function NeuralQuantumFusionBreakthrough() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <div></div>
@@ -273,8 +273,8 @@ export default function NeuralQuantumFusionBreakthrough() {
                 </div>
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   4
                 </div>
                 <div></div>

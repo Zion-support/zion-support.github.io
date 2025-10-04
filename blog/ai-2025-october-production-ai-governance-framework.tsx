@@ -55,8 +55,8 @@ export default function ProductionAIGovernanceFramework2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🎯 Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.9%</div>
                     <div className="text-left">Compliance Rate</div>
                   </div>
@@ -223,8 +223,8 @@ export default function ProductionAIGovernanceFramework2025() {
 
               <h2 className="text-left">Regulatory Compliance</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🇪🇺 EU AI Act Compliance</h4>
                   <ul className="text-left">
                     <li>• Risk classification and documentation</li>

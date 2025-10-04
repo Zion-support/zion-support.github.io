@@ -58,8 +58,8 @@ export default function AIEdgeComputing2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Key Benefits of Edge AI</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Ultra-Low Latency</h3>
                     <p className="text-left">Sub-50ms response times for mission-critical applications</p>
                   </div>
@@ -80,8 +80,8 @@ export default function AIEdgeComputing2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Applications</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Autonomous Vehicles</h3>
                     <p className="text-left"></p>
                       Real-time object detection and path planning with instant decision-making capabilities.
@@ -120,8 +120,8 @@ export default function AIEdgeComputing2025() {
                 <h2 className="text-left">Implementation Strategies</h2>
                 <div className="text-left"></div>
                   <h3 className="text-left">Our Edge AI Framework</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">1<
                       <div></div>
                         <h4 className="text-left">Model Optimization</h4>
@@ -148,8 +148,8 @@ export default function AIEdgeComputing2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">&lt;50ms</div>
                     <div className="text-left">Response Time</div>
                   </div>
@@ -179,8 +179,8 @@ export default function AIEdgeComputing2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Systems
                 </div>
                 <div className="text-left"></div>

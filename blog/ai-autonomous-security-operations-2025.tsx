@@ -55,8 +55,8 @@ export default function AIAutonomousSecurityOperations2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🛡️ Autonomous SOC Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.7%</div>
                     <div className="text-left">Threat Prevention Rate</div>
                   </div>
@@ -111,8 +111,8 @@ export default function AIAutonomousSecurityOperations2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">🏗️ Multi-Agent SOC Architecture</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Detection Agents</h4>
                     <p className="text-left">Real-time analysis of network traffic, endpoint telemetry, logs, and threat intelligence feeds. Processing 100M+ events/sec with &lt;10ms latency.</p>
                   </div>
@@ -210,8 +210,8 @@ export default function AIAutonomousSecurityOperations2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Assessment & Planning (Weeks 1-4)</h3>
                   <ul className="text-left">
                     <li className="text-left">
@@ -301,8 +301,8 @@ export default function AIAutonomousSecurityOperations2025() {
               </div>
 
               <h2 className="text-left">Technology Stack</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">AI & Detection</h3>
                   <ul className="text-left">
                     <li className="text-left">• TensorFlow/PyTorch for threat detection models</li>
@@ -324,8 +324,8 @@ export default function AIAutonomousSecurityOperations2025() {
               </div>
 
               <h2 className="text-left">Key Challenges & Solutions</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Challenge: False Positives & Alert Fatigue</h3>
                   <p className="text-left">Traditional SOCs generate thousands of false positive alerts daily.</p>
                   <p className="text-left"><strong>Solution:</strong> Advanced ML models achieve 99.9% accuracy through ensemble methods, contextual analysis, and continuous feedback loops that learn from analyst decisions.</p>

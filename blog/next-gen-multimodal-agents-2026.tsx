@@ -46,8 +46,8 @@ export default function NextGenMultimodalAgents2026() {
           <div className="text-left"></div>
             <section></section>
               <h2 className="text-left">Reference Architecture</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Perception</h3>
                   <ul className="text-left">
                     <li>• Vision encoders + temporal fusion</li>

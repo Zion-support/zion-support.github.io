@@ -45,8 +45,8 @@ const VectorDatabaseOptimization2026 = () =>
               Master vector database optimization achieving sub-10ms retrieval at billion-scale with advanced indexing, quantization, and hybrid search patterns.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -61,8 +61,8 @@ const VectorDatabaseOptimization2026 = () =>
             </div>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Key Takeaways</h3>
               <ul className="text-left">
                 <li>✅ Achieve sub-10ms P95 latency at billion-vector scale</li>

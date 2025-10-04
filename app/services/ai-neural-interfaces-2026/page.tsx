@@ -19,8 +19,8 @@ export default function AINeuralInterfacesService() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <Link href="/services" className="text-left">
           ← Back to Services
         </Link>
@@ -39,12 +39,12 @@ export default function AINeuralInterfacesService() {
         </p>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <h2 className="text-left">🚀 Service Highlights</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.7%</div>"
                 <div className="text-left">Accuracy Rate</div>"
               </div>
@@ -72,8 +72,8 @@ export default function AINeuralInterfacesService() {
             </p>
 
             <h3 className="text-left">🎯 Core Capabilities</h3>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🧠 Thought-to-Action Translation</h4>"
                 <p className="text-left"></p>
                   Convert mental commands into precise digital actions with 99.7% accuracy. 
@@ -104,8 +104,8 @@ export default function AINeuralInterfacesService() {
             </div>
 
             <h3 className="text-left">🏢 Enterprise Applications</h3>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Manufacturing & Industrial</h4>"
                 <p className="text-left"></p>
                   Hands-free operation of complex machinery, reducing human error by 85% and 
@@ -136,8 +136,8 @@ export default function AINeuralInterfacesService() {
             </div>
 
             <h3 className="text-left">🔬 Technical Implementation</h3>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Neural Signal Capture</h4>"
                 <p className="text-left"></p>
                   Advanced EEG and neural implant technologies capture brain activity with unprecedented 
@@ -162,8 +162,8 @@ export default function AINeuralInterfacesService() {
           </div>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Service Details</h3>"
             <div className="text-left"></div>
               <div></div>
@@ -234,7 +234,7 @@ export default function AINeuralInterfacesService() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">Ready to Transform Your Operations?</h2>"
           <p className="text-left"></p>
@@ -256,7 +256,7 @@ export default function AINeuralInterfacesService() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left">🎯</div>"
           <h3 className="text-left">Precision Control</h3>"
@@ -283,7 +283,7 @@ export default function AINeuralInterfacesService() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <span className="text-left">ZT>

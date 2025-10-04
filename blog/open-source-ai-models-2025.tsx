@@ -73,8 +73,8 @@ export default function OpenSourceAIModels2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Leading Open Source Models</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🦙 Llama 3 (Meta)</h3>
                     <p className="text-left"></p>
                       Meta's flagship open-source model family, available in 8B, 70B, and 405B parameter variants. 
@@ -171,8 +171,8 @@ export default function OpenSourceAIModels2025() {
                   <p className="text-left"></p>
                     For a typical enterprise processing 100M tokens per month:
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">GPT-4 API (Proprietary)<
                       <span className="text-left">$600,000/year<
                     </div>
@@ -200,8 +200,8 @@ export default function OpenSourceAIModels2025() {
                 <p className="text-left"></p>
                   Choose the right deployment approach based on your requirements:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">🏢 On-Premises Deployment</h4>
                     <p className="text-left"></p>
                       Deploy models on your own hardware for maximum control and data sovereignty. Ideal for highly 
@@ -266,8 +266,8 @@ export default function OpenSourceAIModels2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Performance Benchmarks</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">92%</div>
                     <div className="text-left">Of GPT-4 performance with Llama 3 405B on reasoning tasks</div>
                   </div>

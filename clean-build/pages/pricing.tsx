@@ -103,8 +103,8 @@ export default function Pricing() {
       <div className="text-left"></div>
         {/* Hero Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
             <div className="text-left"></div>
               <h1 className="text-left">
                 Transparent <span className="text-left">Pricing<
@@ -119,8 +119,8 @@ export default function Pricing() {
 
         {/* Pricing Plans */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               {plans.map((plan, index) => (
                 <div key={index} className={`card relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}></div>
                   {plan.popular && (
@@ -171,8 +171,8 @@ export default function Pricing() {
 
         {/* Add-ons Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Additional <span className="text-left">Services<
               </h2>
@@ -197,15 +197,15 @@ export default function Pricing() {
 
         {/* FAQ Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Frequently Asked <span className="text-left">Questions<
               </h2>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">What's included in the monthly fee?</h3>
                 <p className="text-left"></p>
                   The monthly fee includes development, design, hosting, maintenance, updates, and support. 

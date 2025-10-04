@@ -6,7 +6,7 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
   <div></div>
     <div className="text-left"></div>
       {/* Hero Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
@@ -32,8 +32,8 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
             Discover how next-generation multimodal models seamlessly process and reason across text, images, video, audio, and 3D data—achieving human-level understanding in cross-modal tasks with 97% accuracy.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Calendar className="text-left" />
               <span>September 30, 2025<
             </div>
@@ -50,7 +50,7 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
       </div>
 
       {/* Content Section */}
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <article className="text-left"></a>
             <h2 className="text-left">The Multimodal AI Revolution</h2>
@@ -76,8 +76,8 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
               Modern MLLMs employ sophisticated architectural innovations that enable seamless information fusion:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <Image className="text-left" />
                   <div></div>
@@ -87,8 +87,8 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <Video className="text-left" />
                   <div></div>
                     <h4 className="text-left">Temporal & Spatial Attention</h4>
@@ -97,8 +97,8 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <Mic className="text-left" />
                   <div></div>
                     <h4 className="text-left">Audio-Visual-Text Fusion</h4>
@@ -110,8 +110,8 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
 
             <h2 className="text-left">Enterprise Applications Across Industries</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🏥</div>
                 <h4 className="text-left">Medical Diagnosis</h4>
                 <p className="text-left">Analyze medical images, patient records, and doctor notes simultaneously, achieving 94% diagnostic accuracy across 200+ conditions—surpassing single-specialist performance.</p>

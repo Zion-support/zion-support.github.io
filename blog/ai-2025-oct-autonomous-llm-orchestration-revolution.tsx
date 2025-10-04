@@ -36,7 +36,7 @@ const AutonomousLLMOrchestrationRevolution: React.FC = () =>
         </div>
       </header>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <h2 className="text-left">🚀 Executive Summary</h2>
           <ul className="text-left">
@@ -147,8 +147,8 @@ const AutonomousLLMOrchestrationRevolution: React.FC = () =>
 
         <h2>Real-World Implementation Case Studies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🏦 Global Financial Services Firm</h3>
             <p className="text-left"></p>
               <strong>Challenge:</strong> $2M/month LLM costs for customer service AI
@@ -232,8 +232,8 @@ const AutonomousLLMOrchestrationRevolution: React.FC = () =>
 
         <h2>Cost Optimization Strategies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">💡 Strategy 1: Intelligent Routing</h4>
             <p className="text-left"></p>
               Route 80% of simple queries to Llama 3 8B instead of GPT-4
@@ -371,8 +371,8 @@ const AutonomousLLMOrchestrationRevolution: React.FC = () =>
         <div className="text-left"></div>
           <h3 className="text-left">🗓️ Implementation Timeline</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Days 1-30: Foundation Phase</h4>
               <ul className="text-left">
                 <li>✅ Audit current LLM usage and costs</li>

@@ -61,8 +61,8 @@ export default function AIOperationalExcellenceAgents2026() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Impact Benchmarks</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">MTTR Reduction</h3>
               <p className="text-left">-65% through autonomous triage, remediation, and escalation routing.</p>
             </div>

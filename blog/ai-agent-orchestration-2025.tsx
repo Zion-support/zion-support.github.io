@@ -181,8 +181,8 @@ export default function AIAgentOrchestration2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Systems
                 </div>
                 <div className="text-left"></div>

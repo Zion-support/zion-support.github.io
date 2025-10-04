@@ -80,8 +80,8 @@ const AI2026JanuaryQuantumConsciousnessBIBreakthrough = () =>
               impossible to detect.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Quantum Pattern Recognition</h3>
                 <p className="text-left"></p>
                   Advanced quantum algorithms that can identify complex patterns and relationships in 
@@ -179,8 +179,8 @@ const AI2026JanuaryQuantumConsciousnessBIBreakthrough = () =>
               with neural mesh networks and synthetic consciousness systems.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Q2 2026 Enhancements</h3>
                 <ul className="text-left">
                   <li>• Neural mesh consciousness integration</li>

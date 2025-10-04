@@ -51,8 +51,8 @@ const AIAutonomousSupplyChainResilience2026 = () =>
               Deploy autonomous supply chain systems achieving 99.5% on-time delivery, 35% cost reduction, and real-time disruption adaptation. Master predictive logistics, autonomous routing, and resilient supply networks.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -67,8 +67,8 @@ const AIAutonomousSupplyChainResilience2026 = () =>
             </div>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">
                 <Package className="text-left" />
                 The Autonomous Supply Chain Revolution
@@ -182,8 +182,8 @@ const AIAutonomousSupplyChainResilience2026 = () =>
 
             <h2 className="text-left">Real-World Transformations</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Global Retailer</h4>
                 <p className="text-left">Fortune 100 retailer deployed autonomous supply chain AI:</p>
                 <ul className="text-left">
@@ -232,8 +232,8 @@ const AIAutonomousSupplyChainResilience2026 = () =>
 
             <h2 className="text-left">Implementation Roadmap</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Foundation (Months 1-4)</h4>
                 <ol className="text-left">
                   <li>1. Integrate data from all supply chain systems (ERP, WMS, TMS, etc.)</li>
@@ -268,8 +268,8 @@ const AIAutonomousSupplyChainResilience2026 = () =>
 
             <div className="text-left"></div>
               <h3 className="text-left">Typical 12-Month ROI</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">35%</div>
                   <div className="text-left">Cost Reduction</div>
                   <p className="text-left">Transportation, inventory, and operational savings</p>

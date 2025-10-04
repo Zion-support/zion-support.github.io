@@ -23,15 +23,15 @@ export default function RevolutionaryBreakthroughs2025() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
+        <div className="text-left">
+        <div className="text-left"></div>"
           <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Sparkles className="text-left" />
                 <span className="text-left">REVOLUTIONARY BREAKTHROUGHS</span>
               </div>
@@ -83,8 +83,8 @@ export default function RevolutionaryBreakthroughs2025() {
 
       {/* Breakthrough Technologies */}
       <section id="breakthrough-technologies" className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               🚀 Revolutionary Breakthrough Technologies
             </h2>
@@ -103,8 +103,8 @@ export default function RevolutionaryBreakthroughs2025() {
                   key={breakthrough.id}
                   className="text-left"></div>
                   {/* Card Header */}
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       {breakthrough.icon}
                     </div>
                     <div className="text-left"></div>
@@ -143,8 +143,8 @@ export default function RevolutionaryBreakthroughs2025() {
                   </p>
 
                   {/* Stats */}
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">{breakthrough.impact}</div>"
                       <div className="text-left">Impact</div>"
                     </div>
@@ -169,8 +169,8 @@ export default function RevolutionaryBreakthroughs2025() {
 
       {/* Services Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               💎 Breakthrough Services & Implementation
             </h2>
@@ -250,8 +250,8 @@ export default function RevolutionaryBreakthroughs2025() {
 
       {/* Case Studies */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               💰 Success Stories & Case Studies
             </h2>
@@ -265,12 +265,12 @@ export default function RevolutionaryBreakthroughs2025() {
               <div
                 key={caseStudy.id}
                 className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     {caseStudy.icon}
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left"></span>
                         {caseStudy.industry}
                       </span>
@@ -286,8 +286,8 @@ export default function RevolutionaryBreakthroughs2025() {
                     </p>
                   </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">{caseStudy.savings}</div>"
                     <div className="text-left">Annual Savings</div>"
                   </div>
@@ -321,10 +321,10 @@ export default function RevolutionaryBreakthroughs2025() {
 
       {/* Call-to-Action */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   🚀 Ready to Transform Your Enterprise?
                 </h3>
@@ -352,8 +352,8 @@ export default function RevolutionaryBreakthroughs2025() {
 
       {/* Footer */}
       <footer className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
             <div className="text-left"></div>
               <a href="/privacy" className="text-left">Privacy Policy</a>"
@@ -364,4 +364,4 @@ export default function RevolutionaryBreakthroughs2025() {
       </footer>
     </div>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div>)
+}</div></div>)

@@ -59,8 +59,8 @@ export default function FraudDetectionRealTimePreventionRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🛡️ Enterprise Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$47B</div>
                     <div className="text-left">Fraud Prevented</div>
                   </div>
@@ -117,8 +117,8 @@ export default function FraudDetectionRealTimePreventionRevolution2025() {
                 Next-generation fraud detection leverages multiple AI techniques working in concert:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🧠 Deep Learning Models</h3>
                   <p className="text-left"></p>
                     Neural networks analyze transaction patterns with 99.94% accuracy
@@ -425,8 +425,8 @@ if __name__ == "__main__":
 
               <h2 className="text-left">Industry-Specific Applications</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🏦 Banking & Financial Services</h3>
                   <ul className="text-left">
                     <li><strong>Account Takeover Prevention</strong>: 99.1% detection of sophisticated takeover attempts</li>
@@ -469,8 +469,8 @@ if __name__ == "__main__":
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Foundation (Months 1-2)</h3>
                   <ul className="text-left">
                     <li>✓ Data pipeline infrastructure setup</li>
@@ -513,8 +513,8 @@ if __name__ == "__main__":
 
               <h2 className="text-left">Key Success Factors</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🎯 Technical Excellence</h3>
                   <ul className="text-left">
                     <li>• Sub-100ms inference latency</li>

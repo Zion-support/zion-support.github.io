@@ -35,8 +35,8 @@ export default function AI2025September30EnterpriseGenAIDeploymentGuide() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">600%</div>
               <div className="text-left">Productivity Gain</div>
             </div>
@@ -81,8 +81,8 @@ export default function AI2025September30EnterpriseGenAIDeploymentGuide() {
 
           <h2 className="text-left">Phase 1: Foundation & Strategy</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📋 Business Case Development</h3>
               <p className="text-left"></p>
                 Build a compelling business case that secures executive buy-in and funding:
@@ -113,8 +113,8 @@ export default function AI2025September30EnterpriseGenAIDeploymentGuide() {
 
           <div className="text-left"></div>
             <h3 className="text-left">🎯 Top 10 Enterprise Use Cases</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">1.<
                   <div></div>
@@ -151,8 +151,8 @@ export default function AI2025September30EnterpriseGenAIDeploymentGuide() {
                   </div>
                 </div>
               </div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">6.<
                   <div></div>
                     <h4 className="text-left">Knowledge Management</h4>
@@ -234,8 +234,8 @@ export default function AI2025September30EnterpriseGenAIDeploymentGuide() {
 
           <h2 className="text-left">Phase 3: Deployment & Scaling</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🚀</div>
               <h3 className="text-left">Pilot Phase</h3>
               <p className="text-left">Weeks 1-4</p>
@@ -283,8 +283,8 @@ export default function AI2025September30EnterpriseGenAIDeploymentGuide() {
             <div className="text-left"></div>
               <div></div>
                 <h4 className="text-left">Operational Metrics</h4>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span>Task completion time:<
                     <span className="text-left">-65% to -85%<
                   </div>
@@ -304,8 +304,8 @@ export default function AI2025September30EnterpriseGenAIDeploymentGuide() {
               </div>
               <div></div>
                 <h4 className="text-left">Financial Metrics</h4>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span>Cost reduction:<
                     <span className="text-left">35% to 60%<
                   </div>
@@ -376,8 +376,8 @@ export default function AI2025September30EnterpriseGenAIDeploymentGuide() {
 
           <h2 className="text-left">Common Pitfalls to Avoid</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">❌ Lack of Clear Strategy</h4>
               <p className="text-left">Deploying GenAI without defined business objectives leads to wasted resources and poor ROI.</p>
             </div>

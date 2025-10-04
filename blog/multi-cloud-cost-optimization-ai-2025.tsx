@@ -55,8 +55,8 @@ export default function MultiCloudCostOptimizationAI2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">💰 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">67%</div>
                     <div className="text-left">Cost Reduction</div>
                   </div>
@@ -145,8 +145,8 @@ export default function MultiCloudCostOptimizationAI2025() {
 
               <div className="text-left"></div>
                 <h2 className="text-left">🔍 Common Waste Categories</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Idle Compute Instances<
                     <span className="text-left">32% of waste<
                   </div>

@@ -55,8 +55,8 @@ export default function NextGenMLOpsAutomationLifecycle2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 MLOps Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Faster Deployment</div>
                   </div>
@@ -108,8 +108,8 @@ export default function NextGenMLOpsAutomationLifecycle2025() {
                   from 6 weeks to 4 hours while achieving $127M in operational savings annually.
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Technical Stack</h4>
                     <ul className="text-left">
                       <li>✓ Automated model training & hyperparameter tuning</li>
@@ -187,8 +187,8 @@ export default function NextGenMLOpsAutomationLifecycle2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">ROI Breakdown</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <span className="text-left">Data Science Productivity Gains<
                     <span className="text-left">$68M<
                   </div>
@@ -209,8 +209,8 @@ export default function NextGenMLOpsAutomationLifecycle2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Platform Foundation (Months 1-2)</h3>
                   <ul className="text-left">
                     <li>• Deploy MLOps platform (Kubeflow, MLflow, or enterprise solution)</li>
@@ -243,8 +243,8 @@ export default function NextGenMLOpsAutomationLifecycle2025() {
 
               <h2 className="text-left">Advanced MLOps Patterns</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🔄 Continuous Learning</h3>
                   <ul className="text-left">
                     <li>• Online learning with streaming data</li>

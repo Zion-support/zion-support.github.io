@@ -64,8 +64,8 @@ const DistributedAITrainingScale2026 = () =>
               <TrendingUp className="text-left" />
               Proven Distributed Training Performance
             </h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">92%</div>
                 <div className="text-left">Scaling Efficiency at 1024 GPUs</div>
               </div>
@@ -106,8 +106,8 @@ const DistributedAITrainingScale2026 = () =>
                 Core Distributed Training Strategies
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     <CheckCircle className="text-left" />
                     Data Parallelism with AllReduce
@@ -215,8 +215,8 @@ const DistributedAITrainingScale2026 = () =>
               </h2>
               <div className="text-left"></div>
                 <h3 className="text-left">Reference Architecture</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <p className="text-left">Hardware Configuration</p>
                     <ul className="text-left">
                       <li>• Compute: 128 nodes × 8 NVIDIA H100 GPUs (1024 total GPUs)</li>
@@ -250,8 +250,8 @@ const DistributedAITrainingScale2026 = () =>
                   Leading AI lab trained 1.3T parameter language model using 3D parallelism across 2048 H100 GPUs. Achieved 88% scaling 
                   efficiency and completed training in 35 days—10x faster than sequential approaches would allow.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1.3T</div>
                     <div className="text-left">Parameters Trained</div>
                   </div>
@@ -276,8 +276,8 @@ const DistributedAITrainingScale2026 = () =>
                 <Zap className="text-left" />
                 Key Takeaways
               </h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Choose the Right Parallelism Strategy</h3>
                   <p className="text-left"></p>
                     Start with data parallelism for models under 80GB, add pipeline/tensor parallelism for larger models. 

@@ -55,8 +55,8 @@ export default function AIPoweredCodeGenerationRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">⚡ Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Productivity Increase</div>
                   </div>
@@ -194,8 +194,8 @@ export default function AIPoweredCodeGenerationRevolution2025() {
                 <p className="text-left"></p>
                   Choose the right AI coding assistant for your tech stack, security requirements, and budget.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">GitHub Copilot Enterprise</h4>
                     <p className="text-left">Best for: Microsoft stack, GitHub-centric workflows</p>
                     <p className="text-left">Features: Codebase-aware suggestions, chat interface, pull request summaries</p>
@@ -218,8 +218,8 @@ export default function AIPoweredCodeGenerationRevolution2025() {
                 <p className="text-left"></p>
                   AI coding assistants are tools—train your team to use them effectively for maximum productivity gains.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">✓</div>
                     <div className="text-left"></div>
                       <strong className="text-left">Prompt Engineering:</strong> Write clear, detailed comments to get better code suggestions
@@ -266,15 +266,15 @@ export default function AIPoweredCodeGenerationRevolution2025() {
 
               <h2 className="text-left">Real-World Transformation Stories</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🚀 SaaS Startup (Series B)</h3>
                   <p className="text-left"></p>
                     15-person engineering team adopted GitHub Copilot Enterprise—shipped Q3 roadmap in 6 weeks 
                     instead of planned 18 weeks. Raised Series C on velocity demonstration.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Development Speed:<
                       <span className="text-left">10x faster<
                     </div>
@@ -295,8 +295,8 @@ export default function AIPoweredCodeGenerationRevolution2025() {
                     2,000+ developer organization rolled out CodeWhisperer—reduced average PR time from 4 days to 
                     8 hours, test coverage from 61% to 89%, security vulnerabilities by 73%.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">PR Cycle Time:<
                       <span className="text-left">-87.5%<
                     </div>
@@ -314,8 +314,8 @@ export default function AIPoweredCodeGenerationRevolution2025() {
 
               <h2 className="text-left">Best Practices & Common Pitfalls</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">✅</div>
                     <div></div>
@@ -327,8 +327,8 @@ export default function AIPoweredCodeGenerationRevolution2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">⚠️</div>
                     <div></div>
                       <h4 className="text-left">Don't Skip Code Review</h4>
@@ -339,8 +339,8 @@ export default function AIPoweredCodeGenerationRevolution2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">✅</div>
                     <div></div>
                       <h4 className="text-left">Maintain Coding Standards</h4>
@@ -351,8 +351,8 @@ export default function AIPoweredCodeGenerationRevolution2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">⚠️</div>
                     <div></div>
                       <h4 className="text-left">Address IP & Licensing Concerns</h4>

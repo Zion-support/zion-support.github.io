@@ -65,8 +65,8 @@ export default function AICloudCostOptimization2025() {
 
             <section></section>
               <h2 className="text-left">Optimization Levers</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Inference Path</h3>
                   <ul className="text-left">
                     <li>• Multi-model routing based on latency/cost/quality SLOs</li>
@@ -89,8 +89,8 @@ export default function AICloudCostOptimization2025() {
 
             <section></section>
               <h2 className="text-left">Reference Architecture</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Cost-Aware Inference Gateway</h3>
                   <ul className="text-left">
                     <li>• Policy-driven routing across OSS and proprietary models</li>
@@ -216,8 +216,8 @@ export default function AICloudCostOptimization2025() {
             <section></section>
               <h2 className="text-left">Complete Cost Optimization Framework</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">1. Intelligent Resource Management</h3>
                   <ul className="text-left">
                     <li>• <strong className="text-left">Right-Sizing:</strong> Match instance types to actual workload requirements (typical savings: 40-60%)</li>
@@ -289,8 +289,8 @@ export default function AICloudCostOptimization2025() {
             <section></section>
               <h2 className="text-left">90-Day Cost Optimization Sprint</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Week 1-2: Discovery & Quick Wins</h3>
                   <ul className="text-left">
                     <li>✅ Deploy cost visibility tools (CloudHealth, Kubecost, Datadog)</li>
@@ -339,8 +339,8 @@ export default function AICloudCostOptimization2025() {
             <section></section>
               <h2 className="text-left">Essential Cost Optimization Tools</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Cloud Cost Management</h3>
                   <ul className="text-left">
                     <li>• <strong>CloudHealth by VMware</strong> - Multi-cloud cost governance</li>
@@ -385,15 +385,15 @@ export default function AICloudCostOptimization2025() {
             <section></section>
               <h2 className="text-left">Real-World Success Stories</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🚀 SaaS Unicorn: $18M Annual Savings</h3>
                   <p className="text-left"></p>
                     Reduced AI infrastructure costs from $22M to $4M annually through comprehensive optimization 
                     across 500+ models serving 10M users.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">82%</div>
                       <div className="text-left">Cost Reduction</div>
                     </div>
@@ -414,8 +414,8 @@ export default function AICloudCostOptimization2025() {
                     Implemented multi-cloud optimization strategy reducing spend from $60M to $15M while 
                     improving reliability and performance.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">75%</div>
                       <div className="text-left">Lower Costs</div>
                     </div>
@@ -434,8 +434,8 @@ export default function AICloudCostOptimization2025() {
 
             <section></section>
               <h2 className="text-left">Cost Optimization Best Practices</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">✅ Measure Everything</h3>
                   <p className="text-left"></p>
                     You can't optimize what you don't measure. Deploy comprehensive cost tracking at 
@@ -507,8 +507,8 @@ export default function AICloudCostOptimization2025() {
           </div>
 
           <footer className="text-left">
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Written by Zion Tech Group FinOps Team
               </div>
               <div className="text-left"></div>

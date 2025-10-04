@@ -35,8 +35,8 @@ export default function AIOctober2025AdaptiveEnterpriseOrchestration() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">94%</div>
               <div className="text-left">Efficiency Improvement</div>
             </div>
@@ -107,8 +107,8 @@ export default function AIOctober2025AdaptiveEnterpriseOrchestration() {
               overhead by $127M annually.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2.8M</div>
                 <div className="text-left">Daily Transactions</div>
               </div>
@@ -125,8 +125,8 @@ export default function AIOctober2025AdaptiveEnterpriseOrchestration() {
 
           <h2 className="text-left">Implementation Framework</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Process Discovery</h3>
               <p className="text-left"></p>
                 AI-powered process mining identifies automation opportunities, analyzes existing workflows, 

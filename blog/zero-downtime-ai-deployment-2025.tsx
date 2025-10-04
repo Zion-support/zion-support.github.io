@@ -50,8 +50,8 @@ const ZeroDowntimeAIDeployment2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Key Outcomes</h3>
             <ul className="text-left">
               <li><strong>99.999% Uptime:</strong> Deploy models without service interruption</li>
@@ -79,8 +79,8 @@ const ZeroDowntimeAIDeployment2025: React.FC = () =>
 
           <div className="text-left"></div>
             <h3 className="text-left">💰 Real Cost of AI Downtime</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">E-commerce recommendation engine down 1 hour:<
                 <span className="text-left">$2.1M loss<
               </div>
@@ -224,8 +224,8 @@ const ZeroDowntimeAIDeployment2025: React.FC = () =>
 
           <h2 className="text-left">Implementation Checklist</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">✅<
               <div></div>
                 <h4 className="text-left">Model Registry Setup</h4>

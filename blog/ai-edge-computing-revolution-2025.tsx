@@ -88,8 +88,8 @@ export default function AIEdgeComputingRevolution2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Applications</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🏭 Manufacturing & Industrial IoT</h3>
                     <p className="text-left"></p>
                       Predictive maintenance, quality control, and safety monitoring require real-time 
@@ -149,8 +149,8 @@ export default function AIEdgeComputingRevolution2025() {
                   models at the edge:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Model Optimization</h3>
                     <p className="text-left"></p>
                       Compress and optimize models for edge devices using quantization, pruning, and 
@@ -190,8 +190,8 @@ export default function AIEdgeComputingRevolution2025() {
                   Real-world performance metrics from Zion Tech Group's edge AI deployments:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">&lt;5ms</div>
                     <div className="text-left">Inference latency</div>
                     <div className="text-left">100x faster than cloud</div>
@@ -295,8 +295,8 @@ export default function AIEdgeComputingRevolution2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group Edge AI Practice
                 </div>
                 <div className="text-left"></div>

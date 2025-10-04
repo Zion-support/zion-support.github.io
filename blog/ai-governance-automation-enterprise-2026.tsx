@@ -64,8 +64,8 @@ const AIGovernanceAutomationEnterprise2026 = () =>
               <TrendingUp className="text-left" />
               Governance Automation Impact
             </h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">100%</div>
                 <div className="text-left">Policy Compliance Rate</div>
               </div>
@@ -107,8 +107,8 @@ const AIGovernanceAutomationEnterprise2026 = () =>
                 Automated Governance Framework
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     <CheckCircle className="text-left" />
                     Policy Automation & Enforcement
@@ -217,8 +217,8 @@ const AIGovernanceAutomationEnterprise2026 = () =>
               </h2>
               <div className="text-left"></div>
                 <h3 className="text-left">Production Governance Stack</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <p className="text-left">Policy Engine Layer</p>
                     <p className="text-left"></p>
                       Open Policy Agent (OPA) or custom policy engine integrated with MLOps pipelines. Policies defined declaratively, 
@@ -261,8 +261,8 @@ const AIGovernanceAutomationEnterprise2026 = () =>
                   Multinational bank deployed automated governance across 300+ AI models in production. Achieved 100% EU AI Act compliance, 
                   reduced governance overhead from 15 FTEs to 3, and passed regulatory audits with zero findings.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">100%</div>
                     <div className="text-left">Compliance Rate</div>
                   </div>
@@ -287,8 +287,8 @@ const AIGovernanceAutomationEnterprise2026 = () =>
                 <AlertTriangle className="text-left" />
                 Critical Success Factors
               </h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Start with Policy Inventory</h3>
                   <p className="text-left"></p>
                     Document all governance requirements first—regulatory, ethical, and business policies. Map to technical controls before automating.

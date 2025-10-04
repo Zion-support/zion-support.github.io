@@ -186,8 +186,8 @@ export default function AICostOptimizationRevolution2025() {
               </section>
             </div>
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group FinOps Team
                 </div>
                 <div className="text-left"></div>

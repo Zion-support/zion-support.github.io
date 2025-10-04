@@ -73,8 +73,8 @@ const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () =>
               Unlike traditional digital twins that merely mirror physical assets, Cognitive Digital Twins incorporate advanced AI, machine learning, and predictive analytics to understand, anticipate, and optimize outcomes before they occur.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Predictive Intelligence</h3>
                 <p className="text-left"></p>
                   Anticipate issues, opportunities, and optimal strategies with unprecedented accuracy using multi-dimensional modeling.
@@ -104,8 +104,8 @@ const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Success Stories</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Global Manufacturing Conglomerate</h3>
                 <p className="text-left"></p>
                   Deployed cognitive digital twins across 127 factories in 34 countries, revolutionizing production optimization.
@@ -185,8 +185,8 @@ const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Core Technology Components</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">AI-Powered Modeling Engine</h3>
                 <p className="text-left"></p>
                   Advanced neural networks create high-fidelity representations of complex systems, capturing intricate relationships and dependencies.
@@ -239,8 +239,8 @@ const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Methodology</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <div className="text-left">1</div>
                   <div></div>
@@ -250,8 +250,8 @@ const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">2</div>
                   <div></div>
                     <h3 className="text-left">Model Development (4-8 weeks)</h3>
@@ -260,8 +260,8 @@ const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">3</div>
                   <div></div>
                     <h3 className="text-left">AI Training & Validation (3-6 weeks)</h3>
@@ -270,8 +270,8 @@ const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">4</div>
                   <div></div>
                     <h3 className="text-left">Production Deployment (2-4 weeks)</h3>
@@ -285,8 +285,8 @@ const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () =>
           <section className="text-left"></section>
             <h2 className="text-left">Industry Applications</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Manufacturing</h3>
                 <p className="text-left">Production optimization, quality control, predictive maintenance, supply chain integration</p>
               </div>

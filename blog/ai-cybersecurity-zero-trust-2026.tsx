@@ -187,8 +187,8 @@ export default function AICybersecurityZeroTrust2026() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published by Zion Tech Group Security Research Team
                 </div>
                 <div className="text-left"></div>

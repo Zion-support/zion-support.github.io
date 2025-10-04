@@ -37,8 +37,8 @@ export default function FederatedLearningPrivacyRevolution() {
         {/* Executive Summary */}
         <section className="text-left"></section>
           <h2 className="text-left">Executive Summary</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">94%</div>
               <div className="text-left">Model Accuracy with Privacy Preservation</div>
             </div>
@@ -134,8 +134,8 @@ export default function FederatedLearningPrivacyRevolution() {
           </div>
 
           <h2 className="text-left">Real-World Success Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Healthcare Consortium</h4>
               <ul className="text-left">
                 <li>• 15 hospitals collaborating on diagnostic AI</li>

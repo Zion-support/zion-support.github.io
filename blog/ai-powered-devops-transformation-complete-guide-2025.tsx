@@ -55,8 +55,8 @@ export default function AIPoweredDevOpsTransformation2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Transformation Outcomes</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Deployment Velocity</div>
                   </div>
@@ -105,8 +105,8 @@ export default function AIPoweredDevOpsTransformation2025() {
               <h2 className="text-left">AI DevOps Architecture</h2>
               
               <h3 className="text-left">Core Components</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">1. Intelligent CI/CD Pipelines</h4>
                   <p className="text-left"></p>
                     AI-powered pipelines that analyze code changes, predict deployment risk, automatically select testing 
@@ -270,8 +270,8 @@ export default function AIPoweredDevOpsTransformation2025() {
                   A major e-commerce company with 500M+ users deployed AI-powered DevOps, achieving 10x faster deployments 
                   and 99.99% uptime during peak shopping seasons.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Deployment Frequency</div>
                     <div className="text-left">From weekly to 10x daily</div>
@@ -295,8 +295,8 @@ export default function AIPoweredDevOpsTransformation2025() {
                   A fast-growing fintech scaled from 10K to 10M users in 6 months using AI-powered auto-scaling and 
                   predictive incident prevention—maintaining 99.9% uptime throughout.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1000x</div>
                     <div className="text-left">User Growth</div>
                     <div className="text-left">Without infrastructure team scaling</div>
@@ -315,8 +315,8 @@ export default function AIPoweredDevOpsTransformation2025() {
               </div>
 
               <h2 className="text-left">Key Metrics to Track</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">DORA Metrics</h4>
                   <ul className="text-left">
                     <li>• <strong className="text-left">Deployment Frequency:</strong> Target: 10+ per day</li>

@@ -35,8 +35,8 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$4.2B</div>
               <div className="text-left">Industry Investment</div>
             </div>
@@ -229,8 +229,8 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
               protecting $3.7 trillion in assets from future quantum threats:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$3.7T</div>
                 <div className="text-left">Assets Protected</div>
                 <div className="text-left"></div>
@@ -272,8 +272,8 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
           
           <div className="text-left"></div>
             {/* 2025 */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2025</div>
                 <h3 className="text-left">Foundation Phase</h3>
               </div>
@@ -286,8 +286,8 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
             </div>
 
             {/* 2026 */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2026</div>
                 <h3 className="text-left">Integration Phase</h3>
               </div>
@@ -300,8 +300,8 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
             </div>
 
             {/* 2027+ */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2027+</div>
                 <h3 className="text-left">Quantum Advantage Phase</h3>
               </div>
@@ -322,8 +322,8 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
           <div className="text-left"></div>
             <div></div>
               <h3 className="text-left">Implementation Costs (5-Year)</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Post-Quantum Cryptography Migration<
                   <span className="text-left">$1.2M<
                 </div>
@@ -348,8 +348,8 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
 
             <div></div>
               <h3 className="text-left">Value Delivered</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Security Risk Mitigation<
                   <span className="text-left">$12M+<
                 </div>
@@ -365,8 +365,8 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
                   <span className="text-left">Competitive Advantage<
                   <span className="text-left">Priceless<
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Estimated 5-Year ROI</div>
                     <div className="text-left">437%</div>
                   </div>

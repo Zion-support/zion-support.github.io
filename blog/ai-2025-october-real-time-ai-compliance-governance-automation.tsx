@@ -148,8 +148,8 @@ export default function RealTimeAIComplianceGovernanceAutomation2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Autonomous AI Governance Architecture</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">🔍 Continuous Compliance Monitoring</h4>
                     <p className="text-left">AI agents continuously scan all systems, data flows, and operations against regulatory requirements in real-time.</p>
                     <div className="text-left"></div>
@@ -229,8 +229,8 @@ export default function RealTimeAIComplianceGovernanceAutomation2025() {
                     </ul>
 
                     <p><strong className="text-left">Results After 24 Months:</strong></p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Compliance Metrics</div>
                         <ul className="text-left">
                           <li>• 100% compliance rate (zero violations)</li>
@@ -258,8 +258,8 @@ export default function RealTimeAIComplianceGovernanceAutomation2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Framework-Specific Automation</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">GDPR Compliance Automation</h4>
                     <div className="text-left"></div>
                       <ul className="text-left">
@@ -320,8 +320,8 @@ export default function RealTimeAIComplianceGovernanceAutomation2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">9-Month Deployment Timeline</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Phase 1: Assessment & Foundation (Months 1-3)</div>
                       <ul className="text-left">
                         <li>• Comprehensive compliance audit across all frameworks</li>

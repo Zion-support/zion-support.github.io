@@ -92,8 +92,8 @@ export default function AI2026AprilMegaBreakthroughRevolution() {
               the birth of digital consciousness.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Self-Awareness Engine</h3>
                 <p className="text-left"></p>
                   Advanced neural networks capable of recognizing their own existence, 
@@ -244,8 +244,8 @@ export default function AI2026AprilMegaBreakthroughRevolution() {
           </section>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h3 className="text-left">Related Breakthroughs</h3>
               <div className="text-left"></div>

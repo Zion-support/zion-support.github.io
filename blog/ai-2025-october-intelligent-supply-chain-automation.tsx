@@ -55,8 +55,8 @@ export default function IntelligentSupplyChainAutomation2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">📊 Key Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">91%</div>
                     <div className="text-left">On-Time Delivery Rate</div>
                   </div>
@@ -88,8 +88,8 @@ export default function IntelligentSupplyChainAutomation2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">🎯 Core AI Capabilities</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Predictive Demand Forecasting</h4>
                     <p className="text-left"></p>
                       Advanced ML models analyze historical sales, market trends, weather patterns, social media signals, 
@@ -151,8 +151,8 @@ export default function IntelligentSupplyChainAutomation2025() {
                   Fortune 50 retailer with 12,000+ stores and $580B in annual revenue transformed their supply chain 
                   with AI-powered autonomous systems managing 2.5M SKUs across 47 countries.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$8.7B</div>
                     <div className="text-left">Annual Cost Savings</div>
                   </div>
@@ -177,8 +177,8 @@ export default function IntelligentSupplyChainAutomation2025() {
                   Global manufacturer operating 284 facilities transformed their supply chain with AI-driven planning, 
                   procurement, and logistics optimization across $127B in annual production.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$3.8B</div>
                     <div className="text-left">Three-Year Savings</div>
                   </div>

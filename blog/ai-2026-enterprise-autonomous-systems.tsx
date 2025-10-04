@@ -6,8 +6,8 @@ export default function AI2026EnterpriseAutonomousSystems() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <h1 className="text-left">AI 2026 Enterprise Autonomous Systems</h1>
         <p className="text-left">Published January 20, 2026 • 15 min read</p>
         <p className="text-left"></p>

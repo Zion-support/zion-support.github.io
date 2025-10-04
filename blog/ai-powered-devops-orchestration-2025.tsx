@@ -18,15 +18,15 @@ const AIPoweredDevOpsOrchestration2025 = () =>
 
       <div className="text-left"></div>
         {/* Header */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Link to="/blog" className="text-left">
               <ArrowLeft className="text-left" />
               Back to Blog
             </Link>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   DevOps AI
                 <
@@ -47,11 +47,11 @@ const AIPoweredDevOpsOrchestration2025 = () =>
         </div>
 
         {/* Content */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">85%</div>
                 <div className="text-left">Fewer Deployment Failures</div>
               </div>
@@ -66,8 +66,8 @@ const AIPoweredDevOpsOrchestration2025 = () =>
             </div>
 
             {/* Article Content */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">
                   <Rocket className="text-left" />
                   The DevOps Evolution
@@ -85,8 +85,8 @@ const AIPoweredDevOpsOrchestration2025 = () =>
                   <Zap className="text-left" />
                   Core Capabilities of AI DevOps
                 </h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <CheckCircle className="text-left" />
                     <div></div>
                       <h3 className="text-left">Predictive Failure Detection</h3>
@@ -128,8 +128,8 @@ const AIPoweredDevOpsOrchestration2025 = () =>
                 <p className="text-left"></p>
                   A production-ready AI DevOps architecture consists of several key components:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Observability Layer</h3>
                     <p className="text-left">Comprehensive monitoring with distributed tracing, metrics aggregation, and log analysis. Feed this data to your AI models for pattern recognition.</p>
                   </div>
@@ -179,8 +179,8 @@ const AIPoweredDevOpsOrchestration2025 = () =>
                   <Shield className="text-left" />
                   Getting Started: Your Action Plan
                 </h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Foundation (Week 1-2)</h3>
                     <p>Implement comprehensive observability. You can't optimize what you can't measure. Deploy OpenTelemetry, centralize logs, and establish baseline metrics.</p>
                   </div>

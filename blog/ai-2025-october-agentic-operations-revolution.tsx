@@ -55,8 +55,8 @@ export default function AgenticAIOperationsRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Transformative Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">76%</div>
                     <div className="text-left">Operational Cost Reduction</div>
                   </div>
@@ -201,8 +201,8 @@ export default function AgenticAIOperationsRevolution2025() {
 
               <h2 className="text-left">Real-World Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏦 Financial Services</h4>
                   <ul className="text-left">
                     <li>• Autonomous fraud detection and blocking with 99.2% accuracy</li>
@@ -331,8 +331,8 @@ export default function AgenticAIOperationsRevolution2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">90-Day Path to Agentic Operations</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Foundation (Days 1-30)</h4>
                     <ul className="text-left">
                       <li>• Audit existing observability and automation capabilities</li>

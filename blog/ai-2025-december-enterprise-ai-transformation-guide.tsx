@@ -64,8 +64,8 @@ export default function December2025EnterpriseAITransformationGuide() {
 
         <div className="text-left"></div>
           <h3 className="text-left">90-Day Accelerator Framework</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>
               <div></div>
                 <h4 className="text-left">Days 1-30: Foundation & Strategy</h4>
@@ -97,8 +97,8 @@ export default function December2025EnterpriseAITransformationGuide() {
             A leading manufacturing company transformed their entire supply chain using AI-driven predictive analytics, 
             achieving 67% reduction in inventory costs and 89% improvement in delivery accuracy.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">67%</div>
               <p className="text-left">Inventory cost reduction</p>
             </div>
@@ -119,8 +119,8 @@ export default function December2025EnterpriseAITransformationGuide() {
           and organizational challenges. Here are the key best practices from our experience with 500+ successful deployments.
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Technical Excellence</h3>
             <ul className="text-left">
               <li>• Robust data infrastructure and governance</li>
@@ -180,8 +180,8 @@ export default function December2025EnterpriseAITransformationGuide() {
 
         <div className="text-left"></div>
           <h3 className="text-left">Phase 1: Assessment & Planning (Weeks 1-4)</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>
               <div></div>
                 <h4 className="text-left">AI Readiness Assessment</h4>
@@ -207,8 +207,8 @@ export default function December2025EnterpriseAITransformationGuide() {
 
         <div className="text-left"></div>
           <h3 className="text-left">Phase 2: Implementation & Training (Weeks 5-12)</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">4</div>
               <div></div>
                 <h4 className="text-left">Technical Deployment</h4>
@@ -234,8 +234,8 @@ export default function December2025EnterpriseAITransformationGuide() {
 
         <div className="text-left"></div>
           <h3 className="text-left">Phase 3: Scale & Optimize (Weeks 13-24)</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">7</div>
               <div></div>
                 <h4 className="text-left">Expansion Planning</h4>

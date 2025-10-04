@@ -36,8 +36,8 @@ export default function AI2025OctoberCognitiveMeshIntelligencePlatform() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$847M</div>
               <div className="text-left">Value Created</div>
             </div>
@@ -145,8 +145,8 @@ export default function AI2025OctoberCognitiveMeshIntelligencePlatform() {
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Strategic Planning</h3>
               <ul className="text-left">
                 <li>• Market intelligence aggregation</li>
@@ -224,8 +224,8 @@ export default function AI2025OctoberCognitiveMeshIntelligencePlatform() {
         <section className="text-left"></section>
           <h2 className="text-left">90-Day Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">Phase 1</div>
                 <div className="text-left">Foundation (Days 1-30)</div>
@@ -238,8 +238,8 @@ export default function AI2025OctoberCognitiveMeshIntelligencePlatform() {
               </ul>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">Phase 2</div>
                 <div className="text-left">Optimization (Days 31-60)</div>
               </div>
@@ -251,8 +251,8 @@ export default function AI2025OctoberCognitiveMeshIntelligencePlatform() {
               </ul>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">Phase 3</div>
                 <div className="text-left">Scale & Evolution (Days 61-90)</div>
               </div>

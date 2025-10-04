@@ -55,8 +55,8 @@ export default function AIDevSecOpsRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🎯 Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.7%</div>
                     <div className="text-left">Vulnerabilities Prevented</div>
                   </div>
@@ -202,8 +202,8 @@ export default function AIDevSecOpsRevolution2025() {
 
               <h2 className="text-left">Technology Stack</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div></div>
                     <h4 className="text-left">AI Security Platforms</h4>
                     <p className="text-left">Snyk Intelligence, GitHub Advanced Security, GitGuardian, Checkmarx AI</p>

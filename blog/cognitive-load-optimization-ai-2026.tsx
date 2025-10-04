@@ -47,8 +47,8 @@ const CognitiveLoadOptimizationAI2026 = () =>
               Design AI systems that minimize cognitive load for users. Learn attention budgets, progressive disclosure, and intelligent defaults that enhance productivity without overwhelming humans.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -64,8 +64,8 @@ const CognitiveLoadOptimizationAI2026 = () =>
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Key Insights</h3>
               <ul className="text-left">
                 <li>✅ Reduce user decision fatigue by 70% with intelligent defaults</li>
@@ -396,8 +396,8 @@ const CognitiveLoadOptimizationAI2026 = () =>
             </div>
 
             {/* Share Section */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <Tag className="text-left" />
                   <div className="text-left"></div>

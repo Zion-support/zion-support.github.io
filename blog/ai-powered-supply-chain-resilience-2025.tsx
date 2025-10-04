@@ -22,8 +22,8 @@ export default function AIPoweredSupplyChainResilience2025() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left"></span>
               🆕 PUBLISHED SEPTEMBER 30, 2025
             <
@@ -41,8 +41,8 @@ export default function AIPoweredSupplyChainResilience2025() {
             with intelligent AI-powered supply chain automation
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">94%</div>
               <div className="text-left">Disruption Prediction</div>
             </div>
@@ -196,8 +196,8 @@ export default function AIPoweredSupplyChainResilience2025() {
               chain resilience after $340M in disruption losses in 2023-2024.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">94%</div>
                 <div className="text-left">Disruption Prediction Rate</div>
               </div>
@@ -234,8 +234,8 @@ export default function AIPoweredSupplyChainResilience2025() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Week 1-2: Data Integration & Foundation</h4>
               <p className="text-left"></p>
                 Connect ERP, WMS, TMS, supplier systems. Establish data pipelines for real-time visibility 
@@ -263,8 +263,8 @@ export default function AIPoweredSupplyChainResilience2025() {
 
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🤖 AI & ML</h4>
               <ul className="text-left">
                 <li>• TensorFlow/PyTorch for demand forecasting</li>
@@ -300,8 +300,8 @@ export default function AIPoweredSupplyChainResilience2025() {
           <div className="text-left"></div>
             <h3 className="text-left">Typical Annual Benefits (Enterprise Scale)</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Transportation Cost Reduction (35%)<
                 <span className="text-left">$82M<
               </div>

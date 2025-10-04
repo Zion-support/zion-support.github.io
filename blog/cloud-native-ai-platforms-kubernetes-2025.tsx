@@ -42,8 +42,8 @@ const CloudNativeAIPlatformsKubernetes2025 = () =>
 
         <h2 className="text-left">Architecture of Cloud-Native AI Platforms</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🎯 Container Orchestration</h4>
             <p className="text-left"></p>
               Kubernetes manages containerized ML workloads across clusters, automatically handling scheduling, scaling, and resource allocation for optimal performance.
@@ -74,8 +74,8 @@ const CloudNativeAIPlatformsKubernetes2025 = () =>
 
         <h2 className="text-left">Key Components & Technologies</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🔧 Kubeflow - End-to-End ML Platform</h4>
             <p className="text-left"></p>
               Production-grade ML platform built on Kubernetes. Provides notebooks, pipelines, model serving, and hyperparameter tuning in a unified environment.
@@ -130,8 +130,8 @@ const CloudNativeAIPlatformsKubernetes2025 = () =>
 
         <h2 className="text-left">Enterprise Success Stories</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🏢 Fortune 500 E-Commerce Platform</h4>
             <p className="text-left"></p>
               Migrated 500+ ML models to Kubernetes-based platform. Results: 92% faster deployment cycles, 78% cost reduction, 99.99% uptime, and ability to handle 10x traffic spikes during peak seasons.
@@ -226,8 +226,8 @@ const CloudNativeAIPlatformsKubernetes2025 = () =>
           Cloud-native platforms enable sophisticated cost optimization while maintaining performance:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">💰 Smart Resource Management</h4>
             <ul className="text-left">
               <li>Autoscaling based on actual workload demands</li>
@@ -263,8 +263,8 @@ const CloudNativeAIPlatformsKubernetes2025 = () =>
 
         <h2 className="text-left">Implementation Roadmap</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Phase 1: Foundation (Weeks 1-4)</h4>
             <ul className="text-left">
               <li>Set up Kubernetes clusters with GPU support</li>

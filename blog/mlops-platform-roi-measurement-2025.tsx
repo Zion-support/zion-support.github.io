@@ -45,8 +45,8 @@ const MLOpsPlatformROIMeasurement2025: React.FC = () =>
               Stop justifying platform investments with infrastructure metrics. Learn how to measure MLOps platform ROI with scorecards, leading indicators, and business outcomes that prove value to leadership.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <User className="text-left" />
                 <span>Zion Tech Group Team<
               </div>
@@ -94,8 +94,8 @@ const MLOpsPlatformROIMeasurement2025: React.FC = () =>
               <p className="text-left"></p>
                 Effective platform ROI measurement requires three layers: Leading Indicators → Adoption Metrics → Business Outcomes. Each layer builds on the previous, creating a clear narrative from platform capabilities to business value.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Layer 1: Leading Indicators</h3>
                   <p className="text-left">Metrics that predict future adoption and success:</p>
                   <ul className="text-left">
@@ -133,12 +133,12 @@ const MLOpsPlatformROIMeasurement2025: React.FC = () =>
               <p className="text-left"></p>
                 A scorecard transforms metrics into a narrative. Here's a proven template used by top platform teams:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Q1 2025 MLOps Platform Scorecard</h3>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div></div>
                       <div className="text-left"></div>
                         <h4 className="text-left">🚀 Time to First Model (TTFX)</h4>
@@ -180,8 +180,8 @@ const MLOpsPlatformROIMeasurement2025: React.FC = () =>
                       <p className="text-left">Teams ship experiments 3.8x faster with automated CI/CD</p>
                     </div>
                   </div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Platform ROI (Revenue / Platform Cost)<
                       <span className="text-left">4.1x<
                     </div>
@@ -220,8 +220,8 @@ const MLOpsPlatformROIMeasurement2025: React.FC = () =>
               <p className="text-left"></p>
                 High-performing platform teams obsess over the "golden path"—the fastest, safest way for teams to accomplish common tasks. Measure golden path effectiveness with these metrics:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Golden Path Metrics</h3>
                   <ul className="text-left">
                     <li>✓ % teams using golden path templates (target: &gt;80%)</li>
@@ -233,8 +233,8 @@ const MLOpsPlatformROIMeasurement2025: React.FC = () =>
                 </div>
                 <div className="text-left"></div>
                   <h3 className="text-left">Golden Path Example</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <strong className="text-left">Task:</strong> Deploy a new model to production
                     </div>
                     <div className="text-left"></div>

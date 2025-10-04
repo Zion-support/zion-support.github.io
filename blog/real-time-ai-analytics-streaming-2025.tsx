@@ -42,8 +42,8 @@ const RealTimeAIAnalyticsStreaming2025 = () =>
 
         <h2 className="text-left">Architecture of Real-Time AI Analytics</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🌊 Stream Processing</h4>
             <p className="text-left"></p>
               Apache Kafka, Flink, and Pulsar handle massive event streams with exactly-once semantics. Distributed processing ensures zero data loss and consistent state management.
@@ -74,8 +74,8 @@ const RealTimeAIAnalyticsStreaming2025 = () =>
 
         <h2 className="text-left">Core Technology Stack</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🚀 Apache Kafka - Event Streaming Platform</h4>
             <p className="text-left"></p>
               Industry-standard platform for building real-time data pipelines and streaming applications. Handles trillions of events daily for world's largest companies.
@@ -130,8 +130,8 @@ const RealTimeAIAnalyticsStreaming2025 = () =>
 
         <h2 className="text-left">Transformative Business Applications</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🎯 Financial Trading & Risk Management</h4>
             <p className="text-left"></p>
               Process millions of market events per second, detect arbitrage opportunities instantly, and manage risk in real-time. Results: $127M additional trading revenue, 99.99% uptime, sub-microsecond latency for critical paths.
@@ -238,8 +238,8 @@ const RealTimeAIAnalyticsStreaming2025 = () =>
 
         <h2 className="text-left">Performance Optimization Techniques</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">⚡ Low-Latency Processing</h4>
             <ul className="text-left">
               <li><strong>Async I/O:</strong> Non-blocking operations prevent thread starvation and maximize throughput</li>
@@ -272,8 +272,8 @@ const RealTimeAIAnalyticsStreaming2025 = () =>
 
         <h2 className="text-left">Implementation Blueprint</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🎯 Phase 1: Foundation (Weeks 1-3)</h4>
             <ul className="text-left">
               <li>Deploy Kafka cluster for event streaming</li>
@@ -316,8 +316,8 @@ const RealTimeAIAnalyticsStreaming2025 = () =>
 
         <h2 className="text-left">ROI & Business Value</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">$87M+</div>
             <div className="text-left">Average annual value created through instant insights and automated decisions</div>
           </div>

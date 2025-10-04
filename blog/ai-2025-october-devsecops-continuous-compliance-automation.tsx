@@ -81,8 +81,8 @@ export default function AIDevSecOpsContinuousCompliance2025() {
                   of code patterns, vulnerability signatures, and compliance requirements to provide:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Intelligent SAST/DAST</h3>
                     <p className="text-left"></p>
                       AI-powered static and dynamic analysis that detects zero-day vulnerabilities, SQL injection 
@@ -174,8 +174,8 @@ export default function AIDevSecOpsContinuousCompliance2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">ROI & Business Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$12M</div>
                     <div className="text-left">Average Annual Savings</div>
                     <div className="text-left">from prevented breaches, downtime, and audit costs</div>

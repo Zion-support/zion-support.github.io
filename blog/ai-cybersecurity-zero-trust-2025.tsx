@@ -80,8 +80,8 @@ export default function AICybersecurityZeroTrust2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">How AI Supercharges Zero Trust</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🔍 Intelligent Threat Detection</h3>
                     <p className="text-left"></p>
                       AI analyzes billions of data points to identify anomalous behavior, detecting threats 
@@ -114,8 +114,8 @@ export default function AICybersecurityZeroTrust2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Key Components of AI-Powered Zero Trust</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Identity & Access Management (IAM)</h3>
                     <p className="text-left"></p>
                       AI-enhanced IAM systems use multi-factor authentication, biometrics, and behavioral analysis 
@@ -171,8 +171,8 @@ export default function AICybersecurityZeroTrust2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Success Stories</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global Financial Institution</h3>
                     <p className="text-left"></p>
                       A multinational bank deployed our AI-powered zero trust platform, blocking 12,000+ targeted 
@@ -209,8 +209,8 @@ export default function AICybersecurityZeroTrust2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Implementing Zero Trust: A Roadmap</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Assessment & Planning (Weeks 1-4)</h4>
                     <p className="text-left"></p>
                       Inventory all assets, map data flows, identify critical resources, and define security policies.
@@ -291,8 +291,8 @@ export default function AICybersecurityZeroTrust2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Security Team
                 </div>
                 <div className="text-left"></div>

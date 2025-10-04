@@ -55,8 +55,8 @@ export default function AutonomousDataQualityOrchestration2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.7%</div>
                     <div className="text-left">Data Accuracy</div>
                   </div>
@@ -153,8 +153,8 @@ export default function AutonomousDataQualityOrchestration2025() {
                   A Fortune 100 retailer implemented autonomous data quality across 3,500 daily pipelines 
                   processing 85TB of transaction, inventory, and customer data.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">84%</div>
                     <div className="text-left">Reduction in manual data quality interventions</div>
                   </div>
@@ -179,8 +179,8 @@ export default function AutonomousDataQualityOrchestration2025() {
                   A major healthcare provider deployed autonomous quality monitoring across patient records, 
                   ensuring HIPAA compliance and preventing medical errors from data inconsistencies.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">100%</div>
                     <div className="text-left">Compliance with HIPAA data quality requirements</div>
                   </div>
@@ -201,8 +201,8 @@ export default function AutonomousDataQualityOrchestration2025() {
 
               <h2 className="text-left">Implementation Framework</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Step 1: Quality Rule Definition</h3>
                   <ul className="text-left">
                     <li>• Define data quality dimensions (completeness, accuracy, consistency, timeliness)</li>

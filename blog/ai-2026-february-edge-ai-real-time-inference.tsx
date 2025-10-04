@@ -19,7 +19,7 @@ const EdgeAIRealTimeInference2026 = () =>
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-february-edge-ai-real-time-inference" />
       </Helmet>
       
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link
             to="/blog"
@@ -51,8 +51,8 @@ const EdgeAIRealTimeInference2026 = () =>
               </p>
             </header>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">
                   <Zap className="text-left" />
                   Performance Benchmarks
@@ -212,8 +212,8 @@ const EdgeAIRealTimeInference2026 = () =>
 
               <h2 className="text-left">Performance Optimization</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     <Clock className="text-left" />
                     Latency Optimization
@@ -272,8 +272,8 @@ const EdgeAIRealTimeInference2026 = () =>
               </ul>
 
               <h2 className="text-left">Success Metrics</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Technical Metrics</h3>
                   <ul className="text-left">
                     <li>• Sub-10ms inference latency</li>

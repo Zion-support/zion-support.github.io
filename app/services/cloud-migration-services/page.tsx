@@ -40,8 +40,8 @@ export default function CloudMigrationServicesPage() {
 
       {/* Cloud Providers Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Expert Cloud Platform Migration
             </h2>
@@ -53,8 +53,8 @@ export default function CloudMigrationServicesPage() {
 
           <div className="text-left"></div>
             {/* AWS Migration */}</div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></p>
@@ -94,8 +94,8 @@ export default function CloudMigrationServicesPage() {
               </div>
 
             {/* Azure Migration */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"/></p>
@@ -135,8 +135,8 @@ export default function CloudMigrationServicesPage() {
               </div>
 
             {/* Google Cloud Migration */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <svg className="text-left" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/></p>
@@ -182,8 +182,8 @@ export default function CloudMigrationServicesPage() {
 
       {/* Migration Process Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Our Proven Migration Process
             </h2>
@@ -192,8 +192,8 @@ export default function CloudMigrationServicesPage() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">1</div>
               <h3 className="text-left">Assessment</h3>
               <p className="text-left">Comprehensive analysis of current infrastructure, applications, and dependencies.</p>
@@ -223,8 +223,8 @@ export default function CloudMigrationServicesPage() {
 
       {/* Pricing Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Cloud Migration Pricing
             </h2>
@@ -235,8 +235,8 @@ export default function CloudMigrationServicesPage() {
 
           <div className="text-left"></div>
             {/* Small Business */}</div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Small Business</h3>
                 <div className="text-left">$2,999</div>
                 <p className="text-left">Up to 10 servers</p>
@@ -275,8 +275,8 @@ export default function CloudMigrationServicesPage() {
             </div>
 
             {/* Enterprise */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Most Popular</span>
               </div>
               <div className="text-left"></div>
@@ -324,8 +324,8 @@ export default function CloudMigrationServicesPage() {
             </div>
 
             {/* Custom Solution */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Custom Solution</h3>
                 <div className="text-left">$15,999+</div>
                 <p className="text-left">Large-scale enterprise</p>

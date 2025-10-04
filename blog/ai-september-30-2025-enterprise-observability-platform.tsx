@@ -62,8 +62,8 @@ export default function AISeptember302025EnterpriseObservabilityPlatform() {
 
           <h3 className="text-left">Revolutionary Capabilities</h3>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🤖 Autonomous Monitoring</h4>
               <p className="text-left"></p>
                 AI agents continuously monitor your entire infrastructure, automatically discovering services, identifying dependencies, and adapting to changes in real-time without manual configuration.

@@ -36,8 +36,8 @@ export default function AI2025OctoberEnterpriseAIFabric() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100+</div>
               <div className="text-left">AI Models</div>
             </div>
@@ -99,8 +99,8 @@ export default function AI2025OctoberEnterpriseAIFabric() {
           </div>
 
           <h2 className="text-left">Key Capabilities</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Multi-Cloud & Hybrid</h3>
               <p className="text-left"></p>
                 Deploy and manage AI workloads across any cloud provider or on-premises infrastructure. 
@@ -131,8 +131,8 @@ export default function AI2025OctoberEnterpriseAIFabric() {
               150+ AI applications across merchandising, supply chain, marketing, and operations with 
               consistent governance and shared infrastructure.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">70%</div>
                 <div className="text-left">Lower TCO</div>
               </div>

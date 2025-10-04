@@ -106,8 +106,8 @@ export default function AIConsciousAgentsBreakthrough2025() {
                 <p className="text-left"></p>
                   Organizations looking to implement conscious agents should follow this strategic roadmap:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Assessment & Planning (Weeks 1-4)</h3>
                     <p className="text-left"></p>
                       Identify high-value use cases, assess infrastructure requirements, and establish ethical
@@ -136,8 +136,8 @@ export default function AIConsciousAgentsBreakthrough2025() {
                 <p className="text-left"></p>
                   Conscious agents are already transforming industries:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Healthcare</h3>
                     <p className="text-left"></p>
                       Patient care coordination, mental health support, ethical triage decisions, and personalized
@@ -212,8 +212,8 @@ export default function AIConsciousAgentsBreakthrough2025() {
               </section>
             </div>
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Research Team
                 </div>
                 <div className="text-left"></div>

@@ -53,8 +53,8 @@ export default function FederatedLearningEnterpriseImplementation2025() {
               </p>
             </header>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">🔐 Why Federated Learning is Transforming Enterprise AI</h2>
                 <p className="text-left"></p>
                   Traditional centralized ML requires aggregating sensitive data, creating compliance nightmares and security risks. 
@@ -600,8 +600,8 @@ class FederatedLearningPlatform:
 
               <h2 className="text-left">Real-World Success Stories</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Healthcare Consortium</h4>
                   <ul className="text-left">
                     <li>✓ 12 hospitals training shared diagnostic model</li>

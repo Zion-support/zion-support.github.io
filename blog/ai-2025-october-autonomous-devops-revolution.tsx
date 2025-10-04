@@ -58,8 +58,8 @@ export default function AIAutonomousDevOpsRevolution2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Enterprise Impact Metrics</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">99.99%</div>
                       <div className="text-left">Infrastructure Uptime</div>
                     </div>
@@ -88,8 +88,8 @@ export default function AIAutonomousDevOpsRevolution2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core Capabilities of Autonomous DevOps</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Predictive Failure Detection</h3>
                     <p className="text-left"></p>
                       AI models continuously analyze system metrics, logs, and behaviors to predict failures 
@@ -153,8 +153,8 @@ export default function AIAutonomousDevOpsRevolution2025() {
                 <div className="text-left"></div>
                   <h3 className="text-left">Phased Adoption Roadmap</h3>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <h4 className="text-left">Phase 1: Foundation (Months 1-3)</h4>
                       <p className="text-left"></p>
                         Implement observability infrastructure, baseline metrics collection, and basic 
@@ -192,15 +192,15 @@ export default function AIAutonomousDevOpsRevolution2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Real-World Success Stories</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global Financial Services Firm</h3>
                     <p className="text-left"></p>
                       Deployed autonomous DevOps across 5,000+ microservices, achieving 99.99% uptime 
                       and reducing infrastructure costs by $12M annually.
                     </p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">99.99%</div>
                         <div className="text-left">Uptime</div>
                       </div>
@@ -221,8 +221,8 @@ export default function AIAutonomousDevOpsRevolution2025() {
                       Implemented AI-powered auto-scaling that predicted Black Friday traffic surge, 
                       preventing outages and delivering flawless customer experience.
                     </p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Zero</div>
                         <div className="text-left">Outages</div>
                       </div>

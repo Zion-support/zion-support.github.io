@@ -108,8 +108,8 @@ const AI2026JanuaryAutonomousReasoningBreakthrough = () =>
               operational optimization, and crisis management scenarios.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Strategic Planning</h4>
                 <p className="text-left"></p>
                   Autonomous analysis of market trends, competitive positioning, and resource allocation decisions.
@@ -170,8 +170,8 @@ const AI2026JanuaryAutonomousReasoningBreakthrough = () =>
               and maximum value realization.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Phase 1: Foundation (Weeks 1-4)</h4>
                 <p className="text-left"></p>
                   Establish data infrastructure, integrate existing systems, and configure reasoning engine parameters.
@@ -209,8 +209,8 @@ const AI2026JanuaryAutonomousReasoningBreakthrough = () =>
             
             <div className="text-left"></div>
               <h3 className="text-left">Enterprise Success Metrics</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">95%</div>
                   <div className="text-left">Faster Decision-Making</div>
                 </div>

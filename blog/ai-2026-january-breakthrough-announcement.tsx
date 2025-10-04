@@ -20,10 +20,10 @@ const AI2026JanuaryBreakthroughAnnouncement = () =>
       <div className="text-left"></div>
         {/* Hero Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   🚀 BREAKING: January 2026
                 <
@@ -38,8 +38,8 @@ const AI2026JanuaryBreakthroughAnnouncement = () =>
                 <span className="text-left"> 98% automation rates< for enterprise transformation
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">95% Decision Accuracy<
                 </div>
                 <div className="text-left"></div>
@@ -70,8 +70,8 @@ const AI2026JanuaryBreakthroughAnnouncement = () =>
 
         {/* Breakthrough Details */}
         <section id="breakthrough-details" className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <h2 className="text-left">
                   Revolutionary AI Breakthroughs
@@ -119,8 +119,8 @@ const AI2026JanuaryBreakthroughAnnouncement = () =>
               </div>
 
               {/* Enterprise Impact */}
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Enterprise Impact & ROI</h3>
                   <div className="text-left"></div>
                     {[

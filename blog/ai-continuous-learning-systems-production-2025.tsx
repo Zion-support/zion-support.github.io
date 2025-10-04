@@ -50,8 +50,8 @@ const AIContinuousLearningSystems Production2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">🎯 Executive Summary</h2>
             <p className="text-left"></p>
               Traditional AI models degrade over time as data patterns change. Continuous learning systems automatically adapt to new data, maintaining peak performance without manual intervention.

@@ -50,8 +50,8 @@ const AIRealTimeCollaborationSystems2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Key Outcomes</h3>
             <ul className="text-left">
               <li><strong>5x Productivity Gains:</strong> AI orchestrates work across teams automatically</li>
@@ -79,8 +79,8 @@ const AIRealTimeCollaborationSystems2025: React.FC = () =>
 
           <div className="text-left"></div>
             <h3 className="text-left">📊 The Cost of Traditional Collaboration</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Average meetings per week:<
                 <span className="text-left">23 hours<
               </div>
@@ -173,8 +173,8 @@ const AIRealTimeCollaborationSystems2025: React.FC = () =>
 
           <h2 className="text-left">Implementation Roadmap</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Phase 1: Foundation (Weeks 1-2)</h4>
               <ul className="text-left">
                 <li>Connect existing tools (Slack, email, project management, documents)</li>
@@ -204,8 +204,8 @@ const AIRealTimeCollaborationSystems2025: React.FC = () =>
 
           <h2 className="text-left">Key Metrics to Track</h2>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h4 className="text-left">Efficiency Metrics</h4>
                 <ul className="text-left">

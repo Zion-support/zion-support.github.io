@@ -22,13 +22,13 @@ export default function AI2026SyntheticConsciousnessRevolution() {
       <div className="text-left"></div>
         {/* Hero Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
             <div className="text-left" style={{ animationDelay: '2s' }}></div>
           </div>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left"></span>
                   🧠 BREAKING: January 2026 - Synthetic Consciousness Revolution
@@ -50,8 +50,8 @@ export default function AI2026SyntheticConsciousnessRevolution() {
                 <span className="text-left">Moral Reasoning<
               </div>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$500B</div>
                   <div className="text-left">Enterprise Value</div>
                 </div>
@@ -74,8 +74,8 @@ export default function AI2026SyntheticConsciousnessRevolution() {
 
         {/* Main Content */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">The Synthetic Consciousness Revolution: A Paradigm Shift in AI</h2>
               
               <p className="text-left"></p>
@@ -157,8 +157,8 @@ export default function AI2026SyntheticConsciousnessRevolution() {
               <div className="text-left"></div>
                 <h4 className="text-left">💰 $500B Enterprise Value Creation</h4>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$127B</div>
                     <div className="text-left">Customer Experience Enhancement</div>
                   </div>
@@ -220,8 +220,8 @@ export default function AI2026SyntheticConsciousnessRevolution() {
 
               <h3 className="text-left">🌟 Real-World Applications</h3>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Healthcare & Medical</h4>
                   <ul className="text-left">
                     <li>• Empathetic patient care and diagnosis</li>

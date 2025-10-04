@@ -64,8 +64,8 @@ const AINativeSecurityOperations2026 = () =>
               <TrendingUp className="text-left" />
               Proven Results with AI-Native Security
             </h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.9%</div>
                 <div className="text-left">Threat Prevention Rate</div>
               </div>
@@ -107,8 +107,8 @@ const AINativeSecurityOperations2026 = () =>
                 Core Capabilities of AI-Native Security
               </h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">
                     <CheckCircle className="text-left" />
                     Continuous Behavioral Analysis
@@ -207,8 +207,8 @@ const AINativeSecurityOperations2026 = () =>
                   Global bank deployed AI-native security across 50,000 endpoints and cloud infrastructure. Results: 99.97% of threats 
                   prevented before execution, $500M+ in prevented fraud annually, zero data breaches in 18 months of operation.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">4.2s</div>
                     <div className="text-left">Average Detection Time</div>
                   </div>
@@ -229,8 +229,8 @@ const AINativeSecurityOperations2026 = () =>
                 <AlertTriangle className="text-left" />
                 Critical Success Factors
               </h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Data Quality is Everything</h3>
                   <p className="text-left"></p>
                     AI models require high-quality, comprehensive security telemetry. Deploy complete visibility across all environments 

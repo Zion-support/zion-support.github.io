@@ -35,8 +35,8 @@ export default function AI2025September30AgenticWorkflowAutomation() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">94%</div>
               <div className="text-left">Tasks Automated</div>
             </div>
@@ -92,8 +92,8 @@ export default function AI2025September30AgenticWorkflowAutomation() {
 
           <h2 className="text-left">Core Capabilities</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Intelligent Decision Making</h3>
               <p className="text-left"></p>
                 AI agents analyze context, evaluate options, and make optimal decisions based on business 
@@ -152,15 +152,15 @@ export default function AI2025September30AgenticWorkflowAutomation() {
 
           <h2 className="text-left">Industry Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏦 Financial Services</h3>
               <p className="text-left"></p>
                 Automated loan processing, fraud detection, compliance monitoring, and customer onboarding 
                 reducing processing time by 89% while improving accuracy to 99.5%.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">89%</div>
                   <div className="text-left">Faster Processing</div>
                 </div>
@@ -181,8 +181,8 @@ export default function AI2025September30AgenticWorkflowAutomation() {
                 Patient intake, insurance verification, appointment scheduling, and medical records management 
                 automated end-to-end, improving patient experience and operational efficiency.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">67%</div>
                   <div className="text-left">Time Saved</div>
                 </div>
@@ -203,8 +203,8 @@ export default function AI2025September30AgenticWorkflowAutomation() {
                 Inventory optimization, order processing, shipment tracking, and supplier coordination 
                 achieving 93% automation rate and $520M in logistics savings.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">93%</div>
                   <div className="text-left">Automation Rate</div>
                 </div>
@@ -225,8 +225,8 @@ export default function AI2025September30AgenticWorkflowAutomation() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 6-Week Fast-Track Deployment</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Process Discovery & Analysis</h4>

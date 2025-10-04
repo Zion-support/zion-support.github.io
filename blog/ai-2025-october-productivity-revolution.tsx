@@ -177,8 +177,8 @@ export default function AIProductivityRevolution2025() {
                   Our proven 90-day implementation framework includes:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       1
                     </div>
@@ -190,8 +190,8 @@ export default function AIProductivityRevolution2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       2
                     </div>
                     <div></div>
@@ -202,8 +202,8 @@ export default function AIProductivityRevolution2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       3
                     </div>
                     <div></div>
@@ -214,8 +214,8 @@ export default function AIProductivityRevolution2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       4
                     </div>
                     <div></div>
@@ -270,8 +270,8 @@ export default function AIProductivityRevolution2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Productivity Team
                 </div>
                 <div className="text-left"></div>

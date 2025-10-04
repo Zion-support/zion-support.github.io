@@ -66,8 +66,8 @@ const AIQuantumIntegrationEnterprise2025 = () =>
             computational paradigm that transcends the limitations of each individually.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">⚛️ Quantum Advantages</h3>
               <ul className="text-left">
                 <li>• Exponential parallelism via superposition</li>
@@ -91,16 +91,16 @@ const AIQuantumIntegrationEnterprise2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Enterprise Use Cases Delivering ROI Today</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">💊 Pharmaceutical Drug Discovery</h3>
               <p className="text-left"></p>
                 Quantum-enhanced AI simulates molecular interactions at unprecedented scale and accuracy. One pharma giant 
                 reduced drug discovery from 5-7 years to 18-24 months, accelerating time-to-market by 65% and saving $2.1B 
                 in R&D costs per successful drug.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">65%</div>
                   <div className="text-left">Time Reduction</div>
                 </div>
@@ -122,8 +122,8 @@ const AIQuantumIntegrationEnterprise2025 = () =>
                 of assets. These systems process 1000x more scenarios than classical methods, achieving 24% higher returns 
                 with 40% lower risk exposure.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">24%</div>
                   <div className="text-left">Higher Returns</div>
                 </div>
@@ -145,8 +145,8 @@ const AIQuantumIntegrationEnterprise2025 = () =>
                 A Fortune 100 retailer reduced logistics costs by $850M annually while improving delivery times by 45% 
                 and reducing carbon emissions by 38%.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$850M</div>
                   <div className="text-left">Annual Savings</div>
                 </div>
@@ -192,8 +192,8 @@ const AIQuantumIntegrationEnterprise2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">Getting Started: 90-Day Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Discovery & Assessment (Weeks 1-4)</h3>
               <ul className="text-left">
                 <li>✓ Identify high-value optimization problems suitable for quantum enhancement</li>

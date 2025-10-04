@@ -35,8 +35,8 @@ export default function AI2025OctoberNextGenCybersecurityRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.99%</div>
               <div className="text-left">Threat Prevention Rate</div>
             </div>
@@ -151,8 +151,8 @@ export default function AI2025OctoberNextGenCybersecurityRevolution() {
           </div>
 
           <h2 className="text-left">Enterprise Implementation Strategy</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
                 <ul className="text-left">
@@ -187,15 +187,15 @@ export default function AI2025OctoberNextGenCybersecurityRevolution() {
           </div>
 
           <h2 className="text-left">Real-World Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Global Financial Institution</h3>
               <p className="text-left"></p>
                 Deployed AI-driven cybersecurity across 50,000 endpoints, preventing 2.3M attack attempts monthly 
                 and reducing security operations costs by 67%.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Threats Blocked:<
                   <span className="text-left">99.99%<
                 </div>
@@ -215,8 +215,8 @@ export default function AI2025OctoberNextGenCybersecurityRevolution() {
                 Protected patient data across 200+ facilities with AI agents detecting and neutralizing ransomware 
                 attempts in real-time, maintaining 100% uptime.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Ransomware Blocked:<
                   <span className="text-left">100%<
                 </div>

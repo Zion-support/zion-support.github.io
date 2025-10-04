@@ -55,8 +55,8 @@ export default function AutonomousSoftwareDevelopmentRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">87%</div>
                     <div className="text-left">Faster Development</div>
                   </div>
@@ -220,8 +220,8 @@ export default function AutonomousSoftwareDevelopmentRevolution2025() {
 
               <h2 className="text-left">Best Practices for Autonomous Development</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">1. Human-AI Collaboration Model</h4>
                   <p className="text-left"></p>
                     Position AI agents as force multipliers for developers, not replacements. Developers focus on 

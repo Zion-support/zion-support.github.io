@@ -35,8 +35,8 @@ export default function AutonomousInfrastructureOptimizationOctober2025() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">70%</div>
               <div className="text-left">Cost Reduction</div>
             </div>
@@ -99,8 +99,8 @@ export default function AutonomousInfrastructureOptimizationOctober2025() {
 
           <h2 className="text-left">AI-Powered Cost Optimization</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">💰 Intelligent FinOps</h3>
               <p className="text-left"></p>
                 Machine learning models analyze usage patterns, predict future demand, and automatically 
@@ -136,8 +136,8 @@ export default function AutonomousInfrastructureOptimizationOctober2025() {
           <div className="text-left"></div>
             <h3 className="text-left">🔧 Autonomous Incident Response</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Anomaly Detection</h4>
@@ -222,15 +222,15 @@ export default function AutonomousInfrastructureOptimizationOctober2025() {
 
           <h2 className="text-left">Multi-Cloud Orchestration</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">☁️ Intelligent Cloud Distribution</h3>
               <p className="text-left"></p>
                 AI automatically distributes workloads across AWS, Azure, GCP, and private clouds based 
                 on cost, performance, compliance, and availability requirements.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Cost Arbitrage</div>
                   <div className="text-left">Optimize across providers</div>
                 </div>
@@ -248,33 +248,33 @@ export default function AutonomousInfrastructureOptimizationOctober2025() {
 
           <h2 className="text-left">Implementation Strategy</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <span className="text-left"><strong className="text-left">Foundation:</strong> Deploy observability and monitoring infrastructure<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">2</div>
                 <span className="text-left"><strong className="text-left">Data Collection:</strong> Aggregate metrics, logs, and traces for ML training<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">3</div>
                 <span className="text-left"><strong className="text-left">Model Training:</strong> Develop and validate predictive models<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">4</div>
                 <span className="text-left"><strong className="text-left">Automation:</strong> Deploy AI agents with human oversight<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">5</div>
                 <span className="text-left"><strong className="text-left">Optimization:</strong> Gradually increase automation autonomy<
               </div>

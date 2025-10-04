@@ -55,8 +55,8 @@ export default function IntelligentCloudCostOptimization2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">💰 Key Cost Savings Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">68%</div>
                     <div className="text-left">Cost Reduction</div>
                   </div>
@@ -87,8 +87,8 @@ export default function IntelligentCloudCostOptimization2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">🎯 Core AI FinOps Capabilities</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Predictive Cost Forecasting</h4>
                     <p className="text-left"></p>
                       AI models analyze historical usage patterns, business cycles, and external factors to forecast 
@@ -137,8 +137,8 @@ export default function IntelligentCloudCostOptimization2025() {
                   Fortune 100 retailer with $28B in annual revenue deployed AI-powered FinOps across their multi-cloud 
                   infrastructure spanning AWS, Azure, and GCP.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$847M</div>
                     <div className="text-left">Annual Cost Savings</div>
                   </div>
@@ -163,8 +163,8 @@ export default function IntelligentCloudCostOptimization2025() {
                   Top 10 global bank transformed their FinOps strategy with AI-powered cost intelligence across 
                   15,000+ cloud resources and 200+ microservices.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$1.2B</div>
                     <div className="text-left">Three-Year Savings</div>
                   </div>

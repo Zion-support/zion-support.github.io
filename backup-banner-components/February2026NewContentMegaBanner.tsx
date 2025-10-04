@@ -208,10 +208,10 @@ const February2026NewContentMegaBanner: React.FC = () => {
       </div>
 
       {/* Animated Background Elements */}
-      <div className="text-left"></div>
-      <div className="text-left"></div>
-      <div className="text-left"></div>
-      <div className="text-left"></div>
+      <div className="text-left">
+        <div className="text-left"></div>
+      <div className="text-left">
+        <div className="text-left"></div>
       <div className="text-left"></div>
     </div>
   );

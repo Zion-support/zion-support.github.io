@@ -50,8 +50,8 @@ const AIAgentMeshNetworks2025: React.FC = () =>
           </div>
         </header>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">🎯 Key Takeaways</h3>
             <ul className="text-left">
               <li><strong>99.99% Uptime:</strong> Mesh architectures eliminate single points of failure through distributed redundancy</li>
@@ -242,8 +242,8 @@ const AIAgentMeshNetworks2025: React.FC = () =>
           </p>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Share this article:</h4>
               <div className="text-left"></div>

@@ -10,13 +10,13 @@ export default function AIAutonomousEnterpriseOperations2026() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <Bot className="text-left" />
               <span className="text-left"></span>
@@ -57,8 +57,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
 
       {/* Autonomous Revolution Section */}
       <section id="autonomous-revolution" className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               The Autonomous Operations Revolution
             </h2>
@@ -104,8 +104,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
 
       {/* Enterprise Applications Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Autonomous Operations in Action
             </h2>
@@ -115,11 +115,11 @@ export default function AIAutonomousEnterpriseOperations2026() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏢 Financial Operations Automation</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <TrendingUp className="text-left" />
                   </div>
@@ -128,8 +128,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
                     <p className="text-left">AI systems that autonomously execute trades, manage portfolios, and optimize investment strategies, achieving 40% better returns.</p>
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Shield className="text-left" />
                   </div>
                   <div></div>
@@ -142,8 +142,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
 
             <div className="text-left"></div>
               <h3 className="text-left">⚡ Supply Chain Autonomy</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Settings className="text-left" />
                   </div>
@@ -152,8 +152,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
                     <p className="text-left">Self-managing supply chains that autonomously route shipments, adjust inventory, and optimize delivery schedules.</p>
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Users className="text-left" />
                   </div>
                   <div></div>
@@ -169,8 +169,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
 
       {/* Implementation Framework */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Autonomous Operations Framework
             </h2>
@@ -189,8 +189,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
               { phase: 'Phase 5', title: 'Continuous Evolution', duration: 'Ongoing', description: 'Monitor, optimize, and expand autonomous capabilities.' }
             ].map((phase, index) => (
               <div key={index} className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     {index + 1}
                   </div>
                   <span className="text-left">{phase.phase}<
@@ -208,8 +208,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
 
       {/* Success Metrics */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h2 className="text-left">
               Autonomous Operations Results
             </h2>
@@ -270,8 +270,8 @@ export default function AIAutonomousEnterpriseOperations2026() {
 
       {/* Footer */}
       <footer className="text-left">
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <p className="text-left">© 2026 Zion Tech Group. All rights reserved.</p>
             <div className="text-left"></div>
               <a href="/privacy" className="text-left">Privacy Policy</a>

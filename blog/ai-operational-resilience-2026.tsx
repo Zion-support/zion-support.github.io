@@ -71,8 +71,8 @@ export default function AIOperationalResilience2026() {
               <section className="text-left"></section>
                 <h2 className="text-left">Chaos and Auto-Recovery</h2>
                 <p className="text-left">Inject failures weekly. Validate auto-remediation playbooks and rollback paths.</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Self-Healing</h3>
                     <p className="text-left">Circuit breakers, retries with jitter, and shadow deploys minimize impact.</p>
                   </div>
@@ -95,8 +95,8 @@ export default function AIOperationalResilience2026() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Outcomes to Target</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.99%</div>
                     <div className="text-left">Uptime</div>
                   </div>

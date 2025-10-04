@@ -88,8 +88,8 @@ export default function AutonomousCloudInfrastructureOrchestration2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Core Capabilities of Autonomous Cloud Systems</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">🔄 Self-Healing Infrastructure</h4>
                     <p className="text-left">Automatically detects, diagnoses, and remediates infrastructure failures within seconds.</p>
                     <div className="text-left"></div>
@@ -165,8 +165,8 @@ export default function AutonomousCloudInfrastructureOrchestration2025() {
                     </ul>
 
                     <p><strong className="text-left">Results After 18 Months:</strong></p>
-                    <div className="text-left"></div>
-                      <div className="text-left"></div>
+                    <div className="text-left">
+        <div className="text-left"></div>
                         <div className="text-left">Financial Impact</div>
                         <ul className="text-left">
                           <li>• $340M annual cost savings (28% reduction)</li>
@@ -194,8 +194,8 @@ export default function AutonomousCloudInfrastructureOrchestration2025() {
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Five-Layer Autonomous Cloud Stack</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Layer 5: Intelligence Layer</div>
                       <p className="text-left">ML models for prediction, optimization, and decision-making. Continuously learning from operations data to improve performance.</p>
                     </div>
@@ -226,8 +226,8 @@ export default function AutonomousCloudInfrastructureOrchestration2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">12-Month Deployment Roadmap</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Foundation (Months 1-3)</h4>
                     <ul className="text-left">
                       <li>• Deploy observability platform with full infrastructure visibility</li>

@@ -34,8 +34,8 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.9%</div>
               <div className="text-left">Security Compliance</div>
             </div>
@@ -101,8 +101,8 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
 
           <h2 className="text-left">Core Architecture Components</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🤖 AI Security Orchestrator</h3>
               <p className="text-left"></p>
                 Central intelligence engine that coordinates all security operations across the entire SDLC:
@@ -134,8 +134,8 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 Autonomous Pipeline Stages</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">1. Intelligent Code Commit</h4>
                 <p className="text-left"></p>
                   AI agents automatically analyze every commit for security issues, code quality, and compliance violations before accepting into the main branch.
@@ -203,8 +203,8 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
 
           <h2 className="text-left">Advanced AI Capabilities</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🧠 Intelligent Threat Detection</h3>
               <ul className="text-left">
                 <li className="text-left">
@@ -243,8 +243,8 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
 
           <h2 className="text-left">Real-World Success Story</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 🏢
               </div>
@@ -254,8 +254,8 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$4.7M</div>
                 <div className="text-left">Annual Security Savings</div>
               </div>
@@ -287,8 +287,8 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
               <p className="text-left"></p>
                 Deploy core security scanning tools, establish baseline metrics, and integrate with existing CI/CD pipelines.
@@ -312,8 +312,8 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
 
           <h2 className="text-left">Key Technologies</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Security Tools</h4>
               <ul className="text-left">
                 <li>• Snyk / Trivy / Grype</li>

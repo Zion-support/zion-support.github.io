@@ -55,8 +55,8 @@ export default function AIFleetOrchestrationEnterprise2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Enterprise Impact Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">100K+</div>
                     <div className="text-left">Agents Orchestrated</div>
                   </div>
@@ -179,8 +179,8 @@ export default function AIFleetOrchestrationEnterprise2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Phase 1: Pilot (Months 1-3)</h4>
                   <p className="text-left"></p>
                     Start with 100-500 agents in a single business unit. Focus on proving value and 
@@ -207,8 +207,8 @@ export default function AIFleetOrchestrationEnterprise2025() {
 
               <h2 className="text-left">Key Technologies & Standards</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Orchestration Platforms</h4>
                   <ul className="text-left">
                     <li>• Kubernetes for containerized agent deployment</li>

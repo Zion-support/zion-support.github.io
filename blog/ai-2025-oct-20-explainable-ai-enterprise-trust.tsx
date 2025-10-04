@@ -55,8 +55,8 @@ export default function ExplainableAIEnterpriseTrust2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🎯 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">92%</div>
                     <div className="text-left">User Adoption Rate</div>
                   </div>
@@ -217,8 +217,8 @@ export default function ExplainableAIEnterpriseTrust2025() {
               <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Assess Explainability Requirements</h3>
                 <p className="text-left">Different stakeholders need different types of explanations. Map your requirements before implementation.</p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">👨‍⚖️ Regulators & Auditors</h4>
                     <p className="text-left">Need: Documentation of decision logic, bias testing, validation against protected attributes</p>
                   </div>
@@ -265,15 +265,15 @@ export default function ExplainableAIEnterpriseTrust2025() {
 
               <h2 className="text-left">Real-World Success Stories</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🏦 Major Bank Credit Decisioning</h3>
                   <p className="text-left"></p>
                     Replaced black-box credit models with explainable EBM—maintained 94% accuracy while providing 
                     clear reasons for every decision. Passed regulatory audit, reduced disputes by 83%.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Model Accuracy:<
                       <span className="text-left">94%<
                     </div>
@@ -294,8 +294,8 @@ export default function ExplainableAIEnterpriseTrust2025() {
                     Deployed SHAP-explained medical imaging AI for radiology—95% clinician trust vs. 31% for 
                     unexplained models. 89% adoption rate, zero malpractice claims.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Clinician Trust:<
                       <span className="text-left">95%<
                     </div>
@@ -313,8 +313,8 @@ export default function ExplainableAIEnterpriseTrust2025() {
 
               <h2 className="text-left">Best Practices for Production XAI</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">✅</div>
                     <div></div>
@@ -326,8 +326,8 @@ export default function ExplainableAIEnterpriseTrust2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">✅</div>
                     <div></div>
                       <h4 className="text-left">Latency Management</h4>
@@ -338,8 +338,8 @@ export default function ExplainableAIEnterpriseTrust2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">✅</div>
                     <div></div>
                       <h4 className="text-left">Human Evaluation</h4>
@@ -350,8 +350,8 @@ export default function ExplainableAIEnterpriseTrust2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">✅</div>
                     <div></div>
                       <h4 className="text-left">Explanation Monitoring</h4>

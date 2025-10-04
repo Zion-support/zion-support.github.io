@@ -75,8 +75,8 @@ export default function IntelligentDataMeshArchitecture2025() {
 
               <section></section>
                 <h2 className="text-left">📊 Measured Enterprise Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Faster Time to Insights</div>
                     <div className="text-left">vs. traditional centralized data warehouses</div>
@@ -101,8 +101,8 @@ export default function IntelligentDataMeshArchitecture2025() {
 
               <section></section>
                 <h2 className="text-left">🚀 Real-World Implementation Success</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Global Financial Services Leader</h3>
                     <p className="text-left"></p>
                       Transformed their monolithic data warehouse into a data mesh with 150+ domain-owned data 
@@ -167,8 +167,8 @@ export default function IntelligentDataMeshArchitecture2025() {
 
               <section></section>
                 <h2 className="text-left">🎯 Implementation Roadmap</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Foundation & Pilots (3-4 months)</h3>
                     <p className="text-left">Establish self-service platform, identify pilot domains, build first data products</p>
                     <div className="text-left">Key milestones: Platform setup, 3-5 pilot data products, governance framework</div>
@@ -193,8 +193,8 @@ export default function IntelligentDataMeshArchitecture2025() {
 
               <section></section>
                 <h2 className="text-left">💡 Key Success Factors</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🎯 Domain Ownership</h3>
                     <p className="text-left">Empower business domains to own their data products with clear accountability</p>
                   </div>
@@ -242,8 +242,8 @@ export default function IntelligentDataMeshArchitecture2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published on October 1, 2025 by Zion Tech Group Data Architecture Team
                 </div>
                 <a href="/blog" className="text-left"></a>

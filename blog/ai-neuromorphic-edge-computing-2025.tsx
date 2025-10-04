@@ -103,8 +103,8 @@ export default function AINeuromorphicEdgeComputing2025() {
             <section className="text-left"></section>
               <h2 className="text-left">🚀 Enterprise Applications</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Smart Manufacturing & Industry 4.0</h3>
                   <p className="text-left"></p>
                     Real-time quality inspection, predictive maintenance, and adaptive robotics with ultra-low latency
@@ -201,8 +201,8 @@ export default function AINeuromorphicEdgeComputing2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">📊 Implementation Roadmap</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Assessment & Design (Months 1-2)</h3>
                   <p className="text-left">Use case identification, neuromorphic architecture design, hardware platform selection, and team training</p>
                 </div>
@@ -225,8 +225,8 @@ export default function AINeuromorphicEdgeComputing2025() {
               <h2 className="text-left">⚡ Energy Efficiency Breakthrough</h2>
               <div className="text-left"></div>
                 <h3 className="text-left">Power Consumption Comparison</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Traditional GPU</div>
                     <div className="text-left">250W</div>
                     <div className="text-left">per inference operation</div>
@@ -267,8 +267,8 @@ export default function AINeuromorphicEdgeComputing2025() {
 
             <section className="text-left"></section>
               <h2 className="text-left">📈 Neuromorphic Impact Metrics</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">10,000x</div>
                   <div className="text-left">Energy efficiency improvement over traditional AI processors</div>
                 </div>

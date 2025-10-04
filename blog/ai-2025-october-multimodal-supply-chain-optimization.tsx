@@ -36,8 +36,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
 
         <div className="text-left"></div>
           <h3 className="text-left">Transformative Results</h3>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">97.3%</div>
               <div className="text-left">Demand Forecast Accuracy</div>
             </div>
@@ -57,8 +57,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
           Modern supply chains generate diverse data types. Multimodal AI unifies these signals for holistic decision-making:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left">🛰️</div>
               <h4 className="text-left">Satellite & Aerial Imagery</h4>
@@ -72,8 +72,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">📊</div>
               <h4 className="text-left">IoT & Sensor Data</h4>
             </div>
@@ -86,8 +86,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">📄</div>
               <h4 className="text-left">Document Intelligence</h4>
             </div>
@@ -100,8 +100,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🌐</div>
               <h4 className="text-left">Market Intelligence</h4>
             </div>
@@ -122,8 +122,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
           <p className="text-left"></p>
             Fortune 100 retailer deployed multimodal AI across 5,000+ stores and 200 distribution centers:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">96.8%</div>
               <div className="text-left">Forecast Accuracy</div>
             </div>
@@ -159,8 +159,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
           <p className="text-left"></p>
             Automotive manufacturer achieves perfect parts availability with multimodal demand sensing:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100%</div>
               <div className="text-left">Parts Availability</div>
             </div>
@@ -184,14 +184,14 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
 
         <h2 className="text-left">Core Use Cases</h2>
         
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🎯 Demand Forecasting</h4>
             <p className="text-left"></p>
               Combine POS data, social media trends, weather patterns, and economic indicators for ultra-accurate demand predictions.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">97.3%< accuracy vs. 78% traditional
               </div>
               <div className="text-left"></div>
@@ -208,8 +208,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
             <p className="text-left"></p>
               Optimize routes, modes, and carriers using real-time conditions, predictive delays, and cost-service tradeoffs.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">34%< cost reduction
               </div>
               <div className="text-left"></div>
@@ -226,8 +226,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
             <p className="text-left"></p>
               Detect and mitigate supply chain risks from geopolitics, natural disasters, supplier issues, and market volatility.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">87%< disruptions prevented
               </div>
               <div className="text-left"></div>
@@ -244,8 +244,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
             <p className="text-left"></p>
               Monitor supplier health, capacity, quality, and compliance through automated document analysis and facility monitoring.
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">94%< quality improvement
               </div>
               <div className="text-left"></div>
@@ -259,8 +259,8 @@ const AIMultimodalSupplyChainOptimization2025 = () =>
         </div>
 
         <h2 className="text-left">Technology Stack</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Multimodal AI Models</h4>
               <ul className="text-left">

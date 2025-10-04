@@ -32,8 +32,8 @@ const PlatformROIScorecards2026 = () =>
             <p className="text-left">From golden paths to revenue: scorecards engineers actually use.</p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <BarChart3 className="text-left" />
               <div></div>
                 <h3 className="text-left">Adoption</h3>

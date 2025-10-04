@@ -51,8 +51,8 @@ const AIEmotionalIntelligenceEnterprise2026 = () =>
               Deploy emotionally intelligent AI achieving 350% customer satisfaction improvement, 98% sentiment classification, and personalized empathetic interactions. Master emotion recognition, affective computing, and human-centered design.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -67,8 +67,8 @@ const AIEmotionalIntelligenceEnterprise2026 = () =>
             </div>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">
                 <Heart className="text-left" />
                 The Empathy Revolution
@@ -116,8 +116,8 @@ const AIEmotionalIntelligenceEnterprise2026 = () =>
             <p className="text-left"></p>
               Advanced AI analyzes multiple channels simultaneously:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Voice Analysis</h4>
                 <ul className="text-left">
                   <li>• Pitch, tone, and speaking rate patterns</li>
@@ -180,8 +180,8 @@ const AIEmotionalIntelligenceEnterprise2026 = () =>
 
             <h2 className="text-left">Enterprise Use Cases</h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">
                   <Users className="text-left" />
                   Customer Service Excellence

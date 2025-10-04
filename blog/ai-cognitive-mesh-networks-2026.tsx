@@ -18,7 +18,7 @@ const AICognitiveMeshNetworks2026 = () =>
         />
       </Helmet>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link
             to="/blog"
@@ -29,8 +29,8 @@ const AICognitiveMeshNetworks2026 = () =>
           </Link>
 
           <article className="text-left"></a>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   Distributed AI
                 <
@@ -53,8 +53,8 @@ const AICognitiveMeshNetworks2026 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <p className="text-left"></p>
                   <strong>Executive Summary:</strong> AI Cognitive Mesh Networks represent a paradigm shift in distributed intelligence, 
                   enabling autonomous nodes to communicate, learn, and make decisions collectively without centralized control. 
@@ -69,30 +69,30 @@ const AICognitiveMeshNetworks2026 = () =>
                 centralized AI systems, mesh networks enable:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Network className="text-left" />
                     <h3 className="text-left">Distributed Processing</h3>
                   </div>
                   <p className="text-left">Process data at the edge with sub-10ms latency</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Brain className="text-left" />
                     <h3 className="text-left">Collective Intelligence</h3>
                   </div>
                   <p className="text-left">Nodes learn from each other autonomously</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Zap className="text-left" />
                     <h3 className="text-left">Self-Healing</h3>
                   </div>
                   <p className="text-left">Automatic fault detection and recovery</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Globe className="text-left" />
                     <h3 className="text-left">Infinite Scale</h3>
                   </div>
@@ -168,14 +168,14 @@ if congestion_detected():
 
               <h2 className="text-left">🏆 Real-World Use Cases & ROI</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🚗 Autonomous Vehicle Fleets</h4>
                   <p className="text-left"></p>
                     Tesla & Waymo deployed 10,000+ vehicles with cognitive mesh networks
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span>Safety Incidents<
                       <span className="text-left">↓ 98%<
                     </div>
@@ -195,8 +195,8 @@ if congestion_detected():
                   <p className="text-left"></p>
                     Siemens deployed mesh networks across 500+ factory robots
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span>Production Downtime<
                       <span className="text-left">↓ 92%<
                     </div>
@@ -217,8 +217,8 @@ if congestion_detected():
                 Deploying AI Cognitive Mesh Networks requires a phased approach:
               </p>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Phase 1: Pilot Deployment (2-4 months)</h4>
                   <p className="text-left">Deploy 10-50 nodes in controlled environment, establish baseline metrics</p>
                 </div>

@@ -55,8 +55,8 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔒 Privacy & Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">97%</div>
                     <div className="text-left">Model Accuracy Maintained</div>
                   </div>
@@ -81,8 +81,8 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
 
               <div className="text-left"></div>
                 <h3 className="text-left">How It Works</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">1</div>
                     <div></div>
                       <h4 className="text-left">Model Distribution</h4>
@@ -115,15 +115,15 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
 
               <h2 className="text-left">Enterprise Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Healthcare: Multi-Hospital AI Models</h3>
                   <p className="text-left"></p>
                     Train diagnostic AI models across hospitals without sharing patient records. Each institution 
                     keeps sensitive health data on-premises while contributing to global model improvement.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">94.7%</div>
                       <div className="text-left">Diagnostic accuracy (vs 94.2% centralized)</div>
                     </div>
@@ -140,8 +140,8 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
                     Banks collaborate on fraud detection models without sharing customer transaction data. 
                     Collective intelligence while maintaining competitive confidentiality.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">99.2%</div>
                       <div className="text-left">Fraud detection accuracy</div>
                     </div>
@@ -158,8 +158,8 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
                     Train AI models across millions of smart devices without collecting personal usage data. 
                     Improve functionality while respecting user privacy.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">10M+</div>
                       <div className="text-left">Participating devices</div>
                     </div>
@@ -173,8 +173,8 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
 
               <h2 className="text-left">Advanced Privacy Techniques</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div></div>
                     <h3 className="text-left">🔐 Differential Privacy</h3>
                     <p className="text-left"></p>
@@ -211,8 +211,8 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
 
               <h2 className="text-left">Implementation Best Practices</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Start with Clear Privacy Requirements</h3>
                   <p className="text-left">Define regulatory requirements (GDPR, HIPAA, CCPA), threat models, and acceptable privacy-utility tradeoffs before architecture design.</p>
                 </div>
@@ -235,11 +235,11 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
 
               <h2 className="text-left">Technical Stack & Tools</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Open Source Frameworks</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">TensorFlow Federated<
                     </div>
                     <div className="text-left"></div>
@@ -256,8 +256,8 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
 
                 <div className="text-left"></div>
                   <h3 className="text-left">Enterprise Platforms</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Google FL Platform<
                     </div>
                     <div className="text-left"></div>
@@ -275,8 +275,8 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
 
               <h2 className="text-left">ROI & Business Impact</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">99.4%</div>
                     <div className="text-left">Data breach risk reduction</div>

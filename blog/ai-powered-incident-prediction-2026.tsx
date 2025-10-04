@@ -47,8 +47,8 @@ const AIPoweredIncidentPrediction2026 = () =>
               Stop incidents before they impact users with predictive AI. Master anomaly detection, failure prediction, and automated remediation achieving 99.99%+ uptime with 80% fewer outages.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -64,8 +64,8 @@ const AIPoweredIncidentPrediction2026 = () =>
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🚨 What You'll Learn</h3>
               <ul className="text-left">
                 <li>✅ Predict incidents 30-120 minutes before they occur</li>
@@ -371,8 +371,8 @@ const AIPoweredIncidentPrediction2026 = () =>
             </div>
 
             {/* Share Section */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <Tag className="text-left" />
                   <div className="text-left"></div>

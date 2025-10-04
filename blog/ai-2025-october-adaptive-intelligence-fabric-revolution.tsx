@@ -52,8 +52,8 @@ export default function AdaptiveIntelligenceFabricRevolution() {
         </p>
 
         <h3 className="text-left">Core Capabilities</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">🔄 Continuous Learning Engine</h4>
             <p className="text-left"></p>
               Automatically ingests new data, identifies patterns, and updates model parameters in real-time 
@@ -155,8 +155,8 @@ export default function AdaptiveIntelligenceFabricRevolution() {
             transactions daily. The adaptive system continuously learns new fraud patterns, achieving 99.91% 
             detection accuracy with 89% reduction in false positives compared to previous rule-based system.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$1.8B</div>
               <div className="text-left">Annual Fraud Prevention</div>
             </div>
@@ -181,8 +181,8 @@ export default function AdaptiveIntelligenceFabricRevolution() {
             The system continuously adapts to new equipment, materials, and environmental conditions, predicting 
             quality issues and equipment failures with 99.7% accuracy up to 14 days in advance.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$940M</div>
               <div className="text-left">Annual Cost Savings</div>
             </div>
@@ -207,8 +207,8 @@ export default function AdaptiveIntelligenceFabricRevolution() {
             stores and e-commerce platform serving 180 million customers. System adapts to seasonal trends, 
             local preferences, and emerging product categories in real-time without manual intervention.
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$2.7B</div>
               <div className="text-left">Revenue Increase</div>
             </div>

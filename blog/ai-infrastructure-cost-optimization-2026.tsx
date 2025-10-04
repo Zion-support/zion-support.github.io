@@ -19,8 +19,8 @@ const AIInfrastructureCostOptimization2026 = () =>
       <div className="text-left"></div>
         <article className="text-left"></a>
           {/* Header */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 Cost Optimization
               <
@@ -47,8 +47,8 @@ const AIInfrastructureCostOptimization2026 = () =>
           </div>
 
           {/* Key Stats */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <DollarSign className="text-left" />
               <div className="text-left">60-80%</div>
               <div className="text-left">Infrastructure Cost Reduction</div>
@@ -192,8 +192,8 @@ spec:
               Most production models are 10-100x larger than necessary. Quantization, pruning, and distillation can reduce model size by 90-95% with minimal accuracy loss.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Before Compression</h4>
                 <ul className="text-left">
                   <li>• Model: 7B parameters (FP32)</li>
@@ -287,8 +287,8 @@ spec:
 
             <h2 className="text-left">Real-World Results</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">FinTech Company: $4.2M Annual Savings</h4>
                 <p className="text-left"></p>
                   By implementing auto-scaling, spot instances, and model compression, reduced AI infrastructure costs from $7M/year to $2.8M/year (60% reduction) with improved performance.
@@ -323,8 +323,8 @@ spec:
 
             <h2 className="text-left">Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Week 1-2: Baseline & Audit</h4>
                 <p className="text-left">Measure current costs, utilization, and performance. Identify biggest waste areas.</p>
               </div>

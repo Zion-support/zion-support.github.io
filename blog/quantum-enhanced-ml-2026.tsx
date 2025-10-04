@@ -12,7 +12,7 @@ const QuantumEnhancedML2026 = () =>
         <meta name="keywords" content="quantum computing, quantum ML, QAOA, VQE, quantum optimization, hybrid quantum-classical" />
       </Helmet>
       
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link to="/blog" className="text-left">
             <ArrowLeft className="text-left" />
@@ -21,8 +21,8 @@ const QuantumEnhancedML2026 = () =>
 
           <article className="text-left"></a>
             {/* Header */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   Quantum Computing
                 <
@@ -41,8 +41,8 @@ const QuantumEnhancedML2026 = () =>
             </div>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1000x</div>
                 <div className="text-left">Training Speedup</div>
               </div>
@@ -85,8 +85,8 @@ const QuantumEnhancedML2026 = () =>
                   <h2 className="text-left">Key Quantum ML Algorithms</h2>
                 </div>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Quantum Neural Networks (QNN)</h3>
                     <p className="text-left"></p>
                       Variational quantum circuits that serve as quantum analogs of classical neural networks. 
@@ -180,8 +180,8 @@ const QuantumEnhancedML2026 = () =>
                   <Sparkles className="text-left" />
                   <h2 className="text-left">Industry Applications</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">🧬 Pharmaceutical R&D</h4>
                     <ul className="text-left">
                       <li>• Drug-target binding affinity prediction</li>
@@ -248,8 +248,8 @@ const QuantumEnhancedML2026 = () =>
                   <Zap className="text-left" />
                   <h2 className="text-left">Getting Started with Quantum ML</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Step 1: Identify Quantum-Suitable Problems</h4>
                     <p className="text-left"></p>
                       Not all ML problems benefit from quantum computing. Focus on optimization, quantum chemistry, 
@@ -296,8 +296,8 @@ const QuantumEnhancedML2026 = () =>
                   <TrendingUp className="text-left" />
                   <h2 className="text-left">The 2026-2030 Roadmap</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       2026
                     </div>
@@ -309,8 +309,8 @@ const QuantumEnhancedML2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       2027
                     </div>
                     <div className="text-left"></div>
@@ -321,8 +321,8 @@ const QuantumEnhancedML2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       2028
                     </div>
                     <div className="text-left"></div>
@@ -333,8 +333,8 @@ const QuantumEnhancedML2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       2030
                     </div>
                     <div className="text-left"></div>

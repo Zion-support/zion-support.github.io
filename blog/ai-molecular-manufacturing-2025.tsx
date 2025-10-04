@@ -50,13 +50,13 @@ const AIMolecularManufacturing2025 = () =>
             </p>
           </header>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <Sparkles className="text-left" />
               <h2 className="text-left">Revolutionary Manufacturing Capabilities</h2>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <CheckCircle className="text-left" />
                 <div></div>
                   <h3 className="text-left">Atomic Precision</h3>
@@ -102,8 +102,8 @@ const AIMolecularManufacturing2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">How Molecular Manufacturing Works</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">1</div>
                     <div></div>
@@ -138,8 +138,8 @@ const AIMolecularManufacturing2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Industry-Transforming Applications</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Beaker className="text-left" />
                     <div></div>
@@ -163,8 +163,8 @@ const AIMolecularManufacturing2025 = () =>
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Factory className="text-left" />
                     <div></div>
                       <h3 className="text-left">Advanced Materials</h3>
@@ -187,8 +187,8 @@ const AIMolecularManufacturing2025 = () =>
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <Atom className="text-left" />
                     <div></div>
                       <h3 className="text-left">Electronics Manufacturing</h3>
@@ -215,8 +215,8 @@ const AIMolecularManufacturing2025 = () =>
 
             <section className="text-left"></section>
               <h2 className="text-left">Real-World Success Stories</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Leading Cancer Research Institute</h3>
                   <p className="text-left"></p>
                     Used molecular manufacturing to create personalized cancer treatments with 99% efficacy. 

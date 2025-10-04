@@ -35,8 +35,8 @@ export default function AI2025OctoberRealTimeAIOperations() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.99%</div>
               <div className="text-left">Uptime SLA</div>
             </div>
@@ -102,8 +102,8 @@ export default function AI2025OctoberRealTimeAIOperations() {
 
           <h2 className="text-left">Observability Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📊 Metrics Collection</h3>
               <p className="text-left"></p>
                 Real-time metrics ingestion with OpenTelemetry, Prometheus, and custom ML metrics 
@@ -166,16 +166,16 @@ export default function AI2025OctoberRealTimeAIOperations() {
 
           <h2 className="text-left">Model Monitoring Deep Dive</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📉 Drift Detection</h3>
               <p className="text-left"></p>
                 Continuous monitoring for concept drift and data drift using statistical tests, 
                 population stability index (PSI), and characteristic stability index (CSI) to detect 
                 when model retraining is needed.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">PSI &lt; 0.1</div>
                   <div className="text-left">Stable Performance</div>
                 </div>
@@ -196,8 +196,8 @@ export default function AI2025OctoberRealTimeAIOperations() {
                 Real-time accuracy, precision, recall, and F1 score monitoring with segment-level 
                 analysis to identify performance degradation in specific cohorts or use cases.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Per-Segment</div>
                   <div className="text-left">Cohort Analysis</div>
                 </div>
@@ -218,8 +218,8 @@ export default function AI2025OctoberRealTimeAIOperations() {
                 P50, P95, P99 latency tracking with automated performance profiling to identify 
                 bottlenecks and optimize inference speed across deployment infrastructure.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">P95 &lt; 100ms</div>
                   <div className="text-left">Target Latency</div>
                 </div>
@@ -240,8 +240,8 @@ export default function AI2025OctoberRealTimeAIOperations() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 6-Week Rollout</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Metrics Definition & Instrumentation</h4>
@@ -325,8 +325,8 @@ export default function AI2025OctoberRealTimeAIOperations() {
             92% fewer production incidents, and 3.2x higher model reliability compared to reactive monitoring approaches.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">87%</div>
               <div className="text-left">Faster Resolution</div>
             </div>

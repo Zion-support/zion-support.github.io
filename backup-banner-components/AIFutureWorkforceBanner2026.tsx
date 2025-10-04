@@ -8,10 +8,10 @@ export default function AIFutureWorkforceBanner2026() {
       {/* Background Pattern */}
       <div className="text-left">
         <div className="text-left">
-          <div className="text-left"></div>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
         </div>
       </div>
       

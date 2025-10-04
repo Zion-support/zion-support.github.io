@@ -80,8 +80,8 @@ const AIPlatformCostOptimization2026 = () =>
               <li>• FinOps dashboards, budget alerts, and automatic waste cleanup</li>
             </ul>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <BarChart3 className="text-left" />
                 <h3 className="text-left">Sample KPI Targets</h3>
               </div>

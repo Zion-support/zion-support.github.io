@@ -77,8 +77,8 @@ export default function AgenticRAGSystemsEnterprise2025() {
                 <p className="text-left"></p>
                   Modern Agentic RAG systems implement sophisticated multi-agent architectures:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🧠 Planning Agent</h3>
                     <p className="text-left"></p>
                       Analyzes complex queries, breaks them into sub-tasks, and develops multi-step research strategies. 
@@ -121,8 +121,8 @@ export default function AgenticRAGSystemsEnterprise2025() {
                 <p className="text-left"></p>
                   Agentic RAG systems are transforming knowledge work across industries:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">📈 Market Research & Intelligence</h3>
                     <p className="text-left"></p>
                       AI agents continuously monitor markets, competitors, and industry trends—autonomously generating 
@@ -249,8 +249,8 @@ export default function AgenticRAGSystemsEnterprise2025() {
                 <p className="text-left"></p>
                   Successful Agentic RAG deployment requires careful planning:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">1. Knowledge Source Preparation</h3>
                     <p className="text-left"></p>
                       Catalog and structure organizational knowledge sources. Clean and enrich documents with metadata. 

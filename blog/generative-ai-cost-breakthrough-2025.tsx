@@ -59,8 +59,8 @@ const GenerativeAICostBreakthrough2025 = () =>
         <section className="text-left"></section>
           <h2 className="text-left">The 8 Pillars of GenAI Cost Optimization</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">1. Semantic Caching (40-60% Savings)</h3>
               <p className="text-left"></p>
                 Traditional caching only matches exact prompts. Semantic caching uses embeddings to identify 
@@ -226,8 +226,8 @@ const GenerativeAICostBreakthrough2025 = () =>
 
         <section className="text-left"></section>
           <h2 className="text-left">Real-World Results: The Numbers</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Fortune 100 Financial Services</h3>
               <div className="text-left"></div>
                 <p><strong className="text-left">Before:</strong> $2.1M/month</p>
@@ -259,8 +259,8 @@ const GenerativeAICostBreakthrough2025 = () =>
 
         <section className="text-left"></section>
           <h2 className="text-left">Implementation Roadmap: 12-Week Sprint</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 Weeks<br/>1-3
               </div>
@@ -275,8 +275,8 @@ const GenerativeAICostBreakthrough2025 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Weeks<br/>4-7
               </div>
               <div></div>
@@ -290,8 +290,8 @@ const GenerativeAICostBreakthrough2025 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Weeks<br/>8-10
               </div>
               <div></div>
@@ -305,8 +305,8 @@ const GenerativeAICostBreakthrough2025 = () =>
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 Weeks<br/>11-12
               </div>
               <div></div>

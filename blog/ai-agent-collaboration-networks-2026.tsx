@@ -12,7 +12,7 @@ const AIAgentCollaborationNetworks2026 = () =>
         <meta name="keywords" content="AI agents, collaboration networks, distributed AI, autonomous systems, enterprise automation, multi-agent systems" />
       </Helmet>
       
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link to="/blog" className="text-left">
             <ArrowLeft className="text-left" />
@@ -21,8 +21,8 @@ const AIAgentCollaborationNetworks2026 = () =>
 
           <article className="text-left"></a>
             {/* Header */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   AI Architecture
                 <
@@ -40,8 +40,8 @@ const AIAgentCollaborationNetworks2026 = () =>
             </div>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">10x</div>
                 <div className="text-left">Efficiency Gain</div>
               </div>
@@ -148,8 +148,8 @@ const AIAgentCollaborationNetworks2026 = () =>
                 <p className="text-left"></p>
                   Enterprise-grade agent networks implement comprehensive security measures including:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Authentication & Authorization</h4>
                     <p className="text-left"></p>
                       Zero-trust architecture with cryptographic agent identities and capability-based access control

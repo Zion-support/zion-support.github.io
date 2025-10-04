@@ -55,8 +55,8 @@ export default function MultiCloudAIOrchestrationMastery2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">☁️ Key Multi-Cloud Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">68%</div>
                     <div className="text-left">Cloud Cost Reduction</div>
                   </div>
@@ -151,8 +151,8 @@ export default function MultiCloudAIOrchestrationMastery2025() {
                 <p className="text-left"></p>
                   Leading e-commerce platform with 500M+ users orchestrates AI across AWS, Azure, and GCP:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$89M</div>
                     <div className="text-left">Annual Cloud Cost Savings</div>
                   </div>

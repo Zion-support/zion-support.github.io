@@ -34,8 +34,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;5ms</div>
               <div className="text-left">Edge Response Time</div>
             </div>
@@ -101,14 +101,14 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
 
           <h2 className="text-left">Three-Tier Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔹 Tier 1: Device Edge</h3>
               <p className="text-left"></p>
                 Ultra-low latency AI inference running directly on IoT devices, sensors, cameras, and mobile devices:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Capabilities</h4>
                   <ul className="text-left">
                     <li>• TinyML models (&lt;1MB)</li>
@@ -136,8 +136,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
               <p className="text-left"></p>
                 Regional edge computing facilities providing moderate latency and higher compute capacity:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Capabilities</h4>
                   <ul className="text-left">
                     <li>• Medium-sized ML models (100MB-1GB)</li>
@@ -165,8 +165,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
               <p className="text-left"></p>
                 Hyperscale cloud infrastructure for training, global orchestration, and complex analytics:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Capabilities</h4>
                   <ul className="text-left">
                     <li>• Large-scale model training</li>
@@ -199,8 +199,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
               Our AI orchestration engine continuously analyzes multiple factors to determine optimal workload placement:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">⚡<
                   <div></div>
@@ -232,8 +232,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🔒<
                   <div></div>
                     <h4 className="text-left">Privacy & Compliance</h4>
@@ -268,8 +268,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
 
           <h2 className="text-left">Real-World Success Story</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 🏭
               </div>
@@ -279,8 +279,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
               </div>
             </div>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$8.3M</div>
                 <div className="text-left">Annual Infrastructure Savings</div>
               </div>
@@ -312,8 +312,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
 
           <h2 className="text-left">Key Technologies & Frameworks</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Edge Computing</h4>
               <ul className="text-left">
                 <li>• KubeEdge / K3s / MicroK8s</li>
@@ -349,8 +349,8 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Weeks 1-6)</h3>
               <p className="text-left"></p>
                 Deploy edge infrastructure, establish connectivity, and implement basic edge processing capabilities.

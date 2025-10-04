@@ -172,8 +172,8 @@ export default function AIAgentsAutonomousFinance2025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Roadmap</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Foundation (Weeks 1-4)</h4>
                     <p className="text-left"></p>
                       Establish data infrastructure, integrate market data feeds, and deploy initial AI models 

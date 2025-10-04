@@ -9,8 +9,8 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left">🧠 BREAKTHROUGH • October 1, 2025<
           </div>
           
@@ -32,8 +32,8 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
         </div>
 
         {/* Key Statistics */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">10,000x</div>
             <div className="text-left">Processing Speed vs. Traditional</div>
           </div>
@@ -94,8 +94,8 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Applications & Use Cases</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🚗 Autonomous Vehicles</h3>
                 <p className="text-left"></p>
                   Real-time sensor fusion, object detection, and decision-making with &lt;1ms latency. 
@@ -138,8 +138,8 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
             <p className="text-left"></p>
               Neuromorphic edge computing platforms integrate several breakthrough technologies:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h4 className="text-left">1. Spiking Neural Networks (SNNs)</h4>
                   <p className="text-left"></p>
@@ -174,8 +174,8 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Pilot Deployment (Months 1-3)</h3>
                 <ul className="text-left">
                   <li>• Neuromorphic hardware evaluation and workload profiling</li>
@@ -209,8 +209,8 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
 
           <section className="text-left"></section>
             <h2 className="text-left">Business Impact & ROI</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h4 className="text-left">Cost Reductions</h4>
                   <ul className="text-left">

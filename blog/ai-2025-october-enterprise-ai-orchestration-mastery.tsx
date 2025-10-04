@@ -80,8 +80,8 @@ export default function AIEnterpriseOrchestrationMastery2025() {
             </div>
 
             <h3 className="text-left">2. Real-World Implementation Success</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">$3.2B</div>
                 <div className="text-left">Total Enterprise Savings</div>
               </div>
@@ -109,8 +109,8 @@ export default function AIEnterpriseOrchestrationMastery2025() {
             </div>
 
             <h3 className="text-left">4. Advanced Capabilities</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🎯 Intelligent Task Routing</h4>
                 <p className="text-left"></p>
                   AI-powered task distribution ensuring optimal agent utilization, automatic workload balancing, 
@@ -136,8 +136,8 @@ export default function AIEnterpriseOrchestrationMastery2025() {
             </div>
 
             <h3 className="text-left">5. Enterprise Benefits</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Operational Excellence</h4>
                 <ul className="text-left">
                   <li>• 95% reduction in manual processes</li>

@@ -56,8 +56,8 @@ export default function FederatedLearningPrivacyRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🔒 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.8%</div>
                     <div className="text-left">Model Accuracy</div>
                   </div>
@@ -224,15 +224,15 @@ export default function FederatedLearningPrivacyRevolution2025() {
 
               <h2 className="text-left">Real-World Success Stories</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🏥 Healthcare Consortium</h3>
                   <p className="text-left"></p>
                     15 hospitals trained a cancer diagnosis AI across 2M+ patient records without sharing data—
                     achieving 97.8% accuracy while maintaining perfect HIPAA compliance.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Model Accuracy:<
                       <span className="text-left">97.8%<
                     </div>
@@ -253,8 +253,8 @@ export default function FederatedLearningPrivacyRevolution2025() {
                     8 banks collaborated on fraud detection across 50M+ transactions—improving detection by 
                     43% while each institution's data remained completely private.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Fraud Detection Lift:<
                       <span className="text-left">+43%<
                     </div>
@@ -272,8 +272,8 @@ export default function FederatedLearningPrivacyRevolution2025() {
 
               <h2 className="text-left">Enterprise Deployment Checklist</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">☑️</div>
                     <div></div>
@@ -285,8 +285,8 @@ export default function FederatedLearningPrivacyRevolution2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">☑️</div>
                     <div></div>
                       <h4 className="text-left">Privacy Budget Allocation</h4>
@@ -297,8 +297,8 @@ export default function FederatedLearningPrivacyRevolution2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">☑️</div>
                     <div></div>
                       <h4 className="text-left">Communication Efficiency</h4>
@@ -309,8 +309,8 @@ export default function FederatedLearningPrivacyRevolution2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">☑️</div>
                     <div></div>
                       <h4 className="text-left">Byzantine Fault Tolerance</h4>
@@ -321,8 +321,8 @@ export default function FederatedLearningPrivacyRevolution2025() {
                   </div>
                 </div>
 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">☑️</div>
                     <div></div>
                       <h4 className="text-left">Model Personalization</h4>

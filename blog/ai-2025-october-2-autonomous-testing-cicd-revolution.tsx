@@ -52,11 +52,11 @@ export default function AutonomousTestingCICDRevolution2025() {
               </p>
             </header>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h2 className="text-left">🚀 Key Breakthrough Results</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.9%</div>
                     <div className="text-left">Pipeline Reliability</div>
                   </div>

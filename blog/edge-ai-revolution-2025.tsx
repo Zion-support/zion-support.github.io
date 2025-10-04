@@ -62,8 +62,8 @@ export default function EdgeAIRevolution2025() {
               
               <section className="text-left"></section>
                 <h2 className="text-left">Why Edge AI Matters Now</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">⚡ Ultra-Low Latency</h3>
                     <p className="text-left"></p>
                       Process data in milliseconds instead of seconds. Critical for autonomous vehicles, 
@@ -99,8 +99,8 @@ export default function EdgeAIRevolution2025() {
                 <p className="text-left"></p>
                   Edge AI is revolutionizing industries across the board:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Manufacturing & Industry 4.0</h3>
                     <p className="text-left"></p>
                       Real-time quality control using computer vision, predictive maintenance on factory equipment, 
@@ -236,8 +236,8 @@ export default function EdgeAIRevolution2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Systems
                 </div>
                 <div className="text-left"></div>

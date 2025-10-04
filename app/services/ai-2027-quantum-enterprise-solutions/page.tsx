@@ -18,8 +18,8 @@ export default function AI2027QuantumEnterpriseSolutions() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <Link href="/services" className="text-left">
           ← Back to Services
         </Link>
@@ -38,10 +38,10 @@ export default function AI2027QuantumEnterpriseSolutions() {
         </div>
       </div>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">🔮 Revolutionary Quantum AI Technology</h2>"
               <p className="text-left"></p>
                 Our AI 2027 Quantum Enterprise Solutions represent the convergence of quantum computing and artificial intelligence, 
@@ -50,8 +50,8 @@ export default function AI2027QuantumEnterpriseSolutions() {
             </div>
 
             <h2 className="text-left">🚀 Core Quantum AI Capabilities</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🧠 Quantum Neural Networks</h3>"
                 <p className="text-left"></p>
                   Advanced neural networks powered by quantum computing principles, enabling simultaneous processing 
@@ -111,8 +111,8 @@ export default function AI2027QuantumEnterpriseSolutions() {
             <h2 className="text-left">📊 Proven Results & ROI</h2>"
             <div className="text-left"></div>
               <h3 className="text-left">Real-World Success Metrics</h3>"
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left">$500M</div>"
                     <div className="text-left">Additional Revenue Generated</div>"
@@ -122,8 +122,8 @@ export default function AI2027QuantumEnterpriseSolutions() {
                     <div className="text-left">Processing Speed Increase</div>"
                   </div>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.9%</div>"
                     <div className="text-left">Accuracy Improvement</div>"
                   </div>
@@ -136,8 +136,8 @@ export default function AI2027QuantumEnterpriseSolutions() {
             </div>
 
             <h2 className="text-left">🏭 Industry Applications</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏥 Healthcare & Pharmaceuticals</h3>"
                 <ul className="text-left">
                   <li>• Drug discovery acceleration</li>
@@ -179,8 +179,8 @@ export default function AI2027QuantumEnterpriseSolutions() {
             </div>
 
             <h2 className="text-left">🔧 Implementation Approach</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>"
                 <div></div>
                   <h3 className="text-left">Quantum Readiness Assessment</h3>"
@@ -215,8 +215,8 @@ export default function AI2027QuantumEnterpriseSolutions() {
           </div>
         </div>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h3 className="text-left">🚀 Get Started Today</h3>"
               <p className="text-left"></p>

@@ -51,8 +51,8 @@ export default function QuantumEnhancedNeuralMeshRevolution() {
         </p>
 
         <h3 className="text-left">Core Components</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h4 className="text-left">Quantum Processing Nodes</h4>
             <p className="text-left"></p>
               Specialized quantum processors optimized for neural computation, capable of maintaining 

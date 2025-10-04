@@ -48,8 +48,8 @@ const AIAgentsProductionDeployment2025: React.FC = () =>
             </p>
 
             {/* Meta Information */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <User className="text-left" />
                 <span>Zion Tech Group Team<
               </div>
@@ -117,8 +117,8 @@ const AIAgentsProductionDeployment2025: React.FC = () =>
               <p className="text-left"></p>
                 Effective monitoring for AI agents requires visibility into both technical metrics and behavioral patterns:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Technical Metrics</h3>
                   <ul className="text-left">
                     <li>→ Request latency P50, P95, P99</li>
@@ -173,8 +173,8 @@ const AIAgentsProductionDeployment2025: React.FC = () =>
               <p className="text-left"></p>
                 Traditional testing isn't sufficient for non-deterministic AI agents. Use these specialized testing approaches:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Policy Tests (Run in CI)</h3>
                   <p className="text-left">Assert agents never suggest prohibited actions, maintain brand voice, and respect data boundaries. Block PRs that fail policy tests.</p>
                 </div>

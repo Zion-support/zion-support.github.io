@@ -35,8 +35,8 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">98.2%</div>
               <div className="text-left">Anomaly Detection</div>
             </div>
@@ -99,8 +99,8 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
 
           <h2 className="text-left">AI-Powered Capabilities</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🤖 Anomaly Detection</h3>
               <ul className="text-left">
                 <li>
@@ -141,8 +141,8 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
           
           <div className="text-left"></div>
             <h3 className="text-left">Modern Observability Stack</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h4 className="text-left">Data Collection Layer</h4>
                   <ul className="text-left">
@@ -187,16 +187,16 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
 
           <h2 className="text-left">Intelligent Incident Response</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🚨 Automated Alert Correlation</h3>
               <p className="text-left"></p>
                 Reduce alert fatigue by grouping related incidents and identifying root causes automatically. 
                 ML algorithms analyze alert patterns, timing, and dependencies to consolidate notifications 
                 and provide actionable context for responders.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <strong className="text-left">Result:</strong> 87% reduction in alert noise, 
                   90% improvement in mean time to acknowledge (MTTA)
                 </div>
@@ -210,8 +210,8 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
                 Start with simple fixes (restart service, scale resources) and gradually expand to complex workflows 
                 with confidence thresholds and human approval gates.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <strong className="text-left">Result:</strong> 76% of incidents resolved without human intervention, 
                   3.2 minute average MTTR for automated fixes
                 </div>
@@ -225,8 +225,8 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
                 When incidents occur, the system automatically traverses the dependency graph to identify 
                 upstream failures and suggest probable root causes.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <strong className="text-left">Result:</strong> 68% faster root cause identification, 
                   45% reduction in MTTR for complex multi-service incidents
                 </div>
@@ -236,8 +236,8 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
 
           <h2 className="text-left">Best Practices</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">1. Instrument Everything</h3>
                 <p className="text-left"></p>
@@ -278,8 +278,8 @@ export default function AI2025OctoberRealTimeAIOpsMonitoring() {
 
           <h2 className="text-left">ROI and Business Impact</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Operational Efficiency</h4>
               <ul className="text-left">
                 <li>• 76% reduction in manual toil</li>

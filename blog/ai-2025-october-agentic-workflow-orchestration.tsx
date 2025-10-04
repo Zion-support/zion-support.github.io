@@ -35,8 +35,8 @@ export default function AI2025OctoberAgenticWorkflowOrchestration() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">73%</div>
               <div className="text-left">Process Automation</div>
             </div>
@@ -99,8 +99,8 @@ export default function AI2025OctoberAgenticWorkflowOrchestration() {
 
           <h2 className="text-left">Implementation Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏗️ Design Patterns</h3>
               <ul className="text-left">
                 <li>
@@ -139,15 +139,15 @@ export default function AI2025OctoberAgenticWorkflowOrchestration() {
 
           <h2 className="text-left">Enterprise Use Cases</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">📊 Customer Service Automation</h3>
               <p className="text-left"></p>
                 Deploy multi-agent systems that handle ticket triage, issue resolution, and escalation management. 
                 Agents collaborate to retrieve knowledge, execute remediation steps, and provide personalized responses.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">85%</div>
                   <div className="text-left">Auto-Resolution</div>
                 </div>
@@ -168,8 +168,8 @@ export default function AI2025OctoberAgenticWorkflowOrchestration() {
                 Orchestrate agents across procurement, inventory management, demand forecasting, and logistics. 
                 Real-time coordination ensures optimal stock levels, minimizes waste, and improves delivery times.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">42%</div>
                   <div className="text-left">Cost Reduction</div>
                 </div>
@@ -190,8 +190,8 @@ export default function AI2025OctoberAgenticWorkflowOrchestration() {
                 Automate invoice processing, fraud detection, compliance checking, and financial reporting. 
                 Agents work together to validate data, flag anomalies, and generate insights for decision-making.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">99.3%</div>
                   <div className="text-left">Accuracy</div>
                 </div>
@@ -209,8 +209,8 @@ export default function AI2025OctoberAgenticWorkflowOrchestration() {
 
           <h2 className="text-left">Best Practices</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">1. Start with Clear Objectives</h3>
                 <p className="text-left"></p>
@@ -251,8 +251,8 @@ export default function AI2025OctoberAgenticWorkflowOrchestration() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">Phase 1</div>
               <h4 className="text-left">Discovery</h4>
               <ul className="text-left">

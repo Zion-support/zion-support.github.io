@@ -287,12 +287,10 @@ const NewestContent2025Banner = () => {
                 <span>Explore All Articles</span>
                 <span>→</span>
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3825
-=======
->>>>>>> origin/main
             </div>
           ))}
         </div>
+      </div>
     </section>
   );
 };

@@ -35,8 +35,8 @@ export default function AI2025OctoberEnterpriseRAGImplementation() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">98.7%</div>
               <div className="text-left">Answer Accuracy</div>
             </div>
@@ -92,8 +92,8 @@ export default function AI2025OctoberEnterpriseRAGImplementation() {
 
           <h2 className="text-left">Production Architecture</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🔍 Indexing Pipeline</h3>
               <p className="text-left"></p>
                 Transform enterprise documents into searchable vector embeddings with chunking, 
@@ -156,15 +156,15 @@ export default function AI2025OctoberEnterpriseRAGImplementation() {
 
           <h2 className="text-left">Vector Database Selection</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🚀 Pinecone (Recommended)</h3>
               <p className="text-left"></p>
                 Fully managed, purpose-built vector database with sub-100ms queries at scale, 
                 automatic scaling, and enterprise-grade security.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">&lt;50ms</div>
                   <div className="text-left">P95 Latency</div>
                 </div>
@@ -185,8 +185,8 @@ export default function AI2025OctoberEnterpriseRAGImplementation() {
                 Open-source vector database with GraphQL API, multi-modal support, and flexible 
                 deployment options for hybrid cloud environments.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Multi-Modal</div>
                   <div className="text-left">Text, Images, Audio</div>
                 </div>
@@ -207,8 +207,8 @@ export default function AI2025OctoberEnterpriseRAGImplementation() {
                 PostgreSQL extension for vector similarity search, ideal for existing Postgres deployments 
                 with moderate scale requirements (&lt;10M vectors).
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">PostgreSQL</div>
                   <div className="text-left">Native Integration</div>
                 </div>
@@ -229,8 +229,8 @@ export default function AI2025OctoberEnterpriseRAGImplementation() {
           <div className="text-left"></div>
             <h3 className="text-left">🚀 8-Week Deployment Plan</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Requirements & Data Assessment</h4>
@@ -347,27 +347,27 @@ export default function AI2025OctoberEnterpriseRAGImplementation() {
 
           <h2 className="text-left">Success Metrics</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left"></div>
                 <span className="text-left">Answer Accuracy (Human Eval)<
                 <span className="text-left">98.7%<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Hallucination Rate<
                 <span className="text-left">&lt;2%<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">P95 Query Latency<
                 <span className="text-left">200ms<
               </div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">User Satisfaction Score<
                 <span className="text-left">4.8/5.0<
               </div>

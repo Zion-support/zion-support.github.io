@@ -97,8 +97,8 @@ export default function BlogPost() {
       
       <div className="text-left"></div>
         <h3 className="text-left">Real-World Performance Data</h3>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">99.99%</div>
             <div className="text-left">Threat Detection Accuracy</div>
           </div>

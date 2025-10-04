@@ -6,8 +6,8 @@ export default function AgentSecurityBlueprintSept302025() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         <h1 className="text-left">Agent Security Blueprint: Zero-Trust for Autonomous Systems</h1>
         <p className="text-left">Published September 30, 2025 • 11 min read</p>
         <p className="text-left"></p>

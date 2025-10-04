@@ -44,8 +44,8 @@ export default function AIOrchestrationPlatforms2026() {
         {/* Key Stats */}
         <div className="text-left"></div>
           <h2 className="text-left">Key Benefits</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">60%</div>
               <div className="text-left">Cost Reduction</div>
             </div>
@@ -107,8 +107,8 @@ export default function AIOrchestrationPlatforms2026() {
 
           <section></section>
             <h2 className="text-left">Enterprise Use Cases</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏭 Manufacturing</h3>
                 <p className="text-left"></p>
                   Coordinate quality control agents, predictive maintenance systems, and supply chain optimization 

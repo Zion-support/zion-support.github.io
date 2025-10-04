@@ -12,7 +12,7 @@ const SelfHealingAISystems2026 = () =>
         <meta name="keywords" content="self-healing systems, AI automation, DevOps, site reliability, incident response, autonomous recovery" />
       </Helmet>
       
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link to="/blog" className="text-left">
             <ArrowLeft className="text-left" />
@@ -21,8 +21,8 @@ const SelfHealingAISystems2026 = () =>
 
           <article className="text-left"></a>
             {/* Header */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left"></span>
                   Infrastructure AI
                 <
@@ -41,8 +41,8 @@ const SelfHealingAISystems2026 = () =>
             </div>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">99.99%</div>
                 <div className="text-left">Uptime Achieved</div>
               </div>
@@ -85,8 +85,8 @@ const SelfHealingAISystems2026 = () =>
                   <Activity className="text-left" />
                   <h2 className="text-left">Core Capabilities</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       <AlertTriangle className="text-left" />
                       <h3 className="text-left">1. Intelligent Anomaly Detection</h3>
@@ -98,8 +98,8 @@ const SelfHealingAISystems2026 = () =>
                     </p>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <Zap className="text-left" />
                       <h3 className="text-left">2. Automated Root Cause Analysis</h3>
                     </div>
@@ -110,8 +110,8 @@ const SelfHealingAISystems2026 = () =>
                     </p>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <CheckCircle className="text-left" />
                       <h3 className="text-left">3. Autonomous Remediation</h3>
                     </div>
@@ -122,8 +122,8 @@ const SelfHealingAISystems2026 = () =>
                     </p>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <Shield className="text-left" />
                       <h3 className="text-left">4. Continuous Learning</h3>
                     </div>
@@ -183,8 +183,8 @@ const SelfHealingAISystems2026 = () =>
                   <Activity className="text-left" />
                   <h2 className="text-left">Real-World Success Stories</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Global E-Commerce Platform</h4>
                     <p className="text-left"></p>
                       Deployed self-healing AI across 500+ microservices handling 10M requests/sec
@@ -230,8 +230,8 @@ const SelfHealingAISystems2026 = () =>
                   <Zap className="text-left" />
                   <h2 className="text-left">Implementation Roadmap</h2>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       1
                     </div>
@@ -244,8 +244,8 @@ const SelfHealingAISystems2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       2
                     </div>
                     <div></div>
@@ -257,8 +257,8 @@ const SelfHealingAISystems2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       3
                     </div>
                     <div></div>
@@ -270,8 +270,8 @@ const SelfHealingAISystems2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       4
                     </div>
                     <div></div>
@@ -283,8 +283,8 @@ const SelfHealingAISystems2026 = () =>
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       5
                     </div>
                     <div></div>

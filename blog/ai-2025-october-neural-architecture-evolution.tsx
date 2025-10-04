@@ -63,8 +63,8 @@ export default function AINeural ArchitectureEvolution2025()
               <p className="text-left"></p>
                 Modern neural architecture evolution leverages genetic algorithms, reinforcement learning, and gradient-based optimization to explore vast architecture spaces efficiently.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🧬 Genetic Evolution</h3>
                   <ul className="text-left">
                     <li>• Population-based architecture search</li>
@@ -90,8 +90,8 @@ export default function AINeural ArchitectureEvolution2025()
               <p className="text-left"></p>
                 Successfully deploying neural architecture evolution requires strategic planning, robust infrastructure, and continuous monitoring.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                   <p className="text-left">Establish search infrastructure and baseline models</p>
                   <ul className="text-left">
@@ -133,8 +133,8 @@ export default function AINeural ArchitectureEvolution2025()
                 <p className="text-left"></p>
                   A Fortune 500 retail company leveraged neural architecture evolution to optimize their recommendation engine, achieving breakthrough performance improvements while dramatically reducing infrastructure costs.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10.2x</div>
                     <div className="text-left">Faster Inference Speed</div>
                   </div>

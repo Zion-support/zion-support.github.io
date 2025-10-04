@@ -16,7 +16,7 @@ const EnterpriseAutonomousOperationsMastery = () =>
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-enterprise-autonomous-operations-mastery" />
       </Helmet>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           {/* Hero Section */}
           <header className="text-left">
@@ -87,8 +87,8 @@ const EnterpriseAutonomousOperationsMastery = () =>
             <section className="text-left"></section>
               <h2 className="text-left">Core Autonomous Capabilities</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🎯 Strategic Decision Making</h3>
                   <p className="text-left"></p>
                     AI systems analyze complex business scenarios and make strategic decisions autonomously, 
@@ -125,8 +125,8 @@ const EnterpriseAutonomousOperationsMastery = () =>
             <section className="text-left"></section>
               <h2 className="text-left">Implementation Framework</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Foundation & Assessment</h3>
                   <div className="text-left"></div>
                     <div></div>

@@ -55,8 +55,8 @@ export default function IntelligentDataFabricTransformation2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Transformational Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$620M</div>
                     <div className="text-left">Annual Savings</div>
                   </div>
@@ -172,8 +172,8 @@ export default function IntelligentDataFabricTransformation2025() {
 
               <h2 className="text-left">Enterprise Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏢 Multi-Cloud Data Unification</h4>
                   <ul className="text-left">
                     <li>• Seamless access to data across AWS, Azure, GCP</li>

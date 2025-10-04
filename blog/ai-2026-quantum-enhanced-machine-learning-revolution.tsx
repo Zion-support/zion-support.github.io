@@ -16,7 +16,7 @@ const QuantumEnhancedMachineLearningRevolution = () =>
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-quantum-enhanced-machine-learning-revolution" />
       </Helmet>
 
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           {/* Hero Section */}
           <header className="text-left">
@@ -88,8 +88,8 @@ const QuantumEnhancedMachineLearningRevolution = () =>
             <section className="text-left"></section>
               <h2 className="text-left">Revolutionary Quantum Algorithms</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🌊 Quantum Neural Networks</h3>
                   <p className="text-left"></p>
                     Revolutionary neural network architectures that leverage quantum superposition and entanglement 
@@ -126,8 +126,8 @@ const QuantumEnhancedMachineLearningRevolution = () =>
             <section className="text-left"></section>
               <h2 className="text-left">Industry Applications</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">🏥 Healthcare & Drug Discovery</h3>
                   <p className="text-left"></p>
                     Quantum-enhanced ML is revolutionizing medical research and treatment:

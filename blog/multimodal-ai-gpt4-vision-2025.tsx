@@ -77,8 +77,8 @@ export default function MultimodalAIGPT4Vision2025() {
                   Organizations across industries are leveraging multimodal AI to transform operations:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">📄 Intelligent Document Processing</h3>
                     <p className="text-left"></p>
                       Automatically extract, classify, and route information from invoices, contracts, forms, and 
@@ -126,8 +126,8 @@ export default function MultimodalAIGPT4Vision2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Performance Metrics & ROI</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">97%</div>
                     <div className="text-left">Accuracy in complex visual analysis tasks</div>
                   </div>

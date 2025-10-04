@@ -47,8 +47,8 @@ const AICompositeAgents2026 = () =>
               Build composite AI agents that orchestrate multiple specialized models for superior outcomes. Learn coordination patterns, intelligent routing, and quality guarantees that scale.
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <Calendar className="text-left" />
                 <span>September 30, 2025<
               </div>
@@ -64,8 +64,8 @@ const AICompositeAgents2026 = () =>
           </header>
 
           {/* Article Content */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Key Takeaways</h3>
               <ul className="text-left">
                 <li>✅ Orchestrate multiple specialized models for 3-5x better outcomes</li>
@@ -312,8 +312,8 @@ const AICompositeAgents2026 = () =>
             </div>
 
             {/* Share Section */}
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <Tag className="text-left" />
                   <div className="text-left"></div>

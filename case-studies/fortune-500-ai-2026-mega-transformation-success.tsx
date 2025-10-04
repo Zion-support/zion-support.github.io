@@ -7,11 +7,11 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+    <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+        {/* Hero Section */}
+        <div className="text-left">
+        <div className="text-left"></div>
             <span className="text-left"></span>
               💰 Fortune 500 Success Story
             <
@@ -43,8 +43,8 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
         </div>
 
         {/* Key Results */}
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">$10B</div>
             <div className="text-left">Value Generated</div>
           </div>
@@ -68,8 +68,8 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
             Company Overview
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">Global Manufacturing Leader</h3>
                 <p className="text-left"></p>
@@ -104,8 +104,8 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
             AI 2026 Transformation Implementation
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🧠</div>
               <h3 className="text-left">Meta-Cognitive AI</h3>
               <p className="text-left"></p>
@@ -145,8 +145,8 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">📊</div>
               <h3 className="text-left">Intelligent Analytics</h3>
               <p className="text-left"></p>
@@ -180,8 +180,8 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
             Measurable Results
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$10B</div>
               <div className="text-left">Total Value Generated</div>
               <p className="text-left"></p>
@@ -214,11 +214,11 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Operational Improvements</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Production Efficiency<
                   <span className="text-left">+95%<
                 </div>
@@ -243,8 +243,8 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
 
             <div className="text-left"></div>
               <h3 className="text-left">Business Impact</h3>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Revenue Growth<
                   <span className="text-left">+40%<
                 </div>
@@ -275,8 +275,8 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
             Implementation Timeline
           </h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">Month 1</div>
               <h3 className="text-left">Assessment</h3>
               <p className="text-left"></p>

@@ -67,8 +67,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
 
             <h3 className="text-left">Privacy Guarantees</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🔒 Differential Privacy</h4>
                 <ul className="text-left">
                   <li>• Mathematical guarantee: ε-differential privacy (ε &lt; 1)</li>
@@ -93,8 +93,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Enterprise Use Cases</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🏥 Healthcare AI Development</h3>
                 <p className="text-left"></p>
                   <strong>Challenge:</strong> Medical AI startup needing 100,000+ annotated patient scans but unable 
@@ -105,8 +105,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
                   real images with differential privacy. Synthetic dataset achieved 99.2% diagnostic accuracy parity 
                   with human radiologists.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.2%</div>
                     <div className="text-left">Diagnostic Accuracy</div>
                   </div>
@@ -135,8 +135,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
                   <strong>Solution:</strong> Generated millions of synthetic fraudulent transactions using conditional 
                   GANs trained on aggregate patterns. Achieved 96% fraud detection rate with 0.8% false positives.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">96%</div>
                     <div className="text-left">Fraud Detection Rate</div>
                   </div>
@@ -165,8 +165,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
                   <strong>Solution:</strong> Physics-based 3D simulation generating photorealistic sensor data (camera, 
                   LiDAR, radar) for 10B+ miles of virtual driving across all weather and road conditions.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10B+</div>
                     <div className="text-left">Simulated Miles</div>
                   </div>
@@ -194,8 +194,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
               Synthetic data must maintain statistical properties of real data while ensuring privacy. Our validation framework ensures:
             </p>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">📊 Statistical Fidelity</h4>
                 <ul className="text-left">
                   <li>• Distribution matching (Wasserstein distance &lt; 0.05)</li>
@@ -233,8 +233,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -249,8 +249,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <div></div>
@@ -264,8 +264,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <div></div>
@@ -284,8 +284,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Cost-Benefit Analysis</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">💰 Cost Savings</h4>
                 <ul className="text-left">
                   <li className="text-left">
@@ -342,8 +342,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Regulatory Compliance</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🇪🇺 GDPR Compliance</h4>
                 <p className="text-left"></p>
                   Synthetic data is not considered personal data under GDPR as it cannot be used to identify individuals:
@@ -378,8 +378,8 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
               AI initiatives while maintaining complete privacy guarantees.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🔒</div>
                 <h3 className="text-left">Privacy Guaranteed</h3>
                 <p className="text-left">Differential privacy with ε &lt; 1, third-party audited, and fully compliant with GDPR/HIPAA</p>

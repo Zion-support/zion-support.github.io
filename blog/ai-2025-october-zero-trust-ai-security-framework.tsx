@@ -56,8 +56,8 @@ export default function ZeroTrustAISecurityFramework2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🛡️ Security Performance Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.97%</div>
                     <div className="text-left">Threat Prevention Rate</div>
                   </div>
@@ -191,8 +191,8 @@ export default function ZeroTrustAISecurityFramework2025() {
 
               <h2 className="text-left">Industry Applications</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏦 Financial Services</h4>
                   <ul className="text-left">
                     <li>• Fraud detection model protection</li>

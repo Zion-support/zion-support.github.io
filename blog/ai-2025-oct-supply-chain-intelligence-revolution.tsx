@@ -55,8 +55,8 @@ export default function AISupplyChainIntelligenceRevolution2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Forecast Accuracy</div>
                   </div>
@@ -270,8 +270,8 @@ export default function AISupplyChainIntelligenceRevolution2025() {
               </div>
 
               <h2 className="text-left">Business Impact & ROI</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Financial Benefits</h4>
                   <ul className="text-left">
                     <li>• 78% inventory reduction = $890M working capital release</li>

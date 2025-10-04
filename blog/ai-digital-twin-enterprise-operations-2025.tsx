@@ -55,8 +55,8 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">94%</div>
                     <div className="text-left">Predictive Accuracy</div>
                   </div>
@@ -111,8 +111,8 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
                   Leading manufacturers deploy digital twins of production lines to optimize throughput, predict 
                   equipment failures, and reduce downtime from days to minutes.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">87%</div>
                     <div className="text-left">Reduction in unplanned downtime</div>
                   </div>
@@ -129,8 +129,8 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
                   Create digital twins of entire supply chains to simulate disruptions, optimize inventory levels, 
                   and predict demand with unprecedented accuracy.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">42%</div>
                     <div className="text-left">Inventory reduction</div>
                   </div>
@@ -147,8 +147,8 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
                   Model entire power grids, predict equipment failures, optimize energy distribution, and integrate 
                   renewable sources with AI-powered digital twins.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">34%</div>
                     <div className="text-left">Energy efficiency improvement</div>
                   </div>
@@ -163,8 +163,8 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
               
               <div className="text-left"></div>
                 <h3 className="text-left">Technical Stack</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Data Ingestion Layer</h4>
                     <p className="text-left">Real-time IoT sensor data, SCADA systems, ERP integration, historian databases</p>
                     <div className="text-left"></div>
@@ -197,8 +197,8 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
               </div>
 
               <h2 className="text-left">Success Story: Global Manufacturing Leader</h2>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Challenge</h3>
                   <p className="text-left"></p>
                     Fortune 100 manufacturer facing $45M annual losses from unplanned equipment downtime, 
@@ -216,8 +216,8 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
                 
                 <div></div>
                   <h3 className="text-left">Results (12 Months)</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">91%</div>
                       <div className="text-left">Reduction in unplanned downtime</div>
                     </div>
@@ -239,8 +239,8 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
 
               <h2 className="text-left">Best Practices & Implementation Roadmap</h2>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">Phase 1: Pilot & Proof of Value (2-3 Months)</h3>
                   <ul className="text-left">
                     <li className="text-left">

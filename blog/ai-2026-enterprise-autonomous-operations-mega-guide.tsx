@@ -19,8 +19,8 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
   return (
     <div>
       <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+        <div className="text-left"></div>
         {/* Hero Section */}
         <header className="text-left">
           <div className="text-left"></div>
@@ -54,8 +54,8 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
             </h2>
           </div>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation</h3>
               <ul className="text-left">
                 <li>• System Assessment</li>
@@ -132,15 +132,15 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
               
               <h3 className="text-left">Phase 2: AI Agent Implementation</h3>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Meta-Cognitive AI Agents</h4>
                   <p className="text-left"></p>
                     Deploy advanced AI agents with self-awareness and autonomous decision-making capabilities 
                     that can adapt and optimize operations without human intervention.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">95%</div>
                       <div className="text-left">Decision Accuracy</div>
                     </div>
@@ -161,8 +161,8 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
                     Comprehensive automation framework that handles complex business processes, 
                     decision trees, and exception handling with minimal human oversight.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">98%</div>
                       <div className="text-left">Automation Rate</div>
                     </div>
@@ -208,11 +208,11 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
               
               <h3 className="text-left">Real-World Success Metrics</h3>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Fortune 500 Manufacturing</h4>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Cost Reduction:<
                       <span className="text-left">$2.3B<
                     </div>
@@ -233,8 +233,8 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
                 
                 <div className="text-left"></div>
                   <h4 className="text-left">Financial Services</h4>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <span className="text-left">Process Automation:<
                       <span className="text-left">98.5%<
                     </div>
@@ -256,8 +256,8 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
               
               <h3 className="text-left">Implementation Timeline</h3>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">1</div>
                   <div></div>
                     <h4 className="text-left">Weeks 1-4: Assessment & Planning</h4>

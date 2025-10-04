@@ -56,8 +56,8 @@ export default function IntelligentAutomationOrchestration2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🚀 Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">87%</div>
                     <div className="text-left">Efficiency Improvement</div>
                   </div>
@@ -147,8 +147,8 @@ export default function IntelligentAutomationOrchestration2025() {
 
               <h2 className="text-left">Key Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🏦 Intelligent Trade Processing</h4>
                   <ul className="text-left">
                     <li>• AI-optimized trade routing for best execution</li>

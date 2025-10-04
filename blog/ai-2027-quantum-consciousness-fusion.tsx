@@ -27,8 +27,8 @@ export default function AIQuantumConsciousnessFusion2027() {
 
         <div className="text-left"></div>
           <h2 className="text-left">⚛️ Quantum Consciousness Metrics</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100,000x</div>
               <div className="text-left">Processing Speed</div>
             </div>
@@ -70,8 +70,8 @@ export default function AIQuantumConsciousnessFusion2027() {
         <section className="text-left"></section>
           <h2 className="text-left">Revolutionary Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🏥 Quantum Medical Diagnosis</h3>
               <p className="text-left"></p>
                 Quantum consciousness AI is revolutionizing medical diagnosis by processing millions of symptoms, 
@@ -185,8 +185,8 @@ export default function AIQuantumConsciousnessFusion2027() {
             with capabilities that were previously impossible:
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Immediate Benefits</h3>
               <ul className="text-left">
                 <li>100,000x faster decision-making processes</li>
@@ -229,8 +229,8 @@ export default function AIQuantumConsciousnessFusion2027() {
           </div>
         </section>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <Link href="/blog" className="text-left">
               Explore More AI Insights
             </Link>

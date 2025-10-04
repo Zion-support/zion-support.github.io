@@ -106,8 +106,8 @@ export default function Services() {
       <div className="text-left"></div>
         {/* Hero Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-          <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
             <div className="text-left"></div>
               <h1 className="text-left">
                 Our <span className="text-left">Services<
@@ -122,12 +122,12 @@ export default function Services() {
 
         {/* Services Grid */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               {services.map((service, index) => (
                 <div key={index} className="text-left"></div>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       {service.icon}
                     </div>
                     <div className="text-left"></div>
@@ -166,8 +166,8 @@ export default function Services() {
 
         {/* Process Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Our <span className="text-left">Process<
               </h2>
@@ -176,8 +176,8 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -187,8 +187,8 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <h3 className="text-left">Planning</h3>
@@ -197,8 +197,8 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <h3 className="text-left">Development</h3>
@@ -207,8 +207,8 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   4
                 </div>
                 <h3 className="text-left">Launch</h3>
@@ -222,8 +222,8 @@ export default function Services() {
 
         {/* Industries Section */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h2 className="text-left">
                 Industries We <span className="text-left">Serve<
               </h2>

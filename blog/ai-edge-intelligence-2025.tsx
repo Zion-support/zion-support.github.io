@@ -150,8 +150,8 @@ export default function AIEdgeIntelligence2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group AI Research
                 </div>
                 <div className="text-left"></div>

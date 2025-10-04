@@ -78,8 +78,8 @@ export default function SovereignAIDataResidency2025() {
                 <p className="text-left"></p>
                   2025 marks a tipping point in AI regulation, with major frameworks now in enforcement:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🇪🇺 European Union AI Act</h3>
                     <p className="text-left"></p>
                       Comprehensive AI regulation with strict requirements for high-risk AI systems, mandatory risk 
@@ -144,8 +144,8 @@ export default function SovereignAIDataResidency2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Industry Applications</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">🏥 Healthcare & Life Sciences</h3>
                     <p className="text-left"></p>
                       Deploy AI for medical diagnosis, drug discovery, and patient care while ensuring HIPAA, GDPR, 
@@ -231,8 +231,8 @@ export default function SovereignAIDataResidency2025() {
                 <p className="text-left"></p>
                   Successful Sovereign AI deployment follows a phased approach:
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Regulatory Assessment</h3>
                     <p className="text-left"></p>
                       Map all applicable data residency and AI regulations across your operating jurisdictions. 

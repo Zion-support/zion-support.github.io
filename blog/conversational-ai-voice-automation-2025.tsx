@@ -22,8 +22,8 @@ export default function ConversationalAIVoiceAutomation2025() {
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <span className="text-left"></span>
               🆕 PUBLISHED SEPTEMBER 30, 2025
             <
@@ -41,8 +41,8 @@ export default function ConversationalAIVoiceAutomation2025() {
             and 95% customer satisfaction while handling 10M+ conversations monthly
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">98%</div>
               <div className="text-left">Voice Accuracy</div>
             </div>
@@ -199,8 +199,8 @@ export default function ConversationalAIVoiceAutomation2025() {
               handling 2.5M monthly inquiries across 18 countries and 12 languages.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">78%</div>
                 <div className="text-left">Inquiries Fully Automated</div>
               </div>
@@ -238,8 +238,8 @@ export default function ConversationalAIVoiceAutomation2025() {
 
           <h2 className="text-left">Use Cases & Applications</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">💰 Banking & Financial Services</h4>
               <ul className="text-left">
                 <li>• Account balance & transaction inquiries</li>
@@ -287,8 +287,8 @@ export default function ConversationalAIVoiceAutomation2025() {
 
           <h2 className="text-left">Implementation Timeline</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">Week 1-3: Discovery & Design</h4>
               <p className="text-left"></p>
                 Analyze conversation logs, identify top intents, design dialogue flows. Build knowledge base 
@@ -316,8 +316,8 @@ export default function ConversationalAIVoiceAutomation2025() {
 
           <h2 className="text-left">Technology Stack</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h4 className="text-left">🤖 AI Foundation</h4>
               <ul className="text-left">
                 <li>• GPT-4, Claude, or Llama for NLU</li>
@@ -353,8 +353,8 @@ export default function ConversationalAIVoiceAutomation2025() {
           <div className="text-left"></div>
             <h3 className="text-left">Typical Annual Benefits (10M Conversations/Year)</h3>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <span className="text-left">Agent Labor Cost Savings (75% automation)<
                 <span className="text-left">$38M<
               </div>

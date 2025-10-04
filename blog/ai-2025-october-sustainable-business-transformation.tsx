@@ -142,8 +142,8 @@ export default function AISustainableBusiness2025() {
                     remarkable results:
                   </p>
                   
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">67%</div>
                       <div className="text-left">Carbon footprint reduction</div>
                     </div>
@@ -220,8 +220,8 @@ export default function AISustainableBusiness2025() {
                   Our proven methodology enables rapid deployment of AI sustainability solutions:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left"></div>
                       Week 1-2
                     </div>
@@ -234,8 +234,8 @@ export default function AISustainableBusiness2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       Week 3-6
                     </div>
                     <div></div>
@@ -246,8 +246,8 @@ export default function AISustainableBusiness2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       Week 7-10
                     </div>
                     <div></div>
@@ -258,8 +258,8 @@ export default function AISustainableBusiness2025() {
                     </div>
                   </div>
 
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       Week 11-12
                     </div>
                     <div></div>
@@ -305,8 +305,8 @@ export default function AISustainableBusiness2025() {
             </div>
             
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Written by Zion Tech Group Sustainability Innovation Team
                 </div>
                 <div className="text-left"></div>

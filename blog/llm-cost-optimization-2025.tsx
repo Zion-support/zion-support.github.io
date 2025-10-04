@@ -63,8 +63,8 @@ const LLMCostOptimization2025 = () =>
             implementation. The key is understanding what, when, and how to cache.
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Semantic Caching</h3>
               <p className="text-left"></p>
                 Cache responses based on semantic similarity rather than exact matches. Two different prompts asking 
@@ -105,14 +105,14 @@ const LLMCostOptimization2025 = () =>
             costs without sacrificing quality.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🎯 Task-Specific Model Routing</h3>
               <p className="text-left"></p>
                 Route requests to different models based on complexity:
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">Simple Tasks</div>
                   <div className="text-left">Small Models</div>
                   <div className="text-left">Classification, extraction, simple Q&A</div>
@@ -168,8 +168,8 @@ const LLMCostOptimization2025 = () =>
 
           <div className="text-left"></div>
             <h3 className="text-left">Token Optimization Techniques</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -178,8 +178,8 @@ const LLMCostOptimization2025 = () =>
                   <p className="text-left"></p>
                     Eliminate verbose instructions, repetitive examples, and unnecessary context.
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">❌ Before (150 tokens)</div>
                       <div className="text-left"></div>
                         "Please analyze the following customer feedback and tell me if the sentiment is positive, negative, 
@@ -196,8 +196,8 @@ const LLMCostOptimization2025 = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <div></div>
@@ -208,8 +208,8 @@ const LLMCostOptimization2025 = () =>
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <div></div>
@@ -235,8 +235,8 @@ const LLMCostOptimization2025 = () =>
             30-50% on compute expenses.
           </p>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">🚀 Deployment Options Comparison</h3>
               <div className="text-left"></div>
                 <table className="text-left">

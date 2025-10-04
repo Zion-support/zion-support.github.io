@@ -234,8 +234,8 @@ const NeuromorphicComputing = () =>
               Leading Neuromorphic Platforms
             </h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   Intel Loihi 2 (2023)
                 </h3>
@@ -315,8 +315,8 @@ const NeuromorphicComputing = () =>
               Real-World Applications & Results
             </h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   🤖 Robotics: Intel Loihi Quadruped
                 </h3>
@@ -446,8 +446,8 @@ const NeuromorphicComputing = () =>
             <h3 className="text-left">
               Modern SNN Training Methods
             </h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">
                   1. Surrogate Gradient Descent
                 </h4>
@@ -509,8 +509,8 @@ const NeuromorphicComputing = () =>
               The Future: 2025-2030 Roadmap
             </h2>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">
                   2025-2026: Mainstream Edge Adoption
                 </h3>

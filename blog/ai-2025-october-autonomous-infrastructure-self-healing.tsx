@@ -63,8 +63,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
           Enterprise-grade self-healing infrastructure requires sophisticated AI orchestration across multiple layers:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left">🔍</div>
               <div></div>
@@ -81,8 +81,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">🧠</div>
               <div></div>
                 <h4 className="text-left">Diagnosis Engine</h4>
@@ -98,8 +98,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">⚡</div>
               <div></div>
                 <h4 className="text-left">Remediation Orchestrator</h4>
@@ -115,8 +115,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
             </div>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">📊</div>
               <div></div>
                 <h4 className="text-left">Learning System</h4>
@@ -140,8 +140,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
           <p className="text-left"></p>
             Top-10 e-commerce platform handles 2M+ transactions/day with fully autonomous infrastructure:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">99.997%</div>
               <div className="text-left">Uptime</div>
             </div>
@@ -168,8 +168,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
           <p className="text-left"></p>
             Top-tier investment bank achieves zero-downtime trading with AI-powered infrastructure:
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">100%</div>
               <div className="text-left">Trading Hours</div>
             </div>
@@ -196,8 +196,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
           Successful self-healing infrastructure requires a phased approach:
         </p>
 
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left">Phase 1<
               <h4 className="text-left">Foundation (Months 1-2)</h4>
@@ -207,8 +207,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">Phase 2<
               <h4 className="text-left">Intelligence (Months 3-4)</h4>
             </div>
@@ -217,8 +217,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">Phase 3<
               <h4 className="text-left">Automation (Months 5-6)</h4>
             </div>
@@ -227,8 +227,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
             </p>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">Phase 4<
               <h4 className="text-left">Optimization (Ongoing)</h4>
             </div>
@@ -239,8 +239,8 @@ const AIAutonomousInfrastructureSelfHealing2025 = () =>
         </div>
 
         <h2 className="text-left">Key Technologies & Tools</h2>
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div></div>
               <h4 className="text-left">Observability Stack</h4>
               <ul className="text-left">

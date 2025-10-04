@@ -8,8 +8,8 @@ export default function RevolutionaryAI2026BreakthroughBanner() {
       <div className="text-left"></div>
       
       {/* Floating Quantum Particles */}
-      <div className="text-left"></div>
-      <div className="text-left"></div>
+      <div className="text-left">
+        <div className="text-left"></div>
       <div className="text-left"></div>
       <div className="text-left" style={{animationDelay: '0.5s'}}></div>
       

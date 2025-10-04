@@ -39,8 +39,8 @@ export default function AIIntelligentAutomationPlatformEngineering() {
         <section className="text-left"></section>
           <h2 className="text-left">Core Capabilities of Intelligent Automation Platforms</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Predictive Resource Optimization</h3>
               <p className="text-left"></p>
                 AI models analyze usage patterns, predict demand spikes, and automatically scale resources before bottlenecks 
@@ -100,8 +100,8 @@ export default function AIIntelligentAutomationPlatformEngineering() {
 
         <section className="text-left"></section>
           <h2 className="text-left">Measurable Business Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">78%</div>
               <div className="text-left">Faster Delivery</div>
               <div className="text-left"></div>
@@ -131,10 +131,10 @@ export default function AIIntelligentAutomationPlatformEngineering() {
             Successful intelligent automation platforms follow proven architectural patterns:
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">🏗️<
                 </div>
                 <div></div>
@@ -147,8 +147,8 @@ export default function AIIntelligentAutomationPlatformEngineering() {
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🔄<
                 </div>
@@ -162,8 +162,8 @@ export default function AIIntelligentAutomationPlatformEngineering() {
               </div>
             </div>
 
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">🛡️<
                 </div>

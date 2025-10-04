@@ -109,8 +109,8 @@ const AI2025OctPredictiveMaintenanceEnterpriseBreakthrough = () =>
                 transforming their operations and achieving unprecedented reliability and cost savings.
               </p>
               
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div className="text-left">$3.2B</div>
                   <div className="text-left">Annual Savings</div>
                 </div>
@@ -132,8 +132,8 @@ const AI2025OctPredictiveMaintenanceEnterpriseBreakthrough = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Predictive Maintenance Applications</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Industrial Equipment</h3>
                 <ul className="text-left">
                   <li>• Manufacturing machinery monitoring</li>
@@ -177,8 +177,8 @@ const AI2025OctPredictiveMaintenanceEnterpriseBreakthrough = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Business Impact & ROI</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div></div>
                   <h3 className="text-left">Operational Excellence</h3>
                   <ul className="text-left">
@@ -212,8 +212,8 @@ const AI2025OctPredictiveMaintenanceEnterpriseBreakthrough = () =>
 
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
                 <ul className="text-left">
                   <li>• Deploy IoT sensor infrastructure</li>
@@ -251,8 +251,8 @@ const AI2025OctPredictiveMaintenanceEnterpriseBreakthrough = () =>
               The future of predictive maintenance is even more exciting with emerging technologies:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🌐 Digital Twins Integration</h3>
                 <p className="text-left"></p>
                   Creating virtual replicas of physical assets for simulation and optimization, 

@@ -75,8 +75,8 @@ export default function CognitiveAutomationOrchestration2025() {
 
               <section></section>
                 <h2 className="text-left">📊 Proven Enterprise Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">78%</div>
                     <div className="text-left">Operational Cost Reduction</div>
                     <div className="text-left">Measured across Fortune 500 implementations</div>
@@ -101,8 +101,8 @@ export default function CognitiveAutomationOrchestration2025() {
 
               <section></section>
                 <h2 className="text-left">🚀 Real-World Implementation Patterns</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Intelligent Document Processing</h3>
                     <p className="text-left"></p>
                       Major financial institutions are processing 5M+ documents daily with 99.7% accuracy using 
@@ -157,8 +157,8 @@ export default function CognitiveAutomationOrchestration2025() {
 
               <section></section>
                 <h2 className="text-left">🎯 Implementation Roadmap</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h3 className="text-left">Phase 1: Process Discovery & Assessment (2-4 weeks)</h3>
                     <p className="text-left">Identify automation opportunities, map workflows, assess ROI potential</p>
                   </div>
@@ -209,8 +209,8 @@ export default function CognitiveAutomationOrchestration2025() {
             </div>
 
             <footer className="text-left">
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   Published on October 1, 2025 by Zion Tech Group Research Team
                 </div>
                 <a href="/blog" className="text-left"></a>

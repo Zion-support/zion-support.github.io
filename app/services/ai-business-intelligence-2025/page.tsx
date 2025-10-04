@@ -35,7 +35,7 @@ export default function AIBusinessIntelligence2025() {
       <div></div>
     <div className="text-left"></div>
       {/* Header */}</div>
-      <div className="text-left"></div>
+      <div className="text-left">
         <div className="text-left"></div>
           <Link href="/services" className="text-left">
             ← Back to Services
@@ -75,8 +75,8 @@ export default function AIBusinessIntelligence2025() {
       {/* Key Benefits */}
       <div className="text-left"></div>
         <h2 className="text-left">Why Choose AI Business Intelligence?</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left">300%</div>"
             <div className="text-left">Average ROI</div>"
           </div>
@@ -97,8 +97,8 @@ export default function AIBusinessIntelligence2025() {
       {/* Features Overview */}
       <section className="text-left"></section>
         <h2 className="text-left">Platform Features</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left">🔮>
             </div>
@@ -114,8 +114,8 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">📊>
             </div>
             <h3 className="text-left">Real-time Dashboards</h3>"
@@ -130,8 +130,8 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">🤖>
             </div>
             <h3 className="text-left">AI-Powered Insights</h3>"
@@ -146,8 +146,8 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">📈>
             </div>
             <h3 className="text-left">Advanced Reporting</h3>"
@@ -162,8 +162,8 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">🔗>
             </div>
             <h3 className="text-left">Data Integration</h3>"
@@ -178,8 +178,8 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">🔒>
             </div>
             <h3 className="text-left">Security & Compliance</h3>"
@@ -198,8 +198,8 @@ export default function AIBusinessIntelligence2025() {
       {/* Use Cases */}
       <section className="text-left"></section>
         <h2 className="text-left">Use Cases</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <h3 className="text-left">Sales & Marketing</h3>"
             <ul className="text-left">
               <li className="text-left">
@@ -307,8 +307,8 @@ export default function AIBusinessIntelligence2025() {
       {/* Pricing */}
       <section className="text-left"></section>
         <h2 className="text-left">Pricing Plans</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <h3 className="text-left">Starter</h3>"
               <div className="text-left">$999<span className="text-left">/month<</div>"
@@ -343,8 +343,8 @@ export default function AIBusinessIntelligence2025() {
             </Link>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left"></span>
                 Most Popular
               </span>
@@ -391,8 +391,8 @@ export default function AIBusinessIntelligence2025() {
             </Link>
           </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Enterprise</h3>"
               <div className="text-left">Custom</div>"
               <p className="text-left">For large organizations</p>"
@@ -438,8 +438,8 @@ export default function AIBusinessIntelligence2025() {
       {/* Implementation Process */}
       <section className="text-left"></section>
         <h2 className="text-left">Implementation Process</h2>"
+        <div className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left">1>
             </div>
@@ -457,8 +457,8 @@ export default function AIBusinessIntelligence2025() {
               </ul>
             </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">2>
             </div>
             <div></div>
@@ -475,8 +475,8 @@ export default function AIBusinessIntelligence2025() {
               </ul>
             </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">3>
             </div>
             <div></div>
@@ -493,8 +493,8 @@ export default function AIBusinessIntelligence2025() {
               </ul>
             </div>
 
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <span className="text-left">4>
             </div>
             <div></div>
@@ -521,8 +521,8 @@ export default function AIBusinessIntelligence2025() {
             See how much your organization can save with AI Business Intelligence
           </p>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">$2.3M</div>"
               <div className="text-left">Average Annual Savings</div>"
             </div>
@@ -591,4 +591,4 @@ export default function AIBusinessIntelligence2025() {
         </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div>)
+}</div>)

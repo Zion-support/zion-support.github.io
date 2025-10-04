@@ -155,8 +155,8 @@ const observabilityPlatform =
                   prioritize based on business impact—ensuring teams focus on what truly matters.
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Before Intelligent Observability</h4>
                     <ul className="text-left">
                       <li>❌ 1000+ alerts per day</li>
@@ -192,8 +192,8 @@ const observabilityPlatform =
                 
                 <div className="text-left"></div>
                   <h3 className="text-left">Example Queries</h3>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Query:</div>
                       <div className="text-left">"Show me API endpoints with increased latency in the last 2 hours"</div>
                       <div className="text-left"></div>
@@ -258,8 +258,8 @@ const observabilityPlatform =
                   that balances immediate value with long-term transformation:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Data Foundation (Weeks 1-4)</h4>
                     <ul className="text-left">
                       <li>• Connect existing monitoring tools and data sources</li>
@@ -293,8 +293,8 @@ const observabilityPlatform =
 
               <section className="text-left"></section>
                 <h2 className="text-left">Proven Enterprise Results</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Global SaaS Provider</h4>
                     <p className="text-left"></p>
                       Reduced MTTR by 92% and eliminated 89% of alert noise while handling 15M+ users across 

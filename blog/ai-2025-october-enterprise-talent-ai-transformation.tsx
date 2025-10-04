@@ -55,8 +55,8 @@ export default function EnterpriseAITalentDevelopment2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🎯 Key Success Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">AI Team Productivity</div>
                   </div>
@@ -247,8 +247,8 @@ export default function EnterpriseAITalentDevelopment2025() {
 
               <h2 className="text-left">Building Specialized AI Roles</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">🤖 ML Engineer</h4>
                   <p className="text-left">Build, train, and deploy production ML systems</p>
                   <ul className="text-left">

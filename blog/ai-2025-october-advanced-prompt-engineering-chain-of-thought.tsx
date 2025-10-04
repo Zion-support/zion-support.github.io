@@ -107,8 +107,8 @@ export default function AdvancedPromptEngineeringCoT2025() {
                   </p>
                 </div>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Zero-Shot CoT</h4>
                     <p className="text-left"></p>
                       Add "Let's think step-by-step" to any prompt to trigger reasoning mode—improves accuracy 
@@ -139,8 +139,8 @@ export default function AdvancedPromptEngineeringCoT2025() {
                   directly into prompts—ensuring outputs align with organizational values and regulatory requirements:
                 </p>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Principle: Privacy & Data Protection</h4>
                     <p className="text-left"></p>
                       Instruction: "Never reference, store, or output personally identifiable information (PII). 
@@ -213,8 +213,8 @@ export default function AdvancedPromptEngineeringCoT2025() {
                   </ol>
                 </div>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Benefits</h4>
                     <ul className="text-left">
                       <li>• Answers grounded in enterprise knowledge</li>
@@ -266,8 +266,8 @@ export default function AdvancedPromptEngineeringCoT2025() {
 
               <section className="text-left"></section>
                 <h2 className="text-left">Measurable Business Impact</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">$22M</div>
                     <div className="text-left">Productivity Gains</div>
                     <div className="text-left">from optimized AI workflows</div>

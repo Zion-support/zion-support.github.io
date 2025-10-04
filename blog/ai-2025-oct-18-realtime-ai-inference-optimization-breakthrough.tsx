@@ -47,8 +47,8 @@ export default function RealtimeAIInferenceOptimization2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">⚡ Performance Breakthroughs</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">&lt;10ms</div>
                     <div className="text-left">P99 Latency</div>
                   </div>
@@ -103,8 +103,8 @@ export default function RealtimeAIInferenceOptimization2025() {
                   Start optimization at the source: the model itself. These techniques reduce computational requirements 
                   without sacrificing accuracy.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Quantization (4-bit to 8-bit)</div>
                     <div className="text-left"></div>
                       Reduce model weights from 32-bit floats to 8-bit integers (75% size reduction, 4x speedup) 
@@ -156,8 +156,8 @@ export default function RealtimeAIInferenceOptimization2025() {
                   Bridge the gap between model architecture and hardware execution with advanced compilation and 
                   runtime strategies.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">TensorRT & ONNX Runtime</div>
                     <div className="text-left"></div>
                       Use NVIDIA TensorRT or ONNX Runtime to compile models into optimized execution graphs. These 
@@ -209,8 +209,8 @@ export default function RealtimeAIInferenceOptimization2025() {
                   Match your workload to the right hardware and deploy infrastructure that minimizes every source 
                   of latency.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Hardware Selection</div>
                     <div className="text-left"></div>
                       <strong>GPUs:</strong> NVIDIA A100/H100 for large models, A10/L4 for small models<br/>
@@ -267,8 +267,8 @@ export default function RealtimeAIInferenceOptimization2025() {
                 </p>
                 
                 <h3 className="text-left">Solution</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <strong className="text-left">Step 1: Model Distillation</strong><br/>
                     Distilled 350M parameter model → 45M parameter model (95% of original accuracy)
                   </div>
@@ -291,8 +291,8 @@ export default function RealtimeAIInferenceOptimization2025() {
                 </div>
 
                 <h3 className="text-left">Results</h3>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Performance</div>
                     <div className="text-left"></div>
                       • P50 latency: 250ms → 3.2ms (98% improvement)<br/>
@@ -371,8 +371,8 @@ export default function RealtimeAIInferenceOptimization2025() {
                   Our optimization team has helped 50+ companies achieve production inference latencies under 10ms 
                   while cutting costs 60-80%. We've optimized models from 100M to 175B parameters across industries.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">Free Consultation</div>
                     <div className="text-left">60-minute performance audit of your current AI inference pipeline</div>
                   </div>

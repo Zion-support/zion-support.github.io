@@ -197,8 +197,8 @@ export default function AIDigitalTwinsIndustry42025() {
               <section className="text-left"></section>
                 <h2 className="text-left">Implementation Framework</h2>
                 
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <h4 className="text-left">Phase 1: Asset Identification & Modeling (Weeks 1-6)</h4>
                     <p className="text-left"></p>
                       Select critical assets, gather historical data, and create initial 3D models:

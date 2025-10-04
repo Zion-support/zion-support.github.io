@@ -35,8 +35,8 @@ export default function AI2025OctoberSustainableAIOperationsGreenComputing() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">85%</div>
               <div className="text-left">Energy Reduction</div>
             </div>
@@ -173,8 +173,8 @@ export default function AI2025OctoberSustainableAIOperationsGreenComputing() {
 
           <div className="text-left"></div>
             <h3 className="text-left">Path to Carbon-Negative AI</h3>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">1</div>
                 <div></div>
                   <h4 className="text-left">Maximize Efficiency (Months 1-6)</h4>
@@ -206,15 +206,15 @@ export default function AI2025OctoberSustainableAIOperationsGreenComputing() {
           </div>
 
           <h2 className="text-left">Real-World Impact</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Global Tech Company</h3>
               <p className="text-left"></p>
                 Reduced AI infrastructure energy consumption by 87% through model optimization and renewable 
                 energy integration, achieving carbon-negative operations.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Energy Savings:<
                   <span className="text-left">87%<
                 </div>
@@ -238,8 +238,8 @@ export default function AI2025OctoberSustainableAIOperationsGreenComputing() {
                 Deployed efficient AI models and carbon-aware infrastructure, achieving 92% renewable energy 
                 usage while improving model performance.
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <span className="text-left">Renewable Energy:<
                   <span className="text-left">92%<
                 </div>
@@ -260,8 +260,8 @@ export default function AI2025OctoberSustainableAIOperationsGreenComputing() {
           </div>
 
           <h2 className="text-left">Technology Stack for Green AI</h2>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div></div>
                 <h3 className="text-left">🔧 Core Technologies</h3>
                 <ul className="text-left">

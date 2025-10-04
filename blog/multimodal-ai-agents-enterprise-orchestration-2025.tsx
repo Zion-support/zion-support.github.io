@@ -68,8 +68,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
               Our enterprise orchestration platform coordinates specialized AI models through an intelligent routing layer:
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">🔀 Intelligent Model Router</h4>
                 <ul className="text-left">
                   <li>• Dynamic model selection based on input types</li>
@@ -94,8 +94,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Real-World Enterprise Use Cases</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h3 className="text-left">🎧 Intelligent Customer Service Agents</h3>
                 <p className="text-left"></p>
                   <strong>Challenge:</strong> Global e-commerce platform handling 5M+ daily customer interactions across voice, chat, email, and video calls.
@@ -104,8 +104,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
                   <strong>Solution:</strong> Multimodal AI agents processing voice tone, facial expressions, chat context, and product images simultaneously 
                   to provide personalized support with human-level empathy.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">87%</div>
                     <div className="text-left">First-Contact Resolution</div>
                   </div>
@@ -134,8 +134,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
                   <strong>Solution:</strong> Multimodal inspection agents combining high-resolution cameras, thermal imaging, 
                   ultrasonic sensors, and vibration analysis to detect defects invisible to single-modality systems.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.7%</div>
                     <div className="text-left">Defect Detection Rate</div>
                   </div>
@@ -164,8 +164,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
                   <strong>Solution:</strong> Multimodal moderation agents analyzing semantic content, visual context, 
                   audio sentiment, and cultural nuances with human-in-the-loop escalation for edge cases.
                 </p>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">96.5%</div>
                     <div className="text-left">Harmful Content Detection</div>
                   </div>
@@ -189,8 +189,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
           <section className="text-left"></section>
             <h2 className="text-left">Implementation Roadmap</h2>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left"></div>
                   1
                 </div>
@@ -205,8 +205,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   2
                 </div>
                 <div></div>
@@ -220,8 +220,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
                 </div>
               </div>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   3
                 </div>
                 <div></div>
@@ -307,8 +307,8 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
               Deploy enterprise-grade multimodal AI agents in your organization with Zion Tech Group's proven orchestration platform.
             </p>
             
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <div className="text-left">🎯</div>
                 <h3 className="text-left">Rapid Deployment</h3>
                 <p className="text-left">Production-ready in 12 weeks with pre-trained models and infrastructure templates</p>

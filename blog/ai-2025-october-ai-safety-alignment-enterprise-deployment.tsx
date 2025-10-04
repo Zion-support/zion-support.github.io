@@ -55,8 +55,8 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">🛡️ Safety & Trust Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">99.2%</div>
                     <div className="text-left">Safety Compliance Rate</div>
                   </div>
@@ -115,8 +115,8 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
 
               <h2 className="text-left">The Enterprise AI Safety Framework</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h3 className="text-left">1. Pre-Deployment Safety Evaluation</h3>
                   
                   <h4 className="text-left">Adversarial Testing ("Red Teaming")</h4>
@@ -182,8 +182,8 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
                   <p className="text-left"></p>
                     Train models to follow a "constitution" of principles through self-critique and refinement:
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <strong>Example Constitution:</strong><br/>
                       1. Choose responses that are helpful, harmless, and honest<br/>
                       2. Avoid bias, discrimination, and stereotyping<br/>
@@ -213,8 +213,8 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
                   <h3 className="text-left">4. Monitoring & Incident Response</h3>
                   
                   <h4 className="text-left">Real-Time Safety Monitoring</h4>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">Output Quality Metrics</div>
                       <ul className="text-left">
                         <li>• Hallucination rate</li>
@@ -282,14 +282,14 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
 
               <h2 className="text-left">Real-World Implementation Success</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Financial Services: Responsible AI Lending</h4>
                   <p className="text-left"></p>
                     Major bank implemented comprehensive AI safety framework for automated loan decisioning
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">99.7%</div>
                       <div className="text-left">Compliance Rate</div>
                     </div>
@@ -309,8 +309,8 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
                   <p className="text-left"></p>
                     Hospital system deployed AI-assisted diagnostics with human-in-the-loop safety controls
                   </p>
-                  <div className="text-left"></div>
-                    <div className="text-left"></div>
+                  <div className="text-left">
+        <div className="text-left"></div>
                       <div className="text-left">98.9%</div>
                       <div className="text-left">Diagnostic Accuracy</div>
                     </div>
@@ -328,8 +328,8 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
 
               <h2 className="text-left">Implementation Roadmap</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">Month 1: Assessment & Foundation</h4>
                   <ul className="text-left">
                     <li>• Audit existing AI systems for safety risks</li>

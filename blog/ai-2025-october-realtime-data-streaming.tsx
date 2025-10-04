@@ -36,8 +36,8 @@ export default function AI2025OctoberRealtimeDataStreaming() {
 
         {/* Key Metrics */}
         <section className="text-left"></section>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <div className="text-left">&lt;50ms</div>
               <div className="text-left">End-to-End Latency</div>
             </div>
@@ -73,8 +73,8 @@ export default function AI2025OctoberRealtimeDataStreaming() {
 
           <h2 className="text-left">Sub-50ms Latency Optimization</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Infrastructure Optimization</h3>
               <ul className="text-left">
                 <li>✓ Zero-copy data transfers using memory mapping</li>
@@ -102,8 +102,8 @@ export default function AI2025OctoberRealtimeDataStreaming() {
             <p className="text-left"></p>
               Transform raw streaming data into AI-ready features in real-time:
             </p>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left">
+        <div className="text-left"></div>
                 <h4 className="text-left">Windowed Aggregations</h4>
                 <p className="text-left"></p>
                   Compute rolling averages, counts, and statistical measures over sliding time windows 
@@ -129,8 +129,8 @@ export default function AI2025OctoberRealtimeDataStreaming() {
 
           <h2 className="text-left">Use Case Patterns</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Real-Time Fraud Detection</h3>
               <p className="text-left"></p>
                 Detect fraudulent transactions in under 10ms by analyzing patterns across user behavior, 
@@ -225,8 +225,8 @@ export default function AI2025OctoberRealtimeDataStreaming() {
 
           <h2 className="text-left">Implementation Roadmap</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Phase 1: Foundation (Weeks 1-4)</h3>
               <p className="text-left"></p>
                 Deploy streaming infrastructure (Kafka/Flink), implement basic event ingestion, 
@@ -253,8 +253,8 @@ export default function AI2025OctoberRealtimeDataStreaming() {
 
           <h2 className="text-left">Success Metrics & ROI</h2>
           
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="text-left">
+        <div className="text-left"></div>
               <h3 className="text-left">Fintech Platform</h3>
               <p className="text-left"></p>
                 Reduced fraud losses by 94% with sub-10ms transaction screening

@@ -55,8 +55,8 @@ export default function GenerativeAIDataLakes2025() {
             <section className="text-left"></section>
               <div className="text-left"></div>
                 <h2 className="text-left">📊 Transformation Metrics</h2>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left">
+        <div className="text-left"></div>
                     <div className="text-left">10x</div>
                     <div className="text-left">Faster Time to Insights</div>
                   </div>
@@ -145,8 +145,8 @@ export default function GenerativeAIDataLakes2025() {
 
               <h2 className="text-left">Key Use Cases</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <h4 className="text-left">💼 Financial Services</h4>
                   <ul className="text-left">
                     <li>• Real-time fraud detection across billions of transactions</li>
@@ -189,8 +189,8 @@ export default function GenerativeAIDataLakes2025() {
 
               <h2 className="text-left">Technology Stack</h2>
 
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+              <div className="text-left">
+        <div className="text-left"></div>
                   <div></div>
                     <h4 className="text-left">Data Lake Platforms</h4>
                     <p className="text-left">AWS Lake Formation, Azure Data Lake, Google Cloud Storage, Databricks Lakehouse</p>
