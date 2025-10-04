@@ -23,7 +23,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableContrastMonitoring = true,
   onMetricsUpdate,
 }) => {
-  const [metrics, setMetrics] = useState<AccessibilityMetrics>({
+  const [, setMetrics] = useState<AccessibilityMetrics>({
     contrastRatio: 0,
     focusableElements: 0,
     headingStructure: [],
@@ -135,9 +135,10 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Enhance form labels
       const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
       inputs.forEach((input) => {
-        const label = document.querySelector(`label[for="${input.id}"]`);
-        if (!label && !input.getAttribute('aria-label')) {
-          input.setAttribute('aria-label', `Input field ${input.type || 'text'}`);
+        const htmlInput = input as HTMLInputElement;
+        const label = document.querySelector(`label[for="${htmlInput.id}"]`);
+        if (!label && !htmlInput.getAttribute('aria-label')) {
+          htmlInput.setAttribute('aria-label', `Input field ${htmlInput.type || 'text'}`);
         }
       });
 
@@ -218,7 +219,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       // Simplified contrast ratio calculation
-      const calculateContrastRatio = (color1: string, color2: string): number => {
+      const calculateContrastRatio = (_color1: string, _color2: string): number => {
         // This is a placeholder - in production, use a proper color contrast library
         return 4.5; // Default accessible ratio
       };

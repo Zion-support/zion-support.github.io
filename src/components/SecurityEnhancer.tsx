@@ -107,12 +107,12 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     };
 
     // Expose sanitization function globally for use in forms
-    (window as any).sanitizeInput = sanitizeInput;
+    (window as unknown as { sanitizeInput?: (input: string) => string }).sanitizeInput = sanitizeInput;
 
     // Cleanup
     return () => {
       // Remove global function on cleanup
-      delete (window as any).sanitizeInput;
+      delete (window as unknown as { sanitizeInput?: (input: string) => string }).sanitizeInput;
     };
   }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection]);
 

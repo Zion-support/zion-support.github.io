@@ -29,7 +29,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (!enableReporting) return;
 
     // Import web-vitals dynamically to avoid bundle bloat
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    import('web-vitals').then((webVitals) => {
+      const getCLS = webVitals.getCLS;
+      const getFID = webVitals.getFID;
+      const getFCP = webVitals.getFCP;
+      const getLCP = webVitals.getLCP;
+      const getTTFB = webVitals.getTTFB;
       getCLS((metric) => {
         setMetrics(prev => {
           const newMetrics = { ...prev, cls: metric.value };
