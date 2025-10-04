@@ -30,12 +30,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Import web-vitals dynamically to avoid bundle bloat
     import('web-vitals').then((webVitals) => {
-      const getCLS = webVitals.getCLS;
-      const getFID = webVitals.getFID;
-      const getFCP = webVitals.getFCP;
-      const getLCP = webVitals.getLCP;
-      const getTTFB = webVitals.getTTFB;
-      getCLS((metric) => {
+      const { onCLS, onINP, onFCP, onLCP, onTTFB } = webVitals;
+      onCLS((metric) => {
         setMetrics(prev => {
           const newMetrics = { ...prev, cls: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -43,7 +39,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      getFID((metric) => {
+      onINP((metric) => {
         setMetrics(prev => {
           const newMetrics = { ...prev, fid: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -51,7 +47,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      getFCP((metric) => {
+      onFCP((metric) => {
         setMetrics(prev => {
           const newMetrics = { ...prev, fcp: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -59,7 +55,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      getLCP((metric) => {
+      onLCP((metric) => {
         setMetrics(prev => {
           const newMetrics = { ...prev, lcp: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -67,7 +63,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      getTTFB((metric) => {
+      onTTFB((metric) => {
         setMetrics(prev => {
           const newMetrics = { ...prev, ttfb: metric.value };
           onMetricsUpdate?.(newMetrics);
@@ -156,8 +152,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         console.warn('Performance budget violations:', violations);
         
         // Report to analytics or monitoring service
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'performance_budget_violation', {
+        if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+          (window as unknown as { gtag: Function }).gtag('event', 'performance_budget_violation', {
             event_category: 'Performance',
             event_label: violations.join(', '),
             value: violations.length,

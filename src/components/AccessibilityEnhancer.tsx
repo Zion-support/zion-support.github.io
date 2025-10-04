@@ -202,7 +202,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           if (color && backgroundColor && color !== backgroundColor) {
             totalElements++;
             // This is a simplified check - in production, you'd use a proper contrast calculation library
-            const contrastRatio = calculateContrastRatio(color, backgroundColor);
+            const contrastRatio = calculateContrastRatio();
             if (contrastRatio >= 4.5) {
               accessibleElements++;
             }
@@ -219,7 +219,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       // Simplified contrast ratio calculation
-      const calculateContrastRatio = (_color1: string, _color2: string): number => {
+      const calculateContrastRatio = (): number => {
         // This is a placeholder - in production, use a proper color contrast library
         return 4.5; // Default accessible ratio
       };
