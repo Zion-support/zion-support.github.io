@@ -45,7 +45,7 @@ class AdvancedPerformanceOptimizer {
       enableServiceWorker: true,
       enableCriticalCSS: true,
       enableBundleOptimization: true,
-      ...config
+      ...config,
     };
 
     this.initializeOptimizations();
@@ -74,9 +74,11 @@ class AdvancedPerformanceOptimizer {
     // Monitor Core Web Vitals
     if ('PerformanceObserver' in window) {
       // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry & { size: number };
+        const lastEntry = entries[entries.length - 1] as PerformanceEntry & {
+          size: number;
+        };
         this.metrics.largestContentfulPaint = lastEntry.startTime;
         this.logMetric('LCP', lastEntry.startTime);
       });
@@ -84,10 +86,11 @@ class AdvancedPerformanceOptimizer {
       this.observers.push(lcpObserver);
 
       // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+          this.metrics.firstInputDelay =
+            entry.processingStart - entry.startTime;
           this.logMetric('FID', this.metrics.firstInputDelay);
         });
       });
@@ -95,7 +98,7 @@ class AdvancedPerformanceOptimizer {
       this.observers.push(fidObserver);
 
       // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list => {
         let clsValue = 0;
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
@@ -112,10 +115,16 @@ class AdvancedPerformanceOptimizer {
 
     // Monitor page load metrics
     window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-      this.metrics.domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-      this.metrics.timeToFirstByte = navigation.responseStart - navigation.requestStart;
+      const navigation = performance.getEntriesByType(
+        'navigation',
+      )[0] as PerformanceNavigationTiming;
+      this.metrics.loadTime =
+        navigation.loadEventEnd - navigation.loadEventStart;
+      this.metrics.domContentLoaded =
+        navigation.domContentLoadedEventEnd -
+        navigation.domContentLoadedEventStart;
+      this.metrics.timeToFirstByte =
+        navigation.responseStart - navigation.requestStart;
 
       this.logMetric('Load Time', this.metrics.loadTime);
       this.logMetric('DOM Content Loaded', this.metrics.domContentLoaded);
@@ -130,7 +139,7 @@ class AdvancedPerformanceOptimizer {
     if (!this.config.enableImageOptimization) return;
 
     const images = document.querySelectorAll('img');
-    images.forEach((img) => {
+    images.forEach(img => {
       // Add loading="lazy" for images below the fold
       if (!img.hasAttribute('loading')) {
         const rect = img.getBoundingClientRect();
@@ -161,8 +170,8 @@ class AdvancedPerformanceOptimizer {
     // Use Intersection Observer for lazy loading
     if ('IntersectionObserver' in window) {
       const lazyImages = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+      const imageObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
@@ -172,7 +181,7 @@ class AdvancedPerformanceOptimizer {
         });
       });
 
-      lazyImages.forEach((img) => imageObserver.observe(img));
+      lazyImages.forEach(img => imageObserver.observe(img));
     }
   }
 
@@ -189,10 +198,10 @@ class AdvancedPerformanceOptimizer {
       'https://fonts.googleapis.com',
       'https://fonts.gstatic.com',
       'https://www.google-analytics.com',
-      'https://www.googletagmanager.com'
+      'https://www.googletagmanager.com',
     ];
 
-    externalDomains.forEach((domain) => {
+    externalDomains.forEach(domain => {
       const link = document.createElement('link');
       link.rel = 'preconnect';
       link.href = domain;
@@ -203,10 +212,10 @@ class AdvancedPerformanceOptimizer {
     // DNS prefetch for additional domains
     const dnsPrefetchDomains = [
       '//fonts.googleapis.com',
-      '//www.google-analytics.com'
+      '//www.google-analytics.com',
     ];
 
-    dnsPrefetchDomains.forEach((domain) => {
+    dnsPrefetchDomains.forEach(domain => {
       const link = document.createElement('link');
       link.rel = 'dns-prefetch';
       link.href = domain;
@@ -231,12 +240,9 @@ class AdvancedPerformanceOptimizer {
     document.head.appendChild(criticalCSS);
 
     // Preload critical fonts
-    const criticalFonts = [
-      '/fonts/inter-var.woff2',
-      '/fonts/inter-var.woff'
-    ];
+    const criticalFonts = ['/fonts/inter-var.woff2', '/fonts/inter-var.woff'];
 
-    criticalFonts.forEach((font) => {
+    criticalFonts.forEach(font => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.as = 'font';
@@ -250,14 +256,16 @@ class AdvancedPerformanceOptimizer {
    * Setup service worker for caching and offline support
    */
   private setupServiceWorker(): void {
-    if (!this.config.enableServiceWorker || !('serviceWorker' in navigator)) return;
+    if (!this.config.enableServiceWorker || !('serviceWorker' in navigator))
+      return;
 
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(registration => {
           console.log('Service Worker registered:', registration);
         })
-        .catch((error) => {
+        .catch(error => {
           console.warn('Service Worker registration failed:', error);
         });
     });
@@ -293,11 +301,16 @@ class AdvancedPerformanceOptimizer {
 
     // Implement browser caching headers
     // This would typically be handled by the server, but we can optimize client-side caching
-    const cacheableResources = document.querySelectorAll('link[rel="stylesheet"], script[src], img[src]');
-    
-    cacheableResources.forEach((resource) => {
+    const cacheableResources = document.querySelectorAll(
+      'link[rel="stylesheet"], script[src], img[src]',
+    );
+
+    cacheableResources.forEach(resource => {
       // Add cache control hints
-      if (resource instanceof HTMLLinkElement && resource.rel === 'stylesheet') {
+      if (
+        resource instanceof HTMLLinkElement &&
+        resource.rel === 'stylesheet'
+      ) {
         resource.setAttribute('data-cache', 'long-term');
       }
     });
@@ -315,7 +328,7 @@ class AdvancedPerformanceOptimizer {
     if (process.env.NODE_ENV === 'production' && (window as any).gtag) {
       (window as any).gtag('event', 'performance_metric', {
         metric_name: name,
-        metric_value: Math.round(value)
+        metric_value: Math.round(value),
       });
     }
   }
@@ -335,7 +348,10 @@ class AdvancedPerformanceOptimizer {
     let score = 100;
 
     // Deduct points based on metric thresholds
-    if (metrics.largestContentfulPaint && metrics.largestContentfulPaint > 2500) {
+    if (
+      metrics.largestContentfulPaint &&
+      metrics.largestContentfulPaint > 2500
+    ) {
       score -= 20;
     }
     if (metrics.firstInputDelay && metrics.firstInputDelay > 100) {

@@ -16,7 +16,7 @@ const PerformanceMonitor: React.FC = () => {
     const handleMetric = (metric: any) => {
       setMetrics(prev => ({
         ...prev,
-        [metric.name]: metric.value
+        [metric.name]: metric.value,
       }));
     };
 
@@ -29,7 +29,7 @@ const PerformanceMonitor: React.FC = () => {
 
   if (process.env.NODE_ENV === 'development') {
     return (
-      <div className="fixed bottom-4 right-4 bg-black text-white p-2 rounded text-xs">
+      <div className='fixed bottom-4 right-4 bg-black text-white p-2 rounded text-xs'>
         <div>CLS: {metrics?.cls?.toFixed(3)}</div>
         <div>FID: {metrics?.fid?.toFixed(1)}ms</div>
         <div>FCP: {metrics?.fcp?.toFixed(1)}ms</div>

@@ -28,14 +28,14 @@ interface AdvancedAnalyticsProps {
 
 const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   config = {},
-  onEventTracked
+  onEventTracked,
 }) => {
   const [isInitialized, setIsInitialized] = useState(false);
   const [userSession, setUserSession] = useState({
     sessionId: '',
     startTime: Date.now(),
     pageViews: 0,
-    events: 0
+    events: 0,
   });
 
   const {
@@ -46,7 +46,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     enablePerformanceTracking = true,
     enableErrorTracking = true,
     enableUserBehaviorTracking = true,
-    debugMode = process.env.NODE_ENV === 'development'
+    debugMode = process.env.NODE_ENV === 'development',
   } = config;
 
   // Initialize Google Analytics
@@ -61,7 +61,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
     // Initialize gtag
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
+    window.gtag = function () {
       window.dataLayer.push(arguments);
     };
 
@@ -69,7 +69,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     window.gtag('config', trackingId, {
       page_title: document.title,
       page_location: window.location.href,
-      send_page_view: true
+      send_page_view: true,
     });
 
     if (debugMode) {
@@ -103,96 +103,116 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   }, [enableGoogleTagManager, trackingId, debugMode]);
 
   // Track custom events
-  const trackEvent = useCallback((event: AnalyticsEvent) => {
-    if (!isInitialized) return;
+  const trackEvent = useCallback(
+    (event: AnalyticsEvent) => {
+      if (!isInitialized) return;
 
-    // Update session data
-    setUserSession(prev => ({
-      ...prev,
-      events: prev.events + 1
-    }));
+      // Update session data
+      setUserSession(prev => ({
+        ...prev,
+        events: prev.events + 1,
+      }));
 
-    // Google Analytics tracking
-    if (enableGoogleAnalytics && window.gtag) {
-      window.gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        custom_map: event.custom_parameters
-      });
-    }
-
-    // Google Tag Manager tracking
-    if (enableGoogleTagManager && window.dataLayer) {
-      window.dataLayer.push({
-        event: 'custom_event',
-        event_category: event.category,
-        event_action: event.action,
-        event_label: event.label,
-        event_value: event.value,
-        ...event.custom_parameters
-      });
-    }
-
-    // Custom analytics tracking
-    if (enableCustomAnalytics) {
-      const customEvent = {
-        ...event,
-        timestamp: new Date().toISOString(),
-        sessionId: userSession.sessionId,
-        pageUrl: window.location.href,
-        userAgent: navigator.userAgent
-      };
-
-      // In a real application, you would send this to your analytics service
-      if (debugMode) {
-        console.log('Custom analytics event:', customEvent);
+      // Google Analytics tracking
+      if (enableGoogleAnalytics && window.gtag) {
+        window.gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          custom_map: event.custom_parameters,
+        });
       }
-    }
 
-    // Call custom event handler
-    if (onEventTracked) {
-      onEventTracked(event);
-    }
-  }, [isInitialized, enableGoogleAnalytics, enableGoogleTagManager, enableCustomAnalytics, userSession.sessionId, onEventTracked, debugMode]);
+      // Google Tag Manager tracking
+      if (enableGoogleTagManager && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'custom_event',
+          event_category: event.category,
+          event_action: event.action,
+          event_label: event.label,
+          event_value: event.value,
+          ...event.custom_parameters,
+        });
+      }
+
+      // Custom analytics tracking
+      if (enableCustomAnalytics) {
+        const customEvent = {
+          ...event,
+          timestamp: new Date().toISOString(),
+          sessionId: userSession.sessionId,
+          pageUrl: window.location.href,
+          userAgent: navigator.userAgent,
+        };
+
+        // In a real application, you would send this to your analytics service
+        if (debugMode) {
+          console.log('Custom analytics event:', customEvent);
+        }
+      }
+
+      // Call custom event handler
+      if (onEventTracked) {
+        onEventTracked(event);
+      }
+    },
+    [
+      isInitialized,
+      enableGoogleAnalytics,
+      enableGoogleTagManager,
+      enableCustomAnalytics,
+      userSession.sessionId,
+      onEventTracked,
+      debugMode,
+    ],
+  );
 
   // Track page views
-  const trackPageView = useCallback((pagePath?: string, pageTitle?: string) => {
-    if (!isInitialized) return;
+  const trackPageView = useCallback(
+    (pagePath?: string, pageTitle?: string) => {
+      if (!isInitialized) return;
 
-    const path = pagePath || window.location.pathname;
-    const title = pageTitle || document.title;
+      const path = pagePath || window.location.pathname;
+      const title = pageTitle || document.title;
 
-    // Update session data
-    setUserSession(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1
-    }));
+      // Update session data
+      setUserSession(prev => ({
+        ...prev,
+        pageViews: prev.pageViews + 1,
+      }));
 
-    // Google Analytics page view
-    if (enableGoogleAnalytics && window.gtag) {
-      window.gtag('config', trackingId, {
-        page_path: path,
-        page_title: title
-      });
-    }
-
-    // Custom page view tracking
-    if (enableCustomAnalytics) {
-      const pageViewEvent = {
-        action: 'page_view',
-        category: 'navigation',
-        label: path,
-        custom_parameters: {
+      // Google Analytics page view
+      if (enableGoogleAnalytics && window.gtag) {
+        window.gtag('config', trackingId, {
+          page_path: path,
           page_title: title,
-          referrer: document.referrer,
-          timestamp: new Date().toISOString()
-        }
-      };
+        });
+      }
 
-      trackEvent(pageViewEvent);
-    }
-  }, [isInitialized, enableGoogleAnalytics, enableCustomAnalytics, trackingId, trackEvent]);
+      // Custom page view tracking
+      if (enableCustomAnalytics) {
+        const pageViewEvent = {
+          action: 'page_view',
+          category: 'navigation',
+          label: path,
+          custom_parameters: {
+            page_title: title,
+            referrer: document.referrer,
+            timestamp: new Date().toISOString(),
+          },
+        };
+
+        trackEvent(pageViewEvent);
+      }
+    },
+    [
+      isInitialized,
+      enableGoogleAnalytics,
+      enableCustomAnalytics,
+      trackingId,
+      trackEvent,
+    ],
+  );
 
   // Track performance metrics
   const trackPerformance = useCallback(() => {
@@ -201,53 +221,53 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     // Track Core Web Vitals
     if ('web-vitals' in window) {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
-        onCLS((metric) => {
+        onCLS(metric => {
           trackEvent({
             action: 'web_vital',
             category: 'performance',
             label: 'CLS',
             value: Math.round(metric.value * 1000),
-            custom_parameters: { metric: 'CLS', value: metric.value }
+            custom_parameters: { metric: 'CLS', value: metric.value },
           });
         });
 
-        onFCP((metric) => {
+        onFCP(metric => {
           trackEvent({
             action: 'web_vital',
             category: 'performance',
             label: 'FCP',
             value: Math.round(metric.value),
-            custom_parameters: { metric: 'FCP', value: metric.value }
+            custom_parameters: { metric: 'FCP', value: metric.value },
           });
         });
 
-        onLCP((metric) => {
+        onLCP(metric => {
           trackEvent({
             action: 'web_vital',
             category: 'performance',
             label: 'LCP',
             value: Math.round(metric.value),
-            custom_parameters: { metric: 'LCP', value: metric.value }
+            custom_parameters: { metric: 'LCP', value: metric.value },
           });
         });
 
-        onTTFB((metric) => {
+        onTTFB(metric => {
           trackEvent({
             action: 'web_vital',
             category: 'performance',
             label: 'TTFB',
             value: Math.round(metric.value),
-            custom_parameters: { metric: 'TTFB', value: metric.value }
+            custom_parameters: { metric: 'TTFB', value: metric.value },
           });
         });
 
-        onINP((metric) => {
+        onINP(metric => {
           trackEvent({
             action: 'web_vital',
             category: 'performance',
             label: 'INP',
             value: Math.round(metric.value),
-            custom_parameters: { metric: 'INP', value: metric.value }
+            custom_parameters: { metric: 'INP', value: metric.value },
           });
         });
       });
@@ -261,15 +281,20 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     // Track scroll depth
     let maxScrollDepth = 0;
     const trackScrollDepth = () => {
-      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+      const scrollDepth = Math.round(
+        (window.scrollY /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+          100,
+      );
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
-        if (maxScrollDepth % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+        if (maxScrollDepth % 25 === 0) {
+          // Track at 25%, 50%, 75%, 100%
           trackEvent({
             action: 'scroll_depth',
             category: 'engagement',
             label: `${maxScrollDepth}%`,
-            value: maxScrollDepth
+            value: maxScrollDepth,
           });
         }
       }
@@ -279,12 +304,13 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     const startTime = Date.now();
     const trackTimeOnPage = () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      if (timeOnPage % 30 === 0 && timeOnPage > 0) { // Track every 30 seconds
+      if (timeOnPage % 30 === 0 && timeOnPage > 0) {
+        // Track every 30 seconds
         trackEvent({
           action: 'time_on_page',
           category: 'engagement',
           label: `${timeOnPage}s`,
-          value: timeOnPage
+          value: timeOnPage,
         });
       }
     };
@@ -298,7 +324,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
           action: 'external_link_click',
           category: 'engagement',
           label: link.href,
-          custom_parameters: { external_url: link.href }
+          custom_parameters: { external_url: link.href },
         });
       }
     };
@@ -321,18 +347,21 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
     const trackError = (error: ErrorEvent | PromiseRejectionEvent) => {
       const errorInfo = {
-        message: error instanceof ErrorEvent ? error.message : 'Unhandled Promise Rejection',
+        message:
+          error instanceof ErrorEvent
+            ? error.message
+            : 'Unhandled Promise Rejection',
         filename: error instanceof ErrorEvent ? error.filename : 'unknown',
         lineno: error instanceof ErrorEvent ? error.lineno : 0,
         colno: error instanceof ErrorEvent ? error.colno : 0,
-        stack: error instanceof ErrorEvent ? error.error?.stack : 'unknown'
+        stack: error instanceof ErrorEvent ? error.error?.stack : 'unknown',
       };
 
       trackEvent({
         action: 'javascript_error',
         category: 'error',
         label: errorInfo.message,
-        custom_parameters: errorInfo
+        custom_parameters: errorInfo,
       });
     };
 
@@ -378,13 +407,31 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
     const cleanup = initializeAnalytics();
     return cleanup;
-  }, [initializeGoogleAnalytics, initializeGoogleTagManager, trackPageView, trackPerformance, trackUserBehavior, trackErrors, debugMode]);
+  }, [
+    initializeGoogleAnalytics,
+    initializeGoogleTagManager,
+    trackPageView,
+    trackPerformance,
+    trackUserBehavior,
+    trackErrors,
+    debugMode,
+  ]);
 
   // Expose tracking functions globally for manual tracking
   useEffect(() => {
     if (isInitialized) {
-      (window as Window & { trackEvent?: typeof trackEvent; trackPageView?: typeof trackPageView }).trackEvent = trackEvent;
-      (window as Window & { trackEvent?: typeof trackEvent; trackPageView?: typeof trackPageView }).trackPageView = trackPageView;
+      (
+        window as Window & {
+          trackEvent?: typeof trackEvent;
+          trackPageView?: typeof trackPageView;
+        }
+      ).trackEvent = trackEvent;
+      (
+        window as Window & {
+          trackEvent?: typeof trackEvent;
+          trackPageView?: typeof trackPageView;
+        }
+      ).trackPageView = trackPageView;
     }
   }, [isInitialized, trackEvent, trackPageView]);
 

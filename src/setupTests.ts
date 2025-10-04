@@ -68,7 +68,9 @@ global.PerformanceObserver = class PerformanceObserver {
   constructor() {}
   observe() {}
   disconnect() {}
-  takeRecords() { return []; }
+  takeRecords() {
+    return [];
+  }
 } as unknown as typeof PerformanceObserver;
 
 // Mock console methods to reduce noise in tests
@@ -80,7 +82,9 @@ beforeAll(() => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning: ReactDOM.render is no longer supported') ||
-       args[0].includes('Warning: A suspended resource finished loading inside a test'))
+        args[0].includes(
+          'Warning: A suspended resource finished loading inside a test',
+        ))
     ) {
       return;
     }

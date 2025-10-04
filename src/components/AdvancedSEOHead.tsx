@@ -31,7 +31,7 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
   seoData,
   siteName = 'Zion Tech Group',
   siteUrl = 'https://zion.app',
-  defaultImage = '/images/og-default.jpg'
+  defaultImage = '/images/og-default.jpg',
 }) => {
   const {
     title,
@@ -49,12 +49,14 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
     publishedTime,
     modifiedTime,
     section,
-    tags = []
+    tags = [],
   } = seoData;
 
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : '';
-  const imageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  const imageUrl = ogImage.startsWith('http')
+    ? ogImage
+    : `${siteUrl}${ogImage}`;
 
   // Generate structured data for articles
   const generateArticleStructuredData = () => {
@@ -68,7 +70,7 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
         author: {
           '@type': 'Organization',
           name: author || siteName,
-          url: siteUrl
+          url: siteUrl,
         },
         publisher: {
           '@type': 'Organization',
@@ -76,17 +78,17 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
           url: siteUrl,
           logo: {
             '@type': 'ImageObject',
-            url: `${siteUrl}/images/logo.png`
-          }
+            url: `${siteUrl}/images/logo.png`,
+          },
         },
         datePublished: publishedTime,
         dateModified: modifiedTime || publishedTime,
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': canonicalUrl
+          '@id': canonicalUrl,
         },
         ...(section && { articleSection: section }),
-        ...(tags.length > 0 && { keywords: tags.join(', ') })
+        ...(tags.length > 0 && { keywords: tags.join(', ') }),
       };
     }
     return null;
@@ -104,15 +106,15 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
       sameAs: [
         'https://twitter.com/ZionTechGroup',
         'https://linkedin.com/company/zion-tech-group',
-        'https://github.com/Zion-Holdings'
+        'https://github.com/Zion-Holdings',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-555-ZION-TECH',
         contactType: 'customer service',
         areaServed: 'US',
-        availableLanguage: 'English'
-      }
+        availableLanguage: 'English',
+      },
     };
   };
 
@@ -123,83 +125,110 @@ const AdvancedSEOHead: React.FC<AdvancedSEOHeadProps> = ({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="robots" content={robots} />
-      {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
-      {author && <meta name="author" content={author} />}
-      
+      <meta name='description' content={description} />
+      <meta name='robots' content={robots} />
+      {keywords.length > 0 && (
+        <meta name='keywords' content={keywords.join(', ')} />
+      )}
+      {author && <meta name='author' content={author} />}
+
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
+      {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
+
       {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={imageUrl} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-      
+      <meta property='og:title' content={fullTitle} />
+      <meta property='og:description' content={description} />
+      <meta property='og:type' content={ogType} />
+      <meta property='og:url' content={canonicalUrl} />
+      <meta property='og:image' content={imageUrl} />
+      <meta property='og:site_name' content={siteName} />
+      <meta property='og:locale' content='en_US' />
+
       {/* Article-specific Open Graph tags */}
       {ogType === 'article' && (
         <>
-          {author && <meta property="article:author" content={author} />}
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {section && <meta property="article:section" content={section} />}
+          {author && <meta property='article:author' content={author} />}
+          {publishedTime && (
+            <meta property='article:published_time' content={publishedTime} />
+          )}
+          {modifiedTime && (
+            <meta property='article:modified_time' content={modifiedTime} />
+          )}
+          {section && <meta property='article:section' content={section} />}
           {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
+            <meta key={index} property='article:tag' content={tag} />
           ))}
         </>
       )}
-      
+
       {/* Twitter Card Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:creator" content={twitterCreator} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={imageUrl} />
-      
+      <meta name='twitter:card' content={twitterCard} />
+      <meta name='twitter:site' content={twitterSite} />
+      <meta name='twitter:creator' content={twitterCreator} />
+      <meta name='twitter:title' content={fullTitle} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content={imageUrl} />
+
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#1a1a1a" />
-      <meta name="msapplication-TileColor" content="#1a1a1a" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <meta name='theme-color' content='#1a1a1a' />
+      <meta name='msapplication-TileColor' content='#1a1a1a' />
+      <meta name='apple-mobile-web-app-capable' content='yes' />
+      <meta
+        name='apple-mobile-web-app-status-bar-style'
+        content='black-translucent'
+      />
+
       {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
+      <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+      <link
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='/apple-touch-icon.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/favicon-32x32.png'
+      />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/favicon-16x16.png'
+      />
+      <link rel='manifest' href='/site.webmanifest' />
+
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type='application/ld+json'>
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
+
       {articleStructuredData && (
-        <script type="application/ld+json">
+        <script type='application/ld+json'>
           {JSON.stringify(articleStructuredData)}
         </script>
       )}
-      
-      <script type="application/ld+json">
+
+      <script type='application/ld+json'>
         {JSON.stringify(organizationStructuredData)}
       </script>
-      
+
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
+      <link rel='preconnect' href='https://fonts.googleapis.com' />
+      <link
+        rel='preconnect'
+        href='https://fonts.gstatic.com'
+        crossOrigin='anonymous'
+      />
+      <link rel='preconnect' href='https://www.google-analytics.com' />
+
       {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+      <link rel='dns-prefetch' href='//www.google-analytics.com' />
     </Helmet>
   );
 };
