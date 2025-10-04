@@ -6,8 +6,7 @@ export type ExpandedServicePricing =
   serviceName: string;
   category: string;
   subcategory: string;
-  pricingTiers: 
-    starter: 
+  pricingTiers: starter: any;
       price: number;
       currency: string;
       billingCycle: string;
@@ -16,7 +15,7 @@ export type ExpandedServicePricing =
       bestFor: string[];
       setupFee: number;
       contractTerm: string};
-    professional: 
+    professional: any;
       price: number;
       currency: string;
       billingCycle: string;
@@ -25,7 +24,7 @@ export type ExpandedServicePricing =
       bestFor: string[];
       setupFee: number;
       contractTerm: string};
-    enterprise: 
+    enterprise: any;
       price: number;
       currency: string;
       billingCycle: string;
@@ -34,7 +33,7 @@ export type ExpandedServicePricing =
       bestFor: string[];
       setupFee: number;
       contractTerm: string};
-    custom: 
+    custom: any;
       priceRange: string;
       currency: string;
       billingCycle: string;
@@ -43,38 +42,36 @@ export type ExpandedServicePricing =
       bestFor: string[];
       setupFee: number;
       contractTerm: string}};
-  marketComparison: 
+  marketComparison: any;
     competitors: string[];
     marketPosition: 'leader' | 'challenger' | 'niche' | 'emerging';
     priceAdvantage: string;
     valueProposition: string};
-  roiAnalysis: 
+  roiAnalysis: any;
     paybackPeriod: string;
     annualROI: string;
     costSavings: string[];
     revenueImpact: string[];
     riskMitigation: string[]};
-  implementation: 
+  implementation: any;
     setupTime: string;
     trainingRequired: string;
     integrationComplexity: 'low' | 'medium' | 'high';
     supportIncluded: string;
     customizationOptions: string[]};
-  contactInfo: 
+  contactInfo: any;
     phone: string;
     email: string;
     website: string;
     address: string}}
 
 // 1. CYBERSECURITY SERVICES PRICING
-export const cybersecurityPricing: ExpandedServicePricing[] = [
-  
+export const cybersecurityPricing: ExpandedServicePricing[] = [;
     serviceId: 'quantum-threat-hunter',
     serviceName: 'Quantum Threat Hunter',
     category: 'Cybersecurity',
     subcategory: 'Threat Intelligence',
-    pricingTiers: 
-      starter: 
+    pricingTiers: starter: any;
         price: 2500,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -99,9 +96,9 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Government agencies'
         ],
         setupFee: 5000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      professional: 
+      professional: any;
         price: 5000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -127,9 +124,9 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Compliance-focused organizations'
         ],
         setupFee: 10000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      enterprise: 
+      enterprise: any;
         price: 10000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -156,9 +153,9 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Defense contractors'
         ],
         setupFee: 25000,
-        contractTerm: '24 months'
+        contractTerm: '24 months';
       },
-      custom: 
+      custom: any;
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
@@ -181,16 +178,16 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Custom security requirements'
         ],
         setupFee: 50000,
-        contractTerm: 'negotiable'
+        contractTerm: 'negotiable';
       }
     },
-    marketComparison: 
+    marketComparison: any;
       competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
       marketPosition: 'leader',
       priceAdvantage: '20-30% more cost-effective than competitors',
-      valueProposition: 'Quantum-resistant security with AI-powered threat detection'
+      valueProposition: 'Quantum-resistant security with AI-powered threat detection';
     },
-    roiAnalysis: 
+    roiAnalysis: any;
       paybackPeriod: '6-8 months',
       annualROI: '400-600%',
       costSavings[
@@ -209,7 +206,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         'Protects brand reputation'
       ]
     },
-    implementation: 
+    implementation: any;
       setupTime: '2-4 weeks',
       trainingRequired: '2-3 days for security team',
       integrationComplexity: 'medium',
@@ -221,11 +218,11 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         'Custom reporting and dashboards'
       ]
     },
-    contactInfo: 
+    contactInfo: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   },
   
@@ -233,8 +230,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     serviceName: 'AI Compliance Automator',
     category: 'Cybersecurity',
     subcategory: 'Compliance Automation',
-    pricingTiers: 
-      starter: 
+    pricingTiers: starter: any;
         price: 1500,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -257,9 +253,9 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Basic compliance needs'
         ],
         setupFee: 2000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      professional: 
+      professional: any;
         price: 3000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -284,9 +280,9 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Growing businesses'
         ],
         setupFee: 5000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      enterprise: 
+      enterprise: any;
         price: 6000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -309,9 +305,9 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Highly regulated industries'
         ],
         setupFee: 10000,
-        contractTerm: '24 months'
+        contractTerm: '24 months';
       },
-      custom: 
+      custom: any;
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
@@ -330,16 +326,16 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Custom compliance requirements'
         ],
         setupFee: 20000,
-        contractTerm: 'negotiable'
+        contractTerm: 'negotiable';
       }
     },
-    marketComparison: 
+    marketComparison: any;
       competitors['OneTrust', 'TrustArc', 'LogicGate'],
       marketPosition: 'challenger',
       priceAdvantage: '15-25% more affordable than competitors',
-      valueProposition: 'AI-powered compliance automation with comprehensive framework support'
+      valueProposition: 'AI-powered compliance automation with comprehensive framework support';
     },
-    roiAnalysis: 
+    roiAnalysis: any;
       paybackPeriod: '4-6 months',
       annualROI: '300-500%',
       costSavings[
@@ -358,7 +354,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         'Reduced audit risks'
       ]
     },
-    implementation: 
+    implementation: any;
       setupTime: '1-2 weeks',
       trainingRequired: '1-2 days for compliance team',
       integrationComplexity: 'low',
@@ -370,24 +366,22 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         'Custom reporting formats'
       ]
     },
-    contactInfo: 
+    contactInfo: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-compliance-automator',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ];
 
 // 2. DATA ANALYTICS SERVICES PRICING
-export const dataAnalyticsPricing: ExpandedServicePricing[] = [
-  
+export const dataAnalyticsPricing: ExpandedServicePricing[] = [;
     serviceId: 'predictive-insights-engine',
     serviceName: 'Predictive Insights Engine',
     category: 'Data Analytics',
     subcategory: 'Predictive Analytics',
-    pricingTiers: 
-      starter: 
+    pricingTiers: starter: any;
         price: 1800,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -410,9 +404,9 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Basic analytics needs'
         ],
         setupFee: 3000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      professional: 
+      professional: any;
         price: 3500,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -436,9 +430,9 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Manufacturing firms'
         ],
         setupFee: 6000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      enterprise: 
+      enterprise: any;
         price: 7000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -461,9 +455,9 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Research institutions'
         ],
         setupFee: 15000,
-        contractTerm: '24 months'
+        contractTerm: '24 months';
       },
-      custom: 
+      custom: any;
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
@@ -482,16 +476,16 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Custom AI requirements'
         ],
         setupFee: 30000,
-        contractTerm: 'negotiable'
+        contractTerm: 'negotiable';
       }
     },
-    marketComparison: 
+    marketComparison: any;
       competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
       marketPosition: 'challenger',
       priceAdvantage: '25-35% more cost-effective than competitors',
-      valueProposition: 'AI-powered predictive analytics with advanced machine learning capabilities'
+      valueProposition: 'AI-powered predictive analytics with advanced machine learning capabilities';
     },
-    roiAnalysis: 
+    roiAnalysis: any;
       paybackPeriod: '5-7 months',
       annualROI: '250-400%',
       costSavings[
@@ -510,7 +504,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         'Proactive problem identification'
       ]
     },
-    implementation: 
+    implementation: any;
       setupTime: '2-3 weeks',
       trainingRequired: '2-3 days for data team',
       integrationComplexity: 'medium',
@@ -522,24 +516,22 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         'Custom dashboard development'
       ]
     },
-    contactInfo: 
+    contactInfo: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/predictive-insights-engine',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ];
 
 // 3. CLOUD & DEVOPS SERVICES PRICING
-export const cloudDevOpsPricing: ExpandedServicePricing[] = [
-  
+export const cloudDevOpsPricing: ExpandedServicePricing[] = [;
     serviceId: 'multi-cloud-orchestrator',
     serviceName: 'Multi-Cloud Orchestrator',
     category: 'Cloud & DevOps',
     subcategory: 'Multi-Cloud Management',
-    pricingTiers: 
-      starter: 
+    pricingTiers: starter: any;
         price: 2000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -562,9 +554,9 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Basic cloud management needs'
         ],
         setupFee: 4000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      professional: 
+      professional: any;
         price: 4000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -588,9 +580,9 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Cost optimization focus'
         ],
         setupFee: 8000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      enterprise: 
+      enterprise: any;
         price: 8000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -613,9 +605,9 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Complex multi-cloud environments'
         ],
         setupFee: 20000,
-        contractTerm: '24 months'
+        contractTerm: '24 months';
       },
-      custom: 
+      custom: any;
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
@@ -634,16 +626,16 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Custom cloud requirements'
         ],
         setupFee: 40000,
-        contractTerm: 'negotiable'
+        contractTerm: 'negotiable';
       }
     },
-    marketComparison: 
+    marketComparison: any;
       competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
       marketPosition: 'challenger',
       priceAdvantage: '30-40% more cost-effective than competitors',
-      valueProposition: 'Intelligent multi-cloud orchestration with AI-powered optimization'
+      valueProposition: 'Intelligent multi-cloud orchestration with AI-powered optimization';
     },
-    roiAnalysis: 
+    roiAnalysis: any;
       paybackPeriod: '3-5 months',
       annualROI: '200-400%',
       costSavings[
@@ -662,7 +654,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         'Better disaster recovery'
       ]
     },
-    implementation: 
+    implementation: any;
       setupTime: '4-6 weeks',
       trainingRequired: '3-5 days for DevOps team',
       integrationComplexity: 'high',
@@ -674,24 +666,22 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         'Integration with existing tools'
       ]
     },
-    contactInfo: 
+    contactInfo: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ];
 
 // 4. IOT & EDGE COMPUTING SERVICES PRICING
-export const iotEdgePricing: ExpandedServicePricing[] = [
-  
+export const iotEdgePricing: ExpandedServicePricing[] = [;
     serviceId: 'industrial-iot-intelligence',
     serviceName: 'Industrial IoT Intelligence Platform',
     category: 'IoT & Edge Computing',
     subcategory: 'Industrial IoT',
-    pricingTiers: 
-      starter: 
+    pricingTiers: starter: any;
         price: 2800,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -714,9 +704,9 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Equipment tracking'
         ],
         setupFee: 5000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      professional: 
+      professional: any;
         price: 5500,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -740,9 +730,9 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Predictive maintenance focus'
         ],
         setupFee: 10000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      enterprise: 
+      enterprise: any;
         price: 11000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -765,9 +755,9 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Advanced IoT requirements'
         ],
         setupFee: 25000,
-        contractTerm: '24 months'
+        contractTerm: '24 months';
       },
-      custom: 
+      custom: any;
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
@@ -786,16 +776,16 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Custom IoT requirements'
         ],
         setupFee: 50000,
-        contractTerm: 'negotiable'
+        contractTerm: 'negotiable';
       }
     },
-    marketComparison: 
+    marketComparison: any;
       competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
       marketPosition: 'challenger',
       priceAdvantage: '25-35% more affordable than competitors',
-      valueProposition: 'AI-powered industrial IoT with predictive maintenance and optimization'
+      valueProposition: 'AI-powered industrial IoT with predictive maintenance and optimization';
     },
-    roiAnalysis: 
+    roiAnalysis: any;
       paybackPeriod: '6-8 months',
       annualROI: '250-400%',
       costSavings[
@@ -814,7 +804,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         'Improved safety monitoring'
       ]
     },
-    implementation: 
+    implementation: any;
       setupTime: '6-8 weeks',
       trainingRequired: '3-5 days for operations team',
       integrationComplexity: 'high',
@@ -826,24 +816,22 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         'Integration with existing systems'
       ]
     },
-    contactInfo: 
+    contactInfo: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/industrial-iot-intelligence',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ];
 
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING
-export const finTechPricing: ExpandedServicePricing[] = [
-  
+export const finTechPricing: ExpandedServicePricing[] = [;
     serviceId: 'quantum-financial-modeling',
     serviceName: 'Quantum Financial Modeling Platform',
     category: 'Financial Technology',
     subcategory: 'Quantum Finance',
-    pricingTiers: 
-      starter: 
+    pricingTiers: starter: any;
         price: 8000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -866,9 +854,9 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Basic quantum finance needs'
         ],
         setupFee: 15000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      professional: 
+      professional: any;
         price: 15000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -892,9 +880,9 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Asset management companies'
         ],
         setupFee: 30000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      enterprise: 
+      enterprise: any;
         price: 30000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -917,9 +905,9 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Research institutions'
         ],
         setupFee: 75000,
-        contractTerm: '24 months'
+        contractTerm: '24 months';
       },
-      custom: 
+      custom: any;
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
@@ -938,16 +926,16 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Custom quantum requirements'
         ],
         setupFee: 150000,
-        contractTerm: 'negotiable'
+        contractTerm: 'negotiable';
       }
     },
-    marketComparison: 
+    marketComparison: any;
       competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
       marketPosition: 'emerging',
       priceAdvantage: '40-60% more cost-effective than competitors',
-      valueProposition: 'Quantum-powered financial modeling with unprecedented speed and accuracy'
+      valueProposition: 'Quantum-powered financial modeling with unprecedented speed and accuracy';
     },
-    roiAnalysis: 
+    roiAnalysis: any;
       paybackPeriod: '8-12 months',
       annualROI: '500-1000%',
       costSavings[
@@ -966,7 +954,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
         'Better regulatory compliance'
       ]
     },
-    implementation: 
+    implementation: any;
       setupTime: '8-12 weeks',
       trainingRequired: '1-2 weeks for financial team',
       integrationComplexity: 'high',
@@ -978,24 +966,22 @@ export const finTechPricing: ExpandedServicePricing[] = [
         'Custom compliance modules'
       ]
     },
-    contactInfo: 
+    contactInfo: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-financial-modeling',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ];
 
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
-export const healthcarePricing: ExpandedServicePricing[] = [
-  
+export const healthcarePricing: ExpandedServicePricing[] = [;
     serviceId: 'ai-diagnostic-assistant',
     serviceName: 'AI Diagnostic Assistant',
     category: 'Healthcare Technology',
     subcategory: 'AI Diagnostics',
-    pricingTiers: 
-      starter: 
+    pricingTiers: starter: any;
         price: 3500,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -1018,9 +1004,9 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Basic diagnostic needs'
         ],
         setupFee: 7000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      professional: 
+      professional: any;
         price: 7000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -1044,9 +1030,9 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Diagnostic centers'
         ],
         setupFee: 15000,
-        contractTerm: '12 months'
+        contractTerm: '12 months';
       },
-      enterprise: 
+      enterprise: any;
         price: 14000,
         currency: 'USD',
         billingCycle: 'monthly',
@@ -1069,9 +1055,9 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Research institutions'
         ],
         setupFee: 35000,
-        contractTerm: '24 months'
+        contractTerm: '24 months';
       },
-      custom: 
+      custom: any;
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
@@ -1090,16 +1076,16 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Custom medical requirements'
         ],
         setupFee: 70000,
-        contractTerm: 'negotiable'
+        contractTerm: 'negotiable';
       }
     },
-    marketComparison: 
+    marketComparison: any;
       competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
       marketPosition: 'challenger',
       priceAdvantage: '30-40% more affordable than competitors',
-      valueProposition: 'AI-powered diagnostic assistance with advanced medical AI capabilities'
+      valueProposition: 'AI-powered diagnostic assistance with advanced medical AI capabilities';
     },
-    roiAnalysis: 
+    roiAnalysis: any;
       paybackPeriod: '6-10 months',
       annualROI: '300-600%',
       costSavings[
@@ -1118,7 +1104,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         'Enhanced compliance'
       ]
     },
-    implementation: 
+    implementation: any;
       setupTime: '6-8 weeks',
       trainingRequired: '2-3 days for medical staff',
       integrationComplexity: 'high',
@@ -1130,11 +1116,11 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         'Custom compliance workflows'
       ]
     },
-    contactInfo: 
+    contactInfo: any;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ];
@@ -1150,16 +1136,16 @@ export const ALL_EXPANDED_SERVICES_PRICING = [
 ];
 
 // Helper functions
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined => 
+export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined =>;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
 
-export const getPricingByCategory = (category: string): ExpandedServicePricing[] => 
+export const getPricingByCategory = (category: string): ExpandedServicePricing[] =>;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
 
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => 
+export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] =>;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
 
-export const searchPricing = (query: string): ExpandedServicePricing[] => 
+export const searchPricing = (query: string): ExpandedServicePricing[] =>;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => 
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||

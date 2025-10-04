@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeAIServicesExpansion 
+export interface InnovativeAIServicesExpansion {
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeAIServicesExpansion
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: 
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
@@ -41,15 +41,14 @@ export interface InnovativeAIServicesExpansion
   reviews: number;
 }
 
-export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
-  
+export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [;
     id: 'ai-powered-content-generation-suite',
     name: 'AI-Powered Content Generation Suite',
     tagline: 'Create engaging content with AI-driven creativity',
     price: '$99',
     period: '/month',
     description: 'Advanced AI content generation platform that creates high-quality, engaging content for blogs, social media, marketing materials, and business communications.',
-    features: [
+    features: [;
       'Multi-format content generation',
       'SEO optimization',
       'Brand voice customization',
@@ -62,7 +61,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'White-label options'
     ],
     popular: true,
-    icon: '✍️',
+    icon: '',
     color: 'from-blue-600 via-indigo-600 to-purple-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-content-generation-suite',
@@ -80,18 +79,18 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$15B AI content generation market',
     growthRate: '35% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI content generation platform with advanced creativity and optimization features.',
     launchDate: '2025-03-10',
     customers: 245,
     rating: 4.7,
-    reviews: 167
+    reviews: 167;
   },
   
     id: 'intelligent-customer-service-automation',
@@ -100,7 +99,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     price: '$129',
     period: '/month',
     description: 'Advanced AI customer service platform that provides 24/7 support, handles complex queries, and seamlessly escalates to human agents when needed.',
-    features: [
+    features: [;
       'Natural language processing',
       'Multi-channel support',
       'Intelligent routing',
@@ -113,7 +112,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'API integrations'
     ],
     popular: true,
-    icon: '🤖',
+    icon: '',
     color: 'from-green-600 via-emerald-600 to-teal-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/intelligent-customer-service-automation',
@@ -131,18 +130,18 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$18B customer service automation market',
     growthRate: '30% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI customer service automation platform with intelligent human handoff.',
     launchDate: '2025-03-15',
     customers: 189,
     rating: 4.8,
-    reviews: 134
+    reviews: 134;
   },
   
     id: 'ai-powered-business-intelligence',
@@ -151,7 +150,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     price: '$179',
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that analyzes complex data sets, identifies patterns, and provides predictive insights for strategic decision-making.',
-    features: [
+    features: [;
       'Advanced data analytics',
       'Predictive modeling',
       'Real-time dashboards',
@@ -164,7 +163,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'API connectivity'
     ],
     popular: true,
-    icon: '📈',
+    icon: '',
     color: 'from-purple-600 via-violet-600 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-business-intelligence',
@@ -182,18 +181,18 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$22B business intelligence market',
     growthRate: '28% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI-powered business intelligence platform with advanced analytics and predictive modeling.',
     launchDate: '2025-03-20',
     customers: 156,
     rating: 4.7,
-    reviews: 98
+    reviews: 98;
   },
   
     id: 'intelligent-process-automation',
@@ -202,7 +201,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     price: '$149',
     period: '/month',
     description: 'Advanced process automation platform that uses AI to identify, optimize, and automate complex business processes, reducing manual work and improving efficiency.',
-    features: [
+    features: [;
       'Process discovery',
       'AI-powered optimization',
       'Workflow automation',
@@ -215,7 +214,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'Scalability options'
     ],
     popular: true,
-    icon: '⚙️',
+    icon: '',
     color: 'from-orange-600 via-red-600 to-pink-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/intelligent-process-automation',
@@ -233,18 +232,18 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$13B process automation market',
     growthRate: '32% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI-powered process automation platform with intelligent workflow optimization.',
     launchDate: '2025-03-25',
     customers: 112,
     rating: 4.6,
-    reviews: 78
+    reviews: 78;
   },
   
     id: 'ai-powered-cybersecurity-threat-detection',
@@ -253,7 +252,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     price: '$199',
     period: '/month',
     description: 'Advanced cybersecurity platform that uses artificial intelligence to detect, analyze, and respond to security threats in real-time, providing comprehensive protection for organizations.',
-    features: [
+    features: [;
       'Real-time threat detection',
       'AI-powered analysis',
       'Behavioral analytics',
@@ -266,7 +265,7 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
       'API security'
     ],
     popular: true,
-    icon: '🛡️',
+    icon: '',
     color: 'from-red-600 via-orange-600 to-yellow-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-powered-cybersecurity-threat-detection',
@@ -284,18 +283,18 @@ export const innovativeAIServicesExpansion: InnovativeAIServicesExpansion[] = [
     marketSize: '$16B AI cybersecurity market',
     growthRate: '38% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI-powered cybersecurity platform with advanced threat detection and response capabilities.',
     launchDate: '2025-03-30',
     customers: 89,
     rating: 4.9,
-    reviews: 67
+    reviews: 67;
 
   }
 ];

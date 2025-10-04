@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeBusinessSolution2025 
+export interface InnovativeBusinessSolution2025 {
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeBusinessSolution2025
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: 
+  contactInfo: any;
     mobile: string;
     email: string;
     address: string;
@@ -41,15 +41,14 @@ export interface InnovativeBusinessSolution2025
   reviews: number;
 }
 
-export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolution2025[] = [
-  
+export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolution2025[] = [;
     id: 'ai-powered-business-intelligence-suite',
     name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable business insights with AI',
     price: '$199',
     period: '/month',
     description: 'Comprehensive AI-powered business intelligence platform that analyzes business data, generates insights, and provides predictive analytics to drive informed decision-making and strategic planning.',
-    features: [
+    features: [;
       'AI data analysis',
       'Predictive analytics',
       'Custom dashboards',
@@ -62,7 +61,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
       'Mobile access'
     ],
     popular: true,
-    icon: '📊',
+    icon: '',
     color: 'from-blue-600 via-indigo-600 to-purple-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence',
@@ -80,18 +79,18 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$24B business intelligence market',
     growthRate: '22% annual growth',
     variant: 'business-intelligence-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI BI platform with comprehensive analytics and predictive insights.',
     launchDate: '2025-01-25',
     customers: 267,
     rating: 4.8,
-    reviews: 189
+    reviews: 189;
   },
   
     id: 'smart-workflow-automation-platform',
@@ -100,7 +99,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     price: '$149',
     period: '/month',
     description: 'Advanced workflow automation platform that uses AI to analyze business processes, identify optimization opportunities, and automate complex workflows to improve efficiency and productivity.',
-    features: [
+    features: [;
       'AI process analysis',
       'Workflow automation',
       'Process optimization',
@@ -113,7 +112,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
       'API access'
     ],
     popular: true,
-    icon: '⚡',
+    icon: '',
     color: 'from-green-600 via-emerald-600 to-teal-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/smart-workflow-automation',
@@ -131,18 +130,18 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$18B workflow automation market',
     growthRate: '28% annual growth',
     variant: 'enterprise-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready workflow automation platform with AI-powered optimization and comprehensive analytics.',
     launchDate: '2025-02-01',
     customers: 189,
     rating: 4.7,
-    reviews: 134
+    reviews: 134;
   },
   
     id: 'intelligent-customer-relationship-platform',
@@ -151,7 +150,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     price: '$179',
     period: '/month',
     description: 'Smart customer relationship platform that uses AI to analyze customer behavior, predict needs, and automate personalized interactions to improve customer satisfaction and increase sales.',
-    features: [
+    features: [;
       'AI customer analysis',
       'Predictive insights',
       'Personalized interactions',
@@ -164,7 +163,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
       'Custom dashboards'
     ],
     popular: true,
-    icon: '👥',
+    icon: '',
     color: 'from-purple-600 via-pink-600 to-red-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/intelligent-customer-relationship',
@@ -182,18 +181,18 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$30B CRM market',
     growthRate: '25% annual growth',
     variant: 'customer-service-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI CRM platform with predictive insights and comprehensive customer management.',
     launchDate: '2025-01-30',
     customers: 312,
     rating: 4.8,
-    reviews: 245
+    reviews: 245;
   },
   
     id: 'ai-powered-financial-management-suite',
@@ -202,7 +201,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     price: '$129',
     period: '/month',
     description: 'Comprehensive AI-powered financial management platform that automates accounting, provides financial insights, and helps businesses make informed financial decisions through intelligent analysis.',
-    features: [
+    features: [;
       'AI accounting automation',
       'Financial insights',
       'Expense tracking',
@@ -215,7 +214,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
       'Integration capabilities'
     ],
     popular: false,
-    icon: '💰',
+    icon: '',
     color: 'from-yellow-600 via-orange-600 to-red-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-financial-management',
@@ -233,18 +232,18 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$20B financial management market',
     growthRate: '20% annual growth',
     variant: 'finance-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI financial management platform with comprehensive automation and insights.',
     launchDate: '2025-02-05',
     customers: 156,
     rating: 4.6,
-    reviews: 112
+    reviews: 112;
   },
   
     id: 'smart-project-management-platform',
@@ -253,7 +252,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     price: '$99',
     period: '/month',
     description: 'Intelligent project management platform that uses AI to optimize project planning, resource allocation, and team collaboration to ensure successful project delivery and improved productivity.',
-    features: [
+    features: [;
       'AI project planning',
       'Resource optimization',
       'Team collaboration',
@@ -266,7 +265,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
       'Custom workflows'
     ],
     popular: true,
-    icon: '📋',
+    icon: '',
     color: 'from-cyan-600 via-blue-600 to-indigo-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/smart-project-management',
@@ -284,17 +283,17 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$16B project management market',
     growthRate: '24% annual growth',
     variant: 'project-management-futuristic',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI project management platform with intelligent planning and comprehensive collaboration.',
     launchDate: '2025-01-28',
     customers: 234,
     rating: 4.7,
-    reviews: 178
+    reviews: 178;
   }
 ];
