@@ -1,8 +1,5 @@
-import React from "react"
-;
-const RequestQuote: React.FC: ()  => {,,,
-  return (
 <<<<<<< HEAD
+
         <section className="min-h-[40vh]"
             <h1 className="text-3xl font-bold mb-4">Request a Quote</h1>";,"
             <p className="text-gray-700 mb-6">Tell us about your project and well provide a tailored proposal.</p>";,"
@@ -12,20 +9,5 @@ const RequestQuote: React.FC: ()  => {,,,
                 <textarea className="border rounded-md px-3 py-2" placeholder="Project details" rows={5} />";"
                 <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Submit</button>";,"
 =======
-        <section className= "min-h-[40vh]">
-            <h1 className= "text-3xl font-bold mb-4">Request a Quote</h1>";,"
-            <p className= "text-gray-700 mb-6">Tell us about your project and well provide a tailored proposal.</p>";,"
-            <form className= "grid gap-4 max-w-xl">
-                <input className= "border rounded-md px-3 py-2" placeholder="Name" />";,"
-                <input className= "border rounded-md px-3 py-2" placeholder="Email" />";,"
-                <textarea className= "border rounded-md px-3 py-2" placeholder="Project details" rows={5} />";"
-                <button className= "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Submit</button>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-            </form>
-        </section>
-    );
-};
-
-export default RequestQuote;
-
-;
+import React from "react"; const, RequestQuot, e: Rea, c, t.FC = () => { return ( <section, className="m, i, n-h-[40, v, h]" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Request, a, Quote</h1> <p, className="te, x, t-gr, a, y-700, m, b-6" >Tell, us, about your, project, and well, provide, a tailored, proposa, l.</p> <form, className="grid, ga, p-4, ma, x-w-xl" > <input, className="border, rounde, d-md, p, x-3, p, y-2" placehold, e, r="Na, m, e" /> <input, className="border, rounde, d-md, p, x-3, p, y-2" placehold, e, r="Ema, i, l" /> <textarea, className="border, rounde, d-md, p, x-3, p, y-2" placehold, e, r="Project, detail, s" ro, w, s={5} /> <button, className="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hove, r:bg-bl, u, e-7, 0, 0" ty, p, e="butt, o, n">Subm, i, t</butt, o, n> </fo, r, m> </secti, o, n> ); }; export default RequestQuote;
+>>>>>>> b8dd5f3b0522c4d36c19ce042d33b718f1a04177

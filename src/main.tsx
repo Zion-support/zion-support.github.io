@@ -1,56 +1,48 @@
-import React from "react"
-import { createRoot } from "react-dom/client"
-import App from "./AppSafe"
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+
+// Report web vitals to help monitor performance in production
 async function reportWebVitals() {
   try {
-    const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
+    const { onCLS, onFID, onLCP, onFCP, onTTFB, onINP } = await import('web-vitals');
     const log = (metric: { name: string; value: number }) => {
-      if (import.meta.env.PROD) {
-        console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
-      }
+      // Replace with analytics endpoint if available
+      console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
     };
     onCLS(log);
+    onFID(log);
     onLCP(log);
     onFCP(log);
     onTTFB(log);
+    // @ts-ignore web-vitals v4 also exports onINP
+    if (onINP) onINP(log);
   } catch {
-    // ignore in unsupported environments
+    // no-op in dev or if unsupported
   }
-};
+}
 
-// Optimized service worker registration
-const registerServiceWorker = () => {
-  if (typeof window !== "undefined" && "serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/sw.js").catch(() => {
-        // Silently fail if service worker registration fails
-      });
-    });
-  }
-};
-
-// Main app initialization with performance optimizations
-const initializeApp = () => {
-  const container = document.getElementById("root");
-  if (!container) {
-    console.error("Root container not found");
-    return;
-  }
-
+const container = document.getElementById('root');
+if (container) {
   const root = createRoot(container);
-  
   root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>
   );
-
-  // Initialize performance monitoring and service worker
+  
   if (import.meta.env.PROD) {
     void reportWebVitals();
-    registerServiceWorker();
   }
-};
+}
 
-// Start the app
-initializeApp();
+// Register service worker for basic offline support if available
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .catch(() => {
+        // no-op: registration failed; proceed without SW
+      });
+  });
+}

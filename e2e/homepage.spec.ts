@@ -1,4 +1,1 @@
-
-  await expect(page.locator('.success-message')).toBeVisible()});
-'
-
+await expect(page.locator('.success-message')).toBeVisible()});' ' '

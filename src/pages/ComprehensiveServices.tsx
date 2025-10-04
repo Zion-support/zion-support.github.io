@@ -1,4 +1,5 @@
 
+
       <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden"
         <div className: {`bg-gradient-to-br ${service.color} p-6 text-white`}>`;`;
           {Icon ? <Icon className="w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}";"

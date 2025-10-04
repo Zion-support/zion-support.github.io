@@ -1,12 +1,1 @@
-import React from 'react';
-
-const Manufacturing: React.FC = () => {
-  return (
-    <div className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold mb-4">Manufacturing Solutions</h1>
-      <p className="text-gray-700 max-w-3xl">Intelligent quality control, predictive maintenance, and supply chain optimization for manufacturing. Initial page created to resolve sidebar links.</p>
-    </div>
-  );
-};
-
-export default Manufacturing;
+import React from "react"; const, Manufacturin, g: Rea, c, t.FC = () => { return ( <div, className="container, m, x-auto, p, x-6, p, y-12" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Manufacturing, Solution, s</h1> <p, className="te, x, t-gr, a, y-700, ma, x-w-3, x, l" >Intelligent, quality, control, predictive, maintenanc, e, and, supply, chain optimization, for, manufacturing. Initial, page, created to, resolve, sidebar lin, k, s.</p> </d, i, v> ); }; export default Manufacturing;

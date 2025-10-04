@@ -1,12 +1,1 @@
-import React from 'react';
-
-const Retail: React.FC = () => {
-  return (
-    <div className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold mb-4">Retail Solutions</h1>
-      <p className="text-gray-700 max-w-3xl">Next-gen demand forecasting, personalization, and autonomous operations for retail and e-commerce. Placeholder content to satisfy navigation; expand with case studies and features.</p>
-    </div>
-  );
-};
-
-export default Retail;
+import React from "react"; const, Retai, l: Rea, c, t.FC = () => { return ( <div, className="container, m, x-auto, p, x-6, p, y-12" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Retail, Solution, s</h1> <p, className="te, x, t-gr, a, y-700, ma, x-w-3, x, l" >Ne, x, t-gen, demand, forecasting, personalizati, o, n, and, autonomous, operations for, retail, and e-commer, c, e. Placeholder, content, to satisfy, navigatio, n; expand, with, case studies, and, features.</p> </d, i, v> ); }; export default Retail;

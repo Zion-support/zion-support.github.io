@@ -1,0 +1,264 @@
+{
+  "timestamp": "2025-10-04T12:07:04.068Z",
+  "summary": {
+    "totalBranches": 50,
+    "successfulMerges": 50,
+    "failedMerges": 0,
+    "conflictsResolved": 0,
+    "successRate": "100.00%"
+  },
+  "results": [
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-00ed"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-018d"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-030d"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-03e3"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-03e9"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0487"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-048f"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-04d5"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-052a"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-056b"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0571"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-05cb"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-08ec"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0907"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0941"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-09cc"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0afb"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0b39"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0d9b"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0e13"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-0f12"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-10f2"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-11a9"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1231"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1380"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-14ab"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-16a4"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1717"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-17d4"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1925"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1aa3"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1ae6"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1cf2"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1d72"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-1f56"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-20a8"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-21a6"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-21c0"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-22cc"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-2312"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-2353"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-2684"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-27da"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-281b"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-286c"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-288a"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-2938"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-299f"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-29bb"
+    },
+    {
+      "success": true,
+      "branch": "cursor/fix-errors-and-merge-to-main-2a48"
+    }
+  ],
+  "branches": [
+    "cursor/fix-errors-and-merge-to-main-00ed",
+    "cursor/fix-errors-and-merge-to-main-018d",
+    "cursor/fix-errors-and-merge-to-main-030d",
+    "cursor/fix-errors-and-merge-to-main-03e3",
+    "cursor/fix-errors-and-merge-to-main-03e9",
+    "cursor/fix-errors-and-merge-to-main-0487",
+    "cursor/fix-errors-and-merge-to-main-048f",
+    "cursor/fix-errors-and-merge-to-main-04d5",
+    "cursor/fix-errors-and-merge-to-main-052a",
+    "cursor/fix-errors-and-merge-to-main-056b",
+    "cursor/fix-errors-and-merge-to-main-0571",
+    "cursor/fix-errors-and-merge-to-main-05cb",
+    "cursor/fix-errors-and-merge-to-main-08ec",
+    "cursor/fix-errors-and-merge-to-main-0907",
+    "cursor/fix-errors-and-merge-to-main-0941",
+    "cursor/fix-errors-and-merge-to-main-09cc",
+    "cursor/fix-errors-and-merge-to-main-0afb",
+    "cursor/fix-errors-and-merge-to-main-0b39",
+    "cursor/fix-errors-and-merge-to-main-0d9b",
+    "cursor/fix-errors-and-merge-to-main-0e13",
+    "cursor/fix-errors-and-merge-to-main-0f12",
+    "cursor/fix-errors-and-merge-to-main-10f2",
+    "cursor/fix-errors-and-merge-to-main-11a9",
+    "cursor/fix-errors-and-merge-to-main-1231",
+    "cursor/fix-errors-and-merge-to-main-1380",
+    "cursor/fix-errors-and-merge-to-main-14ab",
+    "cursor/fix-errors-and-merge-to-main-16a4",
+    "cursor/fix-errors-and-merge-to-main-1717",
+    "cursor/fix-errors-and-merge-to-main-17d4",
+    "cursor/fix-errors-and-merge-to-main-1925",
+    "cursor/fix-errors-and-merge-to-main-1aa3",
+    "cursor/fix-errors-and-merge-to-main-1ae6",
+    "cursor/fix-errors-and-merge-to-main-1cf2",
+    "cursor/fix-errors-and-merge-to-main-1d72",
+    "cursor/fix-errors-and-merge-to-main-1f56",
+    "cursor/fix-errors-and-merge-to-main-20a8",
+    "cursor/fix-errors-and-merge-to-main-21a6",
+    "cursor/fix-errors-and-merge-to-main-21c0",
+    "cursor/fix-errors-and-merge-to-main-22cc",
+    "cursor/fix-errors-and-merge-to-main-2312",
+    "cursor/fix-errors-and-merge-to-main-2353",
+    "cursor/fix-errors-and-merge-to-main-2684",
+    "cursor/fix-errors-and-merge-to-main-27da",
+    "cursor/fix-errors-and-merge-to-main-281b",
+    "cursor/fix-errors-and-merge-to-main-286c",
+    "cursor/fix-errors-and-merge-to-main-288a",
+    "cursor/fix-errors-and-merge-to-main-2938",
+    "cursor/fix-errors-and-merge-to-main-299f",
+    "cursor/fix-errors-and-merge-to-main-29bb",
+    "cursor/fix-errors-and-merge-to-main-2a48"
+  ]
+}

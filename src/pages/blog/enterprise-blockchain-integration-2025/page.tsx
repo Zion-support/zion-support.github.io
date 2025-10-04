@@ -1,4 +1,5 @@
 
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-950">","
       <article className="container mx-auto px-6 py-16 max-w-4xl">","
         {/* Header */}

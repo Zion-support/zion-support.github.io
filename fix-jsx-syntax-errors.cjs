@@ -1,61 +1,128 @@
-#!/usr/bin/env node;
-const fs = require('fs');
+#!/usr/bin/env node
 
-// Function to fix JSX syntax errors;
-function fixJSXSyntaxErrors(filePath) {
+const fs = require('fs');
+const path = require('path');
+
+// Common JSX syntax fixes
+const fixes = [
+  // Fix unclosed JSX tags
+  {
+    pattern: /className="([^"]*?)"([^>]*?)(?=\s*\/>)/g,
+    replacement: 'className="$1"$2 />'
+  },
+  // Fix missing closing quotes
+  {
+    pattern: /className="([^"]*?)"([^>]*?)(?=\s*\/>)/g,
+    replacement: 'className="$1"$2 />'
+  },
+  // Fix unterminated strings in JSX
+  {
+    pattern: /<span >([^<]*?)</g,
+    replacement: '<span>$1</span>'
+  },
+  // Fix malformed JSX attributes
+  {
+    pattern: /className= "([^"]*?)"/g,
+    replacement: 'className="$1"'
+  },
+  // Fix unclosed tags
+  {
+    pattern: /<li className="([^"]*?)"([^>]*?)(?!\s*\/>)(?=\s*<)/g,
+    replacement: '<li className="$1"$2>'
+  },
+  // Fix missing closing tags for divs
+  {
+    pattern: /<div className="([^"]*?)"([^>]*?)>(?=\s*<[^\/])/g,
+    replacement: '<div className="$1"$2>'
+  },
+  // Fix malformed Link components
+  {
+    pattern: /<Link to: "([^"]*?)"/g,
+    replacement: '<Link to="$1"'
+  },
+  // Fix unclosed h3 tags
+  {
+    pattern: /<h3 className="([^"]*?)"([^>]*?)>(?=\s*<[^\/])/g,
+    replacement: '<h3 className="$1"$2>'
+  },
+  // Fix unclosed ul tags
+  {
+    pattern: /<ul className="([^"]*?)"([^>]*?)>(?=\s*<[^\/])/g,
+    replacement: '<ul className="$1"$2>'
+  },
+  // Fix unclosed section tags
+  {
+    pattern: /<section className="([^"]*?)"([^>]*?)>(?=\s*<[^\/])/g,
+    replacement: '<section className="$1"$2>'
+  },
+  // Fix malformed quotes in strings
+  {
+    pattern: /"([^"]*?)"/g,
+    replacement: '"$1"'
+  }
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix JSX attribute semicolons;
-    const fixes = [
-      // Fix title attribute semicolons;
-      { pattern: /title='([^']*);'/g, replacement: "title='$1'" }, { pattern: /title="([^"]*);"/g, replacement: 'title="$1"' },
-      // Fix description attribute semicolons;
-      { pattern: /description='([^']*);'/g, replacement: "description='$1'" }, { pattern: /description="([^"]*);"/g, replacement: 'description="$1"' },
-      // Fix keywords attribute semicolons;
-      { pattern: /keywords='([^']*);'/g, replacement: "keywords='$1'" }, { pattern: /keywords="([^"]*);"/g, replacement: 'keywords="$1"' },
-      // Fix className attribute semicolons;
-      { pattern: /className='([^']*);'/g, replacement: "className='$1'" }, { pattern: /className="([^"]*);"/g, replacement: 'className="$1"' },
-      // Fix JSX closing tag semicolons;
-      { pattern: /(\/>);/g, replacement: '$1' }, { pattern: /(<\/[^>]+>);/g, replacement: '$1' },
-      // Fix JSX opening tag semicolons;
-      { pattern: /(>);/g, replacement: '$1' },
-      // Fix array element semicolons in JSX;
-      { pattern: /'([^']*);',/g, replacement: "'$1'"}, { pattern: /"([^"]*);",/g, replacement: '"$1"'} ];
-
+    let originalContent = content;
+    
+    // Apply fixes
     fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true}
+      content = content.replace(fix.pattern, fix.replacement);
     });
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, `utf8`);
-      console.log(`Fixed JSX syntax errors in: ${filePath}`);
-      return true}
-    return false} catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false}
+    
+    // Additional specific fixes for common patterns
+    // Fix unclosed CheckCircle components
+    content = content.replace(/<CheckCircle className="([^"]*?)"([^>]*?)(?=\s*\/>)/g, '<CheckCircle className="$1"$2 />');
+    
+    // Fix malformed closing tags
+    content = content.replace(/<\/li>"/g, '</li>');
+    content = content.replace(/<\/h3>"/g, '</h3>');
+    content = content.replace(/<\/div>"/g, '</div>');
+    
+    // Fix unterminated string literals
+    content = content.replace(/<span >([^<]*?)</g, '<span>$1</span>');
+    
+    // Fix malformed Link components with to: syntax
+    content = content.replace(/<Link to: "([^"]*?)"/g, '<Link to="$1"');
+    
+    // Fix unclosed JSX elements
+    content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="([^"]*?)"([^>]*?)(?=\s*<[^\/])/g, '<$1 className="$2"$3>');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Files that need JSX syntax fixes;
-const filesToFix = [
-  `pages/NotFound.tsx`,
-  'pages/enhanced-home.tsx',
-  'pages/index.p.tsx',
-  'pages/pricing-guide.tsx',
-  'pages/sitemap.tsx' ];
+function walkDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += walkDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  });
+  
+  return fixedCount;
+}
 
-console.log('🔧 Fixing JSX syntax errors...');
-let fixedCount = 0;
-
-filesToFix.forEach(file => {
-  if (fs.existsSync(file)) {
-    if (fixJSXSyntaxErrors(file)) {
-      fixedCount++}
-  }
-});
-
-console.log(`✅ Fixed JSX syntax errors in ${fixedCount} files`);
+// Main execution
+console.log('Starting JSX syntax fixes...');
+const fixedCount = walkDirectory('./src');
+console.log(`Fixed ${fixedCount} files`);

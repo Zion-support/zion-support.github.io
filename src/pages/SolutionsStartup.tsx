@@ -1,4 +1,5 @@
 
+
       <div className="container mx-auto px-6 py-12"
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Startup Solutions</h1>";,"
         <p className="text-gray-600 max-w-3xl">Move fast with MVPs, rapid prototyping, and growth-oriented architectures.</p>";,"

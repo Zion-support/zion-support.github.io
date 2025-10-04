@@ -1,11 +1,1 @@
-import React from "react";
-
-export default function AIDataAnalytics(): React.JSX.Element {
-  return (
-    <main style: {{ padding: "2rem" }}>"
-      <h1 >AI Data Analytics</h1>
-    </main>
-  );
-}
-
-;
+import React from "react";"; export, default, function AIDataAnalyti, c, s(): Rea, c, t.J, S, X.Eleme, n, t { return ( <main, styl, e={{ paddi, n, g: "2r, e, m" }}>"; <h1>AI, Data, Analytics</h1> </ma, i, n> ); } ;

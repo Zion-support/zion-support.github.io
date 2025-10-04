@@ -1,23 +1,15 @@
 User-agent: *
 Allow: /
-
-# Allow important pages
-Allow: /services/
-Allow: /solutions/
-Allow: /case-studies/
 Allow: /blog/
-Allow: /about/
+Allow: /services/
+Allow: /case-studies/
 Allow: /contact/
 
-# Disallow admin and private areas
-Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
+Disallow: /admin/
 Disallow: /*.json$
 Disallow: /*?*
 
-# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Specific bot rules

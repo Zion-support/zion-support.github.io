@@ -1,65 +1,6 @@
-import React from "react";
-
-export default function AIOperationalScorecards2027(): React.JSX.Element {
-  return (
 <<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
 =======
-    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-      <Helmet >
-        <title >Operational AI Scorecards 2027 — KPIs, Budgets, Rollback</title>
-        <meta name: "description",";,"
-  content: "Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback." /><link ,";,"
-  rel: "canonical",";,"
-  href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards","
-        />
-      </Helmet>
-
-<<<<<<< HEAD
-      <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",";,"
-  href="https: //ziontechgroup.com/blog/ai-2027-operational-scorecards","
-        />
-      </Helmet>
-
-      <div className="container mx-auto px-6 py-16">","
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",";,"
-  Operational AI Scorecards 2027 — KPIs, Budgets, Rollback
-        </h1>
-        <p className="text-zion-slate-light mb-8">",";,"
-  SLIs → KPIs • Budgeted Actions • Instant Rollback
-        </p>
-        <div className="prose prose-invert max-w-3xl">","
-=======
-      <div className= "container mx-auto px-6 py-16">
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4"">"
-  href: "https: //ziontechgroup.com/blog/ai-2027-operational-scorecards","
-        />
-      </Helmet>
-
-      <div className= "container mx-auto px-6 py-16">","
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4"">"
-  Operational AI Scorecards 2027 — KPIs, Budgets, Rollback
-        </h1>
-        <p className= "text-zion-slate-light mb-8"">"
-  SLIs → KPIs • Budgeted Actions • Instant Rollback
-        </p>
-        <div className= "prose prose-invert max-w-3xl">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-          <p >
-            Ship faster with safety by wiring service-level indicators (SLIs) to
-            real business KPIs. Define budgets, trigger canaries, and apply
-            pre-approved rollback actions automatically when thresholds breach.
-          </p>
-          <p >
-            This guide covers scorecard design, alert budgets, CI policy tests
-            and live canaries for GenAI and agentic systems.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-;
+import React from "react";"; export, default, function AIOperationalScorecards20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t { return ( <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e" >"; <Helmet> <title>Operational, AI, Scorecards 20, 2, 7 — KP, I, s, Budge, t, s, Rollba, c, k</title> <me, t, a na, m, e="descripti, o, n" content="Live, scorecards, that link, SLIs, to product, KPIs, with budgeted, actions, and instant, rollbac, k." /><li, n, k r, e, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 7-operation, a, l-scorecar, d, s", /> </Helmet> <div, className="container, m, x-auto, p, x-6, p, y-16" > <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4" >" ======= hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 7-operation, a, l-scorecar, d, s" /> </Helmet> <div, className="container, m, x-auto, p, x-6, p, y-16" >"; <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4" >"; Operational, AI, Scorecards 20, 2, 7 — KP, I, s, Budge, t, s, Rollba, c, k; </h1> <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8" >"; SL, I, s → KP, I, s • Budgeted, Action, s • Instant, Rollbac, k; </p> <div, className="prose, pros, e-invert, ma, x-w-3, x, l" >"; <p> Ship, faster, with safety, by, wiring servi, c, e-level, indicator, s (SL, I, s) to real, business, KPIs. Define, budget, s, trigger, canarie, s, and, appl, y p, r, e-approved, rollback, actions automatically, when, thresholds brea, c, h. </p> <p> This, guide, covers scorecard, desig, n, alert, budget, s, CI, policy, tests and, live, canaries for, GenAI, and agentic, system, s. </p> </d, i, v> </d, i, v> </d, i, v> ); } ;
+>>>>>>> b8dd5f3b0522c4d36c19ce042d33b718f1a04177

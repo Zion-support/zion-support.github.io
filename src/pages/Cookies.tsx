@@ -1,4 +1,5 @@
 
+
     <div className="min-h-screen bg-gray-50"
       <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-16"
         <div className="container mx-auto px-6 text-center"

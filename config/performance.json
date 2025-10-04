@@ -1,11 +1,7 @@
 {
   "lazyLoading": {
     "enabled": true,
-    "components": [
-      "UnifiedBanner",
-      "ContentShowcase",
-      "FeaturedServiceCard"
-    ]
+    "components": ["UnifiedBanner", "ContentShowcase", "FeaturedServiceCard"]
   },
   "bundleOptimization": {
     "treeShaking": true,

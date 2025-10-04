@@ -1,12 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // Optimized Vite configuration for better performance and smaller bundle size
 export default defineConfig({
   plugins: [
     react({
-      jsxRuntime: 'automatic'
+      jsxRuntime: 'automatic',
+    }),
+    visualizer({
+      filename: 'dist/stats.html',
+      open: false,
+      gzipSize: true,
     }),
   ],
   root: '.',
@@ -29,10 +35,10 @@ export default defineConfig({
         moduleSideEffects: false,
         propertyReadSideEffects: false,
         tryCatchDeoptimization: false,
-        preset: 'smallest'
+        preset: 'smallest',
       },
       output: {
-        manualChunks: (id) => {
+        manualChunks: id => {
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             // React core
@@ -63,6 +69,7 @@ export default defineConfig({
             }
             return 'vendor-misc';
           }
+          
           // App chunks - lazy load pages
           if (id.includes('src/pages/')) {
             // Split large page bundles
@@ -77,6 +84,7 @@ export default defineConfig({
             }
             return 'pages-core';
           }
+          
           // Component chunks
           if (id.includes('src/components/')) {
             if (id.includes('banner') || id.includes('Banner')) {
@@ -84,26 +92,29 @@ export default defineConfig({
             }
             return 'components-core';
           }
+          
           // Charts and data visualization
           if (id.includes('recharts') || id.includes('d3')) {
             return 'vendor-charts';
           }
+          
           // Large libraries
           if (id.includes('lodash') || id.includes('moment')) {
             return 'vendor-large';
           }
+          
           return 'vendor';
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
-        assetFileNames: (assetInfo) => {
+        assetFileNames: assetInfo => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/\.(css)$/.test(assetInfo.name)) {
             return `assets/css/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
-        }
+        },
       },
     },
     chunkSizeWarningLimit: 1000,
@@ -164,4 +175,4 @@ export default defineConfig({
     minifySyntax: true,
     minifyWhitespace: true,
   },
-})
+});

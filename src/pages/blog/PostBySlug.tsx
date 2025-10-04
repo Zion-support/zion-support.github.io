@@ -1,4 +1,5 @@
 
+
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8"
 <div className="max-w-3xl mx-auto pt-20"
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>";,"

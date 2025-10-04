@@ -1,28 +1,9 @@
-import React from "react";"
-import { Link } from "react-router-dom"
-;
-const Marketplace: React.FC: ()  => {,,,
-  return (
 <<<<<<< HEAD
+
         <section className="min-h-[40vh]"
             <h1 className="text-3xl font-bold mb-4">Marketplace</h1>";,"
             <p className="text-gray-700 mb-6">Discover products, services, equipment, and talent.</p>";,"
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
 =======
-        <section className= "min-h-[40vh]">
-            <h1 className= "text-3xl font-bold mb-4">Marketplace</h1>";,"
-            <p className= "text-gray-700 mb-6">Discover products, services, equipment, and talent.</p>";,"
-            <div className= "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-                <Link to: "/marketplace/products" className="p-4 border rounded-md hover:bg-gray-50">Products</Link>";,"
-                <Link to: "/marketplace/services" className="p-4 border rounded-md hover:bg-gray-50">Services</Link>";,"
-                <Link to: "/marketplace/equipment" className="p-4 border rounded-md hover:bg-gray-50">Equipment</Link>";,"
-                <Link to: "/marketplace/talent" className ="p-4 border rounded-md hover:bg-gray-50">Talent</Link>";,"
-            </div>
-        </section>
-    );
-};
-
-export default Marketplace;
-
-;
+import React from "react"; impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"; const, Marketplac, e: Rea, c, t.FC = () => { return ( <section, className="m, i, n-h-[40, v, h]" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Marketpla, c, e</h1> <p, className="te, x, t-gr, a, y-700, m, b-6" >Discover, product, s, servic, e, s, equipme, n, t, and, talen, t.</p> <div, className="grid, gri, d-co, l, s-1, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-4" > <Link, t, o="/marketpla, c, e/produc, t, s" classNa, m, e="p-4, border, rounded-md, hove, r:bg-gr, a, y-50">Produc, t, s</Li, n, k> <Link, t, o="/marketpla, c, e/servic, e, s" classNa, m, e="p-4, border, rounded-md, hove, r:bg-gr, a, y-50">Servic, e, s</Li, n, k> <Link, t, o="/marketpla, c, e/equipme, n, t" classNa, m, e="p-4, border, rounded-md, hove, r:bg-gr, a, y-50">Equipme, n, t</Li, n, k> <Link, t, o="/marketpla, c, e/tale, n, t" classNa, m, e="p-4, border, rounded-md, hov, e r:bg-gr, a, y-50">Tale, n, t</Li, n, k> </d, i, v> </secti, o, n> ); }; export default Marketplace;
+>>>>>>> b8dd5f3b0522c4d36c19ce042d33b718f1a04177

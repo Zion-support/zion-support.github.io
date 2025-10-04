@@ -1,60 +1,6 @@
-import React from "react";
-
-export default function ZeroPIITelemetryV2(): React.JSX.Element {
-  return (
 <<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
 =======
-    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-      <Helmet >
-        <title >Zero‑PII Telemetry v2 — Sub‑100ms, Signed, Differentially Private</title>
-        <meta name: "description",";,"
-  content: "Scoped IDs, on‑device aggregation, DP noise, and attestations for privacy‑preserving metrics at the edge." /><link rel: "canonical",";,"
-  href="https://ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2","
-        />
-      </Helmet>
-
-<<<<<<< HEAD
-      <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Zero‑PII Telemetry v2</h1>","
-        <p className="text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>";,"
-        <div className="prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2","
-        />
-      </Helmet>
-
-      <div className="container mx-auto px-6 py-16">","
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Zero‑PII Telemetry v2</h1>","
-        <p className="text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>","
-        <div className="prose prose-invert max-w-3xl">","
-=======
-      <div className= "container mx-auto px-6 py-16">
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4">Zero‑PII Telemetry v2</h1>","
-        <p className= "text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>";,"
-        <div className= "prose prose-invert max-w-3xl">,";,"
-  href: "https: //ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2","
-        />
-      </Helmet>
-
-      <div className= "container mx-auto px-6 py-16">","
-        <h1 className= "text-4xl md: text-5xl font-bold mb-4">Zero‑PII Telemetry v2</h1>","
-        <p className= "text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>","
-        <div className= "prose prose-invert max-w-3xl">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-          <p >
-            Ship privacy-preserving telemetry in under 100ms using scoped IDs
-            on-device aggregation, and differential privacy. Use signed
-            attestations for trust and compliance.
-          </p>
-          <p >
-            We outline event schemas, device-side processing, aggregation windows
-            DP calibration, and verification patterns that scale globally.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-;
+import React from "react";"; export, default, function ZeroPIITelemetry, V, 2(): Rea, c, t.J, S, X.Eleme, n, t { return ( <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e" >"; <Helmet> <title>Ze, r, o‑PII, Telemetry, v2 — S, u, b‑100, m, s, Sign, e, d, Differentially, Privat, e</title> <me, t, a na, m, e="descripti, o, n" content="Scoped, ID, s, on‑device, aggregatio, n, DP, nois, e, and, attestations, for priva, c, y‑preserving, metrics, at the, edg, e." /><li, n, k r, e, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-o, c, t-01-ze, r, o-p, i, i-telemet, r, y-v2", /> </Helmet> <div, className="container, m, x-auto, p, x-6, p, y-16" > <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4" >Ze, r, o‑PII, Telemetry, v2</h1>" <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8" >S, u, b‑100, m, s, Sign, e, d, Differentially, Privat, e</p> <div, className="prose, pros, e-invert, ma, x-w-3, x, l" > ======= hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-o, c, t-01-ze, r, o-p, i, i-telemet, r, y-v2" /> </Helmet> <div, className="container, m, x-auto, p, x-6, p, y-16" >"; <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4" >Ze, r, o‑PII, Telemetry, v2</h1>"; <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8" >S, u, b‑100, m, s, Sign, e, d, Differentially, Privat, e</p>"; <div, className="prose, pros, e-invert, ma, x-w-3, x, l" >"; <p> Ship, privac, y-preserving, telemetry, in under, 100ms, using scoped, ID, s on-device, aggregatio, n, and, differential, privacy. Use, signe, d attestations, for, trust and, complianc, e. </p> <p> We, outline, event schem, a, s, devi, c, e-side, processin, g, aggregation, window, s DP, calibratio, n, and, verification, patterns that, scale, globally. </p> </d, i, v> </d, i, v> </d, i, v> ); } ;
+>>>>>>> b8dd5f3b0522c4d36c19ce042d33b718f1a04177

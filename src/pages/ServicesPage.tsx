@@ -1,4 +1,5 @@
 
+
       <div className="min-h-screen bg-gray-50"
         {/* Header */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"

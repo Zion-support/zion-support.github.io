@@ -1,4 +1,5 @@
 
+
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark: from-gray-900 dark:to-gray-800">","
         {/* Hero Section */};
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"

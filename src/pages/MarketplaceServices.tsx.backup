@@ -1,20 +1,8 @@
-import React from "react"
-;
-const MarketplaceServices: React.FC: ()  => {,,,
-  return (
 <<<<<<< HEAD
+
         <section className="min-h-[40vh]"
             <h1 className="text-3xl font-bold mb-4">Marketplace - Services</h1>";,"
             <p className="text-gray-700">Find expert services tailored to your needs.</p>";,"
 =======
-        <section className= "min-h-[40vh]">
-            <h1 className= "text-3xl font-bold mb-4">Marketplace - Services</h1>";,"
-            <p className= "text-gray-700">Find expert services tailored to your needs.</p>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-        </section>
-    );
-};
-
-export default MarketplaceServices;
-
-;
+import React from "react"; const, MarketplaceService, s: Rea, c, t.FC = () => { return ( <section, className="m, i, n-h-[40, v, h]" > <h1, className="te, x, t-3xl, fon, t-bold, m, b-4" >Marketpla, c, e - Servic, e, s</h1> <p, className="te, x, t-gr, a, y-7, 0, 0" >Find, expert, services tailored, to, your nee, d, s.</p> </secti, o, n> ); }; export default MarketplaceServices;
+>>>>>>> b8dd5f3b0522c4d36c19ce042d33b718f1a04177

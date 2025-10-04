@@ -2,65 +2,44 @@ import React, { useEffect, useState } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
+  cls: number;
+  fid: number;
+  fcp: number;
+  lcp: number;
+  ttfb: number;
 }
 
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-}
-
-export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fid: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-  });
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => {
-        const updated = { ...prev, ...newMetrics };
-        onMetricsUpdate?.(updated);
-        return updated;
-      });
+    const handleMetric = (metric: any) => {
+      setMetrics(prev => ({
+        ...prev,
+        [metric.name]: metric.value,
+      }));
     };
 
-    // Measure Core Web Vitals
-    getCLS((metric) => {
-      updateMetrics({ cls: metric.value });
-    });
+    getCLS(handleMetric);
+    getFID(handleMetric);
+    getFCP(handleMetric);
+    getLCP(handleMetric);
+    getTTFB(handleMetric);
+  }, []);
 
-    getFID((metric) => {
-      updateMetrics({ fid: metric.value });
-    });
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className='fixed bottom-4 right-4 bg-black text-white p-2 rounded text-xs'>
+        <div>CLS: {metrics?.cls?.toFixed(3)}</div>
+        <div>FID: {metrics?.fid?.toFixed(1)}ms</div>
+        <div>FCP: {metrics?.fcp?.toFixed(1)}ms</div>
+        <div>LCP: {metrics?.lcp?.toFixed(1)}ms</div>
+        <div>TTFB: {metrics?.ttfb?.toFixed(1)}ms</div>
+      </div>
+    );
+  }
 
-    getFCP((metric) => {
-      updateMetrics({ fcp: metric.value });
-    });
-
-    getLCP((metric) => {
-      updateMetrics({ lcp: metric.value });
-    });
-
-    getTTFB((metric) => {
-      updateMetrics({ ttfb: metric.value });
-    });
-  }, [onMetricsUpdate]);
-
-  // Log performance metrics in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics]);
-
-  return null; // This component doesn't render anything
+  return null;
 };
 
 export default PerformanceMonitor;
