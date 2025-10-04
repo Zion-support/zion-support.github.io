@@ -1,8 +1,8 @@
 import React from "react";
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-const, Foote, r: Rea, c, t.FC = () => {
+import { Link } from "react-router-dom";
+
+const Footer: React.FC = () => {
   return (
-<<<<<<< HEAD
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -14,127 +14,72 @@ const, Foote, r: Rea, c, t.FC = () => {
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology.
-=======
-    <footer, className="bg-gr, a, y-900, tex, t-white, p, y-12">
-      <div, className="container, m, x-auto, p, x-6">
-        <div, className="grid, gri, d-co, l, s-1 m
-  d:gr, i, d-co, l, s-4, ga, p-8">
-          {/* Company, Inf, o */}
-          <d, i, v>
-            <div, className="flex, item, s-center, spac, e-x-2, m, b-4">
-              <span, className="te, x, t-2, x, l">🚀</sp, a, n>
-              <span, className="te, x, t-xl, fon, t-bo, l, d">Zion, Tech, Group</sp, a, n>
-            </d, i, v>
-            <p, className="te, x, t-gr, a, y-400, m, b-4">
-              Enterpri, s, e-grade, A, I, micro, Saa, S, and, IT, solutions. Transform, your, business with, cuttin, g-edge, technolog, y.
->>>>>>> 84a13d73df97 (Fix syntax errors and optimize build performance)
             </p>
-            <div, className="flex, spac, e-x-4">
-              <a, hre, f="htt, p, s: //twitt, e, r.c, o, m/ziontechgro, u, p" classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-white, transitio, n-colo, r, s" targ, e, t="_bla, n, k" r, e, l="noopener, noreferre, r">
-                Twitt, e, r;
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <span className="sr-only">LinkedIn</span>
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
               </a>
-              <a, hre, f="htt, p, s://linked, i, n.c, o, m/compa, n, y/zi, o, n-te, c, h-gro, u, p" classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-white, transitio, n-colo, r, s" targ, e, t="_bla, n, k" r, e, l="noopener, noreferre, r">
-                Linked, I, n;
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <span className="sr-only">Twitter</span>
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
               </a>
-              <a, hre, f="htt, p, s://gith, u, b.c, o, m/ZionClou, d, s" classNa, m, e="te, x, t-gr, a, y-400, hov, e
-  r:te, x, t-white, transitio, n-colo, r, s" targ, e, t="_bla, n, k" r, e, l="noopener, noreferre, r">
-                GitH, u, b;
-              </a>
-<<<<<<< HEAD
             </div>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-3">
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
-              <li><Link to="/services/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
+            <ul className="space-y-2">
+              <li><Link to="/services/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Solutions</Link></li>
               <li><Link to="/services/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link to="/services/ai-compliance-monitor" className="text-gray-400 hover:text-white transition-colors">AI Compliance Monitor</Link></li>
-              <li><Link to="/services/seo-split-testing" className="text-gray-400 hover:text-white transition-colors">SEO Split Testing</Link></li>
-              <li><Link to="/services/image-cdn-optimizer" className="text-gray-400 hover:text-white transition-colors">Image CDN Optimizer</Link></li>
+              <li><Link to="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
+              <li><Link to="/services/cloud" className="text-gray-400 hover:text-white transition-colors">Cloud & DevOps</Link></li>
+              <li><Link to="/services/analytics" className="text-gray-400 hover:text-white transition-colors">Data Analytics</Link></li>
             </ul>
           </div>
 
-          {/* Solutions */}
+          {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
-            <ul className="space-y-3">
-              <li><Link to="/solutions" className="text-gray-400 hover:text-white transition-colors">All Solutions</Link></li>
-              <li><Link to="/solutions/enterprise" className="text-gray-400 hover:text-white transition-colors">Enterprise</Link></li>
-              <li><Link to="/solutions/smb" className="text-gray-400 hover:text-white transition-colors">SMB</Link></li>
-              <li><Link to="/solutions/startup" className="text-gray-400 hover:text-white transition-colors">Startup</Link></li>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/resources" className="text-gray-400 hover:text-white transition-colors">Resources</Link></li>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-3 text-gray-400">
-              <p className="flex items-center">
-                <span className="mr-2">📞</span>
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">+1 302 464 0950</a>
-              </p>
-              <p className="flex items-center">
-                <span className="mr-2">✉️</span>
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">kleber@ziontechgroup.com</a>
-              </p>
-              <p className="flex items-start">
-                <span className="mr-2 mt-1">📍</span>
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </p>
-            </div>
+            <ul className="space-y-2">
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Get in Touch</Link></li>
+              <li><a href="mailto:hello@ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">hello@ziontechgroup.com</a></li>
+              <li><a href="tel:+1-555-0123" className="text-gray-400 hover:text-white transition-colors">+1 (555) 012-3456</a></li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
-=======
-            </d, i, v>
-          </d, i, v>
-          {/* Servic, e, s */}
-          <d, i, v>
-            <h3, className="te, x, t-lg, fon, t-semibold, m, b-4">Servic, e, s</h3>
-            <ul, className="spa, c, e-y-2">
-              <li><Link, t, o="/servic, e, s" classNa, m, e="te, x, t-gr, a, y-400, hove, r: te, x, t-white, transitio, n-colo, r, s">All, Service, s</Li, n, k></li>
-              <li><Link, t, o="/servic, e, s/ai-servic, e, s" classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-white, transitio, n-colo, r, s">AI, Service, s</Li, n, k></li>
-              <li><Link, t, o="/servic, e, s/mic, r, o-sa, a, s" classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-white, transitio, n-colo, r, s">Micro, Saa, S</Li, n, k></li>
-              <li><Link, t, o="/servic, e, s/it-servic, e, s" classNa, m, e="te, x, t-gr, a, y-400, hov, e
-  r:te, x, t-white, transitio, n-colo, r, s">IT, Service, s</Li, n, k></li>
-            </ul>
-          </d, i, v>
-          {/* Solutio, n, s */}
-          <d, i, v>
-            <h3, className="te, x, t-lg, fon, t-semibold, m, b-4">Solutio, n, s</h3>
-            <ul, className="spa, c, e-y-2">
-              <li><Link, t, o="/solutio, n, s" classNa, m, e="te, x, t-gr, a, y-400, hove, r: te, x, t-white, transitio, n-colo, r, s">All, Solution, s</Li, n, k></li>
-              <li><Link, t, o="/solutio, n, s/enterpri, s, e" classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-white, transitio, n-colo, r, s">Enterpri, s, e</Li, n, k></li>
-              <li><Link, t, o="/solutio, n, s/s, m, b" classNa, m, e="te, x, t-gr, a, y-400, hove, r:te, x, t-white, transitio, n-colo, r, s">S, M, B</Li, n, k></li>
-              <li><Link, t, o="/solutio, n, s/start, u, p" classNa, m, e="te, x, t-gr, a, y-400, hov, e
-  r:te, x, t-white, transitio, n-colo, r, s">Start, u, p</Li, n, k></li>
-            </ul>
-          </d, i, v>
-          {/* Conta, c, t */}
-          <d, i, v>
-            <h3, className="te, x, t-lg, fon, t-semibold, m, b-4">Conta, c, t</h3>
-            <div, className="spa, c, e-y-2, tex, t-gr, a, y-4, 0, 0">
-              <p>📞 +1, 302, 464 09, 5, 0</p>
-              <p>✉️ kleb, e, r@ziontechgro, u, p.c, o, m</p>
-              <p>📍 364, E, Main St, STE, 1008<br />Middletown, DE, 19709</p>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-        <div, className="bord, e, r-t, borde, r-gr, a, y-800, m, t-8, p, t-8, tex, t-center, tex, t-gr, a, y-4, 0, 0">
-          <p>&co, p, y; {new, Dat, e().getFullYe, a, r()} Zion, Tech, Group. All, rights, reserved.</p>
-        </d, i, v>
-      </d, i, v>
-    </foot, e, r>
->>>>>>> 84a13d73df97 (Fix syntax errors and optimize build performance)
   );
 };
+
 export default Footer;
