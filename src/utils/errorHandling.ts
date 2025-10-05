@@ -146,9 +146,9 @@ const sendToMonitoring = (_errorLog: ErrorLog) => {
   // Example: Send to Sentry, LogRocket, or custom endpoint
   try {
     // Uncomment and configure your monitoring service
-    /*
-    if ('Sentry' in window) {
-      (window as Window & { Sentry?: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry?.captureException(new Error(errorLog.message), {
+      /*
+      if ('Sentry' in window) {
+      (window as { Sentry?: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry?.captureException(new Error(errorLog.message), {
         contexts: {
           custom: errorLog.context,
         },
