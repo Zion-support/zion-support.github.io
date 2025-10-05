@@ -216,11 +216,6 @@ export class EnhancedAccessibility {
     });
   }
 
-
-  public getFocusableElementsCount(): number {
-    return this.getFocusableElements().length;
-  }
-
   private checkColorContrast(): void {
     // Basic color contrast check
     console.log('Checking color contrast...');

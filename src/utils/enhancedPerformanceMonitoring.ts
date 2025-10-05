@@ -120,12 +120,12 @@ class EnhancedPerformanceMonitor {
   }
 
   public startMonitoring(): void {
-    this.isMonitoring = true;
+    this._isMonitoring = true;
     console.log('Enhanced performance monitoring started');
   }
 
   public stopMonitoring(): void {
-    this.isMonitoring = false;
+    this._isMonitoring = false;
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     console.log('Enhanced performance monitoring stopped');
