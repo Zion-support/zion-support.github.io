@@ -1,5 +1,6 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import { LoadingPage } from './components/EnhancedLoading';
@@ -11,6 +12,11 @@ import cacheSystem from './utils/advanced-caching';
 import analyticsOptimizer from './utils/analytics-optimizer';
 import SystemMonitor from './components/SystemMonitor';
 import performanceMonitor from './utils/advanced-performance-monitor';
+=======
+import ErrorBoundary from './components/ErrorBoundary';
+import SEO from './components/SEO';
+import Loading from './components/Loading';
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
 import './index.css';
 
 // Lazy load pages for better performance
@@ -29,33 +35,31 @@ function App() {
     const initializeOptimizations = () => {
       try {
         // Initialize performance monitoring
+<<<<<<< HEAD
         performanceOptimizer.startPerformanceMonitoring();
         performanceMonitor.startMonitoring();
+=======
+        // performanceOptimizer.startPerformanceMonitoring();
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
         
         // Initialize security enhancements
-        securityEnhancer.setupSecurityMonitoring();
+        // securityEnhancer.setupSecurityMonitoring();
         
         // Initialize SEO tracking
-        seoOptimizer.trackPageView();
+        // seoOptimizer.trackPageView();
         
         // Set up error reporting
-        errorHandler.setReportingEnabled(true);
-        
-        // Initialize advanced caching
-        cacheSystem.loadFromStorage();
-        
-        // Initialize analytics optimization
-        analyticsOptimizer.trackPageView();
+        // errorHandler.setReportingEnabled(true);
         
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
-        errorHandler.handleError({
-          type: 'Initialization Error',
-          message: 'Failed to initialize optimization systems',
-          error: error instanceof Error ? error.message : String(error),
-          timestamp: new Date().toISOString()
-        });
+        // errorHandler.handleError({
+        //   type: 'Initialization Error' 
+        //   message: 'Failed to initialize optimization systems' 
+        //   error: error.message 
+        //   timestamp: new Date().toISOString()
+        // });
       }
     };
 
@@ -64,8 +68,12 @@ function App() {
 
     // Cleanup on unmount
     return () => {
+<<<<<<< HEAD
       performanceOptimizer.cleanup();
       performanceMonitor.stopMonitoring();
+=======
+      // performanceOptimizer.cleanup();
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
     };
   }, []);
 
@@ -86,8 +94,12 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
+<<<<<<< HEAD
       <SystemMonitor />
     </EnhancedErrorBoundary>
+=======
+    </ErrorBoundary>
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
   );
 }
 

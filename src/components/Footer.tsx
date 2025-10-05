@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
+<<<<<<< HEAD
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -50,6 +51,9 @@ const Footer: React.FC = () => {
           <p className="text-gray-300">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
+=======
+
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
         </div>
       </div>
     </footer>

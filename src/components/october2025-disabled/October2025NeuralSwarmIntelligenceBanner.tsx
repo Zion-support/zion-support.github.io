@@ -1,142 +1,134 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import, React, from 'rea, c, t';
+impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
 
-const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 my-8 shadow-2xl"
+const, October2025NeuralSwarmIntelligenceBanne, r: Rea, c, t.FC = () => {
+  retu, r, n (
+    <moti, o, n.div, initia, l = {{ opac, i, t, y: , 0, y: 2, 0 }}
+      anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+      transiti, o, n = {{ duration: , 0., 6 }}
+      classNa, m, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, rounde, d-2x, l, p-8, m, y-8, shado, w-2, x, l"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle at 50% 120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-      </div>
+      {/* Animated, Backgroun, d */}
+      <div, classNam, e="absolute, inse, t-0, opacit, y-20">
+        <div, classNam, e="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 12, 0%,rg, b, a(1, 2, 0,1, 1, 9,1, 9, 8,0.3),rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0))]"</d, i, v>
 
-      <div className="relative z-10">
-        {/* Badge */}
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 backdrop-blur-sm rounded-full border border-purple-400/30 mb-6"
+      <div, classNam, e = "relativ, e, z-10">
+        {/* Bad, g, e */}
+        <moti, o, n.div, initia, l={{ sca, l, e: , 0., 9, opaci, t, y:  , 0 }}
+          anima, t, e = {{ sc, a, l, e:  , 1, opaci, t, y:  , 1 }}
+          transiti, o, n = {{ del, a, y: , 0., 2 }}
+          classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-4, 0, 0/30, m, b-6"
         >
-          <span className="text-2xl">🧠🐝</span>
-          <span className="text-purple-200 font-semibold text-sm">JUST PUBLISHED: OCTOBER 1, 2025</span>
-          <span className="text-2xl">🚀💎</span>
-        </motion.div>
+          <span, classNam, e="te, x, t-2, x, l">🧠🐝</sp, a, n>
+          <span, classNam, e="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm">JUST, PUBLISHE, D: OCTO, B, E, R , 1, 20, 2, 5</sp, a, n>
+          <span, classNam, e = "te, x, t-2, x, l">🚀💎</sp, a, n>
+        </moti, o, n.d, i, v>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              Advanced Neural Swarm Intelligence
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mt-2">
-                10,000+ AI Agents Working Together
-              </span>
+        {/* Main, Conten, t */}
+        <div, classNam, e="grid, l, g: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">
+          <d, i, v>
+            <h2, classNam, e="te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">
+              Advanced, Neural, Swarm Intelligen, c, e
+              <span, classNam, e="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, m, t-2">
+                , 1, 0,0, 0, 0+ AI, Agents, Working Togeth, e, r
+              </sp, a, n>
             </h2>
             
-            <p className="text-purple-100 text-lg mb-6 leading-relaxed">
-              Revolutionary distributed AI system achieves <strong className="text-white">$8.7B in enterprise value</strong> with 
-              <strong className="text-white"> 10,000+ coordinated agents</strong> operating at <strong className="text-white">99.8% accuracy</strong> across 
-              450 global facilities.
+            <p, classNam, e = "te, x, t-purp, l, e-100, tex, t-lg, m, b-6, leadin, g-relax, e, d">
+              Revolutionary, distributed, AI system, achieve, s <strong, classNam, e="te, x, t-whi, t, e">$8.7B, in, enterprise val, u, e</stro, n, g> wi, t, h 
+              <strong, classNam, e="te, x, t-whi, t, e"> 1, 0,0, 0, 0+ coordinated, agent, s</stro, n, g> operating, a, t <strong, classNam, e = "te, x, t-whi, t, e">99.8% accura, c, y</stro, n, g> across, 450, global faciliti, e, s.
             </p>
 
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-purple-800/30 backdrop-blur-sm rounded-lg p-4 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-300">$8.7B</div>
-                <div className="text-purple-200 text-sm">Total Value Created</div>
-              </div>
-              <div className="bg-purple-800/30 backdrop-blur-sm rounded-lg p-4 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-300">10,000+</div>
-                <div className="text-purple-200 text-sm">AI Agents Coordinated</div>
-              </div>
-              <div className="bg-purple-800/30 backdrop-blur-sm rounded-lg p-4 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-300">99.8%</div>
-                <div className="text-purple-200 text-sm">Accuracy Rate</div>
-              </div>
-              <div className="bg-purple-800/30 backdrop-blur-sm rounded-lg p-4 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-300">2,840%</div>
-                <div className="text-purple-200 text-sm">ROI Over 3 Years</div>
-              </div>
-            </div>
+            {/* Key, Metric, s */}
+            <div, classNam, e="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">
+              <div, classNam, e="bg-purp, l, e-8, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20">
+                <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">$8.7B</d, i, v>
+                <div, classNam, e="te, x, t-purp, l, e-200, tex, t-sm">Total, Value, Created</d, i, v>
+              </d, i, v>
+              <div, classNam, e="bg-purp, l, e-8, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20">
+                <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">1, 0,0, 0, 0+</d, i, v>
+                <div, classNam, e = "te, x, t-purp, l, e-200, tex, t-sm">AI, Agents, Coordinated</d, i, v>
+              </d, i, v>
+              <div, classNam, e="bg-purp, l, e-8, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20">
+                <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">99.8%</d, i, v>
+                <div, classNam, e="te, x, t-purp, l, e-200, tex, t-sm">Accuracy, Rat, e</d, i, v>
+              </d, i, v>
+              <div, classNam, e="bg-purp, l, e-8, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20">
+                <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">, 2,8, 4, 0%</d, i, v>
+                <div, classNam, e = "te, x, t-purp, l, e-200, tex, t-sm">ROI, Over, 3 Yea, r, s</d, i, v>
+              </d, i, v>
+            </d, i, v>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <motion.a
-                href="/blog/ai-2025-october-advanced-neural-swarm-intelligence"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg shadow-lg hover:shadow-purple-500/50 transition-all"
+            {/* CTA, Button, s */}
+            <div, classNam, e="flex, fle, x-wrap, ga, p-4">
+              <moti, o, n.a, hre, f="/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-neur, a, l-swa, r, m-intelligen, c, e"
+                whileHov, e, r={{ sca, l, e: 1., 0, 5 }}
+                whileT, a, p = {{ sca, l, e: 0., 9, 5 }}
+                classNa, m, e = "px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-lg, shado, w-lg, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-a, l, l"
               >
-                Read Full Article →
-              </motion.a>
-              <motion.a
-                href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all"
+                Read, Full, Article →
+              </moti, o, n.a>
+              <moti, o, n.a, hre, f="/conta, c, t"
+                whileHov, e, r={{ sca, l, e: 1., 0, 5 }}
+                whileT, a, p = {{ sca, l, e: 0., 9, 5 }}
+                classNa, m, e = "px-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"
               >
-                Schedule Consultation
-              </motion.a>
-            </div>
-          </div>
+                Schedule, Consultatio, n
+              </moti, o, n.a>
+            </d, i, v>
+          </d, i, v>
 
-          {/* Visual Element */}
-          <div className="hidden lg:block">
-            <div className="relative">
-              <motion.div
-                animate={{
-                  scale: [1, 1.05, 1],
-                  rotate: [0, 5, 0],
+          {/* Visual, Elem, e, n, t */}
+          <div, classNam, e = "hidden, l, g: blo, c, k">
+            <div, classNam, e="relati, v, e">
+              <moti, o, n.div, animat, e={{
+                  sc, a, l, e: [, 1, 1.05, 1],
+                  rota, t, e: [, 0, 5, 0],
                 }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                transiti, o, n = {{
+                  durat, i, o, n:  , 5,
+                  repe, a, t: Infin, i, t, y,",
+      ea, s, e: "easeIn, O, u, t"
                 }}
-                className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
+                classNa, m, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-4, 0, 0/30"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">Featured Highlights:</h3>
-                <ul className="space-y-3 text-purple-100">
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <span><strong>Fortune 500 Success:</strong> 450 facilities transformed globally</span>
+                <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Featured, Highlight, s: </h3>
+                <ul, classNam, e="spa, c, e-y-3, tex, t-purp, l, e-1, 0, 0">
+                  <li, classNam, e="flex, item, s-start, ga, p-3">
+                    <span, classNam, e="te, x, t-2, x, l">✅</sp, a, n>
+                    <sp, a, n><stro, n, g>Fortune, 500, Success:</stro, n, g> 450, facilities, transformed global, l, y</sp, a, n>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <span><strong>Massive Scale:</strong> 10,247 AI agents coordinating seamlessly</span>
+                  <li, classNam, e="flex, item, s-start, ga, p-3">
+                    <span, classNam, e="te, x, t-2, x, l">✅</sp, a, n>
+                    <sp, a, n><stro, n, g>Massive, Scal, e:</stro, n, g> , 1, 0,247, AI, agents coordinating, seamlessl, y</sp, a, n>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <span><strong>Ultra Performance:</strong> Sub-10ms decision latency</span>
+                  <li, classNam, e = "flex, item, s-start, ga, p-3">
+                    <span, classNam, e="te, x, t-2, x, l">✅</sp, a, n>
+                    <sp, a, n><stro, n, g>Ultra, Performanc, e: </stro, n, g> S, u, b-10ms, decision, latency</sp, a, n>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <span><strong>Proven ROI:</strong> 2,840% return over 3 years</span>
+                  <li, classNam, e="flex, item, s-start, ga, p-3">
+                    <span, classNam, e="te, x, t-2, x, l">✅</sp, a, n>
+                    <sp, a, n><stro, n, g>Proven, RO, I:</str, o, n, g> , 2,8, 4, 0% return, over, 3 yea, r, s</sp, a, n>
                   </li>
                 </ul>
-              </motion.div>
-            </div>
-          </div>
-        </div>
+              </moti, o, n.d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
 
-        {/* Bottom Banner */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-8 pt-6 border-t border-purple-400/30 text-center"
+        {/* Bottom, Banne, r */}
+        <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0 }}
+          anima, t, e = {{ opac, i, t, y:  , 1 }}
+          transiti, o, n = {{ del, a, y: , 0., 8 }}
+          classNa, m, e = "mt-8, p, t-6, borde, r-t, borde, r-purp, l, e-4, 0, 0/30, tex, t-cent, e, r"
         >
-          <p className="text-purple-200 text-sm">
-            🏆 <strong className="text-white">BREAKTHROUGH TECHNOLOGY:</strong> Revolutionizing Enterprise AI Through Distributed Swarm Intelligence
+          <p, classNam, e="te, x, t-purp, l, e-200, tex, t-sm">
+            🏆 <strong, classNam, e="te, x, t-whi, t, e">BREAKTHROUGH, TECHNOLOG, Y: </stro, n, g> Revolutionizing, Enterprise, AI Through, Distributed, Swarm Intelligen, c, e
           </p>
-        </motion.div>
-      </div>
-    </motion.div>
+        </moti, o, n.d, i, v>
+      </d, i, v>
+    </moti, o, n.d, i, v>
   );
 };
 
-export default October2025NeuralSwarmIntelligenceBanner;
+export, default, October2025NeuralSwarmIntelligenceBanner;

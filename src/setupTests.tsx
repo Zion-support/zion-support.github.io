@@ -107,11 +107,17 @@ global.console = {
 };
 
 // Mock lucide-react icons
+<<<<<<< HEAD
 jest.mock('lucide-react', () => {
   const mockIcon = (testId: string) => {
     const { createElement } = require('react');
     return createElement('div', { 'data-testid': testId });
   };
+=======
+const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
+
+jest.mock('lucide-react', () => {
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -23,11 +28,15 @@ const Header: React.FC = () => {
             </Link>
             <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
               Services
+<<<<<<< HEAD
             </Link>
             <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
               Blog
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+=======
+
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
               Contact
             </Link>
           </nav>
@@ -59,11 +68,15 @@ const Header: React.FC = () => {
               </Link>
               <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
                 Services
+<<<<<<< HEAD
               </Link>
               <Link to="/blog" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
                 Blog
               </Link>
               <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+=======
+
+>>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
                 Contact
               </Link>
             </div>
