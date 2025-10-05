@@ -1,4 +1,4 @@
-import React{ lazySuspenseuseStateuseEffect } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {

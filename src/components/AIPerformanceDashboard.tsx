@@ -1,349 +1,176 @@
-importReact{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-interfaceAIPerformanceDashboardProps { 
+interface AIPerformanceDashboardProps {
   isVisible: boolean;
-  onClose: () = > void;
- }
+  onClose: () => void;
+}
 
-interfacePerformanceMetrics {
+interface PerformanceMetrics {
   errorRate: number;
   avgResolutionTime: number;
-  criticalErrorsToday: number;
-  userImpactScore: number;
+  throughput: number;
+  cpuUsage: number;
+  memoryUsage: number;
+  responseTime: number;
 }
 
-interfaceAIInsights {
-  predictedHighRiskActions: string[];
-  recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
-    trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
-}
+const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisible, onClose }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    errorRate: 0.02,
+    avgResolutionTime: 150,
+    throughput: 1250,
+    cpuUsage: 45,
+    memoryUsage: 67,
+    responseTime: 89
+  });
 
-interfaceErrorReport { 
-  id: string;
-  severity: string;
-  message: string;
-  lastOccurrence: string | Date;
-  occurrenceCount: number;
-  context: {
-    component?: string;
-    action ?  : string;
-   };
-  aiPredictedImpact?: number;
-  resolutionSuggestions?: string[];
-}
-
-constAIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
-  isVisible
-  onClose
-}) => { 
-  const [metricssetMetrics] = useState<PerformanceMetrics | null>(null);
-  const [insightssetInsights] = useState<AIInsights | null>(null);
-  const [errorssetErrors] = useState<ErrorReport[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (isVisible) {
-      constloadPerformanceData = async () = > {
-        try {
-          // SimulateAPIcalls forperformancedata
-          constmockMetrics: PerformanceMetrics = {
-            errorRate: Math.random() * 5
-            avgResolutionTime: Math.random() * 30 + 10
-            criticalErrorsToday: Math.floor(Math.random() * 10)
-            userImpactScore: Math.floor(Math.random() * 40 + 60)
-           }; constmockInsights: AIInsights = {
-            predictedHighRiskActions: [
-              'Highmemoryusage detectedinuser authenticationflow'
-              'Potentialracecondition indatasynchronization'
-              'Slowdatabasequeries affectinguserexperience'
-            ].slice(0Math.floor(Math.random() * 3))
-            recommendedImprovements: [
-              'Implementcachingfor frequentlyaccesseddata'
-              'Adderrorboundaries topreventcascading failures'
-              'Optimizedatabaseindexes forbetterquery performance'
-              'Considerimplementingcircuit breakerpattern'
-            ]
-            errorTrends: [
-              { category: 'authentication'trend: 'decreasing' }
-              { category: 'database'trend: 'stable' }
-              { category: 'ui'trend: 'increasing' }
-            ]
-          }; constmockErrors: ErrorReport[] = [
-            {
-              id: '1'
-              severity: 'high'
-              message: 'Failedtoload userprofiledata'
-              lastOccurrence: newDate(Date.now() - Math.random() * 3600000)
-              occurrenceCount: Math.floor(Math.random() * 50 + 10)
-              context: { component: 'UserProfile'action: 'load' }
-              aiPredictedImpact: Math.random() * 0.8 + 0.2
-              resolutionSuggestions: [
-                'Checkdatabaseconnection pool'
-                'Implementretrymechanism withexponentialbackoff'
-                'Addfallbackto cacheddata'
-              ]
-            }
-            {
-              id: '2'
-              severity: 'medium'
-              message: 'Slowresponsetime insearchfunctionality'
-              lastOccurrence: newDate(Date.now() - Math.random() * 1800000)
-              occurrenceCount: Math.floor(Math.random() * 20 + 5)
-              context: { component: 'SearchBar'action: 'query' }
-              aiPredictedImpact: Math.random() * 0.6 + 0.1
-              resolutionSuggestions: [
-                'Implementsearchresult caching'
-                'Adddebouncingto searchinput'
-                'ConsiderusingElasticsearch forbetterperformance'
-              ]
-            }
-          ].slice(0Math.floor(Math.random() * 2) + 1);
-
-          // Simulateasyncdata loadingawaitnew Promise(resolve = > setTimeout(resolve1000));
-
-          // Updatestatewith mockdatasetMetrics(mockMetrics);
-          setInsights(mockInsights);
-          setErrors(mockErrors);
-
-          console.log('Performancedataloaded successfully');
-        } catch (error) {
-          console.error('Failedtofetch dashboarddata:'error);
-        }
-      };
-
-      loadPerformanceData();
-      constinterval = setInterval(loadPerformanceData30000); // Updateevery30 secondsreturn () => clearInterval(interval);
+      setIsLoading(true);
+      // Simulate data loading
+      setTimeout(() => {
+        setMetrics({
+          errorRate: Math.random() * 0.05,
+          avgResolutionTime: Math.random() * 200 + 100,
+          throughput: Math.random() * 500 + 1000,
+          cpuUsage: Math.random() * 100,
+          memoryUsage: Math.random() * 100,
+          responseTime: Math.random() * 150 + 50
+        });
+        setIsLoading(false);
+      }, 1000);
     }
-  }[isVisible]);
+  }, [isVisible]);
 
-  if (!isVisible) returnnull;
-
-  constgetSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical':
-        return 'text-red-600bg-red-100'; case 'high':
-        return 'text-orange-600bg-orange-100';
-      case 'medium':
-        return 'text-yellow-600bg-yellow-100';
-      case 'low':
-        return 'text-blue-600bg-blue-100';
-      default:
-        return 'text-gray-600bg-gray-100';
-    }
-  };
-
-  constgetTrendIcon = (trend: string) => {
-    switch (trend) {
-      case 'increasing':
-        return '📈'; case 'decreasing':
-        return '📉';
-      case 'stable':
-        return '➡️';
-      default:
-        return '❓';
-    }
-  };
+  if (!isVisible) return null;
 
   return (
-    <divclassName = 'fixedinset-0bg-blackbg-opacity-50flexitems-centerjustify-centerz-50'>
-      <divclassName='bg-whiterounded-lgshadow-xlmax-w-6xlw-fullmax-h-[90vh] overflow-y-autom-4'>
-        <divclassName='p-6'>
-          <divclassName='flexjustify-betweenitems-centermb-6'>
-            <h2className='text-2xlfont-boldtext-gray-800'>
-              🤖 AIPerformanceDashboard
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+              AI Performance Dashboard
             </h2>
-            <buttononClick = { onClose }className = 'text-gray-500hover: text-gray-700text-2xl'
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             >
-              ×
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           </div>
+        </div>
 
-          {/* PerformanceMetrics */}
-          {  metrics  ? (
-            <divclassName = 'gridgrid-cols-1md: grid-cols-2lg : grid-cols-4gap-4mb-8'>
-              <divclassName='bg-gradient-to-rfrom-blue-500to-blue-600text-whitep-4rounded-lg'>
-                <h3className='text-smfont-mediumopacity-90'>
-                  ErrorRate (perhour)
-                </h3>
-                <pclassName = 'text-2xlfont-bold' > {metrics.errorRate.toFixed(2)  }
-                </p>
-              </div>
-              <divclassName = 'bg-gradient-to-rfrom-red-500to-red-600text-whitep-4rounded-lg'>
-                <h3className='text-smfont-mediumopacity-90'>
-                  CriticalErrorsToday
-                </h3>
-                <pclassName='text-2xlfont-bold'>
-                  {metrics.criticalErrorsToday}
-                </p>
-              </div>
-              <divclassName='bg-gradient-to-rfrom-yellow-500to-yellow-600text-whitep-4rounded-lg'>
-                <h3className='text-smfont-mediumopacity-90'>
-                  UserImpactScore
-                </h3>
-                <pclassName='text-2xlfont-bold'>
-                  {metrics.userImpactScore}/100
-                </p>
-              </div>
-              <divclassName='bg-gradient-to-rfrom-green-500to-green-600text-whitep-4rounded-lg'>
-                <h3className='text-smfont-mediumopacity-90'>
-                  AvgResolutionTime
-                </h3>
-                <pclassName='text-2xlfont-bold'>
-                  {Math.round(metrics.avgResolutionTime)}min
-                </p>
-              </div>
+        <div className="p-6">
+          {isLoading ? (
+            <div className="flex items-center justify-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
             </div>
           ) : (
-            <divclassName = 'space-y-6'>
-              <divclassName='bg-gray-50p-8rounded-lgtext-center'>
-                <divclassName='animate-spinrounded-fullh-12w-12border-b-2border-blue-600mx-automb-4' />
-                <pclassName='text-gray-600'>Loadingperformancemetrics...</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Error Rate */}
+              <div className="bg-red-50 dark:bg-red-900/20 rounded-xl p-6 border border-red-200 dark:border-red-800">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-sm font-medium text-red-800 dark:text-red-200">Error Rate</h3>
+                  <span className="text-2xl">⚠️</span>
+                </div>
+                <div className="text-3xl font-bold text-red-600 dark:text-red-400">
+                  {(metrics.errorRate * 100).toFixed(2)}%
+                </div>
+                <div className="text-sm text-red-600 dark:text-red-400 mt-1">
+                  Target: &lt; 1%
+                </div>
+              </div>
+
+              {/* Average Resolution Time */}
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-sm font-medium text-blue-800 dark:text-blue-200">Avg Resolution Time</h3>
+                  <span className="text-2xl">⏱️</span>
+                </div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                  {metrics.avgResolutionTime.toFixed(0)}ms
+                </div>
+                <div className="text-sm text-blue-600 dark:text-blue-400 mt-1">
+                  Target: &lt; 100ms
+                </div>
+              </div>
+
+              {/* Throughput */}
+              <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-sm font-medium text-green-800 dark:text-green-200">Throughput</h3>
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                  {metrics.throughput.toFixed(0)}
+                </div>
+                <div className="text-sm text-green-600 dark:text-green-400 mt-1">
+                  requests/min
+                </div>
+              </div>
+
+              {/* CPU Usage */}
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-xl p-6 border border-yellow-200 dark:border-yellow-800">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-sm font-medium text-yellow-800 dark:text-yellow-200">CPU Usage</h3>
+                  <span className="text-2xl">💻</span>
+                </div>
+                <div className="text-3xl font-bold text-yellow-600 dark:text-yellow-400">
+                  {metrics.cpuUsage.toFixed(1)}%
+                </div>
+                <div className="w-full bg-yellow-200 dark:bg-yellow-800 rounded-full h-2 mt-2">
+                  <div 
+                    className="bg-yellow-600 dark:bg-yellow-400 h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${metrics.cpuUsage}%` }}
+                  ></div>
+                </div>
+              </div>
+
+              {/* Memory Usage */}
+              <div className="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-6 border border-purple-200 dark:border-purple-800">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-sm font-medium text-purple-800 dark:text-purple-200">Memory Usage</h3>
+                  <span className="text-2xl">🧠</span>
+                </div>
+                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">
+                  {metrics.memoryUsage.toFixed(1)}%
+                </div>
+                <div className="w-full bg-purple-200 dark:bg-purple-800 rounded-full h-2 mt-2">
+                  <div 
+                    className="bg-purple-600 dark:bg-purple-400 h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${metrics.memoryUsage}%` }}
+                  ></div>
+                </div>
+              </div>
+
+              {/* Response Time */}
+              <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-6 border border-indigo-200 dark:border-indigo-800">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-sm font-medium text-indigo-800 dark:text-indigo-200">Response Time</h3>
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
+                  {metrics.responseTime.toFixed(0)}ms
+                </div>
+                <div className="text-sm text-indigo-600 dark:text-indigo-400 mt-1">
+                  Target: &lt; 50ms
+                </div>
               </div>
             </div>
           )}
 
-          {/* AIInsights */}
-          {   insights  && (
-            <divclassName = 'gridgrid-cols-1lg: grid-cols-2gap-6mb-8'>
-              <divclassName='bg-gray-50p-4rounded-lg'>
-                <h3className='text-lgfont-semiboldmb-3text-gray-800'>
-                  🎯 High-RiskActions
-                </h3>
-                <divclassName='space-y-2'>
-                  {insights.predictedHighRiskActions.length > 0  ? (
-                    insights.predictedHighRiskActions.map(
-                      (action: stringindex : number) = > (
-                        <divkey = { index    }className = 'bg-red-100text-red-800px-3py-2roundedtext-sm'
-                        >
-                          ⚠️ {action}
-                        </div>
-                      )
-                    )
-                  ) : (
-                    <divclassName = 'text-green-600'>
-                      ✅ Nohigh-riskactionsdetected
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <divclassName = 'bg-gray-50p-4rounded-lg'>
-                <h3className='text-lgfont-semiboldmb-3text-gray-800'>
-                  💡 AIRecommendations
-                </h3>
-                <divclassName='space-y-2'>
-                  { insights.recommendedImprovements.map(
-                    (improvement: stringindex: number) = > (
-                      <divkey = { index  }className = 'bg-blue-100text-blue-800px-3py-2roundedtext-sm'
-                      >
-                        💡 {improvement}
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* ErrorTrends */}
-          {   insights ? .errorTrends  && (
-            <divclassName = 'bg-gray-50p-4rounded-lgmb-8'>
-              <h3className='text-lgfont-semiboldmb-3text-gray-800'>
-                📊 ErrorTrends (7days)
-              </h3>
-              <divclassName = 'gridgrid-cols-1md: grid-cols-3gap-4'>
-                {insights.errorTrends.map((trendindex : number) = > (
-                  <divkey = { index    }className = 'bg-whitep-3roundedborder'>
-                    <divclassName='flexitems-centerjustify-between'>
-                      <spanclassName='font-mediumcapitalize'>
-                        {String(trend.category)}
-                      </span>
-                      <spanclassName = 'text-lg'>
-                        {getTrendIcon(String(trend.trend))}
-                      </span>
-                    </div>
-                    <divclassName = { `text-smmt-1 ${
-                        trend.trend === 'increasing'
-                          ? 'text-red-600'
-                          : trend.trend === 'decreasing'
-                             ? 'text-green-600'
-                             : 'text-gray-600'
-                       }`}
-                    >
-                      {String(trend.trend)}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* RecentErrors */}
-          <divclassName = 'bg-gray-50p-4rounded-lg'>
-            <h3className='text-lgfont-semiboldmb-3text-gray-800'>
-              🚨 RecentErrors
-            </h3>
-            <divclassName='space-y-3max-h-96overflow-y-auto'>
-              { errors.length > 0 ? (
-                errors.map((errorindex) = > (
-                  <divkey = { index  }className = 'bg-whitep-4roundedborder'>
-                    <divclassName='flexitems-startjustify-betweenmb-2'>
-                      <divclassName='flex-1'>
-                        <divclassName='flexitems-centergap-2mb-1' > <spanclassName={`px-2py-1roundedtext-xsfont-medium ${getSeverityColor(error.severity)}`}
-                          >
-                            {error.severity}
-                          </span>
-                          <spanclassName = 'text-xstext-gray-500'>
-                            { newDate(
-                              typeoferror.lastOccurrence === 'string'
-                                 ? error.lastOccurrence : error.lastOccurrence
-                            ).toLocaleString() }
-                          </span>
-                        </div>
-                        <h4className = 'font-mediumtext-gray-800mb-1'>
-                          {error.message}
-                        </h4>
-                        <divclassName='text-smtext-gray-600'>
-                          Component: {error.context.component || 'Unknown'} |
-                          Action: {error.context.action || 'Unknown'} |"Count:{' '}
-                          {String(error.occurrenceCount)}
-                        </div>
-                        {  error.aiPredictedImpact  && (
-                          <divclassName = 'text-smtext-blue-600mt-1' > 🤖 AIImpactScore:{' '  }
-                            {Math.round(error.aiPredictedImpact * 100)}%
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {  error.resolutionSuggestions &&
-                      error.resolutionSuggestions.length > 0  && (
-                        <divclassName = 'mt-3 p-3bg-green-50rounded'>
-                          <h5className='text-smfont-mediumtext-green-800mb-2'>
-                            💡 AISuggestions: </h5>
-                          <ulclassName='text-smtext-green-700space-y-1'>
-                            {error.resolutionSuggestions.map(
-                              (suggestion: stringidx: number) = > (
-                                <likey = { idx   }className = 'flexitems-startgap-2'
-                                >
-                                  <spanclassName='text-green-600'>•</span>
-                                  {suggestion}
-                                </li>
-                              )
-                            )}
-                          </ul>
-                        </div>
-                      )}
-                  </div>
-                ))
-              ) : (
-                <divclassName = 'text-centertext-gray-500py-8'>
-                  ✨ Noerrorsdetected! Yourapplicationis runningsmoothly.
-                </div>
-              )}
-            </div>
+          <div className="mt-8 flex justify-end">
+            <button
+              onClick={onClose}
+              className="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
@@ -351,4 +178,4 @@ constAIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
   );
 };
 
-exportdefaultAIPerformanceDashboard;
+export default AIPerformanceDashboard;
