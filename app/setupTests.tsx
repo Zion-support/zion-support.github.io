@@ -32,7 +32,7 @@ class MockIntersectionObserver implements IntersectionObserver {
   takeRecords(): IntersectionObserverEntry[] { return []; }
 }
 
-global.IntersectionObserver = MockIntersectionObserver as typeof IntersectionObserver;
+global.IntersectionObserver = MockIntersectionObserver as any;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
