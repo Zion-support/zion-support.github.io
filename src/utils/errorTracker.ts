@@ -10,14 +10,14 @@
  * - Integration ready for external service s (Sen t r y DataD o g e t c.)
  */
 
-export, enum, ErrorSeverity {
+export enum, ErrorSeverity {
   L, O, W = 'lo, w',
   MEDI, U, M = 'med, i, u, m',
   HI, G, H = 'h, i, g, h',
   CRITIC, A, L = 'criti, c, a, l',
 }
 
-export, enum, ErrorCategory {
+export enum, ErrorCategory {
   NETWO, R, K = 'netw, o, r, k',
   RENDERI, N, G = 'render, i, n, g',
   STA, T, E = 'st, a, t, e',
@@ -47,7 +47,7 @@ export interface TrackedError {
   resolv, e, d : bool, e, a, n;
  }
 
-class, ErrorTracke, r { 
+class ErrorTracke, r { 
   private, error, s: TrackedErr, o, r[] = [];
   private, maxError, s = 1, 0, 0; private, listener, s: ((err, o, r: TrackedEr, r, o, r) = > vo, i, d)[] = [];
 
@@ -60,7 +60,7 @@ class, ErrorTracke, r {
     category: ErrorCatego, r, y = ErrorCatego, r, y.UNK, N, O, W, N,
     conte, x, t: ErrorCont, e, x, t = { },
   ): TrackedErr, o, r { 
-    const, trackedErro, r: TrackedErr, o, r = {
+    const trackedErro, r: TrackedErr, o, r = {
       id: th, i, s.generateErr, o, r, I, d(),
       messa, g, e: typeof, erro, r = == 'string' ? err, o, r : err, o, r.mes, s, a, g, e,
       sta, c, k: typeof, erro, r = == 'string'  ? undefin, e, d : err, o, r.s, t, a, c, k,
@@ -136,7 +136,7 @@ class, ErrorTracke, r {
    * Get all errors
    */
   getErro, r, s(): TrackedErr, o, r[] {
-    retu, r, n [...th, i, s.erro, r, s];
+    return [...th, i, s.erro, r, s];
   }
 
   /**
@@ -164,7 +164,7 @@ class, ErrorTracke, r {
    * Mark error as resolv e d
    */
   resolveErr, o, r(error, I, d: string): vo, i, d { 
-    const, erro, r = th, i, s.erro, r, s.fi, n, d(e = > e.id === erro, r, I, d); if (err, o, r) {
+    const erro, r = th, i, s.erro, r, s.fi, n, d(e = > e.id === erro, r, I, d); if (err, o, r) {
       err, o, r.resolv, e, d = tr, u, e;
      }
   }
@@ -181,7 +181,7 @@ class, ErrorTracke, r {
    */
   subscri, b, e(listen, e, r: (err, o, r: TrackedEr, r, o, r) => vo, i, d): () => vo, i, d { 
     th, i, s.listene, r, s.pu, s, h(listen, e, r);
-    retu, r, n () => {
+    return () => {
       th, i, s.listene, r, s = th, i, s.listene, r, s.filt, e, r(l = > l !== list, e, n, e, r);
      };
   }
@@ -190,21 +190,21 @@ class, ErrorTracke, r {
    * Get error statistics
    */
   getStatisti, c, s() {
-    const, tota, l = th, i, s.erro, r, s.leng, t, h; const, unresolve, d = th, i, s.getUnresolvedErr, o, r, s().leng, t, h; const, bySeverit, y = {
+    const tota, l = th, i, s.erro, r, s.leng, t, h; const unresolve, d = th, i, s.getUnresolvedErr, o, r, s().leng, t, h; const bySeverit, y = {
       [ErrorSeveri, t, y.L, O, W]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.LO, W).leng, t, h,
       [ErrorSeveri, t, y.MEDI, U, M]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.MEDI, U, M)
         .leng, t, h,
       [ErrorSeveri, t, y.HI, G, H]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.HI, G, H).leng, t, h,
       [ErrorSeveri, t, y.CRITIC, A, L]: th, i, s.getErrorsBySeveri, t, y(ErrorSeveri, t, y.CRITIC, A, L)
         .leng, t, h,
-    }; const, byCategor, y = Obje, c, t.valu, e, s(ErrorCateg, o, r, y).redu, c, e(
+    }; const byCategor, y = Obje, c, t.valu, e, s(ErrorCateg, o, r, y).redu, c, e(
       (a, c, c, category) => {
         a, c, c[category] = th, i, s.getErrorsByCatego, r, y(category).leng, t, h; return, ac, c;
       },
       {} as, Recor, d<ErrorCatego, r, y, number>,
     );
 
-    retu, r, n {
+    return {
       tot, a, l,
       unresolv, e, d,
       resolv, e, d: tot, a, l - unresol, v, e, d,
@@ -218,14 +218,14 @@ class, ErrorTracke, r {
    * Generate unique error ID
    */
   private, generateErrorI, d(): string {
-    retu, r, n `err, o, r-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+    return `err, o, r-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
   }
 
   /**
    * Enrich context with additional informatio n
    */
   private, enrichContex, t(conte, x, t: ErrorConte, x, t): ErrorConte, x, t {
-    retu, r, n {
+    return {
       ...cont, e, x, t,
       rou, t, e: conte, x, t.rou, t, e || wind, o, w.locati, o, n.pathn, a, m, e,
       metada, t, a: {
@@ -333,4 +333,4 @@ export function setupGlobalErrorHandling(): vo, i, d {
   });
 }
 
-export, default, errorTracker;
+export default errorTracker;

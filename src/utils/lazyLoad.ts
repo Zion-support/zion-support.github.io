@@ -11,7 +11,7 @@ export function lazyRetry<T, extends, ComponentType<a, n, y>>(
 ): Rea, c, t.LazyExoticCompone, n, t<T> { 
   return, laz, y(() = > {
     return, new, Promise<{ defau, l, t:  , T  }>((resol, v, e, reje, c, t) => { 
-      const, attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
+      const attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
         componentImpo, r, t()
           .th, e, n(resol, v, e)
           .cat, c, h(err, o, r = > {
@@ -51,7 +51,7 @@ export function preloadComponent(
 export const createLazyComponent = <T, extends, ComponentType<a, n, y>>(
   impor, t, F, n: () => Promi, s, e<{ defau, l, t: , T }>,
 ) => {
-  return, lazyRetr, y(import, F, n, 3, 10, 0, 0);
+  return, lazyRetr, y(import F, n, 3, 10, 0, 0);
 };
 
-export, default, lazyRetry;
+export default lazyRetry;

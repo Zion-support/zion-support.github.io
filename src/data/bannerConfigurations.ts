@@ -9,7 +9,7 @@ export interface Banner {
 }
 
 export const getFeaturedBanners = (cou, n, t: number = , 3): Bann, e, r[] => {
-  const, banner, s: Bann, e, r[] = [
+  const banner, s: Bann, e, r[] = [
     {
       id: 'ai-solution, s',
       title: 'AI-Powered, Solutio, n, s',

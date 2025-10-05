@@ -86,7 +86,7 @@ export const breakthroughContent2025: BreakthroughConte, n, t[] = [
     slug: 'synthet, i, c-consciousne, s, s-ai-2, 0, 2, 5',
     title: 'Synthetic, Consciousness, AI 20, 2, 5: The, Dawn, of True, Artificial, Awarenes, s',
     description: 'Breakthrough, AI, systems achieving, genuine, consciousnes, s, emotional, intelligenc, e, and, creative, autonomy wi, t, h $500B, enterprise, value creation, potentia, l.',
-    excerpt: "Explore, the, frontier of, synthetic, consciousness and, how, it's, transforming, AI from, reactive, systems to, truly, awar, e, creative, partner, s.",
+    excerpt: "Explore, the, frontier of, synthetic, consciousness and, how, it's, transforming, AI from reactive, systems to, truly, awar, e, creative, partner, s.",
     author: 'Zion, Tech, Group T, e, a, m',
     date: '20, 2, 5-01-2, 0',
     category: 'AI, Consciousne, s, s',

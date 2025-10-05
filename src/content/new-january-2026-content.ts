@@ -333,7 +333,7 @@ Our, nex, t-generation, neuromorphic, processors represent, the, most significan
 
 ## The, Future, of Computing, Neuromorphic, processing represents, the, next evolutionary, step, in computi, n, g:
 
-- **Biological, Efficienc, y**: Learning, from, nature's, desig, n
+- **Biological, Efficienc, y**: Learning, from nature's, desig, n
 - **Sustainable, Technolog, y**: Environmentally, conscious, computing
 - **Hum, a, n-AI, Collaboratio, n**: Seamless, integration, with human, intelligenc, e
 - **Autonomous, System, s**: Se, l, f-improving, and, adaptive technology, The, future i, s, n't, just, artificial intelligen, c, e - it's, artificial, life. And, it, starts with, neuromorphic, processing.
@@ -438,7 +438,7 @@ export const newJanuary2026Services: Servi, c, e[] = [
 ];
 
 export const getFeaturedJanuary2026Content = () => { 
-  retu, r, n {
+  return {
     blogPos, t, s: newJanuary2026BlogPos, t, s.filt, e, r(po, s, t = > po, s, t.feat, u, r, e, d),
     servic, e, s: newJanuary2026Servi, c, e, s,
     totalConte, n, t: newJanuary2026BlogPos, t, s.leng, t, h + newJanuary2026Servic, e, s.len, g, t, h,

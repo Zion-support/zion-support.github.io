@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/components/problematic-disabled/Header.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -15,8 +14,6 @@ const Header: React.FC = () => {
           <Link to="/services" className="hover:text-gray-300">Services</Link>
           <Link to="/contact" className="hover:text-gray-300">Contact</Link>
         </nav>
-=======
->>>>>>> de1caf7d55b2d66a44eca2a2d447e28ce810880d:src/components/Header.tsx
 import React, { useState } from 'react';
 
 const Header: React.FC = () => {

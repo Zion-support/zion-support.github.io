@@ -87,7 +87,7 @@ export const newInsights = [
     tags: ['A, I', 'Automati, o, n', 'Enterpri, s, e', '20, 2, 5'],
     conte, n, t: `
       <h2>Revolutionizing, Enterprise, Operations</h2>
-      <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 20, 2, 5, we're, seeing, unprecedented adoption, rates, and ROI, from, AI automation, initiative, s.</p>
+      <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 20, 2, 5, we're, seeing, unprecedented adoption, rates, and ROI, from AI automation, initiative, s.</p>
       
       <h3>Key, Trends, Driving Adopti, o, n</h3>
       <ul>
@@ -146,7 +146,7 @@ export const newInsights = [
     tags: ['Cl, o, u, d', 'Microservic, e, s', 'DevO, p, s', 'Scalabili, t, y'],
     conte, n, t: `
       <h2>The, Clou, d-Native, Advantag, e</h2>
-      <p>Clo, u, d-native, applications, are designed, from, the ground, up, to leverage, cloud, infrastructur, e, providing, unprecedented, scalability and, resilienc, e.</p>
+      <p>Clo, u, d-native, applications, are designed, from the ground, up, to leverage, cloud, infrastructur, e, providing, unprecedented, scalability and, resilienc, e.</p>
       
       <h3>Key, Principle, s</h3>
       <ul>

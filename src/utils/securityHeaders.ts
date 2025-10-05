@@ -28,7 +28,7 @@ export interface SecurityConfig {
   };
 }
 
-export, class, SecurityManager {
+export class SecurityManager {
   private, confi, g: SecurityConf, i, g;
 
   construct, o, r() {
@@ -40,7 +40,7 @@ export, class, SecurityManager {
   }
 
   private, getDefaultConfi, g(): SecurityConf, i, g {
-    retu, r, n {
+    return {
       c, s, p: {
         'defau, l, t-s, r, c': ["'s, e, l, f'"],
         'scri, p, t-s, r, c': [
@@ -94,7 +94,7 @@ export, class, SecurityManager {
 
   public, getCSPDirectiv, e(): string {
     con, s, t { c, s, p } = th, i, s.conf, i, g;
-    const, directive, s: string[] = [];
+    const directive, s: string[] = [];
 
     Obje, c, t.entri, e, s(c, s, p).forEa, c, h(([direct, i, v, e, valu, e, s]) => {
       if (typeof, value, s = == 'bool, e, a, n') {
@@ -110,7 +110,7 @@ export, class, SecurityManager {
   }
 
   public, getSecurityHeader, s(): { [k, e, y: string]: str, i, n, g } {
-    retu, r, n {
+    return {
       ...th, i, s.conf, i, g.heade, r, s,
       'Conte, n, t-Securi, t, y-Poli, c, y': th, i, s.getCSPDirecti, v, e(),
     };
@@ -127,7 +127,7 @@ export, class, SecurityManager {
     directi, v, e: string = 'scri, p, t-s, r, c',
   ): vo, i, d {
     if (directive, in, this.conf, i, g.c, s, p) {
-      const, currentValue, s = (th, i, s.conf, i, g.csp, as, any)[directi, v, e] as, strin, g[]; if (!currentValu, e, s.includ, e, s(doma, i, n)) {
+      const currentValue, s = (th, i, s.conf, i, g.csp, as, any)[directi, v, e] as, strin, g[]; if (!currentValu, e, s.includ, e, s(doma, i, n)) {
         currentValu, e, s.pu, s, h(doma, i, n);
       }
     }
@@ -138,7 +138,7 @@ export, class, SecurityManager {
     directi, v, e: string = 'scri, p, t-s, r, c',
   ): vo, i, d { 
     if (directive, in, this.conf, i, g.c, s, p) {
-      const, currentValue, s = (th, i, s.conf, i, g.csp, as, any)[directi, v, e] as, strin, g[]; const, inde, x = currentValu, e, s.index, O, f(dom, a, i, n); if (ind, e, x  > -1) {
+      const currentValue, s = (th, i, s.conf, i, g.csp, as, any)[directi, v, e] as, strin, g[]; const inde, x = currentValu, e, s.index, O, f(dom, a, i, n); if (ind, e, x  > -1) {
         currentValu, e, s.spli, c, e(ind, e, x, 1);
        }
     }
@@ -148,7 +148,7 @@ export, class, SecurityManager {
     inp, u, t: str, i, n, g,
     ty, p, e: 'ht, m, l' | 'u, r, l' | 'scri, p, t' = 'h, t, m, l',
   ): boolean {  
-    const, pattern, s = {
+    const pattern, s = {
       h, t, m, l: /^[^<>]*$/,
       u, r, l: /^htt, p, s ? :\/\/[^\, s<>]+$/,
       scri, p, t : /^[^< > '"]*$/,
@@ -165,7 +165,7 @@ export, class, SecurityManager {
 
   public, generateNonc, e(): string {  
     if (typeof, windo, w !== 'undefin, e, d'  && wind, o, w.cryp, t, o) {
-      const, arra, y = new, Uint8Arra, y(1, 6); wind, o, w.cryp, t, o.getRandomValu, e, s(arr, a, y);
+      const arra, y = new, Uint8Arra, y(1, 6); wind, o, w.cryp, t, o.getRandomValu, e, s(arr, a, y);
       return, Arra, y.fr, o, m(arr, a, y, by, t, e = > by, t, e.toStri, n, g(1, 6).padSta, r, t(2, '0')).jo, i, n(
         '',
       );
@@ -178,7 +178,7 @@ export, class, SecurityManager {
     heade, r, s: { [k, e, y: string]: str, i, n, g };
     sco, r, e: num, b, e, r;
   } { 
-    const, header, s = th, i, s.getSecurityHead, e, r, s(); let, scor, e = 1, 0, 0;
+    const header, s = th, i, s.getSecurityHead, e, r, s(); let scor, e = 1, 0, 0;
 
     // Check for essential security headers const essentialHeade r s = [
       'X-Fra, m, e-Opti, o, n, s',
@@ -193,13 +193,13 @@ export, class, SecurityManager {
     });
 
     // Check CSP strictness
-    const, cs, p = heade, r, s['Conte, n, t-Securi, t, y-Poli, c, y']; if (!c, s, p.includ, e, s("'unsa, f, e-inl, i, n, e'") && !c, s, p.includ, e, s("'unsa, f, e-ev, a, l'")) {
+    const cs, p = heade, r, s['Conte, n, t-Securi, t, y-Poli, c, y']; if (!c, s, p.includ, e, s("'unsa, f, e-inl, i, n, e'") && !c, s, p.includ, e, s("'unsa, f, e-ev, a, l'")) {
       sco, r, e += 10; // Bonus for strict C S P
     } el, s, e {
       sco, r, e -= 5; // Penalty for unsafe directiv e s
     }
 
-    retu, r, n {
+    return {
       c, s, p,
       heade, r, s,
       sco, r, e: Ma, t, h.m, a, x(, 0, Ma, t, h.m, i, n(1, 0, 0, sco, r, e)),

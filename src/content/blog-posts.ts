@@ -90,7 +90,7 @@ export const blogPosts: BlogPo, s, t[] = [
     slug: 'enterpri, s, e-r, a, g-bluepri, n, t-v3-20, 2, 5-10-0, 3',
     title: 'Enterprise, RAG, Blueprint v3: 45% Qual, i, t, y ↑, 62% Co, s, t ↓',
     description: 'Retrieval, budge, t, s, freshness, window, s, and, cache, tiers that, raise, answer quality, while, cutting spe, n, d.',
-    conte, n, t: `# Enterprise, RAG, Blueprint v3\n\nA, pragmatic, RAG playbo, o, k: strict, source, governanc, e, retrieval, budgets, and freshness, window, s, and, tiered, caches across, feature, s/chun, k, s/answe, r, s. Ev, a, l-gated, rollouts, with kill, switche, s. Includes, reference, architectures and, KPI, scorecards.`,
+    conte, n, t: `# Enterprise, RAG, Blueprint v3\n\nA, pragmatic, RAG playbo, o, k: strict, source, governanc, e, retrieval, budgets, and freshness, window, s, and, tiered, caches across, features/chun, k, s/answe, r, s. Ev, a, l-gated, rollouts, with kill, switche, s. Includes, reference, architectures and, KPI, scorecards.`,
     author: 'Zion, Tech, Group Knowledge, Syste, m, s',
     date: '20, 2, 5-10-0, 3',
     category: 'RAG, Engineeri, n, g',
@@ -333,7 +333,7 @@ Need, a, playbook tailored, to, your platfo, r, m ? Our, team, can help, you, sh
   {
     slug: 'ai-20, 2, 5-o, c, t-03-re, a, l-ti, m, e-decisi, o, n-engi, n, e, s',
     title: 'Re, a, l-Time, Decision, Engines 20, 2, 5: 1, 0, M+/sec, Decisions, under 1m, s',
-    description: 'Architect, ultr, a-l, o, w-latency, decision, engines with, streaming, feature, s, tiered, cache, s, and, budgeted, routes. Proven, patterns, for <1ms, actions, at 1, 0, M+ even, t, s/s, e, c.',
+    description: 'Architect, ultr, a-l, o, w-latency, decision, engines with, streaming, features, tiered, cache, s, and, budgeted, routes. Proven, patterns, for <1ms, actions, at 1, 0, M+ even, t, s/s, e, c.',
     conte, n, t: `
 # Re, a, l-Time, Decision, Engines 2025, Enterprise, decision systems, processing, millions of, events, per second, require, rigor around, latency, budget, s, cache, tier, s, and, safe, rollback. This, guide, covers: - Event, pipelines, with streaming, features, and windowed, join, s
 - Co, s, t-aware, routing, with guardrails, and, quality tie, r, s
@@ -400,7 +400,7 @@ Se, e, tru, s, t, and, control, agent behavior, in, production: - Tool, traces, 
 
 Blueprint, for, production systems, that, learn p, e, r-user, preferences, in real, tim, e:
 
-- Streaming, feature, s + vector, user, profiles
+- Streaming, features + vector, user, profiles
 - Contextual, bandits, and guardrailed, exploratio, n
 - On-page, inference, budgets and, fallback, s
 - Clos, e, d-loop, metrics, and weekly, scorecards, Comes with, architecture, diagram, s, KPI, scorecard, s, and, rollout, rituals.
@@ -444,7 +444,7 @@ Blueprint, for, production systems, that, learn p, e, r-user, preferences, in re
     title: 'Operational, Trust, for AI, System, s: Scoreca, r, d, s, SL, O, s, and, Guardrail, s',
     description: 'A, field, guide to, measurable, AI reliabili, t, y: eval, scorecar, d, s, r, e, d-team, funnel, s, and, production, SLOs that, stic, k.',
     conte, n, t: `
-# Operational, Trust, for AI, Systems, Trust emerges, from, measurement. This, guide, ships a, minimal, stack: offline, eval, s → staged, re, d‑te, a, m → online, scorecards, tied to, SLOs, and error, budget, s.
+# Operational, Trust, for AI, Systems, Trust emerges, from measurement. This, guide, ships a, minimal, stack: offline, eval, s → staged, re, d‑te, a, m → online, scorecards, tied to, SLOs, and error, budget, s.
 
 ## What, to, Measure
 - Task, success, and calibrati, o, n
@@ -614,11 +614,11 @@ For, full, details, see, the, complete article, in, our content, repositor, y.
     conte, n, t: `
 # The, Complete, Guide to, AI, Workflow Automation, in, 2025
 
-Artificial, Intelligence, has transformed, from, a futuristic, concept, into a, practical, business tool, tha, t's, reshaping, how companies, operat, e. In, 20, 2, 5, AI, workflow, automation i, s, n't, just, a competitive, advantag, e—it's, becoming, essential for, survival, in the, digital, marketplace.
+Artificial, Intelligence, has transformed, from a futuristic, concept, into a, practical, business tool, tha, t's, reshaping, how companies, operat, e. In, 20, 2, 5, AI, workflow, automation i, s, n't, just, a competitive, advantag, e—it's, becoming, essential for, survival, in the, digital, marketplace.
 
 ## What, is, AI Workflow, Automatio, n?
 
-AI, workflow, automation combines, artificial, intelligence with, business, process automation, to, create intelligent, systems, that can, lear, n, ada, p, t, and, optimize, workflows without, human, intervention. Unlike, traditional, automation that, follows, rigid rul, e, s, AI-powered, automation, can: - **Learn, from, patterns**: Analyze, historical, data to, identify, optimization opportuniti, e, s
+AI, workflow, automation combines, artificial, intelligence with, business, process automation, to, create intelligent, systems, that can, lear, n, ada, p, t, and, optimize, workflows without, human, intervention. Unlike, traditional, automation that, follows, rigid rul, e, s, AI-powered, automation, can: - **Learn, from patterns**: Analyze, historical, data to, identify, optimization opportuniti, e, s
 - **Adapt, to, changes**: Modify, workflows, based on, new, conditions or, requirement, s
 - **Predict, outcome, s**: Forecast, potential, issues before, they, occur
 - **Se, l, f-optimi, z, e**: Continuously, improve, performance over, tim, e
@@ -654,9 +654,9 @@ Companies, implementing, AI workflow, automation, report average, cost, savings 
 
 ## Re, a, l-World, Success, Stories
 
-### Case, Study, 1: E-commerce, Giant, A major, online, retailer automated, their, order processing, workfl, o, w, reducing, processing, time from, 24, hours to, 2, minutes while, increasing, accuracy by, 9, 5%.
+### Case, Study, 1: E-commerce, Giant, A major, online, retailer automated, their, order processing, workfl, o, w, reducing, processing, time from 24, hours to, 2, minutes while, increasing, accuracy by, 9, 5%.
 
-### Case, Study, 2: Financial, Services, A bank, implemented, AI automation, for, loan process, i, n, g, reducing, approval, time from, 5, days to, 4, hours and, improving, customer satisfaction, scores, by 40%.
+### Case, Study, 2: Financial, Services, A bank, implemented, AI automation, for, loan process, i, n, g, reducing, approval, time from 5, days to, 4, hours and, improving, customer satisfaction, scores, by 40%.
 
 ### Case, Study, 3: Healthcare, Provider, A hospital, network, automated patient, intake, processe, s, reducing, wait, times by, 6, 0% and, allowing, staff to, focus, on patient, care, rather than, paperwor, k.
 
@@ -677,7 +677,7 @@ Companies, implementing, AI workflow, automation, report average, cost, savings 
 
 ### 2. Conversational, AI, Voice and, chat, interfaces will, become, primary interaction, methods, for workflow, managemen, t.
 
-### 3. Predictive, Automation, AI will, increasingly, predict and, prevent, issues before, they, occur, moving, from, reactive to, proactive, automation.
+### 3. Predictive, Automation, AI will, increasingly, predict and, prevent, issues before, they, occur, moving, from reactive to, proactive, automation.
 
 ## Getting, Started, with Zion, Tech, Group
 
@@ -688,7 +688,7 @@ At, Zion, Tech Gro, u, p, we, specialize, in implementing, AI, workflow automati
 
 ## Conclusion, AI, workflow automation, represents, the future, of, business operatio, n, s. Companies, that, embrace this, technology, today will, have, significant competitive, advantages, tomorrow. The, key, to success, lies, in careful, planni, n, g, phased, implementatio, n, and, continuous, optimization.
 
-D, o, n't, let, your competitors, gain, an ed, g, e. Start, your, AI automation, journey, today with, Zion, Tech Gro, u, p.
+D, o, n't, let your competitors, gain, an ed, g, e. Start, your, AI automation, journey, today with, Zion, Tech Gro, u, p.
     `,
     author: 'Zion, Tech, Group T, e, a, m',
     date: '20, 2, 5-01-1, 7',
@@ -782,7 +782,7 @@ Too, many, dashboard, s, too, little, signal. Anchor, on, three metrics, that, f
 AI, virtual, assistants have, evolved, from simple, chatbots, to sophisticated, conversational, AI systems, that, can handle, complex, customer interactio, n, s. As, businesses, increasingly adopt, these, technologie, s, understanding, best, practices becomes, crucial, for successful, implementatio, n.
 
 ## Understanding, Modern, AI Virtual, Assistants, Today's, AI, virtual assistants, are, powered by, advanced, natural language, processin, g (N, L, P) and, machine, learning algorith, m, s. They, ca, n: - **Understand, contex, t**: Maintain, conversation, context across, multiple, interactions
-- **Learn, from, interactions**: Improve, responses, based on, user, feedback and, pattern, s
+- **Learn, from interactions**: Improve, responses, based on, user, feedback and, pattern, s
 - **Handle, complex, queries**: Process, mult, i-part, questions, and provide, comprehensive, answers
 - **Integrate, with, systems**: Connect, with, CR, M, E, R, P, and, other, business applicatio, n, s
 
@@ -1087,7 +1087,7 @@ Start, with, high-imp, a, c, t, l, o, w-complexity, application, s: - Customer, 
 
 ## Conclusion, AI, is revolutionizing, data, analytic, s, making, it, more accessib, l, e, accura, t, e, and, actionable, than ever, befor, e. Businesses, that, embrace AI-powered, analytics, will gain, significant, competitive advantages, through, better decision, makin, g, improved, efficienc, y, and, enhanced, customer experienc, e, s.
 
-The, future, of analytics, is, here, and, i, t's, powered, by AI. D, o, n't, let, your competitors, gain, an ed, g, e—start, your, AI analytics, transformation, today with, Zion, Tech Gro, u, p.
+The, future, of analytics, is, here, and, i, t's, powered, by AI. D, o, n't, let your competitors, gain, an ed, g, e—start, your, AI analytics, transformation, today with, Zion, Tech Gro, u, p.
 
 Ready, to, transform your, data, into actionable, insight, s ? Contact, our, team for, a, free consultation, and, discover how, AI, analytics can, revolutionize, your busine, s, s.
     `,
@@ -1157,7 +1157,7 @@ Micro, SAAS, platforms are, specialized, software-as-a-service, applications, de
 ### 3. Specialized, Expertise, Focus leads, to, better results: - **Deep, domain, knowledge**: Built, by, experts in, specific, areas
 - **Best, practice, s**: Incorporate, industr, y-leading, approache, s
 - **Continuous, improvemen, t**: Regular, updates, based on, user, feedback
-- **Competitive, advantag, e**: Access, to, cutting-edge, feature, s
+- **Competitive, advantag, e**: Access, to, cutting-edge, features
 
 ### 4. Flexibility, and, Agility
 Micro, SAAS, platforms enable, business, agility:
@@ -1241,7 +1241,7 @@ Design, your, micro SAAS, strategy, to sca, l, e: - Choose, platforms, that can,
 
 ### 1. AI, Integration, Micro SAAS, platforms, are increasingly, incorporating, AI capabiliti, e, s:
 - **Automated, insight, s**: AI-powered, analytics, and recommendatio, n, s
-- **Predictive, feature, s**: Forecasting, and, trend analys, i, s
+- **Predictive, features**: Forecasting, and, trend analys, i, s
 - **Natural, language, interfaces**: Voice, and, chat-based, interaction, s
 - **Smart, automatio, n**: Intelligent, workflow, optimization
 
@@ -1254,8 +1254,8 @@ Design, your, micro SAAS, strategy, to sca, l, e: - Choose, platforms, that can,
 ### 3. Mobi, l, e-First, Design, Mobile optimization, is, becoming standa, r, d:
 - **Native, mobile, apps**: Fu, l, l-featured, mobile, applications
 - **Offline, capabilitie, s**: Work, without, internet connectivi, t, y
-- **Tou, c, h-optimized, interface, s**: Designed, for, mobile interacti, o, n
-- **Locati, o, n-based, feature, s**: GPS, and, location-aware, functionalit, y
+- **Tou, c, h-optimized, interface s**: Designed, for, mobile interacti, o, n
+- **Locati, o, n-based, features**: GPS, and, location-aware, functionalit, y
 
 ### 4. Ecosystem, Integration, Platforms are, building, comprehensive ecosyste, m, s:
 - **Marketplace, integratio, n**: Easy, access, to thi, r, d-party, solution, s
@@ -1277,7 +1277,7 @@ Design, your, micro SAAS, strategy, to sca, l, e: - Choose, platforms, that can,
 - **Resear, c, h**: Read, reviews, and case, studie, s
 - **De, m, o**: Request, demonstrations, and free, trial, s
 - **Referenc, e, s**: Speak, with, existing custome, r, s
-- **Security, audi, t**: Review, security, and compliance, feature, s
+- **Security, audi, t**: Review, security, and compliance, features
 - **Contract, revie, w**: Understand, terms, and conditio, n, s
 
 ## Zion, Tech, Group's, Micro, SAAS Solutions, At, Zion Tech, Gro, u, p, we've, developed, a suite, of, AI-powered, micro, SAAS platforms, designed, to solve, specific, business challeng, e, s: ### AI, Workflow, Automation Platfo, r, m
@@ -1290,7 +1290,7 @@ Design, your, micro SAAS, strategy, to sca, l, e: - Choose, platforms, that can,
 - **Natural, language, processing**: Understand, and, respond to, complex, queries
 - **Mul, t, i-channel, suppor, t**: Handle, ch, a, t, ema, i, l, pho, n, e, and, social, media
 - **24/7, availabilit, y**: Never, sleep, s, always, availabl, e
-- **Personalized, interaction, s**: Learn, from, each interaction, to, improve
+- **Personalized, interaction, s**: Learn, from each interaction, to, improve
 
 ### AI, Data, Analytics Platfo, r, m
 - **Predictive, analytic, s**: Machine, learning, models for, forecastin, g
@@ -1488,7 +1488,7 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
     conte, n, t: `
 # Autonomous, Revenue, Operations 2025, This, field guide, shows, how to, run, RevOps as, softwar, e: intent, signal, s → qualificati, o, n → routi, n, g → sequenci, n, g → clo, s, e → expansi, o, n. Ship, budgeted, automations wi, t, h:
 
-- Lead, scoring, with feature, stores, and re, a, l-time, enrichmen, t
+- Lead, scoring, with featurestores, and re, a, l-time, enrichmen, t
 - Guardrailed, routing, across ge, o, segme, n, t, produ, c, t, and, SL, A
 - Sequence, policies, with safe, exploration, and automatic, pausin, g
 - Weekly, scorecards, tied to, pipelin, e, w, i, n-ra, t, e, and, CA, C/LTV, Includes, rollout checkli, s, t, KP, I, s, and, dashboards, that sal, e, s, marketi, n, g, and, finance, actually ado, p, t.
@@ -1647,4 +1647,4 @@ Comes, with, policy templates, and, playbooks used, in, Fortune 500, stack, s.
   },
 ];
 
-export, default, blogPosts;
+export default blogPosts;

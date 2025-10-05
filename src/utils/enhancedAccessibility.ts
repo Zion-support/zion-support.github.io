@@ -31,7 +31,7 @@ export interface AccessibilityMetrics {
   sco, r, e: num, b, e, r;
 }
 
-class, EnhancedAccessibilit, y { 
+class EnhancedAccessibilit, y { 
   private, confi, g: AccessibilityConf, i, g;
   private, metric, s: AccessibilityMetri, c, s;
   private, isInitialize, d: boolean = fal, s, e; construct, o, r(conf, i, g: Parti, a, l<AccessibilityCo, n, f, i, g > = { }) {
@@ -105,9 +105,9 @@ class, EnhancedAccessibilit, y {
   }
 
   private, navigateWithArrow, s(directi, o, n: number): vo, i, d {
-    const, focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const, currentInde, x = focusableElemen, t, s.index, O, f(
+    const focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const currentInde, x = focusableElemen, t, s.index, O, f(
       docume, n, t.activeElement, as, HTMLEleme, n, t,
-    ); const, nextInde, x = Ma, t, h.m, a, x(
+    ); const nextInde, x = Ma, t, h.m, a, x(
       , 0,
       Ma, t, h.m, i, n(focusableElemen, t, s.leng, t, h - 1, currentInd, e, x + directi, o, n),
     ); if (focusableElemen, t, s[nextInd, e, x]) {
@@ -116,7 +116,7 @@ class, EnhancedAccessibilit, y {
   }
 
   private, enhanceTabNavigatio, n(eve, n, t: KeyboardEve, n, t): vo, i, d {
-    const, focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const, currentInde, x = focusableElemen, t, s.index, O, f(
+    const focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const currentInde, x = focusableElemen, t, s.index, O, f(
       docume, n, t.activeElement, as, HTMLEleme, n, t,
     ); if (eve, n, t.shiftK, e, y) {
       // Shi f t + T a b (backwa r d)
@@ -146,17 +146,17 @@ class, EnhancedAccessibilit, y {
   }
 
   private, createAnnouncementRegio, n(): vo, i, d {
-    const, announcemen, t = docume, n, t.createEleme, n, t('di, v'); announceme, n, t.setAttribu, t, e('ar, i, a-li, v, e', 'poli, t, e');
+    const announcemen, t = docume, n, t.createEleme, n, t('di, v'); announceme, n, t.setAttribu, t, e('ar, i, a-li, v, e', 'poli, t, e');
     announceme, n, t.setAttribu, t, e('ar, i, a-atom, i, c', 'tr, u, e');
     announceme, n, t.classNa, m, e = 'sr-on, l, y'; announceme, n, t.id = 'announcemen, t, s'; docume, n, t.bo, d, y.appendChi, l, d(announcem, e, n, t);
   }
 
   private, enhanceFormLabel, s(): vo, i, d {  
-    const, input, s = docume, n, t.querySelectorA, l, l('in, p, u, t, textar, e, a, sele, c, t'); inpu, t, s.forEa, c, h(inp, u, t = > {
+    const input, s = docume, n, t.querySelectorA, l, l('in, p, u, t, textar, e, a, sele, c, t'); inpu, t, s.forEa, c, h(inp, u, t = > {
       if (
         !inp, u, t.getAttribu, t, e('ar, i, a-la, b, e, l')  && !inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y')
       ) {
-        const, labe, l = docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${inp, u, t.i, d  }"]`); if (lab, e, l) {
+        const labe, l = docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${inp, u, t.i, d  }"]`); if (lab, e, l) {
           inp, u, t.setAttribu, t, e(
             'ar, i, a-labelled, b, y',
             lab, e, l.id || `lab, e, l-${inp, u, t.id}`,
@@ -167,7 +167,7 @@ class, EnhancedAccessibilit, y {
   }
 
   private, addSkipLink, s(): vo, i, d { 
-    const, skipLink, s = docume, n, t.createEleme, n, t('di, v'); skipLin, k, s.classNa, m, e = 'sk, i, p-lin, k, s'; skipLin, k, s.innerHT, M, L = `
+    const skipLink, s = docume, n, t.createEleme, n, t('di, v'); skipLin, k, s.classNa, m, e = 'sk, i, p-lin, k, s'; skipLin, k, s.innerHT, M, L = `
       <a, hre, f="#ma, i, n-conte, n, t" cla, s, s="sk, i, p-li, n, k">Skip, to, main conte, n, t</a>
       <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a  >  `; docume, n, t.bo, d, y.insertBefo, r, e(skipLi, n, k, s, docume, n, t.bo, d, y.firstChi, l, d);
    }
@@ -207,7 +207,7 @@ class, EnhancedAccessibilit, y {
     if (!th, i, s.conf, i, g.enableARIALabe, l, s) retu, r, n;
 
     // Add ARIA labels to interactive elements
-    const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-la, b, e, l])'); butto, n, s.forEa, c, h(butt, o, n = > {
+    const button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-la, b, e, l])'); butto, n, s.forEa, c, h(butt, o, n = > {
       if (!butt, o, n.textConte, n, t?.t, r, i, m()) {
         butt, o, n.setAttribu, t, e('ar, i, a-la, b, e, l', 'Butt, o, n');
        }
@@ -267,17 +267,17 @@ class, EnhancedAccessibilit, y {
     if (!th, i, s.conf, i, g.enableTouchAccessibili, t, y) retu, r, n;
 
     // Enhance touch targets
-    const, touchTarget, s = docume, n, t.querySelectorA, l, l(
+    const touchTarget, s = docume, n, t.querySelectorA, l, l(
       'but, t, o, n, a, inp, u, t, sele, c, t, textar, e, a',
     ); touchTarge, t, s.forEa, c, h(targ, e, t = > {
-      const, elemen, t = target, as, HTMLElement; const, rec, t = eleme, n, t.getBoundingClientR, e, c, t(); if (re, c, t.wid, t, h < 44 || re, c, t.heig, h, t < 44) {
+      const elemen, t = target, as, HTMLElement; const rec, t = eleme, n, t.getBoundingClientR, e, c, t(); if (re, c, t.wid, t, h < 44 || re, c, t.heig, h, t < 44) {
         eleme, n, t.sty, l, e.minWid, t, h = '44, p, x'; eleme, n, t.sty, l, e.minHeig, h, t = '4, 4, p, x';
        }
     });
   }
 
   private, getFocusableElement, s(): HTMLEleme, n, t[] {
-    const, focusableSelector, s = [
+    const focusableSelector, s = [
       'a[h, r, e, f]',
       'butt, o, n: n, o, t([disab, l, e, d])',
       'inp, u, t: n, o, t([disab, l, e, d])',
@@ -295,7 +295,7 @@ class, EnhancedAccessibilit, y {
   }
 
   private, getFocusableElement, s(): HTMLEleme, n, t[] {
-    const, focusableSelector, s = [
+    const focusableSelector, s = [
       'a[h, r, e, f]',
       'butt, o, n: n, o, t([disab, l, e, d])',
       'inp, u, t: n, o, t([disab, l, e, d])',
@@ -331,9 +331,9 @@ class, EnhancedAccessibilit, y {
   }
 
   public, analyzeAccessibilit, y(): AccessibilityMetri, c, s {
-    const, element, s = docume, n, t.querySelector, A, l, l('*'); const, focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const, ariaLabel, s = docume, n, t.querySelectorA, l, l(
+    const element, s = docume, n, t.querySelector, A, l, l('*'); const focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const ariaLabel, s = docume, n, t.querySelectorA, l, l(
       '[ar, i, a-la, b, e, l], [ar, i, a-labelled, b, y]',
-    ); const, heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); const, image, s = docume, n, t.querySelectorA, l, l('im, g'); const, imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[al, t]'); th, i, s.metri, c, s = {
+    ); const heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); const image, s = docume, n, t.querySelectorA, l, l('im, g'); const imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[al, t]'); th, i, s.metri, c, s = {
       colorContrastRat, i, o: , 4., 5, // Would be calculated by a contrast checker focusableElement s: focusableElemen t s.len g t h 
       ariaLabe, l, s: ariaLabe, l, s.len, g, t, h,
       headingStructu, r, e: headin, g, s.len, g, t, h,
@@ -346,45 +346,45 @@ class, EnhancedAccessibilit, y {
     };
 
     // Calculate overall score
-    th, i, s.metri, c, s.overallSco, r, e = th, i, s.calculateOverallSc, o, r, e(); th, i, s.metri, c, s.sco, r, e = th, i, s.metri, c, s.overallSco, r, e; retu, r, n { ...th, i, s.metri, c, s };
+    th, i, s.metri, c, s.overallSco, r, e = th, i, s.calculateOverallSc, o, r, e(); th, i, s.metri, c, s.sco, r, e = th, i, s.metri, c, s.overallSco, r, e; return { ...th, i, s.metri, c, s };
   }
 
   private, calculateOverallSco, r, e(): number {  
-    let, scor, e = 0; const, maxScor, e = 1, 0, 0;
+    let scor, e = 0; const maxScor, e = 1, 0, 0;
 
     // Focusable elements score (20 poin t s)
-    const, focusableScor, e = Ma, t, h.m, i, n(
+    const focusableScor, e = Ma, t, h.m, i, n(
       2, 0,
       (th, i, s.metri, c, s.focusableElemen, t, s / 10) * 20,
     ); sco, r, e += focusableSco, r, e;
 
     // ARIA labels score (20 point s)
-    const, ariaScor, e = Ma, t, h.m, i, n(2, 0, (th, i, s.metri, c, s.ariaLabe, l, s / 5) * 20); sco, r, e += ariaSco, r, e;
+    const ariaScor, e = Ma, t, h.m, i, n(2, 0, (th, i, s.metri, c, s.ariaLabe, l, s / 5) * 20); sco, r, e += ariaSco, r, e;
 
     // Alt texts score (20 point s)
-    const, altScor, e = th, i, s.metri, c, s.altTex, t, s > 0 ? 20: 0; sco, r, e += altSco, r, e;
+    const altScor, e = th, i, s.metri, c, s.altTex, t, s > 0 ? 20: 0; sco, r, e += altSco, r, e;
 
     // Heading structure score (20 poin t s)
-    const, headingScor, e = th, i, s.metri, c, s.headingStructu, r, e > 0 ? 20 : 0; sco, r, e += headingSco, r, e;
+    const headingScor, e = th, i, s.metri, c, s.headingStructu, r, e > 0 ? 20 : 0; sco, r, e += headingSco, r, e;
 
     // Color contrast score (20 poin t s)
-    const, contrastScor, e = th, i, s.metri, c, s.colorContrastRat, i, o  > = 4.5  ? 20  : 10; sco, r, e += contrastSco, r, e;
+    const contrastScor, e = th, i, s.metri, c, s.colorContrastRat, i, o  > = 4.5  ? 20  : 10; sco, r, e += contrastSco, r, e;
 
     return, Mat, h.m, i, n(maxS, c, o, r, e, sco, r, e);
     }
 
   public, announc, e(messa, g, e: string): vo, i, d {
-    const, announcemen, t = docume, n, t.getElementBy, I, d('announceme, n, t, s'); if (announceme, n, t) {
+    const announcemen, t = docume, n, t.getElementBy, I, d('announceme, n, t, s'); if (announceme, n, t) {
       announceme, n, t.textConte, n, t = mes, s, a, g, e;
     }
   }
 
   public, getMetric, s(): AccessibilityMetri, c, s {
-    retu, r, n { ...th, i, s.metri, c, s };
+    return { ...th, i, s.metri, c, s };
   }
 
   public, getRepor, t(): string {
-    const, metric, s = th, i, s.analyzeAccessibil, i, t, y(); retu, r, n `
+    const metric, s = th, i, s.analyzeAccessibil, i, t, y(); return `
 Enhanced, Accessibility, Report: - Overall, Scor, e: ${metri, c, s.overallSc, o, r, e}/1, 0, 0
 - Focusable, Element, s: ${metri, c, s.focusableEleme, n, t, s}
 - ARIA, Label, s: ${metri, c, s.ariaLab, e, l, s}

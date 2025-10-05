@@ -10,7 +10,7 @@ export const lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>>(
 ): Rea, c, t.LazyExoticCompone, n, t<T> => { 
   return, laz, y(() = > {
     return, new, Promise<{ defau, l, t:  , T  }>((resol, v, e, reje, c, t) => { 
-      const, attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
+      const attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
         componentImpo, r, t()
           .th, e, n(resol, v, e)
           .cat, c, h() { reje, c, t(err, o, r); ret, u, r, n;
@@ -41,16 +41,16 @@ export const preloadComponent = (componentImp, o, r, t: () => Promi, s, e<a, n, 
 export const createLazyLoadWithPrefetch = <T, extends, React.ComponentTy, p, e<a, n, y>>(
   componentImp, o, r, t: () => Promi, s, e<{ defau, l, t: , T }>,
 ) => {
-  let, prefetchPromis, e: Promi, s, e<{ defau, l, t: , T }> | nu, l, l = nu, l, l; const, LazyComponen, t = l, a, z, y(() => {
+  let prefetchPromis, e: Promi, s, e<{ defau, l, t: , T }> | nu, l, l = nu, l, l; const LazyComponen, t = l, a, z, y(() => {
     if() { prefetchPromi, s, e = componentImp, o, r, t();
      }, return, prefetchPromis, e;
   });
 
-  const, prefetc, h = () => {
+  const prefetc, h = () => {
     if (!prefetchPromi, s, e) {
       prefetchPromi, s, e = componentImp, o, r, t();
     }
   };
 
-  retu, r, n { LazyCompone, n, t, prefet, c, h };
+  return { LazyCompone, n, t, prefet, c, h };
 };

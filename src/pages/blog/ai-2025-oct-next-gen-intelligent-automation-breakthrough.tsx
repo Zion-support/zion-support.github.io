@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link } from 'react-router-dom';
 impo, r, t {
   ArrowLe, f, t,
   Z, a, p,
@@ -8,10 +8,10 @@ impo, r, t {
   Rock, e, t,
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import, Header, from '../../componen, t, s/Head, e, r';
+import Header, from '../../componen, t, s/Head, e, r';
 
-const, NextGenIntelligentAutomationBreakthroug, h = () => { 
-  retu, r, n (
+const NextGenIntelligentAutomationBreakthroug, h = () => { 
+  return (
     <>
       <Helm, e, t>
         <title>
@@ -28,48 +28,48 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
 
-        <article, classNam, e='container, m, x-auto, p, x-6, p, y-20'>
+        <article, className='container, m, x-auto, p, x-6, p, y-20'>
           <Link, t, o='/bl, o, g'
-            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
+            className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
+            <ArrowLeft, className='w-4 h-4, m, r-2' />
             Back, to, Blog
           </Li, n, k>
 
-          <div, classNam, e='m, a, x-w-4xl, m, x-au, t, o'>
-            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
-              <span, classNam, e='px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
+          <div, className='m, a, x-w-4xl, m, x-au, t, o'>
+            <div, className='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
+              <span, className='px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
                 ⭐ FEATUR, E, D
               </sp, a, n>
-              <span, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-gre, e, n-5, 0, 0/30'>
+              <span, className='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-gre, e, n-5, 0, 0/30'>
                 Intelligent, Automatio, n
               </sp, a, n>
-              <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
                 Octo, b, e, r , 1, 20, 2, 5 • 20, min, read
               </sp, a, n>
-            </d, i, v>
+            </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h
-              <span, classNam, e='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
+              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
                 How, A, I-Powered, Workflows, Are Redefining, Business, Operations
               </sp, a, n>
             </h1>
 
-            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
+            <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               Organizations, deploying, next-generation, automation, are achieving, 9, 4% accu, r, a, c, y, 85% cost, reduction, s, and, 10x, productivity gains, through, AI-powered, workflows, that lea, r, n, ada, p, t, and, optimize, autonomously.
             </p>
 
             <div, classNam, e = 'flex, item, s-center, ga, p-4, m, b-12'>
-              <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'>
-                <Brain, classNam, e='w-6 h-6, tex, t-whi, t, e' />
-              </d, i, v>
+              <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'>
+                <Brain, className='w-6 h-6, tex, t-whi, t, e' />
+              </div>
               <d, i, v>
-                <div, classNam, e='te, x, t-white, fon, t-semibo, l, d'>Marcus, Rodrigue, z</d, i, v>
-                <div, classNam, e='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
+                <div, className='te, x, t-white, fon, t-semibo, l, d'>Marcus, Rodrigue, z</div>
+                <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
                   VP, of, Automation Soluti, o, n, s, Zion, Tech, Group
-                </d, i, v>
-              </d, i, v>
+                </div>
+              </div>
             </d, i, v > {/* Key, Metric, s */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-12'>
               {[
@@ -80,27 +80,27 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
               ].m, a, p((metr, i, c, ind, e, x) => (
                 <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30, tex, t-cent, e, r'
                 >
-                  <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
+                  <div, className='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
                     {metr, i, c.val, u, e}
-                  </d, i, v>
-                  <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  </div>
+                  <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                     {metr, i, c.lab, e, l}
-                  </d, i, v>
+                  </div>
                 </di, v>
               ))}
-            </d, i, v>
+            </div>
 
             {/* Conte, n, t */}
             <div, classNam, e = 'prose, pros, e-invert, pros, e-lg, ma, x-w-none, spac, e-y-8, tex, t-zi, o, n-sla, t, e-lig, h, t'>
               <secti, o, n>
-                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <Zap, classNam, e='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
+                <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Zap, className='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
                   The, Evolution, of Automati, o, n
                 </h2>
-                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
-                  <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
+                <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
                     <d, i, v>
-                      <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                      <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                         Traditional, RP, A (20, 1, 5-2, 0, 2, 0)
                       </h3>
                       <ul, classNam, e = 'spa, c, e-y-2'>
@@ -110,44 +110,44 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                         <li>❌ High, maintenance, burden</li>
                         <li>❌ Limited, scalabilit, y</li>
                       </ul>
-                    </d, i, v>
+                    </div>
                     <d, i, v>
-                      <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                      <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                         Intelligent, Automatio, n (2, 0, 2, 5)
                       </h3>
                       <ul, classNam, e = 'spa, c, e-y-2'>
-                        <li, classNam, e='flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <li, className='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>AI-powered, decisio, n-maki, n, g</sp, a, n>
                         </li>
-                        <li, classNam, e='flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <li, className='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>Unstructured, data, processing</sp, a, n>
                         </li>
-                        <li, classNam, e='flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <li, className='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>Se, l, f-learning, workflow, s</sp, a, n>
                         </li>
-                        <li, classNam, e='flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <li, className='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>Autonomous, optimizatio, n</sp, a, n>
                         </li>
-                        <li, classNam, e='flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <li, className='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>Unlimited, scalabilit, y</sp, a, n>
                         </li>
                       </ul>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
+                    </div>
+                  </div>
+                </div>
               </secti, o, n>
 
               <secti, o, n>
-                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
                   Ne, x, t-Gen, Automation, Capabilities
                 </h2>
-                <div, classNam, e='grid, ga, p-6'>
+                <div, className='grid, ga, p-6'>
                   {[
                     {
                       title: 'Cognitive, Process, Automati, o, n',
@@ -177,28 +177,28 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                   ].m, a, p((capabili, t, y, ind, e, x) => (
                     <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                     >
-                      <div, classNam, e='flex, item, s-start, ga, p-4'>
-                        <div, classNam, e='te, x, t-4, x, l'>{capabili, t, y.ic, o, n}</d, i, v>
+                      <div, className='flex, item, s-start, ga, p-4'>
+                        <div, className='te, x, t-4, x, l'>{capabili, t, y.ic, o, n}</div>
                         <div, classNam, e = 'fl, e, x-1'>
-                          <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                          <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
                             {capabili, t, y.title}
                           </h3>
-                          <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                          <p, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
                             {capabili, t, y.description}
                           </p>
-                        </d, i, v>
-                      </d, i, v>
+                        </div>
+                      </div>
                     </di, v>
                   ))}
-                </d, i, v>
+                </div>
               </secti, o, n>
 
               <secti, o, n>
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <TrendingUp, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
+                  <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
                   Industry, Application, s & Resul, t, s
                 </h2>
-                <div, classNam, e='grid, ga, p-6'>
+                <div, className='grid, ga, p-6'>
                   {[
                     {
                       industry: 'Financial, Servi, c, e, s',
@@ -243,64 +243,64 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                   ].m, a, p((a, p, p, ind, e, x) => (
                     <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30'
                     >
-                      <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
-                        <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
+                      <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
+                        <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
                           {a, p, p.industry}
                         </h3>
-                        <div, classNam, e='flex, ga, p-3'>
-                          <span, classNam, e='px-3, p, y-1, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                        <div, className='flex, ga, p-3'>
+                          <span, className='px-3, p, y-1, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
                             {a, p, p.savin, g, s} savin, g, s
                           </sp, a, n>
-                          <span, classNam, e='px-3, p, y-1, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                          <span, className='px-3, p, y-1, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
                             {a, p, p.automati, o, n} automat, e, d
                           </sp, a, n>
-                        </d, i, v>
-                      </d, i, v>
-                      <ul, classNam, e='spa, c, e-y-2'>
+                        </div>
+                      </div>
+                      <ul, className='spa, c, e-y-2'>
                         { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                            <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                             <sp, a, n>{resu, l, t}</sp, a, n>
                           </l, i>
                         ))}
                       </ul>
-                    </d, i, v>
+                    </div>
                   ))}
-                </d, i, v>
+                </div>
               </secti, o, n>
 
               <section, classNam, e = 'bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, vi, a-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/50'>
-                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <Rocket, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
+                <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Rocket, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
                   Start, Your, Automation Journ, e, y
                 </h2>
-                <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-6'>
+                <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-6'>
                   The, intelligent, automation breakthrough, of, 2025 represents, a, n{' '}
-                  <strong, classNam, e='te, x, t-whi, t, e'>inflection, poin, t</stro, n, g> in, business, operations. The, question, is no, longe, r "Should, we, automate?" b, u, t{' '}
-                  <strong, classNam, e='te, x, t-whi, t, e'>
+                  <strong, className='te, x, t-whi, t, e'>inflection, poin, t</stro, n, g> in, business, operations. The, question, is no, longe, r "Should, we, automate?" b, u, t{' '}
+                  <strong, className='te, x, t-whi, t, e'>
                     "How, fast, can we, transfor, m?"
                   </stro, n, g>
                 </p>
-                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
+                <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
                   <Link, t, o='/conta, c, t'
-                    classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-gre, e, n-600, hove, r:to-cy, a, n-600, transitio, n-a, l, l'
+                    className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-gre, e, n-600, hove, r:to-cy, a, n-600, transitio, n-a, l, l'
                   >
                     Book, Free, Assessment
-                    <Rocket, classNam, e='w-5 h-5' />
+                    <Rocket, className='w-5 h-5' />
                   </Li, n, k>
                   <Link, t, o='/servic, e, s/re, a, l-ti, m, e-cogniti, v, e-automati, o, n'
-                    classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-gre, e, n-5, 0, 0/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
+                    className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-gre, e, n-5, 0, 0/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
                   >
                     View, Automation, Platform
                   </Li, n, k>
-                </d, i, v>
+                </div>
               </secti, o, n>
-            </d, i, v>
-          </d, i, v>
+            </div>
+          </div>
         </artic, l, e>
-      </d, i, v>
+      </div>
     </>
   );
 };
 
-export, default, NextGenIntelligentAutomationBreakthrough;
+export default NextGenIntelligentAutomationBreakthrough;

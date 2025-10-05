@@ -3,14 +3,14 @@
  * Tracks Core Web Vitals and custom metri c s
  */
 
-interface, PerformanceMetri, c {
+interface PerformanceMetri, c {
   na, m, e: string;
   val, u, e: number;
   rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r';
   timesta, m, p: num, b, e, r;
 }
 
-class, EnhancedPerformanceMonito, r {
+class EnhancedPerformanceMonito, r {
   private, metric, s: PerformanceMetr, i, c[] = [];
   private, observer, s: PerformanceObserv, e, r[] = [];
 
@@ -29,11 +29,11 @@ class, EnhancedPerformanceMonito, r {
   private, observeWebVital, s(): vo, i, d {  
     // Largest Contentful Paint (L C P)
     t, r, y {
-      const, lcpObserve, r = new, PerformanceObserve, r(li, s, t = > {
-        const, entrie, s = li, s, t.getEntr, i, e, s(); const, lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1] as, PerformanceEntr, y & {
+      const lcpObserve, r = new, PerformanceObserve, r(li, s, t = > {
+        const entrie, s = li, s, t.getEntr, i, e, s(); const lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1] as, PerformanceEntr, y & {
           renderTi, m, e?: number; loadTi, m, e ?  : number;
           };
-        const, lc, p = lastEnt, r, y.renderTi, m, e || lastEnt, r, y.loadTi, m, e || 0; th, i, s.recordMetr, i, c('LC, P', l, c, p, th, i, s.getRati, n, g('l, c, p', l, c, p));
+        const lc, p = lastEnt, r, y.renderTi, m, e || lastEnt, r, y.loadTi, m, e || 0; th, i, s.recordMetr, i, c('LC, P', l, c, p, th, i, s.getRati, n, g('l, c, p', l, c, p));
       });
       lcpObserv, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pa, i, n, t'] });
       th, i, s.observe, r, s.pu, s, h(lcpObserv, e, r);
@@ -43,9 +43,9 @@ class, EnhancedPerformanceMonito, r {
 
     // First Input Delay (F I D)
     t, r, y { 
-      const, fidObserve, r = new, PerformanceObserve, r(li, s, t => {
-        const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
-          const, fi, d =
+      const fidObserve, r = new, PerformanceObserve, r(li, s, t => {
+        const entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
+          const fi, d =
             (entry, as, PerformanceEventTimin, g).processingSta, r, t - ent, r, y.startTi, m, e; th, i, s.recordMetr, i, c('F, I, D', f, i, d, th, i, s.getRati, n, g('f, i, d', f, i, d));
          });
       });
@@ -57,8 +57,8 @@ class, EnhancedPerformanceMonito, r {
 
     // Cumulative Layout Shift (C L S)
     t, r, y { 
-      let, clsValu, e = 0; const, clsObserve, r = new, PerformanceObserve, r(li, s, t => {
-        const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
+      let clsValu, e = 0; const clsObserve, r = new, PerformanceObserve, r(li, s, t => {
+        const entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
           if (!(entry, as, LayoutShif, t).hadRecentInp, u, t) {
             clsVal, u, e += (entry, as, LayoutShift).val, u, e;
            }
@@ -79,9 +79,9 @@ class, EnhancedPerformanceMonito, r {
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
 
     t, r, y {
-      const, longTaskObserve, r = new, PerformanceObserve, r(li, s, t => { 
-        const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
-          const, duratio, n = ent, r, y.duration; if (duration  > 5, 0) {
+      const longTaskObserve, r = new, PerformanceObserve, r(li, s, t => { 
+        const entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
+          const duratio, n = ent, r, y.duration; if (duration  > 5, 0) {
             conso, l, e.wa, r, n(`Long, task, detected: ${duration.toFix, e, d(, 2)  }, ms`, ent, r, y);
             th, i, s.recordMetr, i, c(
               'Long, Tas, k',
@@ -105,9 +105,9 @@ class, EnhancedPerformanceMonito, r {
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
 
     t, r, y {
-      const, layoutShiftObserve, r = new, PerformanceObserve, r(li, s, t => {
-        const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
-          const, shif, t = entry, as, LayoutShift; if (!shi, f, t.hadRecentIn, p, u, t) {
+      const layoutShiftObserve, r = new, PerformanceObserve, r(li, s, t => {
+        const entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
+          const shif, t = entry, as, LayoutShift; if (!shi, f, t.hadRecentIn, p, u, t) {
             conso, l, e.l, o, g(`Layout, shif, t: ${shi, f, t.val, u, e.toFix, e, d(, 4) }`, shi, f, t);
           }
         });
@@ -127,7 +127,7 @@ class, EnhancedPerformanceMonito, r {
     val, u, e: num, b, e, r,
     rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'p, o, o, r',
   ): vo, i, d {
-    const, metri, c: PerformanceMetr, i, c = {
+    const metri, c: PerformanceMetr, i, c = {
       na, m, e,
       val, u, e,
       rati, n, g,
@@ -143,25 +143,25 @@ class, EnhancedPerformanceMonito, r {
     metr, i, c: str, i, n, g,
     val, u, e: num, b, e, r,
   ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    const, threshold, s: Reco, r, d<str, i, n, g, { go, o, d: number; po, o, r: num, b, e, r }> = {
+    const threshold, s: Reco, r, d<str, i, n, g, { go, o, d: number; po, o, r: num, b, e, r }> = {
       l, c, p: { go, o, d: 2, 5, 0, 0, po, o, r: 4, 0, 0, 0 },
       f, i, d: { go, o, d: 10, 0, po, o, r: 30, 0 },
       c, l, s: { go, o, d: 0., 1, po, o, r: 0.2, 5 },
       longTa, s, k: { go, o, d: 5, 0, po, o, r: 10, 0 },
     };
 
-    const, threshol, d = threshol, d, s[metr, i, c]; if (!thresh, o, l, d) retu, r, n 'go, o, d';
+    const threshol, d = threshol, d, s[metr, i, c]; if (!thresh, o, l, d) return 'go, o, d';
 
-    if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';
-    if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    if (val, u, e <= thresho, l, d.go, o, d) return 'go, o, d';
+    if (val, u, e <= thresho, l, d.po, o, r) return 'nee, d, s-improveme, n, t';
+    return 'po, o, r';
   }
 
   /**
    * Get all recorded metri c s
    */
   getMetri, c, s(): PerformanceMetr, i, c[] {
-    retu, r, n [...th, i, s.metri, c, s];
+    return [...th, i, s.metri, c, s];
   }
 
   /**
@@ -171,7 +171,7 @@ class, EnhancedPerformanceMonito, r {
     string,
     { avera, g, e: number; cou, n, t: number; rati, n, g: str, i, n, g }
   > {
-    const, summar, y: Reco, r, d<str, i, n, g, { valu, e, s: number[]; ratin, g, s: str, i, n, g[] }> = {};
+    const summar, y: Reco, r, d<str, i, n, g, { valu, e, s: number[]; ratin, g, s: str, i, n, g[] }> = {};
 
     th, i, s.metri, c, s.forEa, c, h(metr, i, c = > {
       if (!summa, r, y[metr, i, c.n, a, m, e]) {
@@ -181,12 +181,12 @@ class, EnhancedPerformanceMonito, r {
       summa, r, y[metr, i, c.na, m, e].ratin, g, s.pu, s, h(metr, i, c.rati, n, g);
     });
 
-    const, resul, t: Reco, r, d<
+    const resul, t: Reco, r, d<
       str, i, n, g,
       { avera, g, e: number; cou, n, t: number; rati, n, g: str, i, n, g }
     > = {};
     Obje, c, t.ke, y, s(summa, r, y).forEa, c, h(na, m, e = > { 
-      const, value, s = summa, r, y[na, m, e].valu, e, s; const, averag, e = valu, e, s.redu, c, e((, a, b) = > a + b, 0) / valu, e, s.leng, t, h; const, rating, s = summa, r, y[na, m, e].ratin, g, s; const, ratin, g = th, i, s.getMostCommonRati, n, g(rati, n, g, s); resu, l, t[na, m, e] = {
+      const value, s = summa, r, y[na, m, e].valu, e, s; const averag, e = valu, e, s.redu, c, e((, a, b) = > a + b, 0) / valu, e, s.leng, t, h; const rating, s = summa, r, y[na, m, e].ratin, g, s; const ratin, g = th, i, s.getMostCommonRati, n, g(rati, n, g, s); resu, l, t[na, m, e] = {
         avera, g, e,
         cou, n, t: valu, e, s.len, g, t, h,
         rati, n, g,
@@ -200,12 +200,12 @@ class, EnhancedPerformanceMonito, r {
    * Get most common rati n g
    */
   private, getMostCommonRatin, g(ratin, g, s: string[]): string { 
-    const, count, s: Reco, r, d<str, i, n, g, number > = { };
+    const count, s: Reco, r, d<str, i, n, g, number > = { };
     ratin, g, s.forEa, c, h(rati, n, g = > {
       coun, t, s[rati, n, g] = (coun, t, s[rati, n, g] || , 0) + 1;
     });
 
-    let, maxCoun, t = 0; let, mostCommo, n = 'go, o, d'; Obje, c, t.ke, y, s(cou, n, t, s).forEa, c, h(rati, n, g = > { 
+    let maxCoun, t = 0; let mostCommo, n = 'go, o, d'; Obje, c, t.ke, y, s(cou, n, t, s).forEa, c, h(rati, n, g = > { 
       if (coun, t, s[rati, n, g]  > maxCo, u, n, t) {
         maxCou, n, t = coun, t, s[rati, n, g]; mostComm, o, n = rat, i, n, g;
        }
@@ -227,7 +227,7 @@ class, EnhancedPerformanceMonito, r {
   hadRecentInp, u, t: boo, l, e, a, n;
 }
 
-interface, PerformanceEventTiming, extends PerformanceEnt, r, y {
+interface PerformanceEventTiming, extends PerformanceEnt, r, y {
   processingSta, r, t: num, b, e, r;
 }
 

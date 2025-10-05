@@ -115,7 +115,7 @@ class PerformanceMonitor {
     const interactionTypes: (keyof WindowEventMap)[] = ['click', 'scroll', 'keydown', 'resize'];
     
     interactionTypes.forEach(type => {
-      window.addEventListener(type, (event) => {
+        window.addEventListener(type, (event) => {
         const interaction: UserInteraction = {
           type: type as UserInteraction['type'],
           timestamp: performance.now(),
