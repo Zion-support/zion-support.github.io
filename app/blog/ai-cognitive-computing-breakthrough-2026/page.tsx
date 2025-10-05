@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
 import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, Cog, Share, User } from 'lucide-react';
 
+=======
+import Link from 'next/link';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
+import { ArrowLeft } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Share2 } from 'lucide-react';
+import { Bookmark } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Cognitive Computing Breakthrough 2026: Human-Level Reasoning Revolution | Zion Tech Group',
@@ -16,10 +26,10 @@ export default function AICognitiveComputingBreakthrough2026() {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center gap-2 text-blue-200 mb-4">
-            <ArrowRight href="/blog" className="flex items-center gap-1 hover:text-white transition-colors">
+            <Link href="/blog" className="flex items-center gap-1 hover:text-white transition-colors">
               <ArrowLeft />
               Back to Blog
-            </ArrowRight>
+            </Link>
           </div>
           <div>
             <div>
@@ -226,18 +236,18 @@ export default function AICognitiveComputingBreakthrough2026() {
               Ready to harness the power of human-level AI reasoning? Our expert team can help you implement cognitive computing systems that deliver measurable business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <ArrowRight
+              <Link
                 href="/services/ai-cognitive-computing"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
               >
                 Explore Cognitive AI Services
-              </ArrowRight>
-              <ArrowRight
+              </Link>
+              <Link
                 href="/contact"
                 className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
               >
                 Schedule Consultation
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>
@@ -245,7 +255,7 @@ export default function AICognitiveComputingBreakthrough2026() {
         {/* Article Actions */}
         <div className="flex flex-wrap gap-4 pt-8 border-t border-gray-200">
           <button className="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
-            <Share />
+            <Share2 />
             Share Article
           </button>
           <button>
@@ -260,7 +270,7 @@ export default function AICognitiveComputingBreakthrough2026() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Articles</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <ArrowRight href="/blog/ai-autonomous-enterprise-systems-2026" className="group">
+            <Link href="/blog/ai-autonomous-enterprise-systems-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Autonomous Enterprise Systems 2026
@@ -270,9 +280,9 @@ export default function AICognitiveComputingBreakthrough2026() {
                 </p>
                 <div>Read More →</div>
               </div>
-            </ArrowRight>
+            </Link>
             
-            <ArrowRight href="/blog/ai-quantum-computing-2026" className="group">
+            <Link href="/blog/ai-quantum-computing-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Quantum Computing 2026
@@ -282,9 +292,9 @@ export default function AICognitiveComputingBreakthrough2026() {
                 </p>
                 <div>Read More →</div>
               </div>
-            </ArrowRight>
+            </Link>
             
-            <ArrowRight href="/case-studies/ai-cognitive-computing-success-2026" className="group">
+            <Link href="/case-studies/ai-cognitive-computing-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   Cognitive Computing Success Case Study
@@ -294,7 +304,7 @@ export default function AICognitiveComputingBreakthrough2026() {
                 </p>
                 <div>Read More →</div>
               </div>
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>

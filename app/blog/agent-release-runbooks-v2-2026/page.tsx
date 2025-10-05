@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 // import ArrowRight from 'next/link';
 import { AlertTriangle, ArrowRight, Calendar, CheckCircle, Clock, RefreshCw } from 'lucide-react';
 
+=======
+import { Calendar, Clock } from 'lucide-react';
+// import Link from 'next/link';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
 
 export const metadata = {
@@ -26,7 +31,7 @@ export default function Page() {
         <div>
           <div>
 
-            <CheckCircle />
+            <ListChecks />
 
             <span>Agent Ops • 2026</span>
           </div>
@@ -77,10 +82,10 @@ export default function Page() {
           <div>
             <div>
 
-              <h3 className="text-2xl font-bold flex items-center gap-2"><AlertTriangle /> Prevent Regressions</h3>
+              <h3 className="text-2xl font-bold flex items-center gap-2"><FileWarning /> Prevent Regressions</h3>
               <p className="text-white/90">We implement v2 runbooks in 4–6 weeks with audits and training.</p>
             </div>
-            <ArrowRight href="/contact" className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Engage <RefreshCw /></ArrowRight>
+            <Link href="/contact" className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Engage <RefreshCw /></Link>
 
           </div>
         </div>

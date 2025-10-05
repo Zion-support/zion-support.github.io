@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
 import { ArrowRight, Brain, CheckCircle, Cog, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
+=======
+import Link from 'next/link';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
+import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (
@@ -227,18 +239,18 @@ export default function AINextGenEnterpriseAutomation2026() {
             Join the Fortune 500 companies already transforming their operations with Zion Tech Group's next-generation AI automation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight 
+            <Link 
               href="/contact" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/case-studies" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>
@@ -248,20 +260,20 @@ export default function AINextGenEnterpriseAutomation2026() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <ArrowRight 
+              <Link 
                 href="/blog" 
                 className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
               >
                 <ArrowRight />
                 Back to Blog
-              </ArrowRight>
-              <ArrowRight 
+              </Link>
+              <Link 
                 href="/services" 
                 className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Explore Our Services
                 <ArrowRight />
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

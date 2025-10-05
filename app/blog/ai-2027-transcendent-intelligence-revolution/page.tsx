@@ -305,7 +305,11 @@ export default function AI2027TranscendentIntelligenceRevolution() {
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center">
                   <div className="text-6xl mb-4">{metric.icon}</div>
+<<<<<<< HEAD
                   <div className={`text-4xl font-bold ${metric.color}`}>
+=======
+                  <div className={`text-4xl font-bold ${metric.color} mb-2`}>
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
                     {metric.value}
                   </div>
                   <div>

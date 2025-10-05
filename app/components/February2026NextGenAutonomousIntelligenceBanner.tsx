@@ -1,6 +1,6 @@
 import { ArrowRight, TrendingUp, Users, Brain, Zap, Shield } from 'lucide-react';
 
-import { ArrowRight, Brain, Shield, TrendingUp, User, Users, Zap } from 'lucide-react';
+import { ArrowRight, Brain, Shield, TrendingUp, Users, Zap } from 'lucide-react';
 
 import React from 'react';
 

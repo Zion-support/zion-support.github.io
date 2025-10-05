@@ -60,7 +60,11 @@ export default function MetaCognitiveAIBreakthrough2026() {
               ].map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl mb-3">{stat.icon}</div>
+<<<<<<< HEAD
                   <div className={`text-3xl font-bold ${stat.color}`}>
+=======
+                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
                     {stat.value}
                   </div>
                   <div>

@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
 import { ArrowRight, Brain, Cpu, Target, TrendingUp, Zap } from 'lucide-react';
 
+=======
+import Link from 'next/link';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
+import { ArrowRight } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026: Quantum Neural Superintelligence - The Next Evolution of Artificial Intelligence',
@@ -30,20 +40,20 @@ export default function QuantumNeuralSuperintelligence2026() {
               the world's first quantum neural superintelligence—capable of solving problems beyond the reach of classical AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight 
+              <Link 
                 href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 View $25B Success Case Study
                 <ArrowRight />
-              </ArrowRight>
-              <ArrowRight 
+              </Link>
+              <Link 
                 href="/services/quantum-ai-development"
                 className="inline-flex items-center gap-2 border border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500/10 transition-all duration-300"
               >
                 Implement Quantum AI
                 <Brain />
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>
@@ -270,20 +280,20 @@ export default function QuantumNeuralSuperintelligence2026() {
             Join the quantum revolution and unlock solutions to problems that were previously unsolvable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight 
+            <Link 
               href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Quantum Consultation
               <ArrowRight />
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/services/quantum-ai-development"
               className="inline-flex items-center gap-2 border border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500/10 transition-all duration-300"
             >
               Explore Quantum Solutions
               <TrendingUp />
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </div>

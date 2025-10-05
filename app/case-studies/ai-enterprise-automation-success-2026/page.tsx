@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowRight, Bot, CheckCircle, Clock, Cog, DollarSign, Target, User } from 'lucide-react';
+import { ArrowRight, CheckCircle, Clock, DollarSign, Target, User } from 'lucide-react';
 
 
 

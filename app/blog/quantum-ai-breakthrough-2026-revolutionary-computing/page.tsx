@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
 import { ArrowRight, Atom, Brain, CheckCircle, Cog, Target, TrendingUp, Zap } from 'lucide-react';
 
+=======
+import Link from 'next/link';
+import { Atom } from 'lucide-react';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
 
 export default function QuantumAIBreakthrough2026() {
@@ -259,18 +264,18 @@ export default function QuantumAIBreakthrough2026() {
             Join the quantum revolution. Transform your enterprise with the world's first commercially viable quantum-neural AI systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight 
+            <Link 
               href="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Join Early Access Program
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/case-studies" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Quantum Success Stories
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>
@@ -280,20 +285,20 @@ export default function QuantumAIBreakthrough2026() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <ArrowRight 
+              <Link 
                 href="/blog" 
                 className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
               >
                 <ArrowRight />
                 Back to Blog
-              </ArrowRight>
-              <ArrowRight 
+              </Link>
+              <Link 
                 href="/services" 
                 className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Explore Quantum AI Services
                 <ArrowRight />
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

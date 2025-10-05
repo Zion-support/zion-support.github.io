@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
 import { ArrowLeft, ArrowRight, Bookmark, Brain, Calendar, Clock, DollarSign, Shield, Target, TrendingUp, User, Zap } from 'lucide-react';
 
+=======
+import Link from 'next/link';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
+import { ArrowLeft } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Tag } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2025 December: Ultimate Autonomous Enterprise Revolution - Zion Tech Group',
@@ -15,13 +31,13 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <ArrowRight 
+          <Link 
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft />
             Back to Home
-          </ArrowRight>
+          </Link>
         </div>
       </header>
 
@@ -55,7 +71,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
           <div className="flex flex-wrap gap-2">
             {['AI Revolution', 'Autonomous Enterprise', 'December 2025', 'AI Breakthrough', 'Enterprise Automation'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Bookmark />
+                <Tag />
                 {tag}
               </span>
             ))}
@@ -270,12 +286,12 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
                 <p>
                   Schedule a free consultation with our AI experts to discuss your autonomous transformation goals.
                 </p>
-                <ArrowRight 
+                <Link 
                   href="/contact" 
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
                   Schedule Consultation
-                </ArrowRight>
+                </Link>
               </div>
               <div>
                 <p>

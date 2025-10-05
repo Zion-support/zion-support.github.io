@@ -1,11 +1,25 @@
-import ArrowRight from 'next/link';
-import { ArrowLeft, ArrowRight, BookOpen, Bookmark, Brain, CheckCircle, Clock, Share, TrendingUp, User, Zap } from 'lucide-react';
+import Link from 'next/link';
 
+<<<<<<< HEAD
 
 
 import { Metadata } from 'next';
 import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
 
+=======
+import { ArrowLeft } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Tag } from 'lucide-react';
+import { Share2 } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+
+import { Metadata } from 'next';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
 export const metadata: Metadata = {
   title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',
@@ -26,10 +40,10 @@ export default function AutonomousBusinessProcessesBlog() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <ArrowRight href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
+          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
             <ArrowLeft />
             Back to Blog
-          </ArrowRight>
+          </Link>
           
           <div>
             <div>
@@ -41,7 +55,7 @@ export default function AutonomousBusinessProcessesBlog() {
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Bookmark />
+              <Tag />
               AI Innovation
             </div>
           </div>
@@ -60,7 +74,7 @@ export default function AutonomousBusinessProcessesBlog() {
           
           <div className="flex items-center gap-4">
             <button className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              <Share />
+              <Share2 />
               Share
             </button>
             <div>
@@ -378,20 +392,20 @@ export default function AutonomousBusinessProcessesBlog() {
                 Discover how autonomous business processes can revolutionize your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <ArrowRight 
+                <Link 
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-colors"
                 >
                   Schedule Consultation
                   <ArrowLeft />
-                </ArrowRight>
-                <ArrowRight 
+                </Link>
+                <Link 
                   href="/guides/autonomous-business-processes-implementation-guide-2026"
                   className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
                 >
                   Get Implementation Guide
                   <BookOpen />
-                </ArrowRight>
+                </Link>
               </div>
             </div>
           </section>
@@ -404,7 +418,7 @@ export default function AutonomousBusinessProcessesBlog() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Content</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <ArrowRight href="/case-studies/global-manufacturing-autonomous-transformation" className="group">
+            <Link href="/case-studies/global-manufacturing-autonomous-transformation" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Global Manufacturing Transformation</h3>
                 <p className="text-gray-600 mb-4">See how a Fortune 500 manufacturer achieved 85% process automation with our solution.</p>
@@ -413,9 +427,9 @@ export default function AutonomousBusinessProcessesBlog() {
                   <ArrowLeft />
                 </div>
               </div>
-            </ArrowRight>
+            </Link>
             
-            <ArrowRight href="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
+            <Link href="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Implementation Guide</h3>
                 <p className="text-gray-600 mb-4">Complete step-by-step guide to implementing autonomous business processes.</p>
@@ -424,7 +438,7 @@ export default function AutonomousBusinessProcessesBlog() {
                   <ArrowLeft />
                 </div>
               </div>
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </div>

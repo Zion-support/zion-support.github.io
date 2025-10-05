@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
 import { ArrowRight, Calendar, Clock, TrendingUp, User, Users, Zap } from 'lucide-react';
 
+=======
+import Link from 'next/link';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
+import { ArrowRight } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Revolutionary Breakthrough January 2026: 10x Performance Gains | Zion Tech Group',
@@ -397,7 +407,7 @@ export default function AIRevolutionaryBreakthrough2026() {
               Related Breakthrough Technologies
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <ArrowRight href="/blog/ai-quantum-computing-breakthrough-2026" className="group">
+              <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">⚛️</div>
@@ -413,9 +423,9 @@ export default function AIRevolutionaryBreakthrough2026() {
                     </div>
                   </div>
                 </div>
-              </ArrowRight>
+              </Link>
               
-              <ArrowRight href="/blog/ai-autonomous-enterprise-2026" className="group">
+              <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">🏢</div>
@@ -431,9 +441,9 @@ export default function AIRevolutionaryBreakthrough2026() {
                     </div>
                   </div>
                 </div>
-              </ArrowRight>
+              </Link>
               
-              <ArrowRight href="/case-studies/ai-mega-transformation-success-2026" className="group">
+              <Link href="/case-studies/ai-mega-transformation-success-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">🏆</div>
@@ -449,7 +459,7 @@ export default function AIRevolutionaryBreakthrough2026() {
                     </div>
                   </div>
                 </div>
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

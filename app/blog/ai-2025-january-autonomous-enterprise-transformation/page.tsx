@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
+=======
+import Link from 'next/link';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
 export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
   return (
@@ -264,18 +268,18 @@ export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
                 unprecedented operational excellence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <ArrowRight 
+                <Link 
                   href="/contact" 
                   className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
                 >
                   Start Your Transformation
-                </ArrowRight>
-                <ArrowRight 
+                </Link>
+                <Link 
                   href="/case-studies/ai-2025-january-autonomous-enterprise-1-8-billion-success" 
                   className="bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-400 hover:to-green-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
                 >
                   View Success Story
-                </ArrowRight>
+                </Link>
               </div>
             </div>
           </div>
@@ -283,18 +287,18 @@ export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
           {/* Navigation */}
           <div className="mt-12 pt-8 border-t border-slate-800">
             <div className="flex justify-between items-center">
-              <ArrowRight 
+              <Link 
                 href="/blog/ai-2025-january-quantum-neural-revolution"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 ← Previous: Quantum Neural Revolution
-              </ArrowRight>
-              <ArrowRight 
+              </Link>
+              <Link 
                 href="/blog"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 All Articles →
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

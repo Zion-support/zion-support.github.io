@@ -1,6 +1,10 @@
 import { ArrowRight, TrendingUp, Rocket, Target, Zap, Sparkles, Shield } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Bot, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+=======
+import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
 import ArrowRight from 'next/link';
 

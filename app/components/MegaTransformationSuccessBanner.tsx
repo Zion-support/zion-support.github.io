@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowRight, Award, DollarSign, TrendingUp, User, Users } from 'lucide-react';
+import { ArrowRight, Award, DollarSign, TrendingUp, Users } from 'lucide-react';
 
 
 

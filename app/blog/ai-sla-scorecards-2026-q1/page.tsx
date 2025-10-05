@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
 import { Activity, ArrowRight, Calendar, Clock, Gauge, Map, Shield, ShieldCheck } from 'lucide-react';
 
+=======
+import Link from 'next/link';
+import { Gauge, ShieldCheck, Activity } from 'lucide-react';
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
 
 
 export const metadata = {
@@ -86,8 +91,8 @@ export default function Page() {
             <h3 className="text-2xl font-bold mb-2 flex items-center gap-2"><Activity /> Ship with Confidence</h3>
             <p className="text-white/90 mb-4">Use budgets and rollbacks to move fast without surprises. We implement this end‑to‑end in 6–8 weeks.</p>
             <div className="flex gap-3">
-              <ArrowRight href="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight /></ArrowRight>
-              <ArrowRight href="/blog/ai-governance-live-scorecards-2026" className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Read live scorecards</ArrowRight>
+              <Link href="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight /></Link>
+              <Link href="/blog/ai-governance-live-scorecards-2026" className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Read live scorecards</Link>
             </div>
           </div>
         </div>

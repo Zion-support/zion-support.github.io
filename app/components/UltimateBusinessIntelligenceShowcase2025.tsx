@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -123,10 +123,17 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
+<<<<<<< HEAD
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeFilter === filter.id
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+=======
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                activeFilter === filter.id
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
               }`}
             >
               {filter.label} ({filter.count})
@@ -144,7 +151,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* Content Type Badge */}
               <div className="p-4 pb-0">
                 <div className="flex items-center justify-between mb-3">
+<<<<<<< HEAD
                   <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+=======
+                  <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+>>>>>>> b47e9d4b5bd1af22dc9e86e7460fed7a11146a22
                     {item.type}
                   </span>
                   {item.featured && (
@@ -190,12 +201,12 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  <ArrowRight
+                  <Link
                     href={item.url}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center block"
                   >
                     Read {item.type}
-                  </ArrowRight>
+                  </Link>
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <span>{item.readingTime}</span>
                     <span>•</span>
@@ -217,18 +228,18 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               Join Fortune 500 companies transforming their business intelligence with AI-powered analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight
+              <Link
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Free Consultation
-              </ArrowRight>
-              <ArrowRight
+              </Link>
+              <Link
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Download Guide
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>
