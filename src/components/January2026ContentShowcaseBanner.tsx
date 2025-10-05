@@ -1,46 +1,13 @@
 import React from 'react';
-            </p>
-            <ulclassName = 'space-y-2text-smtext-gray-400'>
-              <li>• 94% reasoningaccuracyimprovement</li>
-              <li>• Self-monitoringcapabilities</li>
-              <li>• Adaptivestrategyselection</li>
-              <li>• Meta-learningoptimization</li>
-            </ul>
-          </div>
-        </div>
-        {/* Call-to-ActionSection */}
-        <divclassName = 'text-centermt-20'>
-          <divclassName='inline-blockp-1rounded-2xlbg-gradient-to-rfrom-purple-500via-cyan-500to-indigo-500'>
-            <divclassName='bg-slate-900rounded-xlpx-12py-10'>
-              <h3className='text-3xlfont-boldtext-whitemb-4'>
-                LeadtheAI 2026Revolution
-              </h3>
-              <pclassName='text-gray-400mb-8max-w-2xlmx-auto'>
-                Beamongthe firsttoimplement thesebreakthroughAI
-                technologies. Getapersonalized assessmentanddiscover howautonomousagentsquantumoptimizationandmeta-cognitivereasoningcan transformyourorganization.
-              </p>
-              <divclassName = 'flexflex-colsm: flex-rowgap-4justify-center'>
-                <ahref='/blog'
-                  className='bg-gradient-to-rfrom-purple-500to-cyan-600hover:from-purple-400hover:to-cyan-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50flexitems-centerjustify-centergap-2'
-                >
-                  <SparklesclassName='w-5 h-5' />
-                  <span>ExploreAllAI 2026Articles</span>
-                </a>
-                <ahref='/contact'
-                  className='border-2border-purple-500text-purple-400hover:bg-purple-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300flexitems-centerjustify-centergap-2'
-                >
-                  <span>GetAI2026 Assessment</span>
-                  <ArrowRight,className='w-5 h-5' />
 import { Sparkles, TrendingUp, Zap, ArrowRight, Brain, Atom, Cpu } from 'lucide-react';
+
 const January2026ContentShowcaseBanner: React.FC = () => {
   const latestArticles = [
     {
       id: 1,
-      title:
-        'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
+      title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
       slug: 'ai-2026-autonomous-agent-factories',
-      excerpt:
-        'Discover how autonomous agent factories are revolutionizing enterprise automation in 2026. Learn about self-replicating AI systems, agent orchestration, and achieving 95% automation rates with breakthrough agent factory architectures.',
+      excerpt: 'Discover how autonomous agent factories are revolutionizing enterprise automation in 2026. Learn about self-replicating AI systems, agent orchestration, and achieving 95% automation rates with breakthrough agent factory architectures.',
       category: 'Autonomous AI Systems',
       date: '2025-01-30',
       readTime: '15 min',
@@ -51,11 +18,9 @@ const January2026ContentShowcaseBanner: React.FC = () => {
     },
     {
       id: 2,
-      title:
-        'AI 2026: Quantum Neural Optimization - Revolutionary AI Performance Breakthrough',
+      title: 'AI 2026: Quantum Neural Optimization - Revolutionary AI Performance Breakthrough',
       slug: 'ai-2026-quantum-neural-optimization',
-      excerpt:
-        'Explore quantum neural optimization in 2026: breakthrough AI performance gains, quantum-enhanced neural networks, and achieving 1000x faster training with quantum computing integration.',
+      excerpt: 'Explore quantum neural optimization in 2026: breakthrough AI performance gains, quantum-enhanced neural networks, and achieving 1000x faster training with quantum computing integration.',
       category: 'Quantum AI',
       date: '2025-01-30',
       readTime: '18 min',
@@ -66,11 +31,9 @@ const January2026ContentShowcaseBanner: React.FC = () => {
     },
     {
       id: 3,
-      title:
-        'AI 2026: Meta-Cognitive Reasoning - The Next Frontier of Artificial Intelligence',
+      title: 'AI 2026: Meta-Cognitive Reasoning - The Next Frontier of Artificial Intelligence',
       slug: 'ai-2026-meta-cognitive-reasoning',
-      excerpt:
-        'Explore meta-cognitive reasoning in AI 2026: self-aware AI systems, cognitive architecture breakthroughs, and achieving human-level reasoning through advanced meta-cognition frameworks.',
+      excerpt: 'Explore meta-cognitive reasoning in AI 2026: self-aware AI systems, cognitive architecture breakthroughs, and achieving human-level reasoning through advanced meta-cognition frameworks.',
       category: 'Cognitive AI',
       date: '2025-01-30',
       readTime: '20 min',
@@ -80,6 +43,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
       gradient: 'from-indigo-500 to-purple-600',
     },
   ];
+
   return (
     <div className='py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden'>
       {/* Animated background effects */}
@@ -94,14 +58,14 @@ const January2026ContentShowcaseBanner: React.FC = () => {
           style={{ animationDelay: '4s' }}
         ></div>
       </div>
+      
       <div className='container mx-auto px-6 relative z-10'>
         {/* Header Section */}
         <div className='text-center mb-16'>
           <div className='inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-8 animate-fade-in'>
             <Sparkles className='w-5 h-5 text-purple-400 animate-pulse' />
             <span className='text-purple-400 font-bold text-sm tracking-wider uppercase'>
-              🚀 3 REVOLUTIONARY AI 2026 BREAKTHROUGHS PUBLISHED • January 30,
-              2025
+              🚀 3 REVOLUTIONARY AI 2026 BREAKTHROUGHS PUBLISHED • January 30, 2025
             </span>
             <Sparkles className='w-5 h-5 text-cyan-400 animate-pulse' />
           </div>
@@ -114,6 +78,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             Meta-Cognitive Reasoning. These cutting-edge technologies are
             already transforming Fortune 500 companies worldwide.
           </p>
+          
           {/* Stats */}
           <div className='grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>
             <div className='bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10'>
@@ -150,6 +115,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Featured Articles Grid */}
         <div className='grid lg:grid-cols-3 gap-8 mb-16'>
           {latestArticles.map((article, index) => (
@@ -178,20 +144,24 @@ const January2026ContentShowcaseBanner: React.FC = () => {
                     </span>
                   </div>
                 </div>
+                
                 {/* Category Tag */}
                 <div className='mb-4'>
                   <span className='inline-block px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30'>
                     {article.category}
                   </span>
                 </div>
+                
                 {/* Title */}
                 <h3 className='text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight'>
                   {article.title}
                 </h3>
+                
                 {/* Excerpt */}
                 <p className='text-gray-400 mb-6 leading-relaxed text-sm'>
                   {article.excerpt}
                 </p>
+                
                 {/* Meta Info */}
                 <div className='flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10'>
                   <span className='flex items-center gap-2'>
@@ -206,6 +176,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
                     })}
                   </span>
                 </div>
+                
                 {/* CTA Button */}
                 <a
                   href={`/blog/${article.slug}`}
@@ -218,6 +189,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </div>
           ))}
         </div>
+
         {/* Technology Highlights */}
         <div className='grid md:grid-cols-3 gap-8 mb-16'>
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 text-center'>
@@ -236,6 +208,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
               <li>• Real-time performance monitoring</li>
             </ul>
           </div>
+          
           <div className='bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 rounded-2xl p-8 text-center'>
             <Atom className='w-16 h-16 text-purple-400 mx-auto mb-4' />
             <h3 className='text-2xl font-bold mb-4 text-purple-400'>
@@ -252,6 +225,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
               <li>• Hybrid quantum-classical systems</li>
             </ul>
           </div>
+          
           <div className='bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8 text-center'>
             <Cpu className='w-16 h-16 text-indigo-400 mx-auto mb-4' />
             <h3 className='text-2xl font-bold mb-4 text-indigo-400'>
@@ -269,6 +243,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </ul>
           </div>
         </div>
+
         {/* Call-to-Action Section */}
         <div className='text-center mt-20'>
           <div className='inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-cyan-500 to-indigo-500'>
@@ -301,11 +276,9 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </div>
           </div>
         </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
+
+export default January2026ContentShowcaseBanner;

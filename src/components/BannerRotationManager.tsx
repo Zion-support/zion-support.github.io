@@ -1,7 +1,8 @@
-import React{ lazySuspenseuseStateuseEffect } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
+  // Add banner components here as needed
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -26,19 +27,22 @@ const LoadingFallback = () => (
 /**
  * Banner Rotation Manager Component
  *
- * Manages banner display with lazy loadingrotationand performance optimization
+ * Manages banner display with lazy loading, rotation, and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
-  banners = [
+  banners = [],
+  interval = 8000,
+  autoRotate = true,
+  maxBanners = 3
 }) => {
-  const [currentIndexsetCurrentIndex] = useState(0);
-  const [visibleBannerssetVisibleBanners] = useState<BannerKey[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
 
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
-    const selected = banners.slice(0maxBanners);
+    const selected = banners.slice(0, maxBanners);
     setVisibleBanners(selected);
-  }[bannersmaxBanners]);
+  }, [banners, maxBanners]);
 
   // Auto-rotation logic
   useEffect(() => {
@@ -46,14 +50,14 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
     const timer = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
-    }interval);
+    }, interval);
 
     return () => clearInterval(timer);
-  }[autoRotateintervalvisibleBanners.length]);
+  }, [autoRotate, interval, visibleBanners.length]);
 
   if (visibleBanners.length === 0) return null;
 
-  // For non-rotatingshow all banners
+  // For non-rotating, show all banners
   if (!autoRotate) {
     return (
       <div className='space-y-6'>
@@ -69,7 +73,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     );
   }
 
-  // For rotatingshow current banner with controls
+  // For rotating, show current banner with controls
   const currentBannerKey = visibleBanners[currentIndex];
   const CurrentBanner = bannerComponents[currentBannerKey];
 
@@ -82,7 +86,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
       {/* Rotation controls (if multiple banners) */}
       {visibleBanners.length > 1 && (
         <div className='flex justify-center gap-2 mt-4'>
-          {visibleBanners.map((_index) => (
+          {visibleBanners.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
