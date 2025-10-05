@@ -1,36 +1,34 @@
-// @ts-nocheck
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function AutonomicDecisionEngines2025(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Autonomic Decision Engines — Sub‑100ms, KPI‑Linked Actions</title>
-        <meta
-          name="description"
-          content="Design decision engines with budgeted actions, live canaries, and rollback ready to contain incidents in seconds."
+        <title>Ai 2025 Sept 30 Autonomic Decision Engines</title>
+        <meta 
+          name="description" 
+          content="Learn about ai 2025 sept 30 autonomic decision engines and how it can benefit your enterprise." 
         />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomic-decision-engines"
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomic-decision-engines" 
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Autonomic Decision Engines</h1>
-        <p className="text-zion-slate-light mb-8">Sub‑100ms, KPI‑Linked Actions</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2025 Sept 30 Autonomic Decision Engines</h1>
+        <p className="text-zion-slate-light mb-8">Learn about ai 2025 sept 30 autonomic decision engines and how it can benefit your enterprise.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Build decision engines that act within explicit budgets and against KPI‑linked canaries. This blueprint
-            covers deterministic tools, safety gates, and rollback triggers that contain incidents in under 60 seconds.
+            This comprehensive guide covers ai 2025 sept 30 autonomic decision engines and provides practical insights for enterprise implementation.
           </p>
-          <p>
-            Key practices: intent prefetching, warm pools, policy‑tested routes, and observability from token to KPI.
-          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
 }
-

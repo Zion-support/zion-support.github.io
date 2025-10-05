@@ -9,21 +9,16 @@ export default function BlogPost(): React.JSX.Element {
         <title>Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint
+          content="Cognitive Assistants Blueprint - 92% CSAT, Governed Velocity for AI systems"
         />
-      </Helmet>
-
-      <div className=" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          "
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint"
-        />
-      
+          Cognitive Assistants Blueprint
         </h1>
+        <p className="text-zion-slate-light mb-8">92% CSAT, Governed Velocity</p>
         <p className="text-zion-slate-light mb-8">"
   A practical guide to shipping reliable cognitive assistants with policy tests, live eval scorecards, and KPI‑linked rollback.
         </p>

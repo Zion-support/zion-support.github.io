@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Brain, Zap, Infinity } from 'lucide-react';
 
 const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
   return (
@@ -22,7 +21,7 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold mb-4"
           >
-            <Sparkles className="w-4 h-4" />
+
             🚀🚀🚀 BREAKING: DECEMBER 2025 REVOLUTIONARY BREAKTHROUGH CONTENT - ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
           </motion.div>
           
@@ -56,7 +55,7 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-purple-600 rounded-lg">
-                <Infinity className="w-6 h-6 text-white" />
+
               </div>
               <div>
                 <h3 className="text-xl font-bold text-yellow-400">Quantum AI Transcendence</h3>
@@ -85,7 +84,7 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
             
             <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
               Explore Transcendence
-              <ArrowRight className="w-4 h-4" />
+
             </button>
           </motion.div>
 
@@ -98,7 +97,7 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-blue-600 rounded-lg">
-                <Brain className="w-6 h-6 text-white" />
+
               </div>
               <div>
                 <h3 className="text-xl font-bold text-cyan-400">Enterprise Consciousness</h3>
@@ -127,7 +126,7 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
             
             <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
               Discover Consciousness
-              <ArrowRight className="w-4 h-4" />
+
             </button>
           </motion.div>
 
@@ -140,7 +139,7 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-green-600 rounded-lg">
-                <Zap className="w-6 h-6 text-white" />
+
               </div>
               <div>
                 <h3 className="text-xl font-bold text-emerald-400">Neural-Quantum Superintelligence</h3>
@@ -169,7 +168,7 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
             
             <button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
               Unlock Superintelligence
-              <ArrowRight className="w-4 h-4" />
+
             </button>
           </motion.div>
         </div>
@@ -217,9 +216,9 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
           className="text-center mt-12"
         >
           <button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3 mx-auto">
-            <Sparkles className="w-6 h-6" />
+
             Explore All Revolutionary Breakthroughs
-            <ArrowRight className="w-6 h-6" />
+
           </button>
         </motion.div>
       </div>

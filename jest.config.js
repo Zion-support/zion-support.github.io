@@ -1,16 +1,22 @@
 export default {
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/app/setupTests.tsx'],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.tsx'],
   transform: {
     '^.+\\.(ts|tsx)$': [
       'ts-jest',
       {
         useESM: true,
+        tsconfig: {
+          jsx: 'react-jsx',
+          esModuleInterop: true,
+          allowSyntheticDefaultImports: true,
+        },
       },
     ],
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-error-boundary|@testing-library|react|react-dom|framer-motion|lucide-react|recharts|tailwind-merge|clsx|web-vitals|react-helmet-async|react-router-dom|gray-matter)/)',
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',

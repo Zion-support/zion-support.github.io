@@ -1,30 +1,34 @@
-// @ts-nocheck
+import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const Page = () => {
+export default function BlogPage(): React.JSX.Element {
   return (
-    <div className="container mx-auto px-6 py-12 text-white">
-      <h1 className="text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>
-      <p className="text-zion-slate-light mb-6">
-        Lightweight CI policy tests wired to KPIs so you can ship faster without regressions. v2 adds
-        budgetaware gates, eval scorecards, and rollback hooks.
-      </p>
-      <div className="space-y-4 text-zion-slate-light">
-        <p>
-          Start by defining guardrail checks for prompts, tools, and data egress. Run them in PR and on
-          every release train. Wire failures to actionable owners and dashboards.
-        </p>
-        <p>
-          Add online canaries with KPI-linked budgets to prevent incidents from reaching blast radius.
-          Trigger instant rollback in seconds on budget breach.
-        </p>
-      </div>
-      <div className="mt-8">
-        <Link to="/blog" className="text-cyan-300 underline">Back to Blog</Link>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <Helmet>
+        <title>Ai 2025 Sept 30 Policy Tests Quickstart V2</title>
+        <meta 
+          name="description" 
+          content="Learn about ai 2025 sept 30 policy tests quickstart v2 and how it can benefit your enterprise." 
+        />
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2025-sept-30-policy-tests-quickstart-v2" 
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2025 Sept 30 Policy Tests Quickstart V2</h1>
+        <p className="text-zion-slate-light mb-8">Learn about ai 2025 sept 30 policy tests quickstart v2 and how it can benefit your enterprise.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            This comprehensive guide covers ai 2025 sept 30 policy tests quickstart v2 and provides practical insights for enterprise implementation.
+          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+        </div>
       </div>
     </div>
   );
-};
-
-export default Page;
-
+}

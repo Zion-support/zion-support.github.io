@@ -9,18 +9,17 @@ export default function BlogPost(): React.JSX.Element {
         <title>Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+          content="Intelligent Automation Breakthrough 2025: From Tickets to Outcomes - Shift from manual tickets to outcome-driven automation with safe agent runbooks, budgets, and instant rollback"
+        />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Intelligent Automation Breakthrough 2025
         </h1>
-        <p>
-  Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
-          content="Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.
-        />
+        <p className="text-zion-slate-light mb-8">
+          Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
         </p>
         <div className="prose prose-invert max-w-3xl">
           <p>

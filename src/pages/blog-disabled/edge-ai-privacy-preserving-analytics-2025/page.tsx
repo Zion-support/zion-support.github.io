@@ -10,7 +10,7 @@ export default function BlogPost(): React.JSX.Element {
         <meta 
           name="description" 
           
-        <link rel="canonical" href="https://ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025/>
+        <link rel="canonical" href="https://ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025/>" />
         <link rel=" />
       </Helmet>
 

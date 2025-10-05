@@ -6,7 +6,7 @@ export default function October2025CuttingEdgeInnovationBanner() {
     <section className="relative overflow-hidden bg-gradient-to-r from-slate-950 via-purple-950 to-slate-950 py-20">
       {/* Animated Grid Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
+        <div className="absolute inset-0" style={{>
           backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), 
                            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
           backgroundSize: '50px 50px'
@@ -89,7 +89,7 @@ export default function October2025CuttingEdgeInnovationBanner() {
                       <div className="text-sm text-gray-400">Cost Reduction</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-cyan-400">5x</div>
+                      
                       <div className="text-sm text-gray-400">Faster Deployment</div>
                     </div>
                   </div>

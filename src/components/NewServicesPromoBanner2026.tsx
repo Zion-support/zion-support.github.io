@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, Brain, Cpu, ArrowRight, CheckCircle, TrendingUp, Star, Shield } from 'lucide-react';
 
 const NewServicesPromoBanner2026: React.FC = () => {
   return (
@@ -15,11 +14,11 @@ const NewServicesPromoBanner2026: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-6">
-            <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+
             <span className="text-2xl font-bold uppercase tracking-wider bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
               🔥 NEW SERVICES LAUNCH - JANUARY 2026
             </span>
-            <Star className="w-6 h-6 text-yellow-400 animate-pulse" />
+
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-emerald-200 to-teal-200 bg-clip-text text-transparent">
@@ -37,7 +36,7 @@ const NewServicesPromoBanner2026: React.FC = () => {
           <div className="bg-gradient-to-br from-blue-800/60 to-purple-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/40 hover:border-blue-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
             <div className="text-center mb-6">
               <div className="bg-blue-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors border-2 border-blue-400/30 shadow-lg">
-                <Zap className="w-10 h-10 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
+
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Quantum Edge Fusion Platform</h3>
               <div className="text-blue-300 font-semibold">Starting at $25,000/month</div>
@@ -45,19 +44,19 @@ const NewServicesPromoBanner2026: React.FC = () => {
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">1000x Speed Improvement</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">Sub-millisecond Latency</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">99.99% Reliability</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">90% Energy Reduction</span>
               </div>
             </div>
@@ -82,7 +81,7 @@ const NewServicesPromoBanner2026: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-800/60 to-pink-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/40 hover:border-purple-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
             <div className="text-center mb-6">
               <div className="bg-purple-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors border-2 border-purple-400/30 shadow-lg">
-                <Brain className="w-10 h-10 text-purple-400 group-hover:scale-110 transition-transform duration-300" />
+
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Synthetic Consciousness AI</h3>
               <div className="text-purple-300 font-semibold">Starting at $50,000/month</div>
@@ -90,19 +89,19 @@ const NewServicesPromoBanner2026: React.FC = () => {
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">98.7% Consciousness Accuracy</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">94% Emotional Intelligence</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">87% Creative Originality</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">99.2% Ethical Alignment</span>
               </div>
             </div>
@@ -135,19 +134,19 @@ const NewServicesPromoBanner2026: React.FC = () => {
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">1000x Energy Efficiency</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">10,000x Speed Improvement</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">Real-Time Learning</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100">
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+
                 <span className="font-semibold">99.9% Cognitive Accuracy</span>
               </div>
             </div>
@@ -172,9 +171,9 @@ const NewServicesPromoBanner2026: React.FC = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-2 border-yellow-400/50 rounded-2xl p-8 mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <TrendingUp className="w-8 h-8 text-yellow-400 animate-bounce" />
+
               <span className="text-2xl font-bold text-yellow-300">EARLY ACCESS SPECIAL OFFER</span>
-              <TrendingUp className="w-8 h-8 text-yellow-400 animate-bounce" />
+
             </div>
             <p className="text-white text-xl font-semibold mb-2">
               🎯 Get 40% OFF Your First 6 Months + FREE Implementation
@@ -189,15 +188,15 @@ const NewServicesPromoBanner2026: React.FC = () => {
               to="/contact" 
               className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
             >
-              <Shield className="w-6 h-6" />
+
               Get Started Now
-              <ArrowRight className="w-6 h-6" />
+
             </Link>
             <Link 
               to="/services" 
               className="inline-flex items-center gap-3 border-2 border-white text-white hover:bg-white hover:text-emerald-900 px-10 py-4 rounded-xl font-bold text-xl transition-all duration-300 hover:scale-105"
             >
-              <Star className="w-6 h-6" />
+
               View All Services
             </Link>
           </div>

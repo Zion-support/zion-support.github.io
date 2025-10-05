@@ -9,23 +9,17 @@ export default function BlogPost(): React.JSX.Element {
         <title>AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomous-control-planes
+          content="AI 2025: Autonomous Control Planes - Budgets, Gates, Rollback for AI systems"
         />
-      </Helmet>
-
-      <div className=" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomous-control-planes" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          "
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-autonomous-control-planes"
-        />
-      
+          AI 2025: Autonomous Control Planes
         </h1>
-        <p className="text-zion-slate-light mb-8">"
-  Budgets, policy gates, and instant rollback for safe, scalable autonomy.
+        <p className="text-zion-slate-light mb-8">
+          Budgets, policy gates, and instant rollback for safe, scalable autonomy.
         </p>
         <div className="prose prose-invert max-w-3xl">
           <p>

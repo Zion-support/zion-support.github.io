@@ -150,7 +150,7 @@ const NewServicesShowcase: React.FC = () => {
               <div className="text-gray-300 text-sm">Value Creation</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-extrabold text-orange-400 mb-2">Zero</div>
+              
               <div className="text-gray-300 text-sm">Human Intervention</div>
             </div>
           </div>

@@ -150,10 +150,10 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-800">🤖 AI Performance Dashboard</h2>
-            <button
+            <button>
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700 text-2xl"
-              aria-label="Close dashboard"
+
             >
               ×
             </button>
@@ -230,7 +230,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       <span className="font-medium capitalize">{String(trend.category)}</span>
                       <span className="text-lg">{getTrendIcon(String(trend.trend))}</span>
                     </div>
-                    <div className={`text-sm mt-1 ${
+                    <div className={`text-sm mt-1 ${>
                       trend.trend === 'increasing' ? 'text-red-600' :
                       trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
                     }`}>
