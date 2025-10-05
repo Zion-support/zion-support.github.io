@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
-import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+import { getErrorMetrics, isErrorRateTooHigh } from '../../src/utils/errorHandling';
 
 interface DashboardData {
   performance: ReturnType<typeof performanceOptimizer.getPerformanceSummary>;
