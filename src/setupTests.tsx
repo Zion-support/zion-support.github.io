@@ -26,8 +26,6 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
-<<<<<<< HEAD
-=======
 
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
