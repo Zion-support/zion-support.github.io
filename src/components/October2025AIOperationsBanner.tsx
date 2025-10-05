@@ -40,7 +40,12 @@ const October2025AIOperationsBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 mb-4">
+<<<<<<< HEAD
             <Activity className="w-4 h-4 text-blue-400 animate-pulse" <span className="text-blue-300 text-sm font-semibold">
+=======
+            <Activity className="w-4 h-4 text-blue-400 animate-pulse" />
+            <span className="text-blue-300 text-sm font-semibold">
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               OCTOBER 2025 - BREAKTHROUGH AI OPERATIONS
             </span>
           </div>
@@ -90,7 +95,11 @@ const October2025AIOperationsBanner = () => {
                   {/* CTA */}
                   <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                     <span className="text-sm font-semibold mr-2">Read Full Guide</span>
+<<<<<<< HEAD
 
+=======
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   </div>
                 </div>
               </Link>
@@ -106,7 +115,11 @@ const October2025AIOperationsBanner = () => {
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl hover:from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group"
             >
               <span>Explore All AI Insights</span>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
             <Link
               to="/contact"

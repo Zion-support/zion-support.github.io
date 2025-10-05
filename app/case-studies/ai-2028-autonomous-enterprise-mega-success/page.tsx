@@ -1,4 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+// import { Brain } from "lucide-react";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
 export const metadata = {
   title: 'AI 2028 Autonomous Enterprise: $100B Mega Success Story | Zion Tech Group',
   description: 'How a global manufacturing conglomerate achieved $100B in value creation through complete enterprise autonomy, revolutionizing operations across 100+ facilities worldwide.',

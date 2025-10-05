@@ -8,8 +8,12 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "Autonomous Systems",
       link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",",
       gradient: "from-cyan-500 to-blue-600",
+<<<<<<< HEAD
 icon: '🚀',=======
       icon: '🚀',
+=======
+      icon: <Zap className="w-6 h-6" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
     {",
@@ -18,8 +22,12 @@ icon: '🚀',=======
       category: "LLM Engineering",
       link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",",
       gradient: "from-purple-500 to-pink-600",
+<<<<<<< HEAD
 icon: '🚀',=======
       icon: '🚀',
+=======
+      icon: <Sparkles className="w-6 h-6" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
     {",
@@ -28,8 +36,12 @@ icon: '🚀',=======
       category: "ML at Scale",
       link: "/blog/ai-2025-oct-real-time-personalization-at-scale",",
       gradient: "from-orange-500 to-red-600",
+<<<<<<< HEAD
 icon: '🚀',=======
       icon: '🚀',
+=======
+      icon: <TrendingUp className="w-6 h-6" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];
@@ -47,7 +59,11 @@ icon: '🚀',=======
         {/* Header Section */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-4">
+<<<<<<< HEAD
 
+=======
+            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               🔥 OCTOBER 1, 2025 — JUST PUBLISHED TODAY
             </span>
@@ -112,7 +128,11 @@ key={idx}
                 {/* Read More Link */}
                 <div className="flex items-center text-sm font-semibold text-purple-400 group-hover:text-cyan-400 transition-colors">
                   Read Full Article
+<<<<<<< HEAD
 
+=======
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
               </div>
             </Link>
@@ -128,7 +148,11 @@ key={idx}
             >
               <span className="flex items-center gap-2">
                 Explore All Latest Content
+<<<<<<< HEAD
 
+=======
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </span>
             </Link>
             

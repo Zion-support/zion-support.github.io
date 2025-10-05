@@ -14,11 +14,19 @@ const October2025NextGenAIBanner = () => {
         {/* Breaking News Badge */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 border-2 border-cyan-400/50 rounded-full px-8 py-3 mb-6 shadow-lg backdrop-blur-sm">
+<<<<<<< HEAD
 
             <span className="text-cyan-200 font-bold text-lg uppercase tracking-wider">
               🚀 October 2025 — Next-Gen AI Breakthroughs
             </span>
 
+=======
+            <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
+            <span className="text-cyan-200 font-bold text-lg uppercase tracking-wider">
+              🚀 October 2025 — Next-Gen AI Breakthroughs
+            </span>
+            <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
           
           <h2 className="text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent leading-tight">
@@ -66,7 +74,11 @@ const October2025NextGenAIBanner = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover:bg-cyan-500/40 transition-colors shadow-lg">
+<<<<<<< HEAD
 
+=======
+                <Users className="w-10 h-10 text-cyan-200" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <span className="text-xs text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/20 px-3 py-1 rounded-full">
@@ -86,6 +98,7 @@ const October2025NextGenAIBanner = () => {
 
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-cyan-300 text-sm">
+<<<<<<< HEAD
 
                 <span className="font-semibold">$4.2B annual value creation</span>
               </div>
@@ -95,6 +108,17 @@ const October2025NextGenAIBanner = () => {
               </div>
               <div className="flex items-center gap-2 text-cyan-300 text-sm">
 
+=======
+                <TrendingUp className="w-4 h-4" />
+                <span className="font-semibold">$4.2B annual value creation</span>
+              </div>
+              <div className="flex items-center gap-2 text-cyan-300 text-sm">
+                <Award className="w-4 h-4" />
+                <span className="font-semibold">96% task completion rate</span>
+              </div>
+              <div className="flex items-center gap-2 text-cyan-300 text-sm">
+                <Zap className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="font-semibold">4.7x ROI within 6 months</span>
               </div>
             </div>
@@ -105,7 +129,11 @@ const October2025NextGenAIBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-6 h-6 text-cyan-300 group-hover:translate-x-2 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
 
@@ -116,7 +144,11 @@ const October2025NextGenAIBanner = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-blue-500/30 rounded-2xl group-hover:bg-blue-500/40 transition-colors shadow-lg">
+<<<<<<< HEAD
 
+=======
+                <Zap className="w-10 h-10 text-blue-200" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <span className="text-xs text-blue-300 font-bold uppercase tracking-wider bg-blue-500/20 px-3 py-1 rounded-full">
@@ -136,6 +168,7 @@ const October2025NextGenAIBanner = () => {
 
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-blue-300 text-sm">
+<<<<<<< HEAD
 
                 <span className="font-semibold">$5.9B annual value creation</span>
               </div>
@@ -145,6 +178,17 @@ const October2025NextGenAIBanner = () => {
               </div>
               <div className="flex items-center gap-2 text-blue-300 text-sm">
 
+=======
+                <TrendingUp className="w-4 h-4" />
+                <span className="font-semibold">$5.9B annual value creation</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-300 text-sm">
+                <Award className="w-4 h-4" />
+                <span className="font-semibold">91% reduction in model staleness</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-300 text-sm">
+                <Zap className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="font-semibold">8.3x ROI within 18 months</span>
               </div>
             </div>
@@ -155,7 +199,11 @@ const October2025NextGenAIBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-6 h-6 text-blue-300 group-hover:translate-x-2 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
 
@@ -166,7 +214,11 @@ const October2025NextGenAIBanner = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-purple-500/30 rounded-2xl group-hover:bg-purple-500/40 transition-colors shadow-lg">
+<<<<<<< HEAD
 
+=======
+                <Brain className="w-10 h-10 text-purple-200" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <span className="text-xs text-purple-300 font-bold uppercase tracking-wider bg-purple-500/20 px-3 py-1 rounded-full">
@@ -186,6 +238,7 @@ const October2025NextGenAIBanner = () => {
 
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-purple-300 text-sm">
+<<<<<<< HEAD
 
                 <span className="font-semibold">$7.3B annual value creation</span>
               </div>
@@ -195,6 +248,17 @@ const October2025NextGenAIBanner = () => {
               </div>
               <div className="flex items-center gap-2 text-purple-300 text-sm">
 
+=======
+                <TrendingUp className="w-4 h-4" />
+                <span className="font-semibold">$7.3B annual value creation</span>
+              </div>
+              <div className="flex items-center gap-2 text-purple-300 text-sm">
+                <Award className="w-4 h-4" />
+                <span className="font-semibold">94% improvement in decisions</span>
+              </div>
+              <div className="flex items-center gap-2 text-purple-300 text-sm">
+                <Zap className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="font-semibold">14.7x ROI within 24 months</span>
               </div>
             </div>
@@ -205,7 +269,11 @@ const October2025NextGenAIBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-6 h-6 text-purple-300 group-hover:translate-x-2 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
         </div>
@@ -226,7 +294,11 @@ const October2025NextGenAIBanner = () => {
               className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <span>Explore All Articles</span>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
             
             <Link
@@ -234,7 +306,11 @@ const October2025NextGenAIBanner = () => {
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <span>Schedule Consultation</span>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
           </div>
         </div>
@@ -243,6 +319,7 @@ const October2025NextGenAIBanner = () => {
         <div className="mt-10 text-center">
           <div className="flex flex-wrap gap-6 justify-center items-center text-blue-300 text-sm">
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
 
               <span className="font-semibold">47 Fortune 500 Deployments</span>
             </div>
@@ -252,6 +329,17 @@ const October2025NextGenAIBanner = () => {
             </div>
             <div className="flex items-center gap-2">
 
+=======
+              <Award className="w-5 h-5 text-yellow-400" />
+              <span className="font-semibold">47 Fortune 500 Deployments</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-cyan-400" />
+              <span className="font-semibold">98% Project Success Rate</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-green-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span className="font-semibold">$18.7B Client Value Created</span>
             </div>
           </div>

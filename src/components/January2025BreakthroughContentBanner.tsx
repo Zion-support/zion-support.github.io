@@ -10,7 +10,11 @@ const January2025BreakthroughContentBanner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+<<<<<<< HEAD
 
+=======
+            <Star className="w-4 h-4 fill-current" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span>JUST PUBLISHED: January 2025</span>
           </div>
           
@@ -34,7 +38,11 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-emerald-500/20 rounded-lg">
+<<<<<<< HEAD
 
+=======
+                  <Brain className="w-6 h-6 text-emerald-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
                 <span className="text-emerald-400 text-sm font-medium">Quantum AI</span>
               </div>
@@ -51,7 +59,11 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   to="/blog/ai-quantum-neural-fusion-2025"
                   className="text-emerald-400 hover:text-emerald-300 transition-colors"
                 >
+<<<<<<< HEAD
 
+=======
+                  <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
@@ -63,7 +75,11 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-blue-500/20 rounded-lg">
+<<<<<<< HEAD
 
+=======
+                  <Zap className="w-6 h-6 text-blue-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
                 <span className="text-blue-400 text-sm font-medium">Autonomous Systems</span>
               </div>
@@ -80,7 +96,11 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   to="/blog/autonomous-enterprise-mesh-2025"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
+<<<<<<< HEAD
 
+=======
+                  <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
@@ -92,7 +112,11 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-purple-500/20 rounded-lg">
+<<<<<<< HEAD
 
+=======
+                  <Brain className="w-6 h-6 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
                 <span className="text-purple-400 text-sm font-medium">AI Consciousness</span>
               </div>
@@ -109,7 +133,11 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   to="/blog/synthetic-consciousness-ai-2025"
                   className="text-purple-400 hover:text-purple-300 transition-colors"
                 >
+<<<<<<< HEAD
 
+=======
+                  <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
@@ -146,14 +174,22 @@ const January2025BreakthroughContentBanner: React.FC = () => {
               to="/case-studies"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
             >
+<<<<<<< HEAD
 
+=======
+              <TrendingUp className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               View All Case Studies
             </Link>
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
+<<<<<<< HEAD
 
+=======
+              <CheckCircle className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               Read Latest Articles
             </Link>
           </div>

@@ -41,11 +41,19 @@ const NewContentPromotionalBanner2026 = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
+<<<<<<< HEAD
 
             <span className="text-violet-400 font-bold text-lg tracking-wider uppercase">
               🌍 NEW 2026 CONTENT REVOLUTION
             </span>
 
+=======
+            <Globe className="w-6 h-6 text-violet-400 animate-pulse" />
+            <span className="text-violet-400 font-bold text-lg tracking-wider uppercase">
+              🌍 NEW 2026 CONTENT REVOLUTION
+            </span>
+            <Globe className="w-6 h-6 text-purple-400 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
 
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -99,7 +107,11 @@ key={index}
                 {/* Reader Count */}
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 text-gray-400">
+<<<<<<< HEAD
 
+=======
+                    <Users className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
@@ -110,7 +122,11 @@ key={index}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>
+<<<<<<< HEAD
 
+=======
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </a>
               </div>
             </div>
@@ -130,10 +146,17 @@ key={index}
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
+<<<<<<< HEAD
               { value: '2.5M+', label: 'Global Readers', icon: '🚀 color'
               { value: '$15B+', label: 'Value Created', icon: '🚀 color'
               { value: '99.9%', label: 'Content Accuracy', icon: '🚀 color',
     { value: '150+', label: 'Countries Reached', icon: '🚀 color'
+=======
+              { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8" />, color: 'text-violet-400' },
+              { value: '$15B+', label: 'Value Created', icon: <TrendingUp className="w-8 h-8" />, color: 'text-purple-400' },
+              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
+              { value: '150+', label: 'Countries Reached', icon: <Globe className="w-8 h-8" />, color: 'text-emerald-400' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
@@ -166,7 +189,11 @@ key={index}
                   href="/blog"
                   className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2"
                 >
+<<<<<<< HEAD
 
+=======
+                  <Rocket className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   <span>Explore All Content</span>
                 </a>
                 <a
@@ -174,7 +201,11 @@ key={index}
                   className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Subscribe to Updates</span>
+<<<<<<< HEAD
 
+=======
+                  <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </a>
               </div>
             </div>

@@ -108,7 +108,11 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Explore January 2026 Content
+<<<<<<< HEAD
 
+=======
+            <ArrowRight className="ml-2 w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </a>
         </motion.div>
       </div>

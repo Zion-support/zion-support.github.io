@@ -3,32 +3,56 @@ import React from 'react';
 const ModernFeatures: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: '🚀',
+=======
+      icon: <Zap className="w-10 h-10" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       title: "Lightning Fast",
       description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
     },
     {
+<<<<<<< HEAD
       icon: '🚀',
+=======
+      icon: <Shield className="w-10 h-10" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2, GDPR compliance, and continuous monitoring."
     },
     {
+<<<<<<< HEAD
       icon: '🚀',
+=======
+      icon: <TrendingUp className="w-10 h-10" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       title: "Proven Results",
       description: "Average 300% ROI within 6 months across all client implementations."
     },
     {
+<<<<<<< HEAD
       icon: '🚀',
+=======
+      icon: <Users className="w-10 h-10" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       title: "Expert Support",
       description: "Dedicated team of AI specialists providing 24/7 support and guidance."
     },
     {
+<<<<<<< HEAD
       icon: '🚀',
+=======
+      icon: <Globe className="w-10 h-10" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       title: "Global Scale",
       description: "Infrastructure spanning 50+ countries for low-latency worldwide access."
     },
     {
+<<<<<<< HEAD
       icon: '🚀',
+=======
+      icon: <Award className="w-10 h-10" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       title: "Award Winning",
       description: "Recognized industry leader with 15+ awards for innovation and excellence."
     }

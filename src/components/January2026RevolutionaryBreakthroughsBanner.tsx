@@ -58,7 +58,11 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6"
           >
+<<<<<<< HEAD
 
+=======
+            <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             January 15, 2026 - Revolutionary Breakthroughs
           </motion.div>
           
@@ -163,7 +167,11 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore All Content
+<<<<<<< HEAD
 
+=======
+                <ArrowRight className="ml-2 w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </a>
               <a
                 href="/services"

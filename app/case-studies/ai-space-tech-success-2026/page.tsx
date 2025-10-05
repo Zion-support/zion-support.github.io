@@ -1,4 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+// import { Satellite } from "lucide-react";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
 export const metadata = {
   title: 'AI Space Technology Success 2026: $50M ROI Case Study',
   description: 'See how a leading space organization achieved $50M ROI with AI space technology, 99.9% mission success, and autonomous operations.',

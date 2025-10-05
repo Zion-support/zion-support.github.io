@@ -151,6 +151,10 @@ className={`
                       <div className="text-xs text-gray-400">{item.metrics}</div>
                     )}
                   </div>
+<<<<<<< HEAD
+=======
+                  <ArrowRight className="flex-shrink-0 w-5 h-5 text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
               </Link>
             ))}

@@ -23,7 +23,11 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
+<<<<<<< HEAD
 
+=======
+            <Sparkles className="w-6 h-6 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <div>
               <h3 className="font-bold text-lg">
                 🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2
@@ -37,7 +41,11 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             to="/blog"
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
+<<<<<<< HEAD
 
+=======
+            <TrendingUp className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             Explore Now
           </Link>
         </div>

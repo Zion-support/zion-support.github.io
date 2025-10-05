@@ -6,8 +6,12 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "TechCorp International",
       industry: "Technology",
+<<<<<<< HEAD
 icon: '🚀',=======
       icon: '🚀',
+=======
+      icon: <TrendingUp className="w-8 h-8" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       result: "300% Revenue Growth",
       description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",",
       metrics: [
@@ -20,8 +24,12 @@ icon: '🚀',=======
     {",
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
+<<<<<<< HEAD
 icon: '🚀',=======
       icon: '🚀',
+=======
+      icon: <Target className="w-8 h-8" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       result: "85% Downtime Reduction",
       description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",",
       metrics: [
@@ -34,8 +42,12 @@ icon: '🚀',=======
     {",
       company: "FinanceFirst Bank",
       industry: "Financial Services",
+<<<<<<< HEAD
 icon: '🚀',=======
       icon: '🚀',
+=======
+      icon: <Users className="w-8 h-8" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",",
       metrics: [
@@ -95,7 +107,11 @@ key={index}
                   className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2"
                 >
                   Read Full Story
+<<<<<<< HEAD
 
+=======
+                  <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
@@ -108,7 +124,11 @@ key={index}
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
           >
             View All Success Stories
+<<<<<<< HEAD
 
+=======
+            <ArrowRight className="w-6 h-6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>

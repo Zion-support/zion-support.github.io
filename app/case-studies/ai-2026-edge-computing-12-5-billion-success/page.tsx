@@ -1,4 +1,8 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+// import { User } from "lucide-react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
 
 export const metadata = {
   title: 'AI 2026 Edge Computing $12.5B Success Case Study | Zion Tech Group',

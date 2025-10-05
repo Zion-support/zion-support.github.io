@@ -49,6 +49,7 @@ export default function AI2026BreakthroughInnovationsPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
+<<<<<<< HEAD
             <TrendingUp />
             <span className="font-semibold">2,800% ROI Average</span>
           </div>
@@ -58,6 +59,17 @@ export default function AI2026BreakthroughInnovationsPage() {
           </div>
           <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
             <Brain />
+=======
+            <TrendingUp className="w-5 h-5 text-green-400" />
+            <span className="font-semibold">2,800% ROI Average</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
+            <Users className="w-5 h-5 text-blue-400" />
+            <span className="font-semibold">500+ Fortune 500 Companies</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
+            <Brain className="w-5 h-5 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="font-semibold">99.9% Automation Rate</span>
           </div>
         </div>
@@ -70,7 +82,11 @@ export default function AI2026BreakthroughInnovationsPage() {
           <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-purple-500 p-2 rounded-lg">
+<<<<<<< HEAD
                 <Brain />
+=======
+                <Brain className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h3 className="text-xl font-bold text-gray-900">Quantum-Neural Consciousness Fusion</h3>
             </div>
@@ -79,7 +95,11 @@ export default function AI2026BreakthroughInnovationsPage() {
               achieving 99.999% awareness levels and $847 billion in generated value.
             </p>
             <div className="flex items-center gap-2 text-sm text-purple-600 font-semibold">
+<<<<<<< HEAD
               <Zap />
+=======
+              <Zap className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span>1,000,000x Performance Boost</span>
             </div>
           </div>
@@ -87,7 +107,11 @@ export default function AI2026BreakthroughInnovationsPage() {
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-green-500 p-2 rounded-lg">
+<<<<<<< HEAD
                 <Target />
+=======
+                <Target className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h3 className="text-xl font-bold text-gray-900">Autonomous Enterprise Systems</h3>
             </div>
@@ -96,7 +120,11 @@ export default function AI2026BreakthroughInnovationsPage() {
               reducing operational costs by $2.8 trillion across global enterprises.
             </p>
             <div className="flex items-center gap-2 text-sm text-green-600 font-semibold">
+<<<<<<< HEAD
               <Zap />
+=======
+              <Zap className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span>99.9% Autonomous Operations</span>
             </div>
           </div>
@@ -104,7 +132,11 @@ export default function AI2026BreakthroughInnovationsPage() {
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-blue-500 p-2 rounded-lg">
+<<<<<<< HEAD
                 <TrendingUp />
+=======
+                <TrendingUp className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h3 className="text-xl font-bold text-gray-900">Hyper-Intelligent Analytics</h3>
             </div>
@@ -113,7 +145,11 @@ export default function AI2026BreakthroughInnovationsPage() {
               delivering real-time insights with 100,000x faster decision-making.
             </p>
             <div className="flex items-center gap-2 text-sm text-blue-600 font-semibold">
+<<<<<<< HEAD
               <Zap />
+=======
+              <Zap className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span>100,000x Faster Decisions</span>
             </div>
           </div>
@@ -121,7 +157,11 @@ export default function AI2026BreakthroughInnovationsPage() {
           <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-orange-500 p-2 rounded-lg">
+<<<<<<< HEAD
                 <Users />
+=======
+                <Users className="w-6 h-6 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h3 className="text-xl font-bold text-gray-900">Consciousness-Level AI</h3>
             </div>
@@ -130,7 +170,11 @@ export default function AI2026BreakthroughInnovationsPage() {
               revolutionizing human-AI collaboration and productivity.
             </p>
             <div className="flex items-center gap-2 text-sm text-orange-600 font-semibold">
+<<<<<<< HEAD
               <Zap />
+=======
+              <Zap className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span>99.999% Self-Aware</span>
             </div>
           </div>
@@ -207,21 +251,33 @@ export default function AI2026BreakthroughInnovationsPage() {
             className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
           >
             View Success Story
+<<<<<<< HEAD
             <ArrowRight />
+=======
+            <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
           <Link 
             href="/services/ai-2026-breakthrough-innovations-implementation" 
             className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
           >
             Start Implementation
+<<<<<<< HEAD
             <ArrowRight />
+=======
+            <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
           <Link 
             href="/contact" 
             className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
           >
             Get Expert Consultation
+<<<<<<< HEAD
             <ArrowRight />
+=======
+            <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </section>

@@ -15,9 +15,15 @@ const October2025NewContentBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full px-6 py-2 mb-6">
+<<<<<<< HEAD
 
             <span className="text-purple-300 font-semibold text-sm uppercase tracking-wider">Fresh Insights • October 2025</span>
 
+=======
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+            <span className="text-purple-300 font-semibold text-sm uppercase tracking-wider">Fresh Insights • October 2025</span>
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
           
           <h2 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
@@ -39,7 +45,11 @@ const October2025NewContentBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition-colors">
+<<<<<<< HEAD
 
+=======
+                <Brain className="w-8 h-8 text-purple-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <span className="text-xs text-purple-300 font-semibold uppercase tracking-wide">AI Automation</span>
@@ -61,7 +71,11 @@ const October2025NewContentBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5 text-purple-300 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
 
@@ -72,7 +86,11 @@ const October2025NewContentBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-red-500/20 rounded-xl group-hover:bg-red-500/30 transition-colors">
+<<<<<<< HEAD
 
+=======
+                <Shield className="w-8 h-8 text-red-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 
@@ -94,7 +112,11 @@ const October2025NewContentBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5 text-red-300 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
 
@@ -127,7 +149,11 @@ const October2025NewContentBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5 text-blue-300 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
         </div>
@@ -139,7 +165,11 @@ const October2025NewContentBanner = () => {
             className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <span>Explore All Insights</span>
+<<<<<<< HEAD
 
+=======
+            <ArrowRight className="w-6 h-6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
           
           <p className="text-blue-200/70 text-sm mt-4">

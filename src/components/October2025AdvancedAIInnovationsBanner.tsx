@@ -14,9 +14,15 @@ const October2025AdvancedAIInnovationsBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-400/30 rounded-full px-6 py-2 mb-6">
+<<<<<<< HEAD
 
             <span className="text-indigo-300 font-semibold text-sm uppercase tracking-wider">Breaking Innovation • October 2025</span>
 
+=======
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+            <span className="text-indigo-300 font-semibold text-sm uppercase tracking-wider">Breaking Innovation • October 2025</span>
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
           
           <h2 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
@@ -38,7 +44,11 @@ const October2025AdvancedAIInnovationsBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-indigo-500/20 rounded-xl group-hover:bg-indigo-500/30 transition-colors">
+<<<<<<< HEAD
 
+=======
+                <Brain className="w-8 h-8 text-indigo-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <span className="text-xs text-indigo-300 font-semibold uppercase tracking-wide">Neuromorphic AI</span>
@@ -60,7 +70,11 @@ const October2025AdvancedAIInnovationsBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5 text-indigo-300 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
 
@@ -71,7 +85,12 @@ const October2025AdvancedAIInnovationsBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition-colors">
+<<<<<<< HEAD
                 <Database className="w-8 h-8 text-purple-300"</div>
+=======
+                <Database className="w-8 h-8 text-purple-300" />
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <div className="flex-1">
                 <span className="text-xs text-purple-300 font-semibold uppercase tracking-wide">Data Engineering</span>
               </div>
@@ -92,7 +111,11 @@ const October2025AdvancedAIInnovationsBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5 text-purple-300 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
 
@@ -103,7 +126,11 @@ const October2025AdvancedAIInnovationsBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-pink-500/20 rounded-xl group-hover:bg-pink-500/30 transition-colors">
+<<<<<<< HEAD
 
+=======
+                <Atom className="w-8 h-8 text-pink-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <span className="text-xs text-pink-300 font-semibold uppercase tracking-wide">Quantum ML</span>
@@ -125,7 +152,11 @@ const October2025AdvancedAIInnovationsBanner = () => {
                 <span>•</span>
                 <span>Oct 1, 2025</span>
               </div>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-5 h-5 text-pink-300 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
         </div>
@@ -137,7 +168,11 @@ const October2025AdvancedAIInnovationsBanner = () => {
             className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <span>Discover More Innovations</span>
+<<<<<<< HEAD
 
+=======
+            <ArrowRight className="w-6 h-6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
           
           <p className="text-indigo-200/70 text-sm mt-4">

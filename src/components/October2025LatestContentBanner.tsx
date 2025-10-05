@@ -37,7 +37,11 @@ const October2025LatestContentBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-cyan-600/20 border border-violet-500/30 rounded-full px-6 py-2 mb-6">
+<<<<<<< HEAD
 
+=======
+            <Sparkles className="w-5 h-5 text-violet-400 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="text-violet-300 font-semibold">NEW CONTENT - OCTOBER 2025</span>
           </div>
           
@@ -73,7 +77,11 @@ const October2025LatestContentBanner = () => {
                 
                 <div className="flex items-center gap-2 text-violet-400 font-semibold group-hover:gap-4 transition-all">
                   <span>Read More</span>
+<<<<<<< HEAD
 
+=======
+                  <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
               </Link>
             );
@@ -115,7 +123,11 @@ const October2025LatestContentBanner = () => {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-lg hover:shadow-violet-500/50"
           >
             Explore All Articles
+<<<<<<< HEAD
 
+=======
+            <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>

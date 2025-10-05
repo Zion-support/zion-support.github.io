@@ -33,6 +33,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
         </h1>
         <div className="flex items-center gap-6 text-gray-600 mb-8">
           <div className="flex items-center gap-2">
+<<<<<<< HEAD
             <Clock />
             <span>28 min read</span>
           </div>
@@ -42,6 +43,17 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           </div>
           <div className="flex items-center gap-2">
             <Users />
+=======
+            <Clock className="w-5 h-5" />
+            <span>28 min read</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Globe className="w-5 h-5" />
+            <span>Metaverse</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span>Enterprise</span>
           </div>
         </div>
@@ -54,7 +66,11 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
               <div className="w-24 h-24 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+<<<<<<< HEAD
                 <Globe />
+=======
+                <Globe className="w-12 h-12" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h2 className="text-3xl font-bold mb-4">Metaverse Enterprise</h2>
               <p className="text-xl opacity-90">The Future of Business Operations</p>
@@ -149,7 +165,11 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+<<<<<<< HEAD
                 <Users />
+=======
+                <Users className="w-6 h-6 text-blue-600" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Virtual Workspaces</h4>
             </div>
@@ -164,7 +184,11 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+<<<<<<< HEAD
                 <Zap />
+=======
+                <Zap className="w-6 h-6 text-purple-600" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h4 className="text-xl font-semibold text-gray-900">AI-Powered Training</h4>
             </div>
@@ -179,7 +203,11 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+<<<<<<< HEAD
                 <Target />
+=======
+                <Target className="w-6 h-6 text-green-600" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Virtual Events & Conferences</h4>
             </div>
@@ -194,7 +222,11 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+<<<<<<< HEAD
                 <Globe />
+=======
+                <Globe className="w-6 h-6 text-orange-600" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Customer Experience</h4>
             </div>

@@ -59,7 +59,11 @@ export default function PostBySlug(): React.JSX.Element {
           <div className="max-w-3xl mx-auto pt-20">
             <h1 className="text-3xl font-bold mb-4">Article not found</h1>
             <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
+<<<<<<< HEAD
             <Link to="/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">
+=======
+            <Link to="/<blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <ArrowLeft className="w-4 h-4" />
               Back to Blog
             </Link>
@@ -81,7 +85,11 @@ export default function PostBySlug(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
         <div className="max-w-4xl mx-auto px-6 py-24">
+<<<<<<< HEAD
           <Link to="/blog" className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
+=======
+          <Link to="/<blog" className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
           </Link>

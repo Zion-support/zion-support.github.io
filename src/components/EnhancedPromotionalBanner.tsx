@@ -34,7 +34,11 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             {banner.ctaText}
+<<<<<<< HEAD
 
+=======
+            <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>

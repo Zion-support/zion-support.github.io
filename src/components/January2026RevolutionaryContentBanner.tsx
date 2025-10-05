@@ -51,7 +51,11 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
+<<<<<<< HEAD
 
+=======
+            <Sparkles className="w-5 h-5 text-blue-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
               January 2026 • Revolutionary Content Launch
             </span>
@@ -100,9 +104,15 @@ key={index}
               {/* Impact Badge */}
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
+<<<<<<< HEAD
 
                   <span className="text-green-400 font-bold text-sm">",
       Impact: {content.impact}
+=======
+                  <Target className="w-4 h-4 text-green-400" />
+                  <span className="text-green-400 font-bold text-sm">
+                    Impact: {content.impact}
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   </span>
                 </div>
               </div>
@@ -113,7 +123,11 @@ key={index}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25"
               >
                 {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
+<<<<<<< HEAD
 
+=======
+                <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </Link>
             </div>
           ))}

@@ -17,11 +17,19 @@ const LatestInsights: React.FC = () => {
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
             <Link
+<<<<<<< HEAD
               to="/insights"
               className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
             >
               View all
             </Link>
+=======
+            to="/<insights" className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+          >
+            View all
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -57,7 +65,11 @@ key={item.id}
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
+<<<<<<< HEAD
 
+=======
+                <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </Link>
             </div>
           ))}
@@ -69,7 +81,11 @@ key={item.id}
             className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
+<<<<<<< HEAD
 
+=======
+            <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>

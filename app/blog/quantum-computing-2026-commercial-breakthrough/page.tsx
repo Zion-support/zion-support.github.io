@@ -36,7 +36,11 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+<<<<<<< HEAD
             <Zap />
+=======
+            <Zap className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             QUANTUM BREAKTHROUGH
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -50,6 +54,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         {/* Article Meta */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-gray-400 mb-12">
           <div className="flex items-center gap-2">
+<<<<<<< HEAD
             <User />
             <span>Zion Tech Group</span>
           </div>
@@ -59,6 +64,17 @@ export default function QuantumComputing2026CommercialBreakthrough() {
           </div>
           <div className="flex items-center gap-2">
             <Clock />
+=======
+            <User className="w-4 h-4" />
+            <span>Zion Tech Group</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Calendar className="w-4 h-4" />
+            <span>January 15, 2026</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Clock className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span>15 min read</span>
           </div>
         </div>
@@ -67,7 +83,11 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         <div className="relative mb-12 rounded-2xl overflow-hidden">
           <div className="aspect-video bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 flex items-center justify-center">
             <div className="text-center text-white">
+<<<<<<< HEAD
               <Cpu />
+=======
+              <Cpu className="w-24 h-24 mx-auto mb-4 opacity-80" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <h2 className="text-3xl font-bold">Quantum Advantage Achieved</h2>
             </div>
           </div>
@@ -80,7 +100,11 @@ export default function QuantumComputing2026CommercialBreakthrough() {
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-blue-900/50 to-cyan-900/50 border border-blue-500/30 rounded-xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+<<<<<<< HEAD
                 <Target />
+=======
+                <Target className="w-6 h-6 text-blue-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 Executive Summary
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed">
@@ -93,7 +117,11 @@ export default function QuantumComputing2026CommercialBreakthrough() {
             {/* Quantum Advantage Metrics */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+<<<<<<< HEAD
                 <TrendingUp />
+=======
+                <TrendingUp className="w-8 h-8 text-green-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 Quantum Advantage: The Numbers Don't Lie
               </h2>
               <div className="grid md:grid-cols-4 gap-6 mb-8">
@@ -119,7 +147,11 @@ export default function QuantumComputing2026CommercialBreakthrough() {
             {/* Industry Applications */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+<<<<<<< HEAD
                 <Brain />
+=======
+                <Brain className="w-8 h-8 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 Industry Transformations
               </h2>
               
@@ -214,7 +246,11 @@ export default function QuantumComputing2026CommercialBreakthrough() {
             {/* Enterprise Implementation Guide */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+<<<<<<< HEAD
                 <Shield />
+=======
+                <Shield className="w-8 h-8 text-yellow-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 Enterprise Implementation Roadmap
               </h2>
               <div className="bg-gradient-to-r from-yellow-900/30 to-orange-900/30 border border-yellow-500/30 rounded-xl p-6">
@@ -315,14 +351,22 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   Start Your Quantum Journey
+<<<<<<< HEAD
                   <ArrowRight />
+=======
+                  <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
                 <Link 
                   href="/services/quantum-computing"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
                 >
                   Explore Quantum Services
+<<<<<<< HEAD
                   <ArrowRight />
+=======
+                  <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>

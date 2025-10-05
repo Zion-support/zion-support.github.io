@@ -25,7 +25,11 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
+<<<<<<< HEAD
 
+=======
+              <Rocket className="w-5 h-5 mr-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span className="font-bold">NEW SERVICES LAUNCHED</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -46,7 +50,11 @@ key={service.id}
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <div className="flex items-center gap-2 mb-3">
+<<<<<<< HEAD
 
+=======
+                  <Star className="w-5 h-5 text-yellow-300 fill-yellow-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   <span className="text-sm font-semibold text-yellow-300">{service.category}</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{service.name}</h3>
@@ -54,7 +62,11 @@ key={service.id}
                 <div className="space-y-2 mb-6">
                   {service.benefits.slice(0, 3).map((benefit, idx) = > (
                     <div key={idx} className="flex items-start gap-2">
+<<<<<<< HEAD
 
+=======
+                      <Zap className="w-4 h-4 text-yellow-300 flex-shrink-0 mt-1" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                       <span className="text-sm text-white">{benefit}</span>
                     </div>
                   ))}
@@ -66,7 +78,11 @@ key={service.id}
                     className="bg-white text-emerald-600 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors flex items-center gap-1"
                   >
                     Learn More
+<<<<<<< HEAD
 
+=======
+                    <ArrowRight className="w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   </Link>
                 </div>
               </div>
@@ -79,7 +95,11 @@ key={service.id}
               className="inline-flex items-center gap-2 bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-all hover:scale-105"
             >
               View All Services
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="w-6 h-6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
           </div>
         </div>
@@ -90,7 +110,11 @@ key={service.id}
     return (
       <div className={`bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white ${className}`}>
         <div className="flex items-center gap-3 mb-6">
+<<<<<<< HEAD
 
+=======
+          <Rocket className="w-8 h-8 text-yellow-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           <h2 className="text-3xl font-bold">New Services Available</h2>
         </div>
         <p className="text-orange-100 text-lg mb-8">
@@ -109,7 +133,12 @@ key={service.id}
                 to={service.link}
                 className="inline-flex items-center gap-2 text-yellow-300 font-semibold hover:text-yellow-200"
               >
+<<<<<<< HEAD
                 Learn More</Link>
+=======
+                Learn More <ArrowRight className="w-4 h-4" />
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           ))}
         </div>
@@ -121,7 +150,11 @@ key={service.id}
       <div className={`bg-white rounded-xl shadow-lg p-8 ${className}`}>
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
+<<<<<<< HEAD
 
+=======
+            <Rocket className="w-7 h-7 text-indigo-600" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <h3 className="text-2xl font-bold text-gray-900">New Services</h3>
           </div>
           <Link to="/services" className="text-indigo-600 font-semibold hover:text-indigo-800">
@@ -151,7 +184,11 @@ key={service.id}
   return (
     <div className={`bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6 text-white ${className}`}>
       <div className="flex items-center gap-3 mb-4">
+<<<<<<< HEAD
 
+=======
+        <Rocket className="w-6 h-6 text-yellow-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
         <h3 className="text-2xl font-bold">New Services Just Launched</h3>
       </div>
       <div className="grid md:grid-cols-3 gap-4">

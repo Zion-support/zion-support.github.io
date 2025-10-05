@@ -13,7 +13,11 @@ export default function October2025FinTechSuccessBanner() {
         {/* Header */}
         <div className="flex flex-wrap items-center gap-3 mb-6">
           <div className="flex items-center gap-2 bg-blue-500/30 border-2 border-blue-400 rounded-full px-5 py-2 backdrop-blur-sm">
+<<<<<<< HEAD
 
+=======
+            <Sparkles className="w-5 h-5 text-yellow-300 animate-spin-slow" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="text-yellow-300 font-black text-sm tracking-wider">
               💎 NEW CASE STUDY • OCTOBER 2025 • FORTUNE 100 SUCCESS 💎
             </span>
@@ -24,7 +28,12 @@ export default function October2025FinTechSuccessBanner() {
           {/* Left Column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
+<<<<<<< HEAD
               <Building2 className="w-12 h-12 text-blue-400 animate-pulse" <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent leading-tight">
+=======
+              <Building2 className="w-12 h-12 text-blue-400 animate-pulse" />
+              <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent leading-tight">
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 Fortune 100 FinTech Transformation
               </h2>
             </div>
@@ -34,7 +43,11 @@ export default function October2025FinTechSuccessBanner() {
             </p>
 
             <div className="flex items-center gap-3 mb-6">
+<<<<<<< HEAD
 
+=======
+              <DollarSign className="w-8 h-8 text-green-400 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <p className="text-xl text-blue-200 font-semibold">
                 $22.8B Business Value • 96% Automation • 47M Customers
               </p>
@@ -43,19 +56,31 @@ export default function October2025FinTechSuccessBanner() {
             {/* Key Results */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
+<<<<<<< HEAD
 
+=======
+                <TrendingUp className="w-6 h-6 text-green-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="text-blue-100 font-semibold">
                   18,400% ROI • $14.1B Annual Cost Savings
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
+<<<<<<< HEAD
 
+=======
+                <Users className="w-6 h-6 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="text-blue-100 font-semibold">
                   47M Active Users • 92% Customer Satisfaction
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
+<<<<<<< HEAD
 
+=======
+                <Shield className="w-6 h-6 text-yellow-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="text-blue-100 font-semibold">
                   99.8% Fraud Detection Accuracy • $2.3B Prevented
                 </span>
@@ -67,8 +92,14 @@ export default function October2025FinTechSuccessBanner() {
               to="/case-studies/fintech-ai-transformation-2025"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/20"
             >
+<<<<<<< HEAD
               <Building2 className="w-6 h-6" <span>Read Full Case Study</span>
 
+=======
+              <Building2 className="w-6 h-6" />
+              <span>Read Full Case Study</span>
+              <Sparkles className="w-6 h-6 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
           </div>
 
@@ -102,7 +133,11 @@ export default function October2025FinTechSuccessBanner() {
             {/* Customer Impact */}
             <div className="bg-gradient-to-br from-purple-800/60 to-blue-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-xl p-4 shadow-xl">
               <div className="flex items-center gap-2 mb-2">
+<<<<<<< HEAD
 
+=======
+                <Users className="w-5 h-5 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <div className="text-lg font-bold text-blue-200">Customer Success</div>
               </div>
               <div className="text-2xl font-black text-purple-300">47M Active Users</div>
@@ -112,7 +147,11 @@ export default function October2025FinTechSuccessBanner() {
             {/* Security Impact */}
             <div className="bg-gradient-to-br from-green-800/60 to-blue-900/60 backdrop-blur-md border-2 border-green-400/50 rounded-xl p-4 shadow-xl">
               <div className="flex items-center gap-2 mb-2">
+<<<<<<< HEAD
 
+=======
+                <Shield className="w-5 h-5 text-green-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <div className="text-lg font-bold text-blue-200">Security Excellence</div>
               </div>
               <div className="text-2xl font-black text-green-300">99.8% Accuracy</div>

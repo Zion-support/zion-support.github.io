@@ -1,4 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+// import { Target } from "lucide-react";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
 export const metadata = {
   title: '$200M ROI Success: Global Tech Giant Neuromorphic AI Transformation | Zion Tech Group',
   description: 'Discover how a Fortune 500 tech company achieved $200M ROI and 1000x energy efficiency through neuromorphic AI transformation with Zion Tech Group.',

@@ -33,7 +33,11 @@ export default function ContentPromotionBanner() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
+<<<<<<< HEAD
 
+=======
+              <TrendingUp className="w-5 h-5 text-yellow-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
                 Fresh Content
               </span>
@@ -52,16 +56,26 @@ export default function ContentPromotionBanner() {
               to="/blog" 
               className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
+<<<<<<< HEAD
 
               Explore All Articles
 
+=======
+              <BookOpen className="w-5 h-5" />
+              Explore All Articles
+              <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
             
             <Link 
               to="/case-studies" 
               className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
             >
+<<<<<<< HEAD
 
+=======
+              <Zap className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               View Case Studies
             </Link>
           </div>
@@ -87,7 +101,11 @@ export default function ContentPromotionBanner() {
                 <span className="text-sm text-white/70">
                   {item.readTime}
                 </span>
+<<<<<<< HEAD
 
+=======
+                <ArrowRight className="w-4 h-4 text-white/70" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
             </div>
           ))}

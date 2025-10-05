@@ -1,4 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+// import { Brain } from "lucide-react";
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
 export const metadata = {
   title: 'AI 2028 Neuromorphic Superintelligence: $75B Transformation Success | Zion Tech Group',
   description: 'How a Fortune 500 technology company achieved $75B in value creation through neuromorphic superintelligence deployment, revolutionizing their entire business model.',

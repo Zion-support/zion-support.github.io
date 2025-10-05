@@ -41,7 +41,11 @@ const October2025InfrastructureExcellenceBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-2 mb-4">
+<<<<<<< HEAD
 
+=======
+            <TrendingUp className="h-5 w-5 text-blue-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="text-sm font-semibold text-blue-400">
               NEW OCTOBER 2025 CONTENT
             </span>
@@ -96,7 +100,11 @@ key={idx}
                   {/* Read more link */}
                   <div className="flex items-center gap-2 text-blue-400 text-sm font-semibold group-hover:gap-3 transition-all">
                     <span>Read Full Guide</span>
+<<<<<<< HEAD
 
+=======
+                    <ArrowRight className="h-4 w-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   </div>
                 </div>
               </Link>
@@ -112,7 +120,11 @@ key={idx}
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-3 text-base font-semibold text-white shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               <span>Explore All Articles</span>
+<<<<<<< HEAD
 
+=======
+              <ArrowRight className="h-5 w-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
             <Link
               to="/contact"

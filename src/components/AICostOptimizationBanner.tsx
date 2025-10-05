@@ -66,9 +66,17 @@ const AICostOptimizationBanner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-8 animate-fade-in">
+<<<<<<< HEAD
             <span className="text-green-400 font-bold text-lg tracking-wider uppercase">
               💰 AI COST OPTIMIZATION BREAKTHROUGH • January 30, 2026
             </span>
+=======
+            <DollarSign className="w-6 h-6 text-green-400 animate-pulse" />
+            <span className="text-green-400 font-bold text-lg tracking-wider uppercase">
+              💰 AI COST OPTIMIZATION BREAKTHROUGH • January 30, 2026
+            </span>
+            <TrendingDown className="w-6 h-6 text-emerald-400 animate-pulse" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
 
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent animate-fade-in">
@@ -123,10 +131,15 @@ const AICostOptimizationBanner: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold shadow-lg">
+<<<<<<< HEAD
 
                         <span>🔥</span>
                         <span>TRENDING</span>
 
+=======
+                        <TrendingDown className="w-3 h-3" />
+                        <span>SAVE</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                       </div>
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-green-500/20 text-green-400 text-xs font-semibold border border-green-500/30">
@@ -169,7 +182,11 @@ const AICostOptimizationBanner: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
+<<<<<<< HEAD
                     <span>⏱️</span>
+=======
+                    <Zap className="w-4 h-4 text-green-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
@@ -181,7 +198,11 @@ const AICostOptimizationBanner: React.FC = () => {
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Optimization Guide</span>
+<<<<<<< HEAD
                   <span>→</span>
+=======
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
@@ -204,7 +225,11 @@ const AICostOptimizationBanner: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 flex items-center justify-center gap-2"
                 >
+<<<<<<< HEAD
 
+=======
+                  <DollarSign className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   <span>Get Free Cost Audit</span>
                 </a>
                 <a
@@ -213,6 +238,10 @@ const AICostOptimizationBanner: React.FC = () => {
                 >
                   <span>📞</span>
                   <span>Call +1 302 464 0950</span>
+<<<<<<< HEAD
+=======
+                  <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </a>
               </div>
             </div>

@@ -11,11 +11,19 @@ export default function October2025NewContentAdvertisingBanner() {
           {/* Attention-Grabbing Header */}
           <div className="mb-8 animate-bounce">
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-yellow-500/20 backdrop-blur-sm rounded-full border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/30">
+<<<<<<< HEAD
 
               <span className="text-yellow-300 font-black text-lg uppercase tracking-wider">
                 🔥 JUST RELEASED • OCTOBER 2025 🔥
               </span>
 
+=======
+              <Zap className="w-6 h-6 text-yellow-400 animate-pulse" />
+              <span className="text-yellow-300 font-black text-lg uppercase tracking-wider">
+                🔥 JUST RELEASED • OCTOBER 2025 🔥
+              </span>
+              <Sparkles className="w-6 h-6 text-yellow-400 animate-spin" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </div>
 
@@ -82,20 +90,32 @@ export default function October2025NewContentAdvertisingBanner() {
                 className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-yellow-500 to-orange-500 text-slate-900 font-black text-xl rounded-xl hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-yellow-500/50"
               >
                 <span>GET STARTED NOW</span>
+<<<<<<< HEAD
 
+=======
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </Link>
               
               <Link
                 to="/blog"
                 className="inline-flex items-center gap-3 px-10 py-5 bg-slate-700/50 backdrop-blur-sm text-white font-bold text-xl rounded-xl border-2 border-white/30 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105"
               >
+<<<<<<< HEAD
 
+=======
+                <Sparkles className="w-6 h-6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span>READ ALL 3 GUIDES</span>
               </Link>
             </div>
 
             <div className="flex items-center gap-2 text-green-400 text-lg font-semibold">
+<<<<<<< HEAD
 
+=======
+              <TrendingUp className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span>Trusted by 500+ Fortune 500 Companies</span>
             </div>
           </div>
