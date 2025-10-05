@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -9,8 +9,33 @@ interface PerformanceMetrics {
   inp?: number;
 }
 
+interface PerformanceThresholds {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  memoryUsage: number;
+}
+
+interface Alert {
+  id: string;
+  message: string;
+  resolved: boolean;
+}
+
 export const AdvancedPerformanceMonitor: React.FC = () => {
-<<<<<<< HEAD
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isVisible, setIsVisible] = useState(false);
+  const [alerts, setAlerts] = useState<Alert[]>([]);
+  const [thresholds, setThresholds] = useState<PerformanceThresholds>({
+    loadTime: 3000,
+    firstContentfulPaint: 1800,
+    largestContentfulPaint: 2500,
+    cumulativeLayoutShift: 0.1,
+    firstInputDelay: 100,
+    memoryUsage: 50 * 1024 * 1024, // 50MB
+  });
 
   // Resolve alert
   const resolveAlert = useCallback((alertId: string) => {
@@ -36,15 +61,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     let score = 100;
 
     // Deduct points for exceeding thresholds
-    if (metrics.loadTime > thresholds.loadTime) score -= 20;
-    if (metrics.firstContentfulPaint > thresholds.firstContentfulPaint)
-      score -= 15;
-    if (metrics.largestContentfulPaint > thresholds.largestContentfulPaint)
-      score -= 15;
-    if (metrics.cumulativeLayoutShift > thresholds.cumulativeLayoutShift)
-      score -= 25;
-    if (metrics.firstInputDelay > thresholds.firstInputDelay) score -= 10;
-    if (metrics.memoryUsage > thresholds.memoryUsage) score -= 15;
+    if (metrics.lcp && metrics.lcp > thresholds.largestContentfulPaint) score -= 20;
+    if (metrics.fcp && metrics.fcp > thresholds.firstContentfulPaint) score -= 15;
+    if (metrics.cls && metrics.cls > thresholds.cumulativeLayoutShift) score -= 25;
+    if (metrics.fid && metrics.fid > thresholds.firstInputDelay) score -= 10;
 
     return Math.max(0, score);
   }, [metrics, thresholds]);
@@ -70,10 +90,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
     return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
   }, []);
-=======
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
->>>>>>> 297cd5093a4334c73fbbc60d17002134ef3086c0
 
   useEffect(() => {
     // Only run in development
