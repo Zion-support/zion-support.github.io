@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export default function EnterpriseAITransformation2026CompleteGuide() {
   return (

@@ -137,10 +137,6 @@ class EnhancedPerformanceMonitor {
     return [...this.metrics];
   }
 
-  public getMonitoringStatus(): boolean {
-    return this.isMonitoring;
-  }
-
   public getAlerts(): PerformanceAlert[] {
     return [...this.alerts];
   }

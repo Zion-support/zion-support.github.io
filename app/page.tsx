@@ -15,7 +15,7 @@ const InteractiveContentShowcase2026 = lazy(
 
 // Loading component for Suspense fallback
 const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
-  <div  rounded`}></div>
+  <div className={`${height} bg-gray-200 animate-pulse rounded`}></div>
 );
 
 export default function HomePage() {
