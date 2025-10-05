@@ -24,7 +24,7 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-    performanceOptimizer.startTracking('App');
+    performanceOptimizer.startRender('App');
 
     console.log('Performance monitoring initialized');
 
