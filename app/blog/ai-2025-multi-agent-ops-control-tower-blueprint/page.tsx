@@ -1,11 +1,9 @@
-import Link from 'next/link';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 
-import { Calendar } from 'lucide-react';
-import { User } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { ArrowLeft } from 'lucide-react';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import User from 'lucide-react/dist/esm/icons/user';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 
 export default function MultiAgentOpsControlTowerBlueprintPage() {
   return (
@@ -47,14 +45,14 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
           <h3 className="text-2xl font-bold mb-3">Stand Up Your Agent Ops</h3>
           <p className="opacity-90 mb-6">We implement control towers tailored to your governance needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/services" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Explore Services</Link>
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">Talk to Experts</Link>
+            <Link to="/services" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Explore Services</Link>
+            <Link to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">Talk to Experts</Link>
           </div>
         </div>
       </article>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link href="/" className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+        <Link to="/" className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
           <ArrowLeft /> Back to Home
         </Link>
       </div>

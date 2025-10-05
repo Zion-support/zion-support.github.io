@@ -5,7 +5,7 @@ export default function AI2026InnovationShowcaseBanner() {
     <section className="py-20 bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
       {/* Innovation Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_25%_25%,rgba(139,92,246,0.3),transparent_50%),radial-gradient(circle_at_75%_75%,rgba(59,130,246,0.3),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle at 25% 25%,rgba(139,92,246,0.3),transparent 50%),radial-gradient(circle at 75% 75%,rgba(59,130,246,0.3),transparent 50%)]"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">

@@ -1,8 +1,3 @@
-import ArrowRight from 'next/link';
-import { ArrowRight, Brain, CheckCircle, Cog, DollarSign, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
-
-
-
 import { ArrowRight, Users, DollarSign, TrendingUp, Target, CheckCircle, Brain, Zap } from 'lucide-react';
 
 export const metadata = {
