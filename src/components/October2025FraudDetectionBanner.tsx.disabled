@@ -98,7 +98,8 @@ const October2025FraudDetectionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Fortune 100 Success Story */}
+      </div>
+      {/* Fortune 100 Success Story */}
         <div className="bg-gradient-to-r from-red-900/30 via-purple-900/30 to-blue-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Shield className="w-8 h-8 text-red-400" />
