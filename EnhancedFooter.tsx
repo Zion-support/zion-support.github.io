@@ -1,29 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {Mail, Phone, MapPin, Linkedin, Twitter} Github; Facebook } from 'lucide-react'
-const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear(),
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react'
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
   const services = [
-    { name: 'AI Development'} href: '/services/ai-development' },
-    {name: 'Cloud Services'} href: '/services/cloud-services' },
-    {name: 'Blockchain Solutions'} href: '/services/blockchain' },
-    {name: 'Data Analytics'} href: '/services/data-analytics' },
-    {name: 'Web Development'} href: '/services/web-development' },
-    {name: 'Mobile Development'} href: '/services/mobile-development' },
-    {name: 'IoT Platforms'} href: '/services/iot-platforms' },
-    {name: 'Cybersecurity'} href: '/services/cybersecurity' },
+    { name: 'AI Development', href: '/services/ai-development' },
+    { name: 'Cloud Services', href: '/services/cloud-services' },
+    { name: 'Blockchain Solutions', href: '/services/blockchain' },
+    { name: 'Data Analytics', href: '/services/data-analytics' },
+    { name: 'Web Development', href: '/services/web-development' },
+    { name: 'Mobile Development', href: '/services/mobile-development' },
+    { name: 'IoT Platforms', href: '/services/iot-platforms' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
   ];
   const products = [
-    {name: 'AI Solutions'} href: '/products/ai-solutions' },
-    {name: 'Cloud Platforms'} href: '/products/cloud-platforms' },
-    {name: 'Analytics Tools'} href: '/products/analytics-tools' },
-    {name: 'Security Suite'} href: '/products/security-suite' },
+    { name: 'AI Solutions', href: '/products/ai-solutions' },
+    { name: 'Cloud Platforms', href: '/products/cloud-platforms' },
+    { name: 'Analytics Tools', href: '/products/analytics-tools' },
+    { name: 'Security Suite', href: '/products/security-suite' },
   ];
   const company = [
-    {name: 'About Us'} href: '/about' },
-    {name: 'Our Team'} href: '/about#team' },
-    {name: 'Careers'} href: '/talent' },
-    {name: 'Blog'} href: '/blog' },
-    {name: 'Contact'} href: '/contact' }
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/about#team' },
+    { name: 'Careers', href: '/talent' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ];
   return (<footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -56,7 +57,7 @@ const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYe
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {services.slice(0} 6).map((service) => (
+              {services.slice(0, 6).map((service) => (
                 <li key={service.name}>
                   <Link href={service.href}>
                     <span className="text-gray-300 hover:text-white transition-colors">

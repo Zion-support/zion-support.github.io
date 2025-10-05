@@ -1,16 +1,18 @@
-import React; { useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {Menu} X } from 'lucide-react'
-const EnhancedHeader: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)}
+import { Menu, X } from 'lucide-react'
+const EnhancedHeader: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navigationItems = [
-    { name: 'Home'} href: '/' },
-    {name: 'Services'} href: '/services' },
-    {name: 'About'} href: '/about' },
-    {name: 'Contact'} href: '/contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
-  const closeMobileMenu = () => {setIsOpen(false);
-    setActiveDropdown(null)}
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
   };
   return (
     <header className="bg-white shadow-lg">
