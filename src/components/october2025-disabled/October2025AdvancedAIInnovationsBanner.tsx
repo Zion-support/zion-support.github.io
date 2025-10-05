@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Sparkles, Brain, Database, Atom, ArrowRight } from 'lucide-react';
 const October2025AdvancedAIInnovationsBanner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16 px-6 rounded-3xl mb-12" > {/* Animated background elements */}
