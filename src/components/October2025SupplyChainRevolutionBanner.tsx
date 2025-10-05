@@ -156,9 +156,10 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
         {/* Fortune 100 Success Story Spotlight */}
         <div className="bg-gradient-to-br from-yellow-900/40 to-orange-900/40 backdrop-blur-sm rounded-2xl p-8 mb-10 border-2 border-yellow-400/50">
           <div className="flex items-center gap-3 mb-4">
-            <div className="bg-yellow-500/20 rounded-full p-3">
-              <TruckIcon className="w-8 h-8 text-yellow-300"</div> />
-                <iv>
+              <div className="bg-yellow-500/20 rounded-full p-3">
+                <TruckIcon className="w-8 h-8 text-yellow-300" />
+              </div>
+              <div>
               <div className="text-yellow-300 text-sm font-semibold uppercase tracking-wider">Case Study Spotlight</div>
               <h3 className="text-3xl font-bold text-white">Fortune 100 Retail Transformation</h3>
             </div>
@@ -191,20 +192,20 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
               <h4 className="text-xl font-bold text-green-200 mb-3">The Results</h4>
               <ul className="space-y-2 text-green-100">
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>$4.2B Annual Value Creation</strong></span>
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>$4.2B Annual Value Creation</strong></span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>98.7% On-Time Delivery</strong> (industry leader)</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>98.7% On-Time Delivery</strong> (industry leader)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>2% Waste Rate</strong> (89% reduction)</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>2% Waste Rate</strong> (89% reduction)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>94% Forecast Accuracy</strong> (perfect inventory)</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>94% Forecast Accuracy</strong> (perfect inventory)</span>
                 </li>
               </ul>
             </div>
@@ -219,9 +220,9 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
                 to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
                 className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-yellow-950 px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
-                Read Full Case Study
-                <ArrowRightIcon className="w-5 h-5"</Link> />
-              </
+                  Read Full Case Study
+                  <ArrowRightIcon className="w-5 h-5" />
+                </Link>
           </div>
         </div>
 
@@ -251,24 +252,26 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
             to="/content/blog/ai-2025-oct-autonomous-supply-chain-intelligence-revolution"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
-            <SparklesIcon className="w-6 h-6" />
-            Read the Revolutionary Guide
-            <ArrowRightIcon className="w-6 h-6"</Link> />
-                <ink
+              <SparklesIcon className="w-6 h-6" />
+              Read the Revolutionary Guide
+              <ArrowRightIcon className="w-6 h-6" />
+            </Link>
+            <Link
             to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
-            <TruckIcon className="w-6 h-6" />
-            View $4.2B Case Study
-            <ArrowRightIcon className="w-6 h-6"</Link> />
-                <ink
+              <TruckIcon className="w-6 h-6" />
+              View $4.2B Case Study
+              <ArrowRightIcon className="w-6 h-6" />
+            </Link>
+            <Link
             to="/content/services/autonomous-supply-chain-intelligence-platform"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
-            <ChartBarIcon className="w-6 h-6" />
-            Explore Platform & Services
-            <ArrowRightIcon className="w-6 h-6"</Link> />
-              </
+              <ChartBarIcon className="w-6 h-6" />
+              Explore Platform & Services
+              <ArrowRightIcon className="w-6 h-6" />
+            </Link>
 
         {/* Free Assessment CTA */}
         <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/30">
@@ -285,9 +288,10 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
                 to="/contact?service=supply-chain-assessment"
                 className="inline-flex items-center gap-2 bg-white text-emerald-900 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-emerald-50"
               >
-                Schedule Free Assessment
-                <ArrowRightIcon className="w-6 h-6"</Link> />
-                <iv className="text-green-200 text-sm">
+                  Schedule Free Assessment
+                  <ArrowRightIcon className="w-6 h-6" />
+                </Link>
+                <div className="text-green-200 text-sm">
                 <div className="font-bold text-lg">⚡ Limited Time Offer</div>
                 <div>90-day pilot starting at $500K • 30% improvement guarantee</div>
               </div>

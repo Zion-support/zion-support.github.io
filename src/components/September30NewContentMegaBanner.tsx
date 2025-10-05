@@ -1,44 +1,44 @@
 import { Link } from "react-router-dom";
 const September30NewContentMegaBanner = () => {
   const newArticles = [
-    {",
+    {
       title: "AI Neural Coding Breakthrough",
       description: "Programming at the speed of thought with 99.7% accuracy",
-      icon: Brain,",
+      icon: Brain,
       link: "/blog/ai-neural-coding-breakthrough-2025",
-      category: "Neural AI",",
+      category: "Neural AI",
       impact: "95% faster development"
     },
-    {",
+    {
       title: "AI Holographic Computing",
       description: "Immersive 3D data visualization with zero latency",
-      icon: Layers,",
+      icon: Layers,
       link: "/blog/ai-holographic-computing-2025",
-      category: "Spatial AI",",
+      category: "Spatial AI",
       impact: "10x faster insights"
     },
-    {",
+    {
       title: "AI Quantum Consciousness",
       description: "1M times faster reasoning with emergent creativity",
-      icon: Atom,",
+      icon: Atom,
       link: "/blog/ai-quantum-consciousness-2025",
-      category: "Quantum AI",",
+      category: "Quantum AI",
       impact: "1M× performance"
     },
-    {",
+    {
       title: "AI Molecular Manufacturing",
       description: "Atomic-precision production with zero waste",
-      icon: Zap,",
+      icon: Zap,
       link: "/blog/ai-molecular-manufacturing-2025",
-      category: "NanoTech",",
+      category: "NanoTech",
       impact: "100% recyclable"
     },
-    {",
+    {
       title: "AI Personalized Education",
       description: "10x better learning outcomes for every student",
-      icon: GraduationCap,",
+      icon: GraduationCap,
       link: "/blog/ai-personalized-education-revolution-2025",
-      category: "EdTech AI",",
+      category: "EdTech AI",
       impact: "97% mastery rate"
     }
   ];

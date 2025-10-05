@@ -77,9 +77,10 @@ const October2025TechBannerNew = () => {
                 <div className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 h-full border border-white/20 hover:border-white/40 transition-all duration-300" > {/* Highlight Badge */}
                   <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${article.color}`}>
                     {article.highlight}
-                  </div > {/* Icon */}
+                  </div>
                   <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <article.icon className="w-7 h-7 text-white"</div>
+                    <article.icon className="w-7 h-7 text-white" />
+                  </div>
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                     {article.title}
@@ -121,7 +122,7 @@ const October2025TechBannerNew = () => {
       </div>
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) =  > (
+          {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-purple-400/30 rounded-full"
@@ -133,12 +134,13 @@ const October2025TechBannerNew = () => {
               y: [0, -30, 0],
               opacity: [0.2, 0.5, 0.2],
             }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,",
-      delay: Math.random() * 2,
-            }}
-        ))}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
       </div>
     </motion.div>
   );
