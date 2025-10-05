@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 
 const October2025UltimateBreakthroughBanner = () => {
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden border-b border-white/10">
-      {/* Animated Background */}
+    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden border-b border-white/10" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_50%,transparent_75%,transparent_100%)] bg-[length:250px_250px] animate-shimmer"></div>
       </div>

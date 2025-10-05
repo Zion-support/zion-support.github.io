@@ -27,8 +27,7 @@ const LatestInsights: React.FC = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           {latestInsights.slice(0, 3).map((item) => (
-            <div>
-              key={item.id}
+            <div > key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
               <div className="flex items-center justify-between mb-4">
@@ -42,8 +41,7 @@ const LatestInsights: React.FC = () => {
                   {isNew(item.date) && (
                     <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">
                       New
-                    </span>
-                  )}
+                    </span > )}
                   <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
                 </div>
               </div>

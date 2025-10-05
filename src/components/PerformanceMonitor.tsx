@@ -10,7 +10,7 @@ interface PerformanceMetrics {
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics > ({
     cls: undefined,
     inp: undefined,
     fcp: undefined,
@@ -23,33 +23,33 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Dynamically import web-vitals to avoid build issues
     import('web-vitals')
-      .then(webVitals => {
+      .then(webVitals = > {
         const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
 
         // Measure Core Web Vitals
         onCLS((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
+          setMetrics((prev: PerformanceMetrics) = > ({
             ...prev,
             cls: metric.value,
           }));
         });
 
         onFCP((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
+          setMetrics((prev: PerformanceMetrics) = > ({
             ...prev,
             fcp: metric.value,
           }));
         });
 
         onLCP((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
+          setMetrics((prev: PerformanceMetrics) = > ({
             ...prev,
             lcp: metric.value,
           }));
         });
 
         onTTFB((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
+          setMetrics((prev: PerformanceMetrics) = > ({
             ...prev,
             ttfb: metric.value,
           }));
@@ -58,7 +58,7 @@ const PerformanceMonitor: React.FC = () => {
         // Try to use onINP if available (for newer versions)
         if (webVitals.onINP) {
           webVitals.onINP((metric: { value: number }) => {
-            setMetrics((prev: PerformanceMetrics) => ({
+            setMetrics((prev: PerformanceMetrics) = > ({
               ...prev,
               inp: metric.value,
             }));
@@ -73,7 +73,7 @@ const PerformanceMonitor: React.FC = () => {
   if (!isVisible) {
     return (
       <button>
-        onClick={() => setIsVisible(true)}
+        onClick={() = > setIsVisible(true)}
         className='fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50'
         title='Open Performance Monitor'
       >
@@ -90,7 +90,7 @@ const PerformanceMonitor: React.FC = () => {
       <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
       <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
       <button>
-        onClick={() => setIsVisible(false)}
+        onClick={() = > setIsVisible(false)}
         className='mt-2 text-xs text-gray-400 hover:text-white'
       >
         Close

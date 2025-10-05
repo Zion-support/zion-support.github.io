@@ -38,8 +38,7 @@ const AdvertisingBanner: React.FC = () => {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default AdvertisingBanner;

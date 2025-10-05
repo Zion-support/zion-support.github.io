@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NewServicesPromoBanner2026: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 py-12 relative overflow-hidden">
-      {/* Animated background elements */}
+    <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 py-12 relative overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>

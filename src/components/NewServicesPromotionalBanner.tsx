@@ -3,8 +3,7 @@ import React from 'react';
 const NewServicesPromotionalBanner: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-emerald-900/40 via-teal-900/40 to-cyan-900/40 border-y border-emerald-500/20">
-      <div className="container mx-auto px-6">
-        {/* Header */}
+      <div className="container mx-auto px-6" > {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6">
             <span className="text-emerald-400 font-bold text-sm tracking-wider uppercase animate-pulse">

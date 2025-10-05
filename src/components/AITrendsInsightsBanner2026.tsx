@@ -9,7 +9,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+450%',
       growth: 'Rapid Growth',
       description: 'Enterprise adoption of generative AI has increased by 450% in Q1 2026, with 78% of Fortune 500 companies implementing AI-powered content generation.',
-      icon: '>'
+      icon: ' > ',
       gradient: 'from-purple-500 to-pink-500',
       badge: 'TRENDING',
       insights: ['78% Fortune 500 adoption', '450% growth rate', '$12B market size']
@@ -21,7 +21,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+300%',
       growth: 'Exponential',
       description: 'Quantum computing achieves practical applications in AI optimization, with 300% improvement in processing complex machine learning algorithms.',
-      icon: '>'
+      icon: ' > ',
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'BREAKTHROUGH',
       insights: ['1000x speed boost', '300% efficiency gain', 'Commercial viability']
@@ -33,7 +33,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+280%',
       growth: 'Accelerating',
       description: 'Business process automation reaches new heights with 95% autonomous operations across multiple industries, reducing operational costs by 60%.',
-      icon: '>'
+      icon: ' > ',
       gradient: 'from-green-500 to-emerald-500',
       badge: 'AUTOMATION',
       insights: ['95% automation rate', '60% cost reduction', '24/7 operations']
@@ -45,7 +45,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+350%',
       growth: 'High Growth',
       description: 'Advanced predictive analytics using AI achieves 99.9% accuracy in forecasting business trends, customer behavior, and market dynamics.',
-      icon: '>'
+      icon: ' > ',
       gradient: 'from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       insights: ['99.9% accuracy', '350% adoption growth', '$8B market value']
@@ -57,7 +57,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+420%',
       growth: 'Rapid Expansion',
       description: 'Edge AI computing transforms real-time decision making with 420% increase in deployment, enabling instant AI processing at the network edge.',
-      icon: '>'
+      icon: ' > ',
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'EDGE AI',
       insights: ['420% deployment growth', 'Real-time processing', 'IoT integration']
@@ -69,7 +69,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+380%',
       growth: 'Critical Growth',
       description: 'AI ethics and governance frameworks become essential with 380% increase in regulatory compliance requirements and ethical AI implementation.',
-      icon: '>'
+      icon: ' > ',
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'GOVERNANCE',
       insights: ['380% compliance growth', 'Ethical frameworks', 'Regulatory alignment']
@@ -77,10 +77,10 @@ const AITrendsInsightsBanner2026: React.FC = () => {
   ];
 
   const marketInsights = [
-    { value: '$2.5T', label: 'Global AI Market Size', icon: '> },'
-    { value: '85%', label: 'Enterprise AI Adoption', icon: '> },'
-    { value: '500M+', label: 'AI-Powered Devices', icon: '> },'
-    { value: '2.3M', label: 'AI Job Openings', icon: '> }'
+    { value: '$2.5T', label: 'Global AI Market Size', icon: ' > ' },
+    { value: '85%', label: 'Enterprise AI Adoption', icon: ' > ' },
+    { value: '500M+', label: 'AI-Powered Devices', icon: ' > ' },
+    { value: '2.3M', label: 'AI Job Openings', icon: ' > ' }
   ];
 
   return (
@@ -114,7 +114,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
 
           {/* Market Insights */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {marketInsights.map((insight, index) => (
+            {marketInsights.map((insight, index) = > (
               <div key={index} className="text-center">
                 <div className="text-purple-400 mb-2 flex justify-center">
                   {insight.icon}
@@ -132,13 +132,12 @@ const AITrendsInsightsBanner2026: React.FC = () => {
 
         {/* Trending Topics Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {trendingTopics.map((topic, index) => (
+          {trendingTopics.map((topic, index) = > (
             <div 
               key={topic.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card glow effect */}
+             > {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${topic.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
@@ -147,8 +146,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                   <div className="text-purple-400 group-hover:scale-110 transition-transform duration-300">
                     {topic.icon}
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${topic.gradient} text-white text-xs font-bold border border-white/30`}>
+                  <div className="flex flex-col gap-2" > <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${topic.gradient} text-white text-xs font-bold border border-white/30`}>
                       {topic.badge}
                     </div>
                     <div className="text-right">
@@ -179,16 +177,14 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                 <div className="mb-6">
                   <div className="text-gray-400 text-xs mb-3 font-semibold">Key Insights:</div>
                   <div className="space-y-1">
-                    {topic.insights.map((insight, idx) => (
+                    {topic.insights.map((insight, idx) = > (
                       <div key={idx} className="flex items-center gap-2 text-gray-300 text-xs">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
                         {insight}
                       </div>
                     ))}
                   </div>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <a
                   href={`/insights/${topic.id}`}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${topic.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}

@@ -11,7 +11,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '180K+',
       badge: 'BREAKTHROUGH',
       gradient: 'from-emerald-500 to-teal-500',
-      icon: '>,'
+      icon: ' > ,'
       link: '/blog/ai-2026-feb-autonomous-neural-networks',
       description: 'Self-evolving neural architectures achieving 99.97% accuracy in autonomous decision-making'
     },
@@ -24,7 +24,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '156K+',
       badge: 'FEATURED',
       gradient: 'from-blue-500 to-cyan-500',
-      icon: '>,'
+      icon: ' > ,'
       link: '/blog/edge-2026-feb-quantum-computing',
       description: 'Ultra-low latency quantum processing delivering sub-millisecond response times'
     },
@@ -37,7 +37,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '203K+',
       badge: 'REVOLUTIONARY',
       gradient: 'from-purple-500 to-pink-500',
-      icon: '>,'
+      icon: ' > ,'
       link: '/blog/ai-2026-feb-meta-cognitive-systems',
       description: 'AI that thinks about thinking - achieving true self-awareness and autonomous learning'
     }
@@ -79,7 +79,7 @@ const February2026ContentShowcaseBanner = () => {
               { value: '99.9%', label: 'Content Accuracy', icon: '>, color'
               { value: '200+', label: 'Expert Articles', icon: '>, color'
               { value: '50+', label: 'Industry Awards', icon: '>, color'
-            ].map((achievement, index) => (
+            ].map((achievement, index) = > (
               <div key={index} className="text-center">
                 <div className={`${achievement.color} mb-2 flex justify-center`}>
                   {achievement.icon}
@@ -97,13 +97,12 @@ const February2026ContentShowcaseBanner = () => {
 
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
+          {featuredContent.map((content, index) =  > (
             <div 
               key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
+             > {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
@@ -111,8 +110,7 @@ const February2026ContentShowcaseBanner = () => {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2 text-emerald-400">
                     {content.icon}
-                  </div>
-                  <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
+                  </div > <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
                     {content.badge}
                   </div>
                 </div>
@@ -152,9 +150,7 @@ const February2026ContentShowcaseBanner = () => {
 
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <a
                   href={content.link}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1`}

@@ -60,13 +60,12 @@ const NewContentPromotionalBanner2026 = () => {
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {newContent.map((content, index) => (
+          {newContent.map((content, index) = > (
             <div 
               key={index}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
+             > {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
@@ -76,8 +75,7 @@ const NewContentPromotionalBanner2026 = () => {
                 </div>
 
                 {/* Date Badge */}
-                <div className="text-center mb-4">
-                  <span className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${content.color} text-white text-xs font-bold`}>
+                <div className="text-center mb-4" > <span className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${content.color} text-white text-xs font-bold`}>
                     {content.date}
                   </span>
                 </div>
@@ -100,9 +98,7 @@ const NewContentPromotionalBanner2026 = () => {
 
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <a
                   href={`/blog/${content.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1`}
@@ -132,9 +128,8 @@ const NewContentPromotionalBanner2026 = () => {
               { value: '$15B+', label: 'Value Created', icon: '>, color'
               { value: '99.9%', label: 'Content Accuracy', icon: '>, color'
               { value: '150+', label: 'Countries Reached', icon: '>, color'
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`${stat.color} mb-2 flex justify-center`}>
+            ].map((stat, index) = > (
+              <div key={index} className="text-center" > <div className={`${stat.color} mb-2 flex justify-center`}>
                   {stat.icon}
                 </div>
                 <div className="text-3xl font-extrabold bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent mb-1">

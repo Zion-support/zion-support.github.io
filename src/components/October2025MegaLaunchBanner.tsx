@@ -116,7 +116,7 @@ const October2025MegaLaunchBanner = () => {
 
         {/* Article Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {topNewArticles.map((article, index) => (
+          {topNewArticles.map((article, index) = > (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 20 }}
@@ -125,8 +125,7 @@ const October2025MegaLaunchBanner = () => {
               whileHover={{ scale: 1.05, translateY: -8 }}
               className="group"
             >
-              <Link to={`/blog/${article.slug}`}>
-                <div className={`relative bg-gradient-to-br ${article.gradient} rounded-2xl p-6 h-full border-2 border-white/30 hover:border-white/50 transition-all duration-300 shadow-xl hover:shadow-2xl`}>
+              <Link to={`/blog/${article.slug}`} > <div className={`relative bg-gradient-to-br ${article.gradient} rounded-2xl p-6 h-full border-2 border-white/30 hover:border-white/50 transition-all duration-300 shadow-xl hover:shadow-2xl`}>
                   {/* Badge */}
                   <div className="absolute -top-3 -left-3 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-xs font-bold text-white shadow-lg">
                     {article.badge}
@@ -276,8 +275,7 @@ const October2025MegaLaunchBanner = () => {
               "GDPR Compliant",
               "Production-Ready"
             ].map((topic) => (
-              <span>
-                key={topic} 
+              <span > key={topic} 
                 className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-full text-sm text-white border border-white/30 hover:border-white/50 hover:bg-white/20 transition-all cursor-pointer"
               >
                 {topic}

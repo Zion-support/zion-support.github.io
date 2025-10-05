@@ -4,7 +4,7 @@ import { octoberNewBreakthroughContent, octoberContentStats } from "../content/o
 const October2025NewBreakthroughBanner = () => {
   const stats = octoberContentStats;
 
-  const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+  const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>> > = {
     '🧠': Brain,
     '💰': DollarSign,
     '🎨': Eye
@@ -45,7 +45,7 @@ const October2025NewBreakthroughBanner = () => {
 
         {/* Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {octoberNewBreakthroughContent.map((content) => {
+          {octoberNewBreakthroughContent.map((content) = > {
             const Icon = iconMap[content.icon] || Brain;
             
             return (
@@ -54,8 +54,7 @@ const October2025NewBreakthroughBanner = () => {
                 to={`/blog/${content.slug}`}
                 className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-8 hover:from-white/20 hover:to-white/10 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500"
               >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className={`bg-gradient-to-br ${content.gradient} p-4 rounded-xl shadow-lg`}>
+                <div className="flex items-start gap-4 mb-6" > <div className={`bg-gradient-to-br ${content.gradient} p-4 rounded-xl shadow-lg`}>
                     <Icon className="w-8 h-8 text-white"</div>
                   <div className="flex-1">
                     <div className="text-xs text-purple-300 mb-2 font-semibold uppercase tracking-wider">
@@ -73,7 +72,7 @@ const October2025NewBreakthroughBanner = () => {
 
                 {/* Key Metrics */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  {Object.entries(content.metrics).slice(0, 4).map(([key, value]) => (
+                  {Object.entries(content.metrics).slice(0, 4).map(([key, value]) = > (
                     <div key={key} className="bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10">
                       <div className="text-2xl font-extrabold text-white mb-1">{value}</div>
                       <div className="text-xs text-purple-300 capitalize font-medium">
@@ -85,7 +84,7 @@ const October2025NewBreakthroughBanner = () => {
 
                 {/* Highlights */}
                 <ul className="space-y-3 mb-6">
-                  {content.highlights.slice(0, 2).map((highlight, idx) => (
+                  {content.highlights.slice(0, 2).map((highlight, idx) = > (
                     <li key={idx} className="flex items-start gap-2 text-xs text-purple-200">
 
                       <span className="leading-relaxed">{highlight}</span>
@@ -166,7 +165,7 @@ const October2025NewBreakthroughBanner = () => {
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap gap-3 justify-center">
             {['AI Agents', 'Memory Systems', 'FinOps', 'Cost Optimization', 'Multimodal AI', 
-              'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) => (
+              'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) = > (
               <span 
                 key={tag}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors"

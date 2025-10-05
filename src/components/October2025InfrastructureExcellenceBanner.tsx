@@ -57,7 +57,7 @@ const October2025InfrastructureExcellenceBanner = () => {
 
         {/* Articles Grid */}
         <div className="grid gap-6 md:grid-cols-3 mb-10">
-          {newArticles.map((article) => {
+          {newArticles.map((article) = > {
             const Icon = article.icon;
             return (
               <Link
@@ -66,8 +66,7 @@ const October2025InfrastructureExcellenceBanner = () => {
                 className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:shadow-2xl"
               >
                 {/* Gradient accent */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} <div className="relative">
-                  {/* Icon */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} <div className="relative" > {/* Icon */}
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${article.gradient} mb-4`}>
                     <Icon className="h-6 w-6 text-white"</div>
 
@@ -84,8 +83,7 @@ const October2025InfrastructureExcellenceBanner = () => {
                   {/* Metrics */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {article.metrics.map((metric, idx) => (
-                      <span>
-                        key={idx}
+                      <span > key={idx}
                         className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/5 text-xs font-medium text-gray-300 border border-white/10"
                       >
                         {metric}

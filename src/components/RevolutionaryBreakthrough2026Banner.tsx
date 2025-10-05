@@ -106,8 +106,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {breakthroughContent.map((content, index) => (
-            <div>
-              key={content.id}
+            <div > key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -124,8 +123,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
 
-                      </div>
-                    )}
+                      </div > )}
                     <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
                       NEW
                     </span>
@@ -170,9 +168,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <Link
                   to={`/${content.slug.includes('case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"

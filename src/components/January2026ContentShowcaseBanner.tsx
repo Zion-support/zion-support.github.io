@@ -112,8 +112,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
         {/* Featured Articles Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {latestArticles.map((article, index) => (
-            <div>
-              key={article.id}
+            <div > key={article.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
@@ -130,8 +129,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
                     {article.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
 
-                      </div>
-                    )}
+                      </div > )}
                     <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
                       BREAKTHROUGH
                     </span>
@@ -162,9 +160,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
                     {article.readTime}
                   </span>
                   <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <a
                   href={`/blog/${article.slug}`}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${article.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}

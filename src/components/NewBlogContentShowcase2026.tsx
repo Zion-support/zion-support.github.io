@@ -15,7 +15,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: '>,'
+      icon: ' > ,'
       gradient: 'from-blue-500 to-purple-500',
       badge: 'FEATURED',
       tags: ['AI', 'Revolution', 'Enterprise', 'Guide']
@@ -33,7 +33,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: '>,'
+      icon: ' > ,'
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'TRENDING',
       tags: ['Quantum', 'Computing', 'AI', 'Breakthrough']
@@ -51,7 +51,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: '>,'
+      icon: ' > ,'
       gradient: 'from-green-500 to-emerald-500',
       badge: 'POPULAR',
       tags: ['Enterprise', 'Implementation', 'AI', 'Success']
@@ -69,7 +69,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.7,
       trending: false,
       featured: false,
-      icon: '>,'
+      icon: ' > ,'
       gradient: 'from-purple-500 to-pink-500',
       badge: 'INNOVATION',
       tags: ['Self-Evolving', 'AI', 'Innovation', 'Future']
@@ -87,7 +87,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: '>,'
+      icon: ' > ,'
       gradient: 'from-orange-500 to-red-500',
       badge: 'ANALYTICS',
       tags: ['Predictive', 'Analytics', 'Forecasting', 'AI']
@@ -105,7 +105,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: false,
       featured: true,
-      icon: '>,'
+      icon: ' > ,'
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'ETHICS',
       tags: ['AI Ethics', 'Governance', 'Responsible AI', 'Compliance']
@@ -113,10 +113,10 @@ const NewBlogContentShowcase2026: React.FC = () => {
   ];
 
   const blogStats = [
-    { value: '500+', label: 'Published Articles', icon: '> },'
-    { value: '2M+', label: 'Monthly Readers', icon: '> },'
-    { value: '4.8', label: 'Average Rating', icon: '> },'
-    { value: '150+', label: 'Expert Authors', icon: '> }'
+    { value: '500+', label: 'Published Articles', icon: ' > },'
+    { value: '2M+', label: 'Monthly Readers', icon: ' > },'
+    { value: '4.8', label: 'Average Rating', icon: ' > },'
+    { value: '150+', label: 'Expert Authors', icon: ' > }'
   ];
 
   return (
@@ -150,7 +150,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
 
           {/* Blog Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {blogStats.map((stat, index) => (
+            {blogStats.map((stat, index) = > (
               <div key={index} className="text-center">
                 <div className="text-blue-400 mb-2 flex justify-center">
                   {stat.icon}
@@ -168,13 +168,12 @@ const NewBlogContentShowcase2026: React.FC = () => {
 
         {/* Featured Blog Posts */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {blogPosts.map((post, index) => (
+          {blogPosts.map((post, index) = > (
             <div 
               key={post.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card glow effect */}
+             > {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
@@ -187,8 +186,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                     {post.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
 
-                      </div>
-                    )}
+                      </div  > )}
                     <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${post.gradient} text-white text-xs font-bold border border-white/30`}>
                       {post.badge}
                     </div>
@@ -215,7 +213,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                 {/* Tags */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-1">
-                    {post.tags.map((tag, idx) => (
+                    {post.tags.map((tag, idx) = > (
                       <span key={idx} className="px-2 py-1 rounded bg-white/10 text-gray-300 text-xs">
                         #{tag}
                       </span>
@@ -244,9 +242,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
 
                     <span className="text-yellow-400 font-bold text-sm">{post.rating}</span>
                   </div>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <a
                   href={`/blog/${post.slug}`}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${post.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}

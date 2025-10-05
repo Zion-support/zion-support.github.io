@@ -89,7 +89,7 @@ const TrendingContentBanner: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % trendingItems.length);
+      setCurrentIndex((prevIndex) = > (prevIndex + 1) % trendingItems.length);
     }, 4000);
 
     return () => clearInterval(interval);
@@ -172,9 +172,8 @@ const TrendingContentBanner: React.FC = () => {
           {/* Navigation dots */}
           <div className="flex gap-2">
             {trendingItems.map((_, index) => (
-              <button>
-                key={index}
-                onClick={() => setCurrentIndex(index)}
+              <button > key={index}
+                onClick={() =  > setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex 
                     ? 'bg-zion-cyan scale-125' 
@@ -188,8 +187,7 @@ const TrendingContentBanner: React.FC = () => {
 
       {/* Progress bar */}
       <div className="mt-4 w-full bg-white/10 rounded-full h-1">
-        <div>
-          className="bg-gradient-to-r from-zion-cyan to-zion-blue-light h-1 rounded-full transition-all duration-100 ease-linear"
+        <div > className="bg-gradient-to-r from-zion-cyan to-zion-blue-light h-1 rounded-full transition-all duration-100 ease-linear"
           style={{ width: `${((currentIndex + 1) / trendingItems.length) * 100}%` }}
 
       </div>

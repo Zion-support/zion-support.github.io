@@ -3,8 +3,7 @@ import React from 'react';
 const LatestTrendsShowcase2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">
-      <div className="container mx-auto px-6">
-        {/* Header */}
+      <div className="container mx-auto px-6" > {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 mb-6">
             <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">

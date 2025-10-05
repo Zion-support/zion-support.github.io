@@ -126,7 +126,7 @@ export default function EnhancedContentShowcase2026() {
     selectedCategory === 'All' || item.category === selectedCategory
   );
 
-  const sortedContent = [...filteredContent].sort((a, b) => {
+  const sortedContent = [...filteredContent].sort((a, b) = > {
     if (sortBy === 'featured') {
       if (a.featured && !b.featured) return -1;
       if (!a.featured && b.featured) return 1;
@@ -182,9 +182,8 @@ export default function EnhancedContentShowcase2026() {
         <div className="flex flex-col md:flex-row gap-4 mb-8 justify-between items-center">
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
-              <button>
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+              <button > key={category}
+                onClick={() = > setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
                   selectedCategory === category
                     ? 'bg-blue-600 text-white'
@@ -200,7 +199,7 @@ export default function EnhancedContentShowcase2026() {
             <span className="text-sm text-gray-600">Sort by:</span>
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
+              onChange={(e) = > setSortBy(e.target.value)}
               className="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
 
@@ -210,23 +209,20 @@ export default function EnhancedContentShowcase2026() {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedContent.map((item) => (
+          {sortedContent.map((item) = > (
             <Link key={item.id} to={item.href} className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 group-hover:border-blue-300">
                 {/* Featured Badge */}
                 {item.featured && (
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 text-xs font-semibold">
                     ⭐ FEATURED
-                  </div>
-                )}
+                  </div > )}
                 
                 <div className="p-6">
                   {/* Type and Category */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getTypeColor(item.type)}`}>
+                  <div className="flex items-center gap-2 mb-3" > <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getTypeColor(item.type)}`}>
                       {item.type.toUpperCase()}
-                    </span>
-                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getCategoryColor(item.category)}`}>
+                    </span > <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getCategoryColor(item.category)}`}>
                       {item.category}
                     </span>
                   </div>
@@ -244,7 +240,7 @@ export default function EnhancedContentShowcase2026() {
                   {/* Metrics */}
                   {item.metrics && (
                     <div className="grid grid-cols-3 gap-2 mb-4">
-                      {item.metrics.map((metric, index) => (
+                      {item.metrics.map((metric, index) = > (
                         <div key={index} className="text-center bg-gray-50 rounded-lg p-2">
                           <div className="text-sm font-bold text-gray-900">{metric.value}</div>
                           <div className="text-xs text-gray-600">{metric.label}</div>

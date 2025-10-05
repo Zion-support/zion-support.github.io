@@ -33,8 +33,7 @@ const BlogPromotionBanner: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section > );
 };
 
 export default BlogPromotionBanner;

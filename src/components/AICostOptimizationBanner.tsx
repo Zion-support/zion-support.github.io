@@ -103,7 +103,7 @@ const AICostOptimizationBanner: React.FC = () => {
 
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
-          {costOptimizationContent.map((content, index) => (
+          {costOptimizationContent.map((content, index) = > (
             <div 
               key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
@@ -122,8 +122,7 @@ const AICostOptimizationBanner: React.FC = () => {
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold shadow-lg">
                         <span className="text-xs">TRENDING</span>
-                      </div>
-                    )}
+                      </div > )}
                     <span className="px-3 py-1.5 rounded-full bg-green-500/20 text-green-400 text-xs font-semibold border border-green-500/30">
                       OPTIMIZE
                     </span>
@@ -168,9 +167,7 @@ const AICostOptimizationBanner: React.FC = () => {
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <Link
                   to={`/blog/${content.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"

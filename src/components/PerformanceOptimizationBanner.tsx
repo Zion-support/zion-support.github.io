@@ -6,28 +6,28 @@ const PerformanceOptimizationBanner = () => {
       title: 'Lightning Fast Loading',
       description: 'Optimized bundle size with code splitting and lazy loading',
       improvement: '87% faster',
-      icon: '>,'
+      icon: ' > ,'
       color: 'from-yellow-500 to-orange-500'
     },
     {
       title: 'Enhanced Security',
       description: 'Advanced security headers and content security policies',
       improvement: '99.9% secure',
-      icon: '>,'
+      icon: ' > ,'
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'SEO Optimized',
       description: 'Meta tags, structured data, and semantic HTML',
       improvement: '95% score',
-      icon: '>,'
+      icon: ' > ,'
       color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Accessibility Enhanced',
       description: 'WCAG 2.1 AA compliant with screen reader support',
       improvement: '100% accessible',
-      icon: '>,'
+      icon: ' > ,'
       color: 'from-purple-500 to-violet-500'
     }
   ];
@@ -44,7 +44,7 @@ const PerformanceOptimizationBanner = () => {
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {optimizations.map((opt, index) => (
+        {optimizations.map((opt, index) = > (
           <div key={index} className={`bg-gradient-to-br ${opt.color} rounded-lg p-4 text-white`}>
             <div className="flex items-center gap-3 mb-3">
               {opt.icon}

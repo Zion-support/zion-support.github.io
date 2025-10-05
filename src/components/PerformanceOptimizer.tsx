@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   isVisible: boolean;
-  onClose: () => void;
+  onClose: () = > void;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -27,31 +27,31 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     if (optimizations.imageOptimization) {
       optimizationsList.push('Optimizing images...');
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve = > setTimeout(resolve, 1000));
       optimizationsList.push('✓ Images optimized');
     }
 
     if (optimizations.codeSplitting) {
       optimizationsList.push('Enabling code splitting...');
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await new Promise(resolve = > setTimeout(resolve, 800));
       optimizationsList.push('✓ Code splitting enabled');
     }
 
     if (optimizations.lazyLoading) {
       optimizationsList.push('Implementing lazy loading...');
-      await new Promise(resolve => setTimeout(resolve, 600));
+      await new Promise(resolve = > setTimeout(resolve, 600));
       optimizationsList.push('✓ Lazy loading implemented');
     }
 
     if (optimizations.caching) {
       optimizationsList.push('Configuring caching...');
-      await new Promise(resolve => setTimeout(resolve, 700));
+      await new Promise(resolve = > setTimeout(resolve, 700));
       optimizationsList.push('✓ Caching configured');
     }
 
     if (optimizations.compression) {
       optimizationsList.push('Enabling compression...');
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve = > setTimeout(resolve, 500));
       optimizationsList.push('✓ Compression enabled');
     }
 
@@ -65,7 +65,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [isVisible, runOptimizations]);
 
   const handleOptimizationToggle = (key: keyof typeof optimizations) => {
-    setOptimizations(prev => ({
+    setOptimizations(prev = > ({
       ...prev,
       [key]: !prev[key],
     }));
@@ -128,8 +128,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         {optimizationOptions.map(option => (
-          <div>
-            key={option.key}
+          <div > key={option.key}
             className={`p-4 border rounded-lg transition-colors ${
               option.enabled
                 ? 'border-green-200 bg-green-50'
@@ -137,8 +136,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             }`}
           >
             <div className='flex items-start space-x-3'>
-              <div className='flex-shrink-0'>
-                <option.icon
+              <div className='flex-shrink-0' > <option.icon
                   className={`h-5 w-5 ${
                     option.enabled ? 'text-green-600' : 'text-gray-400'
                   }`}
@@ -153,7 +151,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                     <input
                       type='checkbox'
                       checked={option.enabled}
-                      onChange={() => handleOptimizationToggle(option.key)}
+                      onChange={() = > handleOptimizationToggle(option.key)}
                       className='sr-only peer'
 
                     <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
@@ -175,8 +173,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </h3>
           <div className='space-y-1'>
             {currentOptimizations.map((optimization, index) => (
-              <div>
-                key={index}
+              <div  > key={index}
                 className={`text-sm ${
                   optimization.startsWith('✓')
                     ? 'text-green-600'
@@ -198,7 +195,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           Close
         </button>
         <button>
-          onClick={() => {
+          onClick={() = > {
             setCurrentOptimizations([]);
             // Trigger re-optimization
           }}

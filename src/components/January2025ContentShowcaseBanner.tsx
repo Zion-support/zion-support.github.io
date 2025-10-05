@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const January2025ContentShowcaseBanner: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      {/* Animated Background */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900" > {/* Animated Background */}
       <div className="absolute inset-0 bg-[url('/images/abstract-pattern.svg')] opacity-10 animate-pulse"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-1"></div>
       

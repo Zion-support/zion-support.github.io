@@ -13,7 +13,7 @@ const bannerComponents = {
   'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),
   'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),
   'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
+  'new-services-2026': lazy(() = > import('./NewServicesPromoBanner2026')),
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -54,7 +54,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
 
   // Select banners to display (limit to maxBanners)
-  useEffect(() => {
+  useEffect(() = > {
     const selected = banners.slice(0, maxBanners);
     setVisibleBanners(selected);
   }, [banners, maxBanners]);
@@ -64,7 +64,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     if (!autoRotate || visibleBanners.length <= 1) return;
 
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % visibleBanners.length);
+      setCurrentIndex((prev) = > (prev + 1) % visibleBanners.length);
     }, interval);
 
     return () => clearInterval(timer);
@@ -76,10 +76,10 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   if (!autoRotate) {
     return (
       <div className="space-y-6">
-        {visibleBanners.map((bannerKey) => {
+        {visibleBanners.map((bannerKey) = > {
           const BannerComponent = bannerComponents[bannerKey];
           return (
-            <Suspense key={bannerKey} fallback={<LoadingFallback />}>
+            <Suspense key={bannerKey} fallback={<LoadingFallback / > }>
               <BannerComponent</Suspense>
           );
         })}
@@ -93,16 +93,16 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
   return (
     <div className="relative">
-      <Suspense fallback={<LoadingFallback />}>
+      <Suspense fallback={<LoadingFallback / > }>
         <CurrentBanner</Suspense>
 
       {/* Rotation controls (if multiple banners) */}
       {visibleBanners.length > 1 && (
         <div className="flex justify-center gap-2 mt-4">
-          {visibleBanners.map((_, index) => (
+          {visibleBanners.map((_, index) = > (
             <button
               key={index}
-              onClick={() => setCurrentIndex(index)}
+              onClick={() = > setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all ${
                 index === currentIndex
                   ? 'bg-purple-400 w-8'

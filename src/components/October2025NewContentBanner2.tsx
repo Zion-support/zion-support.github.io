@@ -62,7 +62,7 @@ const October2025NewContentBanner2 = () => {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {newArticles.map((article) => {
+          {newArticles.map((article) = > {
             const Icon = article.icon;
             return (
               <Link
@@ -75,9 +75,7 @@ const October2025NewContentBanner2 = () => {
                   <span className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/30">
                     {article.badge}
                   </span>
-                </div>
-
-                {/* Icon */}
+                </div > {/* Icon */}
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${article.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className="w-8 h-8 text-white"</div>
 
@@ -93,9 +91,7 @@ const October2025NewContentBanner2 = () => {
                 <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-4 transition-all">
                   <span>Read Article</span>
 
-                </div>
-
-                {/* Hover Gradient Effect */}
+                </div > {/* Hover Gradient Effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
               </Link>
             );

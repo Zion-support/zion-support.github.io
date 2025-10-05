@@ -69,8 +69,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {revolutionaryContent.map((content, index) => (
-            <div>
-              key={index} 
+            <div > key={index} 
               className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               {/* Content Header */}
@@ -128,8 +127,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
             { value: '500%', label: 'Productivity Gain', icon: '⚡', color: 'from-yellow-400 to-orange-400' }
           ].map((stat, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 text-center">
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className={`text-2xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-1`}>
+              <div className="text-3xl mb-2">{stat.icon}</div > <div className={`text-2xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-1`}>
                 {stat.value}
               </div>
               <div className="text-gray-400 text-xs font-medium">

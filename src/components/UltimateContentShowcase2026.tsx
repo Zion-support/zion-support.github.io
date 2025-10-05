@@ -3,8 +3,7 @@ import React from 'react';
 const UltimateContentShowcase2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-slate-900/20">
-      <div className="container mx-auto px-6">
-        {/* Header */}
+      <div className="container mx-auto px-6" > {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
             <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">

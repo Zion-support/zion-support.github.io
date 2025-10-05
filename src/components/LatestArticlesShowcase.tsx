@@ -18,7 +18,7 @@ const LatestArticlesShowcase: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {latestArticles.map((article) => (
+          {latestArticles.map((article) = > (
             <Link
               key={article.id}
               to={article.link}
@@ -32,8 +32,7 @@ const LatestArticlesShowcase: React.FC = () => {
                   {article.featured && (
                     <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-medium">
                       Featured
-                    </span>
-                  )}
+                    </span > )}
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
@@ -57,8 +56,7 @@ const LatestArticlesShowcase: React.FC = () => {
                 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {article.tags.slice(0, 3).map((tag) => (
-                    <span>
-                      key={tag}
+                    <span > key={tag}
                       className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
                     >
                       {tag}

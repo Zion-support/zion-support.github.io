@@ -24,7 +24,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '25K+',
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
-      icon: '>,'
+      icon: ' > ,'
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
@@ -36,7 +36,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '19K+',
       badge: 'FEATURED',
       gradient: 'from-teal-500 to-cyan-500',
-      icon: '>,'
+      icon: ' > ,'
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
     },
     {
@@ -48,7 +48,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
-      icon: '>,'
+      icon: ' > ,'
       link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
@@ -60,7 +60,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '41K+',
       badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
-      icon: '>,'
+      icon: ' > ,'
       link: '/blog/edge-2026-private-feature-flags'
     },
     {
@@ -72,16 +72,16 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
-      icon: '>,'
+      icon: ' > ,'
       link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
 
   const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon: '> },'
-    { value: '98%', label: 'Customer Satisfaction', icon: '> },'
-    { value: '200+', label: 'Expert Articles', icon: '> },'
-    { value: '50+', label: 'Industry Awards', icon: '> }'
+    { value: '500K+', label: 'Monthly Readers', icon: ' > },'
+    { value: '98%', label: 'Customer Satisfaction', icon: ' > },'
+    { value: '200+', label: 'Expert Articles', icon: ' > },'
+    { value: '50+', label: 'Industry Awards', icon: ' > }'
   ];
 
   return (
@@ -115,7 +115,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
           {/* Achievement Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement, index) = > (
               <div key={index} className="text-center">
                 <div className="text-indigo-400 mb-2 flex justify-center">
                   {achievement.icon}
@@ -133,13 +133,12 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
+          {featuredContent.map((content, index) = > (
             <div 
               key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
+             > {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
@@ -147,8 +146,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2 text-indigo-400">
                     {content.icon}
-                  </div>
-                  <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
+                  </div > <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
                     {content.badge}
                   </div>
                 </div>
@@ -183,9 +181,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <a
                   href={content.link || '/blog'}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}

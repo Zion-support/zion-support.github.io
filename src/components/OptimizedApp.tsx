@@ -12,7 +12,7 @@ const LoadingSpinner: React.FC = () => (
 // Error fallback component
 const ErrorFallback: React.FC<{
   error: Error;
-  resetErrorBoundary: () => void;
+  resetErrorBoundary: () = > void;
 }> = ({ error, resetErrorBoundary }) => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='max-w-md mx-auto text-center p-6'>
@@ -28,8 +28,7 @@ const ErrorFallback: React.FC<{
           <summary className='cursor-pointer text-sm text-gray-500'>
             Error details
           </summary>
-          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto'>
-            {error.message}
+          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto' > {error.message}
           </pre>
         </details>
       )}
@@ -48,14 +47,14 @@ const MainContent: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setTimeout(() = > {
       setIsLoaded(true);
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
   if (!isLoaded) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner / > ;
   }
 
   return (
@@ -94,7 +93,7 @@ const MainContent: React.FC = () => {
               Discover our latest innovations and breakthrough technologies
             </p>
           </div>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner / > }>
             <div className='grid md:grid-cols-3 gap-8'>
               <div className='text-center p-6'>
                 <div className='text-4xl mb-4'>🤖</div>
@@ -133,7 +132,7 @@ const OptimizedApp: React.FC = () => {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
-      onError={(error, errorInfo) => {
+      onError={(error, errorInfo) = > {
         console.error('Application Error:', error, errorInfo);
         if (process.env.NODE_ENV === 'production') {
           // Send error to monitoring service in production
@@ -141,7 +140,7 @@ const OptimizedApp: React.FC = () => {
         }
       }}
     >
-      <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={<LoadingSpinner / > }>
         <MainContent</Suspense>
     </ErrorBoundary>
   );

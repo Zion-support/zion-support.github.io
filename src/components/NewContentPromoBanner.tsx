@@ -137,7 +137,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
             {/* Featured content grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-              {featuredContent.map((item, index) => {
+              {featuredContent.map((item, index) = > {
                 const Icon = item.icon;
                 return (
                   <Link
@@ -206,7 +206,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
           {/* Dismiss button */}
           <button>
-            onClick={() => setIsDismissed(true)}
+            onClick={() = > setIsDismissed(true)}
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
 
           >

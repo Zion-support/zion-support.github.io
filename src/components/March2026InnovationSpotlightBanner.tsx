@@ -77,13 +77,12 @@ const March2026InnovationSpotlightBanner = () => {
 
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {innovations.map((innovation, index) => (
+          {innovations.map((innovation, index) = > (
             <div 
               key={index}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
+             > {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${innovation.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
@@ -103,13 +102,10 @@ const March2026InnovationSpotlightBanner = () => {
                 </p>
 
                 {/* Impact */}
-                <div className="text-center mb-6">
-                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>
+                <div className="text-center mb-6" > <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>
                     Impact: {innovation.impact}
                   </div>
-                </div>
-
-                {/* CTA Button */}
+                </div > {/* CTA Button */}
                 <a
                   href={`/innovations/${innovation.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${innovation.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
@@ -139,20 +135,17 @@ const March2026InnovationSpotlightBanner = () => {
                 company: 'NeuroTech Global',
                 achievement: '500% Cognitive Enhancement',
                 revenue: '$2.1B Revenue Growth',
-                icon: '>'
-              },
+                icon: ' > ' },
               {
                 company: 'Quantum Dynamics',
                 achievement: '1000x Processing Speed',
                 revenue: '$3.8B Market Value',
-                icon: '>'
-              },
+                icon: ' > ' },
               {
                 company: 'Reality Synthesis Corp',
                 achievement: '$5.2B Market Creation',
                 revenue: '98% Customer Satisfaction',
-                icon: '>'
-              }
+                icon: ' > ' }
             ].map((story, index) => (
               <div key={index} className="text-center">
                 <div className="text-purple-400 mb-4 flex justify-center">

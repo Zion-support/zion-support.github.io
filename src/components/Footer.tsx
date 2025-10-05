@@ -40,8 +40,7 @@ const Footer: React.FC = () => {
           <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer > );
 };
 
 export default Footer;
