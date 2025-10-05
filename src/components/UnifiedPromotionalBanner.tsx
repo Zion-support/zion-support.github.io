@@ -127,12 +127,11 @@ className={`
         </p>
 
         {/* Featured Items */}
-{visibleItems.length  > 0 && (
-          <div className={` > grid gap-4 mb-6            ${variant === 'mega' ? 'md:grid-cols-3' : 
+{visibleItems.length > 0 && (
+          <div className={`grid gap-4 mb-6 ${variant === 'mega' ? 'md:grid-cols-3' : 
               variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' : 
-              'md:grid-cols-1'}
-          `}>
-            {visibleItems.map((item, index) = > (
+              'md:grid-cols-1'}`}>
+            {visibleItems.map((item, index) => (
               <Link
                 key={index}
                 to={item.link}
@@ -169,12 +168,12 @@ className={`
                 variant === 'hero' || variant === 'mega' ? 'px-10 py-5 text-lg' : 
                 'text-base'}
             `}
-> {ctaText}
-            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`}</Link>=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
+          >
+            {ctaText}
+            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`} />
+          </Link>
 
-          {featuredItems.length  > showCount && (
+          {featuredItems.length > showCount && (
             <Link
               to={ctaLink}
               className="text-purple-300 hover:text-purple-200 font-semibold transition-colors text-sm"

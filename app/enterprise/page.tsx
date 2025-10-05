@@ -1,4 +1,4 @@
-import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
+// import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
 
 export default function EnterprisePage() {
   return (
@@ -50,9 +50,9 @@ export default function EnterprisePage() {
       </header>
 
       {/* Enterprise Solutions Banner */}
-      <section id="solutions">
+      {/* <section id="solutions">
         <EnterpriseSolutionsBanner />
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="py-12 bg-slate-950 border-t border-white/10">
