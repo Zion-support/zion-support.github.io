@@ -30,6 +30,13 @@ export default defineConfig({
           utils: ['clsx', 'tailwind-merge'],
         },
       },
+      proxy: {
+        '/api': {
+          target: 'http://localhost:5000',
+          changeOrigin: true,
+          secure: false,
+        },
+      },
     },
     terserOptions: {
       compress: {
