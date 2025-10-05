@@ -120,23 +120,19 @@ class EnhancedPerformanceMonitor {
   }
 
   public startMonitoring(): void {
-<<<<<<< HEAD
-    // this._isMonitoring = true;
-=======
     this._isMonitoring = true;
->>>>>>> cursor/fix-errors-and-merge-to-main-4095
     console.log('Enhanced performance monitoring started');
   }
 
   public stopMonitoring(): void {
-<<<<<<< HEAD
-    // this._isMonitoring = false;
-=======
     this._isMonitoring = false;
->>>>>>> cursor/fix-errors-and-merge-to-main-4095
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     console.log('Enhanced performance monitoring stopped');
+  }
+
+  public isMonitoring(): boolean {
+    return this._isMonitoring;
   }
 
   public getMetrics(): PerformanceMetrics[] {

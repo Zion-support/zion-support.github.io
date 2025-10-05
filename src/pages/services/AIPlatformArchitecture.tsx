@@ -1,9 +1,5 @@
 import React from 'react';
 
-import React from 'react';
-
-import React from 'react';
-
 const AIPlatformArchitecture: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950">
@@ -45,7 +41,6 @@ const AIPlatformArchitecture: React.FC = () => {
             <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
               <div className="w-6 h-6 bg-cyan-400 rounded"></div>
             </div>
-<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-3">API-First Approach</h3>
             <p className="text-gray-300 mb-6">
               RESTful APIs and GraphQL endpoints that provide seamless integration 
