@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowRight, Brain, TrendingUp, CheckCircle, Sparkles } from 'lucide-react';
 
 
+import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
+
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: unknown[] = [];
 let breakthroughServices2025: unknown[] = [];

@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { Target, DollarSign, Clock, CheckCircle, User } from 'lucide-react';
 
 
+import { Clock, User, DollarSign, Target, CheckCircle } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
   description: 'Discover how a Fortune 500 manufacturing giant achieved $2.3B cost savings, 99.97% uptime, and complete operational autonomy through AI enterprise automation in just 6 months.',
