@@ -216,6 +216,19 @@ export class EnhancedAccessibility {
     });
   }
 
+  public getFocusableElementsCount(): number {
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(', ');
+
+    return document.querySelectorAll(focusableSelectors).length;
+  }
+
   private checkColorContrast(): void {
     // Basic color contrast check
     console.log('Checking color contrast...');
