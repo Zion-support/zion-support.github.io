@@ -46,7 +46,6 @@ jest.mock('react-router-dom', () => ({
   useLocation: () => ({ pathname: '/' }),
 }));
 
-<<<<<<< HEAD
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
