@@ -15,7 +15,7 @@ export default {
     ],
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(react-error-boundary|@testing-library|react-helmet-async|framer-motion)/)',
+    'node_modules/(?!(react-error-boundary|@testing-library|react|react-dom|framer-motion|lucide-react|recharts|tailwind-merge|clsx|web-vitals|react-helmet-async|react-router-dom|gray-matter)/)',
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
