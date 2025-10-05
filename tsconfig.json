@@ -42,22 +42,6 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true
   },
-<<<<<<< HEAD
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
-}
-=======
   "include": ["src", "app"],
   "exclude": [
     "src/pages/blog-disabled/**/*",
@@ -68,4 +52,3 @@
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
->>>>>>> e52b5e0b7c7c (feat: Complete comprehensive improvements and final optimizations)
