@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { ArrowRight, Award, Calendar, CheckCircle, Clock, Target, TrendingUp, User, Zap } from 'lucide-react';
 
 import { Award, User, Calendar, Clock, Target, Zap, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 

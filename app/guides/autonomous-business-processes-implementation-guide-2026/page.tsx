@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, TrendingUp, Zap } from 'lucide-react';
 
 import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
 
