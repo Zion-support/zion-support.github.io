@@ -8,8 +8,7 @@ import {
   User, 
   ArrowRight,
   Tag,
-  Search,
-  Filter
+  Search
 } from 'lucide-react';
 
 const Blog: React.FC = () => {

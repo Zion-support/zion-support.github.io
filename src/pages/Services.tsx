@@ -9,8 +9,6 @@ import {
   Cloud, 
   Code, 
   Database, 
-  Smartphone, 
-  Globe,
   CheckCircle,
   ArrowRight,
   Star,
