@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'February 2026: $1 Trillion Success Story - Transcendent Automation Revolution | Zion Tech Group',
   description: 'How a Fortune 50 global technology consortium achieved $1 trillion ROI through the Transcendent Automation Revolution, achieving beyond-human intelligence and infinite business value.',
-  keywords: 'Case Study, Success Story, AI, Transcendent Automation, $1 Trillion, Fortune 50, ROI, Beyond Human Intelligence'
+  keywords: 'Case Study, Success Story, AI, Transcendent Automation, $1 Trillion, Fortune 50, ROI, Beyond Human Intelligence',
 };
 
 export default function February2026TranscendentAutomation1TrillionSuccessPage() {
@@ -246,24 +246,24 @@ export default function February2026TranscendentAutomation1TrillionSuccessPage()
               Transform your business into a transcendent, infinitely capable enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight
+              <Link
                 href="/contact"
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
-              </ArrowRight>
-              <ArrowRight
+              </Link>
+              <Link
                 href="/blog/ai-2026-february-transcendent-automation-revolution"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough →
-              </ArrowRight>
-              <ArrowRight
+              </Link>
+              <Link
                 href="/services/transcendent-automation"
                 className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Learn More
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

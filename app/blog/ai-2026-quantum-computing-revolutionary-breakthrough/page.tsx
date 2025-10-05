@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'quantum computing, AI breakthrough 2026, quantum consciousness, neural networks, parallel processing, enterprise AI',
   openGraph: {
     title: 'AI 2026 Quantum Computing Revolutionary Breakthrough: Quantum-Neural Consciousness Fusion',
-  description: 'Revolutionary quantum computing breakthrough enabling quantum-neural consciousness fusion with infinite parallel processing capabilities.',
-  type: 'article',
-  publishedTime: '2026-04-10T00:00:00.000Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Revolutionary quantum computing breakthrough enabling quantum-neural consciousness fusion with infinite parallel processing capabilities.',
+    type: 'article',
+    publishedTime: '2026-04-10T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AI2026QuantumComputingRevolutionaryBreakthrough() {

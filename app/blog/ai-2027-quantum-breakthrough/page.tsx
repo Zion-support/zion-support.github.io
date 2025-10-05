@@ -6,11 +6,11 @@ export const metadata = {
   keywords: 'quantum computing, AI 2027, enterprise AI, quantum algorithms, breakthrough technology, computational optimization',
   openGraph: {
     title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
-  description: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',
-  type: 'article',
-  publishedTime: '2027-01-15T00:00:00.000Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Discover how quantum computing breakthroughs in 2027 are revolutionizing enterprise AI operations, delivering unprecedented computational power and optimization capabilities.',
+    type: 'article',
+    publishedTime: '2027-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AI2027QuantumBreakthrough() {

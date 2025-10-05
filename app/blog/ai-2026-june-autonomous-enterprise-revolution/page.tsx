@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'autonomous enterprise, AI automation, business transformation, enterprise AI, June 2026 breakthrough',
   openGraph: {
     title: 'AI 2026 June Autonomous Enterprise Revolution: Complete Business Transformation',
-  description: 'Revolutionary autonomous enterprise systems delivering unprecedented business transformation and efficiency gains.',
-  type: 'article',
-  publishedTime: '2026-06-01T00:00:00.000Z'
-  }
+    description: 'Revolutionary autonomous enterprise systems delivering unprecedented business transformation and efficiency gains.',
+    type: 'article',
+    publishedTime: '2026-06-01T00:00:00.000Z',
+  },
 };
 
 export default function AI2026JuneAutonomousEnterpriseRevolution() {

@@ -4,24 +4,24 @@ const ContentShowcase: React.FC = () => {
   const contentItems = [
     {
       title: 'AI-Powered Manufacturing',
-  description:
+      description:
         'Revolutionize your production line with intelligent automation and predictive maintenance.',
-  image: '/api/placeholder/400/300',
-  category: 'Manufacturing'
+      image: '/api/placeholder/400/300',
+      category: 'Manufacturing',
     },
     {
       title: 'Enterprise AI Strategy',
-  description:
+      description:
         'Comprehensive AI implementation roadmap tailored to your business needs.',
-  image: '/api/placeholder/400/300',
-  category: 'Strategy'
+      image: '/api/placeholder/400/300',
+      category: 'Strategy',
     },
     {
       title: 'Autonomous Operations',
-  description:
+      description:
         'Self-managing systems that optimize performance and reduce operational costs.',
-  image: '/api/placeholder/400/300',
-  category: 'Operations'
+      image: '/api/placeholder/400/300',
+      category: 'Operations',
     },
   ];
 
@@ -39,14 +39,14 @@ const ContentShowcase: React.FC = () => {
             >
               <div className='h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center'>
                 <span className='text-white text-2xl font-bold'>
-                  {item}
+                  {item.category}
                 </span>
               </div>
               <div className='p-6'>
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>
-                  {item}
+                  {item.title}
                 </h3>
-                <p className='text-gray-600 mb-4'>{item}</p>
+                <p className='text-gray-600 mb-4'>{item.description}</p>
                 <button className='w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300'>
                   Learn More
                 </button>

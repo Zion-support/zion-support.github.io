@@ -112,9 +112,9 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
     <div className={`${variants[variant]} ${className} relative overflow-hidden`}>
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping" />
+        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-6">
@@ -146,8 +146,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                     className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                   >
                     <div className="flex items-center gap-2 mb-2">
-                      <Icon className="w-4 h-4 text-white/80" />
-                      <span className="text-xs font-medium text-white/80">{item.category}</span>
+                      <Icon className="w-4 h-4 text-white/80" <span className="text-xs font-medium text-white/80">{item.category}</span>
                     </div>
                     <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
                       {item.title}
@@ -209,9 +208,9 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
           <button
 onClick={() => setIsDismissed(true)}
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
+
           >
-            <X className="w-5 h-5" />
-          </button>
+            <X className="w-5 h-5"</button>
         </div>
       </div>
     </div>

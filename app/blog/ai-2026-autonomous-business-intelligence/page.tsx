@@ -6,9 +6,9 @@ export const metadata = {
   keywords: 'autonomous business intelligence, AI automation, enterprise AI, business intelligence, AI ROI',
   openGraph: {
     title: 'AI 2026 Autonomous Business Intelligence: 300% ROI Revolution',
-  description: 'Revolutionary autonomous business intelligence achieving 300% ROI improvements through self-evolving AI systems.',
-  url: 'https://ziontechgroup.com/blog/ai-2026-autonomous-business-intelligence'
-  }
+    description: 'Revolutionary autonomous business intelligence achieving 300% ROI improvements through self-evolving AI systems.',
+    url: 'https://ziontechgroup.com/blog/ai-2026-autonomous-business-intelligence',
+  },
 };
 
 export default function AIAutonomousBusinessIntelligence2026() {

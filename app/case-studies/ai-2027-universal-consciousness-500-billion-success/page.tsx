@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'AI success story, $500B ROI, AI 2027, universal consciousness, Fortune 5, mega transformation',
   openGraph: {
     title: 'AI 2027 Universal Consciousness: $500B Success Story',
-  description: 'Fortune 5 company achieves $500B ROI with revolutionary AI 2027 Universal Consciousness Revolution.',
-  type: 'article',
-  publishedTime: '2027-01-01T00:00:00.000Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Fortune 5 company achieves $500B ROI with revolutionary AI 2027 Universal Consciousness Revolution.',
+    type: 'article',
+    publishedTime: '2027-01-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AI2027UniversalConsciousness500BillionSuccess() {

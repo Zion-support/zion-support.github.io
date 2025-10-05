@@ -40,9 +40,9 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
     <div className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -97,7 +97,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               className="group relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500 rounded-2xl"></div>
               
               <div className="relative bg-white/8 backdrop-blur-xl rounded-2xl p-8 border border-white/15 hover:border-purple-500/50 transition-all duration-300 h-full">
                 <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -153,11 +153,11 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-6xl mb-4">💼</div>
                 <p className="text-gray-300 mb-4 italic">
-                  "Zion Tech Groups AI solutions reduced our operational costs by $50M annually. 
+                  "Zion Tech Group's AI solutions reduced our operational costs by $50M annually. 
                   The autonomous systems are game-changing."
                 </p>
                 <div className="font-bold text-white">Fortune 500 CTO</div>
@@ -181,7 +181,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
           </div>
         </div>
 
-        {/* Call-to-Action Section */'}
+        {/* Call-to-Action Section */}
         <div className="text-center">
           <div className="inline-block p-2 rounded-3xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500">
             <div className="bg-slate-900 rounded-2xl px-16 py-16">

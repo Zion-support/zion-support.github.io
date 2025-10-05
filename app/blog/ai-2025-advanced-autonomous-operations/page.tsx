@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'autonomous operations, AI automation, Fortune 500, operational autonomy, AI-driven processes, enterprise automation',
   openGraph: {
     title: 'AI 2025: Advanced Autonomous Operations Revolution',
-  description: 'Revolutionary AI-driven autonomous operations delivering 99.9% operational autonomy and $2.7B ROI for Fortune 500 enterprises.',
-  type: 'article',
-  publishedTime: '2025-01-15T00:00:00Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Revolutionary AI-driven autonomous operations delivering 99.9% operational autonomy and $2.7B ROI for Fortune 500 enterprises.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AI2025AdvancedAutonomousOperations() {

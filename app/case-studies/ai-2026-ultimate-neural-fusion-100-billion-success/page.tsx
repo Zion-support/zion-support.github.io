@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI 2026 Ultimate Neural Fusion: $100B Success Story - Fortune 50 Transformation',
   description: 'How a Fortune 50 company achieved $100B ROI with revolutionary neural fusion technology, 500,000x performance improvements, and universal consciousness integration.',
-  keywords: 'AI success story, neural fusion, $100B ROI, Fortune 50, enterprise transformation, quantum neural networks'
+  keywords: 'AI success story, neural fusion, $100B ROI, Fortune 50, enterprise transformation, quantum neural networks',
 };
 
 export default function UltimateNeuralFusionSuccess() {

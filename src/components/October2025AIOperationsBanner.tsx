@@ -32,16 +32,15 @@ const October2025AIOperationsBanner = () => {
     <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 mb-4">
-            <Activity className="w-4 h-4 text-blue-400 animate-pulse" />
-            <span className="text-blue-300 text-sm font-semibold">
+            <Activity className="w-4 h-4 text-blue-400 animate-pulse" <span className="text-blue-300 text-sm font-semibold">
               OCTOBER 2025 - BREAKTHROUGH AI OPERATIONS
             </span>
           </div>
@@ -64,13 +63,12 @@ const October2025AIOperationsBanner = () => {
                 className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
                 {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${article.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${article.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
                 
                 {/* Content */}
                 <div className="relative z-10" > {/* Icon */}
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
+                    <Icon className="w-6 h-6 text-white"</div>
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">

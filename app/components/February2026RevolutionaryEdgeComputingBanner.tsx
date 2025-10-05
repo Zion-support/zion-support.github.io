@@ -1,8 +1,4 @@
 import React from 'react';
-import { ArrowRight, Cpu, Shield, TrendingUp, Zap } from 'lucide-react';
-
-import ArrowRight from 'next/link';
-
 import { ArrowRight, TrendingUp, Zap } from 'lucide-react';
 
 const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
@@ -62,27 +58,27 @@ const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <ArrowRight 
+            <Link 
               href="/blog/ai-2026-february-revolutionary-edge-computing-breakthrough"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read the Full Article
               <ArrowRight className="w-5 h-5 ml-2" />
-            </ArrowRight>
+            </Link>
             
-            <ArrowRight 
+            <Link 
               href="/case-studies/ai-2026-february-global-tech-edge-computing-transformation-12-billion-success"
               className="inline-flex items-center px-8 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 transition-all duration-300"
             >
               View Success Story
-            </ArrowRight>
+            </Link>
             
-            <ArrowRight 
+            <Link 
               href="/services/ai-2026-february-revolutionary-edge-computing-consulting"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Get Consulting Services
-            </ArrowRight>
+            </Link>
           </div>
 
           {/* Success Metrics */}

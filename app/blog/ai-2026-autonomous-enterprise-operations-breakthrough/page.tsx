@@ -1,4 +1,5 @@
 
+import ArrowRight from 'next/link';
 
 export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
   return (

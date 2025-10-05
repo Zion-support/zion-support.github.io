@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026 January Breakthrough: $50B Manufacturing Success Story',
   description: 'How a Fortune 5 manufacturing giant achieved $50B ROI with January 2026 AI breakthrough innovations. 500,000x performance improvements and 99.999% autonomous operations.',
-  keywords: 'AI case study 2026, $50B success, manufacturing AI, breakthrough innovations, Fortune 5, autonomous systems'
+  keywords: 'AI case study 2026, $50B success, manufacturing AI, breakthrough innovations, Fortune 5, autonomous systems',
 };
 
 export default function AI2026JanuaryBreakthrough50BillionSuccess() {
@@ -306,15 +306,15 @@ export default function AI2026JanuaryBreakthrough50BillionSuccess() {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Success Stories</h3>
             <div className="flex flex-wrap gap-4 justify-center">
-              <ArrowRight href="/case-studies" className="text-green-400 hover:text-green-300 transition-colors">
+              <Link href="/case-studies" className="text-green-400 hover:text-green-300 transition-colors">
                 All Case Studies →
-              </ArrowRight>
-              <ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
+              </Link>
+              <Link href="/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
                 AI Innovation Blog →
-              </ArrowRight>
-              <ArrowRight href="/contact" className="text-purple-400 hover:text-purple-300 transition-colors">
+              </Link>
+              <Link href="/contact" className="text-purple-400 hover:text-purple-300 transition-colors">
                 Start Your Transformation →
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

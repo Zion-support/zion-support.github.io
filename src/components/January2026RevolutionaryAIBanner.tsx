@@ -6,7 +6,7 @@ const January2026RevolutionaryAIBanner = () => {
     <div className="bg-gradient-to-r from-violet-500/20 via-purple-500/20 to-fuchsia-500/20 border border-violet-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-6">
 
-        <span className="text-xl font-bold text-violet-400">🚀 JANUARY 2026: 'REVOLUTIONARY AI BREAKTHROUGH</span>
+        <span className="text-xl font-bold text-violet-400">🚀 JANUARY 2026: REVOLUTIONARY AI BREAKTHROUGH</span>
 
       </div>
       
@@ -15,13 +15,13 @@ const January2026RevolutionaryAIBanner = () => {
       </h2>
       
       <p className="text-white text-lg font-semibold mb-6 text-center max-w-4xl mx-auto">
-        🌟 BREAKING: Worlds First Quantum-Conscious AI System Achieves 99.99% Accuracy in Complex Decision Making - 
+        🌟 BREAKING: World's First Quantum-Conscious AI System Achieves 99.99% Accuracy in Complex Decision Making - 
         $2.3B in Enterprise Value Created in First Month!
       </p>
       
       <p className="text-gray-300 text-base mb-8 text-center max-w-5xl mx-auto">
         Experience the revolutionary fusion of quantum computing and artificial consciousness. Our breakthrough 
-        quantum-conscious AI systems are transforming how enterprises operate', delivering unprecedented accuracy, 
+        quantum-conscious AI systems are transforming how enterprises operate, delivering unprecedented accuracy, 
         speed, and intelligent automation that was previously impossible.
       </p>
       

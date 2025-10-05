@@ -19,7 +19,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
 
       <div className="relative z-10">
@@ -65,8 +65,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
               transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all duration-300"
             >
-              <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300" />
-              <h3 className="font-semibold text-white mb-1">{feature.title}</h3>
+              <feature.icon className="w-8 h-8 mx-auto mb-3 text-purple-300" <h3 className="font-semibold text-white mb-1">{feature.title}</h3>
               <p className="text-sm text-blue-200">{feature.desc}</p>
             </motion.div>
           ))}
@@ -115,8 +114,8 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse" />
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000" />
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
     </motion.div>
   );
 };

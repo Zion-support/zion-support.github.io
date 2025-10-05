@@ -10,8 +10,6 @@ notifications: Notification[];",
       onRemove: (id: string) => void;=======
   notifications: Notification[];",
       onRemove: (id: string) => void;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
 };
 
 export default function NotificationSystem({ notifications, onRemove }: NotificationSystemProps): React.JSX.Element | null {

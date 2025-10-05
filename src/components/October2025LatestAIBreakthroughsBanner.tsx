@@ -94,7 +94,9 @@ export default function October2025LatestAIBreakthroughsBanner() {
             className="group bg-gradient-to-br from-rose-500/20 to-purple-500/20 rounded-xl p-6 border border-rose-500/30 hover:border-rose-400/50 transition-all hover:scale-105"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-rose-500/20 rounded-lg" />
+              <div className="p-3 bg-rose-500/20 rounded-lg">
+
+              </div>
               <span className="px-3 py-1 bg-rose-500/30 text-rose-300 rounded-full text-xs font-bold">
                 Personalization AI
               </span>

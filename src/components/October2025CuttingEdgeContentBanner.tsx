@@ -10,8 +10,6 @@ const October2025CuttingEdgeContentBanner = () => {
       gradient: "from-cyan-500 to-blue-600",
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
     {",
@@ -22,8 +20,6 @@ icon: '🚀',=======
       gradient: "from-purple-500 to-pink-600",
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
     {",
@@ -34,8 +30,6 @@ icon: '🚀',=======
       gradient: "from-orange-500 to-red-600",
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];
@@ -44,9 +38,9 @@ icon: '🚀',=======
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-y border-purple-500/20">
       {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div className="absolute top-0 -right-4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
       </div>
 
       <div className="relative container mx-auto px-4 py-12">
@@ -79,7 +73,7 @@ icon: '🚀',=======
               className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
             >
               {/* Card gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
               
               <div className="relative p-6">
                 {/* Icon and Category */}

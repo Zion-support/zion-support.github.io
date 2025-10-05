@@ -47,7 +47,7 @@ const September30NewContentMegaBanner = () => {
   return (
     <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
       
       <div className="relative z-10">
         {/* Header */}
@@ -91,8 +91,9 @@ const September30NewContentMegaBanner = () => {
                 </div>
               </div>
             </Link>
-          ))},
-    {/* Additional promotional card */}
+          ))}
+
+          {/* Additional promotional card */}
           <Link
             to="/blog"
             className="group bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center text-center"

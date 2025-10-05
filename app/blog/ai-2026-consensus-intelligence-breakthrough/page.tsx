@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, Consensus Intelligence, Quantum AI, Enterprise AI, Decision Making, AI Agents, Quantum Computing',
   openGraph: {
     title: 'AI 2026: Consensus Intelligence Breakthrough',
-  description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
-  type: 'article',
-  publishedTime: '2026-01-15T00:00:00.000Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function ConsensusIntelligencePage() {

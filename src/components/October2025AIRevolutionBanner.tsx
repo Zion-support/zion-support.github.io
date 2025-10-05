@@ -39,7 +39,9 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             className="group bg-gradient-to-br from-purple-900/30 to-purple-800/20 rounded-2xl p-6 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-purple-500/20 rounded-xl border border-purple-400/30 group-hover:bg-purple-500/30 transition-colors" />
+              <div className="p-3 bg-purple-500/20 rounded-xl border border-purple-400/30 group-hover:bg-purple-500/30 transition-colors">
+
+              </div>
               <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/30">
                 AUTONOMOUS AGENTS
               </span>
@@ -63,7 +65,9 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
                 <div className="text-2xl font-bold text-green-400">78%</div>
                 <div className="text-xs text-white/60">Cost Cut</div>
               </div>
-              <div className="bg-black/30 rounded-lg p-3 text-center" />
+              <div className="bg-black/30 rounded-lg p-3 text-center">
+
+              </div>
             </div>
             
             <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-3 transition-all">
@@ -122,7 +126,9 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             className="group bg-gradient-to-br from-emerald-900/30 to-cyan-800/20 rounded-2xl p-6 border border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/20"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-emerald-500/20 rounded-xl border border-emerald-400/30 group-hover:bg-emerald-500/30 transition-colors" />
+              <div className="p-3 bg-emerald-500/20 rounded-xl border border-emerald-400/30 group-hover:bg-emerald-500/30 transition-colors">
+
+              </div>
               <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full border border-emerald-500/30">
                 AI SAFETY
               </span>

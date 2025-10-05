@@ -35,7 +35,7 @@ const October2025InfrastructureExcellenceBanner = () => {
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16 sm:py-20">
       {/* Animated background effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url(/grid.svg')] bg-center opacity-10" <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"</div>
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"</div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}

@@ -33,11 +33,11 @@ const SEO: React.FC<SEOProps> = ({
     canonical ||
     (typeof window !== 'undefined'
       ? window.location.href
-      : 'https: '//ziontechgroup.com);
+      : 'https://ziontechgroup.com');
 
   return (
     <Helmet>
-      <title>{fullTitle'}</title>
+      <title>{fullTitle}</title>
       <meta name='description' content={description} />
       <meta name='keywords' content={keywords} />
       <meta name='author' content={author} />
@@ -52,19 +52,19 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='googlebot' content='index,follow' />
 
       {/* Open Graph */}
-      <meta property='og: 'title content={fullTitle'} />
-      <meta property='og: 'description content={description'} />
-      <meta property='og: 'type content={ogType'} />
-      <meta property='og: 'url content={canonicalUrl'} />
-      <meta property='og: 'image content={ogImage'} />
-      <meta property='og: 'site_name content=Zion Tech Group />
-      <meta property=og:locale content=en_US />
+      <meta property='og:title' content={fullTitle} />
+      <meta property='og:description' content={description} />
+      <meta property='og:type' content={ogType} />
+      <meta property='og:url' content={canonicalUrl} />
+      <meta property='og:image' content={ogImage} />
+      <meta property='og:site_name' content='Zion Tech Group' />
+      <meta property='og:locale' content='en_US' />
 
-      {/* Twitter */'}
-      <meta name='twitter: 'card content={twitterCard'} />
-      <meta name='twitter: 'title content={fullTitle'} />
-      <meta name='twitter: 'description content={description'} />
-      <meta name='twitter: 'image content={ogImage'} />
+      {/* Twitter */}
+      <meta name='twitter:card' content={twitterCard} />
+      <meta name='twitter:title' content={fullTitle} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content={ogImage} />
 
       {/* Additional SEO */}
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -72,15 +72,15 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='theme-color' content='#1f2937' />
 
       {/* Preconnect to external domains */}
-      <link rel='preconnect' href='https: '//fonts.googleapis.com />
+      <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link
-        rel=preconnect
-        href=https://fonts.gstatic.com
-        crossOrigin=anonymous
+        rel='preconnect'
+        href='https://fonts.gstatic.com'
+        crossOrigin='anonymous'
       />
 
-      {/* Structured Data */'},
-    {structuredData ? (
+      {/* Structured Data */}
+      {structuredData ? (
         <script type='application/ld+json'>
           {JSON.stringify(structuredData)}
         </script>

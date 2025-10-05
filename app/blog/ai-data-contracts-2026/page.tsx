@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Design and enforce data contracts to cut incident rates, reduce drift, and ship reliable AI at scale.',
   keywords:
-    'data contracts, AI reliability, data quality, schema evolution, observability, SLAs, SLOs'
+    'data contracts, AI reliability, data quality, schema evolution, observability, SLAs, SLOs',
 };
 
 export default function AIDataContracts2026Page() {

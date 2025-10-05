@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, autonomous systems, 99.99% automation, enterprise AI, revolutionary breakthrough, $100B value',
   openGraph: {
     title: 'AI 2026 Ultimate Autonomous Revolution - 99.99% Automation Breakthrough',
-  description: 'Revolutionary AI breakthrough achieving 99.99% autonomous operations and $100 billion enterprise value.',
-  type: 'article'
-  }
+    description: 'Revolutionary AI breakthrough achieving 99.99% autonomous operations and $100 billion enterprise value.',
+    type: 'article',
+  },
 };
 
 export default function AI2026UltimateAutonomousRevolution() {

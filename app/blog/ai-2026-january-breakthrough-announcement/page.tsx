@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   keywords: ['AI breakthrough 2026', 'Meta-Cognitive AI', 'Quantum Neural Networks', 'Autonomous Operations', 'Enterprise AI'],
   openGraph: {
     title: '🚀 January 2026 AI Breakthrough: Meta-Cognitive AI Revolution',
-  description: 'Revolutionary AI breakthrough delivering 1000x performance improvements and 98% automation rates for enterprise transformation.',
-  type: 'article',
-  url: '/blog/ai-2026-january-breakthrough-announcement'
+    description: 'Revolutionary AI breakthrough delivering 1000x performance improvements and 98% automation rates for enterprise transformation.',
+    type: 'article',
+    url: '/blog/ai-2026-january-breakthrough-announcement',
   },
   alternates: {
-    canonical: '/blog/ai-2026-january-breakthrough-announcement'
-  }
+    canonical: '/blog/ai-2026-january-breakthrough-announcement',
+  },
 };
 
 export default function Page() {

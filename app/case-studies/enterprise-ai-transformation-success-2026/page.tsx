@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Enterprise AI Transformation Success: Fortune 500 Company Achieves 300% ROI',
@@ -44,9 +44,9 @@ export default function EnterpriseAITransformationCaseStudy() {
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex items-center space-x-2 text-sm">
-            <ArrowRight href="/" className="text-green-600 hover:text-green-800">Home</ArrowRight>
+            <Link href="/" className="text-green-600 hover:text-green-800">Home</Link>
             <span className="text-gray-400">/</span>
-            <ArrowRight href="/case-studies" className="text-green-600 hover:text-green-800">Case Studies</ArrowRight>
+            <Link href="/case-studies" className="text-green-600 hover:text-green-800">Case Studies</Link>
             <span className="text-gray-400">/</span>
             <span className="text-gray-600">Enterprise AI Transformation</span>
           </nav>
@@ -331,18 +331,18 @@ export default function EnterpriseAITransformationCaseStudy() {
               Let Zion Tech Group help you achieve similar results.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <ArrowRight 
+              <Link 
                 href="/contact" 
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
               >
                 Start Your Transformation
-              </ArrowRight>
-              <ArrowRight 
+              </Link>
+              <Link 
                 href="/services" 
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Explore Our Services
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </article>

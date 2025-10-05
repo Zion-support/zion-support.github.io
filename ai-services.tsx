@@ -2,7 +2,6 @@ import { CheckCircle, FileText, MessageSquare, Users } from 'lucide-react';
 import React from 'react'
 
 import { Helmet } from 'react-helmet-async'
-import { MessageSquare, FileText, Users, CheckCircle } from 'lucide-react';
 
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group'

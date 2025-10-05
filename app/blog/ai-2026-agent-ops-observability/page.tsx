@@ -5,14 +5,11 @@ export const metadata = {
   description: 'Metrics, traces, evals, and guardrails for reliable autonomy at scale.',
   openGraph: {
     title: 'Agent Ops Observability 2026',
-  description: 'Instrument agents with traces, evaluations, KPIs, and guardrails to ensure reliability.',
-  type: 'article',
-  url: 'https://ziontechgroup.com/blog/ai-2026-agent-ops-observability',
-  images: [
-      { url: '/og-agent-ops-observability-2026.jpg',
-  width: 1200,
-  height: 630,
-  alt: 'Agent Ops Observability 2026' }
+    description: 'Instrument agents with traces, evaluations, KPIs, and guardrails to ensure reliability.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-2026-agent-ops-observability',
+    images: [
+      { url: '/og-agent-ops-observability-2026.jpg', width: 1200, height: 630, alt: 'Agent Ops Observability 2026' }
     ]
   }
 };

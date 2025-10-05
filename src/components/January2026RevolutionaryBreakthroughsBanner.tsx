@@ -46,7 +46,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
 
       <div className="relative z-10">
@@ -177,10 +177,10 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       </div>
 
       {/* Floating Particles */}
-      <div className="absolute top-20 left-20 w-4 h-4 bg-purple-400/30 rounded-full animate-pulse" />
-      <div className="absolute top-40 right-32 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-1000" />
-      <div className="absolute bottom-20 left-32 w-3 h-3 bg-green-400/30 rounded-full animate-pulse delay-2000" />
-      <div className="absolute bottom-40 right-20 w-5 h-5 bg-orange-400/30 rounded-full animate-pulse delay-500" />
+      <div className="absolute top-20 left-20 w-4 h-4 bg-purple-400/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-40 right-32 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-32 w-3 h-3 bg-green-400/30 rounded-full animate-pulse delay-2000"></div>
+      <div className="absolute bottom-40 right-20 w-5 h-5 bg-orange-400/30 rounded-full animate-pulse delay-500"></div>
     </motion.div>
   );
 };

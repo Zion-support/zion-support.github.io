@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'Fortune 500, universal consciousness computing, $10 billion success, business transformation, AI breakthrough',
   openGraph: {
     title: 'Fortune 500 Universal Consciousness Computing Success: $10 Billion Transformation',
-  description: 'Real-world case study showing how Universal Consciousness Computing delivered $10 billion in value and 99.9% operational efficiency.',
-  type: 'article',
-  publishedTime: '2026-05-01T00:00:00.000Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Real-world case study showing how Universal Consciousness Computing delivered $10 billion in value and 99.9% operational efficiency.',
+    type: 'article',
+    publishedTime: '2026-05-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function Fortune500UniversalConsciousnessSuccess() {

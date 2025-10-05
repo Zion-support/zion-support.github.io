@@ -1,192 +1,186 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Success Stories & Case Studies | Zion Tech Group',
   description: 'Discover real-world AI transformation success stories. See how companies achieved $500M+ savings, 99% automation, and 600% ROI with our AI solutions.',
-  keywords: 'AI case studies, success stories, AI transformation, enterprise AI, automation success, AI ROI, digital transformation'
+  keywords: 'AI case studies, success stories, AI transformation, enterprise AI, automation success, AI ROI, digital transformation',
 };
 
 const caseStudies = [
   {
     title: 'AI Manufacturing Transformation: 90% Efficiency Gain',
-  slug: 'ai-manufacturing-transformation-2026',
-  excerpt: 'See how a Fortune 500 manufacturer achieved 90% efficiency gains and $50M annual savings through comprehensive AI transformation.',
-  company: 'Global Manufacturing Corp',
-  industry: 'Manufacturing',
-  results: {
+    slug: 'ai-manufacturing-transformation-2026',
+    excerpt: 'See how a Fortune 500 manufacturer achieved 90% efficiency gains and $50M annual savings through comprehensive AI transformation.',
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    results: {
       savings: '$50M',
-  efficiency: '90%',
-  quality: '95%',
-  timeline: '12 months'
+      efficiency: '90%',
+      quality: '95%',
+      timeline: '12 months'
     },
-  image: '🏭',
-  color: 'green'
+    image: '🏭',
+    color: 'green'
   },
   {
     title: 'Fortune 500 AI Transformation: $50M+ Savings & 300% ROI',
-  slug: 'fortune-500-ai-transformation-2027',
-  excerpt: 'See how a Fortune 500 company achieved $50M+ in savings and a 300% ROI through comprehensive AI transformation with Zion Tech Group.',
-  company: 'Fortune 500 Manufacturing',
-  industry: 'Manufacturing',
-  results: {
+    slug: 'fortune-500-ai-transformation-2027',
+    excerpt: 'See how a Fortune 500 company achieved $50M+ in savings and a 300% ROI through comprehensive AI transformation with Zion Tech Group.',
+    company: 'Fortune 500 Manufacturing',
+    industry: 'Manufacturing',
+    results: {
       savings: '$50M+',
-  roi: '300%',
-  efficiency: '85%',
-  timeline: '18 months'
+      roi: '300%',
+      efficiency: '85%',
+      timeline: '18 months'
     },
-  image: '🏭',
-  color: 'green'
+    image: '🏭',
+    color: 'green'
   },
   {
     title: 'AI FinTech Quantum Transformation 2026: $100M Revenue & 99.9% Security',
-  slug: 'ai-fintech-quantum-transformation-2026',
-  excerpt: 'See how a leading FinTech achieved $100M revenue increase, 99.9% security improvement, and quantum-powered trading capabilities.',
-  company: 'Leading FinTech Company',
-  industry: 'Financial Services',
-  results: {
+    slug: 'ai-fintech-quantum-transformation-2026',
+    excerpt: 'See how a leading FinTech achieved $100M revenue increase, 99.9% security improvement, and quantum-powered trading capabilities.',
+    company: 'Leading FinTech Company',
+    industry: 'Financial Services',
+    results: {
       revenue: '$100M',
-  security: '99.9%',
-  speed: '1000x',
-  timeline: '18 months'
+      security: '99.9%',
+      speed: '1000x',
+      timeline: '18 months'
     },
-  image: '💰',
-  color: 'indigo'
+    image: '💰',
+    color: 'indigo'
   },
   {
     title: 'AI Mega Transformation Success 2026: $500M+ Savings Achieved',
-  slug: 'ai-mega-transformation-success-2026',
-  excerpt: 'Discover how a Fortune 500 company achieved $500M+ annual savings and 99% process automation through comprehensive AI transformation.',
-  company: 'Fortune 500 Manufacturing',
-  industry: 'Manufacturing',
-  results: {
+    slug: 'ai-mega-transformation-success-2026',
+    excerpt: 'Discover how a Fortune 500 company achieved $500M+ annual savings and 99% process automation through comprehensive AI transformation.',
+    company: 'Fortune 500 Manufacturing',
+    industry: 'Manufacturing',
+    results: {
       savings: '$500M+',
-  automation: '99%',
-  roi: '600%',
-  timeline: '18 months'
+      automation: '99%',
+      roi: '600%',
+      timeline: '18 months'
     },
-  image: '🏭',
-  color: 'green'
+    image: '🏭',
+    color: 'green'
   },
   {
     title: 'AI Supply Chain Optimization: 60% Cost Reduction & 90% Efficiency Gain',
-  slug: 'ai-supply-chain-optimization-2025',
-  excerpt: 'See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.',
-  company: 'Global Manufacturing Corp',
-  industry: 'Manufacturing',
-  results: {
+    slug: 'ai-supply-chain-optimization-2025',
+    excerpt: 'See how a global manufacturer achieved 60% cost reduction and 90% efficiency improvement, saving $12M annually.',
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    results: {
       savings: '$12M',
-  efficiency: '90%',
-  costReduction: '60%',
-  timeline: '12 months'
+      efficiency: '90%',
+      costReduction: '60%',
+      timeline: '12 months'
     },
-  image: '📦',
-  color: 'blue'
+    image: '📦',
+    color: 'blue'
   },
   {
     title: 'FinTech AI Risk Compliance: 70% Risk Reduction & $2.5M Savings',
-  slug: 'fintech-ai-risk-compliance-2025',
-  excerpt: 'See how a leading fintech achieved 70% risk reduction with automated governance frameworks.',
-  company: 'FinTech Solutions Inc',
-  industry: 'Financial Services',
-  results: {
+    slug: 'fintech-ai-risk-compliance-2025',
+    excerpt: 'See how a leading fintech achieved 70% risk reduction with automated governance frameworks.',
+    company: 'FinTech Solutions Inc',
+    industry: 'Financial Services',
+    results: {
       savings: '$2.5M',
-  riskReduction: '70%',
-  compliance: '100%',
-  timeline: '9 months'
+      riskReduction: '70%',
+      compliance: '100%',
+      timeline: '9 months'
     },
-  image: '💰',
-  color: 'purple'
+    image: '💰',
+    color: 'purple'
   },
   {
     title: 'TechCorp: 90% Efficiency Gain with AI',
-  slug: 'techcorp-ai-transformation',
-  excerpt: 'See how TechCorp achieved $500K annual savings and 90% efficiency improvement with AI transformation.',
-  company: 'TechCorp Inc',
-  industry: 'E-commerce',
-  results: {
+    slug: 'techcorp-ai-transformation',
+    excerpt: 'See how TechCorp achieved $500K annual savings and 90% efficiency improvement with AI transformation.',
+    company: 'TechCorp Inc',
+    industry: 'E-commerce',
+    results: {
       savings: '$500K',
-  efficiency: '90%',
-  roi: '300%',
-  timeline: '6 months'
+      efficiency: '90%',
+      roi: '300%',
+      timeline: '6 months'
     },
-  image: '🛒',
-  color: 'orange'
+    image: '🛒',
+    color: 'orange'
   },
   {
     title: 'HealthTech Solutions: 80% Faster Response Time',
-  slug: 'healthtech-ai-transformation',
-  excerpt: 'Achieved 80% faster response time, 24/7 support, and 95% customer satisfaction with AI virtual assistant.',
-  company: 'HealthTech Solutions',
-  industry: 'Healthcare',
-  results: {
+    slug: 'healthtech-ai-transformation',
+    excerpt: 'Achieved 80% faster response time, 24/7 support, and 95% customer satisfaction with AI virtual assistant.',
+    company: 'HealthTech Solutions',
+    industry: 'Healthcare',
+    results: {
       responseTime: '80% faster',
-  satisfaction: '95%',
-  uptime: '24/7',
-  timeline: '4 months'
+      satisfaction: '95%',
+      uptime: '24/7',
+      timeline: '4 months'
     },
-  image: '🏥',
-  color: 'teal'
+    image: '🏥',
+    color: 'teal'
   },
   {
     title: 'RetailAI Corp: 150% Revenue Growth',
-  slug: 'retail-ai-transformation',
-  excerpt: 'See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.',
-  company: 'RetailAI Corp',
-  industry: 'Retail',
-  results: {
+    slug: 'retail-ai-transformation',
+    excerpt: 'See how RetailAI Corp achieved 150% revenue growth and 80% cost reduction with AI transformation.',
+    company: 'RetailAI Corp',
+    industry: 'Retail',
+    results: {
       revenueGrowth: '150%',
-  costReduction: '80%',
-  roi: '400%',
-  timeline: '8 months'
+      costReduction: '80%',
+      roi: '400%',
+      timeline: '8 months'
     },
-  image: '🛍️',
-  color: 'pink'
+    image: '🛍️',
+    color: 'pink'
   },
   {
     title: 'FinanceFlow Ltd: 75% Process Efficiency Improvement',
-  slug: 'financeflow-ai-automation',
-  excerpt: 'Achieved 75% process efficiency improvement and 300% ROI in 6 months with AI workflow automation.',
-  company: 'FinanceFlow Ltd',
-  industry: 'Fintech',
-  results: {
+    slug: 'financeflow-ai-automation',
+    excerpt: 'Achieved 75% process efficiency improvement and 300% ROI in 6 months with AI workflow automation.',
+    company: 'FinanceFlow Ltd',
+    industry: 'Fintech',
+    results: {
       efficiency: '75%',
-  roi: '300%',
-  automation: '85%',
-  timeline: '6 months'
+      roi: '300%',
+      automation: '85%',
+      timeline: '6 months'
     },
-  image: '💳',
-  color: 'indigo'
+    image: '💳',
+    color: 'indigo'
   },
   {
     title: 'Manufacturing Excellence: Zero-Defect Production',
-  slug: 'ai-manufacturing-excellence-2026',
-  excerpt: 'Achieved zero-defect manufacturing with 99.99% quality assurance and 60% increase in production efficiency.',
-  company: 'Global Manufacturing Ltd',
-  industry: 'Manufacturing',
-  results: {
+    slug: 'ai-manufacturing-excellence-2026',
+    excerpt: 'Achieved zero-defect manufacturing with 99.99% quality assurance and 60% increase in production efficiency.',
+    company: 'Global Manufacturing Ltd',
+    industry: 'Manufacturing',
+    results: {
       quality: '99.99%',
-  efficiency: '60%',
-  defects: '0%',
-  timeline: '10 months'
+      efficiency: '60%',
+      defects: '0%',
+      timeline: '10 months'
     },
-  image: '⚙️',
-  color: 'red'
+    image: '⚙️',
+    color: 'red'
   }
 ];
 
 const industries = [
-  { name: 'All Industries',
-  count: caseStudies.length,
-  active: true },
-  { name: 'Manufacturing',
-  count: caseStudies.filter(item => item.industry === 'Manufacturing').length },
-  { name: 'Financial Services',
-  count: caseStudies.filter(item => item.industry === 'Financial Services' || item.industry === 'Fintech').length },
-  { name: 'Healthcare',
-  count: caseStudies.filter(item => item.industry === 'Healthcare').length },
-  { name: 'E-commerce',
-  count: caseStudies.filter(item => item.industry === 'E-commerce' || item.industry === 'Retail').length }
+  { name: 'All Industries', count: caseStudies.length, active: true },
+  { name: 'Manufacturing', count: caseStudies.filter(item => item.industry === 'Manufacturing').length },
+  { name: 'Financial Services', count: caseStudies.filter(item => item.industry === 'Financial Services' || item.industry === 'Fintech').length },
+  { name: 'Healthcare', count: caseStudies.filter(item => item.industry === 'Healthcare').length },
+  { name: 'E-commerce', count: caseStudies.filter(item => item.industry === 'E-commerce' || item.industry === 'Retail').length }
 ];
 
 export default function CaseStudiesPage() {
@@ -240,7 +234,7 @@ export default function CaseStudiesPage() {
                 </span>
               ))}
             </div>
-            <ArrowRight
+            <Link
               href={`/case-studies/${caseStudies[0].slug}`}
               className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
@@ -248,7 +242,7 @@ export default function CaseStudiesPage() {
               <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>
@@ -292,12 +286,12 @@ export default function CaseStudiesPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 text-sm">Success Story</span>
-                    <ArrowRight
+                    <Link
                       href={`/case-studies/${study.slug}`}
                       className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                     >
                       Read More →
-                    </ArrowRight>
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -349,12 +343,12 @@ export default function CaseStudiesPage() {
             Join hundreds of successful companies that have transformed their operations with our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight
+            <Link
               href="/services"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Our Solutions
-            </ArrowRight>
+            </Link>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"

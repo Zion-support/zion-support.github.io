@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI 2027 Universal Intelligence Singularity $10 Trillion Success Story - Zion Tech Group',
   description: 'How a Fortune 100 global conglomerate achieved $10 trillion ROI through universal intelligence singularity AI systems.',
-  keywords: 'AI success story, $10 trillion ROI, universal intelligence singularity, Fortune 100, AI transformation'
+  keywords: 'AI success story, $10 trillion ROI, universal intelligence singularity, Fortune 100, AI transformation',
 };
 
 export default function AI2027UniversalIntelligenceSingularity10TrillionSuccess() {
@@ -111,8 +111,7 @@ export default function AI2027UniversalIntelligenceSingularity10TrillionSuccess(
             </h3>
             
             <p className="text-lg text-gray-300 mb-8">
-              We deployed our revolutionary universal intelligence singularity AI systems,
-  featuring:
+              We deployed our revolutionary universal intelligence singularity AI systems, featuring:
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">

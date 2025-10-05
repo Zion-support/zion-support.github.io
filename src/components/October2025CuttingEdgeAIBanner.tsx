@@ -5,9 +5,9 @@ const October2025CuttingEdgeAIBanner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16 px-6 rounded-3xl mb-12" > {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-500" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -66,7 +66,9 @@ const October2025CuttingEdgeAIBanner = () => {
             className="group bg-gradient-to-br from-violet-800/40 to-fuchsia-900/40 backdrop-blur-sm border border-violet-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-violet-500/20 rounded-xl group-hover:bg-violet-500/30 transition-colors" />
+              <div className="p-3 bg-violet-500/20 rounded-xl group-hover:bg-violet-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <span className="text-xs text-violet-300 font-semibold uppercase tracking-wide">AI Architecture</span>
               </div>
@@ -123,7 +125,9 @@ const October2025CuttingEdgeAIBanner = () => {
             className="group bg-gradient-to-br from-amber-800/40 to-orange-900/40 backdrop-blur-sm border border-amber-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-amber-500/20 rounded-xl group-hover:bg-amber-500/30 transition-colors" />
+              <div className="p-3 bg-amber-500/20 rounded-xl group-hover:bg-amber-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <span className="text-xs text-amber-300 font-semibold uppercase tracking-wide">AI Infrastructure</span>
               </div>

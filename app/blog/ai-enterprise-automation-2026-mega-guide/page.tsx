@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   keywords: 'AI automation, Enterprise automation, Autonomous operations, AI workflows, Enterprise AI, Automation guide',
   openGraph: {
     title: 'AI Enterprise Automation 2026: Complete Mega Guide',
-  description: 'Master enterprise AI automation with our comprehensive guide covering autonomous operations and intelligent workflows.',
-  type: 'article'
-  }
+    description: 'Master enterprise AI automation with our comprehensive guide covering autonomous operations and intelligent workflows.',
+    type: 'article',
+  },
 };
 
 export default function AIEnterpriseAutomation2026MegaGuide() {
@@ -44,27 +44,14 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
 
             <div className="grid md:grid-cols-4 gap-6 mb-12">
               {[
-                { value: '98%',
-  label: 'Automation Rate',
-  icon: '🤖',
-  color: 'from-green-500 to-emerald-500' },
-                { value: '99.9%',
-  label: 'System Uptime',
-  icon: '⚡',
-  color: 'from-blue-500 to-cyan-500' },
-                { value: '300%',
-  label: 'ROI Improvement',
-  icon: '💰',
-  color: 'from-purple-500 to-pink-500' },
-                { value: '85%',
-  label: 'Cost Reduction',
-  icon: '📊',
-  color: 'from-orange-500 to-red-500' }
+                { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'from-green-500 to-emerald-500' },
+                { value: '99.9%', label: 'System Uptime', icon: '⚡', color: 'from-blue-500 to-cyan-500' },
+                { value: '300%', label: 'ROI Improvement', icon: '💰', color: 'from-purple-500 to-pink-500' },
+                { value: '85%', label: 'Cost Reduction', icon: '📊', color: 'from-orange-500 to-red-500' }
               ].map((stat, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="text-5xl mb-3">{stat.icon}</div>
-                  <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
-                    {stat.value}
+<div  bg-clip-text text-transparent mb-2`}>                    {stat.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">
                     {stat.label}
@@ -145,15 +132,9 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {[
-                  { title: 'Intelligent Monitoring',
-  description: 'Real-time system monitoring with predictive analytics and anomaly detection.',
-  icon: '📊' },
-                  { title: 'Automated Response',
-  description: 'Instant response to issues with self-healing capabilities and intelligent routing.',
-  icon: '⚡' },
-                  { title: 'Continuous Learning',
-  description: 'Machine learning models that continuously improve automation effectiveness.',
-  icon: '🧠' }
+                  { title: 'Intelligent Monitoring', description: 'Real-time system monitoring with predictive analytics and anomaly detection.', icon: '📊' },
+                  { title: 'Automated Response', description: 'Instant response to issues with self-healing capabilities and intelligent routing.', icon: '⚡' },
+                  { title: 'Continuous Learning', description: 'Machine learning models that continuously improve automation effectiveness.', icon: '🧠' }
                 ].map((component, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                     <div className="text-4xl mb-4">{component.icon}</div>
@@ -293,23 +274,13 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
 
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {[
-                  { title: 'Specialized Agents',
-  description: 'Purpose-built AI agents for specific business functions and processes.',
-  icon: '🎯',
-  color: 'text-purple-400' },
-                  { title: 'Agent Communication',
-  description: 'Intelligent communication protocols enabling seamless agent collaboration.',
-  icon: '💬',
-  color: 'text-pink-400' },
-                  { title: 'Orchestration Engine',
-  description: 'Central coordination system managing agent workflows and resource allocation.',
-  icon: '🎼',
-  color: 'text-indigo-400' }
+                  { title: 'Specialized Agents', description: 'Purpose-built AI agents for specific business functions and processes.', icon: '🎯', color: 'text-purple-400' },
+                  { title: 'Agent Communication', description: 'Intelligent communication protocols enabling seamless agent collaboration.', icon: '💬', color: 'text-pink-400' },
+                  { title: 'Orchestration Engine', description: 'Central coordination system managing agent workflows and resource allocation.', icon: '🎼', color: 'text-indigo-400' }
                 ].map((component, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                     <div className="text-4xl mb-4">{component.icon}</div>
-                    <h3 className={`text-lg font-bold ${component.color} mb-2`}>{component.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{component.description}</p>
+<h3 `}>{component.title}</h3>                    <p className="text-gray-300 text-sm leading-relaxed">{component.description}</p>
                   </div>
                 ))}
               </div>

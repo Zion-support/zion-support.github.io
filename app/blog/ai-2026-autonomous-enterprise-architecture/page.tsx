@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, autonomous enterprise, enterprise architecture, self-healing systems, predictive infrastructure, AI-driven decisions',
   openGraph: {
     title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
-  description: 'Revolutionary autonomous enterprise architecture transforming business operations',
-  type: 'article',
-  publishedTime: '2026-01-15T00:00:00Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Revolutionary autonomous enterprise architecture transforming business operations',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AI2026AutonomousEnterpriseArchitecture() {

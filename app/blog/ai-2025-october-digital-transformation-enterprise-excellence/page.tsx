@@ -1,23 +1,23 @@
 export const metadata = {
   title: 'Digital Transformation Excellence — October 2025 | Zion Tech Group',
   description:
-    'A comprehensive enterprise guide to AI-powered digital transformation delivering multi-billion dollar value with measurable outcomes.'
+    'A comprehensive enterprise guide to AI-powered digital transformation delivering multi-billion dollar value with measurable outcomes.',
 };
 
 export default function DigitalTransformationExcellencePage() {
   return (
-    <main>
-      <article>
-        <header>
-          <p>Published Oct 1, 2025</p>
-          <h1>Digital Transformation Excellence — October 2025</h1>
-          <p>
+    <main className="min-h-screen bg-slate-950 text-white">
+      <article className="max-w-3xl mx-auto px-4 py-16">
+        <header className="mb-10">
+          <p className="text-sm text-white/60">Published Oct 1, 2025</p>
+          <h1 className="text-4xl font-extrabold mt-2">Digital Transformation Excellence — October 2025</h1>
+          <p className="text-white/70 mt-3">
             A practical blueprint to unlock enterprise-scale value through AI-first operating models, platform modernization,
             and governed acceleration — from strategy to measurable outcomes.
           </p>
         </header>
 
-        <section>
+        <section className="prose prose-invert prose-slate max-w-none">
           <h2>Executive summary</h2>
           <p>
             Leaders are moving beyond pilots to durable business impact. This guide outlines how to instrument value, modernize
@@ -48,7 +48,7 @@ export default function DigitalTransformationExcellencePage() {
           <h3>Case study highlights</h3>
           <p>
             Retail and technology enterprises realized multi-billion dollar value via unified platforms, autonomous operations,
-            and disciplined governance — achieving 98%+ automation in Target workflows.
+            and disciplined governance — achieving 98%+ automation in target workflows.
           </p>
 
           <h3>Next steps</h3>

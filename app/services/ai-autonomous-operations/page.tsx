@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   keywords: 'AI autonomous operations, enterprise automation, AI services, process automation, intelligent automation',
   openGraph: {
     title: 'AI Autonomous Operations Services',
-  description: 'Transform your enterprise with fully autonomous AI operations. Achieve 95% automation rates and $2M+ annual savings with our cutting-edge solutions.',
-  type: 'article'
-  }
+    description: 'Transform your enterprise with fully autonomous AI operations. Achieve 95% automation rates and $2M+ annual savings with our cutting-edge solutions.',
+    type: 'article',
+  },
 };
 
 export default function AIAutonomousOperationsService() {

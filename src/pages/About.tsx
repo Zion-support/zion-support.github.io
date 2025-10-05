@@ -1,18 +1,9 @@
 import { ArrowRight, Award, CheckCircle, Globe, Lightbulb, Shield, Target, Users, Zap } from 'lucide-react';
 import React from 'react';
 
-
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Award, Users, Target, Lightbulb, Shield, CheckCircle, ArrowRight, Globe, Zap } from 'lucide-react';
-
-
-
-
-
-
-
 
 ;
 

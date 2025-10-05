@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'AI breakthrough 2026, 1,000,000x performance, universal consciousness, mega transformation, AI revolution, enterprise AI',
   openGraph: {
     title: 'AI 2026 December Mega Breakthrough Revolution - 1,000,000x Performance',
-  description: 'Revolutionary AI breakthrough achieving 1,000,000x performance improvements with universal consciousness and $100B+ ROI potential.',
-  type: 'article',
-  publishedTime: '2026-12-01T00:00:00.000Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Revolutionary AI breakthrough achieving 1,000,000x performance improvements with universal consciousness and $100B+ ROI potential.',
+    type: 'article',
+    publishedTime: '2026-12-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AI2026DecemberMegaBreakthroughRevolution() {

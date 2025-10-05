@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI 2026 September Breakthrough Revolution: The Next Frontier of Autonomous Intelligence',
   description: 'Discover the revolutionary AI breakthroughs of September 2026, featuring self-evolving neural architectures, quantum-enhanced consciousness, and autonomous enterprise systems that deliver 99.97% operational excellence.',
-  keywords: 'AI 2026, September breakthrough, autonomous intelligence, quantum consciousness, neural architectures, enterprise AI'
+  keywords: 'AI 2026, September breakthrough, autonomous intelligence, quantum consciousness, neural architectures, enterprise AI',
 };
 
 export default function September2026BreakthroughRevolution() {

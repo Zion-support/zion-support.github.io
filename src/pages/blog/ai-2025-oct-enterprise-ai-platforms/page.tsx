@@ -6,15 +6,8 @@ export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Ai 2025 Oct Enterprise Ai Platforms</title>
-        <meta 
-          name="description" 
-          content="Learn about ai 2025 oct enterprise ai platforms and how it can benefit your enterprise." 
-        />
-        <link 
-          rel="canonical" 
-          href="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" 
-        />
+        <title>Ai 2025 Oct Enterprise Ai Platforms - Zion</title>
+        <meta name="description" content="Learn about ai 2025 oct enterprise ai platforms and how it can benefit your enterprise." />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -31,4 +24,5 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
+}
 }

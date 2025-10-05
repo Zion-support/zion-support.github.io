@@ -6,11 +6,11 @@ export const metadata = {
     'Deploy autonomous AI across the enterprise with guardrails, policy tests, and observability. Achieve 300%+ ROI with reliable, measurable automation.',
   openGraph: {
     title: 'AI Enterprise Automation 2026',
-  description:
+    description:
       'Blueprint to scale autonomous AI safely with policy gates, evals, and cost-aware routing. Real outcomes, not demos.',
-  type: 'article',
-  publishedTime: '2026-01-30T00:00:00Z'
-  }
+    type: 'article',
+    publishedTime: '2026-01-30T00:00:00Z',
+  },
 };
 
 export default function AIEnterpriseAutomation2026() {

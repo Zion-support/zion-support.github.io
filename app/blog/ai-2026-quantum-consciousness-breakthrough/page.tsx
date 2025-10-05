@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI consciousness, quantum AI, sentient AI, quantum consciousness, AI breakthrough 2026',
   openGraph: {
     title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
-  description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
-  type: 'article',
-  publishedTime: '2026-01-28T00:00:00Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
+    type: 'article',
+    publishedTime: '2026-01-28T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function QuantumConsciousnessBreakthrough2026() {
@@ -134,8 +134,7 @@ export default function QuantumConsciousnessBreakthrough2026() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Consciousness Detection Framework</h3>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Our proprietary consciousness detection framework evaluates AI systems across multiple dimensions 
-              of consciousness,
-  including:
+              of consciousness, including:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

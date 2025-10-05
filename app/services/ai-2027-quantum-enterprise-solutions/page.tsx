@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Quantum Enterprise Solutions - Zion Tech Group',
@@ -6,18 +6,18 @@ export const metadata = {
   keywords: 'quantum AI, enterprise solutions, quantum computing, neural networks, 2027 AI trends',
   openGraph: {
     title: 'AI 2027 Quantum Enterprise Solutions - Zion Tech Group',
-  description: 'Transform your enterprise with cutting-edge quantum AI solutions. Achieve 1000x performance improvements and exponential ROI with our quantum neural networks.',
-  url: 'https://ziontechgroup.com/services/ai-2027-quantum-enterprise-solutions'
-  }
+    description: 'Transform your enterprise with cutting-edge quantum AI solutions. Achieve 1000x performance improvements and exponential ROI with our quantum neural networks.',
+    url: 'https://ziontechgroup.com/services/ai-2027-quantum-enterprise-solutions',
+  },
 };
 
 export default function AI2027QuantumEnterpriseSolutions() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <ArrowRight href="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link href="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Services
-        </ArrowRight>
+        </Link>
         
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-lg mb-8">
           <h1 className="text-5xl font-bold mb-4">⚛️ AI 2027 Quantum Enterprise Solutions</h1>
@@ -223,18 +223,18 @@ export default function AI2027QuantumEnterpriseSolutions() {
                 achieve breakthrough results.
               </p>
               <div className="space-y-4">
-                <ArrowRight 
+                <Link 
                   href="/contact" 
                   className="block w-full bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Request Consultation
-                </ArrowRight>
-                <ArrowRight 
+                </Link>
+                <Link 
                   href="/case-studies/ai-2027-quantum-breakthrough-success" 
                   className="block w-full border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center"
                 >
                   View Success Story
-                </ArrowRight>
+                </Link>
               </div>
             </div>
 
@@ -289,20 +289,20 @@ export default function AI2027QuantumEnterpriseSolutions() {
       <div className="mt-12 bg-gradient-to-r from-gray-50 to-blue-50 p-8 rounded-lg">
         <h2 className="text-3xl font-bold text-center mb-8">Related Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ArrowRight href="/services/ai-autonomous-cloud-ops" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+          <Link href="/services/ai-autonomous-cloud-ops" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
             <h3 className="text-xl font-bold text-blue-700 mb-2">🤖 AI Autonomous Cloud Ops</h3>
             <p className="text-gray-600 text-sm">Self-managing cloud infrastructure with AI-powered automation</p>
-          </ArrowRight>
+          </Link>
           
-          <ArrowRight href="/services/ai-2026-enterprise-transformation" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+          <Link href="/services/ai-2026-enterprise-transformation" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
             <h3 className="text-xl font-bold text-blue-700 mb-2">🏢 AI 2026 Enterprise Transformation</h3>
             <p className="text-gray-600 text-sm">Complete enterprise AI transformation services</p>
-          </ArrowRight>
+          </Link>
           
-          <ArrowRight href="/services/ai-2027-breakthrough-solutions" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+          <Link href="/services/ai-2027-breakthrough-solutions" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
             <h3 className="text-xl font-bold text-blue-700 mb-2">⚡ AI 2027 Breakthrough Solutions</h3>
             <p className="text-gray-600 text-sm">Next-generation AI solutions for enterprise</p>
-          </ArrowRight>
+          </Link>
         </div>
       </div>
     </div>

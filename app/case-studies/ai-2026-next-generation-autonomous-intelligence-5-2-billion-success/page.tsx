@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '$5.2B Success Story: Next-Generation Autonomous Intelligence Revolution',
@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'Case Study, Autonomous Intelligence, Fortune 100, $5.2B ROI, Enterprise Success',
   openGraph: {
     title: '$5.2B Success Story: Next-Generation Autonomous Intelligence Revolution',
-  description: 'How a Fortune 100 global manufacturing conglomerate achieved $5.2B ROI through next-generation autonomous intelligence with 99.99% operational autonomy.',
-  type: 'article',
-  publishedTime: '2026-01-15T00:00:00Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'How a Fortune 100 global manufacturing conglomerate achieved $5.2B ROI through next-generation autonomous intelligence with 99.99% operational autonomy.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function NextGenAutonomousIntelligenceSuccessPage() {
@@ -36,18 +36,18 @@ export default function NextGenAutonomousIntelligenceSuccessPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <ArrowRight 
+              <Link 
                 href="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" 
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough →
-              </ArrowRight>
-              <ArrowRight 
+              </Link>
+              <Link 
                 href="/contact" 
                 className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Similar Results
-              </ArrowRight>
+              </Link>
             </div>
             
             {/* Key Metrics */}
@@ -397,18 +397,18 @@ export default function NextGenAutonomousIntelligenceSuccessPage() {
                 Contact Zion Tech Group to begin your autonomous intelligence transformation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <ArrowRight 
+                <Link 
                   href="/contact" 
                   className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
                 >
                   Start Your Transformation
-                </ArrowRight>
-                <ArrowRight 
+                </Link>
+                <Link 
                   href="/blog/ai-2026-next-generation-autonomous-intelligence-revolution" 
                   className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Read Full Breakthrough
-                </ArrowRight>
+                </Link>
               </div>
               <div className="mt-6 text-green-100">
                 <p><strong>Email:</strong> kleber@ziontechgroup.com</p>

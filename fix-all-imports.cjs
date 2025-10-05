@@ -2,109 +2,121 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { glob } = require('glob');
 
-// Find all TypeScript/JSX files that have incorrect imports
-const files = glob.sync('**/*.{ts,tsx,js,jsx}', {
-  ignore: [
-    'node_modules/**',
-    'dist/**',
-    'build/**',
-    '.git/**',
-    '**/backup-problematic-files/**',
-    '**/corrupted-files-backup/**',
-    '**/corrupted_backup/**',
-    '**/corrupted_files_backup_2/**',
-    '**/automation_backup/**',
-    '**/ai-optimization-backups/**',
-    '**/automation_logs/**',
-    '**/all-automations-reports/**',
-    '**/accessibility-reports/**',
-    '**/performance-reports/**',
-    '**/optimization-reports/**',
-    '**/monitoring-reports/**',
-    '**/maintenance-reports/**',
-    '**/log-analysis-reports/**',
-    '**/intelligent-deployment-reports/**',
-    '**/improvement-reports/**',
-    '**/intelligence-reports/**',
-    '**/factories/**',
-    '**/error-prevention-reports/**',
-    '**/build-reports/**',
-    '**/linting-error-fixer-report.json',
-    '**/merge-conflict-resolver-report.json',
-    '**/master-automation-report.json',
-    '**/final-automation-report.json',
-    '**/final-comprehensive-report.json',
-    '**/final-comprehensive-automation-report.json',
-    '**/AUTOMATION_*.md',
-    '**/ALL_*.md',
-    '**/APP_*.md',
-    '**/ADMIN_*.md',
-    '**/automation_logs.txt',
-    '**/create-working-pages.cjs',
-    '**/fix-*.cjs',
-    '**/fix-imports.cjs',
-    '**/fix_files.cjs',
-    '**/fix_lucide_imports*.py',
-    '**/fix_lucide_default_imports.py',
-    '**/fix-imports.cjs',
-    '**/fix_files.cjs',
-    '**/fix_lucide_imports_final.py',
-    '**/fix-lucide-imports.js',
-    '**/fix_lucide_imports_v2.py',
-    '**/implement-improvements.sh',
-    '**/lint-fixes*.patch',
-    '**/ERROR_FIXES_AND_AUTOMATION_SUMMARY.md'
-  ]
-});
+// All the icons that are actually used in the codebase
+const allIcons = [
+  'ArrowLeft', 'ArrowRight', 'Calendar', 'Clock', 'User', 'Users', 'Tag', 'TrendingUp', 
+  'DollarSign', 'Target', 'Brain', 'Map', 'Shield', 'Zap', 'Cpu', 'Bot', 'Share', 
+  'Bookmark', 'CheckCircle', 'BookOpen', 'BarChart3', 'Gauge', 'ShieldCheck', 'Activity', 
+  'Atom', 'Globe', 'Rocket', 'Satellite', 'Award', 'Cog', 'Cogs', 'Factory', 'Calculator',
+  'ListChecks', 'FileWarning', 'RefreshCw', 'Link'
+];
 
-let fixedFiles = 0;
-let totalFiles = 0;
+// Fix icon names to correct lucide-react names
+const iconMappings = {
+  'Globe2': 'Globe',
+  'RocketIcon': 'Rocket',
+  'BookmarkIcon': 'Bookmark',
+  'Share2': 'Share'
+};
 
-console.log(`Found ${files.length} files to check...`);
-
-files.forEach(file => {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    
-    // Check if file has incorrect imports
-    const hasIncorrectImports = /import\s+.*\s+from\s+['"]lucide-react['"];/.test(content) || 
-                               /import\s+\{\s*Link\s*\}\s+from\s+['"]next\/link['"];/.test(content);
-    
-    if (hasIncorrectImports) {
-      totalFiles++;
-      console.log(`Fixing ${file}...`);
-      
-      let newContent = content;
-      
-      // Fix lucide-react imports - convert named imports to default imports
-      const lucideMatches = newContent.match(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]lucide-react['"];/g);
-      if (lucideMatches && lucideMatches.length > 0) {
-        lucideMatches.forEach(match => {
-          const namesMatch = match.match(/import\s+\{\s*([^}]+)\s*\}\s+from/);
-          if (namesMatch) {
-            const names = namesMatch[1].split(',').map(name => name.trim()).filter(Boolean);
-            const defaultImports = names.map(name => `import ${name} from 'lucide-react';`).join('\n');
-            newContent = newContent.replace(match, defaultImports);
-          }
-        });
-      }
-      
-      // Fix Next.js Link imports - convert named import to default import
-      newContent = newContent.replace(
-        /import\s+\{\s*Link\s*\}\s+from\s+['"]next\/link['"];/g,
-        "import Link from 'next/link';"
-      );
-      
-      // Write the fixed content back
-      fs.writeFileSync(file, newContent, 'utf8');
-      fixedFiles++;
-      console.log(`✓ Fixed ${file}`);
+// Clean up imports and add all missing icons
+function fixImports(content) {
+  const lines = content.split('\n');
+  const cleanedLines = [];
+  let hasLucideImport = false;
+  let hasLinkImport = false;
+  let usedIcons = new Set();
+  
+  // Find all used icons in the content
+  allIcons.forEach(icon => {
+    if (content.includes(`<${icon}`) || content.includes(`${icon} `) || content.includes(`${icon}`)) {
+      usedIcons.add(icon);
     }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+  });
+  
+  // Apply icon name mappings
+  usedIcons.forEach(icon => {
+    if (iconMappings[icon]) {
+      usedIcons.delete(icon);
+      usedIcons.add(iconMappings[icon]);
+    }
+  });
+  
+  for (const line of lines) {
+    if (line.includes('import') && line.includes('lucide-react')) {
+      if (!hasLucideImport && usedIcons.size > 0) {
+        hasLucideImport = true;
+        const iconList = Array.from(usedIcons).sort().join(', ');
+        cleanedLines.push(`import { ${iconList} } from 'lucide-react';`);
+      }
+      // Skip duplicate lucide imports
+    } else if (line.includes('import') && line.includes('Link')) {
+      if (!hasLinkImport) {
+        hasLinkImport = true;
+        cleanedLines.push(line);
+      }
+      // Skip duplicate Link imports
+    } else if (line.includes('import') && line.includes('next/link')) {
+      if (!hasLinkImport) {
+        hasLinkImport = true;
+        cleanedLines.push(line);
+      }
+      // Skip duplicate Link imports
+    } else {
+      cleanedLines.push(line);
+    }
   }
-});
+  
+  // If we need Link but don't have it, add it
+  if (content.includes('<Link') && !hasLinkImport) {
+    const insertIndex = cleanedLines.findIndex(line => line.includes('import') && line.includes('react'));
+    if (insertIndex !== -1) {
+      cleanedLines.splice(insertIndex + 1, 0, "import Link from 'next/link';");
+    } else {
+      cleanedLines.unshift("import Link from 'next/link';");
+    }
+  }
+  
+  return cleanedLines.join('\n');
+}
 
-console.log(`\nFixed ${fixedFiles} out of ${totalFiles} files with incorrect imports.`);
+// Fix icon names in the content
+function fixIconNames(content) {
+  Object.entries(iconMappings).forEach(([oldName, newName]) => {
+    content = content.replace(new RegExp(`\\b${oldName}\\b`, 'g'), newName);
+  });
+  return content;
+}
+
+// Process all TypeScript/JSX files
+async function processFiles() {
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+  
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    try {
+      const filePath = path.join(process.cwd(), file);
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+      
+      // Apply fixes
+      content = fixImports(content);
+      content = fixIconNames(content);
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`Fixed: ${file}`);
+        fixedCount++;
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+    }
+  });
+  
+  console.log(`\nFixed ${fixedCount} files`);
+}
+
+processFiles().catch(console.error);

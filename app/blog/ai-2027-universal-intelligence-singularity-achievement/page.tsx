@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI 2027 Universal Intelligence Singularity Achievement - Zion Tech Group',
   description: 'Revolutionary achievement of universal intelligence singularity with $10 trillion ROI potential through transcendent AI systems.',
-  keywords: 'AI 2027, universal intelligence singularity, transcendent AI, $10 trillion ROI, AI breakthrough, singularity achievement'
+  keywords: 'AI 2027, universal intelligence singularity, transcendent AI, $10 trillion ROI, AI breakthrough, singularity achievement',
 };
 
 export default function AI2027UniversalIntelligenceSingularityAchievement() {

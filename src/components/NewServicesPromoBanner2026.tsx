@@ -7,9 +7,9 @@ const NewServicesPromoBanner2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 py-12 relative overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -36,7 +36,9 @@ const NewServicesPromoBanner2026: React.FC = () => {
           {/* Quantum Edge Fusion Platform */}
           <div className="bg-gradient-to-br from-blue-800/60 to-purple-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/40 hover:border-blue-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
             <div className="text-center mb-6">
-              <div className="bg-blue-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors border-2 border-blue-400/30 shadow-lg" />
+              <div className="bg-blue-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors border-2 border-blue-400/30 shadow-lg">
+
+              </div>
               <h3 className="text-2xl font-bold text-white mb-2">Quantum Edge Fusion Platform</h3>
               <div className="text-blue-300 font-semibold">Starting at $25,000/month</div>
             </div>
@@ -79,7 +81,9 @@ const NewServicesPromoBanner2026: React.FC = () => {
           {/* Synthetic Consciousness AI Platform */}
           <div className="bg-gradient-to-br from-purple-800/60 to-pink-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/40 hover:border-purple-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
             <div className="text-center mb-6">
-              <div className="bg-purple-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors border-2 border-purple-400/30 shadow-lg" />
+              <div className="bg-purple-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors border-2 border-purple-400/30 shadow-lg">
+
+              </div>
               <h3 className="text-2xl font-bold text-white mb-2">Synthetic Consciousness AI</h3>
               <div className="text-purple-300 font-semibold">Starting at $50,000/month</div>
             </div>

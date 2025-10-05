@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'March 2026 AI Breakthrough: $3.2B Fortune 500 Mega Success Story | Zion Tech Group',
   description: 'Learn how a Fortune 500 manufacturing conglomerate achieved unprecedented results with our March 2026 AI breakthrough suite, generating $3.2B in measurable value.',
-  keywords: 'AI, Case Study, Fortune 500, Success Story, Manufacturing, $3.2B, Breakthrough'
+  keywords: 'AI, Case Study, Fortune 500, Success Story, Manufacturing, $3.2B, Breakthrough',
 };
 
 export default function March2026BreakthroughMegaSuccessPage() {

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI 2025: Quantum Computing Breakthrough - Zion Tech Group',
   description: 'Revolutionary quantum computing breakthrough achieving 1 million qubits and exponential AI performance gains in December 2025.',
-  keywords: 'quantum computing, AI breakthrough, quantum AI, December 2025, Zion Tech Group'
+  keywords: 'quantum computing, AI breakthrough, quantum AI, December 2025, Zion Tech Group',
 };
 
 export default function AI2025DecemberQuantumComputingBreakthrough() {

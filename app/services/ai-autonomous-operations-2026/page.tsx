@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   keywords: 'autonomous AI, self-healing systems, enterprise automation, AI operations, intelligent automation',
   openGraph: {
     title: 'Autonomous AI Operations Services 2026',
-  description: 'Transform your operations with self-managing AI systems.',
-  type: 'website'
-  }
+    description: 'Transform your operations with self-managing AI systems.',
+    type: 'website',
+  },
 };
 
 export default function AIAutonomousOperationsServices2026() {

@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   keywords: 'AI Success Story, Fortune 500, $50B Value, Autonomous Intelligence, Enterprise Transformation',
   openGraph: {
     title: 'AI 2026 July Revolutionary Breakthrough: $50B Mega Success Story',
-  description: 'Real-world success story: How Fortune 500 companies achieved unprecedented results with Next-Generation Autonomous Intelligence.',
-  type: 'article'
-  }
+    description: 'Real-world success story: How Fortune 500 companies achieved unprecedented results with Next-Generation Autonomous Intelligence.',
+    type: 'article',
+  },
 };
 
 export default function AI2026JulyRevolutionaryBreakthroughMegaSuccess() {

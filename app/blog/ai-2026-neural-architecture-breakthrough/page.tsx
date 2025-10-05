@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, neural architecture, multi-modal AI, enterprise AI, breakthrough technology, machine learning',
   openGraph: {
     title: 'AI 2026: Neural Architecture Breakthrough - Revolutionary Multi-Modal Intelligence',
-  description: 'Discover the groundbreaking neural architecture breakthrough that enables 1000x processing speed and 99% accuracy in multi-modal AI systems.',
-  type: 'article',
-  publishedTime: '2026-01-15T00:00:00.000Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Discover the groundbreaking neural architecture breakthrough that enables 1000x processing speed and 99% accuracy in multi-modal AI systems.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AINeuralArchitectureBreakthrough() {

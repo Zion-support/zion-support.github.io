@@ -3,7 +3,7 @@ import ArrowRight from 'next/link';
 export const metadata = {
   title: 'AI 2026: Hyper-Automation Revolution - Complete Enterprise Transformation - Zion Tech Group',
   description: 'Revolutionary hyper-automation platform delivering 99.5% autonomous operations with $3.2B average ROI and complete enterprise transformation capabilities.',
-  keywords: 'hyper-automation, enterprise AI, autonomous operations, AI transformation, enterprise automation'
+  keywords: 'hyper-automation, enterprise AI, autonomous operations, AI transformation, enterprise automation',
 };
 
 export default function AI2026HyperAutomationRevolution() {

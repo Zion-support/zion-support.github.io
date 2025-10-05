@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2025-2026 Mega Transformation Success: $3.2B ROI Breakthrough',
@@ -6,9 +6,9 @@ export const metadata = {
   keywords: 'AI transformation success, Fortune 500 ROI, quantum AI, autonomous operations, enterprise AI case study',
   openGraph: {
     title: 'AI 2025-2026 Mega Transformation Success: $3.2B ROI Breakthrough',
-  description: 'Discover how a Fortune 500 company achieved $3.2B ROI through revolutionary AI transformation.',
-  type: 'article'
-  }
+    description: 'Discover how a Fortune 500 company achieved $3.2B ROI through revolutionary AI transformation.',
+    type: 'article',
+  },
 };
 
 export default function AIMegaTransformationSuccess20252026() {
@@ -255,18 +255,18 @@ export default function AIMegaTransformationSuccess20252026() {
             Our proven methodologies and cutting-edge technologies can deliver unprecedented ROI for your enterprise.
           </p>
           <div className="flex gap-4">
-            <ArrowRight 
+            <Link 
               href="/contact" 
               className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Start Your Transformation
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/services" 
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               View Our Services
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </div>
@@ -274,20 +274,20 @@ export default function AIMegaTransformationSuccess20252026() {
       <div className="mt-12 border-t pt-8">
         <h3 className="text-2xl font-bold mb-4">Related Success Stories</h3>
         <div className="grid md:grid-cols-2 gap-4">
-          <ArrowRight 
+          <Link 
             href="/case-studies/ai-2026-global-enterprise-transformation-success" 
             className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
           >
             <h4 className="font-bold text-blue-600">$500M Global Enterprise Success</h4>
             <p className="text-gray-600 text-sm">Another Fortune 500 transformation with massive ROI</p>
-          </ArrowRight>
-          <ArrowRight 
+          </Link>
+          <Link 
             href="/case-studies/fortune-500-ai-transformation-mega-success-2026" 
             className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
           >
             <h4 className="font-bold text-green-600">$300M ROI Success Story</h4>
             <p className="text-gray-600 text-sm">Manufacturing industry transformation case study</p>
-          </ArrowRight>
+          </Link>
         </div>
       </div>
     </div>

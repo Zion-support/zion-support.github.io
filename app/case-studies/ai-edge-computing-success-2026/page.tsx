@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Edge Computing Success Story: $50M Savings & Sub-10ms Performance',
@@ -7,12 +7,12 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI Edge Computing Success Story: $50M Savings & Sub-10ms Performance',
-  description: 'Discover how a Fortune 500 manufacturer achieved $50M annual savings, 99.99% uptime, and sub-10ms response times with AI edge computing transformation.',
-  url: 'https://ziontechgroup.com/case-studies/ai-edge-computing-success-2026',
-  siteName: 'Zion Tech Group',
-  locale: 'en_US',
-  type: 'article'
-  }
+    description: 'Discover how a Fortune 500 manufacturer achieved $50M annual savings, 99.99% uptime, and sub-10ms response times with AI edge computing transformation.',
+    url: 'https://ziontechgroup.com/case-studies/ai-edge-computing-success-2026',
+    siteName: 'Zion Tech Group',
+    locale: 'en_US',
+    type: 'article',
+  },
 };
 
 export default function AIEdgeComputingSuccess2026() {
@@ -305,12 +305,12 @@ export default function AIEdgeComputingSuccess2026() {
             Discover how AI edge computing can deliver similar results for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight
+            <Link
               href="/services/ai-edge-computing"
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Edge AI Services
-            </ArrowRight>
+            </Link>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
@@ -324,22 +324,22 @@ export default function AIEdgeComputingSuccess2026() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Success Stories</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <ArrowRight href="/case-studies/ai-autonomous-business-systems-success-2026" className="group">
+            <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   Autonomous Business Systems Success
                 </h4>
                 <p className="text-gray-600">How a Fortune 500 company achieved 95% automation with AI autonomous systems.</p>
               </div>
-            </ArrowRight>
-            <ArrowRight href="/case-studies/ai-quantum-computing-transformation-2026" className="group">
+            </Link>
+            <Link href="/case-studies/ai-quantum-computing-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   Quantum AI Transformation
                 </h4>
                 <p className="text-gray-600">Discover how quantum AI delivered 1000x performance improvements.</p>
               </div>
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </div>

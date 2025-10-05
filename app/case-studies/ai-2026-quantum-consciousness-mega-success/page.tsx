@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI Achievement',
@@ -7,17 +7,17 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI Achievement',
-  description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.',
-  url: 'https://ziontechgroup.com/case-studies/ai-2026-quantum-consciousness-mega-success',
-  siteName: 'Zion Tech Group',
-  locale: 'en_US',
-  type: 'article'
+    description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.',
+    url: 'https://ziontechgroup.com/case-studies/ai-2026-quantum-consciousness-mega-success',
+    siteName: 'Zion Tech Group',
+    locale: 'en_US',
+    type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-  title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI',
-  description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.'
-  }
+    title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI',
+    description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.',
+  },
 };
 
 export default function QuantumConsciousnessSuccess() {
@@ -264,12 +264,12 @@ export default function QuantumConsciousnessSuccess() {
             Join the Fortune 100 companies achieving breakthrough results with quantum consciousness AI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight
+            <Link
               href="/contact"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Schedule Quantum Consultation
-            </ArrowRight>
+            </Link>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
@@ -285,15 +285,15 @@ export default function QuantumConsciousnessSuccess() {
           <div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h3>
             <div className="space-y-3">
-              <ArrowRight href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block text-blue-600 hover:text-blue-800 transition-colors">
+              <Link href="/case-studies/ai-2026-global-enterprise-transformation-success" className="block text-blue-600 hover:text-blue-800 transition-colors">
                 → Global Enterprise AI Transformation: $500M ROI Success
-              </ArrowRight>
-              <ArrowRight href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block text-blue-600 hover:text-blue-800 transition-colors">
+              </Link>
+              <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block text-blue-600 hover:text-blue-800 transition-colors">
                 → Fortune 500 AI Transformation: $300M ROI Achievement
-              </ArrowRight>
-              <ArrowRight href="/blog/ai-2026-quantum-consciousness-breakthrough" className="block text-blue-600 hover:text-blue-800 transition-colors">
+              </Link>
+              <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="block text-blue-600 hover:text-blue-800 transition-colors">
                 → AI 2026: Quantum Consciousness Breakthrough Technology
-              </ArrowRight>
+              </Link>
             </div>
           </div>
           <div className="text-sm text-gray-500">

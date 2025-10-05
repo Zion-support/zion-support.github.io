@@ -1,3 +1,5 @@
+import ArrowRight from 'next/link';
+import { ArrowRight, Target } from 'lucide-react';
 
 
 export const metadata = {

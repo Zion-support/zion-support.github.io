@@ -6,9 +6,9 @@ export const metadata = {
   keywords: 'AI 2027, quantum computing, quantum AI, enterprise AI, quantum breakthrough, AI performance',
   openGraph: {
     title: 'AI 2027: Quantum Computing Breakthrough for Enterprise',
-  description: 'The quantum computing revolution is here. Learn how AI 2027 quantum systems are delivering 1000x performance improvements.',
-  type: 'article'
-  }
+    description: 'The quantum computing revolution is here. Learn how AI 2027 quantum systems are delivering 1000x performance improvements.',
+    type: 'article',
+  },
 };
 
 export default function AI2027QuantumBreakthroughEnterprise() {

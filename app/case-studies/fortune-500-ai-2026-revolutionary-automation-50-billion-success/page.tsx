@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'Fortune 500, AI automation, $50 billion success, enterprise transformation, AI ROI, case study',
   openGraph: {
     title: 'Fortune 500 AI 2026 Revolutionary Automation: $50B Success Story',
-  description: 'Complete case study: How revolutionary AI automation delivered $50 billion in value creation.',
-  type: 'article',
-  publishedTime: '2026-01-15T00:00:00Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Complete case study: How revolutionary AI automation delivered $50 billion in value creation.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function Fortune500AI2026RevolutionaryAutomation50BillionSuccess() {

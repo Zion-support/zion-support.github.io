@@ -4,12 +4,12 @@ const October2025UltimateBreakthroughBanner = () => {
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden border-b border-white/10" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_50%,transparent_75%,transparent_100%)] bg-[length:250px_250px] animate-shimmer" />
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_50%,transparent_75%,transparent_100%)] bg-[length:250px_250px] animate-shimmer"></div>
       </div>
       
       {/* Glowing Orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-700" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Badge */}
@@ -42,7 +42,9 @@ const October2025UltimateBreakthroughBanner = () => {
             className="group relative bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-purple-400/30 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
-              <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors" />
+              <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-purple-200 transition-colors">
                   Agentic Mesh Networks
@@ -62,7 +64,9 @@ const October2025UltimateBreakthroughBanner = () => {
             className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-blue-400/30 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
-              <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors" />
+              <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-blue-200 transition-colors">
                   Quantum-AI Optimization
@@ -82,7 +86,9 @@ const October2025UltimateBreakthroughBanner = () => {
             className="group relative bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-sm border border-indigo-400/30 rounded-xl p-6 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
-              <div className="p-2 bg-indigo-500/20 rounded-lg group-hover:bg-indigo-500/30 transition-colors" />
+              <div className="p-2 bg-indigo-500/20 rounded-lg group-hover:bg-indigo-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-indigo-200 transition-colors">
                   Cognitive Digital Twins
@@ -102,7 +108,9 @@ const October2025UltimateBreakthroughBanner = () => {
             className="group relative bg-gradient-to-br from-cyan-500/10 to-teal-500/10 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
-              <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors" />
+              <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-cyan-200 transition-colors">
                   Neuromorphic Edge AI
@@ -122,7 +130,9 @@ const October2025UltimateBreakthroughBanner = () => {
             className="group relative bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm border border-red-400/30 rounded-xl p-6 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
-              <div className="p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors" />
+              <div className="p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-red-200 transition-colors">
                   Autonomous Security
@@ -139,7 +149,9 @@ const October2025UltimateBreakthroughBanner = () => {
           {/* CTA Card */}
           <div className="group relative bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm border-2 border-yellow-400/50 rounded-xl p-6 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300">
             <div className="flex items-start gap-3 mb-3">
-              <div className="p-2 bg-yellow-500/20 rounded-lg group-hover:bg-yellow-500/30 transition-colors" />
+              <div className="p-2 bg-yellow-500/20 rounded-lg group-hover:bg-yellow-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1">
                   Explore All Breakthroughs

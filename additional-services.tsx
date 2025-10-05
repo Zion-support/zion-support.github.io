@@ -2,7 +2,6 @@ import { ArrowRight, Brain, CheckCircle, Clock, Cloud, Code, DollarSign, Globe, 
 import React from 'react'
 
 import { Helmet } from 'react-helmet-async'
-import { Brain, Code, Cloud, Server, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, Smartphone, Globe } from 'lucide-react';
 
 export default function AdditionalServices() {
   const title = 'Expanded Services Catalog — Zion Tech Group';

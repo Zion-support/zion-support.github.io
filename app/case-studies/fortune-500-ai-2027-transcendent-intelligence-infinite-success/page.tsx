@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -242,7 +241,7 @@ export default function Fortune500AI2027TranscendentIntelligenceInfiniteSuccess(
               ].map((result, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 text-center">
                   <div className="text-6xl mb-4">{result.icon}</div>
-                  <div className={`text-4xl font-extrabold mb-2 ${result.color}`}>
+                  <div className={`text-5xl font-extrabold ${result.color} mb-2`}>
                     {result.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">

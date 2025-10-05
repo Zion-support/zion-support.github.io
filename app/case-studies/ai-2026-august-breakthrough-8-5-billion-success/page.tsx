@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, August breakthrough, $8.5B success, Fortune 500, autonomous operations, 3,000% ROI, enterprise transformation',
   openGraph: {
     title: 'AI 2026 August Breakthrough: $8.5B Enterprise Transformation Success',
-  description: 'Fortune 500 companies achieve unprecedented success with AI 2026 August breakthrough: $8.5B value, 99.95% autonomy, 3,000% ROI.',
-  type: 'article',
-  publishedTime: '2026-08-15T00:00:00Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Fortune 500 companies achieve unprecedented success with AI 2026 August breakthrough: $8.5B value, 99.95% autonomy, 3,000% ROI.',
+    type: 'article',
+    publishedTime: '2026-08-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AI2026AugustBreakthroughSuccessPage() {

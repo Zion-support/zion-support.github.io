@@ -6,9 +6,9 @@ export const metadata = {
     'A concise executive guide to plan, fund, and govern enterprise AI with measurable outcomes.',
   openGraph: {
     title: 'AI Executive Playbook 2027',
-  description:
+    description:
       'Plan, fund, and govern reliable AI with measurable outcomes across the enterprise.',
-  type: 'article'
+    type: 'article'
   }
 };
 

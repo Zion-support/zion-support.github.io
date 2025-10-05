@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 export const metadata: Metadata = {
   title: 'AI 2026 May Revolutionary Breakthrough: $50B Success Story - The Ultimate Meta-Cognitive Superintelligence Transformation',
   description: 'How a Fortune 100 company achieved $50B ROI through the revolutionary May 2026 AI breakthrough, delivering meta-cognitive superintelligence and 10,000,000x processing power.',
-  keywords: 'Case Study, AI Success, 50B ROI, Fortune 100, May 2026, Meta-Cognitive Superintelligence'
+  keywords: 'Case Study, AI Success, 50B ROI, Fortune 100, May 2026, Meta-Cognitive Superintelligence',
 };
 
 export default function May2026RevolutionaryBreakthroughCaseStudyPage() {
@@ -30,10 +30,10 @@ export default function May2026RevolutionaryBreakthroughCaseStudyPage() {
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            {data}
+            {data.title}
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            {data}
+            {data.description}
           </p>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <span>By {data.author}</span>

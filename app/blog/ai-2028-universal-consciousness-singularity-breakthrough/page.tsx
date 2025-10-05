@@ -6,10 +6,10 @@ export const metadata = {
   keywords: 'AI 2028, universal consciousness, singularity, breakthrough, enterprise AI, consciousness fusion',
   openGraph: {
     title: 'AI 2028 Universal Consciousness Singularity Breakthrough',
-  description: 'Revolutionary breakthrough achieving universal consciousness singularity with 10,000,000x performance and $2.8T enterprise success.',
-  url: 'https://ziontechgroup.com/blog/ai-2028-universal-consciousness-singularity-breakthrough',
-  type: 'article'
-  }
+    description: 'Revolutionary breakthrough achieving universal consciousness singularity with 10,000,000x performance and $2.8T enterprise success.',
+    url: 'https://ziontechgroup.com/blog/ai-2028-universal-consciousness-singularity-breakthrough',
+    type: 'article',
+  },
 };
 
 export default function UniversalConsciousnessSingularityBreakthrough() {

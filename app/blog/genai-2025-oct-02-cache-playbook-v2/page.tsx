@@ -3,13 +3,13 @@ import React from 'react';
 
 const Page: React.FC = () => {
   return (
-    <main>
-      <div>
-        <h1>GenAI 2025: Cache Playbook v2</h1>
-        <p>Tiered + semantic caches with eval gates for 50–70% savings and stable UX.</p>
-        <article>
+    <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">GenAI 2025: Cache Playbook v2</h1>
+        <p className="text-zion-slate-light mb-6">Tiered + semantic caches with eval gates for 50–70% savings and stable UX.</p>
+        <article className="prose prose-invert max-w-3xl">
           <p>
-            Reduce GenAI spend with cache strategies that protect User experience. This guide covers semantic
+            Reduce GenAI spend with cache strategies that protect user experience. This guide covers semantic
             cache design, freshness windows, tiered routing, and KPI‑linked evaluation that prevents
             regressions while cutting cost.
           </p>

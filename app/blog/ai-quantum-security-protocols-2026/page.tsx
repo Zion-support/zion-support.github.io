@@ -3,7 +3,7 @@ import ArrowRight from 'next/link';
 export const metadata = {
   title: 'AI Quantum Security Protocols 2026 | Zion Tech Group',
   description:
-    'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.'
+    'Protect AI systems with quantum‑resistant cryptography and verifiable guardrails. Achieve 99.99% security with sub‑millisecond overhead.',
 };
 
 export default function AIQuantumSecurityProtocols2026Page() {

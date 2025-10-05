@@ -1,19 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-
-// Mock the entire App component to avoid complex dependencies
-jest.mock('../App', () => {
-  return function MockApp() {
-    return (
-      <div data-testid="app">
-        <div data-testid="header">Header Component</div>
-        <div data-testid="main-content">Main Content</div>
-        <div data-testid="footer">Footer Component</div>
-      </div>
-    );
-  };
-});
+import App from '../App';
 
 // Mock react-router-dom components
 jest.mock('react-router-dom', () => ({
@@ -25,8 +13,18 @@ jest.mock('react-router-dom', () => ({
   ),
 }));
 
-// Import the mocked App
-import App from '../App';
+// Mock other components that might cause issues
+jest.mock('../components/Header', () => {
+  return function MockHeader() {
+    return <div data-testid="header">Header Component</div>;
+  };
+});
+
+jest.mock('../components/Footer', () => {
+  return function MockFooter() {
+    return <div data-testid="footer">Footer Component</div>;
+  };
+});
 
 describe('App', () => {
   test('renders without crashing', () => {
@@ -37,7 +35,6 @@ describe('App', () => {
     );
     
     // Check if the app renders without throwing errors
-    expect(screen.getByTestId('app')).toBeInTheDocument();
     expect(screen.getByTestId('header')).toBeInTheDocument();
     expect(screen.getByTestId('footer')).toBeInTheDocument();
   });
@@ -50,11 +47,9 @@ describe('App', () => {
     );
     
     // Verify basic app structure is present
-    const app = screen.getByTestId('app');
     const header = screen.getByTestId('header');
     const footer = screen.getByTestId('footer');
     
-    expect(app).toBeInTheDocument();
     expect(header).toBeInTheDocument();
     expect(footer).toBeInTheDocument();
   });

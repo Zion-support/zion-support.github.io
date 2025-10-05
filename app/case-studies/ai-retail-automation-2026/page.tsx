@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI retail automation, retail AI, automation case study, retail transformation, AI ROI',
   openGraph: {
     title: 'AI Retail Automation 2026: $8M ROI Case Study',
-  description: 'See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI with AI retail automation.',
-  type: 'article',
-  publishedTime: '2026-01-20T10:00:00Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI with AI retail automation.',
+    type: 'article',
+    publishedTime: '2026-01-20T10:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function AIRetailAutomation2026() {
@@ -206,29 +206,29 @@ const retailAutomation = {
   customerExperience: {
     checkout: {
       system: 'Computer Vision + ML',
-  accuracy: '99.8%',
-  speed: '3x faster',
-  laborReduction: '85%'
+      accuracy: '99.8%',
+      speed: '3x faster',
+      laborReduction: '85%'
     },
-  service: {
+    service: {
       chatbot: 'NLP + Intent Recognition',
-  resolutionRate: '92%',
-  satisfaction: '4.8/5',
-  costReduction: '70%'
+      resolutionRate: '92%',
+      satisfaction: '4.8/5',
+      costReduction: '70%'
     }
   },
   operations: {
     inventory: {
       tracking: 'IoT + AI Analytics',
-  accuracy: '99.5%',
-  stockouts: '-95%',
-  wasteReduction: '60%'
+      accuracy: '99.5%',
+      stockouts: '-95%',
+      wasteReduction: '60%'
     },
-  forecasting: {
+    forecasting: {
       algorithm: 'Deep Learning Models',
-  accuracy: '94%',
-  inventoryOptimization: '40%',
-  revenueIncrease: '15%'
+      accuracy: '94%',
+      inventoryOptimization: '40%',
+      revenueIncrease: '15%'
     }
   }
 };`}

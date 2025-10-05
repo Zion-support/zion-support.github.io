@@ -1,4 +1,5 @@
 
+import ArrowRight from 'next/link';
 
 import { Metadata } from 'next';
 
@@ -8,10 +9,10 @@ export const metadata: Metadata = {
   keywords: 'autonomous enterprise, business autonomy, AI 2027, self-managing operations, autonomous business',
   openGraph: {
     title: 'AI 2027 Autonomous Enterprise Revolution: Complete Business Autonomy',
-  description: 'Complete business autonomy with self-managing operations and autonomous decision-making.',
-  type: 'article',
-  publishedTime: '2027-03-20T00:00:00.000Z'
-  }
+    description: 'Complete business autonomy with self-managing operations and autonomous decision-making.',
+    type: 'article',
+    publishedTime: '2027-03-20T00:00:00.000Z',
+  },
 };
 
 export default function AutonomousEnterpriseRevolution() {

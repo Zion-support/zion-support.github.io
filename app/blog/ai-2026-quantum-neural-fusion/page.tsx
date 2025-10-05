@@ -1,4 +1,5 @@
 
+import ArrowRight from 'next/link';
 
 import { Metadata } from 'next';
 
@@ -8,10 +9,10 @@ export const metadata: Metadata = {
   keywords: 'quantum neural networks, quantum computing, AI fusion, neural network evolution, quantum AI',
   openGraph: {
     title: 'Quantum-Neural Fusion: The Next Evolution in AI Computing',
-  description: 'Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities.',
-  type: 'article',
-  publishedTime: '2026-01-20T00:00:00.000Z'
-  }
+    description: 'Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00.000Z',
+  },
 };
 
 export default function QuantumNeuralFusion() {

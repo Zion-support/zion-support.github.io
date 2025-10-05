@@ -86,9 +86,9 @@ const September30MegaBanner2025 = () => {
     >
       {/* Animated Background Effects */}
       <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute -top-1/2 -right-1/2 w-[800px] h-[800px] bg-cyan-500/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-1/2 -left-1/2 w-[800px] h-[800px] bg-purple-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute -top-1/2 -right-1/2 w-[800px] h-[800px] bg-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-1/2 -left-1/2 w-[800px] h-[800px] bg-purple-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
       </div>
 
       <div className="relative z-10 p-10 md:p-16">
@@ -198,7 +198,9 @@ const September30MegaBanner2025 = () => {
         {/* Key Benefits Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-            <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center flex-shrink-0" />
+            <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center flex-shrink-0">
+
+            </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Production-Ready Today</h4>
               <p className="text-sm text-blue-200 font-medium">Deploy enterprise-grade AI in 4-10 weeks with proven architectures</p>
@@ -206,7 +208,9 @@ const September30MegaBanner2025 = () => {
           </div>
           
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-            <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center flex-shrink-0" />
+            <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center flex-shrink-0">
+
+            </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Breakthrough Performance</h4>
               <p className="text-sm text-blue-200 font-medium">10,000x speed, 95%+ accuracy, 85% cost reduction across use cases</p>
@@ -214,7 +218,9 @@ const September30MegaBanner2025 = () => {
           </div>
           
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-            <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center flex-shrink-0" />
+            <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center flex-shrink-0">
+
+            </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Measurable ROI</h4>
               <p className="text-sm text-blue-200 font-medium">300-500% productivity gains with quantified business impact</p>

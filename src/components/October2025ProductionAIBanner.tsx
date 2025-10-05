@@ -4,8 +4,8 @@ export default function October2025ProductionAIBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -30,7 +30,9 @@ export default function October2025ProductionAIBanner() {
             className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
           >
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-3 bg-indigo-500 rounded-lg group-hover:bg-indigo-400 transition-colors" />
+              <div className="p-3 bg-indigo-500 rounded-lg group-hover:bg-indigo-400 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
                   Production AI Agents: Best Practices 2025
@@ -67,7 +69,9 @@ export default function October2025ProductionAIBanner() {
             className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
           >
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-3 bg-purple-500 rounded-lg group-hover:bg-purple-400 transition-colors" />
+              <div className="p-3 bg-purple-500 rounded-lg group-hover:bg-purple-400 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
                   Real-Time AI Model Monitoring
@@ -104,7 +108,9 @@ export default function October2025ProductionAIBanner() {
             className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
           >
             <div className="flex items-start gap-4 mb-4">
-              <div className="p-3 bg-pink-500 rounded-lg group-hover:bg-pink-400 transition-colors" />
+              <div className="p-3 bg-pink-500 rounded-lg group-hover:bg-pink-400 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
                   Multimodal RAG Systems Revolution

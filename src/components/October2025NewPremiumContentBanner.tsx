@@ -5,8 +5,8 @@ const October2025NewPremiumContentBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 py-16 overflow-hidden" > {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="relative container mx-auto px-6">
@@ -36,7 +36,9 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
                 <Activity className="w-8 h-8 text-white"</div>
-              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full" />
+              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
+                
+              </div>
             </div>
             
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -78,7 +80,9 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
                 <Lock className="w-8 h-8 text-white"</div>
-              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full" />
+              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
+                
+              </div>
             </div>
             
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
@@ -120,7 +124,9 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
                 <BarChart3 className="w-8 h-8 text-white"</div>
-              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full" />
+              <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
+                
+              </div>
             </div>
             
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">

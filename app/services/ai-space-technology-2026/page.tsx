@@ -1,5 +1,4 @@
-import { ArrowRight } from 'lucide-react';
-
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Space Technology 2026 Service | Autonomous Space Operations | Zion Tech Group',
@@ -17,9 +16,9 @@ export default function AISpaceTechnologyService() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <ArrowRight href="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link href="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Services
-        </ArrowRight>
+        </Link>
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
             🚀 SPACE BREAKTHROUGH
@@ -228,12 +227,12 @@ export default function AISpaceTechnologyService() {
               >
                 🚀 Schedule Demo
               </a>
-              <ArrowRight
+              <Link
                 href="/case-studies/ai-space-technology-success-2026"
                 className="block w-full text-blue-600 text-center py-2 font-semibold hover:underline"
               >
                 View Success Stories →
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>
@@ -306,18 +305,18 @@ export default function AISpaceTechnologyService() {
           for aerospace industry leaders worldwide.
         </p>
         <div className="flex gap-4">
-          <ArrowRight
+          <Link
             href="/services"
             className="text-blue-600 hover:text-blue-800 font-semibold"
           >
             View All Services →
-          </ArrowRight>
-          <ArrowRight
+          </Link>
+          <Link
             href="/case-studies"
             className="text-purple-600 hover:text-purple-800 font-semibold"
           >
             View Success Stories →
-          </ArrowRight>
+          </Link>
         </div>
       </div>
     </div>

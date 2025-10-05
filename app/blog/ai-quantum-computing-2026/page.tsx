@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'quantum computing, AI, machine learning, quantum algorithms, enterprise technology, 2026',
   openGraph: {
     title: 'AI-Powered Quantum Computing Breakthroughs in 2026',
-  description: 'Discover how AI and quantum computing are converging to solve previously impossible problems.',
-  type: 'article',
-  publishedTime: '2025-01-30T00:00:00.000Z'
-  }
+    description: 'Discover how AI and quantum computing are converging to solve previously impossible problems.',
+    type: 'article',
+    publishedTime: '2025-01-30T00:00:00.000Z',
+  },
 };
 
 export default function AIQuantumComputing2026() {

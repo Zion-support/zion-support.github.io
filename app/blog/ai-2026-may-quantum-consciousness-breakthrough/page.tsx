@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'quantum consciousness, AI awareness, breakthrough 2026, quantum AI, consciousness simulation',
   openGraph: {
     title: 'AI 2026 May Quantum Consciousness Breakthrough: Revolutionary AI Awareness',
-  description: 'Revolutionary quantum consciousness breakthrough enabling genuine AI awareness and self-reflection capabilities.',
-  type: 'article',
-  publishedTime: '2026-05-01T00:00:00.000Z'
-  }
+    description: 'Revolutionary quantum consciousness breakthrough enabling genuine AI awareness and self-reflection capabilities.',
+    type: 'article',
+    publishedTime: '2026-05-01T00:00:00.000Z',
+  },
 };
 
 export default function AI2026MayQuantumConsciousnessBreakthrough() {

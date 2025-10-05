@@ -1,6 +1,5 @@
 import { ArrowRight, Brain, CheckCircle, Cpu, Mail, MapPin, Phone, Rocket, Server, TrendingUp, Zap } from 'lucide-react';
 import React, { useState, useMemo } from 'react'
-
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
@@ -16,7 +15,6 @@ import { Link } from 'react-router-dom'
 
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025'
 import { SEO } from '@/components/SEO'
-import { CheckCircle, Zap, TrendingUp, Brain, Server, ArrowRight, Mail, Phone, MapPin, Rocket, Cpu } from 'lucide-react';
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');

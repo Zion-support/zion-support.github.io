@@ -5,9 +5,9 @@ const October2025AdvancedAIInnovationsBanner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16 px-6 rounded-3xl mb-12" > {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-500" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -37,7 +37,9 @@ const October2025AdvancedAIInnovationsBanner = () => {
             className="group bg-gradient-to-br from-indigo-800/40 to-indigo-900/40 backdrop-blur-sm border border-indigo-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-indigo-500/20 rounded-xl group-hover:bg-indigo-500/30 transition-colors" />
+              <div className="p-3 bg-indigo-500/20 rounded-xl group-hover:bg-indigo-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <span className="text-xs text-indigo-300 font-semibold uppercase tracking-wide">Neuromorphic AI</span>
               </div>
@@ -65,23 +67,22 @@ const October2025AdvancedAIInnovationsBanner = () => {
           {/* Article 2 - Synthetic Data Generation */}
           <Link 
             to="/blog/ai-2025-october-synthetic-data-generation-mastery"
-            className="group bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 hover: scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50"
+            className="group bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition-colors">
-                <Database className="w-8 h-8 text-purple-300" />
-              </div>
+                <Database className="w-8 h-8 text-purple-300"</div>
               <div className="flex-1">
                 <span className="text-xs text-purple-300 font-semibold uppercase tracking-wide">Data Engineering</span>
               </div>
             </div>
             
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-200 transition-colors">
-              Synthetic Data Generation Mastery: Solving AIs Data Scarcity Problem
+              Synthetic Data Generation Mastery: Solving AI's Data Scarcity Problem
             </h3>
             
             <p className="text-purple-200/80 text-sm mb-4 line-clamp-3">
-              Learn how leading organizations generate 60-80% of training data synthetically', 
+              Learn how leading organizations generate 60-80% of training data synthetically, 
               enabling faster iteration, privacy compliance, and more robust AI systems.
             </p>
             
@@ -101,7 +102,9 @@ const October2025AdvancedAIInnovationsBanner = () => {
             className="group bg-gradient-to-br from-pink-800/40 to-pink-900/40 backdrop-blur-sm border border-pink-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/50"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-pink-500/20 rounded-xl group-hover:bg-pink-500/30 transition-colors" />
+              <div className="p-3 bg-pink-500/20 rounded-xl group-hover:bg-pink-500/30 transition-colors">
+
+              </div>
               <div className="flex-1">
                 <span className="text-xs text-pink-300 font-semibold uppercase tracking-wide">Quantum ML</span>
               </div>

@@ -305,24 +305,7 @@ class EnhancedAccessibility {
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-      'area[href]',
-      'iframe',
-      'object',
-      'embed',
-      '[contenteditable="true"]'
-    ];
-    
-    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
-  }
 
-  private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
       '[tabindex]:not([tabindex="-1"])',
       'area[href]',
       'iframe',
@@ -336,6 +319,7 @@ class EnhancedAccessibility {
 
   public getFocusableElementsCount(): number {
     return this.getFocusableElements().length;
+
   }
 
   private checkColorContrast(): void {

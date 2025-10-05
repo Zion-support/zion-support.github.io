@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI 2026: Advanced Neural Architectures Revolution | Zion Tech Group',
   description: 'Discover revolutionary neural architecture breakthroughs achieving 1000x performance improvements with meta-cognitive reasoning and quantum-enhanced processing.',
-  keywords: 'AI 2026, neural architectures, meta-cognitive AI, quantum computing, enterprise AI'
+  keywords: 'AI 2026, neural architectures, meta-cognitive AI, quantum computing, enterprise AI',
 };
 
 export default function AI2026AdvancedNeuralArchitectures() {
@@ -30,21 +30,13 @@ export default function AI2026AdvancedNeuralArchitectures() {
           {/* Key Metrics */}
           <div className="grid md:grid-cols-4 gap-6 mb-12">
             {[
-              { value: '1000x',
-  label: 'Performance Improvement',
-  icon: '⚡' },
-              { value: '95%',
-  label: 'Decision Accuracy',
-  icon: '🎯' },
-              { value: '98%',
-  label: 'Automation Rate',
-  icon: '🤖' },
-              { value: '$2.3B',
-  label: 'Enterprise Savings',
-  icon: '💰' }
+              { value: '1000x', label: 'Performance Improvement', icon: '⚡' },
+              { value: '95%', label: 'Decision Accuracy', icon: '🎯' },
+              { value: '98%', label: 'Automation Rate', icon: '🤖' },
+              { value: '$2.3B', label: 'Enterprise Savings', icon: '💰' }
             ].map((metric, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center">
-                <div className="text-4xl mb-3">{metric}</div>
+                <div className="text-4xl mb-3">{metric.icon}</div>
                 <div className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
                   {metric.value}
                 </div>

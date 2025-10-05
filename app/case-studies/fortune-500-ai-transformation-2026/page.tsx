@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'fortune 500 AI transformation, enterprise AI case study, meta-cognitive AI results, AI ROI success story',
   openGraph: {
     title: 'Fortune 500 AI Transformation: $75M Annual Savings',
-  description: 'Revolutionary Meta-Cognitive AI implementation delivering unprecedented enterprise results.',
-  type: 'article',
-  publishedTime: '2026-01-15T00:00:00Z',
-  authors: ['Zion Tech Group']
-  }
+    description: 'Revolutionary Meta-Cognitive AI implementation delivering unprecedented enterprise results.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
 };
 
 export default function Fortune500AITransformation() {

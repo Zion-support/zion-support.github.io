@@ -5,14 +5,11 @@ export const metadata = {
   description: 'Practical blueprint to ship agentic systems safely: approvals, budgets, evals, rollback, and observability.',
   openGraph: {
     title: 'Production Agent Guardrails — October 2, 2025',
-  description: 'Approvals, verifiers, budgets, online evals, and rollback to ship safe autonomy.',
-  type: 'article',
-  url: 'https://ziontechgroup.com/blog/ai-2025-oct-02-production-agent-guardrails',
-  images: [
-      { url: '/og-ai-2025-production-agent-guardrails.jpg',
-  width: 1200,
-  height: 630,
-  alt: 'Production Agent Guardrails' }
+    description: 'Approvals, verifiers, budgets, online evals, and rollback to ship safe autonomy.',
+    type: 'article',
+    url: 'https://ziontechgroup.com/blog/ai-2025-oct-02-production-agent-guardrails',
+    images: [
+      { url: '/og-ai-2025-production-agent-guardrails.jpg', width: 1200, height: 630, alt: 'Production Agent Guardrails' }
     ]
   }
 };

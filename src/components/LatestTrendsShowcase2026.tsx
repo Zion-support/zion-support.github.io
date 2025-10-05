@@ -63,7 +63,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
 
         {/* Featured Innovation */}
         <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20 mb-16">
-          <div className="grid md: grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-4">
                 <span className="text-yellow-400 font-bold text-sm">🏆 FEATURED INNOVATION</span>
@@ -72,20 +72,20 @@ const LatestTrendsShowcase2026: React.FC = () => {
                 Meta-Cognitive AI Framework
               </h3>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                The worlds first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes', 
+                The world's first AI system that thinks about thinking. Our Meta-Cognitive AI can reason about its own reasoning processes, 
                 identify knowledge gaps, and autonomously improve its decision-making capabilities.
               </p>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                  <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
                   <span className="text-gray-300">Self-reflection and meta-reasoning</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                  <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
                   <span className="text-gray-300">Autonomous learning and improvement</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full" />
+                  <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
                   <span className="text-gray-300">Cognitive bias detection and correction</span>
                 </div>
               </div>

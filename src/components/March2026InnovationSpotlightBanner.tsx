@@ -29,9 +29,9 @@ const March2026InnovationSpotlightBanner = () => {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -86,7 +86,7 @@ key={index}
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${innovation.color} opacity-0 group-hover:opacity-10 transition-all duration-500`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${innovation.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
                 {/* Innovation Icon */}
@@ -113,7 +113,7 @@ key={index}
 
                 {/* CTA Button */}
                 <a
-                  href={`/innovations/${innovation.title.toLowerCase().replace(/\s+/g, -')}`}
+                  href={`/innovations/${innovation.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${innovation.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Explore Innovation</span>
@@ -141,13 +141,13 @@ key={index}
                 company: 'NeuroTech Global',
                 achievement: '500% Cognitive Enhancement',
                 revenue: '$2.1B Revenue Growth',
-                icon: '>',
+                icon: '>'
               },
               {
                 company: 'Quantum Dynamics',
                 achievement: '1000x Processing Speed',
                 revenue: '$3.8B Market Value',
-                icon: '>',
+                icon: '>'
               },
               {
                 company: 'Reality Synthesis Corp',

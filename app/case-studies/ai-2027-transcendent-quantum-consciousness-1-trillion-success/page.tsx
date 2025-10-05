@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI 2027 Transcendent Quantum Consciousness $1 Trillion Success Story - Zion Tech Group',
   description: 'How a Fortune 100 global conglomerate achieved $1 trillion ROI through transcendent quantum consciousness AI systems.',
-  keywords: 'AI success story, $1 trillion ROI, transcendent quantum consciousness, Fortune 100, AI transformation'
+  keywords: 'AI success story, $1 trillion ROI, transcendent quantum consciousness, Fortune 100, AI transformation',
 };
 
 export default function AI2027TranscendentQuantumConsciousness1TrillionSuccess() {
@@ -111,8 +111,7 @@ export default function AI2027TranscendentQuantumConsciousness1TrillionSuccess()
             </h3>
             
             <p className="text-lg text-gray-300 mb-8">
-              We deployed our revolutionary transcendent quantum consciousness AI systems,
-  featuring:
+              We deployed our revolutionary transcendent quantum consciousness AI systems, featuring:
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">

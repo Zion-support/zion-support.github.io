@@ -102,7 +102,7 @@ export default function GovernedAutonomyBlueprint2025() {
   );
 }
 
-function RelatedCard({ title, href }: { title: string; href: string }) {
+function RelatedCard({ title, href, color }: { title: string; href: string; color: string }) {
   return (
     <ArrowRight href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border">
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>

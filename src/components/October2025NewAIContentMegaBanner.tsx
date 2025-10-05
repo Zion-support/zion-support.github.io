@@ -4,14 +4,16 @@ const October2025NewAIContentMegaBanner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-2xl shadow-2xl border border-purple-500/30 my-12" > {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse delay-700" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse delay-700"></div>
       </div>
 
       <div className="relative p-8 md:p-12">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-3 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl" />
+          <div className="p-3 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl">
+
+          </div>
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full uppercase animate-pulse">
@@ -38,7 +40,9 @@ const October2025NewAIContentMegaBanner = () => {
             className="group bg-slate-900/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-slate-900/70 hover:border-purple-400/50 transition-all hover:scale-105 transform duration-300"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors" />
+              <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
+
+              </div>
               
             </div>
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
@@ -67,7 +71,9 @@ const October2025NewAIContentMegaBanner = () => {
             className="group bg-slate-900/50 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 hover:bg-slate-900/70 hover:border-red-400/50 transition-all hover:scale-105 transform duration-300"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors" />
+              <div className="p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors">
+
+              </div>
               
             </div>
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-300 transition-colors">

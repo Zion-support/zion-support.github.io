@@ -5,7 +5,9 @@ const October2025CuttingEdgeInnovationsBanner = () => {
     <div className="bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-b border-indigo-500/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex items-start gap-4">
-          <div className="hidden sm:flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex-shrink-0 shadow-lg shadow-indigo-500/50" />
+          <div className="hidden sm:flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex-shrink-0 shadow-lg shadow-indigo-500/50">
+
+          </div>
           
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-2">
@@ -31,7 +33,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
               <span className="text-green-400 font-bold">82% cost reduction</span>. Revolutionary innovations transforming enterprises worldwide!
             </p>
 
-            <div className="grid sm: grid-cols-3 gap-3 mb-4">
+            <div className="grid sm:grid-cols-3 gap-3 mb-4">
               <Link
                 to="/blog/ai-2025-oct-neuro-symbolic-ai-enterprise-breakthrough"
                 className="group bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:from-blue-600/30 hover:to-purple-600/30 border border-blue-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
@@ -100,7 +102,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
               to="/blog"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-indigo-500/50"
             >
-              <span>Explore Todays Breakthrough Innovations</span>
+              <span>Explore Today's Breakthrough Innovations</span>
 
             </Link>
           </div>
@@ -108,6 +110,6 @@ const October2025CuttingEdgeInnovationsBanner = () => {
       </div>
     </div>
   );
-'};
+};
 
 export default October2025CuttingEdgeInnovationsBanner;

@@ -4,8 +4,8 @@ const October2025LatestInnovationsBanner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-y border-indigo-500/30" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -41,7 +41,9 @@ const October2025LatestInnovationsBanner = () => {
             to="/blog/ai-2025-october-governance-compliance-framework-enterprise"
             className="group relative bg-gradient-to-br from-emerald-900/30 to-blue-900/30 border border-emerald-500/30 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
           >
-            <div className="absolute top-4 right-4" />
+            <div className="absolute top-4 right-4">
+
+            </div>
             
             <div className="mb-4">
               <span className="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
@@ -76,7 +78,9 @@ const October2025LatestInnovationsBanner = () => {
             to="/blog/ai-2025-october-quantum-enhanced-ai-hybrid-systems"
             className="group relative bg-gradient-to-br from-violet-900/30 to-cyan-900/30 border border-violet-500/30 rounded-xl p-6 hover:border-violet-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
           >
-            <div className="absolute top-4 right-4" />
+            <div className="absolute top-4 right-4">
+
+            </div>
             
             <div className="mb-4">
               <span className="inline-block bg-violet-500/20 text-violet-300 text-xs font-bold px-3 py-1 rounded-full mb-3">

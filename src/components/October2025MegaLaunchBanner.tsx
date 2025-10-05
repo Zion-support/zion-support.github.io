@@ -77,10 +77,10 @@ const October2025MegaLaunchBanner = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-1/2 -left-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }} />
+        <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-1/2 -left-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
       </div>
 
       <div className="relative z-10 p-8 md:p-12">
@@ -194,7 +194,9 @@ const October2025MegaLaunchBanner = () => {
         {/* Key Benefits */}
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-            <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center" />
+            <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center">
+
+            </div>
             <div>
               <h4 className="font-bold text-white mb-1">Production-Ready</h4>
               <p className="text-sm text-purple-200">Deploy in hours, not months</p>
@@ -202,7 +204,9 @@ const October2025MegaLaunchBanner = () => {
           </div>
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-            <div className="w-12 h-12 rounded-full bg-pink-500/30 flex items-center justify-center" />
+            <div className="w-12 h-12 rounded-full bg-pink-500/30 flex items-center justify-center">
+
+            </div>
             <div>
               <h4 className="font-bold text-white mb-1">Measurable ROI</h4>
               <p className="text-sm text-purple-200">3-10x improvements proven</p>
@@ -210,7 +214,9 @@ const October2025MegaLaunchBanner = () => {
           </div>
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-            <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center" />
+            <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center">
+
+            </div>
             <div>
               <h4 className="font-bold text-white mb-1">Expert Insights</h4>
               <p className="text-sm text-purple-200">15-20 min deep dives</p>
@@ -218,7 +224,9 @@ const October2025MegaLaunchBanner = () => {
           </div>
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
-            <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center" />
+            <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center">
+
+            </div>
             <div>
               <h4 className="font-bold text-white mb-1">Cutting-Edge</h4>
               <p className="text-sm text-purple-200">Latest 2025/2026 tech</p>
