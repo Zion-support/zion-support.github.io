@@ -6,7 +6,6 @@
     z-index: 1000;
   `;
 
->>>>>>> ca845918a191049d26eb75f526c9918cbf578354
     }
     return AccessibilityEnhancer.instance;
   }
@@ -86,4 +85,3 @@
 }
 
 export default AccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9

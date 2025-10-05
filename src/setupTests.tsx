@@ -268,7 +268,6 @@ beforeAll(() => {
     ) {
       return;
     originalConsoleWarn.call(console, ...args);
->>>>>>> ca845918a191049d26eb75f526c9918cbf578354
   };
 });
 

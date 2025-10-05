@@ -88,5 +88,4 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByTestId('home-page')).toBeInTheDocument();
   });
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
 });

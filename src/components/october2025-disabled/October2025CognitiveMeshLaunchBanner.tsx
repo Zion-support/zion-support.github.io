@@ -49,7 +49,6 @@
           <p className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
             ✨ <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
             Free 2-week assessment included. No commitment required.
->>>>>>> ca845918a191049d26eb75f526c9918cbf578354
           </p>
         </div>
       </div>

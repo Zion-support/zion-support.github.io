@@ -296,7 +296,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
                 >
                   <span>Get AI 2026 Assessment</span>
                   <ArrowRight className='w-5 h-5' />
->>>>>>> ca845918a191049d26eb75f526c9918cbf578354
                 </a>
               </div>
             </div>

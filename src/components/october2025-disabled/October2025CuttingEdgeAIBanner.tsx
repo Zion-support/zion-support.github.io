@@ -30,7 +30,6 @@ constOctober2025CuttingEdgeAIBanner = () => {
           <Linkto = "/blog/ai-2025-october-agentic-governance-frameworks"
             className="groupbg-gradient-to-brfrom-emerald-800/40to-teal-900/40backdrop-blur-smborderborder-emerald-400/30rounded-2xlp-6hover: scale-105transition-allduration-300hover:shadow-2xlhover:shadow-emerald-500/50"
           >
->>>>>>> ca845918a191049d26eb75f526c9918cbf578354
             </h3>
             <pclassName="text-teal-200/80text-smmb-4line-clamp-3">
               Buildtrustin autonomousAIwith 99.9% complianceaccuracyand real-timeriskassessment.
@@ -71,7 +70,6 @@ constOctober2025CuttingEdgeAIBanner = () => {
           <Linkto = "/blog/ai-2025-october-continuous-learning-systems"
             className="groupbg-gradient-to-brfrom-cyan-800/40to-blue-900/40backdrop-blur-smborderborder-cyan-400/30rounded-2xlp-6hover: scale-105transition-allduration-300hover:shadow-2xlhover:shadow-cyan-500/50"
           >
->>>>>>> ca845918a191049d26eb75f526c9918cbf578354
             </h3>
             <pclassName="text-blue-200/80text-smmb-4line-clamp-3">
               Deployself-improvingAIwith 99.8% uptimeand94% accuracyimprovementover time.

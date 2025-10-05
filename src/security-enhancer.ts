@@ -8,4 +8,3 @@
 }
 
 export default SecurityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
