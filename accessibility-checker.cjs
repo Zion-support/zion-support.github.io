@@ -6,7 +6,7 @@ const fs = require('fs');
 console.log('♿ Accessibility Check Starting...\n');
 
 // Accessibility checks
-const accessibilityChecks = [;
+const accessibilityChecks = [
   'npm run build',
   'npx @axe-core/cli http://localhost:3000 --exit',
   'npx lighthouse http://localhost:3000 --only-categories=accessibility --output=json --output-path=./accessibility-report.json'

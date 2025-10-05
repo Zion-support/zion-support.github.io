@@ -80,13 +80,8 @@ const AdvancedPerformanceDashboard: React.FC<
         value: Math.floor(Math.random() * 2000) + 500,
         metric: "lcp",
       };
-<<<<<<< HEAD
-
-      setRealTimeData((prev) => [...prev.slice(-9), newDataPoint]);
-=======
       
       setRealTimeData(prev => [...prev.slice(-9), newDataPoint as any]);
->>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
 
       // Update optimization suggestions
       const suggestions = [

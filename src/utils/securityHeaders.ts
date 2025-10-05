@@ -44,10 +44,24 @@ export class SecurityManager {
     return {
       csp: {
         'default-src': ["'self'"],
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'https://www.googletagmanager.com', 'https://www.google-analytics.com'],
-        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+        'script-src': [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-eval'",
+          'https://www.googletagmanager.com',
+          'https://www.google-analytics.com',
+        ],
+        'style-src': [
+          "'self'",
+          "'unsafe-inline'",
+          'https://fonts.googleapis.com',
+        ],
         'img-src': ["'self'", 'data:', 'https:', 'blob:'],
-        'connect-src': ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
+        'connect-src': [
+          "'self'",
+          'https://www.google-analytics.com',
+          'https://analytics.google.com',
+        ],
         'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],
         'object-src': ["'none'"],
         'media-src': ["'self'"],
@@ -59,21 +73,23 @@ export class SecurityManager {
         'base-uri': ["'self'"],
         'manifest-src': ["'self'"],
         'upgrade-insecure-requests': true,
-        'block-all-mixed-content': true
+        'block-all-mixed-content': true,
       },
       headers: {
         'X-Frame-Options': 'DENY',
         'X-Content-Type-Options': 'nosniff',
         'X-XSS-Protection': '1; mode=block',
-        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+        'Strict-Transport-Security':
+          'max-age=31536000; includeSubDomains; preload',
         'Referrer-Policy': 'strict-origin-when-cross-origin',
-        'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()',
+        'Permissions-Policy':
+          'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()',
         'X-Download-Options': 'noopen',
         'X-Permitted-Cross-Domain-Policies': 'none',
         'Cross-Origin-Embedder-Policy': 'require-corp',
         'Cross-Origin-Opener-Policy': 'same-origin',
-        'Cross-Origin-Resource-Policy': 'same-origin'
-      }
+        'Cross-Origin-Resource-Policy': 'same-origin',
+      },
     };
   }
 
@@ -97,7 +113,7 @@ export class SecurityManager {
   public getSecurityHeaders(): { [key: string]: string } {
     return {
       ...this.config.headers,
-      'Content-Security-Policy': this.getCSPDirective()
+      'Content-Security-Policy': this.getCSPDirective(),
     };
   }
 
@@ -107,7 +123,10 @@ export class SecurityManager {
     }
   }
 
-  public addTrustedDomain(domain: string, directive: string = 'script-src'): void {
+  public addTrustedDomain(
+    domain: string,
+    directive: string = 'script-src',
+  ): void {
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       if (!currentValues.includes(domain)) {
@@ -116,7 +135,10 @@ export class SecurityManager {
     }
   }
 
-  public removeTrustedDomain(domain: string, directive: string = 'script-src'): void {
+  public removeTrustedDomain(
+    domain: string,
+    directive: string = 'script-src',
+  ): void {
     if (directive in this.config.csp) {
       const currentValues = (this.config.csp as any)[directive] as string[];
       const index = currentValues.indexOf(domain);
@@ -126,11 +148,14 @@ export class SecurityManager {
     }
   }
 
-  public validateInput(input: string, type: 'html' | 'url' | 'script' = 'html'): boolean {
+  public validateInput(
+    input: string,
+    type: 'html' | 'url' | 'script' = 'html',
+  ): boolean {
     const patterns = {
       html: /^[^<>]*$/,
       url: /^https?:\/\/[^\s<>]+$/,
-      script: /^[^<>'"]*$/
+      script: /^[^<>'"]*$/,
     };
 
     return patterns[type].test(input);
@@ -148,7 +173,9 @@ export class SecurityManager {
     if (typeof window !== 'undefined' && window.crypto) {
       const array = new Uint8Array(16);
       window.crypto.getRandomValues(array);
-      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+      return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(
+        '',
+      );
     }
     // Fallback for environments without crypto
     return Math.random().toString(36).substr(2, 16);
@@ -168,7 +195,7 @@ export class SecurityManager {
       'X-Content-Type-Options',
       'X-XSS-Protection',
       'Strict-Transport-Security',
-      'Content-Security-Policy'
+      'Content-Security-Policy',
     ];
 
     essentialHeaders.forEach(header => {
@@ -188,7 +215,7 @@ export class SecurityManager {
     return {
       csp,
       headers,
-      score: Math.max(0, Math.min(100, score))
+      score: Math.max(0, Math.min(100, score)),
     };
   }
 }

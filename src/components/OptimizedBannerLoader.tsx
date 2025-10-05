@@ -29,7 +29,7 @@ export default function OptimizedBannerLoader({
   const [Component, setComponent] = useState<React.ComponentType<Record<string, unknown>> | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() = > {
+  useEffect(() => {
     // Register banner with manager
     bannerManager.registerBanner({
       id: bannerId,
@@ -39,7 +39,7 @@ export default function OptimizedBannerLoader({
     // Preload if high priority
     if (preload || priority >= 10) {
       importFn().then(module => {
-        setComponent(() = > module.default);
+        setComponent(() => module.default);
       });
     }
 
@@ -50,7 +50,7 @@ export default function OptimizedBannerLoader({
           if (entry.isIntersecting && !Component) {
             setIsVisible(true);
             importFn().then(module => {
-              setComponent(() = > module.default);
+              setComponent(() => module.default);
             });
             observer.disconnect();
           }
@@ -70,7 +70,7 @@ export default function OptimizedBannerLoader({
   }, [bannerId, importFn, priority, preload, Component]);
 
   // Record impression when banner is visible
-  useEffect(() = > {
+  useEffect(() => {
     if (isVisible) {
       bannerManager.recordImpression(bannerId);
     }
@@ -83,10 +83,11 @@ export default function OptimizedBannerLoader({
   return (
     <div
       id={`banner-${bannerId}`}
-      onClick={() = > bannerManager.recordClick(bannerId)}
+      onClick={() => bannerManager.recordClick(bannerId)}
     >
       <Suspense fallback={fallback}>
-        <Component</Suspense>
+        <Component />
+      </Suspense>
     </div>
   );
 }
