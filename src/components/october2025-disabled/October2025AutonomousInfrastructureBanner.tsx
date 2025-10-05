@@ -231,11 +231,7 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div>
               <div className="text-2xl font-bold text-white mb-1">99.99%</div>
               <div>Average Uptime Achieved</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-white mb-1">340%</div>
-              <div>Average ROI</div>
-            </div>
+
             <div>
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
               <div>Average Payback Period</div>

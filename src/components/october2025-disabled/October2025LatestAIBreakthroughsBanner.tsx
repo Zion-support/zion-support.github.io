@@ -27,8 +27,7 @@ export default function October2025LatestAIBreakthroughsBanner() {
               <div className="p-3 bg-purple-500/20 rounded-lg">
                 <Server className="h-6 w-6 text-purple-400" />
               </div>
-              <span className="px-3 py-1 bg-purple-500/30 text-purple-300 rounded-full text-xs font-bold">
-                Infrastructure AI
+
               </span>
             </div>
             <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors">

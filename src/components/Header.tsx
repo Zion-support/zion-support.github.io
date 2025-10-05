@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -34,44 +36,7 @@ const Header: React.FC = () => {
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
             >
               Services
-            </Link>
-            <Link
-              to="/blog"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/contact"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
-            >
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
-  return (
-    <header className="bg-gray-900 text-white shadow-lg" data-testid="header">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-white hover:text-blue-400 transition duration-300">
-              Zion Tech Group
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-white hover:text-blue-400 transition duration-300">
-              Home
-            </Link>
-            <Link to="/services" className="text-white hover:text-blue-400 transition duration-300">
-              Services
-            </Link>
-            <Link to="/about" className="text-white hover:text-blue-400 transition duration-300">
-              About
-            </Link>
-            <Link to="/contact" className="text-white hover:text-blue-400 transition duration-300">
               Contact
             </Link>
           </nav>
@@ -95,11 +60,7 @@ const Header: React.FC = () => {
               </Link>
               <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white">
                 Services
-              </Link>
-              <Link to="/blog" className="block px-3 py-2 text-gray-300 hover:text-white">
-                Blog
-              </Link>
-              <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white">
+
                 Contact
               </Link>
               <Link to="/team" className="block px-3 py-2 text-gray-300 hover:text-white">

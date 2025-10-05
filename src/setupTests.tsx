@@ -46,6 +46,7 @@ jest.mock('react-router-dom', () => ({
   useLocation: () => ({ pathname: '/' }),
 }));
 
+// Mock lucide-react icons
 const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
 
 // Mock lucide-react icons
