@@ -15,32 +15,22 @@ class SecurityEnhancer {
     if (this.isInitialized) {
       return;
     }
-<<<<<<< HEAD
     this.setupCSP();
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
     this.setupSecurityHeaders();
     
-=======
-
-    this.setupSecurityHeaders();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1aad
     this.isInitialized = true;
     console.log('Security enhancer initialized');
   }
 
-<<<<<<< HEAD
   private setupCSP(): void {
-=======
-  private setupSecurityHeaders(): void {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1aad
     if (typeof document !== 'undefined') {
       const meta = document.createElement('meta');
       meta.httpEquiv = 'Content-Security-Policy';
       meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
       document.head.appendChild(meta);
     }
-<<<<<<< HEAD
   }
 
   private setupHTTPSRedirect(): void {
@@ -61,8 +51,6 @@ class SecurityEnhancer {
   private setupSecurityHeaders(): void {
     // Additional security headers setup
     console.log('Security headers configured');
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1aad
   }
 
   cleanup(): void {

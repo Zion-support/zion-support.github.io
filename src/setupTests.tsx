@@ -47,11 +47,7 @@ jest.mock('react-router-dom', () => ({
 }));
 
 // Mock lucide-react icons
-<<<<<<< HEAD
-const mockIcon = (name: string) => `[${name}]`;
-=======
 const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1aad
 
 jest.mock('lucide-react', () => {
   return {

@@ -13,10 +13,7 @@ const Privacy: React.FC = () => {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1aad
       {/* <Footer /> */}
     </div>
   );
