@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
+import { ArrowLeft, Brain, Zap, TrendingUp, CheckCircle, Target, Rocket, Shield } from 'lucide-react';
 
 const CognitiveAutomationEnterpriseRevolution = () => {
   return (

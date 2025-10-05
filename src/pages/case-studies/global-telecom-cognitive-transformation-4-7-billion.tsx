@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 
 ;
 import Header from '../../components/Header';
+import { Award, TrendingUp, Users, Zap, CheckCircle, ArrowRight, Brain, Target } from 'lucide-react';
 
 const GlobalTelecomCognitiveTransformation: React.FC = () => {
   return (

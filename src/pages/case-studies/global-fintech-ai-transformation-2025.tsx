@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
+import { ArrowLeft, TrendingUp, DollarSign, Shield, CheckCircle, Target, Zap } from 'lucide-react';
 
 const GlobalFinTechAITransformation = () => {
   return (

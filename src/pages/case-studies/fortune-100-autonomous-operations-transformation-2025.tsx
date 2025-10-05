@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
+import { ArrowLeft, ArrowRight, CheckCircle, DollarSign, TrendingUp, Users, Zap } from 'lucide-react';
 
 const Fortune100AutonomousOperationsTransformation = () => {
   return (

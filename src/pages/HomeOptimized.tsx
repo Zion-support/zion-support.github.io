@@ -16,6 +16,7 @@ import { lazy, Suspense } from "react";
 import Header from "../components/Header";
 import BannerRotationManager from "../components/BannerRotationManager";
 import { latestInsights } from "../content/insights";
+import { ArrowRight, CheckCircle, Globe, Rocket, Shield, Star, Target, Users, Zap } from 'lucide-react';
 
 // Lazy load heavy components
 const EnhancedTestimonials = lazy(() => import("../components/EnhancedTestimonials"));
