@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/problematic-disabled/Header.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -14,6 +15,8 @@ const Header: React.FC = () => {
           <Link to="/services" className="hover:text-gray-300">Services</Link>
           <Link to="/contact" className="hover:text-gray-300">Contact</Link>
         </nav>
+=======
+>>>>>>> de1caf7d55b2d66a44eca2a2d447e28ce810880d:src/components/Header.tsx
 import React, { useState } from 'react';
 
 const Header: React.FC = () => {
@@ -36,6 +39,9 @@ const Header: React.FC = () => {
             </a>
             <a href="/services" className="text-gray-300 hover:text-white transition-colors">
               Services
+            </a>
+            <a href="/blog" className="text-gray-300 hover:text-white transition-colors">
+              Blog
             </a>
             <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
@@ -69,6 +75,9 @@ const Header: React.FC = () => {
               </a>
               <a href="/services" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
                 Services
+              </a>
+              <a href="/blog" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+                Blog
               </a>
               <a href="/contact" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
                 Contact

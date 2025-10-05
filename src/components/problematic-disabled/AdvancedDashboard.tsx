@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD:src/components/problematic-disabled/AdvancedDashboard.tsx
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
 import { enhancedAccessibility } from '../utils/enhancedAccessibility';
 // import { securityAuditor } from '../utils/securityAuditor';
 // import EnhancedUXManager from '../utils/enhancedUXManager';
+=======
+>>>>>>> de1caf7d55b2d66a44eca2a2d447e28ce810880d:src/components/AdvancedDashboard.tsx
 
 interface DashboardData {
   analytics: {
@@ -35,6 +38,7 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
+<<<<<<< HEAD:src/components/problematic-disabled/AdvancedDashboard.tsx
     // Mock analytics data for now
     const events: Array<{ name: string; timestamp?: number }> = [];
     const cacheStats = { hits: 0, misses: 0, size: 0 };
@@ -118,6 +122,8 @@ const AdvancedDashboard: React.FC = () => {
     if (ms < 1000) return `${ms}ms`;
     if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
     return `${(ms / 60000).toFixed(1)}m`;
+=======
+>>>>>>> de1caf7d55b2d66a44eca2a2d447e28ce810880d:src/components/AdvancedDashboard.tsx
     // Mock data for demonstration
     const mockData: DashboardData = {
       analytics: {
@@ -162,6 +168,7 @@ const AdvancedDashboard: React.FC = () => {
           </button>
         </div>
 
+<<<<<<< HEAD:src/components/problematic-disabled/AdvancedDashboard.tsx
         {/* Tabs */}
         <div className="bg-gray-100 border-b">
           <div className="flex space-x-1 p-2">
@@ -185,6 +192,8 @@ const AdvancedDashboard: React.FC = () => {
                 {tab.label}
               </button>
             ))}
+=======
+>>>>>>> de1caf7d55b2d66a44eca2a2d447e28ce810880d:src/components/AdvancedDashboard.tsx
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Analytics</h3>
@@ -197,6 +206,7 @@ const AdvancedDashboard: React.FC = () => {
             )}
           </div>
 
+<<<<<<< HEAD:src/components/problematic-disabled/AdvancedDashboard.tsx
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
           {activeTab === "overview" && data && (
@@ -216,6 +226,8 @@ const AdvancedDashboard: React.FC = () => {
                   <div>Page Views: {data.analytics?.pageViews || 0}</div>
                   <div>Events: {data.analytics?.events?.length || 0}</div>
                 </div>
+=======
+>>>>>>> de1caf7d55b2d66a44eca2a2d447e28ce810880d:src/components/AdvancedDashboard.tsx
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Performance</h3>
             {data && (

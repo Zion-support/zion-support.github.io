@@ -1,8 +1,6 @@
 class SecurityEnhancer {
   private static instance: SecurityEnhancer;
-  private isInitialized: boolean = false;
-
-  private constructor() {}
+  private isInitialized = false;
 
   static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
@@ -17,10 +15,9 @@ class SecurityEnhancer {
     }
 
     this.setupCSP();
-    this.setupSecurityHeaders();
-    
+    this.setupHTTPSRedirect();
+    this.setupXSSProtection();
     this.isInitialized = true;
-    console.log('Security enhancer initialized');
   }
 
   private setupCSP(): void {
@@ -30,14 +27,17 @@ class SecurityEnhancer {
     document.head.appendChild(meta);
   }
 
-  private setupSecurityHeaders(): void {
-    // Additional security headers setup
-    console.log('Security headers configured');
+  private setupHTTPSRedirect(): void {
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
   }
 
-  cleanup(): void {
-    this.isInitialized = false;
-    console.log('Security enhancer cleaned up');
+  private setupXSSProtection(): void {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
   }
 }
 
