@@ -26,7 +26,7 @@ const NewContentShowcase: React.FC = () => {
               <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
             </div>
             <div className="space-y-4">
-              {topArticles.map((article) = > (
+              {topArticles.map((article) => (
                 <Link
                   key={article.id}
                   to={article.link}
@@ -61,7 +61,7 @@ const NewContentShowcase: React.FC = () => {
               <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
             </div>
             <div className="space-y-4">
-              {topServices.map((service) = > (
+              {topServices.map((service) => (
                 <Link
                   key={service.id}
                   to={service.link}

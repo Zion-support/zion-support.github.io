@@ -6,21 +6,25 @@ export const metadata = {
 
 export default function AutonomousRiskBudgetsV2Page() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <article className="max-w-3xl mx-auto px-4 py-16">
-        <header className="mb-10">
-          <p className="text-sm text-white/60">Published Sep 30, 2025</p>
-          <h1 className="text-4xl font-extrabold mt-2">Autonomous Risk Budgets V2</h1>
-          <p className="text-white/70 mt-3">
-            Dynamic guardrails and live scorecards that minimize incidents while maintaining speed.
+    <main className='min-h-screen bg-slate-950 text-white'>
+      <article className='max-w-3xl mx-auto px-4 py-16'>
+        <header className='mb-10'>
+          <p className='text-sm text-white/60'>Published Sep 30, 2025</p>
+          <h1 className='text-4xl font-extrabold mt-2'>
+            Autonomous Risk Budgets V2
+          </h1>
+          <p className='text-white/70 mt-3'>
+            Dynamic guardrails and live scorecards that minimize incidents while
+            maintaining speed.
           </p>
         </header>
 
-        <section className="prose prose-invert prose-slate max-w-none">
+        <section className='prose prose-invert prose-slate max-w-none'>
           <h2>Operational risk budgets</h2>
           <p>
-            Risk budgets set explicit allowances for failure modes (e.g., hallucinations, latency
-            spikes) with automated triggers for rollbacks and model tier switches.
+            Risk budgets set explicit allowances for failure modes (e.g.,
+            hallucinations, latency spikes) with automated triggers for
+            rollbacks and model tier switches.
           </p>
 
           <h3>Key ingredients</h3>
@@ -41,11 +45,11 @@ export default function AutonomousRiskBudgetsV2Page() {
 
           <h3>Expected results</h3>
           <p>
-            Teams adopting V2 see incident counts drop 50‑80% with sustained weekly release cadence.
+            Teams adopting V2 see incident counts drop 50‑80% with sustained
+            weekly release cadence.
           </p>
         </section>
       </article>
     </main>
   );
 }
-

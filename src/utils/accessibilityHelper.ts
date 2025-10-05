@@ -29,7 +29,7 @@ export class FocusTrap {
     ].join(', ');
 
     this.focusableElements = Array.from(
-      this.element.querySelectorAll<HTMLElement>(focusableSelectors)
+      this.element.querySelectorAll<HTMLElement>(focusableSelectors),
     );
 
     this.firstFocusableElement = this.focusableElements[0];
@@ -83,7 +83,7 @@ export class FocusTrap {
  */
 export function announceToScreenReader(
   message: string,
-  priority: 'polite' | 'assertive' = 'polite'
+  priority: 'polite' | 'assertive' = 'polite',
 ) {
   if (typeof document === 'undefined') return;
 
@@ -138,7 +138,7 @@ export function setupSkipLinks() {
   const skipLink = document.querySelector<HTMLAnchorElement>('a.skip-link');
   if (!skipLink) return;
 
-  skipLink.addEventListener('click', (event) => {
+  skipLink.addEventListener('click', event => {
     event.preventDefault();
     const targetId = skipLink.getAttribute('href')?.substring(1);
     if (!targetId) return;
@@ -152,7 +152,7 @@ export function setupSkipLinks() {
         () => {
           target.removeAttribute('tabindex');
         },
-        { once: true }
+        { once: true },
       );
     }
   });
@@ -165,7 +165,7 @@ export function setupSkipLinks() {
 export function validateColorContrast(
   foreground: string,
   background: string,
-  largeText = false
+  largeText = false,
 ): { valid: boolean; ratio: number; required: number } {
   const ratio = getContrastRatio(foreground, background);
   const required = largeText ? 3 : 4.5;
@@ -201,7 +201,7 @@ function getLuminance(color: string): number {
   const { r, g, b } = rgb;
 
   // Convert to relative luminance
-  const [rs, gs, bs] = [r, g, b].map((val) => {
+  const [rs, gs, bs] = [r, g, b].map(val => {
     const v = val / 255;
     return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
   });
@@ -250,11 +250,13 @@ export function validateHeadingHierarchy(): {
     return { valid: true, issues: [] };
   }
 
-  const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+  const headings = Array.from(
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6'),
+  );
   const issues: string[] = [];
 
   let previousLevel = 0;
-  headings.forEach((heading) => {
+  headings.forEach(heading => {
     const level = parseInt(heading.tagName.substring(1));
 
     if (previousLevel === 0 && level !== 1) {
@@ -263,7 +265,7 @@ export function validateHeadingHierarchy(): {
 
     if (level > previousLevel + 1) {
       issues.push(
-        `Heading level ${level} follows heading level ${previousLevel} - skipped level ${previousLevel + 1}`
+        `Heading level ${level} follows heading level ${previousLevel} - skipped level ${previousLevel + 1}`,
       );
     }
 
@@ -319,7 +321,7 @@ export const KeyboardNavigation = {
  */
 export function makeKeyboardAccessible(
   element: HTMLElement,
-  onClick: () => void
+  onClick: () => void,
 ) {
   // Ensure element is focusable
   if (!element.hasAttribute('tabindex')) {
@@ -332,7 +334,7 @@ export function makeKeyboardAccessible(
   }
 
   // Handle keyboard events
-  element.addEventListener('keydown', (event) => {
+  element.addEventListener('keydown', event => {
     KeyboardNavigation.handleActionKey(event as KeyboardEvent, onClick);
   });
 }
@@ -352,7 +354,7 @@ export function initializeAccessibility() {
       const headingValidation = validateHeadingHierarchy();
       if (!headingValidation.valid) {
         console.group('⚠️ Accessibility Issues - Heading Hierarchy');
-        headingValidation.issues.forEach((issue) => console.warn(issue));
+        headingValidation.issues.forEach(issue => console.warn(issue));
         console.groupEnd();
       }
     }, 1000);

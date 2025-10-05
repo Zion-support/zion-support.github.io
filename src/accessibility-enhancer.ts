@@ -1,4 +1,3 @@
-
 // Accessibility Enhancement Script
 export const enhanceAccessibility = () => {
   // Add skip links
@@ -16,17 +15,17 @@ export const enhanceAccessibility = () => {
     text-decoration: none;
     z-index: 1000;
   `;
-  
+
   skipLink.addEventListener('focus', () => {
     skipLink.style.top = '6px';
   });
-  
+
   skipLink.addEventListener('blur', () => {
     skipLink.style.top = '-40px';
   });
-  
+
   document.body.insertBefore(skipLink, document.body.firstChild);
-  
+
   // Add ARIA labels to interactive elements
   const buttons = document.querySelectorAll('button:not([aria-label])');
   buttons.forEach(button => {
@@ -34,7 +33,7 @@ export const enhanceAccessibility = () => {
       button.setAttribute('aria-label', button.textContent.trim());
     }
   });
-  
+
   // Add focus indicators
   const style = document.createElement('style');
   style.textContent = `

@@ -75,7 +75,7 @@ describe('Analytics Tracking System', () => {
 
       const stored = mockLocalStorage.getItem('analytics_events');
       expect(stored).toBeTruthy();
-      
+
       if (stored) {
         const events = JSON.parse(stored);
         expect(events).toHaveLength(1);
@@ -113,7 +113,9 @@ describe('Analytics Tracking System', () => {
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
         const events = JSON.parse(stored);
-        const pageViewEvent = events.find((e: any) => e.category === 'page_view');
+        const pageViewEvent = events.find(
+          (e: any) => e.category === 'page_view',
+        );
         expect(pageViewEvent).toBeTruthy();
         expect(pageViewEvent.label).toBe('/test-path');
       }
@@ -141,7 +143,7 @@ describe('Analytics Tracking System', () => {
       if (stored) {
         const events = JSON.parse(stored);
         const bannerEvent = events.find(
-          (e: any) => e.category === 'banner' && e.action === 'click'
+          (e: any) => e.category === 'banner' && e.action === 'click',
         );
         expect(bannerEvent).toBeTruthy();
         expect(bannerEvent.metadata.source).toBe('homepage');
@@ -160,7 +162,9 @@ describe('Analytics Tracking System', () => {
       const stored = mockLocalStorage.getItem('analytics_events');
       if (stored) {
         const events = JSON.parse(stored);
-        const conversionEvent = events.find((e: any) => e.category === 'conversion');
+        const conversionEvent = events.find(
+          (e: any) => e.category === 'conversion',
+        );
         expect(conversionEvent).toBeTruthy();
         expect(conversionEvent.action).toBe('newsletter_signup');
         expect(conversionEvent.value).toBe(10);
@@ -206,7 +210,7 @@ describe('Analytics Tracking System', () => {
       if (stored) {
         const events = JSON.parse(stored);
         const formEvent = events.find(
-          (e: any) => e.category === 'form' && e.action === 'submit_error'
+          (e: any) => e.category === 'form' && e.action === 'submit_error',
         );
         expect(formEvent).toBeTruthy();
         expect(formEvent.metadata.errorMessage).toBe('Validation error');

@@ -12,23 +12,18 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div>
-            
             <ul className='space-y-2 text-gray-300'>
               <li>AI Solutions</li>
               <li>IT Infrastructure</li>
               <li>Cloud Services</li>
-              
             </ul>
           </div>
           <div>
-            
             <ul className='space-y-2 text-gray-300'>
               <li>About Us</li>
-
             </ul>
           </div>
           <div>
-            
             <p className='text-gray-300'>
               Email: info@ziontechgroup.com
               <br />
@@ -40,7 +35,8 @@ const Footer: React.FC = () => {
           <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
-    </footer > );
+    </footer>
+  );
 };
 
 export default Footer;

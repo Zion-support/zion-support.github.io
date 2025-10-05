@@ -89,7 +89,6 @@ const October2025LatestPremiumContentBanner = () => {
                 <div className="flex items-start gap-3 mb-2">
                   <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                   <div>
-=======
                   <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-blue-200 transition-colors">

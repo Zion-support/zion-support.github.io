@@ -1,11 +1,14 @@
 /**
  * Banner Migration Helper
- * 
+ *
  * This utility helps migrate from legacy banner components to the UnifiedPromotionalBanner.
  * It provides helper functions to convert existing banner props to the new unified format.
  */
 
-import { UnifiedPromotionalBannerProps, FeaturedItem } from '../components/UnifiedPromotionalBanner';
+import {
+  UnifiedPromotionalBannerProps,
+  FeaturedItem,
+} from '../components/UnifiedPromotionalBanner';
 
 /**
  * Converts legacy NewContentPromoBanner props to UnifiedPromotionalBanner props
@@ -30,7 +33,7 @@ export function convertNewContentPromoProps(legacyProps: {
     className: legacyProps.className,
     icon: 'rocket',
     animated: true,
-    badge: 'NEW'
+    badge: 'NEW',
   };
 }
 
@@ -43,39 +46,39 @@ export const bannerPresets = {
     theme: 'gradient' as const,
     icon: 'rocket' as const,
     badge: '🚀 OCTOBER 2025',
-    animated: true
+    animated: true,
   },
-  
+
   januaryInnovation: {
     variant: 'hero' as const,
     theme: 'purple' as const,
     icon: 'sparkles' as const,
     badge: '✨ JANUARY 2026',
-    animated: true
+    animated: true,
   },
-  
+
   februaryRevolution: {
     variant: 'mega' as const,
     theme: 'gradient' as const,
     icon: 'zap' as const,
     badge: '⚡ FEBRUARY 2026',
-    animated: true
+    animated: true,
   },
-  
+
   compactUpdate: {
     variant: 'compact' as const,
     theme: 'blue' as const,
     icon: 'star' as const,
-    animated: false
+    animated: false,
   },
-  
+
   enterpriseSolution: {
     variant: 'premium' as const,
     theme: 'cyan' as const,
     icon: 'rocket' as const,
     badge: 'ENTERPRISE',
-    animated: true
-  }
+    animated: true,
+  },
 };
 
 /**
@@ -83,11 +86,11 @@ export const bannerPresets = {
  */
 export function createBannerConfig(
   preset: keyof typeof bannerPresets,
-  overrides: Partial<UnifiedPromotionalBannerProps>
+  overrides: Partial<UnifiedPromotionalBannerProps>,
 ): UnifiedPromotionalBannerProps {
   return {
     ...bannerPresets[preset],
-    ...overrides
+    ...overrides,
   } as UnifiedPromotionalBannerProps;
 }
 
@@ -99,38 +102,40 @@ export const bannerTemplates = {
     title: `🚀 JUST RELEASED: ${count} Revolutionary AI Breakthroughs`,
     ctaText: 'Explore Latest Innovations',
     ctaLink: '/blog',
-    icon: 'rocket' as const
+    icon: 'rocket' as const,
   }),
-  
+
   enterpriseUpdate: (topic: string) => ({
     title: `🎯 NEW ENTERPRISE SOLUTION: ${topic}`,
     ctaText: 'Learn More',
     ctaLink: '/services',
-    icon: 'sparkles' as const
+    icon: 'sparkles' as const,
   }),
-  
+
   researchRelease: (field: string) => ({
     title: `🔬 BREAKTHROUGH RESEARCH: ${field}`,
     ctaText: 'Read Full Report',
     ctaLink: '/blog',
-    icon: 'zap' as const
-  })
+    icon: 'zap' as const,
+  }),
 };
 
 /**
  * Helper to create featured items with consistent formatting
  */
-export function createFeaturedItems(items: Array<{
-  title: string;
-  category: string;
-  link: string;
-  metrics?: string;
-}>): FeaturedItem[] {
+export function createFeaturedItems(
+  items: Array<{
+    title: string;
+    category: string;
+    link: string;
+    metrics?: string;
+  }>,
+): FeaturedItem[] {
   return items.map(item => ({
     title: item.title,
     category: item.category.toUpperCase(),
     link: item.link,
-    metrics: item.metrics
+    metrics: item.metrics,
   }));
 }
 
@@ -138,10 +143,10 @@ export function createFeaturedItems(items: Array<{
  * Date formatter for banner dates
  */
 export function formatBannerDate(date: Date = new Date()): string {
-  return date.toLocaleDateString('en-US', { 
-    month: 'long', 
-    day: 'numeric', 
-    year: 'numeric' 
+  return date.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
   });
 }
 
@@ -158,7 +163,7 @@ export const usageExamples = {
       ctaLink="/blog"
     />
   `,
-  
+
   withPreset: `
     <UnifiedPromotionalBanner
       {...createBannerConfig('octoberBreakthrough', {
@@ -170,7 +175,7 @@ export const usageExamples = {
       })}
     />
   `,
-  
+
   withFeaturedItems: `
     <UnifiedPromotionalBanner
       variant="premium"
@@ -187,5 +192,5 @@ export const usageExamples = {
         }
       ])}
     />
-  `
+  `,
 };

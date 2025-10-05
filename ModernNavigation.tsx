@@ -1,4 +1,3 @@
-
 interface ModernNavigationProps {
   className?: string;
 }

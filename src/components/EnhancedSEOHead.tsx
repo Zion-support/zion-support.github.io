@@ -54,7 +54,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     foundingDate: '2020',
     numberOfEmployees: '500+',
     industry: 'Artificial Intelligence',
-      services: [
+    services: [
       'AI Workflow Automation',
       'Enterprise AI Solutions',
       'AI Data Analytics',

@@ -26,7 +26,9 @@ const App: React.FC = () => {
     performanceOptimizer.startRender('App');
 
     console.log('Performance monitoring initialized');
-    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    console.log(
+      '🚀 Zion Tech Group App initialized with comprehensive monitoring',
+    );
   }, []);
 
   return (

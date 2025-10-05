@@ -19,7 +19,7 @@ export const getErrorMetrics = () => {
     errorCount: 0,
     errorRate: 0,
     lastError: null,
-    totalErrors: 0
+    totalErrors: 0,
   };
 };
 

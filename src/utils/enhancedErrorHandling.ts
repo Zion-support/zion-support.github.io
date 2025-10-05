@@ -14,7 +14,13 @@ export interface ErrorInfo {
   userId?: string;
   sessionId?: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
+  category:
+    | 'javascript'
+    | 'network'
+    | 'resource'
+    | 'promise'
+    | 'react'
+    | 'unknown';
 }
 
 export interface ErrorReport {
@@ -39,7 +45,7 @@ class EnhancedErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Global error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.handleError({
         message: event.message,
         stack: event.error?.stack,
@@ -47,12 +53,12 @@ class EnhancedErrorHandler {
         userAgent: navigator.userAgent,
         url: window.location.href,
         severity: this.determineSeverity(event.error),
-        category: 'javascript'
+        category: 'javascript',
       });
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.handleError({
         message: event.reason?.message || 'Unhandled promise rejection',
         stack: event.reason?.stack,
@@ -60,39 +66,49 @@ class EnhancedErrorHandler {
         userAgent: navigator.userAgent,
         url: window.location.href,
         severity: this.determineSeverity(event.reason),
-        category: 'promise'
+        category: 'promise',
       });
     });
 
     this.isInitialized = true;
   }
 
-  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
+  private determineSeverity(
+    error: any,
+  ): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
 
     const message = error.message?.toLowerCase() || '';
-    
+
     // Critical errors
-    if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
+    if (
+      message.includes('chunk') ||
+      message.includes('loading') ||
+      message.includes('network')
+    ) {
       return 'critical';
     }
-    
+
     // High severity errors
-    if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {
+    if (
+      message.includes('syntax') ||
+      message.includes('reference') ||
+      message.includes('type')
+    ) {
       return 'high';
     }
-    
+
     // Medium severity errors
     if (message.includes('warning') || message.includes('deprecated')) {
       return 'medium';
     }
-    
+
     return 'low';
   }
 
   private handleError(errorInfo: ErrorInfo): void {
     this.errors.push(errorInfo);
-    
+
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
       this.errors = this.errors.slice(-this.maxErrors);
@@ -116,7 +132,7 @@ class EnhancedErrorHandler {
     error: Error | string,
     componentStack?: string,
     errorBoundary?: string,
-    additionalInfo?: Partial<ErrorInfo>
+    additionalInfo?: Partial<ErrorInfo>,
   ): void {
     const errorInfo: ErrorInfo = {
       message: typeof error === 'string' ? error : error.message,
@@ -124,11 +140,12 @@ class EnhancedErrorHandler {
       componentStack,
       errorBoundary,
       timestamp: Date.now(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+      userAgent:
+        typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       severity: 'medium',
       category: 'react',
-      ...additionalInfo
+      ...additionalInfo,
     };
 
     this.handleError(errorInfo);
@@ -139,22 +156,25 @@ class EnhancedErrorHandler {
   }
 
   public getErrorReport(): ErrorReport {
-    const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;
-    const lastError = this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined;
-    
+    const criticalErrors = this.errors.filter(
+      e => e.severity === 'critical',
+    ).length;
+    const lastError =
+      this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined;
+
     return {
       errors: [...this.errors],
       totalErrors: this.errors.length,
       criticalErrors,
       lastError,
       errorRate: this.calculateErrorRate(),
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
   }
 
   private calculateErrorRate(): number {
     // Calculate error rate over the last hour
-    const oneHourAgo = Date.now() - (60 * 60 * 1000);
+    const oneHourAgo = Date.now() - 60 * 60 * 1000;
     const recentErrors = this.errors.filter(e => e.timestamp > oneHourAgo);
     return recentErrors.length / 60; // errors per minute
   }
