@@ -40,60 +40,6 @@ const ComprehensiveSystemDashboard: React.FC = () => {
   // Initialize monitoring systems
   const initializeMonitoring = useCallback(() => {
     try {
-<<<<<<< HEAD
-      performanceOptimizer.startMonitoring();
-      accessibilityEnhancer.startMonitoring();
-      seoOptimizer.startMonitoring();
-      setIsMonitoring(true);
-=======
-      setIsLoading(true);
-      
-      // Load performance metrics
-      const performanceData = await enhancedPerformanceMonitor.getMetrics();
-      const performanceScore = 85; // Mock performance score
-      
-      // Load security metrics
-      const securityData = enhancedSecurityManager.getSecurityReport();
-      
-      // Load analytics data
-      const analyticsReport = enhancedAnalytics.generateReport();
-      // const advancedEvents = advancedAnalytics?.getEvents();
-      
-      // Load system metrics
-      const systemData = {
-        memoryUsage: ((performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize ?? 0) / 1024 / 1024,
-        cpuUsage: Math.random() * 100, // Placeholder
-        networkLatency: Math.random() * 100 // Placeholder
-      };
-
-      setMetrics({
-        performance: {
-          score: performanceScore,
-          lcp: performanceData.get('lcp')?.[0]?.value || 0,
-          fcp: performanceData.get('fcp')?.[0]?.value || 0,
-          ttfb: performanceData.get('ttfb')?.[0]?.value || 0
-        },
-        security: {
-          score: enhancedSecurityManager.getSecurityScore(),
-          totalEvents: securityData.totalEvents || 0,
-          criticalEvents: securityData.eventsBySeverity?.critical || 0
-        },
-        analytics: {
-          pageViews: analyticsReport.pageViews || 0,
-          uniqueVisitors: analyticsReport.uniqueVisitors || 0,
-          bounceRate: analyticsReport.bounceRate || 0
-        },
-        system: systemData
-      });
-
-      // Generate real-time data
-      const realTime: RealTimeDataPoint[] = Array.from({ length: 20 }, (_, i) => ({
-        timestamp: Date.now() - (19 - i) * 1000,
-        value: Math.random() * 100,
-        metric: 'performance'
-      }));
-      setRealTimeData(realTime as any);
->>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
     } catch (error) {
       console.error("Error initializing monitoring systems:", error);
     }

@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
-<<<<<<< HEAD
-import AdvancedAccessibilityManager from "../utils/advancedAccessibilityManager";
-import AdvancedSecurityManager from "../utils/advancedSecurityManager";
-import EnhancedUXManager from "../utils/enhancedUXManager";
-=======
 import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
 import { AdvancedSecurityManager } from '../utils/advancedSecurityManager';
 import EnhancedUXManager from '../utils/enhancedUXManager';
->>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
 
 interface PerformanceData {
   memoryUsage: number;

@@ -64,7 +64,7 @@ const October2025TechBannerNew = () => {
         </p>
         {/* Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {newArticles.map((article, index) = > (
+          {newArticles.map((article, index) => (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 20 }}

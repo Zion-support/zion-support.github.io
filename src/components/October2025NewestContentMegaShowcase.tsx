@@ -3,7 +3,6 @@ export default function October2025NewestContentMegaShowcase() {
   const newContent = [
     {",
       icon: <Network className="w-8 h-8" />,",
-=======
     {
       icon: <Network className="w-8 h-8" />,
       title: "Autonomous Mesh Intelligence Platform",
@@ -15,7 +14,6 @@ export default function October2025NewestContentMegaShowcase() {
     },
     {
       icon: '🚀',
-=======
       icon: <Atom className="w-8 h-8" />,
       title: "Quantum-Neural Hybrid Systems",
       description: "100,000x performance improvements for drug discovery and optimization",",
@@ -26,7 +24,6 @@ export default function October2025NewestContentMegaShowcase() {
     },
     {
       icon: '🚀',
-=======
       icon: <Brain className="w-8 h-8" />,
       title: "Neural-Symbolic Reasoning Systems",
       description: "97% accuracy with 100% explainable AI decision-making",",
@@ -69,7 +66,7 @@ export default function October2025NewestContentMegaShowcase() {
         </div>
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {newContent.map((item, index) = > (
+          {newContent.map((item, index) => (
             <Link
               key={index}
               to={item.link}

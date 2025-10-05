@@ -77,7 +77,7 @@ const October2025UltimateEnterpriseBanner = () => {
             </div>
             {/* Key Highlights */}
             <div className="space-y-2 mb-6">
-              {multiCloudContent.highlights.slice(0, 4).map((highlight, index) = > (
+              {multiCloudContent.highlights.slice(0, 4).map((highlight, index) => (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                   <span className="text-sm leading-relaxed">{highlight}</span>
@@ -139,7 +139,7 @@ const October2025UltimateEnterpriseBanner = () => {
             </div>
             {/* Key Highlights */}
             <div className="space-y-2 mb-6">
-              {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) = > (
+              {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) => (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
                   <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
                   <span className="text-sm leading-relaxed">{highlight}</span>

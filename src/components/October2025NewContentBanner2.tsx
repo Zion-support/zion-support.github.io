@@ -57,7 +57,7 @@ const October2025NewContentBanner2 = () => {
         </div>
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {newArticles.map((article) = > {
+          {newArticles.map((article) => {
             const Icon = article.icon;
             return (
               <Link

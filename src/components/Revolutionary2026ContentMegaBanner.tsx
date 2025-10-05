@@ -132,7 +132,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
         </div>
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {revolutionaryContent.map((content, index) = > (
+          {revolutionaryContent.map((content, index) => (
             <motion.div
               key={content.id}
               initial={{ opacity: 0, y: 20 }}

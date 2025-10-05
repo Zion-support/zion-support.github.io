@@ -145,7 +145,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
         </div>
         {/* Showcase Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
-          {showcaseContent.map((content, index) = > (
+          {showcaseContent.map((content, index) => (
             <motion.div
               key={content.id}
               initial={{ opacity: 0, y: 30 }}
@@ -198,7 +198,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                 </p>
                 {/* Stats Grid */}
                 <div className="grid grid-cols-3 gap-4 mb-8">
-                  {Object.entries(content.stats).map(([key, value], idx) = > (
+                  {Object.entries(content.stats).map(([key, value], idx) => (
                     <div key={idx} className="text-center p-3 bg-white/5 rounded-xl border border-white/10">
                       <div className="text-lg font-bold text-blue-400 mb-1">{value}</div>
                       <div className="text-xs text-gray-400 capitalize">{key}</div>

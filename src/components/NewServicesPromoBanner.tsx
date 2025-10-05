@@ -14,7 +14,7 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
   className = ''
 }) => {
   const services = featuredOnly
-    ? newServices2026.filter(s = > s.featured).slice(0, showCount)
+    ? newServices2026.filter(s => s.featured).slice(0, showCount)
     : newServices2026.slice(0, showCount);
   if (variant === 'showcase') {
     return (
@@ -33,7 +33,7 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {services.map((service) = > (
+            {services.map((service) => (
               <div
 key={service.id}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all hover:scale-105"
@@ -46,7 +46,7 @@ key={service.id}
                 <h3 className="text-2xl font-bold mb-3">{service.name}</h3>
                 <p className="text-emerald-100 mb-4">{service.description}</p>
                 <div className="space-y-2 mb-6">
-                  {service.benefits.slice(0, 3).map((benefit, idx) = > (
+                  {service.benefits.slice(0, 3).map((benefit, idx) => (
                     <div key={idx} className="flex items-start gap-2">
                       <Zap className="w-4 h-4 text-yellow-300 flex-shrink-0 mt-1" />
                       <span className="text-sm text-white">{benefit}</span>
@@ -89,7 +89,7 @@ key={service.id}
           Discover our latest AI-powered solutions transforming businesses worldwide
         </p>
         <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service) = > (
+          {services.map((service) => (
             <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all">
               <div className="text-3xl mb-3">{service.icon}</div>
               <h3 className="text-xl font-bold mb-2">{service.name}</h3>
@@ -121,7 +121,7 @@ key={service.id}
           </Link>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service) = > (
+          {services.map((service) => (
             <Link
               key={service.id}
               to={service.link}
@@ -146,7 +146,7 @@ key={service.id}
         <h3 className="text-2xl font-bold">New Services Just Launched</h3>
       </div>
       <div className="grid md:grid-cols-3 gap-4">
-        {services.map((service) = > (
+        {services.map((service) => (
           <div key={service.id} className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-all">
             <div className="text-2xl mb-2">{service.icon}</div>
             <h4 className="font-semibold mb-2">{service.name}</h4>
