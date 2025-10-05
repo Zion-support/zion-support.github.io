@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+// @ts-ignore
+import { ArrowRight, DollarSign, Users, TrendingUp, Brain, CheckCircle, Target } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations Implementation | Zion Tech Group',

@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import { Brain } from 'lucide-react';
 
 // Fallback: content module may be relocated; guard import

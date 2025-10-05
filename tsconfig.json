@@ -27,7 +27,7 @@
       "@/config/*": ["src/config/*"]
     }
   },
-  "include": ["src", "app"],
+  "include": ["src", "app", "types"],
   "exclude": ["src/pages/blog-disabled/**/*", "app/blog", "app/components", "blog", "components", "src/components/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

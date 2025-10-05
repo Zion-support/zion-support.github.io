@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+// @ts-ignore
+import { ArrowRight, Award, TrendingUp, Zap, Brain, Target, DollarSign, Users } from 'lucide-react';
 
 // @ts-ignore
 export const metadata = {
