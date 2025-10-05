@@ -6,10 +6,9 @@ echo "=== Cleaning All Merge Conflicts ==="
 for file in *.sh *.py *.cjs; do
     if [ -f "$file" ]; then
         echo "Cleaning conflicts in: $file"
-        sed -i '/^<<<<<<< HEAD$/d' "$file"
-        sed -i '/^=======$/d' "$file"
-        sed -i '/^>>>>>>> [a-f0-9]*$/d' "$file"
-    fi
+        sed -i '/^$/d' "$file"
+        sed -i '/^$/d' "$file"
+        sed -i '/^    fi
 done
 
 echo "=== Merge Conflict Cleanup Complete ==="

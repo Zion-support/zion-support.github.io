@@ -1,218 +1,91 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+impo, r, t { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m 'rea, c, t';
+impo, r, t { AlertTriang, l, e, Refresh, C, w, Ho, m, e, Ma, i, l } fr, o, m 'luci, d, e-rea, c, t';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableReporting?: boolean;
-}
+interface, Prop, s {  
+      hasErr, o, r: f, a, l, s, e,
+      err, o, r: n, u, l, l,
+      errorIn, f, o: n, u, l, l,
+      error, I, d: '',
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  componentDidCat, c, h(err, o, r: Er, r, o, r, errorIn, f, o: ErrorIn, f, o) {
+    con, s, t { onEr, r, o, r } = th, i, s.pro, p, s;
+    con, s, t { error, I, d } = th, i, s.sta, t, e;
 
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+    // Update state with error info this.setSta t e({ errorIn f o });
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ errorInfo });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by ErrorBoundary:', error);
-      console.error('Error Info:', errorInfo);
-    }
-
-    // Report error to external service in production
-    if (this.props.enableReporting && process.env.NODE_ENV === 'production') {
-      this.reportError(error, errorInfo);
-    }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-  }
-
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error reporting service
-    // Example: Sentry, LogRocket, Bugsnag, etc.
-    const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
+    // Log error details
+    const, errorDetail, s = {
+      erro, r, I, d,
+      messa, g, e: err, o, r.mess, a, g, e,
+      sta, c, k: err, o, r.st, a, c, k,
+      componentSta, c, k: errorIn, f, o.componentSt, a, c, k,
+      timesta, m, p: new, Dat, e().toISOStr, i, n, g(),
+      userAge, n, t: navigat, o, r.userAg, e, n, t,
+      u, r, l: wind, o, w.locati, o, n.h, r, e, f,
+      retryCou, n, t: th, i, s.retryCo, u, n, t,
     };
 
-    // For now, just log to console
-    console.error('Error Report:', errorReport);
+    // Log to console in development if (impo r t.me t a.e n v.D E V) {
+      // esli n t-disab l e-ne x t-line n o-console consol e.err o r('Error Boundary caught an erro r:' errorDetai l s);
 
-    // In production, you would send this to your error reporting service:
-    // errorReportingService.captureException(error, { extra: errorReport });
-  };
-
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
-
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      // Default error UI
-      return (
-        <div
-          className='error-boundary'
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '50vh',
-            padding: '2rem',
-            textAlign: 'center',
-            backgroundColor: '#f8f9fa',
-            border: '1px solid #dee2e6',
-            borderRadius: '8px',
-            margin: '1rem',
-          }}
-        >
-          <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>⚠️</div>
-          <h2 style={{ color: '#dc3545', marginBottom: '1rem' }}>
-            Something went wrong
-          </h2>
-          <p
-            style={{
-              color: '#6c757d',
-              marginBottom: '2rem',
-              maxWidth: '500px',
-            }}
-          >
-            We're sorry, but something unexpected happened. Our team has been
-            notified and is working to fix this issue.
-          </p>
-
-          <div
-            style={{
-              display: 'flex',
-              gap: '1rem',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-            }}
-          >
-            <button
-              onClick={this.handleRetry}
-              style={{
-                padding: '0.75rem 1.5rem',
-                backgroundColor: '#007bff',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                fontSize: '1rem',
-              }}
-            >
-              Try Again
-            </button>
-            <button
-              onClick={this.handleReload}
-              style={{
-                padding: '0.75rem 1.5rem',
-                backgroundColor: '#6c757d',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                fontSize: '1rem',
-              }}
-            >
-              Reload Page
-            </button>
-          </div>
-
-          {process.env.NODE_ENV === 'development' && this.state.error && (
-            <details
-              style={{
-                marginTop: '2rem',
-                textAlign: 'left',
-                backgroundColor: '#f8f9fa',
-                padding: '1rem',
-                borderRadius: '4px',
-                border: '1px solid #dee2e6',
-                maxWidth: '100%',
-                overflow: 'auto',
-              }}
-            >
-              <summary
-                style={{
-                  cursor: 'pointer',
-                  fontWeight: 'bold',
-                  marginBottom: '0.5rem',
-                }}
-              >
-                Error Details (Development Only)
-              </summary>
-              <div style={{ fontSize: '0.875rem' }}>
-                <div style={{ marginBottom: '1rem' }}>
-                  <strong>Error:</strong> {this.state.error.message}
-                </div>
-                <div style={{ marginBottom: '1rem' }}>
-                  <strong>Stack:</strong>
-                  <pre
-                    style={{
-                      backgroundColor: '#e9ecef',
-                      padding: '0.5rem',
-                      borderRadius: '4px',
-                      overflow: 'auto',
-                      fontSize: '0.75rem',
-                    }}
-                  >
-                    {this.state.error.stack}
-                  </pre>
-                </div>
-                {this.state.errorInfo && (
-                  <div>
-                    <strong>Component Stack:</strong>
-                    <pre
-                      style={{
-                        backgroundColor: '#e9ecef',
-                        padding: '0.5rem',
-                        borderRadius: '4px',
-                        overflow: 'auto',
-                        fontSize: '0.75rem',
-                      }}
-                    >
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  </div>
-                )}
-              </div>
-            </details>
-          )}
-        </div>
-      );
+    // Log to console in development if (impo r t.me t a.e n v.D E V) {
+      // esli n t-disab l e-ne x t-line n o-console consol e.err o r('Error Repor t:' errorRepo r t);
     }
 
-    return this.props.children;
-  }
-}
+    // In productio n send to error reporting servic e: // fet c h('/a p i/err o r s' {
+    //   meth o d: 'P O S T' 
+    //   heade r s: { 'Conte n t-Ty p e': 'applicati o n/j s o n' } 
+    //   bo d y: JS O N.stringi f y(errorRep o r t)
 
-export default EnhancedErrorBoundary;
+  getSession, I, d = (): string =  > {
+    let, sessionI, d = sessionStora, g, e.getIt, e, m('sessio, n, I, d'); if() { session, I, d = `sessio, n, _${Da, t, e.no, w() }, _${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; sessionStora, g, e.setIt, e, m('session, I, d', session, I, d);
+    th, i, s.retryCou, n, t++; th, i, s.setSta, t, e({
+      hasErr, o, r: fa, l, s, e,
+      err, o, r: n, u, l, l,
+      errorIn, f, o: n, u, l, l,
+      error, I, d: '',
+
+  handleReportEr, r, o, r = () => {
+    con, s, t { err, o, r, errorIn, f, o, error, I, d } = th, i, s.sta, t, e;
+
+    // In a real applicati o n this would send to an error reporting service const errorRepo r t = { 
+      erro, r, I, d,
+      messa, g, e: err, o, r?.mess, a, g, e,
+      sta, c, k: err, o, r?.st, a, c, k,
+      componentSta, c, k: errorIn, f, o ? .componentSt, a, c, k,
+      timesta, m, p: new, Dat, e().toISOStr, i, n, g(),
+      userAge, n, t: navigat, o, r.userAg, e, n, t,
+      u, r, l : wind, o, w.locati, o, n.h, r, e, f,
+     };
+
+    // For demo purposes copy to clipboard
+    if() { navigat, o, r.clipboa, r, d.writeTe, x, t(JS, O, N.stringi, f, y(errorRepo, r, t, nu, l, l, 2));
+      ale, r, t('Error, details, copied to, clipboar, d');
+     }, el, s, e {
+      // esli n t-disab l e-ne x t-line n o-console consol e.l o g('Error Repor t:' errorRepo r t);
+      ale, r, t('Error, details, logged to, consol, e');
+    }
+              <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
+                We're, sor, r, y, but, something, unexpected happen, e, d. Our, team, has
+                been, notified, and is, working, to fix, this, issue.
+
+            <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-3, justif, y-cent, e, r'>
+              <button, onClic, k = { th, i, s.handleR, e, t, r, y }, classNa, m, e = 'inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s'
+              >
+                <RefreshCw, classNam, e='w-4 h-4, m, r-2' />
+                Try, Agai, n
+                <Home, classNam, e='w-4 h-4, m, r-2' />
+                Go, Hom, e
+                <RefreshCw, classNam, e='w-4 h-4, m, r-2' />
+                Reload, Pag, e
+                <Mail, classNam, e='w-4 h-4, m, r-2' />
+                Report, Erro, r
+              </butt, o, n>
+            </d, i, v>
+
+            {  showDetai, l, s && th, i, s.sta, t, e.errorIn, f, o  && (
+              <details, classNam, e='mt-6, tex, t-le, f, t'>
+                <summary, classNam, e='curs, o, r-pointer, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, hove, r:te, x, t-gr, a, y-9, 0, 0'>
+                  Development, Detail, s
+                </summa, r, y>
+                <pre, classNam, e='mt-2, tex, t-xs, tex, t-gr, a, y-600, b, g-gr, a, y-10, 0, p-3, rounded, overflow-auto, ma, x-h-64' > {err, o, r?.s, t, a, c, k  }

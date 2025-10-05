@@ -1,1 +1,2 @@
-host: true;
+host: true,
+host: true

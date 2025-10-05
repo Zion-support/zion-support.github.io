@@ -1,5 +1,1 @@
-  step.label ;
-}< </div>) ;
-}) ;
-}</div> </div>) ;
-
+step.label ; }< </div>) ; }) ; }</div> </div>) ;

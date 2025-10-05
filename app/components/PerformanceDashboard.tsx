@@ -19,7 +19,7 @@ const PerformanceDashboard: React.FC = () => {
       const performance = performanceOptimizer.getPerformanceSummary();
       const errors = getErrorMetrics();
       const isHealthy =
-        !isErrorRateTooHigh(5) && performance.performanceGrade.startsWith('A');
+        !isErrorRateTooHigh(5) && performance.averageRenderTime < 16;
 
       setData({
         performance,
@@ -95,10 +95,10 @@ const PerformanceDashboard: React.FC = () => {
           <div className='flex items-center space-x-2'>
             <button
               onClick={() => setAutoRefresh(!autoRefresh)}
-              className={`text-xs px-2 py-1 rounded ${
+              className={`px-3 py-1 rounded text-sm font-medium ${
                 autoRefresh
                   ? 'bg-green-100 text-green-800'
-                  : 'bg-gray-100 text-gray-600'
+                  : 'bg-gray-100 text-gray-800'
               }`}
             >
               {autoRefresh ? 'Auto' : 'Manual'}
@@ -125,7 +125,9 @@ const PerformanceDashboard: React.FC = () => {
         </div>
         <div className='flex items-center mt-2'>
           <div
-            className={`w-3 h-3 rounded-full mr-2 ${data.isHealthy ? 'bg-green-500' : 'bg-red-500'}`}
+            className={`w-2 h-2 rounded-full mr-2 ${
+              data.isHealthy ? 'bg-green-500' : 'bg-red-500'
+            }`}
           ></div>
           <span className='text-sm text-gray-600'>
             {data.isHealthy ? 'System Healthy' : 'Issues Detected'}
@@ -143,7 +145,11 @@ const PerformanceDashboard: React.FC = () => {
             <div className='bg-gray-50 p-2 rounded'>
               <div className='text-gray-600'>Grade</div>
               <div className='font-semibold'>
-                {data.performance.performanceGrade}
+                {data.performance.averageRenderTime < 16
+                  ? 'A'
+                  : data.performance.averageRenderTime < 32
+                    ? 'B'
+                    : 'C'}
               </div>
             </div>
             <div className='bg-gray-50 p-2 rounded'>
@@ -161,7 +167,9 @@ const PerformanceDashboard: React.FC = () => {
             <div className='bg-gray-50 p-2 rounded'>
               <div className='text-gray-600'>Memory</div>
               <div className='font-semibold'>
-                {data.performance.currentMemoryUsage}
+                {data.performance.memoryUsage > 0
+                  ? `${(data.performance.memoryUsage / 1024 / 1024).toFixed(1)}MB`
+                  : 'N/A'}
               </div>
             </div>
           </div>
@@ -185,22 +193,25 @@ const PerformanceDashboard: React.FC = () => {
         </div>
 
         {/* Recommendations */}
-        {data.performance.recommendations.length > 0 && (
+        {data.performance.slowComponents > 0 && (
           <div>
             <h4 className='text-sm font-medium text-gray-900 mb-2'>
               Recommendations
             </h4>
             <div className='space-y-1'>
-              {data.performance.recommendations
-                .slice(0, 3)
-                .map((rec, index) => (
-                  <div
-                    key={index}
-                    className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'
-                  >
-                    {rec}
-                  </div>
-                ))}
+              {data.performance.slowComponents > 0 && (
+                <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
+                  {data.performance.slowComponents} slow components detected.
+                  Consider optimizing render performance.
+                </div>
+              )}
+              {data.performance.averageRenderTime > 16 && (
+                <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
+                  Average render time is{' '}
+                  {data.performance.averageRenderTime.toFixed(1)}ms. Consider
+                  code splitting or memoization.
+                </div>
+              )}
             </div>
           </div>
         )}

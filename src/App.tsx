@@ -1,161 +1,231 @@
-import React, { useState, useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { AppHeader } from './layout/AppHeader';
+import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
+import { ChatAssistant } from './components/ChatAssistant';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { SEO } from './components/SEO';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PromotionalBanner } from './components/PromotionalBanner';
+import { NewContentPromotionalBanner } from './components/NewContentPromotionalBanner';
+// Removed direct import to avoid name collision with lazy import below
+import { ServicesHighlight } from './components/ServicesHighlight';
+import { LoggingTest } from './components/LoggingTest';
+import './index.css';
 
-// Import existing components
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import UserFriendlyErrorBoundary from './components/UserFriendlyErrorBoundary';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Team = lazy(() => import('./pages/Team'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
 
-// Import pages
-import HomePage from './pages/Home';
-import AboutPage from './pages/About';
-import ContactPage from './pages/Contact';
-import ServicesPage from './pages/Services';
-import BlogPage from './pages/Blog';
-
-// Animation variants
-const pageVariants = {
-  initial: { opacity: 0, y: 20 },
-  in: { opacity: 1, y: 0 },
-  out: { opacity: 0, y: -20 }
-};
-
-const pageTransition = {
-  type: 'tween' as const,
-  ease: 'anticipate' as const,
-  duration: 0.4
-};
-
-// Main App component
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [showPerformanceOptimizer, setShowPerformanceOptimizer] = useState(false);
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-
   useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey) {
-        switch (event.key) {
-          case 'P':
-            event.preventDefault();
-            setShowPerformanceOptimizer(true);
-            break;
-          case 'M':
-            event.preventDefault();
-            setShowPerformanceMonitor(true);
-            break;
-          default:
-            break;
-        }
+    // Initialize all optimization systems
+    const initializeOptimizations = () => {
+      try {
+        // Initialize performance monitoring
+        performanceOptimizer.startPerformanceMonitoring();
+        performanceMonitor.startMonitoring();
+        
+        // Initialize security enhancements
+        // securityEnhancer.setupSecurityMonitoring();
+        
+        // Initialize SEO tracking
+        // seoOptimizer.trackPageView();
+        
+        // Set up error reporting
+        // errorHandler.setReportingEnabled(true);
+        
+        console.log('All optimization systems initialized successfully');
+      } catch (error) {
+        console.error('Failed to initialize optimization systems:', error);
+        // errorHandler.handleError({
+        //   type: 'Initialization Error' 
+        //   message: 'Failed to initialize optimization systems' 
+        //   error: error.message 
+        //   timestamp: new Date().toISOString()
+        // });
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    // Initialize optimizations after component mount
+    initializeOptimizations();
+
+    // Cleanup on unmount
+    return () => {
+      performanceOptimizer.cleanup();
+      performanceMonitor.stopMonitoring();
+    };
   }, []);
 
-  if (isLoading) {
-    return (
-      <HelmetProvider>
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <LoadingSpinner />
-        </div>
-      </HelmetProvider>
-    );
-  }
-
   return (
-    <HelmetProvider>
-      <UserFriendlyErrorBoundary>
-        <EnhancedErrorBoundary>
-          <Router>
-            <div className="min-h-screen bg-white">
-              <SEOHead />
-              <Header />
-              
-              <motion.main
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={pageTransition}
-                className="flex-1"
-              >
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                </Routes>
-              </motion.main>
+    <div>
+      {/* <EnhancedSEO /> */}
+      <Router>
+<<<<<<< HEAD
+        <Suspense fallback={<EnhancedLoading />}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/services' element={<Services />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/team' element={<Team />} />
+            <Route path='/privacy' element={<Privacy />} />
+            <Route path='/terms' element={<Terms />} />
+          </Routes>
+        </Suspense>
+=======
+        <div className="min-h-screen bg-futuristic">
+          <AppHeader />
+          <PromotionalBanner />
+          <NewContentPromotionalBanner />
+          
+          <main className="flex-1">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<EnhancedContact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/docs" element={<Documentation />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/cookies" element={<Cookies />} />
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+                <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
+                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
+                <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
+                <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
+                <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/logging-test" element={<LoggingTest />} />
+                
+                {/* New routes for missing pages */}
+                <Route path="/api-docs" element={<APIDocumentation />} />
+                <Route path="/developers" element={<DeveloperPortal />} />
+                <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                <Route path="/community" element={<Community />} />
+                
+                {/* Enhanced Routes */}
+                <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
+                <Route path="/services/innovative-2025" element={<InnovativeServicesLanding2025 />} />
+                <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/demo" element={<Demo />} />
+                
+                {/* New Content Showcase Routes */}
+                <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025Page />} />
+                <Route path="/content-showcase" element={<ContentShowcase />} />
+                <Route path="/interactive-demos" element={<InteractiveDemoShowcase />} />
 
-              <Footer />
+                <Route path="/investors" element={<Investors />} />
+                <Route path="/legal" element={<Legal />} />
+                <Route path="/press" element={<Press />} />
+                <Route path="/blog/ai-business-trends-2025" element={<NewBlogPost />} />
+                
+                {/* New content showcase routes */}
+                <Route path="/new-content-showcase" element={<NewContentShowcase />} />
+                <Route path="/ai-innovation-hub" element={<AIInnovationHub />} />
+                <Route path="/blog/new-ai-services-announcement" element={<BlogPostNewContent />} />
+                <Route path="/case-study-ai-automation-success" element={<CaseStudyAIAutomationSuccess />} />
+                
+                {/* New blog posts */}
+                <Route path="/blog/ai-revolution-2025" element={<AIRevolution2025 />} />
+                <Route path="/blog/quantum-computing-business" element={<QuantumComputingBusiness />} />
+                <Route path="/blog/AI-Business-Automation-2025" element={<AIBusinessAutomation2025 />} />
+                
+                {/* Service Routes - only for existing pages */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
 
-              {/* Performance Optimizer Modal */}
-              {showPerformanceOptimizer && (
-                <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-                  <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-                    <div className="flex justify-between items-center mb-4">
-                      <h2 className="text-2xl font-bold text-gray-900">Performance Optimizer</h2>
-                      <button
-                        onClick={() => setShowPerformanceOptimizer(false)}
-                        className="text-gray-500 hover:text-gray-700"
+                {/* New innovative service routes */}
+                <Route path="/services/ai-legal-document-generator" element={<AIPoweredLegalDocumentGenerator />} />
+                <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPlatform />} />
+                <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
+                <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
+                <Route path="/services/ai-powered-customer-success-platform" element={<AIPoweredCustomerSuccessPlatform />} />
+                <Route path="/services/AI-Business-Automation" element={<AIBusinessAutomation />} />
+
+                {/* New content routes */}
+                <Route path="/innovative-tech-solutions-2025" element={<InnovativeTechSolutions2025 />} />
+                <Route path="/blog/the-future-of-ai-in-business-2025" element={<TheFutureOfAIInBusiness2025 />} />
+
+                {/* New AI-powered service routes */}
+                <Route path="/services/ai-powered-customer-success-platform" element={<AIPoweredCustomerSuccessPlatform />} />
+                <Route path="/services/ai-powered-marketing-automation" element={<AIPoweredMarketingAutomation />} />
+
+                {/* Enhanced 404 route */}
+                <Route path="*" element={
+                  <div className="min-h-screen bg-futuristic flex items-center justify-center">
+                    <SEO 
+                      title="Page Not Found - Zion Tech Group"
+                      description="The page you're looking for doesn't exist."
+                      keywords="404, page not found, Zion Tech Group"
+                      ogType="website"
+                    />
+                    <div className="text-center text-white">
+                      <h1 className="text-6xl font-bold mb-4 animate-fade-in">404</h1>
+                      <p className="text-xl text-gray-300 mb-8 animate-fade-in animation-delay-200">Page Not Found</p>
+                      <p className="text-gray-400 mb-8 animate-fade-in animation-delay-400">The page you're looking for doesn't exist.</p>
+                      <button 
+                        onClick={() => window.history.back()} 
+                        className="btn-futuristic mr-4"
                       >
-                        ✕
+                        Go Back
+                      </button>
+                      <button 
+                        onClick={() => window.location.href = '/'} 
+                        className="btn-futuristic"
+                      >
+                        Go Home
                       </button>
                     </div>
-                    <PerformanceOptimizer />
                   </div>
-                </div>
-              )}
-
-              {/* Performance Monitor Modal */}
-              {showPerformanceMonitor && (
-                <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-                  <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-                    <div className="flex justify-between items-center mb-4">
-                      <h2 className="text-2xl font-bold text-gray-900">Performance Monitor</h2>
-                      <button
-                        onClick={() => setShowPerformanceMonitor(false)}
-                        className="text-gray-500 hover:text-gray-700"
-                      >
-                        ✕
-                      </button>
-                    </div>
-                    <PerformanceMonitor />
-                  </div>
-                </div>
-              )}
-
-              {/* Keyboard Shortcuts Help */}
-              <div className="fixed bottom-4 left-4 z-40 bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm opacity-75 hover:opacity-100 transition-opacity duration-200">
-                <div className="font-semibold mb-1">Keyboard Shortcuts:</div>
-                <div>Ctrl+Shift+P: Performance Optimizer</div>
-                <div>Ctrl+Shift+M: Performance Monitor</div>
-              </div>
-            </div>
-          </Router>
-        </EnhancedErrorBoundary>
-      </UserFriendlyErrorBoundary>
-    </HelmetProvider>
+                } />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+          <ChatAssistant />
+          <PerformanceOptimizer />
+          <AccessibilityEnhancer />
+        </div>
+>>>>>>> origin/cursor/undefined-awde-task-40d3
+      </Router>
+      <SystemMonitor />
+    </div>
   );
 }
 

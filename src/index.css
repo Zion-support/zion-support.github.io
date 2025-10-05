@@ -41,12 +41,6 @@ body {
     background-color: #f9f9f9;
   }
 }
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
 .hidden {
   display: none;
 }

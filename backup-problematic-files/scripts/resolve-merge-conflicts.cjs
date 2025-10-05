@@ -7,10 +7,6 @@ conflictType = 'incoming';
         continue;
       }
 
-
-
-
-
 console.log('🔧 Starting merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
@@ -18,7 +14,6 @@ console.log('🔧 Starting merge conflict resolution...');
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-
 
     if (!content.includes('    }
     console.log(`📝 Resolving conflicts in: ${filePath}`);
@@ -31,8 +26,7 @@ console.log('🔧 Starting merge conflict resolution...');
       const line = lines[i];
       if (line.includes()) {
       
-      if (line.includes('=======')) {
-// Function to resolve merge conflicts in a file;
+      if (line.includes('// Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {
   // TODO: Implement
@@ -42,7 +36,6 @@ function resolveMergeConflicts(filePath) {
         conflictType = 'incoming';
         continue;
       }
-      
 
       if (line.includes('>>>>>>>')) {
         inConflict = false;
@@ -74,7 +67,6 @@ function resolveMergeConflicts(filePath) {
         conflictType = 'incoming';
         continue;
       }
-      
 
       if (line.includes('>>>>>>>')) {
         inConflict = false;
@@ -95,7 +87,6 @@ function resolveMergeConflicts(filePath) {
         conflictType = 'head';
 conflictType = 'incoming';
         continue;
-
 
         resolvedLines.push(line);
       } else if (conflictType === 'head') {
@@ -125,7 +116,6 @@ class MergeConflictResolver {
       ",
       "      "      ""],,
 }
-
 
     return true;
   } catch (error) {`;
@@ -202,7 +192,6 @@ function findConflictedFiles(dir) {
 
           const content = fs.readFileSync(fullPath, 'utf8');
 
-  
   console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
   conflictedFiles.forEach(file => console.log(`  - ${file}`));
   

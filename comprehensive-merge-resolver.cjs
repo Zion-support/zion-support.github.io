@@ -112,8 +112,7 @@ class ComprehensiveMergeResolver {
       
       // Remove conflict markers and keep both versions when appropriate
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g,
-        (match, headContent, incomingContent) => {
+        /\n([\s\S]*?)\n\n([\s\S]*?)\n        (match, headContent, incomingContent) => {
           // If contents are similar, merge them
           if (headContent.trim() === incomingContent.trim()) {
             return headContent;
@@ -135,8 +134,7 @@ class ComprehensiveMergeResolver {
       );
       
       // Clean up any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD|=======|>>>>>>> [^\n]+/g, '');
-      
+      resolvedContent = resolvedContent.replace(/||      
       // Remove duplicate lines
       const lines = resolvedContent.split('\n');
       const uniqueLines = [...new Set(lines)];

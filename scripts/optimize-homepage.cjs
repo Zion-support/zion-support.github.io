@@ -9,8 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🚀 Homepage Optimization Script');
-console.log('================================\n');
-
+console.log('
 const homePagePath = path.join(__dirname, '../src/pages/Home.tsx');
 
 if (!fs.existsSync(homePagePath)) {

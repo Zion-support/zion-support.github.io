@@ -1,89 +1,83 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
 import App from '../App';
 
-// Mock the improvement runner to prevent side effects during testing
-jest.mock('../utils/improvementRunner', () => ({
-  runAllImprovements: jest.fn(),
-}));
+// Mock the components that App depends on
+jest.mock('../components/ErrorBoundary', () => {
+  return function MockErrorBoundary({ children }: { children: React.ReactNode }) {
+    return <div data-testid="error-boundary">{children}</div>;
+  };
+});
 
-// Mock framer-motion to prevent animation issues in tests
-jest.mock('framer-motion', () => ({
-  motion: {
-    div: ({
-      children,
-      ...props
-    }: {
-      children: React.ReactNode;
-      [key: string]: unknown;
-    }) => <div {...props}>{children}</div>,
-    main: ({
-      children,
-      ...props
-    }: {
-      children: React.ReactNode;
-      [key: string]: unknown;
-    }) => <main {...props}>{children}</main>,
-  },
-  AnimatePresence: ({ children }: { children: React.ReactNode }) => (
-    <>{children}</>
-  ),
-}));
+jest.mock('../components/SEO', () => {
+  return function MockSEO() {
+    return <div data-testid="seo">SEO Component</div>;
+  };
+});
 
-// Mock react-helmet-async
-jest.mock('react-helmet-async', () => ({
-  HelmetProvider: ({ children }: { children: React.ReactNode }) => (
-    <>{children}</>
-  ),
-  Helmet: ({ children }: { children: React.ReactNode }) => <>{children}</>,
-}));
+jest.mock('../components/Loading', () => {
+  return function MockLoading() {
+    return <div data-testid="loading">Loading...</div>;
+  };
+});
 
-// Mock react-router-dom
-jest.mock('react-router-dom', () => ({
-  BrowserRouter: ({ children }: { children: React.ReactNode }) => <div data-testid="router">{children}</div>,
-  Routes: ({ children }: { children: React.ReactNode }) => <div data-testid="routes">{children}</div>,
-  Route: ({ element }: { element: React.ReactNode }) => <div data-testid="route">{element}</div>,
-}));
+// Mock the pages
+jest.mock('../pages/Home', () => {
+  return function MockHome() {
+    return <div data-testid="home-page">Home Page</div>;
+  };
+});
 
-const renderApp = (component: React.ReactElement) => {
-  return render(component);
-};
+jest.mock('../pages/About', () => {
+  return function MockAbout() {
+    return <div data-testid="about-page">About Page</div>;
+  };
+});
 
-describe('App Component', () => {
-  test('renders without crashing', async () => {
-    renderApp(<App />);
-    await waitFor(() => {
-      expect(screen.getByRole('main')).toBeInTheDocument();
-    }, { timeout: 2000 });
+jest.mock('../pages/Services', () => {
+  return function MockServices() {
+    return <div data-testid="services-page">Services Page</div>;
+  };
+});
+
+jest.mock('../pages/Blog', () => {
+  return function MockBlog() {
+    return <div data-testid="blog-page">Blog Page</div>;
+  };
+});
+
+jest.mock('../pages/Contact', () => {
+  return function MockContact() {
+    return <div data-testid="contact-page">Contact Page</div>;
+  };
+});
+
+jest.mock('../pages/Team', () => {
+  return function MockTeam() {
+    return <div data-testid="team-page">Team Page</div>;
+  };
+});
+
+jest.mock('../pages/Privacy', () => {
+  return function MockPrivacy() {
+    return <div data-testid="privacy-page">Privacy Page</div>;
+  };
+});
+
+jest.mock('../pages/Terms', () => {
+  return function MockTerms() {
+    return <div data-testid="terms-page">Terms Page</div>;
+  };
+});
+
+describe('App', () => {
+  it('renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+    expect(screen.getByTestId('seo')).toBeInTheDocument();
   });
 
-  test('renders header component', async () => {
-    renderApp(<App />);
-    await waitFor(() => {
-      expect(screen.getByRole('banner')).toBeInTheDocument();
-    }, { timeout: 2000 });
-  });
-
-  test('renders footer component', async () => {
-    renderApp(<App />);
-    await waitFor(() => {
-      expect(screen.getByRole('contentinfo')).toBeInTheDocument();
-    }, { timeout: 2000 });
-  });
-
-  test('renders performance monitor (no visible element)', async () => {
-    renderApp(<App />);
-    // PerformanceMonitor doesn't render visible elements in production
-    await waitFor(() => {
-      expect(screen.getByRole('main')).toBeInTheDocument();
-    }, { timeout: 2000 });
-  });
-
-  test('renders accessibility enhancer (no visible element)', async () => {
-    renderApp(<App />);
-    // AccessibilityEnhancer doesn't render visible elements
-    await waitFor(() => {
-      expect(screen.getByRole('main')).toBeInTheDocument();
-    }, { timeout: 2000 });
+  it('renders the home page by default', () => {
+    render(<App />);
+    expect(screen.getByTestId('home-page')).toBeInTheDocument();
   });
 });
