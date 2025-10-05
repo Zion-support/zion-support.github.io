@@ -1,16 +1,18 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Calendar, Clock, User, arrowright, trendingup, Brain, Zap, Shield, Globe, Target } from 'lucide-react';
 
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import User from 'lucide-react/dist/esm/icons/ser';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Shield from 'lucide-react/dist/esm/icons/hield';
-import Globe from 'lucide-react/dist/esm/icons/lobe';
-import Target from 'lucide-react/dist/esm/icons/arget';
+
+
+
+
+
+
+
+
+
+
+
 
 export const metadata: Metadata = {
   title: 'AI 2026: The Future AI Landscape - Mega Trends & Revolutionary Breakthroughs | Zion Tech Group',

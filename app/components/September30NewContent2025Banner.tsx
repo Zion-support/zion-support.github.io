@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 
 const September30NewContent2025Banner: React.FC = () => {
@@ -128,7 +129,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span  text-white text-sm font-semibold shadow-lg`}>
+                  <span className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
@@ -191,7 +192,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span  text-white text-sm font-semibold shadow-lg`}>
+                  <span className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>

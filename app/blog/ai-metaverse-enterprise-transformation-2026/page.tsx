@@ -1,11 +1,13 @@
 import Link from 'next/link';
+import { Clock, arrowright, Globe, Users, Zap, Target } from 'lucide-react';
 
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import Globe from 'lucide-react/dist/esm/icons/lobe';
-import Users from 'lucide-react/dist/esm/icons/sers';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Target from 'lucide-react/dist/esm/icons/arget';
+
+
+
+
+
+
+
 
 export const metadata = {
   title: 'AI Metaverse Enterprise Transformation 2026: The Future of Virtual Business Operations',
