@@ -8,21 +8,21 @@ export const metadata: Metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2027 Transcendent Quantum Consciousness: $847B Success Story',
-    description: 'Fortune 500 case study: How transcendent quantum consciousness achieved $847B in enterprise value creation with 99.999% accuracy.',
-    url: 'https://ziontechgroup.com/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
+  description: 'Fortune 500 case study: How transcendent quantum consciousness achieved $847B in enterprise value creation with 99.999% accuracy.',
+  url: 'https://ziontechgroup.com/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success',
+  siteName: 'Zion Tech Group',
+  locale: 'en_US',
+  type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2027 Transcendent Quantum Consciousness: $847B Success Story',
-    description: 'Fortune 500 case study: How transcendent quantum consciousness achieved $847B in enterprise value creation.',
+  title: 'AI 2027 Transcendent Quantum Consciousness: $847B Success Story',
+  description: 'Fortune 500 case study: How transcendent quantum consciousness achieved $847B in enterprise value creation.'
   },
   robots: {
     index: true,
-    follow: true,
-  },
+  follow: true
+  }
 };
 
 export default function AI2027TranscendentQuantumConsciousness847BillionSuccess() {

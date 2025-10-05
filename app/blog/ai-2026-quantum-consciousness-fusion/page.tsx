@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Quantum Consciousness Fusion: The Next Evolution of AI',
@@ -7,11 +8,11 @@ export const metadata: Metadata = {
   keywords: ['Quantum', 'Consciousness', 'Fusion', 'AI', 'Enterprise', 'Breakthrough'],
   openGraph: {
     title: 'Quantum Consciousness Fusion: The Next Evolution of AI',
-    description: 'Explore the revolutionary quantum consciousness fusion technology that merges human and AI consciousness for unprecedented enterprise capabilities and 50,000x performance improvements.',
-    type: 'article',
-    publishedTime: '2026-03-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Explore the revolutionary quantum consciousness fusion technology that merges human and AI consciousness for unprecedented enterprise capabilities and 50,000x performance improvements.',
+  type: 'article',
+  publishedTime: '2026-03-15T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function QuantumConsciousnessFusionPage() {

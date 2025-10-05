@@ -6,9 +6,9 @@ export const metadata = {
   keywords: 'AI 2027, meta-intelligence, transcendent AI, cognitive architectures, enterprise AI, breakthrough',
   openGraph: {
     title: 'AI 2027 Transcendent Meta-Intelligence Breakthrough - $1.8T Success',
-    description: 'Revolutionary AI 2027 Transcendent Meta-Intelligence breakthrough achieving unprecedented enterprise value creation.',
-    type: 'article',
-  },
+  description: 'Revolutionary AI 2027 Transcendent Meta-Intelligence breakthrough achieving unprecedented enterprise value creation.',
+  type: 'article'
+  }
 };
 
 export default function AI2027TranscendentMetaIntelligenceBreakthrough() {

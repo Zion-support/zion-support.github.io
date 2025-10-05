@@ -5,38 +5,38 @@ import { ArrowLeft, ArrowRight, Calendar, Clock, User } from 'lucide-react';
 
 export default function MultiAgentOpsControlTowerBlueprintPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-medium">🛰️ MULTI-AGENT OPS CONTROL</span>
+    <div>
+      <section>
+        <div>
+          <div>
+            <div>
+              <span>🛰️ MULTI-AGENT OPS CONTROL</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">AI 2025: Multi‑Agent Ops Control Tower Blueprint</h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <h1>AI 2025: Multi‑Agent Ops Control Tower Blueprint</h1>
+            <p>
               Operationalize AI agents with observability, approvals, runbooks, and fail‑safes.
             </p>
-            <div className="flex flex-wrap justify-center items-center space-x-6 text-sm text-gray-200 mb-8">
-              <div className="flex items-center"><Calendar /> September 30, 2025</div>
-              <div className="flex items-center"><User /> Zion Tech Group</div>
-              <div className="flex items-center"><Clock /> 7 min read</div>
+            <div>
+              <div><Calendar /> September 30, 2025</div>
+              <div><User /> Zion Tech Group</div>
+              <div><Clock /> 7 min read</div>
             </div>
           </div>
         </div>
       </section>
 
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="prose prose-lg max-w-none">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Control Tower Capabilities</h2>
-          <ul className="space-y-4 text-gray-700">
+      <article>
+        <div>
+          <h2>Control Tower Capabilities</h2>
+          <ul>
             <li>Unified agent registry, routing, and permissions</li>
             <li>Approval workflows for sensitive operations</li>
             <li>Runtime observability: traces, metrics, event timelines</li>
             <li>Safeguards: budget limits, blast‑radius controls, auto‑rollback</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Day‑2 Operations</h2>
-          <p className="text-gray-700 mb-6">Runbooks, incident response, and continuous evaluation ensure reliability and trust.</p>
+          <h2>Day‑2 Operations</h2>
+          <p>Runbooks, incident response, and continuous evaluation ensure reliability and trust.</p>
         </div>
 
         <div className="bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-8 text-white text-center mt-12">

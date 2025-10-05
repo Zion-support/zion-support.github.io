@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import {
   getErrorMetrics,
-  isErrorRateTooHigh,
+  isErrorRateTooHigh
 } from '../../src/utils/errorHandling';
 
 interface DashboardData {
@@ -28,7 +28,7 @@ const PerformanceDashboard: React.FC = () => {
         performance,
         errors,
         isHealthy,
-        timestamp: new Date(),
+  timestamp: new Date()
       });
     };
 
@@ -43,12 +43,12 @@ const PerformanceDashboard: React.FC = () => {
   const exportData = () => {
     const exportData = {
       performance: performanceOptimizer.exportMetrics(),
-      errors: data?.errors,
-      timestamp: new Date().toISOString(),
+  errors: data?.errors,
+  timestamp: new Date().toISOString()
     };
 
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json',
+      type: 'application/json'
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');

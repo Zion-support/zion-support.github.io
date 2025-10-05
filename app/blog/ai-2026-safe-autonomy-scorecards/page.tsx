@@ -2,14 +2,14 @@
 
 export default function ArticlePage() {
   return (
-    <main className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-4 py-16">
-        <header className="mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026 Safe Autonomy Scorecards: KPIs, Budgets, and Rollback</h1>
-          <p className="text-gray-600">September 30, 2025 • 12 min read • AI Governance</p>
+    <main>
+      <article>
+        <header>
+          <h1>AI 2026 Safe Autonomy Scorecards: KPIs, Budgets, and Rollback</h1>
+          <p>September 30, 2025 • 12 min read • AI Governance</p>
         </header>
 
-        <section className="prose prose-lg max-w-none">
+        <section>
           <p>
             Enterprises adopting autonomous AI need real-time accountability that links system behavior to
             business outcomes. Safe autonomy scorecards provide a practical mechanism to wire KPIs, guardrails,
@@ -32,7 +32,7 @@ export default function ArticlePage() {
           <h2>Rollout Blueprint</h2>
           <ol>
             <li>Start with one critical journey, define measurable success and failure modes.</li>
-            <li>Instrument SLIs at the boundary of value (customer or internal user).</li>
+            <li>Instrument SLIs at the boundary of value (customer or internal User).</li>
             <li>Attach budgeted actions and approvals to breach conditions.</li>
             <li>Automate canary + rollback; practice drills monthly.</li>
           </ol>

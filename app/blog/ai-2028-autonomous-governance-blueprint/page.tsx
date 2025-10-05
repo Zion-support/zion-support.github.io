@@ -7,11 +7,14 @@ export const metadata = {
   description: 'Budgets, live scorecards, PR policy tests, and rollback playbooks that enable safe, enterprise-scale autonomy.',
   openGraph: {
     title: 'AI 2028: Autonomous Governance Blueprint',
-    description: 'KPI‑linked scorecards, budget gates, and live canaries hardwired into delivery for safe autonomy.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-2028-autonomous-governance-blueprint',
-    images: [
-      { url: '/og-ai-autonomous-governance-2028.jpg', width: 1200, height: 630, alt: 'AI 2028 Autonomous Governance' }
+  description: 'KPI‑linked scorecards, budget gates, and live canaries hardwired into delivery for safe autonomy.',
+  type: 'article',
+  url: 'https://ziontechgroup.com/blog/ai-2028-autonomous-governance-blueprint',
+  images: [
+      { url: '/og-ai-autonomous-governance-2028.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'AI 2028 Autonomous Governance' }
     ]
   }
 };
@@ -23,7 +26,7 @@ export default function AutonomousGovernanceBlueprint2028() {
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2028: Autonomous Governance Blueprint</h1>
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Governance</div>
 
-      <div className="prose prose-lg max-w-none">
+      <div>
         <p>
           This blueprint operationalizes enterprise autonomy with guardrails that make outcomes measurable and safe.
           It details KPI‑linked scorecards, budget gates, PR policy tests, and instant rollback backed by live canaries.

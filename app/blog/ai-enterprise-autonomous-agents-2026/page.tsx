@@ -5,11 +5,14 @@ export const metadata = {
   description: 'Deploy autonomous agents with provable guardrails to achieve 400% efficiency gains, 70% cost reduction, and 99.95% uptime across the enterprise.',
   openGraph: {
     title: 'AI Enterprise Autonomous Agents 2026',
-    description: 'Architecture, guardrails, and rollout patterns for enterprise‑grade autonomous agents with measurable ROI.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-enterprise-autonomous-agents-2026',
-    images: [
-      { url: '/og-ai-enterprise-autonomous-agents-2026.jpg', width: 1200, height: 630, alt: 'AI Enterprise Autonomous Agents 2026' }
+  description: 'Architecture, guardrails, and rollout patterns for enterprise‑grade autonomous agents with measurable ROI.',
+  type: 'article',
+  url: 'https://ziontechgroup.com/blog/ai-enterprise-autonomous-agents-2026',
+  images: [
+      { url: '/og-ai-enterprise-autonomous-agents-2026.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'AI Enterprise Autonomous Agents 2026' }
     ]
   }
 };
@@ -21,7 +24,7 @@ export default function AIEnterpriseAutonomousAgents2026() {
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI Enterprise Autonomous Agents 2026</h1>
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 18 min read • Implementation Guide</div>
 
-      <div className="prose prose-lg max-w-none">
+      <div>
         <p>
           This guide outlines a practical approach to design, govern, and scale enterprise‑grade autonomous agents. It focuses
           on reliability, safety, and ROI with policy guardrails, online evaluations, and value stream analytics.
@@ -30,7 +33,7 @@ export default function AIEnterpriseAutonomousAgents2026() {
         <h2>Architecture</h2>
         <ul>
           <li>Policy‑aware router with budgets, SLAs, and fallback strategies</li>
-          <li>Tooling layer with approvals, rate limits, and audit logs</li>
+          <li>Tooling layer with approvals, rate limits, and audit Logs</li>
           <li>Observation layer with traces, metrics, and incident hooks</li>
           <li>Scorecards linked to business KPIs and error budgets</li>
         </ul>

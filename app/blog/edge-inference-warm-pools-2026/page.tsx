@@ -5,26 +5,26 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Edge Inference Warm Pools 2026: Sub-100ms Global with Predictable Cost',
-  description: 'Warm pools, intent prefetching, and tiered caches to achieve fast, affordable inference worldwide.',
+  description: 'Warm pools, intent prefetching, and tiered caches to achieve fast, affordable inference worldwide.'
 };
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-16 bg-gradient-to-r from-emerald-600/10 to-teal-600/10 border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Edge Inference Warm Pools 2026: <span className="text-emerald-700">Sub‑100ms Global with Predictable Cost</span>
+    <main>
+      <section>
+        <div>
+          <h1>
+            Edge Inference Warm Pools 2026: <span>Sub‑100ms Global with Predictable Cost</span>
           </h1>
-          <p className="text-gray-600 mt-4">
+          <p>
             Use <strong>warm model pools</strong>, <strong>intent prefetching</strong>, and <strong>tiered caches</strong> to hit latency targets without runaway spend.
           </p>
-          <div className="mt-6 text-sm text-gray-500">6 min read • Edge Computing • Published Sep 30, 2025</div>
+          <div>6 min read • Edge Computing • Published Sep 30, 2025</div>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-6 prose prose-lg">
+      <section>
+        <div>
           <h2>Key Components</h2>
           <ol>
             <li>Regional warm pools sized via traffic forecasts</li>

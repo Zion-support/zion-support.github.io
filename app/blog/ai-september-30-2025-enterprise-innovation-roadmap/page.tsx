@@ -7,11 +7,11 @@ export const metadata = {
   keywords: 'enterprise AI roadmap, pilot to platform, AI governance, ROI framework, transformation',
   openGraph: {
     title: 'Enterprise AI Innovation Roadmap (Sept 30, 2025)',
-    description: 'Methodical milestones to scale enterprise AI with control, safety, and outcomes.',
-    type: 'article',
-    publishedTime: '2025-09-30T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Methodical milestones to scale enterprise AI with control, safety, and outcomes.',
+  type: 'article',
+  publishedTime: '2025-09-30T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function EnterpriseInnovationRoadmapSept302025() {

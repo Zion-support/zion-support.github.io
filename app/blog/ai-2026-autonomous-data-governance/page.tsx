@@ -6,24 +6,24 @@ export const metadata = {
     'Blueprint for autonomous data governance: policies-as-code, lineage, consent, and continuous compliance with measurable controls.',
   openGraph: {
     title: 'AI 2026 Autonomous Data Governance',
-    description:
+  description:
       'Policies-as-code, evaluation gates, and end-to-end lineage to automate compliance at scale.',
-    type: 'article'
+  type: 'article'
   }
 };
 
 export default function AutonomousDataGovernance2026Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-3xl mx-auto px-6 py-16">
-        <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-400/20 text-teal-300 text-xs font-semibold">New • September 2025</div>
-          <h1 className="text-4xl font-extrabold mt-4 mb-3">AI 2026 Autonomous Data Governance</h1>
-          <p className="text-slate-300">Operationalize policies as code with lineage, consent, and automated audits across the AI value chain.</p>
-          <div className="mt-3 text-slate-400 text-sm">16 min read • Category: Data Governance</div>
+    <div>
+      <main>
+        <div>
+          <div>New • September 2025</div>
+          <h1>AI 2026 Autonomous Data Governance</h1>
+          <p>Operationalize policies as code with lineage, consent, and automated audits across the AI value chain.</p>
+          <div>16 min read • Category: Data Governance</div>
         </div>
 
-        <div className="prose prose-invert prose-slate max-w-none">
+        <div>
           <p>
             Enterprises need provable controls for data usage across ingestion, training, inference, and analytics. This guide
             provides a pragmatic framework to encode policies as code, enforce them with gates, and continuously verify compliance.
@@ -39,7 +39,7 @@ export default function AutonomousDataGovernance2026Page() {
 
           <h2>Reference Architecture</h2>
           <p>
-            Implement interceptors at data access and model I/O boundaries. Each request carries a policy context (purpose, user,
+            Implement interceptors at data access and model I/O boundaries. Each request carries a policy context (purpose, User,
             jurisdiction) evaluated against allow/deny rules with explainability and trace IDs.
           </p>
 

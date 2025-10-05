@@ -1,22 +1,22 @@
 export const metadata = {
   title: 'Autonomous Risk Budgets V2 | Zion Tech Group',
   description:
-    'Dynamic guardrails with live scorecards to cut incidents by 80% while increasing release velocity.',
+    'Dynamic guardrails with live scorecards to cut incidents by 80% while increasing release velocity.'
 };
 
 export default function AutonomousRiskBudgetsV2Page() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <article className="max-w-3xl mx-auto px-4 py-16">
-        <header className="mb-10">
-          <p className="text-sm text-white/60">Published Sep 30, 2025</p>
-          <h1 className="text-4xl font-extrabold mt-2">Autonomous Risk Budgets V2</h1>
-          <p className="text-white/70 mt-3">
+    <main>
+      <article>
+        <header>
+          <p>Published Sep 30, 2025</p>
+          <h1>Autonomous Risk Budgets V2</h1>
+          <p>
             Dynamic guardrails and live scorecards that minimize incidents while maintaining speed.
           </p>
         </header>
 
-        <section className="prose prose-invert prose-slate max-w-none">
+        <section>
           <h2>Operational risk budgets</h2>
           <p>
             Risk budgets set explicit allowances for failure modes (e.g., hallucinations, latency
@@ -33,7 +33,7 @@ export default function AutonomousRiskBudgetsV2Page() {
 
           <h3>Implementation playbook</h3>
           <ol>
-            <li>Define critical user journeys and attach eval coverage.</li>
+            <li>Define critical User journeys and attach eval coverage.</li>
             <li>Instrument eval events using structured telemetry.</li>
             <li>Calibrate budgets and SLOs with product and risk owners.</li>
             <li>Automate rollback and model fallback paths.</li>

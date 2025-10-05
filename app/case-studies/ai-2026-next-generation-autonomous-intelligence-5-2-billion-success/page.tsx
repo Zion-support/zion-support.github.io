@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'Case Study, Autonomous Intelligence, Fortune 100, $5.2B ROI, Enterprise Success',
   openGraph: {
     title: '$5.2B Success Story: Next-Generation Autonomous Intelligence Revolution',
-    description: 'How a Fortune 100 global manufacturing conglomerate achieved $5.2B ROI through next-generation autonomous intelligence with 99.99% operational autonomy.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'How a Fortune 100 global manufacturing conglomerate achieved $5.2B ROI through next-generation autonomous intelligence with 99.99% operational autonomy.',
+  type: 'article',
+  publishedTime: '2026-01-15T00:00:00Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function NextGenAutonomousIntelligenceSuccessPage() {

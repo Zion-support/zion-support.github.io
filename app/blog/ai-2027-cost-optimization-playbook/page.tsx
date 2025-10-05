@@ -8,11 +8,14 @@ export const metadata = {
   description: 'Cut AI spend 30–70% with routing, caching, quantization, and guardrails while maintaining quality.',
   openGraph: {
     title: 'AI 2027 Cost Optimization Playbook',
-    description: 'Tier models, cache prompts, and enforce budgets with KPI-linked routes to sustain UX under cost constraints.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-2027-cost-optimization-playbook',
-    images: [
-      { url: '/og-ai-cost-optimization-2027.jpg', width: 1200, height: 630, alt: 'AI Cost Optimization 2027' }
+  description: 'Tier models, cache prompts, and enforce budgets with KPI-linked routes to sustain UX under cost constraints.',
+  type: 'article',
+  url: 'https://ziontechgroup.com/blog/ai-2027-cost-optimization-playbook',
+  images: [
+      { url: '/og-ai-cost-optimization-2027.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'AI Cost Optimization 2027' }
     ]
   }
 };
@@ -24,7 +27,7 @@ export default function AICostOptimizationPlaybook2027() {
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2027 Cost Optimization Playbook</h1>
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 13 min read • Cost Optimization</div>
 
-      <div className="prose prose-lg max-w-none">
+      <div>
         <p>
           This playbook provides pragmatic techniques to reduce AI costs by 30–70% while improving reliability.
           It covers model tiering, intelligent routing, prompt caching, quantization, and evaluation-driven guardrails.
@@ -40,7 +43,7 @@ export default function AICostOptimizationPlaybook2027() {
 
         <h2>Implementation Checklist</h2>
         <ul>
-          <li>Define quality tiers and expected SLAs per user journey</li>
+          <li>Define quality tiers and expected SLAs per User journey</li>
           <li>Introduce cache tiers with hit/miss tracing and ROI reports</li>
           <li>Wire policy tests that block budget overruns before merge</li>
         </ul>

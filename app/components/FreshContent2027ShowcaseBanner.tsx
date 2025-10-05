@@ -2,42 +2,42 @@ import ArrowRight from 'next/link';
 
 export default function FreshContent2027ShowcaseBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 rounded-2xl p-8 mb-12">
+    <div>
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      <div>
+        <div></div>
+        <div></div>
       </div>
 
-      <div className="relative z-10">
+      <div>
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
-            <span className="animate-pulse mr-2">✨</span>
+        <div>
+          <div>
+            <span>✨</span>
             Fresh Content 2027
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2>
             Revolutionary AI Breakthroughs
           </h2>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+          <p>
             Discover the latest cutting-edge innovations that are reshaping the future of enterprise technology
           </p>
         </div>
 
         {/* Content Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div>
           {/* Neuromorphic Computing */}
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-2xl">🧠</span>
+          <div>
+            <div>
+              <div>
+                <span>🧠</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-cyan-300">Neuromorphic Computing</h3>
-                <p className="text-sm text-gray-400">January 2027</p>
+                <h3>Neuromorphic Computing</h3>
+                <p>January 2027</p>
               </div>
             </div>
-            <p className="text-gray-300 text-sm mb-4">
+            <p>
               Brain-inspired computing that delivers 100,000x faster processing with 99.7% energy reduction
             </p>
             <ArrowRight 
@@ -52,17 +52,17 @@ export default function FreshContent2027ShowcaseBanner() {
           </div>
 
           {/* Quantum-AI Hybrid */}
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-2xl">⚛️</span>
+          <div>
+            <div>
+              <div>
+                <span>⚛️</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-purple-300">Quantum-AI Hybrid</h3>
-                <p className="text-sm text-gray-400">February 2027</p>
+                <h3>Quantum-AI Hybrid</h3>
+                <p>February 2027</p>
               </div>
             </div>
-            <p className="text-gray-300 text-sm mb-4">
+            <p>
               The convergence of quantum computing and AI solving previously intractable problems
             </p>
             <ArrowRight 
@@ -77,17 +77,17 @@ export default function FreshContent2027ShowcaseBanner() {
           </div>
 
           {/* Autonomous Operations */}
-          <div className="bg-gradient-to-br from-emerald-600/20 to-green-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300 hover:scale-105">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-2xl">🤖</span>
+          <div>
+            <div>
+              <div>
+                <span>🤖</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-emerald-300">Autonomous Operations</h3>
-                <p className="text-sm text-gray-400">March 2027</p>
+                <h3>Autonomous Operations</h3>
+                <p>March 2027</p>
               </div>
             </div>
-            <p className="text-gray-300 text-sm mb-4">
+            <p>
               Self-managing organizations that operate with superhuman efficiency and continuous optimization
             </p>
             <ArrowRight 

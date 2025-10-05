@@ -6,31 +6,31 @@ export const metadata = {
     'Prevent cost regressions with live KPI-linked scorecards, budget-aware routing, and instant rollback for GenAI platforms.',
   openGraph: {
     title: 'AI 2028: Autonomous FinOps Scorecards',
-    description:
+  description:
       'Prevent cost regressions with live KPI-linked scorecards, budget-aware routing, and instant rollback for GenAI platforms.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-2028-autonomous-finops-scorecards',
-  },
+  type: 'article',
+  url: 'https://ziontechgroup.com/blog/ai-2028-autonomous-finops-scorecards'
+  }
 };
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <section className="py-16 border-b border-white/10 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="mb-4 text-emerald-300 text-xs font-semibold uppercase tracking-wider">FinOps • Autonomous Platforms</div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+    <div>
+      <section>
+        <div>
+          <div>FinOps • Autonomous Platforms</div>
+          <h1>
             AI 2028: Autonomous FinOps Scorecards
           </h1>
-          <p className="text-emerald-100/90 text-lg">
+          <p>
             Prevent spend regressions with KPI-linked action scorecards, budget-aware routing, tiered quality, and
-            instant rollback — all without hurting user experience.
+            instant rollback — all without hurting User experience.
           </p>
-          <div className="mt-6 text-sm text-emerald-200/80">18 min • Oct 2025</div>
+          <div>18 min • Oct 2025</div>
         </div>
       </section>
 
-      <article className="max-w-4xl mx-auto px-4 py-12 prose prose-invert prose-emerald">
+      <article>
         <h2>Why Autonomous FinOps Now</h2>
         <p>
           GenAI costs can spike 3–10x with prompt drift, retrieval variance, and traffic surges. Traditional dashboards are

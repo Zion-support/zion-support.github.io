@@ -6,24 +6,24 @@ export const metadata = {
     'A pragmatic blueprint to scale reliable AI hyper‑automation across the enterprise with guardrails, observability, and measurable ROI.',
   openGraph: {
     title: 'AI 2027 Hyper‑Automation Blueprint',
-    description:
+  description:
       'Scale reliable AI hyper‑automation with policy gates, evals, and value stream analytics.',
-    type: 'article'
+  type: 'article'
   }
 };
 
 export default function HyperAutomationBlueprint2027Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-3xl mx-auto px-6 py-16">
-        <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/20 text-emerald-300 text-xs font-semibold">New • October 2025</div>
-          <h1 className="text-4xl font-extrabold mt-4 mb-3">AI 2027 Hyper‑Automation Blueprint</h1>
-          <p className="text-slate-300">Scale reliable automation with agentic workflows, policy guardrails, and end‑to‑end value tracking.</p>
-          <div className="mt-3 text-slate-400 text-sm">14 min read • Category: Implementation Guide</div>
+    <div>
+      <main>
+        <div>
+          <div>New • October 2025</div>
+          <h1>AI 2027 Hyper‑Automation Blueprint</h1>
+          <p>Scale reliable automation with agentic workflows, policy guardrails, and end‑to‑end value tracking.</p>
+          <div>14 min read • Category: Implementation Guide</div>
         </div>
 
-        <div className="prose prose-invert prose-slate max-w-none">
+        <div>
           <p>
             This blueprint distills proven patterns for deploying enterprise‑grade hyper‑automation using agentic
             workflows. It emphasizes reliability, controllability, and measurable ROI over demos and prototypes.
@@ -50,7 +50,7 @@ export default function HyperAutomationBlueprint2027Page() {
 
           <h3>Observability & Evals</h3>
           <p>
-            Instrument agents with traces, structured logs, and task‑level evaluations. Track precision/recall for
+            Instrument agents with traces, structured Logs, and task‑level evaluations. Track precision/recall for
             retrieval, route quality, latency budgets, and cost per outcome.
           </p>
 

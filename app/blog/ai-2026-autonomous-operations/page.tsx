@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'autonomous operations, enterprise automation, AI automation, autonomous AI, automation breakthrough 2026',
   openGraph: {
     title: 'Autonomous Operations: 98% Automation Rate',
-    description: 'Revolutionary autonomous AI systems achieving unprecedented automation levels in enterprise operations.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Revolutionary autonomous AI systems achieving unprecedented automation levels in enterprise operations.',
+  type: 'article',
+  publishedTime: '2026-01-15T00:00:00Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AutonomousOperations() {

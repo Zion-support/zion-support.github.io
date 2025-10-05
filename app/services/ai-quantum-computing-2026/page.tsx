@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   keywords: 'quantum computing services, AI quantum, quantum machine learning, enterprise quantum solutions',
   openGraph: {
     title: 'AI-Powered Quantum Computing Services 2026',
-    description: 'Revolutionary quantum-AI solutions for enterprise transformation.',
-    type: 'website',
-  },
+  description: 'Revolutionary quantum-AI solutions for enterprise transformation.',
+  type: 'website'
+  }
 };
 
 export default function AIQuantumComputingServices2026() {

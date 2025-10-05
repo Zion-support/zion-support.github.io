@@ -2,7 +2,7 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'AI 2026: Runtime Rollback Blueprint — Instant Recovery with KPI Canaries',
-	description: 'Design instant rollback with KPI‑linked canaries, budgets, and guardrails to keep autonomy safe without slowing teams.',
+  description: 'Design instant rollback with KPI‑linked canaries, budgets, and guardrails to keep autonomy safe without slowing teams.'
 };
 
 export default function Page() {

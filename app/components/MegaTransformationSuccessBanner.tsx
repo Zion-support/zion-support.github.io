@@ -6,39 +6,39 @@ import { ArrowRight, Award, DollarSign, TrendingUp, User, Users } from 'lucide-r
 
 export default function MegaTransformationSuccessBanner() {
   return (
-    <section className="py-16 bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <section>
+      <div>
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div>
+          <h2>
             🏆 Mega Transformation Success Stories
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto">
+          <p>
             Real-world AI transformation results from Fortune 500 companies, 
             delivering unprecedented ROI and operational excellence.
           </p>
         </div>
 
         {/* Featured Success Stories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div>
           {/* Fortune 500 Success */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="flex items-center mb-4">
-              <Award className="w-8 h-8 text-yellow-400 mr-3" />
-              <h3 className="text-xl font-bold">Fortune 500 Transformation</h3>
+          <div>
+            <div>
+              <Award />
+              <h3>Fortune 500 Transformation</h3>
             </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-green-400 mr-2" />
-                <span className="text-green-400 font-semibold">$200M+ ROI</span>
+            <div>
+              <div>
+                <DollarSign />
+                <span>$200M+ ROI</span>
               </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-400 font-semibold">800% Productivity Gain</span>
+              <div>
+                <TrendingUp />
+                <span>800% Productivity Gain</span>
               </div>
-              <div className="flex items-center">
-                <Users className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-400 font-semibold">15-month Payback</span>
+              <div>
+                <Users />
+                <span>15-month Payback</span>
               </div>
             </div>
             <ArrowRight 
@@ -51,23 +51,23 @@ export default function MegaTransformationSuccessBanner() {
           </div>
 
           {/* Manufacturing Transformation */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="flex items-center mb-4">
-              <Star className="w-8 h-8 text-orange-400 mr-3" />
-              <h3 className="text-xl font-bold">Manufacturing Excellence</h3>
+          <div>
+            <div>
+              <Star />
+              <h3>Manufacturing Excellence</h3>
             </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-green-400 mr-2" />
-                <span className="text-green-400 font-semibold">$150M+ Savings</span>
+            <div>
+              <div>
+                <DollarSign />
+                <span>$150M+ Savings</span>
               </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-400 font-semibold">600% Efficiency Boost</span>
+              <div>
+                <TrendingUp />
+                <span>600% Efficiency Boost</span>
               </div>
-              <div className="flex items-center">
-                <Users className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-400 font-semibold">99.8% Uptime</span>
+              <div>
+                <Users />
+                <span>99.8% Uptime</span>
               </div>
             </div>
             <ArrowRight 
@@ -80,23 +80,23 @@ export default function MegaTransformationSuccessBanner() {
           </div>
 
           {/* Healthcare Innovation */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="flex items-center mb-4">
-              <Award className="w-8 h-8 text-red-400 mr-3" />
-              <h3 className="text-xl font-bold">Healthcare AI Revolution</h3>
+          <div>
+            <div>
+              <Award />
+              <h3>Healthcare AI Revolution</h3>
             </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-green-400 mr-2" />
-                <span className="text-green-400 font-semibold">$75M+ Value</span>
+            <div>
+              <div>
+                <DollarSign />
+                <span>$75M+ Value</span>
               </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-400 font-semibold">95% Accuracy</span>
+              <div>
+                <TrendingUp />
+                <span>95% Accuracy</span>
               </div>
-              <div className="flex items-center">
-                <Users className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-400 font-semibold">50% Faster Diagnosis</span>
+              <div>
+                <Users />
+                <span>50% Faster Diagnosis</span>
               </div>
             </div>
             <ArrowRight 
@@ -109,23 +109,23 @@ export default function MegaTransformationSuccessBanner() {
           </div>
 
           {/* Finance Automation */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="flex items-center mb-4">
-              <Star className="w-8 h-8 text-green-400 mr-3" />
-              <h3 className="text-xl font-bold">Finance Automation</h3>
+          <div>
+            <div>
+              <Star />
+              <h3>Finance Automation</h3>
             </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-green-400 mr-2" />
-                <span className="text-green-400 font-semibold">$120M+ ROI</span>
+            <div>
+              <div>
+                <DollarSign />
+                <span>$120M+ ROI</span>
               </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-400 font-semibold">700% Process Speed</span>
+              <div>
+                <TrendingUp />
+                <span>700% Process Speed</span>
               </div>
-              <div className="flex items-center">
-                <Users className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-400 font-semibold">99.9% Accuracy</span>
+              <div>
+                <Users />
+                <span>99.9% Accuracy</span>
               </div>
             </div>
             <ArrowRight 
@@ -138,23 +138,23 @@ export default function MegaTransformationSuccessBanner() {
           </div>
 
           {/* Supply Chain Optimization */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="flex items-center mb-4">
-              <Award className="w-8 h-8 text-blue-400 mr-3" />
-              <h3 className="text-xl font-bold">Supply Chain Excellence</h3>
+          <div>
+            <div>
+              <Award />
+              <h3>Supply Chain Excellence</h3>
             </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-green-400 mr-2" />
-                <span className="text-green-400 font-semibold">$180M+ Savings</span>
+            <div>
+              <div>
+                <DollarSign />
+                <span>$180M+ Savings</span>
               </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-400 font-semibold">500% Optimization</span>
+              <div>
+                <TrendingUp />
+                <span>500% Optimization</span>
               </div>
-              <div className="flex items-center">
-                <Users className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-400 font-semibold">99.7% On-time Delivery</span>
+              <div>
+                <Users />
+                <span>99.7% On-time Delivery</span>
               </div>
             </div>
             <ArrowRight 
@@ -167,23 +167,23 @@ export default function MegaTransformationSuccessBanner() {
           </div>
 
           {/* Global Logistics */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="flex items-center mb-4">
-              <Star className="w-8 h-8 text-purple-400 mr-3" />
-              <h3 className="text-xl font-bold">Global Logistics AI</h3>
+          <div>
+            <div>
+              <Star />
+              <h3>Global Logistics AI</h3>
             </div>
-            <div className="space-y-3 mb-4">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-green-400 mr-2" />
-                <span className="text-green-400 font-semibold">$250M+ Value</span>
+            <div>
+              <div>
+                <DollarSign />
+                <span>$250M+ Value</span>
               </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-400 font-semibold">900% Efficiency</span>
+              <div>
+                <TrendingUp />
+                <span>900% Efficiency</span>
               </div>
-              <div className="flex items-center">
-                <Users className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-400 font-semibold">Global Scale</span>
+              <div>
+                <Users />
+                <span>Global Scale</span>
               </div>
             </div>
             <ArrowRight 
@@ -197,24 +197,24 @@ export default function MegaTransformationSuccessBanner() {
         </div>
 
         {/* Success Metrics */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 mb-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Cumulative Success Metrics</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <h3>Cumulative Success Metrics</h3>
+          <div>
             <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">$1.2B+</div>
-              <div className="text-sm text-gray-300">Total Value Created</div>
+              <div>$1.2B+</div>
+              <div>Total Value Created</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
-              <div className="text-sm text-gray-300">Average Success Rate</div>
+              <div>99.9%</div>
+              <div>Average Success Rate</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-400 mb-2">800%</div>
-              <div className="text-sm text-gray-300">Max Productivity Gain</div>
+              <div>800%</div>
+              <div>Max Productivity Gain</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">18mo</div>
-              <div className="text-sm text-gray-300">Average Payback Period</div>
+              <div>18mo</div>
+              <div>Average Payback Period</div>
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@ export default function MegaTransformationSuccessBanner() {
               Start Your Transformation <Star className="w-5 h-5 ml-2" />
             </ArrowRight>
           </div>
-          <p className="text-sm opacity-75">
+          <p>
             Join the ranks of industry leaders who have achieved extraordinary results with AI
           </p>
         </div>

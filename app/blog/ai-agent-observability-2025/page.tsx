@@ -4,7 +4,7 @@ import ArrowRight from 'next/link';
 export const metadata = {
   title: 'AI Agent Observability 2025: Metrics, Traces, and Safety Signals | Zion Tech Group',
   description:
-    'A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response.',
+    'A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response.'
 };
 
 export default function AIAgentObservability2025Page() {
@@ -33,80 +33,80 @@ export default function AIAgentObservability2025Page() {
             </ArrowRight>
           </nav>
 
-          <article className="max-w-4xl mx-auto">
-            <header className="mb-12">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-300 text-sm rounded-full border border-cyan-400/30">
+          <article>
+            <header>
+              <div>
+                <span>
                   AI Observability
                 </span>
-                <span className="text-white/60 text-sm">September 30, 2025</span>
-                <span className="text-white/60 text-sm">•</span>
-                <span className="text-white/60 text-sm">10 min read</span>
+                <span>September 30, 2025</span>
+                <span>•</span>
+                <span>10 min read</span>
               </div>
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+              <h1>
                 AI Agent Observability 2025: Metrics, Traces, and Safety Signals
               </h1>
-              <p className="text-xl text-white/80">
+              <p>
                 Production agents require deep visibility across prompts, tools, plans, memory, and safety controls. This
                 guide provides a concise blueprint for telemetry that boosts reliability, safety, and cost efficiency.
               </p>
             </header>
 
-            <div className="prose prose-invert prose-lg max-w-none">
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-4 text-cyan-300">Core Signals</h2>
-                <ul className="space-y-3 text-white/85">
+            <div>
+              <section>
+                <h2>Core Signals</h2>
+                <ul>
                   <li><strong>Prompt Quality:</strong> input length, redactions, PII flags, jailbreak risk</li>
                   <li><strong>Tool Traces:</strong> tool name, latency, arguments, failures, retries</li>
                   <li><strong>Episode Timeline:</strong> steps, branches, cancellations, human-in-the-loop events</li>
                   <li><strong>Safety Budget:</strong> policy checks, blocked calls, risk score over time</li>
                   <li><strong>Cost & Tokens:</strong> per-step tokens, per-episode cost, cache hits</li>
-                  <li><strong>Outcome Quality:</strong> eval pass/fail, hallucination score, user rating</li>
+                  <li><strong>Outcome Quality:</strong> eval pass/fail, hallucination score, User rating</li>
                 </ul>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-4 text-indigo-300">SLOs and Error Budgets</h2>
-                <p className="text-white/80 mb-4">
+              <section>
+                <h2>SLOs and Error Budgets</h2>
+                <p>
                   Define SLOs for latency, success rate, policy adherence, and cost per task. Track error budgets per
                   agent capability and gate new releases when burn rate exceeds thresholds.
                 </p>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                    <h3 className="font-semibold mb-2">Reliability SLO</h3>
-                    <p className="text-white/70">P95 end-to-end latency ≤ 2.5s, success ≥ 99.5%</p>
+                <div>
+                  <div>
+                    <h3>Reliability SLO</h3>
+                    <p>P95 end-to-end latency ≤ 2.5s, success ≥ 99.5%</p>
                   </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                    <h3 className="font-semibold mb-2">Safety SLO</h3>
-                    <p className="text-white/70">Policy violation rate ≤ 0.01%, injection escape = 0</p>
+                  <div>
+                    <h3>Safety SLO</h3>
+                    <p>Policy violation rate ≤ 0.01%, injection escape = 0</p>
                   </div>
                 </div>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-4 text-fuchsia-300">Incident Response</h2>
-                <p className="text-white/80 mb-4">
+              <section>
+                <h2>Incident Response</h2>
+                <p>
                   Capture episode replays, redaction diffs, and failing tool spans. Auto-create tickets with rich context
                   and route to owners by capability. Provide buttons for rollback, guardrail tighten, or traffic shift.
                 </p>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-4 text-emerald-300">Reference Telemetry Schema</h2>
-                <pre className="bg-black/40 rounded-xl p-4 overflow-x-auto text-sm">
+              <section>
+                <h2>Reference Telemetry Schema</h2>
+                <pre>
 {`{
   episodeId: string,
   agentName: string,
   userId?: string,
   steps: Array<{
     type: 'prompt' | 'tool' | 'plan' | 'safety' | 'memory',
-    startTime: string,
-    endTime: string,
-    latencyMs: number,
+  startTime: string,
+  endTime: string,
+  latencyMs: number,
     tokensIn?: number,
     tokensOut?: number,
     tool?: { name: string; args: Record<string, unknown>; error?: string },
-    safety?: { policy: string; decision: 'allow' | 'block'; score: number },
+    safety?: { policy: string; decision: 'allow' | 'block'; score: number }
   }>,
   outcome: { status: 'success' | 'failure'; evalScore?: number; costUsd?: number }
 }`}

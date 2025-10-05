@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Fortune 100 Hyperconscious Transformation: $1.2T Value Creation | Zion Tech Group',
   description: 'How a Fortune 100 global conglomerate achieved $1.2 trillion in value creation through hyperconscious AI implementation, achieving 99.999% operational excellence.',
-  keywords: 'Fortune 100, hyperconscious AI, enterprise transformation, value creation, AI success story',
+  keywords: 'Fortune 100, hyperconscious AI, enterprise transformation, value creation, AI success story'
 };
 
 export default function Fortune100TransformationPage() {

@@ -2,47 +2,47 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'AI Infrastructure Automation 2026 | Zion Tech Group',
-	description: 'Build self-healing, policy-tested infrastructure with 99.99% uptime and 70% cost reduction.'
+  description: 'Build self-healing, policy-tested infrastructure with 99.99% uptime and 70% cost reduction.'
 };
 
 export default function AIInfrastructureAutomation2026Page() {
 	return (
-		<div className="min-h-screen bg-slate-950 text-white">
-			<main className="max-w-3xl mx-auto px-6 py-16">
-				<h1 className="text-4xl font-extrabold mb-4">AI Infrastructure Automation 2026</h1>
-				<p className="text-white/80 mb-8">
+		<div>
+			<main>
+				<h1>AI Infrastructure Automation 2026</h1>
+				<p>
 					Design autonomous infrastructure that provisions, scales, and recovers from failures automatically. Reduce MTTR to minutes,
 					improve reliability to 99.99%, and cut cloud spend by 70% with predictive autoscaling, policy tests, and intelligent healing.
 				</p>
 
-				<section className="space-y-6 mb-10">
-					<h2 className="text-2xl font-bold">Reference Architecture</h2>
-					<ul className="list-disc ml-6 text-white/90">
+				<section>
+					<h2>Reference Architecture</h2>
+					<ul>
 						<li>Policy-tested IaC with drift detection and auto-remediation</li>
 						<li>Quality-tier routing with semantic caches and budget guards</li>
-						<li>Observability: traces, metrics, and eval scorecards per user flow</li>
+						<li>Observability: traces, metrics, and eval scorecards per User flow</li>
 						<li>Canary deploys with automated rollback on scorecard regressions</li>
 					</ul>
 				</section>
 
-				<section className="space-y-6 mb-10">
-					<h2 className="text-2xl font-bold">Key Outcomes</h2>
-					<div className="grid grid-cols-2 gap-4">
-						<div className="bg-white/5 border border-white/10 rounded-xl p-4">
-							<div className="text-2xl font-bold text-emerald-400">8 min</div>
-							<div className="text-sm text-white/80">Mean Time to Recovery</div>
+				<section>
+					<h2>Key Outcomes</h2>
+					<div>
+						<div>
+							<div>8 min</div>
+							<div>Mean Time to Recovery</div>
 						</div>
-						<div className="bg-white/5 border border-white/10 rounded-xl p-4">
-							<div className="text-2xl font-bold text-cyan-400">70%</div>
-							<div className="text-sm text-white/80">Cloud Cost Reduction</div>
+						<div>
+							<div>70%</div>
+							<div>Cloud Cost Reduction</div>
 						</div>
-						<div className="bg-white/5 border border-white/10 rounded-xl p-4">
-							<div className="text-2xl font-bold text-indigo-400">99.99%</div>
-							<div className="text-sm text-white/80">Uptime</div>
+						<div>
+							<div>99.99%</div>
+							<div>Uptime</div>
 						</div>
-						<div className="bg-white/5 border border-white/10 rounded-xl p-4">
-							<div className="text-2xl font-bold text-fuchsia-400">0</div>
-							<div className="text-sm text-white/80">Manual Interventions</div>
+						<div>
+							<div>0</div>
+							<div>Manual Interventions</div>
 						</div>
 					</div>
 				</section>

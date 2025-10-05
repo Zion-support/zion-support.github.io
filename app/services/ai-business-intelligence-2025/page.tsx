@@ -9,29 +9,29 @@ export const metadata: Metadata = {
   keywords: 'AI business intelligence, business analytics, predictive analytics, data visualization, business insights, AI dashboards',
   openGraph: {
     title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',
-    description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/services/ai-business-intelligence-2025',
-    images: [
+  description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards.',
+  type: 'website',
+  url: 'https://ziontechgroup.com/services/ai-business-intelligence-2025',
+  images: [
       {
         url: '/og-images/ai-business-intelligence-2025.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Business Intelligence 2025 Service',
+  width: 1200,
+  height: 630,
+  alt: 'AI Business Intelligence 2025 Service'
       },
-    ],
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',
-    description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards.',
-    images: ['/og-images/ai-business-intelligence-2025.jpg'],
-  },
+  title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',
+  description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards.',
+  images: ['/og-images/ai-business-intelligence-2025.jpg']
+  }
 };
 
 export default function AIBusinessIntelligence2025() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div>
       {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-4">
@@ -44,26 +44,26 @@ export default function AIBusinessIntelligence2025() {
           </span>
         </div>
         
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+        <h1>
           AI Business Intelligence 2025: Advanced Analytics & Insights Platform
         </h1>
         
-        <div className="flex flex-wrap gap-3 mb-6">
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+        <div>
+          <span>
             Business Intelligence
           </span>
-          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+          <span>
             Predictive Analytics
           </span>
-          <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
+          <span>
             Data Visualization
           </span>
-          <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">
+          <span>
             Real-time Insights
           </span>
         </div>
         
-        <p className="text-xl text-gray-600 leading-relaxed">
+        <p>
           Transform your business with AI-powered business intelligence. Our advanced analytics platform delivers 
           predictive insights, real-time dashboards, and intelligent automation that drives 300% ROI and enables 
           data-driven decision making at scale.
@@ -71,42 +71,42 @@ export default function AIBusinessIntelligence2025() {
       </div>
 
       {/* Key Benefits */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why Choose AI Business Intelligence?</h2>
-        <div className="grid md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">300%</div>
-            <div className="text-gray-600">Average ROI</div>
+      <div>
+        <h2>Why Choose AI Business Intelligence?</h2>
+        <div>
+          <div>
+            <div>300%</div>
+            <div>Average ROI</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-600 mb-2">95%</div>
-            <div className="text-gray-600">Prediction Accuracy</div>
+          <div>
+            <div>95%</div>
+            <div>Prediction Accuracy</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">Real-time</div>
-            <div className="text-gray-600">Data Processing</div>
+          <div>
+            <div>Real-time</div>
+            <div>Data Processing</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">80%</div>
-            <div className="text-gray-600">Faster Decisions</div>
+          <div>
+            <div>80%</div>
+            <div>Faster Decisions</div>
           </div>
         </div>
       </div>
 
       {/* Features Overview */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Platform Features</h2>
+      <section>
+        <h2>Platform Features</h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🔮</span>
+        <div>
+          <div>
+            <div>
+              <span>🔮</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Predictive Analytics</h3>
-            <p className="text-gray-600 mb-4">
+            <h3>Predictive Analytics</h3>
+            <p>
               Advanced machine learning models that predict future trends, customer behavior, and business outcomes with 95% accuracy.
             </p>
-            <ul className="text-sm text-gray-700 space-y-1">
+            <ul>
               <li>• Revenue forecasting</li>
               <li>• Customer churn prediction</li>
               <li>• Market trend analysis</li>
@@ -114,15 +114,15 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">📊</span>
+          <div>
+            <div>
+              <span>📊</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Real-time Dashboards</h3>
-            <p className="text-gray-600 mb-4">
+            <h3>Real-time Dashboards</h3>
+            <p>
               Interactive dashboards that provide real-time insights into key business metrics and performance indicators.
             </p>
-            <ul className="text-sm text-gray-700 space-y-1">
+            <ul>
               <li>• Custom KPI tracking</li>
               <li>• Executive summaries</li>
               <li>• Department-specific views</li>
@@ -130,15 +130,15 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🤖</span>
+          <div>
+            <div>
+              <span>🤖</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI-Powered Insights</h3>
-            <p className="text-gray-600 mb-4">
+            <h3>AI-Powered Insights</h3>
+            <p>
               Intelligent insights and recommendations generated automatically from your data to guide strategic decisions.
             </p>
-            <ul className="text-sm text-gray-700 space-y-1">
+            <ul>
               <li>• Automated anomaly detection</li>
               <li>• Smart recommendations</li>
               <li>• Pattern recognition</li>
@@ -146,15 +146,15 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">📈</span>
+          <div>
+            <div>
+              <span>📈</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Advanced Reporting</h3>
-            <p className="text-gray-600 mb-4">
+            <h3>Advanced Reporting</h3>
+            <p>
               Comprehensive reporting suite with automated report generation and customizable templates for all stakeholders.
             </p>
-            <ul className="text-sm text-gray-700 space-y-1">
+            <ul>
               <li>• Automated report scheduling</li>
               <li>• Custom report builder</li>
               <li>• Multi-format export</li>
@@ -162,15 +162,15 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🔗</span>
+          <div>
+            <div>
+              <span>🔗</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Data Integration</h3>
-            <p className="text-gray-600 mb-4">
+            <h3>Data Integration</h3>
+            <p>
               Seamless integration with existing systems and data sources to create a unified view of your business.
             </p>
-            <ul className="text-sm text-gray-700 space-y-1">
+            <ul>
               <li>• 200+ pre-built connectors</li>
               <li>• Real-time data sync</li>
               <li>• Data quality management</li>
@@ -178,15 +178,15 @@ export default function AIBusinessIntelligence2025() {
             </ul>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🔒</span>
+          <div>
+            <div>
+              <span>🔒</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Security & Compliance</h3>
-            <p className="text-gray-600 mb-4">
+            <h3>Security & Compliance</h3>
+            <p>
               Enterprise-grade security with compliance support for GDPR, HIPAA, SOX, and other regulatory requirements.
             </p>
-            <ul className="text-sm text-gray-700 space-y-1">
+            <ul>
               <li>• End-to-end encryption</li>
               <li>• Role-based access control</li>
               <li>• Audit trails</li>
@@ -197,109 +197,109 @@ export default function AIBusinessIntelligence2025() {
       </section>
 
       {/* Use Cases */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Use Cases</h2>
+      <section>
+        <h2>Use Cases</h2>
         
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Sales & Marketing</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">✓</span>
+        <div>
+          <div>
+            <h3>Sales & Marketing</h3>
+            <ul>
+              <li>
+                <span>✓</span>
                 <span>Lead scoring and qualification</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Customer lifetime value prediction</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Campaign performance optimization</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Market segmentation analysis</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Churn prediction and prevention</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Operations & Finance</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+          <div>
+            <h3>Operations & Finance</h3>
+            <ul>
+              <li>
+                <span>✓</span>
                 <span>Financial forecasting and budgeting</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Supply chain optimization</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Inventory management</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Risk assessment and management</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Performance monitoring</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Human Resources</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-purple-500 mt-1">✓</span>
+          <div>
+            <h3>Human Resources</h3>
+            <ul>
+              <li>
+                <span>✓</span>
                 <span>Employee performance analytics</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Turnover prediction</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Recruitment optimization</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Skills gap analysis</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-purple-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Workforce planning</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Customer Experience</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">✓</span>
+          <div>
+            <h3>Customer Experience</h3>
+            <ul>
+              <li>
+                <span>✓</span>
                 <span>Customer satisfaction analysis</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Support ticket prediction</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Personalization insights</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Product recommendation engine</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-orange-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Customer journey optimization</span>
               </li>
             </ul>
@@ -308,35 +308,35 @@ export default function AIBusinessIntelligence2025() {
       </section>
 
       {/* Pricing */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Pricing Plans</h2>
+      <section>
+        <h2>Pricing Plans</h2>
         
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Starter</h3>
-              <div className="text-3xl font-bold text-blue-600 mb-2">$999<span className="text-lg text-gray-600">/month</span></div>
-              <p className="text-gray-600">Perfect for small to medium businesses</p>
+        <div>
+          <div>
+            <div>
+              <h3>Starter</h3>
+              <div>$999<span>/month</span></div>
+              <p>Perfect for small to medium businesses</p>
             </div>
-            <ul className="space-y-3 text-gray-700 mb-8">
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
-                <span>Up to 10 users</span>
+            <ul>
+              <li>
+                <span>✓</span>
+                <span>Up to 10 Users</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>5 data sources</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Basic dashboards</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Standard reports</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Email support</span>
               </li>
             </ul>
@@ -348,44 +348,44 @@ export default function AIBusinessIntelligence2025() {
             </ArrowRight>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-500 rounded-lg p-8 relative">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+          <div>
+            <div>
+              <span>
                 Most Popular
               </span>
             </div>
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Professional</h3>
-              <div className="text-3xl font-bold text-blue-600 mb-2">$2,999<span className="text-lg text-gray-600">/month</span></div>
-              <p className="text-gray-600">Ideal for growing enterprises</p>
+            <div>
+              <h3>Professional</h3>
+              <div>$2,999<span>/month</span></div>
+              <p>Ideal for growing enterprises</p>
             </div>
-            <ul className="space-y-3 text-gray-700 mb-8">
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
-                <span>Up to 50 users</span>
+            <ul>
+              <li>
+                <span>✓</span>
+                <span>Up to 50 Users</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Unlimited data sources</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Advanced dashboards</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Predictive analytics</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Custom reports</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Priority support</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>API access</span>
               </li>
             </ul>
@@ -397,39 +397,39 @@ export default function AIBusinessIntelligence2025() {
             </ArrowRight>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise</h3>
-              <div className="text-3xl font-bold text-blue-600 mb-2">Custom</div>
-              <p className="text-gray-600">For large organizations</p>
+          <div>
+            <div>
+              <h3>Enterprise</h3>
+              <div>Custom</div>
+              <p>For large organizations</p>
             </div>
-            <ul className="space-y-3 text-gray-700 mb-8">
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
-                <span>Unlimited users</span>
+            <ul>
+              <li>
+                <span>✓</span>
+                <span>Unlimited Users</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Enterprise integrations</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>White-label solution</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Advanced AI models</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Dedicated support</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>On-premise deployment</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-500 mt-1">✓</span>
+              <li>
+                <span>✓</span>
                 <span>Custom development</span>
               </li>
             </ul>
@@ -444,21 +444,21 @@ export default function AIBusinessIntelligence2025() {
       </section>
 
       {/* Implementation Process */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Process</h2>
+      <section>
+        <h2>Implementation Process</h2>
         
-        <div className="space-y-8">
-          <div className="flex items-start gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-              <span className="text-xl font-bold text-blue-600">1</span>
+        <div>
+          <div>
+            <div>
+              <span>1</span>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery & Planning</h3>
-              <p className="text-gray-600 mb-4">
+              <h3>Discovery & Planning</h3>
+              <p>
                 We analyze your current data infrastructure, identify key business objectives, and create a 
                 comprehensive implementation roadmap tailored to your needs.
               </p>
-              <ul className="text-gray-700 space-y-1">
+              <ul>
                 <li>• Data source assessment</li>
                 <li>• Business requirements gathering</li>
                 <li>• Success metrics definition</li>
@@ -467,17 +467,17 @@ export default function AIBusinessIntelligence2025() {
             </div>
           </div>
 
-          <div className="flex items-start gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-              <span className="text-xl font-bold text-green-600">2</span>
+          <div>
+            <div>
+              <span>2</span>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Data Integration & Setup</h3>
-              <p className="text-gray-600 mb-4">
+              <h3>Data Integration & Setup</h3>
+              <p>
                 Our team connects your data sources, cleans and prepares data, and sets up the AI business 
                 intelligence platform with your specific configurations.
               </p>
-              <ul className="text-gray-700 space-y-1">
+              <ul>
                 <li>• Data pipeline creation</li>
                 <li>• Data quality optimization</li>
                 <li>• Platform configuration</li>
@@ -486,17 +486,17 @@ export default function AIBusinessIntelligence2025() {
             </div>
           </div>
 
-          <div className="flex items-start gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-              <span className="text-xl font-bold text-purple-600">3</span>
+          <div>
+            <div>
+              <span>3</span>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Dashboard & Report Creation</h3>
-              <p className="text-gray-600 mb-4">
+              <h3>Dashboard & Report Creation</h3>
+              <p>
                 We build custom dashboards and reports based on your business needs, incorporating AI-powered 
                 insights and predictive analytics.
               </p>
-              <ul className="text-gray-700 space-y-1">
+              <ul>
                 <li>• Custom dashboard design</li>
                 <li>• KPI definition and tracking</li>
                 <li>• Report template creation</li>
@@ -505,17 +505,17 @@ export default function AIBusinessIntelligence2025() {
             </div>
           </div>
 
-          <div className="flex items-start gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-              <span className="text-xl font-bold text-orange-600">4</span>
+          <div>
+            <div>
+              <span>4</span>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Training & Deployment</h3>
-              <p className="text-gray-600 mb-4">
+              <h3>Training & Deployment</h3>
+              <p>
                 We provide comprehensive training for your team and deploy the solution with ongoing support 
                 to ensure successful adoption and maximum value.
               </p>
-              <ul className="text-gray-700 space-y-1">
+              <ul>
                 <li>• User training sessions</li>
                 <li>• Administrator training</li>
                 <li>• Go-live support</li>
@@ -527,25 +527,25 @@ export default function AIBusinessIntelligence2025() {
       </section>
 
       {/* ROI Calculator */}
-      <section className="mb-16">
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 text-white">
-          <h2 className="text-3xl font-bold mb-4">Calculate Your ROI</h2>
-          <p className="text-xl mb-8 text-blue-100">
+      <section>
+        <div>
+          <h2>Calculate Your ROI</h2>
+          <p>
             See how much your organization can save with AI Business Intelligence
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">$2.3M</div>
-              <div className="text-blue-100">Average Annual Savings</div>
+          <div>
+            <div>
+              <div>$2.3M</div>
+              <div>Average Annual Savings</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">300%</div>
-              <div className="text-blue-100">Average ROI</div>
+            <div>
+              <div>300%</div>
+              <div>Average ROI</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">6-12</div>
-              <div className="text-blue-100">Months to Break Even</div>
+            <div>
+              <div>6-12</div>
+              <div>Months to Break Even</div>
             </div>
           </div>
           
@@ -561,9 +561,9 @@ export default function AIBusinessIntelligence2025() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-50 rounded-lg p-8 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business Intelligence?</h2>
-        <p className="text-xl text-gray-600 mb-8">
+      <section>
+        <h2>Ready to Transform Your Business Intelligence?</h2>
+        <p>
           Let our AI experts help you unlock the power of data-driven decision making.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -591,7 +591,7 @@ export default function AIBusinessIntelligence2025() {
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 AI Data Analytics
               </h3>
-              <p className="text-gray-600">
+              <p>
                 Transform data into actionable insights with predictive modeling and real-time dashboards.
               </p>
             </div>
@@ -601,7 +601,7 @@ export default function AIBusinessIntelligence2025() {
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 AI Workflow Automation
               </h3>
-              <p className="text-gray-600">
+              <p>
                 Automate business processes with intelligent workflow design and smart triggers.
               </p>
             </div>

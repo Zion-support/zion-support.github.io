@@ -6,10 +6,10 @@ export const metadata = {
   keywords: 'AI 2026 services, autonomous enterprise systems, enterprise automation, Fortune 500 ROI, revolutionary AI solutions',
   openGraph: {
     title: 'AI 2026 Revolutionary Autonomous Enterprise Systems - Zion Tech Group Services',
-    description: 'Transform your enterprise with AI 2026 Revolutionary Autonomous Enterprise Systems. Achieve 99.7% automation efficiency and $2.8B ROI like Fortune 500 companies.',
-    url: 'https://ziontechgroup.com/services/ai-2026-revolutionary-autonomous-enterprise-systems',
-    type: 'website',
-  },
+  description: 'Transform your enterprise with AI 2026 Revolutionary Autonomous Enterprise Systems. Achieve 99.7% automation efficiency and $2.8B ROI like Fortune 500 companies.',
+  url: 'https://ziontechgroup.com/services/ai-2026-revolutionary-autonomous-enterprise-systems',
+  type: 'website'
+  }
 };
 
 export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() {

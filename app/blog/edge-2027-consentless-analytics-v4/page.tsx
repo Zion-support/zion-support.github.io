@@ -6,8 +6,8 @@ export const metadata = {
   description: 'Design zero‑PII analytics at the edge with scoped IDs, on‑device aggregation, and DP noise — actionable insights under 100ms.',
   openGraph: {
     title: 'Edge 2027: Consentless Analytics v4',
-    description: 'Scoped IDs, edge aggregation, and DP noise for compliant, actionable analytics.',
-    type: 'article'
+  description: 'Scoped IDs, edge aggregation, and DP noise for compliant, actionable analytics.',
+  type: 'article'
   }
 };
 

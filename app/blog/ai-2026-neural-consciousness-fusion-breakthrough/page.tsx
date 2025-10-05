@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, neural consciousness fusion, artificial intelligence, consciousness AI, neural networks, breakthrough, enterprise AI, quantum consciousness',
   openGraph: {
     title: 'AI 2026 Neural Consciousness Fusion: Revolutionary Breakthrough',
-    description: 'Revolutionary AI achieving 1,000,000x performance through neural consciousness fusion technology.',
-    type: 'article',
-  },
+  description: 'Revolutionary AI achieving 1,000,000x performance through neural consciousness fusion technology.',
+  type: 'article'
+  }
 };
 
 export default function NeuralConsciousnessFusionBreakthrough() {

@@ -2,50 +2,50 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Edge Experiments 2025 — Zero‑PII Global A/B at <100ms',
-  description: 'Private, fast experimentation with scoped IDs, DP noise, and on-device aggregation.',
+  description: 'Private, fast experimentation with scoped IDs, DP noise, and on-device aggregation.'
 };
 
 export default function EdgeExperiments2025() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10">
-      <article className="prose prose-lg max-w-none">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+    <div>
+      <article>
+        <header>
+          <div>
+            <span>
               ANALYTICS
             </span>
-            <span className="text-sm text-gray-500">September 30, 2025</span>
+            <span>September 30, 2025</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1>
             Edge Experiments 2025 — Zero‑PII Global A/B with Privacy Budgets
           </h1>
-          <p className="text-xl text-gray-600 mt-4">
+          <p>
             Run privacy‑safe experiments worldwide with sub‑100ms latency using scoped identifiers, on‑device aggregation,
             and differential privacy noise.
           </p>
         </header>
 
-        <section className="mb-8 bg-cyan-50 rounded-lg p-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why This Matters</h2>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-white p-4 rounded-lg shadow-sm text-center">
-              <div className="text-3xl font-bold text-cyan-600 mb-1">&lt;100ms</div>
-              <div className="text-sm text-gray-600">Latency</div>
+        <section>
+          <h2>Why This Matters</h2>
+          <div>
+            <div>
+              <div>&lt;100ms</div>
+              <div>Latency</div>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-1">0 PII</div>
-              <div className="text-sm text-gray-600">Scoped IDs</div>
+            <div>
+              <div>0 PII</div>
+              <div>Scoped IDs</div>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm text-center">
-              <div className="text-3xl font-bold text-indigo-600 mb-1">DP</div>
-              <div className="text-sm text-gray-600">Differential Privacy</div>
+            <div>
+              <div>DP</div>
+              <div>Differential Privacy</div>
             </div>
           </div>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Design Principles</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <section>
+          <h2>Design Principles</h2>
+          <ul>
             <li>Scoped, rotated identifiers instead of personal data</li>
             <li>On‑device metrics aggregation with noise injection</li>
             <li>Signed, remotely configurable feature flags with proofs</li>
@@ -53,9 +53,9 @@ export default function EdgeExperiments2025() {
           </ul>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Implementation Checklist</h2>
-          <ol className="list-decimal list-inside text-gray-700 space-y-2">
+        <section>
+          <h2>Implementation Checklist</h2>
+          <ol>
             <li>Introduce scoped ID service with rotation & attestation</li>
             <li>Move metrics aggregation to device or edge POP</li>
             <li>Calibrate DP noise for business KPIs</li>

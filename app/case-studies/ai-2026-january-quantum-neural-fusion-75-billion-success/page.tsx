@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'Quantum AI, Enterprise Transformation, ROI Success, Case Study, 2026',
   openGraph: {
     title: 'AI 2026 Quantum-Neural Fusion: $75B Success Story',
-    description: 'Revolutionary quantum-neural fusion implementation delivering $75 billion in value creation across 47 business units.',
-    type: 'article',
-    publishedTime: '2026-01-20',
-    authors: ['Zion Tech Group Case Study Team'],
-  },
+  description: 'Revolutionary quantum-neural fusion implementation delivering $75 billion in value creation across 47 business units.',
+  type: 'article',
+  publishedTime: '2026-01-20',
+  authors: ['Zion Tech Group Case Study Team']
+  }
 };
 
 export default function QuantumNeuralFusionSuccessPage() {

@@ -3,7 +3,7 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback',
-  description: 'Battle-tested checklists for safe agent updates with budgeted actions, approvals, and one-click rollback.',
+  description: 'Battle-tested checklists for safe agent updates with budgeted actions, approvals, and one-click rollback.'
 };
 
 export default function Page() {

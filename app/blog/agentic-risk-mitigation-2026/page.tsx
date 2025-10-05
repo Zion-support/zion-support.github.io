@@ -2,8 +2,8 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Agentic Risk Mitigation 2026 — Guardrails, Evals, and Safe Autonomy',
-	description:
-		'Practical framework for mitigating risks in agentic systems: governance, evaluations, kill-switches, and safe autonomy patterns for 2026 enterprise deployment.',
+  description:
+		'Practical framework for mitigating risks in agentic systems: governance, evaluations, kill-switches, and safe autonomy patterns for 2026 enterprise deployment.'
 };
 
 export default function AgenticRiskMitigation2026Page() {

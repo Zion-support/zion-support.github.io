@@ -3,7 +3,7 @@ import ArrowRight from 'next/link';
 export const metadata = {
   title: 'Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI',
   description:
-    'Design a reliable, cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails. A pragmatic 2026 blueprint for enterprises.',
+    'Design a reliable, cost‑efficient GenAI platform with routing, memory, evals, and policy guardrails. A pragmatic 2026 blueprint for enterprises.'
 };
 
 export default function ReliableGenAIPlatform2026Page() {
@@ -13,22 +13,22 @@ export default function ReliableGenAIPlatform2026Page() {
         <div className="mb-8">
           <ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</ArrowRight>
         </div>
-        <header className="mb-6">
-          <div className="flex items-center gap-3 text-sm text-white/60 mb-3">
-            <span className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Implementation Guide</span>
+        <header>
+          <div>
+            <span>Implementation Guide</span>
             <span>January 2026</span>
             <span>18 min read</span>
           </div>
-          <h1 className="text-4xl font-extrabold leading-tight">
+          <h1>
             Reliable GenAI Platform 2026: Architecture, Guardrails, and ROI
           </h1>
-          <p className="text-white/70 mt-3">
+          <p>
             A pragmatic blueprint to ship a reliable, governed, and cost‑efficient GenAI platform
             with policy guardrails, evaluations, and cost‑aware routing.
           </p>
         </header>
 
-        <article className="prose prose-invert prose-slate max-w-none">
+        <article>
           <h2>Why Reliability First</h2>
           <p>
             Production GenAI requires deterministic behavior under constraints. Reliability comes from
@@ -39,7 +39,7 @@ export default function ReliableGenAIPlatform2026Page() {
           <h2>Reference Architecture</h2>
           <ul>
             <li>Request router with policy gates and safety filters</li>
-            <li>Memory service: short‑term context, long‑term vectors, and audit logs</li>
+            <li>Memory service: short‑term context, long‑term vectors, and audit Logs</li>
             <li>Tooling layer with least‑privilege credentials and scoped sandboxes</li>
             <li>Observability: traces, metrics, red‑team events, and scorecards</li>
             <li>FinOps: caching, quantization, and model tiering per SLOs</li>
@@ -72,7 +72,7 @@ export default function ReliableGenAIPlatform2026Page() {
           </ul>
         </article>
 
-        <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">
+        <footer>
           <p>
             Continue exploring:
             {' '}

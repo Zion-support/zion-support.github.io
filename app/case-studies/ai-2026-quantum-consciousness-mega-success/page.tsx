@@ -7,17 +7,17 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI Achievement',
-    description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.',
-    url: 'https://ziontechgroup.com/case-studies/ai-2026-quantum-consciousness-mega-success',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
+  description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.',
+  url: 'https://ziontechgroup.com/case-studies/ai-2026-quantum-consciousness-mega-success',
+  siteName: 'Zion Tech Group',
+  locale: 'en_US',
+  type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI',
-    description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.',
-  },
+  title: 'AI 2026 Quantum Consciousness Success: $2.5B ROI',
+  description: 'Fortune 100 enterprise achieves $2.5B ROI through quantum consciousness AI implementation.'
+  }
 };
 
 export default function QuantumConsciousnessSuccess() {

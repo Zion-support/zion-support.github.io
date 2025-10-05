@@ -6,11 +6,11 @@ export const metadata = {
   keywords: 'neuromorphic AI case study, AI transformation, Fortune 100 success, neuromorphic computing ROI',
   openGraph: {
     title: 'Case Study: $750M Neuromorphic AI Breakthrough Success',
-    description: 'Fortune 100 company achieves breakthrough results with neuromorphic AI',
-    type: 'article',
-    publishedTime: '2027-01-25T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Fortune 100 company achieves breakthrough results with neuromorphic AI',
+  type: 'article',
+  publishedTime: '2027-01-25T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2027NeuromorphicBreakthroughSuccess() {

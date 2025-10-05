@@ -136,7 +136,8 @@ export default function AI2026BreakthroughAnnouncement() {
               <h3 className="text-xl font-bold text-white mb-4">Quantum-Neural Processing Pipeline</h3>
               <p className="text-gray-300 mb-4">
                 Our Quantum-Neural Integration (QNI) technology leverages quantum computing principles to enhance 
-                classical neural networks, achieving:
+                classical neural networks,
+  achieving:
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">

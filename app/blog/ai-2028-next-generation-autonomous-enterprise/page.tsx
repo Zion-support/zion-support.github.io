@@ -7,17 +7,17 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2028: Next-Generation Autonomous Enterprise Revolution',
-    description: 'Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities.',
-    url: 'https://ziontechgroup.com/blog/ai-2028-next-generation-autonomous-enterprise',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
+  description: 'Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities.',
+  url: 'https://ziontechgroup.com/blog/ai-2028-next-generation-autonomous-enterprise',
+  siteName: 'Zion Tech Group',
+  locale: 'en_US',
+  type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2028: Next-Generation Autonomous Enterprise Revolution',
-    description: 'Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities.',
-  },
+  title: 'AI 2028: Next-Generation Autonomous Enterprise Revolution',
+  description: 'Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities.'
+  }
 };
 
 export default function AI2028NextGenerationAutonomousEnterprise() {

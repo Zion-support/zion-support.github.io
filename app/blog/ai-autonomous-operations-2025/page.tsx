@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   keywords: 'autonomous AI operations, enterprise automation, AI transformation, Fortune 500, cost savings',
   openGraph: {
     title: 'AI 2025: The Enterprise Autonomous Operations Revolution',
-    description: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
-    type: 'article',
-  },
+  description: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
+  type: 'article'
+  }
 };
 
 export default function AIAutonomousOperations2025() {
@@ -106,7 +106,8 @@ export default function AIAutonomousOperations2025() {
               <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-xl p-6">
                 <h3 className="text-xl font-bold mb-3 text-blue-400">Fortune 500 Manufacturing</h3>
                 <p className="text-gray-300 mb-4">
-                  A leading automotive manufacturer implemented autonomous AI operations across their production lines, achieving:
+                  A leading automotive manufacturer implemented autonomous AI operations across their production lines,
+  achieving:
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• 92% reduction in quality defects</li>

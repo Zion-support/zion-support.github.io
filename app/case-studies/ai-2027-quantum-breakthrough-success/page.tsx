@@ -8,17 +8,17 @@ export const metadata: Metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2027 Quantum Breakthrough Success: $1.2B ROI Case Study',
-    description: 'Discover how a Fortune 100 technology leader achieved $1.2B ROI and 1000x performance improvements through revolutionary quantum-enhanced AI implementation.',
-    url: 'https://ziontechgroup.com/case-studies/ai-2027-quantum-breakthrough-success',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
+  description: 'Discover how a Fortune 100 technology leader achieved $1.2B ROI and 1000x performance improvements through revolutionary quantum-enhanced AI implementation.',
+  url: 'https://ziontechgroup.com/case-studies/ai-2027-quantum-breakthrough-success',
+  siteName: 'Zion Tech Group',
+  locale: 'en_US',
+  type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2027 Quantum Breakthrough Success: $1.2B ROI Case Study',
-    description: 'Discover how a Fortune 100 technology leader achieved $1.2B ROI and 1000x performance improvements through revolutionary quantum-enhanced AI implementation.',
-  },
+  title: 'AI 2027 Quantum Breakthrough Success: $1.2B ROI Case Study',
+  description: 'Discover how a Fortune 100 technology leader achieved $1.2B ROI and 1000x performance improvements through revolutionary quantum-enhanced AI implementation.'
+  }
 };
 
 export default function AI2027QuantumBreakthroughSuccess() {
@@ -57,10 +57,22 @@ export default function AI2027QuantumBreakthroughSuccess() {
             {/* Key Success Metrics */}
             <div className="grid md:grid-cols-4 gap-8 mb-12">
               {[
-                { value: '$1.2B', label: 'Total ROI Achieved', icon: '💰', color: 'text-green-400' },
-                { value: '1000x', label: 'Performance Improvement', icon: '⚡', color: 'text-yellow-400' },
-                { value: '99.99%', label: 'System Reliability', icon: '🎯', color: 'text-blue-400' },
-                { value: '18mo', label: 'Payback Period', icon: '⏱️', color: 'text-purple-400' }
+                { value: '$1.2B',
+  label: 'Total ROI Achieved',
+  icon: '💰',
+  color: 'text-green-400' },
+                { value: '1000x',
+  label: 'Performance Improvement',
+  icon: '⚡',
+  color: 'text-yellow-400' },
+                { value: '99.99%',
+  label: 'System Reliability',
+  icon: '🎯',
+  color: 'text-blue-400' },
+                { value: '18mo',
+  label: 'Payback Period',
+  icon: '⏱️',
+  color: 'text-purple-400' }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="text-5xl mb-3">{metric.icon}</div>
