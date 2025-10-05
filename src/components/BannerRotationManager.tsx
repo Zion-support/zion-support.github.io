@@ -2,6 +2,33 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
+  'january2026-revolutionary': lazy(
+    () => import('./January2026RevolutionaryBanner'),
+  ),
+  'january2026-content-showcase': lazy(
+    () => import('./January2026ContentShowcaseBanner'),
+  ),
+  'january2026-new-content': lazy(
+    () => import('./January2026NewContentShowcaseBanner'),
+  ),
+  'january2026-revolutionary-ai': lazy(
+    () => import('./January2026RevolutionaryAIBanner'),
+  ),
+  'january2026-revolutionary-content': lazy(
+    () => import('./January2026RevolutionaryContentBanner'),
+  ),
+  'january2026-revolutionary-breakthroughs': lazy(
+    () => import('./January2026RevolutionaryBreakthroughsBanner'),
+  ),
+  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
+  'latest-2026-content': lazy(() => import('./Latest2026ContentBanner')),
+  'breakthrough-content-2026': lazy(() => import('./BreakthroughContent2026Banner')),
+  'enterprise-ai-fall-2025': lazy(() => import('./EnterpriseAIFall2025Banner')),
+  'november-2025-game-changers': lazy(() => import('./November2025GameChangersBanner')),
+  'march-2026-innovation': lazy(() => import('./March2026InnovationSpotlightBanner')),
+  'february-2026-content': lazy(() => import('./February2026ContentShowcaseBanner')),
+  'january-2027-content': lazy(() => import('./January2027ContentAdvertisingBanner')),
+  'january-2027-new-content': lazy(() => import('./January2027NewContentShowcaseBanner')),
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -26,13 +53,17 @@ const LoadingFallback = () => (
 /**
  * Banner Rotation Manager Component
  *
- * Manages banner display with lazy loadingrotationand performance optimization
+ * Manages banner display with lazy loading rotation and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
-  banners = [],
+  banners = [
+    'january2026-revolutionary',
+    'january2026-content-showcase',
+    'latest-2026-content',
+  ],
   interval = 8000,
-  autoRotate = true,
-  maxBanners = 3
+  autoRotate = false, // Disabled by default to reduce unnecessary re-renders
+  maxBanners = 3,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
@@ -56,7 +87,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
   if (visibleBanners.length === 0) return null;
 
-  // For non-rotatingshow all banners
+  // For non-rotating show all banners
   if (!autoRotate) {
     return (
       <div className='space-y-6'>
@@ -72,7 +103,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     );
   }
 
-  // For rotatingshow current banner with controls
+  // For rotating show current banner with controls
   const currentBannerKey = visibleBanners[currentIndex];
   const CurrentBanner = bannerComponents[currentBannerKey];
 
@@ -85,7 +116,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
       {/* Rotation controls (if multiple banners) */}
       {visibleBanners.length > 1 && (
         <div className='flex justify-center gap-2 mt-4'>
-          {visibleBanners.map((_index) => (
+          {visibleBanners.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

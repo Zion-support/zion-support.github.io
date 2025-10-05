@@ -1,96 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react';
+import, React, from 'rea, c, t';
 
-interface AnimatedSectionProps {
-  children: React.ReactNode;
-  animation?: 'fadeIn' | 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight' | 'scale' | 'rotate';
-  delay?: number;
-  duration?: number;
-  threshold?: number;
-  className?: string;
-  style?: React.CSSProperties;
-}
+interface, AnimatedSectionProp, s { 
+  animati, o, n?: 'fade, I, n' | 'slide, U, p' | 'slideLe, f, t' | 'slideRig, h, t' | 'sca, l, e';
+  del, a, y ? : number;
+  childr, e, n : Rea, c, t.ReactN, o, d, e;
+ }
 
-const AnimatedSection: React.FC<AnimatedSectionProps> = ({
-  children,
-  animation = 'fadeIn',
-  delay = 0,
-  duration = 600,
-  threshold = 0.1,
-  className = '',
-  style = {}
+const, AnimatedSectio, n: Rea, c, t.FC<AnimatedSectionPro, p, s> = ({
+  animati, o, n = 'fa, d, e, I, n',
+  del, a, y =  , 0,
+  childr, e, n,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const elementRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setTimeout(() => {
-            setIsVisible(true);
-            setHasAnimated(true);
-          }, delay);
-        }
-      },
-      { threshold }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
-    };
-  }, [delay, threshold, hasAnimated]);
-
-  const getAnimationStyles = (): React.CSSProperties => {
-    const baseStyles: React.CSSProperties = {
-      transition: `all ${duration}ms cubic-bezier(0.4, 0, 0.2, 1)`,
-      transitionDelay: `${delay}ms`,
-      ...style
-    };
-
-    if (!isVisible) {
-      switch (animation) {
-        case 'fadeIn':
-          return { ...baseStyles, opacity: 0 };
-        case 'slideUp':
-          return { ...baseStyles, opacity: 0, transform: 'translateY(30px)' };
-        case 'slideDown':
-          return { ...baseStyles, opacity: 0, transform: 'translateY(-30px)' };
-        case 'slideLeft':
-          return { ...baseStyles, opacity: 0, transform: 'translateX(30px)' };
-        case 'slideRight':
-          return { ...baseStyles, opacity: 0, transform: 'translateX(-30px)' };
-        case 'scale':
-          return { ...baseStyles, opacity: 0, transform: 'scale(0.8)' };
-        case 'rotate':
-          return { ...baseStyles, opacity: 0, transform: 'rotate(5deg) scale(0.9)' };
-        default:
-          return { ...baseStyles, opacity: 0 };
-      }
-    }
-
-    return {
-      ...baseStyles,
-      opacity: 1,
-      transform: 'translateY(0) translateX(0) scale(1) rotate(0deg)'
-    };
-  };
-
-  return (
-    <div
-      ref={elementRef}
-      className={className}
-      style={getAnimationStyles()}
-    >
-      {children}
-    </div>
+  const, styl, e: Rea, c, t.CSSProperti, e, s = {  animationDel, a, y: `${d, e, l, a, y }, ms` }; const, classNam, e = `animat, e, d-section, animatio, n-${animati, o, n}`; retu, r, n (
+    <div, classNam, e = { classN, a, m, e }, sty, l, e = {sty, l, e}>
+      {childr, e, n}
+    </di, v>
   );
 };
 
-export default AnimatedSection;
+export, default, AnimatedSection;

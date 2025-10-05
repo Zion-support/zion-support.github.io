@@ -1,210 +1,284 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import, React, from 'rea, c, t';
 
-const AITrendsInsightsBanner2026: React.FC = () => {
-  return (
-    <div className='bg-gradient-to-r from-indigo-900/40 to-cyan-900/40 border-y border-indigo-500/20 py-16'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-12'>
-          <div className='inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 border border-indigo-500/30 mb-6'>
-            <span className='text-indigo-400 font-bold text-sm tracking-wider uppercase animate-pulse'>
-              🔮 2026 AI TRENDS
-            </span>
-          </div>
-          <h2 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent'>
-            AI Trends & Insights 2026
+const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
+  const, trendingTopic, s = [
+    {
+      i, d: , 1,
+      title: 'Generative, AI, Enterprise Adopt, i, o, n',
+      category: 'Enterpris, e, A, I',
+      tre, n, d: '+45, 0%',
+      grow, t, h: 'Rapid, Grow, t, h',
+      description: 'Enterprise, adoption, of generative, AI, has increased, by, 450% in, Q1, 202, 6, with, 7, 8% of, Fortune, 500 companies, implementing, AI-powered, content, generation.',
+      ic, o, n: '🚀',
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
+      bad, g, e: 'TREND, I, N, G',
+      insigh, t, s: [
+        '78% Fortune, 500, adoptio, n',
+        '4, 5, 0% growth, rat, e',
+        '$12B, market, size',
+      ],
+    },
+    {
+      id:  , 2,
+      title: 'Quantum, Computing, Breakthrough, s',
+      category: 'Quantum, Te, c, h',
+      tre, n, d: '+30, 0%',
+      grow, t, h: 'Exponent, i, a, l',
+      description: 'Quantum, computing, achieves practical, applications, in AI, optimizati, o, n, with, 30, 0% improvement, in, processing complex, machine, learning algorith, m, s.',
+      ic, o, n: '🚀',
+      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
+      bad, g, e: 'BREAKTHRO, U, G, H',
+      insigh, t, s: [
+        '1000x, speed, boos, t',
+        '3, 0, 0% efficiency, gai, n',
+        'Commercial, viabilit, y',
+      ],
+    },
+    {
+      id:  , 3,
+      title: 'Autonomous, Business, Operation, s',
+      category: 'Automat, i, o, n',
+      tre, n, d: '+28, 0%',
+      grow, t, h: 'Accelerat, i, n, g',
+      description: 'Business, process, automation reaches, new, heights with, 9, 5% autonomous, operations, across multiple, industri, e, s, reducing, operational, costs by, 6, 0%.',
+      ic, o, n: '🚀',
+      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0',
+      bad, g, e: 'AUTOMAT, I, O, N',
+      insigh, t, s: [
+        '95% automation, ra, t, e',
+        '60% cost, reductio, n',
+        '24/7, operation, s',
+      ],
+    },
+    {
+      id:  , 4,
+      title: 'AI-Powered, Predictive, Analytic, s',
+      category: 'Business, Intelligen, c, e',
+      tre, n, d: '+35, 0%',
+      grow, t, h: 'High, Grow, t, h',
+      description: 'Advanced, predictive, analytics using, AI, achieves 99.9% accuracy, in, forecasting business, tren, d, s, customer, behavio, r, and, market, dynamics.',
+      ic, o, n: '🚀',
+      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
+      bad, g, e: 'PREDICT, I, V, E',
+      insigh, t, s: ['99.9% accur, a, c, y', '3, 5, 0% adoption, growt, h', '$8B, market, value'],
+    },
+    {
+      id:  , 5,
+      title: 'Edge, AI, Computing Revolut, i, o, n',
+      category: 'Edge, Computi, n, g',
+      tre, n, d: '+42, 0%',
+      grow, t, h: 'Rapid, Expansi, o, n',
+      description: 'Edge, AI, computing transforms, rea, l-time, decision, making with, 42, 0% increase, in, deploymen, t, enabling, instant, AI processing, at, the network, edg, e.',
+      ic, o, n: '🚀',
+      gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-50, 0',
+      bad, g, e: 'EDG, E, A, I',
+      insigh, t, s: [
+        '4, 2, 0% deployment, grow, t, h',
+        'Re, a, l-time, processin, g',
+        'IoT, integratio, n',
+      ],
+    },
+    {
+      id:  , 6,
+      title: 'AI, Ethics, and Governa, n, c, e',
+      category: 'AI, Governan, c, e',
+      tre, n, d: '+38, 0%',
+      grow, t, h: 'Critical, Grow, t, h',
+      description: 'AI, ethics, and governance, frameworks, become essential, with, 380% increase, in, regulatory compliance, requirements, and ethical, AI, implementatio, n.',
+      ic, o, n: '🚀',
+      gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-50, 0',
+      bad, g, e: 'GOVERNA, N, C, E',
+      insigh, t, s: [
+        '3, 8, 0% compliance, grow, t, h',
+        'Ethical, framework, s',
+        'Regulatory, alignmen, t',
+      ],
+    },
+  ]; const, marketInsight, s = [
+    { val, u, e: '$2., 5, T', lab, e, l: 'Global, AI, Market S, i, z, e', ic, o, n: '📈' },
+    { val, u, e: '8, 5%', lab, e, l: 'Enterprise, AI, Adoptio, n', ic, o, n: '🏢' },
+    { val, u, e: '5, 0, 0, M+', lab, e, l: 'AI-Powered, Devic, e, s', ic, o, n: '📱' },
+    { val, u, e: '2.3, M', lab, e, l: 'AI, Job, Opening, s', ic, o, n: '💼' },
+  ]; retu, r, n (
+    <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-cy, a, n-900, relative, overflow-hidd, e, n'>
+      {/* Animated, background, effects */}
+      <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
+        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
+        <div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
+          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+         />
+        <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
+          sty, l, e={{ animationDel, a, y: ', 4, s' }}
+         />
+      </d, i, v>
+
+      <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
+        {/* Header, Sectio, n */}
+        <div, classNam, e='te, x, t-center, m, b-16'>
+          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in'>
+            <span, classNam, e='te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
+              📊 AI, TREND, S & INSIGH, T, S • Q1, 202, 6
+            </sp, a, n>
+          </d, i, v>
+
+          <h2, classNam, e='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
+            AI, Trend, s & Insights, 202, 6
           </h2>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-            Discover the cutting-edge AI trends and insights that will shape the future of technology in 2026.
+
+          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>
+            Stay, ahead, of the, curve, with the, latest, AI tr, e, n, d, s, market, insight, s,
+            and, breakthrough, technologies. Discover, wha, t's, shaping, the future, of, artificial intelligence, and, how it, impacts, your busine, s, s.
           </p>
-        </div>
 
-        <div className='grid md:grid-cols-2 gap-8 mb-12'>
-          {/* Left Side - Trending Topics */}
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10'>
-            <h3 className='text-3xl font-bold text-white mb-6'>
-              Trending AI Topics:
-            </h3>
-            <div className='space-y-4'>
-              {[
-                {
-                  icon: '🧠',
-                  title: 'Quantum AI Computing',
-                  description: 'Revolutionary quantum-classical hybrid systems',
-                  growth: '+340%',
-                  category: 'Computing'
-                },
-                {
-                  icon: '🤖',
-                  title: 'Autonomous AI Agents',
-                  description: 'Self-managing AI systems with human-level reasoning',
-                  growth: '+280%',
-                  category: 'Automation'
-                },
-                {
-                  icon: '🔮',
-                  title: 'Predictive AI Analytics',
-                  description: 'Advanced forecasting and decision intelligence',
-                  growth: '+220%',
-                  category: 'Analytics'
-                },
-                {
-                  icon: '🛡️',
-                  title: 'AI Security & Ethics',
-                  description: 'Next-gen security protocols and ethical frameworks',
-                  growth: '+190%',
-                  category: 'Security'
-                },
-                {
-                  icon: '🌐',
-                  title: 'Edge AI Deployment',
-                  description: 'Distributed AI processing at the network edge',
-                  growth: '+260%',
-                  category: 'Infrastructure'
-                }
-              ].map((topic, index) => (
-                <div key={index} className='flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:border-indigo-500/50 transition-all duration-300'>
-                  <div className='text-3xl'>{topic.icon}</div>
-                  <div className='flex-1'>
-                    <div className='flex items-center justify-between mb-2'>
-                      <h4 className='text-lg font-bold text-white'>
-                        {topic.title}
-                      </h4>
-                      <div className='flex items-center gap-2'>
-                        <span className='text-green-400 text-sm font-bold'>
-                          {topic.growth}
-                        </span>
-                        <span className='text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded'>
-                          {topic.category}
-                        </span>
-                      </div>
-                    </div>
-                    <p className='text-gray-400 text-sm'>
-                      {topic.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Right Side - Insights & CTA */}
-          <div className='bg-gradient-to-br from-indigo-900/30 to-cyan-900/30 rounded-2xl p-8 border border-indigo-500/30'>
-            <div className='text-center mb-8'>
-              <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-500/30 mb-4'>
-                <span className='text-indigo-400 font-bold text-sm'>
-                  📊 INSIGHTS
-                </span>
-              </div>
-              <h3 className='text-3xl font-bold text-white mb-4'>
-                Key Insights for 2026
-              </h3>
-              <p className='text-gray-300 mb-6'>
-                Stay ahead with our comprehensive analysis of emerging AI trends and their business impact.
-              </p>
-            </div>
-
-            <div className='space-y-4 mb-8'>
-              <div className='flex items-center gap-3'>
-                <span className='text-indigo-400'>📈</span>
-                <span className='text-gray-300'>
-                  AI market projected to reach $1.8T by 2026
-                </span>
-              </div>
-              <div className='flex items-center gap-3'>
-                <span className='text-indigo-400'>⚡</span>
-                <span className='text-gray-300'>
-                  Quantum AI will be 1000x faster than classical systems
-                </span>
-              </div>
-              <div className='flex items-center gap-3'>
-                <span className='text-indigo-400'>🔮</span>
-                <span className='text-gray-300'>
-                  Predictive AI will reduce business risks by 85%
-                </span>
-              </div>
-              <div className='flex items-center gap-3'>
-                <span className='text-indigo-400'>🌐</span>
-                <span className='text-gray-300'>
-                  Edge AI will process 60% of data locally by 2026
-                </span>
-              </div>
-              <div className='flex items-center gap-3'>
-                <span className='text-indigo-400'>🤖</span>
-                <span className='text-gray-300'>
-                  Autonomous AI agents will handle 40% of business tasks
-                </span>
-              </div>
-            </div>
-
-            <div className='space-y-4'>
-              <Link to='/ai-trends-2026'
-                className='w-full bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1 text-center block'
-              >
-                Explore Full Report
-              </Link>
-              <Link to='/schedule-consultation'
-                className='w-full border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center block'
-              >
-                Schedule AI Strategy Consultation
-              </Link>
-            </div>
-
-            <div className='text-center mt-6'>
-              <p className='text-sm text-gray-400'>
-                📊 50+ industry reports • Updated monthly • Free access
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Social Proof */}
-        <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10'>
-          <div className='text-center mb-6'>
-            <h3 className='text-2xl font-bold text-white mb-2'>
-              Trusted by Industry Leaders
-            </h3>
-            <p className='text-gray-400'>
-              Join 2,000+ executives who rely on our AI trend analysis
-            </p>
-          </div>
-
-          <div className='grid md:grid-cols-3 gap-6'>
-            {[
-              {
-                company: 'Fortune 500 CTO',
-                result: 'Saved $50M in R&D',
-                testimonial: "Your trend analysis helped us pivot our AI strategy and avoid costly mistakes"
-              },
-              {
-                company: 'AI Startup CEO',
-                result: 'Raised $10M Series B',
-                testimonial: 'The insights from your reports were crucial in our fundraising presentation'
-              },
-              {
-                company: 'Enterprise AI Director',
-                result: '300% ROI increase',
-                testimonial: 'Following your recommendations led to a complete transformation of our AI capabilities'
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className='text-center p-6 bg-white/5 rounded-xl border border-white/10'>
-                <div className='text-yellow-400 text-2xl mb-2'>★★★★★</div>
-                <p className='text-gray-300 mb-4 italic'>
-                  "{testimonial.testimonial}"
-                </p>
-                <div className='text-indigo-400 font-semibold'>
-                  {testimonial.company}
-                </div>
-                <div className='text-indigo-400 text-sm font-bold'>
-                  {testimonial.result}
-                </div>
-              </div>
+          {/* Market, Insight, s */}
+          <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o'>
+            { marketInsigh, t, s.m, a, p((ins, i, g, h, t, ind, e, x) = > (
+              <div, ke, y = { in, d, e, x  }, classNa, m, e = 'te, x, t-cent, e, r'>
+                <div, classNam, e='te, x, t-purp, l, e-400, m, b-2, flex, justify-cent, e, r'>
+                  {insig, h, t.ic, o, n}
+                </d, i, v>
+                <div, classNam, e='te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1'>
+                  {insig, h, t.val, u, e}
+                </d, i, v>
+                <div, classNam, e='te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m'>
+                  {insig, h, t.lab, e, l}
+                </d, i, v>
+              </di, v>
             ))}
-          </div>
-        </div>
-      </div>
-    </div>
+          </d, i, v>
+        </d, i, v>
+
+        {/* Trending, Topics, Grid */}
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
+          { trendingTopi, c, s.m, a, p((t, o, p, i, c, ind, e, x) = > (
+            <div, ke, y = { top, i, c.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+             > {/* Card, glow, effect */}
+              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${top, i, c.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}
+               />
+
+              <div, classNam, e = 'relativ, e, p-8'>
+                {/* Ic, o, n & Bad, g, e */}
+                <div, classNam, e='flex, item, s-start, justif, y-between, m, b-6'>
+                  <div, classNam, e='te, x, t-purp, l, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0'>
+                    {top, i, c.ic, o, n}
+                  </d, i, v>
+                  <div, classNam, e = 'flex, fle, x-col, ga, p-2' > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${top, i, c.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}
+                    >
+                      {top, i, c.bad, g, e}
+                    </d, i, v>
+                    <div, classNam, e = 'te, x, t-rig, h, t'>
+                      <div, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, tex, t-lg'>
+                        {top, i, c.tre, n, d}
+                      </d, i, v>
+                      <div, classNam, e='te, x, t-gr, a, y-400, tex, t-xs'>
+                        {top, i, c.grow, t, h}
+                      </d, i, v>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+
+                {/* Catego, r, y */}
+                <div, classNam, e='mb-4'>
+                  <span, classNam, e='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
+                    {top, i, c.category}
+                  </sp, a, n>
+                </d, i, v>
+
+                {/* Tit, l, e */}
+                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>
+                  {top, i, c.t, i, t, l, e}
+                </h3>
+
+                {/* Descripti, o, n */}
+                <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm'>
+                  {top, i, c.description}
+                </p>
+
+                {/* Key, Insight, s */}
+                <div, classNam, e='mb-6'>
+                  <div, classNam, e='te, x, t-gr, a, y-400, tex, t-xs, m, b-3, fon, t-semibo, l, d'>
+                    Key, Insight, s: </d, i, v>
+                  <div, classNam, e='spa, c, e-y-1'>
+                    { top, i, c.insigh, t, s.m, a, p((ins, i, g, h, t, i, d, x) = > (
+                      <div, ke, y = { id, x  }, classNa, m, e = 'flex, item, s-center, ga, p-2, tex, t-gr, a, y-300, tex, t-xs'
+                      >
+                        <div, classNam, e='w-1.5 h-1.5, rounde, d-full, b, g-purp, l, e-4, 0, 0' />
+                        {insig, h, t}
+                      </di, v>
+                    ))}
+                  </d, i, v>
+                </d, i, v > {/* CTA, Butto, n */}
+                <a, hre, f = {`/insigh, t, s/${top, i, c.id}`}
+                  classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${top, i, c.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
+                >
+                  <sp, a, n>Explore, Tren, d</sp, a, n>
+                </a>
+              </d, i, v>
+            </d, i, v>
+          ))}
+        </d, i, v>
+
+        {/* Newslett, e, r & Updates, Sectio, n */}
+        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16'>
+          <div, classNam, e='te, x, t-cent, e, r'>
+            <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6'>
+              <span, classNam, e='te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
+                RE, A, L-TIME, UPDATE, S
+              </sp, a, n>
+            </d, i, v>
+
+            <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
+              Get, Weekly, AI Tren, d, s & Insigh, t, s
+            </h3>
+            <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
+              Stay, informed, with our, weekly, AI trends, newslette, r. Get, exclusive, insigh, t, s, market, analysi, s, and, early, access to, breakthrough, technologies.
+            </p>
+
+            <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o'>
+              <input, typ, e='ema, i, l'
+                placehold, e, r='Enter, your, email'
+                classNa, m, e='fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-purp, l, e-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0'
+              />
+
+              <button, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'>
+                <sp, a, n>Subscri, b, e</sp, a, n>
+              </butt, o, n>
+            </d, i, v>
+            <p, classNam, e='te, x, t-xs, tex, t-gr, a, y-500, m, t-4'>
+              Join, 250, K+ professiona, l, s. No, s, p, a, m, unsubscribe, anytim, e.
+            </p>
+          </d, i, v>
+        </d, i, v>
+
+        {/* CTA, Sectio, n */}
+        <div, classNam, e = 'te, x, t-cent, e, r'>
+          <div, classNam, e='inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-pi, n, k-5, 0, 0'>
+            <div, classNam, e='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'>
+              <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
+                Lead, the, AI Revoluti, o, n
+              </h3>
+              <p, classNam, e='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
+                D, o, n't, just, follow tren, d, s – create, the, m. Get, exclusive, access to, our, AI insig, h, t, s, early, technology, previews, and, strategic, guidance for, your, organization.
+              </p>
+              <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+                <a, hre, f='/insigh, t, s'
+                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
+                >
+                  <sp, a, n>Explore, All, Insights</sp, a, n>
+                </a>
+                <a, hre, f='/conta, c, t'
+                  classNa, m, e='bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'
+                >
+                  <sp, a, n>Get, Expert, Consultation</sp, a, n>
+                </a>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
 
-export default AITrendsInsightsBanner2026;
+export, default, AITrendsInsightsBanner2026;

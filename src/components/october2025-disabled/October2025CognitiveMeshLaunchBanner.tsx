@@ -4,7 +4,7 @@ import { Calendar, ArrowRight } from 'lucide-react';
 
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner
- * Promotes the new Cognitive Mesh content including blog, case study, and services
+ * Promotes the new Cognitive Mesh content including blog case study and services
  * 
  * @component
  * @description High-performance promotional banner with accessibility features

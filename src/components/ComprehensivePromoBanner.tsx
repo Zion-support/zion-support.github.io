@@ -1,236 +1,125 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-interface ComprehensivePromoBannerProps {
-  variant?: 'hero' | 'compact' | 'featured';
-  showCount?: number;
-  className?: string;
-}
-
-const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
-  variant = 'hero',
-  showCount = 3,
-  className = ''
-}) => {
-  const promotions = [
-    {
-      id: 'ai-innovation',
-      title: 'AI Innovation Suite',
-      description: 'Revolutionary AI technologies that transform your business operations',
-      discount: '50% OFF',
-      originalPrice: '$100,000',
-      salePrice: '$50,000',
-      features: ['Quantum AI Processing', 'Predictive Analytics', 'Autonomous Operations'],
-      cta: 'Get Early Access',
-      link: '/contact?offer=ai-innovation',
-      featured: true
-    },
-    {
-      id: 'cost-optimization',
-      title: 'Cost Optimization Package',
-      description: 'Reduce operational costs by up to 60% with our AI solutions',
-      discount: '40% OFF',
-      originalPrice: '$75,000',
-      salePrice: '$45,000',
-      features: ['Resource Optimization', 'Energy Efficiency', 'Process Automation'],
-      cta: 'Start Saving',
-      link: '/contact?offer=cost-optimization',
-      featured: false
-    },
-    {
-      id: 'performance-boost',
-      title: 'Performance Boost Pro',
-      description: 'Accelerate your systems with advanced performance optimization',
-      discount: '30% OFF',
-      originalPrice: '$60,000',
-      salePrice: '$42,000',
-      features: ['Speed Optimization', 'Memory Management', 'Real-time Monitoring'],
-      cta: 'Boost Performance',
-      link: '/contact?offer=performance-boost',
-      featured: false
-    }
-  ];
-
-  const displayPromotions = promotions.slice(0, showCount);
-
-  if (variant === 'compact') {
-    return (
-      <div className={`bg-gradient-to-r from-blue-900/40 to-purple-900/40 border-y border-blue-500/20 py-8 ${className}`}>
-        <div className="container mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Special Offers Available
-            </h2>
-            <p className="text-gray-300 mb-6">
-              Limited time offers on our most popular AI solutions
+import, React, from 'rea, c, t';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
+impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
+interface, ComprehensivePromoBannerProp, s { 
+  varia, n, t?: 'he, r, o' | 'compa, c, t' | 'featured';
+  showCou, n, t?: number;
+  classNa, m, e ?  : string;
+ }
+const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, s> = ({ 
+  varia, n, t = 'he, r, o', 
+  showCou, n, t =  , 4,
+  classNa, m, e = '' 
+}) => { 
+  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(0, showCou, n, t); const, latestService, s = newServices20, 2, 6.filt, e, r(s = > s.featu, r, e, d).sli, c, e(0, showCou, n, t); if (varia, n, t = == 'comp, a, c, t') {
+    retu, r, n (
+      <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, rounde, d-x, l, p-6 ${classNa, m, e }`}>
+        <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+          <d, i, v>
+            <h3, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
+              🚀 N, e, w: {latestArticl, e, s.le, n, g, t, h} Articl, e, s + {latestServic, e, s.leng, t, h} Servic, e, s
+            </h3>
+            <p, classNam, e = "te, x, t-indi, g, o-1, 0, 0">
+              Multimoda, l, A, I, Blockcha, i, n-AI, Green, A, I, Auto, M, L & Mo, r, e!
             </p>
-            <Link
-              to="/offers"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
-            >
-              View All Offers
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (variant === 'featured') {
-    const featuredPromo = promotions.find(p => p.featured) || promotions[0];
-    
-    return (
-      <div className={`bg-gradient-to-r from-purple-900/40 to-pink-900/40 border-y border-purple-500/20 py-12 ${className}`}>
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-4">
-              <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
-                🔥 FEATURED OFFER
-              </span>
-            </div>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              {featuredPromo.title}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              {featuredPromo.description}
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-4xl font-bold text-purple-400">
-                      {featuredPromo.discount}
-                    </span>
-                    <div>
-                      <div className="text-2xl font-bold text-white">
-                        {featuredPromo.salePrice}
-                      </div>
-                      <div className="text-lg text-gray-400 line-through">
-                        {featuredPromo.originalPrice}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {featuredPromo.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <span className="text-purple-400">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link
-                    to={featuredPromo.link}
-                    className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 text-center block"
-                  >
-                    {featuredPromo.cta}
-                  </Link>
-                </div>
-                
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🚀</div>
-                  <p className="text-gray-300">
-                    Join thousands of companies already transforming with our AI solutions
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Hero variant (default)
-  return (
-    <div className={`bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-pink-900/40 border-y border-blue-500/20 py-16 ${className}`}>
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 border border-blue-500/30 mb-6">
-            <span className="text-blue-400 font-bold text-sm tracking-wider uppercase animate-pulse">
-              🎉 COMPREHENSIVE OFFERS
-            </span>
-          </div>
-          <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Transform Your Business with AI
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Choose from our comprehensive suite of AI solutions designed to accelerate your digital transformation.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayPromotions.map((promo, index) => (
-            <div
-              key={promo.id}
-              className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 ${
-                promo.featured ? 'ring-2 ring-purple-500' : ''
-              }`}
-            >
-              {promo.featured && (
-                <div className="text-center mb-4">
-                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-bold rounded-full">
-                    ⭐ FEATURED
-                  </span>
-                </div>
-              )}
-              
-              <h3 className="text-2xl font-bold text-white mb-4">
-                {promo.title}
-              </h3>
-              
-              <p className="text-gray-300 mb-6">
-                {promo.description}
-              </p>
-              
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-3xl font-bold text-blue-400">
-                  {promo.discount}
-                </span>
-                <div>
-                  <div className="text-2xl font-bold text-white">
-                    {promo.salePrice}
-                  </div>
-                  <div className="text-lg text-gray-400 line-through">
-                    {promo.originalPrice}
-                  </div>
-                </div>
-              </div>
-              
-              <ul className="space-y-2 mb-6">
-                {promo.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-2 text-gray-300">
-                    <span className="text-blue-400">✓</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <Link
-                to={promo.link}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block"
-              >
-                {promo.cta}
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Link
-            to="/all-offers"
-            className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+          </d, i, v>
+          <Link, t, o = "/bl, o, g"
+            classNa, m, e="bg-white, tex, t-indi, g, o-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-indi, g, o-50, transitio, n-colors, flex, items-center, ga, p-2"
           >
-            View All Offers
-          </Link>
-        </div>
-      </div>
-    </div>
+            Explore, No, w
+            <ArrowRight, classNam, e="w-5 h-5" />
+          </Li, n, k>
+        </d, i, v>
+      </d, i, v  > );
+  }
+  if (varia, n, t = == 'featu, r, e, d') {
+    retu, r, n (
+      <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
+        <div, classNam, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-60, 0, p-8">
+          <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
+            <Sparkles, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />
+            <h2, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Latest, Innovation, s</h2>
+          </d, i, v>
+          <p, classNam, e="te, x, t-purp, l, e-100, tex, t-lg">
+            Discover, our, newest articles, and, services transforming, industrie, s
+          </p>
+        </d, i, v>
+        <div, classNam, e="grid, m, d: gr, i, d-co, l, s-2, ga, p-6 p-8">
+          { latestArticl, e, s.sl, i, c, e(, 0, 2).m, a, p((artic, l, e) = > (
+            <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = "border, borde, r-gr, a, y-200, rounde, d-x, l, p-6, hove, r: shad, o, w-lg, transitio, n-a, l, l">
+              <div, classNam, e="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</d, i, v>
+              <h4, classNam, e = "te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.title}</h4>
+              <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">{artic, l, e.description}</p>
+              <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">
+                Read, Mor, e <ArrowRight, classNam, e="w-4 h-4" />
+              </Li, n, k>
+            </d, i, v>
+          ))}
+        </d, i, v>
+      </d, i, v  > );
+  }
+  // Hero varian t (defau l t)
+  retu, r, n (
+    <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-whi, t, e ${class, N, a, m, e}`}>
+      <div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o">
+        <div, classNam, e="te, x, t-center, m, b-10">
+          <div, classNam, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6">
+            <Zap, classNam, e="w-5 h-5, m, r-2" />
+            <span, classNam, e="fo, n, t-bo, l, d">OCTOBER, 202, 5: BREAKTHROUGH, CONTENT, RELEASE</sp, a, n>
+          </d, i, v>
+          <h2, classNam, e="te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4">
+            {latestArticl, e, s.le, n, g, t, h} New, Article, s + {latestServic, e, s.leng, t, h} Revolutionary, Service, s
+          </h2>
+          <p, classNam, e = "te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">
+            Multimoda, l, A, I, Blockchain, Integratio, n, Green, A, I, Auto, M, L, Predictive, Maintenanc, e, 
+            AI, Talent, Acquisition, Fraud, Preventio, n & Mo, r, e!
+          </p>
+        </d, i, v>
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">
+          <div, classNam, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6">
+            <h3, classNam, e="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2">
+              <Sparkles, classNam, e="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
+              Latest, Article, s
+            </h3>
+            <div, classNam, e="spa, c, e-y-3">
+              { latestArticl, e, s.sl, i, c, e(, 0, 3).m, a, p((artic, l, e) = > (
+                <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } classNa, m, e="block, b, g-whi, t, e/5, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/15, transitio, n-a, l, l"
+                >
+                  <div, classNam, e="te, x, t-sm, tex, t-purp, l, e-300, m, b-1">{artic, l, e.cate, g, o, r, y}</d, i, v>
+                  <div, classNam, e = "fo, n, t-semibo, l, d">{artic, l, e.title}</d, i, v>
+                  <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-300, m, t-1">{artic, l, e.readTime}</d, i, v>
+                </L, i, n, k>
+              ))}
+            </d, i, v>
+          </d, i, v>
+          <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6">
+            <h3, classNam, e="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2">
+              <Zap, classNam, e="w-6 h-6, tex, t-gre, e, n-3, 0, 0" />
+              New, Service, s
+            </h3>
+            <div, classNam, e="spa, c, e-y-3">
+              { latestServic, e, s.sli, c, e(, 0, 3).m, a, p((servi, c, e) = > (
+                <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } classNa, m, e="block, b, g-whi, t, e/5, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/15, transitio, n-a, l, l"
+                >
+                  <div, classNam, e="te, x, t-sm, tex, t-gre, e, n-300, m, b-1">{servi, c, e.cate, g, o, r, y}</d, i, v>
+                  <div, classNam, e = "fo, n, t-semibo, l, d">{servi, c, e.title}</d, i, v>
+                  <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-300, m, t-1">{servi, c, e.prici, n, g}</d, i, v>
+                </L, i, n, k>
+              ))}
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        <div, classNam, e = "te, x, t-cent, e, r">
+          <Link, t, o="/bl, o, g"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-indi, g, o-900, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
+          >
+            Explore, All, Content
+            <ArrowRight, classNam, e="w-6 h-6" />
+          </Li, n, k>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-
-export default ComprehensivePromoBanner;
+export, default, ComprehensivePromoBanner;
