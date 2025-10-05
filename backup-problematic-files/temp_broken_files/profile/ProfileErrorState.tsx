@@ -1,0 +1,3 @@
+import ArrowLeft from 'lucide-react';
+
+ export function ProfileErrorState({ error } ProfileErrorStateProps) {; return (; <div className="text-left" >}" </div>" <div className="text-left" >{error || "Something went wrong"}</div>" <Button asChild>) '

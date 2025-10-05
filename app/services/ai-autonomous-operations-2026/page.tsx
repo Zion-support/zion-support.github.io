@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Autonomous AI Operations Services 2026 | Zion Tech Group',

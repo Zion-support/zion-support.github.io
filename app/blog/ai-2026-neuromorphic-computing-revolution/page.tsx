@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '🧠 Neuromorphic Computing Revolution 2026: Brain-Inspired AI That Thinks Like Humans',

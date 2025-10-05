@@ -1,12 +1,6 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
+import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'AI 2026 December Mega Breakthrough Consulting - Zion Tech Group',
   description: 'Transform your enterprise with revolutionary AI technology delivering 15,000x performance improvements, 99.95% autonomous operations, and $50 billion in proven value generation.',

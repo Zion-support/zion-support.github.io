@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
@@ -52,8 +51,7 @@ export default function MetaCognitiveAIBreakthrough2026() {
               ].map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl mb-3">{stat.icon}</div>
-                  <div className={`text-3xl font-extrabold mb-2 ${stat.color}`}>
-                    {stat.value}
+<div `}>                    {stat.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">
                     {stat.label}

@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Hyperintelligence Mega Success 2026 - Fortune 500 Case Study',

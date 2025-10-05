@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Quantum-AI Hybrid Systems 2027: The Convergence of Quantum Computing and Artificial Intelligence',

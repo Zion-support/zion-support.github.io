@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking - Zion Tech Group',

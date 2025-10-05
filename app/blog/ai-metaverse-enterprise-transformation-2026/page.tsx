@@ -1,6 +1,12 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
-import { Clock, ArrowRight, Globe, Users, Zap, Target } from 'lucide-react';
+import Link from 'next/link';
+
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import Globe from 'lucide-react/dist/esm/icons/globe';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Target from 'lucide-react/dist/esm/icons/target';>>>>>>> origin/merge-pr-25212
+import { Target, Users, Clock, Zap, User, Globe } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Metaverse Enterprise Transformation 2026: The Future of Virtual Business Operations',
@@ -26,15 +32,15 @@ export default function AIMetaverseEnterpriseTransformation2026() {
         </h1>
         <div className="flex items-center gap-6 text-gray-600 mb-8">
           <div className="flex items-center gap-2">
-            <Clock className="w-5 h-5" />
+            <Clock />
             <span>28 min read</span>
           </div>
           <div className="flex items-center gap-2">
-            <Globe className="w-5 h-5" />
+            <Globe />
             <span>Metaverse</span>
           </div>
           <div className="flex items-center gap-2">
-            <Users className="w-5 h-5" />
+            <Users />
             <span>Enterprise</span>
           </div>
         </div>
@@ -47,7 +53,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
               <div className="w-24 h-24 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                <Globe className="w-12 h-12" />
+                <Globe />
               </div>
               <h2 className="text-3xl font-bold mb-4">Metaverse Enterprise</h2>
               <p className="text-xl opacity-90">The Future of Business Operations</p>
@@ -142,7 +148,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Users className="w-6 h-6 text-blue-600" />
+                <Users />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Virtual Workspaces</h4>
             </div>
@@ -157,7 +163,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-purple-600" />
+                <Zap />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">AI-Powered Training</h4>
             </div>
@@ -172,7 +178,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <Target className="w-6 h-6 text-green-600" />
+                <Target />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Virtual Events & Conferences</h4>
             </div>
@@ -187,7 +193,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                <Globe className="w-6 h-6 text-orange-600" />
+                <Globe />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Customer Experience</h4>
             </div>
@@ -305,12 +311,14 @@ export default function AIMetaverseEnterpriseTransformation2026() {
             Discover how AI-powered metaverse technologies can revolutionize your business operations, enhance collaboration, and unlock new possibilities for growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Schedule Consultation
             </Link>
-            <Link to="/services/ai-metaverse-enterprise"
+            <Link
+              href="/services/ai-metaverse-enterprise"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
             >
               Learn More
@@ -323,7 +331,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
       <div className="mt-16 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Content</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link to="/blog/ai-cognitive-superintelligence-2026" className="group">
+          <Link href="/blog/ai-cognitive-superintelligence-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Cognitive Superintelligence 2026
@@ -333,7 +341,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
               </p>
             </div>
           </Link>
-          <Link to="/blog/ai-autonomous-robotics-2026" className="group">
+          <Link href="/blog/ai-autonomous-robotics-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Autonomous Robotics 2026
@@ -343,7 +351,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
               </p>
             </div>
           </Link>
-          <Link to="/case-studies/ai-metaverse-enterprise-mega-success-2026" className="group">
+          <Link href="/case-studies/ai-metaverse-enterprise-mega-success-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 $400M Metaverse Success Story

@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'February 2025: Quantum AI Breakthrough - $50 Billion Enterprise Transformation Success | Zion Tech Group',

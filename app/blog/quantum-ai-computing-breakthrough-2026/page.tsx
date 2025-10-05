@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Quantum AI Computing Breakthrough 2026: 1000x Processing Speed | Zion Tech Group',

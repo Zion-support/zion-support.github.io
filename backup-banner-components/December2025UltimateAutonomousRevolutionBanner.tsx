@@ -1,104 +1,94 @@
-// import React from 'react';
-import Link from 'next/link';
-import { Brain, Zap, TrendingUp, ArrowRight, Star, CheckCircle } from 'lucide-react';
-
+import React from 'react'
+import Link from 'next/link'
+import {Brain, Zap, TrendingUp, ArrowRight} Star; CheckCircle } from 'lucide-react'
 export default function December2025UltimateAutonomousRevolutionBanner() {
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white">
+  return (<div className="text-left">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      <div className="text-left">
+        <div className="text-left" style={{
+          backgroundImage: `url("data:image/svg+xml)%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}
         }} />
       </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 py-12">
-        <div className="text-center mb-8">
+      <div className="text-left">
+        <div className="text-left">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
-            <Star className="w-4 h-4" />
+          <div className="text-left">
+            <Star className="text-left" />
             REVOLUTIONARY BREAKTHROUGH
           </div>
-
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <h1 className="text-left">
+            <span className="text-left">
               AI 2025 December:
-            </span>
+            <
             <br />
-            <span className="text-white">
+            <span className="text-left">
               Ultimate Autonomous Enterprise Revolution
-            </span>
+            <
           </h1>
-
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-4xl mx-auto">
-            The most significant AI breakthrough of 2025 has arrived. Achieve <span className="font-bold text-yellow-300">99.9% operational autonomy</span> with unprecedented efficiency gains.
+          <p className="text-left">
+            The most significant AI breakthrough of 2025 has arrived. Achieve <span className="text-left">99.9% operational autonomy< with unprecedented efficiency gains.
           </p>
-
           {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">99.9%</div>
-              <div className="text-purple-200 text-sm">Autonomous Operations</div>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">99.9%</div>
+              <div className="text-left">Autonomous Operations</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-300 mb-2">$2.8B</div>
-              <div className="text-purple-200 text-sm">Annual Cost Savings</div>
+            <div className="text-left">
+              <div className="text-left">$2.8B</div>
+              <div className="text-left">Annual Cost Savings</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-300 mb-2">500x</div>
-              <div className="text-purple-200 text-sm">Performance Improvement</div>
+            <div className="text-left">
+              <div className="text-left">500x</div>
+              <div className="text-left">Performance Improvement</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-300 mb-2">24/7</div>
-              <div className="text-purple-200 text-sm">Autonomous Monitoring</div>
+            <div className="text-left">
+              <div className="text-left">24/7</div>
+              <div className="text-left">Autonomous Monitoring</div>
             </div>
           </div>
-
           {/* Features */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center gap-3 mb-4">
-                <Brain className="w-6 h-6 text-purple-300" />
-                <h3 className="font-bold text-lg">Neural Autonomy Engine</h3>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <Brain className="text-left" />
+                <h3 className="text-left">Neural Autonomy Engine</h3>
               </div>
-              <p className="text-purple-100 text-sm">
+              <p className="text-left">
                 Advanced neural networks enabling complete operational independence with self-learning capabilities.
               </p>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center gap-3 mb-4">
-                <Zap className="w-6 h-6 text-yellow-300" />
-                <h3 className="font-bold text-lg">Quantum-Speed Processing</h3>
+            <div className="text-left">
+              <div className="text-left">
+                <Zap className="text-left" />
+                <h3 className="text-left">Quantum-Speed Processing</h3>
               </div>
-              <p className="text-purple-100 text-sm">
+              <p className="text-left">
                 Leveraging quantum computing principles for unprecedented speed and efficiency.
               </p>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center gap-3 mb-4">
-                <TrendingUp className="w-6 h-6 text-green-300" />
-                <h3 className="font-bold text-lg">Predictive Intelligence</h3>
+            <div className="text-left">
+              <div className="text-left">
+                <TrendingUp className="text-left" />
+                <h3 className="text-left">Predictive Intelligence</h3>
               </div>
-              <p className="text-purple-100 text-sm">
+              <p className="text-left">
                 Anticipates issues before they occur with advanced predictive analytics.
               </p>
             </div>
           </div>
-
           {/* Success Stories */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
-            <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
-              <CheckCircle className="w-6 h-6 text-green-300" />
+          <div className="text-left">
+            <h3 className="text-left">
+              <CheckCircle className="text-left" />
               Proven Results Across Fortune 500 Companies
             </h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="text-left">
               <div>
-                <h4 className="font-bold text-lg mb-2">Manufacturing Giant</h4>
-                <ul className="space-y-1 text-purple-100 text-sm">
+                <h4 className="text-left">Manufacturing Giant</h4>
+                <ul className="text-left">
                   <li>• $850M annual cost reduction</li>
                   <li>• 99.7% autonomous production</li>
                   <li>• Zero unplanned downtime</li>
@@ -106,8 +96,8 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-lg mb-2">Financial Services Leader</h4>
-                <ul className="space-y-1 text-purple-100 text-sm">
+                <h4 className="text-left">Financial Services Leader</h4>
+                <ul className="text-left">
                   <li>• $1.2B operational savings</li>
                   <li>• 99.9% autonomous compliance</li>
                   <li>• Real-time risk management</li>
@@ -116,65 +106,61 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
               </div>
             </div>
           </div>
-
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
+          <div className="text-left">
+            <Link
               href="/blog/ai-2025-december-ultimate-autonomous-enterprise-revolution"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="text-left"
             >
-              <Brain className="w-5 h-5" />
+              <Brain className="text-left" />
               Discover the Revolution
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="text-left" />
             </Link>
-            
-            <Link 
+            <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-300"
+              className="text-left"
             >
-              <Zap className="w-5 h-5" />
+              <Zap className="text-left" />
               Schedule Demo
             </Link>
           </div>
-
           {/* Limited Time Offer */}
-          <div className="mt-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 max-w-2xl mx-auto">
-            <h3 className="font-bold text-xl mb-4">🎯 Limited-Time Implementation Offer</h3>
-            <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="text-left">
+            <h3 className="text-left">🎯 Limited-Time Implementation Offer</h3>
+            <div className="text-left">
               <div>
-                <div className="text-2xl font-bold">50%</div>
-                <div className="text-orange-100 text-sm">Implementation Discount</div>
+                <div className="text-left">50%</div>
+                <div className="text-left">Implementation Discount</div>
               </div>
               <div>
-                <div className="text-2xl font-bold">30 Days</div>
-                <div className="text-orange-100 text-sm">Money-Back Guarantee</div>
+                <div className="text-left">30 Days</div>
+                <div className="text-left">Money-Back Guarantee</div>
               </div>
               <div>
-                <div className="text-2xl font-bold">24/7</div>
-                <div className="text-orange-100 text-sm">Expert Support</div>
+                <div className="text-left">24/7</div>
+                <div className="text-left">Expert Support</div>
               </div>
             </div>
           </div>
-
           {/* Trust Indicators */}
-          <div className="mt-8 text-center">
-            <p className="text-purple-200 text-sm mb-4">
+          <div className="text-left">
+            <p className="text-left">
               Trusted by 500+ Fortune 500 companies worldwide
             </p>
-            <div className="flex justify-center items-center gap-8 opacity-60">
-              <div className="text-2xl font-bold">🏢 Fortune 500</div>
-              <div className="text-2xl font-bold">🌍 Global</div>
-              <div className="text-2xl font-bold">🔒 Secure</div>
-              <div className="text-2xl font-bold">⚡ Fast</div>
+            <div className="text-left">
+              <div className="text-left">🏢 Fortune 500</div>
+              <div className="text-left">🌍 Global</div>
+              <div className="text-left">🔒 Secure</div>
+              <div className="text-left">⚡ Fast</div>
             </div>
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 left-20 w-12 h-12 bg-indigo-500/20 rounded-full animate-pulse delay-500"></div>
+      <div className="text-left">
+        <div className="text-left"></div>
+      <div className="text-left"></div>
     </div>
   );
 }
+import React from 'react'' import Link from 'next/link'' import {Brain, Zap, TrendingUp, ArrowRight} Star; CheckCircle } from 'lucide-react' export default function December2025UltimateAutonomousRevolutionBanner() { return ( <div className="text-left" > {/* Background Pattern */} <div className="text-left" > <div></div> <div className="text-left" > <div className="text-left" > {/* Badge */} <div className="text-left" > <Star className="text-left" /> REVOLUTIONARY BREAKTHROUGH </div> {/* Main Heading */} <h1 className="text-left" > <span className="text-left" > AI 2025 December: < <br /> <span className="text-left" > Ultimate Autonomous Enterprise Revolution < </h1> {/* Subheading */} <p className="text-left" > The most significant AI breakthrough of 2025 has arrived. Achieve <span className="text-left" >99.9% operational autonomy< with unprecedented efficiency gains. </p> {/* Key Metrics */} <div className="text-left" > <div className="text-left" > <div className="text-left" >99.9%</div> <div className="text-left" >Autonomous Operations</div> </div> <div className="text-left" > <div className="text-left" >$2.8B</div> <div className="text-left" >Annual Cost Savings</div> </div> <div className="text-left" > <div className="text-left" >500x</div> <div className="text-left" >Performance Improvement</div> </div> <div className="text-left" > <div className="text-left" >24/7</div> <div className="text-left" >Autonomous Monitoring</div> </div> </div> {/* Features */} <div className="text-left" > <div className="text-left" > <div className="text-left" > <Brain className="text-left" /> <h3 className="text-left" >Neural Autonomy Engine</h3> </div> <p className="text-left" > Advanced neural networks enabling complete operational independence with self-learning capabilities. </p> </div> <div className="text-left" > <div className="text-left" > <Zap className="text-left" /> <h3 className="text-left" >Quantum-Speed Processing</h3> </div> <p className="text-left" > Leveraging quantum computing principles for unprecedented speed and efficiency. </p> </div> <div className="text-left" > <div className="text-left" > <TrendingUp className="text-left" /> <h3 className="text-left" >Predictive Intelligence</h3> </div> <p className="text-left" > Anticipates issues before they occur with advanced predictive analytics. </p> </div> </div> {/* Success Stories */} <div className="text-left" > <h3 className="text-left" > <CheckCircle className="text-left" /> Proven Results Across Fortune 500 Companies </h3> <div className="text-left" > <div> <h4 className="text-left" >Manufacturing Giant</h4> <ul className="text-left" > <li>• $850M annual cost reduction</li> <li>• 99.7% autonomous production</li> <li>• Zero unplanned downtime</li> <li>• 340% ROI in 18 months</li> </ul> </div> <div> <h4 className="text-left" >Financial Services Leader</h4> <ul className="text-left" > <li>• $1.2B operational savings</li> <li>• 99.9% autonomous compliance</li> <li>• Real-time risk management</li> <li>• 450% ROI in 12 months</li> </ul> </div> </div> </div> {/* CTA Buttons */} <div className="text-left" > <Link href="/blog/ai-2025-december-ultimate-autonomous-enterprise-revolution" className="text-left" > <Brain className="text-left" /> Discover the Revolution <ArrowRight className="text-left" /> </Link> <Link href="/contact" className="text-left" > <Zap className="text-left" /> Schedule Demo </Link> </div> {/* Limited Time Offer */} <div className="text-left" > <h3 className="text-left" >🎯 Limited-Time Implementation Offer</h3> <div className="text-left" > <div> <div className="text-left" >50%</div> <div className="text-left" >Implementation Discount</div> </div> <div> <div className="text-left" >30 Days</div> <div className="text-left" >Money-Back Guarantee</div> </div> <div> <div className="text-left" >24/7</div> <div className="text-left" >Expert Support</div> </div> </div> </div> {/* Trust Indicators */} <div className="text-left" > <p className="text-left" > Trusted by 500+ Fortune 500 companies worldwide </p> <div className="text-left" > <div className="text-left" >🏢 Fortune 500</div> <div className="text-left" >🌍 Global</div> <div className="text-left" >🔒 Secure</div> <div className="text-left" >⚡ Fast</div> </div> </div> </div> </div> {/* Floating Elements */} <div></div> <div></div> <div></div> </div> ); }'

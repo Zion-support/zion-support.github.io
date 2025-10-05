@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'March 2026 AI Breakthrough Revolution: The Next Frontier of Enterprise Intelligence',

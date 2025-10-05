@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Universal Intelligence Singularity $10 Trillion Success Story - Zion Tech Group',

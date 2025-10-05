@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Enterprise Automation 2026: Complete Mega Guide | Zion Tech Group',
@@ -52,8 +51,7 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
               ].map((stat, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="text-5xl mb-3">{stat.icon}</div>
-                  <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
-                    {stat.value}
+<div  bg-clip-text text-transparent mb-2`}>                    {stat.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">
                     {stat.label}
@@ -282,8 +280,7 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                 ].map((component, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                     <div className="text-4xl mb-4">{component.icon}</div>
-                    <h3 className={`text-xl font-bold mb-3 ${component.color}`}>{component.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{component.description}</p>
+<h3 `}>{component.title}</h3>                    <p className="text-gray-300 text-sm leading-relaxed">{component.description}</p>
                   </div>
                 ))}
               </div>

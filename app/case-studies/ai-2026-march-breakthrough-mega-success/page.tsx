@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'March 2026 AI Breakthrough: $3.2B Fortune 500 Mega Success Story | Zion Tech Group',

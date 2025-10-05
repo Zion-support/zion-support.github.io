@@ -1,5 +1,1 @@
-export: interface Real2025Q2Addition {
-  id: string;
-   name: string;
-   tagline: string;
-   price: string]]}}
+export: interface Real2025Q2Addition {id: string; name: string} tagline: string} price: string]]}}

@@ -1,7 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, TrendingUp, Brain, Zap, Target, Users, DollarSign, Award } from 'lucide-react';
-
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Case Study | Zion Tech Group',
   description: 'Detailed case study of how Fortune 500 companies achieved $2.8 trillion in value through AI 2026 breakthrough innovations including quantum-neural fusion and autonomous enterprise systems.',
@@ -290,19 +288,22 @@ export default function AI2026BreakthroughInnovationsCaseStudyPage() {
           Join the Fortune 500 companies already generating unprecedented value with AI 2026 breakthrough innovations.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link to="/blog/ai-2026-breakthrough-innovations-mega-success" 
+          <Link 
+            href="/blog/ai-2026-breakthrough-innovations-mega-success" 
             className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
           >
             Read Full Blog Post
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <Link to="/services/ai-2026-breakthrough-innovations-implementation" 
+          <Link 
+            href="/services/ai-2026-breakthrough-innovations-implementation" 
             className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
           >
             Start Implementation
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
           >
             Get Expert Consultation

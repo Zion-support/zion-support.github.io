@@ -1,13 +1,9 @@
-
-/* Critical CSS optimizations */
 :root {
   --color-primary: #3b82f6;
   --color-secondary: #1e293b;
   --color-accent: #06b6d4;
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
-
-/* Optimize font loading */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -15,7 +11,6 @@
   font-display: swap;
   src: url('/fonts/inter-regular.woff2') format('woff2');
 }
-
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -23,8 +18,6 @@
   font-display: swap;
   src: url('/fonts/inter-semibold.woff2') format('woff2');
 }
-
-/* Optimize animations */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -34,31 +27,22 @@
     transition-duration: 0.01ms !important;
   }
 }
-
-/* Optimize images */
 img {
   max-width: 100%;
   height: auto;
   loading: lazy;
 }
-
-/* Optimize focus states */
 .focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
-
-/* Optimize button interactions */
-button, a {
+button,
+a {
   touch-action: manipulation;
 }
-
-/* Optimize scrolling */
 html {
   scroll-behavior: smooth;
 }
-
-/* Optimize text rendering */
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

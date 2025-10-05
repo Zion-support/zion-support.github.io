@@ -1,0 +1,1 @@
+success: boolean, message?: strin,g} interface: ErrorResponse {error: strin}g} export: default async function handler(req: NextApiReques,t)

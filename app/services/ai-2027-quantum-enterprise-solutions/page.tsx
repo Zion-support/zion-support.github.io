@@ -1,5 +1,4 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Quantum Enterprise Solutions - Zion Tech Group',
@@ -16,7 +15,7 @@ export default function AI2027QuantumEnterpriseSolutions() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link to="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link href="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Services
         </Link>
         
@@ -224,12 +223,14 @@ export default function AI2027QuantumEnterpriseSolutions() {
                 achieve breakthrough results.
               </p>
               <div className="space-y-4">
-                <Link to="/contact" 
+                <Link 
+                  href="/contact" 
                   className="block w-full bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Request Consultation
                 </Link>
-                <Link to="/case-studies/ai-2027-quantum-breakthrough-success" 
+                <Link 
+                  href="/case-studies/ai-2027-quantum-breakthrough-success" 
                   className="block w-full border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center"
                 >
                   View Success Story
@@ -288,17 +289,17 @@ export default function AI2027QuantumEnterpriseSolutions() {
       <div className="mt-12 bg-gradient-to-r from-gray-50 to-blue-50 p-8 rounded-lg">
         <h2 className="text-3xl font-bold text-center mb-8">Related Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Link to="/services/ai-autonomous-cloud-ops" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+          <Link href="/services/ai-autonomous-cloud-ops" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
             <h3 className="text-xl font-bold text-blue-700 mb-2">🤖 AI Autonomous Cloud Ops</h3>
             <p className="text-gray-600 text-sm">Self-managing cloud infrastructure with AI-powered automation</p>
           </Link>
           
-          <Link to="/services/ai-2026-enterprise-transformation" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+          <Link href="/services/ai-2026-enterprise-transformation" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
             <h3 className="text-xl font-bold text-blue-700 mb-2">🏢 AI 2026 Enterprise Transformation</h3>
             <p className="text-gray-600 text-sm">Complete enterprise AI transformation services</p>
           </Link>
           
-          <Link to="/services/ai-2027-breakthrough-solutions" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+          <Link href="/services/ai-2027-breakthrough-solutions" className="block p-6 bg-white border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
             <h3 className="text-xl font-bold text-blue-700 mb-2">⚡ AI 2027 Breakthrough Solutions</h3>
             <p className="text-gray-600 text-sm">Next-generation AI solutions for enterprise</p>
           </Link>

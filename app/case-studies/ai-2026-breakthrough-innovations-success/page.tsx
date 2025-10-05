@@ -1,5 +1,4 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations Success: $10B+ ROI Transformation Story',
@@ -126,17 +125,20 @@ export default function AI2026BreakthroughInnovationsSuccessPage() {
             unprecedented results.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all"
             >
               Schedule Consultation
             </Link>
-            <Link to="/blog/ai-2026-breakthrough-innovations-january" 
+            <Link 
+              href="/blog/ai-2026-breakthrough-innovations-january" 
               className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all"
             >
               Read Full Innovation Report
             </Link>
-            <Link to="/case-studies" 
+            <Link 
+              href="/case-studies" 
               className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all"
             >
               View All Success Stories

@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI 2025 December: Revolutionary Autonomous Enterprise Transformation',
+  description: 'Discover how Fortune 500 companies are achieving unprecedented business transformation through revolutionary autonomous enterprise systems, achieving 95% operational efficiency and $50B+ value creation.',
+  keywords: ['AI 2025', 'autonomous enterprise', 'Fortune 500', 'business transformation', 'operational efficiency', 'AI automation'],
+  openGraph: {
+    title: 'AI 2025 December: Revolutionary Autonomous Enterprise Transformation',
+    description: 'Discover how Fortune 500 companies are achieving unprecedented business transformation through revolutionary autonomous enterprise systems.',
+    type: 'article',
+    publishedTime: '2025-12-01T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AI2025DecemberRevolutionaryAutonomousEnterprise() {
   return (

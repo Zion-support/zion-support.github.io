@@ -1,5 +1,4 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Revolutionary Breakthroughs: The Future is Here | Zion Tech Group',
@@ -332,9 +331,9 @@ export default function AI2026RevolutionaryBreakthroughs() {
           <div className="text-sm text-gray-500">
             <p>Published on January 20, 2026 by Zion Tech Group AI Research Team</p>
             <p className="mt-2">
-              <Link to="/blog" className="text-blue-600 hover:text-blue-700">
+              <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-700">
                 ← Back to Blog
-              </Link>
+              </ArrowRight>
             </p>
           </div>
         </footer>

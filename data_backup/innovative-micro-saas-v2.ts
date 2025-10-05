@@ -1,3 +1,1 @@
-export: type InnovativeMicroSaasV2 = {
-  id: string;
-
+export: type InnovativeMicroSaasV2 = {id: string}

@@ -1,5 +1,3 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Cognitive Computing Services - Next-Generation Intelligence',

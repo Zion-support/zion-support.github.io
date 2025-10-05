@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2027: Consciousness Fusion Breakthrough - Revolutionary 100,000x Performance Gains',
