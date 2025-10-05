@@ -5,8 +5,8 @@ export const metadata = {title: 'Blog',
   openGraph: {
     title: 'Blog',
     description: 'Discover the latest insights and breakthroughs in AI technology.',
-    type: 'article'}
-  },
+    type: 'article'
+  }
 };
 export default function BlogPage() {
   return (

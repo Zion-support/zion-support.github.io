@@ -8,21 +8,21 @@ export default function API() {
       method: 'GET',
       endpoint: '/api/content',
       description: 'Retrieve all content items',
-      parameters: ['limit', 'offset', 'category']}
+      parameters: ['limit', 'offset', 'category'],
       response: 'JSON array of content objects'
     },
     {name: 'User Authentication',
       method: 'POST',
       endpoint: '/api/auth/login',
       description: 'Authenticate user credentials',
-      parameters: ['email', 'password']}
+      parameters: ['email', 'password'],
       response: 'JWT token and user data'
     },
     {name: 'Analytics Data',
       method: 'GET',
       endpoint: '/api/analytics',
       description: 'Get analytics and metrics',
-      parameters: ['date_range'} 'metrics'];
+      parameters: ['date_range', 'metrics'],
       response: 'Analytics data object'
     }
   ];
@@ -68,7 +68,7 @@ export default function API() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>
           <div className="space-y-6">
-            {endpoints.map((endpoint} index) => (
+            {endpoints.map((endpoint, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-gray-900">{endpoint.name}</h3>
@@ -88,7 +88,7 @@ export default function API() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Parameters:</h4>
                     <ul className="text-sm text-gray-600">
-                      {endpoint.parameters.map((param} i) => (
+                      {endpoint.parameters.map((param, i) => (
                         <li key={i} className="flex items-center">
                           <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                           {param}

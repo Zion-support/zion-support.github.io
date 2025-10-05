@@ -70,7 +70,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact',
           marketSize: '$3.8B healthcare scheduling market',
-          roi: '28% reduction in no-shows} 15% revenue increase'
+          roi: '28% reduction in no-shows, 15% revenue increase'
         },
         {name: 'AI Content Localization Engine',
           blurb: 'Automated content translation, cultural adaptation, and SEO optimization for global markets.',
@@ -85,7 +85,7 @@ export default function AdditionalServices() {
             'Integration with CMS platforms'
           ],
           link: '/contact',
-          marketSize: '$56B localization market'}
+          marketSize: '$56B localization market',
           roi: '40% faster time-to-market globally'
         },
         {name: 'Smart Inventory Forecasting',
@@ -102,7 +102,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact',
           marketSize: '$2.1B inventory management market',
-          roi: '25% reduction in stockouts} 20% cost savings'
+          roi: '25% reduction in stockouts, 20% cost savings'
         },
         {name: 'AI-Powered Compliance Monitor',
           blurb: 'Automated compliance monitoring, risk assessment, and regulatory reporting for financial services.',
@@ -117,7 +117,7 @@ export default function AdditionalServices() {
             'Regulatory change notifications'
           ],
           link: '/contact',
-          marketSize: '$12.3B compliance software market'}
+          marketSize: '$12.3B compliance software market',
           roi: '60% reduction in compliance costs'
         },
         {name: 'Smart Lead Scoring Platform',
@@ -133,7 +133,7 @@ export default function AdditionalServices() {
             'Custom scoring model training'
           ],
           link: '/contact',
-          marketSize: '$6.8B sales automation market'}
+          marketSize: '$6.8B sales automation market',
           roi: '45% improvement in lead conversion'
         },
         {name: 'AI Social Media Scheduler',
@@ -147,7 +147,7 @@ export default function AdditionalServices() {
             'Multi-platform posting automation',
             'Engagement rate optimization',
             'Competitor analysis and benchmarking'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Invoice Generator Pro',
@@ -161,7 +161,7 @@ export default function AdditionalServices() {
             'Client portal with payment history and analytics',
             'Integration with accounting software (QuickBooks) Xero)',
             'Custom branding and professional templates'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Smart Social Media Scheduler',
@@ -175,7 +175,7 @@ export default function AdditionalServices() {
             'Hashtag research and trending topic integration',
             'Analytics dashboard with engagement insights',
             'Team collaboration and approval workflows'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI Customer Support Chatbot',
@@ -189,7 +189,7 @@ export default function AdditionalServices() {
             'Integration with CRM and helpdesk systems',
             'Custom knowledge base training and updates',
             'Real-time analytics and performance metrics'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Smart Inventory Management System',
@@ -203,7 +203,7 @@ export default function AdditionalServices() {
             'Supplier management and purchase order automation',
             'Real-time stock alerts and low inventory warnings',
             'Integration with e-commerce platforms and POS systems'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Email Marketing Suite',
@@ -217,7 +217,7 @@ export default function AdditionalServices() {
             'A/B testing with statistical significance',
             'Advanced segmentation and targeting',
             'Deliverability monitoring and optimization'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Smart Project Management Tool',
@@ -231,7 +231,7 @@ export default function AdditionalServices() {
             'Team productivity analytics and insights',
             'Automated status updates and reporting',
             'Integration with popular development tools'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Lead Scoring Platform',
@@ -245,7 +245,7 @@ export default function AdditionalServices() {
             'Predictive conversion analytics',
             'Custom scoring models for different industries',
             'Real-time lead alerts and notifications'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Smart Document Management System',
@@ -259,7 +259,7 @@ export default function AdditionalServices() {
             'Version control and collaboration features',
             'Compliance monitoring and audit trails',
             'Integration with cloud storage platforms'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Analytics Dashboard',
@@ -273,7 +273,7 @@ export default function AdditionalServices() {
             'Real-time data processing and updates',
             'Integration with multiple data sources',
             'Natural language query interface'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Smart Appointment Booking System',
@@ -287,7 +287,7 @@ export default function AdditionalServices() {
             'Automated reminders and confirmations',
             'Custom booking forms and questionnaires',
             'Integration with payment processing'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Smart Contract Audit Platform',
@@ -299,7 +299,7 @@ export default function AdditionalServices() {
             'Gas optimization recommendations',
             'Compliance checking for DeFi protocols',
             'Real-time monitoring and alerting'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'API Rate Limiting & Monetization',
@@ -311,7 +311,7 @@ export default function AdditionalServices() {
             'Usage analytics and billing automation',
             'DDoS protection and traffic shaping',
             'Developer portal with API documentation'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Real Estate Investment Analytics',
@@ -323,7 +323,7 @@ export default function AdditionalServices() {
             'Market trend analysis and predictions',
             'ROI calculations and risk assessment',
             'Portfolio optimization recommendations'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Supply Chain Risk Intelligence',
@@ -335,7 +335,7 @@ export default function AdditionalServices() {
             'Risk scoring and early warning systems',
             'Alternative supplier recommendations',
             'Compliance tracking and reporting'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Video Content Creator',
@@ -351,7 +351,7 @@ export default function AdditionalServices() {
             'Real-time collaboration and approval workflows'
           ],
           link: '/contact',
-          marketSize: '$15.7B video marketing market'}
+          marketSize: '$15.7B video marketing market',
           roi: '70% reduction in video production costs'
         },
         {name: 'Smart Expense Management SaaS',
@@ -367,7 +367,7 @@ export default function AdditionalServices() {
             'Advanced analytics and spending insights'
           ],
           link: '/contact',
-          marketSize: '$8.2B expense management market'}
+          marketSize: '$8.2B expense management market',
           roi: '45% reduction in expense processing time'
         },
         {name: 'AI-Powered Customer Feedback Analyzer',
@@ -383,7 +383,7 @@ export default function AdditionalServices() {
             'Integration with CRM and support systems'
           ],
           link: '/contact',
-          marketSize: '$4.1B customer feedback market'}
+          marketSize: '$4.1B customer feedback market',
           roi: '60% improvement in customer satisfaction scores'
         },
         {name: 'Smart Contract Analytics Platform',
@@ -399,7 +399,7 @@ export default function AdditionalServices() {
             'Multi-blockchain support (Ethereum, Polygon) BSC)'
           ],
           link: '/contact',
-          marketSize: '$2.1B blockchain analytics market'}
+          marketSize: '$2.1B blockchain analytics market',
           roi: '80% reduction in smart contract risks'
         },
         {name: 'AI-Powered SEO Content Optimizer',
@@ -415,7 +415,7 @@ export default function AdditionalServices() {
             'Integration with CMS and publishing platforms'
           ],
           link: '/contact',
-          marketSize: '$6.8B SEO tools market'}
+          marketSize: '$6.8B SEO tools market',
           roi: '120% increase in organic traffic'
         },
         {name: 'Smart Property Management System',
@@ -431,7 +431,7 @@ export default function AdditionalServices() {
             'Integration with accounting and banking systems'
           ],
           link: '/contact',
-          marketSize: '$3.2B property management market'}
+          marketSize: '$3.2B property management market',
           roi: '35% reduction in property management costs'
         },
         {name: 'AI-Powered Legal Document Analyzer',
@@ -447,7 +447,7 @@ export default function AdditionalServices() {
             'Integration with legal practice management systems'
           ],
           link: '/contact',
-          marketSize: '$12.4B legal tech market'}
+          marketSize: '$12.4B legal tech market',
           roi: '75% reduction in document review time'
         },
         {name: 'Smart Fleet Management Platform',
@@ -463,7 +463,7 @@ export default function AdditionalServices() {
             'Integration with dispatch and logistics systems'
           ],
           link: '/contact',
-          marketSize: '$5.8B fleet management market'}
+          marketSize: '$5.8B fleet management market',
           roi: '25% reduction in fleet operating costs'
         },
         {name: 'AI-Powered Email Deliverability Optimizer',
@@ -479,7 +479,7 @@ export default function AdditionalServices() {
             'Integration with major email marketing platforms'
           ],
           link: '/contact',
-          marketSize: '$7.5B email marketing market'}
+          marketSize: '$7.5B email marketing market',
           roi: '40% improvement in email deliverability rates'
         }
         ,
@@ -496,7 +496,7 @@ export default function AdditionalServices() {
             'Legal review workflow'
           ],
           link: '/contact',
-          marketSize: '$10.5B privacy tech market'}
+          marketSize: '$10.5B privacy tech market',
           roi: '90% faster policy updates'
         },
         {name: 'AI Proposal & SOW Writer',
@@ -512,7 +512,7 @@ export default function AdditionalServices() {
             'Versioning and redline compare'
           ],
           link: '/contact',
-          marketSize: '$6.2B proposal software market'}
+          marketSize: '$6.2B proposal software market',
           roi: '3x faster sales cycles'
         },
         {name: 'AI-Powered Competitive Intelligence Platform',
@@ -528,7 +528,7 @@ export default function AdditionalServices() {
             'Strategic recommendations and SWOT analysis'
           ],
           link: '/contact',
-          marketSize: '$4.8B competitive intelligence market'}
+          marketSize: '$4.8B competitive intelligence market',
           roi: '45% improvement in strategic decision speed'
         },
         {name: 'Smart Contract Lifecycle Management',
@@ -544,7 +544,7 @@ export default function AdditionalServices() {
             'Version control and upgrade management'
           ],
           link: '/contact',
-          marketSize: '$2.3B smart contract market'}
+          marketSize: '$2.3B smart contract market',
           roi: '70% reduction in development time'
         },
         {name: 'AI-Powered Customer Onboarding Automation',
@@ -560,7 +560,7 @@ export default function AdditionalServices() {
             'Customer success metrics and analytics'
           ],
           link: '/contact',
-          marketSize: '$3.2B customer onboarding market'}
+          marketSize: '$3.2B customer onboarding market',
           roi: '60% improvement in customer activation rates'
         },
         {name: 'Intelligent API Documentation Generator',
@@ -576,7 +576,7 @@ export default function AdditionalServices() {
             'Analytics and usage tracking'
           ],
           link: '/contact',
-          marketSize: '$2.1B API management market'}
+          marketSize: '$2.1B API management market',
           roi: '80% reduction in documentation maintenance'
         },
         {name: 'AI-Powered Event Management Platform',
@@ -592,7 +592,7 @@ export default function AdditionalServices() {
             'Post-event follow-up automation'
           ],
           link: '/contact',
-          marketSize: '$5.8B event management market'}
+          marketSize: '$5.8B event management market',
           roi: '50% reduction in event planning time'
         },
         {name: 'Smart Contract Analytics & Risk Assessment',
@@ -608,7 +608,7 @@ export default function AdditionalServices() {
             'Multi-blockchain support and cross-chain analysis'
           ],
           link: '/contact',
-          marketSize: '$1.8B blockchain analytics market'}
+          marketSize: '$1.8B blockchain analytics market',
           roi: '65% improvement in risk management efficiency'
         },
         {name: 'AI-Powered Content Moderation Suite',
@@ -624,7 +624,7 @@ export default function AdditionalServices() {
             'Custom model training for specific use cases'
           ],
           link: '/contact',
-          marketSize: '$3.2B content moderation market'}
+          marketSize: '$3.2B content moderation market',
           roi: '70% reduction in moderation costs'
         },
         {name: 'Intelligent Password Management Enterprise',
@@ -640,7 +640,7 @@ export default function AdditionalServices() {
             'Single sign-on (SSO) integration'
           ],
           link: '/contact',
-          marketSize: '$2.8B password management market'}
+          marketSize: '$2.8B password management market',
           roi: '85% reduction in password-related security incidents'
         },
         {name: 'AI-Powered Subscription Analytics',
@@ -656,7 +656,7 @@ export default function AdditionalServices() {
             'Integration with payment and CRM systems'
           ],
           link: '/contact',
-          marketSize: '$4.2B subscription management market'}
+          marketSize: '$4.2B subscription management market',
           roi: '35% improvement in customer retention'
         },
         {name: 'Smart Contract Insurance Platform',
@@ -672,7 +672,7 @@ export default function AdditionalServices() {
             'Multi-blockchain support and cross-chain coverage'
           ],
           link: '/contact',
-          marketSize: '$1.2B DeFi insurance market'}
+          marketSize: '$1.2B DeFi insurance market',
           roi: '90% faster claims processing'
         },
         {name: 'AI-Powered Employee Onboarding Suite',
@@ -688,7 +688,7 @@ export default function AdditionalServices() {
             'Custom onboarding templates and checklists'
           ],
           link: '/contact',
-          marketSize: '$2.4B HR onboarding market'}
+          marketSize: '$2.4B HR onboarding market',
           roi: '60% reduction in onboarding time'
         },
         {name: 'Intelligent Code Review Assistant',
@@ -704,7 +704,7 @@ export default function AdditionalServices() {
             'Custom rules and coding standards enforcement'
           ],
           link: '/contact',
-          marketSize: '$3.1B code review tools market'}
+          marketSize: '$3.1B code review tools market',
           roi: '75% reduction in code review time'
         },
         {name: 'AI-Powered Vendor Management Platform',
@@ -720,7 +720,7 @@ export default function AdditionalServices() {
             'Analytics and reporting dashboard'
           ],
           link: '/contact',
-          marketSize: '$2.8B vendor management market'}
+          marketSize: '$2.8B vendor management market',
           roi: '50% improvement in vendor relationship efficiency'
         },
         {name: 'Smart Contract Marketplace',
@@ -736,7 +736,7 @@ export default function AdditionalServices() {
             'Community governance and moderation'
           ],
           link: '/contact',
-          marketSize: '$1.5B smart contract market'}
+          marketSize: '$1.5B smart contract market',
           roi: '80% reduction in smart contract development costs'
         }
       ]
@@ -776,7 +776,7 @@ export default function AdditionalServices() {
             'A/B testing and performance monitoring'
           ],
           link: '/contact',
-          marketSize: '$15.2B predictive analytics market'}
+          marketSize: '$15.2B predictive analytics market',
           roi: '25% improvement in business decision accuracy'
         },
         {name: 'AI-Powered Document Processing',
@@ -792,7 +792,7 @@ export default function AdditionalServices() {
             'Workflow automation and approval processes'
           ],
           link: '/contact',
-          marketSize: '$12.4B document management market'}
+          marketSize: '$12.4B document management market',
           roi: '90% reduction in manual processing time'
         },
         {name: 'Computer Vision Solutions',
@@ -808,7 +808,7 @@ export default function AdditionalServices() {
             'Real-time processing and alert systems'
           ],
           link: '/contact',
-          marketSize: '$19.1B computer vision market'}
+          marketSize: '$19.1B computer vision market',
           roi: '40% improvement in quality control accuracy'
         },
         {name: 'AI-Powered Fraud Detection',
@@ -838,7 +838,7 @@ export default function AdditionalServices() {
             'Content generation and summarization',
             'Chatbot and virtual assistant development',
             'Custom model training and optimization'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Content Generation Suite',
@@ -852,7 +852,7 @@ export default function AdditionalServices() {
             'Multi-format content (blogs, social) emails)',
             'Plagiarism detection and originality scoring',
             'Content performance analytics and optimization'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI Customer Sentiment Analysis',
@@ -866,7 +866,7 @@ export default function AdditionalServices() {
             'Customer journey sentiment mapping',
             'Integration with CRM and support systems',
             'Predictive customer churn analysis'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Fraud Detection System',
@@ -880,7 +880,7 @@ export default function AdditionalServices() {
             'Multi-channel fraud prevention',
             'Custom rule engine and risk scoring',
             'Compliance reporting and audit trails'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Recommendation Engine',
@@ -894,7 +894,7 @@ export default function AdditionalServices() {
             'A/B testing for recommendation algorithms',
             'Multi-domain recommendation support',
             'Performance analytics and optimization'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Predictive Analytics Platform',
@@ -908,7 +908,7 @@ export default function AdditionalServices() {
             'Demand forecasting and inventory optimization',
             'Risk assessment and mitigation strategies',
             'Real-time prediction updates and monitoring'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Image Recognition System',
@@ -922,7 +922,7 @@ export default function AdditionalServices() {
             'Content moderation and filtering',
             'Custom model training and optimization',
             'Real-time processing and API integration'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Language Translation Service',
@@ -936,7 +936,7 @@ export default function AdditionalServices() {
             'Voice translation and speech synthesis',
             'Custom terminology and glossary management',
             'API integration and batch processing'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Code Review Assistant',
@@ -948,7 +948,7 @@ export default function AdditionalServices() {
             'Code quality metrics and improvement suggestions',
             'Security compliance checking',
             'Performance optimization recommendations'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Predictive Maintenance AI',
@@ -960,7 +960,7 @@ export default function AdditionalServices() {
             'Failure prediction with confidence intervals',
             'Maintenance scheduling optimization',
             'Cost reduction through proactive maintenance'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI Customer Journey Analytics',
@@ -972,7 +972,7 @@ export default function AdditionalServices() {
             'Journey mapping and optimization recommendations',
             'Churn prediction and retention strategies',
             'Personalized marketing automation triggers'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Autonomous Document Processing',
@@ -984,7 +984,7 @@ export default function AdditionalServices() {
             'Intelligent data extraction and validation',
             'Workflow automation and approval routing',
             'Compliance tracking and audit trails'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Fraud Detection',
@@ -996,7 +996,7 @@ export default function AdditionalServices() {
             'Behavioral pattern analysis',
             'Risk scoring and automated responses',
             'False positive reduction through ML'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'AI-Powered Autonomous Testing Platform',
@@ -1012,7 +1012,7 @@ export default function AdditionalServices() {
             'Integration with CI/CD pipelines and DevOps tools'
           ],
           link: '/contact',
-          marketSize: '$4.1B test automation market'}
+          marketSize: '$4.1B test automation market',
           roi: '85% reduction in test maintenance costs'
         },
         {name: 'AI-Powered Voice Analytics Platform',
@@ -1028,7 +1028,7 @@ export default function AdditionalServices() {
             'Integration with call center and CRM systems'
           ],
           link: '/contact',
-          marketSize: '$2.8B voice analytics market'}
+          marketSize: '$2.8B voice analytics market',
           roi: '50% improvement in customer service quality'
         },
         {name: 'AI-Powered Predictive Maintenance System',
@@ -1044,7 +1044,7 @@ export default function AdditionalServices() {
             'Integration with CMMS and ERP systems'
           ],
           link: '/contact',
-          marketSize: '$4.5B predictive maintenance market'}
+          marketSize: '$4.5B predictive maintenance market',
           roi: '40% reduction in unplanned downtime'
         },
         {name: 'AI-Powered Content Moderation Suite',
@@ -1060,7 +1060,7 @@ export default function AdditionalServices() {
             'Custom model training for specific use cases'
           ],
           link: '/contact',
-          marketSize: '$3.2B content moderation market'}
+          marketSize: '$3.2B content moderation market',
           roi: '70% reduction in moderation costs'
         },
         {name: 'AI-Powered Energy Optimization Platform',
@@ -1076,7 +1076,7 @@ export default function AdditionalServices() {
             'Integration with smart grid and IoT devices'
           ],
           link: '/contact',
-          marketSize: '$12.8B energy management market'}
+          marketSize: '$12.8B energy management market',
           roi: '30% reduction in energy costs'
         },
         {name: 'AI-Powered Talent Acquisition Platform',
@@ -1092,7 +1092,7 @@ export default function AdditionalServices() {
             'Integration with ATS and HR systems'
           ],
           link: '/contact',
-          marketSize: '$15.8B talent acquisition market'}
+          marketSize: '$15.8B talent acquisition market',
           roi: '60% reduction in time-to-hire'
         },
         {name: 'AI-Powered Supply Chain Optimization',
@@ -1108,7 +1108,7 @@ export default function AdditionalServices() {
             'Integration with ERP and logistics systems'
           ],
           link: '/contact',
-          marketSize: '$37.4B supply chain management market'}
+          marketSize: '$37.4B supply chain management market',
           roi: '25% reduction in supply chain costs'
         },
         {name: 'AI-Powered Financial Risk Assessment',
@@ -1124,7 +1124,7 @@ export default function AdditionalServices() {
             'Integration with trading and risk management systems'
           ],
           link: '/contact',
-          marketSize: '$28.5B financial risk management market'}
+          marketSize: '$28.5B financial risk management market',
           roi: '35% reduction in credit losses'
         },
         {name: 'AI-Powered Healthcare Diagnostics Assistant',
@@ -1140,7 +1140,7 @@ export default function AdditionalServices() {
             'Integration with EHR and healthcare systems'
           ],
           link: '/contact',
-          marketSize: '$45.2B healthcare AI market'}
+          marketSize: '$45.2B healthcare AI market',
           roi: '30% improvement in diagnostic accuracy'
         }
         ,
@@ -1157,7 +1157,7 @@ export default function AdditionalServices() {
             'Playbook A/B testing'
           ],
           link: '/contact',
-          marketSize: '$30B sales tech market'}
+          marketSize: '$30B sales tech market',
           roi: '25% lift in win rates'
         },
         {name: 'Responsible AI Governance Suite',
@@ -1173,7 +1173,7 @@ export default function AdditionalServices() {
             'Incident response and RCA'
           ],
           link: '/contact',
-          marketSize: '$4.3B AI governance market'}
+          marketSize: '$4.3B AI governance market',
           roi: 'Audit time reduced by 70%'
         },
         {name: 'AI-Powered Autonomous Code Generation',
@@ -1189,7 +1189,7 @@ export default function AdditionalServices() {
             'Security vulnerability detection and fixes'
           ],
           link: '/contact',
-          marketSize: '$8.4B code generation market'}
+          marketSize: '$8.4B code generation market',
           roi: '85% reduction in development time'
         },
         {name: 'AI-Powered Digital Twin Platform',
@@ -1205,7 +1205,7 @@ export default function AdditionalServices() {
             'Integration with ERP and maintenance systems'
           ],
           link: '/contact',
-          marketSize: '$15.8B digital twin market'}
+          marketSize: '$15.8B digital twin market',
           roi: '40% reduction in operational costs'
         },
         {name: 'AI-Powered Autonomous Vehicle Fleet Management',
@@ -1221,7 +1221,7 @@ export default function AdditionalServices() {
             'Integration with smart city infrastructure'
           ],
           link: '/contact',
-          marketSize: '$18.4B autonomous vehicle market'}
+          marketSize: '$18.4B autonomous vehicle market',
           roi: '60% improvement in fleet efficiency'
         },
         {name: 'AI-Powered Quantum Computing Optimization',
@@ -1237,7 +1237,7 @@ export default function AdditionalServices() {
             'Custom quantum circuit design and optimization'
           ],
           link: '/contact',
-          marketSize: '$2.1B quantum computing market'}
+          marketSize: '$2.1B quantum computing market',
           roi: '300% improvement in quantum algorithm performance'
         },
         {name: 'AI-Powered Metaverse Development Platform',
@@ -1253,7 +1253,7 @@ export default function AdditionalServices() {
             'Analytics and user behavior tracking'
           ],
           link: '/contact',
-          marketSize: '$13.8B metaverse market'}
+          marketSize: '$13.8B metaverse market',
           roi: '70% reduction in metaverse development costs'
         },
         {name: 'AI-Powered Space Mission Optimization',
@@ -1269,7 +1269,7 @@ export default function AdditionalServices() {
             'Integration with ground control systems'
           ],
           link: '/contact',
-          marketSize: '$4.2B space technology market'}
+          marketSize: '$4.2B space technology market',
           roi: '50% improvement in mission success rates'
         },
         {name: 'AI-Powered Climate Change Modeling',
@@ -1285,7 +1285,7 @@ export default function AdditionalServices() {
             'Integration with IoT environmental sensors'
           ],
           link: '/contact',
-          marketSize: '$1.8B climate tech market'}
+          marketSize: '$1.8B climate tech market',
           roi: '80% improvement in climate prediction accuracy'
         },
         {name: 'AI-Powered Synthetic Biology Platform',
@@ -1301,7 +1301,7 @@ export default function AdditionalServices() {
             'Regulatory compliance and safety monitoring'
           ],
           link: '/contact',
-          marketSize: '$3.2B synthetic biology market'}
+          marketSize: '$3.2B synthetic biology market',
           roi: '200% improvement in drug discovery efficiency'
         },
         {name: 'AI-Powered Brain-Computer Interface',
@@ -1317,7 +1317,7 @@ export default function AdditionalServices() {
             'Research and development support tools'
           ],
           link: '/contact',
-          marketSize: '$1.7B brain-computer interface market'}
+          marketSize: '$1.7B brain-computer interface market',
           roi: '150% improvement in neural signal accuracy'
         }
       ]
@@ -1371,7 +1371,7 @@ export default function AdditionalServices() {
             'Security awareness training programs',
             'Vulnerability management and patching',
             '24/7 security monitoring and support'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Cloud Migration & Optimization',
@@ -1385,7 +1385,7 @@ export default function AdditionalServices() {
             'Performance monitoring and optimization',
             'Disaster recovery and backup solutions',
             '24/7 cloud infrastructure monitoring'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'DevOps Automation & CI/CD',
@@ -1399,7 +1399,7 @@ export default function AdditionalServices() {
             'Monitoring and logging solutions',
             'Security scanning and compliance automation',
             'Performance optimization and scaling'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Cybersecurity Assessment & Implementation',
@@ -1413,7 +1413,7 @@ export default function AdditionalServices() {
             'Incident response planning and training',
             'Compliance audit and certification support',
             'Ongoing security monitoring and updates'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Data Analytics & Business Intelligence',
@@ -1427,7 +1427,7 @@ export default function AdditionalServices() {
             'Interactive dashboard and reporting',
             'Real-time data processing and analytics',
             'Data governance and quality management'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'API Development & Integration',
@@ -1441,7 +1441,7 @@ export default function AdditionalServices() {
             'API documentation and testing',
             'Rate limiting and security implementation',
             'Performance monitoring and optimization'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Database Design & Optimization',
@@ -1455,7 +1455,7 @@ export default function AdditionalServices() {
             'Backup and disaster recovery solutions',
             'Security implementation and access control',
             'Monitoring and maintenance automation'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Mobile App Development',
@@ -1469,7 +1469,7 @@ export default function AdditionalServices() {
             'Backend integration and API development',
             'App store optimization and deployment',
             'Performance monitoring and analytics'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'E-commerce Platform Development',
@@ -1483,7 +1483,7 @@ export default function AdditionalServices() {
             'Customer portal and account management',
             'SEO optimization and marketing tools',
             'Analytics and reporting dashboard'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Blockchain & Web3 Solutions',
@@ -1497,7 +1497,7 @@ export default function AdditionalServices() {
             'Blockchain integration and APIs',
             'Cryptocurrency payment solutions',
             'Web3 wallet integration'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Zero Trust Security Architecture',
@@ -1509,7 +1509,7 @@ export default function AdditionalServices() {
             'Network micro-segmentation and policy enforcement',
             'Device trust and endpoint security',
             'Continuous security monitoring and threat detection'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Cloud Migration & Modernization',
@@ -1521,7 +1521,7 @@ export default function AdditionalServices() {
             'Containerization and microservices architecture',
             'Database migration and optimization',
             'Cost optimization and performance tuning'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'DevSecOps Pipeline Implementation',
@@ -1533,7 +1533,7 @@ export default function AdditionalServices() {
             'Infrastructure as Code (IaC) security validation',
             'Secrets management and secure deployment',
             'Compliance automation and reporting'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Disaster Recovery & Business Continuity',
@@ -1545,7 +1545,7 @@ export default function AdditionalServices() {
             'Automated failover and recovery procedures',
             'Business continuity planning and testing',
             'RTO/RPO optimization and monitoring'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'API Gateway & Microservices Management',
@@ -1557,7 +1557,7 @@ export default function AdditionalServices() {
             'Rate limiting, authentication, and authorization',
             'API analytics and performance monitoring',
             'Developer portal and documentation'
-          ]}
+          ],
           link: '/contact'
         },
         {name: 'Cloud-Native Application Development',
@@ -1573,7 +1573,7 @@ export default function AdditionalServices() {
             'Monitoring and observability implementation'
           ],
           link: '/contact',
-          marketSize: '$445B cloud computing market'}
+          marketSize: '$445B cloud computing market',
           roi: '60% reduction in infrastructure costs'
         },
         {name: 'Enterprise Data Integration Platform',
@@ -1589,7 +1589,7 @@ export default function AdditionalServices() {
             'Integration with cloud and on-premise systems'
           ],
           link: '/contact',
-          marketSize: '$33.3B data integration market'}
+          marketSize: '$33.3B data integration market',
           roi: '50% reduction in data processing time'
         },
         {name: 'Multi-Cloud Infrastructure Management',
@@ -1605,7 +1605,7 @@ export default function AdditionalServices() {
             'Cloud migration and modernization services'
           ],
           link: '/contact',
-          marketSize: '$445B cloud computing market'}
+          marketSize: '$445B cloud computing market',
           roi: '35% reduction in cloud costs'
         },
         {name: 'Edge Computing Solutions',
@@ -1621,7 +1621,7 @@ export default function AdditionalServices() {
             'Security and compliance for edge deployments'
           ],
           link: '/contact',
-          marketSize: '$15.7B edge computing market'}
+          marketSize: '$15.7B edge computing market',
           roi: '40% improvement in response times'
         },
         {name: 'Enterprise Security Operations Center (SOC)',
@@ -1637,7 +1637,7 @@ export default function AdditionalServices() {
             'Integration with SIEM and security tools'
           ],
           link: '/contact',
-          marketSize: '$366.1B cybersecurity market'}
+          marketSize: '$366.1B cybersecurity market',
           roi: '70% reduction in security incidents'
         },
         {name: 'Digital Transformation Consulting',
@@ -1653,7 +1653,7 @@ export default function AdditionalServices() {
             'Ongoing support and optimization'
           ],
           link: '/contact',
-          marketSize: '$1.8T digital transformation market'}
+          marketSize: '$1.8T digital transformation market',
           roi: '300% average ROI within 2 years'
         },
         {name: 'IoT Platform Development',
@@ -1669,7 +1669,7 @@ export default function AdditionalServices() {
             'Security and compliance implementation'
           ],
           link: '/contact',
-          marketSize: '$1.3T IoT market'}
+          marketSize: '$1.3T IoT market',
           roi: '25% reduction in operational costs'
         },
         {name: 'Enterprise Resource Planning (ERP) Implementation',
@@ -1685,7 +1685,7 @@ export default function AdditionalServices() {
             'Ongoing support and maintenance'
           ],
           link: '/contact',
-          marketSize: '$54.8B ERP market'}
+          marketSize: '$54.8B ERP market',
           roi: '20% improvement in operational efficiency'
         },
         {name: 'Customer Relationship Management (CRM) Solutions',
@@ -1701,7 +1701,7 @@ export default function AdditionalServices() {
             'Training and ongoing support'
           ],
           link: '/contact',
-          marketSize: '$58.8B CRM market'}
+          marketSize: '$58.8B CRM market',
           roi: '45% improvement in sales productivity'
         },
         {name: 'Edge Computing & 5G Infrastructure',
@@ -1717,7 +1717,7 @@ export default function AdditionalServices() {
             'Real-time analytics and decision making'
           ],
           link: '/contact',
-          marketSize: '$15.7B edge computing market'}
+          marketSize: '$15.7B edge computing market',
           roi: '60% improvement in response times'
         },
         {name: 'Quantum-Safe Security Implementation',
@@ -1733,7 +1733,7 @@ export default function AdditionalServices() {
             'Legacy system migration and integration'
           ],
           link: '/contact',
-          marketSize: '$2.8B quantum security market'}
+          marketSize: '$2.8B quantum security market',
           roi: '100% protection against quantum attacks'
         },
         {name: 'Autonomous Infrastructure Management',
@@ -1749,7 +1749,7 @@ export default function AdditionalServices() {
             'Integration with existing infrastructure'
           ],
           link: '/contact',
-          marketSize: '$12.4B autonomous infrastructure market'}
+          marketSize: '$12.4B autonomous infrastructure market',
           roi: '70% reduction in operational overhead'
         },
         {name: 'Neuromorphic Computing Systems',
@@ -1765,7 +1765,7 @@ export default function AdditionalServices() {
             'Research and development support'
           ],
           link: '/contact',
-          marketSize: '$1.2B neuromorphic computing market'}
+          marketSize: '$1.2B neuromorphic computing market',
           roi: '90% reduction in power consumption'
         },
         {name: 'Satellite Internet & Global Connectivity',
@@ -1781,7 +1781,7 @@ export default function AdditionalServices() {
             'Emergency and disaster response networks'
           ],
           link: '/contact',
-          marketSize: '$8.4B satellite internet market'}
+          marketSize: '$8.4B satellite internet market',
           roi: '80% improvement in global connectivity'
         },
         {name: 'Advanced Robotics & Automation Systems',
@@ -1797,7 +1797,7 @@ export default function AdditionalServices() {
             'Production line optimization and monitoring'
           ],
           link: '/contact',
-          marketSize: '$23.8B robotics market'}
+          marketSize: '$23.8B robotics market',
           roi: '65% improvement in manufacturing efficiency'
         },
         {name: 'Advanced Materials & Nanotechnology',
@@ -1813,7 +1813,7 @@ export default function AdditionalServices() {
             'Research and development collaboration'
           ],
           link: '/contact',
-          marketSize: '$4.2B nanotechnology market'}
+          marketSize: '$4.2B nanotechnology market',
           roi: '200% improvement in material performance'
         },
         {name: 'Advanced Manufacturing & Industry 4.0',
@@ -1829,7 +1829,7 @@ export default function AdditionalServices() {
             'Digital twin implementation and monitoring'
           ],
           link: '/contact',
-          marketSize: '$18.2B Industry 4.0 market'}
+          marketSize: '$18.2B Industry 4.0 market',
           roi: '50% improvement in manufacturing efficiency'
         },
         {name: 'Advanced Energy Storage & Grid Management',
@@ -1845,7 +1845,7 @@ export default function AdditionalServices() {
             'Microgrid design and implementation'
           ],
           link: '/contact',
-          marketSize: '$12.8B energy storage market'}
+          marketSize: '$12.8B energy storage market',
           roi: '40% improvement in energy efficiency'
         }
         ,
@@ -1862,7 +1862,7 @@ export default function AdditionalServices() {
             'Self-serve BI and semantic layer'
           ],
           link: '/contact',
-          marketSize: '$87B analytics market'}
+          marketSize: '$87B analytics market',
           roi: '50% faster analytics delivery'
         },
         {name: 'Platform Engineering (Internal Developer Platform)',
@@ -1878,7 +1878,7 @@ export default function AdditionalServices() {
             'Platform SRE and runtime standards'
           ],
           link: '/contact',
-          marketSize: '$24B platform engineering market'}
+          marketSize: '$24B platform engineering market',
           roi: '40% cycle time reduction'
         }
       ]
@@ -1901,7 +1901,7 @@ export default function AdditionalServices() {
             'Real-time collaboration and approval workflows'
           ],
           link: '/contact',
-          marketSize: '$15.7B video marketing market'}
+          marketSize: '$15.7B video marketing market',
           roi: '70% reduction in video production costs'
         },
         {name: 'Smart Expense Management SaaS',
@@ -1917,7 +1917,7 @@ export default function AdditionalServices() {
             'Real-time expense analytics and reporting'
           ],
           link: '/contact',
-          marketSize: '$4.2B expense management market'}
+          marketSize: '$4.2B expense management market',
           roi: '60% reduction in expense processing time'
         },
         {name: 'AI-Powered Customer Feedback Analyzer',
@@ -1933,7 +1933,7 @@ export default function AdditionalServices() {
             'Integration with CRM and support systems'
           ],
           link: '/contact',
-          marketSize: '$8.1B customer experience market'}
+          marketSize: '$8.1B customer experience market',
           roi: '45% improvement in customer satisfaction scores'
         }
       ]
@@ -1956,7 +1956,7 @@ export default function AdditionalServices() {
             'Integration with CI/CD pipelines'
           ],
           link: '/contact',
-          marketSize: '$12.3B test automation market'}
+          marketSize: '$12.3B test automation market',
           roi: '80% reduction in test maintenance effort'
         },
         {name: 'AI-Powered Voice Analytics Platform',
@@ -1972,7 +1972,7 @@ export default function AdditionalServices() {
             'Integration with contact center systems'
           ],
           link: '/contact',
-          marketSize: '$6.7B voice analytics market'}
+          marketSize: '$6.7B voice analytics market',
           roi: '35% improvement in customer service quality'
         },
         {name: 'AI-Powered Predictive Maintenance System',
@@ -1988,7 +1988,7 @@ export default function AdditionalServices() {
             'Integration with ERP and maintenance systems'
           ],
           link: '/contact',
-          marketSize: '$9.8B predictive maintenance market'}
+          marketSize: '$9.8B predictive maintenance market',
           roi: '25% reduction in unplanned downtime'
         }
       ]
@@ -2011,7 +2011,7 @@ export default function AdditionalServices() {
             'Multi-cloud deployment and management'
           ],
           link: '/contact',
-          marketSize: '$25.4B cloud-native development market'}
+          marketSize: '$25.4B cloud-native development market',
           roi: '40% faster application deployment'
         },
         {name: 'Enterprise Data Integration Platform',
@@ -2027,7 +2027,7 @@ export default function AdditionalServices() {
             'Integration with existing enterprise systems'
           ],
           link: '/contact',
-          marketSize: '$18.7B data integration market'}
+          marketSize: '$18.7B data integration market',
           roi: '50% improvement in data quality and accessibility'
         },
         {name: 'Multi-Cloud Infrastructure Management',
@@ -2042,8 +2042,8 @@ export default function AdditionalServices() {
             'Performance monitoring and optimization',
             'Cloud migration and modernization services'
           ],
-          link: '/contact'}
-          marketSize: '$31.2B multi-cloud management market';
+          link: '/contact',
+          marketSize: '$31.2B multi-cloud management market',
           roi: '30% reduction in cloud costs'
         }
       ]
@@ -2092,7 +2092,7 @@ export default function AdditionalServices() {
         <section className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 gap-8">
             {sections.map((section) => {
-              const Icon = section.icon}
+              const Icon = section.icon;
               return (
                 <div key={section.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
                   <div className="flex items-center gap-x-3 mb-6">
@@ -2107,7 +2107,7 @@ export default function AdditionalServices() {
                         <h3 className="text-lg font-semibold text-white mb-2">{item.name}</h3>
                         <p className="text-sm text-slate-300 mb-4">{item.blurb}</p>
                         <ul className="space-y-2 mb-4">
-                          {item.bullets.map((bullet} idx) => (
+                          {item.bullets.map((bullet, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-slate-400">
                               <CheckCircle className={`h-4 w-4 text-${section.color}-400`} />
                               <span>{bullet}</span>
@@ -2199,5 +2199,5 @@ export default function AdditionalServices() {
         </section>
       </div>
     </>
-  ),
+  );
 }
