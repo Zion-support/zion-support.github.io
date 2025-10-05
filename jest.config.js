@@ -29,6 +29,7 @@ export default {
     '!src/vite-env.d.ts',
     '!src/main.tsx',
     '!src/utils/improvementRunner.ts',
+    '!src/pages/blog-disabled/**/*',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testTimeout: 10000,
@@ -72,6 +73,7 @@ export default {
     '/__tests__/server/',
     '/__tests__/pages/',
     '/__tests__/disabled/',
+    '/src/pages/blog-disabled/',
   ],
   modulePathIgnorePatterns: [
     '/automation/',
