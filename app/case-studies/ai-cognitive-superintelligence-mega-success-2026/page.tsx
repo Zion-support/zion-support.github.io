@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 
 
 

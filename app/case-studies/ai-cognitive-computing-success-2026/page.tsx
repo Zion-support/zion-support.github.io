@@ -1,4 +1,13 @@
 import Link from 'next/link';
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import User from 'lucide-react/dist/esm/icons/user';
+import DollarSign from 'lucide-react/dist/esm/icons/dollar-sign';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Target from 'lucide-react/dist/esm/icons/target';
+import Share2 from 'lucide-react/dist/esm/icons/share-2';
+import Bookmark from 'lucide-react/dist/esm/icons/bookmark';
 
 
 
