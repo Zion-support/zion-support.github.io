@@ -20,11 +20,19 @@ const Header: React.FC = () => {
             </a>
             <a href="/services" className="text-gray-300 hover:text-white transition-colors">
               Services
+<<<<<<< HEAD
             </a>
             <a href="/blog" className="text-gray-300 hover:text-white transition-colors">
               Blog
             </a>
             <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
+=======
+            </Link>
+            <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
+              Blog
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+>>>>>>> c7f90c7b2082e88650f45c5e38f8f08c7d1a5161
               Contact
             </a>
           </nav>
@@ -56,11 +64,19 @@ const Header: React.FC = () => {
               </a>
               <a href="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Services
+<<<<<<< HEAD
               </a>
               <a href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Blog
               </a>
               <a href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+=======
+              </Link>
+              <Link to="/blog" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+                Blog
+              </Link>
+              <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+>>>>>>> c7f90c7b2082e88650f45c5e38f8f08c7d1a5161
                 Contact
               </a>
             </div>
