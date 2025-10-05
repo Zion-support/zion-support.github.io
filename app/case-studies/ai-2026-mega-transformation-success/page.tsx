@@ -1,11 +1,14 @@
 import Link from 'next/link';
 
-import TrendingUp from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Clock from 'lucide-react';
-import Users from 'lucide-react';
-import Award from 'lucide-react';
-import ArrowRight from 'lucide-react';
+// @ts-ignore
+import { 
+  TrendingUp, 
+  DollarSign, 
+  Clock, 
+  Users, 
+  Award, 
+  ArrowRight 
+} from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026 Mega Transformation: $50M Revenue Increase Case Study',
