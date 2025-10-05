@@ -1,5 +1,6 @@
 
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
+import Calendar from 'lucide-react/dist/esm/icons/alendar';import { Calendar, Clock } from 'lucide-react';
+
 import Clock from 'lucide-react/dist/esm/icons/lock';
 import Shield from 'lucide-react/dist/esm/icons/hield';
 import Cpu from 'lucide-react/dist/esm/icons/pu';

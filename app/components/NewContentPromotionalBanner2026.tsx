@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ArrowRight, TrendingUp, Target, Rocket, Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [

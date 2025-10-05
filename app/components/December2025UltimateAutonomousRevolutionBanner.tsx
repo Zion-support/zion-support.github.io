@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 
+import { ArrowRight, TrendingUp, CheckCircle, Brain, Zap, Star } from 'lucide-react';
 
 export default function December2025UltimateAutonomousRevolutionBanner() {
   return (

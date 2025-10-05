@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight, CheckCircle, Brain, Zap } from 'lucide-react';
 
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
 import Atom from 'lucide-react/dist/esm/icons/tom';

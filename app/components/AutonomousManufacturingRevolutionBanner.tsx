@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ArrowRight, TrendingUp, Zap } from 'lucide-react';
 
 import Link from 'next/link';
 

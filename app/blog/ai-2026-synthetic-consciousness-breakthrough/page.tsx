@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight, TrendingUp, Target, Brain, Zap } from 'lucide-react';
 
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
 import Brain from 'lucide-react/dist/esm/icons/rain';

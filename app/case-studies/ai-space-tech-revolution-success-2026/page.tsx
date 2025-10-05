@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 
+import { DollarSign, Rocket, Satellite, Zap, Globe } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Space Tech Revolution: $100M Mission Success Case Study',

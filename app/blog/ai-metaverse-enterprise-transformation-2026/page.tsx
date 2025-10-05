@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Clock, Users, Target, Zap, Globe } from 'lucide-react';
 
 import Clock from 'lucide-react/dist/esm/icons/lock';
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';

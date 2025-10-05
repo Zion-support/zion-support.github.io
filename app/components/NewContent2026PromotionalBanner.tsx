@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 
+import { ArrowRight, TrendingUp, Brain, Zap } from 'lucide-react';
 
 export default function NewContent2026PromotionalBanner() {
   return (

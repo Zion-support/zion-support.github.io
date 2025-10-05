@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 
+import { ArrowLeft, Clock, TrendingUp, Target, CheckCircle, Zap, BookOpen } from 'lucide-react';
 
 import { Metadata } from 'next';
 

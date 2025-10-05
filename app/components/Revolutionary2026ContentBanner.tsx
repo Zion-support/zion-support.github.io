@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 
+import { ArrowRight, Brain, Zap } from 'lucide-react';
 
 export default function Revolutionary2026ContentBanner() {
   return (

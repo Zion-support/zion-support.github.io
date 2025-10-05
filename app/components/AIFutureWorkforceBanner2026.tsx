@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 
+import { ArrowRight, Users, TrendingUp, Brain } from 'lucide-react';
 
 export default function AIFutureWorkforceBanner2026() {
   return (
