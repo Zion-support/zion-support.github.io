@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import {CheckCircle,
   Zap,
   TrendingUp,
@@ -13,6 +14,9 @@ import {CheckCircle,
   Rocket,
   Cpu
 } from 'lucide-react'
+=======
+import {CheckCircle} from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-cb3a
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025'
 import { SEO } from '@/components/SEO'
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
