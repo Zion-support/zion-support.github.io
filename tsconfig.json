@@ -26,5 +26,6 @@
     }
   },
   "include": ["src", "app"],
+  "exclude": ["src/pages/blog-disabled/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
