@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Agent Ops Observability 2026 | Zion Tech Group',
@@ -17,7 +17,7 @@ export const metadata = {
 export default function AgentOpsObservability2026Page() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
+      <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</ArrowRight>
       <h1 className="text-4xl font-bold text-gray-900 mb-3">Agent Ops Observability 2026</h1>
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Reliability</div>
 
@@ -45,7 +45,7 @@ export default function AgentOpsObservability2026Page() {
         <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
           <h3 className="m-0">Need help instrumenting?</h3>
           <p className="m-0">We deploy observability foundations with policy gates and value stream analytics.</p>
-          <Link href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</Link>
+          <ArrowRight href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</ArrowRight>
         </div>
       </div>
     </div>

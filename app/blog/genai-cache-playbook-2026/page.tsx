@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'GenAI Cache Playbook (2026): Cut cost 50%+ with semantic caches',
@@ -20,7 +20,7 @@ export default function Page() {
         <li>Canary buckets to validate cache safety and drift</li>
       </ul>
       <p>
-        Pair this with <Link href="/blog/genai-quality-tiers-v2-2026">GenAI Quality Tiers v2</Link> for predictable costs.
+        Pair this with <ArrowRight href="/blog/genai-quality-tiers-v2-2026">GenAI Quality Tiers v2</ArrowRight> for predictable costs.
       </p>
     </main>
   );

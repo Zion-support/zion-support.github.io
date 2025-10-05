@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2028: Self‑Healing Platforms — 99.995% Uptime at Lower Cost',
@@ -37,8 +37,8 @@ export default function Page() {
         </section>
 
         <footer className="mt-12 border-t border-gray-200 pt-6 flex items-center justify-between">
-          <Link href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</Link>
-          <Link href="/content-hub" className="text-gray-600 hover:text-gray-800">Explore All Content →</Link>
+          <ArrowRight href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</ArrowRight>
+          <ArrowRight href="/content-hub" className="text-gray-600 hover:text-gray-800">Explore All Content →</ArrowRight>
         </footer>
       </div>
     </article>

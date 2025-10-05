@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AutonomousEnterprise2027Banner() {
   return (
@@ -6,7 +6,7 @@ export default function AutonomousEnterprise2027Banner() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-teal-600/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.3),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle at 50% 50%,rgba(16,185,129,0.3),transparent 50%)]"></div>
       </div>
 
       {/* Content */}
@@ -30,18 +30,18 @@ export default function AutonomousEnterprise2027Banner() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2027-autonomous-enterprise-transformation"
                 className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-center"
               >
                 Explore 2027 Vision
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/services/autonomous-enterprise"
                 className="px-8 py-4 border border-emerald-500 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 text-center"
               >
                 Start Your Journey
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 

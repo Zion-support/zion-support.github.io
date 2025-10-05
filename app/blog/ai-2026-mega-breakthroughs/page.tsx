@@ -1,12 +1,11 @@
 import Link from 'next/link';
+import { Target, Brain, Rocket, Zap } from 'lucide-react';
 
-=======
-import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import Zap from 'lucide-react/dist/esm/icons/zap';
 import Brain from 'lucide-react/dist/esm/icons/brain';
 import Shield from 'lucide-react/dist/esm/icons/shield';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
-import Target from 'lucide-react/dist/esm/icons/target';>>>>>>> origin/merge-pr-25212
+import Target from 'lucide-react/dist/esm/icons/target';
 
 export const metadata = {
   title: 'AI 2026 Mega Breakthroughs: The Revolutionary Technologies Reshaping Enterprise',

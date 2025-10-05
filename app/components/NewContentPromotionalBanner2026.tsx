@@ -1,4 +1,9 @@
 import React from 'react';
+import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+
+import ArrowRight from 'next/link';
+
+import { ArrowRight, TrendingUp, Target, Rocket, Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
@@ -131,13 +136,13 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </p>
 
                 {/* CTA Button */}
-                <Link
+                <ArrowRight
                   href={`/blog/${content.slug}`}
                   className={`inline-flex items-center gap-3 bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
                   <span className="text-lg">Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                </Link>
+                </ArrowRight>
               </div>
 
               {/* Corner accent */}
@@ -164,21 +169,21 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link
+              <ArrowRight
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
               >
                 <Sparkles className="w-6 h-6" />
                 <span>Start Your AI Journey</span>
-              </Link>
+              </ArrowRight>
               
-              <Link
+              <ArrowRight
                 href="/blog"
                 className="border-2 border-fuchsia-400 text-fuchsia-400 hover:bg-fuchsia-400 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
               >
                 <span>Explore All Content</span>
                 <ArrowRight className="w-6 h-6" />
-              </Link>
+              </ArrowRight>
             </div>
 
             {/* Stats */}

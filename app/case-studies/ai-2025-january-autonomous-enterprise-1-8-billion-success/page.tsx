@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AI2025JanuaryAutonomousEnterpriseSuccess() {
   return (
@@ -336,36 +336,36 @@ export default function AI2025JanuaryAutonomousEnterpriseSuccess() {
               Contact Zion Tech Group to begin your own transformation journey and achieve unprecedented cost savings.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/contact" 
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/blog/ai-2025-january-autonomous-enterprise-transformation" 
                 className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
               >
                 Read Technical Details
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
           {/* Navigation */}
           <div className="mt-12 pt-8 border-t border-slate-800">
             <div className="flex justify-between items-center">
-              <Link 
+              <ArrowRight 
                 href="/case-studies/ai-2025-january-quantum-neural-2-5-billion-success"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 ← Previous: $2.5B Quantum Neural Success
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/case-studies"
                 className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 All Case Studies →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>

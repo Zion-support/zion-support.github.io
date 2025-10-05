@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'February 2026: Transcendent Automation Revolution - Beyond Human Intelligence | Zion Tech Group',
@@ -214,24 +214,24 @@ export default function February2026TranscendentAutomationRevolutionPage() {
               and achieve $1 trillion+ ROI through infinite consciousness and universal domination.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <ArrowRight
                 href="/contact"
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/case-studies/ai-2026-february-transcendent-automation-1-trillion-success"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 View $1 Trillion Success →
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/services/transcendent-automation"
                 className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Learn More
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>

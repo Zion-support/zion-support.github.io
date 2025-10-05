@@ -1,4 +1,6 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
+import { ArrowLeft, ArrowRight, Bookmark, Brain, Calendar, CheckCircle, Clock, Shield, TrendingUp, User, Zap } from 'lucide-react';
+
 
 // Use simple SVG icons instead of lucide-react to avoid TypeScript issues
 const ArrowLeft = ({ className }: { className?: string }) => (
@@ -25,7 +27,7 @@ const Clock = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const Tag = ({ className }: { className?: string }) => (
+const Bookmark = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
   </svg>
@@ -73,13 +75,13 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link 
+          <ArrowRight 
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
-          </Link>
+          </ArrowRight>
         </div>
       </header>
 
@@ -113,7 +115,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
           <div className="flex flex-wrap gap-2">
             {['AI Success Story', '$2.8B Savings', 'Autonomous Enterprise', 'December 2025', 'Fortune 100'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag className="w-3 h-3" />
+                <Bookmark className="w-3 h-3" />
                 {tag}
               </span>
             ))}
@@ -451,12 +453,12 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
                 <p className="text-blue-700 mb-4">
                   Learn how Zion Tech Group can help your organization achieve similar results with our revolutionary AI autonomous enterprise platform.
                 </p>
-                <Link 
+                <ArrowRight 
                   href="/contact" 
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
                   Schedule Consultation
-                </Link>
+                </ArrowRight>
               </div>
               <div>
                 <p className="text-blue-700 mb-4">

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -451,18 +451,18 @@ export default function AIAutomation2026CompleteGuide() {
               Join thousands of organizations already achieving unprecedented efficiency gains with AI automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/case-studies" 
                 className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 View Automation Success Stories
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/contact" 
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
               >
                 Start Your Automation Journey
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -471,7 +471,7 @@ export default function AIAutomation2026CompleteGuide() {
         <div className="max-w-4xl mx-auto mt-16">
           <h3 className="text-2xl font-bold text-white mb-8">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2026-enterprise-breakthrough" className="group">
+            <ArrowRight href="/blog/ai-2026-enterprise-breakthrough" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-emerald-400 mb-2">
                   AI 2026 Enterprise Breakthrough
@@ -480,8 +480,8 @@ export default function AIAutomation2026CompleteGuide() {
                   Discover the next frontier of business transformation with AI
                 </p>
               </div>
-            </Link>
-            <Link href="/blog/autonomous-agents-2026" className="group">
+            </ArrowRight>
+            <ArrowRight href="/blog/autonomous-agents-2026" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-emerald-400 mb-2">
                   Autonomous Agents 2026
@@ -490,7 +490,7 @@ export default function AIAutomation2026CompleteGuide() {
                   The future of self-managing business systems
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

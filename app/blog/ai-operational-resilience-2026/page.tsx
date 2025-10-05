@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'AI Operational Resilience 2026: Designing for Failure and Recovery',
@@ -54,10 +54,10 @@ export default function Page() {
 					<h3 className="text-xl font-semibold mb-2">Next up</h3>
 					<ul className="list-disc pl-6 text-blue-700">
 						<li>
-							<Link href="/content-hub">Explore the Content Hub</Link>
+							<ArrowRight href="/content-hub">Explore the Content Hub</ArrowRight>
 						</li>
 						<li>
-							<Link href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization Playbook</Link>
+							<ArrowRight href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization Playbook</ArrowRight>
 						</li>
 					</ul>
 				</div>

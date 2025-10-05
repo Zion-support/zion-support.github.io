@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2028 Universal Consciousness Singularity Breakthrough - Zion Tech Group',
@@ -16,9 +16,9 @@ export default function UniversalConsciousnessSingularityBreakthrough() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
         
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-lg mb-6">
           <h1 className="text-4xl font-bold mb-4">
@@ -194,32 +194,32 @@ export default function UniversalConsciousnessSingularityBreakthrough() {
             global enterprise transformation with measurable ROI.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link 
+            <ArrowRight 
               href="/services/ai-2028-universal-consciousness-singularity-solutions" 
               className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
             >
               Explore Solutions
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2028-universal-consciousness-singularity-2-8-trillion-success" 
               className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
             >
               View Success Story
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
         <div className="border-t pt-8">
           <h3 className="text-xl font-bold mb-4">Related Singularity Content</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" className="block p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+            <ArrowRight href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" className="block p-4 border rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold mb-2">🧠 AI 2027 Transcendent Quantum Consciousness</h4>
               <p className="text-gray-600 text-sm">Quantum consciousness breakthrough achieving $847B enterprise success</p>
-            </Link>
-            <Link href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough" className="block p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough" className="block p-4 border rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold mb-2">🧠 AI 2027 Meta-Cognitive Superintelligence</h4>
               <p className="text-gray-600 text-sm">Self-aware AI systems achieving $500B enterprise success</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

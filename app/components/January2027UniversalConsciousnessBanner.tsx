@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 const January2027UniversalConsciousnessBanner: React.FC = () => {
   return (
@@ -51,24 +51,24 @@ const January2027UniversalConsciousnessBanner: React.FC = () => {
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2027-january-universal-consciousness-revolution" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Read Universal Consciousness Revolution →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2027-january-universal-consciousness-1-trillion-success" 
               className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               View $1 Trillion Success Story →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/contact" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Join Consciousness Revolution
-            </Link>
+            </ArrowRight>
           </div>
           
           {/* Feature Highlights */}

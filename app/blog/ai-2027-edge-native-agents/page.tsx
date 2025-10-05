@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency',
@@ -12,7 +12,7 @@ export default function Page() {
 		<div className="min-h-screen bg-slate-950 text-white">
 			<main className="max-w-3xl mx-auto px-6 py-16">
 				<div className="mb-8">
-					<Link href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</Link>
+					<ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300">← Back to Blog</ArrowRight>
 				</div>
 				<h1 className="text-4xl font-extrabold mb-4">
 					AI 2027: Edge‑Native Agents — Real‑Time, Reliable, Low‑Latency
@@ -65,8 +65,8 @@ export default function Page() {
 				<div className="mt-12 p-6 rounded-lg bg-slate-900 border border-white/10">
 					<div className="font-semibold mb-2">Next up</div>
 					<div className="flex flex-col sm:flex-row gap-3">
-						<Link href="/blog/ai-2027-cost-optimization-playbook" className="text-emerald-400 hover:text-emerald-300">AI 2027 Cost Optimization Playbook →</Link>
-						<Link href="/content-hub" className="text-blue-400 hover:text-blue-300">Explore the Content Hub →</Link>
+						<ArrowRight href="/blog/ai-2027-cost-optimization-playbook" className="text-emerald-400 hover:text-emerald-300">AI 2027 Cost Optimization Playbook →</ArrowRight>
+						<ArrowRight href="/content-hub" className="text-blue-400 hover:text-blue-300">Explore the Content Hub →</ArrowRight>
 					</div>
 				</div>
 			</main>

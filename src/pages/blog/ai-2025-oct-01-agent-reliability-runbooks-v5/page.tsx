@@ -8,9 +8,7 @@ export default function BlogPage(): React.JSX.Element {
         <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
         <meta 
           name="description" 
-
           content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback." 
-
         />
         <link 
           rel="canonical" 
@@ -46,7 +44,6 @@ export default function BlogPage(): React.JSX.Element {
               <a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
             </div>
           </div>
-
         </div>
       </div>
     </div>

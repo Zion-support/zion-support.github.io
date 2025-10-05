@@ -1,4 +1,19 @@
 import Link from 'next/link';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Target from 'lucide-react/dist/esm/icons/target';
+import Users from 'lucide-react/dist/esm/icons/users';
+import DollarSign from 'lucide-react/dist/esm/icons/dollar-sign';
+import Award from 'lucide-react/dist/esm/icons/award';
+
+
+
+
+
+
+
+
 
 export const metadata = {
   title: 'AI Synthetic Consciousness: $10B ROI Success Story - Fortune 500 Transformation',

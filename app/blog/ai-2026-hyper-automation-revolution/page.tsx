@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026: Hyper-Automation Revolution - Complete Enterprise Transformation - Zion Tech Group',
@@ -172,18 +172,18 @@ export default function AI2026HyperAutomationRevolution() {
             automation capabilities and ROI. Contact our automation experts today.
           </p>
           <div className="flex gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all"
             >
               Start Transformation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-hyper-automation-revolution-success" 
               className="border border-red-500 text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all"
             >
               View Success Stories
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>
@@ -191,29 +191,29 @@ export default function AI2026HyperAutomationRevolution() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Automation Solutions</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link href="/blog/ai-2026-autonomous-enterprise-operations" className="group block">
+          <ArrowRight href="/blog/ai-2026-autonomous-enterprise-operations" className="group block">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-2 py-1 rounded text-xs font-bold mb-3 inline-block">AUTONOMOUS OPS</span>
               <h4 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 mb-2">Autonomous Enterprise Operations</h4>
               <p className="text-gray-600 text-sm">95% autonomous operations with AI-powered decision making</p>
             </div>
-          </Link>
+          </ArrowRight>
           
-          <Link href="/blog/ai-2026-enterprise-automation-revolution" className="group block">
+          <ArrowRight href="/blog/ai-2026-enterprise-automation-revolution" className="group block">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded text-xs font-bold mb-3 inline-block">ENTERPRISE AI</span>
               <h4 className="text-lg font-bold text-gray-900 group-hover:text-green-600 mb-2">Enterprise Automation Revolution</h4>
               <p className="text-gray-600 text-sm">Complete enterprise transformation with advanced AI automation</p>
             </div>
-          </Link>
+          </ArrowRight>
           
-          <Link href="/case-studies/ai-2026-hyper-automation-revolution-success" className="group block">
+          <ArrowRight href="/case-studies/ai-2026-hyper-automation-revolution-success" className="group block">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 rounded text-xs font-bold mb-3 inline-block">$3.2B ROI</span>
               <h4 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 mb-2">Hyper-Automation Success</h4>
               <p className="text-gray-600 text-sm">How Fortune 500 achieved $3.2B ROI with hyper-automation</p>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

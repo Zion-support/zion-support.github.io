@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AIQuantumComputingBreakthrough2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <div className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/" className="text-blue-400 hover:text-blue-300 transition-colors">
+          <ArrowRight href="/" className="text-blue-400 hover:text-blue-300 transition-colors">
             ← Back to Home
-          </Link>
+          </ArrowRight>
         </nav>
 
         <article className="max-w-4xl mx-auto">

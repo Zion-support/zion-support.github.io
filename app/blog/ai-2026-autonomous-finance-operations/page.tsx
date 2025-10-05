@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Autonomous Finance Operations: 98% Automation & $100M+ Savings',
@@ -240,12 +240,12 @@ export default function AI2026AutonomousFinanceOperations() {
             Join Fortune 500 companies achieving 98% automation and $100M+ savings with AI autonomous finance operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/services/ai-finance-automation"
               className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Finance AI Services
-            </Link>
+            </ArrowRight>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-600 transition-colors"
@@ -259,22 +259,22 @@ export default function AI2026AutonomousFinanceOperations() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2026-autonomous-business-systems" className="group">
+            <ArrowRight href="/blog/ai-2026-autonomous-business-systems" className="group">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   AI 2026 Autonomous Business Systems
                 </h4>
                 <p className="text-gray-600">Discover how autonomous AI systems are transforming enterprise operations across all departments.</p>
               </div>
-            </Link>
-            <Link href="/case-studies/ai-finance-automation-success-2026" className="group">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-finance-automation-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   Finance Automation Success Story
                 </h4>
                 <p className="text-gray-600">See how a Fortune 500 company achieved $100M savings with AI finance automation.</p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

@@ -1,45 +1,33 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Common patterns to fix
+// Common TypeScript/JSX fixes
 const fixes = [
-  // Fix missing commas in object literals
+  // Fix JSX syntax issues
   {
-    pattern: /(\s+icon:\s*['"`][^'"`]*['"`])\s*\n\s*(gradient:|badge:|insights:|value:|label:)/g,
-    replacement: '$1,\n      $2'
-  },
-  // Fix missing closing tags for self-closing elements
-  {
-    pattern: /<br\s*$/gm,
+    pattern: /<br\s*\/?>/g,
     replacement: '<br />'
   },
-  // Fix malformed JSX attributes
+  // Fix unescaped > in JSX
   {
-    pattern: /className=\{`([^`]*)\$\{([^}]*)\}\s*([^`]*)\`\}/g,
-    replacement: 'className={`$1${$2}$3`}'
+    pattern: /{'>'}/g,
+    replacement: '{">"}'
   },
-  // Fix missing closing tags for JSX elements
+  // Fix missing commas in object literals
   {
-    pattern: /<(\w+)\s*$/gm,
-    replacement: '<$1 />'
+    pattern: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
+    replacement: '$1 = { $2 }, $3'
   },
-  // Fix malformed template literals
+  // Fix JSX expressions
   {
-    pattern: /\$\{>\s*([^}]*)\}/g,
-    replacement: '${$1}'
+    pattern: /{([^}]*)\s*>\s*([^}]*)}/g,
+    replacement: '{ $1 > $2 }'
   },
-  // Fix missing commas in arrays
+  // Fix object property syntax
   {
-    pattern: /(\s+icon:\s*['"`][^'"`]*['"`])\s*\n\s*(\})/g,
-    replacement: '$1,\n    $2'
-  },
-  // Fix malformed JSX expressions
-  {
-    pattern: /(\s+)\{([^}]*)\}\s*\n\s*(\})/g,
-    replacement: '$1{$2}\n    $3'
+    pattern: /(\w+)\s*:\s*([^,}]+)\s*(\w+)/g,
+    replacement: '$1: $2, $3'
   }
 ];
 
@@ -68,27 +56,21 @@ function fixFile(filePath) {
   }
 }
 
+// Main function
 async function main() {
-  const srcDir = path.join(process.cwd(), 'src');
-  const pattern = path.join(srcDir, '**/*.{ts,tsx}');
-  
-  console.log('Scanning for TypeScript files...');
-  const files = await glob(pattern);
-  
-  console.log(`Found ${files.length} files to check`);
-  
+  // Find all TypeScript/TSX files
+  const files = await glob('src/**/*.{ts,tsx}');
+
+  console.log(`Found ${files.length} TypeScript files to check...`);
+
   let fixedCount = 0;
   files.forEach(file => {
     if (fixFile(file)) {
       fixedCount++;
     }
   });
-  
+
   console.log(`Fixed ${fixedCount} files`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixFile, fixes };
+main().catch(console.error);

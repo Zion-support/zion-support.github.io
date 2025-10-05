@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
@@ -24,9 +24,9 @@ export default function AIZeroDayThreatDetection() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">
             Cybersecurity Breakthrough
@@ -288,12 +288,12 @@ export default function AIZeroDayThreatDetection() {
             and achieve 99.97% protection with zero false positives.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/services/ai-cybersecurity"
               className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Security Solutions
-            </Link>
+            </ArrowRight>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"

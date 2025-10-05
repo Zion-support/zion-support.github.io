@@ -1,11 +1,13 @@
 import { TrendingUp } from 'lucide-react';
 import { Link } from "react-router-dom";
 
+
 ;
 
 const October2025RevOpsBanner = () => {
   return (
-    <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border-y border-emerald-500/30 overflow-hidden" > {/* Animated background elements */}
+    <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border-y border-emerald-500/30 overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />

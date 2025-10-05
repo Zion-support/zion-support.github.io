@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Intelligent Data Fabric 2026: Real-Time AI for Connected Enterprises',
@@ -56,10 +56,10 @@ export default function Page() {
 					<h3 className="text-xl font-semibold mb-2">Next up</h3>
 					<ul className="list-disc pl-6 text-amber-700">
 						<li>
-							<Link href="/blog/ai-operational-resilience-2026">AI Operational Resilience 2026</Link>
+							<ArrowRight href="/blog/ai-operational-resilience-2026">AI Operational Resilience 2026</ArrowRight>
 						</li>
 						<li>
-							<Link href="/content-hub">Explore the Content Hub</Link>
+							<ArrowRight href="/content-hub">Explore the Content Hub</ArrowRight>
 						</li>
 					</ul>
 				</div>
