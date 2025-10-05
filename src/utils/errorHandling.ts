@@ -138,7 +138,7 @@ export const logInfo = (message: string, context?: Record<string, any>) => {
 const sendToMonitoring = (_errorLog: ErrorLog) => {
   if (typeof window === 'undefined') return;
 
-  // Log to console for now (errorLog is used here)
+  // Log to console for now (_errorLog is used here)
   console.debug('Monitoring service would receive:', _errorLog);
 
   // Example: Send to Sentry, LogRocket, or custom endpoint
