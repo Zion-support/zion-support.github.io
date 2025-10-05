@@ -9,6 +9,7 @@ class SecurityEnhancer {
       SecurityEnhancer.instance = new SecurityEnhancer();
     }
     return SecurityEnhancer.instance;
+<<<<<<< HEAD
   }
 
   init(): void {
@@ -61,6 +62,26 @@ class SecurityEnhancer {
     console.log('Security headers configured');
   }
 
+=======
+  }
+
+  init(): void {
+    if (this.isInitialized) {
+      return;
+    }
+    this.setupCSP();
+    this.isInitialized = true;
+    console.log('Security enhancer initialized');
+  }
+
+  private setupCSP(): void {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content-Security-Policy';
+    meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
+    document.head.appendChild(meta);
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
   cleanup(): void {
     this.isInitialized = false;
     console.log('Security enhancer cleaned up');

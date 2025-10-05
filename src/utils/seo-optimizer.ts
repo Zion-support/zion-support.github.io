@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * SEO Optimizer Utility
  * Advanced SEO monitoring and optimization tools
@@ -423,3 +424,12 @@ if (typeof window !== 'undefined') {
 }
 
 export default SEOOptimizer;
+=======
+const seoOptimizer = {
+  trackPageView: () => {
+    console.log('Page view tracked');
+  }
+};
+
+export default seoOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d

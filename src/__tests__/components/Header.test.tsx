@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../../components/Header';
 import '@testing-library/jest-dom';
@@ -11,6 +12,9 @@ const renderWithRouter = (component: React.ReactElement) => {
     </BrowserRouter>
   );
 };
+=======
+import Header from '../../components/Header';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
 
 describe('Header', () => {
   it('renders without crashing', () => {

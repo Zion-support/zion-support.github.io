@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +38,64 @@ const AdvancedDashboard: React.FC = () => {
 =======
   const [activeTab, setActiveTab] = useState("overview");
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+=======
+import React, { useState, useEffect } from 'react';
+
+interface PerformanceData {
+  memoryUsage: number;
+  memoryLimit: number;
+}
+
+interface AccessibilityData {
+  features: string;
+}
+
+interface SecurityData {
+  status: string;
+}
+
+interface UXData {
+  status: string;
+}
+
+interface AnalyticsData {
+  id: string;
+  startTime: number;
+  lastActivity: number;
+  pageViews: number;
+  events: Array<{
+    event: string;
+    timestamp: number;
+    properties?: Record<string, unknown>;
+  }>;
+  deviceInfo: {
+    screenResolution: string;
+    language: string;
+    timezone: string;
+  };
+}
+
+interface CacheData {
+  size: number;
+  totalSize: number;
+  maxSize: number;
+  hitRate: number;
+}
+
+interface DashboardData {
+  analytics: AnalyticsData;
+  cache: CacheData;
+  performance: PerformanceData;
+  accessibility: AccessibilityData;
+  security: SecurityData;
+  ux: UXData;
+}
+
+const AdvancedDashboard: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState<DashboardData | null>(null);
+  const [activeTab, setActiveTab] = useState("overview");
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
 
   useEffect(() => {
     if (isOpen) {
@@ -99,6 +158,7 @@ const AdvancedDashboard: React.FC = () => {
 
     // Convert cache stats to proper format
     const cache: CacheData = {
+<<<<<<< HEAD
       size:
         typeof cacheStats === "object" && cacheStats !== null
           ? ((cacheStats as Record<string, unknown>).size as number) || 0
@@ -144,15 +204,51 @@ const AdvancedDashboard: React.FC = () => {
         interactivity: 0,
         visualStability: 0
       }
+=======
+      size: typeof cacheStats === "object" && cacheStats !== null
+        ? ((cacheStats as Record<string, unknown>).size as number) || 0
+        : 0,
+      totalSize: typeof cacheStats === "object" && cacheStats !== null
+        ? ((cacheStats as Record<string, unknown>).totalSize as number) || 0
+        : 0,
+      maxSize: typeof cacheStats === "object" && cacheStats !== null
+        ? ((cacheStats as Record<string, unknown>).maxSize as number) || 0
+        : 0,
+      hitRate: typeof cacheStats === "object" && cacheStats !== null
+        ? ((cacheStats as Record<string, unknown>).hitRate as number) || 0
+        : 0
+    };
+
+    setData({
+      analytics: analyticsData,
+      cache: cache,
+      performance: {
+        memoryUsage: (performance as Performance & {
+          memory?: { usedJSHeapSize?: number };
+        }).memory?.usedJSHeapSize || 0,
+        memoryLimit: (performance as Performance & {
+          memory?: { jsHeapSizeLimit?: number };
+        }).memory?.jsHeapSizeLimit || 0
+      },
+      accessibility: { features: "Screen reader support, keyboard navigation" },
+      security: { status: "Active" },
+      ux: { status: "Optimized" }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
     });
   };
 
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return "0 Bytes";
     const k = 1024;
+<<<<<<< HEAD
       const sizes = ["Bytes", "KB", "MB", "GB"];
       const i = Math.floor(Math.log(bytes) / Math.log(k));
       return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+=======
+    const sizes = ["Bytes", "KB", "MB", "GB"];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
   };
 
   const formatDuration = (ms: number): string => {
@@ -249,6 +345,7 @@ const AdvancedDashboard: React.FC = () => {
         {/* Tabs */}
         <div className="bg-gray-100 border-b">
           <div className="flex space-x-1 p-2">
+<<<<<<< HEAD
               {[
                 { id: "overview", label: "Overview" },
                 { id: "analytics", label: "Analytics" },
@@ -256,6 +353,15 @@ const AdvancedDashboard: React.FC = () => {
                 { id: "cache", label: "Cache" },
                 { id: "security", label: "Security" },
                 { id: "accessibility", label: "Accessibility" }
+=======
+            {[
+              { id: "overview", label: "Overview" },
+              { id: "analytics", label: "Analytics" },
+              { id: "performance", label: "Performance" },
+              { id: "cache", label: "Cache" },
+              { id: "security", label: "Security" },
+              { id: "accessibility", label: "Accessibility" }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -280,18 +386,26 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
                 <div className="space-y-1 text-sm">
                   <div>
+<<<<<<< HEAD
                       Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-green-800">Sessions</h3>
                     <p className="text-2xl font-bold text-green-600">{data.analytics.sessions}</p>
+=======
+                    Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
+                  </div>
+                  <div>
+                    Duration: {formatDuration(Date.now() - (data.analytics?.startTime || 0))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
                   </div>
                   <div className="bg-yellow-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-yellow-800">Bounce Rate</h3>
                     <p className="text-2xl font-bold text-yellow-600">{(data.analytics.bounceRate * 100).toFixed(1)}%</p>
                   </div>
                 </div>
+<<<<<<< HEAD
               )}
               
               {activeTab === "analytics" && (
@@ -306,6 +420,19 @@ const AdvancedDashboard: React.FC = () => {
                       <p className="text-sm text-gray-600">Sessions</p>
                       <p className="text-xl font-bold">{data.analytics.sessions}</p>
                     </div>
+=======
+              </div>
+
+              <div className="bg-purple-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-purple-900 mb-2">Performance</h3>
+                <div className="space-y-1 text-sm">
+                  <div>Memory: {formatBytes(data.performance?.memoryUsage || 0)}</div>
+                  <div>Limit: {formatBytes(data.performance?.memoryLimit || 0)}</div>
+                  <div>
+                    Usage: {(
+                      ((data.performance?.memoryUsage || 0) / (data.performance?.memoryLimit || 1)) * 100
+                    ).toFixed(1)}%
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
                   </div>
                 </div>
               )}
@@ -324,6 +451,7 @@ const AdvancedDashboard: React.FC = () => {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
               )}
               
               {activeTab === "security" && (
@@ -360,6 +488,27 @@ const AdvancedDashboard: React.FC = () => {
               </div>
             )}
           </div>
+=======
+              </div>
+
+              <div className="bg-pink-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-pink-900 mb-2">Accessibility</h3>
+                <div className="space-y-1 text-sm">
+                  <div>Features: {data.accessibility?.features}</div>
+                  <div>Compliance: WCAG 2.1 AA</div>
+                </div>
+              </div>
+
+              <div className="bg-indigo-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-indigo-900 mb-2">User Experience</h3>
+                <div className="space-y-1 text-sm">
+                  <div>Status: {data.ux?.status}</div>
+                  <div>Theme: Auto</div>
+                </div>
+              </div>
+            </div>
+          )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
         </div>
 
           <div className="bg-gray-50 p-4 rounded-lg">

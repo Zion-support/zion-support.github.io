@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const SystemMonitor: React.FC = () => {
@@ -25,6 +26,14 @@ const SystemMonitor: React.FC = () => {
       <div>Status: Running</div>
       <div>Memory: {Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0)}MB</div>
       <div>Press Ctrl+Shift+M to toggle</div>
+=======
+import React from 'react';
+
+const SystemMonitor: React.FC = () => {
+  return (
+    <div className="fixed bottom-4 right-4 z-50">
+      {/* System monitor component - can be expanded later */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
     </div>
   );
 };

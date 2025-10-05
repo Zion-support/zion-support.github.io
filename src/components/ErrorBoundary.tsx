@@ -20,7 +20,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 
   render() {
@@ -29,10 +29,17 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+<<<<<<< HEAD
             <p className="text-gray-400 mb-8">We're working to fix this issue.</p>
             <button
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+=======
+            <p className="text-gray-300 mb-8">We're working to fix this issue.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
             >
               Reload Page
             </button>

@@ -2,66 +2,44 @@ import React from 'react';
 // import Footer from '../components/Footer';
 
 const Services: React.FC = () => {
-  const services = [
-    {
-      title: 'AI Solutions',
-      description: 'Custom artificial intelligence solutions tailored to your business needs.',
-      icon: '🤖'
-    },
-    {
-      title: 'Cloud Computing',
-      description: 'Scalable cloud infrastructure and migration services.',
-      icon: '☁️'
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Advanced data analysis and business intelligence solutions.',
-      icon: '📊'
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      icon: '🔒'
-    },
-    {
-      title: 'Software Development',
-      description: 'Custom software development and system integration.',
-      icon: '💻'
-    },
-    {
-      title: 'Consulting',
-      description: 'Strategic technology consulting and digital transformation.',
-      icon: '🎯'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-900">
       
       <main className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and innovation.
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold text-white mb-8 text-center">Our Services</h1>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
+              <p className="text-gray-300">
+                Custom artificial intelligence solutions tailored to your business needs.
+              </p>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">IT Consulting</h3>
+              <p className="text-gray-300">
+                Strategic IT consulting to optimize your technology infrastructure.
+              </p>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">Data Analytics</h3>
+              <p className="text-gray-300">
+                Advanced data analytics to drive informed business decisions.
+              </p>
+            </div>
           </div>
         </div>
       </main>
+<<<<<<< HEAD
 
       {/* <Footer /> */}
+=======
+      
+      <Footer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
     </div>
   );
 };

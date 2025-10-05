@@ -142,15 +142,26 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
   return (
     <div className={`comprehensive-promo-banner ${variant} ${className}`}>
       <div className="banner-content">
+<<<<<<< HEAD
         <h2>Comprehensive Solutions</h2>
         <p>Discover our full range of services and solutions.</p>
         <Link to="/services">
           Explore Services
+=======
+        <h2>Comprehensive Promo Banner</h2>
+        <p>This is a comprehensive promotional banner component.</p>
+        <Link to="/" className="cta-button">
+          Learn More
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
         </Link>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensivePromoBanner;
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+=======
+export default ComprehensivePromoBanner;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
