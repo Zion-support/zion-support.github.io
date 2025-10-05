@@ -9,6 +9,8 @@ import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Target from 'lucide-react/dist/esm/icons/target';
 import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';>>>>>>> origin/merge-pr-25212
+import { ArrowRight, Brain, Users, Zap, CheckCircle, User } from 'lucide-react';
+
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (

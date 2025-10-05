@@ -7,6 +7,8 @@ import Clock from 'lucide-react/dist/esm/icons/clock';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Zap from 'lucide-react/dist/esm/icons/zap';>>>>>>> origin/merge-pr-25212
+import { ArrowRight, Users, TrendingUp, Clock, Zap, Calendar, User } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Revolutionary Breakthrough January 2026: 10x Performance Gains | Zion Tech Group',

@@ -12,6 +12,8 @@ import Shield from 'lucide-react/dist/esm/icons/shield';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 import Target from 'lucide-react/dist/esm/icons/target';
 import Brain from 'lucide-react/dist/esm/icons/brain';>>>>>>> origin/merge-pr-25212
+import { ArrowRight, Brain, Target, TrendingUp, Clock, Zap, Calendar, User, Shield } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation | Zion Tech Group',

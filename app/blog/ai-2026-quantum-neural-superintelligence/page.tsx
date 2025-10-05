@@ -7,6 +7,8 @@ import Brain from 'lucide-react/dist/esm/icons/brain';
 import Cpu from 'lucide-react/dist/esm/icons/cpu';
 import Target from 'lucide-react/dist/esm/icons/target';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';>>>>>>> origin/merge-pr-25212
+import { ArrowRight, Brain, Target, TrendingUp, Zap } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI 2026: Quantum Neural Superintelligence - The Next Evolution of Artificial Intelligence',

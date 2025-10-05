@@ -7,6 +7,8 @@ import Brain from 'lucide-react/dist/esm/icons/brain';
 import Shield from 'lucide-react/dist/esm/icons/shield';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import Target from 'lucide-react/dist/esm/icons/target';>>>>>>> origin/merge-pr-25212
+import { Brain, Target, Zap, Rocket, Shield } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI 2026 Mega Breakthroughs: The Revolutionary Technologies Reshaping Enterprise',

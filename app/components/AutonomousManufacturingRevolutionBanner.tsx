@@ -1,10 +1,5 @@
 import React from 'react';
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';=======
-
->>>>>>> origin/merge-pr-25212
-
+import { ArrowRight, Cogs, Factory, TrendingUp, Zap } from 'lucide-react';;
 import Link from 'next/link';
 
 const AutonomousManufacturingRevolutionBanner: React.FC = () => {

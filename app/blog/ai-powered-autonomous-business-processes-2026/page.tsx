@@ -13,6 +13,8 @@ import Brain from 'lucide-react/dist/esm/icons/brain';
 import Zap from 'lucide-react/dist/esm/icons/zap';>>>>>>> origin/merge-pr-25212
 
 import { Metadata } from 'next';
+import { ArrowLeft, Brain, TrendingUp, Clock, Zap, CheckCircle, User, Tag, BookOpen, Share2 } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',

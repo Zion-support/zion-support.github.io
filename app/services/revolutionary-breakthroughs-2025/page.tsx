@@ -1,4 +1,6 @@
 import React from 'react';
+import { ArrowRight, Brain, TrendingUp, CheckCircle, Sparkles } from 'lucide-react';
+
 
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: unknown[] = [];

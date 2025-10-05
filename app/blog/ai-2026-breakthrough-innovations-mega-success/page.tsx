@@ -7,6 +7,8 @@ import Brain from 'lucide-react/dist/esm/icons/brain';
 import Zap from 'lucide-react/dist/esm/icons/zap';
 import Target from 'lucide-react/dist/esm/icons/target';
 import Users from 'lucide-react/dist/esm/icons/users';>>>>>>> origin/merge-pr-25212
+import { ArrowRight, Brain, Target, Users, TrendingUp, Zap, User } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story | Zion Tech Group',

@@ -1,8 +1,5 @@
 import Link from 'next/link';
-import { Sparkles, Shield, Bot, ShoppingBag } from 'lucide-react';;
-;
-;
-;
+import { Bot, Shield, ShoppingBag, Sparkles } from 'lucide-react';;
 
 export default function FeaturedOctober2026Content() {
   return (
