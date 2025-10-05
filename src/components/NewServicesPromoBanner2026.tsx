@@ -125,7 +125,8 @@ const NewServicesPromoBanner2026: React.FC = () => {
           <div className="bg-gradient-to-br from-green-800/60 to-teal-800/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/40 hover:border-green-400/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group">
             <div className="text-center mb-6">
               <div className="bg-green-500/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/30 transition-colors border-2 border-green-400/30 shadow-lg">
-                <Cpu className="w-10 h-10 text-green-400 group-hover:scale-110 transition-transform duration-300"</div>
+                <Cpu className="w-10 h-10 text-green-400 group-hover:scale-110 transition-transform duration-300" />
+              </div>
               <h3 className="text-2xl font-bold text-white mb-2">Neuromorphic Processing Suite</h3>
               <div className="text-green-300 font-semibold">Starting at $15,000/month</div>
             </div>

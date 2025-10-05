@@ -3,27 +3,27 @@ import { motion } from "framer-motion";
 
 const October2025TechBannerNew = () => {
   const newArticles = [
-    {
+    {",
       title: "Next-Gen Autonomous Systems",
-      description: "The 2025 Enterprise Revolution",
+      description: "The 2025 Enterprise Revolution",",
       slug: "ai-2025-oct-17-next-gen-autonomous-systems",
-      icon: Brain,
+      icon: Brain,",
       color: "from-purple-500 to-pink-500",
       highlight: "NEW"
     },
-    {
+    {",
       title: "Generative AI Code Generation",
-      description: "Transforming Software Development",
+      description: "Transforming Software Development",",
       slug: "ai-2025-oct-17-generative-ai-code-generation",
-      icon: Code2,
+      icon: Code2,",
       color: "from-blue-500 to-cyan-500",
       highlight: "HOT"
     },
-    {
+    {",
       title: "Real-Time Personalization Engines",
-      description: "Revolutionizing Customer Experience",
+      description: "Revolutionizing Customer Experience",",
       slug: "ai-2025-oct-17-real-time-personalization-engines",
-      icon: Zap,
+      icon: Zap,",
       color: "from-orange-500 to-red-500",
       highlight: "TRENDING"
     }
@@ -146,8 +146,8 @@ const October2025TechBannerNew = () => {
             }}
             transition={{
               duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
+              repeat: Infinity,",
+      delay: Math.random() * 2,
             }}
 
         ))}

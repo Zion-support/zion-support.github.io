@@ -20,7 +20,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Multimodal AI Customer Experience Platform
-            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               $340M Value Created | 287% ROI | 94% Customer Satisfaction
             </span>
           </h2>
@@ -113,8 +113,8 @@ const October2025MultimodalCXRevolutionBanner = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-6">
             <div>
               <div className="text-red-400 font-semibold mb-2 flex items-center gap-2">
-                <AlertCircle className="w-5 h-5" />
-                Before: Customer Experience Crisis
+                <AlertCircle className="w-5 h-5" />",
+      Before: Customer Experience Crisis
               </div>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-start gap-2">
@@ -142,8 +142,8 @@ const October2025MultimodalCXRevolutionBanner = () => {
 
             <div>
               <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">
-
-                After: Multimodal AI Excellence
+",
+      After: Multimodal AI Excellence
               </div>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-start gap-2">

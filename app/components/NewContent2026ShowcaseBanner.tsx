@@ -1,5 +1,6 @@
 import Link from 'next/link';
-// import { ArrowRight, Star, TrendingUp, Users } from 'lucide-react';
+
+
 
 export default function NewContent2026ShowcaseBanner() {
   return (

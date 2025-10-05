@@ -13,7 +13,7 @@ interface ContentItem {
   href: string;
   metrics?: {
     label: string;
-    value: string;
+  value: string;
   }[];
 }
 

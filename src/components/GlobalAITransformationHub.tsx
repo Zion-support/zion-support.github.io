@@ -7,7 +7,11 @@ const GlobalAITransformationHub = () => {
       title: 'Enterprise Automation',
       description: 'Complete business process automation with 95% efficiency gains',
       value: '$2.3B',
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
     },
@@ -15,7 +19,11 @@ const GlobalAITransformationHub = () => {
       title: 'Quantum Consciousness AI',
       description: 'Revolutionary AI consciousness integration with infinite scalability',
       value: '$500B',
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
     },
@@ -23,7 +31,11 @@ const GlobalAITransformationHub = () => {
       title: 'Autonomous Operations',
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
       value: '$150B',
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
     },
@@ -31,7 +43,11 @@ const GlobalAITransformationHub = () => {
       title: 'Neural Security',
       description: 'Advanced AI-powered security with 99.7% threat prevention',
       value: '$87B',
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       color: 'from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }

@@ -20,7 +20,7 @@ const October2025FraudDetectionBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             AI-Powered Real-Time Fraud Detection
-            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
+            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
               $847B in Assets Protected | 99.7% Accuracy | Sub-50ms Detection
             </span>
           </h2>
@@ -114,8 +114,8 @@ const October2025FraudDetectionBanner = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-6">
             <div>
               <div className="text-red-400 font-semibold mb-2 flex items-center gap-2">
-                <AlertCircle className="w-5 h-5" />
-                Before: Crisis State
+                <AlertCircle className="w-5 h-5" />",
+      Before: Crisis State
               </div>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-start gap-2">
@@ -143,8 +143,8 @@ const October2025FraudDetectionBanner = () => {
 
             <div>
               <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">
-
-                After: AI-Powered Excellence
+",
+      After: AI-Powered Excellence
               </div>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-start gap-2">

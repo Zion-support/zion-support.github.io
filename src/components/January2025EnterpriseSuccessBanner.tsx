@@ -19,7 +19,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">
               Real Results
             </span>
-            <br <span className="text-white">From Real Companies</span>
+            <br /> <span className="text-white">From Real Companies</span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">

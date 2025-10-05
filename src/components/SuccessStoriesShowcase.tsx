@@ -6,40 +6,52 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "TechCorp International",
       industry: "Technology",
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       result: "300% Revenue Growth",
-      description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
+      description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",",
       metrics: [
         "98% prediction accuracy",
         "60% cost reduction",
         "2M users impacted"
-      ],
+      ],",
       color: "from-blue-500 to-cyan-500"
     },
-    {
+    {",
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       result: "85% Downtime Reduction",
-      description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",
+      description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",",
       metrics: [
         "$2M annual savings",
         "40% lower maintenance costs",
         "99.9% uptime achieved"
-      ],
+      ],",
       color: "from-green-500 to-emerald-500"
     },
-    {
+    {",
       company: "FinanceFirst Bank",
       industry: "Financial Services",
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       result: "99.95% Fraud Detection",
-      description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
+      description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",",
       metrics: [
         "$5M fraud prevented",
         "Sub-100ms detection",
         "95% fewer false positives"
-      ],
+      ],",
       color: "from-purple-500 to-pink-500"
     }
   ];
@@ -59,11 +71,9 @@ const SuccessStoriesShowcase: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {stories.map((story, index) = > (
             <div
-<<<<<<< HEAD
-              key={index}
-=======
+
 key={index}
->>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
+
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>

@@ -6,8 +6,13 @@ export type Notification = {
 };
 
 type NotificationSystemProps = {
+<<<<<<< HEAD
   notifications: Notification[];
   onRemove: (id: string) = > void;
+=======
+  notifications: Notification[];",
+      onRemove: (id: string) => void;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
 };
 
 export default function NotificationSystem({ notifications, onRemove }: NotificationSystemProps): React.JSX.Element | null {

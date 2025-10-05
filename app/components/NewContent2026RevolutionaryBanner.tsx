@@ -1,5 +1,6 @@
 import Link from 'next/link';
-// import { ArrowRight, Brain, Zap, Star, TrendingUp } from 'lucide-react';
+
+
 
 export default function NewContent2026RevolutionaryBanner() {
   return (

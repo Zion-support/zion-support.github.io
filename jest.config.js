@@ -3,10 +3,12 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/app/setupTests.tsx'],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest'],
+
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'] }],
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(react-error-boundary|.*\\.mjs$|@testing-library|@types|framer-motion|lucide-react|clsx|tailwind-merge|web-vitals|recharts|react|react-dom|react-helmet-async|react-router-dom|gray-matter)/)',
+    'node_modules/(?!(react-error-boundary|@testing-library|react|react-dom|framer-motion|lucide-react)/)',
+
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
@@ -14,6 +16,9 @@ export default {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/fileMock.js',
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-error-boundary|@testing-library)/)',
+  ],
   testMatch: [
     '<rootDir>/app/**/__tests__/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/app/**/*.{test,spec}.{js,jsx,ts,tsx}',

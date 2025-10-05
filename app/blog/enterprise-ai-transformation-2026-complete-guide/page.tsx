@@ -1,4 +1,6 @@
 
+import Link from 'next/link';
+
 export default function EnterpriseAITransformation2026CompleteGuide() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-950 text-white">
@@ -227,7 +229,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             ].map((metric, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
                 <div className="text-6xl mb-4">{metric.icon}</div>
-                <div className={`text-4xl font-extrabold mb-2 ${metric.color}`}>
+                <div className={`text-4xl font-bold mb-2 ${metric.color}`}>
                   {metric.value}
                 </div>
                 <div className="text-gray-400 text-sm font-medium">

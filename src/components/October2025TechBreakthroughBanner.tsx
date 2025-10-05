@@ -67,7 +67,8 @@ const October2025TechBreakthroughBanner = () => {
           <div className="group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 rounded-xl bg-cyan-500/20 group-hover:bg-cyan-500/30 transition-colors">
-                <Lock className="w-8 h-8 text-cyan-300"</div>
+                <Lock className="w-8 h-8 text-cyan-300" />
+              </div>
               <div className="flex-1">
                 <div className="text-xs font-bold text-cyan-300 uppercase tracking-wide mb-1">Quantum Security</div>
                 <div className="text-sm text-cyan-100 font-medium">NIST-Approved • Production-Ready</div>

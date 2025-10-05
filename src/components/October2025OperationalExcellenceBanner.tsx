@@ -66,7 +66,8 @@ const October2025OperationalExcellenceBanner = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-emerald-500/30 rounded-2xl group-hover:bg-emerald-500/40 transition-colors shadow-lg">
-                <Wrench className="w-10 h-10 text-emerald-200"</div>
+                <Wrench className="w-10 h-10 text-emerald-200" />
+              </div>
               <div className="flex-1">
                 <span className="text-xs text-emerald-300 font-bold uppercase tracking-wider bg-emerald-500/20 px-3 py-1 rounded-full">
                   Predictive Maintenance
@@ -116,7 +117,8 @@ const October2025OperationalExcellenceBanner = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-teal-500/30 rounded-2xl group-hover:bg-teal-500/40 transition-colors shadow-lg">
-                <Network className="w-10 h-10 text-teal-200"</div>
+                <Network className="w-10 h-10 text-teal-200" />
+              </div>
               <div className="flex-1">
                 <span className="text-xs text-teal-300 font-bold uppercase tracking-wider bg-teal-500/20 px-3 py-1 rounded-full">
                   API Orchestration

@@ -180,41 +180,25 @@ export default function BlogIndexPage() {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         {posts.map((post) => (
           <a key={post.href} href={post.href} className='group'>
-            <article className={`border rounded-lg p-6 h-full hover:shadow-lg transition-all duration-300 ${
-              post.featured 
-                ? 'border-purple-200 bg-gradient-to-br from-purple-50 to-blue-50 hover:shadow-purple-200 hover:border-purple-300' 
-                : 'border-gray-200 bg-white hover:shadow-md hover:border-gray-300'
-            }`}>
-              <div className={`text-sm ${post.featured ? 'text-purple-600' : 'text-gray-500'}`}>
+            <article className='bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105'>
+              <div className='text-sm text-gray-400 mb-2 flex items-center'>
                 {post.date}
                 {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
               </div>
-              <h2 className={`mt-2 text-2xl font-semibold transition-colors ${
-                post.featured 
-                  ? 'text-purple-900 group-hover:text-purple-700' 
-                  : 'text-gray-900 group-hover:text-blue-600'
-              }`}>
+              <h2 className='text-2xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors'>
                 {post.title}
               </h2>
-              <p className={`mt-2 ${post.featured ? 'text-purple-700' : 'text-gray-600'}`}>
+              <p className='text-gray-300 mb-4 line-clamp-3'>
                 {post.description}
               </p>
               <div className='mt-4 flex gap-2 flex-wrap'>
                 {post.tags.map((tag) => (
-                  <span key={tag} className={`text-xs px-2 py-1 rounded ${
-                    post.featured 
-                      ? 'bg-purple-100 text-purple-700 border border-purple-200' 
-                      : 'bg-blue-50 text-blue-700'
-                  }`}>
+                  <span key={tag} className='bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm'>
                     {tag}
                   </span>
                 ))}
               </div>
-              <div className={`mt-4 font-medium transition-colors ${
-                post.featured 
-                  ? 'text-purple-600 group-hover:text-purple-800' 
-                  : 'text-blue-600 group-hover:text-blue-800'
-              }`}>
+              <div className='mt-4 text-purple-400 font-semibold group-hover:text-purple-300 transition-colors'>
                 Read more →
               </div>
             </article>

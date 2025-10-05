@@ -20,7 +20,7 @@ const October2025AutonomousInfrastructureBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Real-Time Autonomous Infrastructure Orchestration
-            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               $3.2B Value Created | 99.99% Uptime | 87% Cost Reduction | 42x ROI
             </span>
           </h2>

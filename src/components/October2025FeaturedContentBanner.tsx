@@ -7,7 +7,7 @@ const October2025FeaturedContentBanner = () => {
       title: "Enterprise AI Value Realization",
       description: "90 days to shipped outcomes: scorecards, evaluator gates, tiered routing",
       link: "/blog/enterprise-ai-value-realization-2025-10-08",
-      icon: Brain,
+      icon: "Brain",
       gradient: "from-indigo-600 to-blue-600",
       bgGradient: "from-indigo-900/40 to-blue-900/40",
       borderColor: "border-indigo-500/30",
@@ -21,7 +21,7 @@ const October2025FeaturedContentBanner = () => {
       title: "Enterprise Neural Orchestration Platform",
       description: "89% faster AI deployment, 94% cost reduction, $12.4M annual savings",
       link: "/blog/ai-2025-october-enterprise-neural-orchestration-platform",
-      icon: Brain,
+      icon: "Brain",
       gradient: "from-blue-600 to-purple-600",
       bgGradient: "from-blue-900/40 to-purple-900/40",
       borderColor: "border-blue-500/30",
@@ -35,7 +35,7 @@ const October2025FeaturedContentBanner = () => {
       title: "Cognitive Supply Chain Revolution",
       description: "76% forecast accuracy, 68% inventory cost reduction, $18.7M value",
       link: "/blog/ai-2025-october-cognitive-supply-chain-revolution",
-      icon: Package,
+      icon: "Package",
       gradient: "from-emerald-600 to-teal-600",
       bgGradient: "from-emerald-900/40 to-teal-900/40",
       borderColor: "border-emerald-500/30",
@@ -49,7 +49,7 @@ const October2025FeaturedContentBanner = () => {
       title: "AI Reliability Blueprints 2027",
       description: "Evaluators, action budgets, instant rollback — ship safely",
       link: "/blog/ai-reliability-blueprints-2027-2025-10-02",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       gradient: "from-cyan-600 to-blue-600",
       bgGradient: "from-cyan-900/40 to-blue-900/40",
       borderColor: "border-cyan-500/30",
@@ -63,7 +63,7 @@ const October2025FeaturedContentBanner = () => {
       title: "Edge Inference Playbook 2027",
       description: "Sub‑100ms globally with warm pools and tiered caches",
       link: "/blog/edge-inference-playbook-2027-2025-10-02",
-      icon: Sparkles,
+      icon: "Sparkles",
       gradient: "from-purple-600 to-pink-600",
       bgGradient: "from-purple-900/40 to-pink-900/40",
       borderColor: "border-purple-500/30",
@@ -107,8 +107,15 @@ const October2025FeaturedContentBanner = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${content.bgGradient} opacity-50 group-hover:opacity-70 transition-opacity`}></div>
                 <div className="relative p-8">
                   {/* Icon & Title */}
+<<<<<<< HEAD
                   <div className="flex items-start mb-6" > <div className={`p-4 bg-gradient-to-r ${content.gradient} rounded-xl mr-4`}>
                       <Icon className="w-8 h-8 text-white"</div>
+=======
+                  <div className="flex items-start mb-6">
+                    <div className={`p-4 bg-gradient-to-r ${content.gradient} rounded-xl mr-4`}>
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                         {content.title}

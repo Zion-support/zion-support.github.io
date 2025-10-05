@@ -18,7 +18,7 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <span className="bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Revolutionary AI Breakthroughs
             </span>
-            <br <span className="text-white">2025 Edition</span>
+            <br /> <span className="text-white">2025 Edition</span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">

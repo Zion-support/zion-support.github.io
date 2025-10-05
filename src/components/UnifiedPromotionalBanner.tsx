@@ -107,15 +107,28 @@ className={`
           </div > )}
 
         {/* Title */}
+<<<<<<< HEAD
         <h2 className={` > font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
+=======
+        <h2 className={`
+          font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
           ${variant === 'hero' || variant === 'mega' ? 'text-4xl md:text-5xl' : 
             variant === 'premium' ? 'text-3xl md:text-4xl' : 
             variant === 'compact' ? 'text-xl md:text-2xl' : 
             'text-2xl md:text-3xl'}
         `}>
           {title}
+<<<<<<< HEAD
         </h2 > {/* Description */}
         <p className={` > text-gray-200 mb-6
+=======
+        </h2>
+
+        {/* Description */}
+        <p className={`
+          text-gray-200 mb-6
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
           ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
             variant === 'compact' ? 'text-sm' : 
             'text-base md:text-lg'}
@@ -124,8 +137,14 @@ className={`
         </p>
 
         {/* Featured Items */}
+<<<<<<< HEAD
         {visibleItems.length  > 0 && (
           <div className={` > grid gap-4 mb-6
+=======
+        {visibleItems.length > 0 && (
+          <div className={`
+            grid gap-4 mb-6
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
             ${variant === 'mega' ? 'md:grid-cols-3' : 
               variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' : 
               'md:grid-cols-1'}
@@ -167,8 +186,15 @@ className={`
                 variant === 'hero' || variant === 'mega' ? 'px-10 py-5 text-lg' : 
                 'text-base'}
             `}
+<<<<<<< HEAD
            > {ctaText}
             <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`}</Link>
+=======
+          >
+            {ctaText}
+            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`} />
+          </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
 
           {featuredItems.length  > showCount && (
             <Link

@@ -1,6 +1,18 @@
 import Link from 'next/link';
-// import { ArrowRight, Zap, TrendingUp, DollarSign, Users, Target, Award, Brain } from 'lucide-react';
+import { ArrowRight, TrendingUp, Brain, Zap, Target, Users, DollarSign, Award } from 'lucide-react';
 
+
+
+
+
+
+
+
+
+
+// @ts-ignore
+
+// @ts-ignore
 export const metadata = {
   title: 'Quantum Neural Superintelligence: $25B ROI Success - Revolutionary AI Transformation',
   description: 'Discover how a Fortune 500 company achieved $25 billion in ROI through Zion Tech Group\'s quantum neural superintelligence implementation. The most successful AI transformation in history.',

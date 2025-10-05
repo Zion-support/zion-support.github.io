@@ -1,10 +1,16 @@
+import { FileText } from 'lucide-react';
 import { Link } from "react-router-dom";
+
+
+;
 
 const October2025DocumentAutomationBanner = () => {
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-y border-indigo-500/30 overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}</div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breaking News Badge */}
@@ -12,7 +18,8 @@ const October2025DocumentAutomationBanner = () => {
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-bold text-sm shadow-lg animate-pulse">
             <FileText className="w-4 h-4 mr-2" />
             NEW RELEASE - OCTOBER 1, 2025
-            <FileText className="w-4 h-4 ml-2"</div>
+            <FileText className="w-4 h-4 ml-2" />
+          </div>
         </div>
 
         {/* Main Headline */}
@@ -38,9 +45,8 @@ const October2025DocumentAutomationBanner = () => {
             <div className="text-sm text-indigo-200">Faster Processing</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105">
-
             <div className="text-3xl font-black text-white mb-1">99.2%</div>
-            
+            <div className="text-sm text-purple-200">Accuracy Rate</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-pink-400/30 hover:border-pink-400/60 transition-all hover:scale-105">
 
@@ -167,19 +173,19 @@ const October2025DocumentAutomationBanner = () => {
               <div className="text-indigo-200">Loan apps, KYC docs → 92% faster, $23M savings</div>
             </div>
             <div className="bg-purple-800/30 rounded-lg p-4 border border-purple-400/20">
-              
+              <div className="font-bold text-white mb-2">Insurance</div>
               <div className="text-purple-200">Claims processing → 89% STP, 7-day to 2-hour cycle</div>
             </div>
             <div className="bg-pink-800/30 rounded-lg p-4 border border-pink-400/20">
-              
+              <div className="font-bold text-white mb-2">Healthcare</div>
               <div className="text-pink-200">Medical records → 94% faster, 99.8% HIPAA compliance</div>
             </div>
             <div className="bg-indigo-800/30 rounded-lg p-4 border border-indigo-400/20">
-              
+              <div className="font-bold text-white mb-2">Legal</div>
               <div className="text-indigo-200">Contract review → 87% faster, $18M paralegal savings</div>
             </div>
             <div className="bg-purple-800/30 rounded-lg p-4 border border-purple-400/20">
-              
+              <div className="font-bold text-white mb-2">Logistics</div>
               <div className="text-purple-200">Shipping docs → 91% automation, 6hr to 15min</div>
             </div>
             <div className="bg-pink-800/30 rounded-lg p-4 border border-pink-400/20">

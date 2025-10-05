@@ -4,29 +4,41 @@ const October2025CuttingEdgeContentBanner = () => {
   const featuredArticles = [
     {
       title: "Next-Gen Autonomous Orchestration — Self-Healing Systems at Scale",
-      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",
+      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",",
       category: "Autonomous Systems",
-      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",
+      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",",
       gradient: "from-cyan-500 to-blue-600",
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
-    {
+    {",
       title: "Advanced Prompt Engineering Mastery — 10x LLM Performance",
-      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",
+      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",",
       category: "LLM Engineering",
-      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",
+      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",",
       gradient: "from-purple-500 to-pink-600",
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
-    {
+    {",
       title: "Real-Time AI Personalization at Scale — 100M+ Users",
-      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",
+      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",",
       category: "ML at Scale",
-      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",
+      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",",
       gradient: "from-orange-500 to-red-600",
+<<<<<<< HEAD
       icon: ' > ,'
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];
@@ -96,11 +108,9 @@ const October2025CuttingEdgeContentBanner = () => {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {article.metrics.map((metric, idx) = > (
                     <span
-<<<<<<< HEAD
-                      key={idx}
-=======
+
 key={idx}
->>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
+
                       className="text-xs px-2 py-1 rounded-md bg-slate-700/50 text-gray-300 border border-slate-600/50"
                     >
                       {metric}
@@ -154,8 +164,8 @@ key={idx}
           33% { transform: translate(30px, -50px) scale(1.1); }
           66% { transform: translate(-20px, 20px) scale(0.9); }
         }
-        .animate-blob {
-          animation: blob 7s infinite;
+        .animate-blob {",
+      animation: blob 7s infinite;
         }
         .animation-delay-2000 {
           animation-delay: 2s;

@@ -1,5 +1,7 @@
 import Link from 'next/link';
-// import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, DollarSign, BarChart3, Award, Zap } from 'lucide-react';
+
+
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

@@ -2,24 +2,24 @@ import { Link } from "react-router-dom";
 
 const October2025LatestContentBanner = () => {
   const articles = [
-    {
+    {",
       title: "Advanced GenAI Orchestration Platform",
       description: "Master multi-model coordination and intelligent workflow automation at enterprise scale",
-      icon: Brain,
+      icon: Brain,",
       link: "/blog/ai-2025-october-advanced-genai-orchestration-platform",
       gradient: "from-violet-600 to-purple-600"
     },
-    {
+    {",
       title: "Enterprise AI Security: Zero Trust Framework",
       description: "Comprehensive security architecture protecting AI models, data, and inference endpoints",
-      icon: Shield,
+      icon: Shield,",
       link: "/blog/ai-2025-october-enterprise-ai-security-zero-trust-framework",
       gradient: "from-cyan-600 to-blue-600"
     },
-    {
+    {",
       title: "Real-Time Multimodal AI Processing",
       description: "Revolutionary techniques for simultaneous text, vision, and audio processing in production",
-      icon: Zap,
+      icon: Zap,",
       link: "/blog/ai-2025-october-real-time-multimodal-processing-revolution",
       gradient: "from-purple-600 to-pink-600"
     }

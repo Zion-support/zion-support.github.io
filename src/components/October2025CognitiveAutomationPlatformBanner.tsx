@@ -93,8 +93,8 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {
                 }}
                 transition={{
                   duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  repeat: Infinity,",
+      ease: "easeInOut"
                 }}
                 className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-lg rounded-2xl p-8 border border-emerald-400/30"
               >
