@@ -1,8 +1,10 @@
 import Link from 'next/link';
 
-import Clock from 'lucide-react';
-import User from 'lucide-react';
-import CheckCircle from 'lucide-react';
+
+import { Clock, User, CheckCircle } from "lucide-react";
+;
+;
+;
 
 export const metadata = {
   title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',

@@ -1,8 +1,10 @@
 import Link from 'next/link';
 
-import Clock from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
+
+import { Clock, Brain, TrendingUp } from "lucide-react";
+;
+;
+;
 
 export const metadata = {
   title: 'AI Cognitive Superintelligence Mega Success 2026: $750M ROI Case Study',

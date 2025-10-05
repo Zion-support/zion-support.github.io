@@ -1,11 +1,13 @@
 import Link from 'next/link';
 
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import ArrowRight from 'lucide-react';
-import Star from 'lucide-react';
-import CheckCircle from 'lucide-react';
+
+import { Brain, Zap, TrendingUp, ArrowRight, Star, CheckCircle } from "lucide-react";
+;
+;
+;
+;
+;
+;
 
 export default function December2025UltimateAutonomousRevolutionBanner() {
   return (

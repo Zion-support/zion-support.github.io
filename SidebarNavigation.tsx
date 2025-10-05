@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+
+import { Home, User, Settings, Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
-import { Home, User, Settings, Menu, X } from 'lucide-react';
+
+
+
+
+;
 const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
