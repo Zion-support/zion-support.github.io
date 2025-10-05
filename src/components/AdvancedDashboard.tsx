@@ -147,14 +147,6 @@ const AdvancedDashboard: React.FC = () => {
         status: "UX features disabled", // EnhancedUXManager.getInstance() ? "Active" : "Inactive",
         features: "Active", // Fallback value
       },
-      security: {
-        // Get security stats from manager
-        status: "Active", // Fallback value
-      },
-      ux: {
-        // Get UX stats from manager
-        status: "Active", // Fallback value
-      },
     });
   };
 
