@@ -6,12 +6,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Fintech, 2025, Sept 30, Ai, Financial Modeling, Guid, e</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Fintech, 2025, Sept 30, Ai, Financial Modeling, Guid, e</title>
+        <meta, nam, e='description'
           conte, n, t='Learn, about, fintech 2025, sept, 30 ai, financial, modeling guide, and, how it, can, benefit your, enterpris, e.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/finte, c, h-20, 2, 5-se, p, t-30-ai-financi, a, l-modeli, n, g-gui, d, e'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/finte c h-20 2 5-se p t-30-ai-financi a l-modeli n g-gui d e'
         />
       </Helm, e, t>
 

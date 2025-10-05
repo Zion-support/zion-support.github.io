@@ -15,11 +15,11 @@ const, AdvancedCybersecurityA, I = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Advanced, Cybersecurity, AI Platfo, r, m | Ne, x, t-Gen, Threat, Detection &
           Respon, s, e | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='AI-powered, cybersecurity, platform with, 9, 9.92% threat, detection, accuracy. Re, a, l-time, protecti, o, n, autonomous, incident, response, and, predictive, security intelligen, c, e.'
         />
         <meta, nam, e = 'keywor, d, s'
@@ -166,33 +166,33 @@ const, AdvancedCybersecurityA, I = () => {
               <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                 {[
                   {
-                    tit, l, e: 'AI-Powered, Threat, Detecti, o, n',
-                    descripti, o, n: '99.92% accuracy, with, behavioral analy, s, i, s, pattern, recognitio, n, and, zer, o-day, detectio, n. 95% fewer, false, positives.',
+                    title: 'AI-Powered, Threat, Detecti, o, n',
+                    description: '99.92% accuracy, with, behavioral analy, s, i, s, pattern, recognitio, n, and, zer, o-day, detectio, n. 95% fewer, false, positives.',
                     ic, o, n: '🎯',
                   },
                   {
-                    tit, l, e: 'Automated, Incident, Respons, e',
-                    descripti, o, n: '<5, second, response initiati, o, n. 99.7% faster, than, manual response, with, intelligent quarantine, and, self-heal, i, n, g.',
+                    title: 'Automated, Incident, Respons, e',
+                    description: '<5, second, response initiati, o, n. 99.7% faster, than, manual response, with, intelligent quarantine, and, self-heal, i, n, g.',
                     ic, o, n: '⚡',
                   },
                   {
-                    tit, l, e: 'Predictive, Security, Intelligenc, e',
-                    descripti, o, n: 'Forecast, threats, before they, happen, with attack, path, analysi, s, vulnerability, predictio, n, and, risk, scoring.',
+                    title: 'Predictive, Security, Intelligenc, e',
+                    description: 'Forecast, threats, before they, happen, with attack, path, analysi, s, vulnerability, predictio, n, and, risk, scoring.',
                     ic, o, n: '🔮',
                   },
                   {
-                    tit, l, e: 'Unified, Security, Platfor, m',
-                    descripti, o, n: 'S, I, E, M, E, D, R, N, D, R, SO, A, R, and, UEBA, in one, platfor, m. 5, 0, 0+ p, r, e-built, security, integrations.',
+                    title: 'Unified, Security, Platfor, m',
+                    description: 'S, I, E, M, E, D, R, N, D, R, SO, A, R, and, UEBA, in one, platfor, m. 5, 0, 0+ p, r, e-built, security, integrations.',
                     ic, o, n: '🛡️',
                   },
                   {
-                    tit, l, e: 'Advanced, Analytic, s & Forens, i, c, s',
-                    descripti, o, n: 'Attack, timeline, reconstructio, n, root, cause, analysis, and, threat, hunting with, interactive, visualization.',
+                    title: 'Advanced, Analytic, s & Forens, i, c, s',
+                    description: 'Attack, timeline, reconstructio, n, root, cause, analysis, and, threat, hunting with, interactive, visualization.',
                     ic, o, n: '🔬',
                   },
                   {
-                    tit, l, e: 'Complian, c, e & Governa, n, c, e',
-                    descripti, o, n: 'Automated, monitoring, for G, D, P, R, HIP, A, A, PCI, DS, S, SO, C, 2, ISO, 27001, with re, a, l-time, compliance, reporting.',
+                    title: 'Complian, c, e & Governa, n, c, e',
+                    description: 'Automated, monitoring, for G, D, P, R, HIP, A, A, PCI, DS, S, SO, C, 2, ISO, 27001, with re, a, l-time, compliance, reporting.',
                     ic, o, n: '📋',
                   },
                 ].m, a, p((featu, r, e, ind, e, x) => (
@@ -200,10 +200,10 @@ const, AdvancedCybersecurityA, I = () => {
                   >
                     <div, classNam, e='te, x, t-4xl, m, b-4'>{featu, r, e.ic, o, n}</d, i, v>
                     <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
-                      {featu, r, e.tit, l, e}
+                      {featu, r, e.title}
                     </h3>
                     <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                      {featu, r, e.descripti, o, n}
+                      {featu, r, e.description}
                     </p>
                   </di, v>
                 ))}
@@ -218,9 +218,9 @@ const, AdvancedCybersecurityA, I = () => {
               <div, classNam, e='spa, c, e-y-6'>
                 {[
                   {
-                    indust, r, y: 'Financial, Servi, c, e, s',
+                    industry: 'Financial, Servi, c, e, s',
                     savin, g, s: '$8.4, M',
-                    resul, t, s: 'Zero, breach, e, s',
+                    results: 'Zero, breach, e, s',
                     highligh, t, s: [
                       '96% reduction, in, fraud los, s, e, s',
                       '1, 0, 0% PCI, complianc, e',
@@ -228,9 +228,9 @@ const, AdvancedCybersecurityA, I = () => {
                     ],
                   },
                   {
-                    indust, r, y: 'Healthc, a, r, e',
+                    industry: 'Healthc, a, r, e',
                     savin, g, s: '$6.2, M',
-                    resul, t, s: '1, 0, 0% HI, P, A, A',
+                    results: '1, 0, 0% HI, P, A, A',
                     highligh, t, s: [
                       'Zero, ransomware, infection, s',
                       '92% reduction, in, security inciden, t, s',
@@ -238,9 +238,9 @@ const, AdvancedCybersecurityA, I = () => {
                     ],
                   },
                   {
-                    indust, r, y: 'Manufactur, i, n, g',
+                    industry: 'Manufactur, i, n, g',
                     savin, g, s: '$4.8, M',
-                    resul, t, s: 'Zero, disruptio, n, s',
+                    results: 'Zero, disruptio, n, s',
                     highligh, t, s: [
                       'OT/IT, security, convergenc, e',
                       'Industrial, IoT, protection',
@@ -248,33 +248,33 @@ const, AdvancedCybersecurityA, I = () => {
                     ],
                   },
                   {
-                    indust, r, y: 'Reta, i, l & E-comme, r, c, e',
+                    industry: 'Reta, i, l & E-comme, r, c, e',
                     savin, g, s: '$5.6, M',
-                    resul, t, s: '94% fraud, reducti, o, n',
+                    results: '94% fraud, reducti, o, n',
                     highligh, t, s: [
                       'POS, security, monitorin, g',
                       'DDoS, mitigatio, n',
                       'Customer, data, protection',
                     ],
                   },
-                ].m, a, p((soluti, o, n, ind, e, x) => (
+                ].m, a, p((solution, ind, e, x) => (
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   >
                     <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
                       <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-                        {soluti, o, n.indust, r, y}
+                        {solution.industry}
                       </h3>
                       <div, classNam, e='flex, ga, p-4'>
                         <div, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
-                          {soluti, o, n.savin, g, s} annual, saving, s
+                          {solution.savin, g, s} annual, saving, s
                         </d, i, v>
                         <div, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
-                          {soluti, o, n.resul, t, s}
+                          {solution.results}
                         </d, i, v>
                       </d, i, v>
                     </d, i, v>
                     <ul, classNam, e='spa, c, e-y-2'>
-                      { soluti, o, n.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
+                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                         <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>{highlig, h, t}</sp, a, n>

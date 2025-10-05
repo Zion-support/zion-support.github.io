@@ -15,17 +15,17 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Mul, t, i-Agent, Enterprise, Orchestration Revoluti, o, n | AI, Collaboration, Systems | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Discover, how, multi-agent, AI, orchestration is, revolutionizing, enterprises. Achieve, 9, 7.8% automa, t, i, o, n, $84, 7, M+ value, creatio, n, and, 8, 9% cost, reduction, with coordinated, AI, agent tea, m, s.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='mul, t, i-agent, syste, m, s, AI, orchestratio, n, autonomous, agent, s, agent, collaboratio, n, enterprise, A, I, AI, automatio, n, agent, swarm, s'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-multiage, n, t-enterpri, s, e-orchestrati, o, n-revoluti, o, n'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-multiage n t-enterpri s e-orchestrati o n-revoluti o n'
         />
       </Helm, e, t>
 
@@ -244,7 +244,7 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
                 <div, classNam, e='grid, ga, p-6'>
                   {[
                     {
-                      tit, l, e: 'Supply, Chain, Optimizati, o, n',
+                      title: 'Supply, Chain, Optimizati, o, n',
                       ic, o, n: '🚛',
                       agen, t, s: [
                         'Demand, forecasting, agent, s',
@@ -252,7 +252,7 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
                         'Logistics, agent, s',
                         'Procurement, agent, s',
                       ],
-                      resul, t, s: [
+                      results: [
                         '99.2% demand, forecast, accurac, y',
                         '78% reduction, in, inventory cos, t, s',
                         '94% on-time, deliver, y',
@@ -260,7 +260,7 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
                       ],
                     },
                     {
-                      tit, l, e: 'Customer, Experience, Transformatio, n',
+                      title: 'Customer, Experience, Transformatio, n',
                       ic, o, n: '❤️',
                       agen, t, s: [
                         'Intent, recognition, agent, s',
@@ -268,7 +268,7 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
                         'Recommendation, agent, s',
                         'Support, agent, s',
                       ],
-                      resul, t, s: [
+                      results: [
                         '97.8% customer, satisfacti, o, n',
                         '12.4x, engagement, increase',
                         '89% faster, respons, e',
@@ -276,7 +276,7 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
                       ],
                     },
                     {
-                      tit, l, e: 'Financial, Services, Operation, s',
+                      title: 'Financial, Services, Operation, s',
                       ic, o, n: '💰',
                       agen, t, s: [
                         'Risk, assessment, agent, s',
@@ -284,7 +284,7 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
                         'Trading, agent, s',
                         'Compliance, agent, s',
                       ],
-                      resul, t, s: [
+                      results: [
                         '99.97% fraud, detecti, o, n',
                         '$2.3B+ protected, asset, s',
                         '95% faster, risk, assessment',
@@ -296,7 +296,7 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
                     >
                       <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'>
                         <span, classNam, e='te, x, t-3, x, l'>{applicati, o, n.ic, o, n}</sp, a, n>
-                        {applicati, o, n.tit, l, e}
+                        {applicati, o, n.title}
                       </h3>
 
                       <div, classNam, e = 'mb-4'>
@@ -316,7 +316,7 @@ const, MultiAgentEnterpriseOrchestratio, n: Rea, c, t.FC = () => {
                         <p, classNam, e = 'te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-300, m, b-2'>
                           Results, Achieve, d: </p>
                         <div, classNam, e='grid, gri, d-co, l, s-2, ga, p-2'>
-                          { applicati, o, n.resul, t, s.m, a, p((re, s, u, l, t, i) = > (
+                          { applicati, o, n.results.m, a, p((re, s, u, l, t, i) = > (
                             <div, ke, y = { , i  }, classNa, m, e = 'te, x, t-sm, tex, t-purp, l, e-100, flex, items-center, ga, p-2'
                             >
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />

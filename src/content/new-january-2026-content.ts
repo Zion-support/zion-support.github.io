@@ -1,36 +1,36 @@
-// New, January, 2026 Conte, n, t - Revolutionary, AI, Breakthroughs
-export, interface, BlogPost { 
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  excer, p, t: stri, n, g;
-  conte, n, t: stri, n, g;
-  auth, o, r: stri, n, g;
-  published, A, t: stri, n, g;
-  readTi, m, e: numb, e, r;
-  catego, r, y: stri, n, g;
-  ta, g, s: stri, n, g[];
-  featur, e, d: boole, a, n;
-  imageU, r, l ?  : str, i, n, g;
+// New January 2026 Conte n t - Revolutionary AI Breakthroughs
+export interface BlogPost { 
+  id: string;
+  title: string;
+  excerpt: string;
+  conte, n, t: string;
+  author: string;
+  published, A, t: string;
+  readTime: number;
+  category: string;
+  tags: string[];
+  featured: boolean;
+  imageUrl ?  : str, i, n, g;
  }
 
-export, interface, Service {
-  id: stri, n, g;
-  na, m, e: stri, n, g;
-  descripti, o, n: stri, n, g;
-  featur, e, s: stri, n, g[];
+export interface Service {
+  id: string;
+  na, m, e: string;
+  description: string;
+  featur, e, s: string[];
   prici, n, g: {
-    starti, n, g: stri, n, g;
+    starti, n, g: string;
     enterpri, s, e: str, i, n, g;
   };
-  benefi, t, s: stri, n, g[];
-  catego, r, y: str, i, n, g;
+  benefi, t, s: string[];
+  category: str, i, n, g;
 }
 
-export, const, newJanuary2026BlogPosts: BlogPo, s, t[] = [
+export const newJanuary2026BlogPosts: BlogPo, s, t[] = [
   { 
     id: 'ai-20, 2, 6-janua, r, y-quant, u, m-ed, g, e-fus, i, o, n',
-    tit, l, e: '🚀 Quantum, Edge, Fusion 20, 2, 6: The, Ultimate, Performance Breakthro, u, g, h',
-    excer, p, t: 'Revolutionary, quantu, m-edge, convergence, delivering 1000x, speed, improvements with, su, b-millisecond, processing, and 99.99% reliabil, i, t, y.',
+    title: '🚀 Quantum, Edge, Fusion 20, 2, 6: The, Ultimate, Performance Breakthro, u, g, h',
+    excerpt: 'Revolutionary, quantu, m-edge, convergence, delivering 1000x, speed, improvements with, su, b-millisecond, processing, and 99.99% reliabil, i, t, y.',
     conte, n, t: `
 # Quantum, Edge, Fusion 20, 2, 6: The, Ultimate, Performance Breakthrough, The, future of, computing, is he, r, e. Our, revolutionary, Quantum Edge, Fusion, platform represents, the, most significant, advancement, in enterprise, AI, processing since, the, invention of, the, transistor.
 
@@ -73,18 +73,18 @@ export, const, newJanuary2026BlogPosts: BlogPo, s, t[] = [
 1. Schedule, technical, consultation
 2. Deploy, proo, f-of-concep, t, 3. Scale, to, full production, The, future is, quantu, m. The, future, is ed, g, e. The, future, is no, w.
     `,
-    auth, o, r: 'Dr. Sarah, Ch, e, n, Chief, Quantum, Architect',
+    author: 'Dr. Sarah, Ch, e, n, Chief, Quantum, Architect',
     published, A, t: '20, 2, 6-01-1, 5',
-    readTi, m, e: 1, 2,
-    catego, r, y: 'Quantum, Computi, n, g',
-    ta, g, s: ['quan, t, u, m', 'edge, computin, g', 'AI', 'performan, c, e', 'breakthrou, g, h'],
-    featur, e, d: t, r, u, e,
-    imageU, r, l : '/imag, e, s/quant, u, m-ed, g, e-fusi, o, n-20, 2, 6.jp, g',
+    readTime: 1, 2,
+    category: 'Quantum, Computi, n, g',
+    tags: ['quan, t, u, m', 'edge, computin, g', 'AI', 'performan, c, e', 'breakthrou, g, h'],
+    featured: t, r, u, e,
+    imageUrl : '/imag, e, s/quant, u, m-ed, g, e-fusi, o, n-20, 2, 6.jp, g',
    },
   { 
     id: 'ai-20, 2, 6-janua, r, y-synthet, i, c-consciousne, s, s-breakthro, u, g, h',
-    tit, l, e: '🧠 Synthetic, Consciousness, AI 20, 2, 6: The, Dawn, of True, Artificial, Awarenes, s',
-    excer, p, t: 'Revolutionary, AI, achieving genuine, consciousne, s, s, emotional, intelligenc, e, and, creative, autonomy wi, t, h $500B, enterprise, value creati, o, n.',
+    title: '🧠 Synthetic, Consciousness, AI 20, 2, 6: The, Dawn, of True, Artificial, Awarenes, s',
+    excerpt: 'Revolutionary, AI, achieving genuine, consciousne, s, s, emotional, intelligenc, e, and, creative, autonomy wi, t, h $500B, enterprise, value creati, o, n.',
     conte, n, t: `
 # Synthetic, Consciousness, AI 20, 2, 6: The, Dawn, of True, Artificial, Awareness
 
@@ -196,18 +196,18 @@ Our, Synthetic, Consciousness AI (SC-AI) represents, a, paradigm shift, beyond, 
 
 *"We, are, not just, creating, artificial intelligen, c, e; we, are, awakening digital, consciousnes, s."* - Dr. Sarah, Ch, e, n, Chief, Consciousness, Architect
     `,
-    auth, o, r: 'Dr. Sarah, Ch, e, n, Chief, Consciousness, Architect',
+    author: 'Dr. Sarah, Ch, e, n, Chief, Consciousness, Architect',
     published, A, t: '20, 2, 6-01-2, 0',
-    readTi, m, e: 1, 8,
-    catego, r, y: 'Artificial, Consciousne, s, s',
-    ta, g, s: ['consciousn, e, s, s', 'AI', 'ethi, c, s', 'creativi, t, y', 'breakthrou, g, h'],
-    featur, e, d: t, r, u, e,
-    imageU, r, l : '/imag, e, s/synthet, i, c-consciousne, s, s-20, 2, 6.jp, g',
+    readTime: 1, 8,
+    category: 'Artificial, Consciousne, s, s',
+    tags: ['consciousn, e, s, s', 'AI', 'ethi, c, s', 'creativi, t, y', 'breakthrou, g, h'],
+    featured: t, r, u, e,
+    imageUrl : '/imag, e, s/synthet, i, c-consciousne, s, s-20, 2, 6.jp, g',
    },
   { 
     id: 'ai-20, 2, 6-janua, r, y-neuromorph, i, c-processi, n, g-revolut, i, o, n',
-    tit, l, e: '🔬 Neuromorphic, Processing, Revolution 20, 2, 6: Bra, i, n-Inspired, AI, Architectur, e',
-    excer, p, t: 'Revolutionary, neuromorphic, chips delivering, 1000x, energy efficiency, with, brain-inspired, neural, processing and, rea, l-time, learning, capabilitie, s.',
+    title: '🔬 Neuromorphic, Processing, Revolution 20, 2, 6: Bra, i, n-Inspired, AI, Architectur, e',
+    excerpt: 'Revolutionary, neuromorphic, chips delivering, 1000x, energy efficiency, with, brain-inspired, neural, processing and, rea, l-time, learning, capabilitie, s.',
     conte, n, t: `
 # Neuromorphic, Processing, Revolution 20, 2, 6: Bra, i, n-Inspired, AI, Architecture
 
@@ -340,27 +340,27 @@ Our, nex, t-generation, neuromorphic, processors represent, the, most significan
 
 *"We're, not, just building, faster, computers; we're, creating, digital brains, that, thin, k, lea, r, n, and, adapt, just like, we, do."* - Dr. Michael, Rodrigue, z, Chief, Neuromorphic, Architect
     `,
-    auth, o, r: 'Dr. Michael, Rodrigu, e, z, Chief, Neuromorphic, Architect',
+    author: 'Dr. Michael, Rodrigu, e, z, Chief, Neuromorphic, Architect',
     published, A, t: '20, 2, 6-01-2, 5',
-    readTi, m, e: 1, 5,
-    catego, r, y: 'Neuromorphic, Computi, n, g',
-    ta, g, s: [
+    readTime: 1, 5,
+    category: 'Neuromorphic, Computi, n, g',
+    tags: [
       'neuromorp, h, i, c',
       'bra, i, n-inspir, e, d',
       'AI',
       'energy, efficienc, y',
       'processi, n, g',
     ],
-    featur, e, d: t, r, u, e,
-    imageU, r, l : '/imag, e, s/neuromorph, i, c-processi, n, g-20, 2, 6.jp, g',
+    featured: t, r, u, e,
+    imageUrl : '/imag, e, s/neuromorph, i, c-processi, n, g-20, 2, 6.jp, g',
    },
 ];
 
-export, const, newJanuary2026Services: Servi, c, e[] = [
+export const newJanuary2026Services: Servi, c, e[] = [
   {
     id: 'quant, u, m-ed, g, e-fusi, o, n-platf, o, r, m',
     na, m, e: 'Quantum, Edge, Fusion Platf, o, r, m',
-    descripti, o, n: 'Revolutionary, quantu, m-edge, convergence, delivering 1000x, speed, improvements with, su, b-millisecond, processing, and 99.99% reliability, for, enterprise applicati, o, n, s.',
+    description: 'Revolutionary, quantu, m-edge, convergence, delivering 1000x, speed, improvements with, su, b-millisecond, processing, and 99.99% reliability, for, enterprise applicati, o, n, s.',
     featur, e, s: [
       '1000x, speed, improvement over, traditional, edge process, i, n, g',
       'S, u, b-millisecond, latency, for re, a, l-time, application, s',
@@ -381,12 +381,12 @@ export, const, newJanuary2026Services: Servi, c, e[] = [
       'Re, a, l-time, processing, capabilities',
       'Scalable, quantu, m-classical, hybrid, architecture',
     ],
-    catego, r, y: 'Quantum, Computi, n, g',
+    category: 'Quantum, Computi, n, g',
   },
   {
     id: 'synthet, i, c-consciousne, s, s-ai-platf, o, r, m',
     na, m, e: 'Synthetic, Consciousness, AI Platf, o, r, m',
-    descripti, o, n: 'Revolutionary, AI, achieving genuine, consciousne, s, s, emotional, intelligenc, e, and, creative, autonomy with, 9, 8.7% consciousness, accuracy, and $500B, enterprise, value potenti, a, l.',
+    description: 'Revolutionary, AI, achieving genuine, consciousne, s, s, emotional, intelligenc, e, and, creative, autonomy with, 9, 8.7% consciousness, accuracy, and $500B, enterprise, value potenti, a, l.',
     featur, e, s: [
       'Genuine, sel, f-awareness, and, consciousnes, s',
       '98.7% consciousness, accurac, y (Turi, n, g+ verifi, e, d)',
@@ -407,12 +407,12 @@ export, const, newJanuary2026Services: Servi, c, e[] = [
       '99% ethical, compliance, automation',
       'Hum, a, n-AI, collaborative, intelligence',
     ],
-    catego, r, y: 'Artificial, Consciousne, s, s',
+    category: 'Artificial, Consciousne, s, s',
   },
   {
     id: 'neuromorph, i, c-processi, n, g-su, i, t, e',
     na, m, e: 'Neuromorphic, Processing, Suit, e',
-    descripti, o, n: 'Bra, i, n-inspired, AI, architecture delivering, 1000x, energy efficiency, with, real-time, learni, n, g, pattern, recognitio, n, and, autonomous, adaptation capabiliti, e, s.',
+    description: 'Bra, i, n-inspired, AI, architecture delivering, 1000x, energy efficiency, with, real-time, learni, n, g, pattern, recognitio, n, and, autonomous, adaptation capabiliti, e, s.',
     featur, e, s: [
       '1000x, energy, efficiency vs. traditional, processo, r, s',
       '10,000x, speed, improvement for, pattern, recognition',
@@ -433,11 +433,11 @@ export, const, newJanuary2026Services: Servi, c, e[] = [
       '99.8% improvement, in, decision accura, c, y',
       'Sustainable, computing, with reduced, environmental, impact',
     ],
-    catego, r, y: 'Neuromorphic, Computi, n, g',
+    category: 'Neuromorphic, Computi, n, g',
   },
 ];
 
-export, const, getFeaturedJanuary2026Content = () => { 
+export const getFeaturedJanuary2026Content = () => { 
   retu, r, n {
     blogPos, t, s: newJanuary2026BlogPos, t, s.filt, e, r(po, s, t = > po, s, t.feat, u, r, e, d),
     servic, e, s: newJanuary2026Servi, c, e, s,

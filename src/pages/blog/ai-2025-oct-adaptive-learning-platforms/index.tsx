@@ -7,10 +7,10 @@ const, AdaptiveLearningPlatform, s = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           AI-Powered, Adaptive, Learning Platforms, 202, 5: Personalized, Enterprise, Training at, Scal, e | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Revolutionary, adaptive, learning systems, using, AI to, personalize, enterprise traini, n, g. Achieve, 9, 2% completion, ra, t, e, s, 5x, faster, skill developme, n, t, a, n, d $34, 0, M+ in, productivity, gains.'
         />
         <meta, nam, e = 'keywor, d, s'
@@ -159,7 +159,7 @@ const, AdaptiveLearningPlatform, s = () => {
                   </h3>
                   <p, classNam, e='mb-3'>
                     Generate, personalized, learning materials, o, n-dema, n, d. AI, creates, custom examples, relevant, to the, learne, r's, r, o, l, e,
-                    indust, r, y, and, experience, level. Interactive, simulations, adapt to, individual, skill leve, l, s.
+                    industry, and, experience, level. Interactive, simulations, adapt to, individual, skill leve, l, s.
                   </p>
                   <div, classNam, e = 'bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0/30'>
                     <strong, classNam, e='te, x, t-purp, l, e-4, 0, 0'>Innovati, o, n: </st, r, o, n, g>{' '}

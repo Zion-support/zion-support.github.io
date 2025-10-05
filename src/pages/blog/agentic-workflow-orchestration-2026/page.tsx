@@ -5,14 +5,14 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Agentic, Workflow, Orchestration 20, 2, 6 — Budg, e, t, s, Canari, e, s, Rollba, c, k
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Design, agentic, workflows with, budgeted, action, s, K, P, I-linked, canarie, s, and, instant, rollback for, safe, velocity.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/agent, i, c-workfl, o, w-orchestrati, o, n-20, 2, 6'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/agent i c-workfl o w-orchestrati o n-20 2 6'
         />
       </Helm, e, t>
 

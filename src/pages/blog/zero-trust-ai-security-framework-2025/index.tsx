@@ -15,18 +15,18 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |
           Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Comprehensive, zer, o-trust, security, framework for, AI, systems. Protect, mod, e, l, s, da, t, a, and, inference, pipelines with, proven, security controls, used, by Fortune, 500, companies.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, securi, t, y, zero, trus, t, model, securit, y, ML, securit, y, AI, governanc, e, enterprise, securit, y'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ze, r, o-tru, s, t-ai-securi, t, y-framewo, r, k-20, 2, 5'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ze r o-tru s t-ai-securi t y-framewo r k-20 2 5'
         />
       </Helm, e, t>
 

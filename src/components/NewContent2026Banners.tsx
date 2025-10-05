@@ -1,6 +1,6 @@
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
-// Latest, Content, 2026 Banner, export, function LatestContent2026Bann, e, r() { 
+// Latest Content 2026 Banner export function LatestContent2026Bann e r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -36,7 +36,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
     </d, i, v > );
  }
 
-// AI, Security, Enterprise 2026, Banner, export functio; n, AISecurityEnterprise2026Banne, r() { 
+// AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -70,7 +70,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
     </d, i, v > );
  }
 
-// AI, Multimodal, Enterprise 2026, Banner, export functio; n, AIMultimodalEnterprise2026Banne, r() { 
+// AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -85,7 +85,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
             AI, Multimodal, Enterprise Solutions, 202, 6
           </h2>
           <p, classNam, e='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>
-            Harness, the, power of, t, e, x, t, ima, g, e, aud, i, o, and, video, processing with, unified, AI models, that, deliver 95% accuracy, across, all modaliti, e, s.
+            Harness, the, power of, t, e, x, t, image, aud, i, o, and, video, processing with, unified, AI models, that, deliver 95% accuracy, across, all modaliti, e, s.
           </p>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'>
             <div, classNam, e='bg-whi, t, e/10, rounde, d-l, g, p-4'>
@@ -114,7 +114,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
     </d, i, v > );
  }
 
-// AI, Sustainability, Transformation Banner, export, function AISustainabilityTransformationBann, e, r() { 
+// AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -158,7 +158,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
     </d, i, v > );
  }
 
-// New, Latest, 2026 Content, Banner, export functio; n, NewLatest2026ContentBanne, r() { 
+// New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -211,7 +211,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
     </d, i, v > );
  }
 
-// AI, Autonomous, Cloud Ops, Banner, export functio; n, AIAutonomousCloudOpsBanne, r() { 
+// AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -256,7 +256,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
     </d, i, v > );
  }
 
-// AI, FinTech, Transformation Banner, export, function AIFinTechTransformationBann, e, r() { 
+// AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -301,7 +301,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
     </d, i, v > );
  }
 
-// AI, Retail, Automation Banner, export, function AIRetailAutomationBann, e, r() { 
+// AI Retail Automation Banner export function AIRetailAutomationBann e r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>
@@ -346,7 +346,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
     </d, i, v > );
  }
 
-// Latest, 2026, Content Banner, export, function Latest2026ContentBann, e, r() { 
+// Latest 2026 Content Banner export function Latest2026ContentBann e r() { 
   retu, r, n (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, vi, a-purp, l, e-600, t, o-fuchs, i, a-600, tex, t-white, p, y-6'>
       <div, classNam, e='m, a, x-w-6xl, m, x-auto, p, x-4'>

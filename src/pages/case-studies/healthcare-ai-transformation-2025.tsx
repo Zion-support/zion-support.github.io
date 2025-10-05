@@ -16,10 +16,10 @@ const, HealthcareAITransformatio, n = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Healthcare, AI, Transformation: $124M, Sav, e, d, 3.8M, Patients, Served | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Major, healthcare, network achiev, e, s $124M, cost, savings and, 8, 7% faster, patient, processing through, comprehensive, AI transformati, o, n. 3.8M, patien, t, s, 450, facilitie, s, 96% satisfacti, o, n.'
         />
         <meta, nam, e = 'keywor, d, s'
@@ -165,7 +165,7 @@ const, HealthcareAITransformatio, n = () => {
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                         <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                        <sp, a, n>Patient, satisfactio, n: 67% (indust, r, y: 7, 8%)</sp, a, n>
+                        <sp, a, n>Patient, satisfactio, n: 67% (industry: 7, 8%)</sp, a, n>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                         <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>

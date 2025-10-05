@@ -10,8 +10,8 @@ const, HomePag, e: Rea, c, t.FC = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>Ho, m, e - Zion, Tech, Group</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>Ho, m, e - Zion, Tech, Group</title>
+        <meta, nam, e = 'description'
           conte, n, t='Leading, provider, of , A, I, blockcha, i, n, cloud, computin, g, and, cybersecurity, solutions for, modern, businesses.'
         />
       </Helm, e, t>
@@ -19,10 +19,10 @@ const, HomePag, e: Rea, c, t.FC = () => {
       <div, classNam, e = 'ho, m, e-pa, g, e'>
         <section, classNam, e='he, r, o-secti, o, n'>
           <div, classNam, e='he, r, o-conte, n, t'>
-            <h1, classNam, e='he, r, o-tit, l, e'>
+            <h1, classNam, e='he, r, o-title'>
               Advanced, Technology, Solutions for, the, Future
             </h1>
-            <p, classNam, e='he, r, o-subtit, l, e'>
+            <p, classNam, e='he, r, o-subtitle'>
               Empowering, businesses, with cutti, n, g-edg, e, A, I, blockcha, i, n, cloud, computin, g, and, cybersecurity, solutions that, drive, innovation and, growt, h.
             </p>
             <div, classNam, e = 'he, r, o-actio, n, s'>
@@ -41,7 +41,7 @@ const, HomePag, e: Rea, c, t.FC = () => {
         </secti, o, n > <AnimatedSection, animatio, n='slide, U, p' del, a, y={2, 0, 0 }>
           <section, classNam, e='featur, e, s-secti, o, n'>
             <div, classNam, e='contain, e, r'>
-              <h2, classNam, e='secti, o, n-tit, l, e'>Why, Choose, Zion Tech, Grou, p?</h2>
+              <h2, classNam, e='secti, o, n-title'>Why, Choose, Zion Tech, Grou, p?</h2>
               <div, classNam, e='featur, e, s-gr, i, d'>
                 <AnimatedSection, animatio, n='fade, I, n' del, a, y={4, 0, 0}>
                   <div, classNam, e='featu, r, e-ca, r, d'>
@@ -89,7 +89,7 @@ const, HomePag, e: Rea, c, t.FC = () => {
         <AnimatedSection, animatio, n='slide, U, p' del, a, y={2, 0, 0}>
           <section, classNam, e='servic, e, s-previ, e, w'>
             <div, classNam, e='contain, e, r'>
-              <h2, classNam, e='secti, o, n-tit, l, e'>Our, Core, Services</h2>
+              <h2, classNam, e='secti, o, n-title'>Our, Core, Services</h2>
               <div, classNam, e='servic, e, s-gr, i, d'>
                 <AnimatedSection, animatio, n='slideLe, f, t' del, a, y={4, 0, 0}>
                   <div, classNam, e='servi, c, e-ca, r, d'>
@@ -142,7 +142,7 @@ const, HomePag, e: Rea, c, t.FC = () => {
 
         {/* Featured, Content, Advertising Bann, e, r */}
         <AnimatedSection, animatio, n='slide, U, p' del, a, y={2, 0, 0}>
-          <section, classNam, e='featur, e, d-bann, e, r-secti, o, n'>
+          <section, classNam, e='featured-bann, e, r-secti, o, n'>
             <October2025FeaturedContentBann, e, r />
           </secti, o, n>
         </AnimatedSecti, o, n>
@@ -152,7 +152,7 @@ const, HomePag, e: Rea, c, t.FC = () => {
             <div, classNam, e='contain, e, r'>
               <div, classNam, e='pro, m, o-ca, r, d'>
                 <div, classNam, e='pro, m, o-conte, n, t'>
-                  <h2, classNam, e='secti, o, n-tit, l, e'>🚀 October, 2025, Updates</h2>
+                  <h2, classNam, e='secti, o, n-title'>🚀 October, 2025, Updates</h2>
                   <p, classNam, e='pro, m, o-te, x, t'>
                     Fresh, insights, on Mul, t, i-Agent, AI, System, s, Ze, r, o-Trust, Architecture, 2.0, Quant, u, m-Safe, Cryptograph, y, Re, a, l-Time, AI, Training, Sustainable, AI, practices, Kubernetes, Service, Mesh
                     compariso, n, s, and, Agentic, Workflows. Pl, u, s: GenAI, in, productio, n, priva, c, y-first, Edge, AI, and, inciden, t-ready, C, I/CD, playbook, s.
@@ -174,26 +174,26 @@ const, HomePag, e: Rea, c, t.FC = () => {
                 the, m, e='purp, l, e'
                 ic, o, n='rock, e, t'
                 bad, g, e='N, e, w'
-                da, t, e = { new, Da, t, e().toLocaleDateStri, n, g() }, tit, l, e = 'Just, Publishe, d: Governed, Age, n, t, s, RAG, v, 3, Cost, v, 6'
-                descripti, o, n = 'New, enterprise, guides: safe, agentic, automati, o, n, pragmatic, RAG, that lifts, quality, while cutting, cos, t, and, GenAI, cost optimization, v, 6.'
+                date = { new, Da, t, e().toLocaleDateStri, n, g() }, title = 'Just, Publishe, d: Governed, Age, n, t, s, RAG, v, 3, Cost, v, 6'
+                description = 'New, enterprise, guides: safe, agentic, automati, o, n, pragmatic, RAG, that lifts, quality, while cutting, cos, t, and, GenAI, cost optimization, v, 6.'
                 ctaTe, x, t = 'Explore, all, posts'
                 ctaLi, n, k='/bl, o, g'
                 showCou, n, t = { , 3 }, featuredIte, m, s = {[
                   {
-                    tit, l, e: 'Governed, Agentic, Automation: Safe, To, o, l, s, Fast, Outcome, s',
-                    catego, r, y: 'A, I',
+                    title: 'Governed, Agentic, Automation: Safe, To, o, l, s, Fast, Outcome, s',
+                    category: 'A, I',
                     li, n, k: '/bl, o, g/govern, e, d-agent, i, c-automati, o, n-20, 2, 5-10-0, 3',
                     metri, c, s: '8, mi, n • 20, 2, 5-10-0, 3',
                   },
                   {
-                    tit, l, e: 'Enterprise, RAG, Blueprint v3: 45% Qual, i, t, y ↑, 62% Co, s, t ↓',
-                    catego, r, y: 'RA, G',
+                    title: 'Enterprise, RAG, Blueprint v3: 45% Qual, i, t, y ↑, 62% Co, s, t ↓',
+                    category: 'RA, G',
                     li, n, k: '/bl, o, g/enterpri, s, e-r, a, g-bluepri, n, t-v3-20, 2, 5-10-0, 3',
                     metri, c, s: '9, mi, n • 20, 2, 5-10-0, 3',
                   },
                   {
-                    tit, l, e: 'GenAI, Cost, Optimization v6: Quality, Tie, r, s, Coales, c, e, Disti, l, l',
-                    catego, r, y: 'Cl, o, u, d',
+                    title: 'GenAI, Cost, Optimization v6: Quality, Tie, r, s, Coales, c, e, Disti, l, l',
+                    category: 'Cl, o, u, d',
                     li, n, k: '/bl, o, g/gen, a, i-co, s, t-optimizati, o, n-v6-20, 2, 5-10-0, 3',
                     metri, c, s: '9, mi, n • 20, 2, 5-10-0, 3',
                   },
@@ -206,7 +206,7 @@ const, HomePag, e: Rea, c, t.FC = () => {
         <AnimatedSection, animatio, n = 'slide, U, p' del, a, y={2, 0, 0}>
           <section, classNam, e='bl, o, g-previ, e, w'>
             <div, classNam, e='contain, e, r'>
-              <h2, classNam, e='secti, o, n-tit, l, e'>From, the, Blog</h2>
+              <h2, classNam, e='secti, o, n-title'>From, the, Blog</h2>
               <div, classNam, e='bl, o, g-gr, i, d'>
                 { [...BLOG_POS, T, S]
                   .so, r, t(
@@ -217,25 +217,25 @@ const, HomePag, e: Rea, c, t.FC = () => {
                   .sli, c, e(0, 4)
                   .m, a, p(po, s, t = > (
                     <article, ke, y = { po, s, t.i, d  }, classNa, m, e = 'bl, o, g-ca, r, d'>
-                      <div, classNam, e='bl, o, g-ca, r, d-ima, g, e'
+                      <div, classNam, e='bl, o, g-ca, r, d-image'
                         sty, l, e={{
                           backgroundIma, g, e: `u, r, l(${po, s, t.featuredI, m, a, g, e})`,
                         }}
                       />
                       <div, classNam, e = 'bl, o, g-ca, r, d-conte, n, t'>
                         <div, classNam, e='bl, o, g-me, t, a'>
-                          <span, classNam, e='bl, o, g-catego, r, y'>{po, s, t.catego, r, y}</sp, a, n>
+                          <span, classNam, e='bl, o, g-category'>{po, s, t.category}</sp, a, n>
                           <span, classNam, e='bl, o, g-d, o, t'>•</sp, a, n>
-                          <span, classNam, e='bl, o, g-da, t, e'>
+                          <span, classNam, e='bl, o, g-date'>
                             {new, Dat, e(po, s, t.publishe, d, A, t).toLocaleDateStri, n, g()}
                           </sp, a, n>
                           <span, classNam, e = 'bl, o, g-d, o, t'>•</sp, a, n>
                           <span, classNam, e='bl, o, g-readti, m, e'>
-                            {po, s, t.readTi, m, e} min, rea, d
+                            {po, s, t.readTime} min, rea, d
                           </sp, a, n>
                         </d, i, v>
-                        <h3, classNam, e='bl, o, g-tit, l, e'>{po, s, t.tit, l, e}</h3>
-                        <p, classNam, e='bl, o, g-excer, p, t'>{po, s, t.excer, p, t}</p>
+                        <h3, classNam, e='bl, o, g-title'>{po, s, t.title}</h3>
+                        <p, classNam, e='bl, o, g-excerpt'>{po, s, t.excerpt}</p>
                         <a, hre, f='/<bl, o, g' classNa, m, e='servi, c, e-li, n, k'>
                           Read, on, the bl, o, g →
                         </a>

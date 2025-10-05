@@ -1,42 +1,42 @@
-// Enterprise, case, studies showcasing, rea, l-world, AI, implementations and, results, export interfac; e, EnterpriseCaseStud, y { 
-  id: stri, n, g;
-  sl, u, g ? : stri, n, g;
-  tit, l, e: stri, n, g;
-  compa, n, y: stri, n, g;
-  indust, r, y: stri, n, g;
-  descripti, o, n: stri, n, g;
-  challen, g, e: stri, n, g;
-  soluti, o, n: stri, n, g;
-  resul, t, s: {
+// Enterprise case studies showcasing rea l-world AI implementations and results export interfac; e EnterpriseCaseStud y { 
+  id: string;
+  slug ? : string;
+  title: string;
+  company: string;
+  industry: string;
+  description: string;
+  challenge: string;
+  solution: string;
+  results: {
     metri, c, s: {
-      performan, c, e: stri, n, g;
-      savin, g, s: stri, n, g;
-      accura, c, y: stri, n, g;
+      performan, c, e: string;
+      savin, g, s: string;
+      accura, c, y: string;
       r, o, i : str, i, n, g;
      };
-    timefra, m, e: stri, n, g;
+    timefra, m, e: string;
     sca, l, e: str, i, n, g;
   };
-  technologi, e, s: stri, n, g[];
-  featur, e, d: boole, a, n;
-  da, t, e: stri, n, g;
-  auth, o, r: stri, n, g;
-  ima, g, e?: stri, n, g;
-  newBad, g, e?: boole, a, n;
+  technologies: string[];
+  featured: boolean;
+  date: string;
+  author: string;
+  image?: string;
+  newBad, g, e?: boolean;
   trendi, n, g?: bool, e, a, n;
 }
 
-export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
+export const enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
   {
     id: 'fortu, n, e-5, 0, 0-ai-transformat, i, o, n',
-    sl, u, g: 'fortu, n, e-5, 0, 0-ai-transformat, i, o, n',
-    tit, l, e: 'Fortune, 500, Global Manufacturi, n, g: Complete, AI, Transformatio, n',
-    compa, n, y: 'Global, Manufacturing, Cor, p',
-    indust, r, y: 'Manufactur, i, n, g',
-    descripti, o, n: 'Complete, enterprise, AI transformation, achieving, 99.99% operational, autono, m, y, $3.7B, value, creation, and, zero, human error, operation, s.',
-    challen, g, e: 'Manual, process, e, s, operational, inefficiencie, s, and, high, error rates, across, 450 global, facilitie, s',
-    soluti, o, n: 'Implemented, comprehensive, AI mesh, network, with autonomous, decisio, n-making, and, self-healing, infrastructu, r, e',
-    resul, t, s: {
+    slug: 'fortu, n, e-5, 0, 0-ai-transformat, i, o, n',
+    title: 'Fortune, 500, Global Manufacturi, n, g: Complete, AI, Transformatio, n',
+    company: 'Global, Manufacturing, Cor, p',
+    industry: 'Manufactur, i, n, g',
+    description: 'Complete, enterprise, AI transformation, achieving, 99.99% operational, autono, m, y, $3.7B, value, creation, and, zero, human error, operation, s.',
+    challenge: 'Manual, process, e, s, operational, inefficiencie, s, and, high, error rates, across, 450 global, facilitie, s',
+    solution: 'Implemented, comprehensive, AI mesh, network, with autonomous, decisio, n-making, and, self-healing, infrastructu, r, e',
+    results: {
       metri, c, s: {
         performan, c, e: '99.99% upt, i, m, e',
         savin, g, s: '$3.7B, annual, l, y',
@@ -46,29 +46,29 @@ export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
       timefra, m, e: '18, mont, h, s',
       sca, l, e: '450, facilities, globall, y',
     },
-    technologi, e, s: [
+    technologies: [
       'Autonomou, s, A, I',
       'Se, l, f-Healing, Infrastructur, e',
       'Predictive, Analytic, s',
       'IoT, Integratio, n',
     ],
-    featur, e, d: t, r, u, e,
-    da, t, e: '20, 2, 5-01-2, 0',
-    auth, o, r: 'Zion, Tech, Group T, e, a, m',
-    ima, g, e: '/imag, e, s/fortu, n, e-5, 0, 0-ai-transformati, o, n.jp, g',
+    featured: t, r, u, e,
+    date: '20, 2, 5-01-2, 0',
+    author: 'Zion, Tech, Group T, e, a, m',
+    image: '/imag, e, s/fortu, n, e-5, 0, 0-ai-transformati, o, n.jp, g',
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
   {
     id: 'financi, a, l-servic, e, s-fra, u, d-prevent, i, o, n',
-    sl, u, g: 'financi, a, l-servic, e, s-fra, u, d-prevent, i, o, n',
-    tit, l, e: 'Leading, Financial, Services: AI-Powered, Fraud, Preventio, n',
-    compa, n, y: 'Global, Financial, Service, s',
-    indust, r, y: 'Financial, Servic, e, s',
-    descripti, o, n: 'Advanced, AI, fraud detection, system, preventing $47B, in, fraudulent transactions, with, 99.94% accuracy, and, real-time, processi, n, g.',
-    challen, g, e: 'Sophisticated, fraud, schemes causi, n, g $20, 0, M+ annual, losses, and regulatory, compliance, requirement, s',
-    soluti, o, n: 'Deployed, quantu, m-enhanced, neural, networks with, rea, l-time, behavioral, analysis and, predictive, modelin, g',
-    resul, t, s: {
+    slug: 'financi, a, l-servic, e, s-fra, u, d-prevent, i, o, n',
+    title: 'Leading, Financial, Services: AI-Powered, Fraud, Preventio, n',
+    company: 'Global, Financial, Service, s',
+    industry: 'Financial, Servic, e, s',
+    description: 'Advanced, AI, fraud detection, system, preventing $47B, in, fraudulent transactions, with, 99.94% accuracy, and, real-time, processi, n, g.',
+    challenge: 'Sophisticated, fraud, schemes causi, n, g $20, 0, M+ annual, losses, and regulatory, compliance, requirement, s',
+    solution: 'Deployed, quantu, m-enhanced, neural, networks with, rea, l-time, behavioral, analysis and, predictive, modelin, g',
+    results: {
       metri, c, s: {
         performan, c, e: '99.94% accur, a, c, y',
         savin, g, s: '$47B, prevent, e, d',
@@ -78,29 +78,29 @@ export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
       timefra, m, e: '12, mont, h, s',
       sca, l, e: '5, 0, M+ transactions, dai, l, y',
     },
-    technologi, e, s: [
+    technologies: [
       'Quantu, m, A, I',
       'Re, a, l-time, Analytic, s',
       'Behavioral, Analysi, s',
       'Predictive, Modelin, g',
     ],
-    featur, e, d: t, r, u, e,
-    da, t, e: '20, 2, 5-01-2, 0',
-    auth, o, r: 'Zion, Tech, Group T, e, a, m',
-    ima, g, e: '/imag, e, s/financi, a, l-fra, u, d-preventi, o, n.jp, g',
+    featured: t, r, u, e,
+    date: '20, 2, 5-01-2, 0',
+    author: 'Zion, Tech, Group T, e, a, m',
+    image: '/imag, e, s/financi, a, l-fra, u, d-preventi, o, n.jp, g',
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
   {
     id: 'healthca, r, e-ai-diagnost, i, c-sys, t, e, m',
-    sl, u, g: 'healthca, r, e-ai-diagnost, i, c-sys, t, e, m',
-    tit, l, e: 'Major, Healthcare, System: AI, Diagnostic, Excellenc, e',
-    compa, n, y: 'Regional, Healthcare, Networ, k',
-    indust, r, y: 'Healthc, a, r, e',
-    descripti, o, n: 'AI-powered, diagnostic, system achieving, 9, 4% diagnostic, accura, c, y, 252, lives, saved, and, 49, 7% ROI, in, healthcare delive, r, y.',
-    challen, g, e: 'Diagnostic, dela, y, s, accuracy, issue, s, and, resource, constraints affecting, patient, outcomes',
-    soluti, o, n: 'Implemented, multimodal, AI diagnostic, platform, with re, a, l-time, analysis, and clinical, decision, suppor, t',
-    resul, t, s: {
+    slug: 'healthca, r, e-ai-diagnost, i, c-sys, t, e, m',
+    title: 'Major, Healthcare, System: AI, Diagnostic, Excellenc, e',
+    company: 'Regional, Healthcare, Networ, k',
+    industry: 'Healthc, a, r, e',
+    description: 'AI-powered, diagnostic, system achieving, 9, 4% diagnostic, accura, c, y, 252, lives, saved, and, 49, 7% ROI, in, healthcare delive, r, y.',
+    challenge: 'Diagnostic, dela, y, s, accuracy, issue, s, and, resource, constraints affecting, patient, outcomes',
+    solution: 'Implemented, multimodal, AI diagnostic, platform, with re, a, l-time, analysis, and clinical, decision, suppor, t',
+    results: {
       metri, c, s: {
         performan, c, e: '94% accur, a, c, y',
         savin, g, s: '$1.5B, val, u, e',
@@ -110,29 +110,29 @@ export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
       timefra, m, e: '15, mont, h, s',
       sca, l, e: '25, hospita, l, s, 500K, patient, s',
     },
-    technologi, e, s: [
+    technologies: [
       'Multimoda, l, A, I',
       'Diagnostic, Imagin, g',
       'Clinical, Decision, Support',
       'Re, a, l-time, Analytic, s',
     ],
-    featur, e, d: t, r, u, e,
-    da, t, e: '20, 2, 5-01-2, 0',
-    auth, o, r: 'Zion, Tech, Group T, e, a, m',
-    ima, g, e: '/imag, e, s/healthca, r, e-ai-diagnosti, c, s.jp, g',
+    featured: t, r, u, e,
+    date: '20, 2, 5-01-2, 0',
+    author: 'Zion, Tech, Group T, e, a, m',
+    image: '/imag, e, s/healthca, r, e-ai-diagnosti, c, s.jp, g',
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
   {
     id: 'reta, i, l-supp, l, y-cha, i, n-optimizat, i, o, n',
-    sl, u, g: 'reta, i, l-supp, l, y-cha, i, n-optimizat, i, o, n',
-    tit, l, e: 'Global, Retail, Chain: AI, Supply, Chain Revolut, i, o, n',
-    compa, n, y: 'Global, Retail, Corporatio, n',
-    indust, r, y: 'Ret, a, i, l',
-    descripti, o, n: 'AI-driven, supply, chain optimization, achieving, 65% faster, deliveri, e, s, 40% cost, reductio, n, and, 9, 5% inventory, accurac, y.',
-    challen, g, e: 'Supply, chain, inefficiencie, s, stockou, t, s, and, delivery, delays affecting, customer, satisfaction',
-    soluti, o, n: 'Deployed, autonomous, supply chain, AI, with predictive, analytics, and dynamic, optimizati, o, n',
-    resul, t, s: {
+    slug: 'reta, i, l-supp, l, y-cha, i, n-optimizat, i, o, n',
+    title: 'Global, Retail, Chain: AI, Supply, Chain Revolut, i, o, n',
+    company: 'Global, Retail, Corporatio, n',
+    industry: 'Ret, a, i, l',
+    description: 'AI-driven, supply, chain optimization, achieving, 65% faster, deliveri, e, s, 40% cost, reductio, n, and, 9, 5% inventory, accurac, y.',
+    challenge: 'Supply, chain, inefficiencie, s, stockou, t, s, and, delivery, delays affecting, customer, satisfaction',
+    solution: 'Deployed, autonomous, supply chain, AI, with predictive, analytics, and dynamic, optimizati, o, n',
+    results: {
       metri, c, s: {
         performan, c, e: '65% faster, delive, r, y',
         savin, g, s: '40% cost, reducti, o, n',
@@ -142,29 +142,29 @@ export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
       timefra, m, e: '10, mont, h, s',
       sca, l, e: ', 2,0, 0, 0+ stores, globall, y',
     },
-    technologi, e, s: [
+    technologies: [
       'Supply, Chain, A, I',
       'Predictive, Analytic, s',
       'Autonomous, Optimizatio, n',
       'IoT, Sensor, s',
     ],
-    featur, e, d: t, r, u, e,
-    da, t, e: '20, 2, 5-01-2, 0',
-    auth, o, r: 'Zion, Tech, Group T, e, a, m',
-    ima, g, e: '/imag, e, s/reta, i, l-supp, l, y-cha, i, n-ai.jp, g',
+    featured: t, r, u, e,
+    date: '20, 2, 5-01-2, 0',
+    author: 'Zion, Tech, Group T, e, a, m',
+    image: '/imag, e, s/reta, i, l-supp, l, y-cha, i, n-ai.jp, g',
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
   {
     id: 'ener, g, y-sect, o, r-sma, r, t-g, r, i, d',
-    sl, u, g: 'ener, g, y-sect, o, r-sma, r, t-g, r, i, d',
-    tit, l, e: 'Energy, Utilit, y: Smart, Grid, AI Implementat, i, o, n',
-    compa, n, y: 'Regional, Energy, Utilit, y',
-    indust, r, y: 'Ene, r, g, y',
-    descripti, o, n: 'Smart, grid, AI system, achieving, 99.97% upt, i, m, e, 60% energy, efficiency, improvement, a, n, d $890M, annual, savings.',
-    challen, g, e: 'Grid, instabili, t, y, energy, wast, e, and, maintenance, inefficiencies in, aging, infrastructure',
-    soluti, o, n: 'Implemented, A, I-powered, smart, grid with, predictive, maintenance and, autonomous, energy distribut, i, o, n',
-    resul, t, s: {
+    slug: 'ener, g, y-sect, o, r-sma, r, t-g, r, i, d',
+    title: 'Energy, Utilit, y: Smart, Grid, AI Implementat, i, o, n',
+    company: 'Regional, Energy, Utilit, y',
+    industry: 'Ene, r, g, y',
+    description: 'Smart, grid, AI system, achieving, 99.97% upt, i, m, e, 60% energy, efficiency, improvement, a, n, d $890M, annual, savings.',
+    challenge: 'Grid, instabili, t, y, energy, wast, e, and, maintenance, inefficiencies in, aging, infrastructure',
+    solution: 'Implemented, A, I-powered, smart, grid with, predictive, maintenance and, autonomous, energy distribut, i, o, n',
+    results: {
       metri, c, s: {
         performan, c, e: '99.97% upt, i, m, e',
         savin, g, s: '$890M, annual, l, y',
@@ -174,29 +174,29 @@ export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
       timefra, m, e: '20, mont, h, s',
       sca, l, e: '5M+ customers, serv, e, d',
     },
-    technologi, e, s: [
+    technologies: [
       'Smart, Grid, A, I',
       'Predictive, Maintenanc, e',
       'Energy, Optimizatio, n',
       'IoT, Integratio, n',
     ],
-    featur, e, d: t, r, u, e,
-    da, t, e: '20, 2, 5-01-2, 0',
-    auth, o, r: 'Zion, Tech, Group T, e, a, m',
-    ima, g, e: '/imag, e, s/ener, g, y-sma, r, t-gr, i, d-ai.jp, g',
+    featured: t, r, u, e,
+    date: '20, 2, 5-01-2, 0',
+    author: 'Zion, Tech, Group T, e, a, m',
+    image: '/imag, e, s/ener, g, y-sma, r, t-gr, i, d-ai.jp, g',
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
   {
     id: 'logisti, c, s-autonomo, u, s-fl, e, e, t',
-    sl, u, g: 'logisti, c, s-autonomo, u, s-fl, e, e, t',
-    tit, l, e: 'Logistics, Compan, y: Autonomous, Fleet, Managemen, t',
-    compa, n, y: 'Global, Logistics, Provide, r',
-    indust, r, y: 'Logist, i, c, s',
-    descripti, o, n: 'Autonomous, fleet, management achieving, 9, 9.8% delivery, accura, c, y, 45% fuel, saving, s, a, n, d $2.3B, operational, value.',
-    challen, g, e: 'Fleet, inefficienci, e, s, fuel, cost, s, and, delivery, accuracy issues, across, global operatio, n, s',
-    soluti, o, n: 'Deployed, autonomous, fleet AI, with, route optimization, and, predictive maintenance, syste, m, s',
-    resul, t, s: {
+    slug: 'logisti, c, s-autonomo, u, s-fl, e, e, t',
+    title: 'Logistics, Company: Autonomous, Fleet, Managemen, t',
+    company: 'Global, Logistics, Provide, r',
+    industry: 'Logist, i, c, s',
+    description: 'Autonomous, fleet, management achieving, 9, 9.8% delivery, accura, c, y, 45% fuel, saving, s, a, n, d $2.3B, operational, value.',
+    challenge: 'Fleet, inefficienci, e, s, fuel, cost, s, and, delivery, accuracy issues, across, global operatio, n, s',
+    solution: 'Deployed, autonomous, fleet AI, with, route optimization, and, predictive maintenance, syste, m, s',
+    results: {
       metri, c, s: {
         performan, c, e: '99.8% accur, a, c, y',
         savin, g, s: '$2.3B, val, u, e',
@@ -206,25 +206,25 @@ export, const, enterpriseCaseStudies2025: EnterpriseCaseStu, d, y[] = [
       timefra, m, e: '14, mont, h, s',
       sca, l, e: '5, 0,0, 0, 0+ vehicles, globall, y',
     },
-    technologi, e, s: [
+    technologies: [
       'Autonomous, Fle, e, t',
       'Route, Optimizatio, n',
       'Predictive, Maintenanc, e',
       'IoT, Sensor, s',
     ],
-    featur, e, d: t, r, u, e,
-    da, t, e: '20, 2, 5-01-2, 0',
-    auth, o, r: 'Zion, Tech, Group T, e, a, m',
-    ima, g, e: '/imag, e, s/logisti, c, s-autonomo, u, s-fle, e, t.jp, g',
+    featured: t, r, u, e,
+    date: '20, 2, 5-01-2, 0',
+    author: 'Zion, Tech, Group T, e, a, m',
+    image: '/imag, e, s/logisti, c, s-autonomo, u, s-fle, e, t.jp, g',
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
 ];
 
-export, const, featuredCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(
+export const featuredCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(
   caseStu, d, y => caseStu, d, y.featu, r, e, d,
-); export, const, trendingCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(
+); export const trendingCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(
   caseStu, d, y => caseStu, d, y.trend, i, n, g,
-); export, const, newCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(
+); export const newCaseStudies = enterpriseCaseStudies20, 2, 5.filt, e, r(
   caseStu, d, y => caseStu, d, y.newBa, d, g, e,
 );

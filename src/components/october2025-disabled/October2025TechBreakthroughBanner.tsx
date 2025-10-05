@@ -18,7 +18,7 @@ const, October2025TechBreakthroughBanne, r = () => {
       </d, i, v>
 
       {/* Animated, Gri, d */}
-      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-ima, g, e:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
+      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
 
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'>
         {/* Breaking, News, Bad, g, e */}

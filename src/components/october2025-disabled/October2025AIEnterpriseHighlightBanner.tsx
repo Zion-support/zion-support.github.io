@@ -23,7 +23,7 @@ const, October2025AIEnterpriseHighlightBanne, r: Rea, c, t.FC = () => {
         </h2>
 
         <p, classNam, e='te, x, t-xl, tex, t-center, m, b-10, tex, t-whi, t, e/80, ma, x-w-3xl, m, x-au, t, o'>
-          Three, comprehensive, guides helping, Fortune, 1000 companies, accelerate, AI adoption, with, proven frameworks, and, measurable resul, t, s
+          Three, comprehensive, guides helping, Fortune, 1000 companies, accelerate, AI adoption, with, proven frameworks, and, measurable results
         </p>
 
         <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'>

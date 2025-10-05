@@ -27,7 +27,7 @@ export, default, function October2025SelfHealingSpotlightBann, e, r() {
               <div, classNam, e='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>
                 <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>2.3, mi, n</d, i, v>
                 <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
-                  Mean, Time, to Resoluti, o, n
+                  Mean, Time, to Resolution
                 </d, i, v>
               </d, i, v>
               <div, classNam, e='bg-whi, t, e/1, 0, p-3, rounde, d-lg'>

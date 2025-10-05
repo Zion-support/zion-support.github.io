@@ -1,16 +1,16 @@
-// Minimal, type, s; remove, t, s-nocheck, import, React fr, o, m 'rea, c, t';
+// Minimal type s; remove t s-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export, default, function GenAICostTiersV3_20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t { 
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>GenAI, 202, 7: Cost, Tiers, v3 — 40–70% Savin, g, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>GenAI, 202, 7: Cost, Tiers, v3 — 40–70% Savin, g, s</title>
+        <meta, nam, e='description'
           conte, n, t='Quality, tier, s + semantic, cache, s + policy, tests, for predictable, spend, and stable, U, X.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 7-co, s, t-tie, r, s-v3'
+          hr, e, f='htt, p, s://ziontechgro u p.c o m/bl o g/gen a i-20 2 7-co s t-tie r s-v3'
         />
       </Helm, e, t>
 

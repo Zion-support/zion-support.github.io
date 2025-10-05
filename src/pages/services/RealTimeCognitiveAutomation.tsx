@@ -15,10 +15,10 @@ const, RealTimeCognitiveAutomatio, n = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Re, a, l-Time, Cognitive, Automation Platfo, r, m | Transform, Business, Operations with, A, I | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Transform, operations, with Re, a, l-Time, Cognitive, Automation Platfo, r, m. 94% accur, a, c, y, 85% cost, reductio, n, 10x, productivity, gains. AI-powered, workflows, that learn, and, optimize autonomous, l, y.'
         />
         <meta, nam, e = 'keywor, d, s'
@@ -159,33 +159,33 @@ const, RealTimeCognitiveAutomatio, n = () => {
               <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                 {[
                   {
-                    tit, l, e: 'Intelligent, Document, Processi, n, g',
-                    descripti, o, n: '99.8% accuracy, across, PD, F, imag, e, s, scanned, document, s, and, handwritin, g. Support, for, 127 languag, e, s.',
+                    title: 'Intelligent, Document, Processi, n, g',
+                    description: '99.8% accuracy, across, PD, F, imag, e, s, scanned, document, s, and, handwritin, g. Support, for, 127 languag, e, s.',
                     ic, o, n: '📄',
                   },
                   {
-                    tit, l, e: 'Cognitive, Decision, Engin, e',
-                    descripti, o, n: 'AI-powered, decisio, n-making, with, 94% prediction, accurac, y. Mul, t, i-criteria, analysis, in re, a, l-t, i, m, e.',
+                    title: 'Cognitive, Decision, Engin, e',
+                    description: 'AI-powered, decisio, n-making, with, 94% prediction, accurac, y. Mul, t, i-criteria, analysis, in re, a, l-t, i, m, e.',
                     ic, o, n: '🎯',
                   },
                   {
-                    tit, l, e: 'Workflow, Orchestrati, o, n',
-                    descripti, o, n: 'Visual, n, o-code, designer, with smart, routing, and autonomous, exception, handling. 10x, faster, deploymen, t.',
+                    title: 'Workflow, Orchestrati, o, n',
+                    description: 'Visual, n, o-code, designer, with smart, routing, and autonomous, exception, handling. 10x, faster, deploymen, t.',
                     ic, o, n: '🔄',
                   },
                   {
-                    tit, l, e: 'Natural, Language, Understandin, g',
-                    descripti, o, n: '98% accuracy, in, intent recogniti, o, n. Process, and, respond to, human, language with, contextual, understandin, g.',
+                    title: 'Natural, Language, Understandin, g',
+                    description: '98% accuracy, in, intent recogniti, o, n. Process, and, respond to, human, language with, contextual, understandin, g.',
                     ic, o, n: '💬',
                   },
                   {
-                    tit, l, e: 'Predictive, Analyti, c, s',
-                    descripti, o, n: 'Process, mining, and bottleneck, detectio, n. Anticipate, issues, before they, occur, with predictive, maintenan, c, e.',
+                    title: 'Predictive, Analyti, c, s',
+                    description: 'Process, mining, and bottleneck, detectio, n. Anticipate, issues, before they, occur, with predictive, maintenan, c, e.',
                     ic, o, n: '📊',
                   },
                   {
-                    tit, l, e: 'Enterprise, Integrati, o, n',
-                    descripti, o, n: 'P, r, e-built, connectors, for 5, 0, 0+ systems, including, SA, P, Salesfor, c, e, ServiceN, o, w, and, custom, APIs.',
+                    title: 'Enterprise, Integrati, o, n',
+                    description: 'P, r, e-built, connectors, for 5, 0, 0+ systems, including, SA, P, Salesfor, c, e, ServiceN, o, w, and, custom, APIs.',
                     ic, o, n: '🔌',
                   },
                 ].m, a, p((capabili, t, y, ind, e, x) => (
@@ -193,10 +193,10 @@ const, RealTimeCognitiveAutomatio, n = () => {
                   >
                     <div, classNam, e='te, x, t-4xl, m, b-4'>{capabili, t, y.ic, o, n}</d, i, v>
                     <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
-                      {capabili, t, y.tit, l, e}
+                      {capabili, t, y.title}
                     </h3>
                     <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                      {capabili, t, y.descripti, o, n}
+                      {capabili, t, y.description}
                     </p>
                   </di, v>
                 ))}
@@ -211,7 +211,7 @@ const, RealTimeCognitiveAutomatio, n = () => {
               <div, classNam, e='spa, c, e-y-6'>
                 {[
                   {
-                    indust, r, y: 'Financial, Servi, c, e, s',
+                    industry: 'Financial, Servi, c, e, s',
                     savin, g, s: '$12.4, M',
                     automati, o, n: '9, 5%',
                     highligh, t, s: [
@@ -221,7 +221,7 @@ const, RealTimeCognitiveAutomatio, n = () => {
                     ],
                   },
                   {
-                    indust, r, y: 'Healthc, a, r, e',
+                    industry: 'Healthc, a, r, e',
                     savin, g, s: '$8.7, M',
                     automati, o, n: '9, 2%',
                     highligh, t, s: [
@@ -231,7 +231,7 @@ const, RealTimeCognitiveAutomatio, n = () => {
                     ],
                   },
                   {
-                    indust, r, y: 'Manufactur, i, n, g',
+                    industry: 'Manufactur, i, n, g',
                     savin, g, s: '$18.2, M',
                     automati, o, n: '9, 4%',
                     highligh, t, s: [
@@ -241,7 +241,7 @@ const, RealTimeCognitiveAutomatio, n = () => {
                     ],
                   },
                   {
-                    indust, r, y: 'Reta, i, l & E-comme, r, c, e',
+                    industry: 'Reta, i, l & E-comme, r, c, e',
                     savin, g, s: '$6.8, M',
                     automati, o, n: '8, 9%',
                     highligh, t, s: [
@@ -250,24 +250,24 @@ const, RealTimeCognitiveAutomatio, n = () => {
                       'Retur, n, s: 95% automa, t, e, d',
                     ],
                   },
-                ].m, a, p((soluti, o, n, ind, e, x) => (
+                ].m, a, p((solution, ind, e, x) => (
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   >
                     <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
                       <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-                        {soluti, o, n.indust, r, y}
+                        {solution.industry}
                       </h3>
                       <div, classNam, e='flex, ga, p-4'>
                         <div, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
-                          {soluti, o, n.savin, g, s} annual, saving, s
+                          {solution.savin, g, s} annual, saving, s
                         </d, i, v>
                         <div, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
-                          {soluti, o, n.automati, o, n} automati, o, n
+                          {solution.automati, o, n} automati, o, n
                         </d, i, v>
                       </d, i, v>
                     </d, i, v>
                     <ul, classNam, e='spa, c, e-y-2'>
-                      { soluti, o, n.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
+                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                         <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>{highlig, h, t}</sp, a, n>

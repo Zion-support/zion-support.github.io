@@ -109,7 +109,7 @@ export, default, function October2025ProductionAIBann, e, r() {
               </d, i, v>
             </d, i, v>
             <p, classNam, e='te, x, t-whi, t, e/80, m, b-4, leadin, g-relax, e, d'>
-              Unlock, ima, g, e, s, vid, e, o, aud, i, o, and, diagrams, with 68% higher, accurac, y. Ne, x, t-generation, knowledge, retrieval for, enterprise, knowledge bas, e, s.
+              Unlock, image, s, vid, e, o, aud, i, o, and, diagrams, with 68% higher, accurac, y. Ne, x, t-generation, knowledge, retrieval for, enterprise, knowledge bas, e, s.
             </p>
             <div, classNam, e = 'spa, c, e-y-2, m, b-4'>
               <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-sm'>

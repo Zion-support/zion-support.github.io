@@ -6,12 +6,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Edge, Ai, Privacy Preserving, Analytics, 2025</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Edge, Ai, Privacy Preserving, Analytics, 2025</title>
+        <meta, nam, e='description'
           conte, n, t='Learn, about, edge ai, privacy, preserving analytics, 2025, and how, it, can benefit, your, enterprise.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-ai-priva, c, y-preservi, n, g-analyti, c, s-20, 2, 5'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-ai-priva c y-preservi n g-analyti c s-20 2 5'
         />
       </Helm, e, t>
 

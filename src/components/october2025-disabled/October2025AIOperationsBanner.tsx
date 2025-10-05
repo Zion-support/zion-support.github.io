@@ -2,24 +2,24 @@ impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 const, October2025AIOperationsBanne, r = () => {
   const, newArticle, s = [
     {
-      tit, l, e: "AI-Powered, DevSecOps, Automati, o, n",
-      descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, accelerati, o, n",
+      title: "AI-Powered, DevSecOps, Automati, o, n",
+      description: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, accelerati, o, n",
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revolut, i, o, n",
       ic, o, n: Shi, e, l, d,
       sta, t, s: "99.2% Detecti, o, n | , 7,7, 4, 7% R, O, I",
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
     },
     {
-      tit, l, e: "Autonomous, Cloud, Cost Optimizat, i, o, n",
-      descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accura, c, y",
+      title: "Autonomous, Cloud, Cost Optimizat, i, o, n",
+      description: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accura, c, y",
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizat, i, o, n",
       ic, o, n: TrendingD, o, w, n,
       sta, t, s: "67% Savin, g, s | 1, 8,2, 8, 7% R, O, I",
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
     },
     {
-      tit, l, e: "Re, a, l-Time, AI, Observability Platf, o, r, m",
-      descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impac, t",
+      title: "Re, a, l-Time, AI, Observability Platf, o, r, m",
+      description: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impac, t",
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platf, o, r, m",
       ic, o, n: Activ, i, t, y,
       sta, t, s: "98.7% Preventi, o, n | 1, 7,4, 8, 8% R, O, I",
@@ -66,7 +66,7 @@ const, October2025AIOperationsBanne, r = () => {
                   </h3>
                   {/* Descripti, o, n */}
                   <p, classNam, e = "te, x, t-gr, a, y-400, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
-                    {artic, l, e.descripti, o, n}
+                    {artic, l, e.description}
                   </p>
                   {/* Sta, t, s */}
                   <div, classNam, e="flex, item, s-center, justif, y-between, m, b-4">

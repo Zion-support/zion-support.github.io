@@ -6,12 +6,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Federated, Learning, Enterprise 20, 2, 6</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Federated, Learning, Enterprise 20, 2, 6</title>
+        <meta, nam, e='description'
           conte, n, t='Learn, about, federated learning, enterprise, 2026 and, how, it can, benefit, your enterpri, s, e.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/federat, e, d-learni, n, g-enterpri, s, e-20, 2, 6'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/federat e d-learni n g-enterpri s e-20 2 6'
         />
       </Helm, e, t>
 

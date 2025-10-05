@@ -16,23 +16,23 @@ const, AutonomousEnterpriseMesh202, 6: Rea, c, t.FC = () => {
   const, feature, s = [
     {
       ic, o, n: Net, w, o, r, k,
-      tit, l, e: 'Se, l, f-Organizing, Networ, k, s',
-      descripti, o, n: 'AI, systems, that autonomously, form, optimal network, topologies, for maximum, efficien, c, y',
+      title: 'Se, l, f-Organizing, Networ, k, s',
+      description: 'AI, systems, that autonomously, form, optimal network, topologies, for maximum, efficien, c, y',
     },
     {
       ic, o, n: Br, a, i, n,
-      tit, l, e: 'Collective, Intelligen, c, e',
-      descripti, o, n: 'Distributed, AI, agents that, share, knowledge and, learn, from each, other, in re, a, l-t, i, m, e',
+      title: 'Collective, Intelligen, c, e',
+      description: 'Distributed, AI, agents that, share, knowledge and, learn, from each, other, in re, a, l-t, i, m, e',
     },
     {
       ic, o, n: Za, p,
-      tit, l, e: 'Dynamic, Optimizati, o, n',
-      descripti, o, n: 'Continuous, sel, f-optimization, of, business processes, with, zero human, interventi, o, n',
+      title: 'Dynamic, Optimizati, o, n',
+      description: 'Continuous, sel, f-optimization, of, business processes, with, zero human, interventi, o, n',
     },
     {
       ic, o, n: Shi, e, l, d,
-      tit, l, e: 'Autonomous, Securi, t, y',
-      descripti, o, n: 'Se, l, f-healing, security, systems that, adapt, to threats, automatical, l, y',
+      title: 'Autonomous, Securi, t, y',
+      description: 'Se, l, f-healing, security, systems that, adapt, to threats, automatical, l, y',
     },
   ]; const, stat, s = [
     {
@@ -46,11 +46,11 @@ const, AutonomousEnterpriseMesh202, 6: Rea, c, t.FC = () => {
   ]; retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Autonomous, Enterprise, Mesh 20, 2, 6: Se, l, f-Organizing, Business, Intelligence
           | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Revolutionary, sel, f-organizing, AI, mesh networks, achieving, 99.7% operational, efficiency, with zero, human, intervention. Discover, the, future of, autonomous, business intelligen, c, e.'
         />
         <meta, nam, e='keywor, d, s'
@@ -69,7 +69,7 @@ const, AutonomousEnterpriseMesh202, 6: Rea, c, t.FC = () => {
           <div, classNam, e='relativ, e, z-10, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, t-20, p, b-16'>
             <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ durati, o, n: , 0., 8 }}
+              transiti, o, n = {{ duration: , 0., 8 }}
               classNa, m, e = 'te, x, t-cent, e, r'
             >
               <div, classNam, e='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-full, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-6'>
@@ -115,7 +115,7 @@ const, AutonomousEnterpriseMesh202, 6: Rea, c, t.FC = () => {
         <div, classNam, e = 'm, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-16'>
           <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ del, a, y: , 0., 2, durati, o, n: 0., 8 }}
+            transiti, o, n = {{ del, a, y: , 0., 2, duration: 0., 8 }}
             classNa, m, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8'
           >
             { sta, t, s.m, a, p((st, a, t, ind, e, x) = > (
@@ -136,7 +136,7 @@ const, AutonomousEnterpriseMesh202, 6: Rea, c, t.FC = () => {
         >
           <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ del, a, y: , 0., 4, durati, o, n: 0., 8 }}
+            transiti, o, n = {{ del, a, y: , 0., 4, duration: 0., 8 }}
             classNa, m, e = 'prose, pros, e-lg, pros, e-invert, ma, x-w-no, n, e'
           >
             <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
@@ -165,7 +165,7 @@ const, AutonomousEnterpriseMesh202, 6: Rea, c, t.FC = () => {
                     {featu, r, e.t, i, t, l, e}
                   </h4>
                   <p, classNam, e = 'te, x, t-gr, a, y-300, leadin, g-relax, e, d'>
-                    {featu, r, e.descripti, o, n}
+                    {featu, r, e.description}
                   </p>
                 </di, v>
               ))}
@@ -215,7 +215,7 @@ const, AutonomousEnterpriseMesh202, 6: Rea, c, t.FC = () => {
         <div, classNam, e = 'm, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, b-20'>
           <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ del, a, y: , 0., 6, durati, o, n: 0., 8 }}
+            transiti, o, n = {{ del, a, y: , 0., 6, duration: 0., 8 }}
             classNa, m, e = 'te, x, t-cente, r, p-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, border, border-purp, l, e-5, 0, 0/20, rounde, d-xl'
           >
             <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>

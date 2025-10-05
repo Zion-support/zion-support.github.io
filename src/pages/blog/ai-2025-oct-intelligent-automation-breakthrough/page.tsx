@@ -6,12 +6,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Ai, 2025, Oct Intelligent, Automation, Breakthrough</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Ai, 2025, Oct Intelligent, Automation, Breakthrough</title>
+        <meta, nam, e='description'
           conte, n, t='Learn, about, ai 2025, oct, intelligent automation, breakthrough, and how, it, can benefit, your, enterprise.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-intellige, n, t-automati, o, n-breakthrou, g, h'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-intellige n t-automati o n-breakthrou g h'
         />
       </Helm, e, t>
 

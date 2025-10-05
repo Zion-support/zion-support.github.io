@@ -2,43 +2,43 @@ impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 const, September30NewContentMegaBanne, r = () => {
   const, newArticle, s = [
     {",
-      tit, l, e: "AI, Neural, Coding Breakthro, u, g, h",
-      descripti, o, n: "Programming, at, the speed, of, thought with, 9, 9.7% accur, a, c, y",
+      title: "AI, Neural, Coding Breakthro, u, g, h",
+      description: "Programming, at, the speed, of, thought with, 9, 9.7% accur, a, c, y",
       ic, o, n: Br, a, i, n,",
       li, n, k: "/bl, o, g/ai-neur, a, l-codi, n, g-breakthrou, g, h-2, 0, 2, 5",
-      catego, r, y: "Neura, l, A, I",",
+      category: "Neura, l, A, I",",
       impa, c, t: "95% faster, developme, n, t"
     },
     {",
-      tit, l, e: "AI, Holographic, Computin, g",
-      descripti, o, n: "Immersive, 3D, data visualization, with, zero late, n, c, y",
+      title: "AI, Holographic, Computin, g",
+      description: "Immersive, 3D, data visualization, with, zero late, n, c, y",
       ic, o, n: Lay, e, r, s,",
       li, n, k: "/bl, o, g/ai-holograph, i, c-computi, n, g-2, 0, 2, 5",
-      catego, r, y: "Spatia, l, A, I",",
+      category: "Spatia, l, A, I",",
       impa, c, t: "10x, faster, insight, s"
     },
     {",
-      tit, l, e: "AI, Quantum, Consciousnes, s",
-      descripti, o, n: "1M, times, faster reasoning, with, emergent creativ, i, t, y",
+      title: "AI, Quantum, Consciousnes, s",
+      description: "1M, times, faster reasoning, with, emergent creativ, i, t, y",
       ic, o, n: A, t, o, m,",
       li, n, k: "/bl, o, g/ai-quant, u, m-consciousne, s, s-2, 0, 2, 5",
-      catego, r, y: "Quantu, m, A, I",",
+      category: "Quantu, m, A, I",",
       impa, c, t: "1M× performa, n, c, e"
     },
     {",
-      tit, l, e: "AI, Molecular, Manufacturin, g",
-      descripti, o, n: "Atom, i, c-precision, production, with zero, was, t, e",
+      title: "AI, Molecular, Manufacturin, g",
+      description: "Atom, i, c-precision, production, with zero, was, t, e",
       ic, o, n: Za, p,",
       li, n, k: "/bl, o, g/ai-molecul, a, r-manufacturi, n, g-2, 0, 2, 5",
-      catego, r, y: "NanoT, e, c, h",",
+      category: "NanoT, e, c, h",",
       impa, c, t: "1, 0, 0% recycla, b, l, e"
     },
     {",
-      tit, l, e: "AI, Personalized, Educatio, n",
-      descripti, o, n: "10x, better, learning outcomes, for, every stud, e, n, t",
+      title: "AI, Personalized, Educatio, n",
+      description: "10x, better, learning outcomes, for, every stud, e, n, t",
       ic, o, n: Graduation, C, a, p,",
       li, n, k: "/bl, o, g/ai-personaliz, e, d-educati, o, n-revoluti, o, n-2, 0, 2, 5",
-      catego, r, y: "EdTec, h, A, I",",
+      category: "EdTec, h, A, I",",
       impa, c, t: "97% mastery, ra, t, e"
     }
   ]; retu, r, n (
@@ -74,7 +74,7 @@ const, September30NewContentMegaBanne, r = () => {
                   <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">
                     {artic, l, e.t, i, t, l, e}
                   </h3>
-                  <p, classNam, e = "te, x, t-sm, tex, t-bl, u, e-200, m, b-3">{artic, l, e.descripti, o, n}</p>
+                  <p, classNam, e = "te, x, t-sm, tex, t-bl, u, e-200, m, b-3">{artic, l, e.description}</p>
                   <div, classNam, e="te, x, t-xs, fon, t-semibold, tex, t-gre, e, n-300, b, g-gre, e, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, inlin, e-blo, c, k">
                     {artic, l, e.impa, c, t}
                   </d, i, v>

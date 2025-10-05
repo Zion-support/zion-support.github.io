@@ -6,10 +6,10 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = "m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">
       <Helm, e, t>
-        <tit, l, e>GenAI, Eval, Scorecards Quicksta, r, t — K, P, I, s, Budge, t, s, Rollba, c, k</tit, l, e>
-        <meta, nam, e = "descripti, o, n" 
+        <title>GenAI, Eval, Scorecards Quicksta, r, t — K, P, I, s, Budge, t, s, Rollba, c, k</title>
+        <meta, nam, e = "description" 
           
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-se, p, t-30-ev, a, l-scorecar, d, s-quicksta, r, t
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro u p.c o m/bl o g/gen a i-20 2 5-se p t-30-ev a l-scorecar d s-quicksta r t
         />
       </Helm, e, t>" />
 " />

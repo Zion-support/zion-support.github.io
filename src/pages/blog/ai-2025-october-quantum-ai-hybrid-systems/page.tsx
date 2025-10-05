@@ -14,21 +14,21 @@ const, QuantumAIHybrid202, 5 = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Quant, u, m-AI, Hybrid, Systems 20, 2, 5: Practical, Nea, r-Term, Implementatio, n |
           Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Discover, how, quantum-AI, hybrid, systems are, revolutionizing, enterprise computi, n, g. Learn, implementation, strategi, e, s, re, a, l-world, application, s, and, ROI, optimization for, 1000x, processing speed, gain, s.'
         />
-        <meta, propert, y = 'og: tit, l, e'
+        <meta, propert, y = 'og: title'
           conte, n, t='Quant, u, m-AI, Hybrid, Systems 20, 2, 5: Practical, Nea, r-Term, Implementatio, n'
         />
-        <meta, propert, y='og:descripti, o, n'
+        <meta, propert, y='og:description'
           conte, n, t='Discover, how, quantum-AI, hybrid, systems are, revolutionizing, enterprise computi, n, g. Learn, implementation, strategi, e, s, re, a, l-world, application, s, and, ROI, optimization for, 1000x, processing speed, gain, s.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-ai-hybr, i, d-syste, m, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-octob e r-quant u m-ai-hybr i d-syste m s'
         />
       </Helm, e, t>
 

@@ -1,7 +1,7 @@
 import, Reac, t, { useEffe, c, t, useSta, t, e, useCallba, c, k } fr, o, m 'rea, c, t';
 
 interface, PerformanceOptimizerProp, s { 
-  isVisib, l, e: boole, a, n;
+  isVisib, l, e: boolean;
   onClo, s, e: () = > v, o, i, d;
  }
 
@@ -18,12 +18,12 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
     c, d, n: fa, l, s, e,
   });
 
-  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<stri, n, g[]>(
+  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>(
     [],
   );
 
   const, runOptimization, s = useCallba, c, k(as, y, n, c () => { 
-    const, optimizationsLis, t: stri, n, g[] = []; if() { optimizationsLi, s, t.pu, s, h('Optimizing, image, s...');
+    const, optimizationsLis, t: string[] = []; if() { optimizationsLi, s, t.pu, s, h('Optimizing, image, s...');
       await, new, Promise(resol, v, e = > setTimeo, u, t(res, o, l, v, e, 10, 0, 0)); optimizationsLi, s, t.pu, s, h('✓ Images, optimize, d');
       }, if (optimizatio, n, s.codeSplitti, n, g) { 
       optimizationsLi, s, t.pu, s, h('Enabling, code, splitting...');
@@ -59,42 +59,42 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
     {
       k, e, y: 'imageOptimizati, o, n' as, co, n, s, t,
       lab, e, l: 'Image, Optimizati, o, n',
-      descripti, o, n: 'Compress, and, optimize images, for, faster load, i, n, g',
+      description: 'Compress, and, optimize images, for, faster load, i, n, g',
       ic, o, n: Im, a, g, e,
       enabl, e, d: optimizatio, n, s.imageOptimizat, i, o, n,
     },
     {
       k, e, y: 'codeSplitti, n, g' as, con, s, t,
       lab, e, l: 'Code, Splitti, n, g',
-      descripti, o, n: 'Split, code, into smaller, chunks, for better, performan, c, e',
+      description: 'Split, code, into smaller, chunks, for better, performan, c, e',
       ic, o, n: C, o, d, e,
       enabl, e, d: optimizatio, n, s.codeSplitt, i, n, g,
     },
     {
       k, e, y: 'lazyLoadi, n, g' as, con, s, t,
       lab, e, l: 'Lazy, Loadi, n, g',
-      descripti, o, n: 'Load, content, only when, need, e, d',
+      description: 'Load, content, only when, need, e, d',
       ic, o, n: Datab, a, s, e,
       enabl, e, d: optimizatio, n, s.lazyLoad, i, n, g,
     },
     {
       k, e, y: 'cachi, n, g' as, con, s, t,
       lab, e, l: 'Browser, Cachi, n, g',
-      descripti, o, n: 'Enable, aggressive, caching strateg, i, e, s',
+      description: 'Enable, aggressive, caching strateg, i, e, s',
       ic, o, n: Setti, n, g, s,
       enabl, e, d: optimizatio, n, s.cach, i, n, g,
     },
     {
       k, e, y: 'compressi, o, n' as, con, s, t,
       lab, e, l: 'Gzip, Compressi, o, n',
-      descripti, o, n: 'Compress, assets, for faster, transf, e, r',
+      description: 'Compress, assets, for faster, transf, e, r',
       ic, o, n: Za, p,
       enabl, e, d: optimizatio, n, s.compress, i, o, n,
     },
     {
       k, e, y: 'c, d, n' as, con, s, t,
       lab, e, l: 'CDN, Integrati, o, n',
-      descripti, o, n: 'Use, Content, Delivery Network, for, global performa, n, c, e',
+      description: 'Use, Content, Delivery Network, for, global performa, n, c, e',
       ic, o, n: W, i, f, i,
       enabl, e, d: optimizatio, n, s.cd, n,
     },
@@ -171,7 +171,7 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
         </butt, o, n>
         <button, onCli, c, k={ () = > {
             setCurrentOptimizatio, n, s([]);
-            // Trigger, r, e-optimizat, i, o, n
+            // Trigger r e-optimizat i o n
            }}
           classNa, m, e = 'px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-white, b, g-bl, u, e-600, border, border-transparent, rounde, d-md, hove, r: bg-bl, u, e-700, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'
         >

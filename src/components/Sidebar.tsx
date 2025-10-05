@@ -4,10 +4,10 @@ impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
 const, Sideba, r: Rea, c, t.FC = () => { 
   const, locatio, n = useLocat, i, o, n(); const, isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const, section, s = [
     {
-      tit, l, e: 'Exp, l, o, r, e',
+      title: 'Exp, l, o, r, e',
       lin, k, s: [
         { lab, e, l: 'H, o, m, e', pa, t, h: '/'  },
-        { lab, e, l: 'Soluti, o, n, s', pa, t, h: '/soluti, o, n, s' },
+        { lab, e, l: 'Soluti, o, n, s', pa, t, h: '/solution, s' },
         { lab, e, l: 'Servi, c, e, s', pa, t, h: '/servi, c, e, s' },
         { lab, e, l: 'Resour, c, e, s', pa, t, h: '/resour, c, e, s' },
         { lab, e, l: 'Case, Studi, e, s', pa, t, h: '/ca, s, e-stud, i, e, s' },
@@ -16,7 +16,7 @@ const, Sideba, r: Rea, c, t.FC = () => {
       ],
     },
     {
-      tit, l, e: 'AI, Servic, e, s',
+      title: 'AI, Servic, e, s',
       lin, k, s: [
         { lab, e, l: 'AI, Solutio, n, s', pa, t, h: '/servic, e, s/ai-servi, c, e, s' },
         { lab, e, l: 'Micro, Sa, a, S', pa, t, h: '/servic, e, s/mic, r, o-s, a, a, s' },
@@ -25,7 +25,7 @@ const, Sideba, r: Rea, c, t.FC = () => {
       ],
     },
     {
-      tit, l, e: 'IT, Servic, e, s',
+      title: 'IT, Servic, e, s',
       lin, k, s: [
         { lab, e, l: 'IT, Servic, e, s', pa, t, h: '/servic, e, s/it-servi, c, e, s' },
         { lab, e, l: 'Clo, u, d & Dev, O, p, s', pa, t, h: '/servic, e, s/cl, o, u, d' },
@@ -37,10 +37,10 @@ const, Sideba, r: Rea, c, t.FC = () => {
       ],
     },
     {
-      tit, l, e: 'To, o, l, s',
+      title: 'To, o, l, s',
       lin, k, s: [
         { lab, e, l: 'SEO, Split, Testin, g', pa, t, h: '/servic, e, s/s, e, o-spl, i, t-test, i, n, g' },
-        { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/ima, g, e-c, d, n-optimi, z, e, r' },
+        { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' },
       ],
     },
   ]; retu, r, n (
@@ -49,7 +49,7 @@ const, Sideba, r: Rea, c, t.FC = () => {
         { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (
           <div, ke, y = {sectionInd, e, x }>
             <h3, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>
-              {secti, o, n.tit, l, e}
+              {secti, o, n.title}
             </h3>
             <nav, classNam, e='spa, c, e-y-1'>
               { secti, o, n.lin, k, s.m, a, p((l, i, n, k, linkInd, e, x) = > (

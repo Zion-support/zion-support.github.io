@@ -3,8 +3,8 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
   const, newArticle, s = [
     {
       i, d:  , 1,
-      tit, l, e: 'Distributed, Tracing, for Microservi, c, e, s',
-      descripti, o, n: '99.99% observabil, i, t, y, 87% faster, MTT, R, $8.2M, saving, s',
+      title: 'Distributed, Tracing, for Microservi, c, e, s',
+      description: '99.99% observabil, i, t, y, 87% faster, MTT, R, $8.2M, saving, s',
       ic, o, n: Activ, i, t, y,
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservi, c, e, s',
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
@@ -12,8 +12,8 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
     },
     {
       id:  , 2,
-      tit, l, e: 'Kubernetes, Security, Best Practi, c, e, s',
-      descripti, o, n: 'Ze, r, o-trust, architectu, r, e, 99.97% threat, preventio, n',
+      title: 'Kubernetes, Security, Best Practi, c, e, s',
+      description: 'Ze, r, o-trust, architectu, r, e, 99.97% threat, preventio, n',
       ic, o, n: Shi, e, l, d,
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practi, c, e, s',
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
@@ -21,8 +21,8 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
     },
     {
       id:  , 3,
-      tit, l, e: 'Re, a, l-Time, Data, Streamin, g',
-      descripti, o, n: 'Process, 10, M+ even, t, s/sec, with, sub-100ms, laten, c, y',
+      title: 'Re, a, l-Time, Data, Streamin, g',
+      description: 'Process, 10, M+ even, t, s/sec, with, sub-100ms, laten, c, y',
       ic, o, n: Za, p,
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectu, r, e, s',
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
@@ -72,7 +72,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
                   </h3>
                   {/* Descripti, o, n */}
                   <p, classNam, e = 'te, x, t-gr, a, y-400, tex, t-sm, m, b-4'>
-                    {artic, l, e.descripti, o, n}
+                    {artic, l, e.description}
                   </p>
                   {/* Metri, c, s */}
                   <div, classNam, e='flex, fle, x-wrap, ga, p-2, m, b-4'>

@@ -4,32 +4,32 @@ export, default, function FeaturedContentBanner20, 2, 5() {
   const, featuredConten, t = [
     {
       ty, p, e: 'bl, o, g',
-      tit, l, e: 'AI, Autonomous, Enterprise Operatio, n, s: Complete, 2025, Guid, e',
-      excer, p, t: 'Master, autonomous, AI operations, with, proven frameworks, achieving, 95% automation, rat, e, s, $2M+ annual, saving, s, and, 9, 9.99% uptime, through, comprehensive implementation, strategie, s.',
+      title: 'AI, Autonomous, Enterprise Operatio, n, s: Complete, 2025, Guid, e',
+      excerpt: 'Master, autonomous, AI operations, with, proven frameworks, achieving, 95% automation, rat, e, s, $2M+ annual, saving, s, and, 9, 9.99% uptime, through, comprehensive implementation, strategie, s.',
       hr, e, f: '/bl, o, g/ai-autonomo, u, s-enterpri, s, e-operatio, n, s-2, 0, 2, 5',
-      ima, g, e: '🤖',
-      catego, r, y: 'Latest, AI, Innovatio, n',
-      readTi, m, e: '45, min, rea, d',
+      image: '🤖',
+      category: 'Latest, AI, Innovatio, n',
+      readTime: '45, min, rea, d',
       publishDa, t, e: 'Ja, n, 3, 0, 20, 2, 5'
     },
     {
       ty, p, e: 'b, l, o, g',
-      tit, l, e: 'AI, Enterprise, Transformation: $50M, Annual, Savings Bluepr, i, n, t',
-      excer, p, t: 'Discover, how, Fortune 500, companies, achieve $50M, annual, saving, s, 95% process, automatio, n, and, 30, 0% ROI, through, comprehensive AI, transformation, strategies.',
+      title: 'AI, Enterprise, Transformation: $50M, Annual, Savings Bluepr, i, n, t',
+      excerpt: 'Discover, how, Fortune 500, companies, achieve $50M, annual, saving, s, 95% process, automatio, n, and, 30, 0% ROI, through, comprehensive AI, transformation, strategies.',
       hr, e, f: '/bl, o, g/ai-enterpri, s, e-transformati, o, n-2, 0, 2, 5',
-      ima, g, e: '💰',
-      catego, r, y: 'Success, Sto, r, y',
-      readTi, m, e: '50, min, rea, d',
+      image: '💰',
+      category: 'Success, Sto, r, y',
+      readTime: '50, min, rea, d',
       publishDa, t, e: 'Ja, n, 2, 8, 20, 2, 5'
     },
     {
       ty, p, e: 'b, l, o, g',
-      tit, l, e: 'AI, Innovation, Labs: Product, Development, Revolutio, n',
-      excer, p, t: 'Revolutionize, product, development with, AI, Innovation Labs, achieving, 10x faster, tim, e-to-mar, k, e, t, 85% cost, reductio, n, and, 30, 0% innovation, acceleratio, n.',
+      title: 'AI, Innovation, Labs: Product, Development, Revolutio, n',
+      excerpt: 'Revolutionize, product, development with, AI, Innovation Labs, achieving, 10x faster, tim, e-to-mar, k, e, t, 85% cost, reductio, n, and, 30, 0% innovation, acceleratio, n.',
       hr, e, f: '/bl, o, g/ai-innovati, o, n-la, b, s-produ, c, t-developme, n, t-2, 0, 2, 5',
-      ima, g, e: '🚀',
-      catego, r, y: 'Innovation, L, a, b',
-      readTi, m, e: '40, min, rea, d',
+      image: '🚀',
+      category: 'Innovation, L, a, b',
+      readTime: '40, min, rea, d',
       publishDa, t, e: 'Ja, n, 2, 5, 20, 2, 5'
     }
   ]; retu, r, n (
@@ -60,18 +60,18 @@ export, default, function FeaturedContentBanner20, 2, 5() {
                 <div, classNam, e = "fl, e, x-1">
                   <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-3">
                     <span, classNam, e="te, x, t-bl, u, e-400, fon, t-semibold, tex, t-xs, trackin, g-wider, uppercas, e">
-                      {conte, n, t.catego, r, y}
+                      {conte, n, t.category}
                     </sp, a, n>
                   </d, i, v>
                   <h3, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-3, 0, 0">
                     {conte, n, t.t, i, t, l, e}
                   </h3>
                   <p, classNam, e = "te, x, t-gr, a, y-400, tex, t-sm, leadin, g-relaxed, m, b-4">
-                    {conte, n, t.excer, p, t}
+                    {conte, n, t.excerpt}
                   </p>
                   <div, classNam, e="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-5, 0, 0">
                     <sp, a, n>📅 {conte, n, t.publishDa, t, e}</sp, a, n>
-                    <sp, a, n>⏱️ {conte, n, t.readTi, m, e}</sp, a, n>
+                    <sp, a, n>⏱️ {conte, n, t.readTime}</sp, a, n>
                   </d, i, v>
                 </d, i, v>
               </d, i, v>

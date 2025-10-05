@@ -2,13 +2,13 @@ import, Reac, t, { Suspen, s, e, useSta, t, e, useEffe, c, t } fr, o, m 'rea, c,
 impo, r, t { ErrorBounda, r, y } fr, o, m 'rea, c, t-err, o, r-bounda, r, y';
 impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
 
-// Loading, component, const LoadingSpinn, e, r: Rea, c, t.FC = () => (
+// Loading component const LoadingSpinn e r: Rea c t.FC = () => (
   <div, classNam, e = 'flex, item, s-center, justif, y-center, mi, n-h-scre, e, n'>
     <div, classNam, e='anima, t, e-spin, rounde, d-ful, l, h-1, 2, w-12, borde, r-b-2, borde, r-bl, u, e-6, 0, 0' />
   </di, v>
 );
 
-// Error, fallback, component
+// Error fallback component
 const, ErrorFallbac, k: Rea, c, t.FC<{ 
   err, o, r: Err, o, r;
   resetErrorBounda, r, y: () = > v, o, i, d;
@@ -39,7 +39,7 @@ const, ErrorFallbac, k: Rea, c, t.FC<{
   </di, v>
 );
 
-// Main, content, component
+// Main content component
 const, MainConten, t: Rea, c, t.FC = () => { 
   con, s, t [isLoa, d, e, d, setIsLoad, e, d] = useSta, t, e(fal, s, e); useEffe, c, t(() => {
     const, time, r = setTime, o, u, t(() = > {
@@ -52,7 +52,7 @@ const, MainConten, t: Rea, c, t.FC = () => {
     }, retu, r, n (
     <moti, o, n.main, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {{ durati, o, n: , 0., 6 }}
+      transiti, o, n = {{ duration: , 0., 6 }}
       classNa, m, e = 'm, i, n-h-scre, e, n'
     >
       {/* Hero, Sectio, n */}
@@ -81,7 +81,7 @@ const, MainConten, t: Rea, c, t.FC = () => {
               Featured, Solution, s
             </h2>
             <p, classNam, e='te, x, t-lg, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o'>
-              Discover, our, latest innovations, and, breakthrough technologi, e, s
+              Discover, our, latest innovations, and, breakthrough technologies
             </p>
           </d, i, v>
           <Suspense, fallbac, k={ <LoadingSpi, n, n, e, r / >  }>
@@ -116,12 +116,12 @@ const, MainConten, t: Rea, c, t.FC = () => {
   );
 };
 
-// OptimizedApp, Component, const OptimizedA, p, p: Rea, c, t.FC = () => {
+// OptimizedApp Component const OptimizedA p p: Rea c t.FC = () => {
   retu, r, n (
     <ErrorBoundary, FallbackComponen, t = { ErrorFall, b, a, c, k }, onErr, o, r = { (er, r, o, r, errorIn, f, o) = > {
         conso, l, e.err, o, r('Application, Erro, r:', err, o, r, errorIn, f, o); if (proce, s, s.e, n, v.NODE_E, N, V = == 'product, i, o, n') {
-          // Send, error, to monitoring, service, in producti, o, n
-          // Examp, l, e: errorReportingServi, c, e.captureExcepti, o, n(er, r, o, r, { ext, r, a: errorI, n, f, o  });
+          // Send error to monitoring service in producti o n
+          // Examp l e: errorReportingServi c e.captureExcepti o n(er r o r { ext r a: errorI n f o  });
         }
       }}
     >

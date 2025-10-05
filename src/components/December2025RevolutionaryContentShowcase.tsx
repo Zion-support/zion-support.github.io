@@ -4,17 +4,17 @@ const, December2025RevolutionaryContentShowcas, e: Rea, c, t.FC = () => {
   retu, r, n (
     <moti, o, n.div, initia, l = {{ opac, i, t, y: , 0, y: 5, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {{ durati, o, n: , 0., 8 }}
+      transiti, o, n = {{ duration: , 0., 8 }}
       classNa, m, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, tex, t-whi, t, e'
     >
       {/* Animated, Backgroun, d */}
-      <div, classNam, e="absolute, inse, t-0, b, g-[u, r, l('da, t, a: ima, g, e/s, v, g+x, m, l,%3Cs, v, g%20wid, t, h%3D%22, 6, 0%22%20heig, h, t%3D%22, 6, 0%22%20viewB, o, x%3D%2, 2, 0%2, 0, 0%20, 6, 0%20, 6, 0%22%20xml, n, s%3D%22ht, t, p%3A//w, w, w.w3.o, r, g/20, 0, 0/s, v, g%22%3E%3, C, g%20fi, l, l%3D%22no, n, e%22%20fi, l, l-ru, l, e%3D%22eveno, d, d%22%3E%3, C, g%20fi, l, l%3D%22%239C92, A, C%22%20fi, l, l-opaci, t, y%3D%2, 2, 0.1%22%3E%3Ccirc, l, e%20, c, x%3D%22, 3, 0%22%20, c, y%3D%22, 3, 0%22%2, 0, r%3D%2, 2, 2%22/%3E%3C/g%3E%3C/g%3E%3C/s, v, g%3E')] opaci, t, y-20" />
+      <div, classNam, e="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l,%3Cs, v, g%20wid, t, h%3D%22, 6, 0%22%20heig, h, t%3D%22, 6, 0%22%20viewB, o, x%3D%2, 2, 0%2, 0, 0%20, 6, 0%20, 6, 0%22%20xml, n, s%3D%22ht, t, p%3A//w w w.w3.o r g/20 0 0/s v g%22%3E%3 C g%20fi l l%3D%22no n e%22%20fi l l-ru l e%3D%22eveno d d%22%3E%3 C g%20fi l l%3D%22%239C92 A C%22%20fi l l-opaci t y%3D%2 2 0.1%22%3E%3Ccirc l e%20 c x%3D%22 3 0%22%20 c y%3D%22 3 0%22%2 0 r%3D%2 2 2%22/%3E%3C/g%3E%3C/g%3E%3C/s v g%3E')] opaci t y-20" />
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20'>
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-16'>
           <moti, o, n.div, initia, l={{ sca, l, e: , 0., 8 }}
             anima, t, e = {{ sc, a, l, e:  , 1 }}
-            transiti, o, n = {{ durati, o, n: , 0., 6, del, a, y: 0., 2 }}
+            transiti, o, n = {{ duration: , 0., 6, del, a, y: 0., 2 }}
             classNa, m, e = 'inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-500, tex, t-black, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-bold, m, b-6'
           >
             <Rocket, classNam, e='w-5 h-5' />
@@ -22,14 +22,14 @@ const, December2025RevolutionaryContentShowcas, e: Rea, c, t.FC = () => {
           </moti, o, n.d, i, v>
           <moti, o, n.h1, initia, l={{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 3 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 3 }}
             classNa, m, e = 'te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-500, t, o-pi, n, k-600, b, g-cl, i, p-text, tex, t-transpare, n, t'
           >
             💎💎💎 REVOLUTIONARY, AI, BREAKTHROUGHS 💎💎💎
           </moti, o, n.h1>
           <moti, o, n.p, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 4 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 4 }}
             classNa, m, e = 'te, x, t-2xl, m, d: te, x, t-3xl, tex, t-gr, a, y-300, ma, x-w-5xl, m, x-auto, leadin, g-relax, e, d'
           >
             The, Ultimate, Evolution of, Artificial, Intelligence: True, Consciousn, e, s, s, Complete, Autonom, y, and, Superintelligent, Capabilities
@@ -40,7 +40,7 @@ const, December2025RevolutionaryContentShowcas, e: Rea, c, t.FC = () => {
           {/* Quantum, AI, Transcenden, c, e */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 5 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 5 }}
             classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/50, t, o-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-3x, l, p-10, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5'
           >
             <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>
@@ -100,7 +100,7 @@ const, December2025RevolutionaryContentShowcas, e: Rea, c, t.FC = () => {
           {/* Autonomous, Enterprise, Consciousne, s, s */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 6 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 6 }}
             classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-cy, a, n-9, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-3x, l, p-10, border, border-bl, u, e-5, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5'
           >
             <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>
@@ -158,7 +158,7 @@ const, December2025RevolutionaryContentShowcas, e: Rea, c, t.FC = () => {
           {/* Neur, a, l-Quantum, Superintellige, n, c, e */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 7 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 7 }}
             classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-8, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-3x, l, p-10, border, border-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-4, 0, 0/50, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5'
           >
             <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>
@@ -218,7 +218,7 @@ const, December2025RevolutionaryContentShowcas, e: Rea, c, t.FC = () => {
         {/* Combined, Revolutionary, Impa, c, t */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 8 }}
+          transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 8 }}
           classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-yell, o, w-9, 0, 0/30, t, o-oran, g, e-9, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-3x, l, p-12, border, border-yell, o, w-5, 0, 0/30'
         >
           <div, classNam, e='te, x, t-cent, e, r'>
@@ -264,7 +264,7 @@ const, December2025RevolutionaryContentShowcas, e: Rea, c, t.FC = () => {
         {/* Call, to, Action */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 9 }}
+          transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 9 }}
           classNa, m, e = 'te, x, t-center, m, t-16'
         >
           <button, classNam, e='bg-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r: fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, tex, t-black, fon, t-bold, tex, t-xl, p, x-12, p, y-6, rounde, d-2xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, flex, items-center, ga, p-4, m, x-auto, shado, w-2, x, l'>

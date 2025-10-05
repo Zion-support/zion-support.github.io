@@ -3,42 +3,42 @@ const, February2026ContentShowcaseBanne, r = () => {
   const, featuredConten, t = [
     {
       i, d:  , 1,
-      tit, l, e: 'Autonomous, Neural, Networks 2, 0, 2, 6',
-      catego, r, y: 'AI, Architectu, r, e',
-      readTi, m, e: '12, m, i, n',
+      title: 'Autonomous, Neural, Networks 2, 0, 2, 6',
+      category: 'AI, Architectu, r, e',
+      readTime: '12, m, i, n',
       rati, n, g: 5., 0,
       reade, r, s: '1, 8, 0, K+',
       bad, g, e: 'BREAKTHRO, U, G, H',
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
       ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,
       li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-netwo, r, k, s',
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-mak, i, n, g'
+      description: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-mak, i, n, g'
      },
     { 
       id:  , 2,
-      tit, l, e: 'Quantum, Edge, Computing Revolut, i, o, n',
-      catego, r, y: 'Edge, Computi, n, g',
-      readTi, m, e: '15, m, i, n',
+      title: 'Quantum, Edge, Computing Revolut, i, o, n',
+      category: 'Edge, Computi, n, g',
+      readTime: '15, m, i, n',
       rati, n, g: 4., 9,
       reade, r, s: '1, 5, 6, K+',
       bad, g, e: 'FEATU, R, E, D',
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
       ic, o, n: <Zap, classNam, e = "w-6 , h-, 6" / > ,
       li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-comput, i, n, g',
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, time, s'
+      description: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, time, s'
      },
     { 
       id:  , 3,
-      tit, l, e: 'Me, t, a-Cognitive, AI, System, s',
-      catego, r, y: 'AI, Psycholo, g, y',
-      readTi, m, e: '18, m, i, n',
+      title: 'Me, t, a-Cognitive, AI, System, s',
+      category: 'AI, Psycholo, g, y',
+      readTime: '18, m, i, n',
       rati, n, g: 5., 0,
       reade, r, s: '2, 0, 3, K+',
       bad, g, e: 'REVOLUTION, A, R, Y',
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
       ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
       li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syst, e, m, s',
-      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learn, i, n, g'
+      description: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learn, i, n, g'
      }
   ]; retu, r, n (
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
@@ -106,7 +106,7 @@ const, February2026ContentShowcaseBanne, r = () => {
                 {/* Catego, r, y */}
                 <div, classNam, e = "mb-4">
                   <span, classNam, e="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-emera, l, d-400, tex, t-xs, fon, t-semibold, border, border-emera, l, d-5, 0, 0/30">
-                    {conte, n, t.catego, r, y}
+                    {conte, n, t.category}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}
@@ -115,13 +115,13 @@ const, February2026ContentShowcaseBanne, r = () => {
                 </h3>
                 {/* Descripti, o, n */}
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, tex, t-sm, leadin, g-relax, e, d">
-                  {conte, n, t.descripti, o, n}
+                  {conte, n, t.description}
                 </p>
                 {/* Meta, Inf, o */}
                 <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">
                   <span, classNam, e="flex, item, s-center, ga, p-2">
                     <Zap, classNam, e="w-4 h-4, tex, t-emera, l, d-4, 0, 0" />
-                    {conte, n, t.readTi, m, e}
+                    {conte, n, t.readTime}
                   </sp, a, n>
                   <span, classNam, e="flex, item, s-center, ga, p-1">
                     <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />

@@ -23,7 +23,7 @@ impo, r, t {
   BookOp, e, n,
 } fr, o, m 'luci, d, e-rea, c, t';
 interface, October2025AIRevolutionBannerProp, s { 
-  classNa, m, e ?  : stri, n, g;
+  classNa, m, e ?  : string;
  }
 export, default, function October2025AIRevolutionBann, e, r({
   classNa, m, e = '',

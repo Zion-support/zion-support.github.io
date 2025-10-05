@@ -1,16 +1,16 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
+// @ts-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export, default, function AIE2EObservabilityBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>AI, 202, 6: E2E, Observability, Blueprint — From, Token, to K, P, I</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>AI, 202, 6: E2E, Observability, Blueprint — From, Token, to K, P, I</title>
+        <meta, nam, e='description'
           conte, n, t='Trace, prom, p, t, s, too, l, s, cos, t, s, and, outcomes, end‑to‑end, with, budgets, SL, I, s, and, rollback, hooks.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 6-e, 2, e-observabili, t, y-bluepri, n, t'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 6-e 2 e-observabili t y-bluepri n t'
         />
       </Helm, e, t>
 

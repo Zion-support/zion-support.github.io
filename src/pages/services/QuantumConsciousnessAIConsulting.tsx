@@ -5,25 +5,25 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>Quantum, Consciousness, AI Consulti, n, g | Zion, Tech, Group</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>Quantum, Consciousness, AI Consulti, n, g | Zion, Tech, Group</title>
+        <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, quantum, consciousness AI, consultin, g. Achieve, 9, 9.9% decision, accuracy, and autonomous, operations, with AI, that, thinks and, feel, s.'
         />
         <meta, nam, e='keywor, d, s'
           conte, n, t='quant, u, m , A, I, consciousne, s, s, enterprise, consultin, g, business, transformatio, n, autonomous, system, s'
         />
-        <meta, propert, y = 'og: tit, l, e'
+        <meta, propert, y = 'og: title'
           conte, n, t='Quantum, Consciousness, AI Consulti, n, g | Zion, Tech, Group'
         />
-        <meta, propert, y='og:descripti, o, n'
+        <meta, propert, y='og:description'
           conte, n, t="The, worl, d's, first, quantum consciousness, AI, consulting service, delivering, unprecedented business, valu, e."
         />
         <meta, propert, y='og:ty, p, e' conte, n, t='websi, t, e' />
-        <meta, nam, e='twitt, e, r:ca, r, d' conte, n, t='summary_large_ima, g, e' />
-        <meta, nam, e='twitt, e, r:tit, l, e'
+        <meta, nam, e='twitt, e, r:ca, r, d' conte, n, t='summary_large_image' />
+        <meta, nam, e='twitt, e, r:title'
           conte, n, t='Quantum, Consciousness, AI Consulti, n, g | Zion, Tech, Group'
         />
-        <meta, nam, e='twitt, e, r:descripti, o, n'
+        <meta, nam, e='twitt, e, r:description'
           conte, n, t='Transform, your, enterprise with, AI, that truly, thinks, and fee, l, s.'
         />
       </Helm, e, t>
@@ -286,7 +286,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
                         </lab, e, l>
                         <input, typ, e='<te, x, t'
                           classNa, m, e='w-full, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-xl, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-5, 0, 0'
-                          placehold, e, r='Your, Compan, y'
+                          placehold, e, r='Your, Company'
                         />
                       </d, i, v>
                       <d, i, v>

@@ -3,37 +3,37 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
   const, revolutionaryConten, t = [
     {
-      tit, l, e: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',
-      descripti, o, n: '98% Automation, Ra, t, e, 1000x, Processing, Speed, $2.5B, Cost, Savings',
-      sl, u, g: 'ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automat, i, o, n',
-      catego, r, y: 'AI, Innovati, o, n',
+      title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',
+      description: '98% Automation, Ra, t, e, 1000x, Processing, Speed, $2.5B, Cost, Savings',
+      slug: 'ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automat, i, o, n',
+      category: 'AI, Innovati, o, n',
       emo, j, i: '🚀',
       highlig, h, t: 'BREAKTHRO, U, G, H',
       impa, c, t: '98% Automat, i, o, n',
       ty, p, e: 'b, l, o, g',
-      readTi, m, e: '15, m, i, n',
+      readTime: '15, m, i, n',
     },
     {
-      tit, l, e: 'Quantum, AI, Breakthrough: Revolutionary, Computing, Paradig, m',
-      descripti, o, n: '10^18, Operation, s/se, c, 99.9% Accura, c, y, $10B, Market, Value',
-      sl, u, g: 'quant, u, m-ai-breakthrou, g, h-20, 2, 6-revolutiona, r, y-comput, i, n, g',
-      catego, r, y: 'Quantum, Computi, n, g',
+      title: 'Quantum, AI, Breakthrough: Revolutionary, Computing, Paradig, m',
+      description: '10^18, Operation, s/se, c, 99.9% Accura, c, y, $10B, Market, Value',
+      slug: 'quant, u, m-ai-breakthrou, g, h-20, 2, 6-revolutiona, r, y-comput, i, n, g',
+      category: 'Quantum, Computi, n, g',
       emo, j, i: '⚛️',
       highlig, h, t: 'REVOLUTION, A, R, Y',
       impa, c, t: '10^18, Op, s/se, c',
       ty, p, e: 'b, l, o, g',
-      readTi, m, e: '18, m, i, n',
+      readTime: '18, m, i, n',
     },
     {
-      tit, l, e: 'Fortune, 500, Quantum AI, Transformatio, n: $10B, Revenue, Impac, t',
-      descripti, o, n: '5, 0, 0% Productivity, Increa, s, e, 95% Process, Automatio, n, Market, Leadershi, p',
-      sl, u, g: 'fortu, n, e-5, 0, 0-quant, u, m-ai-transformati, o, n-2, 0, 2, 6',
-      catego, r, y: 'Success, Sto, r, y',
+      title: 'Fortune, 500, Quantum AI, Transformatio, n: $10B, Revenue, Impac, t',
+      description: '5, 0, 0% Productivity, Increa, s, e, 95% Process, Automatio, n, Market, Leadershi, p',
+      slug: 'fortu, n, e-5, 0, 0-quant, u, m-ai-transformati, o, n-2, 0, 2, 6',
+      category: 'Success, Sto, r, y',
       emo, j, i: '🏆',
       highlig, h, t: 'MEGA, SUCCE, S, S',
       impa, c, t: '$10B, Reven, u, e',
       ty, p, e: 'ca, s, e-st, u, d, y',
-      readTi, m, e: '12, m, i, n',
+      readTime: '12, m, i, n',
     },
   ]; retu, r, n (
     <section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
@@ -76,20 +76,20 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
                     {conte, n, t.highlig, h, t}
                   </sp, a, n>
                   <span, classNam, e='te, x, t-xs, tex, t-gr, a, y-4, 0, 0'>
-                    {conte, n, t.readTi, m, e}
+                    {conte, n, t.readTime}
                   </sp, a, n>
                 </d, i, v>
               </d, i, v>
               {/* Content, Inf, o */}
               <div, classNam, e='mb-4'>
                 <span, classNam, e='te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, uppercase, tracking-wi, d, e'>
-                  {conte, n, t.catego, r, y}
+                  {conte, n, t.category}
                 </sp, a, n>
                 <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
                   {conte, n, t.t, i, t, l, e}
                 </h3>
                 <p, classNam, e = 'te, x, t-gr, a, y-400, tex, t-sm, leadin, g-relaxed, m, b-4'>
-                  {conte, n, t.descripti, o, n}
+                  {conte, n, t.description}
                 </p>
               </d, i, v>
               {/* Impact, Badg, e */}
@@ -102,7 +102,7 @@ const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
                 </d, i, v>
               </d, i, v>
               {/* CTA, Butto, n */}
-              <Link, t, o = { `/${conte, n, t.ty, p, e === 'bl, o, g'  ? 'bl, o, g'  : 'ca, s, e-studi, e, s' }/${conte, n, t.sl, u, g}`}
+              <Link, t, o = { `/${conte, n, t.ty, p, e === 'bl, o, g'  ? 'bl, o, g'  : 'ca, s, e-studi, e, s' }/${conte, n, t.slug}`}
                 classNa, m, e='w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2, grou, p-hov, e, r:shad, o, w-lg, grou, p-hov, e, r:shad, o, w-bl, u, e-5, 0, 0/25'
               >
                 { conte, n, t.ty, p, e === 'bl, o, g'  ? 'Read, Articl, e'  : 'View, Case, Stu, d, y' }

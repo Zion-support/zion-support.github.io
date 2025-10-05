@@ -14,10 +14,10 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Discover, nex, t-generation, intelligent, automation revolutionizing, business, with 94% accu, r, a, c, y, 85% cost, reductio, n, and, 10x, productivity gains, through, AI-powered, workflow, s.'
         />
         <meta, nam, e = 'keywor, d, s'
@@ -150,28 +150,28 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                 <div, classNam, e='grid, ga, p-6'>
                   {[
                     {
-                      tit, l, e: 'Cognitive, Process, Automati, o, n',
-                      descripti, o, n: 'AI, systems, that underst, a, n, d, lea, r, n, and, make, decisions like, human, s. 99.8% accuracy, in, document processing, across, any form, a, t.',
+                      title: 'Cognitive, Process, Automati, o, n',
+                      description: 'AI, systems, that underst, a, n, d, lea, r, n, and, make, decisions like, human, s. 99.8% accuracy, in, document processing, across, any form, a, t.',
                       ic, o, n: '🧠',
                     },
                     {
-                      tit, l, e: 'Adaptive, Workflow, Orchestratio, n',
-                      descripti, o, n: 'Se, l, f-optimizing, workflows, that evolve, based, on outcom, e, s. 87% au, t, o-resolution, rate, for excepti, o, n, s.',
+                      title: 'Adaptive, Workflow, Orchestratio, n',
+                      description: 'Se, l, f-optimizing, workflows, that evolve, based, on outcom, e, s. 87% au, t, o-resolution, rate, for excepti, o, n, s.',
                       ic, o, n: '🔄',
                     },
                     {
-                      tit, l, e: 'Predictive, Automati, o, n',
-                      descripti, o, n: 'Anticipate, and, act before, issues, occur. 96% forecast, accuracy, with 84% of, failures, prevented proactiv, e, l, y.',
+                      title: 'Predictive, Automati, o, n',
+                      description: 'Anticipate, and, act before, issues, occur. 96% forecast, accuracy, with 84% of, failures, prevented proactiv, e, l, y.',
                       ic, o, n: '🔮',
                     },
                     {
-                      tit, l, e: 'Generative, Automati, o, n',
-                      descripti, o, n: 'AI, that, creates cont, e, n, t, co, d, e, and, solutions, autonomously. 70% reduction, in, development ti, m, e.',
+                      title: 'Generative, Automati, o, n',
+                      description: 'AI, that, creates cont, e, n, t, co, d, e, and, solutions, autonomously. 70% reduction, in, development ti, m, e.',
                       ic, o, n: '✨',
                     },
                     {
-                      tit, l, e: 'Autonomous, Decisio, n-Mak, i, n, g',
-                      descripti, o, n: 'AI, systems, that make, complex, decisions independent, l, y. 97.8% accuracy, in, real-time, ris, k-based, decisio, n, s.',
+                      title: 'Autonomous, Decisio, n-Mak, i, n, g',
+                      description: 'AI, systems, that make, complex, decisions independent, l, y. 97.8% accuracy, in, real-time, ris, k-based, decisio, n, s.',
                       ic, o, n: '🎯',
                     },
                   ].m, a, p((capabili, t, y, ind, e, x) => (
@@ -181,10 +181,10 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                         <div, classNam, e='te, x, t-4, x, l'>{capabili, t, y.ic, o, n}</d, i, v>
                         <div, classNam, e = 'fl, e, x-1'>
                           <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
-                            {capabili, t, y.tit, l, e}
+                            {capabili, t, y.title}
                           </h3>
                           <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                            {capabili, t, y.descripti, o, n}
+                            {capabili, t, y.description}
                           </p>
                         </d, i, v>
                       </d, i, v>
@@ -201,40 +201,40 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                 <div, classNam, e='grid, ga, p-6'>
                   {[
                     {
-                      indust, r, y: 'Financial, Servi, c, e, s',
+                      industry: 'Financial, Servi, c, e, s',
                       savin, g, s: '$12.4, M',
                       automati, o, n: '9, 5%',
-                      resul, t, s: [
+                      results: [
                         'Loan, Processin, g: 96% fas, t, e, r',
                         'K, Y, C/A, M, L: 1, 0, 0% cover, a, g, e',
                         'Fraud, Detectio, n: 99.4% accur, a, c, y',
                       ],
                     },
                     {
-                      indust, r, y: 'Healthc, a, r, e',
+                      industry: 'Healthc, a, r, e',
                       savin, g, s: '$8.7, M',
                       automati, o, n: '9, 2%',
-                      resul, t, s: [
+                      results: [
                         'Claims, Processin, g: 92% au, t, o-adjudicat, i, o, n',
                         'Medical, Codin, g: 99.1% accur, a, c, y',
                         '70% administrative, burden, reduction',
                       ],
                     },
                     {
-                      indust, r, y: 'Manufactur, i, n, g',
+                      industry: 'Manufactur, i, n, g',
                       savin, g, s: '$18.2, M',
                       automati, o, n: '9, 4%',
-                      resul, t, s: [
+                      results: [
                         'Quality, Contro, l: 99.7% defect, detecti, o, n',
                         'Invento, r, y: 98% forecast, accura, c, y',
                         'Downti, m, e: 73% reduct, i, o, n',
                       ],
                     },
                     {
-                      indust, r, y: 'Reta, i, l & E-comme, r, c, e',
+                      industry: 'Reta, i, l & E-comme, r, c, e',
                       savin, g, s: '$6.8, M',
                       automati, o, n: '8, 9%',
-                      resul, t, s: [
+                      results: [
                         'Order, Processin, g: 99.8% automat, i, o, n',
                         'Fulfillme, n, t: 80% fas, t, e, r',
                         'Reven, u, e: 28% incre, a, s, e',
@@ -245,7 +245,7 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                     >
                       <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
                         <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-                          {a, p, p.indust, r, y}
+                          {a, p, p.industry}
                         </h3>
                         <div, classNam, e='flex, ga, p-3'>
                           <span, classNam, e='px-3, p, y-1, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
@@ -257,7 +257,7 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                         </d, i, v>
                       </d, i, v>
                       <ul, classNam, e='spa, c, e-y-2'>
-                        { a, p, p.resul, t, s.m, a, p((res, u, l, t, rInd, e, x) = > (
+                        { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                             <sp, a, n>{resu, l, t}</sp, a, n>

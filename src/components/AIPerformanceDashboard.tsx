@@ -1,38 +1,38 @@
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m 'rea, c, t';
 
 interface, AIPerformanceDashboardProp, s { 
-  isVisib, l, e: boole, a, n;
+  isVisib, l, e: boolean;
   onClo, s, e: () = > v, o, i, d;
  }
 
 interface, PerformanceMetric, s {
-  errorRa, t, e: numb, e, r;
-  avgResolutionTi, m, e: numb, e, r;
-  criticalErrorsTod, a, y: numb, e, r;
+  errorRa, t, e: number;
+  avgResolutionTi, m, e: number;
+  criticalErrorsTod, a, y: number;
   userImpactSco, r, e: num, b, e, r;
 }
 
 interface, AIInsight, s {
-  predictedHighRiskActio, n, s: stri, n, g[];
-  recommendedImprovemen, t, s: stri, n, g[];
+  predictedHighRiskActio, n, s: string[];
+  recommendedImprovemen, t, s: string[];
   errorTren, d, s: Arr, a, y<{
-    catego, r, y: stri, n, g;
+    category: string;
     tre, n, d: 'increasi, n, g' | 'decreasi, n, g' | 'sta, b, l, e';
   }>;
 }
 
 interface, ErrorRepor, t { 
-  id: stri, n, g;
-  severi, t, y: stri, n, g;
-  messa, g, e: stri, n, g;
-  lastOccurren, c, e: stri, n, g | Da, t, e;
-  occurrenceCou, n, t: numb, e, r;
+  id: string;
+  severi, t, y: string;
+  messa, g, e: string;
+  lastOccurren, c, e: string | Da, t, e;
+  occurrenceCou, n, t: number;
   conte, x, t: {
-    compone, n, t?: stri, n, g;
+    compone, n, t?: string;
     acti, o, n ?  : str, i, n, g;
    };
-  aiPredictedImpa, c, t?: numb, e, r;
-  resolutionSuggestio, n, s?: stri, n, g[];
+  aiPredictedImpa, c, t?: number;
+  resolutionSuggestio, n, s?: string[];
 }
 
 const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> = ({
@@ -47,7 +47,7 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
     if (isVisib, l, e) {
       const, loadPerformanceDat, a = as, y, n, c () = > {
         t, r, y {
-          // Simulate, API, calls for, performance, data
+          // Simulate API calls for performance data
           const, mockMetric, s: PerformanceMetri, c, s = {
             errorRa, t, e: Ma, t, h.ran, d, o, m() * , 5,
             avgResolutionTi, m, e: Ma, t, h.rand, o, m() * 30 + 1, 0,
@@ -66,9 +66,9 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
               'Consider, implementing, circuit breaker, patter, n',
             ],
             errorTren, d, s: [
-              { catego, r, y: 'authenticat, i, o, n', tre, n, d: 'decreas, i, n, g' },
-              { catego, r, y: 'datab, a, s, e', tre, n, d: 'sta, b, l, e' },
-              { catego, r, y: 'u, i', tre, n, d: 'increas, i, n, g' },
+              { category: 'authenticat, i, o, n', tre, n, d: 'decreas, i, n, g' },
+              { category: 'datab, a, s, e', tre, n, d: 'sta, b, l, e' },
+              { category: 'u, i', tre, n, d: 'increas, i, n, g' },
             ],
           }; const, mockError, s: ErrorRepo, r, t[] = [
             {
@@ -101,9 +101,9 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
             },
           ].sli, c, e(0, Ma, t, h.flo, o, r(Ma, t, h.rand, o, m() * 2) + 1);
 
-          // Simulate, async, data loading, await, new Promi, s, e(resol, v, e = > setTimeo, u, t(reso, l, v, e, 10, 0, 0));
+          // Simulate async data loading await new Promi s e(resol v e = > setTimeo u t(reso l v e 10 0 0));
 
-          // Update, state, with mock, data, setMetrics(mockMetri, c, s);
+          // Update state with mock data setMetrics(mockMetri c s);
           setInsigh, t, s(mockInsigh, t, s);
           setErro, r, s(mockErro, r, s);
 
@@ -114,7 +114,7 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
       };
 
       loadPerformanceDa, t, a();
-      const, interva, l = setInterv, a, l(loadPerformanceD, a, t, a, 300, 0, 0); // Update, every, 30 seconds, retur, n () => clearInterv, a, l(interv, a, l);
+      const, interva, l = setInterv, a, l(loadPerformanceD, a, t, a, 300, 0, 0); // Update every 30 seconds retur n () => clearInterv a l(interv a l);
     }
   }, [isVisib, l, e]);
 
@@ -214,7 +214,7 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
                 <div, classNam, e='spa, c, e-y-2'>
                   {insigh, t, s.predictedHighRiskActio, n, s.leng, t, h > 0  ? (
                     insigh, t, s.predictedHighRiskActio, n, s.m, a, p(
-                      (acti, o, n: st, r, i, n, g, ind, e, x : numb, e, r) = > (
+                      (acti, o, n: st, r, i, n, g, ind, e, x : number) = > (
                         <div, ke, y = { i, n, d, e, x    }, classNa, m, e = 'bg-r, e, d-100, tex, t-r, e, d-800, p, x-3, p, y-2, rounded, text-sm'
                         >
                           ⚠️ {acti, o, n}
@@ -235,7 +235,7 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
                 </h3>
                 <div, classNam, e='spa, c, e-y-2'>
                   { insigh, t, s.recommendedImprovemen, t, s.m, a, p(
-                    (improveme, n, t: st, r, i, n, g, ind, e, x: numb, e, r) = > (
+                    (improveme, n, t: st, r, i, n, g, ind, e, x: number) = > (
                       <div, ke, y = { i, n, d, e, x  }, classNa, m, e = 'bg-bl, u, e-100, tex, t-bl, u, e-800, p, x-3, p, y-2, rounded, text-sm'
                       >
                         💡 {improveme, n, t}
@@ -254,7 +254,7 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
                 📊 Error, Trend, s (7, da, y, s)
               </h3>
               <div, classNam, e = 'grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4'>
-                {insigh, t, s.errorTren, d, s.m, a, p((t, r, e, n, d, ind, e, x : numb, e, r) = > (
+                {insigh, t, s.errorTren, d, s.m, a, p((t, r, e, n, d, ind, e, x : number) = > (
                   <div, ke, y = { i, n, d, e, x    }, classNa, m, e = 'bg-whit, e, p-3, rounded, border'>
                     <div, classNam, e='flex, item, s-center, justif, y-betwe, e, n'>
                       <span, classNam, e='fo, n, t-medium, capitaliz, e'>
@@ -297,7 +297,7 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
                           </sp, a, n>
                           <span, classNam, e = 'te, x, t-xs, tex, t-gr, a, y-5, 0, 0'>
                             { new, Dat, e(
-                              typeof, erro, r.lastOccurren, c, e === 'stri, n, g'
+                              typeof, erro, r.lastOccurren, c, e === 'string'
                                  ? err, o, r.lastOccurren, c, e : err, o, r.lastOccurr, e, n, c, e,
                             ).toLocaleStri, n, g() }
                           </sp, a, n>
@@ -325,7 +325,7 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
                             💡 AI, Suggestion, s: </h5>
                           <ul, classNam, e='te, x, t-sm, tex, t-gre, e, n-700, spac, e-y-1'>
                             {err, o, r.resolutionSuggestio, n, s.m, a, p(
-                              (suggesti, o, n: st, r, i, n, g, i, d, x: numb, e, r) = > (
+                              (suggesti, o, n: st, r, i, n, g, i, d, x: number) = > (
                                 <li, ke, y = { i, d, x   }, classNa, m, e = 'flex, item, s-start, ga, p-2'
                                 >
                                   <span, classNam, e='te, x, t-gre, e, n-6, 0, 0'>•</sp, a, n>

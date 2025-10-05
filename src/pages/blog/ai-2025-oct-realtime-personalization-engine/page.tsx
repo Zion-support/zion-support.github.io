@@ -6,17 +6,17 @@ export, default, function RealtimePersonalizationEngine20, 2, 5() {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Re, a, l-Time, AI, Personalization Engine, 202, 5 — 98.4% Relevan, c, e, 8.7x, Conversion, Lift, $23, 4, M+ Revenue, Growt, h | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Deploy, rea, l-time, AI, personalization that, adapts, to user, behavior, in millisecon, d, s. Achieve, 9, 8.4% relevance, scori, n, g, 8.7x, conversion, improvements, and, driv, e $23, 4, M+ incremental, revenue, growth.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, personalizati, o, n, re, a, l-time, personalizatio, n, recommendation, engin, e, customer, experienc, e, conversion, optimizatio, n, behavioral, targetin, g, predictive, personalizatio, n, marketing, A, I'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-realti, m, e-personalizati, o, n-engi, n, e'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-realti m e-personalizati o n-engi n e'
         />
       </Helm, e, t>
 

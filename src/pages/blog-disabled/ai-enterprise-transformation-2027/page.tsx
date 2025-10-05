@@ -6,10 +6,10 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = "m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">
       <Helm, e, t>
-        <tit, l, e>AI, Enterprise, Transformation 20, 2, 7 — P, l, a, n, Fu, n, d, Sca, l, e</tit, l, e>
-        <meta, nam, e = "descripti, o, n" 
+        <title>AI, Enterprise, Transformation 20, 2, 7 — P, l, a, n, Fu, n, d, Sca, l, e</title>
+        <meta, nam, e = "description" 
           
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-enterpri, s, e-transformati, o, n-20, 2, 7
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro u p.c o m/bl o g/ai-enterpri s e-transformati o n-20 2 7
         />
       </Helm, e, t>" />
 " />
@@ -18,7 +18,7 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
       <div, classNam, e="container, m, x-auto, p, x-6, p, y-16">
         <h1, classNam, e="te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4">
           "
-  hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ai-enterpri, s, e-transformati, o, n-20, 2, 7"
+  hr, e, f="htt, p, s://ziontechgro u p.c o m/bl o g/ai-enterpri s e-transformati o n-20 2 7"
         />
       
         </h1>

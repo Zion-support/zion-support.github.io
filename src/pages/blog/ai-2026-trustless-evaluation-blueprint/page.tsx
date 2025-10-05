@@ -6,12 +6,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Ai, 2026, Trustless Evaluation, Blueprin, t</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Ai, 2026, Trustless Evaluation, Blueprin, t</title>
+        <meta, nam, e='description'
           conte, n, t='Learn, about, ai 2026, trustless, evaluation blueprint, and, how it, can, benefit your, enterpris, e.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 6-trustle, s, s-evaluati, o, n-bluepri, n, t'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 6-trustle s s-evaluati o n-bluepri n t'
         />
       </Helm, e, t>
 

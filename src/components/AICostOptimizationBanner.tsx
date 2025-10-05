@@ -5,48 +5,48 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
   const, costOptimizationConten, t = [
     {
       i, d: , 1,
-      tit, l, e: 'AI, Cost, Optimization Breakthrou, g, h: Cut, Spending, by 9, 0%',
-      sl, u, g: 'ai-co, s, t-optimizati, o, n-breakthrou, g, h-2, 0, 2, 6',
-      excer, p, t: 'Revolutionary, AI, cost optimization, strategies, delivering 90% cost, reducti, o, n, $20, 0, M+ savin, g, s, and, 10x, efficiency gains, for, Fortune 500, companie, s.',
-      catego, r, y: 'Cost, Optimizati, o, n',
-      da, t, e: '20, 2, 6-01-3, 0',
-      readTi, m, e: '22, m, i, n',
+      title: 'AI, Cost, Optimization Breakthrou, g, h: Cut, Spending, by 9, 0%',
+      slug: 'ai-co, s, t-optimizati, o, n-breakthrou, g, h-2, 0, 2, 6',
+      excerpt: 'Revolutionary, AI, cost optimization, strategies, delivering 90% cost, reducti, o, n, $20, 0, M+ savin, g, s, and, 10x, efficiency gains, for, Fortune 500, companie, s.',
+      category: 'Cost, Optimizati, o, n',
+      date: '20, 2, 6-01-3, 0',
+      readTime: '22, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '💰',
       metri, c, s: { val, u, e: '9, 0%', lab, e, l: 'Cost, Reducti, o, n' },
     },
     {
       id:  , 2,
-      tit, l, e: 'Generative, AI, Cost Breakthrou, g, h: 85% Savi, n, g, s',
-      sl, u, g: 'generati, v, e-ai-co, s, t-breakthrou, g, h-2, 0, 2, 5',
-      excer, p, t: 'Proven, strategies, to slash, generative, AI costs, by, 85% through, semantic, cachin, g, model, cascadin, g, and, intelligent, routing without, sacrificing, quality.',
-      catego, r, y: 'GenAI, Optimizati, o, n',
-      da, t, e: '20, 2, 5-09-3, 0',
-      readTi, m, e: '18, m, i, n',
+      title: 'Generative, AI, Cost Breakthrou, g, h: 85% Savi, n, g, s',
+      slug: 'generati, v, e-ai-co, s, t-breakthrou, g, h-2, 0, 2, 5',
+      excerpt: 'Proven, strategies, to slash, generative, AI costs, by, 85% through, semantic, cachin, g, model, cascadin, g, and, intelligent, routing without, sacrificing, quality.',
+      category: 'GenAI, Optimizati, o, n',
+      date: '20, 2, 5-09-3, 0',
+      readTime: '18, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '🧠',
       metri, c, s: { val, u, e: '8, 5%', lab, e, l: 'GenAI, Savin, g, s' },
     },
     {
       id:  , 3,
-      tit, l, e: 'AI, Infrastructure, Automation: 70% Cost, C, u, t',
-      sl, u, g: 'ai-infrastructu, r, e-automati, o, n-2, 0, 2, 6',
-      excer, p, t: 'Se, l, f-healing, AI, infrastructure achieving, 7, 0% cost, reducti, o, n, 99.99% upti, m, e, an, d, 8-minute, MTTR, through intelligent, automation, and optimizati, o, n.',
-      catego, r, y: 'Infrastructur, e, A, I',
-      da, t, e: '20, 2, 6-01-3, 0',
-      readTi, m, e: '25, m, i, n',
+      title: 'AI, Infrastructure, Automation: 70% Cost, C, u, t',
+      slug: 'ai-infrastructu, r, e-automati, o, n-2, 0, 2, 6',
+      excerpt: 'Se, l, f-healing, AI, infrastructure achieving, 7, 0% cost, reducti, o, n, 99.99% upti, m, e, an, d, 8-minute, MTTR, through intelligent, automation, and optimizati, o, n.',
+      category: 'Infrastructur, e, A, I',
+      date: '20, 2, 6-01-3, 0',
+      readTime: '25, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '⚡',
       metri, c, s: { val, u, e: '7, 0%', lab, e, l: 'Infra, Cost, Cu, t' },
     },
     {
       id:  , 4,
-      tit, l, e: 'Enterprise, AI, FinOps: $50, 0, M+ Savings, Gui, d, e',
-      sl, u, g: 'enterpri, s, e-ai-fino, p, s-optimizati, o, n-2, 0, 2, 6',
-      excer, p, t: 'Complete, guide, to AI, Financial, Operations achievi, n, g $50, 0, M+ savings, through, intelligent resource, allocati, o, n, usage, optimizatio, n, and, cost, governance.',
-      catego, r, y: 'AI, FinO, p, s',
-      da, t, e: '20, 2, 6-01-3, 0',
-      readTi, m, e: '30, m, i, n',
+      title: 'Enterprise, AI, FinOps: $50, 0, M+ Savings, Gui, d, e',
+      slug: 'enterpri, s, e-ai-fino, p, s-optimizati, o, n-2, 0, 2, 6',
+      excerpt: 'Complete, guide, to AI, Financial, Operations achievi, n, g $50, 0, M+ savings, through, intelligent resource, allocati, o, n, usage, optimizatio, n, and, cost, governance.',
+      category: 'AI, FinO, p, s',
+      date: '20, 2, 6-01-3, 0',
+      readTime: '30, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '📊',
       metri, c, s: { val, u, e: '$5, 0, 0, M+', lab, e, l: 'Total, Savin, g, s' },
@@ -135,7 +135,7 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
                 {/* Category, Ta, g */}
                 <div, classNam, e='mb-4'>
                   <span, classNam, e='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-te, a, l-5, 0, 0/20, tex, t-te, a, l-400, tex, t-xs, fon, t-semibold, border, border-te, a, l-5, 0, 0/30'>
-                    {conte, n, t.catego, r, y}
+                    {conte, n, t.category}
                   </sp, a, n>
                 </d, i, v>
 
@@ -146,7 +146,7 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
 
                 {/* Excer, p, t */}
                 <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm'>
-                  {conte, n, t.excer, p, t}
+                  {conte, n, t.excerpt}
                 </p>
 
                 {/* Key, Metri, c */}
@@ -167,7 +167,7 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
                 <div, classNam, e='flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10'>
                   <span, classNam, e='flex, item, s-center, ga, p-2'>
                     <sp, a, n>⏱️</sp, a, n>
-                    {conte, n, t.readTi, m, e}
+                    {conte, n, t.readTime}
                   </sp, a, n>
                   <sp, a, n>
                     {new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', {
@@ -176,7 +176,7 @@ const, AICostOptimizationBanne, r: Rea, c, t.FC = () => {
                     })}
                   </sp, a, n>
                 </d, i, v > {/* CTA, Butto, n */}
-                <Link, t, o = {`/bl, o, g/${conte, n, t.sl, u, g}`}
+                <Link, t, o = {`/bl, o, g/${conte, n, t.slug}`}
                   classNa, m, e='gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-600, hove, r: fr, o, m-gre, e, n-400, hove, r:to-emera, l, d-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-gre, e, n-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
                 >
                   <sp, a, n>Read, Optimization, Guide</sp, a, n>

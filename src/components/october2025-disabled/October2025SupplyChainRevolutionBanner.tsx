@@ -227,11 +227,11 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
           <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>
           <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">
             {[
-              { indust, r, y: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%' },
-              { indust, r, y: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%' },
-              { indust, r, y: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%' },
-              { indust, r, y: 'Automot, i, v, e', val, u, e: '$1.4, B', r, o, i: ', 2,4, 0, 0%' },
-              { indust, r, y: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%' }
+              { industry: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%' },
+              { industry: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%' },
+              { industry: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%' },
+              { industry: 'Automot, i, v, e', val, u, e: '$1.4, B', r, o, i: ', 2,4, 0, 0%' },
+              { industry: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%' }
             ].m, a, p((it, e, m, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
                 <div, classNam, e="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indu, s, t, r, y}</d, i, v>

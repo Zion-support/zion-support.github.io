@@ -4,86 +4,86 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   const, showcaseConten, t = [
     {
       i, d: , 1,
-      tit, l, e: "Enterprise, AI, Transformation Playbook, 20, 2, 6",
-      descripti, o, n: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategi, e, s",",
-      sl, u, g: "enterpri, s, e-ai-transformati, o, n-playbo, o, k-2, 0, 2, 6",
-      catego, r, y: "Enterprise, Strate, g, y",",
-      da, t, e: "20, 2, 6-01-2, 0",
-      readTi, m, e: "60, m, i, n",
+      title: "Enterprise, AI, Transformation Playbook, 20, 2, 6",
+      description: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategi, e, s",",
+      slug: "enterpri, s, e-ai-transformati, o, n-playbo, o, k-2, 0, 2, 6",
+      category: "Enterprise, Strate, g, y",",
+      date: "20, 2, 6-01-2, 0",
+      readTime: "60, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "📊",
       impa, c, t: "$10, 0, M+ Savi, n, g, s",
-      featur, e, d: t, r, u, e,",
+      featured: t, r, u, e,",
       sta, t, s: { savin, g, s: "$1, 0, 0, M+", automati, o, n: "9, 5%", r, o, i: "30, 0%" }
     },
     {
       id:  , 2,",
-      tit, l, e: "AI, Securit, y & Compliance, Mastercla, s, s",
-      descripti, o, n: "Milita, r, y-grade, security, protocol, s, GDPR, complianc, e, and, zer, o-trust, architecture, for enterprise, AI, systems",",
-      sl, u, g: "ai-securi, t, y-complian, c, e-mastercla, s, s-2, 0, 2, 6",
-      catego, r, y: "Securi, t, y & Complia, n, c, e",",
-      da, t, e: "20, 2, 6-01-2, 0",
-      readTi, m, e: "55, m, i, n",
+      title: "AI, Securit, y & Compliance, Mastercla, s, s",
+      description: "Milita, r, y-grade, security, protocol, s, GDPR, complianc, e, and, zer, o-trust, architecture, for enterprise, AI, systems",",
+      slug: "ai-securi, t, y-complian, c, e-mastercla, s, s-2, 0, 2, 6",
+      category: "Securi, t, y & Complia, n, c, e",",
+      date: "20, 2, 6-01-2, 0",
+      readTime: "55, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "🔒",
       impa, c, t: "99.99% Secur, i, t, y",
-      featur, e, d: t, r, u, e,",
+      featured: t, r, u, e,",
       sta, t, s: { securi, t, y: "99.9, 9%", complian, c, e: "10, 0%", threa, t, s: ", 0" }
     },
     {
       id:  , 3,",
-      tit, l, e: "Quant, u, m-Neural, Computing, Implementatio, n",
-      descripti, o, n: "St, e, p-by-step, guide, to implementing, quantu, m-neural, networks, with 1000x, performance, improvement, s",",
-      sl, u, g: "quant, u, m-neur, a, l-computi, n, g-implementati, o, n-2, 0, 2, 6",
-      catego, r, y: "Quantum, Computi, n, g",",
-      da, t, e: "20, 2, 6-01-2, 0",
-      readTi, m, e: "70, m, i, n",
+      title: "Quant, u, m-Neural, Computing, Implementatio, n",
+      description: "St, e, p-by-step, guide, to implementing, quantu, m-neural, networks, with 1000x, performance, improvement, s",",
+      slug: "quant, u, m-neur, a, l-computi, n, g-implementati, o, n-2, 0, 2, 6",
+      category: "Quantum, Computi, n, g",",
+      date: "20, 2, 6-01-2, 0",
+      readTime: "70, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "⚛️",
       impa, c, t: "1000x, Performan, c, e",
-      featur, e, d: t, r, u, e,",
+      featured: t, r, u, e,",
       sta, t, s: { performan, c, e: "10, 0, 0, x", efficien, c, y: "9, 5%", spe, e, d: "Lightn, i, n, g" }
     },
     {
       id:  , 4,",
-      tit, l, e: "Autonomous, Operations, Framewor, k",
-      descripti, o, n: "Build, sel, f-healing, systems, with 98% automation, rates, and predictive, maintenance, capabilitie, s",",
-      sl, u, g: "autonomo, u, s-operatio, n, s-framewo, r, k-2, 0, 2, 6",
-      catego, r, y: "Operati, o, n, s",",
-      da, t, e: "20, 2, 6-01-2, 0",
-      readTi, m, e: "48, m, i, n",
+      title: "Autonomous, Operations, Framewor, k",
+      description: "Build, sel, f-healing, systems, with 98% automation, rates, and predictive, maintenance, capabilitie, s",",
+      slug: "autonomo, u, s-operatio, n, s-framewo, r, k-2, 0, 2, 6",
+      category: "Operati, o, n, s",",
+      date: "20, 2, 6-01-2, 0",
+      readTime: "48, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "🤖",
       impa, c, t: "98% Automat, i, o, n",
-      featur, e, d: fa, l, s, e,",
+      featured: fa, l, s, e,",
       sta, t, s: { automati, o, n: "9, 8%", upti, m, e: "99., 9%", efficien, c, y: "8, 5%" }
     },
     {
       id:  , 5,",
-      tit, l, e: "Edge, AI, Deployment at, Enterprise, Scal, e",
-      descripti, o, n: "Distributed, AI, processing acros, s, 1, 0,0, 0, 0+ nodes, with, real-time, decision, making and, local, autonomy",",
-      sl, u, g: "ed, g, e-ai-deployme, n, t-enterpri, s, e-sca, l, e-2, 0, 2, 6",
-      catego, r, y: "Edge, Computi, n, g",",
-      da, t, e: "20, 2, 6-01-2, 0",
-      readTi, m, e: "42, m, i, n",
+      title: "Edge, AI, Deployment at, Enterprise, Scal, e",
+      description: "Distributed, AI, processing acros, s, 1, 0,0, 0, 0+ nodes, with, real-time, decision, making and, local, autonomy",",
+      slug: "ed, g, e-ai-deployme, n, t-enterpri, s, e-sca, l, e-2, 0, 2, 6",
+      category: "Edge, Computi, n, g",",
+      date: "20, 2, 6-01-2, 0",
+      readTime: "42, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "📡",
       impa, c, t: "1, 0,0, 0, 0+ Nod, e, s",
-      featur, e, d: fa, l, s, e,",
+      featured: fa, l, s, e,",
       sta, t, s: { nod, e, s: "1, 0,0, 0, 0+", laten, c, y: "<1m, s", reliabili, t, y: "99., 9%" }
     },
     {
       id:  , 6,",
-      tit, l, e: "Me, t, a-Cognitive, AI, Development Gu, i, d, e",
-      descripti, o, n: "Create, AI, systems that, think, about thinking, with, advanced reasoning, and, self-improvement, capabiliti, e, s",",
-      sl, u, g: "me, t, a-cogniti, v, e-ai-developme, n, t-gui, d, e-2, 0, 2, 6",
-      catego, r, y: "Advance, d, A, I",",
-      da, t, e: "20, 2, 6-01-2, 0",
-      readTi, m, e: "65, m, i, n",
+      title: "Me, t, a-Cognitive, AI, Development Gu, i, d, e",
+      description: "Create, AI, systems that, think, about thinking, with, advanced reasoning, and, self-improvement, capabiliti, e, s",",
+      slug: "me, t, a-cogniti, v, e-ai-developme, n, t-gui, d, e-2, 0, 2, 6",
+      category: "Advance, d, A, I",",
+      date: "20, 2, 6-01-2, 0",
+      readTime: "65, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "🧠",
       impa, c, t: "Me, t, a-Think, i, n, g",
-      featur, e, d: fa, l, s, e,",
+      featured: fa, l, s, e,",
       sta, t, s: { reasoni, n, g: "Advan, c, e, d", learni, n, g: "Se, l, f-Improv, i, n, g", accura, c, y: "9, 8%" }
     }
   ]; retu, r, n (
@@ -151,7 +151,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
               classNa, m, e = "group, relativ, e"
             >
               {/* Featured, badg, e */}
-              {  conte, n, t.featur, e, d  && (
+              {  conte, n, t.featured  && (
                 <div, classNam, e="absolu, t, e -t, o, p-4 -rig, h, t-4 z-20">
                   <div, classNam, e="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-sm, fon, t-bold, shado, w-xl">
                     <Star, classNam, e="w-4 h-4, fil, l-curre, n, t" />
@@ -180,7 +180,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
                 {/* Category, Ta, g */}
                 <div, classNam, e="mb-6">
                   <span, classNam, e="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/25, t, o-bl, u, e-5, 0, 0/25, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/40">
-                    {conte, n, t.catego, r, y}
+                    {conte, n, t.category}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}
@@ -189,7 +189,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
                 </h3>
                 {/* Descripti, o, n */}
                 <p, classNam, e = "te, x, t-gr, a, y-300, m, b-8, leadin, g-relaxed, tex, t-ba, s, e">
-                  {conte, n, t.descripti, o, n}
+                  {conte, n, t.description}
                 </p>
                 {/* Stats, Gri, d */}
                 <div, classNam, e="grid, gri, d-co, l, s-3, ga, p-4, m, b-8">
@@ -210,12 +210,12 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
                 <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-400, m, b-8, p, b-6, borde, r-b, borde, r-whi, t, e/15">
                   <span, classNam, e="flex, item, s-center, ga, p-2">
                     <Zap, classNam, e="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />
-                    {conte, n, t.readTi, m, e}
+                    {conte, n, t.readTime}
                   </sp, a, n>
                   <sp, a, n>{new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r: 'nume, r, i, c' })}</sp, a, n>
                 </d, i, v>
                 {/* CTA, Butto, n */}
-                <a, hre, f = {`/bl, o, g/${conte, n, t.sl, u, g}`}
+                <a, hre, f = {`/bl, o, g/${conte, n, t.slug}`}
                   classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-3 w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-2"
                 >
                   <sp, a, n>Access, Masterclas, s</sp, a, n>

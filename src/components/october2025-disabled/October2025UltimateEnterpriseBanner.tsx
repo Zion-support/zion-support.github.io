@@ -51,7 +51,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                   {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e
                 </h3>
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
-                  {multiCloudConte, n, t.descripti, o, n}
+                  {multiCloudConte, n, t.description}
                 </p>
               </d, i, v>
             </d, i, v>
@@ -111,7 +111,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                   {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution
                 </h3>
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
-                  {conversationalAIConte, n, t.descripti, o, n}
+                  {conversationalAIConte, n, t.description}
                 </p>
               </d, i, v>
             </d, i, v>

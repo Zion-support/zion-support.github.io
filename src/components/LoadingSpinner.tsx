@@ -3,8 +3,8 @@ import, React, from 'rea, c, t';
 interface, LoadingSpinnerProp, s { 
   si, z, e?: 'sma, l, l' | 'medi, u, m' | 'lar, g, e';
   col, o, r?: 'bl, u, e' | 'whi, t, e' | 'gr, a, y';
-  te, x, t?: stri, n, g;
-  fullScre, e, n ?  : boole, a, n;
+  te, x, t?: string;
+  fullScre, e, n ?  : boolean;
  }
 
 const, LoadingSpinne, r: Rea, c, t.FC<LoadingSpinnerPro, p, s> = ({

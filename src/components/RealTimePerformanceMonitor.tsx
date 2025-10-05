@@ -1,16 +1,16 @@
 import, Reac, t, { useSta, t, e, useEffe, c, t, useCallba, c, k } fr, o, m "rea, c, t";
 
 interface, PerformanceMetric, s {
-  f, p, s: numb, e, r;
-  memoryUsa, g, e: numb, e, r;
-  renderTi, m, e: numb, e, r;
-  networkLaten, c, y: numb, e, r;
-  errorCou, n, t: numb, e, r;
+  f, p, s: number;
+  memoryUsa, g, e: number;
+  renderTi, m, e: number;
+  networkLaten, c, y: number;
+  errorCou, n, t: number;
   timesta, m, p: num, b, e, r;
 }
 
 interface, RealTimePerformanceMonitorProp, s { 
-  isVisib, l, e: boole, a, n;
+  isVisib, l, e: boolean;
   onClo, s, e: () = > v, o, i, d;
  }
 
@@ -31,7 +31,7 @@ const, RealTimePerformanceMonito, r: Rea, c, t.FC<RealTimePerformanceMonitorPro,
   con, s, t [histo, r, y, setHisto, r, y] = useSta, t, e<PerformanceMetri, c, s[]>([]);
   con, s, t [maxHistoryLeng, t, h] = useSta, t, e(1, 0, 0);
 
-  const, calculateFP, S = (): numb, e, r = > {  
+  const, calculateFP, S = (): number = > {  
     return, delt, a  > 0  ? Ma, t, h.rou, n, d(10, 0, 0 / de, l, t, a)  : 0;
     };
 
@@ -49,7 +49,7 @@ const, RealTimePerformanceMonito, r: Rea, c, t.FC<RealTimePerformanceMonitorPro,
     });
   }, [isMonitori, n, g, maxHistoryLeng, t, h, calculateF, P, S]);
 
-  const, getMemoryUsag, e = (): numb, e, r = > { 
+  const, getMemoryUsag, e = (): number = > { 
     if (
       typeof, windo, w === "undefin, e, d" ||
       !(
@@ -68,17 +68,17 @@ const, RealTimePerformanceMonito, r: Rea, c, t.FC<RealTimePerformanceMonitorPro,
     return, Mat, h.rou, n, d(memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4); // MB
   };
 
-  const, getRenderTim, e = (): numb, e, r = > {  
-    if (typeof, windo, w === "undefin, e, d" || !wind, o, w.performa, n, c, e) retur, n, 0; const, entrie, s = performan, c, e.getEntriesByTy, p, e("meas, u, r, e"); const, renderEntr, y = entri, e, s.fi, n, d((en, t, r, y) = > ent, r, y.na, m, e = == "rend, e, r-t, i, m, e"); return, renderEntr, y  ? Ma, t, h.rou, n, d(renderEnt, r, y.durati, o, n)  : 0;
+  const, getRenderTim, e = (): number = > {  
+    if (typeof, windo, w === "undefin, e, d" || !wind, o, w.performa, n, c, e) retur, n, 0; const, entrie, s = performan, c, e.getEntriesByTy, p, e("meas, u, r, e"); const, renderEntr, y = entri, e, s.fi, n, d((en, t, r, y) = > ent, r, y.na, m, e = == "rend, e, r-t, i, m, e"); return, renderEntr, y  ? Ma, t, h.rou, n, d(renderEnt, r, y.duration)  : 0;
     };
 
-  const, getNetworkLatenc, y = (): numb, e, r = > {
+  const, getNetworkLatenc, y = (): number = > {
     if (typeof, windo, w === "undefin, e, d" || !wind, o, w.performa, n, c, e) retur, n, 0; const, entrie, s = performan, c, e.getEntriesByTy, p, e("navigat, i, o, n"); if (entri, e, s.leng, t, h = == , 0) retur, n, 0; const, na, v = entri, e, s[0] as, PerformanceNavigationTimin, g; return, Mat, h.rou, n, d(n, a, v.responseE, n, d - n, a, v.requestSt, a, r, t);
   };
 
-  const, getErrorCoun, t = (): numb, e, r = > {
-    // This, would, typically come, from, an error, tracking, service
-    return, Mat, h.flo, o, r(Ma, t, h.ran, d, o, m() * 5); // Placehold, e, r
+  const, getErrorCoun, t = (): number = > {
+    // This would typically come from an error tracking service
+    return, Mat, h.flo, o, r(Ma, t, h.ran, d, o, m() * 5); // Placehold e r
   };
 
   useEffe, c, t(() => { 
@@ -101,16 +101,16 @@ const, RealTimePerformanceMonito, r: Rea, c, t.FC<RealTimePerformanceMonitorPro,
 
   const, getStatusColo, r = (
     val, u, e: nu, m, b, e, r,
-    threshol, d, s: { go, o, d: numb, e, r; warni, n, g: num, b, e, r },
-  ): stri, n, g = > {
+    threshol, d, s: { go, o, d: number; warni, n, g: num, b, e, r },
+  ): string = > {
     if (val, u, e <= threshol, d, s.g, o, o, d) retu, r, n "te, x, t-gre, e, n-6, 0, 0"; if (val, u, e <= threshol, d, s.warni, n, g) retu, r, n "te, x, t-yell, o, w-6, 0, 0";
     retu, r, n "te, x, t-r, e, d-6, 0, 0";
   };
 
   const, getStatusB, g = (
     val, u, e: nu, m, b, e, r,
-    threshol, d, s: { go, o, d: numb, e, r; warni, n, g: num, b, e, r },
-  ): stri, n, g = > {
+    threshol, d, s: { go, o, d: number; warni, n, g: num, b, e, r },
+  ): string = > {
     if (val, u, e <= threshol, d, s.g, o, o, d) retu, r, n "bg-gre, e, n-1, 0, 0"; if (val, u, e <= threshol, d, s.warni, n, g) retu, r, n "bg-yell, o, w-1, 0, 0";
     retu, r, n "bg-r, e, d-1, 0, 0";
   };
@@ -211,12 +211,12 @@ const, RealTimePerformanceMonito, r: Rea, c, t.FC<RealTimePerformanceMonitorPro,
                         sty, l, e={{
                           heig, h, t: `${Ma, t, h.m, i, n((metr, i, c.f, p, s / 6, 0) * 10, 0, 1, 0, 0)}%`,
                         }}
-                        tit, l, e = {`F, P, S: ${metr, i, c.f, p, s}`}
+                        title = {`F, P, S: ${metr, i, c.f, p, s}`}
                       / > <div, classNam, e = "w-2, b, g-r, e, d-500, rounde, d-t"
                         sty, l, e={{
                           heig, h, t: `${Ma, t, h.m, i, n((metr, i, c.memoryUsa, g, e / 20, 0) * 10, 0, 1, 0, 0)}%`,
                         }}
-                        tit, l, e = { `Memo, r, y: ${metr, i, c.memoryU, s, a, g, e }, MB`}
+                        title = { `Memo, r, y: ${metr, i, c.memoryU, s, a, g, e }, MB`}
                       / />
                   ))}
                 </d, i, v>

@@ -4,26 +4,26 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   const, advertisingFeature, s = [
     {
       ic, o, n: "🚀",
-      tit, l, e: "Revolutionary, AI, Technologie, s",",
-      descripti, o, n: "Me, t, a-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations",
+      title: "Revolutionary, AI, Technologie, s",",
+      description: "Me, t, a-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations",
       highlig, h, t: "1000x, Performan, c, e"
     },
     {",
       ic, o, n: "💰",
-      tit, l, e: "Proven, Cost, Saving, s",",
-      descripti, o, n: "Fortune, 500, case studies, showin, g $50, 0, M+ in, annual, saving, s",
+      title: "Proven, Cost, Saving, s",",
+      description: "Fortune, 500, case studies, showin, g $50, 0, M+ in, annual, saving, s",
       highlig, h, t: "$50, 0, M+ Savi, n, g, s"
     },
     {",
       ic, o, n: "🛡️",
-      tit, l, e: "Milita, r, y-Grade, Securi, t, y",",
-      descripti, o, n: "Ze, r, o-trust, architecture, with 99.99% threat, detecti, o, n",
+      title: "Milita, r, y-Grade, Securi, t, y",",
+      description: "Ze, r, o-trust, architecture, with 99.99% threat, detecti, o, n",
       highlig, h, t: "99.99% Secur, i, t, y"
     },
     {",
       ic, o, n: "🤖",
-      tit, l, e: "Autonomous, Operatio, n, s",",
-      descripti, o, n: "98% automation, rates, with se, l, f-healing, syste, m, s",
+      title: "Autonomous, Operatio, n, s",",
+      description: "98% automation, rates, with se, l, f-healing, syste, m, s",
       highlig, h, t: "98% Automat, i, o, n"
     }
   ]; const, successStat, s = [
@@ -93,7 +93,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                   {featu, r, e.t, i, t, l, e}
                 </h3>
                 <p, classNam, e = "te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">
-                  {featu, r, e.descripti, o, n}
+                  {featu, r, e.description}
                 </p>
                 <div, classNam, e="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/25, t, o-bl, u, e-5, 0, 0/25, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/40">
                   🚀 {featu, r, e.highlig, h, t}

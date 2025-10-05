@@ -99,7 +99,7 @@ const, October2025DocumentAutomationBanne, r = () => {
               <p, classNam, e='te, x, t-purp, l, e-100, tex, t-sm, m, b-4'>
                 Real, transformatio, n: Ho, w, a $18B, insurance, company achiev, e, d $47M, annual, savin, g, s, 94% faster, processin, g (45, day, s → 2.7, day, s), and, 9, 9.2% accuracy, by, automating 2.4M, documents, annually with, zero, manual interventi, o, n.
               </p>
-              <Link, t, o = '/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-insuran, c, e-compa, n, y-docume, n, t-automati, o, n-47-milli, o, n-succe, s, s'
+              <Link, t, o = '/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-insuran, c, e-company-docume, n, t-automati, o, n-47-milli, o, n-succe, s, s'
                 classNa, m, e='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
               >
                 Read, Success, Story

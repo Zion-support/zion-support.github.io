@@ -3,22 +3,22 @@ import, React, from 'rea, c, t';
 const, ContentShowcas, e: Rea, c, t.FC = () => {
   const, contentItem, s = [
     {
-      tit, l, e: 'Latest, AI, Innovatio, n, s',
-      descripti, o, n: 'Discover, the, newest AI, technologies, and their, applications, in busin, e, s, s',
-      catego, r, y: 'AI, Technolo, g, y',
-      readTi, m, e: '5, min, rea, d',
+      title: 'Latest, AI, Innovatio, n, s',
+      description: 'Discover, the, newest AI, technologies, and their, applications, in busin, e, s, s',
+      category: 'AI, Technolo, g, y',
+      readTime: '5, min, rea, d',
     },
     {
-      tit, l, e: 'Micro, SaaS, Trends 2, 0, 2, 4',
-      descripti, o, n: 'Explore, the, latest trends, in, micro SaaS, development, and deploym, e, n, t',
-      catego, r, y: 'SaaS, Solutio, n, s',
-      readTi, m, e: '7, min, rea, d',
+      title: 'Micro, SaaS, Trends 2, 0, 2, 4',
+      description: 'Explore, the, latest trends, in, micro SaaS, development, and deploym, e, n, t',
+      category: 'SaaS, Solutio, n, s',
+      readTime: '7, min, rea, d',
     },
     {
-      tit, l, e: 'Cloud, Migration, Guid, e',
-      descripti, o, n: 'Comprehensive, guide, to successful, cloud, migration strateg, i, e, s',
-      catego, r, y: 'IT, Servic, e, s',
-      readTi, m, e: '10, min, rea, d',
+      title: 'Cloud, Migration, Guid, e',
+      description: 'Comprehensive, guide, to successful, cloud, migration strateg, i, e, s',
+      category: 'IT, Servic, e, s',
+      readTime: '10, min, rea, d',
     },
   ]; retu, r, n (
     <div, classNam, e = 'py-16, b, g-gr, a, y-50'>
@@ -35,10 +35,10 @@ const, ContentShowcas, e: Rea, c, t.FC = () => {
                   {it, e, m.cate, g, o, r, y}
                 </sp, a, n>
               </d, i, v>
-              <h3, classNam, e = 'te, x, t-xl, fon, t-bold, m, b-3'>{it, e, m.tit, l, e}</h3>
-              <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>{it, e, m.descripti, o, n}</p>
+              <h3, classNam, e = 'te, x, t-xl, fon, t-bold, m, b-3'>{it, e, m.title}</h3>
+              <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>{it, e, m.description}</p>
               <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                <span, classNam, e='te, x, t-sm, tex, t-gr, a, y-5, 0, 0'>{it, e, m.readTi, m, e}</sp, a, n>
+                <span, classNam, e='te, x, t-sm, tex, t-gr, a, y-5, 0, 0'>{it, e, m.readTime}</sp, a, n>
                 <a, hre, f='/bl, o, g'
                   classNa, m, e='te, x, t-bl, u, e-600, hove, r: te, x, t-bl, u, e-800, fon, t-semibo, l, d'
                 >

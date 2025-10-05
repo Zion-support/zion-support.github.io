@@ -9,21 +9,21 @@ const, EnterpriseAutomation202, 5 = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           AI-Powered, Enterprise, Automation 20, 2, 5: Complete, Implementation, Guide |
           Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, AI, automation in, 202, 5. Complete, guide, covering implementation, strateg, i, e, s, ROI, optimizatio, n, and, rea, l-world, case, studies for, 40, 0%+ efficiency, gain, s.'
         />
-        <meta, propert, y = 'og: tit, l, e'
+        <meta, propert, y = 'og: title'
           conte, n, t='AI-Powered, Enterprise, Automation 20, 2, 5: Complete, Implementation, Guide'
         />
-        <meta, propert, y='og:descripti, o, n'
+        <meta, propert, y='og:description'
           conte, n, t='Transform, your, enterprise with, AI, automation in, 202, 5. Complete, guide, covering implementation, strateg, i, e, s, ROI, optimizatio, n, and, rea, l-world, case, studies for, 40, 0%+ efficiency, gain, s.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-octob, e, r-breakthrou, g, h-enterpri, s, e-automati, o, n'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-octob e r-breakthrou g h-enterpri s e-automati o n'
         />
       </Helm, e, t>
       <div, classNam, e='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>

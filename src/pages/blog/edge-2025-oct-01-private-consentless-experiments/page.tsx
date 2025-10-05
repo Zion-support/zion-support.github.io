@@ -6,12 +6,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Edge, 2025, Oct 01, Private, Consentless Experimen, t, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Edge, 2025, Oct 01, Private, Consentless Experimen, t, s</title>
+        <meta, nam, e='description'
           conte, n, t='Learn, about, edge 2025, oct, 01 private, consentless, experiments and, how, it can, benefit, your enterpri, s, e.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-o, c, t-01-priva, t, e-consentle, s, s-experimen, t, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 5-o c t-01-priva t e-consentle s s-experimen t s'
         />
       </Helm, e, t>
 

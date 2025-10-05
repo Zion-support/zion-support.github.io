@@ -6,17 +6,17 @@ export, default, function CognitiveSearchEnterprise20, 2, 5() {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Transform, enterprise, knowledge discovery, with, AI-powered, cognitive, search. Achieve, 9, 7% answer, accura, c, y, 12x, faster, information retriev, a, l, and, unloc, k $12, 4, M+ in, productivity, gains across, your, organization.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='cognitive, sear, c, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-cogniti, v, e-sear, c, h-enterpri, s, e'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-cogniti v e-sear c h-enterpri s e'
         />
       </Helm, e, t>
 
@@ -144,7 +144,7 @@ export, default, function CognitiveSearchEnterprise20, 2, 5() {
                   3. AI-Powered, Answer, Generation
                 </h3>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                  LLMs, synthesize, information from, multiple, sources to, generate, comprehensive answers, with, citations. The, system, explains its, reasoning, and confidence, lev, e, l, enabling, users, to trust, and, validate resul, t, s.
+                  LLMs, synthesize, information from, multiple, sources to, generate, comprehensive answers, with, citations. The, system, explains its, reasoning, and confidence, lev, e, l, enabling, users, to trust, and, validate results.
                 </p>
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
                   <li>

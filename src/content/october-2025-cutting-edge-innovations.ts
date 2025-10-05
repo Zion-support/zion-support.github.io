@@ -1,10 +1,10 @@
-export, const, octoberCuttingEdgeInnovations = [
+export const octoberCuttingEdgeInnovations = [
   {
     id: 'quant, u, m-securi, t, y-netw, o, r, k, s',
-    sl, u, g: 'ai-20, 2, 5-octob, e, r-quant, u, m-securi, t, y-networ, k, s-enterpr, i, s, e',
-    tit, l, e: 'AI-Powered, Quantum, Security Netwo, r, k, s',
-    catego, r, y: 'Quantum, Securi, t, y',
-    descripti, o, n: 'Master, quantu, m-resistant, security, with AI-powered, threat, detectio, n, po, s, t-quantum, cryptograph, y, and, zer, o-trust, network, s. 99.9, 9, 9% uptime, wit, h <100ms, threat, detection.',
+    slug: 'ai-20, 2, 5-octob, e, r-quant, u, m-securi, t, y-networ, k, s-enterpr, i, s, e',
+    title: 'AI-Powered, Quantum, Security Netwo, r, k, s',
+    category: 'Quantum, Securi, t, y',
+    description: 'Master, quantu, m-resistant, security, with AI-powered, threat, detectio, n, po, s, t-quantum, cryptograph, y, and, zer, o-trust, network, s. 99.9, 9, 9% uptime, wit, h <100ms, threat, detection.',
     ic, o, n: '🔐',
     gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-purp, l, e-60, 0',
     metri, c, s: {
@@ -23,10 +23,10 @@ export, const, octoberCuttingEdgeInnovations = [
   },
   {
     id: 'neuromorph, i, c-comput, i, n, g',
-    sl, u, g: 'ai-20, 2, 5-octob, e, r-neuromorph, i, c-enterpri, s, e-revolut, i, o, n',
-    tit, l, e: 'Neuromorphic, Computing, Revolutio, n',
-    catego, r, y: 'Bra, i, n-Inspire, d, A, I',
-    descripti, o, n: 'Deploy, brai, n-inspired, neuromorphic, chips for, 100x, energy efficiency, and, sub-millisecond, inference, at the, edg, e. Transform, autonomous, vehicle, s, roboti, c, s, and, Io, T.',
+    slug: 'ai-20, 2, 5-octob, e, r-neuromorph, i, c-enterpri, s, e-revolut, i, o, n',
+    title: 'Neuromorphic, Computing, Revolutio, n',
+    category: 'Bra, i, n-Inspire, d, A, I',
+    description: 'Deploy, brai, n-inspired, neuromorphic, chips for, 100x, energy efficiency, and, sub-millisecond, inference, at the, edg, e. Transform, autonomous, vehicle, s, roboti, c, s, and, Io, T.',
     ic, o, n: '🧠',
     gradie, n, t: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0',
     metri, c, s: {
@@ -45,10 +45,10 @@ export, const, octoberCuttingEdgeInnovations = [
   },
   {
     id: 'mul, t, i-age, n, t-governa, n, c, e',
-    sl, u, g: 'ai-20, 2, 5-octob, e, r-autonomo, u, s-mul, t, i-age, n, t-governa, n, c, e',
-    tit, l, e: 'Mul, t, i-Agent, Governance, Framewor, k',
-    catego, r, y: 'AI, Governan, c, e',
-    descripti, o, n: 'Govern, AI, agent swarms, at, scale with, polic, y-as-c, o, d, e, safety, guardrail, s, and, compliance, automation. 99.97% policy, compliance, across 1000s, of, agents.',
+    slug: 'ai-20, 2, 5-octob, e, r-autonomo, u, s-mul, t, i-age, n, t-governa, n, c, e',
+    title: 'Mul, t, i-Agent, Governance, Framewor, k',
+    category: 'AI, Governan, c, e',
+    description: 'Govern, AI, agent swarms, at, scale with, polic, y-as-c, o, d, e, safety, guardrail, s, and, compliance, automation. 99.97% policy, compliance, across 1000s, of, agents.',
     ic, o, n: '⚖️',
     gradie, n, t: 'fr, o, m-indi, g, o-600, t, o-viol, e, t-60, 0',
     metri, c, s: {
@@ -65,7 +65,7 @@ export, const, octoberCuttingEdgeInnovations = [
       'Deployed, in, JP Morgan, Chase, and Kaiser, Permanent, e',
     ],
   },
-]; export, const, octoberInnovationMetrics = {
+]; export const octoberInnovationMetrics = {
   totalMark, e, t: '$1.00, 9, T',
   averageEfficien, c, y: '98, x',
   combinedComplian, c, e: '99., 9%',

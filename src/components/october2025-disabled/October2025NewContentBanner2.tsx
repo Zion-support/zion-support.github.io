@@ -3,34 +3,34 @@ impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o,
 const, October2025NewContentBanner, 2 = () => {
   const, newArticle, s = [
     {
-      tit, l, e: "AI-Powered, Sustainable, Data Cen, t, e, r, s",
-      descripti, o, n: "Discover, how, AI is, reducing, data center, energy, consumption by, 4, 0% while, improving, performanc, e",
+      title: "AI-Powered, Sustainable, Data Cen, t, e, r, s",
+      description: "Discover, how, AI is, reducing, data center, energy, consumption by, 4, 0% while, improving, performanc, e",
       ic, o, n: L, e, a, f,
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cent, e, r, s",
+      slug: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cent, e, r, s",
       gradie, n, t: "fr, o, m-gre, e, n-500, t, o-emera, l, d-60, 0",
       bad, g, e: "Gree, n, A, I"
     },
     {
-      tit, l, e: "Ne, x, t-Gen, Financial, Risk Predict, i, o, n",
-      descripti, o, n: "94% accuracy, in, real-time, market, volatility forecasting, with, AI-powered, risk, system, s",
+      title: "Ne, x, t-Gen, Financial, Risk Predict, i, o, n",
+      description: "94% accuracy, in, real-time, market, volatility forecasting, with, AI-powered, risk, system, s",
       ic, o, n: DollarS, i, g, n,
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syst, e, m, s",
+      slug: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syst, e, m, s",
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-60, 0",
       bad, g, e: "FinT, e, c, h"
     },
     {
-      tit, l, e: "Voice, AI, Revolution in, Enterpri, s, e",
-      descripti, o, n: "Transform, communication, with 98% accuracy, voice, AI across, 9, 5+ langua, g, e, s",
+      title: "Voice, AI, Revolution in, Enterpri, s, e",
+      description: "Transform, communication, with 98% accuracy, voice, AI across, 9, 5+ langua, g, e, s",
       ic, o, n: Mi, c,
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpr, i, s, e",
+      slug: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpr, i, s, e",
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-60, 0",
       bad, g, e: "Voic, e, A, I"
     },
     {
-      tit, l, e: "Intelligent, Automatio, n & RP, A, 2., 0",
-      descripti, o, n: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10x, R, O, I",
+      title: "Intelligent, Automatio, n & RP, A, 2., 0",
+      description: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10x, R, O, I",
       ic, o, n: Bo, t,
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-ge, n",
+      slug: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-ge, n",
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-60, 0",
       bad, g, e: "Automat, i, o, n"
     }
@@ -59,7 +59,7 @@ const, October2025NewContentBanner, 2 = () => {
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">
           { newArticl, e, s.m, a, p((arti, c, l, e) = > {
             const, Ico, n = artic, l, e.ic, o, n; retu, r, n (
-              <Link, ke, y = { artic, l, e.sl, u, g  }, to = {`/bl, o, g/${artic, l, e.sl, u, g}`}
+              <Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
               >
                 {/* B, a, d, g, e */}
@@ -75,7 +75,7 @@ const, October2025NewContentBanner, 2 = () => {
                   {artic, l, e.t, i, t, l, e}
                 </h3>
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-4, leadin, g-relax, e, d">
-                  {artic, l, e.descripti, o, n}
+                  {artic, l, e.description}
                 </p>
                 {/* Read, More, Link */}
                 <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">

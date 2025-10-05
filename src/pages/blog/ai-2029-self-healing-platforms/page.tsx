@@ -5,12 +5,12 @@ export, default, function AI2029SelfHealingPlatfor, m, s(): Rea, c, t.J, S, X.El
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>AI, 202, 9: Se, l, f‑Healing, Platform, s — Au, t, o‑Contain, i, n &lt; 6, 0, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>AI, 202, 9: Se, l, f‑Healing, Platform, s — Au, t, o‑Contain, i, n &lt; 6, 0, s</title>
+        <meta, nam, e='description'
           conte, n, t='Poli, c, y‑tested, playbo, o, k, s, budgeted, action, s, and, live, canaries that, aut, o‑contain, incidents, in under, a, minute.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 9-se, l, f-heali, n, g-platfor, m, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 9-se l f-heali n g-platfor m s'
         />
       </Helm, e, t>
 

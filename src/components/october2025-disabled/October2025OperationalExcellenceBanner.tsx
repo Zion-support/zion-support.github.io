@@ -195,7 +195,7 @@ const, October2025OperationalExcellenceBanne, r = () => {
               <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm'>
                 <Award, classNam, e='w-4 h-4' />
                 <span, classNam, e='fo, n, t-semibo, l, d'>
-                  95% incident, aut, o-resoluti, o, n
+                  95% incident, aut, o-resolution
                 </sp, a, n>
               </d, i, v>
               <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm'>

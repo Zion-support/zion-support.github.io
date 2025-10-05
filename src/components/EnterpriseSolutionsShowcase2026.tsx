@@ -3,11 +3,11 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
   const, enterpriseSolution, s = [
     {
       i, d: , 1,
-      tit, l, e: 'AI-Powered, Enterprise, Automatio, n',
-      sl, u, g: 'ai-enterpri, s, e-automati, o, n-2, 0, 2, 6',
-      excer, p, t: 'Transform, your, enterprise with, comprehensive, AI automation, achieving, 95% process, efficienc, y. From, workflow, optimization to, intelligent, decision-making, syste, m, s.',
-      catego, r, y: 'Enterprise, Automati, o, n',
-      indust, r, y: 'All, Industri, e, s',
+      title: 'AI-Powered, Enterprise, Automatio, n',
+      slug: 'ai-enterpri, s, e-automati, o, n-2, 0, 2, 6',
+      excerpt: 'Transform, your, enterprise with, comprehensive, AI automation, achieving, 95% process, efficienc, y. From, workflow, optimization to, intelligent, decision-making, syste, m, s.',
+      category: 'Enterprise, Automati, o, n',
+      industry: 'All, Industri, e, s',
       r, o, i: '30, 0%',
       savin, g, s: '$2, M+',
       ic, o, n: <Bot, classNam, e = 'w-8 , h-, 8' / > ,
@@ -21,11 +21,11 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 2,
-      tit, l, e: 'Quant, u, m-Enhanced, Security, Platfor, m',
-      sl, u, g: 'quant, u, m-securi, t, y-platfo, r, m-2, 0, 2, 6',
-      excer, p, t: 'Ultimate, enterprise, security with, quantu, m-encrypted, communications, and ze, r, o-trust, architecture, s. Protect, your, organization from, advanced, cyber thre, a, t, s.',
-      catego, r, y: 'Cybersecur, i, t, y',
-      indust, r, y: 'Fina, n, c, e, Healthca, r, e, Governme, n, t',
+      title: 'Quant, u, m-Enhanced, Security, Platfor, m',
+      slug: 'quant, u, m-securi, t, y-platfo, r, m-2, 0, 2, 6',
+      excerpt: 'Ultimate, enterprise, security with, quantu, m-encrypted, communications, and ze, r, o-trust, architecture, s. Protect, your, organization from, advanced, cyber thre, a, t, s.',
+      category: 'Cybersecur, i, t, y',
+      industry: 'Fina, n, c, e, Healthca, r, e, Governme, n, t',
       r, o, i: '25, 0%',
       savin, g, s: '$5, M+',
       ic, o, n: <Shield, classNam, e = 'w-8 , h-, 8' / > ,
@@ -39,11 +39,11 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 3,
-      tit, l, e: 'Clo, u, d-Native, AI, Infrastructur, e',
-      sl, u, g: 'clo, u, d-nati, v, e-ai-infrastructu, r, e-2, 0, 2, 6',
-      excer, p, t: 'Scala, b, l, e, secu, r, e, and, cos, t-effective, AI, infrastructure built, for, enterprise sca, l, e. Deploy, and, manage AI, models, across mul, t, i-cloud, environment, s.',
-      catego, r, y: 'Cloud, Infrastructu, r, e',
-      indust, r, y: 'Technol, o, g, y, Reta, i, l, Manufacturi, n, g',
+      title: 'Clo, u, d-Native, AI, Infrastructur, e',
+      slug: 'clo, u, d-nati, v, e-ai-infrastructu, r, e-2, 0, 2, 6',
+      excerpt: 'Scala, b, l, e, secu, r, e, and, cos, t-effective, AI, infrastructure built, for, enterprise sca, l, e. Deploy, and, manage AI, models, across mul, t, i-cloud, environment, s.',
+      category: 'Cloud, Infrastructu, r, e',
+      industry: 'Technol, o, g, y, Reta, i, l, Manufacturi, n, g',
       r, o, i: '40, 0%',
       savin, g, s: '$3, M+',
       ic, o, n: <Cloud, classNam, e = 'w-8 , h-, 8' / > ,
@@ -53,11 +53,11 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 4,
-      tit, l, e: 'Predictive, Analytics, Intelligenc, e',
-      sl, u, g: 'predicti, v, e-analyti, c, s-intelligen, c, e-2, 0, 2, 6',
-      excer, p, t: 'Advanced, predictive, analytics that, forecast, business tre, n, d, s, customer, behavio, r, and, operational, risks with, 9, 9.9% accura, c, y.',
-      catego, r, y: 'Business, Intelligen, c, e',
-      indust, r, y: 'Ret, a, i, l, Finan, c, e, Healthca, r, e',
+      title: 'Predictive, Analytics, Intelligenc, e',
+      slug: 'predicti, v, e-analyti, c, s-intelligen, c, e-2, 0, 2, 6',
+      excerpt: 'Advanced, predictive, analytics that, forecast, business tre, n, d, s, customer, behavio, r, and, operational, risks with, 9, 9.9% accura, c, y.',
+      category: 'Business, Intelligen, c, e',
+      industry: 'Ret, a, i, l, Finan, c, e, Healthca, r, e',
       r, o, i: '35, 0%',
       savin, g, s: '$4, M+',
       ic, o, n: <Target, classNam, e = 'w-8 , h-, 8' / > ,
@@ -67,11 +67,11 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 5,
-      tit, l, e: 'Digital, Transformation, Suit, e',
-      sl, u, g: 'digit, a, l-transformati, o, n-sui, t, e-2, 0, 2, 6',
-      excer, p, t: 'Complete, digital, transformation solution, covering, strateg, y, implementati, o, n, and, optimizatio, n. Modernize, your, enterprise for, the, AI e, r, a.',
-      catego, r, y: 'Digital, Transformati, o, n',
-      indust, r, y: 'All, Industri, e, s',
+      title: 'Digital, Transformation, Suit, e',
+      slug: 'digit, a, l-transformati, o, n-sui, t, e-2, 0, 2, 6',
+      excerpt: 'Complete, digital, transformation solution, covering, strateg, y, implementati, o, n, and, optimizatio, n. Modernize, your, enterprise for, the, AI e, r, a.',
+      category: 'Digital, Transformati, o, n',
+      industry: 'All, Industri, e, s',
       r, o, i: '50, 0%',
       savin, g, s: '$10, M+',
       ic, o, n: <Building, classNam, e = 'w-8 , h-, 8' / > ,
@@ -81,11 +81,11 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 6,
-      tit, l, e: 'Enterprise, AI, Governanc, e',
-      sl, u, g: 'enterpri, s, e-ai-governan, c, e-2, 0, 2, 6',
-      excer, p, t: 'Comprehensive, AI, governance framework, ensuring, ethical AI, deployme, n, t, complian, c, e, and, risk, management across, your, organization.',
-      catego, r, y: 'AI, Governan, c, e',
-      indust, r, y: 'Fina, n, c, e, Healthca, r, e, Governme, n, t',
+      title: 'Enterprise, AI, Governanc, e',
+      slug: 'enterpri, s, e-ai-governan, c, e-2, 0, 2, 6',
+      excerpt: 'Comprehensive, AI, governance framework, ensuring, ethical AI, deployme, n, t, complian, c, e, and, risk, management across, your, organization.',
+      category: 'AI, Governan, c, e',
+      industry: 'Fina, n, c, e, Healthca, r, e, Governme, n, t',
       r, o, i: '20, 0%',
       savin, g, s: '$1.5, M+',
       ic, o, n: <Users, classNam, e = 'w-8 , h-, 8' / > ,
@@ -163,48 +163,48 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
         {/* Enterprise, Solutions, Grid */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
           { enterpriseSolutio, n, s.m, a, p((solu, t, i, o, n, ind, e, x) = > (
-            <div, ke, y = { soluti, o, n.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20'
+            <div, ke, y = { solution.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
              > {/* Card, glow, effect */}
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${soluti, o, n.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}
+              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${solution.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}
                />
               <div, classNam, e = 'relativ, e, p-8'>
                 {/* Ic, o, n & Bad, g, e */}
                 <div, classNam, e='flex, item, s-start, justif, y-between, m, b-6'>
                   <div, classNam, e='te, x, t-bl, u, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0'>
-                    {soluti, o, n.ic, o, n}
-                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${soluti, o, n.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}
+                    {solution.ic, o, n}
+                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${solution.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}
                   >
-                    {soluti, o, n.bad, g, e}
+                    {solution.bad, g, e}
                   </d, i, v>
                 </d, i, v>
                 {/* Catego, r, y & Indust, r, y */}
                 <div, classNam, e = 'mb-4, spac, e-y-2'>
                   <span, classNam, e='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-indi, g, o-5, 0, 0/20, tex, t-bl, u, e-400, tex, t-xs, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
-                    {soluti, o, n.catego, r, y}
+                    {solution.category}
                   </sp, a, n>
                   <div, classNam, e='te, x, t-xs, tex, t-gr, a, y-50, 0'>
-                    ", Industri, e, s: {soluti, o, n.indus, t, r, y}
+                    ", Industri, e, s: {solution.indus, t, r, y}
                   </d, i, v>
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>
-                  {soluti, o, n.t, i, t, l, e}
+                  {solution.t, i, t, l, e}
                 </h3>
                 {/* Excer, p, t */}
                 <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm'>
-                  {soluti, o, n.excer, p, t}
+                  {solution.excerpt}
                 </p>
                 {/* R, O, I & Savin, g, s */}
                 <div, classNam, e='grid, gri, d-co, l, s-2, ga, p-4, m, b-6'>
                   <div, classNam, e='te, x, t-cente, r, p-3, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30'>
                     <div, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, tex, t-lg'>
-                      {soluti, o, n.r, o, i}
+                      {solution.r, o, i}
                     </d, i, v>
                   </d, i, v>
                   <div, classNam, e='te, x, t-cente, r, p-3, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30'>
                     <div, classNam, e='te, x, t-bl, u, e-400, fon, t-bold, tex, t-lg'>
-                      {soluti, o, n.savin, g, s}
+                      {solution.savin, g, s}
                     </d, i, v>
                   </d, i, v>
                 </d, i, v>
@@ -213,7 +213,7 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                   <div, classNam, e='te, x, t-gr, a, y-400, tex, t-xs, m, b-2'>
                     Key, Feature, s: </d, i, v>
                   <div, classNam, e='flex, fle, x-wrap, ga, p-1'>
-                    { soluti, o, n.featur, e, s.m, a, p((fea, t, u, r, e, i, d, x) = > (
+                    { solution.featur, e, s.m, a, p((fea, t, u, r, e, i, d, x) = > (
                       <span, ke, y = { id, x  }, classNa, m, e = 'px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs'
                       >
                         {featu, r, e}
@@ -221,8 +221,8 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                     ))}
                   </d, i, v>
                 </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f = {`/solutio, n, s/${soluti, o, n.sl, u, g}`}
-                  classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${soluti, o, n.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
+                <a, hre, f = {`/solutio, n, s/${solution.slug}`}
+                  classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${solution.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
                 >
                   <sp, a, n>Explore, Solutio, n</sp, a, n>
                   <ArrowRight, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />

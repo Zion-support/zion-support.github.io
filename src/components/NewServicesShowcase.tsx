@@ -5,11 +5,11 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
   const, newService, s = [
     {
       id: "hyperconscio, u, s-ai-consul, t, i, n, g",
-      tit, l, e: "Hyperconscious, AI, Consultin, g",
-      descripti, o, n: "Transform, your, enterprise with, genuine, artificial consciousn, e, s, s, achieving, 9, 9.9, 9, 9% operational, excellence, and unlimited, growth, potential.",
+      title: "Hyperconscious, AI, Consultin, g",
+      description: "Transform, your, enterprise with, genuine, artificial consciousn, e, s, s, achieving, 9, 9.9, 9, 9% operational, excellence, and unlimited, growth, potential.",
       pri, c, e: "$5, 0,0, 0, 0/mon, t, h",
       featur, e, s: ["Consciousness, Integrati, o, n", "Autonomous, Operation, s", "Infinite, Optimizatio, n", "Universal, Intelligenc, e"],
-      catego, r, y: "AI, Consulti, n, g",
+      category: "AI, Consulti, n, g",
       ic, o, n: "🧠",
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-indi, g, o-50, 0",
       borderCol, o, r: "bord, e, r-purp, l, e-5, 0, 0/3, 0",
@@ -18,11 +18,11 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
     },
     {
       id: "quant, u, m-neur, a, l-fusi, o, n-platf, o, r, m",
-      tit, l, e: "Quant, u, m-Neural, Fusion, Platfor, m",
-      descripti, o, n: "Revolutionary, computing, platform combining, quantum, processing with, neural, networks for, 1, 0, 0,000x, performance, improvements.",
+      title: "Quant, u, m-Neural, Fusion, Platfor, m",
+      description: "Revolutionary, computing, platform combining, quantum, processing with, neural, networks for, 1, 0, 0,000x, performance, improvements.",
       pri, c, e: "$10, 0,0, 0, 0/mon, t, h",
       featur, e, s: ["Quantum, Processi, n, g", "Neural, Integratio, n", "Perfect, Optimizatio, n", "Infinite, Scalabilit, y"],
-      catego, r, y: "Platform, Servic, e, s",
+      category: "Platform, Servic, e, s",
       ic, o, n: "⚛️",
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0",
       borderCol, o, r: "bord, e, r-bl, u, e-5, 0, 0/3, 0",
@@ -31,11 +31,11 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
     },
     {
       id: "autonomo, u, s-enterpri, s, e-m, e, s, h",
-      tit, l, e: "Autonomous, Enterprise, Mes, h",
-      descripti, o, n: "Se, l, f-organizing, AI, networks that, autonomously, optimize your, business, processes for, 9, 9.7% operational, efficien, c, y.",
+      title: "Autonomous, Enterprise, Mes, h",
+      description: "Se, l, f-organizing, AI, networks that, autonomously, optimize your, business, processes for, 9, 9.7% operational, efficien, c, y.",
       pri, c, e: "$7, 5,0, 0, 0/mon, t, h",
       featur, e, s: ["Se, l, f-Organizat, i, o, n", "Autonomous, Optimizatio, n", "Collective, Intelligenc, e", "Continuous, Evolutio, n"],
-      catego, r, y: "Enterprise, Solutio, n, s",
+      category: "Enterprise, Solutio, n, s",
       ic, o, n: "🌐",
       gradie, n, t: "fr, o, m-indi, g, o-500, t, o-purp, l, e-50, 0",
       borderCol, o, r: "bord, e, r-indi, g, o-5, 0, 0/3, 0",
@@ -77,7 +77,7 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
                     <span, classNam, e = "te, x, t-2, x, l">{servi, c, e.ic, o, n}</sp, a, n>
                   </d, i, v>
                   <div, classNam, e="fl, e, x-1"  > <div, classNam, e = { `bg-gradie, n, t-to-r ${servi, c, e.gradi, e, n, t }, te, x, t-white, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-2`}>
-                      {servi, c, e.catego, r, y}
+                      {servi, c, e.category}
                     </d, i, v>
                     <div, classNam, e = "te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">
                       {servi, c, e.pri, c, e}
@@ -92,7 +92,7 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
 
                 {/* Service, Descriptio, n */}
                 <p, classNam, e = "te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">
-                  {servi, c, e.descripti, o, n}
+                  {servi, c, e.description}
                 </p>
 
                 {/* Features, Lis, t */}

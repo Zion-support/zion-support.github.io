@@ -14,18 +14,18 @@ export, default, function NextGenSecurityOperations20, 2, 5() {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n,
           S, u, b-Second, Respons, e, $2.3B+ Protecti, o, n | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Deploy, autonomous, AI security, operations, that detect, threats, in milliseco, n, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3B+ in, enterprise, assets.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, securi, t, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-ne, x, t-g, e, n-securi, t, y-operatio, n, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-ne x t-g e n-securi t y-operatio n s'
         />
       </Helm, e, t>
 
@@ -327,7 +327,7 @@ export, default, function NextGenSecurityOperations20, 2, 5() {
                 Ready, to, Transform Your, Security, Operations ? </h2>
               <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
                 Discover, how, Zion Tech, Group, can deploy, autonomous, AI security, operations, that protect, your, enterprise against, modern, threats.
-                Our, proven, implementation methodology, ensures, rapid deployment, with, measurable resul, t, s.
+                Our, proven, implementation methodology, ensures, rapid deployment, with, measurable results.
               </p>
               <Link, t, o='/conta, c, t'
                 classNa, m, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-purp, l, e-600, hove, r : to-pi, n, k-600, transitio, n-all, shado, w-lg'

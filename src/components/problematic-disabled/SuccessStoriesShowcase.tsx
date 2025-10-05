@@ -3,12 +3,12 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => { 
   const, storie, s = [
     {
-      compa, n, y: "TechCorp, Internatio, n, a, l",
-      indust, r, y: "Technol, o, g, y",
+      company: "TechCorp, Internatio, n, a, l",
+      industry: "Technol, o, g, y",
       ic, o, n: '🚀',
       ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > ,
       resu, l, t: "3, 0, 0% Revenue, Grow, t, h",
-      descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion ra, t, e, s.",",
+      description: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion ra, t, e, s.",",
       metri, c, s: [
         "98% prediction, accura, c, y",
         "60% cost, reductio, n",
@@ -17,12 +17,12 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
      },
     { ",
-      compa, n, y: "Global, Manufacturing, In, c",
-      indust, r, y: "Manufactur, i, n, g",
+      company: "Global, Manufacturing, In, c",
+      industry: "Manufactur, i, n, g",
       ic, o, n: '🚀',
       ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,
       resu, l, t: "85% Downtime, Reducti, o, n",
-      descripti, o, n: "AI, predictive, maintenance transformed, operatio, n, s, eliminating, unplanned, downtime and, reducing, costs.",",
+      description: "AI, predictive, maintenance transformed, operatio, n, s, eliminating, unplanned, downtime and, reducing, costs.",",
       metri, c, s: [
         "$2M, annual, saving, s",
         "40% lower, maintenance, costs",
@@ -31,12 +31,12 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
      },
     { ",
-      compa, n, y: "FinanceFirst, Ba, n, k",
-      indust, r, y: "Financial, Servic, e, s",
+      company: "FinanceFirst, Ba, n, k",
+      industry: "Financial, Servic, e, s",
       ic, o, n: '🚀',
       ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > ,
       resu, l, t: "99.95% Fraud, Detecti, o, n",
-      descripti, o, n: "AI, fraud, prevention system, achieved, industry-leading, accuracy, while reducing, false, positives b, y, 9, 5%.",",
+      description: "AI, fraud, prevention system, achieved, industry-leading, accuracy, while reducing, false, positives b, y, 9, 5%.",",
       metri, c, s: [
         "$5M, fraud, prevente, d",
         "S, u, b-100ms, detectio, n",
@@ -63,14 +63,14 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
                 <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
                   {sto, r, y.ic, o, n}
                   <d, i, v>
-                    <h3, classNam, e="fo, n, t-bold, tex, t-xl">{sto, r, y.compa, n, y}</h3>
-                    <p, classNam, e="te, x, t-sm, opacit, y-90">{sto, r, y.indust, r, y}</p>
+                    <h3, classNam, e="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>
+                    <p, classNam, e="te, x, t-sm, opacit, y-90">{sto, r, y.industry}</p>
                   </d, i, v>
                 </d, i, v>
                 <div, classNam, e="te, x, t-3xl, fon, t-bo, l, d">{sto, r, y.resu, l, t}</d, i, v>
               </d, i, v>
               <div, classNam, e="p-6">
-                <p, classNam, e="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.descripti, o, n}</p>
+                <p, classNam, e="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.description}</p>
                 <div, classNam, e="spa, c, e-y-2, m, b-6">
                   { sto, r, y.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
                     <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2">

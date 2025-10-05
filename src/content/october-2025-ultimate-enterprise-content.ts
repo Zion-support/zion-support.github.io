@@ -1,21 +1,21 @@
-// October, 2025, Ultimate Enterprise, AI, Content
-// BRAND, NE, W: Mul, t, i-Cloud, Intelligenc, e & Conversational, AI, Revolution
+// October 2025 Ultimate Enterprise AI Content
+// BRAND NE W: Mul t i-Cloud Intelligenc e & Conversational AI Revolution
 
-export, const, octoberUltimateEnterpriseContent = [
+export const octoberUltimateEnterpriseContent = [
   {
     id: 'adapti, v, e-mul, t, i-clo, u, d-intelligen, c, e-20, 2, 5',
-    tit, l, e: '🚀 N, E, W: Adaptive, Mult, i-Cloud, Intelligenc, e - 1, 5, 6% RO, I, $89M, Saving, s',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-01-adapti, v, e-mul, t, i-clo, u, d-intelligen, c, e-revolut, i, o, n',
-    descripti, o, n: 'JUST, PUBLISHE, D: Revolutionary, mult, i-cloud, intelligence, platform achieving, 15, 6% RO, I, 91% cost, optimizatio, n, a, n, d $89M, annual, savings through, A, I-powered, unified, cloud management, across, AWS, Azu, r, e, G, C, P.',
-    catego, r, y: 'Cloud, Infrastructu, r, e',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '18, m, i, n',
+    title: '🚀 N, E, W: Adaptive, Mult, i-Cloud, Intelligenc, e - 1, 5, 6% RO, I, $89M, Saving, s',
+    slug: 'ai-20, 2, 5-o, c, t-01-adapti, v, e-mul, t, i-clo, u, d-intelligen, c, e-revolut, i, o, n',
+    description: 'JUST, PUBLISHE, D: Revolutionary, mult, i-cloud, intelligence, platform achieving, 15, 6% RO, I, 91% cost, optimizatio, n, a, n, d $89M, annual, savings through, A, I-powered, unified, cloud management, across, AWS, Azu, r, e, G, C, P.',
+    category: 'Cloud, Infrastructu, r, e',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '18, m, i, n',
     ic, o, n: '☁️',
     gradie, n, t: 'fr, o, m-bl, u, e-600, vi, a-cy, a, n-600, t, o-te, a, l-60, 0',
-    featur, e, d: t, r, u, e,
+    featured: t, r, u, e,
     breaki, n, g: t, r, u, e,
     n, e, w: t, r, u, e,
-    ta, g, s: [
+    tags: [
       'Mul, t, i-Cl, o, u, d',
       'FinO, p, s',
       'Cloud, Operation, s',
@@ -47,18 +47,18 @@ export, const, octoberUltimateEnterpriseContent = [
   },
   {
     id: 'conversation, a, l-ai-enterpri, s, e-transformati, o, n-2, 0, 2, 5',
-    tit, l, e: '🎯 N, E, W: Conversational, AI, Revolution - 1, 8, 4% RO, I, 94% Customer, Satisfactio, n',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-01-conversation, a, l-ai-enterpri, s, e-transformati, o, n-platf, o, r, m',
-    descripti, o, n: 'JUST, PUBLISHE, D: Ne, x, t-generation, conversational, AI platform, delivering, 184% RO, I, 94% customer, satisfactio, n, an, d, 5.7x, productivity, gains through, intelligent, human-AI, collaboration, across 97, languages, and 12, channel, s.',
-    catego, r, y: 'Conversationa, l, A, I',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '17, m, i, n',
+    title: '🎯 N, E, W: Conversational, AI, Revolution - 1, 8, 4% RO, I, 94% Customer, Satisfactio, n',
+    slug: 'ai-20, 2, 5-o, c, t-01-conversation, a, l-ai-enterpri, s, e-transformati, o, n-platf, o, r, m',
+    description: 'JUST, PUBLISHE, D: Ne, x, t-generation, conversational, AI platform, delivering, 184% RO, I, 94% customer, satisfactio, n, an, d, 5.7x, productivity, gains through, intelligent, human-AI, collaboration, across 97, languages, and 12, channel, s.',
+    category: 'Conversationa, l, A, I',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '17, m, i, n',
     ic, o, n: '💬',
     gradie, n, t: 'fr, o, m-purp, l, e-600, vi, a-pi, n, k-600, t, o-ro, s, e-60, 0',
-    featur, e, d: t, r, u, e,
+    featured: t, r, u, e,
     breaki, n, g: t, r, u, e,
     n, e, w: t, r, u, e,
-    ta, g, s: [
+    tags: [
       'Conversationa, l, A, I',
       'Customer, Experienc, e',
       'N, L, P',
@@ -88,18 +88,18 @@ export, const, octoberUltimateEnterpriseContent = [
       bad, g, e: 'FEATU, R, E, D',
     },
   },
-]; export, const, getFeaturedUltimateContent = () => { 
+]; export const getFeaturedUltimateContent = () => { 
   return, octoberUltimateEnterpriseConten, t.filt, e, r(conte, n, t = > conte, n, t.featu, r, e, d);
  };
 
-export, const, getBreakingUltimateContent = () => { 
+export const getBreakingUltimateContent = () => { 
   return, octoberUltimateEnterpriseConten, t.filt, e, r(conte, n, t = > conte, n, t.break, i, n, g);
  };
 
-export, const, getNewUltimateContent = () => { 
+export const getNewUltimateContent = () => { 
   return, octoberUltimateEnterpriseConten, t.filt, e, r(conte, n, t = > conte, n, t.ne, w);
  };
 
-export, const, getAllUltimateEnterpriseContent = () => {
+export const getAllUltimateEnterpriseContent = () => {
   return, octoberUltimateEnterpriseConten, t;
 };

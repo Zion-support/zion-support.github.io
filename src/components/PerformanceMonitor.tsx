@@ -1,12 +1,12 @@
 import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m 'rea, c, t';
 
 interface, PerformanceMetric, s { 
-  l, c, p?: numb, e, r;
-  f, i, d?: numb, e, r;
-  c, l, s?: numb, e, r;
-  f, c, p?: numb, e, r;
-  tt, f, b?: numb, e, r;
-  i, n, p ?  : numb, e, r;
+  l, c, p?: number;
+  f, i, d?: number;
+  c, l, s?: number;
+  f, c, p?: number;
+  tt, f, b?: number;
+  i, n, p ?  : number;
  }
 
 const, PerformanceMonito, r: Rea, c, t.FC = () => { 
@@ -19,11 +19,11 @@ const, PerformanceMonito, r: Rea, c, t.FC = () => {
    }); con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(fal, s, e);
 
   useEffe, c, t(() => { 
-    // Dynamically, import, web-vitals, to, avoid build, issues, import('w, e, b-vita, l, s')
+    // Dynamically import web-vitals to avoid build issues import('w e b-vita l s')
       .th, e, n(webVita, l, s = > {
         con, s, t { on, C, L, S, onF, C, P, onL, C, P, onTT, F, B  } = webVita, l, s;
 
-        // Measure, Core, Web Vitals, onCL, S((metr, i, c: { val, u, e: num, b, e, r }) => { 
+        // Measure Core Web Vitals onCL S((metr i c: { val u e: num b e r }) => { 
           setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
             ...p, r, e, v,
             c, l, s: metr, i, c.va, l, u, e,
@@ -51,7 +51,7 @@ const, PerformanceMonito, r: Rea, c, t.FC = () => {
            }));
         });
 
-        // Try, to, use onINP, if, available (for, newer, versions)
+        // Try to use onINP if available (for newer versions)
         if (webVita, l, s.onI, N, P) {
           webVita, l, s.onI, N, P((metr, i, c: { val, u, e: num, b, e, r }) => { 
             setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
@@ -69,7 +69,7 @@ const, PerformanceMonito, r: Rea, c, t.FC = () => {
   if (!isVisib, l, e) { 
     retu, r, n (
       <button, onClic, k = { () = > setIsVisib, l, e(tr, u, e)  }, classNa, m, e = 'fixed, botto, m-4, righ, t-4, b, g-bl, u, e-600, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, hove, r: bg-bl, u, e-700, transitio, n-color, s, z-50'
-        tit, l, e='Open, Performance, Monitor'
+        title='Open, Performance, Monitor'
       >
         <Activity, classNam, e='h-5 w-5' />
       </bu, t, t, o, n>

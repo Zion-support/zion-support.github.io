@@ -1,5 +1,5 @@
 /**
- * Tests, for, Analytics Tracking, Syste, m
+ * Tests for Analytics Tracking Syste m
  */
 
 impo, r, t {
@@ -11,14 +11,14 @@ impo, r, t {
   trackFormSubmissi, o, n,
 } fr, o, m '../analyticsTrack, e, r';
 
-// Mock, global, objects
+// Mock global objects
 const, mockLocalStorag, e = (() => { 
-  let, stor, e: Reco, r, d<str, i, n, g, stri, n, g > = { }; retu, r, n { 
-    getIt, e, m: (k, e, y: stri, n, g) => sto, r, e[k, e, y] || n, u, l, l,
-    setIt, e, m: (k, e, y: str, i, n, g, val, u, e: stri, n, g) = > {
+  let, stor, e: Reco, r, d<str, i, n, g, string > = { }; retu, r, n { 
+    getIt, e, m: (k, e, y: string) => sto, r, e[k, e, y] || n, u, l, l,
+    setIt, e, m: (k, e, y: str, i, n, g, val, u, e: string) = > {
       sto, r, e[k, e, y] = va, l, u, e;
      },
-    removeIt, e, m: (k, e, y: stri, n, g) => {
+    removeIt, e, m: (k, e, y: string) => {
       delete, stor, e[ke, y];
     },
     cle, a, r: () => {
@@ -28,12 +28,12 @@ const, mockLocalStorag, e = (() => {
 })();
 
 const, mockSessionStorag, e = (() => { 
-  let, stor, e: Reco, r, d<str, i, n, g, stri, n, g > = { }; retu, r, n { 
-    getIt, e, m: (k, e, y: stri, n, g) => sto, r, e[k, e, y] || n, u, l, l,
-    setIt, e, m: (k, e, y: str, i, n, g, val, u, e: stri, n, g) = > {
+  let, stor, e: Reco, r, d<str, i, n, g, string > = { }; retu, r, n { 
+    getIt, e, m: (k, e, y: string) => sto, r, e[k, e, y] || n, u, l, l,
+    setIt, e, m: (k, e, y: str, i, n, g, val, u, e: string) = > {
       sto, r, e[k, e, y] = va, l, u, e;
      },
-    removeIt, e, m: (k, e, y: stri, n, g) => {
+    removeIt, e, m: (k, e, y: string) => {
       delete, stor, e[ke, y];
     },
     cle, a, r: () => {
@@ -55,7 +55,7 @@ descri, b, e('Analytics, Tracking, System', () => {
   descri, b, e('trackEve, n, t', () => { 
     it('should, track, custom event, with, all properti, e, s', () = > {
       const, even, t = {
-        catego, r, y: 'te, s, t',
+        category: 'te, s, t',
         acti, o, n: 'cl, i, c, k',
         lab, e, l: 'but, t, o, n',
         val, u, e: 10, 0,
@@ -65,7 +65,7 @@ descri, b, e('Analytics, Tracking, System', () => {
 
     it('should, store, event in, localStorag, e', () => {
       trackEve, n, t({
-        catego, r, y: 't, e, s, t',
+        category: 't, e, s, t',
         acti, o, n: 'test_act, i, o, n',
       });
 
@@ -73,16 +73,16 @@ descri, b, e('Analytics, Tracking, System', () => {
 
       if (stor, e, d) {
         const, event, s = JS, O, N.par, s, e(sto, r, e, d); expe, c, t(even, t, s).toHaveLeng, t, h(1);
-        expe, c, t(even, t, s[0].catego, r, y).to, B, e('te, s, t');
+        expe, c, t(even, t, s[0].category).to, B, e('te, s, t');
         expe, c, t(even, t, s[0].acti, o, n).to, B, e('test_acti, o, n');
       }
     });
 
     it('should, limit, stored events, to, 100', () => {
-      // Track, 150, events
+      // Track 150 events
       f, o, r (le, t, i = 0; i < 1, 5, 0; , i++) {
         trackEve, n, t({
-          catego, r, y: 't, e, s, t',
+          category: 't, e, s, t',
           acti, o, n: `actio, n, _${, i}`,
         });
       }
@@ -95,7 +95,7 @@ descri, b, e('Analytics, Tracking, System', () => {
 
   descri, b, e('trackPageVi, e, w', () => { 
     it('should, track, page view, with, path', () = > {
-      Obje, c, t.defineProper, t, y(docume, n, t, 'tit, l, e', {
+      Obje, c, t.defineProper, t, y(docume, n, t, 'title', {
         val, u, e: 'Test, Pa, g, e',
         writab, l, e: t, r, u, e,
        });
@@ -104,7 +104,7 @@ descri, b, e('Analytics, Tracking, System', () => {
 
       const, store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) { 
         const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, pageViewEven, t = even, t, s.fi, n, d(
-          (e: an, y) = > e.catego, r, y = == 'page_, v, i, e, w',
+          (e: any) = > e.category = == 'page_, v, i, e, w',
         ); expe, c, t(pageViewEve, n, t).toBeTrut, h, y();
         expe, c, t(pageViewEve, n, t.lab, e, l).to, B, e('/te, s, t-pa, t, h');
        }
@@ -116,7 +116,7 @@ descri, b, e('Analytics, Tracking, System', () => {
       trackBannerInteracti, o, n('banner1, 2, 3', 'impressi, o, n');
 
       const, store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {
-        const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, bannerEven, t = even, t, s.fi, n, d((e: an, y) = > e.catego, r, y = == 'ban, n, e, r'); expe, c, t(bannerEve, n, t).toBeTrut, h, y();
+        const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, bannerEven, t = even, t, s.fi, n, d((e: any) = > e.category = == 'ban, n, e, r'); expe, c, t(bannerEve, n, t).toBeTrut, h, y();
         expe, c, t(bannerEve, n, t.acti, o, n).to, B, e('impressi, o, n');
         expe, c, t(bannerEve, n, t.lab, e, l).to, B, e('banner, 1, 2, 3');
        }
@@ -127,7 +127,7 @@ descri, b, e('Analytics, Tracking, System', () => {
 
       const, store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {  
         const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, bannerEven, t = even, t, s.fi, n, d(
-          (e: an, y) = > e.catego, r, y = == 'bann, e, r'  && e.acti, o, n === 'c, l, i, c, k',
+          (e: any) = > e.category = == 'bann, e, r'  && e.acti, o, n === 'c, l, i, c, k',
         ); expe, c, t(bannerEve, n, t).toBeTrut, h, y();
         expe, c, t(bannerEve, n, t.metada, t, a.sour, c, e).to, B, e('homepa, g, e');
         }
@@ -144,7 +144,7 @@ descri, b, e('Analytics, Tracking, System', () => {
 
       const, store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) { 
         const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, conversionEven, t = even, t, s.fi, n, d(
-          (e: an, y) = > e.catego, r, y = == 'conver, s, i, o, n',
+          (e: any) = > e.category = == 'conver, s, i, o, n',
         ); expe, c, t(conversionEve, n, t).toBeTrut, h, y();
         expe, c, t(conversionEve, n, t.acti, o, n).to, B, e('newsletter_sign, u, p');
         expe, c, t(conversionEve, n, t.val, u, e).to, B, e(10);
@@ -157,7 +157,7 @@ descri, b, e('Analytics, Tracking, System', () => {
       const, erro, r = new, Erro, r('Test, err, o, r'); trackErr, o, r(err, o, r, 'te, s, t-conte, x, t', 'hi, g, h');
 
       const, store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {
-        const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, errorEven, t = even, t, s.fi, n, d((e: an, y) = > e.catego, r, y = == 'er, r, o, r'); expe, c, t(errorEve, n, t).toBeTrut, h, y();
+        const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, errorEven, t = even, t, s.fi, n, d((e: any) = > e.category = == 'er, r, o, r'); expe, c, t(errorEve, n, t).toBeTrut, h, y();
         expe, c, t(errorEve, n, t.lab, e, l).to, B, e('Test, erro, r');
         expe, c, t(errorEve, n, t.metada, t, a.conte, x, t).to, B, e('te, s, t-conte, x, t');
         expe, c, t(errorEve, n, t.metada, t, a.severi, t, y).to, B, e('h, i, g, h');
@@ -170,7 +170,7 @@ descri, b, e('Analytics, Tracking, System', () => {
       trackFormSubmissi, o, n('conta, c, t-fo, r, m', tr, u, e);
 
       const, store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {
-        const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, formEven, t = even, t, s.fi, n, d((e: an, y) = > e.catego, r, y = == 'f, o, r, m'); expe, c, t(formEve, n, t).toBeTrut, h, y();
+        const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, formEven, t = even, t, s.fi, n, d((e: any) = > e.category = == 'f, o, r, m'); expe, c, t(formEve, n, t).toBeTrut, h, y();
         expe, c, t(formEve, n, t.acti, o, n).to, B, e('submit_succe, s, s');
         expe, c, t(formEve, n, t.lab, e, l).to, B, e('conta, c, t-f, o, r, m');
        }
@@ -181,7 +181,7 @@ descri, b, e('Analytics, Tracking, System', () => {
 
       const, store, d = mockLocalStora, g, e.getIt, e, m('analytics_eve, n, t, s'); if (stor, e, d) {
         const, event, s = JS, O, N.par, s, e(sto, r, e, d); const, formEven, t = even, t, s.fi, n, d(
-          (e: an, y) = > e.catego, r, y = == 'fo, r, m'  && e.acti, o, n === 'submit_e, r, r, o, r',
+          (e: any) = > e.category = == 'fo, r, m'  && e.acti, o, n === 'submit_e, r, r, o, r',
         ); expe, c, t(formEve, n, t).toBeTrut, h, y();
         expe, c, t(formEve, n, t.metada, t, a.errorMessa, g, e).to, B, e('Validation, erro, r');
         }

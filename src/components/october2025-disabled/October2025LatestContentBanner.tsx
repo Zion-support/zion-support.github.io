@@ -2,22 +2,22 @@ impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 const, October2025LatestContentBanne, r = () => {
   const, article, s = [
     {
-      tit, l, e: "Advanced, GenAI, Orchestration Plat, f, o, r, m",
-      descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scal, e",
+      title: "Advanced, GenAI, Orchestration Plat, f, o, r, m",
+      description: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scal, e",
       ic, o, n: Br, a, i, n,
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platf, o, r, m",
       gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-60, 0"
     },
     {
-      tit, l, e: "Enterprise, AI, Security: Zero, Trust, Framewor, k",
-      descripti, o, n: "Comprehensive, security, architecture protecting, AI, model, s, da, t, a, and, inference, endpoints",
+      title: "Enterprise, AI, Security: Zero, Trust, Framewor, k",
+      description: "Comprehensive, security, architecture protecting, AI, model, s, da, t, a, and, inference, endpoints",
       ic, o, n: Shi, e, l, d,
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framew, o, r, k",
       gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-60, 0"
     },
     {
-      tit, l, e: "Re, a, l-Time, Multimodal, AI Process, i, n, g",
-      descripti, o, n: "Revolutionary, techniques, for simultaneous, te, x, t, visi, o, n, and, audio, processing in, productio, n",
+      title: "Re, a, l-Time, Multimodal, AI Process, i, n, g",
+      description: "Revolutionary, techniques, for simultaneous, te, x, t, visi, o, n, and, audio, processing in, productio, n",
       ic, o, n: Za, p,
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revolut, i, o, n",
       gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0"
@@ -56,7 +56,7 @@ const, October2025LatestContentBanne, r = () => {
                   {artic, l, e.t, i, t, l, e}
                 </h3>
                 <p, classNam, e = "te, x, t-sla, t, e-400, m, b-4, lin, e-cla, m, p-2">
-                  {artic, l, e.descripti, o, n}
+                  {artic, l, e.description}
                 </p>
                 <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
                   <sp, a, n>Read, Mor, e</sp, a, n>

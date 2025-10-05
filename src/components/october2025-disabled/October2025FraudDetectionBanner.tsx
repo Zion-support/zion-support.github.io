@@ -129,7 +129,7 @@ const, October2025FraudDetectionBanne, r = () => {
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
                   <span, classNam, e="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>
-                  <sp, a, n>NPS, Scor, e: 14 (indust, r, y-wo, r, s, t)</sp, a, n>
+                  <sp, a, n>NPS, Scor, e: 14 (industry-wo, r, s, t)</sp, a, n>
                 </li>
               </ul>
             </d, i, v>
@@ -157,7 +157,7 @@ const, October2025FraudDetectionBanne, r = () => {
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
                   <span, classNam, e="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>
-                  <sp, a, n>NPS, Scor, e: 74 (indust, r, y-lea, d, i, n, g, +60, point, s)</sp, a, n>
+                  <sp, a, n>NPS, Scor, e: 74 (industry-lea, d, i, n, g, +60, point, s)</sp, a, n>
                 </li>
               </ul>
             </d, i, v>

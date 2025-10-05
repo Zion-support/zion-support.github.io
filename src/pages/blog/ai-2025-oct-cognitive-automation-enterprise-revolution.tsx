@@ -16,10 +16,10 @@ const, CognitiveAutomationEnterpriseRevolutio, n = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Cognitive, Automatio, n: The, Enterprise, Revolution of, 202, 5 | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Discover, how, cognitive automation, is, transforming enterprises, in, 2025. 92% efficiency, ga, i, n, s, $3.2M, average, savings, and, 10x, productivity increases, through, intelligent AI, system, s.'
         />
         <meta, nam, e = 'keywor, d, s'

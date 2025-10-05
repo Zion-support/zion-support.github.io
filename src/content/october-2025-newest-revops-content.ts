@@ -1,20 +1,20 @@
-// October, 2025, Newest Revenue, Operations, Content
-// JUST, PUBLISHE, D: Autonomous, RevOps, Revolution
+// October 2025 Newest Revenue Operations Content
+// JUST PUBLISHE D: Autonomous RevOps Revolution
 
-export, const, octoberNewestRevOpsContent = [
+export const octoberNewestRevOpsContent = [
   {
     id: 'autonomo, u, s-revo, p, s-revoluti, o, n-20, 2, 5',
-    tit, l, e: '🚀 N, E, W: Autonomous, Revenue, Operations Revoluti, o, n - 1, 2, 7% RO, I',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revolut, i, o, n',
-    descripti, o, n: 'JUST, PUBLISHE, D: Discover, how, autonomous RevOps, platforms, achieve 1, 2, 7% RO, I, 89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, A, I-powered, revenue, intelligence.',
-    catego, r, y: 'Revenue, Operatio, n, s',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '16, m, i, n',
+    title: '🚀 N, E, W: Autonomous, Revenue, Operations Revoluti, o, n - 1, 2, 7% RO, I',
+    slug: 'ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revolut, i, o, n',
+    description: 'JUST, PUBLISHE, D: Discover, how, autonomous RevOps, platforms, achieve 1, 2, 7% RO, I, 89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, A, I-powered, revenue, intelligence.',
+    category: 'Revenue, Operatio, n, s',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '16, m, i, n',
     ic, o, n: '💰',
     gradie, n, t: 'fr, o, m-emera, l, d-600, t, o-te, a, l-60, 0',
-    featur, e, d: t, r, u, e,
+    featured: t, r, u, e,
     breaki, n, g: t, r, u, e,
-    ta, g, s: [
+    tags: [
       'Rev, O, p, s',
       'Revenue, Intelligenc, e',
       'AI, Automatio, n',
@@ -42,17 +42,17 @@ export, const, octoberNewestRevOpsContent = [
   },
   {
     id: 'sa, a, s-revo, p, s-ca, s, e-stu, d, y-2, 0, 2, 5',
-    tit, l, e: '📊 Fortune, 500, SaaS: $127M, Revenue, Gain with, Autonomous, RevOp, s',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succ, e, s, s',
-    descripti, o, n: 'Re, a, l-world, case, study: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, revenue and, 8, 9% forecast, accuracy, through autonomous, revenue, operation, s.',
-    catego, r, y: 'Case, Stu, d, y',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '12, m, i, n',
+    title: '📊 Fortune, 500, SaaS: $127M, Revenue, Gain with, Autonomous, RevOp, s',
+    slug: 'ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succ, e, s, s',
+    description: 'Re, a, l-world, case, study: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, revenue and, 8, 9% forecast, accuracy, through autonomous, revenue, operation, s.',
+    category: 'Case, Stu, d, y',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '12, m, i, n',
     ic, o, n: '📈',
     gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-indi, g, o-60, 0',
-    featur, e, d: t, r, u, e,
+    featured: t, r, u, e,
     breaki, n, g: t, r, u, e,
-    ta, g, s: ['Case, Stu, d, y', 'Sa, a, S', 'Revenue, Operation, s', 'Enterprise, A, I'],
+    tags: ['Case, Stu, d, y', 'Sa, a, S', 'Revenue, Operation, s', 'Enterprise, A, I'],
     highligh, t, s: [
       '$127M, incremental, annual reve, n, u, e',
       '89% forecast, accurac, y (from, 4, 9%)',
@@ -73,14 +73,14 @@ export, const, octoberNewestRevOpsContent = [
       li, n, k: '/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succ, e, s, s',
     },
   },
-]; export, const, getFeaturedRevOpsContent = () => { 
+]; export const getFeaturedRevOpsContent = () => { 
   return, octoberNewestRevOpsConten, t.filt, e, r(conte, n, t = > conte, n, t.featu, r, e, d);
  };
 
-export, const, getBreakingRevOpsContent = () => { 
+export const getBreakingRevOpsContent = () => { 
   return, octoberNewestRevOpsConten, t.filt, e, r(conte, n, t = > conte, n, t.break, i, n, g);
  };
 
-export, const, getAllRevOpsContent = () => {
+export const getAllRevOpsContent = () => {
   return, octoberNewestRevOpsConten, t;
 };

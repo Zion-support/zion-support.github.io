@@ -15,17 +15,17 @@ const, GlobalTelecomCognitiveTransformatio, n: Rea, c, t.FC = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Fortune, 20, Telecom: $4.7B, Cognitive, Computing Success, Stor, y | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='How, a, Fortune 20, telecommunications, provider achiev, e, d $4.7B, in, value through, cognitive, computing transformati, o, n. 98.7% satisfac, t, i, o, n, 99.96% reliabili, t, y, 3,6, 0, 2% R, O, I.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='cognitive, computing, case st, u, d, y, telecom, transformatio, n, AI, success, story, enterprise, cognitive, AI, telecommunications, A, I'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/ca, s, e-studi, e, s/glob, a, l-telec, o, m-cogniti, v, e-transformati, o, n-4-7-billi, o, n'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/ca s e-studi e s/glob a l-telec o m-cogniti v e-transformati o n-4-7-billi o n'
         />
       </Helm, e, t>
 
@@ -245,7 +245,7 @@ const, GlobalTelecomCognitiveTransformatio, n: Rea, c, t.FC = () => {
                 <div, classNam, e='spa, c, e-y-6'>
                   {[
                     {
-                      tit, l, e: 'Cognitive, Customer, Intelligen, c, e',
+                      title: 'Cognitive, Customer, Intelligen, c, e',
                       ic, o, n: '❤️',
                       featur, e, s: [
                         'Cognitive, virtual, assistant handlin, g, 2.3M, daily, interaction, s',
@@ -256,7 +256,7 @@ const, GlobalTelecomCognitiveTransformatio, n: Rea, c, t.FC = () => {
                       te, c, h: 'G, P, T-4, fin, e-tu, n, e, d, Knowledge, graph, s, Vector, database, s, Re, a, l-time, M, L',
                     },
                     {
-                      tit, l, e: 'Autonomous, Network, Intelligenc, e',
+                      title: 'Autonomous, Network, Intelligenc, e',
                       ic, o, n: '🌐',
                       featur, e, s: [
                         'Continuous, monitoring, of 50, 0,0, 0, 0+ network, element, s',
@@ -267,7 +267,7 @@ const, GlobalTelecomCognitiveTransformatio, n: Rea, c, t.FC = () => {
                       te, c, h: 'Unsupervised, learni, n, g, Causal, reasonin, g, Optimization, algorithm, s',
                     },
                     {
-                      tit, l, e: 'Enterprise, Cognitive, Intelligenc, e',
+                      title: 'Enterprise, Cognitive, Intelligenc, e',
                       ic, o, n: '📊',
                       featur, e, s: [
                         'Re, a, l-time, analytics, across all, business, unit, s',
@@ -277,19 +277,19 @@ const, GlobalTelecomCognitiveTransformatio, n: Rea, c, t.FC = () => {
                       ],
                       te, c, h: 'Natural, language, querie, s, Automated, insight, s, Causal, inferenc, e',
                     },
-                  ].m, a, p((soluti, o, n, i, d, x) => (
+                  ].m, a, p((solution, i, d, x) => (
                     <div, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'
                     >
                       <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'>
-                        <span, classNam, e='te, x, t-3, x, l'>{soluti, o, n.ic, o, n}</sp, a, n>
-                        {soluti, o, n.tit, l, e}
+                        <span, classNam, e='te, x, t-3, x, l'>{solution.ic, o, n}</sp, a, n>
+                        {solution.title}
                       </h3>
 
                       <div, classNam, e='mb-4'>
                         <p, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
                           Capabilities, Deploye, d: </p>
                         <ul, classNam, e='spa, c, e-y-2'>
-                          { soluti, o, n.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (
+                          { solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (
                             <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-purp, l, e-1, 0, 0'
                             >
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
@@ -303,7 +303,7 @@ const, GlobalTelecomCognitiveTransformatio, n: Rea, c, t.FC = () => {
                         <p, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
                           Technology, Stac, k: </p>
                         <p, classNam, e='te, x, t-sm, tex, t-purp, l, e-1, 0, 0'>
-                          {soluti, o, n.te, c, h}
+                          {solution.te, c, h}
                         </p>
                       </d, i, v>
                     </d, i, v>
@@ -388,7 +388,7 @@ const, GlobalTelecomCognitiveTransformatio, n: Rea, c, t.FC = () => {
                           chan, g, e: 'fro, m, 4.2, h, r, s',
                         },
                         {
-                          lab, e, l: 'Automated, Resoluti, o, n',
+                          lab, e, l: 'Automated, Resolution',
                           val, u, e: '8, 7%',
                           chan, g, e: 'of, inciden, t, s',
                         },

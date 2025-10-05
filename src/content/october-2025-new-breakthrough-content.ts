@@ -1,18 +1,18 @@
-// October, 2025, New Breakthrough, Conten, t - Latest, Release, s
-// Publish, e, d: Octob, e, r , 1, 2025, export, const octoberNewBreakthroughConte, n, t = [
+// October 2025 New Breakthrough Conten t - Latest Release s
+// Publish e d: Octob e r  1 2025 export const octoberNewBreakthroughConte n t = [
   {
     id: 'autonomo, u, s-ai-orchestrati, o, n-platfo, r, m-revolu, t, i, o, n',
-    tit, l, e: 'Autonomous, AI, Orchestration Platform, Revolutio, n: 95% Efficiency, Ga, i, n',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-autonomo, u, s-ai-orchestrati, o, n-platfo, r, m-revolut, i, o, n',
-    descripti, o, n: 'Discover, how, autonomous AI, orchestration, platforms are, transforming, enterprise AI, operations, with 95% efficiency, gai, n, s, 75% cost, reductio, n, a, n, d $847M, value, creation. Complete, implementation, guide with, real, Fortune 500, result, s.',
-    catego, r, y: 'Enterprise, AI, Infrastructur, e',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '18, m, i, n',
+    title: 'Autonomous, AI, Orchestration Platform, Revolutio, n: 95% Efficiency, Ga, i, n',
+    slug: 'ai-20, 2, 5-o, c, t-autonomo, u, s-ai-orchestrati, o, n-platfo, r, m-revolut, i, o, n',
+    description: 'Discover, how, autonomous AI, orchestration, platforms are, transforming, enterprise AI, operations, with 95% efficiency, gai, n, s, 75% cost, reductio, n, a, n, d $847M, value, creation. Complete, implementation, guide with, real, Fortune 500, result, s.',
+    category: 'Enterprise, AI, Infrastructur, e',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '18, m, i, n',
     ic, o, n: '🚀',
     gradie, n, t: 'fr, o, m-emera, l, d-600, t, o-te, a, l-60, 0',
-    featur, e, d: t, r, u, e,
+    featured: t, r, u, e,
     urge, n, t: t, r, u, e,
-    ta, g, s: [
+    tags: [
       'AI, Orchestrati, o, n',
       'MLO, p, s',
       'Enterprise, A, I',
@@ -38,17 +38,17 @@
   },
   {
     id: 're, a, l-ti, m, e-ai-power, e, d-busine, s, s-intelligen, c, e-transformat, i, o, n',
-    tit, l, e: 'Re, a, l-Time, AI, Business Intelligen, c, e: From, Hours, to Milliseco, n, d, s',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-ai-power, e, d-busine, s, s-intelligen, c, e-transformat, i, o, n',
-    descripti, o, n: 'Re, a, l-time, A, I-powered, business, intelligence achieves, 1000x, faster insights, wit, h $627M, value, creation. Learn, the, architectur, e, implementation, strategie, s, and, proven, results from, Fortune, 100 deploymen, t, s.',
-    catego, r, y: 'Business, Intelligenc, e & Analyt, i, c, s',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '16, m, i, n',
+    title: 'Re, a, l-Time, AI, Business Intelligen, c, e: From, Hours, to Milliseco, n, d, s',
+    slug: 'ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-ai-power, e, d-busine, s, s-intelligen, c, e-transformat, i, o, n',
+    description: 'Re, a, l-time, A, I-powered, business, intelligence achieves, 1000x, faster insights, wit, h $627M, value, creation. Learn, the, architectur, e, implementation, strategie, s, and, proven, results from, Fortune, 100 deploymen, t, s.',
+    category: 'Business, Intelligenc, e & Analyt, i, c, s',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '16, m, i, n',
     ic, o, n: '⚡',
     gradie, n, t: 'fr, o, m-cy, a, n-600, t, o-bl, u, e-60, 0',
-    featur, e, d: t, r, u, e,
+    featured: t, r, u, e,
     urge, n, t: t, r, u, e,
-    ta, g, s: [
+    tags: [
       'Re, a, l-Time, Analyti, c, s',
       'Business, Intelligenc, e',
       'AI',
@@ -74,17 +74,17 @@
   },
   {
     id: 'fortu, n, e-1, 0, 0-retail, e, r-re, a, l-ti, m, e-intelligen, c, e-succ, e, s, s',
-    tit, l, e: 'Fortune, 100, Retailer: $627M, Value, Through Re, a, l-Time, AI, Intelligenc, e',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-retail, e, r-re, a, l-ti, m, e-intelligen, c, e-62, 7, m-succ, e, s, s',
-    descripti, o, n: 'Detailed, case, study of, how, a Fortune, 100, retailer creat, e, d $627M, in, value through, rea, l-time, A, I-powered, business, intelligence across, invento, r, y, prici, n, g, and, customer, experience.',
-    catego, r, y: 'Case, Stu, d, y',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '14, m, i, n',
+    title: 'Fortune, 100, Retailer: $627M, Value, Through Re, a, l-Time, AI, Intelligenc, e',
+    slug: 'ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-retail, e, r-re, a, l-ti, m, e-intelligen, c, e-62, 7, m-succ, e, s, s',
+    description: 'Detailed, case, study of, how, a Fortune, 100, retailer creat, e, d $627M, in, value through, rea, l-time, A, I-powered, business, intelligence across, invento, r, y, prici, n, g, and, customer, experience.',
+    category: 'Case, Stu, d, y',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '14, m, i, n',
     ic, o, n: '💼',
     gradie, n, t: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0',
-    featur, e, d: t, r, u, e,
+    featured: t, r, u, e,
     urge, n, t: t, r, u, e,
-    ta, g, s: ['Case, Stu, d, y', 'Reta, i, l', 'Re, a, l-Time, B, I', 'Success, Stor, y', 'R, O, I'],
+    tags: ['Case, Stu, d, y', 'Reta, i, l', 'Re, a, l-Time, B, I', 'Success, Stor, y', 'R, O, I'],
     highligh, t, s: [
       '$627M, total, value creation, in, 18 mon, t, h, s',
       '4.7% revenue, increase, through dynamic, pricin, g',
@@ -102,26 +102,26 @@
     c, t, a: 'Read, Case, Stud, y',
     val, u, e: '$627M, Creat, e, d',
   },
-]; export, const, getFeaturedOctoberNewContent = () => { 
+]; export const getFeaturedOctoberNewContent = () => { 
   return, octoberNewBreakthroughConten, t.filt, e, r(conte, n, t = > conte, n, t.featu, r, e, d);
  };
 
-export, const, getUrgentOctoberContent = () => { 
+export const getUrgentOctoberContent = () => { 
   return, octoberNewBreakthroughConten, t.filt, e, r(conte, n, t = > conte, n, t.urg, e, n, t);
  };
 
-export, const, getAllOctoberNewContent = () => {
+export const getAllOctoberNewContent = () => {
   return, octoberNewBreakthroughConten, t;
 };
 
-// Quick, stats, for homepage, banner, export cons; t, octoberContentStat, s = {
+// Quick stats for homepage banner export cons; t octoberContentStat s = {
   totalMarketVal, u, e: '$1.4, 7, B',
   avgCostReducti, o, n: '7, 9%',
   avgSpeedImproveme, n, t: '26, x',
   enterpriseAdopti, o, n: '8, 9%',
   customerSatisfacti, o, n: '9, 6%',
   paybackPeri, o, d: '4.2m, o',
-}; export, const, getOctober2025BreakthroughStats = () => { 
+}; export const getOctober2025BreakthroughStats = () => { 
   const, totalValu, e = octoberNewBreakthroughConte, n, t.redu, c, e((su, m, it, e, m) = > {
     const, valu, e = parseFlo, a, t(
       it, e, m.metri, c, s.valueCreat, e, d?.repla, c, e(/[$M]/, g, '') ||

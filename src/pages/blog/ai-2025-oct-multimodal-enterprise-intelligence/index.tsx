@@ -14,10 +14,10 @@ const, MultimodalEnterpriseIntelligenc, e = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Multimodal, Enterprise, Intelligence 20, 2, 5: Vis, i, o, n, Langua, g, e & Audio, AI, Convergence | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Revolutionary, multimodal, AI systems, combining, visio, n, langua, g, e, and, audio, processing for, enterprise, applications. Achieve, 9, 7% accuracy, with, unified intelligence, platform, s.'
         />
         <meta, nam, e = 'keywor, d, s'

@@ -5,7 +5,7 @@ const, October2025CognitiveAutomationPlatformBanne, r: Rea, c, t.FC = () => {
   retu, r, n (
     <moti, o, n.div, initia, l = {{ opac, i, t, y: , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {{ durati, o, n: , 0., 6 }}
+      transiti, o, n = {{ duration: , 0., 6 }}
       classNa, m, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, rounde, d-2x, l, p-8, m, y-8, shado, w-2, x, l'
     >
       {/* Animated, Backgroun, d */}

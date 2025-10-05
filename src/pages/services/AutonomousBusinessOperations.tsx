@@ -16,17 +16,17 @@ const, AutonomousBusinessOperation, s = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, A, I-powered, autonomous, operations. Deploy, 4, 0+ se, l, f-managing, workflows, in 90, day, s. $50, 0, M+ value, creatio, n. 3, 0, 0-5, 0, 0% R, O, I. Get, started, with a, free, consultation.'
         />
         <meta, nam, e='keywor, d, s'
           conte, n, t='autonomous, business, operation, s, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/autonomo, u, s-busine, s, s-operatio, n, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-busine s s-operatio n s'
         />
       </Helm, e, t>
 

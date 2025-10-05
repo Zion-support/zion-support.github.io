@@ -15,10 +15,10 @@ const, GlobalFinTechAITransformatio, n = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Fortune, 500, digital banking, platform, achieves $127M, annual, value through, AI, transformation. 94.7% fraud, detect, i, o, n, 15.2x, RO, I, 10x, customer, growth enabl, e, d.'
         />
         <meta, nam, e = 'keywor, d, s'
@@ -171,9 +171,9 @@ const, GlobalFinTechAITransformatio, n = () => {
               <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                 {[
                   {
-                    tit, l, e: 'Re, a, l-Time, Fraud, Detection Plat, f, o, r, m',
+                    title: 'Re, a, l-Time, Fraud, Detection Plat, f, o, r, m',
                     ic, o, n: '🛡️',
-                    resul, t, s: [
+                    results: [
                       '94.7% detection, accura, c, y',
                       '$22.1M, annual, savings',
                       '<50ms, detection, latency',
@@ -181,9 +181,9 @@ const, GlobalFinTechAITransformatio, n = () => {
                     ],
                   },
                   {
-                    tit, l, e: 'Intelligent, Credit, Decisioning Eng, i, n, e',
+                    title: 'Intelligent, Credit, Decisioning Eng, i, n, e',
                     ic, o, n: '⚡',
-                    resul, t, s: [
+                    results: [
                       '2-minute, decisio, n, s',
                       '56% approval, rat, e (up, from, 42%)',
                       '$28M, incremental, revenue',
@@ -191,9 +191,9 @@ const, GlobalFinTechAITransformatio, n = () => {
                     ],
                   },
                   {
-                    tit, l, e: 'Hyp, e, r-Personalization, Platfo, r, m',
+                    title: 'Hyp, e, r-Personalization, Platfo, r, m',
                     ic, o, n: '🎯',
-                    resul, t, s: [
+                    results: [
                       '18.4% conversion, ra, t, e',
                       '8% churn, rat, e (down, from, 28%)',
                       '87, NP, S (up, from, 62)',
@@ -201,9 +201,9 @@ const, GlobalFinTechAITransformatio, n = () => {
                     ],
                   },
                   {
-                    tit, l, e: 'Cognitive, Process, Automatio, n',
+                    title: 'Cognitive, Process, Automatio, n',
                     ic, o, n: '🤖',
-                    resul, t, s: [
+                    results: [
                       '92% automation, ra, t, e',
                       '450, FTE, redeployed',
                       '$38M, annual, savings',
@@ -211,9 +211,9 @@ const, GlobalFinTechAITransformatio, n = () => {
                     ],
                   },
                   {
-                    tit, l, e: 'Predictive, Customer, Analytic, s',
+                    title: 'Predictive, Customer, Analytic, s',
                     ic, o, n: '📊',
-                    resul, t, s: [
+                    results: [
                       '94% churn, prediction, accurac, y',
                       '42% LTV, increas, e',
                       '$32M, retained, revenue',
@@ -221,9 +221,9 @@ const, GlobalFinTechAITransformatio, n = () => {
                     ],
                   },
                   {
-                    tit, l, e: 'AI-Powered, Compliance, Monitorin, g',
+                    title: 'AI-Powered, Compliance, Monitorin, g',
                     ic, o, n: '📋',
-                    resul, t, s: [
+                    results: [
                       '1, 0, 0% automated, reporti, n, g',
                       'Zero, regulatory, fines',
                       '$8.4M, cost, reduction',
@@ -236,11 +236,11 @@ const, GlobalFinTechAITransformatio, n = () => {
                     <div, classNam, e='flex, item, s-start, ga, p-3, m, b-4'>
                       <div, classNam, e='te, x, t-3, x, l'>{initiati, v, e.ic, o, n}</d, i, v>
                       <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>
-                        {initiati, v, e.tit, l, e}
+                        {initiati, v, e.title}
                       </h3>
                     </d, i, v>
                     <ul, classNam, e='spa, c, e-y-2'>
-                      { initiati, v, e.resul, t, s.m, a, p((res, u, l, t, rInd, e, x) = > (
+                      { initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > (
                         <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <span, classNam, e='te, x, t-sm'>{resu, l, t}</sp, a, n>
@@ -261,9 +261,9 @@ const, GlobalFinTechAITransformatio, n = () => {
                 {[
                   {
                     pha, s, e: 'Phas, e, 1: Founda, t, i, o, n',
-                    durati, o, n: 'Month, s, 1-, 6',
+                    duration: 'Month, s, 1-, 6',
                     foc, u, s: 'AI, strate, g, y, data, platform, modernization, ML, infrastructur, e, quick, win, s',
-                    resul, t, s: [
+                    results: [
                       'Infrastructure, deploy, e, d',
                       'Data, platform, operational',
                       'First, models, in producti, o, n',
@@ -272,9 +272,9 @@ const, GlobalFinTechAITransformatio, n = () => {
                   },
                   {
                     pha, s, e: 'Phas, e, 2: Scal, i, n, g',
-                    durati, o, n: 'Month, s, 7-1, 2',
+                    duration: 'Month, s, 7-1, 2',
                     foc, u, s: 'Core, AI, capabilities deploym, e, n, t, enterpri, s, e-wide, integratio, n, process, automation, scaling',
-                    resul, t, s: [
+                    results: [
                       'All, major, initiatives deplo, y, e, d',
                       '$78M, in, value deliver, e, d',
                       '85% process, automatio, n',
@@ -283,9 +283,9 @@ const, GlobalFinTechAITransformatio, n = () => {
                   },
                   {
                     pha, s, e: 'Phas, e, 3: Optimizat, i, o, n',
-                    durati, o, n: 'Months, 1, 3-1, 8',
+                    duration: 'Months, 1, 3-1, 8',
                     foc, u, s: 'Advanced, featur, e, s, continuous, learnin, g, compliance, automatio, n, performance, optimizatio, n',
-                    resul, t, s: [
+                    results: [
                       '$127M, annual, run r, a, t, e',
                       '15.2x, ROI, achieved',
                       'Indust, r, y-leading, capabilitie, s',
@@ -300,7 +300,7 @@ const, GlobalFinTechAITransformatio, n = () => {
                         {pha, s, e.pha, s, e}
                       </h3>
                       <span, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
-                        {pha, s, e.durati, o, n}
+                        {pha, s, e.duration}
                       </sp, a, n>
                     </d, i, v>
                     <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
@@ -310,7 +310,7 @@ const, GlobalFinTechAITransformatio, n = () => {
                       <h4, classNam, e = 'te, x, t-white, fon, t-semibold, m, b-2'>
                         Resul, t, s: </h4>
                       <ul, classNam, e='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
-                        { pha, s, e.resul, t, s.m, a, p((re, s, u, l, t, rInd, e, x) = > (
+                        { pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                             <sp, a, n>{resu, l, t}</sp, a, n>
@@ -426,7 +426,7 @@ const, GlobalFinTechAITransformatio, n = () => {
                         Chief, Technology, Officer
                       </d, i, v>
                       <div, classNam, e='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
-                        Client, Compan, y
+                        Client, Company
                       </d, i, v>
                     </d, i, v>
                   </d, i, v>
@@ -448,7 +448,7 @@ const, GlobalFinTechAITransformatio, n = () => {
                         Head, of, Risk Manageme, n, t
                       </d, i, v>
                       <div, classNam, e='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
-                        Client, Compan, y
+                        Client, Company
                       </d, i, v>
                     </d, i, v>
                   </d, i, v>
@@ -463,7 +463,7 @@ const, GlobalFinTechAITransformatio, n = () => {
                   Ready, to, Transform Your, Organization, with AI?
                 </h2>
                 <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-6'>
-                  Schedule, a, consultation to, discuss, how we, can, help you, achieve, similar resul, t, s.
+                  Schedule, a, consultation to, discuss, how we, can, help you, achieve, similar results.
                 </p>
                 <div, classNam, e='flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r'>
                   <Link, t, o='/conta, c, t'

@@ -64,7 +64,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
                   </sp, a, n>
                 </d, i, v>
               </d, i, v>
-              <Link, t, o='/bl, o, g/catego, r, y/breakthrou, g, h-technologi, e, s'
+              <Link, t, o='/bl, o, g/category/breakthrou, g, h-technologies'
                 classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, tex, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-300, fon, t-medium, transitio, n-colo, r, s'
               >
                 Explore, All, Technologies

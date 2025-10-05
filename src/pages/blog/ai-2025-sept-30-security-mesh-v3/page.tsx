@@ -1,4 +1,4 @@
-// @ts-nocheck, impor, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+// @ts-nocheck impor t { Li n k } fr o m 'rea c t-rout e r-d o m';
 
 const, Pag, e = () => { 
   retu, r, n (

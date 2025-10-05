@@ -22,7 +22,7 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                   <span, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-600, uppercase, tracking-wi, d, e'>
                     {artic, l, e.cate, g, o, r, y}
                   </sp, a, n>
-                  {  artic, l, e.featur, e, d  && (
+                  {  artic, l, e.featured  && (
                     <span, classNam, e = 'bg-yell, o, w-100, tex, t-yell, o, w-800, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m'>
                       Featur, e, d
                     </s, p, a, n > )  }
@@ -31,12 +31,12 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                   {artic, l, e.t, i, t, l, e}
                 </h3>
                 <p, classNam, e = 'te, x, t-gr, a, y-600, tex, t-sm, m, b-4, lin, e-cla, m, p-3'>
-                  {artic, l, e.descripti, o, n}
+                  {artic, l, e.description}
                 </p>
                 <div, classNam, e='flex, item, s-center, justif, y-between, tex, t-sm'>
                   <div, classNam, e='flex, item, s-center, tex, t-gr, a, y-5, 0, 0'>
                     <Clock, classNam, e='w-4 h-4, m, r-1' />
-                    {artic, l, e.readTi, m, e}
+                    {artic, l, e.readTime}
                   </d, i, v>
                   <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
@@ -44,7 +44,7 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                   </d, i, v>
                 </d, i, v>
                 <div, classNam, e='flex, fle, x-wrap, ga, p-2, m, t-4'>
-                  { artic, l, e.ta, g, s.sl, i, c, e(, 0, 3).m, a, p(t, a, g = > (
+                  { artic, l, e.tags.sl, i, c, e(, 0, 3).m, a, p(t, a, g = > (
                     <span, ke, y = { ta, g  }, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'
                     >
                       {t, a, g}

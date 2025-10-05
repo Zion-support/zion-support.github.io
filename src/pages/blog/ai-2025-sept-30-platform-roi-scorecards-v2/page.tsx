@@ -5,12 +5,12 @@ export, default, function PlatformRoiScorecards, V, 2(): Rea, c, t.J, S, X.Eleme
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Platform, ROI, Scorecards v2 — Proving, Value, in Wee, k, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Platform, ROI, Scorecards v2 — Proving, Value, in Wee, k, s</title>
+        <meta, nam, e='description'
           conte, n, t='K, P, I-linked, developer, scorecard, s, golden, path, s, and, adoption, funnels that, quantify, platform ROI, in, 4–8, week, s.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-platfo, r, m-r, o, i-scorecar, d, s-v2'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-se p t-30-platfo r m-r o i-scorecar d s-v2'
         />
       </Helm, e, t>
 

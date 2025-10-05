@@ -1,16 +1,16 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
+// @ts-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export, default, function GenAIQualityTiers, V, 4(): Rea, c, t.J, S, X.Eleme, n, t { 
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>GenAI, Quality, Tiers v4 — 60% Savings, With, Stable UX</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>GenAI, Quality, Tiers v4 — 60% Savings, With, Stable UX</title>
+        <meta, nam, e='description'
           conte, n, t='Advanced, tier, routin, g, semantic, cache, s, and, eva, l‑gated, fallbacks, that preserve, KPIs, while cutting, spen, d.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-se, p, t-30-quali, t, y-tie, r, s-v4'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/gen a i-20 2 5-se p t-30-quali t y-tie r s-v4'
         />
       </Helm, e, t>
       <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>

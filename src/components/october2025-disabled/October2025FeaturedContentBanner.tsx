@@ -3,8 +3,8 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 const, October2025FeaturedContentBanne, r = () => {
   const, featuredConten, t = [
     {
-      tit, l, e: 'Enterprise, AI, Value Realiza, t, i, o, n',
-      descripti, o, n: '90, days, to shipped, outcome, s: scoreca, r, d, s, evaluator, gate, s, tiered, routin, g',
+      title: 'Enterprise, AI, Value Realiza, t, i, o, n',
+      description: '90, days, to shipped, outcome, s: scoreca, r, d, s, evaluator, gate, s, tiered, routin, g',
       li, n, k: '/bl, o, g/enterpri, s, e-ai-val, u, e-realizati, o, n-20, 2, 5-10-0, 8',
       ic, o, n: 'Br, a, i, n',
       gradie, n, t: 'fr, o, m-indi, g, o-600, t, o-bl, u, e-60, 0',
@@ -17,8 +17,8 @@ const, October2025FeaturedContentBanne, r = () => {
       ],
     },
     {
-      tit, l, e: 'Enterprise, Neural, Orchestration Platf, o, r, m',
-      descripti, o, n: '89% faster, AI, deploymen, t, 94% cost, reductio, n, $12.4M, annual, savings',
+      title: 'Enterprise, Neural, Orchestration Platf, o, r, m',
+      description: '89% faster, AI, deploymen, t, 94% cost, reductio, n, $12.4M, annual, savings',
       li, n, k: '/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platf, o, r, m',
       ic, o, n: 'Br, a, i, n',
       gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-purp, l, e-60, 0',
@@ -31,8 +31,8 @@ const, October2025FeaturedContentBanne, r = () => {
       ],
     },
     {
-      tit, l, e: 'Cognitive, Supply, Chain Revolut, i, o, n',
-      descripti, o, n: '76% forecast, accura, c, y, 68% inventory, cost, reduction, $18.7M, valu, e',
+      title: 'Cognitive, Supply, Chain Revolut, i, o, n',
+      description: '76% forecast, accura, c, y, 68% inventory, cost, reduction, $18.7M, valu, e',
       li, n, k: '/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revolut, i, o, n',
       ic, o, n: 'Pack, a, g, e',
       gradie, n, t: 'fr, o, m-emera, l, d-600, t, o-te, a, l-60, 0',
@@ -45,8 +45,8 @@ const, October2025FeaturedContentBanne, r = () => {
       ],
     },
     {
-      tit, l, e: 'AI, Reliability, Blueprints 2, 0, 2, 7',
-      descripti, o, n: 'Evaluat, o, r, s, action, budget, s, instant, rollbac, k — ship, safel, y',
+      title: 'AI, Reliability, Blueprints 2, 0, 2, 7',
+      description: 'Evaluat, o, r, s, action, budget, s, instant, rollbac, k — ship, safel, y',
       li, n, k: '/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-0, 2',
       ic, o, n: 'Trendin, g, U, p',
       gradie, n, t: 'fr, o, m-cy, a, n-600, t, o-bl, u, e-60, 0',
@@ -59,8 +59,8 @@ const, October2025FeaturedContentBanne, r = () => {
       ],
     },
     {
-      tit, l, e: 'Edge, Inference, Playbook 2, 0, 2, 7',
-      descripti, o, n: 'S, u, b‑100ms, globally, with warm, pools, and tiered, cach, e, s',
+      title: 'Edge, Inference, Playbook 2, 0, 2, 7',
+      description: 'S, u, b‑100ms, globally, with warm, pools, and tiered, cach, e, s',
       li, n, k: '/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-0, 2',
       ic, o, n: 'Spark, l, e, s',
       gradie, n, t: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0',
@@ -110,7 +110,7 @@ const, October2025FeaturedContentBanne, r = () => {
                         {conte, n, t.t, i, t, l, e}
                       </h3>
                       <p, classNam, e = 'te, x, t-gr, a, y-300, tex, t-sm'>
-                        {conte, n, t.descripti, o, n}
+                        {conte, n, t.description}
                       </p>
                     </d, i, v>
                   </d, i, v>

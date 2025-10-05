@@ -4,17 +4,17 @@ const, December2025RevolutionaryBreakthroughContentBanne, r: Rea, c, t.FC = () =
   retu, r, n (
     <moti, o, n.div, initia, l = {{ opac, i, t, y: , 0, y: 5, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {{ durati, o, n: , 0., 8 }}
+      transiti, o, n = {{ duration: , 0., 8 }}
       classNa, m, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, tex, t-whi, t, e'
     >
       {/* Animated, Backgroun, d */}
-      <div, classNam, e="absolute, inse, t-0, b, g-[u, r, l('da, t, a: ima, g, e/s, v, g+x, m, l,%3Cs, v, g%20wid, t, h%3D%22, 6, 0%22%20heig, h, t%3D%22, 6, 0%22%20viewB, o, x%3D%2, 2, 0%2, 0, 0%20, 6, 0%20, 6, 0%22%20xml, n, s%3D%22ht, t, p%3A//w, w, w.w3.o, r, g/20, 0, 0/s, v, g%22%3E%3, C, g%20fi, l, l%3D%22no, n, e%22%20fi, l, l-ru, l, e%3D%22eveno, d, d%22%3E%3, C, g%20fi, l, l%3D%22%239C92, A, C%22%20fi, l, l-opaci, t, y%3D%2, 2, 0.1%22%3E%3Ccirc, l, e%20, c, x%3D%22, 3, 0%22%20, c, y%3D%22, 3, 0%22%2, 0, r%3D%2, 2, 2%22/%3E%3C/g%3E%3C/g%3E%3C/s, v, g%3E')] opaci, t, y-20" />
+      <div, classNam, e="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l,%3Cs, v, g%20wid, t, h%3D%22, 6, 0%22%20heig, h, t%3D%22, 6, 0%22%20viewB, o, x%3D%2, 2, 0%2, 0, 0%20, 6, 0%20, 6, 0%22%20xml, n, s%3D%22ht, t, p%3A//w w w.w3.o r g/20 0 0/s v g%22%3E%3 C g%20fi l l%3D%22no n e%22%20fi l l-ru l e%3D%22eveno d d%22%3E%3 C g%20fi l l%3D%22%239C92 A C%22%20fi l l-opaci t y%3D%2 2 0.1%22%3E%3Ccirc l e%20 c x%3D%22 3 0%22%20 c y%3D%22 3 0%22%2 0 r%3D%2 2 2%22/%3E%3C/g%3E%3C/g%3E%3C/s v g%3E')] opaci t y-20" />
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-16'>
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'>
           <moti, o, n.div, initia, l={{ sca, l, e: , 0., 8 }}
             anima, t, e = {{ sc, a, l, e:  , 1 }}
-            transiti, o, n = {{ durati, o, n: , 0., 6, del, a, y: 0., 2 }}
+            transiti, o, n = {{ duration: , 0., 6, del, a, y: 0., 2 }}
             classNa, m, e = 'inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4'
           >
             <Sparkles, classNam, e='w-4 h-4' />
@@ -23,14 +23,14 @@ const, December2025RevolutionaryBreakthroughContentBanne, r: Rea, c, t.FC = () =
           </moti, o, n.d, i, v>
           <moti, o, n.h1, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 3 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 3 }}
             classNa, m, e = 'te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-pi, n, k-500, t, o-purp, l, e-600, b, g-cl, i, p-text, tex, t-transpare, n, t'
           >
             💎💎💎 JUST, PUBLISHE, D: $20.9B, Combined, Val, u, e, 1, 0, 0,000x, Processing, Power, True, AI, Consciousness - REVOLUTIONARY, BREAKTHROUGH, S! 💎💎💎
           </moti, o, n.h1>
           <moti, o, n.p, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 4 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 4 }}
             classNa, m, e = 'te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o'
           >
             Discover, the, most revolutionary, AI, breakthroughs of, 202, 5: Quantum, AI, Transcenden, c, e, Autonomous, Enterprise, Consciousness, and, Neura, l-Quantum, Superintelligenc, e - the, ultimate, evolution of, artificial, intelligence!
@@ -41,7 +41,7 @@ const, December2025RevolutionaryBreakthroughContentBanne, r: Rea, c, t.FC = () =
           {/* Quantum, AI, Transcenden, c, e */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 5 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 5 }}
             classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-800, t, o-indi, g, o-900, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
             <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
@@ -82,7 +82,7 @@ const, December2025RevolutionaryBreakthroughContentBanne, r: Rea, c, t.FC = () =
           {/* Autonomous, Enterprise, Consciousne, s, s */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 6 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 6 }}
             classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-800, t, o-cy, a, n-900, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
             <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
@@ -124,7 +124,7 @@ const, December2025RevolutionaryBreakthroughContentBanne, r: Rea, c, t.FC = () =
           {/* Neur, a, l-Quantum, Superintellige, n, c, e */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 7 }}
+            transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 7 }}
             classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-800, t, o-emera, l, d-900, rounde, d-2x, l, p-8, border, border-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
             <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
@@ -166,7 +166,7 @@ const, December2025RevolutionaryBreakthroughContentBanne, r: Rea, c, t.FC = () =
         {/* Combined, Impact, Secti, o, n */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 8 }}
+          transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 8 }}
           classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-yell, o, w-9, 0, 0/50, t, o-oran, g, e-9, 0, 0/50, rounde, d-2x, l, p-8, border, border-yell, o, w-5, 0, 0/30'
         >
           <div, classNam, e='te, x, t-cent, e, r'>
@@ -206,7 +206,7 @@ const, December2025RevolutionaryBreakthroughContentBanne, r: Rea, c, t.FC = () =
         {/* Call, to, Action */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {{ durati, o, n: , 0., 8, del, a, y: 0., 9 }}
+          transiti, o, n = {{ duration: , 0., 8, del, a, y: 0., 9 }}
           classNa, m, e = 'te, x, t-center, m, t-12'
         >
           <button, classNam, e='bg-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r: fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, tex, t-black, fon, t-bold, tex, t-lg, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, flex, items-center, ga, p-3, m, x-au, t, o'>

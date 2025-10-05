@@ -1,13 +1,13 @@
-export, const, newInsights = [
+export const newInsights = [
   { 
     id: 'ai-platfo, r, m-r, o, i-scorec, a, r, d, s',
-    tit, l, e: 'AI, Platform, ROI: Simple, Scorecards, That Drive, Adopti, o, n',
+    title: 'AI, Platform, ROI: Simple, Scorecards, That Drive, Adopti, o, n',
     summa, r, y: 'Connect, platform, capabilities to, adopti, o, n, golden, path, s, and, SLO, outcomes. Make, quarterly, cut/scale, decisions, with eviden, c, e.',
-    catego, r, y: 'AI, Strate, g, y',
-    da, t, e: '20, 2, 5-10-0, 3',
+    category: 'AI, Strate, g, y',
+    date: '20, 2, 5-10-0, 3',
     readMinut, e, s:  , 7,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['Platf, o, r, m', 'R, O, I', 'Scorecar, d, s'],
+    featured: t, r, u, e,
+    tags: ['Platf, o, r, m', 'R, O, I', 'Scorecar, d, s'],
     conte, n, t: `
       <h2>Why, Scorecards, Win</h2>
       <p>Adopt, i, o, n, TTFX, on, golden pat, h, s, and, reliability, SLOs are, the, leading signals, that, predict platform, RO, I.</p>
@@ -20,13 +20,13 @@ export, const, newInsights = [
    },
   { 
     id: 'guardrai, l, s-scorecar, d, s-eva, l, s-2, 0, 2, 5',
-    tit, l, e: 'Guardrails, Engineers, Adopt: Scoreca, r, d, s, PR, Gate, s, Online, Canarie, s',
+    title: 'Guardrails, Engineers, Adopt: Scoreca, r, d, s, PR, Gate, s, Online, Canarie, s',
     summa, r, y: 'Lightwei, g, h, t, outco, m, e‑linked, guardrails, that speed, delivery, while managing, ris, k.',
-    catego, r, y: 'AI, Strate, g, y',
-    da, t, e: '20, 2, 5-09-2, 9',
+    category: 'AI, Strate, g, y',
+    date: '20, 2, 5-09-2, 9',
     readMinut, e, s:  , 7,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['Guardra, i, l, s', 'Scorecar, d, s', 'Eva, l, s'],
+    featured: t, r, u, e,
+    tags: ['Guardra, i, l, s', 'Scorecar, d, s', 'Eva, l, s'],
     conte, n, t: `
       <h2>Ship, Fast, e, r, Saf, e, r</h2>
       <p>Connect, scorecards, to product, KPI, s. Use, PR, gates for, risky, changes and, run, online canaries, tied, to outcom, e, s.</p>
@@ -39,52 +39,52 @@ export, const, newInsights = [
    },
   { 
     id: 'ed, g, e-fla, g, s-bluepri, n, t-2, 0, 2, 5',
-    tit, l, e: 'Edge, Flags, Blueprint: Ze, r, o‑Regret, Rollou, t, s',
+    title: 'Edge, Flags, Blueprint: Ze, r, o‑Regret, Rollou, t, s',
     summa, r, y: '<100ms, global, flags with, segmented, canarie, s, budge, t, s, and, instant, rollback.',
-    catego, r, y: 'Architect, u, r, e',
-    da, t, e: '20, 2, 5-09-2, 9',
+    category: 'Architect, u, r, e',
+    date: '20, 2, 5-09-2, 9',
     readMinut, e, s:  , 6,
-    featur, e, d: fa, l, s, e,
-    ta, g, s: ['E, d, g, e', 'Fla, g, s', 'Delive, r, y'],
+    featured: fa, l, s, e,
+    tags: ['E, d, g, e', 'Fla, g, s', 'Delive, r, y'],
     conte, n, t: `
       <h2>Progressive, Deliver, y</h2>
       <p>Segment, by, geo and, accou, n, t, cap, risk, with budge, t, s, and, stream, telemetry for, evidenc, e‑based, release, s.</p  >  `,
    },
   { 
     id: 'r, a, g-freshne, s, s-t, t, l-2, 0, 2, 5',
-    tit, l, e: 'RAG, Freshnes, s: TTL, Budgets, and Versioned, Corpo, r, a',
+    title: 'RAG, Freshnes, s: TTL, Budgets, and Versioned, Corpo, r, a',
     summa, r, y: 'Prevent, stale, answers with, freshness, windows and, warm, cache, s.',
-    catego, r, y: 'Ge, n, A, I',
-    da, t, e: '20, 2, 5-09-2, 9',
+    category: 'Ge, n, A, I',
+    date: '20, 2, 5-09-2, 9',
     readMinut, e, s:  , 8,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['RA, G', 'Freshne, s, s', 'Sear, c, h'],
+    featured: t, r, u, e,
+    tags: ['RA, G', 'Freshne, s, s', 'Sear, c, h'],
     conte, n, t: `
       <h2>Operate, with, Freshness</h2>
       <p>Use, TTL, window, s, async, warmup, s, and, versioned, corpora to, keep, retrieval accurate, at, scale.</p  >  `,
    },
   { 
     id: 'secu, r, e-ml-supp, l, y-ch, a, i, n',
-    tit, l, e: 'Secure, ML, Supply Cha, i, n: Line, a, g, e, SBO, M, s, and, Egress, Controls',
+    title: 'Secure, ML, Supply Cha, i, n: Line, a, g, e, SBO, M, s, and, Egress, Controls',
     summa, r, y: 'Lock, down, dataset, s, mode, l, s, and, inference, routes with, provenanc, e, signed, artifact, s, and, policy, checks in, C, I/CD.',
-    catego, r, y: 'Secur, i, t, y',
-    da, t, e: '20, 2, 5-10-0, 3',
+    category: 'Secur, i, t, y',
+    date: '20, 2, 5-10-0, 3',
     readMinut, e, s:  , 6,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['Secur, i, t, y', 'ML', 'Supply, Chai, n'],
+    featured: t, r, u, e,
+    tags: ['Secur, i, t, y', 'ML', 'Supply, Chai, n'],
     conte, n, t: `
       <h2>E, n, d-to-End, Control, s</h2>
       <p>Track, lineage, from datasets, to, deployed mode, l, s. Enforce, policy, tests and, signed, artifacts across, the, pipeline.</, p  >  `,
    },
   { 
     id: 'ai-automati, o, n-2, 0, 2, 5',
-    tit, l, e: 'The, Future, of AI, Automation, in Enterpr, i, s, e',
+    title: 'The, Future, of AI, Automation, in Enterpr, i, s, e',
     summa, r, y: 'Discover, how, AI automation, is, transforming enterprise, operations, in 2, 0, 2, 5, with, rea, l-world, case, studies and, implementation, strategies.',
-    catego, r, y: 'AI & Automat, i, o, n',
-    da, t, e: '20, 2, 5-01-2, 0',
+    category: 'AI & Automat, i, o, n',
+    date: '20, 2, 5-01-2, 0',
     readMinut, e, s:  , 8,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['A, I', 'Automati, o, n', 'Enterpri, s, e', '20, 2, 5'],
+    featured: t, r, u, e,
+    tags: ['A, I', 'Automati, o, n', 'Enterpri, s, e', '20, 2, 5'],
     conte, n, t: `
       <h2>Revolutionizing, Enterprise, Operations</h2>
       <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 20, 2, 5, we're, seeing, unprecedented adoption, rates, and ROI, from, AI automation, initiative, s.</p>
@@ -110,13 +110,13 @@ export, const, newInsights = [
    },
   { 
     id: 'cybersecuri, t, y-ai-2, 0, 2, 5',
-    tit, l, e: 'AI-Powered, Cybersecurit, y: The, Next, Generation of, Protecti, o, n',
+    title: 'AI-Powered, Cybersecurit, y: The, Next, Generation of, Protecti, o, n',
     summa, r, y: 'Explore, how, AI is, revolutionizing, cybersecurity with, advanced, threat detect, i, o, n, automated, respons, e, and, predictive, security analyti, c, s.',
-    catego, r, y: 'Cybersecur, i, t, y',
-    da, t, e: '20, 2, 5-01-1, 8',
+    category: 'Cybersecur, i, t, y',
+    date: '20, 2, 5-01-1, 8',
     readMinut, e, s: 1, 0,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['Cybersecur, i, t, y', 'AI', 'Threat, Detectio, n', 'Securi, t, y'],
+    featured: t, r, u, e,
+    tags: ['Cybersecur, i, t, y', 'AI', 'Threat, Detectio, n', 'Securi, t, y'],
     conte, n, t: `
       <h2>The, Evolution, of Cyber, Threat, s</h2>
       <p>As, cyber, threats become, more, sophisticate, d, traditional, security, measures are, no, longer sufficie, n, t. AI-powered, cybersecurity, represents the, next, frontier in, digital, protection.</p>
@@ -137,13 +137,13 @@ export, const, newInsights = [
    },
   { 
     id: 'clo, u, d-nati, v, e-2, 0, 2, 5',
-    tit, l, e: 'Building, Resilient, Cloud-Native, Applicatio, n, s',
+    title: 'Building, Resilient, Cloud-Native, Applicatio, n, s',
     summa, r, y: 'Learn, the, latest strategies, for, developing and, deploying, cloud-native, applications, that scale, automatically, and handle, failures, gracefull, y.',
-    catego, r, y: 'Cloud, Computi, n, g',
-    da, t, e: '20, 2, 5-01-1, 5',
+    category: 'Cloud, Computi, n, g',
+    date: '20, 2, 5-01-1, 5',
     readMinut, e, s: 1, 2,
-    featur, e, d: fa, l, s, e,
-    ta, g, s: ['Cl, o, u, d', 'Microservic, e, s', 'DevO, p, s', 'Scalabili, t, y'],
+    featured: fa, l, s, e,
+    tags: ['Cl, o, u, d', 'Microservic, e, s', 'DevO, p, s', 'Scalabili, t, y'],
     conte, n, t: `
       <h2>The, Clou, d-Native, Advantag, e</h2>
       <p>Clo, u, d-native, applications, are designed, from, the ground, up, to leverage, cloud, infrastructur, e, providing, unprecedented, scalability and, resilienc, e.</p>
@@ -161,13 +161,13 @@ export, const, newInsights = [
    },
   { 
     id: 'da, t, a-analyti, c, s-a, i',
-    tit, l, e: 'AI-Driven, Data, Analytics: From, Insights, to Act, i, o, n',
+    title: 'AI-Driven, Data, Analytics: From, Insights, to Act, i, o, n',
     summa, r, y: 'Transform, your, data into, actionable, business intelligence, with, advanced AI, analyti, c, s, machine, learning, models, and, rea, l-time, dashboard, s.',
-    catego, r, y: 'Data, Analyti, c, s',
-    da, t, e: '20, 2, 5-01-1, 2',
+    category: 'Data, Analyti, c, s',
+    date: '20, 2, 5-01-1, 2',
     readMinut, e, s:  , 9,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['Data, Analyti, c, s', 'AI', 'Machine, Learnin, g', 'Business, Intelligenc, e'],
+    featured: t, r, u, e,
+    tags: ['Data, Analyti, c, s', 'AI', 'Machine, Learnin, g', 'Business, Intelligenc, e'],
     conte, n, t: `
       <h2>The, Dat, a-Driven, Transformatio, n</h2>
       <p>Modern, businesses, generate vast, amounts, of d, a, t, a, but, the, real value, lies, in extracting, meaningful, insights and, taking, action based, on, those insigh, t, s.</p>
@@ -185,13 +185,13 @@ export, const, newInsights = [
    },
   { 
     id: 'devo, p, s-automati, o, n-2, 0, 2, 5',
-    tit, l, e: 'DevOps, Automatio, n: Accelerating, Software, Deliver, y',
+    title: 'DevOps, Automatio, n: Accelerating, Software, Deliver, y',
     summa, r, y: 'Master, the, art of, DevOps, automation with, C, I/CD, pipelin, e, s, infrastructure, as, code, and, automated, testing strategies, that, reduce deployment, times, by 80%.',
-    catego, r, y: 'Dev, O, p, s',
-    da, t, e: '20, 2, 5-01-1, 0',
+    category: 'Dev, O, p, s',
+    date: '20, 2, 5-01-1, 0',
     readMinut, e, s: 1, 1,
-    featur, e, d: fa, l, s, e,
-    ta, g, s: ['Dev, O, p, s', 'CI/CD', 'Automati, o, n', 'Infrastructu, r, e'],
+    featured: fa, l, s, e,
+    tags: ['Dev, O, p, s', 'CI/CD', 'Automati, o, n', 'Infrastructu, r, e'],
     conte, n, t: `
       <h2>Accelerating, Software, Delivery</h2>
       <p>DevOps, automation, is essential, for, modern software, developme, n, t, enabling, teams, to deliver, features, faster while, maintaining, quality and, reliabilit, y.</p>
@@ -209,13 +209,13 @@ export, const, newInsights = [
    },
   { 
     id: 'mic, r, o-sa, a, s-tre, n, d, s',
-    tit, l, e: 'The, Rise, of Mic, r, o-Sa, a, S: Building, Profitable, Niche Soluti, o, n, s',
+    title: 'The, Rise, of Mic, r, o-Sa, a, S: Building, Profitable, Niche Soluti, o, n, s',
     summa, r, y: 'Discover, how, micro-SaaS, businesses, are disrupting, traditional, software markets, with, focuse, d, profitable, solutions, for specific, niche, s.',
-    catego, r, y: 'Mic, r, o-S, a, a, S',
-    da, t, e: '20, 2, 5-01-0, 8',
+    category: 'Mic, r, o-S, a, a, S',
+    date: '20, 2, 5-01-0, 8',
     readMinut, e, s:  , 7,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['Mic, r, o-S, a, a, S', 'Entrepreneursh, i, p', 'Softwa, r, e', 'Busine, s, s'],
+    featured: t, r, u, e,
+    tags: ['Mic, r, o-S, a, a, S', 'Entrepreneursh, i, p', 'Softwa, r, e', 'Busine, s, s'],
     conte, n, t: `
       <h2>The, Micr, o-SaaS, Revolutio, n</h2>
       <p>Mic, r, o-SaaS, businesses, are proving, that, you d, o, n't, need, massive scale, to, build profitable, software, companies. Focus, and, specialization are, the, keys to, succes, s.</p>
@@ -233,13 +233,13 @@ export, const, newInsights = [
    },
   { 
     id: 'enterpri, s, e-r, a, g-bluepri, n, t-2, 0, 2, 5',
-    tit, l, e: 'Enterprise, RAG, Blueprint v2: Freshn, e, s, s, Securi, t, y, and, Eval, s',
+    title: 'Enterprise, RAG, Blueprint v2: Freshn, e, s, s, Securi, t, y, and, Eval, s',
     summa, r, y: 'Producti, o, n-ready, RAG, patterns: hybrid, sear, c, h, au, t, h-aware, retrieva, l, freshness, control, s, and, layered, evaluation.',
-    catego, r, y: 'Ge, n, A, I',
-    da, t, e: '20, 2, 5-10-0, 4',
+    category: 'Ge, n, A, I',
+    date: '20, 2, 5-10-0, 4',
     readMinut, e, s:  , 9,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['RA, G', 'Gen, A, I', 'Sear, c, h', 'Securi, t, y'],
+    featured: t, r, u, e,
+    tags: ['RA, G', 'Gen, A, I', 'Sear, c, h', 'Securi, t, y'],
     conte, n, t: `
       <h2>Why, RAG, v2</h2>
       <p>Move, beyond, naive vector, search, with hybrid, retriev, a, l, freshness, window, s, and, authorizatio, n-aware, filter, s.</p>
@@ -252,13 +252,13 @@ export, const, newInsights = [
    },
   { 
     id: 'fino, p, s-scorecar, d, s-2, 0, 2, 5',
-    tit, l, e: 'Cloud, FinOps, Scorecards Engineers, Actually, Us, e',
+    title: 'Cloud, FinOps, Scorecards Engineers, Actually, Us, e',
     summa, r, y: 'Guardra, i, l, s, PR, check, s, and, budgets, that cut, waste, 25–40% while, preserving, delivery spe, e, d.',
-    catego, r, y: 'Cl, o, u, d',
-    da, t, e: '20, 2, 5-10-0, 4',
+    category: 'Cl, o, u, d',
+    date: '20, 2, 5-10-0, 4',
     readMinut, e, s:  , 6,
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['Fin, O, p, s', 'Clo, u, d', 'Governan, c, e'],
+    featured: t, r, u, e,
+    tags: ['Fin, O, p, s', 'Clo, u, d', 'Governan, c, e'],
     conte, n, t: `
       <h2>Scorecards, That, Matter</h2>
       <p>Connect, spend, to product, goa, l, s, set, guardrails, engineers respe, c, t, and, automate, waste preventi, o, n.</p>
@@ -271,15 +271,15 @@ export, const, newInsights = [
    },
 ];
 
-// Add, e, d: Octob, e, r , 7, 2025, newInsight, s.unshi, f, t({ 
+// Add e d: Octob e r  7 2025 newInsight s.unshi f t({ 
   id: 'ai-governan, c, e-scorecar, d, s-2, 0, 2, 6',
-  tit, l, e: 'AI, Governance, 2026: Scorecards, Engineers, Actually Us, e',
+  title: 'AI, Governance, 2026: Scorecards, Engineers, Actually Us, e',
   summa, r, y: 'Outco, m, e‑linked, guardrails, with PR, checks, and online, canaries, that accelerate, delive, r, y.',
-  catego, r, y: 'AI, Strate, g, y',
-  da, t, e: '20, 2, 5-10-0, 7',
+  category: 'AI, Strate, g, y',
+  date: '20, 2, 5-10-0, 7',
   readMinut, e, s:  , 7,
-  featur, e, d: t, r, u, e,
-  ta, g, s: ['Governa, n, c, e', 'Poli, c, y', 'Scorecar, d, s'],
+  featured: t, r, u, e,
+  tags: ['Governa, n, c, e', 'Poli, c, y', 'Scorecar, d, s'],
   conte, n, t: `
     <h2>Guardrails, That, Ship</h2>
     <p>Adopt, scorecards, tied to, KP, I, s, small, PR, checks for, risky, changes, and, budgeted, online canari, e, s.</p>
@@ -291,6 +291,6 @@ export, const, newInsights = [
     </ul  >  `,
  });
 
-export, const, featuredInsights = newInsigh, t, s.filt, e, r(insig, h, t => insig, h, t.featu, r, e, d); export, const, latestInsights = newInsigh, t, s.so, r, t(
-  (, a, b) => new, Dat, e(b.da, t, e).getTi, m, e() - new, Dat, e(a.da, t, e).getTi, m, e(),
+export const featuredInsights = newInsigh, t, s.filt, e, r(insig, h, t => insig, h, t.featu, r, e, d); export const latestInsights = newInsigh, t, s.so, r, t(
+  (, a, b) => new, Dat, e(b.date).getTi, m, e() - new, Dat, e(a.date).getTi, m, e(),
 );

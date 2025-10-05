@@ -1,13 +1,13 @@
 import, React, from 'rea, c, t';
 interface, FeaturedConten, t {
-  id: numb, e, r;
-  tit, l, e: stri, n, g;
-  catego, r, y: stri, n, g;
-  readTi, m, e: stri, n, g;
-  rati, n, g: numb, e, r;
-  reade, r, s: stri, n, g;
-  bad, g, e: stri, n, g;
-  gradie, n, t: stri, n, g;
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  rati, n, g: number;
+  reade, r, s: string;
+  bad, g, e: string;
+  gradie, n, t: string;
   ic, o, n: Rea, c, t.ReactNo, d, e;
   li, n, k: str, i, n, g;
 }
@@ -15,9 +15,9 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   const, featuredConten, t: FeaturedConte, n, t[] = [
     {
       id: , 0,
-      tit, l, e: 'Governed, Agent, Rollback, s',
-      catego, r, y: 'AI, Operatio, n, s',
-      readTi, m, e: '7, m, i, n',
+      title: 'Governed, Agent, Rollback, s',
+      category: 'AI, Operatio, n, s',
+      readTime: '7, m, i, n',
       rati, n, g: 5., 0,
       reade, r, s: '25, K+',
       bad, g, e: 'NE, W',
@@ -27,9 +27,9 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
      },
     { 
       id:  , 7,
-      tit, l, e: 'Consentless, Personalizatio, n (E, d, g, e)',
-      catego, r, y: 'Edge, Computi, n, g',
-      readTi, m, e: '6, m, i, n',
+      title: 'Consentless, Personalizatio, n (E, d, g, e)',
+      category: 'Edge, Computi, n, g',
+      readTime: '6, m, i, n',
       rati, n, g: 4., 9,
       reade, r, s: '19, K+',
       bad, g, e: 'FEATU, R, E, D',
@@ -39,9 +39,9 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
      },
     { 
       id:  , 1,
-      tit, l, e: 'AI, 202, 7: Operational, Trust, Blueprin, t',
-      catego, r, y: 'AI, Strate, g, y',
-      readTi, m, e: '8, m, i, n',
+      title: 'AI, 202, 7: Operational, Trust, Blueprin, t',
+      category: 'AI, Strate, g, y',
+      readTime: '8, m, i, n',
       rati, n, g: 4., 9,
       reade, r, s: '58, K+',
       bad, g, e: 'NE, W',
@@ -51,9 +51,9 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
      },
     { 
       id:  , 2,
-      tit, l, e: 'Edge, 202, 6: Private, Feature, Flag, s',
-      catego, r, y: 'Architect, u, r, e',
-      readTi, m, e: '7, m, i, n',
+      title: 'Edge, 202, 6: Private, Feature, Flag, s',
+      category: 'Architect, u, r, e',
+      readTime: '7, m, i, n',
       rati, n, g: 4., 8,
       reade, r, s: '41, K+',
       bad, g, e: 'TREND, I, N, G',
@@ -63,9 +63,9 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
      },
     { 
       id:  , 3,
-      tit, l, e: 'GenAI, Quality, Tiers v2 (2, 0, 2, 6)',
-      catego, r, y: 'Ge, n, A, I',
-      readTi, m, e: '8, m, i, n',
+      title: 'GenAI, Quality, Tiers v2 (2, 0, 2, 6)',
+      category: 'Ge, n, A, I',
+      readTime: '8, m, i, n',
       rati, n, g: 4., 9,
       reade, r, s: '47, K+',
       bad, g, e: 'FEATU, R, E, D',
@@ -139,7 +139,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 {/* Catego, r, y */}
                 <div, classNam, e = "mb-4">
                   <span, classNam, e="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-indi, g, o-400, tex, t-xs, fon, t-semibold, border, border-indi, g, o-5, 0, 0/30">
-                    {conte, n, t.catego, r, y}
+                    {conte, n, t.category}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}
@@ -150,7 +150,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">
                   <span, classNam, e="flex, item, s-center, ga, p-2">
                     <Zap, classNam, e="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />
-                    {conte, n, t.readTi, m, e}
+                    {conte, n, t.readTime}
                   </sp, a, n>
                   <span, classNam, e="flex, item, s-center, ga, p-1">
                     <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />

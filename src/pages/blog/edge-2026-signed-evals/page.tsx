@@ -1,16 +1,16 @@
-// Minimal, type, s; remove, t, s-nocheck, import, React fr, o, m 'rea, c, t';
+// Minimal type s; remove t s-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export, default, function EdgeSignedEvals20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Edge, 202, 6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt; 100, m, s</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>Edge, 202, 6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt; 100, m, s</title>
+        <meta, nam, e = 'description'
           conte, n, t='Scoped, I, D, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, evals, you can, trus, t.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 6-sign, e, d-eva, l, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 6-sign e d-eva l s'
         />
       </Helm, e, t>
 

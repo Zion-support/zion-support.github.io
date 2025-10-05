@@ -3,12 +3,12 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
   const, futureTechArticle, s = [
     {
       i, d: , 1,
-      tit, l, e: 'Neur, a, l-Quantum, Hybrid, Computin, g',
-      sl, u, g: 'neur, a, l-quant, u, m-hybr, i, d-2, 0, 2, 6',
-      excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experienc, e, 1, 0,000x, faster, AI inference, with, quantum-enhanced, deep, learning.',
-      catego, r, y: 'Quantum, AI, Revolutio, n',
-      da, t, e: '20, 2, 6-01-2, 0',
-      readTi, m, e: '18, m, i, n',
+      title: 'Neur, a, l-Quantum, Hybrid, Computin, g',
+      slug: 'neur, a, l-quant, u, m-hybr, i, d-2, 0, 2, 6',
+      excerpt: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experienc, e, 1, 0,000x, faster, AI inference, with, quantum-enhanced, deep, learning.',
+      category: 'Quantum, AI, Revolutio, n',
+      date: '20, 2, 6-01-2, 0',
+      readTime: '18, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: <Atom, classNam, e = 'w-8 , h-, 8' / > ,
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
@@ -17,12 +17,12 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 2,
-      tit, l, e: 'Se, l, f-Evolving, AI, Ecosystem, s',
-      sl, u, g: 'se, l, f-evolvi, n, g-ai-ecosyste, m, s-2, 0, 2, 6',
-      excer, p, t: 'AI, systems, that continuously, evolve, and improve, themselves, without human, interventio, n. Achieve, true, autonomous development, with, self-modifying, neural, architecture, s.',
-      catego, r, y: 'Autonomous, Evoluti, o, n',
-      da, t, e: '20, 2, 6-01-2, 0',
-      readTi, m, e: '22, m, i, n',
+      title: 'Se, l, f-Evolving, AI, Ecosystem, s',
+      slug: 'se, l, f-evolvi, n, g-ai-ecosyste, m, s-2, 0, 2, 6',
+      excerpt: 'AI, systems, that continuously, evolve, and improve, themselves, without human, interventio, n. Achieve, true, autonomous development, with, self-modifying, neural, architecture, s.',
+      category: 'Autonomous, Evoluti, o, n',
+      date: '20, 2, 6-01-2, 0',
+      readTime: '22, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: <Brain, classNam, e = 'w-8 , h-, 8' / > ,
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
@@ -31,12 +31,12 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 3,
-      tit, l, e: 'Predictive, Reality, Modelin, g',
-      sl, u, g: 'predicti, v, e-reali, t, y-modeli, n, g-2, 0, 2, 6',
-      excer, p, t: 'AI, that, predicts and, models, reality before, it, happens. Advanced, predictive, analytics that, forecast, market tre, n, d, s, customer, behavio, r, and, system, failures with, 9, 9.9% accura, c, y.',
-      catego, r, y: 'Predictive, Intelligen, c, e',
-      da, t, e: '20, 2, 6-01-2, 0',
-      readTi, m, e: '15, m, i, n',
+      title: 'Predictive, Reality, Modelin, g',
+      slug: 'predicti, v, e-reali, t, y-modeli, n, g-2, 0, 2, 6',
+      excerpt: 'AI, that, predicts and, models, reality before, it, happens. Advanced, predictive, analytics that, forecast, market tre, n, d, s, customer, behavio, r, and, system, failures with, 9, 9.9% accura, c, y.',
+      category: 'Predictive, Intelligen, c, e',
+      date: '20, 2, 6-01-2, 0',
+      readTime: '15, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: <Target, classNam, e = 'w-8 , h-, 8' / > ,
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0',
@@ -45,12 +45,12 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 4,
-      tit, l, e: 'Immersive, AI, Workspace, s',
-      sl, u, g: 'immersi, v, e-ai-workspac, e, s-2, 0, 2, 6',
-      excer, p, t: 'Revolutionary, virtual, environments where, AI, and humans, collaborate, in re, a, l-ti, m, e. Experience, seamless, integration between, physical, and digital, workspac, e, s.',
-      catego, r, y: 'Immersive, Technolo, g, y',
-      da, t, e: '20, 2, 6-01-2, 0',
-      readTi, m, e: '12, m, i, n',
+      title: 'Immersive, AI, Workspace, s',
+      slug: 'immersi, v, e-ai-workspac, e, s-2, 0, 2, 6',
+      excerpt: 'Revolutionary, virtual, environments where, AI, and humans, collaborate, in re, a, l-ti, m, e. Experience, seamless, integration between, physical, and digital, workspac, e, s.',
+      category: 'Immersive, Technolo, g, y',
+      date: '20, 2, 6-01-2, 0',
+      readTime: '12, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: <Rocket, classNam, e = 'w-8 , h-, 8' / > ,
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
@@ -59,12 +59,12 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 5,
-      tit, l, e: 'Quant, u, m-Secure, AI, Network, s',
-      sl, u, g: 'quant, u, m-secu, r, e-ai-networ, k, s-2, 0, 2, 6',
-      excer, p, t: 'Ultimate, security, with quant, u, m-encrypted, AI, communications. Protect, your, AI systems, with, unbreakable quantum, cryptography, and ze, r, o-trust, architectur, e, s.',
-      catego, r, y: 'Quantum, Securi, t, y',
-      da, t, e: '20, 2, 6-01-2, 0',
-      readTi, m, e: '14, m, i, n',
+      title: 'Quant, u, m-Secure, AI, Network, s',
+      slug: 'quant, u, m-secu, r, e-ai-networ, k, s-2, 0, 2, 6',
+      excerpt: 'Ultimate, security, with quant, u, m-encrypted, AI, communications. Protect, your, AI systems, with, unbreakable quantum, cryptography, and ze, r, o-trust, architectur, e, s.',
+      category: 'Quantum, Securi, t, y',
+      date: '20, 2, 6-01-2, 0',
+      readTime: '14, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: <Shield, classNam, e = 'w-8 , h-, 8' / > ,
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-50, 0',
@@ -73,12 +73,12 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
      },
     { 
       id:  , 6,
-      tit, l, e: 'Me, t, a-Cognitive, AI, Orchestratio, n',
-      sl, u, g: 'me, t, a-cogniti, v, e-ai-orchestrati, o, n-2, 0, 2, 6',
-      excer, p, t: 'AI, that, thinks about, thinking, and orchestrates, multiple, AI syste, m, s. Advanced, met, a-cognitive, frameworks, that manage, and, optimize entire, AI, ecosystems autonomou, s, l, y.',
-      catego, r, y: 'Me, t, a-Cognitiv, e, A, I',
-      da, t, e: '20, 2, 6-01-2, 0',
-      readTi, m, e: '20, m, i, n',
+      title: 'Me, t, a-Cognitive, AI, Orchestratio, n',
+      slug: 'me, t, a-cogniti, v, e-ai-orchestrati, o, n-2, 0, 2, 6',
+      excerpt: 'AI, that, thinks about, thinking, and orchestrates, multiple, AI syste, m, s. Advanced, met, a-cognitive, frameworks, that manage, and, optimize entire, AI, ecosystems autonomou, s, l, y.',
+      category: 'Me, t, a-Cognitiv, e, A, I',
+      date: '20, 2, 6-01-2, 0',
+      readTime: '20, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: <Bot, classNam, e = 'w-8 , h-, 8' / > ,
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-50, 0',
@@ -144,7 +144,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                 {/* Category, Ta, g */}
                 <div, classNam, e = 'mb-4'>
                   <span, classNam, e='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
-                    {artic, l, e.catego, r, y}
+                    {artic, l, e.category}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}
@@ -153,7 +153,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                 </h3>
                 {/* Excer, p, t */}
                 <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm'>
-                  {artic, l, e.excer, p, t}
+                  {artic, l, e.excerpt}
                 </p>
                 {/* Sta, t, s */}
                 <div, classNam, e='mb-6'>
@@ -167,7 +167,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                 <div, classNam, e='flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10'>
                   <span, classNam, e='flex, item, s-center, ga, p-2'>
                     <Zap, classNam, e='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
-                    {artic, l, e.readTi, m, e}
+                    {artic, l, e.readTime}
                   </sp, a, n>
                   <sp, a, n>
                     {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {
@@ -177,7 +177,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                     })}
                   </sp, a, n>
                 </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f = {`/bl, o, g/${artic, l, e.sl, u, g}`}
+                <a, hre, f = {`/bl, o, g/${artic, l, e.slug}`}
                   classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${artic, l, e.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
                 >
                   <sp, a, n>Explore, Technolog, y</sp, a, n>
@@ -215,7 +215,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
               </h3>
               <p, classNam, e='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
                 Be, among, the first, enterprises, to deploy, these, revolutionary
-                technologi, e, s. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
+                technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
               </p>
               <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
                 <a, hre, f='/bl, o, g'

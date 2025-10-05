@@ -1,16 +1,16 @@
-// Minimal, type, s; remove, t, s-nocheck, import, React fr, o, m 'rea, c, t';
+// Minimal type s; remove t s-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export, default, function BreakingEnterpriseAIBreakthroughs20, 2, 5(): Rea, c, t.J, S, X.Eleme, n, t { 
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Sep, t, 3, 0, 20, 2, 5: Breaking, Enterprise, AI Breakthroug, h, s</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>Sep, t, 3, 0, 20, 2, 5: Breaking, Enterprise, AI Breakthroug, h, s</title>
+        <meta, nam, e = 'description'
           conte, n, t='8, productio, n‑ready, pattern, s: roll, b, a, c, k, scorecar, d, s, consentless, analytic, s, and, mor, e.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-breaki, n, g-enterpri, s, e-ai-breakthroug, h, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-se p t-30-breaki n g-enterpri s e-ai-breakthroug h s'
         />
       </Helm, e, t>
 

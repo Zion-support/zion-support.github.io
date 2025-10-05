@@ -27,28 +27,28 @@ const, AIInnovationAdvertisingBanne, r: Rea, c, t.FC = () => {
               {[
                 {
                   ic, o, n: '⚡',
-                  tit, l, e: 'Quant, u, m-Neural, AI, Acces, s',
-                  descripti, o, n: '1000x, faster, processing with, quantu, m-classical, hybrid, system, s',
+                  title: 'Quant, u, m-Neural, AI, Acces, s',
+                  description: '1000x, faster, processing with, quantu, m-classical, hybrid, system, s',
                 },
                 {
                   ic, o, n: '🧠',
-                  tit, l, e: 'Me, t, a-Cognitive, AI, Framewor, k',
-                  descripti, o, n: 'Se, l, f-aware, AI, that thinks, about, its own, thinking, processe, s',
+                  title: 'Me, t, a-Cognitive, AI, Framewor, k',
+                  description: 'Se, l, f-aware, AI, that thinks, about, its own, thinking, processe, s',
                 },
                 {
                   ic, o, n: '🤖',
-                  tit, l, e: 'Autonomous, Operations, Suit, e',
-                  descripti, o, n: '98% automation, rate, with se, l, f-healing, and, self-optimizing, syste, m, s',
+                  title: 'Autonomous, Operations, Suit, e',
+                  description: '98% automation, rate, with se, l, f-healing, and, self-optimizing, syste, m, s',
                 },
                 {
                   ic, o, n: '🛡️',
-                  tit, l, e: 'Enterprise, Security, Packag, e',
-                  descripti, o, n: 'Milita, r, y-grade, security, for AI, systems, and data, protecti, o, n',
+                  title: 'Enterprise, Security, Packag, e',
+                  description: 'Milita, r, y-grade, security, for AI, systems, and data, protecti, o, n',
                 },
                 {
                   ic, o, n: '📊',
-                  tit, l, e: 'Re, a, l-time, Analytics, Dashboar, d',
-                  descripti, o, n: 'Live, monitoring, and optimization, of, all AI, operatio, n, s',
+                  title: 'Re, a, l-time, Analytics, Dashboar, d',
+                  description: 'Live, monitoring, and optimization, of, all AI, operatio, n, s',
                 },
               ].m, a, p((featu, r, e, ind, e, x) => (
                 <div, ke, y = { in, d, e, x }, classNa, m, e = 'flex, item, s-start, ga, p-4 p-4, b, g-whi, t, e/5, rounde, d-xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
@@ -56,10 +56,10 @@ const, AIInnovationAdvertisingBanne, r: Rea, c, t.FC = () => {
                   <div, classNam, e='te, x, t-3, x, l'>{featu, r, e.ic, o, n}</d, i, v>
                   <d, i, v>
                     <h4, classNam, e = 'te, x, t-lg, fon, t-bold, tex, t-white, m, b-2'>
-                      {featu, r, e.tit, l, e}
+                      {featu, r, e.title}
                     </h4>
                     <p, classNam, e='te, x, t-gr, a, y-400, tex, t-sm'>
-                      {featu, r, e.descripti, o, n}
+                      {featu, r, e.description}
                     </p>
                   </d, i, v>
                 </di, v>
@@ -152,17 +152,17 @@ const, AIInnovationAdvertisingBanne, r: Rea, c, t.FC = () => {
           <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'>
             {[
               {
-                compa, n, y: 'Fortune, 500, Tech G, i, a, n, t',
+                company: 'Fortune, 500, Tech G, i, a, n, t',
                 resu, l, t: '3, 0, 0% ROI, increa, s, e',
                 testimoni, a, l: "Zion, Tech, Group's, AI, solutions revolutionized, our, operation, s",
               },
               {
-                compa, n, y: 'Global, Financial, Institutio, n',
+                company: 'Global, Financial, Institutio, n',
                 resu, l, t: '$50M, cost, saving, s',
                 testimoni, a, l: 'The, autonomous, systems reduced, our, operational costs, dramatical, l, y',
               },
               {
-                compa, n, y: 'Leading, Healthcare, Syste, m',
+                company: 'Leading, Healthcare, Syste, m',
                 resu, l, t: '99.9% uptime, achiev, e, d',
                 testimoni, a, l: 'Me, t, a-cognitive, AI, improved our, decisio, n-making, accuracy, by 9, 5%',
               },
@@ -174,7 +174,7 @@ const, AIInnovationAdvertisingBanne, r: Rea, c, t.FC = () => {
                   "{testimoni, a, l.testimoni, a, l}"
                 </p>
                 <div, classNam, e='te, x, t-bl, u, e-400, fon, t-semibo, l, d'>
-                  {testimoni, a, l.compa, n, y}
+                  {testimoni, a, l.company}
                 </d, i, v>
                 <div, classNam, e='te, x, t-gre, e, n-400, tex, t-sm, fon, t-bo, l, d'>
                   {testimoni, a, l.resu, l, t}

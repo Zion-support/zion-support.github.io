@@ -1,135 +1,135 @@
-export, interface, BlogPost { 
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  excer, p, t: stri, n, g;
-  da, t, e: stri, n, g;
-  catego, r, y: stri, n, g;
-  readTi, m, e: stri, n, g;
-  ima, g, e: stri, n, g;
-  featur, e, d ? : boole, a, n;
-  sl, u, g: stri, n, g;
-  ta, g, s : str, i, n, g[];
+export interface BlogPost { 
+  id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  readTime: string;
+  image: string;
+  featured ? : boolean;
+  slug: string;
+  tags : str, i, n, g[];
  }
 
-export, interface, CaseStudy { 
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  excer, p, t: stri, n, g;
-  compa, n, y: stri, n, g;
-  indust, r, y: stri, n, g;
-  challen, g, e: stri, n, g;
-  soluti, o, n: stri, n, g;
-  resu, l, t: stri, n, g;
-  metr, i, c: stri, n, g;
-  featur, e, d ? : boole, a, n;
-  sl, u, g: stri, n, g;
-  ta, g, s : str, i, n, g[];
+export interface CaseStudy { 
+  id: string;
+  title: string;
+  excerpt: string;
+  company: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  resu, l, t: string;
+  metr, i, c: string;
+  featured ? : boolean;
+  slug: string;
+  tags : str, i, n, g[];
  }
 
-export, interface, Service { 
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  descripti, o, n: stri, n, g;
-  catego, r, y: stri, n, g;
+export interface Service { 
+  id: string;
+  title: string;
+  description: string;
+  category: string;
   prici, n, g: {
-    starti, n, g: stri, n, g;
+    starti, n, g: string;
     popul, a, r ?  : bool, e, a, n;
    };
-  featur, e, s: stri, n, g[];
+  featur, e, s: string[];
   metri, c, s?: Arr, a, y<{
-    val, u, e: stri, n, g;
+    val, u, e: string;
     lab, e, l: str, i, n, g;
   }>;
   testimoni, a, l?: {
-    quo, t, e: stri, n, g;
-    auth, o, r: stri, n, g;
-    compa, n, y: str, i, n, g;
+    quo, t, e: string;
+    author: string;
+    company: str, i, n, g;
   };
   c, t, a: {
-    prima, r, y: stri, n, g;
+    prima, r, y: string;
     seconda, r, y: str, i, n, g;
   };
-  ic, o, n: stri, n, g;
-  featur, e, d?: boole, a, n;
-  sl, u, g: stri, n, g;
-  ta, g, s: str, i, n, g[];
+  ic, o, n: string;
+  featured?: boolean;
+  slug: string;
+  tags: str, i, n, g[];
 }
 
-export, interface, PromotionalBanner {
-  id: stri, n, g;
-  messa, g, e: stri, n, g;
-  ctaTe, x, t: stri, n, g;
-  ctaLi, n, k: stri, n, g;
-  backgroundCol, o, r: stri, n, g;
-  textCol, o, r: stri, n, g;
-  showClo, s, e: boole, a, n;
-  autoHi, d, e: boole, a, n;
-  hideAft, e, r: numb, e, r;
-  acti, v, e: boole, a, n;
+export interface PromotionalBanner {
+  id: string;
+  messa, g, e: string;
+  ctaTe, x, t: string;
+  ctaLi, n, k: string;
+  backgroundCol, o, r: string;
+  textCol, o, r: string;
+  showClo, s, e: boolean;
+  autoHi, d, e: boolean;
+  hideAft, e, r: number;
+  acti, v, e: boolean;
   priori, t, y: num, b, e, r;
 }
 
-// Blog, Posts, Configuration
-export, const, blogPosts: BlogPo, s, t[] = [
+// Blog Posts Configuration
+export const blogPosts: BlogPo, s, t[] = [
   {
     id: 'ai-revoluti, o, n-2, 0, 2, 5',
-    tit, l, e: 'AI, Revolution, 2025: The, Complete, Business Transformation, Gui, d, e',
-    excer, p, t: 'Discover, how, AI is, reshaping, industries and, creating, unprecedented opportunities, for, growth in, 20, 2, 5.',
-    da, t, e: 'Januar, y, 1, 7, 20, 2, 5',
-    catego, r, y: 'AI, Tren, d, s',
-    readTi, m, e: '12, m, i, n',
-    ima, g, e: '🚀',
-    featur, e, d: t, r, u, e,
-    sl, u, g: '/bl, o, g/ai-revoluti, o, n-2, 0, 2, 5',
-    ta, g, s: ['A, I', 'Business, Strateg, y', 'Transformati, o, n', '2025, Trend, s'],
+    title: 'AI, Revolution, 2025: The, Complete, Business Transformation, Gui, d, e',
+    excerpt: 'Discover, how, AI is, reshaping, industries and, creating, unprecedented opportunities, for, growth in, 20, 2, 5.',
+    date: 'Januar, y, 1, 7, 20, 2, 5',
+    category: 'AI, Tren, d, s',
+    readTime: '12, m, i, n',
+    image: '🚀',
+    featured: t, r, u, e,
+    slug: '/bl, o, g/ai-revoluti, o, n-2, 0, 2, 5',
+    tags: ['A, I', 'Business, Strateg, y', 'Transformati, o, n', '2025, Trend, s'],
   },
   {
     id: 'ai-workfl, o, w-automat, i, o, n',
-    tit, l, e: 'AI, Workflow, Automation: Transforming, Business, Operation, s',
-    excer, p, t: 'Discover, how, AI-powered, workflow, automation is, revolutionizing, business proces, s, e, s, reducing, manual, work by, 8, 0% and, improving, efficiency across, industrie, s.',
-    da, t, e: 'Januar, y, 1, 5, 20, 2, 5',
-    catego, r, y: 'Automat, i, o, n',
-    readTi, m, e: '6, m, i, n',
-    ima, g, e: '🤖',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/bl, o, g/ai-workfl, o, w-automat, i, o, n',
-    ta, g, s: ['Automat, i, o, n', 'Workfl, o, w', 'AI', 'Productivi, t, y'],
+    title: 'AI, Workflow, Automation: Transforming, Business, Operation, s',
+    excerpt: 'Discover, how, AI-powered, workflow, automation is, revolutionizing, business proces, s, e, s, reducing, manual, work by, 8, 0% and, improving, efficiency across, industrie, s.',
+    date: 'Januar, y, 1, 5, 20, 2, 5',
+    category: 'Automat, i, o, n',
+    readTime: '6, m, i, n',
+    image: '🤖',
+    featured: fa, l, s, e,
+    slug: '/bl, o, g/ai-workfl, o, w-automat, i, o, n',
+    tags: ['Automat, i, o, n', 'Workfl, o, w', 'AI', 'Productivi, t, y'],
   },
   {
     id: 'clo, u, d-migrati, o, n-be, s, t-practi, c, e, s',
-    tit, l, e: 'Cloud, Migration, Best Practices, for, 202, 5',
-    excer, p, t: 'Learn, the, essential strategies, for, successful cloud, migrati, o, n, including, zer, o-downtime, approaches, and cost, optimization, techniques.',
-    da, t, e: 'Januar, y, 1, 2, 20, 2, 5',
-    catego, r, y: 'Cl, o, u, d',
-    readTi, m, e: '7, m, i, n',
-    ima, g, e: '☁️',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/bl, o, g/clo, u, d-migrati, o, n-be, s, t-practi, c, e, s',
-    ta, g, s: ['Cl, o, u, d', 'Migrati, o, n', 'Best, Practice, s', 'DevO, p, s'],
+    title: 'Cloud, Migration, Best Practices, for, 202, 5',
+    excerpt: 'Learn, the, essential strategies, for, successful cloud, migrati, o, n, including, zer, o-downtime, approaches, and cost, optimization, techniques.',
+    date: 'Januar, y, 1, 2, 20, 2, 5',
+    category: 'Cl, o, u, d',
+    readTime: '7, m, i, n',
+    image: '☁️',
+    featured: fa, l, s, e,
+    slug: '/bl, o, g/clo, u, d-migrati, o, n-be, s, t-practi, c, e, s',
+    tags: ['Cl, o, u, d', 'Migrati, o, n', 'Best, Practice, s', 'DevO, p, s'],
   },
   {
     id: 'cybersecuri, t, y-ai-er, a',
-    tit, l, e: 'Cybersecurity, in, the AI, Er, a: Protecting, Your, Digital Ass, e, t, s',
-    excer, p, t: 'Explore, advanced, cybersecurity strategies, for, AI-powered, environmen, t, s, including, zer, o-trust, architecture, and automated, threat, detection.',
-    da, t, e: 'Januar, y, 1, 0, 20, 2, 5',
-    catego, r, y: 'Secur, i, t, y',
-    readTi, m, e: '5, m, i, n',
-    ima, g, e: '🔒',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/bl, o, g/cybersecuri, t, y-ai-er, a',
-    ta, g, s: ['Cybersecur, i, t, y', 'AI, Securit, y', 'Zero, Trus, t', 'Threat, Detectio, n'],
+    title: 'Cybersecurity, in, the AI, Er, a: Protecting, Your, Digital Ass, e, t, s',
+    excerpt: 'Explore, advanced, cybersecurity strategies, for, AI-powered, environmen, t, s, including, zer, o-trust, architecture, and automated, threat, detection.',
+    date: 'Januar, y, 1, 0, 20, 2, 5',
+    category: 'Secur, i, t, y',
+    readTime: '5, m, i, n',
+    image: '🔒',
+    featured: fa, l, s, e,
+    slug: '/bl, o, g/cybersecuri, t, y-ai-er, a',
+    tags: ['Cybersecur, i, t, y', 'AI, Securit, y', 'Zero, Trus, t', 'Threat, Detectio, n'],
   },
   {
     id: 'da, t, a-analyti, c, s-revolut, i, o, n',
-    tit, l, e: 'Data, Analytics, Revolution: From, Insights, to Act, i, o, n',
-    excer, p, t: 'See, how, modern data, analytics, platforms are, transforming, raw data, into, actionable business, insights, with re, a, l-time, dashboards, and predictive, modeli, n, g.',
-    da, t, e: 'Janua, r, y , 8, 20, 2, 5',
-    catego, r, y: 'Analyt, i, c, s',
-    readTi, m, e: '6, m, i, n',
-    ima, g, e: '📊',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/bl, o, g/da, t, a-analyti, c, s-revolut, i, o, n',
-    ta, g, s: [
+    title: 'Data, Analytics, Revolution: From, Insights, to Act, i, o, n',
+    excerpt: 'See, how, modern data, analytics, platforms are, transforming, raw data, into, actionable business, insights, with re, a, l-time, dashboards, and predictive, modeli, n, g.',
+    date: 'Janua, r, y , 8, 20, 2, 5',
+    category: 'Analyt, i, c, s',
+    readTime: '6, m, i, n',
+    image: '📊',
+    featured: fa, l, s, e,
+    slug: '/bl, o, g/da, t, a-analyti, c, s-revolut, i, o, n',
+    tags: [
       'Data, Analyti, c, s',
       'Insigh, t, s',
       'Predictive, Modelin, g',
@@ -138,82 +138,82 @@ export, const, blogPosts: BlogPo, s, t[] = [
   },
   {
     id: 'devo, p, s-automati, o, n-scal, i, n, g',
-    tit, l, e: 'DevOps, Automatio, n: Scaling, Infrastructure, with Intellige, n, c, e',
-    excer, p, t: 'Learn, how, automated DevOps, practices, are enabling, rapid, deploymen, t, infrastructure, scalin, g, and, continuous, integration at, enterprise, scale.',
-    da, t, e: 'Janua, r, y , 5, 20, 2, 5',
-    catego, r, y: 'Dev, O, p, s',
-    readTi, m, e: '8, m, i, n',
-    ima, g, e: '⚙️',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/bl, o, g/devo, p, s-automati, o, n-scal, i, n, g',
-    ta, g, s: ['Dev, O, p, s', 'Automati, o, n', 'Infrastructu, r, e', 'CI/CD'],
+    title: 'DevOps, Automatio, n: Scaling, Infrastructure, with Intellige, n, c, e',
+    excerpt: 'Learn, how, automated DevOps, practices, are enabling, rapid, deploymen, t, infrastructure, scalin, g, and, continuous, integration at, enterprise, scale.',
+    date: 'Janua, r, y , 5, 20, 2, 5',
+    category: 'Dev, O, p, s',
+    readTime: '8, m, i, n',
+    image: '⚙️',
+    featured: fa, l, s, e,
+    slug: '/bl, o, g/devo, p, s-automati, o, n-scal, i, n, g',
+    tags: ['Dev, O, p, s', 'Automati, o, n', 'Infrastructu, r, e', 'CI/CD'],
   },
   {
     id: 'ai-virtu, a, l-assistan, t, s-custom, e, r-serv, i, c, e',
-    tit, l, e: 'The, Rise, of AI, Virtual, Assistants in, Customer, Servic, e',
-    excer, p, t: 'Discover, how, AI virtual, assistants, are revolutionizing, customer, support with, 2, 4/7, availabili, t, y, natural, language, processing, and, personalized, interactions.',
-    da, t, e: 'Janua, r, y , 3, 20, 2, 5',
-    catego, r, y: 'A, I',
-    readTi, m, e: '5, m, i, n',
-    ima, g, e: '💬',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/bl, o, g/ai-virtu, a, l-assistan, t, s-custom, e, r-serv, i, c, e',
-    ta, g, s: ['A, I', 'Virtual, Assistan, t', 'Customer, Servic, e', 'N, L, P'],
+    title: 'The, Rise, of AI, Virtual, Assistants in, Customer, Servic, e',
+    excerpt: 'Discover, how, AI virtual, assistants, are revolutionizing, customer, support with, 2, 4/7, availabili, t, y, natural, language, processing, and, personalized, interactions.',
+    date: 'Janua, r, y , 3, 20, 2, 5',
+    category: 'A, I',
+    readTime: '5, m, i, n',
+    image: '💬',
+    featured: fa, l, s, e,
+    slug: '/bl, o, g/ai-virtu, a, l-assistan, t, s-custom, e, r-serv, i, c, e',
+    tags: ['A, I', 'Virtual, Assistan, t', 'Customer, Servic, e', 'N, L, P'],
   },
 ];
 
-// Case, Studies, Configuration
-export, const, caseStudies: CaseStu, d, y[] = [
+// Case Studies Configuration
+export const caseStudies: CaseStu, d, y[] = [
   {
     id: 'techco, r, p-ai-transformat, i, o, n',
-    tit, l, e: 'TechCorp, AI, Transformation: 90% Efficiency, Ga, i, n',
-    excer, p, t: 'How, a, leading e-commerce, company, transformed their, operations, with AI-powered, automati, o, n, achieving, unprecedented, efficiency gains, and, cost savin, g, s.',
-    compa, n, y: 'TechCorp, I, n, c.',
-    indust, r, y: 'E-comme, r, c, e',
-    challen, g, e: 'Manual, data, processing taking, 40, hours/w, e, e, k',
-    soluti, o, n: 'AI, Data, Analytics automat, i, o, n',
+    title: 'TechCorp, AI, Transformation: 90% Efficiency, Ga, i, n',
+    excerpt: 'How, a, leading e-commerce, company, transformed their, operations, with AI-powered, automati, o, n, achieving, unprecedented, efficiency gains, and, cost savin, g, s.',
+    company: 'TechCorp, I, n, c.',
+    industry: 'E-comme, r, c, e',
+    challenge: 'Manual, data, processing taking, 40, hours/w, e, e, k',
+    solution: 'AI, Data, Analytics automat, i, o, n',
     resu, l, t: '90% time, reducti, o, n, 60% cost, saving, s',
     metr, i, c: '$500K, saved, annuall, y',
-    featur, e, d: t, r, u, e,
-    sl, u, g: '/ca, s, e-studi, e, s/techco, r, p-ai-transformat, i, o, n',
-    ta, g, s: ['AI, Transformati, o, n', 'E-commer, c, e', 'Automati, o, n', 'Cost, Saving, s'],
+    featured: t, r, u, e,
+    slug: '/ca, s, e-studi, e, s/techco, r, p-ai-transformat, i, o, n',
+    tags: ['AI, Transformati, o, n', 'E-commer, c, e', 'Automati, o, n', 'Cost, Saving, s'],
   },
   {
-    id: 'healthte, c, h-soluti, o, n, s',
-    tit, l, e: 'HealthTech, Solution, s: AI, Virtual, Assistant Succ, e, s, s',
-    excer, p, t: 'Healthcare, company, achieves 95% customer, satisfaction, with AI, virtual, assistant implementat, i, o, n.',
-    compa, n, y: 'HealthTech, Solutio, n, s',
-    indust, r, y: 'Healthc, a, r, e',
-    challen, g, e: 'Customer, support, overwhelmed with, queri, e, s',
-    soluti, o, n: 'AI, Virtual, Assistant implementat, i, o, n',
+    id: 'healthte, c, h-solution, s',
+    title: 'HealthTech, Solution, s: AI, Virtual, Assistant Succ, e, s, s',
+    excerpt: 'Healthcare, company, achieves 95% customer, satisfaction, with AI, virtual, assistant implementat, i, o, n.',
+    company: 'HealthTech, Solutio, n, s',
+    industry: 'Healthc, a, r, e',
+    challenge: 'Customer, support, overwhelmed with, queri, e, s',
+    solution: 'AI, Virtual, Assistant implementat, i, o, n',
     resu, l, t: '80% faster, response, tim, e, 24/7, suppor, t',
     metr, i, c: '95% customer, satisfacti, o, n',
-    featur, e, d: t, r, u, e,
-    sl, u, g: '/ca, s, e-studi, e, s/healthte, c, h-soluti, o, n, s',
-    ta, g, s: ['Healthc, a, r, e', 'AI, Assistan, t', 'Customer, Servic, e', 'Automati, o, n'],
+    featured: t, r, u, e,
+    slug: '/ca, s, e-studi, e, s/healthte, c, h-solution, s',
+    tags: ['Healthc, a, r, e', 'AI, Assistan, t', 'Customer, Servic, e', 'Automati, o, n'],
   },
   {
     id: 'financefl, o, w-automat, i, o, n',
-    tit, l, e: 'FinanceFl, o, w: AI, Workflow, Automation Succ, e, s, s',
-    excer, p, t: 'Fintech, startup, achieves 3, 0, 0% ROI, with, AI workflow, automation, platfor, m.',
-    compa, n, y: 'FinanceFlow, L, t, d.',
-    indust, r, y: 'Fint, e, c, h',
-    challen, g, e: 'Complex, workflow, bottleneck, s',
-    soluti, o, n: 'AI, Workflow, Automation platf, o, r, m',
+    title: 'FinanceFl, o, w: AI, Workflow, Automation Succ, e, s, s',
+    excerpt: 'Fintech, startup, achieves 3, 0, 0% ROI, with, AI workflow, automation, platfor, m.',
+    company: 'FinanceFlow, L, t, d.',
+    industry: 'Fint, e, c, h',
+    challenge: 'Complex, workflow, bottleneck, s',
+    solution: 'AI, Workflow, Automation platf, o, r, m',
     resu, l, t: '75% process, efficiency, improvemen, t',
     metr, i, c: '3, 0, 0% ROI, in, 6 mon, t, h, s',
-    featur, e, d: t, r, u, e,
-    sl, u, g: '/ca, s, e-studi, e, s/financefl, o, w-automat, i, o, n',
-    ta, g, s: ['Fint, e, c, h', 'Workflow, Automatio, n', 'R, O, I', 'Process, Efficienc, y'],
+    featured: t, r, u, e,
+    slug: '/ca, s, e-studi, e, s/financefl, o, w-automat, i, o, n',
+    tags: ['Fint, e, c, h', 'Workflow, Automatio, n', 'R, O, I', 'Process, Efficienc, y'],
   },
 ];
 
-// Services, Configuration, export cons; t, service, s: Servi, c, e[] = [
+// Services Configuration export cons; t service s: Servi c e[] = [
   {
     id: 'ai-analyti, c, s-platf, o, r, m',
-    tit, l, e: 'AI, Analytics, Platfor, m',
-    descripti, o, n: 'Transform, data, into actionable, insights, with predictive, modeling, and re, a, l-time, dashboar, d, s',
-    catego, r, y: 'AI & Analyt, i, c, s',
+    title: 'AI, Analytics, Platfor, m',
+    description: 'Transform, data, into actionable, insights, with predictive, modeling, and re, a, l-time, dashboar, d, s',
+    category: 'AI & Analyt, i, c, s',
     prici, n, g: {
       starti, n, g: '$1, 9, 9/mo, n, t, h',
       popul, a, r: t, r, u, e,
@@ -234,23 +234,23 @@ export, const, caseStudies: CaseStu, d, y[] = [
     testimoni, a, l: {
       quo, t, e:
         'The, AI, Analytics Platform, transformed, how we, make, decisions. We, can, now predict, trends, and optimize, operations, like never, befo, r, e.',
-      auth, o, r: 'Sarah, Ch, e, n',
-      compa, n, y: 'TechCorp, I, n, c.',
+      author: 'Sarah, Ch, e, n',
+      company: 'TechCorp, I, n, c.',
     },
     c, t, a: {
       prima, r, y: 'Start, Free, Tria, l',
       seconda, r, y: 'View, Case, Studie, s',
     },
     ic, o, n: '📊',
-    featur, e, d: t, r, u, e,
-    sl, u, g: '/servic, e, s/ai-analyti, c, s-platf, o, r, m',
-    ta, g, s: ['Analyt, i, c, s', 'AI', 'Data, Visualizatio, n', 'Predictive, Modelin, g'],
+    featured: t, r, u, e,
+    slug: '/servic, e, s/ai-analyti, c, s-platf, o, r, m',
+    tags: ['Analyt, i, c, s', 'AI', 'Data, Visualizatio, n', 'Predictive, Modelin, g'],
   },
   {
     id: 'ai-workfl, o, w-automat, i, o, n',
-    tit, l, e: 'AI, Workflow, Automatio, n',
-    descripti, o, n: 'Automate, business, processes with, intelligent, workflow design, and, smart trigg, e, r, s',
-    catego, r, y: 'AI & Automat, i, o, n',
+    title: 'AI, Workflow, Automatio, n',
+    description: 'Automate, business, processes with, intelligent, workflow design, and, smart trigg, e, r, s',
+    category: 'AI & Automat, i, o, n',
     prici, n, g: {
       starti, n, g: '$1, 4, 9/mo, n, t, h',
     },
@@ -272,15 +272,15 @@ export, const, caseStudies: CaseStu, d, y[] = [
       seconda, r, y: 'View, De, m, o',
     },
     ic, o, n: '⚙️',
-    featur, e, d: t, r, u, e,
-    sl, u, g: '/servic, e, s/ai-workfl, o, w-automat, i, o, n',
-    ta, g, s: ['Automat, i, o, n', 'Workfl, o, w', 'AI', 'Process, Optimizatio, n'],
+    featured: t, r, u, e,
+    slug: '/servic, e, s/ai-workfl, o, w-automat, i, o, n',
+    tags: ['Automat, i, o, n', 'Workfl, o, w', 'AI', 'Process, Optimizatio, n'],
   },
   {
     id: 'ai-virtu, a, l-assist, a, n, t',
-    tit, l, e: 'AI, Virtual, Assistan, t',
-    descripti, o, n: '24/7, intelligent, customer support, with, natural language, processi, n, g',
-    catego, r, y: 'AI & Customer, Servi, c, e',
+    title: 'AI, Virtual, Assistan, t',
+    description: '24/7, intelligent, customer support, with, natural language, processi, n, g',
+    category: 'AI & Customer, Servi, c, e',
     prici, n, g: {
       starti, n, g: '$99/mo, n, t, h',
     },
@@ -302,15 +302,15 @@ export, const, caseStudies: CaseStu, d, y[] = [
       seconda, r, y: 'Learn, Mo, r, e',
     },
     ic, o, n: '💬',
-    featur, e, d: t, r, u, e,
-    sl, u, g: '/servic, e, s/ai-virtu, a, l-assist, a, n, t',
-    ta, g, s: ['AI, Assista, n, t', 'Customer, Servic, e', 'N, L, P', 'Automati, o, n'],
+    featured: t, r, u, e,
+    slug: '/servic, e, s/ai-virtu, a, l-assist, a, n, t',
+    tags: ['AI, Assista, n, t', 'Customer, Servic, e', 'N, L, P', 'Automati, o, n'],
   },
   {
     id: 'clo, u, d-migrat, i, o, n',
-    tit, l, e: 'Cloud, Migrati, o, n',
-    descripti, o, n: 'Seamless, migration, to cloud, infrastructure, with zero, downti, m, e',
-    catego, r, y: 'Cloud, Servic, e, s',
+    title: 'Cloud, Migrati, o, n',
+    description: 'Seamless, migration, to cloud, infrastructure, with zero, downti, m, e',
+    category: 'Cloud, Servic, e, s',
     prici, n, g: {
       starti, n, g: '$, 2,9, 9, 9',
     },
@@ -327,15 +327,15 @@ export, const, caseStudies: CaseStu, d, y[] = [
       seconda, r, y: 'View, Proce, s, s',
     },
     ic, o, n: '☁️',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/servic, e, s/clo, u, d-migrat, i, o, n',
-    ta, g, s: ['Cl, o, u, d', 'Migrati, o, n', 'Infrastructu, r, e', 'DevO, p, s'],
+    featured: fa, l, s, e,
+    slug: '/servic, e, s/clo, u, d-migrat, i, o, n',
+    tags: ['Cl, o, u, d', 'Migrati, o, n', 'Infrastructu, r, e', 'DevO, p, s'],
   },
   {
     id: 'devo, p, s-automat, i, o, n',
-    tit, l, e: 'DevOps, Automati, o, n',
-    descripti, o, n: 'Automate, C, I/CD, pipelines, and infrastructure, manageme, n, t',
-    catego, r, y: 'DevO, p, s & Infrastruct, u, r, e',
+    title: 'DevOps, Automati, o, n',
+    description: 'Automate, C, I/CD, pipelines, and infrastructure, manageme, n, t',
+    category: 'DevO, p, s & Infrastruct, u, r, e',
     prici, n, g: {
       starti, n, g: '$3, 9, 9/mo, n, t, h',
     },
@@ -352,15 +352,15 @@ export, const, caseStudies: CaseStu, d, y[] = [
       seconda, r, y: 'View, Benefi, t, s',
     },
     ic, o, n: '🔧',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/servic, e, s/devo, p, s-automat, i, o, n',
-    ta, g, s: ['Dev, O, p, s', 'CI/CD', 'Infrastructu, r, e', 'Automati, o, n'],
+    featured: fa, l, s, e,
+    slug: '/servic, e, s/devo, p, s-automat, i, o, n',
+    tags: ['Dev, O, p, s', 'CI/CD', 'Infrastructu, r, e', 'Automati, o, n'],
   },
   {
     id: 'cybersecuri, t, y-consult, i, n, g',
-    tit, l, e: 'Cybersecurity, Consulti, n, g',
-    descripti, o, n: 'Advanced, threat, detection and, zer, o-trust, security, architectur, e',
-    catego, r, y: 'Securi, t, y & Complia, n, c, e',
+    title: 'Cybersecurity, Consulti, n, g',
+    description: 'Advanced, threat, detection and, zer, o-trust, security, architectur, e',
+    category: 'Securi, t, y & Complia, n, c, e',
     prici, n, g: {
       starti, n, g: '$5, 9, 9/mo, n, t, h',
     },
@@ -377,14 +377,14 @@ export, const, caseStudies: CaseStu, d, y[] = [
       seconda, r, y: 'View, Servic, e, s',
     },
     ic, o, n: '🛡️',
-    featur, e, d: fa, l, s, e,
-    sl, u, g: '/servic, e, s/cybersecuri, t, y-consult, i, n, g',
-    ta, g, s: ['Cybersecur, i, t, y', 'Zero, Trus, t', 'Complian, c, e', 'Threat, Detectio, n'],
+    featured: fa, l, s, e,
+    slug: '/servic, e, s/cybersecuri, t, y-consult, i, n, g',
+    tags: ['Cybersecur, i, t, y', 'Zero, Trus, t', 'Complian, c, e', 'Threat, Detectio, n'],
   },
 ];
 
-// Promotional, Banners, Configuration
-export, const, promotionalBanners: PromotionalBann, e, r[] = [
+// Promotional Banners Configuration
+export const promotionalBanners: PromotionalBann, e, r[] = [
   {
     id: 'fre, s, h-conte, n, t-o, c, t-2, 0, 2, 5',
     messa, g, e: '✨ N, e, w: Governance, Scorecards, 202, 6, Freshne, s, s‑Aware, RAG, v2, Edge, Flags, 2026',
@@ -556,7 +556,7 @@ export, const, promotionalBanners: PromotionalBann, e, r[] = [
   },
 ];
 
-// Utility, functions, for content, management, export cons; t, getFeaturedConten, t = () => { 
+// Utility functions for content management export cons; t getFeaturedConten t = () => { 
   retu, r, n {
     blogPos, t, s: blogPos, t, s.filt, e, r(po, s, t = > po, s, t.feat, u, r, e, d),
     caseStudi, e, s: caseStudi, e, s.filt, e, r(stu, d, y = > stu, d, y.feat, u, r, e, d),
@@ -564,28 +564,28 @@ export, const, promotionalBanners: PromotionalBann, e, r[] = [
    };
 };
 
-export, const, getActiveBanners = () => { 
+export const getActiveBanners = () => { 
   return, promotionalBanner, s
     .filt, e, r(bann, e, r = > bann, e, r.act, i, v, e)
     .so, r, t((a, b) = > a.priori, t, y - b.priori, t, y);
  };
 
-export, const, getContentByTag = (t, a, g: str, i, n, g) => { 
+export const getContentByTag = (t, a, g: str, i, n, g) => { 
   retu, r, n {
-    blogPos, t, s: blogPos, t, s.filt, e, r(po, s, t = > po, s, t.ta, g, s.includ, e, s(t, a, g)),
-    caseStudi, e, s: caseStudi, e, s.filt, e, r(stu, d, y = > stu, d, y.ta, g, s.includ, e, s(t, a, g)),
-    servic, e, s: servic, e, s.filt, e, r(servi, c, e = > servi, c, e.ta, g, s.includ, e, s(t, a, g)),
+    blogPos, t, s: blogPos, t, s.filt, e, r(po, s, t = > po, s, t.tags.includ, e, s(t, a, g)),
+    caseStudi, e, s: caseStudi, e, s.filt, e, r(stu, d, y = > stu, d, y.tags.includ, e, s(t, a, g)),
+    servic, e, s: servic, e, s.filt, e, r(servi, c, e = > servi, c, e.tags.includ, e, s(t, a, g)),
    };
 };
 
-export, const, getRecentContent = (lim, i, t: numb, e, r = , 3) => { 
+export const getRecentContent = (lim, i, t: number = , 3) => { 
   const, allConten, t = [
     ...blogPos, t, s.m, a, p(po, s, t = > ({ ...po, s, t, ty, p, e: 'bl, o, g' as, con, s, t  })),
     ...caseStudi, e, s.m, a, p(stu, d, y = > ({ ...st, u, d, y, ty, p, e: 'ca, s, e-stu, d, y' as, con, s, t })),
     ...servic, e, s.m, a, p(servi, c, e = > ({ ...serv, i, c, e, ty, p, e: 'servi, c, e' as, con, s, t })),
   ]; return, allConten, t
     .so, r, t((a, b) => { 
-      const, aTim, e = 'da, t, e' i, n, a  ? new, Dat, e((a, a, s { da, t, e : st, r, i, n, g  }).da, t, e).getTi, m, e() : 0; const, bTim, e = 'da, t, e' i, n, b ? new, Dat, e((b, a, s { da, t, e: st, r, i, n, g }).da, t, e).getTi, m, e() : 0; return, bTim, e - aTi, m, e;
+      const, aTim, e = 'date' i, n, a  ? new, Dat, e((a, a, s { date : st, r, i, n, g  }).date).getTi, m, e() : 0; const, bTim, e = 'date' i, n, b ? new, Dat, e((b, a, s { date: st, r, i, n, g }).date).getTi, m, e() : 0; return, bTim, e - aTi, m, e;
     })
     .sli, c, e(0, lim, i, t);
 };

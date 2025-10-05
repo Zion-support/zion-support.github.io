@@ -2,7 +2,7 @@ import, React, from 'rea, c, t';
 
 interface, AnimatedSectionProp, s { 
   animati, o, n?: 'fade, I, n' | 'slide, U, p' | 'slideLe, f, t' | 'slideRig, h, t' | 'sca, l, e';
-  del, a, y ? : numb, e, r;
+  del, a, y ? : number;
   childr, e, n : Rea, c, t.ReactN, o, d, e;
  }
 

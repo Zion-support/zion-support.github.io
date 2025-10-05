@@ -5,14 +5,14 @@ export, default, function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           AI, Executive, Playbook 20, 2, 7: Fu, n, d, Gove, r, n, and, Scale, with KP, I, s
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Executive, roadmap, with K, P, I‑linked, scorecar, d, s, budgeted, action, s, and, governance, that accelerates, deliver, y.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-executi, v, e-playbo, o, k-20, 2, 7'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-executi v e-playbo o k-20 2 7'
         />
       </Helm, e, t>
 

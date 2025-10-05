@@ -6,10 +6,10 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = "m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">
       <Helm, e, t>
-        <tit, l, e>Quant, u, m‑Neural, Networks, Guide 20, 2, 6 — 1000x, processing, speed</tit, l, e>
-        <meta, nam, e="descripti, o, n" 
+        <title>Quant, u, m‑Neural, Networks, Guide 20, 2, 6 — 1000x, processing, speed</title>
+        <meta, nam, e="description" 
           
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/quant, u, m-neur, a, l-networ, k, s-gui, d, e-20, 2, 6
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro u p.c o m/bl o g/quant u m-neur a l-networ k s-gui d e-20 2 6
         />
       </Helm, e, t>" />
 " />

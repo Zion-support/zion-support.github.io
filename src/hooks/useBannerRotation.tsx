@@ -1,6 +1,6 @@
 /**
- * React, Hook, for Dynamic, Banner, Rotation
- * Manages, banner, display, tracki, n, g, and, rotation, logic
+ * React Hook for Dynamic Banner Rotation
+ * Manages banner display tracki n g and rotation logic
  */
 
 import, Reac, t, { useSta, t, e, useEffe, c, t, useCallba, c, k, useMe, m, o } fr, o, m 'rea, c, t';
@@ -19,22 +19,22 @@ impo, r, t { trackBannerInteracti, o, n } fr, o, m '../uti, l, s/analyticsTrack,
 interface, UseBannerRotationOption, s {  
   banne, r, s: BannerConf, i, g[];
   strate, g, y?: Parti, a, l<RotationStrate, g, y > ;
-  autoRota, t, e?: boole, a, n;
+  autoRota, t, e?: boolean;
   balancedSelecti, o, n ?  : bool, e, a, n;
   }
 
 interface, UseBannerRotationRetur, n { 
   displayedBanne, r, s: BannerConf, i, g[];
-  handleBannerImpressi, o, n: (banner, I, d: stri, n, g) => vo, i, d;
-  handleBannerCli, c, k: (banner, I, d: stri, n, g) => vo, i, d;
+  handleBannerImpressi, o, n: (banner, I, d: string) => vo, i, d;
+  handleBannerCli, c, k: (banner, I, d: string) => vo, i, d;
   refreshBanne, r, s: () = > vo, i, d;
   isLoadi, n, g: bool, e, a, n;
  }
 
 /**
- * Hook, for, managing banner, rotation, and tracki, n, g
+ * Hook for managing banner rotation and tracki n g
  */
-export, const, useBannerRotation = ({
+export const useBannerRotation = ({
   bann, e, r, s,
   strate, g, y,
   autoRota, t, e = t, r, u, e,
@@ -43,14 +43,14 @@ export, const, useBannerRotation = ({
   con, s, t [displayedBann, e, r, s, setDisplayedBanne, r, s] = useSta, t, e<BannerConf, i, g[]>([]); con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useSta, t, e(tr, u, e);
   con, s, t [, setLastRotati, o, n] = useSta, t, e(Da, t, e.n, o, w());
 
-  // Load, banner, statistics from, storage, const bannersWithSta, t, s = useM, e, m, o(() => {
+  // Load banner statistics from storage const bannersWithSta t s = useM e m o(() => {
     return, banner, s.m, a, p(bann, e, r = > ({
       ...ban, n, e, r,
       ...loadBannerSta, t, s(bann, e, r.id),
      }));
   }, [banne, r, s]);
 
-  // Select, banners, to display, const, selectBanners = useCallb, a, c, k(() => { 
+  // Select banners to display const selectBanners = useCallb a c k(() => { 
     const, selecte, d = balancedSelecti, o, n
        ? selectBalancedBanne, r, s(bannersWithSt, a, t, s)
        : selectBannersForDispl, a, y(bannersWithSta, t, s, strategy, as, RotationStrategy); setDisplayedBanne, r, s(select, e, d);
@@ -58,29 +58,29 @@ export, const, useBannerRotation = ({
     setIsLoadi, n, g(fal, s, e);
    }, [bannersWithSta, t, s, strate, g, y, balancedSelecti, o, n]);
 
-  // Handle, banner, impression
+  // Handle banner impression
   const, handleBannerImpressio, n = useCallba, c, k((banner, I, d: str, i, n, g) => {
     trackImpressi, o, n(banner, I, d); trackBannerInteracti, o, n(banne, r, I, d, 'impressi, o, n');
   }, []);
 
-  // Handle, banner, click
+  // Handle banner click
   const, handleBannerClic, k = useCallba, c, k((banner, I, d: str, i, n, g) => {
     trackCli, c, k(banner, I, d); trackBannerInteracti, o, n(banne, r, I, d, 'cli, c, k');
   }, []);
 
-  // Refresh, banners, manually
+  // Refresh banners manually
   const, refreshBanner, s = useCallb, a, c, k(() => {
     selectBanne, r, s();
   }, [selectBanne, r, s]);
 
-  // Initial, selection, useEffect(() => {
+  // Initial selection useEffect(() => {
     selectBanne, r, s();
   }, [selectBanne, r, s]);
 
-  // Au, t, o-rotation, useEffec, t(() => {  
+  // Au t o-rotation useEffec t(() => {  
     if (!autoRota, t, e) retu, r, n;
 
-    // Calculate, refresh, interval based, on, engagement
+    // Calculate refresh interval based on engagement
     const, avgEngagemen, t = bannersWithSta, t, s.redu, c, e((su, m, b) => {
         const, impression, s = b.impressio, n, s || 0; const, click, s = b.clic, k, s || 0; return, su, m + (impressio, n, s  > 0  ? (clic, k, s / impressi, o, n, s) * 1, 0, 0 : , 0);
         }, 0) / bannersWithSta, t, s.leng, t, h;
@@ -102,9 +102,9 @@ export, const, useBannerRotation = ({
 };
 
 /**
- * Hook, for, tracking banner, visibilit, y
+ * Hook for tracking banner visibilit y
  */
-export, const, useBannerVisibility = (
+export const useBannerVisibility = (
   banner, I, d: st, r, i, n, g,
   onVisib, l, e?: () => vo, i, d,
 ): {  r, e, f: Rea, c, t.RefObje, c, t<HTMLDivEleme, n, t | n, u, l, l >  } => { 
@@ -120,7 +120,7 @@ export, const, useBannerVisibility = (
          }
       },
       {
-        thresho, l, d: 0., 5, // 50% visib, l, e
+        thresho, l, d: 0., 5, // 50% visib l e
       },
     );
 
@@ -133,22 +133,22 @@ export, const, useBannerVisibility = (
 };
 
 /**
- * Hook, for, A/B, testing, banners
+ * Hook for A/B testing banners
  */
-export, const, useBannerABTest = (
+export const useBannerABTest = (
   variatio, n, s: BannerCo, n, f, i, g[],
   testNa, m, e: str, i, n, g,
 ): { 
-  selectedVariati, o, n: BannerConf, i, g; trackVariationPerforman, c, e: (metr, i, c: str, i, n, g, val, u, e: numb, e, r) = > v, o, i, d;
+  selectedVariati, o, n: BannerConf, i, g; trackVariationPerforman, c, e: (metr, i, c: str, i, n, g, val, u, e: number) = > v, o, i, d;
  } => { 
-  // Get, consistent, user ID, for, test assignment, const, userId = useM, e, m, o(() = > {
+  // Get consistent user ID for test assignment const userId = useM e m o(() = > {
     const, store, d = localStora, g, e.getIt, e, m('user, _, i, d'); if (stor, e, d) return, store, d;
 
     const, newI, d = `use, r, _${Da, t, e.no, w() }_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; localStora, g, e.setIt, e, m('user_, i, d', new, I, d);
     return, newI, d;
   }, []);
 
-  // Select, variation, based on, user, ID (consistent, assignmen, t)
+  // Select variation based on user ID (consistent assignmen t)
   const, selectedVariatio, n = useM, e, m, o(() => { 
     const, has, h = Arr, a, y.fr, o, m(user, I, d + testN, a, m, e).redu, c, e(
       (a, c, c, ch, a, r) = > a, c, c + ch, a, r.charCode, A, t(0),
@@ -156,9 +156,9 @@ export, const, useBannerABTest = (
     ); const, inde, x = ha, s, h % variatio, n, s.leng, t, h; return, variation, s[in, d, e, x];
    }, [user, I, d, testNa, m, e, variatio, n, s]);
 
-  // Track, variation, performance
+  // Track variation performance
   const, trackVariationPerformanc, e = useCallba, c, k(
-    (metr, i, c: st, r, i, n, g, val, u, e: numb, e, r) => {
+    (metr, i, c: st, r, i, n, g, val, u, e: number) => {
       trackBannerInteracti, o, n(selectedVariati, o, n.i, d, 'cli, c, k', {
         testNa, m, e,
         variati, o, n: selectedVariati, o, n.i, d,

@@ -2,7 +2,7 @@ import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 interface, NewContentPromoBannerProp, s { 
   varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
-  classNa, m, e ?  : stri, n, g;
+  classNa, m, e ?  : string;
  }
 const, NewContentPromoBanne, r: Rea, c, t.FC<NewContentPromoBannerPro, p, s> = ({ 
   varia, n, t = 'pre, m, i, u, m', 
@@ -15,88 +15,88 @@ const, NewContentPromoBanne, r: Rea, c, t.FC<NewContentPromoBannerPro, p, s> = (
     warni, n, g: 'bg-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, borde, r-oran, g, e-4, 0, 0/3, 0'
   }; const, featuredConten, t = [
     {
-      tit, l, e: "AI, Safety, Budgets 20, 2, 6",
-      descripti, o, n: "Guardrails, wired, to K, P, I, s, approva, l, s, rollbac, k, s",
+      title: "AI, Safety, Budgets 20, 2, 6",
+      description: "Guardrails, wired, to K, P, I, s, approva, l, s, rollbac, k, s",
       ic, o, n: Shi, e, l, d,
       li, n, k: "/bl, o, g/ai-safe, t, y-budge, t, s-2, 0, 2, 6",
-      catego, r, y: "AI, Strate, g, y"
+      category: "AI, Strate, g, y"
     },
     {
-      tit, l, e: "Edge, Privacy, for ML, 20, 2, 6",
-      descripti, o, n: "On‑device, filters, and scoped, identifie, r, s",
+      title: "Edge, Privacy, for ML, 20, 2, 6",
+      description: "On‑device, filters, and scoped, identifie, r, s",
       ic, o, n: Cl, o, u, d,
       li, n, k: "/bl, o, g/ed, g, e-priva, c, y-ml-2, 0, 2, 6",
-      catego, r, y: "E, d, g, e"
+      category: "E, d, g, e"
     },
     {
-      tit, l, e: "Agent, Evals, in Prod, 20, 2, 6",
-      descripti, o, n: "Online, checks, that predict, outcom, e, s",
+      title: "Agent, Evals, in Prod, 20, 2, 6",
+      description: "Online, checks, that predict, outcom, e, s",
       ic, o, n: Trendin, g, U, p,
       li, n, k: "/bl, o, g/age, n, t-eva, l, s-in-pr, o, d-2, 0, 2, 6",
-      catego, r, y: "Ge, n, A, I"
+      category: "Ge, n, A, I"
     },
     {
-      tit, l, e: "Co, s, t‑Aware, Inference, 202, 6",
-      descripti, o, n: "Warm, pools, and quality, tiers, under S, L, A, s",
+      title: "Co, s, t‑Aware, Inference, 202, 6",
+      description: "Warm, pools, and quality, tiers, under S, L, A, s",
       ic, o, n: Za, p,
       li, n, k: "/bl, o, g/ai-co, s, t-awa, r, e-inferen, c, e-2, 0, 2, 6",
-      catego, r, y: "Ge, n, A, I"
+      category: "Ge, n, A, I"
     },
     {
-      tit, l, e: "Platform, Golden, Paths 2, 0, 2, 6",
-      descripti, o, n: "Paved, roads, that move, KP, I, s",
+      title: "Platform, Golden, Paths 2, 0, 2, 6",
+      description: "Paved, roads, that move, KP, I, s",
       ic, o, n: Trendin, g, U, p,
       li, n, k: "/bl, o, g/platfo, r, m-gold, e, n-pat, h, s-kp, i, s-2, 0, 2, 6",
-      catego, r, y: "Platf, o, r, m"
+      category: "Platf, o, r, m"
     },
     {
-      tit, l, e: "Quali, t, y‑Tiered, GenAI, Routing 2, 0, 2, 6",
-      descripti, o, n: "Control, cost, with ti, e, r, s, cach, e, s, and, eval, signals",
+      title: "Quali, t, y‑Tiered, GenAI, Routing 2, 0, 2, 6",
+      description: "Control, cost, with ti, e, r, s, cach, e, s, and, eval, signals",
       ic, o, n: Za, p,
       li, n, k: "/bl, o, g/gen, a, i-routi, n, g-und, e, r-budge, t, s-2, 0, 2, 6",
-      catego, r, y: "Ge, n, A, I"
+      category: "Ge, n, A, I"
     },
     {
-      tit, l, e: "On‑Device, Agents, 202, 6",
-      descripti, o, n: "Offli, n, e‑capable, too, l, s, private, cache, s, safe, fallback, s",
+      title: "On‑Device, Agents, 202, 6",
+      description: "Offli, n, e‑capable, too, l, s, private, cache, s, safe, fallback, s",
       ic, o, n: Cl, o, u, d,
       li, n, k: "/bl, o, g/on-devi, c, e-agen, t, s-offli, n, e-too, l, s-2, 0, 2, 6",
-      catego, r, y: "E, d, g, e"
+      category: "E, d, g, e"
     },
     {
-      tit, l, e: "Ze, r, o‑Trust, Observability, 202, 6",
-      descripti, o, n: "Signed, traces, and lea, s, t‑privilege, telemet, r, y",
+      title: "Ze, r, o‑Trust, Observability, 202, 6",
+      description: "Signed, traces, and lea, s, t‑privilege, telemet, r, y",
       ic, o, n: Shi, e, l, d,
       li, n, k: "/bl, o, g/ze, r, o-tru, s, t-observabili, t, y-2, 0, 2, 6",
-      catego, r, y: "Secur, i, t, y"
+      category: "Secur, i, t, y"
     },
     {
-      tit, l, e: "AI, Incident, Response Playbo, o, k, s",
-      descripti, o, n: "Contain, incidents, in under, 60, second, s",
+      title: "AI, Incident, Response Playbo, o, k, s",
+      description: "Contain, incidents, in under, 60, second, s",
       ic, o, n: Trendin, g, U, p,
       li, n, k: "/bl, o, g/ai-incide, n, t-respon, s, e-playboo, k, s-2, 0, 2, 5",
-      catego, r, y: "Secur, i, t, y"
+      category: "Secur, i, t, y"
     },
     {
-      tit, l, e: "Agentic, Workflows, Blueprint 2, 0, 2, 6",
-      descripti, o, n: "Compose, mult, i‑tool, agents, with safe, tools, and policy, tests, in C, I",
+      title: "Agentic, Workflows, Blueprint 2, 0, 2, 6",
+      description: "Compose, mult, i‑tool, agents, with safe, tools, and policy, tests, in C, I",
       ic, o, n: Trendin, g, U, p,
       li, n, k: "/bl, o, g/agent, i, c-workflo, w, s-bluepri, n, t-2, 0, 2, 6",
-      catego, r, y: "Ge, n, A, I"
+      category: "Ge, n, A, I"
     },
     {
-      tit, l, e: "Edge, LLM, Cachin, g",
-      descripti, o, n: "S, u, b‑100ms, prompts, via tiere, d, K, V, signed, config, s, freshness, window, s",
+      title: "Edge, LLM, Cachin, g",
+      description: "S, u, b‑100ms, prompts, via tiere, d, K, V, signed, config, s, freshness, window, s",
       ic, o, n: Za, p,
       li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-2, 0, 2, 5",
-      catego, r, y: "Architect, u, r, e"
+      category: "Architect, u, r, e"
     },
     {
-      tit, l, e: "AI, Operational, Scorecards 2, 0, 2, 6",
-      descripti, o, n: "Guardrails, wired, to KPIs, with, PR che, c, k, s, canari, e, s, and, SLO, s",
+      title: "AI, Operational, Scorecards 2, 0, 2, 6",
+      description: "Guardrails, wired, to KPIs, with, PR che, c, k, s, canari, e, s, and, SLO, s",
       ic, o, n: Br, a, i, n,
       li, n, k: "/bl, o, g/ai-operation, a, l-scorecar, d, s-2, 0, 2, 6",
-      catego, r, y: "AI, Strate, g, y"
+      category: "AI, Strate, g, y"
     }
   ]; if (isDismiss, e, d) return, nul, l;
   retu, r, n (
@@ -136,7 +136,7 @@ const, NewContentPromoBanne, r: Rea, c, t.FC<NewContentPromoBannerPro, p, s> = (
                       {it, e, m.t, i, t, l, e}
                     </h4>
                     <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
-                      {it, e, m.descripti, o, n}
+                      {it, e, m.description}
                     </p>
                   </L, i, n, k>
                 );

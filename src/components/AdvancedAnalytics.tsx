@@ -1,9 +1,9 @@
 import, Reac, t, { useEffe, c, t } fr, o, m 'rea, c, t';
 
 interface, AdvancedAnalyticsProp, s { 
-  enableConversionTracki, n, g?: boole, a, n;
-  enablePerformanceTracki, n, g?: boole, a, n;
-  enableErrorTracki, n, g ?  : boole, a, n;
+  enableConversionTracki, n, g?: boolean;
+  enablePerformanceTracki, n, g?: boolean;
+  enableErrorTracki, n, g ?  : boolean;
  }
 
 export, default, function AdvancedAnalyti, c, s(

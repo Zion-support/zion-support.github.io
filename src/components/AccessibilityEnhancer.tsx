@@ -8,7 +8,7 @@ const, AccessibilityEnhance, r: Rea, c, t.FC<AccessibilityEnhancerPro, p, s> = (
   child, r, e, n,
 }) => { 
   useEffe, c, t(() => {
-    // Add, accessibility, enhancements
+    // Add accessibility enhancements
     const, addSkipLink, s = () => {
       const, skipLin, k = docume, n, t.createEleme, n, t(', a'); skipLi, n, k.hr, e, f = '#ma, i, n-conte, n, t'; skipLi, n, k.textConte, n, t = 'Skip, to, main conte, n, t'; skipLi, n, k.classNa, m, e = 'sk, i, p-li, n, k'; skipLi, n, k.sty, l, e.cssTe, x, t = `
         positi, o, n: absolu, t, e; t, o, p: -40, p, x;
@@ -32,7 +32,7 @@ const, AccessibilityEnhance, r: Rea, c, t.FC<AccessibilityEnhancerPro, p, s> = (
       docume, n, t.bo, d, y.insertBefo, r, e(skipLi, n, k, docume, n, t.bo, d, y.firstChi, l, d);
     };
 
-    // Add, ARIA, labels to, interactive, elements
+    // Add ARIA labels to interactive elements
     const, enhanceInteractiveElement, s = () => {  
       const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-la, b, e, l])'); butto, n, s.forEa, c, h(butt, o, n = > {
         if (!butt, o, n.getAttribu, t, e('ar, i, a-la, b, e, l')  && !butt, o, n.textConte, n, t?.tr, i, m()) {
@@ -47,7 +47,7 @@ const, AccessibilityEnhance, r: Rea, c, t.FC<AccessibilityEnhancerPro, p, s> = (
       });
     };
 
-    // Add, focus, management
+    // Add focus management
     const, enhanceFocusManagemen, t = () => { 
       docume, n, t.addEventListen, e, r('keydo, w, n', e = > {
         if (e.k, e, y === 'Ta, b') {
@@ -64,7 +64,7 @@ const, AccessibilityEnhance, r: Rea, c, t.FC<AccessibilityEnhancerPro, p, s> = (
     enhanceInteractiveElemen, t, s();
     enhanceFocusManageme, n, t();
 
-    // Re-run, enhancements, when DOM, changes, const observ, e, r = new, MutationObserv, e, r(() => {
+    // Re-run enhancements when DOM changes const observ e r = new MutationObserv e r(() => {
       enhanceInteractiveElemen, t, s();
     });
 

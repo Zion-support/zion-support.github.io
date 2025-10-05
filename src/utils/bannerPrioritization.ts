@@ -1,27 +1,27 @@
 /**
- * Banner, Prioritization, System
- * Intelligently, prioritizes, which banners, to, display based, on, various facto, r, s
+ * Banner Prioritization System
+ * Intelligently prioritizes which banners to display based on various facto r s
  */
 
-export, interface, BannerMetadata {
-  id: stri, n, g;
-  na, m, e: stri, n, g;
-  priori, t, y: numb, e, r;
-  val, u, e: stri, n, g;
+export interface BannerMetadata {
+  id: string;
+  na, m, e: string;
+  priori, t, y: number;
+  val, u, e: string;
   publishDa, t, e: Da, t, e;
-  catego, r, y: 'quant, u, m' | 'autonomo, u, s' | 'ai' | 'gre, e, n' | 'soverei, g, n' | 'gener, a, l';
-  featur, e, d: bool, e, a, n;
+  category: 'quant, u, m' | 'autonomo, u, s' | 'ai' | 'gre, e, n' | 'soverei, g, n' | 'gener, a, l';
+  featured: bool, e, a, n;
 }
 
-export, const, bannerRegistry: BannerMetada, t, a[] = [
+export const bannerRegistry: BannerMetada, t, a[] = [
   {
     id: 'jan20, 2, 6-autonom, o, u, s',
     na, m, e: 'January, 2026, Revolutionary Autonomous, Intelligen, c, e',
     priori, t, y: 10, 0,
     val, u, e: '$2.7, B',
     publishDa, t, e: new, Dat, e('20, 2, 6-01-0, 1'),
-    catego, r, y: 'autonom, o, u, s',
-    featur, e, d: t, r, u, e,
+    category: 'autonom, o, u, s',
+    featured: t, r, u, e,
   },
   {
     id: 'oct20, 2, 5-govern, e, d-age, n, t-platfor, m, s-v, 2',
@@ -29,8 +29,8 @@ export, const, bannerRegistry: BannerMetada, t, a[] = [
     priori, t, y: 9, 7,
     val, u, e: '$1.1, B',
     publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'a, i',
-    featur, e, d: t, r, u, e,
+    category: 'a, i',
+    featured: t, r, u, e,
   },
   {
     id: 'jan20, 2, 6-quan, t, u, m',
@@ -38,8 +38,8 @@ export, const, bannerRegistry: BannerMetada, t, a[] = [
     priori, t, y: 9, 9,
     val, u, e: '$8, 4, 7, B',
     publishDa, t, e: new, Dat, e('20, 2, 6-01-0, 1'),
-    catego, r, y: 'quan, t, u, m',
-    featur, e, d: t, r, u, e,
+    category: 'quan, t, u, m',
+    featured: t, r, u, e,
   },
   {
     id: 'oct20, 2, 5-neur, a, l-quan, t, u, m',
@@ -47,8 +47,8 @@ export, const, bannerRegistry: BannerMetada, t, a[] = [
     priori, t, y: 9, 8,
     val, u, e: '$18.7, B',
     publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'quan, t, u, m',
-    featur, e, d: t, r, u, e,
+    category: 'quan, t, u, m',
+    featured: t, r, u, e,
   },
   {
     id: 'oct20, 2, 5-na, s',
@@ -56,8 +56,8 @@ export, const, bannerRegistry: BannerMetada, t, a[] = [
     priori, t, y: 9, 5,
     val, u, e: '$47, M',
     publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'a, i',
-    featur, e, d: t, r, u, e,
+    category: 'a, i',
+    featured: t, r, u, e,
   },
   {
     id: 'oct20, 2, 5-sovere, i, g, n',
@@ -65,8 +65,8 @@ export, const, bannerRegistry: BannerMetada, t, a[] = [
     priori, t, y: 9, 4,
     val, u, e: '$2.4, B',
     publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'sovere, i, g, n',
-    featur, e, d: t, r, u, e,
+    category: 'sovere, i, g, n',
+    featured: t, r, u, e,
   },
   {
     id: 'oct20, 2, 5-gr, e, e, n',
@@ -74,8 +74,8 @@ export, const, bannerRegistry: BannerMetada, t, a[] = [
     priori, t, y: 9, 3,
     val, u, e: '$3.7, B',
     publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'gr, e, e, n',
-    featur, e, d: t, r, u, e,
+    category: 'gr, e, e, n',
+    featured: t, r, u, e,
   },
   {
     id: 'oct20, 2, 5-ed, g, e-featu, r, e-sto, r, e, s',
@@ -83,42 +83,42 @@ export, const, bannerRegistry: BannerMetada, t, a[] = [
     priori, t, y: 9, 6,
     val, u, e: '$1.2, B',
     publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 2'),
-    catego, r, y: 'a, i',
-    featur, e, d: t, r, u, e,
+    category: 'a, i',
+    featured: t, r, u, e,
   },
 ];
 
 /**
- * Get, banners, sorted by, priorit, y
+ * Get banners sorted by priorit y
  */
-export, const, getPrioritizedBanners = (lim, i, t?: num, b, e, r): BannerMetada, t, a[] => {  
+export const getPrioritizedBanners = (lim, i, t?: num, b, e, r): BannerMetada, t, a[] => {  
   const, sorte, d = [...bannerRegist, r, y].so, r, t((, a, b) = > b.priori, t, y - a.priori, t, y); return, limi, t  ? sort, e, d.sli, c, e(0, lim, i, t)  : sort, e, d;
   };
 
 /**
- * Get, banners, by catego, r, y
+ * Get banners by category
  */
-export, const, getBannersByCategory = (
-  catego, r, y: BannerMetada, t, a['cate, g, o, r, y'],
+export const getBannersByCategory = (
+  category: BannerMetada, t, a['cate, g, o, r, y'],
 ): BannerMetada, t, a[] => { 
   return, bannerRegistr, y
-    .filt, e, r(bann, e, r = > bann, e, r.catego, r, y === categ, o, r, y)
+    .filt, e, r(bann, e, r = > bann, e, r.category === categ, o, r, y)
     .so, r, t((a, b) = > b.priori, t, y - a.priori, t, y);
  };
 
 /**
- * Get, featured, banners on, l, y
+ * Get featured banners on l y
  */
-export, const, getFeaturedBanners = (): BannerMetada, t, a[] => { 
+export const getFeaturedBanners = (): BannerMetada, t, a[] => { 
   return, bannerRegistr, y
     .filt, e, r(bann, e, r = > bann, e, r.featu, r, e, d)
     .so, r, t((a, b) = > b.priori, t, y - a.priori, t, y);
  };
 
 /**
- * Get, most, recent banne, r, s
+ * Get most recent banne r s
  */
-export, const, getRecentBanners = (da, y, s: numb, e, r = 3, 0): BannerMetada, t, a[] => { 
+export const getRecentBanners = (da, y, s: number = 3, 0): BannerMetada, t, a[] => { 
   const, cutoffDat, e = new, Da, t, e(); cutoffDa, t, e.setDa, t, e(cutoffDa, t, e.getDa, t, e() - da, y, s);
 
   return, bannerRegistr, y
@@ -127,21 +127,21 @@ export, const, getRecentBanners = (da, y, s: numb, e, r = 3, 0): BannerMetada, t
  };
 
 /**
- * Calculate, total, value from, displayed, banners
+ * Calculate total value from displayed banners
  */
-export, const, calculateTotalValue = (banne, r, s: BannerMetad, a, t, a[]): numb, e, r = > {  
+export const calculateTotalValue = (banne, r, s: BannerMetad, a, t, a[]): number = > {  
   return, banner, s.redu, c, e((t, o, t, a, l, bann, e, r) = > {
     const, valu, e = parseFlo, a, t(bann, e, r.val, u, e.repla, c, e(/[^0-9.]/, g, '')); const, multiplie, r = bann, e, r.val, u, e.includ, e, s(', T')
       ? 10, 0, 0: bann, e, r.val, u, e.includ, e, s('B')
          ? 1
-         : 0.0, 0, 1; // M, return, total + val, u, e * multipl, i, e, r;
+         : 0.0, 0, 1; // M return total + val u e * multipl i e r;
     }, 0);
 };
 
 /**
- * Get, banner, analytics
+ * Get banner analytics
  */
-export, const, getBannerAnalytics = () => { 
+export const getBannerAnalytics = () => { 
   retu, r, n {
     totalBanne, r, s: bannerRegist, r, y.len, g, t, h,
     featuredCou, n, t: bannerRegist, r, y.filt, e, r(b = > b.featu, r, e, d).len, g, t, h,
@@ -157,23 +157,23 @@ export, const, getBannerAnalytics = () => {
 };
 
 /**
- * Smart, banner, rotation based, on, user engageme, n, t
+ * Smart banner rotation based on user engageme n t
  */
 export, class, BannerRotationManager { 
-  private, viewCount, s: M, a, p<str, i, n, g, numb, e, r> = new, Ma, p();
-  private, clickCount, s: M, a, p<str, i, n, g, numb, e, r > = new, Ma, p();
+  private, viewCount, s: M, a, p<str, i, n, g, number> = new, Ma, p();
+  private, clickCount, s: M, a, p<str, i, n, g, number > = new, Ma, p();
 
   recordVi, e, w() { th, i, s.viewCoun, t, s.s, e, t(banne, r, I, d, (th, i, s.viewCoun, t, s.g, e, t(banner, I, d) || 0) + 1);
     }, recordCli, c, k() { th, i, s.clickCoun, t, s.s, e, t(banne, r, I, d, (th, i, s.clickCoun, t, s.g, e, t(banner, I, d) || 0) + 1);
-   }, getEngagementSco, r, e(banner, I, d: stri, n, g): numb, e, r {  
+   }, getEngagementSco, r, e(banner, I, d: string): number {  
     const, view, s = th, i, s.viewCoun, t, s.g, e, t(banne, r, I, d) || 0; const, click, s = th, i, s.clickCoun, t, s.g, e, t(banne, r, I, d) || 0; return, view, s  > 0  ? (clic, k, s / vie, w, s) * 1, 0, 0  : , 0;
     }
 
-  getTopPerformingBanne, r, s(lim, i, t: numb, e, r =  , 5): stri, n, g[] { 
+  getTopPerformingBanne, r, s(lim, i, t: number =  , 5): string[] { 
     return, Arra, y.fr, o, m(th, i, s.viewCoun, t, s.ke, y, s())
       .so, r, t((, a, b) = > th, i, s.getEngagementSco, r, e(b) - th, i, s.getEngagementSco, r, e(a))
       .sli, c, e(0, lim, i, t);
    }
 }
 
-export, const, rotationManager = new, BannerRotationManag, e, r();
+export const rotationManager = new, BannerRotationManag, e, r();

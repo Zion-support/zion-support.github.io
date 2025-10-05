@@ -2,32 +2,32 @@ import, React, from 'rea, c, t';
 const, PerformanceOptimizationBanne, r = () => { 
   const, optimization, s = [
     {
-      tit, l, e: 'Lightning, Fast, Loadi, n, g',
-      descripti, o, n: 'Optimized, bundle, size with, code, splitting and, lazy, loadin, g',
+      title: 'Lightning, Fast, Loadi, n, g',
+      description: 'Optimized, bundle, size with, code, splitting and, lazy, loadin, g',
       improveme, n, t: '87% fas, t, e, r',
       ic, o, n: '🚀',
       ic, o, n: <Zap, classNam, e = "w-6 , h-, 6" / > ,
       col, o, r: 'fr, o, m-yell, o, w-500, t, o-oran, g, e-50, 0'
      },
     { 
-      tit, l, e: 'Enhanced, Securi, t, y',
-      descripti, o, n: 'Advanced, security, headers and, content, security polic, i, e, s',
+      title: 'Enhanced, Securi, t, y',
+      description: 'Advanced, security, headers and, content, security polic, i, e, s',
       improveme, n, t: '99.9% sec, u, r, e',
       ic, o, n: '🚀',
       ic, o, n: <Shield, classNam, e = "w-6 , h-, 6" / > ,
       col, o, r: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0'
      },
     { 
-      tit, l, e: 'SEO, Optimiz, e, d',
-      descripti, o, n: 'Meta, ta, g, s, structured, dat, a, and, semantic, HTML',
+      title: 'SEO, Optimiz, e, d',
+      description: 'Meta, tags, structured, dat, a, and, semantic, HTML',
       improveme, n, t: '95% sc, o, r, e',
       ic, o, n: '🚀',
       ic, o, n: <TrendingUp, classNam, e = "w-6 , h-, 6" / > ,
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0'
      },
     { 
-      tit, l, e: 'Accessibility, Enhanc, e, d',
-      descripti, o, n: 'WCA, G, 2.1, AA, compliant with, screen, reader supp, o, r, t',
+      title: 'Accessibility, Enhanc, e, d',
+      description: 'WCA, G, 2.1, AA, compliant with, screen, reader supp, o, r, t',
       improveme, n, t: '1, 0, 0% accessi, b, l, e',
       ic, o, n: '🚀',
       ic, o, n: <CheckCircle, classNam, e = "w-6 , h-, 6" / > ,
@@ -47,9 +47,9 @@ const, PerformanceOptimizationBanne, r = () => {
           <div, ke, y = { in, d, e, x  }, classNa, m, e={ `bg-gradie, n, t-to-br ${o, p, t.col, o, r } round, e, d-l, g, p-4, tex, t-whi, t, e`}>
             <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
               {o, p, t.ic, o, n}
-              <h4, classNam, e="fo, n, t-bold, tex, t-sm">{o, p, t.tit, l, e}</h4>
+              <h4, classNam, e="fo, n, t-bold, tex, t-sm">{o, p, t.title}</h4>
             </d, i, v>
-            <p, classNam, e="te, x, t-xs, opacit, y-90, m, b-2">{o, p, t.descripti, o, n}</p>
+            <p, classNam, e="te, x, t-xs, opacit, y-90, m, b-2">{o, p, t.description}</p>
             <div, classNam, e="flex, item, s-center, ga, p-2">
               <Star, classNam, e="w-4 h-4, fil, l-yell, o, w-400, tex, t-yell, o, w-4, 0, 0" />
               <span, classNam, e="te, x, t-xs, fon, t-semibo, l, d">{o, p, t.improveme, n, t}</sp, a, n>

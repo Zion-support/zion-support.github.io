@@ -6,18 +6,18 @@ export, default, function AutonomousInfrastructureHealing20, 2, 5() {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Autonomous, Infrastructure, Self-Healing, 202, 5 — 99.97% Upti, m, e, 94%
           Incident, Reductio, n, $6, 7, M+ Annual, Saving, s | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Deploy, autonomous, self-healing, infrastructure, that automatically, detec, t, s, diagnos, e, s, and, resolves, incidents in, millisecond, s. Achieve, 9, 9.97% upti, m, e, reduce, incidents, by 94%, and, sav, e $6, 7, M+ annually, with, AI-powered, infrastructure, automation.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='autonomous, infrastructu, r, e, se, l, f-healing, system, s, AI, infrastructur, e, automated, incident, response, infrastructure, automatio, n, site, reliability, engineering, chaos, engineerin, g, infrastructure, resilienc, e'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-infrastructu, r, e-heali, n, g'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-autonomo u s-infrastructu r e-heali n g'
         />
       </Helm, e, t>
 

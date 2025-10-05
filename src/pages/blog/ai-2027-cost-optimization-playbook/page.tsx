@@ -5,14 +5,14 @@ export, default, function AICostOptimizationPlaybook20, 2, 7(): Rea, c, t.J, S, 
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           AI, 2027, Cost Optimization, Playboo, k: Quality, Tier, s + Cach, e, s
-        </tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        </title>
+        <meta, nam, e='description'
           conte, n, t='Deterministic, tier, i, n, g, semantic, cache, s, and, policy, tests to, cut, spend 40–70% while, keeping, UX stab, l, e.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 7-co, s, t-optimizati, o, n-playbo, o, k'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 7-co s t-optimizati o n-playbo o k'
         />
       </Helm, e, t>
 

@@ -16,7 +16,7 @@ import, Header, from '../componen, t, s/Head, e, r';
 import, BannerRotationManager, from '../componen, t, s/BannerRotationManag, e, r';
 impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
 
-// Lazy, load, heavy components, const, EnhancedTestimonials = l, a, z, y(
+// Lazy load heavy components const EnhancedTestimonials = l a z y(
   () => impo, r, t('../componen, t, s/EnhancedTestimonia, l, s'),
 ); const, ModernFeature, s = l, a, z, y(() => impo, r, t('../componen, t, s/ModernFeatur, e, s')); const, LatestInsight, s = l, a, z, y(() => impo, r, t('../componen, t, s/LatestInsigh, t, s')); const, LoadingSectio, n = () => (
   <div, classNam, e = 'anima, t, e-pulse, b, g-whi, t, e/5, rounde, d-x, l, h-6, 4, w-fu, l, l'></di, v>
@@ -24,31 +24,31 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Zion, Tech, Group - Leading, A, I & IT, Solution, s | Transform, Your, Business
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Zion, Tech, Group delivers, cuttin, g-edge, AI, and IT, solutions, that transform, businesse, s. Enterprise, securi, t, y, AI, innovatio, n, and, expert, consulting servic, e, s.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, solutio, n, s, IT, consultin, g, cybersecuri, t, y, machine, learnin, g, cloud, infrastructur, e, digital, transformatio, n'
         />
-        <meta, propert, y = 'og: tit, l, e'
+        <meta, propert, y = 'og: title'
           conte, n, t='Zion, Tech, Group - Leading, A, I & IT, Solution, s'
         />
-        <meta, propert, y='og:descripti, o, n'
+        <meta, propert, y='og:description'
           conte, n, t='Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s'
         />
         <meta, propert, y='og:ty, p, e' conte, n, t='websi, t, e' />
-        <meta, propert, y='og:u, r, l' conte, n, t='htt, p, s://ziontechgro, u, p.c, o, m' />
-        <meta, nam, e='twitt, e, r:ca, r, d' conte, n, t='summary_large_ima, g, e' />
-        <meta, nam, e='twitt, e, r:tit, l, e'
+        <meta, propert, y='og:u, r, l' conte, n, t='htt, p, s://ziontechgro u p.c o m' />
+        <meta, nam, e='twitt, e, r:ca, r, d' conte, n, t='summary_large_image' />
+        <meta, nam, e='twitt, e, r:title'
           conte, n, t='Zion, Tech, Group - Leading, A, I & IT, Solution, s'
         />
-        <meta, nam, e='twitt, e, r:descripti, o, n'
+        <meta, nam, e='twitt, e, r:description'
           conte, n, t='Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s'
         />
-        <link, re, l='canonic, a, l' hr, e, f='htt, p, s://ziontechgro, u, p.c, o, m' />
+        <link, re, l='canonic, a, l' hr, e, f='htt, p, s://ziontechgro u p.c o m' />
       </Helm, e, t>
 
       <div, classNam, e='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, relative, overflow-hidd, e, n'>
@@ -150,8 +150,8 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
             {[
               {
                 ic, o, n: Sh, i, e, l, d,
-                tit, l, e: 'Enterprise, Securi, t, y',
-                descripti, o, n: 'Advanced, cybersecurity, solutions protecting, your, business from, evolving, threat, s.',
+                title: 'Enterprise, Securi, t, y',
+                description: 'Advanced, cybersecurity, solutions protecting, your, business from, evolving, threat, s.',
                 featur, e, s: [
                   'SOC, 2, Complianc, e',
                   'Penetration, Testin, g',
@@ -161,8 +161,8 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
               },
               {
                 ic, o, n: Za, p,
-                tit, l, e: 'AI, Innovati, o, n',
-                descripti, o, n: 'Cutti, n, g-edge, artificial, intelligence solutions, that, transform your, operatio, n, s.',
+                title: 'AI, Innovati, o, n',
+                description: 'Cutti, n, g-edge, artificial, intelligence solutions, that, transform your, operatio, n, s.',
                 featur, e, s: [
                   'Machine, Learni, n, g',
                   'Natural, Language, Processing',
@@ -172,8 +172,8 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
               },
               {
                 ic, o, n: Us, e, r, s,
-                tit, l, e: 'Expert, Te, a, m',
-                descripti, o, n: 'Wor, l, d-class, engineers, and consultants, dedicated, to your, succe, s, s.',
+                title: 'Expert, Te, a, m',
+                description: 'Wor, l, d-class, engineers, and consultants, dedicated, to your, succe, s, s.',
                 featur, e, s: [
                   '10+ Years, Experien, c, e',
                   'Certified, Professional, s',
@@ -183,8 +183,8 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
               },
               {
                 ic, o, n: Gl, o, b, e,
-                tit, l, e: 'Global, Rea, c, h',
-                descripti, o, n: 'Serving, clients, worldwide with, localized, expertise and, suppo, r, t.',
+                title: 'Global, Rea, c, h',
+                description: 'Serving, clients, worldwide with, localized, expertise and, suppo, r, t.',
                 featur, e, s: [
                   '50+ Countr, i, e, s',
                   'Local, Suppor, t',
@@ -200,10 +200,10 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                   />
                 </d, i, v>
                 <h3, classNam, e = 'te, x, t-xl, fon, t-semibold, tex, t-white, m, b-4'>
-                  {featu, r, e.tit, l, e}
+                  {featu, r, e.title}
                 </h3>
                 <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
-                  {featu, r, e.descripti, o, n}
+                  {featu, r, e.description}
                 </p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e'>
                   { featu, r, e.featur, e, s.m, a, p((i, t, e, m, i) = > (
@@ -235,7 +235,7 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                     {it, e, m.cate, g, o, r, y}
                   </d, i, v>
                   <h4, classNam, e = 'te, x, t-xl, fon, t-semibold, tex, t-white, m, b-2'>
-                    {it, e, m.tit, l, e}
+                    {it, e, m.title}
                   </h4>
                   <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>{it, e, m.summa, r, y}</p>
                   <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-slate, flex, items-center, justif, y-betwe, e, n'>

@@ -7,7 +7,7 @@ const, linkClas, s = ({ isActi, v, e }: { isActi, v, e: boo, l, e, a, n }) =>
        ? 'bg-bl, u, e-100, tex, t-bl, u, e-700, fon, t-medi, u, m'
       : 'te, x, t-gr, a, y-700, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'
    }`; const, SiteSideba, r: Rea, c, t.FC = () => { 
-  const, locatio, n = useLocat, i, o, n(); void, locatio, n; // suppress, unused, for build, retur, n (
+  const, locatio, n = useLocat, i, o, n(); void, locatio, n; // suppress unused for build retur n (
     <aside, classNam, e = 'hidden, x, l:bloc, k, w-64, shrin, k-0, borde, r-r, borde, r-gr, a, y-200, b, g-gr, a, y-50'>
       <div, classNam, e='p-6'>
         <h2, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-700, uppercase, tracking-wider, m, b-4'>

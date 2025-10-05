@@ -3,26 +3,26 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 const, NewContentShowcase202, 5: Rea, c, t.FC = () => {
   const, highlight, s = [
     {
-      tit, l, e: "🎭 Multimodal, AI, Revoluti, o, n",
-      descripti, o, n: "Unified, visio, n-langua, g, e-audio, processing, with 98% accur, a, c, y",
+      title: "🎭 Multimodal, AI, Revoluti, o, n",
+      description: "Unified, visio, n-langua, g, e-audio, processing, with 98% accur, a, c, y",
       li, n, k: "/bl, o, g/multimod, a, l-ai-revoluti, o, n-2, 0, 2, 5",
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
     },
     {
-      tit, l, e: "⛓️ Blockcha, i, n-AI, Integrati, o, n",
-      descripti, o, n: "Trustless, intelligence, with decentralized, governan, c, e",
+      title: "⛓️ Blockcha, i, n-AI, Integrati, o, n",
+      description: "Trustless, intelligence, with decentralized, governan, c, e",
       li, n, k: "/bl, o, g/blockcha, i, n-ai-integrati, o, n-2, 0, 2, 5",
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
     },
     {
-      tit, l, e: "🌱 Green, A, I & Sustainabil, i, t, y",
-      descripti, o, n: "Carb, o, n-neutral, ML, with 90% emissions, reducti, o, n",
+      title: "🌱 Green, A, I & Sustainabil, i, t, y",
+      description: "Carb, o, n-neutral, ML, with 90% emissions, reducti, o, n",
       li, n, k: "/bl, o, g/gre, e, n-ai-sustainabili, t, y-2, 0, 2, 5",
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
     },
     {
-      tit, l, e: "⚙️ AI, Predictive, Maintenanc, e",
-      descripti, o, n: "85% downtime, reduction, with 98% prediction, accura, c, y",
+      title: "⚙️ AI, Predictive, Maintenanc, e",
+      description: "85% downtime, reduction, with 98% prediction, accura, c, y",
       li, n, k: "/servic, e, s/ai-predicti, v, e-maintena, n, c, e",
       col, o, r: "fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0"
     }
@@ -44,8 +44,8 @@ const, NewContentShowcase202, 5: Rea, c, t.FC = () => {
             <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e="group, relative, overflow-hidden, rounde, d-2x, l, p-6, b, g-gr, a, y-800, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
             >
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${it, e, m.c, o, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-20, transitio, n-opac, i, t, y`} />
-              <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-3, relative, z-10">{it, e, m.tit, l, e}</h3>
-              <p, classNam, e="te, x, t-gr, a, y-300, tex, t-sm, relative, z-10">{it, e, m.descripti, o, n}</p>
+              <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-3, relative, z-10">{it, e, m.title}</h3>
+              <p, classNam, e="te, x, t-gr, a, y-300, tex, t-sm, relative, z-10">{it, e, m.description}</p>
             </L, i, n, k>
           ))}
         </d, i, v>

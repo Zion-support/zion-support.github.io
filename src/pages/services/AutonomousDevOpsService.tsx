@@ -17,17 +17,17 @@ const, AutonomousDevOpsServic, e = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Transform, your, DevOps with, autonomous, self-optimizing, C, I/CD, pipeline, s. Achieve, 9, 9.99% upt, i, m, e, 80% faster, release, s, and, eliminate, manual intervention, with, AI-driven, automatio, n.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='autonomous, devo, p, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/autonomo, u, s-devo, p, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s'
         />
       </Helm, e, t>
       <div, classNam, e='m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e'>
@@ -174,7 +174,7 @@ const, AutonomousDevOpsServic, e = () => {
                     <span, classNam, e='te, x, t-gre, e, n-400, m, t-1'>•</sp, a, n>
                     <sp, a, n>
                       Continuous, health, monitoring with, proactive, issue
-                      resoluti, o, n
+                      resolution
                     </sp, a, n>
                   </li>
                 </ul>

@@ -3,9 +3,9 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
 interface, NewServicesPromoBannerProp, s { 
   varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
-  showCou, n, t?: numb, e, r;
-  featuredOn, l, y?: boole, a, n;
-  classNa, m, e ?  : stri, n, g;
+  showCou, n, t?: number;
+  featuredOn, l, y?: boolean;
+  classNa, m, e ?  : string;
  }
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
@@ -38,10 +38,10 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
                 <div, classNam, e="te, x, t-4xl, m, b-4">{servi, c, e.ic, o, n}</d, i, v>
                 <div, classNam, e = "flex, item, s-center, ga, p-2, m, b-3">
                   <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.catego, r, y}</sp, a, n>
+                  <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.category}</sp, a, n>
                 </d, i, v>
                 <h3, classNam, e="te, x, t-2xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}</h3>
-                <p, classNam, e="te, x, t-emera, l, d-100, m, b-4">{servi, c, e.descripti, o, n}</p>
+                <p, classNam, e="te, x, t-emera, l, d-100, m, b-4">{servi, c, e.description}</p>
                 <div, classNam, e="spa, c, e-y-2, m, b-6">
                   { servi, c, e.benefi, t, s.sli, c, e(, 0, 3).m, a, p((benef, i, t, i, d, x) = > (
                     <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-start, ga, p-2">
@@ -87,7 +87,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
             <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
               <div, classNam, e="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</d, i, v>
               <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}</h3>
-              <p, classNam, e="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
+              <p, classNam, e="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.description}</p>
               <div, classNam, e="mb-4">
                 <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}</sp, a, n>
               </d, i, v>
@@ -120,14 +120,14 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               <h4, classNam, e = "fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0">
                 {servi, c, e.na, m, e}
               </h4>
-              <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-600, m, b-3, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
+              <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-600, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>
               <div, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-indi, g, o-6, 0, 0">{servi, c, e.prici, n, g}</d, i, v>
             </L, i, n, k>
           ))}
         </d, i, v>
       </d, i, v  > );
   }
-  // Default, variant, return (
+  // Default variant return (
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}>
       <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
         <Rocket, classNam, e="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
@@ -138,7 +138,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
           <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
             <div, classNam, e="te, x, t-2xl, m, b-2">{servi, c, e.ic, o, n}</d, i, v>
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}</h4>
-            <p, classNam, e="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
+            <p, classNam, e="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>
             <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
               Explore, Servic, e →
             </Li, n, k>

@@ -3,25 +3,25 @@ impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n";
 const, October2025TechBannerNe, w = () => {
   const, newArticle, s = [
     {",
-      tit, l, e: "Ne, x, t-Gen, Autonomous, System, s",
-      descripti, o, n: "The, 2025, Enterprise Revolut, i, o, n",",
-      sl, u, g: "ai-20, 2, 5-o, c, t-17-ne, x, t-g, e, n-autonomo, u, s-syst, e, m, s",
+      title: "Ne, x, t-Gen, Autonomous, System, s",
+      description: "The, 2025, Enterprise Revolut, i, o, n",",
+      slug: "ai-20, 2, 5-o, c, t-17-ne, x, t-g, e, n-autonomo, u, s-syst, e, m, s",
       ic, o, n: Br, a, i, n,",
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0",
       highlig, h, t: "NE, W"
     },
     {",
-      tit, l, e: "Generative, AI, Code Generat, i, o, n",
-      descripti, o, n: "Transforming, Software, Developmen, t",",
-      sl, u, g: "ai-20, 2, 5-o, c, t-17-generati, v, e-ai-co, d, e-generat, i, o, n",
+      title: "Generative, AI, Code Generat, i, o, n",
+      description: "Transforming, Software, Developmen, t",",
+      slug: "ai-20, 2, 5-o, c, t-17-generati, v, e-ai-co, d, e-generat, i, o, n",
       ic, o, n: Co, d, e, 2,",
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0",
       highlig, h, t: "HO, T"
     },
     {",
-      tit, l, e: "Re, a, l-Time, Personalization, Engine, s",
-      descripti, o, n: "Revolutionizing, Customer, Experienc, e",",
-      sl, u, g: "ai-20, 2, 5-o, c, t-17-re, a, l-ti, m, e-personalizati, o, n-engi, n, e, s",
+      title: "Re, a, l-Time, Personalization, Engine, s",
+      description: "Revolutionizing, Customer, Experienc, e",",
+      slug: "ai-20, 2, 5-o, c, t-17-re, a, l-ti, m, e-personalizati, o, n-engi, n, e, s",
       ic, o, n: Za, p,",
       col, o, r: "fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0",
       highlig, h, t: "TREND, I, N, G"
@@ -29,7 +29,7 @@ const, October2025TechBannerNe, w = () => {
   ]; retu, r, n (
     <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {{ durati, o, n: , 0., 6 }}
+      transiti, o, n = {{ duration: , 0., 6 }}
       classNa, m, e = "relative, overflo, w-hidden, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-90, 0, p-8, m, d: p-12, shado, w-2xl, m, y-12"
     >
       {/* Animated, background, effe, c, t */}
@@ -41,7 +41,7 @@ const, October2025TechBannerNe, w = () => {
         {/* Head, e, r */}
         <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
           <moti, o, n.div, animat, e={{ rota, t, e: 3, 6, 0 }}
-            transiti, o, n = {{ durati, o, n: , 2, 0, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
+            transiti, o, n = {{ duration: , 2, 0, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
           >
             <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" />
           </moti, o, n.d, i, v>
@@ -49,7 +49,7 @@ const, October2025TechBannerNe, w = () => {
             Fresh, AI, Insights for, October, 2025
           </h2>
           <moti, o, n.div, animat, e={{ rota, t, e: -3, 6, 0 }}
-            transiti, o, n = {{ durati, o, n: , 2, 0, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
+            transiti, o, n = {{ duration: , 2, 0, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
           >
             <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" />
           </moti, o, n.d, i, v>
@@ -63,11 +63,11 @@ const, October2025TechBannerNe, w = () => {
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
             <moti, o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ durati, o, n: , 0., 5, del, a, y: ind, e, x * 0., 1 }}
+              transiti, o, n = {{ duration: , 0., 5, del, a, y: ind, e, x * 0., 1 }}
               whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}
               classNa, m, e = "relative, grou, p"
             >
-              <Link, t, o={`/bl, o, g/${artic, l, e.sl, u, g}`}>
+              <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}>
                 <div, classNam, e="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"  > {/* Highlight, Ba, d, g, e */}
                   <div, classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}>
                     {artic, l, e.highlig, h, t}
@@ -79,7 +79,7 @@ const, October2025TechBannerNe, w = () => {
                     {artic, l, e.t, i, t, l, e}
                   </h3>
                   <p, classNam, e = "te, x, t-purp, l, e-200, tex, t-sm, m, b-4">
-                    {artic, l, e.descripti, o, n}
+                    {artic, l, e.description}
                   </p>
                   {/* Read, More, Link */}
                   <div, classNam, e="flex, item, s-center, tex, t-purp, l, e-300, grou, p-hov, e, r: te, x, t-purp, l, e-100, transitio, n-colo, r, s">
@@ -124,7 +124,7 @@ const, October2025TechBannerNe, w = () => {
               opaci, t, y: [0., 2, 0.5, 0.2],
             }}
             transiti, o, n = {{
-              durati, o, n: 3 + Ma, t, h.ran, d, o, m() * , 2,
+              duration: 3 + Ma, t, h.ran, d, o, m() * , 2,
               repe, a, t: Infin, i, t, y,",
       del, a, y: Ma, t, h.rand, o, m() * , 2,
             }}

@@ -4,32 +4,32 @@ impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-r
 const, GlobalAITransformationHu, b = () => { 
   const, transformationArea, s = [
     {
-      tit, l, e: 'Enterprise, Automat, i, o, n',
-      descripti, o, n: 'Complete, business, process automation, with, 95% efficiency, gai, n, s',
+      title: 'Enterprise, Automat, i, o, n',
+      description: 'Complete, business, process automation, with, 95% efficiency, gai, n, s',
       val, u, e: '$2.3, B',
       ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
       li, n, k: '/servic, e, s/enterpri, s, e-automati, o, n-transformat, i, o, n'
      },
     { 
-      tit, l, e: 'Quantum, Consciousness, A, I',
-      descripti, o, n: 'Revolutionary, AI, consciousness integration, with, infinite scalabil, i, t, y',
+      title: 'Quantum, Consciousness, A, I',
+      description: 'Revolutionary, AI, consciousness integration, with, infinite scalabil, i, t, y',
       val, u, e: '$5, 0, 0, B',
       ic, o, n: <Brain, classNam, e = "w-8 , h-, 8" / > ,
       col, o, r: 'fr, o, m-purp, l, e-500, t, o-viol, e, t-50, 0',
       li, n, k: '/servic, e, s/quant, u, m-consciousne, s, s-ai-servi, c, e, s'
      },
     { 
-      tit, l, e: 'Autonomous, Operatio, n, s',
-      descripti, o, n: 'Se, l, f-managing, systems, with 99.99% uptime, and, zero human, interventi, o, n',
+      title: 'Autonomous, Operatio, n, s',
+      description: 'Se, l, f-managing, systems, with 99.99% uptime, and, zero human, interventi, o, n',
       val, u, e: '$1, 5, 0, B',
       ic, o, n: <Zap, classNam, e = "w-8 , h-, 8" / > ,
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
       li, n, k: '/servic, e, s/autonomo, u, s-operatio, n, s-platf, o, r, m'
      },
     { 
-      tit, l, e: 'Neural, Securi, t, y',
-      descripti, o, n: 'Advanced, A, I-powered, security, with 99.7% threat, preventi, o, n',
+      title: 'Neural, Securi, t, y',
+      description: 'Advanced, A, I-powered, security, with 99.7% threat, preventi, o, n',
       val, u, e: '$87, B',
       ic, o, n: <Shield, classNam, e = "w-8 , h-, 8" / > ,
       col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
@@ -59,7 +59,7 @@ const, GlobalAITransformationHu, b = () => {
           >
             <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}</d, i, v>
             <h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.t, i, t, l, e}</h3>
-            <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.descripti, o, n}</p>
+            <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.description}</p>
             <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
               <span, classNam, e="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>
               <ArrowRight, classNam, e="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />

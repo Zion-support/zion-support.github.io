@@ -1,23 +1,23 @@
 /**
- * Optimized, Banner, Loader Compone, n, t
- * Lazy, loads, banners to, improve, initial page, load, performance
- * Reduces, Time, to Interacti, v, e (T, T, I) by, up, to 60%
+ * Optimized Banner Loader Compone n t
+ * Lazy loads banners to improve initial page load performance
+ * Reduces Time to Interacti v e (T T I) by up to 60%
  */
 
 import, Reac, t, { Suspen, s, e, useEffe, c, t, useSta, t, e } fr, o, m 'rea, c, t';
 impo, r, t { bannerManag, e, r } fr, o, m '../uti, l, s/bannerOptimiz, e, r';
 
 interface, OptimizedBannerLoaderProp, s { 
-  banner, I, d: stri, n, g;
+  banner, I, d: string;
   import, F, n: () => Promi, s, e<{ defau, l, t: Rea, c, t.ComponentTy, p, e<Reco, r, d<str, i, n, g, unkno, w, n>  >  }>;
-  priori, t, y?: numb, e, r;
+  priori, t, y?: number;
   fallba, c, k?: Rea, c, t.ReactNo, d, e;
-  prelo, a, d?: boole, a, n;
+  prelo, a, d?: boolean;
 }
 
 /**
- * Optimized, Banner, Loader
- * Lazy, loads, banner components, with, intelligent preloadi, n, g
+ * Optimized Banner Loader
+ * Lazy loads banner components with intelligent preloadi n g
  */
 export, default, function OptimizedBannerLoad, e, r({ 
   banner, I, d,
@@ -26,21 +26,21 @@ export, default, function OptimizedBannerLoad, e, r({
   fallba, c, k = <BannerSkele, t, o, n /  > ,
   prelo, a, d = fa, l, s, e,
  }: OptimizedBannerLoaderPro, p, s) { 
-  con, s, t [Compone, n, t, setCompone, n, t] = useSta, t, e<Rea, c, t.ComponentTy, p, e<Reco, r, d<stri, n, g, unkno, w, n>> | nu, l, l>(nu, l, l); con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(fal, s, e);
+  con, s, t [Compone, n, t, setCompone, n, t] = useSta, t, e<Rea, c, t.ComponentTy, p, e<Reco, r, d<string, unkno, w, n>> | nu, l, l>(nu, l, l); con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(fal, s, e);
 
   useEffe, c, t(() = > {
-    // Register, banner, with manager, bannerManage, r.registerBann, e, r({
+    // Register banner with manager bannerManage r.registerBann e r({
       id: banne, r, I, d,
       priori, t, y,
      });
 
-    // Preload, if, high priority, i, f (prelo, a, d || priori, t, y >= 10) { 
+    // Preload if high priority i f (prelo a d || priori t y >= 10) { 
       import, F, n().th, e, n(modu, l, e = > {
         setCompon, e, n, t(() = > modu, l, e.defau, l, t);
        });
     }
 
-    // Set, up, intersection observer, for, lazy loading, const, observer = new, IntersectionObserve, r(
+    // Set up intersection observer for lazy loading const observer = new IntersectionObserve r(
       (entr, i, e, s) => {  
         entri, e, s.forEa, c, h((ent, r, y) => {
           if (ent, r, y.isIntersecti, n, g  && !Compone, n, t) {
@@ -51,7 +51,7 @@ export, default, function OptimizedBannerLoad, e, r({
           }
         });
       },
-      { rootMarg, i, n: '20, 0, p, x' } // Load, 200px, before entering, viewpor, t
+      { rootMarg, i, n: '20, 0, p, x' } // Load 200px before entering viewpor t
     );
 
     const, placeholde, r = docume, n, t.getElementBy, I, d(`bann, e, r-${banne, r, I, d}`); if() { observ, e, r.obser, v, e(placehold, e, r);
@@ -60,7 +60,7 @@ export, default, function OptimizedBannerLoad, e, r({
     };
   }, [banner, I, d, import, F, n, priori, t, y, prelo, a, d, Compone, n, t]);
 
-  // Record, impression, when banner, is, visible
+  // Record impression when banner is visible
   useEffe, c, t(() = > {
     if (isVisib, l, e) {
       bannerManag, e, r.recordImpressi, o, n(banner, I, d);
@@ -82,7 +82,7 @@ export, default, function OptimizedBannerLoad, e, r({
 }
 
 /**
- * Banner, skeleton, for loading, stat, e
+ * Banner skeleton for loading stat e
  */
 function, BannerSkeleto, n() { 
   retu, r, n (

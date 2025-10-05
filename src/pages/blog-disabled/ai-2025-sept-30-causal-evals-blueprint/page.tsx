@@ -6,12 +6,12 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>AI, 202, 5: Causal, Evals, Blueprint — KP, I, s, Budge, t, s, Rollba, c, k</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>AI, 202, 5: Causal, Evals, Blueprint — KP, I, s, Budge, t, s, Rollba, c, k</title>
+        <meta, nam, e = 'description'
           conte, n, t='AI, 202, 5: Causal, Evals, Blueprint - KP, I, s, Budge, t, s, Rollback, for, AI syste, m, s'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-caus, a, l-eva, l, s-bluepri, n, t'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-se p t-30-caus a l-eva l s-bluepri n t'
         />
       </Helm, e, t>
 

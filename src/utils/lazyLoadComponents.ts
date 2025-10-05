@@ -1,9 +1,9 @@
 impo, r, t { la, z, y } fr, o, m 'rea, c, t';
 
 /**
- * Lazy, load, components with, better, error handling, and, retry log, i, c
+ * Lazy load components with better error handling and retry log i c
  */
-export, const, lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>>(
+export const lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>>(
   componentImp, o, r, t: () => Promi, s, e<{ defau, l, t: , T }>,
   retri, e, s =  , 3,
   interv, a, l = 1, 0, 0, 0,
@@ -29,16 +29,16 @@ export, const, lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>
 };
 
 /**
- * Preload, a, component
+ * Preload a component
  */
-export, const, preloadComponent = (componentImp, o, r, t: () => Promi, s, e<a, n, y>): vo, i, d = > {
+export const preloadComponent = (componentImp, o, r, t: () => Promi, s, e<a, n, y>): vo, i, d = > {
   componentIm, p, o, r, t();
 };
 
 /**
- * Lazy, load, with prefetch, on, hover
+ * Lazy load with prefetch on hover
  */
-export, const, createLazyLoadWithPrefetch = <T, extends, React.ComponentTy, p, e<a, n, y>>(
+export const createLazyLoadWithPrefetch = <T, extends, React.ComponentTy, p, e<a, n, y>>(
   componentImp, o, r, t: () => Promi, s, e<{ defau, l, t: , T }>,
 ) => {
   let, prefetchPromis, e: Promi, s, e<{ defau, l, t: , T }> | nu, l, l = nu, l, l; const, LazyComponen, t = l, a, z, y(() => {

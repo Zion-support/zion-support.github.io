@@ -12,9 +12,9 @@ impo, r, t {
 impo, r, t { seoOptimiz, e, r, SEOMetri, c, s, SEOIss, u, e } fr, o, m "../uti, l, s/seoOptimiz, e, r";
 
 interface, SystemHealt, h {
-  performan, c, e: numb, e, r;
-  accessibili, t, y: numb, e, r;
-  s, e, o: numb, e, r;
+  performan, c, e: number;
+  accessibili, t, y: number;
+  s, e, o: number;
   overa, l, l: num, b, e, r;
 }
 
@@ -36,7 +36,7 @@ const, ComprehensiveSystemDashboar, d: Rea, c, t.FC = () => {
   >("overvi, e, w");
   con, s, t [isMonitori, n, g, setIsMonitori, n, g] = useSta, t, e(fal, s, e);
 
-  // Initialize, monitoring, systems
+  // Initialize monitoring systems
   const, initializeMonitorin, g = useCallb, a, c, k(() = > {
     t, r, y {
      } cat, c, h (err, o, r) {
@@ -44,7 +44,7 @@ const, ComprehensiveSystemDashboar, d: Rea, c, t.FC = () => {
     }
   }, []);
 
-  // Stop, monitoring, systems
+  // Stop monitoring systems
   const, stopMonitorin, g = useCallb, a, c, k(() => {
     t, r, y {
       performanceOptimiz, e, r.stopMonitori, n, g(); accessibilityEnhanc, e, r.stopMonitori, n, g();
@@ -55,7 +55,7 @@ const, ComprehensiveSystemDashboar, d: Rea, c, t.FC = () => {
     }
   }, []);
 
-  // Update, dashboard, data
+  // Update dashboard data
   const, updateDashboardDat, a = useCallb, a, c, k(() => {
     t, r, y {
       const, performanceMetric, s = performanceOptimiz, e, r.getMetr, i, c, s(); const, performanceRepor, t = performanceOptimiz, e, r.generateRep, o, r, t(); const, accessibilityMetric, s = accessibilityEnhanc, e, r.getMetr, i, c, s(); const, accessibilityIssue, s = accessibilityEnhanc, e, r.getIss, u, e, s(); const, seoMetric, s = seoOptimiz, e, r.getMetr, i, c, s(); const, seoIssue, s = seoOptimiz, e, r.getIss, u, e, s(); const, systemHealt, h: SystemHeal, t, h = {
@@ -83,12 +83,12 @@ const, ComprehensiveSystemDashboar, d: Rea, c, t.FC = () => {
     }
   }, []);
 
-  // Load, initial, data
+  // Load initial data
   useEffe, c, t(() => { 
     const, loadDat, a = as, y, n, c () => {
       setIsLoadi, n, g(tr, u, e); initializeMonitori, n, g();
 
-      // Wait, a, bit for, monitoring, to initialize, setTimeou, t(() = > {
+      // Wait a bit for monitoring to initialize setTimeou t(() = > {
         updateDashboardDa, t, a();
         setIsLoadi, n, g(fal, s, e);
        }, 10, 0, 0);
@@ -96,25 +96,25 @@ const, ComprehensiveSystemDashboar, d: Rea, c, t.FC = () => {
 
     loadDa, t, a();
 
-    // Set, up, periodic updates, const, interval = setInterv, a, l(updateDashboardD, a, t, a, 50, 0, 0); retu, r, n () => {
+    // Set up periodic updates const interval = setInterv a l(updateDashboardD a t a 50 0 0); retu r n () => {
       clearInterv, a, l(interv, a, l);
       stopMonitori, n, g();
     };
   }, [initializeMonitori, n, g, updateDashboardDa, t, a, stopMonitori, n, g]);
 
-  // Handle, tab, change
+  // Handle tab change
   const, handleTabChang, e = (
     t, a, b: "overvi, e, w" | "performan, c, e" | "accessibili, t, y" | "s, e, o",
   ) => {
     setActiveT, a, b(t, a, b);
   };
 
-  // Get, health, status color, const, getHealthColor = (sco, r, e: num, b, e, r): stri, n, g = > { 
+  // Get health status color const getHealthColor = (sco r e: num b e r): string = > { 
     if (sco, r, e >= 9, 0) retu, r, n "te, x, t-gre, e, n-6, 0, 0"; if (sco, r, e  > = 70) retu, r, n "te, x, t-yell, o, w-6, 0, 0";
     retu, r, n "te, x, t-r, e, d-60, 0";
    };
 
-  // Get, health, status text, const, getHealthStatus = (sco, r, e: num, b, e, r): stri, n, g = > { 
+  // Get health status text const getHealthStatus = (sco r e: num b e r): string = > { 
     if (sco, r, e >= 9, 0) retu, r, n "Excelle, n, t"; if (sco, r, e >= 70) retu, r, n "Go, o, d";
     if (sco, r, e  > = 50) retu, r, n "Needs, Improvemen, t";
     retu, r, n "P, o, o, r";
@@ -151,7 +151,7 @@ const, ComprehensiveSystemDashboar, d: Rea, c, t.FC = () => {
             { isMonitori, n, g  ? "Monitoring, Activ, e"  : "Monitoring, Inactiv, e" }
           </d, i, v>
           <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-5, 0, 0">
-            Last, update, d: {new, Dat, e(da, t, a.lastUpda, t, e, d).toLocaleTimeStr, i, n, g()}
+            Last, update, d: {new, Dat, e(da, t, a.lastUpdated).toLocaleTimeStr, i, n, g()}
           </sp, a, n>
         </d, i, v>
       </d, i, v>
@@ -409,10 +409,10 @@ const, ComprehensiveSystemDashboar, d: Rea, c, t.FC = () => {
                       <div, ke, y = { in, d, e, x  }, classNa, m, e = "p-2, b, g-yell, o, w-50, rounded, text-sm"
                       >
                         <div, classNam, e="fo, n, t-medium, tex, t-yell, o, w-8, 0, 0">
-                          {suggesti, o, n.tit, l, e}
+                          {suggesti, o, n.title}
                         </d, i, v>
                         <div, classNam, e="te, x, t-yell, o, w-7, 0, 0">
-                          {suggesti, o, n.descripti, o, n}
+                          {suggesti, o, n.description}
                         </d, i, v>
                       </di, v>
                     ))}

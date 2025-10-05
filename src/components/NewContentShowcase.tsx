@@ -28,10 +28,10 @@ const, NewContentShowcas, e: Rea, c, t.FC = () => {
                 <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } classNa, m, e="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
                 >
                   <div, classNam, e="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</d, i, v>
-                  <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.tit, l, e}</h4>
-                  <p, classNam, e="te, x, t-gr, a, y-600, tex, t-sm, m, b-3, lin, e-cla, m, p-2">{artic, l, e.descripti, o, n}</p>
+                  <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.title}</h4>
+                  <p, classNam, e="te, x, t-gr, a, y-600, tex, t-sm, m, b-3, lin, e-cla, m, p-2">{artic, l, e.description}</p>
                   <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm">
-                    <span, classNam, e="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTi, m, e}</sp, a, n>
+                    <span, classNam, e="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>
                     <span, classNam, e="te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1">
                       Read, Mor, e <ArrowRight, classNam, e="w-4 h-4" />
                     </sp, a, n>
@@ -60,10 +60,10 @@ const, NewContentShowcas, e: Rea, c, t.FC = () => {
                 >
                   <div, classNam, e="flex, item, s-center, ga, p-2, m, b-2">
                     <span, classNam, e="te, x, t-2, x, l">{servi, c, e.ic, o, n}</sp, a, n>
-                    <span, classNam, e = "te, x, t-sm, tex, t-purp, l, e-600, fon, t-semibo, l, d">{servi, c, e.catego, r, y}</sp, a, n>
+                    <span, classNam, e = "te, x, t-sm, tex, t-purp, l, e-600, fon, t-semibo, l, d">{servi, c, e.category}</sp, a, n>
                   </d, i, v>
                   <h4, classNam, e="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{servi, c, e.na, m, e}</h4>
-                  <p, classNam, e="te, x, t-gr, a, y-600, tex, t-sm, m, b-3, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
+                  <p, classNam, e="te, x, t-gr, a, y-600, tex, t-sm, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>
                   <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm">
                     <span, classNam, e="te, x, t-gr, a, y-700, fon, t-semibo, l, d">{servi, c, e.prici, n, g}</sp, a, n>
                     <span, classNam, e="te, x, t-purp, l, e-600, fon, t-semibold, flex, items-center, ga, p-1">

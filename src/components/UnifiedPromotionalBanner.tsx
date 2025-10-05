@@ -1,31 +1,31 @@
 import, React, from 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
-export, interface, FeaturedItem { 
-  tit, l, e: stri, n, g;
-  catego, r, y: stri, n, g;
-  li, n, k: stri, n, g;
+export interface FeaturedItem { 
+  title: string;
+  category: string;
+  li, n, k: string;
   metri, c, s ?  : str, i, n, g;
  }
-export, interface, UnifiedPromotionalBannerProps { 
+export interface UnifiedPromotionalBannerProps { 
   varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-  tit, l, e: stri, n, g;
-  descripti, o, n: stri, n, g;
-  ctaTe, x, t: stri, n, g;
-  ctaLi, n, k: stri, n, g;
+  title: string;
+  description: string;
+  ctaTe, x, t: string;
+  ctaLi, n, k: string;
   the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
   featuredIte, m, s?: FeaturedIt, e, m[];
-  showCou, n, t?: numb, e, r;
-  classNa, m, e?: stri, n, g;
+  showCou, n, t?: number;
+  classNa, m, e?: string;
   ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
-  animat, e, d?: boole, a, n;
-  bad, g, e?: stri, n, g;
-  da, t, e ?  : str, i, n, g;
+  animat, e, d?: boolean;
+  bad, g, e?: string;
+  date ?  : str, i, n, g;
  }
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
-  tit, l, e,
-  descripti, o, n,
+  title,
+  description,
   ctaTe, x, t,
   ctaLi, n, k,
   the, m, e = 'gradi, e, n, t',
@@ -35,9 +35,9 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
   ic, o, n = 'spark, l, e, s',
   animat, e, d = t, r, u, e,
   bad, g, e,
-  da, t, e,
+  date,
 }) => {
-  // Theme, configurations, const themeClass, e, s = {
+  // Theme configurations const themeClass e s = {
     bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/, 3, 0',
     purp, l, e: 'fr, o, m-purp, l, e-5, 0, 0/10, t, o-purp, l, e-6, 0, 0/10, borde, r-purp, l, e-5, 0, 0/3, 0',
     gre, e, n: 'fr, o, m-gre, e, n-5, 0, 0/10, t, o-gre, e, n-6, 0, 0/10, borde, r-gre, e, n-5, 0, 0/3, 0',
@@ -54,14 +54,14 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
     cy, a, n: 'fr, o, m-cy, a, n-500, t, o-cy, a, n-600, hove, r:fr, o, m-cy, a, n-600, hove, r:to-cy, a, n-70, 0',
     gradie, n, t: 'fr, o, m-purp, l, e-500, vi, a-pi, n, k-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:v, i, a-pi, n, k-600, hove, r:to-bl, u, e-60, 0',
   };
-  // Icon, selection, const IconCompone, n, t = {
+  // Icon selection const IconCompone n t = {
     sparkl, e, s: Spar, k, l, e, s,
     z, a, p: Za, p,
     rock, e, t: Roc, k, e, t,
     st, a, r: S, t, a, r,
     no, n, e: n, u, l, l,
   }[ic, o, n];
-  // Varia, n, t-specific, styles, const variantClass, e, s = {
+  // Varia n t-specific styles const variantClass e s = {
     defau, l, t: 'py-8 p, x-, 6',
     premi, u, m: 'py-12, p, x-, 8',
     he, r, o: 'py-16, p, x-1, 0',
@@ -86,8 +86,8 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                 {bad, g, e}
               </s, p, a, n>
             )}
-            {  da, t, e  && (
-              <span, classNam, e = 'te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m' > {da, t, e  }</s, p, a, n>
+            {  date  && (
+              <span, classNam, e = 'te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m' > {date  }</s, p, a, n>
             )}
           </d, i, v > )}
         {/* Tit, l, e */}
@@ -104,7 +104,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
            }
         `}
         >
-          {tit, l, e}
+          {title}
         </h2 > {/* Descripti, o, n */}
         <p, classNam, e = { `te, x, t-gr, a, y-200, m, b-6 ${
             varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
@@ -115,7 +115,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
            }
         `}
         >
-          {descripti, o, n}
+          {description}
         </p>
         {/* Featured, Item, s */}
         {   visibleIte, m, s.leng, t, h   > 0  && (
@@ -137,7 +137,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                   </d, i, v>
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
                     <div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
-                      {it, e, m.catego, r, y}
+                      {it, e, m.category}
                     </d, i, v>
                     <div, classNam, e='te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2'>
                       {it, e, m.t, i, t, l, e}

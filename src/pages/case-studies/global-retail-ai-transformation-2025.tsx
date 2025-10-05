@@ -15,11 +15,11 @@ const, GlobalRetailAITransformatio, n = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Global, Retail, AI Transformati, o, n: $489M, Value, Created in, 18, Months |
           Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Fortune, 100, retailer achiev, e, s $489M, value, creation through, comprehensive, AI transformati, o, n. 94% inventory, optimizat, i, o, n, 78% customer, satisfaction, increase, 3, 4, 0% marketing, RO, I.'
         />
         <meta, nam, e = 'keywor, d, s'

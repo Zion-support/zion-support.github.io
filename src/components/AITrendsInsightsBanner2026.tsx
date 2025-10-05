@@ -4,11 +4,11 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
   const, trendingTopic, s = [
     {
       i, d: , 1,
-      tit, l, e: 'Generative, AI, Enterprise Adopt, i, o, n',
-      catego, r, y: 'Enterpris, e, A, I',
+      title: 'Generative, AI, Enterprise Adopt, i, o, n',
+      category: 'Enterpris, e, A, I',
       tre, n, d: '+45, 0%',
       grow, t, h: 'Rapid, Grow, t, h',
-      descripti, o, n: 'Enterprise, adoption, of generative, AI, has increased, by, 450% in, Q1, 202, 6, with, 7, 8% of, Fortune, 500 companies, implementing, AI-powered, content, generation.',
+      description: 'Enterprise, adoption, of generative, AI, has increased, by, 450% in, Q1, 202, 6, with, 7, 8% of, Fortune, 500 companies, implementing, AI-powered, content, generation.',
       ic, o, n: '🚀',
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
       bad, g, e: 'TREND, I, N, G',
@@ -20,11 +20,11 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
     },
     {
       id:  , 2,
-      tit, l, e: 'Quantum, Computing, Breakthrough, s',
-      catego, r, y: 'Quantum, Te, c, h',
+      title: 'Quantum, Computing, Breakthrough, s',
+      category: 'Quantum, Te, c, h',
       tre, n, d: '+30, 0%',
       grow, t, h: 'Exponent, i, a, l',
-      descripti, o, n: 'Quantum, computing, achieves practical, applications, in AI, optimizati, o, n, with, 30, 0% improvement, in, processing complex, machine, learning algorith, m, s.',
+      description: 'Quantum, computing, achieves practical, applications, in AI, optimizati, o, n, with, 30, 0% improvement, in, processing complex, machine, learning algorith, m, s.',
       ic, o, n: '🚀',
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
       bad, g, e: 'BREAKTHRO, U, G, H',
@@ -36,11 +36,11 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
     },
     {
       id:  , 3,
-      tit, l, e: 'Autonomous, Business, Operation, s',
-      catego, r, y: 'Automat, i, o, n',
+      title: 'Autonomous, Business, Operation, s',
+      category: 'Automat, i, o, n',
       tre, n, d: '+28, 0%',
       grow, t, h: 'Accelerat, i, n, g',
-      descripti, o, n: 'Business, process, automation reaches, new, heights with, 9, 5% autonomous, operations, across multiple, industri, e, s, reducing, operational, costs by, 6, 0%.',
+      description: 'Business, process, automation reaches, new, heights with, 9, 5% autonomous, operations, across multiple, industri, e, s, reducing, operational, costs by, 6, 0%.',
       ic, o, n: '🚀',
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0',
       bad, g, e: 'AUTOMAT, I, O, N',
@@ -52,11 +52,11 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
     },
     {
       id:  , 4,
-      tit, l, e: 'AI-Powered, Predictive, Analytic, s',
-      catego, r, y: 'Business, Intelligen, c, e',
+      title: 'AI-Powered, Predictive, Analytic, s',
+      category: 'Business, Intelligen, c, e',
       tre, n, d: '+35, 0%',
       grow, t, h: 'High, Grow, t, h',
-      descripti, o, n: 'Advanced, predictive, analytics using, AI, achieves 99.9% accuracy, in, forecasting business, tren, d, s, customer, behavio, r, and, market, dynamics.',
+      description: 'Advanced, predictive, analytics using, AI, achieves 99.9% accuracy, in, forecasting business, tren, d, s, customer, behavio, r, and, market, dynamics.',
       ic, o, n: '🚀',
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
       bad, g, e: 'PREDICT, I, V, E',
@@ -64,11 +64,11 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
     },
     {
       id:  , 5,
-      tit, l, e: 'Edge, AI, Computing Revolut, i, o, n',
-      catego, r, y: 'Edge, Computi, n, g',
+      title: 'Edge, AI, Computing Revolut, i, o, n',
+      category: 'Edge, Computi, n, g',
       tre, n, d: '+42, 0%',
       grow, t, h: 'Rapid, Expansi, o, n',
-      descripti, o, n: 'Edge, AI, computing transforms, rea, l-time, decision, making with, 42, 0% increase, in, deploymen, t, enabling, instant, AI processing, at, the network, edg, e.',
+      description: 'Edge, AI, computing transforms, rea, l-time, decision, making with, 42, 0% increase, in, deploymen, t, enabling, instant, AI processing, at, the network, edg, e.',
       ic, o, n: '🚀',
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-50, 0',
       bad, g, e: 'EDG, E, A, I',
@@ -80,11 +80,11 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
     },
     {
       id:  , 6,
-      tit, l, e: 'AI, Ethics, and Governa, n, c, e',
-      catego, r, y: 'AI, Governan, c, e',
+      title: 'AI, Ethics, and Governa, n, c, e',
+      category: 'AI, Governan, c, e',
       tre, n, d: '+38, 0%',
       grow, t, h: 'Critical, Grow, t, h',
-      descripti, o, n: 'AI, ethics, and governance, frameworks, become essential, with, 380% increase, in, regulatory compliance, requirements, and ethical, AI, implementatio, n.',
+      description: 'AI, ethics, and governance, frameworks, become essential, with, 380% increase, in, regulatory compliance, requirements, and ethical, AI, implementatio, n.',
       ic, o, n: '🚀',
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-50, 0',
       bad, g, e: 'GOVERNA, N, C, E',
@@ -181,7 +181,7 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
                 {/* Catego, r, y */}
                 <div, classNam, e='mb-4'>
                   <span, classNam, e='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
-                    {top, i, c.catego, r, y}
+                    {top, i, c.category}
                   </sp, a, n>
                 </d, i, v>
 
@@ -192,7 +192,7 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
 
                 {/* Descripti, o, n */}
                 <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm'>
-                  {top, i, c.descripti, o, n}
+                  {top, i, c.description}
                 </p>
 
                 {/* Key, Insight, s */}

@@ -5,12 +5,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Enterprise, RAG, Security v2 — Au, t, h-Aw, a, r, e, Fre, s, h, Sign, e, d</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>Enterprise, RAG, Security v2 — Au, t, h-Aw, a, r, e, Fre, s, h, Sign, e, d</title>
+        <meta, nam, e = 'description'
           conte, n, t='Au, t, h-scoped, retriev, a, l, freshness, window, s, prompt, firewall, s, and, signed, outputs that, keep, answers correct, and, compliant.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-enterpri, s, e-r, a, g-securi, t, y-v2'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-enterpri s e-r a g-securi t y-v2'
         />
       </Helm, e, t>
 

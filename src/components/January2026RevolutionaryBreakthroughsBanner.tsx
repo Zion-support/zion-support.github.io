@@ -4,32 +4,32 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
   const, breakthrough, s = [
     {
       ic, o, n: B, r, a, i, n,
-      tit, l, e: "Synthetic, Consciousness, A, I",
-      descripti, o, n: "Revolutionary, AI, achieving genuine, consciousness, and emotional, intelligen, c, e",
+      title: "Synthetic, Consciousness, A, I",
+      description: "Revolutionary, AI, achieving genuine, consciousness, and emotional, intelligen, c, e",
       sta, t, s: "$500B, Enterprise, Valu, e",
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0",
       bgCol, o, r: "bg-purp, l, e-5, 0, 0/1, 0"
     },
     {
       ic, o, n: Za, p,
-      tit, l, e: "Quantum, Edge, Computin, g",
-      descripti, o, n: "S, u, b-millisecond, processing, with 2, 0, 0-250x, speed, improvement, s",
+      title: "Quantum, Edge, Computin, g",
+      description: "S, u, b-millisecond, processing, with 2, 0, 0-250x, speed, improvement, s",
       sta, t, s: "200x, Fast, e, r",
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0",
       bgCol, o, r: "bg-bl, u, e-5, 0, 0/1, 0"
     },
     {
       ic, o, n: Netw, o, r, k,
-      tit, l, e: "Autonomous, Enterprise, Mes, h",
-      descripti, o, n: "Se, l, f-organizing, AI, networks achieving, 9, 9.7% operational, efficien, c, y",
+      title: "Autonomous, Enterprise, Mes, h",
+      description: "Se, l, f-organizing, AI, networks achieving, 9, 9.7% operational, efficien, c, y",
       sta, t, s: "99.7% Efficie, n, c, y",
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0",
       bgCol, o, r: "bg-gre, e, n-5, 0, 0/1, 0"
     },
     {
       ic, o, n: Shi, e, l, d,
-      tit, l, e: "Quant, u, m-Safe, Securi, t, y",
-      descripti, o, n: "Unbreakable, protection, systems with, 9, 9.99% threat, preventi, o, n",
+      title: "Quant, u, m-Safe, Securi, t, y",
+      description: "Unbreakable, protection, systems with, 9, 9.99% threat, preventi, o, n",
       sta, t, s: "$2.8B, Protect, e, d",
       col, o, r: "fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0",
       bgCol, o, r: "bg-oran, g, e-5, 0, 0/1, 0"
@@ -37,7 +37,7 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
   ]; retu, r, n (
     <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {{ durati, o, n: , 0., 8 }}
+      transiti, o, n = {{ duration: , 0., 8 }}
       classNa, m, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, rounde, d-2x, l, p-8, tex, t-whi, t, e"
     >
       {/* Background, Effect, s */}
@@ -49,7 +49,7 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
         <div, classNam, e="te, x, t-center, m, b-12">
           <moti, o, n.div, initia, l={{ sca, l, e: , 0., 9 }}
             anima, t, e = {{ sc, a, l, e:  , 1 }}
-            transiti, o, n = {{ del, a, y: , 0., 2, durati, o, n: 0., 6 }}
+            transiti, o, n = {{ del, a, y: , 0., 2, duration: 0., 6 }}
             classNa, m, e = "inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-6"
           >
             <Sparkles, classNam, e="w-4 h-4, m, r-2, tex, t-yell, o, w-4, 0, 0" />
@@ -57,14 +57,14 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
           </moti, o, n.d, i, v>
           <moti, o, n.h2, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ del, a, y: , 0., 3, durati, o, n: 0., 6 }}
+            transiti, o, n = {{ del, a, y: , 0., 3, duration: 0., 6 }}
             classNa, m, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-white, vi, a-purp, l, e-200, t, o-bl, u, e-200, b, g-cl, i, p-text, tex, t-transparent, m, b-6"
           >
             AI, Revolution, 2026
           </moti, o, n.h2>
           <moti, o, n.p, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ del, a, y: , 0., 4, durati, o, n: 0., 6 }}
+            transiti, o, n = {{ del, a, y: , 0., 4, duration: 0., 6 }}
             classNa, m, e = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"
           >
             Witness, the, most profound, technological, breakthroughs in, human, history. 
@@ -76,7 +76,7 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
           { breakthroug, h, s.m, a, p((breakthr, o, u, g, h, ind, e, x) = > (
             <moti, o, n.div, ke, y = { breakthrou, g, h.ti, t, l, e  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ del, a, y: 0.5 + ind, e, x * , 0., 1, durati, o, n: 0., 6 }}
+              transiti, o, n = {{ del, a, y: 0.5 + ind, e, x * , 0., 1, duration: 0., 6 }}
               classNa, m, e = { `${breakthrou, g, h.bgCo, l, o, r }, backdr, o, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/20, transitio, n-all, duratio, n-300, group, hover:transform, hove, r:sca, l, e-10, 5`}
             >
               <div, classNam, e = "flex, item, s-start, spac, e-x-4" > <div, classNam, e={`p-3, rounde, d-xl, b, g-gradie, n, t-to-r ${breakthrou, g, h.col, o, r}`}>
@@ -87,7 +87,7 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
                     {breakthrou, g, h.t, i, t, l, e}
                   </h3>
                   <p, classNam, e = "te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">
-                    {breakthrou, g, h.descripti, o, n}
+                    {breakthrou, g, h.description}
                   </p>
                   <div, classNam, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-fu, l, l">
                     <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0">
@@ -102,7 +102,7 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
         {/* Key, Stat, s */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {{ del, a, y: , 0., 9, durati, o, n: 0., 6 }}
+          transiti, o, n = {{ del, a, y: , 0., 9, duration: 0., 6 }}
           classNa, m, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12"
         >
           <div, classNam, e="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/10">
@@ -133,7 +133,7 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
         {/* C, T, A */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {{ del, a, y: , 1., 0, durati, o, n: 0., 6 }}
+          transiti, o, n = {{ del, a, y: , 1., 0, duration: 0., 6 }}
           classNa, m, e = "te, x, t-cent, e, r"
         >
           <div, classNam, e="spa, c, e-y-4">

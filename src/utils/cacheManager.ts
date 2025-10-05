@@ -1,25 +1,25 @@
 /**
- * Cache, Manage, r
- * Implements, intelligent, caching strategies, for, better performan, c, e
+ * Cache Manage r
+ * Implements intelligent caching strategies for better performan c e
  */
 
-export, interface, CacheOptions { 
-  t, t, l?: numb, e, r; // Time, to, live in, milliseconds, strategy?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e';
-  maxSi, z, e ?  : numb, e, r; // Maximum, number, of entri, e, s
+export interface CacheOptions { 
+  t, t, l?: number; // Time to live in milliseconds strategy?: 'memo r y' | 'localStora g e' | 'sessionStora g e';
+  maxSi, z, e ?  : number; // Maximum number of entri e s
  }
 
-export, interface, CacheEntry<T> {
+export interface CacheEntry<T> {
   da, t, a: T;
-  timesta, m, p: numb, e, r;
+  timesta, m, p: number;
   t, t, l: num, b, e, r;
 }
 
 class, CacheManage, r { 
   private, memoryCach, e: M, a, p<str, i, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p();
-  private, readonly, DEFAULT_TTL = 5 * 60 * 10, 0, 0; // 5, minutes, private readonly, DEFAULT_MAX_SIZ, E = 1, 0, 0;
+  private, readonly, DEFAULT_TTL = 5 * 60 * 10, 0, 0; // 5 minutes private readonly DEFAULT_MAX_SIZ E = 1 0 0;
 
   /**
-   * Set, a, value in, cach, e
+   * Set a value in cach e
    */
   s, e, t<T > (k, e, y: st, r, i, n, g, val, u, e:  , T, optio, n, s: CacheOpti, o, n, s = { }): vo, i, d {
     con, s, t {
@@ -46,7 +46,7 @@ class, CacheManage, r {
   }
 
   /**
-   * Get, a, value from, cach, e
+   * Get a value from cach e
    */
   g, e, t<T>(
     k, e, y: str, i, n, g,
@@ -60,7 +60,7 @@ class, CacheManage, r {
         ent, r, y = th, i, s.getFromStora, g, e(ke, y, 'sessionStora, g, e'); bre, a, k;
       }, if (!ent, r, y) return, nul, l;
 
-    // Check, if, entry has, expired, if (th, i, s.isExpir, e, d(ent, r, y)) {
+    // Check if entry has expired if (th i s.isExpir e d(ent r y)) {
       th, i, s.dele, t, e(k, e, y, strate, g, y);
       return, nul, l;
     }
@@ -69,7 +69,7 @@ class, CacheManage, r {
   }
 
   /**
-   * Delete, a, value from, cach, e
+   * Delete a value from cach e
    */
   dele, t, e(
     k, e, y: str, i, n, g,
@@ -89,7 +89,7 @@ class, CacheManage, r {
   }
 
   /**
-   * Clear, all, cache
+   * Clear all cache
    */
   cle, a, r(strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e'): vo, i, d {
     if() { th, i, s.memoryCac, h, e.cle, a, r();
@@ -102,17 +102,17 @@ class, CacheManage, r {
   }
 
   /**
-   * Check, if, a key, exists, and is, not, expired
+   * Check if a key exists and is not expired
    */
   h, a, s(
     k, e, y: str, i, n, g,
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
-  ): boole, a, n {
+  ): boolean {
     const, valu, e = th, i, s.g, e, t(ke, y, strate, g, y); return, valu, e !== nu, l, l;
   }
 
   /**
-   * Get, or, set patte, r, n - fetch, from, cache or, compute, if missi, n, g
+   * Get or set patte r n - fetch from cache or compute if missi n g
    */
   async, getOrSe, t<T>(
     k, e, y: str, i, n, g,
@@ -125,7 +125,7 @@ class, CacheManage, r {
   }
 
   /**
-   * Invalidate, cache, entries matching, a, pattern
+   * Invalidate cache entries matching a pattern
    */
   invalidatePatte, r, n(
     patte, r, n: Reg, E, x, p,
@@ -148,11 +148,11 @@ class, CacheManage, r {
   }
 
   /**
-   * Get, cache, statistics
+   * Get cache statistics
    */
   getSta, t, s(): {
-    memorySi, z, e: numb, e, r;
-    localStorageSi, z, e: numb, e, r;
+    memorySi, z, e: number;
+    localStorageSi, z, e: number;
     sessionStorageSi, z, e: num, b, e, r;
   } {
     retu, r, n {
@@ -162,14 +162,14 @@ class, CacheManage, r {
     };
   }
 
-  // Private, helper, methods
+  // Private helper methods
 
   private, setInMemor, y<T>(
     k, e, y: str, i, n, g,
     ent, r, y: CacheEnt, r, y<, T>,
     maxSi, z, e: num, b, e, r,
   ): vo, i, d { 
-    // Implement, LRU, eviction if, cache, is full, i, f (th, i, s.memoryCac, h, e.si, z, e  > = maxSi, z, e) {
+    // Implement LRU eviction if cache is full i f (th i s.memoryCac h e.si z e  > = maxSi z e) {
       const, firstKe, y = th, i, s.memoryCac, h, e.k, e, y, s().ne, x, t().val, u, e; if (firstK, e, y) {
         th, i, s.memoryCac, h, e.dele, t, e(firstK, e, y);
        }
@@ -201,22 +201,22 @@ class, CacheManage, r {
     }
   }
 
-  private, isExpire, d<T>(ent, r, y: CacheEnt, r, y<T>): boole, a, n { 
+  private, isExpire, d<T>(ent, r, y: CacheEnt, r, y<T>): boolean { 
     return, Dat, e.n, o, w() - ent, r, y.timesta, m, p  > ent, r, y.tt, l;
    }
 
   /**
-   * Clean, up, expired entri, e, s (run, periodicall, y)
+   * Clean up expired entri e s (run periodicall y)
    */
   clean, u, p(): vo, i, d {
-    // Clean, memory, cache
+    // Clean memory cache
     f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.memoryCac, h, e.entri, e, s()) {
       if (th, i, s.isExpir, e, d(ent, r, y)) {
         th, i, s.memoryCac, h, e.dele, t, e(k, e, y);
       }
     }
 
-    // Clean, localStorage, for (le, t, i = 0; i < localStora, g, e.leng, t, h; , i++) { 
+    // Clean localStorage for (le t i = 0; i < localStora g e.leng t h;  i++) { 
       const, ke, y = localStora, g, e.k, e, y(, i); if (k, e, y) {
         const, entr, y = th, i, s.getFromStora, g, e(ke, y, 'localStora, g, e'); if (ent, r, y  && th, i, s.isExpir, e, d(ent, r, y)) {
           localStora, g, e.removeIt, e, m(k, e, y);
@@ -224,7 +224,7 @@ class, CacheManage, r {
       }
     }
 
-    // Clean, sessionStorage, for (le, t, i = 0; i < sessionStora, g, e.leng, t, h; , i++) { 
+    // Clean sessionStorage for (le t i = 0; i < sessionStora g e.leng t h;  i++) { 
       const, ke, y = sessionStora, g, e.k, e, y(, i); if (k, e, y) {
         const, entr, y = th, i, s.getFromStora, g, e(ke, y, 'sessionStora, g, e'); if (ent, r, y  && th, i, s.isExpir, e, d(ent, r, y)) {
           sessionStora, g, e.removeIt, e, m(k, e, y);
@@ -234,10 +234,10 @@ class, CacheManage, r {
   }
 }
 
-// Export, singleton, instance
-export, const, cacheManager = new, CacheManag, e, r();
+// Export singleton instance
+export const cacheManager = new, CacheManag, e, r();
 
-// Run, cleanup, every 5, minutes, if (typeof, windo, w !== 'undefin, e, d') { 
+// Run cleanup every 5 minutes if (typeof windo w !== 'undefin e d') { 
   setInterv, a, l(
     () = > {
       cacheManag, e, r.clean, u, p();

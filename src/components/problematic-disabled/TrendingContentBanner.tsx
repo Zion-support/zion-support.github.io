@@ -3,81 +3,81 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 const, TrendingContentBanne, r: Rea, c, t.FC = () => {
   con, s, t [currentIn, d, e, x, setCurrentInd, e, x] = useSta, t, e(0); const, trendingItem, s = [
     {
-      tit, l, e: "AI, Disaster, Recovery Playb, o, o, k, s",
-      descripti, o, n: "Failov, e, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.",",
+      title: "AI, Disaster, Recovery Playb, o, o, k, s",
+      description: "Failov, e, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.",",
       vie, w, s: "11.2, K",
-      readTi, m, e: "7, m, i, n",",
-      catego, r, y: "AI, Operatio, n, s",
+      readTime: "7, m, i, n",",
+      category: "AI, Operatio, n, s",
       ic, o, n: Trendin, g, U, p,",
       li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-2, 0, 2, 5",
       bad, g, e: "NE, W"
     },
     {",
-      tit, l, e: "Private, Feature, Flags: Ze, r, o‑PII, Experimen, t, s",
-      descripti, o, n: "Signed, confi, g, s, scoped, ID, s, and, edge, analytics under, 100m, s.",",
+      title: "Private, Feature, Flags: Ze, r, o‑PII, Experimen, t, s",
+      description: "Signed, confi, g, s, scoped, ID, s, and, edge, analytics under, 100m, s.",",
       vie, w, s: "13.6, K",
-      readTi, m, e: "8, m, i, n",",
-      catego, r, y: "Experimentat, i, o, n",
+      readTime: "8, m, i, n",",
+      category: "Experimentat, i, o, n",
       ic, o, n: Shi, e, l, d,",
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-priva, t, e-featu, r, e-fla, g, s-ze, r, o-pi, i",
       bad, g, e: "NE, W"
     },
     {",
-      tit, l, e: "Runtime, Rollback, Guardrail, s",
-      descripti, o, n: "Canary, scorecar, d, s, kill, switche, s, and, instant, reversibility.",",
+      title: "Runtime, Rollback, Guardrail, s",
+      description: "Canary, scorecar, d, s, kill, switche, s, and, instant, reversibility.",",
       vie, w, s: "12.1, K",
-      readTi, m, e: "7, m, i, n",",
-      catego, r, y: "Reliabil, i, t, y",
+      readTime: "7, m, i, n",",
+      category: "Reliabil, i, t, y",
       ic, o, n: Trendin, g, U, p,",
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-guardra, i, l, s",
       bad, g, e: "TREND, I, N, G"
     },
     {",
-      tit, l, e: "AI, Autonomous, Infrastructure 2, 0, 2, 6",
-      descripti, o, n: "Se, l, f‑heal, i, n, g, se, l, f‑optimizi, n, g, se, l, f‑scaling, platforms, with budge, t, s.",",
+      title: "AI, Autonomous, Infrastructure 2, 0, 2, 6",
+      description: "Se, l, f‑heal, i, n, g, se, l, f‑optimizi, n, g, se, l, f‑scaling, platforms, with budge, t, s.",",
       vie, w, s: "12.4, K",
-      readTi, m, e: "9, m, i, n",",
-      catego, r, y: "Platform, Engineeri, n, g",
+      readTime: "9, m, i, n",",
+      category: "Platform, Engineeri, n, g",
       ic, o, n: Trendin, g, U, p,",
       li, n, k: "/bl, o, g/ai-autonomo, u, s-infrastructu, r, e-2, 0, 2, 6",
       bad, g, e: "HO, T"
     },
     {",
-      tit, l, e: "Ze, r, o‑Trust, for, GenAI 2, 0, 2, 6",
-      descripti, o, n: "Prompt, firewal, l, s, egress, control, s, and, signed, outputs at, scal, e.",",
+      title: "Ze, r, o‑Trust, for, GenAI 2, 0, 2, 6",
+      description: "Prompt, firewal, l, s, egress, control, s, and, signed, outputs at, scal, e.",",
       vie, w, s: "10.9, K",
-      readTi, m, e: "7, m, i, n",",
-      catego, r, y: "Secur, i, t, y",
+      readTime: "7, m, i, n",",
+      category: "Secur, i, t, y",
       ic, o, n: Shi, e, l, d,",
       li, n, k: "/bl, o, g/ze, r, o-tru, s, t-f, o, r-gen, a, i-2, 0, 2, 6",
       bad, g, e: "TREND, I, N, G"
     },
     {",
-      tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 2, 0, 2, 6",
-      descripti, o, n: "Ne, a, r‑term, wins, by combining, QC, libs with, AI, orchestratio, n.",",
+      title: "Quant, u, m‑AI, Hybrid, Blueprint 2, 0, 2, 6",
+      description: "Ne, a, r‑term, wins, by combining, QC, libs with, AI, orchestratio, n.",",
       vie, w, s: "9.1, K",
-      readTi, m, e: "8, m, i, n",",
-      catego, r, y: "Quan, t, u, m",
+      readTime: "8, m, i, n",",
+      category: "Quan, t, u, m",
       ic, o, n: Br, a, i, n,",
       li, n, k: "/bl, o, g/quant, u, m-ai-hybr, i, d-bluepri, n, t-2, 0, 2, 6",
       bad, g, e: "NE, W"
     },
     {",
-      tit, l, e: "Edge, LLM, Caching Blueprint, 20, 2, 6",
-      descripti, o, n: "S, u, b‑100ms, prompts, via tiered, caches, and freshness, windo, w, s.",",
+      title: "Edge, LLM, Caching Blueprint, 20, 2, 6",
+      description: "S, u, b‑100ms, prompts, via tiered, caches, and freshness, windo, w, s.",",
       vie, w, s: "8.9, K",
-      readTi, m, e: "6, m, i, n",",
-      catego, r, y: "Architect, u, r, e",
+      readTime: "6, m, i, n",",
+      category: "Architect, u, r, e",
       ic, o, n: Za, p,",
       li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-2, 0, 2, 6",
       bad, g, e: "POPU, L, A, R"
     },
     {",
-      tit, l, e: "GenAI, Data, Governance Quickst, a, r, t",
-      descripti, o, n: "Policy, tes, t, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.",",
+      title: "GenAI, Data, Governance Quickst, a, r, t",
+      description: "Policy, tes, t, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.",",
       vie, w, s: "9.8, K",
-      readTi, m, e: "6, m, i, n",",
-      catego, r, y: "AI, Governan, c, e",
+      readTime: "6, m, i, n",",
+      category: "AI, Governan, c, e",
       ic, o, n: Shi, e, l, d,",
       li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-2, 0, 2, 5",
       bad, g, e: "HO, T"
@@ -122,7 +122,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
                 {currentIt, e, m.t, i, t, l, e}
               </h3>
               <p, classNam, e = "te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-3">
-                {currentIt, e, m.descripti, o, n}
+                {currentIt, e, m.description}
               </p>
               <div, classNam, e="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">
                 <div, classNam, e="flex, item, s-center, ga, p-1">
@@ -131,7 +131,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
                 </d, i, v>
                 <div, classNam, e="flex, item, s-center, ga, p-1">
                   <Clock, classNam, e="w-3 h-3" />
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d</sp, a, n>
+                  <sp, a, n>{currentIt, e, m.readTime} re, a, d</sp, a, n>
                 </d, i, v>
                 <div, classNam, e="flex, item, s-center, ga, p-1">
                   <Star, classNam, e="w-3 h-3, tex, t-yell, o, w-4, 0, 0" />

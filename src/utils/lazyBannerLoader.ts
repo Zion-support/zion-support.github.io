@@ -1,27 +1,27 @@
 /**
- * Lazy, Banner, Loader
- * Optimizes, banner, loading by, implementing, lazy loading, and, code splitti, n, g
+ * Lazy Banner Loader
+ * Optimizes banner loading by implementing lazy loading and code splitti n g
  */
 
 impo, r, t { la, z, y, ComponentTy, p, e } fr, o, m 'rea, c, t';
 
 interface, BannerComponen, t { 
-  defau, l, t: ComponentTy, p, e<an, y > ;
+  defau, l, t: ComponentTy, p, e<any > ;
  }
 
 /**
- * Lazy, load, banner components, to, reduce initial, bundle, size
- * Only, load, banners when, the, y're, neede, d
+ * Lazy load banner components to reduce initial bundle size
+ * Only load banners when the y're neede d
  */
-export, const, lazyLoadBanner = (impor, t, F, n: () => Promi, s, e<BannerCompone, n, t>) => {
+export const lazyLoadBanner = (impor, t, F, n: () => Promi, s, e<BannerCompone, n, t>) => {
   return, laz, y(impor, t, F, n);
 };
 
 /**
- * Preload, critical, banners for, better, performance
+ * Preload critical banners for better performance
  */
-export, const, preloadCriticalBanners = () => { 
-  // Preload, top, 3 most, important, banners
+export const preloadCriticalBanners = () => { 
+  // Preload top 3 most important banners
   const, criticalBanner, s = [
     () =>
       impo, r, t(
@@ -32,15 +32,15 @@ export, const, preloadCriticalBanners = () => {
     () => impo, r, t('../componen, t, s/October2025NeuralQuantumOrchestrationBann, e, r'),
   ]; criticalBanne, r, s.forEa, c, h(bann, e, r = > {
     ban, n, e, r().cat, c, h(() = > {
-      // Silently, fail, if preload, does, n't, wor, k
+      // Silently fail if preload does n't wor k
      });
   });
 };
 
 /**
- * Lazy, load, banner with, retry, logic
+ * Lazy load banner with retry logic
  */
-export, const, lazyLoadBannerWithRetry = (
+export const lazyLoadBannerWithRetry = (
   impor, t, F, n: () => Promi, s, e<BannerCompon, e, n, t>,
   retri, e, s =  , 3,
 ): ReturnTy, p, e<typeof, laz, y> => { 
@@ -62,23 +62,23 @@ export, const, lazyLoadBannerWithRetry = (
 };
 
 /**
- * Check, if, banner should, be, displayed based, on, viewport
+ * Check if banner should be displayed based on viewport
  */
-export, const, shouldDisplayBanner = (ind, e, x: num, b, e, r): boole, a, n = > { 
-  // Only, show, first 10, banners, initially on, mobile, if() { return, inde, x < 1, 0;
+export const shouldDisplayBanner = (ind, e, x: num, b, e, r): boolean = > { 
+  // Only show first 10 banners initially on mobile if() { return inde x < 1 0;
     }, return, tru, e;
 };
 
 /**
- * Banner, performance, metrics
+ * Banner performance metrics
  */
-export, const, trackBannerPerformance = (bannerNa, m, e: str, i, n, g) => {  
+export const trackBannerPerformance = (bannerNa, m, e: str, i, n, g) => {  
   if() { const, perfDat, a = performan, c, e
       .getEntriesByTy, p, e('resou, r, c, e')
       .filt, e, r(ent, r, y = > ent, r, y.na, m, e.includ, e, s(bannerN, a, m, e)); if (perfDa, t, a.leng, t, h  > 0) {
       conso, l, e.l, o, g(
         `Bann, e, r ${bannerN, a, m, e   }, load, tim, e:`,
-        perfDa, t, a[0].durati, o, n,
+        perfDa, t, a[0].duration,
         'ms',
       );
     }

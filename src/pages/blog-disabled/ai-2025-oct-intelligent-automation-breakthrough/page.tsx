@@ -6,14 +6,14 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Intelligent, Automation, Breakthrough 20, 2, 5: From, Tickets, to Outcom, e, s
-        </tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        </title>
+        <meta, nam, e='description'
           conte, n, t='Intelligent, Automation, Breakthrough 20, 2, 5: From, Tickets, to Outcom, e, s - Shift, from, manual tickets, to, outcome-driven, automation, with safe, agent, runboo, k, s, budge, t, s, and, instant, rollback'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-intellige, n, t-automati, o, n-breakthrou, g, h'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-intellige n t-automati o n-breakthrou g h'
         />
       </Helm, e, t>
 

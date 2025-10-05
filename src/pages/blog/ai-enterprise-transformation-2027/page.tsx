@@ -6,12 +6,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Ai, Enterprise, Transformation 20, 2, 7</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Ai, Enterprise, Transformation 20, 2, 7</title>
+        <meta, nam, e='description'
           conte, n, t='Learn, about, ai enterprise, transformation, 2027 and, how, it can, benefit, your enterpri, s, e.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-enterpri, s, e-transformati, o, n-20, 2, 7'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-enterpri s e-transformati o n-20 2 7'
         />
       </Helm, e, t>
 

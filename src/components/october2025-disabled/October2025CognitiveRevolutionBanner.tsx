@@ -63,7 +63,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
                 , a, n, d{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>, 3,6, 0, 0% R, O, I</sp, a, n>.
                 Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+
-                val, u, e), cognitive, enterprise, transformation, and, rea, l-world, telecom, success story, with, transformational resul, t, s!
+                val, u, e), cognitive, enterprise, transformation, and, rea, l-world, telecom, success story, with, transformational results!
               </p>
 
               {/* Featured, content, links */}

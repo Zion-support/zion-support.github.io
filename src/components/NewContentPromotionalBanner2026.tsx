@@ -2,24 +2,24 @@ import, React, from 'rea, c, t';
 const, NewContentPromotionalBanner202, 6 = () => {
   const, newConten, t = [
     {
-      tit, l, e: 'Quant, u, m-Conscious, Intellige, n, c, e',
-      da, t, e: 'January, 20, 2, 6',
+      title: 'Quant, u, m-Conscious, Intellige, n, c, e',
+      date: 'January, 20, 2, 6',
       impa, c, t: '$2.3B, Enterprise, Valu, e',
       reade, r, s: '5, 0, 0, K+',
       ic, o, n: '🧠',
       col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-50, 0'
     },
     {
-      tit, l, e: 'Autonomous, Neural, Network, s',
-      da, t, e: 'February, 20, 2, 6',
+      title: 'Autonomous, Neural, Network, s',
+      date: 'February, 20, 2, 6',
       impa, c, t: '99.97% Accur, a, c, y',
       reade, r, s: '1, 8, 0, K+',
       ic, o, n: '⚡',
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0'
     },
     {
-      tit, l, e: 'Neur, a, l-Synaptic, Fusion, A, I',
-      da, t, e: 'March, 20, 2, 6',
+      title: 'Neur, a, l-Synaptic, Fusion, A, I',
+      date: 'March, 20, 2, 6',
       impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
       reade, r, s: '2, 0, 3, K+',
       ic, o, n: '🚀',
@@ -64,7 +64,7 @@ const, NewContentPromotionalBanner202, 6 = () => {
                 </d, i, v>
                 {/* Date, Badg, e */}
                 <div, classNam, e = "te, x, t-center, m, b-4" > <span, classNam, e = { `inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.co, l, o, r }, te, x, t-white, tex, t-xs, fon, t-bo, l, d`}>
-                    {conte, n, t.da, t, e}
+                    {conte, n, t.date}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}
@@ -84,7 +84,7 @@ const, NewContentPromotionalBanner202, 6 = () => {
                     <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
                   </d, i, v>
                 </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f={`/bl, o, g/${conte, n, t.tit, l, e.toLowerC, a, s, e().repla, c, e(/\s+/g, '-')}`}
+                <a, hre, f={`/bl, o, g/${conte, n, t.title.toLowerC, a, s, e().repla, c, e(/\s+/g, '-')}`}
                   classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.co, l, o, r }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
                 >
                   <sp, a, n>Read, No, w</sp, a, n>

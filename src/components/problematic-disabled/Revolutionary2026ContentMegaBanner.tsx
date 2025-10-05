@@ -4,81 +4,81 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
   const, revolutionaryConten, t = [
     {
       i, d: , 1,
-      tit, l, e: "AI, 202, 6: The, Met, a-Cognitive, Revoluti, o, n",
-      descripti, o, n: "Breakthrough, AI, that thinks, about, thinking - achieving, 1000x, processing speed, with, quantum-neural, convergen, c, e",",
-      sl, u, g: "ai-me, t, a-cogniti, v, e-revoluti, o, n-2, 0, 2, 6",
-      catego, r, y: "Revolutionar, y, A, I",",
-      da, t, e: "20, 2, 6-01-1, 5",
-      readTi, m, e: "45, m, i, n",
+      title: "AI, 202, 6: The, Met, a-Cognitive, Revoluti, o, n",
+      description: "Breakthrough, AI, that thinks, about, thinking - achieving, 1000x, processing speed, with, quantum-neural, convergen, c, e",",
+      slug: "ai-me, t, a-cogniti, v, e-revoluti, o, n-2, 0, 2, 6",
+      category: "Revolutionar, y, A, I",",
+      date: "20, 2, 6-01-1, 5",
+      readTime: "45, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "🧠",
       impa, c, t: "1000x, Spe, e, d",
-      featur, e, d: t, r, u, e
+      featured: t, r, u, e
     },
     {
       id:  , 2,",
-      tit, l, e: "Autonomous, Enterprise, Operations 2, 0, 2, 6",
-      descripti, o, n: "98% automation, rates, with se, l, f-healing, syste, m, s, predictive, maintenanc, e, and, zer, o-downtime, operation, s",",
-      sl, u, g: "autonomo, u, s-enterpri, s, e-operatio, n, s-2, 0, 2, 6",
-      catego, r, y: "Enterprise, Automati, o, n",",
-      da, t, e: "20, 2, 6-01-1, 5",
-      readTi, m, e: "38, m, i, n",
+      title: "Autonomous, Enterprise, Operations 2, 0, 2, 6",
+      description: "98% automation, rates, with se, l, f-healing, syste, m, s, predictive, maintenanc, e, and, zer, o-downtime, operation, s",",
+      slug: "autonomo, u, s-enterpri, s, e-operatio, n, s-2, 0, 2, 6",
+      category: "Enterprise, Automati, o, n",",
+      date: "20, 2, 6-01-1, 5",
+      readTime: "38, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "🤖",
       impa, c, t: "98% Automat, i, o, n",
-      featur, e, d: t, r, u, e
+      featured: t, r, u, e
     },
     {
       id:  , 3,",
-      tit, l, e: "Quant, u, m-Neural, Network, Architectur, e",
-      descripti, o, n: "Ne, x, t-generation, computing, combining quantum, processing, with neural, networks, for unprecedented, performan, c, e",",
-      sl, u, g: "quant, u, m-neur, a, l-netwo, r, k-architectu, r, e-2, 0, 2, 6",
-      catego, r, y: "Quantum, Computi, n, g",",
-      da, t, e: "20, 2, 6-01-1, 5",
-      readTi, m, e: "52, m, i, n",
+      title: "Quant, u, m-Neural, Network, Architectur, e",
+      description: "Ne, x, t-generation, computing, combining quantum, processing, with neural, networks, for unprecedented, performan, c, e",",
+      slug: "quant, u, m-neur, a, l-netwo, r, k-architectu, r, e-2, 0, 2, 6",
+      category: "Quantum, Computi, n, g",",
+      date: "20, 2, 6-01-1, 5",
+      readTime: "52, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "⚛️",
       impa, c, t: "Quantum, Breakthrou, g, h",
-      featur, e, d: t, r, u, e
+      featured: t, r, u, e
     },
     {
       id:  , 4,",
-      tit, l, e: "Zero, Trust, AI Security, Framewo, r, k",
-      descripti, o, n: "Milita, r, y-grade, security, protocols for, AI, systems with, 9, 9.99% threat, detection, and autonomous, respon, s, e",",
-      sl, u, g: "ze, r, o-tru, s, t-ai-securi, t, y-framewo, r, k-2, 0, 2, 6",
-      catego, r, y: "AI, Securi, t, y",",
-      da, t, e: "20, 2, 6-01-1, 5",
-      readTi, m, e: "41, m, i, n",
+      title: "Zero, Trust, AI Security, Framewo, r, k",
+      description: "Milita, r, y-grade, security, protocols for, AI, systems with, 9, 9.99% threat, detection, and autonomous, respon, s, e",",
+      slug: "ze, r, o-tru, s, t-ai-securi, t, y-framewo, r, k-2, 0, 2, 6",
+      category: "AI, Securi, t, y",",
+      date: "20, 2, 6-01-1, 5",
+      readTime: "41, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "🛡️",
       impa, c, t: "99.99% Secur, i, t, y",
-      featur, e, d: fa, l, s, e
+      featured: fa, l, s, e
     },
     {
       id:  , 5,",
-      tit, l, e: "Edge, AI, Deployment at, Sca, l, e",
-      descripti, o, n: "Distributed, AI, processing acros, s, 1, 0,0, 0, 0+ edge, nodes, with re, a, l-time, decision, making and, local, autonomy",",
-      sl, u, g: "ed, g, e-ai-deployme, n, t-sca, l, e-2, 0, 2, 6",
-      catego, r, y: "Edge, Computi, n, g",",
-      da, t, e: "20, 2, 6-01-1, 5",
-      readTi, m, e: "35, m, i, n",
+      title: "Edge, AI, Deployment at, Sca, l, e",
+      description: "Distributed, AI, processing acros, s, 1, 0,0, 0, 0+ edge, nodes, with re, a, l-time, decision, making and, local, autonomy",",
+      slug: "ed, g, e-ai-deployme, n, t-sca, l, e-2, 0, 2, 6",
+      category: "Edge, Computi, n, g",",
+      date: "20, 2, 6-01-1, 5",
+      readTime: "35, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "📡",
       impa, c, t: "1, 0,0, 0, 0+ Nod, e, s",
-      featur, e, d: fa, l, s, e
+      featured: fa, l, s, e
     },
     {
       id:  , 6,",
-      tit, l, e: "Synthetic, Data, Generation Revolut, i, o, n",
-      descripti, o, n: "AI-generated, datasets, that outperform, real, data with, 9, 5% accuracy, and, infinite scalabil, i, t, y",",
-      sl, u, g: "synthet, i, c-da, t, a-generati, o, n-revoluti, o, n-2, 0, 2, 6",
-      catego, r, y: "Data, Scien, c, e",",
-      da, t, e: "20, 2, 6-01-1, 5",
-      readTi, m, e: "43, m, i, n",
+      title: "Synthetic, Data, Generation Revolut, i, o, n",
+      description: "AI-generated, datasets, that outperform, real, data with, 9, 5% accuracy, and, infinite scalabil, i, t, y",",
+      slug: "synthet, i, c-da, t, a-generati, o, n-revoluti, o, n-2, 0, 2, 6",
+      category: "Data, Scien, c, e",",
+      date: "20, 2, 6-01-1, 5",
+      readTime: "43, m, i, n",
       trendi, n, g: t, r, u, e,",
       ic, o, n: "🎭",
       impa, c, t: "95% Accur, a, c, y",",
-      featur, e, d: fa, l, s, e
+      featured: fa, l, s, e
     }
   ]; retu, r, n (
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
@@ -138,7 +138,7 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
               classNa, m, e = "group, relativ, e"
             >
               {/* Featured, badg, e */}
-              {  conte, n, t.featur, e, d  && (
+              {  conte, n, t.featured  && (
                 <div, classNam, e="absolu, t, e -t, o, p-3 -rig, h, t-3 z-20">
                   <div, classNam, e="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-xs, fon, t-bold, shado, w-lg">
                     <Star, classNam, e="w-3 h-3, fil, l-curre, n, t" />
@@ -167,7 +167,7 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
                 {/* Catego, r, y & Impa, c, t */}
                 <div, classNam, e="mb-4">
                   <span, classNam, e="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30">
-                    {conte, n, t.catego, r, y}
+                    {conte, n, t.category}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}
@@ -176,7 +176,7 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
                 </h3>
                 {/* Descripti, o, n */}
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm">
-                  {conte, n, t.descripti, o, n}
+                  {conte, n, t.description}
                 </p>
                 {/* Impact, Badg, e */}
                 <div, classNam, e="mb-6">
@@ -188,12 +188,12 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
                 <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">
                   <span, classNam, e="flex, item, s-center, ga, p-2">
                     <Zap, classNam, e="w-4 h-4, tex, t-purp, l, e-4, 0, 0" />
-                    {conte, n, t.readTi, m, e}
+                    {conte, n, t.readTime}
                   </sp, a, n>
                   <sp, a, n>{new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r: 'nume, r, i, c' })}</sp, a, n>
                 </d, i, v>
                 {/* CTA, Butto, n */}
-                <a, hre, f = {`/bl, o, g/${conte, n, t.sl, u, g}`}
+                <a, hre, f = {`/bl, o, g/${conte, n, t.slug}`}
                   classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1"
                 >
                   <div, classNam, e="w-4 h-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-fu, l, l" />

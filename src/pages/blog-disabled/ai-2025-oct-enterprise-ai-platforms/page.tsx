@@ -6,12 +6,12 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, RO, I</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, RO, I</title>
+        <meta, nam, e = 'description'
           conte, n, t='Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, ROI, for modern, AI, infrastructure'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-enterpri, s, e-ai-platfor, m, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-enterpri s e-ai-platfor m s'
         />
       </Helm, e, t>
 

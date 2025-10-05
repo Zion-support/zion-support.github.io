@@ -136,7 +136,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {
               <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>✗</sp, a, n>
-                  <sp, a, n>38% CSAT, scor, e (indust, r, y: 7, 2%)</sp, a, n>
+                  <sp, a, n>38% CSAT, scor, e (industry: 7, 2%)</sp, a, n>
                 </li>
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                   <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>✗</sp, a, n>
@@ -164,7 +164,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {
               <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <span, classNam, e='te, x, t-gre, e, n-400, m, t-1'>✓</sp, a, n>
-                  <sp, a, n>94% CS, A, T (+1, 4, 7%, indust, r, y-leadi, n, g)</sp, a, n>
+                  <sp, a, n>94% CS, A, T (+1, 4, 7%, industry-leadi, n, g)</sp, a, n>
                 </li>
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                   <span, classNam, e='te, x, t-gre, e, n-400, m, t-1'>✓</sp, a, n>

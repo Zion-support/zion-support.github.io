@@ -1,16 +1,16 @@
-// Minimal, type, s; remove, t, s-nocheck, import, React fr, o, m 'rea, c, t';
+// Minimal type s; remove t s-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export, default, function AIAutonomousRoadmaps20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t { 
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>AI, 202, 7: Autonomous, Roadmaps, that Prove, RO, I</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>AI, 202, 7: Autonomous, Roadmaps, that Prove, RO, I</title>
+        <meta, nam, e='description'
           conte, n, t='Outco, m, e‑led, b, e, t, s, KPI, scorecard, s, budge, t, s, and, rollbac, k — a, practical, 2027 roadmap, syste, m.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 7-autonomo, u, s-roadma, p, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 7-autonomo u s-roadma p s'
         />
       </Helm, e, t>
 

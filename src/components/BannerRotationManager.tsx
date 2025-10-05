@@ -53,7 +53,7 @@ const LoadingFallback = () => (
 /**
  * Banner Rotation Manager Component
  *
- * Manages banner display with lazy loading, rotation, and performance optimization
+ * Manages banner display with lazy loading rotation and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   banners = [
@@ -87,7 +87,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
   if (visibleBanners.length === 0) return null;
 
-  // For non-rotating, show all banners
+  // For non-rotating show all banners
   if (!autoRotate) {
     return (
       <div className='space-y-6'>
@@ -103,7 +103,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     );
   }
 
-  // For rotating, show current banner with controls
+  // For rotating show current banner with controls
   const currentBannerKey = visibleBanners[currentIndex];
   const CurrentBanner = bannerComponents[currentBannerKey];
 

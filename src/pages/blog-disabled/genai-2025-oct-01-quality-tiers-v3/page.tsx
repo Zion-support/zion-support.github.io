@@ -6,10 +6,10 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = "m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">
       <Helm, e, t>
-        <tit, l, e>GenAI, Quality, Tiers v3 — 50% Savi, n, g, s, Stable, U, X</tit, l, e>
-        <meta, nam, e = "descripti, o, n" 
+        <title>GenAI, Quality, Tiers v3 — 50% Savi, n, g, s, Stable, U, X</title>
+        <meta, nam, e = "description" 
           
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-quali, t, y-tie, r, s-v3
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro u p.c o m/bl o g/gen a i-20 2 5-o c t-01-quali t y-tie r s-v3
         />
       </Helm, e, t>" />
 " />
@@ -20,7 +20,7 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           GenAI, Quality, Tiers v3
         </h1>
         <p, classNam, e="te, x, t-zi, o, n-sla, t, e-ligh, t, m, b-, 8">;,
-  hr, e, f = "htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-quali, t, y-tie, r, s-v3"
+  hr, e, f = "htt, p, s: //ziontechgro u p.c o m/bl o g/gen a i-20 2 5-o c t-01-quali t y-tie r s-v3"
         />
       </p>
         <div, classNam, e="prose, pros, e-invert, ma, x-w-3, x, l">

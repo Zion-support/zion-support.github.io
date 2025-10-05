@@ -5,12 +5,12 @@ export, default, function EdgeZeroPIIAnalytics20, 2, 6(): Rea, c, t.J, S, X.Elem
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Ze, r, o‑PII, Edge, Analytics 20, 2, 6</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Ze, r, o‑PII, Edge, Analytics 20, 2, 6</title>
+        <meta, nam, e='description'
           conte, n, t='Scoped, I, D, s, on‑device, aggregatio, n, and, differential, privacy for, actionable, insights under, 100m, s—without, PI, I.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-ze, r, o-p, i, i-analyti, c, s-20, 2, 6'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-ze r o-p i i-analyti c s-20 2 6'
         />
       </Helm, e, t>
 

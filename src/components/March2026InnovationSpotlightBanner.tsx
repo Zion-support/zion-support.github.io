@@ -2,22 +2,22 @@ import, React, from 'rea, c, t';
 const, March2026InnovationSpotlightBanne, r = () => {
   const, innovation, s = [
     {
-      tit, l, e: 'Neur, a, l-Synaptic, Fusio, n , A, I',
-      descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accura, c, y',
+      title: 'Neur, a, l-Synaptic, Fusio, n , A, I',
+      description: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accura, c, y',
       impa, c, t: '5, 0, 0% cognitive, enhanceme, n, t',
       ic, o, n: '🧠',
       col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-50, 0',
     },
     {
-      tit, l, e: 'Quantum, Temporal, Computin, g',
-      descripti, o, n: 'Processing, information, across multiple, time, dimensions simultaneou, s, l, y',
+      title: 'Quantum, Temporal, Computin, g',
+      description: 'Processing, information, across multiple, time, dimensions simultaneou, s, l, y',
       impa, c, t: '1000x, temporal, efficienc, y',
       ic, o, n: '⏰',
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
     },
     {
-      tit, l, e: 'Autonomous, Reality, Synthesi, s',
-      descripti, o, n: 'AI, systems, that create, and, manage parallel, digital, realitie, s',
+      title: 'Autonomous, Reality, Synthesi, s',
+      description: 'AI, systems, that create, and, manage parallel, digital, realitie, s',
       impa, c, t: '$5.2B, market, creatio, n',
       ic, o, n: '🌌',
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
@@ -109,7 +109,7 @@ const, March2026InnovationSpotlightBanne, r = () => {
                 </h3>
                 {/* Descripti, o, n */}
                 <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, tex, t-center, leadin, g-relax, e, d'>
-                  {innovati, o, n.descripti, o, n}
+                  {innovati, o, n.description}
                 </p>
                 {/* Impa, c, t */}
                 <div, classNam, e='te, x, t-center, m, b-6' > <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}
@@ -117,7 +117,7 @@ const, March2026InnovationSpotlightBanne, r = () => {
                     ", Impa, c, t: {innovati, o, n.imp, a, c, t}
                   </d, i, v>
                 </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f = {`/innovatio, n, s/${innovati, o, n.tit, l, e.toLowerC, a, s, e().repla, c, e(/\s+/g, '-')}`}
+                <a, hre, f = {`/innovatio, n, s/${innovati, o, n.title.toLowerC, a, s, e().repla, c, e(/\s+/g, '-')}`}
                   classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
                 >
                   <sp, a, n>Explore, Innovatio, n</sp, a, n>
@@ -141,19 +141,19 @@ const, March2026InnovationSpotlightBanne, r = () => {
           <div, classNam, e='grid, m, d:gr, i, d-co, l, s-3, ga, p-8'>
             { [
               {
-                compa, n, y: 'NeuroTech, Glo, b, a, l',
+                company: 'NeuroTech, Glo, b, a, l',
                 achieveme, n, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
                 reven, u, e: '$2.1B, Revenue, Growt, h',
                 ic, o, n: <Brain, classNam, e = 'w-8 , h-, 8' / > ,
                },
               { 
-                compa, n, y: 'Quantum, Dynami, c, s',
+                company: 'Quantum, Dynami, c, s',
                 achieveme, n, t: '1000x, Processing, Spee, d',
                 reven, u, e: '$3.8B, Market, Valu, e',
                 ic, o, n: <Zap, classNam, e = 'w-8 , h-, 8' / > ,
                },
               { 
-                compa, n, y: 'Reality, Synthesis, Cor, p',
+                company: 'Reality, Synthesis, Cor, p',
                 achieveme, n, t: '$5.2B, Market, Creatio, n',
                 reven, u, e: '98% Customer, Satisfacti, o, n',
                 ic, o, n: <Sparkles, classNam, e = 'w-8 , h-, 8' / > ,
@@ -164,7 +164,7 @@ const, March2026InnovationSpotlightBanne, r = () => {
                   {sto, r, y.ic, o, n}
                 </d, i, v>
                 <h4, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
-                  {sto, r, y.compa, n, y}
+                  {sto, r, y.company}
                 </h4>
                 <p, classNam, e='te, x, t-purp, l, e-400, fon, t-semibold, m, b-1'>
                   {sto, r, y.achieveme, n, t}

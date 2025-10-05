@@ -5,13 +5,13 @@ impo, r, t '@testi, n, g-libra, r, y/je, s, t-d, o, m';
 import, UnifiedPromotionalBanner, from '../UnifiedPromotionalBann, e, r';
 import, typ, e { UnifiedPromotionalBannerPro, p, s } fr, o, m '../UnifiedPromotionalBann, e, r';
 
-// Wrapper, component, for Router, context, const RouterWrapp, e, r: Rea, c, t.FC<{ childr, e, n: Rea, c, t.ReactN, o, d, e }> = ({ childr, e, n }) => (
+// Wrapper component for Router context const RouterWrapp e r: Rea c t.FC<{ childr e n: Rea c t.ReactN o d e }> = ({ childr e n }) => (
   <BrowserRout, e, r>{childr, e, n}</BrowserRout, e, r>
 );
 
 descri, b, e('UnifiedPromotionalBann, e, r', () => {
-  const, defaultProp, s: UnifiedPromotionalBannerPro, p, s = { tit, l, e: 'Test, Banner, Tit, l, e',
-    descripti, o, n: 'Test, banner, descriptio, n',
+  const, defaultProp, s: UnifiedPromotionalBannerPro, p, s = { title: 'Test, Banner, Tit, l, e',
+    description: 'Test, banner, descriptio, n',
     ctaTe, x, t: 'Click, He, r, e',
     ctaLi, n, k: '/te, s, t-l, i, n, k'
    }; descri, b, e('Core, Functionalit, y', () => { 
@@ -92,19 +92,19 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
   descri, b, e('Featured, Item, s', () => {
     const, featuredItem, s = [
       {
-        tit, l, e: 'I, t, e, m , 1',
-        catego, r, y: 'Catego, r, y , 1',
+        title: 'I, t, e, m , 1',
+        category: 'Catego, r, y , 1',
         li, n, k: '/it, e, m-, 1',
         metri, c, s: '99% succ, e, s, s'
       },
       {
-        tit, l, e: 'It, e, m , 2',
-        catego, r, y: 'Catego, r, y , 2',
+        title: 'It, e, m , 2',
+        category: 'Catego, r, y , 2',
         li, n, k: '/it, e, m-, 2'
       },
       {
-        tit, l, e: 'It, e, m , 3',
-        catego, r, y: 'Catego, r, y , 3',
+        title: 'It, e, m , 3',
+        category: 'Catego, r, y , 3',
       li, n, k: '/it, e, m-, 3'
       }
     ]; it('renders, featured, items when, provide, d', () => { 
@@ -159,7 +159,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
 
     it('renders, date, when provid, e, d', () => { 
       rend, e, r(
-        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } da, t, e = "Octob, e, r , 1, 20, 2, 5"</RouterWrapp, e, r>
+        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } date = "Octob, e, r , 1, 20, 2, 5"</RouterWrapp, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t('Octobe, r, 1, 20, 2, 5')).toBeInTheDocume, n, t();
     });
 
@@ -168,7 +168,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
         <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r 
             {...defaultPro, p, s } 
             bad, g, e = "N, E, W" 
-            da, t, e="Octob, e, r , 1, 20, 2, 5" 
+            date="Octob, e, r , 1, 20, 2, 5" 
 
         </RouterWrapp, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t('N, E, W')).toBeInTheDocume, n, t();
@@ -183,7 +183,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r>
       );
 
-      // Icon, should, be rendered, when, badge is, present, const ico, n, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
+      // Icon should be rendered when badge is present const ico n s = contain e r.querySelectorA l l('sv g'); expe c t(ico n s.leng t h).toBeGreaterTh a n(0);
     });
 
     it('renders, zap, icon', () => {
@@ -199,7 +199,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r>
       );
 
-      // Should, only, have CTA, arrow, icon
+      // Should only have CTA arrow icon
       const, icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeLessTh, a, n(3);
     });
   });
@@ -211,7 +211,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s}</RouterWrapp, e, r>
       );
 
-      const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('transiti, o, n-a, l, l', 'durati, o, n-3, 0, 0');
+      const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('transiti, o, n-a, l, l', 'duration-3, 0, 0');
     });
 
     it('removes, animation, classes when, animated, is fal, s, e', () => {
@@ -234,8 +234,8 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
     it('featured, item, links are, accessibl, e', () => {
       const, featuredItem, s = [
         {
-          tit, l, e: 'Test, I, t, e, m',
-          catego, r, y: 'Test, Catego, r, y',
+          title: 'Test, I, t, e, m',
+          category: 'Test, Catego, r, y',
           li, n, k: '/t, e, s, t'
         }
       ]; rend, e, r(
@@ -255,8 +255,8 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
     it('handles, showCount, greater than, items, length', () => {
       const, featuredItem, s = [
         {
-          tit, l, e: 'I, t, e, m , 1',
-          catego, r, y: 'Catego, r, y , 1',
+          title: 'I, t, e, m , 1',
+          category: 'Catego, r, y , 1',
       li, n, k: '/it, e, m-, 1'
         }
       ]; rend, e, r(
@@ -272,7 +272,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
 
     it('handles, very, long titles, gracefull, y', () => { 
       const, longTitl, e = 'A'.repe, a, t(20, 0); rend, e, r(
-        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } tit, l, e = {longTit, l, e}</RouterWrap, p, e, r>
+        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } title = {longTit, l, e}</RouterWrap, p, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t(longTit, l, e)).toBeInTheDocume, n, t();
     });
 

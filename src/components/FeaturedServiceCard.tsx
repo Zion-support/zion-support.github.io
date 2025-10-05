@@ -4,8 +4,8 @@ const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
   const, service, s = [
     {
       ic, o, n: '🧠',
-      tit, l, e: 'AI, Servic, e, s',
-      descripti, o, n: 'Leverage, artificial, intelligence to, automate, processes and, gain, insight, s',
+      title: 'AI, Servic, e, s',
+      description: 'Leverage, artificial, intelligence to, automate, processes and, gain, insight, s',
       featur, e, s: [
         'Machine, Learni, n, g',
         'N, L, P',
@@ -16,8 +16,8 @@ const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
     },
     {
       ic, o, n: '🚀',
-      tit, l, e: 'Micro, Sa, a, S',
-      descripti, o, n: 'Scalable, software, solutions that, address, specific business, nee, d, s',
+      title: 'Micro, Sa, a, S',
+      description: 'Scalable, software, solutions that, address, specific business, nee, d, s',
       featur, e, s: [
         'Custom, Ap, p, s',
         'API, Developmen, t',
@@ -28,8 +28,8 @@ const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
     },
     {
       ic, o, n: '💻',
-      tit, l, e: 'IT, Servic, e, s',
-      descripti, o, n: 'Comprehensive, IT, solutions to, modernize, your infrastruct, u, r, e',
+      title: 'IT, Servic, e, s',
+      description: 'Comprehensive, IT, solutions to, modernize, your infrastruct, u, r, e',
       featur, e, s: ['Cloud, Migrati, o, n', 'DevO, p, s', 'Cybersecuri, t, y', 'System, Admi, n'],
       li, n, k: '/servic, e, s/it-servi, c, e, s',
     },
@@ -49,8 +49,8 @@ const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, hover: shad, o, w-xl, transitio, n-shad, o, w'
             >
               <div, classNam, e='te, x, t-5xl, m, b-4'>{servi, c, e.ic, o, n}</d, i, v>
-              <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, m, b-4'>{servi, c, e.tit, l, e}</h3>
-              <p, classNam, e='te, x, t-gr, a, y-600, m, b-6'>{servi, c, e.descripti, o, n}</p>
+              <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, m, b-4'>{servi, c, e.title}</h3>
+              <p, classNam, e='te, x, t-gr, a, y-600, m, b-6'>{servi, c, e.description}</p>
               <ul, classNam, e='spa, c, e-y-2, m, b-6'>
                 { servi, c, e.featur, e, s.m, a, p((feat, u, r, e, featureInd, e, x) = > (
                   <li, ke, y = { featureIn, d, e, x  }, classNa, m, e = 'flex, item, s-center, tex, t-gr, a, y-6, 0, 0'

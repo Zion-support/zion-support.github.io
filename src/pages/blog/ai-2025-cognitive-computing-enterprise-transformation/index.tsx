@@ -14,17 +14,17 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Cognitive, Computing, Enterprise Transformati, o, n | Hum, a, n-Like, AI, Intelligence | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Discover, cognitive, computing systems, that, understa, n, d, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-cogniti, v, e-computi, n, g-enterpri, s, e-transformati, o, n'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-cogniti v e-computi n g-enterpri s e-transformati o n'
         />
       </Helm, e, t>
 
@@ -188,7 +188,7 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                 <div, classNam, e='grid, ga, p-6'>
                   {[
                     {
-                      tit, l, e: 'Natural, Language, Understandi, n, g',
+                      title: 'Natural, Language, Understandi, n, g',
                       ic, o, n: '💬',
                       featur, e, s: [
                         'Semantic, comprehension, of unstructured, te, x, t',
@@ -198,7 +198,7 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                       ],
                     },
                     {
-                      tit, l, e: 'Knowledge, Reasoni, n, g',
+                      title: 'Knowledge, Reasoni, n, g',
                       ic, o, n: '🧠',
                       featur, e, s: [
                         'Inference, over, complex knowledge, grap, h, s',
@@ -208,7 +208,7 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                       ],
                     },
                     {
-                      tit, l, e: 'Continuous, Learni, n, g',
+                      title: 'Continuous, Learni, n, g',
                       ic, o, n: '📈',
                       featur, e, s: [
                         'Adaptive, models, that improve, over, tim, e',
@@ -218,7 +218,7 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                       ],
                     },
                     {
-                      tit, l, e: 'Explainable, Intelligen, c, e',
+                      title: 'Explainable, Intelligen, c, e',
                       ic, o, n: '🔍',
                       featur, e, s: [
                         'Transparent, decision, pathway, s',
@@ -232,7 +232,7 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                     >
                       <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'>
                         <span, classNam, e='te, x, t-3, x, l'>{capabili, t, y.ic, o, n}</sp, a, n>
-                        {capabili, t, y.tit, l, e}
+                        {capabili, t, y.title}
                       </h3>
                       <ul, classNam, e = 'spa, c, e-y-2'>
                         { capabili, t, y.featur, e, s.m, a, p((feat, u, r, e, i) = > (
@@ -257,8 +257,8 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                 <div, classNam, e='spa, c, e-y-6'>
                   {[
                     {
-                      tit, l, e: 'Intelligent, Decision, Suppo, r, t',
-                      indust, r, y: 'Financial, Servic, e, s',
+                      title: 'Intelligent, Decision, Suppo, r, t',
+                      industry: 'Financial, Servic, e, s',
                       impa, c, t: {
                         accura, c, y: '98.5% accurate, risk, prediction, s',
                         val, u, e: '$847M, prevented, losse, s',
@@ -267,8 +267,8 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                       },
                     },
                     {
-                      tit, l, e: 'Customer, Intelligence, Platfor, m',
-                      indust, r, y: 'Ret, a, i, l',
+                      title: 'Customer, Intelligence, Platfor, m',
+                      industry: 'Ret, a, i, l',
                       impa, c, t: {
                         conversi, o, n: '12.8x, increase, in conversion, rat, e, s',
                         satisfacti, o, n: '97.8% customer, satisfacti, o, n',
@@ -277,8 +277,8 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                       },
                     },
                     {
-                      tit, l, e: 'Autonomous, Operations, Managemen, t',
-                      indust, r, y: 'Manufactur, i, n, g',
+                      title: 'Autonomous, Operations, Managemen, t',
+                      industry: 'Manufactur, i, n, g',
                       impa, c, t: {
                         predicti, o, n: '99.6% prediction, accura, c, y',
                         downti, m, e: '87% reduction, in, downtim, e',
@@ -295,7 +295,7 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                             {a, p, p.t, i, t, l, e}
                           </h3>
                           <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'>
-                            {a, p, p.indust, r, y} Use, Cas, e
+                            {a, p, p.industry} Use, Cas, e
                           </p>
                         </d, i, v>
                         <Award, classNam, e='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
@@ -328,25 +328,25 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                   {[
                     {
                       pha, s, e: 'Phas, e, 1: Founda, t, i, o, n',
-                      durati, o, n: 'Month, s, 1-, 3',
+                      duration: 'Month, s, 1-, 3',
                       investme, n, t: '$3-7, M',
                       objectiv, e, s: 'Deploy, cognitive, platform infrastruct, u, r, e, establish, data, pipelines, assess, readines, s',
                     },
                     {
                       pha, s, e: 'Phas, e, 2: Pilot, Developme, n, t',
-                      durati, o, n: 'Month, s, 4-, 6',
+                      duration: 'Month, s, 4-, 6',
                       investme, n, t: '$5-10, M',
                       objectiv, e, s: 'Build, cognitive, model, s, deploy, pilot, applications, validate, business, value',
                     },
                     {
                       pha, s, e: 'Phas, e, 3: Enterprise, Rollo, u, t',
-                      durati, o, n: 'Month, s, 7-1, 2',
+                      duration: 'Month, s, 7-1, 2',
                       investme, n, t: '$10-20, M',
                       objectiv, e, s: 'Scale, to, productio, n, deplo, y, 5-10, use, cases, integrate, with, all syste, m, s',
                     },
                     {
                       pha, s, e: 'Phas, e, 4: Optimizat, i, o, n',
-                      durati, o, n: 'Month, s, 1, 3+',
+                      duration: 'Month, s, 1, 3+',
                       investme, n, t: '$5-1, 0, M/y, e, a, r',
                       objectiv, e, s: 'Continuous, improveme, n, t, new, use, cases, se, l, f-service, capabilitie, s',
                     },
@@ -359,7 +359,7 @@ const, CognitiveComputingTransformatio, n: Rea, c, t.FC = () => {
                             {pha, s, e.pha, s, e}
                           </h3>
                           <p, classNam, e='te, x, t-sm, tex, t-purp, l, e-3, 0, 0'>
-                            {pha, s, e.durati, o, n}
+                            {pha, s, e.duration}
                           </p>
                         </d, i, v>
                         <span, classNam, e='te, x, t-sm, fon, t-bold, tex, t-yell, o, w-4, 0, 0'>

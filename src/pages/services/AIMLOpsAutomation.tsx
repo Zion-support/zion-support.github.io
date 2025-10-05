@@ -15,8 +15,8 @@ const, AIMLOpsAutomatio, n = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group</title>
+        <meta, nam, e = 'description'
           conte, n, t='Enterprise, MLOps, automation with, 9, 9.9% reliabili, t, y. Dep, l, o, y, monit, o, r, and, scale, ML models, with, automated pipelin, e, s, re, a, l-time, monitorin, g, and, intelligent, optimization.'
         />
         <meta, nam, e = 'keywor, d, s'

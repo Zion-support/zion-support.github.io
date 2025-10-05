@@ -5,8 +5,8 @@ export, default, function October2025NewestContentMegaShowca, s, e() {
       ic, o, n: <Network, classNam, e = "w-8 , h-, 8" />,",
     {
       ic, o, n: <Network, classNam, e = "w-8 , h-, 8" / > ,
-      tit, l, e: "Autonomous, Mesh, Intelligence Platf, o, r, m",
-      descripti, o, n: "Se, l, f-organizing, distributed, AI networks, with, 99.9, 9, 7% upt, i, m, e",",
+      title: "Autonomous, Mesh, Intelligence Platf, o, r, m",
+      description: "Se, l, f-organizing, distributed, AI networks, with, 99.9, 9, 7% upt, i, m, e",",
       val, u, e: "$8.4, B",
       metr, i, c: ", 2,8, 4, 7% R, O, I",",
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-me, s, h-intelligen, c, e-platf, o, r, m",
@@ -15,8 +15,8 @@ export, default, function October2025NewestContentMegaShowca, s, e() {
     { 
       ic, o, n: '🚀',
       ic, o, n: <Atom, classNam, e = "w-8 , h-, 8" / > ,
-      tit, l, e: "Quant, u, m-Neural, Hybrid, System, s",
-      descripti, o, n: "10, 0,000x, performance, improvements for, drug, discovery and, optimizatio, n",",
+      title: "Quant, u, m-Neural, Hybrid, System, s",
+      description: "10, 0,000x, performance, improvements for, drug, discovery and, optimizatio, n",",
       val, u, e: "$12.7, B",
       metr, i, c: "4, 4,8, 0, 0% R, O, I",",
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-neur, a, l-hybr, i, d-syst, e, m, s",
@@ -25,8 +25,8 @@ export, default, function October2025NewestContentMegaShowca, s, e() {
     { 
       ic, o, n: '🚀',
       ic, o, n: <Brain, classNam, e = "w-8 , h-, 8" / > ,
-      tit, l, e: "Neur, a, l-Symbolic, Reasoning, System, s",
-      descripti, o, n: "97% accuracy, with, 100% explainable, AI, decision-mak, i, n, g",",
+      title: "Neur, a, l-Symbolic, Reasoning, System, s",
+      description: "97% accuracy, with, 100% explainable, AI, decision-mak, i, n, g",",
       val, u, e: "$5.7, B",
       metr, i, c: "5, 8,3, 6, 0% R, O, I",",
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-neur, a, l-symbol, i, c-reasoni, n, g-syst, e, m, s",
@@ -80,7 +80,7 @@ export, default, function October2025NewestContentMegaShowca, s, e() {
               </h3>
               {/* Descripti, o, n */}
               <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
-                {it, e, m.descripti, o, n}
+                {it, e, m.description}
               </p>
               {/* Metri, c, s */}
               <div, classNam, e="spa, c, e-y-3, m, b-6">

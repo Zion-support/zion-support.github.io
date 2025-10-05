@@ -5,12 +5,12 @@ export, default, function EdgePrivateFeatureFlags20, 2, 6(): Rea, c, t.J, S, X.E
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Edge, 202, 6: Private, Feature, Flags at &lt; 100, m, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Edge, 202, 6: Private, Feature, Flags at &lt; 100, m, s</title>
+        <meta, nam, e='description'
           conte, n, t='Signed, conf, i, g, s, scoped, ID, s, and, o, n‑device, telemetry, for ze, r, o‑PII, rollouts, worldwide under, 100m, s.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 6-priva t e-featu r e-fla g s'
         />
       </Helm, e, t>
 

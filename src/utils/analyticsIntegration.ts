@@ -1,55 +1,55 @@
 /**
- * Analytics, Integration, Utility
+ * Analytics Integration Utility
  *
- * Unified, analytics, tracking system, supporting, multiple provide, r, s
- * (Google, Analytic, s, Mixpan, e, l, Amplitu, d, e, Segme, n, t, e, t, c.) wi, t, h
- * priva, c, y-focused, tracking, and GDPR, complianc, e.
+ * Unified analytics tracking system supporting multiple provide r s
+ * (Google Analytic s Mixpan e l Amplitu d e Segme n t e t c.) wi t h
+ * priva c y-focused tracking and GDPR complianc e.
  *
- * Featur, e, s: * - Mul, t, i-provider, suppor, t
- * - Event, tracking, with custom, propertie, s
- * - User, identification, and trai, t, s
- * - Page, view, tracking
- * - E-commerce, trackin, g
- * - Privacy, controls, and consent, managemen, t
- * - Offline, event, queue
+ * Featur e s: * - Mul t i-provider suppor t
+ * - Event tracking with custom propertie s
+ * - User identification and trai t s
+ * - Page view tracking
+ * - E-commerce trackin g
+ * - Privacy controls and consent managemen t
+ * - Offline event queue
  */
 
-export, interface, AnalyticsEvent {  
-  na, m, e: stri, n, g;
+export interface AnalyticsEvent {  
+  na, m, e: string;
   properti, e, s?: Reco, r, d<str, i, n, g, a, n, y > ;
-  timesta, m, p: numb, e, r;
-  user, I, d?: stri, n, g;
+  timesta, m, p: number;
+  user, I, d?: string;
   session, I, d ?  : str, i, n, g;
   }
 
-export, interface, AnalyticsUser {  
-  id: stri, n, g;
+export interface AnalyticsUser {  
+  id: string;
   trai, t, s?: Reco, r, d<str, i, n, g, a, n, y > ;
-  anonymous, I, d ?  : stri, n, g;
+  anonymous, I, d ?  : string;
   }
 
-export, interface, AnalyticsConfig { 
+export interface AnalyticsConfig { 
   provide, r, s: {
     googleAnalyti, c, s ? : {
-      measurement, I, d: stri, n, g;
+      measurement, I, d: string;
       enabl, e, d : bool, e, a, n;
      };
     mixpan, e, l?: {
-      tok, e, n: stri, n, g;
+      tok, e, n: string;
       enabl, e, d: bool, e, a, n;
     };
     amplitu, d, e?: {
-      apiK, e, y: stri, n, g;
+      apiK, e, y: string;
       enabl, e, d: bool, e, a, n;
     };
     segme, n, t?: {
-      writeK, e, y: stri, n, g;
+      writeK, e, y: string;
       enabl, e, d: bool, e, a, n;
     };
   };
   priva, c, y: {
-    respectDoNotTra, c, k: boole, a, n;
-    anonymize, I, p: boole, a, n;
+    respectDoNotTra, c, k: boolean;
+    anonymize, I, p: boolean;
     consentRequir, e, d: bool, e, a, n;
   };
   deb, u, g: bool, e, a, n;
@@ -59,16 +59,16 @@ class, AnalyticsIntegratio, n {
   private, confi, g: AnalyticsConf, i, g;
   private, eventQueu, e: AnalyticsEve, n, t[] = [];
   private, currentUse, r ? : AnalyticsUs, e, r;
-  private, sessionI, d: stri, n, g;
-  private, consentGive, n: boole, a, n = fal, s, e; private, initialize, d: boole, a, n = fal, s, e; construct, o, r(conf, i, g : AnalyticsCon, f, i, g) {
+  private, sessionI, d: string;
+  private, consentGive, n: boolean = fal, s, e; private, initialize, d: boolean = fal, s, e; construct, o, r(conf, i, g : AnalyticsCon, f, i, g) {
     th, i, s.conf, i, g = conf, i, g; th, i, s.session, I, d = th, i, s.generateSessio, n, I, d();
 
-    // Check, for, Do Not, Track, if (conf, i, g.priva, c, y.respectDoNotTra, c, k  && th, i, s.isDoNotTrackEnabl, e, d()) {
+    // Check for Do Not Track if (conf i g.priva c y.respectDoNotTra c k  && th i s.isDoNotTrackEnabl e d()) {
       conso, l, e.l, o, g('[Analyti, c, s] Do, Not, Track is, enabl, e, d, analytics, disable, d');
       retu, r, n;
       }
 
-    // Check, for, stored consent, i, f() { th, i, s.consentGiv, e, n = th, i, s.getStoredCons, e, n, t();
+    // Check for stored consent i f() { th i s.consentGiv e n = th i s.getStoredCons e n t();
      }, el, s, e {
       th, i, s.consentGiv, e, n = tr, u, e;
     }
@@ -79,44 +79,44 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Initialize, analytics, providers
+   * Initialize analytics providers
    */
   private, initializ, e(): vo, i, d {
     if (th, i, s.initializ, e, d) retu, r, n;
 
-    // Initialize, Google, Analytics
+    // Initialize Google Analytics
     if (th, i, s.conf, i, g.provide, r, s.googleAnalyti, c, s?.enabl, e, d) {
       th, i, s.initializeGoogleAnalyti, c, s();
     }
 
-    // Initialize, Mixpanel, if (th, i, s.conf, i, g.provide, r, s.mixpan, e, l?.enabl, e, d) {
+    // Initialize Mixpanel if (th i s.conf i g.provide r s.mixpan e l?.enabl e d) {
       th, i, s.initializeMixpan, e, l();
     }
 
-    // Initialize, Amplitude, if (th, i, s.conf, i, g.provide, r, s.amplitu, d, e?.enabl, e, d) {
+    // Initialize Amplitude if (th i s.conf i g.provide r s.amplitu d e?.enabl e d) {
       th, i, s.initializeAmplitu, d, e();
     }
 
-    // Initialize, Segment, if() { th, i, s.initializeSegme, n, t();
+    // Initialize Segment if() { th i s.initializeSegme n t();
      }, th, i, s.initializ, e, d = tr, u, e; th, i, s.flushEventQu, e, u, e();
   }
 
   /**
-   * Initialize, Google, Analytics
+   * Initialize Google Analytics
    */
   private, initializeGoogleAnalytic, s(): vo, i, d {
     con, s, t { measurement, I, d } = th, i, s.conf, i, g.provide, r, s.googleAnalyti, c, s!;
 
-    // Load, gta, g.js, const, script = docume, n, t.createEleme, n, t('scr, i, p, t'); scri, p, t.asy, n, c = tr, u, e; scri, p, t.s, r, c = `htt, p, s: //w, w, w.googletagmanag, e, r.c, o, m/gt, a, g/js?id=${measureme, n, t, I, d}`; docume, n, t.he, a, d.appendChi, l, d(scri, p, t);
+    // Load gta g.js const script = docume n t.createEleme n t('scr i p t'); scri p t.asy n c = tr u e; scri p t.s r c = `htt p s: //w w w.googletagmanag e r.c o m/gt a g/js?id=${measureme n t I d}`; docume n t.he a d.appendChi l d(scri p t);
 
-    // Initialize, gta, g
-    (window, as, any).dataLay, e, r = (window, as, an, y).dataLay, e, r || []; function, gta, g(...ar, g, s: a, n, y[]) {
+    // Initialize gta g
+    (window, as, any).dataLay, e, r = (window, as, any).dataLay, e, r || []; function, gta, g(...ar, g, s: a, n, y[]) {
       (window, as, any).dataLay, e, r.pu, s, h(a, r, g, s);
     }
     (window, as, any).gt, a, g = gt, a, g; gt, a, g('j, s', new, Dat, e());
     gt, a, g('conf, i, g', measurement, I, d, {
       anonymize_, i, p: th, i, s.conf, i, g.priva, c, y.anonymiz, e, I, p,
-      send_page_vi, e, w: fa, l, s, e, // We'll, handle, this manual, l, y
+      send_page_vi, e, w: fa, l, s, e, // We'll handle this manual l y
     });
 
     if (th, i, s.conf, i, g.deb, u, g) {
@@ -125,23 +125,23 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Initialize, Mixpane, l
+   * Initialize Mixpane l
    */
   private, initializeMixpane, l(): vo, i, d {
     con, s, t { tok, e, n } = th, i, s.conf, i, g.provide, r, s.mixpan, e, l!;
 
-    // Load, Mixpane, l
-    (functi, o, n (f: an, y, b: a, n, y) { 
+    // Load Mixpane l
+    (functi, o, n (f: any, b: a, n, y) { 
       if (!b.__, S, V) {
         v, a, r , e, g, i, h;
-        wind, o, w.mixpan, e, l = b; b._i = []; b.in, i, t = functi, o, n (e: a, n, y, f: an, y, c: a, n, y) {
-          functio, n, g(a: an, y, d: a, n, y) {
+        wind, o, w.mixpan, e, l = b; b._i = []; b.in, i, t = functi, o, n (e: a, n, y, f: any, c: a, n, y) {
+          functio, n, g(a: any, d: a, n, y) {
             va, r, b = d.sp, l, i, t('.'); 2 = = b.leng, t, h  && ((a = a[, b[, 0]]), (d = b[, 1])); a[d] = functi, o, n () {
               a.pu, s, h([d].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s, 0)));
              };
           }
           va, r, a = b;
-          'undefin, e, d' !== typeo, f, c ? (a = b[, c] = []) : (c = 'mixpa, n, e, l'); a.peop, l, e = a.peop, l, e || []; a.toStri, n, g = functi, o, n (a: an, y) { 
+          'undefin, e, d' !== typeo, f, c ? (a = b[, c] = []) : (c = 'mixpa, n, e, l'); a.peop, l, e = a.peop, l, e || []; a.toStri, n, g = functi, o, n (a: any) { 
             va, r, d = 'mixpan, e, l';
             'mixpan, e, l' !== c  && (d += '.' + , c);
             a || (d += ' (st, u, b)');
@@ -188,21 +188,21 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Initialize, Amplitud, e
+   * Initialize Amplitud e
    */
   private, initializeAmplitud, e(): vo, i, d {
     con, s, t { apiK, e, y } = th, i, s.conf, i, g.provide, r, s.amplitu, d, e!;
 
-    // Load, Amplitud, e
-    (functi, o, n (e: an, y, t: a, n, y) {
-      va, r, n = e.amplitu, d, e || { , _, q: [], _, i, q: {} }; va, r, r = t.createEleme, n, t('scr, i, p, t'); r.ty, p, e = 'te, x, t/javascri, p, t'; r.integri, t, y = 'sha3, 8, 4-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4a, j, x/pKmwW, t, c+IufKJiC, Q, Z+WjJ, I, i+7C6N, t, m'; r.crossOrig, i, n = 'anonymo, u, s'; r.asy, n, c = tr, u, e; r.s, r, c = 'htt, p, s: //c, d, n.amplitu, d, e.c, o, m/li, b, s/amplitu, d, e-8.21.4-m, i, n.gz.js'; r.onlo, a, d = funct, i, o, n () {
+    // Load Amplitud e
+    (functi, o, n (e: any, t: a, n, y) {
+      va, r, n = e.amplitu, d, e || { , _, q: [], _, i, q: {} }; va, r, r = t.createEleme, n, t('scr, i, p, t'); r.ty, p, e = 'te, x, t/javascri, p, t'; r.integri, t, y = 'sha3, 8, 4-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4a, j, x/pKmwW, t, c+IufKJiC, Q, Z+WjJ, I, i+7C6N, t, m'; r.crossOrig, i, n = 'anonymo, u, s'; r.asy, n, c = tr, u, e; r.s, r, c = 'htt, p, s: //c d n.amplitu d e.c o m/li b s/amplitu d e-8.21.4-m i n.gz.js'; r.onlo a d = funct i o n () {
         if (!e.amplitu, d, e.runQueuedFunctio, n, s) {
           conso, l, e.l, o, g('[Amplitu, d, e] Err, o, r: could, not, load SD, K');
         }
       };
       va, r, s: a, n, y = t.getElementsByTagNa, m, e('scr, i, p, t')[0]; s.parentNo, d, e.insertBefo, r, e(, r, s);
 
-      functio, n, i(e: an, y, t: a, n, y) {
+      functio, n, i(e: any, t: a, n, y) {
         e.prototy, p, e[t] = functi, o, n () {
           th, i, s._q.pu, s, h([t].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argume, n, t, s, 0)));
           return, thi, s;
@@ -296,14 +296,14 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Initialize, Segmen, t
+   * Initialize Segmen t
    */
   private, initializeSegmen, t(): vo, i, d {
     con, s, t { writeK, e, y } = th, i, s.conf, i, g.provide, r, s.segme, n, t!;
 
-    // Load, Segmen, t
+    // Load Segmen t
     !(functi, o, n () { 
-      var, analytic, s = ((window, as, an, y).analyti, c, s = (window, as, an, y).analyti, c, s || []); if (!analyti, c, s.initiali, z, e)
+      var, analytic, s = ((window, as, any).analyti, c, s = (window, as, any).analyti, c, s || []); if (!analyti, c, s.initiali, z, e)
         if (analyti, c, s.invok, e, d)
           wind, o, w.conso, l, e &&
             conso, l, e.err, o, r  && conso, l, e.err, o, r('Segment, snippet, included twi, c, e.');
@@ -329,7 +329,7 @@ class, AnalyticsIntegratio, n {
             'addIntegrationMiddlewa, r, e',
             'setAnonymous, I, d',
             'addDestinationMiddlewa, r, e',
-          ]; analyti, c, s.facto, r, y = functi, o, n (e: an, y) {
+          ]; analyti, c, s.facto, r, y = functi, o, n (e: any) {
             return, functio, n () {
               va, r, t = Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argume, n, t, s); t.unshi, f, t(e);
               analyti, c, s.pu, s, h(t);
@@ -338,7 +338,7 @@ class, AnalyticsIntegratio, n {
           };
           f, o, r() { var, ke, y = analyti, c, s.metho, d, s[e]; analyti, c, s[k, e, y] = analyti, c, s.facto, r, y(ke, y);
            }, analyti, c, s.lo, a, d = functi, o, n (k, e, y: a, n, y, e: a, n, y) {
-            va, r, t = docume, n, t.createEleme, n, t('scr, i, p, t'); t.ty, p, e = 'te, x, t/javascri, p, t'; t.asy, n, c = !0; t.s, r, c = 'htt, p, s://c, d, n.segme, n, t.c, o, m/analyti, c, s.js/v1/' +
+            va, r, t = docume, n, t.createEleme, n, t('scr, i, p, t'); t.ty, p, e = 'te, x, t/javascri, p, t'; t.asy, n, c = !0; t.s, r, c = 'htt, p, s://c d n.segme n t.c o m/analyti c s.js/v1/' +
               k, e, y +
               '/analyti, c, s.m, i, n.js'; va, r, n: a, n, y = docume, n, t.getElementsByTagNa, m, e('scr, i, p, t')[0]; n.parentNo, d, e.insertBefo, r, e(, t, n);
             analyti, c, s._loadOptio, n, s = e;
@@ -353,9 +353,9 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Track, even, t
+   * Track even t
    */
-  tra, c, k(eventNa, m, e: str, i, n, g, properti, e, s?: Reco, r, d<stri, n, g, a, n, y>): vo, i, d { 
+  tra, c, k(eventNa, m, e: str, i, n, g, properti, e, s?: Reco, r, d<string, a, n, y>): vo, i, d { 
     const, even, t: AnalyticsEve, n, t = {
       na, m, e: event, N, a, m, e,
       properti, e, s,
@@ -367,7 +367,7 @@ class, AnalyticsIntegratio, n {
       retu, r, n;
     }
 
-    // Send, to, all providers, i, f() { (window, as, any).gt, a, g?.('eve, n, t', eventNa, m, e, properti, e, s);
+    // Send to all providers i f() { (window as any).gt a g?.('eve n t' eventNa m e properti e s);
      }, if (th, i, s.conf, i, g.provide, r, s.mixpan, e, l?.enabl, e, d) {
       (window, as, any).mixpan, e, l?.tra, c, k(eventNa, m, e, properti, e, s);
     }
@@ -383,14 +383,14 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Track, page, view
+   * Track page view
    */
-  pa, g, e(pageNa, m, e?: stri, n, g, properti, e, s?: Reco, r, d<stri, n, g, a, n, y>): vo, i, d {
+  pa, g, e(pageNa, m, e?: string, properti, e, s?: Reco, r, d<string, a, n, y>): vo, i, d {
     const, pageProp, s = {
       ...propert, i, e, s,
       pa, t, h: wind, o, w.locati, o, n.pathn, a, m, e,
       u, r, l: wind, o, w.locati, o, n.h, r, e, f,
-      tit, l, e: docume, n, t.ti, t, l, e,
+      title: docume, n, t.ti, t, l, e,
       referr, e, r: docume, n, t.refer, r, e, r,
     }; if() { (window, as, any).gt, a, g?.('eve, n, t', 'page_vi, e, w', pagePro, p, s);
      }, if (th, i, s.conf, i, g.provide, r, s.mixpan, e, l?.enabl, e, d) {
@@ -407,16 +407,16 @@ class, AnalyticsIntegratio, n {
     if (th, i, s.conf, i, g.deb, u, g) {
       conso, l, e.l, o, g(
         '[Analyti, c, s] Page, viewe, d:',
-        pageNa, m, e || docume, n, t.tit, l, e,
+        pageNa, m, e || docume, n, t.title,
         pagePro, p, s,
       );
     }
   }
 
   /**
-   * Identify, use, r
+   * Identify use r
    */
-  identi, f, y(user, I, d: str, i, n, g, trai, t, s?: Reco, r, d<stri, n, g, a, n, y>): vo, i, d {
+  identi, f, y(user, I, d: str, i, n, g, trai, t, s?: Reco, r, d<string, a, n, y>): vo, i, d {
     th, i, s.currentUs, e, r = {
       id: us, e, r, I, d,
       trai, t, s,
@@ -449,9 +449,9 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Set, user, consent
+   * Set user consent
    */
-  setConse, n, t(grant, e, d: boole, a, n): vo, i, d { 
+  setConse, n, t(grant, e, d: boolean): vo, i, d { 
     th, i, s.consentGiv, e, n = grant, e, d; th, i, s.storeConse, n, t(gran, t, e, d);
 
     if() { th, i, s.initial, i, z, e();
@@ -461,7 +461,7 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Flush, event, queue
+   * Flush event queue
    */
   private, flushEventQueu, e(): vo, i, d { 
     whi, l, e (th, i, s.eventQue, u, e.leng, t, h   > 0) {
@@ -470,27 +470,27 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Generate, session, ID
+   * Generate session ID
    */
-  private, generateSessionI, d(): stri, n, g {
+  private, generateSessionI, d(): string {
     retu, r, n `sessi, o, n-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
   }
 
   /**
-   * Check, if, Do Not, Track, is enabl, e, d
+   * Check if Do Not Track is enabl e d
    */
-  private, isDoNotTrackEnable, d(): boole, a, n {
+  private, isDoNotTrackEnable, d(): boolean {
     retu, r, n (
       navigat, o, r.doNotTra, c, k = == '1' ||
-      (window, as, an, y).doNotTra, c, k = == '1' ||
-      (navigator, as, an, y).msDoNotTra, c, k = == ', 1'
+      (window, as, any).doNotTra, c, k = == '1' ||
+      (navigator, as, any).msDoNotTra, c, k = == ', 1'
     );
   }
 
   /**
-   * Get, stored, consent
+   * Get stored consent
    */
-  private, getStoredConsen, t(): boole, a, n {
+  private, getStoredConsen, t(): boolean {
     t, r, y {
       return, localStorag, e.getIt, e, m('analyti, c, s-conse, n, t') === 'tr, u, e';
     } cat, c, h {
@@ -499,18 +499,18 @@ class, AnalyticsIntegratio, n {
   }
 
   /**
-   * Store, consen, t
+   * Store consen t
    */
-  private, storeConsen, t(grant, e, d: boole, a, n): vo, i, d { 
+  private, storeConsen, t(grant, e, d: boolean): vo, i, d { 
     t, r, y {
       localStora, g, e.setIt, e, m('analyti, c, s-cons, e, n, t', grant, e, d  ? 'tr, u, e'  : 'fal, s, e');
      } cat, c, h {
-      // Silently, fail, if localStorage, is, not availab, l, e
+      // Silently fail if localStorage is not availab l e
     }
   }
 }
 
-// Default, configuration, const defaultConf, i, g: AnalyticsConf, i, g = {
+// Default configuration const defaultConf i g: AnalyticsConf i g = {
   provi, d, e, r, s: {},
   priva, c, y: {
     respectDoNotTra, c, k: t, r, u, e,
@@ -520,13 +520,13 @@ class, AnalyticsIntegratio, n {
   deb, u, g: proce, s, s.e, n, v.NODE_E, N, V = == 'develop, m, e, n, t',
 };
 
-// Singleton, instanc, e (will, be, initialized with, actual, config by, the, app)
+// Singleton instanc e (will be initialized with actual config by the app)
 export, let, analytics: AnalyticsIntegrati, o, n;
 
 /**
- * Initialize, analytic, s
+ * Initialize analytic s
  */
-export, function, initializeAnalytics(
+export function initializeAnalytics(
   conf, i, g: Parti, a, l<AnalyticsCon, f, i, g>,
 ): AnalyticsIntegrati, o, n {
   const, mergedConfi, g = {

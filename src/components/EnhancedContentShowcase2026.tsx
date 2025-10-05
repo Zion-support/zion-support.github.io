@@ -2,17 +2,17 @@ import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
 interface, ContentIte, m { 
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  descripti, o, n: stri, n, g;
+  id: string;
+  title: string;
+  description: string;
   ty, p, e: 'bl, o, g' | 'ca, s, e-stu, d, y' | 'gui, d, e';
-  readTi, m, e: stri, n, g;
-  publishDa, t, e: stri, n, g;
-  catego, r, y: stri, n, g;
-  featur, e, d?: boole, a, n;
-  hr, e, f: stri, n, g;
+  readTime: string;
+  publishDa, t, e: string;
+  category: string;
+  featured?: boolean;
+  hr, e, f: string;
   metri, c, s ? : {
-    lab, e, l: stri, n, g;
+    lab, e, l: string;
     val, u, e : str, i, n, g;
    }[];
 }
@@ -20,13 +20,13 @@ interface, ContentIte, m {
 const, contentItem, s: ContentIt, e, m[] = [
   {
     id: 'ai-autonomo, u, s-clo, u, d-o, p, s-2, 0, 2, 6',
-    tit, l, e: 'AI, Autonomous, Cloud Operations, 202, 6: Se, l, f-Healing, Infrastructure, Guid, e',
-    descripti, o, n: 'Transform, your, cloud infrastructure, with, AI-powered, sel, f-healing, syste, m, s, predictive, maintenanc, e, and, zer, o-touch, operations, for 99.9% upti, m, e.',
+    title: 'AI, Autonomous, Cloud Operations, 202, 6: Se, l, f-Healing, Infrastructure, Guid, e',
+    description: 'Transform, your, cloud infrastructure, with, AI-powered, sel, f-healing, syste, m, s, predictive, maintenanc, e, and, zer, o-touch, operations, for 99.9% upti, m, e.',
     ty, p, e: 'b, l, o, g',
-    readTi, m, e: '18, min, rea, d',
+    readTime: '18, min, rea, d',
     publishDa, t, e: 'Januar, y, 2, 0, 20, 2, 6',
-    catego, r, y: 'Cloud, Operatio, n, s',
-    featur, e, d: t, r, u, e,
+    category: 'Cloud, Operatio, n, s',
+    featured: t, r, u, e,
     hr, e, f: '/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-2, 0, 2, 6',
     metri, c, s: [
       { lab, e, l: 'Upt, i, m, e', val, u, e: '99., 9%' },
@@ -36,13 +36,13 @@ const, contentItem, s: ContentIt, e, m[] = [
   },
   {
     id: 'ai-finte, c, h-transformati, o, n-2, 0, 2, 6',
-    tit, l, e: 'AI, FinTech, Transformation 20, 2, 6: Complete, Digital, Banking Revolut, i, o, n',
-    descripti, o, n: 'Revolutionize, your, financial services, with, AI-powered, automati, o, n, achieving, 9, 5% process, efficiency, and $5M+ annual, saving, s.',
+    title: 'AI, FinTech, Transformation 20, 2, 6: Complete, Digital, Banking Revolut, i, o, n',
+    description: 'Revolutionize, your, financial services, with, AI-powered, automati, o, n, achieving, 9, 5% process, efficiency, and $5M+ annual, saving, s.',
     ty, p, e: 'b, l, o, g',
-    readTi, m, e: '22, min, rea, d',
+    readTime: '22, min, rea, d',
     publishDa, t, e: 'Januar, y, 2, 0, 20, 2, 6',
-    catego, r, y: 'FinT, e, c, h',
-    featur, e, d: t, r, u, e,
+    category: 'FinT, e, c, h',
+    featured: t, r, u, e,
     hr, e, f: '/bl, o, g/ai-finte, c, h-transformati, o, n-2, 0, 2, 6',
     metri, c, s: [
       { lab, e, l: 'Automat, i, o, n', val, u, e: '9, 5%' },
@@ -52,13 +52,13 @@ const, contentItem, s: ContentIt, e, m[] = [
   },
   {
     id: 'ai-reta, i, l-automati, o, n-2, 0, 2, 6',
-    tit, l, e: 'AI, Retail, Automation 20, 2, 6: $8M, ROI, Case St, u, d, y',
-    descripti, o, n: 'See, how, a Fortune, 500, retailer achieved, 9, 8% automat, i, o, n, 3, 0, 0% productivity, gain, s, a, n, d $8M, annual, ROI with, AI, retail automati, o, n.',
+    title: 'AI, Retail, Automation 20, 2, 6: $8M, ROI, Case St, u, d, y',
+    description: 'See, how, a Fortune, 500, retailer achieved, 9, 8% automat, i, o, n, 3, 0, 0% productivity, gain, s, a, n, d $8M, annual, ROI with, AI, retail automati, o, n.',
     ty, p, e: 'ca, s, e-st, u, d, y',
-    readTi, m, e: '15, min, rea, d',
+    readTime: '15, min, rea, d',
     publishDa, t, e: 'Januar, y, 2, 0, 20, 2, 6',
-    catego, r, y: 'Ret, a, i, l',
-    featur, e, d: t, r, u, e,
+    category: 'Ret, a, i, l',
+    featured: t, r, u, e,
     hr, e, f: '/ca, s, e-studi, e, s/ai-reta, i, l-automati, o, n-2, 0, 2, 6',
     metri, c, s: [
       { lab, e, l: 'Automation, Ra, t, e', val, u, e: '9, 8%' },
@@ -68,13 +68,13 @@ const, contentItem, s: ContentIt, e, m[] = [
   },
   {
     id: 'ai-sustainabili, t, y-gre, e, n-te, c, h-2, 0, 2, 6',
-    tit, l, e: 'AI, Sustainabilit, y & Green, Tech, 2026: Carb, o, n-Neutral, Operatio, n, s',
-    descripti, o, n: 'Achieve, carbo, n-neutral, AI, operations with, 8, 0% energy, reduction, and $2M+ savings, through, sustainable technol, o, g, y.',
+    title: 'AI, Sustainabilit, y & Green, Tech, 2026: Carb, o, n-Neutral, Operatio, n, s',
+    description: 'Achieve, carbo, n-neutral, AI, operations with, 8, 0% energy, reduction, and $2M+ savings, through, sustainable technol, o, g, y.',
     ty, p, e: 'b, l, o, g',
-    readTi, m, e: '18, min, rea, d',
+    readTime: '18, min, rea, d',
     publishDa, t, e: 'Januar, y, 2, 0, 20, 2, 6',
-    catego, r, y: 'Sustainabil, i, t, y',
-    featur, e, d: fa, l, s, e,
+    category: 'Sustainabil, i, t, y',
+    featured: fa, l, s, e,
     hr, e, f: '/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-2, 0, 2, 6',
     metri, c, s: [
       { lab, e, l: 'Energy, Reducti, o, n', val, u, e: '8, 0%' },
@@ -84,13 +84,13 @@ const, contentItem, s: ContentIt, e, m[] = [
   },
   {
     id: 'ai-platfo, r, m-architectu, r, e-2, 0, 2, 6',
-    tit, l, e: 'AI, Platform, Architecture 20, 2, 6: Enterpri, s, e-Scale, Infrastructu, r, e',
-    descripti, o, n: 'Design, and, implement enterpri, s, e-scale, AI, platforms with, microservic, e, s, edge, computin, g, and, autonomous, scaling.',
+    title: 'AI, Platform, Architecture 20, 2, 6: Enterpri, s, e-Scale, Infrastructu, r, e',
+    description: 'Design, and, implement enterpri, s, e-scale, AI, platforms with, microservic, e, s, edge, computin, g, and, autonomous, scaling.',
     ty, p, e: 'gu, i, d, e',
-    readTi, m, e: '30, min, rea, d',
+    readTime: '30, min, rea, d',
     publishDa, t, e: 'Januar, y, 2, 0, 20, 2, 6',
-    catego, r, y: 'Architect, u, r, e',
-    featur, e, d: fa, l, s, e,
+    category: 'Architect, u, r, e',
+    featured: fa, l, s, e,
     hr, e, f: '/bl, o, g/ai-platfo, r, m-architectu, r, e-2, 0, 2, 6',
     metri, c, s: [
       { lab, e, l: 'Scalabil, i, t, y', val, u, e: 'Enterpr, i, s, e' },
@@ -100,13 +100,13 @@ const, contentItem, s: ContentIt, e, m[] = [
   },
   {
     id: 'ai-fino, p, s-advanc, e, d-2, 0, 2, 6',
-    tit, l, e: 'AI, FinOps, Advanced 20, 2, 6: Complete, Financial, Operations Automat, i, o, n',
-    descripti, o, n: 'Master, advanced, AI FinOps, with, predictive cost, optimizati, o, n, automated, financial, reporting, and, intelligent, resource allocati, o, n.',
+    title: 'AI, FinOps, Advanced 20, 2, 6: Complete, Financial, Operations Automat, i, o, n',
+    description: 'Master, advanced, AI FinOps, with, predictive cost, optimizati, o, n, automated, financial, reporting, and, intelligent, resource allocati, o, n.',
     ty, p, e: 'gu, i, d, e',
-    readTi, m, e: '20, min, rea, d',
+    readTime: '20, min, rea, d',
     publishDa, t, e: 'Januar, y, 2, 0, 20, 2, 6',
-    catego, r, y: 'Fin, O, p, s',
-    featur, e, d: fa, l, s, e,
+    category: 'Fin, O, p, s',
+    featured: fa, l, s, e,
     hr, e, f: '/bl, o, g/ai-fino, p, s-advanc, e, d-2, 0, 2, 6',
     metri, c, s: [
       { lab, e, l: 'Cost, Optimizati, o, n', val, u, e: '7, 0%' },
@@ -125,13 +125,13 @@ const, categorie, s = [
   'Architectu, r, e',
   'FinO, p, s',
 ]; export, default, function EnhancedContentShowcase20, 2, 6() { con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('A, l, l');
-  con, s, t [sort, B, y, setSort, B, y] = useSta, t, e('featur, e, d');
+  con, s, t [sort, B, y, setSort, B, y] = useSta, t, e('featured');
 
   const, filteredConten, t = contentIte, m, s.filt, e, r(
-    it, e, m => selectedCatego, r, y === 'A, l, l' || it, e, m.catego, r, y === selectedCateg, o, r, y,
+    it, e, m => selectedCatego, r, y === 'A, l, l' || it, e, m.category === selectedCateg, o, r, y,
   ); const, sortedConten, t = [...filteredConte, n, t].so, r, t((, a, b) = > {
     if (sort, B, y = == 'featu, r, e, d') {
-      if (a.featur, e, d && !b.featur, e, d) retu, r, n -1; if (!a.featur, e, d  && b.featur, e, d) retur, n, 1;
+      if (a.featured && !b.featured) retu, r, n -1; if (!a.featured  && b.featured) retur, n, 1;
       retur, n, 0;
        }, if (sort, B, y = == 'new, e, s, t') {
       retu, r, n (
@@ -153,8 +153,8 @@ const, categorie, s = [
     }
   };
 
-  const, getCategoryColo, r = (catego, r, y: str, i, n, g) => {
-    swit, c, h (catego, r, y) {
+  const, getCategoryColo, r = (category: str, i, n, g) => {
+    swit, c, h (category) {
       ca, s, e 'Cloud, Operation, s':
         retu, r, n 'bg-cy, a, n-100, tex, t-cy, a, n-8, 0, 0'; ca, s, e 'FinTe, c, h':
         retu, r, n 'bg-emera, l, d-100, tex, t-emera, l, d-8, 0, 0';
@@ -193,14 +193,14 @@ const, categorie, s = [
         {/* Filters, and, Sorting */}
         <div, classNam, e = 'flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, m, b-8, justif, y-between, item, s-cent, e, r'>
           <div, classNam, e='flex, fle, x-wrap, ga, p-2'>
-            { categori, e, s.m, a, p(catego, r, y = > (
-              <button, ke, y = { cate, g, o, r, y  }, onCli, c, k={  () = > setSelectedCatego, r, y(catego, r, y)  } classNa, m, e = { `px-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s ${
-                  selectedCatego, r, y === catego, r, y
+            { categori, e, s.m, a, p(category = > (
+              <button, ke, y = { cate, g, o, r, y  }, onCli, c, k={  () = > setSelectedCatego, r, y(category)  } classNa, m, e = { `px-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s ${
+                  selectedCatego, r, y === category
                      ? 'bg-bl, u, e-600, tex, t-whi, t, e'
                     : 'bg-white, tex, t-gr, a, y-700, hove, r : bg-gr, a, y-100, border, border-gr, a, y-2, 0, 0'
                  }`}
               >
-                {catego, r, y}
+                {category}
               </butt, o, n>
             ))}
           </d, i, v>
@@ -218,7 +218,7 @@ const, categorie, s = [
             <Link, ke, y = { it, e, m., i, d  }, to={ it, e, m.hr, e, f } classNa, m, e='gro, u, p'>
               <div, classNam, e='bg-white, rounde, d-xl, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-200, grou, p-hov, e, r:bord, e, r-bl, u, e-3, 0, 0'>
                 {/* Featured, Ba, d, g, e */}
-                {  it, e, m.featur, e, d  && (
+                {  it, e, m.featured  && (
                   <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, x-3, p, y-1, tex, t-xs, fon, t-semibo, l, d'>
                     ⭐ FEATUR, E, D
                   </di, v > )  }
@@ -230,7 +230,7 @@ const, categorie, s = [
                       {it, e, m.ty, p, e.toUpperCa, s, e()}
                     </sp, a, n > <span, classNam, e = {`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibo, l, d ${getCategoryCol, o, r(it, e, m.categ, o, r, y)}`}
                     >
-                      {it, e, m.catego, r, y}
+                      {it, e, m.category}
                     </sp, a, n>
                   </d, i, v>
 
@@ -241,7 +241,7 @@ const, categorie, s = [
 
                   {/* Descripti, o, n */}
                   <p, classNam, e = 'te, x, t-gr, a, y-600, m, b-4, tex, t-sm, lin, e-cla, m, p-3'>
-                    {it, e, m.descripti, o, n}
+                    {it, e, m.description}
                   </p>
 
                   {/* Metri, c, s */}
@@ -263,7 +263,7 @@ const, categorie, s = [
 
                   {/* Meta, Informatio, n */}
                   <div, classNam, e = 'flex, item, s-center, justif, y-between, tex, t-xs, tex, t-gr, a, y-5, 0, 0'>
-                    <sp, a, n>{it, e, m.readTi, m, e}</sp, a, n>
+                    <sp, a, n>{it, e, m.readTime}</sp, a, n>
                     <sp, a, n>{it, e, m.publishDa, t, e}</sp, a, n>
                   </d, i, v>
                 </d, i, v>

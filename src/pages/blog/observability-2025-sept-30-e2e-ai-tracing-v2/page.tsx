@@ -6,12 +6,12 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Observability, 2025, Sept 30, E2e, Ai Tracing, V, 2</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Observability, 2025, Sept 30, E2e, Ai Tracing, V, 2</title>
+        <meta, nam, e='description'
           conte, n, t='Learn, about, observability 2025, sept, 30 e2e, ai, tracing v2, and, how it, can, benefit your, enterpris, e.'
         />
         <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/observabili, t, y-20, 2, 5-se, p, t-30-e, 2, e-ai-traci, n, g-v2'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/observabili t y-20 2 5-se p t-30-e 2 e-ai-traci n g-v2'
         />
       </Helm, e, t>
 

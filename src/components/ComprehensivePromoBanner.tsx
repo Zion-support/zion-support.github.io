@@ -3,9 +3,9 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
 interface, ComprehensivePromoBannerProp, s { 
-  varia, n, t?: 'he, r, o' | 'compa, c, t' | 'featur, e, d';
-  showCou, n, t?: numb, e, r;
-  classNa, m, e ?  : stri, n, g;
+  varia, n, t?: 'he, r, o' | 'compa, c, t' | 'featured';
+  showCou, n, t?: number;
+  classNa, m, e ?  : string;
  }
 const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, s> = ({ 
   varia, n, t = 'he, r, o', 
@@ -49,8 +49,8 @@ const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, 
           { latestArticl, e, s.sl, i, c, e(, 0, 2).m, a, p((artic, l, e) = > (
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = "border, borde, r-gr, a, y-200, rounde, d-x, l, p-6, hove, r: shad, o, w-lg, transitio, n-a, l, l">
               <div, classNam, e="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</d, i, v>
-              <h4, classNam, e = "te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.tit, l, e}</h4>
-              <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">{artic, l, e.descripti, o, n}</p>
+              <h4, classNam, e = "te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.title}</h4>
+              <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">{artic, l, e.description}</p>
               <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">
                 Read, Mor, e <ArrowRight, classNam, e="w-4 h-4" />
               </Li, n, k>
@@ -59,7 +59,7 @@ const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, 
         </d, i, v>
       </d, i, v  > );
   }
-  // Hero, varian, t (defau, l, t)
+  // Hero varian t (defau l t)
   retu, r, n (
     <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-whi, t, e ${class, N, a, m, e}`}>
       <div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o">
@@ -87,8 +87,8 @@ const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, 
                 <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } classNa, m, e="block, b, g-whi, t, e/5, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/15, transitio, n-a, l, l"
                 >
                   <div, classNam, e="te, x, t-sm, tex, t-purp, l, e-300, m, b-1">{artic, l, e.cate, g, o, r, y}</d, i, v>
-                  <div, classNam, e = "fo, n, t-semibo, l, d">{artic, l, e.tit, l, e}</d, i, v>
-                  <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-300, m, t-1">{artic, l, e.readTi, m, e}</d, i, v>
+                  <div, classNam, e = "fo, n, t-semibo, l, d">{artic, l, e.title}</d, i, v>
+                  <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-300, m, t-1">{artic, l, e.readTime}</d, i, v>
                 </L, i, n, k>
               ))}
             </d, i, v>
@@ -103,7 +103,7 @@ const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, 
                 <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } classNa, m, e="block, b, g-whi, t, e/5, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/15, transitio, n-a, l, l"
                 >
                   <div, classNam, e="te, x, t-sm, tex, t-gre, e, n-300, m, b-1">{servi, c, e.cate, g, o, r, y}</d, i, v>
-                  <div, classNam, e = "fo, n, t-semibo, l, d">{servi, c, e.tit, l, e}</d, i, v>
+                  <div, classNam, e = "fo, n, t-semibo, l, d">{servi, c, e.title}</d, i, v>
                   <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-300, m, t-1">{servi, c, e.prici, n, g}</d, i, v>
                 </L, i, n, k>
               ))}

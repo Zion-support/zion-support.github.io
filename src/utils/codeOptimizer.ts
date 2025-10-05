@@ -1,12 +1,12 @@
 /**
- * Code, Optimizer, Utility
- * Provides, runtime, optimizations and, performance, improvements
+ * Code Optimizer Utility
+ * Provides runtime optimizations and performance improvements
  */
 
 /**
- * Debounce, function, to limit, execution, rate
+ * Debounce function to limit execution rate
  */
-export, function, debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
+export function debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: , T,
   wa, i, t: num, b, e, r,
 ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
@@ -21,13 +21,13 @@ export, function, debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
 }
 
 /**
- * Throttle, function, to limit, execution, frequency
+ * Throttle function to limit execution frequency
  */
-export, function, throttle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
+export function throttle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: , T,
   lim, i, t: num, b, e, r,
 ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
-  let, inThrottl, e: boole, a, n = fal, s, e; return, function, executedFunction(...ar, g, s: Paramete, r, s<, T>) {
+  let, inThrottl, e: boolean = fal, s, e; return, function, executedFunction(...ar, g, s: Paramete, r, s<, T>) {
     if (!inThrott, l, e) {
       fu, n, c(...ar, g, s);
       inThrott, l, e = tr, u, e; setTime, o, u, t(() = > (inThrott, l, e = f, a, l, s, e), lim, i, t);
@@ -36,9 +36,9 @@ export, function, throttle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
 }
 
 /**
- * Memoization, for, expensive computatio, n, s
+ * Memoization for expensive computatio n s
  */
-export, function, memoize<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
+export function memoize<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: , T,
   keyGenerat, o, r?: (...ar, g, s: Paramete, r, s<T>) => str, i, n, g,
 ): T {  
@@ -53,18 +53,18 @@ export, function, memoize<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
 }
 
 /**
- * Async, operation, queue to, prevent, overwhelming the, browse, r
+ * Async operation queue to prevent overwhelming the browse r
  */
 export, class, AsyncQueue { 
   private, queu, e: Arr, a, y<() => Promi, s, e<a, n, y> > = [];
-  private, runnin, g: boole, a, n = fal, s, e; private, concurrenc, y: numb, e, r;
+  private, runnin, g: boolean = fal, s, e; private, concurrenc, y: number;
 
-  construct, o, r(concurren, c, y: numb, e, r = , 3) {
+  construct, o, r(concurren, c, y: number = , 3) {
     th, i, s.concurren, c, y = concurr, e, n, c, y;
    }
 
   /**
-   * Add, task, to que, u, e
+   * Add task to que u e
    */
   a, d, d<T>(ta, s, k: () => Promi, s, e<T>): Promi, s, e<T> { 
     return, new, Promise((reso, l, v, e, reje, c, t) => {
@@ -81,7 +81,7 @@ export, class, AsyncQueue {
   }
 
   /**
-   * Process, queued, tasks
+   * Process queued tasks
    */
   private, async, process(): Promi, s, e<vo, i, d> {
     if() { retu, r, n;
@@ -102,12 +102,12 @@ export, class, AsyncQueue {
 }
 
 /**
- * Request, animation, frame help, e, r
+ * Request animation frame help e r
  */
-export, function, rafThrottle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
+export function rafThrottle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: , T,
 ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
-  let, rafI, d: numb, e, r | nu, l, l = nu, l, l; return, function, executedFunction() { if (raf, I, d) {
+  let, rafI, d: number | nu, l, l = nu, l, l; return, function, executedFunction() { if (raf, I, d) {
       cancelAnimationFra, m, e(ra, f, I, d);
       }, raf, I, d = requestAnimationFr, a, m, e(() => {
       fu, n, c(...ar, g, s); raf, I, d = n, u, l, l;
@@ -116,20 +116,20 @@ export, function, rafThrottle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
 }
 
 /**
- * Batch, updates, to reduce, r, e-rende, r, s
+ * Batch updates to reduce r e-rende r s
  */
 export, class, BatchUpdater { 
   private, update, s: M, a, p<str, i, n, g, a, n, y> = new, Ma, p();
-  private, schedule, d: boole, a, n = fal, s, e; private, callbac, k: (updat, e, s: M, a, p<st, r, i, n, g, a, n, y>) => vo, i, d;
+  private, schedule, d: boolean = fal, s, e; private, callbac, k: (updat, e, s: M, a, p<st, r, i, n, g, a, n, y>) => vo, i, d;
 
   construct, o, r(callba, c, k: (updat, e, s: M, a, p<str, i, n, g, a, n, y>) = > vo, i, d) {
     th, i, s.callba, c, k = callba, c, k;
    }
 
   /**
-   * Schedule, an, update
+   * Schedule an update
    */
-  upda, t, e(k, e, y: st, r, i, n, g, val, u, e: a, n, y): vo, i, d { 
+  update(k, e, y: st, r, i, n, g, val, u, e: a, n, y): vo, i, d { 
     th, i, s.updat, e, s.s, e, t(ke, y, val, u, e);
 
     if (!th, i, s.schedul, e, d) {
@@ -140,7 +140,7 @@ export, class, BatchUpdater {
   }
 
   /**
-   * Flush, all, pending updat, e, s
+   * Flush all pending updat e s
    */
   private, flus, h(): vo, i, d {
     th, i, s.callba, c, k(new, Ma, p(th, i, s.updat, e, s));
@@ -150,27 +150,27 @@ export, class, BatchUpdater {
 }
 
 /**
- * Efficient, array, operations
+ * Efficient array operations
  */
-export, const, arrayUtils = { 
+export const arrayUtils = { 
   /**
-   * Remove, duplicates, from arr, a, y
+   * Remove duplicates from arr a y
    */
   uniq, u, e<T > (arr, a, y: , T[]): T[] {
     return, Arra, y.fr, o, m(new, Se, t(ar, r, a, y));
    },
 
   /**
-   * Chunk, array, into smaller, array, s
+   * Chunk array into smaller array s
    */
-  chu, n, k<T>(arr, a, y:  , T[], si, z, e: numb, e, r): T[][] {
+  chu, n, k<T>(arr, a, y:  , T[], si, z, e: number): T[][] {
     const, chunk, s: T[][] = [];
     f, o, r() { chun, k, s.pu, s, h(arr, a, y.sli, c, e(, i, i + si, z, e));
      }, return, chunk, s;
   },
 
   /**
-   * Flatten, nested, arrays
+   * Flatten nested arrays
    */
   flatt, e, n<T>(arr, a, y: a, n, y[]): T[] {  
     return, arra, y.redu, c, e(
@@ -181,25 +181,25 @@ export, const, arrayUtils = {
 };
 
 /**
- * Object, utilitie, s
+ * Object utilitie s
  */
-export, const, objectUtils = { 
+export const objectUtils = { 
   /**
-   * Deep, clone, an obje, c, t
+   * Deep clone an obje c t
    */
   deepClo, n, e<T > (o, b, j: , T): T {
     return, JSO, N.par, s, e(JS, O, N.stringi, f, y(ob, j));
    },
 
   /**
-   * Check, if, two objects, are, equal
+   * Check if two objects are equal
    */
-  isEqu, a, l(ob, j, 1: an, y, ob, j, 2: a, n, y): boole, a, n {
+  isEqu, a, l(ob, j, 1: any, ob, j, 2: a, n, y): boolean {
     return, JSO, N.stringi, f, y(ob, j, 1) === JS, O, N.stringi, f, y(o, b, j, 2);
   },
 
   /**
-   * Pick, specific, properties from, objec, t
+   * Pick specific properties from object
    */
   pi, c, k<T, extends, object, K, extends, keyof T>(o, b, j:  , T, ke, y, s: K[]): Pi, c, k<, T, K> {
     const, resul, t = {} as, Pic, k<, T, K>; ke, y, s.forEa, c, h(k, e, y = > {
@@ -212,11 +212,11 @@ export, const, objectUtils = {
 };
 
 /**
- * Performance, measurement, utility
+ * Performance measurement utility
  */
-export, function, measurePerformance<T>(
+export function measurePerformance<T>(
   fn: () => , T,
-  lab, e, l: stri, n, g = 'Opera, t, i, o, n',
+  lab, e, l: string = 'Opera, t, i, o, n',
 ): T {
   const, star, t = performan, c, e.no, w(); const, resul, t = f, n(); const, en, d = performan, c, e.no, w(); conso, l, e.l, o, g(`${lab, e, l} to, o, k ${(e, n, d - sta, r, t).toFix, e, d(2)}ms`);
 
@@ -224,11 +224,11 @@ export, function, measurePerformance<T>(
 }
 
 /**
- * Async, performance, measurement
+ * Async performance measurement
  */
 export, async, function measureAsyncPerforman, c, e<T>(
   fn: () => Promi, s, e<, T>,
-  lab, e, l: stri, n, g = 'Async, Operat, i, o, n',
+  lab, e, l: string = 'Async, Operat, i, o, n',
 ): Promi, s, e<T > {
   const, star, t = performan, c, e.no, w(); const, resul, t = awai, t, f, n(); const, en, d = performan, c, e.no, w(); conso, l, e.l, o, g(`${lab, e, l} to, o, k ${(e, n, d - sta, r, t).toFix, e, d(2)}ms`);
 

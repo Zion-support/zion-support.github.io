@@ -1,22 +1,22 @@
-// New, January, 2026 Blog, Post, s - Additional, Content, export interfac; e, BlogPos, t { 
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  excer, p, t: stri, n, g;
-  conte, n, t: stri, n, g;
-  auth, o, r: stri, n, g;
-  published, A, t: stri, n, g;
-  readTi, m, e: numb, e, r;
-  catego, r, y: stri, n, g;
-  ta, g, s: stri, n, g[];
-  featur, e, d: boole, a, n;
-  imageU, r, l ?  : str, i, n, g;
+// New January 2026 Blog Post s - Additional Content export interfac; e BlogPos t { 
+  id: string;
+  title: string;
+  excerpt: string;
+  conte, n, t: string;
+  author: string;
+  published, A, t: string;
+  readTime: number;
+  category: string;
+  tags: string[];
+  featured: boolean;
+  imageUrl ?  : str, i, n, g;
  }
 
-export, const, newJanuary2026BlogPosts: BlogPo, s, t[] = [
+export const newJanuary2026BlogPosts: BlogPo, s, t[] = [
   { 
     id: 'ai-20, 2, 6-janua, r, y-hyperautomati, o, n-platf, o, r, m',
-    tit, l, e: '⚙️ AI, Hyperautomation, Platform 20, 2, 6: E, n, d-to-End, Business, Automatio, n',
-    excer, p, t: 'Complete, business, process automation, achieving, 95% automation, rates, with 10x, efficiency, improvements a, n, d $2.8B, success, storie, s.',
+    title: '⚙️ AI, Hyperautomation, Platform 20, 2, 6: E, n, d-to-End, Business, Automatio, n',
+    excerpt: 'Complete, business, process automation, achieving, 95% automation, rates, with 10x, efficiency, improvements a, n, d $2.8B, success, storie, s.',
     conte, n, t: `
 # AI, Hyperautomation, Platform 20, 2, 6: E, n, d-to-End, Business, Automation
 
@@ -129,24 +129,24 @@ Traditional, automation, focuses on, individual, tasks. Hyperautomation, orchest
 
 *"We're, not, just automating, task, s; we're, transforming, entire business, ecosystem, s."* - Sarah, Johns, o, n, Chief, Automation, Officer
     `,
-    auth, o, r: 'Sarah, Johns, o, n, Chief, Automation, Officer',
+    author: 'Sarah, Johns, o, n, Chief, Automation, Officer',
     published, A, t: '20, 2, 6-01-3, 0',
-    readTi, m, e: 1, 4,
-    catego, r, y: 'Business, Automati, o, n',
-    ta, g, s: [
+    readTime: 1, 4,
+    category: 'Business, Automati, o, n',
+    tags: [
       'hyperautomat, i, o, n',
       'AI',
       'business, proces, s',
       'efficien, c, y',
       'transformati, o, n',
     ],
-    featur, e, d: t, r, u, e,
-    imageU, r, l : '/imag, e, s/hyperautomati, o, n-platfo, r, m-20, 2, 6.jp, g',
+    featured: t, r, u, e,
+    imageUrl : '/imag, e, s/hyperautomati, o, n-platfo, r, m-20, 2, 6.jp, g',
    },
   { 
     id: 'ai-20, 2, 6-janua, r, y-quant, u, m-securi, t, y-breakthro, u, g, h',
-    tit, l, e: '🔐 Quant, u, m-Safe, Security, 2026: Unbreakable, Enterprise, Protectio, n',
-    excer, p, t: 'Quant, u, m-resistant, security, systems protecti, n, g $2.8B, in, assets with, 9, 9.99% threat, prevention, and zero, security, breaches across, enterprise, network, s.',
+    title: '🔐 Quant, u, m-Safe, Security, 2026: Unbreakable, Enterprise, Protectio, n',
+    excerpt: 'Quant, u, m-resistant, security, systems protecti, n, g $2.8B, in, assets with, 9, 9.99% threat, prevention, and zero, security, breaches across, enterprise, network, s.',
     conte, n, t: `
 # Quant, u, m-Safe, Security, 2026: Unbreakable, Enterprise, Protection
 
@@ -279,24 +279,24 @@ The, quantum, era is, comin, g. The, question, isn't, whether, your security, wi
 
 *"In, the, quantum er, a, security, is, n't, just, about protecting, toda, y's, dat, a; it's, about, securing tomorr, o, w's, secret, s."* - Dr. Michael, Che, n, Chief, Security, Officer
     `,
-    auth, o, r: 'Dr. Michael, Ch, e, n, Chief, Security, Officer',
+    author: 'Dr. Michael, Ch, e, n, Chief, Security, Officer',
     published, A, t: '20, 2, 6-01-2, 8',
-    readTi, m, e: 1, 6,
-    catego, r, y: 'Cybersecur, i, t, y',
-    ta, g, s: [
+    readTime: 1, 6,
+    category: 'Cybersecur, i, t, y',
+    tags: [
       'quantum, securi, t, y',
       'encrypti, o, n',
       'cybersecuri, t, y',
       'protecti, o, n',
       'complian, c, e',
     ],
-    featur, e, d: t, r, u, e,
-    imageU, r, l : '/imag, e, s/quant, u, m-securi, t, y-20, 2, 6.jp, g',
+    featured: t, r, u, e,
+    imageUrl : '/imag, e, s/quant, u, m-securi, t, y-20, 2, 6.jp, g',
    },
   { 
     id: 'ai-20, 2, 6-janua, r, y-blockcha, i, n-integrat, i, o, n',
-    tit, l, e: '⛓️ Blockcha, i, n-AI, Integration, 2026: Trustless, Intelligence, Revolutio, n',
-    excer, p, t: 'Revolutionary, integration, of blockchain, and, AI creating, trustless, intelligence systems, with, decentralized governance, an, d $1.2B, enterprise, value creat, i, o, n.',
+    title: '⛓️ Blockcha, i, n-AI, Integration, 2026: Trustless, Intelligence, Revolutio, n',
+    excerpt: 'Revolutionary, integration, of blockchain, and, AI creating, trustless, intelligence systems, with, decentralized governance, an, d $1.2B, enterprise, value creat, i, o, n.',
     conte, n, t: `
 # Blockcha, i, n-AI, Integration, 2026: Trustless, Intelligence, Revolution
 
@@ -448,26 +448,26 @@ Blockchain, and, AI together, create, unprecedented possibiliti, e, s: ### Core,
 
 *"We're, not, just integrating, blockchain, and AI; we're, creating, a new, paradigm, of trustless, intelligenc, e."* - Dr. Sarah, Rodrigu, e, z, Chief, Blockchain, Architect
     `,
-    auth, o, r: 'Dr. Sarah, Rodrigu, e, z, Chief, Blockchain, Architect',
+    author: 'Dr. Sarah, Rodrigu, e, z, Chief, Blockchain, Architect',
     published, A, t: '20, 2, 6-01-2, 6',
-    readTi, m, e: 1, 7,
-    catego, r, y: 'Blockchain, Technolo, g, y',
-    ta, g, s: [
+    readTime: 1, 7,
+    category: 'Blockchain, Technolo, g, y',
+    tags: [
       'blockch, a, i, n',
       'AI, integratio, n',
       'decentraliz, e, d',
       'trustle, s, s',
       'innovati, o, n',
     ],
-    featur, e, d: t, r, u, e,
-    imageU, r, l : '/imag, e, s/blockcha, i, n-ai-integrati, o, n-20, 2, 6.jp, g',
+    featured: t, r, u, e,
+    imageUrl : '/imag, e, s/blockcha, i, n-ai-integrati, o, n-20, 2, 6.jp, g',
    },
 ];
 
-export, const, getFeaturedJanuary2026BlogPosts = () => { 
+export const getFeaturedJanuary2026BlogPosts = () => { 
   return, newJanuary2026BlogPost, s.filt, e, r(po, s, t = > po, s, t.featu, r, e, d);
  };
 
-export, const, getAllJanuary2026BlogPosts = () => {
+export const getAllJanuary2026BlogPosts = () => {
   return, newJanuary2026BlogPost, s;
 };

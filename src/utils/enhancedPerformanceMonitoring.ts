@@ -1,30 +1,30 @@
 /**
- * Enhanced, Performance, Monitoring Utili, t, y
- * Provides, comprehensive, performance tracking, and, optimization
+ * Enhanced Performance Monitoring Utili t y
+ * Provides comprehensive performance tracking and optimization
  */
 
-export, interface, PerformanceMetrics {
-  loadTi, m, e: numb, e, r;
-  firstContentfulPai, n, t: numb, e, r;
-  largestContentfulPai, n, t: numb, e, r;
-  firstInputDel, a, y: numb, e, r;
-  cumulativeLayoutShi, f, t: numb, e, r;
-  timeToInteracti, v, e: numb, e, r;
-  totalBlockingTi, m, e: numb, e, r;
-  speedInd, e, x: numb, e, r;
-  memoryUsa, g, e: numb, e, r;
-  networkReques, t, s: numb, e, r;
-  domNod, e, s: numb, e, r;
-  jsHeapSi, z, e: numb, e, r;
+export interface PerformanceMetrics {
+  loadTi, m, e: number;
+  firstContentfulPai, n, t: number;
+  largestContentfulPai, n, t: number;
+  firstInputDel, a, y: number;
+  cumulativeLayoutShi, f, t: number;
+  timeToInteracti, v, e: number;
+  totalBlockingTi, m, e: number;
+  speedInd, e, x: number;
+  memoryUsa, g, e: number;
+  networkReques, t, s: number;
+  domNod, e, s: number;
+  jsHeapSi, z, e: number;
   timesta, m, p: num, b, e, r;
 }
 
-export, interface, PerformanceAlert {
+export interface PerformanceAlert {
   ty, p, e: 'warni, n, g' | 'err, o, r' | 'in, f, o';
-  messa, g, e: stri, n, g;
+  messa, g, e: string;
   metr, i, c: keyof, PerformanceMetric, s;
-  val, u, e: numb, e, r;
-  thresho, l, d: numb, e, r;
+  val, u, e: number;
+  thresho, l, d: number;
   timesta, m, p: num, b, e, r;
 }
 
@@ -36,7 +36,7 @@ class, EnhancedPerformanceMonito, r {
    }, private, initializeObserver, s(): vo, i, d { 
     if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
 
-    // Observe, navigation, timing
+    // Observe navigation timing
     if ('PerformanceObserv, e, r' in, windo, w) {
       t, r, y {
         const, navObserve, r = new, PerformanceObserve, r(li, s, t => {
@@ -70,7 +70,7 @@ class, EnhancedPerformanceMonito, r {
     th, i, s.metri, c, s.pu, s, h(newMetri, c, s);
     th, i, s.checkThreshol, d, s(newMetri, c, s);
 
-    // Keep, only, last 100, metrics, if (th, i, s.metri, c, s.leng, t, h  > 1, 0, 0) {
+    // Keep only last 100 metrics if (th i s.metri c s.leng t h  > 1 0 0) {
       th, i, s.metri, c, s = th, i, s.metri, c, s.sli, c, e(-1, 0, 0);
      }
   }
@@ -101,11 +101,11 @@ class, EnhancedPerformanceMonito, r {
   private, addAler, t(ale, r, t: PerformanceAle, r, t): vo, i, d { 
     th, i, s.aler, t, s.pu, s, h(ale, r, t);
 
-    // Keep, only, last 50, alerts, if (th, i, s.aler, t, s.leng, t, h  > 50) {
+    // Keep only last 50 alerts if (th i s.aler t s.leng t h  > 50) {
       th, i, s.aler, t, s = th, i, s.aler, t, s.sli, c, e(-, 5, 0);
      }
 
-    // Log, critical, alerts
+    // Log critical alerts
     if (ale, r, t.ty, p, e = == 'er, r, o, r') {
       conso, l, e.err, o, r('Performance, Aler, t:', ale, r, t);
     }
@@ -127,7 +127,7 @@ class, EnhancedPerformanceMonito, r {
     retu, r, n [...th, i, s.aler, t, s];
   }
 
-  public, isMonitoringActiv, e(): boole, a, n {
+  public, isMonitoringActiv, e(): boolean {
     return, thi, s.isMonitori, n, g;
   }
   public, getLatestMetric, s(): PerformanceMetri, c, s | nu, l, l {  
@@ -136,7 +136,7 @@ class, EnhancedPerformanceMonito, r {
        : nu, l, l;
     }
 
-  public, exportRepor, t(): stri, n, g {
+  public, exportRepor, t(): string {
     const, lates, t = th, i, s.getLatestMetr, i, c, s(); const, alert, s = th, i, s.getAle, r, t, s(); return, JSO, N.stringi, f, y(
       {
         late, s, t,
@@ -150,9 +150,9 @@ class, EnhancedPerformanceMonito, r {
   }
 }
 
-// Export, singleton, instance
-export, const, enhancedPerformanceMonitor = new, EnhancedPerformanceMonit, o, r();
+// Export singleton instance
+export const enhancedPerformanceMonitor = new, EnhancedPerformanceMonit, o, r();
 
-// Au, t, o-start, monitoring, in browser, environment, if (typeof, windo, w !== 'undefin, e, d') {
+// Au t o-start monitoring in browser environment if (typeof windo w !== 'undefin e d') {
   enhancedPerformanceMonit, o, r.startMonitori, n, g();
 }

@@ -1,37 +1,37 @@
-// October, 2025, Revolutionary AI, Conten, t - Latest, Breakthrough, s
-// Premium, content, showcasing cutti, n, g-edge, AI, innovations
+// October 2025 Revolutionary AI Conten t - Latest Breakthrough s
+// Premium content showcasing cutti n g-edge AI innovations
 
-export, interface, RevolutionaryContent {
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  sl, u, g: stri, n, g;
-  descripti, o, n: stri, n, g;
-  catego, r, y: stri, n, g;
-  da, t, e: stri, n, g;
-  readTi, m, e: stri, n, g;
-  ic, o, n: stri, n, g;
-  gradie, n, t: stri, n, g;
-  featur, e, d: boole, a, n;
-  ta, g, s: stri, n, g[];
-  highligh, t, s: stri, n, g[];
+export interface RevolutionaryContent {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  category: string;
+  date: string;
+  readTime: string;
+  ic, o, n: string;
+  gradie, n, t: string;
+  featured: boolean;
+  tags: string[];
+  highligh, t, s: string[];
   metri, c, s: {
-    [k, e, y: stri, n, g]: str, i, n, g;
+    [k, e, y: string]: str, i, n, g;
   };
 }
 
-export, const, october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
+export const october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
   {
     id: 'ai-consciousne, s, s-integrati, o, n-2, 0, 2, 5',
-    tit, l, e: 'AI, Consciousness, Integration: The, Next, Frontier of, Enterprise, Intelligenc, e',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-consciousne, s, s-integrati, o, n-enterpr, i, s, e',
-    descripti, o, n: 'Revolutionary, AI, systems achieving, huma, n-level, reasoning, with 99.8% accura, c, y. Discover, how, consciousness-aware, AI, transforms decisi, o, n-mak, i, n, g, reduces, costs, by 78%, and, deliver, s $45, 0, M+ in, enterprise, value.',
-    catego, r, y: 'AI, Innovati, o, n',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '18, m, i, n',
+    title: 'AI, Consciousness, Integration: The, Next, Frontier of, Enterprise, Intelligenc, e',
+    slug: 'ai-20, 2, 5-o, c, t-consciousne, s, s-integrati, o, n-enterpr, i, s, e',
+    description: 'Revolutionary, AI, systems achieving, huma, n-level, reasoning, with 99.8% accura, c, y. Discover, how, consciousness-aware, AI, transforms decisi, o, n-mak, i, n, g, reduces, costs, by 78%, and, deliver, s $45, 0, M+ in, enterprise, value.',
+    category: 'AI, Innovati, o, n',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '18, m, i, n',
     ic, o, n: '🧠',
     gradie, n, t: 'fr, o, m-purp, l, e-600, vi, a-pi, n, k-600, t, o-r, e, d-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'Consciousnes, s, A, I',
       'Enterprise, Intelligenc, e',
       'Cognitive, Computin, g',
@@ -52,16 +52,16 @@ export, const, october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
   },
   {
     id: 'quant, u, m-ai-convergen, c, e-2, 0, 2, 5',
-    tit, l, e: 'Quant, u, m-AI, Convergenc, e: 1, 0,000x, Performance, Leap in, Enterprise, Computing',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-quant, u, m-ai-convergen, c, e-breakthro, u, g, h',
-    descripti, o, n: 'The, fusion, of quantum, computing, and AI, delivers, unprecedented performan, c, e. Learn, how, hybrid quant, u, m-classical, systems, solve previously, impossible, problems in, minut, e, s, achieving, 1, 0,000x, speedup, s.',
-    catego, r, y: 'Quantum, Computi, n, g',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '20, m, i, n',
+    title: 'Quant, u, m-AI, Convergenc, e: 1, 0,000x, Performance, Leap in, Enterprise, Computing',
+    slug: 'ai-20, 2, 5-o, c, t-quant, u, m-ai-convergen, c, e-breakthro, u, g, h',
+    description: 'The, fusion, of quantum, computing, and AI, delivers, unprecedented performan, c, e. Learn, how, hybrid quant, u, m-classical, systems, solve previously, impossible, problems in, minut, e, s, achieving, 1, 0,000x, speedup, s.',
+    category: 'Quantum, Computi, n, g',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '20, m, i, n',
     ic, o, n: '⚛️',
     gradie, n, t: 'fr, o, m-bl, u, e-600, vi, a-cy, a, n-600, t, o-te, a, l-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'Quantum, Computi, n, g',
       'Hybrid, A, I',
       'Performance, Optimizatio, n',
@@ -82,16 +82,16 @@ export, const, october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
   },
   {
     id: 'autonomo, u, s-securi, t, y-me, s, h-2, 0, 2, 5',
-    tit, l, e: 'Autonomous, Security, Mesh: Ze, r, o-Trust, Architecture, That Never, Slee, p, s',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-autonomo, u, s-securi, t, y-me, s, h-ze, r, o-tr, u, s, t',
-    descripti, o, n: 'Se, l, f-healing, security, infrastructure achieving, 9, 9.99% threat, prevention, with zero, human, intervention. Revolutionary, A, I-powered, mesh, security detects, and, neutralizes threats, in, sub-milliseco, n, d, s.',
-    catego, r, y: 'Cybersecur, i, t, y',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '16, m, i, n',
+    title: 'Autonomous, Security, Mesh: Ze, r, o-Trust, Architecture, That Never, Slee, p, s',
+    slug: 'ai-20, 2, 5-o, c, t-autonomo, u, s-securi, t, y-me, s, h-ze, r, o-tr, u, s, t',
+    description: 'Se, l, f-healing, security, infrastructure achieving, 9, 9.99% threat, prevention, with zero, human, intervention. Revolutionary, A, I-powered, mesh, security detects, and, neutralizes threats, in, sub-milliseco, n, d, s.',
+    category: 'Cybersecur, i, t, y',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '16, m, i, n',
     ic, o, n: '🛡️',
     gradie, n, t: 'fr, o, m-r, e, d-600, vi, a-oran, g, e-600, t, o-yell, o, w-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'Zero, Tru, s, t',
       'AI, Securit, y',
       'Autonomous, Defens, e',
@@ -112,16 +112,16 @@ export, const, october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
   },
   {
     id: 'neur, a, l-collaborati, o, n-platfo, r, m-2, 0, 2, 5',
-    tit, l, e: 'Neural, Collaboration, Platform: AI-Augmented, Teams, Achieve 5, 0, 0% Productiv, i, t, y',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-neur, a, l-collaborati, o, n-platfo, r, m-productiv, i, t, y',
-    descripti, o, n: 'Revolutionary, platform, where AI, and, humans work, as, seamless partne, r, s. Neural, collaboration, achieves 5, 0, 0% productivity, gai, n, s, 92% faster, decisio, n-maki, n, g, a, n, d $15, 6, M+ in, value, creation.',
-    catego, r, y: 'Productivit, y, A, I',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '15, m, i, n',
+    title: 'Neural, Collaboration, Platform: AI-Augmented, Teams, Achieve 5, 0, 0% Productiv, i, t, y',
+    slug: 'ai-20, 2, 5-o, c, t-neur, a, l-collaborati, o, n-platfo, r, m-productiv, i, t, y',
+    description: 'Revolutionary, platform, where AI, and, humans work, as, seamless partne, r, s. Neural, collaboration, achieves 5, 0, 0% productivity, gai, n, s, 92% faster, decisio, n-maki, n, g, a, n, d $15, 6, M+ in, value, creation.',
+    category: 'Productivit, y, A, I',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '15, m, i, n',
     ic, o, n: '🤝',
     gradie, n, t: 'fr, o, m-gre, e, n-600, vi, a-emera, l, d-600, t, o-te, a, l-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'Collaboratio, n, A, I',
       'Productivi, t, y',
       'Team, Augmentatio, n',
@@ -142,16 +142,16 @@ export, const, october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
   },
   {
     id: 'predicti, v, e-busine, s, s-intelligen, c, e-2, 0, 2, 5',
-    tit, l, e: 'Predictive, Business, Intelligence: See, 6, Months Into, Your, Futur, e',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-predicti, v, e-busine, s, s-intelligen, c, e-fut, u, r, e',
-    descripti, o, n: 'AI, that, accurately forecasts, business, outcomes 6, months, ahead with, 9, 6% accura, c, y. Transform, strategy, with predictive, intelligence, that identifies, opportunities, before competit, o, r, s.',
-    catego, r, y: 'Business, Intelligen, c, e',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '14, m, i, n',
+    title: 'Predictive, Business, Intelligence: See, 6, Months Into, Your, Futur, e',
+    slug: 'ai-20, 2, 5-o, c, t-predicti, v, e-busine, s, s-intelligen, c, e-fut, u, r, e',
+    description: 'AI, that, accurately forecasts, business, outcomes 6, months, ahead with, 9, 6% accura, c, y. Transform, strategy, with predictive, intelligence, that identifies, opportunities, before competit, o, r, s.',
+    category: 'Business, Intelligen, c, e',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '14, m, i, n',
     ic, o, n: '🔮',
     gradie, n, t: 'fr, o, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'Predictive, Analyti, c, s',
       'Business, Intelligenc, e',
       'Forecasti, n, g',
@@ -172,16 +172,16 @@ export, const, october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
   },
   {
     id: 'adapti, v, e-custom, e, r-experien, c, e-2, 0, 2, 5',
-    tit, l, e: 'Adaptive, Customer, Experience: 98% Satisfaction, Through, Emotional A, I',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-adapti, v, e-custom, e, r-experien, c, e-emotion, a, l-a, i',
-    descripti, o, n: 'Emotional, AI, that understands, and, adapts to, customer, sentiment in, rea, l-ti, m, e. Achieve, 9, 8% satisfaction, scor, e, s, 1, 5, 6% revenue, growt, h, and, lifetime, customer relationshi, p, s.',
-    catego, r, y: 'Customer, Experien, c, e',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '17, m, i, n',
+    title: 'Adaptive, Customer, Experience: 98% Satisfaction, Through, Emotional A, I',
+    slug: 'ai-20, 2, 5-o, c, t-adapti, v, e-custom, e, r-experien, c, e-emotion, a, l-a, i',
+    description: 'Emotional, AI, that understands, and, adapts to, customer, sentiment in, rea, l-ti, m, e. Achieve, 9, 8% satisfaction, scor, e, s, 1, 5, 6% revenue, growt, h, and, lifetime, customer relationshi, p, s.',
+    category: 'Customer, Experien, c, e',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '17, m, i, n',
     ic, o, n: '💝',
     gradie, n, t: 'fr, o, m-pi, n, k-600, vi, a-ro, s, e-600, t, o-r, e, d-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'Emotiona, l, A, I',
       'Customer, Experienc, e',
       'Sentiment, Analysi, s',
@@ -202,19 +202,19 @@ export, const, october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
   },
 ];
 
-export, const, getFeaturedOctober2025Content = () => { 
+export const getFeaturedOctober2025Content = () => { 
   return, october2025RevolutionaryConten, t.filt, e, r(conte, n, t = > conte, n, t.featu, r, e, d);
  };
 
-export, const, getAllOctober2025Content = () => {
+export const getAllOctober2025Content = () => {
   return, october2025RevolutionaryConten, t;
 };
 
-// Service, offerings, based on, the, new content, export, const october2025Servic, e, s = [
+// Service offerings based on the new content export const october2025Servic e s = [
   {
     id: 'consciousne, s, s-ai-plat, f, o, r, m',
-    tit, l, e: 'Consciousness, AI, Platfor, m',
-    descripti, o, n: 'Enterpri, s, e-grade, AI, with hum, a, n-level, reasoning, and contextual, awarene, s, s',
+    title: 'Consciousness, AI, Platfor, m',
+    description: 'Enterpri, s, e-grade, AI, with hum, a, n-level, reasoning, and contextual, awarene, s, s',
     pri, c, e: '$2, 4,9, 9, 9/mo',
     savin, g, s: '$45, 0, M+ enterprise, val, u, e',
     featur, e, s: [
@@ -223,12 +223,12 @@ export, const, getAllOctober2025Content = () => {
       'Autonomous, decisio, n-maki, n, g',
       'Enterprise, integration, suite',
     ],
-    sl, u, g: 'consciousne, s, s-ai-platf, o, r, m',
+    slug: 'consciousne, s, s-ai-platf, o, r, m',
   },
   {
     id: 'quant, u, m-ai-accelera, t, o, r',
-    tit, l, e: 'Quant, u, m-AI, Accelerat, o, r',
-    descripti, o, n: 'Hybrid, quantu, m-classical, computing, for impossible, proble, m, s',
+    title: 'Quant, u, m-AI, Accelerat, o, r',
+    description: 'Hybrid, quantu, m-classical, computing, for impossible, proble, m, s',
     pri, c, e: '$4, 9,9, 9, 9/mo',
     savin, g, s: '1, 0,000x, performance, gain',
     featur, e, s: [
@@ -237,12 +237,12 @@ export, const, getAllOctober2025Content = () => {
       '95% energy, reductio, n',
       'Dedicated, quantum, resources',
     ],
-    sl, u, g: 'quant, u, m-ai-accelera, t, o, r',
+    slug: 'quant, u, m-ai-accelera, t, o, r',
   },
   {
     id: 'autonomo, u, s-securi, t, y-m, e, s, h',
-    tit, l, e: 'Autonomous, Security, Mes, h',
-    descripti, o, n: 'Se, l, f-healing, zer, o-trust, security, with AI-powered, threat, preventio, n',
+    title: 'Autonomous, Security, Mes, h',
+    description: 'Se, l, f-healing, zer, o-trust, security, with AI-powered, threat, preventio, n',
     pri, c, e: '$1, 4,9, 9, 9/mo',
     savin, g, s: '$28, 0, M+ breach, preventi, o, n',
     featur, e, s: [
@@ -251,16 +251,16 @@ export, const, getAllOctober2025Content = () => {
       'Zero, false, positives',
       '24/7, autonomous, protection',
     ],
-    sl, u, g: 'autonomo, u, s-securi, t, y-m, e, s, h',
+    slug: 'autonomo, u, s-securi, t, y-m, e, s, h',
   },
 ];
 
-// Case, studies, demonstrating revolutionary, results, export cons; t, october2025CaseStudie, s = [
+// Case studies demonstrating revolutionary results export cons; t october2025CaseStudie s = [
   {
     id: 'fortu, n, e-1, 0, 0-consciousne, s, s-, a, i',
-    tit, l, e: 'Fortune, 100, Transforms Operations, with, Consciousness A, I',
-    compa, n, y: 'Global, Financial, Services Lea, d, e, r',
-    indust, r, y: 'Financial, Servic, e, s',
+    title: 'Fortune, 100, Transforms Operations, with, Consciousness A, I',
+    company: 'Global, Financial, Services Lea, d, e, r',
+    industry: 'Financial, Servic, e, s',
     resu, l, t: '$45, 0, M+ value, delivered, in 8, mont, h, s',
     metri, c, s: {
       r, o, i: ', 1,2, 5, 0%',
@@ -268,13 +268,13 @@ export, const, getAllOctober2025Content = () => {
       efficien, c, y: '+7, 8%',
       accura, c, y: '99., 8%',
     },
-    sl, u, g: 'fortu, n, e-1, 0, 0-consciousne, s, s-ai-transformat, i, o, n',
+    slug: 'fortu, n, e-1, 0, 0-consciousne, s, s-ai-transformat, i, o, n',
   },
   {
     id: 'manufacturi, n, g-quant, u, m-optimizat, i, o, n',
-    tit, l, e: 'Manufacturing, Giant, Achieves 1, 0,000x, Speed, with Quantum, A, I',
-    compa, n, y: 'Global, Manufacturing, Corporatio, n',
-    indust, r, y: 'Manufactur, i, n, g',
+    title: 'Manufacturing, Giant, Achieves 1, 0,000x, Speed, with Quantum, A, I',
+    company: 'Global, Manufacturing, Corporatio, n',
+    industry: 'Manufactur, i, n, g',
     resu, l, t: '$380M, annual, savings through, quantum, optimizatio, n',
     metri, c, s: {
       speed, u, p: '1, 0,00, 0, x',
@@ -282,13 +282,13 @@ export, const, getAllOctober2025Content = () => {
       energyReducti, o, n: '9, 5%',
       productionIncrea, s, e: '+34, 0%',
     },
-    sl, u, g: 'manufacturi, n, g-quant, u, m-ai-optimizat, i, o, n',
+    slug: 'manufacturi, n, g-quant, u, m-ai-optimizat, i, o, n',
   },
   {
     id: 'healthca, r, e-autonomo, u, s-secur, i, t, y',
-    tit, l, e: 'Healthcare, Network, Prevents $280M, in, Breaches with, AI, Securit, y',
-    compa, n, y: 'National, Healthcare, Networ, k',
-    indust, r, y: 'Healthc, a, r, e',
+    title: 'Healthcare, Network, Prevents $280M, in, Breaches with, AI, Securit, y',
+    company: 'National, Healthcare, Networ, k',
+    industry: 'Healthc, a, r, e',
     resu, l, t: 'Zero, security, breache, s, $28, 0, M+ in, prevented, costs',
     metri, c, s: {
       breach, e, s: ', 0',
@@ -296,6 +296,6 @@ export, const, getAllOctober2025Content = () => {
       complian, c, e: '10, 0%',
       responseTi, m, e: '<1m, s',
     },
-    sl, u, g: 'healthca, r, e-autonomo, u, s-securi, t, y-succ, e, s, s',
+    slug: 'healthca, r, e-autonomo, u, s-securi, t, y-succ, e, s, s',
   },
 ]; export, default, october2025RevolutionaryContent;

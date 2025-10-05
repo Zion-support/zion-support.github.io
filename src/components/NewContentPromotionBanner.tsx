@@ -2,17 +2,17 @@ import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 interface, NewContentPromotionBannerProp, s { 
   varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
-  tit, l, e?: stri, n, g;
-  descripti, o, n?: stri, n, g;
-  ctaTe, x, t?: stri, n, g;
-  ctaLi, n, k?: stri, n, g;
-  dismissib, l, e?: boole, a, n;
-  classNa, m, e ?  : stri, n, g;
+  title?: string;
+  description?: string;
+  ctaTe, x, t?: string;
+  ctaLi, n, k?: string;
+  dismissib, l, e?: boolean;
+  classNa, m, e ?  : string;
  }
 const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p, s> = ({
   varia, n, t = 'in, f, o',
-  tit, l, e = "🚀 NEW, CONTEN, T: Fresh, Insight, s & Expert, Gui, d, e, s",
-  descripti, o, n = "Discover, our, latest articles, on, real-time, data, pipeline, s, platform, engineerin, g, and, GenAI, operationalization.",
+  title = "🚀 NEW, CONTEN, T: Fresh, Insight, s & Expert, Gui, d, e, s",
+  description = "Discover, our, latest articles, on, real-time, data, pipeline, s, platform, engineerin, g, and, GenAI, operationalization.",
   ctaTe, x, t = "Explore, Latest, Conten, t",
   ctaLi, n, k = "/b, l, o, g",
   dismissib, l, e = t, r, u, e,
@@ -57,10 +57,10 @@ const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p
               </d, i, v>
             </d, i, v>
             <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">
-              {tit, l, e}
+              {title}
             </h3>
             <p, classNam, e="te, x, t-sm, opacit, y-90, m, b-4, ma, x-w-2, x, l">
-              {descripti, o, n}
+              {description}
             </p>
             {/* Featured, Content, Preview */}
             <div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">

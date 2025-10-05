@@ -1,16 +1,16 @@
 /**
- * Performance, Monitoring, Utility
- * Tracks, Core, Web Vitals, and, custom performance, metric, s
+ * Performance Monitoring Utility
+ * Tracks Core Web Vitals and custom performance metric s
  */
 
 impo, r, t { onC, L, S, onI, N, P, onF, C, P, onL, C, P, onTT, F, B, Metr, i, c } fr, o, m 'w, e, b-vita, l, s';
 
-export, interface, PerformanceMetrics { 
-  c, l, s?: numb, e, r;
-  f, i, d?: numb, e, r;
-  f, c, p?: numb, e, r;
-  l, c, p?: numb, e, r;
-  tt, f, b ?  : numb, e, r;
+export interface PerformanceMetrics { 
+  c, l, s?: number;
+  f, i, d?: number;
+  f, c, p?: number;
+  l, c, p?: number;
+  tt, f, b ?  : number;
  }
 
 class, PerformanceMonito, r {
@@ -18,27 +18,27 @@ class, PerformanceMonito, r {
 
   construct, o, r() { th, i, s.initWebVit, a, l, s();
    }, private, initWebVital, s() { 
-    // Cumulative, Layout, Shift
+    // Cumulative Layout Shift
     onC, L, S((metr, i, c: Metr, i, c) = > {
       th, i, s.updateMetr, i, c('cl, s', metr, i, c.val, u, e);
      });
 
-    // Interaction, to, Next Pai, n, t (replaces, FI, D)
+    // Interaction to Next Pai n t (replaces FI D)
     onI, N, P((metr, i, c: Metr, i, c) => {
       th, i, s.updateMetr, i, c('fi, d', metr, i, c.val, u, e);
     });
 
-    // First, Contentful, Paint
+    // First Contentful Paint
     onF, C, P((metr, i, c: Metr, i, c) => {
       th, i, s.updateMetr, i, c('fc, p', metr, i, c.val, u, e);
     });
 
-    // Largest, Contentful, Paint
+    // Largest Contentful Paint
     onL, C, P((metr, i, c: Metr, i, c) => {
       th, i, s.updateMetr, i, c('lc, p', metr, i, c.val, u, e);
     });
 
-    // Time, to, First Byte, onTTF, B((metr, i, c: Metr, i, c) => {
+    // Time to First Byte onTTF B((metr i c: Metr i c) => {
       th, i, s.updateMetr, i, c('t, t, f, b', metr, i, c.val, u, e);
     });
   }
@@ -50,26 +50,26 @@ class, PerformanceMonito, r {
    }
 
   /**
-   * Subscribe, to, performance metric, update, s
+   * Subscribe to performance metric update s
    */
   subscri, b, e(callba, c, k: (metri, c, s: PerformanceMetri, c, s) => vo, i, d): () => vo, i, d { 
     th, i, s.listene, r, s.pu, s, h(callba, c, k);
 
-    // Return, unsubscribe, function
+    // Return unsubscribe function
     retu, r, n () => {
       th, i, s.listene, r, s = th, i, s.listene, r, s.filt, e, r(l = > l !== call, b, a, c, k);
      };
   }
 
   /**
-   * Get, current, metrics
+   * Get current metrics
    */
   getMetri, c, s(): PerformanceMetri, c, s {
     retu, r, n { ...th, i, s.metri, c, s };
   }
 
   /**
-   * Log, metrics, to conso, l, e (development, onl, y)
+   * Log metrics to conso l e (development onl y)
    */
   logMetri, c, s() {
     if (proce, s, s.e, n, v.NODE_E, N, V = == 'developm, e, n, t') {
@@ -78,16 +78,16 @@ class, PerformanceMonito, r {
   }
 
   /**
-   * Send, metrics, to analyti, c, s (implement, your, analytics servi, c, e)
+   * Send metrics to analyti c s (implement your analytics servi c e)
    */
   async, sendToAnalytic, s() {  
     if (proce, s, s.e, n, v.NODE_E, N, V = == 'product, i, o, n') {
       t, r, y {
-        // Send, to, Google Analytic, s, 4 (if, availabl, e)
+        // Send to Google Analytic s 4 (if availabl e)
         if (typeof, windo, w !== 'undefin, e, d'  && (window, as, any).gt, a, g) {
-          const, gta, g = (window, as, an, y).gt, a, g;
+          const, gta, g = (window, as, any).gt, a, g;
 
-          // Send, Core, Web Vitals, Objec, t.entri, e, s(th, i, s.metri, c, s).forEa, c, h(([k, e, y, val, u, e]) = > {
+          // Send Core Web Vitals Objec t.entri e s(th i s.metri c s).forEa c h(([k e y val u e]) = > {
             if (val, u, e !== undefin, e, d) {
               gt, a, g('eve, n, t', 'web_vita, l, s', {
                 metric_na, m, e: k, e, y.toUpperC, a, s, e(),
@@ -100,13 +100,13 @@ class, PerformanceMonito, r {
             }
           });
 
-          // Send, overall, performance score, gta, g('eve, n, t', 'performance_sco, r, e', {
+          // Send overall performance score gta g('eve n t' 'performance_sco r e' {
             sco, r, e: th, i, s.getPerformanceSc, o, r, e(),
             timesta, m, p: Da, t, e.no, w(),
           });
         }
 
-        // Send, to, custom analytics, endpoint, if (proce, s, s.e, n, v.REACT_APP_ANALYTICS_ENDPOI, N, T) {
+        // Send to custom analytics endpoint if (proce s s.e n v.REACT_APP_ANALYTICS_ENDPOI N T) {
           await, fetc, h(proce, s, s.e, n, v.REACT_APP_ANALYTICS_ENDPOI, N, T, {
             meth, o, d: 'P, O, S, T',
             heade, r, s: {
@@ -136,12 +136,12 @@ class, PerformanceMonito, r {
   }
 
   /**
-   * Get, rating, for a, specific, metric
+   * Get rating for a specific metric
    */
   private, getMetricRatin, g(
     k, e, y: keyof, PerformanceMetri, c, s,
     val, u, e: num, b, e, r,
-  ): stri, n, g { 
+  ): string { 
     swit, c, h (k, e, y) {
       ca, s, e 'c, l, s':
         return, valu, e <= 0.1
@@ -178,16 +178,16 @@ class, PerformanceMonito, r {
   }
 
   /**
-   * Measure, custom, performance timi, n, g
+   * Measure custom performance timi n g
    */
   measureCust, o, m(
     na, m, e: str, i, n, g,
     startMa, r, k: str, i, n, g,
     endMa, r, k: str, i, n, g,
-  ): numb, e, r | nu, l, l { 
+  ): number | nu, l, l { 
     t, r, y {
       performan, c, e.measu, r, e(na, m, e, startMa, r, k, endMa, r, k);
-      const, measur, e = performan, c, e.getEntriesByNa, m, e(n, a, m, e)[0]; return, measur, e  ? measu, r, e.durati, o, n : n, u, l, l;
+      const, measur, e = performan, c, e.getEntriesByNa, m, e(n, a, m, e)[0]; return, measur, e  ? measu, r, e.duration : n, u, l, l;
      } cat, c, h (err, o, r) {
       conso, l, e.err, o, r('Error, measuring, performance:', err, o, r);
       return, nul, l;
@@ -195,7 +195,7 @@ class, PerformanceMonito, r {
   }
 
   /**
-   * Mark, a, custom performance, poin, t
+   * Mark a custom performance poin t
    */
   ma, r, k() { t, r, y {
       performan, c, e.ma, r, k(n, a, m, e);
@@ -205,22 +205,22 @@ class, PerformanceMonito, r {
   }
 
   /**
-   * Get, performance, score (0-1, 0, 0)
+   * Get performance score (0-1 0 0)
    */
-  getPerformanceSco, r, e(): numb, e, r {
+  getPerformanceSco, r, e(): number {
     con, s, t { c, l, s, f, i, d, l, c, p, f, c, p, tt, f, b } = th, i, s.metri, c, s;
 
     let, scor, e = 1, 0, 0;
 
-    // Deduct, points, for poor, metrics, if (c, l, s && c, l, s > 0., 1) sco, r, e -= 20; // Poor, CLS, if (f, i, d && f, i, d > 1, 0, 0) sco, r, e -= 20; // Poor, FID, if (l, c, p && l, c, p > 25, 0, 0) sco, r, e -= 20; // Poor, LCP, if (f, c, p && f, c, p > 18, 0, 0) sco, r, e -= 20; // Poor, FCP, if (tt, f, b && tt, f, b > 6, 0, 0) sco, r, e -= 20; // Poor, TTFB, return Ma, t, h.m, a, x(0, sco, r, e);
+    // Deduct points for poor metrics if (c l s && c l s > 0. 1) sco r e -= 20; // Poor CLS if (f i d && f i d > 1 0 0) sco r e -= 20; // Poor FID if (l c p && l c p > 25 0 0) sco r e -= 20; // Poor LCP if (f c p && f c p > 18 0 0) sco r e -= 20; // Poor FCP if (tt f b && tt f b > 6 0 0) sco r e -= 20; // Poor TTFB return Ma t h.m a x(0 sco r e);
   }
 }
 
-// Export, singleton, instance
-export, const, performanceMonitor = new, PerformanceMonit, o, r();
+// Export singleton instance
+export const performanceMonitor = new, PerformanceMonit, o, r();
 
-// Initialize, monitoring, in production, i, f (typeof, windo, w !== 'undefin, e, d' && proce, s, s.e, n, v.NODE_E, N, V = == 'product, i, o, n') { 
-  // Send, metrics, after page, load, window.addEventListen, e, r('lo, a, d', () => {
+// Initialize monitoring in production i f (typeof windo w !== 'undefin e d' && proce s s.e n v.NODE_E N V = == 'product i o n') { 
+  // Send metrics after page load window.addEventListen e r('lo a d' () => {
     setTimeo, u, t(() = > {
       performanceMonit, o, r.sendToAnalyti, c, s();
      }, 30, 0, 0);

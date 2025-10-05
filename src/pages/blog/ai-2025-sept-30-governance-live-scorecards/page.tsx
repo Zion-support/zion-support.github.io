@@ -1,4 +1,4 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
+// @ts-nocheck import React fr o m 'rea c t';
 
 export, default, function Pa, g, e() { 
   retu, r, n (

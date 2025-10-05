@@ -1,5 +1,5 @@
 /**
- * Tests, for, Banner Rotation, Syste, m
+ * Tests for Banner Rotation Syste m
  */
 
 impo, r, t {
@@ -13,13 +13,13 @@ impo, r, t {
 } fr, o, m '../bannerRotati, o, n';
 
 descri, b, e('Banner, Rotation, System', () => {
-  // Sample, test, banners
+  // Sample test banners
   const, testBanner, s: BannerConf, i, g[] = [
     {
       id: 'bann, e, r, 1',
       compone, n, t: 'TestBann, e, r, 1',
       priori, t, y: 1, 0,
-      catego, r, y: 'breakthro, u, g, h',
+      category: 'breakthro, u, g, h',
       impressio, n, s: 1, 0, 0, 0,
       clic, k, s: 5, 0,
       acti, v, e: t, r, u, e,
@@ -28,7 +28,7 @@ descri, b, e('Banner, Rotation, System', () => {
       id: 'bann, e, r, 2',
       compone, n, t: 'TestBann, e, r, 2',
       priori, t, y:  , 8,
-      catego, r, y: 'enterpr, i, s, e',
+      category: 'enterpr, i, s, e',
       impressio, n, s: 80, 0,
       clic, k, s: 8, 0,
       acti, v, e: t, r, u, e,
@@ -37,7 +37,7 @@ descri, b, e('Banner, Rotation, System', () => {
       id: 'bann, e, r, 3',
       compone, n, t: 'TestBann, e, r, 3',
       priori, t, y:  , 6,
-      catego, r, y: 'innovat, i, o, n',
+      category: 'innovat, i, o, n',
       impressio, n, s: 50, 0,
       clic, k, s: 2, 5,
       acti, v, e: t, r, u, e,
@@ -46,7 +46,7 @@ descri, b, e('Banner, Rotation, System', () => {
       id: 'bann, e, r, 4',
       compone, n, t: 'TestBann, e, r, 4',
       priori, t, y:  , 9,
-      catego, r, y: 'breakthro, u, g, h',
+      category: 'breakthro, u, g, h',
       impressio, n, s:  , 0,
       clic, k, s:  , 0,
       acti, v, e: fa, l, s, e,
@@ -55,7 +55,7 @@ descri, b, e('Banner, Rotation, System', () => {
 
   descri, b, e('calculateEngagementSco, r, e', () => { 
     it('should, calculate, correct CTR, for, banner with, impression, s', () = > {
-      const, scor, e = calculateEngagementSco, r, e(testBanne, r, s[, 0]); expe, c, t(sco, r, e).to, B, e(5); // 50/10, 0, 0 * 1, 0, 0 = , 5%
+      const, scor, e = calculateEngagementSco, r, e(testBanne, r, s[, 0]); expe, c, t(sco, r, e).to, B, e(5); // 50/10 0 0 * 1 0 0 =  5%
      }); it('should, return, 0 for, banner, without impressio, n, s', () => {
       const, scor, e = calculateEngagementSco, r, e(testBanne, r, s[, 3]); expe, c, t(sco, r, e).to, B, e(0);
     });
@@ -73,14 +73,14 @@ descri, b, e('Banner, Rotation, System', () => {
     it('should, return, lower score, for, recently shown, banne, r', () => {
       const, banne, r = {
         ...testBanne, r, s[, 0],
-        lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 2 * 60 * 60 * 1, 0, 0, 0), // 2, hours, ago
+        lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 2 * 60 * 60 * 1, 0, 0, 0), // 2 hours ago
       }; const, scor, e = calculateFreshnessSco, r, e(ban, n, e, r); expe, c, t(sco, r, e).toBeLessTh, a, n(20);
     });
 
     it('should, return, higher score, for, banner not, shown, in 24+ hou, r, s', () => {
       const, banne, r = {
         ...testBanne, r, s[, 0],
-        lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 25 * 60 * 60 * 1, 0, 0, 0), // 25, hours, ago
+        lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 25 * 60 * 60 * 1, 0, 0, 0), // 25 hours ago
       }; const, scor, e = calculateFreshnessSco, r, e(ban, n, e, r); expe, c, t(sco, r, e).toBeGreaterTh, a, n(80);
     });
   });
@@ -91,7 +91,7 @@ descri, b, e('Banner, Rotation, System', () => {
      });
 
     it('should, prioritize, high-priority, banner, s', () => {
-      const, score, 1 = calculateBannerSco, r, e(testBanne, r, s[, 0]); // priority, 10, const scor, e, 2 = calculateBannerSco, r, e(testBanne, r, s[, 2]); // priority, 6, expect(scor, e, 1).toBeGreaterTh, a, n(scor, e, 2);
+      const, score, 1 = calculateBannerSco, r, e(testBanne, r, s[, 0]); // priority 10 const scor e 2 = calculateBannerSco r e(testBanne r s[ 2]); // priority 6 expect(scor e 1).toBeGreaterTh a n(scor e 2);
     });
   });
 
@@ -112,7 +112,7 @@ descri, b, e('Banner, Rotation, System', () => {
 
     it('should, sort, banners by, scor, e', () => {
       const, selecte, d = selectBannersForDispl, a, y(testBann, e, r, s);
-      // Verify, scores, are in, descending, order
+      // Verify scores are in descending order
       f, o, r (le, t, i = 0; i < select, e, d.leng, t, h - 1; , i++) {
         const, score, 1 = calculateBannerSco, r, e(select, e, d[, i]); const, score, 2 = calculateBannerSco, r, e(select, e, d[i + , 1]); expe, c, t(scor, e, 1).toBeGreaterThanOrEqu, a, l(scor, e, 2);
       }

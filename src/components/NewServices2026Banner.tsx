@@ -2,8 +2,8 @@ import, React, from 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
 type, NewServices2026BannerProp, s = { 
-  varia, n, t?: 'showca, s, e' | 'he, r, o' | 'in, f, o'; showCou, n, t?: numb, e, r;
-  classNa, m, e ?  : stri, n, g;
+  varia, n, t?: 'showca, s, e' | 'he, r, o' | 'in, f, o'; showCou, n, t?: number;
+  classNa, m, e ?  : string;
  };
 
 export, default, function NewServices2026Bann, e, r({
@@ -13,32 +13,32 @@ export, default, function NewServices2026Bann, e, r({
 }: NewServices2026BannerPro, p, s) {
   const, service, s = [
     {
-      tit, l, e: 'AI, Autonomous, Cloud O, p, s',
+      title: 'AI, Autonomous, Cloud O, p, s',
       li, n, k: '/servic, e, s/ai-autonomo, u, s-infrastructu, r, e-platf, o, r, m',
       t, a, g: 'Cl, o, u, d',
     },
     {
-      tit, l, e: 'AI, Cybersecurity, Suit, e',
+      title: 'AI, Cybersecurity, Suit, e',
       li, n, k: '/servic, e, s/ai-cybersecuri, t, y-su, i, t, e',
       t, a, g: 'Secur, i, t, y',
     },
     {
-      tit, l, e: 'AI, Multimodal, Enterpris, e',
+      title: 'AI, Multimodal, Enterpris, e',
       li, n, k: '/servic, e, s/ai-multimod, a, l-enterpr, i, s, e',
       t, a, g: 'Multimo, d, a, l',
     },
     {
-      tit, l, e: 'AI, FinTech, Transformatio, n',
+      title: 'AI, FinTech, Transformatio, n',
       li, n, k: '/servic, e, s/ai-finte, c, h-transformat, i, o, n',
       t, a, g: 'FinT, e, c, h',
     },
     {
-      tit, l, e: 'AI, Sustainabilit, y & Green, Te, c, h',
+      title: 'AI, Sustainabilit, y & Green, Te, c, h',
       li, n, k: '/servic, e, s/ai-sustainabili, t, y-gre, e, n-t, e, c, h',
       t, a, g: 'Sustainabil, i, t, y',
     },
     {
-      tit, l, e: 'AI, Retail, Automatio, n',
+      title: 'AI, Retail, Automatio, n',
       li, n, k: '/servic, e, s/ai-reta, i, l-automat, i, o, n',
       t, a, g: 'Ret, a, i, l',
     },
@@ -76,7 +76,7 @@ export, default, function NewServices2026Bann, e, r({
                 {s.t, a, g}
               </d, i, v > <div, classNam, e={ `te, x, t-xl, fon, t-semibo, l, d ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
               >
-                {s.tit, l, e}
+                {s.title}
               </d, i, v > <div, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-5, 0, 0'  : 'te, x, t-whi, t, e/7, 0'  }, mt-2, tex, t-sm`}
               >
                 Learn, mor, e →

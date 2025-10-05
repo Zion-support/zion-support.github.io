@@ -1,18 +1,18 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
+// @ts-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export, default, function AutonomousGovernanceBlueprint, V, 2(): Rea, c, t.J, S, X.Eleme, n, t { 
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Autonomous, Governance, Blueprint v2 — K, P, I, s, Policy, Test, s, Rollba, c, k
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='K, P, I-linked, scorecar, d, s, CI, policy, tests, and, instant, rollback for, safe, autonomy at, scal, e.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-autonomo, u, s-governan, c, e-bluepri, n, t-v2'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-se p t-30-autonomo u s-governan c e-bluepri n t-v2'
         />
       </Helm, e, t>
       <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>

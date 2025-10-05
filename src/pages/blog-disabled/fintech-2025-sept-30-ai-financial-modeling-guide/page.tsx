@@ -6,10 +6,10 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = "m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">
       <Helm, e, t>
-        <tit, l, e>AI, Financial, Modeling Gui, d, e — 95% Accuracy, with, Guardrails</tit, l, e>
-        <meta, nam, e="descripti, o, n" 
+        <title>AI, Financial, Modeling Gui, d, e — 95% Accuracy, with, Guardrails</title>
+        <meta, nam, e="description" 
           
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/finte, c, h-20, 2, 5-se, p, t-30-ai-financi, a, l-modeli, n, g-gui, d, e
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro u p.c o m/bl o g/finte c h-20 2 5-se p t-30-ai-financi a l-modeli n g-gui d e
         />
       </Helm, e, t>" />
 " />
@@ -22,7 +22,7 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         
         </h1>
         <p, classNam, e="te, x, t-zi, o, n-sla, t, e-ligh, t, m, b-, 8">;,
-  hr, e, f = "htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/finte, c, h-20, 2, 5-se, p, t-30-ai-financi, a, l-modeli, n, g-gui, d, e"
+  hr, e, f = "htt, p, s: //ziontechgro u p.c o m/bl o g/finte c h-20 2 5-se p t-30-ai-financi a l-modeli n g-gui d e"
         />
       </p>
         <div, classNam, e="prose, pros, e-invert, ma, x-w-3, x, l">

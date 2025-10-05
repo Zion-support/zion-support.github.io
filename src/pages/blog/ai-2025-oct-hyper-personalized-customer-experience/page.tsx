@@ -13,18 +13,18 @@ export, default, function HyperPersonalizedCustomerExperience20, 2, 5() {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Hyp, e, r-Personalized, AI, Customer Experience, Platform, 2025 — 97.8%
           Satisfacti, o, n, 12.4x, Engagemen, t, $3.2B+ Reven, u, e | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Deploy, A, I-powered, hype, r-personalization, that, understands each, customer, individually. Achieve, 9, 7.8% satisfaction, scor, e, s, increase, engagement, by 12.4x, reduce, churn, by 89%, and, driv, e $3.2B+ in, incremental, revenue through, truly, personalized experienc, e, s.'
         />
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, personalizati, o, n, customer, experienc, e, hyp, e, r-personalizati, o, n, customer, engagemen, t, AI, CX, platform, behavioral, A, I, customer, journe, y, experience, optimizatio, n'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-hyp, e, r-personaliz, e, d-custom, e, r-experien, c, e'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-hyp e r-personaliz e d-custom e r-experien c e'
         />
       </Helm, e, t>
 

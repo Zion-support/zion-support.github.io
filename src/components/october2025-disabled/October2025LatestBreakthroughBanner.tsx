@@ -27,21 +27,21 @@ const, October2025LatestBreakthroughBanne, r = () => {
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
           {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {
             const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; retu, r, n (
-              <Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.sl, u, g}`}
+              <Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               >
                 <div, classNam, e="flex, item, s-start, ga, p-4, m, b-4" > <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}>
                     <Icon, classNam, e = "w-6 h-6, tex, t-whi, t, e" />
                   </d, i, v>
                   <div, classNam, e="fl, e, x-1">
-                    <div, classNam, e="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>
+                    <div, classNam, e="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.category}</d, i, v>
                     <h3, classNam, e="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">
                       {conte, n, t.t, i, t, l, e}
                     </h3>
                   </d, i, v>
                 </d, i, v>
                 <p, classNam, e = "te, x, t-sm, tex, t-bl, u, e-200, m, b-4, lin, e-cla, m, p-2">
-                  {conte, n, t.descripti, o, n}
+                  {conte, n, t.description}
                 </p>
                 {/* Key, Metric, s */}
                 <div, classNam, e="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">

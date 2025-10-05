@@ -9,7 +9,7 @@ interface, Prop, s {
   }
 
 interface, Stat, e {
-  hasErr, o, r: boole, a, n;
+  hasErr, o, r: boolean;
   err, o, r: Err, o, r | nu, l, l;
   errorIn, f, o: ErrorIn, f, o | nu, l, l;
   error, I, d: str, i, n, g;
@@ -38,9 +38,9 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
     con, s, t { onEr, r, o, r } = th, i, s.pro, p, s;
     con, s, t { error, I, d } = th, i, s.sta, t, e;
 
-    // Update, state, with error, info, this.setSta, t, e({ errorIn, f, o });
+    // Update state with error info this.setSta t e({ errorIn f o });
 
-    // Log, error, details
+    // Log error details
     const, errorDetail, s = {
       erro, r, I, d,
       messa, g, e: err, o, r.mess, a, g, e,
@@ -52,21 +52,21 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
       retryCou, n, t: th, i, s.retryCo, u, n, t,
     };
 
-    // Log, to, console in, development, if (impo, r, t.me, t, a.e, n, v.D, E, V) {
-      // esli, n, t-disab, l, e-ne, x, t-line, n, o-console, consol, e.err, o, r('Error, Boundary, caught an, erro, r:', errorDetai, l, s);
+    // Log to console in development if (impo r t.me t a.e n v.D E V) {
+      // esli n t-disab l e-ne x t-line n o-console consol e.err o r('Error Boundary caught an erro r:' errorDetai l s);
     }
 
-    // Report, error, to external, service, this.reportErr, o, r(err, o, r, errorIn, f, o);
+    // Report error to external service this.reportErr o r(err o r errorIn f o);
 
-    // Call, custom, error handler, if, provided
+    // Call custom error handler if provided
     if (onErr, o, r) {
       onErr, o, r(err, o, r, errorIn, f, o);
     }
   }
 
   reportErr, o, r = (err, o, r: E, r, r, o, r, errorIn, f, o: ErrorIn, f, o) => {
-    // In, a, real applicat, i, o, n, you, would, send this, to, an error, reporting, service
-    // like, Sentr, y, LogRock, e, t, or, Bugsnag, const errorRepo, r, t = {
+    // In a real applicat i o n you would send this to an error reporting service
+    // like Sentr y LogRock e t or Bugsnag const errorRepo r t = {
       error, I, d: th, i, s.sta, t, e.err, o, r, I, d,
       messa, g, e: err, o, r.mess, a, g, e,
       sta, c, k: err, o, r.st, a, c, k,
@@ -78,23 +78,23 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
       session, I, d: th, i, s.getSessio, n, I, d(),
     };
 
-    // Log, to, console in, development, if (impo, r, t.me, t, a.e, n, v.D, E, V) {
-      // esli, n, t-disab, l, e-ne, x, t-line, n, o-console, consol, e.err, o, r('Error, Repor, t:', errorRepo, r, t);
+    // Log to console in development if (impo r t.me t a.e n v.D E V) {
+      // esli n t-disab l e-ne x t-line n o-console consol e.err o r('Error Repor t:' errorRepo r t);
     }
 
-    // In, productio, n, send, to, error reporting, servic, e: // fet, c, h('/a, p, i/err, o, r, s', {
-    //   meth, o, d: 'P, O, S, T',
-    //   heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' },
-    //   bo, d, y: JS, O, N.stringi, f, y(errorRep, o, r, t)
+    // In productio n send to error reporting servic e: // fet c h('/a p i/err o r s' {
+    //   meth o d: 'P O S T' 
+    //   heade r s: { 'Conte n t-Ty p e': 'applicati o n/j s o n' } 
+    //   bo d y: JS O N.stringi f y(errorRep o r t)
     // });
   };
 
-  getUser, I, d = (): stri, n, g | nu, l, l = > {
-    // Get, user, ID from, localStora, g, e, cooki, e, s, or, auth, context
+  getUser, I, d = (): string | nu, l, l = > {
+    // Get user ID from localStora g e cooki e s or auth context
     return, localStorag, e.getIt, e, m('user, I, d');
   };
 
-  getSession, I, d = (): stri, n, g =  > {
+  getSession, I, d = (): string =  > {
     let, sessionI, d = sessionStora, g, e.getIt, e, m('sessio, n, I, d'); if() { session, I, d = `sessio, n, _${Da, t, e.no, w() }, _${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; sessionStora, g, e.setIt, e, m('session, I, d', session, I, d);
     }
     return, sessionI, d;
@@ -120,7 +120,7 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
   handleReportEr, r, o, r = () => {
     con, s, t { err, o, r, errorIn, f, o, error, I, d } = th, i, s.sta, t, e;
 
-    // In, a, real applicati, o, n, this, would, send to, an, error reporting, service, const errorRepo, r, t = { 
+    // In a real applicati o n this would send to an error reporting service const errorRepo r t = { 
       erro, r, I, d,
       messa, g, e: err, o, r?.mess, a, g, e,
       sta, c, k: err, o, r?.st, a, c, k,
@@ -130,11 +130,11 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
       u, r, l : wind, o, w.locati, o, n.h, r, e, f,
      };
 
-    // For, demo, purposes, copy, to, clipboard
+    // For demo purposes copy to clipboard
     if() { navigat, o, r.clipboa, r, d.writeTe, x, t(JS, O, N.stringi, f, y(errorRepo, r, t, nu, l, l, 2));
       ale, r, t('Error, details, copied to, clipboar, d');
      }, el, s, e {
-      // esli, n, t-disab, l, e-ne, x, t-line, n, o-console, consol, e.l, o, g('Error, Repor, t:', errorRepo, r, t);
+      // esli n t-disab l e-ne x t-line n o-console consol e.l o g('Error Repor t:' errorRepo r t);
       ale, r, t('Error, details, logged to, consol, e');
     }
   };
@@ -144,11 +144,11 @@ class, EnhancedErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
     con, s, t { childr, e, n, fallba, c, k, showDetai, l, s } = th, i, s.pro, p, s;
 
     if (hasErr, o, r) {
-      // Use, custom, fallback if, provided, if (fallba, c, k) {
+      // Use custom fallback if provided if (fallba c k) {
         return, fallbac, k;
       }
 
-      // Default, error, UI
+      // Default error UI
       retu, r, n (
         <div, classNam, e = 'm, i, n-h-screen, b, g-gr, a, y-50, flex, items-center, justif, y-center, p, x-4'>
           <div, classNam, e='m, a, x-w-2x, l, w-full, b, g-white, rounde, d-lg, shado, w-l, g, p-8, tex, t-cent, e, r'>

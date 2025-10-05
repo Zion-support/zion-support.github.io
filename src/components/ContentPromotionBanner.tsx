@@ -2,21 +2,21 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 export, default, function ContentPromotionBann, e, r() {
   const, featuredConten, t = [
     {
-      tit, l, e: "Edge, Inference, Patterns That, Actually, Reduce Lat, e, n, c, y",
-      catego, r, y: "AI, Infrastructu, r, e",
-      readTi, m, e: "7, min, rea, d",
+      title: "Edge, Inference, Patterns That, Actually, Reduce Lat, e, n, c, y",
+      category: "AI, Infrastructu, r, e",
+      readTime: "7, min, rea, d",
       isN, e, w: t, r, u, e,
     },
     {
-      tit, l, e: "Nor, t, h‑Star, Engineering, Metrics: Fewer, KP, I, s, Better, Outcome, s",
-      catego, r, y: "Leaders, h, i, p",
-      readTi, m, e: "5, min, rea, d",
+      title: "Nor, t, h‑Star, Engineering, Metrics: Fewer, KP, I, s, Better, Outcome, s",
+      category: "Leaders, h, i, p",
+      readTime: "5, min, rea, d",
       isN, e, w: t, r, u, e,
     },
     {
-      tit, l, e: "OpenTelemetry, in, Production: Traces, That, Engineers Us, e",
-      catego, r, y: "Observabil, i, t, y",
-      readTi, m, e: "6, min, rea, d",
+      title: "OpenTelemetry, in, Production: Traces, That, Engineers Us, e",
+      category: "Observabil, i, t, y",
+      readTime: "6, min, rea, d",
       isN, e, w: t, r, u, e,
     },
   ]; retu, r, n (
@@ -71,11 +71,11 @@ export, default, function ContentPromotionBann, e, r() {
                   </s, p, a, n  > )  }
               </d, i, v>
               <h3, classNam, e = "fo, n, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2">
-                {it, e, m.tit, l, e}
+                {it, e, m.title}
               </h3>
               <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
                 <span, classNam, e="te, x, t-sm, tex, t-whi, t, e/70">
-                  {it, e, m.readTi, m, e}
+                  {it, e, m.readTime}
                 </sp, a, n>
                 <ArrowRight, classNam, e="w-4 h-4, tex, t-whi, t, e/70" />
               </d, i, v>

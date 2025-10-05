@@ -15,10 +15,10 @@ const, Fortune100AutonomousOperationsTransformatio, n = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           Fortune, 10, 0: $650M, Value, Through Autonomous, Operation, s | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Fortune, 100, financial services, company, creates $650M, annual, value through, A, I-powered, autonomous, operations. 85% cost, reduct, i, o, n, 99.7% accura, c, y, 40+ workflows, in, 90 da, y, s.'
         />
         <meta, nam, e = 'keywor, d, s'

@@ -5,12 +5,12 @@ export, default, function ConsentlessMetrics, V, 3(): Rea, c, t.J, S, X.Eleme, n
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>Consentless, Metrics, v3 — Ze, r, o‑PII, Signals, under 100, m, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>Consentless, Metrics, v3 — Ze, r, o‑PII, Signals, under 100, m, s</title>
+        <meta, nam, e='description'
           conte, n, t='Scoped, I, D, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, privac, y‑preserving, analytics, worldwide.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-se, p, t-30-consentle, s, s-metri, c, s-v3'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 5-se p t-30-consentle s s-metri c s-v3'
         />
       </Helm, e, t>
 

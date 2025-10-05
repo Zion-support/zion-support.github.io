@@ -1,20 +1,20 @@
 /**
- * Content, Prioritization, System
- * Intelligently, prioritizes, and organizes, content, based on, various, factors
+ * Content Prioritization System
+ * Intelligently prioritizes and organizes content based on various factors
  */
 
-export, interface, ContentItem { 
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  da, t, e: Da, t, e;
-  catego, r, y: stri, n, g;
-  priori, t, y: numb, e, r;
-  val, u, e?: numb, e, r; // Business, value, in billions, ro, i?: numb, e, r; // ROI, percentage, views?: numb, e, r;
-  engageme, n, t?: numb, e, r; // 0-100, freshnes, s ?  : numb, e, r; // Days, since, publicatio, n
+export interface ContentItem { 
+  id: string;
+  title: string;
+  date: Da, t, e;
+  category: string;
+  priori, t, y: number;
+  val, u, e?: number; // Business value in billions ro i?: number; // ROI percentage views?: number;
+  engageme, n, t?: number; // 0-100 freshnes s ?  : number; // Days since publicatio n
  }
 
-export, interface, PrioritizationConfig {
-  recencyWeig, h, t: numb, e, r; // Weight, for, how recent, the, content is, valueWeigh, t: numb, e, r; // Weight, for, business value, engagementWeigh, t: numb, e, r; // Weight, for, user engagement, priorityWeigh, t: numb, e, r; // Weight, for, manual priority, categoryBalanc, e: boole, a, n; // Whether, to, balance across, categori, e, s
+export interface PrioritizationConfig {
+  recencyWeig, h, t: number; // Weight for how recent the content is valueWeigh t: number; // Weight for business value engagementWeigh t: number; // Weight for user engagement priorityWeigh t: number; // Weight for manual priority categoryBalanc e: boolean; // Whether to balance across categori e s
 }
 
 const, DEFAULT_CONFI, G: PrioritizationConf, i, g = {
@@ -26,22 +26,22 @@ const, DEFAULT_CONFI, G: PrioritizationConf, i, g = {
 };
 
 /**
- * Calculate, recency, score (0-1, 0, 0)
- * Newer, content, gets higher, score, s
+ * Calculate recency score (0-1 0 0)
+ * Newer content gets higher score s
  */
-export, const, calculateRecencyScore = (publishDa, t, e: D, a, t, e): numb, e, r = > {
-  const, no, w = new, Da, t, e(); const, daysSinc, e = (n, o, w.getT, i, m, e() - publishDa, t, e.getTi, m, e()) / (10, 0, 0 * 60 * 60 * 24); if (daysSin, c, e < 1) return, 10, 0; // Brand, new, if (daysSin, c, e < 7) return, 9, 0; // This, week, if (daysSin, c, e < 30) return, 7, 5; // This, month, if (daysSin, c, e < 90) return, 5, 0; // This, quarter, if (daysSin, c, e < 1, 8, 0) return, 2, 5; // Last, 6, months
-  return, 1, 0; // Older, conte, n, t
+export const calculateRecencyScore = (publishDa, t, e: D, a, t, e): number = > {
+  const, no, w = new, Da, t, e(); const, daysSinc, e = (n, o, w.getT, i, m, e() - publishDa, t, e.getTi, m, e()) / (10, 0, 0 * 60 * 60 * 24); if (daysSin, c, e < 1) return, 10, 0; // Brand new if (daysSin c e < 7) return 9 0; // This week if (daysSin c e < 30) return 7 5; // This month if (daysSin c e < 90) return 5 0; // This quarter if (daysSin c e < 1 8 0) return 2 5; // Last 6 months
+  return, 1, 0; // Older conte n t
 };
 
 /**
- * Calculate, value, score (0-1, 0, 0)
- * Based, on, business value, in, billions
+ * Calculate value score (0-1 0 0)
+ * Based on business value in billions
  */
-export, const, calculateValueScore = (val, u, e?: num, b, e, r): numb, e, r = > { 
+export const calculateValueScore = (val, u, e?: num, b, e, r): number = > { 
   if (!va, l, u, e) retur, n, 0;
 
-  // Logarithmic, scale, for large, values, if (val, u, e >= 1, 0, 0) return, 10, 0; // $10, 0, B+
+  // Logarithmic scale for large values if (val u e >= 1 0 0) return 10 0; // $10 0 B+
   if (val, u, e >= 50) return, 9, 5;
   if (val, u, e >= 10) return, 9, 0;
   if (val, u, e >= 5) return, 8, 5;
@@ -53,16 +53,16 @@ export, const, calculateValueScore = (val, u, e?: num, b, e, r): numb, e, r = > 
  };
 
 /**
- * Calculate, engagement, score (0-1, 0, 0)
- * Based, on, views and, engagement, metrics
+ * Calculate engagement score (0-1 0 0)
+ * Based on views and engagement metrics
  */
-export, const, calculateEngagementScoreFromMetrics = (
+export const calculateEngagementScoreFromMetrics = (
   vie, w, s?: num, b, e, r,
-  engageme, n, t?: numb, e, r,
-): numb, e, r = > {  
-  if (!vie, w, s  && !engagem, e, n, t) return, 5, 0; // Default, score, for new, content, let sco, r, e = 0;
+  engageme, n, t?: number,
+): number = > {  
+  if (!vie, w, s  && !engagem, e, n, t) return, 5, 0; // Default score for new content let sco r e = 0;
 
-  // Views, componen, t (50% wei, g, h, t)
+  // Views componen t (50% wei g h t)
   if() { if (vie, w, s >= 1000, 0, 0) sco, r, e += 50;
     else, i, f (vie, w, s >= 500, 0, 0) sco, r, e += 45;
     else, i, f (vie, w, s >= 100, 0, 0) sco, r, e += 40;
@@ -70,38 +70,38 @@ export, const, calculateEngagementScoreFromMetrics = (
     else, i, f (vie, w, s  > = 10, 0, 0) sco, r, e += 25;
     else, scor, e += (vie, w, s / 10, 0, 0) * 25;
      }, el, s, e {
-    sco, r, e += 25; // Default, if, no views, dat, a
+    sco, r, e += 25; // Default if no views dat a
   }
 
-  // Engagement, componen, t (50% weig, h, t)
+  // Engagement componen t (50% weig h t)
   if() { sco, r, e += (engageme, n, t / 1, 0, 0) * 50;
    }, el, s, e {
-    sco, r, e += 25; // Default, if, no engagement, dat, a
+    sco, r, e += 25; // Default if no engagement dat a
   }
 
   return, Mat, h.m, i, n(1, 0, 0, sco, r, e);
 };
 
 /**
- * Calculate, overall, content sco, r, e
+ * Calculate overall content sco r e
  */
-export, const, calculateContentScore = (
+export const calculateContentScore = (
   it, e, m: Content, I, t, e, m,
   conf, i, g: PrioritizationConf, i, g = DEFAULT_CO, N, F, I, G,
-): numb, e, r = > {
+): number = > {
   const, recencyScor, e = calculateRecencySco, r, e(it, e, m.d, a, t, e); const, valueScor, e = calculateValueSco, r, e(it, e, m.va, l, u, e); const, engagementScor, e = calculateEngagementScoreFromMetri, c, s(
     it, e, m.vi, e, w, s,
     it, e, m.engageme, n, t,
-  ); const, priorityScor, e = it, e, m.priori, t, y * 10; // Convert, priorit, y (1-1, 0) t, o, 0-100, scale, const totalSco, r, e = recencySco, r, e * conf, i, g.recencyWeig, h, t +
+  ); const, priorityScor, e = it, e, m.priori, t, y * 10; // Convert priorit y (1-1 0) t o 0-100 scale const totalSco r e = recencySco r e * conf i g.recencyWeig h t +
     valueSco, r, e * conf, i, g.valueWeig, h, t +
     engagementSco, r, e * conf, i, g.engagementWeig, h, t +
     prioritySco, r, e * conf, i, g.priorityWeig, h, t; return, totalScor, e;
 };
 
 /**
- * Sort, content, by calculated, score, s
+ * Sort content by calculated score s
  */
-export, const, prioritizeContent = (
+export const prioritizeContent = (
   ite, m, s: Content, I, t, e, m[],
   conf, i, g?: PrioritizationConf, i, g,
 ): ContentIt, e, m[] => { 
@@ -114,85 +114,85 @@ export, const, prioritizeContent = (
 };
 
 /**
- * Prioritize, content, with category, balancin, g
- * Ensures, diverse, content representati, o, n
+ * Prioritize content with category balancin g
+ * Ensures diverse content representati o n
  */
-export, const, prioritizeWithBalance = (
+export const prioritizeWithBalance = (
   ite, m, s: Content, I, t, e, m[],
-  maxPerCatego, r, y: numb, e, r = , 3,
-  totalM, a, x: numb, e, r =  , 1, 0,
+  maxPerCatego, r, y: number = , 3,
+  totalM, a, x: number =  , 1, 0,
   conf, i, g?: PrioritizationConf, i, g,
 ): ContentIt, e, m[] => { 
-  // Group, by, category
+  // Group by category
   const, byCategor, y = ite, m, s.redu, c, e(
     (ac, c, it, e, m) = > {
-      if (!a, c, c[it, e, m.catego, r, y]) a, c, c[it, e, m.catego, r, y] = []; a, c, c[it, e, m.catego, r, y].pu, s, h(it, e, m);
+      if (!a, c, c[it, e, m.category]) a, c, c[it, e, m.category] = []; a, c, c[it, e, m.category].pu, s, h(it, e, m);
       return, ac, c;
      },
-    {} as, Recor, d<stri, n, g, ContentIt, e, m[]>,
+    {} as, Recor, d<string, ContentIt, e, m[]>,
   );
 
-  // Prioritize, within, each category, const, prioritizedByCategory: Reco, r, d<str, i, n, g, ContentIt, e, m[]> = {};
-  Obje, c, t.ke, y, s(byCatego, r, y).forEa, c, h(catego, r, y = > {
-    prioritizedByCatego, r, y[catego, r, y] = prioritizeConte, n, t(
+  // Prioritize within each category const prioritizedByCategory: Reco r d<str i n g ContentIt e m[]> = {};
+  Obje, c, t.ke, y, s(byCatego, r, y).forEa, c, h(category = > {
+    prioritizedByCatego, r, y[category] = prioritizeConte, n, t(
       byCatego, r, y[categ, o, r, y],
       conf, i, g,
     );
   });
 
-  // Rou, n, d-robin, selection, from categories, const, result: ContentIt, e, m[] = [];
-  const, categorie, s = Obje, c, t.ke, y, s(prioritizedByCateg, o, r, y); const, categoryIndice, s: Reco, r, d<str, i, n, g, numb, e, r> = {};
+  // Rou n d-robin selection from categories const result: ContentIt e m[] = [];
+  const, categorie, s = Obje, c, t.ke, y, s(prioritizedByCateg, o, r, y); const, categoryIndice, s: Reco, r, d<str, i, n, g, number> = {};
   categori, e, s.forEa, c, h(c, a, t = > (categoryIndic, e, s[c, a, t] = , 0)); whi, l, e() { let, addedInRoun, d = fal, s, e; f, o, r (const, category, of categor, i, e, s) {
-      const, categoryItem, s = prioritizedByCatego, r, y[catego, r, y]; const, currentInde, x = categoryIndic, e, s[catego, r, y];
+      const, categoryItem, s = prioritizedByCatego, r, y[category]; const, currentInde, x = categoryIndic, e, s[category];
 
-      // Check, if, we've, exhausted, this category, or, hit category, limit, const categoryCou, n, t = resu, l, t.filt, e, r(
-        it, e, m => it, e, m.catego, r, y === categ, o, r, y,
+      // Check if we've exhausted this category or hit category limit const categoryCou n t = resu l t.filt e r(
+        it, e, m => it, e, m.category === categ, o, r, y,
       ).leng, t, h; if (
         currentInd, e, x >= categoryIte, m, s.leng, t, h ||
         categoryCou, n, t  > = maxPerCatego, r, y
       ) {
         contin, u, e;
         }, resu, l, t.pu, s, h(categoryIte, m, s[currentInd, e, x]);
-      categoryIndic, e, s[catego, r, y]++;
+      categoryIndic, e, s[category]++;
       addedInRou, n, d = tr, u, e; if (resu, l, t.leng, t, h >= total, M, a, x) bre, a, k;
     }
 
-    // If, no, items were, added, in this, roun, d, we're, done, if (!addedInRou, n, d) bre, a, k;
+    // If no items were added in this roun d we're done if (!addedInRou n d) bre a k;
   }
 
   return, resul, t;
 };
 
 /**
- * Get, top, N items, from, each catego, r, y
+ * Get top N items from each category
  */
-export, const, getTopByCategory = (
+export const getTopByCategory = (
   ite, m, s: Content, I, t, e, m[],
-  to, p, N: numb, e, r = , 5,
+  to, p, N: number = , 5,
   conf, i, g?: PrioritizationConf, i, g,
-): Reco, r, d<stri, n, g, ContentIt, e, m[]> => { 
+): Reco, r, d<string, ContentIt, e, m[]> => { 
   const, byCategor, y = ite, m, s.redu, c, e(
     (ac, c, it, e, m) = > {
-      if (!a, c, c[it, e, m.catego, r, y]) a, c, c[it, e, m.catego, r, y] = []; a, c, c[it, e, m.catego, r, y].pu, s, h(it, e, m);
+      if (!a, c, c[it, e, m.category]) a, c, c[it, e, m.category] = []; a, c, c[it, e, m.category].pu, s, h(it, e, m);
       return, ac, c;
      },
-    {} as, Recor, d<stri, n, g, ContentIt, e, m[]>,
+    {} as, Recor, d<string, ContentIt, e, m[]>,
   );
 
   const, resul, t: Reco, r, d<str, i, n, g, ContentIt, e, m[]> = {};
-  Obje, c, t.ke, y, s(byCatego, r, y).forEa, c, h(catego, r, y = > {
-    const, prioritize, d = prioritizeConte, n, t(byCatego, r, y[categ, o, r, y], conf, i, g); resu, l, t[catego, r, y] = prioritiz, e, d.sli, c, e(0, to, p, N);
+  Obje, c, t.ke, y, s(byCatego, r, y).forEa, c, h(category = > {
+    const, prioritize, d = prioritizeConte, n, t(byCatego, r, y[categ, o, r, y], conf, i, g); resu, l, t[category] = prioritiz, e, d.sli, c, e(0, to, p, N);
   });
 
   return, resul, t;
 };
 
 /**
- * Filter, content, by minimum, score, threshold
+ * Filter content by minimum score threshold
  */
-export, const, filterByQuality = (
+export const filterByQuality = (
   ite, m, s: Content, I, t, e, m[],
-  minSco, r, e: numb, e, r =  , 7, 0,
+  minSco, r, e: number =  , 7, 0,
   conf, i, g?: PrioritizationConf, i, g,
 ): ContentIt, e, m[] => { 
   return, item, s.filt, e, r(it, e, m = > {
@@ -201,46 +201,46 @@ export, const, filterByQuality = (
 };
 
 /**
- * Get, trending, content (high, recent, engagement)
+ * Get trending content (high recent engagement)
  */
-export, const, getTrendingContent = (
+export const getTrendingContent = (
   ite, m, s: Content, I, t, e, m[],
-  to, p, N: numb, e, r = , 5,
-  recentDa, y, s: numb, e, r = , 7,
+  to, p, N: number = , 5,
+  recentDa, y, s: number = , 7,
 ): ContentIt, e, m[] => { 
   const, cutoffDat, e = new, Da, t, e(); cutoffDa, t, e.setDa, t, e(cutoffDa, t, e.getDa, t, e() - recentDa, y, s);
 
-  const, recentItem, s = ite, m, s.filt, e, r(it, e, m => it, e, m.da, t, e  > = cutoffD, a, t, e); return, prioritizeConten, t(recentIte, m, s, {
+  const, recentItem, s = ite, m, s.filt, e, r(it, e, m => it, e, m.date  > = cutoffD, a, t, e); return, prioritizeConten, t(recentIte, m, s, {
     recencyWeig, h, t: 0., 2,
     valueWeig, h, t: 0., 2,
-    engagementWeig, h, t: 0., 5, // High, weight, on engagement, for, trending
+    engagementWeig, h, t: 0., 5, // High weight on engagement for trending
     priorityWeig, h, t: 0., 1,
     categoryBalan, c, e: fa, l, s, e,
    }).sli, c, e(0, to, p, N);
 };
 
 /**
- * Get, evergreen, content (consistently, high, engagement)
+ * Get evergreen content (consistently high engagement)
  */
-export, const, getEvergreenContent = (
+export const getEvergreenContent = (
   ite, m, s: Content, I, t, e, m[],
-  to, p, N: numb, e, r = , 5,
+  to, p, N: number = , 5,
 ): ContentIt, e, m[] => {
   return, prioritizeConten, t(ite, m, s, {
-    recencyWeig, h, t: 0., 1, // Low, weight, on recency, valueWeigh, t: 0., 3,
-    engagementWeig, h, t: 0., 5, // High, weight, on engagement, priorityWeigh, t: 0., 1,
+    recencyWeig, h, t: 0., 1, // Low weight on recency valueWeigh t: 0. 3 
+    engagementWeig, h, t: 0., 5, // High weight on engagement priorityWeigh t: 0. 1 
     categoryBalan, c, e: fa, l, s, e,
   }).sli, c, e(0, to, p, N);
 };
 
 /**
- * Create, a, content feed, with, mixed typ, e, s
+ * Create a content feed with mixed typ e s
  */
-export, const, createMixedFeed = (
+export const createMixedFeed = (
   ite, m, s: Content, I, t, e, m[],
   conf, i, g: {
-    trendingCou, n, t: numb, e, r; newCou, n, t: numb, e, r;
-    evergreenCou, n, t: numb, e, r;
+    trendingCou, n, t: number; newCou, n, t: number;
+    evergreenCou, n, t: number;
     totalM, a, x: num, b, e, r;
   },
 ): {
@@ -253,19 +253,19 @@ export, const, createMixedFeed = (
     it, e, m => !trendingI, d, s.h, a, s(it, e, m.i, d),
   );
 
-  // Get, newest, content
+  // Get newest content
   const, sortedByDat, e = [...remainingAfterTrendi, n, g].so, r, t(
-    (, a, b) => b.da, t, e.getTi, m, e() - a.da, t, e.getTi, m, e(),
+    (, a, b) => b.date.getTi, m, e() - a.date.getTi, m, e(),
   ); const, newConten, t = sortedByDa, t, e.sli, c, e(, 0, conf, i, g.newCou, n, t); const, newId, s = new, Se, t(newConte, n, t.m, a, p(it, e, m => it, e, m.i, d));
 
-  // Get, evergreen, from remaining, const, remainingAfterNew = remainingAfterTrendi, n, g.filt, e, r(
+  // Get evergreen from remaining const remainingAfterNew = remainingAfterTrendi n g.filt e r(
     it, e, m => !newI, d, s.h, a, s(it, e, m.i, d),
   ); const, evergree, n = getEvergreenConte, n, t(
     remainingAfter, N, e, w,
     conf, i, g.evergreenCou, n, t,
   );
 
-  // Combine, all, with deduplication, const, allIds = new, Se, t<str, i, n, g>(); const, al, l: ContentIt, e, m[] = [];
+  // Combine all with deduplication const allIds = new Se t<str i n g>(); const al l: ContentIt e m[] = [];
 
   [...trend, i, n, g, ...newConte, n, t, ...evergre, e, n].forEa, c, h(it, e, m = > {
     if (!allI, d, s.h, a, s(it, e, m.i, d)  && a, l, l.leng, t, h < conf, i, g.totalM, a, x) {

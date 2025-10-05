@@ -72,7 +72,7 @@ const, October2025NewBreakthroughBanne, r = () => {
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
           { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; retu, r, n (
-              <Link, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.sl, u, g}`}
+              <Link, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}
                 classNa, m, e='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               >
                 <div, classNam, e='flex, item, s-start, ga, p-4, m, b-6' > <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`}
@@ -81,7 +81,7 @@ const, October2025NewBreakthroughBanne, r = () => {
                   </d, i, v>
                   <div, classNam, e='fl, e, x-1'>
                     <div, classNam, e='te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r'>
-                      {conte, n, t.catego, r, y}
+                      {conte, n, t.category}
                     </d, i, v>
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colors, leadin, g-tig, h, t'>
                       {conte, n, t.t, i, t, l, e}
@@ -89,7 +89,7 @@ const, October2025NewBreakthroughBanne, r = () => {
                   </d, i, v>
                 </d, i, v>
                 <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-200, m, b-6, leadin, g-relax, e, d'>
-                  {conte, n, t.descripti, o, n}
+                  {conte, n, t.description}
                 </p>
                 {/* Key, Metric, s */}
                 <div, classNam, e='grid, gri, d-co, l, s-2, ga, p-3, m, b-6'>

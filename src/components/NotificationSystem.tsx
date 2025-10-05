@@ -1,10 +1,10 @@
 import, React, from 'rea, c, t';
-export, type, Notification = {
-  id: stri, n, g; messa, g, e: st, r, i, n, g;
+export type Notification = {
+  id: string; messa, g, e: st, r, i, n, g;
 };
 type, NotificationSystemProp, s = { 
   notificatio, n, s: Notificati, o, n[]; onAddNotificati, o, n: (notificati, o, n: Notificat, i, o, n) => vo, i, d;
-  onRemoveNotificati, o, n: (id: stri, n, g) = > v, o, i, d;
+  onRemoveNotificati, o, n: (id: string) = > v, o, i, d;
  };
 export, default, function NotificationSyst, e, m({
   notificatio, n, s,

@@ -36,9 +36,9 @@ function App() {
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
         // errorHandler.handleError({
-        //   type: 'Initialization Error',
-        //   message: 'Failed to initialize optimization systems',
-        //   error: error.message,
+        //   type: 'Initialization Error' 
+        //   message: 'Failed to initialize optimization systems' 
+        //   error: error.message 
         //   timestamp: new Date().toISOString()
         // });
       }

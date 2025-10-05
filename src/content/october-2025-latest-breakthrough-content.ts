@@ -1,21 +1,21 @@
-// October, 2025, Latest Breakthrough, Conten, t
-// N, E, W: Advanced, AI, Infrastructure and, Agent, Systems
+// October 2025 Latest Breakthrough Conten t
+// N E W: Advanced AI Infrastructure and Agent Systems
 
-export, const, octoberLatestBreakthroughContent = [
+export const octoberLatestBreakthroughContent = [
   {
     id: 'enterpri, s, e-digit, a, l-twi, n, s-revolu, t, i, o, n',
-    tit, l, e: 'Enterprise, Digital, Twins: AI-Powered, Revolution, Delivering $850M, Succe, s, s',
-    sl, u, g: 'ai-20, 2, 5-octob, e, r-enterpri, s, e-digit, a, l-twi, n, s-revolut, i, o, n',
-    descripti, o, n: 'Discover, how, AI-powered, digital, twins are, revolutionizing, enterprise operations, in, 202, 5, delivering, unprecedented, insights, predictive, capabilitie, s, a, n, d $47B, in, business val, u, e.',
-    catego, r, y: 'Digital, Transformati, o, n',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '12, m, i, n',
+    title: 'Enterprise, Digital, Twins: AI-Powered, Revolution, Delivering $850M, Succe, s, s',
+    slug: 'ai-20, 2, 5-octob, e, r-enterpri, s, e-digit, a, l-twi, n, s-revolut, i, o, n',
+    description: 'Discover, how, AI-powered, digital, twins are, revolutionizing, enterprise operations, in, 202, 5, delivering, unprecedented, insights, predictive, capabilitie, s, a, n, d $47B, in, business val, u, e.',
+    category: 'Digital, Transformati, o, n',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '12, m, i, n',
     ic, o, n: '🎯',
     gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-indi, g, o-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: ['Digital, Twi, n, s', 'AI', 'Enterpri, s, e', 'I, o, T', 'Predictive, Analytic, s'],
+    featured: t, r, u, e,
+    tags: ['Digital, Twi, n, s', 'AI', 'Enterpri, s, e', 'I, o, T', 'Predictive, Analytic, s'],
     highligh, t, s: [
-      '$850M, success, story from, Fortune, 100 energy, compa, n, y',
+      '$850M, success, story from, Fortune, 100 energy, company',
       '99.2% accuracy, in, failure predicti, o, n',
       '89% reduction, in, unplanned downti, m, e',
       '$47B, in, aggregate business, value, created',
@@ -29,16 +29,16 @@ export, const, octoberLatestBreakthroughContent = [
   },
   {
     id: 'autonomo, u, s-l, l, m-orchestrati, o, n-revolut, i, o, n',
-    tit, l, e: 'Autonomous, LLM, Orchestration: 60% Cost, Reduction, at Enterprise, Sca, l, e',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-autonomo, u, s-l, l, m-orchestrati, o, n-revolut, i, o, n',
-    descripti, o, n: 'Mul, t, i-model, AI, systems are, revolutionizing, enterprise LLM, deployment, s. Learn, how, intelligent rout, i, n, g, cachi, n, g, and, optimization, deliver 10x, performance, improvements with, 6, 0% cost, saving, s.',
-    catego, r, y: 'LLM, Infrastructu, r, e',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '16, m, i, n',
+    title: 'Autonomous, LLM, Orchestration: 60% Cost, Reduction, at Enterprise, Sca, l, e',
+    slug: 'ai-20, 2, 5-o, c, t-autonomo, u, s-l, l, m-orchestrati, o, n-revolut, i, o, n',
+    description: 'Mul, t, i-model, AI, systems are, revolutionizing, enterprise LLM, deployment, s. Learn, how, intelligent rout, i, n, g, cachi, n, g, and, optimization, deliver 10x, performance, improvements with, 6, 0% cost, saving, s.',
+    category: 'LLM, Infrastructu, r, e',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '16, m, i, n',
     ic, o, n: '🚀',
     gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-cy, a, n-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'LLM, Orchestrati, o, n',
       'Mul, t, i-Model, A, I',
       'Cost, Optimizatio, n',
@@ -59,16 +59,16 @@ export, const, octoberLatestBreakthroughContent = [
   },
   {
     id: 'vect, o, r-databa, s, e-optimizati, o, n-breakthro, u, g, h',
-    tit, l, e: 'Vector, Database, Optimization: 100x, Faster, RAG at, Billio, n-Vector, Sca, l, e',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-vect, o, r-databa, s, e-optimizati, o, n-breakthro, u, g, h',
-    descripti, o, n: 'Master, advanced, vector database, optimization, for RAG, application, s. Achieve, su, b-10ms, query, times at, billio, n-vector, scale, with 70% infrastructure, cost, reduction through, proven, technique, s.',
-    catego, r, y: 'RAG, Infrastructu, r, e',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '17, m, i, n',
+    title: 'Vector, Database, Optimization: 100x, Faster, RAG at, Billio, n-Vector, Sca, l, e',
+    slug: 'ai-20, 2, 5-o, c, t-vect, o, r-databa, s, e-optimizati, o, n-breakthro, u, g, h',
+    description: 'Master, advanced, vector database, optimization, for RAG, application, s. Achieve, su, b-10ms, query, times at, billio, n-vector, scale, with 70% infrastructure, cost, reduction through, proven, technique, s.',
+    category: 'RAG, Infrastructu, r, e',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '17, m, i, n',
     ic, o, n: '⚡',
     gradie, n, t: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'Vector, Databas, e, s',
       'R, A, G',
       'Performance, Optimizatio, n',
@@ -89,16 +89,16 @@ export, const, octoberLatestBreakthroughContent = [
   },
   {
     id: 'producti, o, n-rea, d, y-ai-agen, t, s-framew, o, r, k',
-    tit, l, e: 'Producti, o, n-Ready, AI, Agents: 99.9% Uptime, for, Enterprise Autonomous, Syste, m, s',
-    sl, u, g: 'ai-20, 2, 5-o, c, t-producti, o, n-rea, d, y-ai-agen, t, s-framew, o, r, k',
-    descripti, o, n: 'Build, reliab, l, e, scalable, AI, agent systems, for, production environmen, t, s. Learn, battl, e-tested, patterns, for reliabili, t, y, monitori, n, g, and, compliance, to achieve, enterpris, e-grade, autonomous, AI.',
-    catego, r, y: 'AI, Agent, System, s',
-    da, t, e: '20, 2, 5-10-0, 1',
-    readTi, m, e: '18, m, i, n',
+    title: 'Producti, o, n-Ready, AI, Agents: 99.9% Uptime, for, Enterprise Autonomous, Syste, m, s',
+    slug: 'ai-20, 2, 5-o, c, t-producti, o, n-rea, d, y-ai-agen, t, s-framew, o, r, k',
+    description: 'Build, reliab, l, e, scalable, AI, agent systems, for, production environmen, t, s. Learn, battl, e-tested, patterns, for reliabili, t, y, monitori, n, g, and, compliance, to achieve, enterpris, e-grade, autonomous, AI.',
+    category: 'AI, Agent, System, s',
+    date: '20, 2, 5-10-0, 1',
+    readTime: '18, m, i, n',
     ic, o, n: '🤖',
     gradie, n, t: 'fr, o, m-gre, e, n-600, t, o-emera, l, d-60, 0',
-    featur, e, d: t, r, u, e,
-    ta, g, s: [
+    featured: t, r, u, e,
+    tags: [
       'AI, Agen, t, s',
       'Production, A, I',
       'Reliability, Engineerin, g',
@@ -117,10 +117,10 @@ export, const, octoberLatestBreakthroughContent = [
       mark, e, t: '$3, 4, 0, B',
     },
   },
-]; export, const, getFeaturedOctoberLatestContent = () => { 
+]; export const getFeaturedOctoberLatestContent = () => { 
   return, octoberLatestBreakthroughConten, t.filt, e, r(conte, n, t = > conte, n, t.featu, r, e, d);
  };
 
-export, const, getAllOctoberLatestContent = () => {
+export const getAllOctoberLatestContent = () => {
   return, octoberLatestBreakthroughConten, t;
 };

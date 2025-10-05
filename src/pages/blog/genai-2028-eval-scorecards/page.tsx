@@ -5,12 +5,12 @@ export, default, function GenAIEvalScorecards20, 2, 8(): Rea, c, t.J, S, X.Eleme
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>GenAI, 202, 8: Eval, Scorecard, s — KPIs, You, Can Tru, s, t</tit, l, e>
-        <meta, nam, e='descripti, o, n'
+        <title>GenAI, 202, 8: Eval, Scorecard, s — KPIs, You, Can Tru, s, t</title>
+        <meta, nam, e='description'
           conte, n, t='Signed, attestati, o, n, s, golden, task, s, and, budge, t‑linked, guardrails, for reliable, GenAI, in producti, o, n.'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 8-ev, a, l-scorecar, d, s'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/gen a i-20 2 8-ev a l-scorecar d s'
         />
       </Helm, e, t>
 

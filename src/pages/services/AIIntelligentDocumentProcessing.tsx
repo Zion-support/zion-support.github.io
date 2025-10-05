@@ -15,10 +15,10 @@ const, AIIntelligentDocumentProcessin, g = () => {
   retu, r, n (
     <>
       <Helm, e, t>
-        <tit, l, e>
+        <title>
           AI, Intelligent, Document Processi, n, g | Automate, 9, 5% of, Document, Workflows | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        </title>
+        <meta, nam, e = 'description'
           conte, n, t='Transform, document, processing with, AI, achieving 98.5% accur, a, c, y, 95% automati, o, n, a, n, d $2.8M+ annual, saving, s. Extra, c, t, classi, f, y, and, process, any document, type, at sca, l, e.'
         />
         <meta, nam, e = 'keywor, d, s'

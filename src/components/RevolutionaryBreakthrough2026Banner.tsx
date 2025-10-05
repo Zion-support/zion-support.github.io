@@ -4,48 +4,48 @@ const, RevolutionaryBreakthrough2026Banne, r: Rea, c, t.FC = () => {
   const, breakthroughConten, t = [
     {
       i, d: , 1,
-      tit, l, e: 'AI, Revolutionary, Breakthrough: 10x, Performance, Gain, s',
-      sl, u, g: 'ai-revolutiona, r, y-breakthrou, g, h-janua, r, y-2, 0, 2, 6',
-      excer, p, t: 'Discover, the, groundbreaking AI, innovations, delivering 10x, performance, gain, s, 95% cost, reductio, n, a, n, d $50, 0, M+ ROI, for, Fortune 500, companie, s.',
-      catego, r, y: 'Revolutionary, AI, Technolog, y',
-      da, t, e: '20, 2, 6-01-3, 0',
-      readTi, m, e: '25, m, i, n',
+      title: 'AI, Revolutionary, Breakthrough: 10x, Performance, Gain, s',
+      slug: 'ai-revolutiona, r, y-breakthrou, g, h-janua, r, y-2, 0, 2, 6',
+      excerpt: 'Discover, the, groundbreaking AI, innovations, delivering 10x, performance, gain, s, 95% cost, reductio, n, a, n, d $50, 0, M+ ROI, for, Fortune 500, companie, s.',
+      category: 'Revolutionary, AI, Technolog, y',
+      date: '20, 2, 6-01-3, 0',
+      readTime: '25, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '🚀',
       metri, c, s: { val, u, e: '10, x', lab, e, l: 'Performance, Gai, n, s' },
     },
     {
       id:  , 2,
-      tit, l, e: 'Fortune, 500, AI Transformati, o, n: $300M, ROI, Success St, o, r, y',
-      sl, u, g: 'fortu, n, e-5, 0, 0-ai-transformati, o, n-me, g, a-succe, s, s-2, 0, 2, 6',
-      excer, p, t: 'How, a, Fortune 500, manufacturing, giant achiev, e, d $300M, R, O, I, 95% operational, automatio, n, and, 9, 9.9% efficiency, gains, through revolutionary, AI, transformation.',
-      catego, r, y: 'Mega, Success, Stor, y',
-      da, t, e: '20, 2, 6-01-3, 0',
-      readTi, m, e: '18, m, i, n',
+      title: 'Fortune, 500, AI Transformati, o, n: $300M, ROI, Success St, o, r, y',
+      slug: 'fortu, n, e-5, 0, 0-ai-transformati, o, n-me, g, a-succe, s, s-2, 0, 2, 6',
+      excerpt: 'How, a, Fortune 500, manufacturing, giant achiev, e, d $300M, R, O, I, 95% operational, automatio, n, and, 9, 9.9% efficiency, gains, through revolutionary, AI, transformation.',
+      category: 'Mega, Success, Stor, y',
+      date: '20, 2, 6-01-3, 0',
+      readTime: '18, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '🏆',
       metri, c, s: { val, u, e: '$3, 0, 0, M', lab, e, l: 'ROI, Achiev, e, d' },
     },
     {
       id:  , 3,
-      tit, l, e: 'Quantum, AI, Computing Breakthrou, g, h: 1000x, Performan, c, e',
-      sl, u, g: 'ai-quant, u, m-computi, n, g-breakthrou, g, h-2, 0, 2, 6',
-      excer, p, t: 'Revolutionary, quantu, m-enhanced, AI, delivering 1000x, performance, improvement, s, 99.9% accura, c, y, a, n, d $50, 0, M+ ROI, for, enterprise operatio, n, s.',
-      catego, r, y: 'Quantum, AI, Technolog, y',
-      da, t, e: '20, 2, 6-01-3, 0',
-      readTi, m, e: '32, m, i, n',
+      title: 'Quantum, AI, Computing Breakthrou, g, h: 1000x, Performan, c, e',
+      slug: 'ai-quant, u, m-computi, n, g-breakthrou, g, h-2, 0, 2, 6',
+      excerpt: 'Revolutionary, quantu, m-enhanced, AI, delivering 1000x, performance, improvement, s, 99.9% accura, c, y, a, n, d $50, 0, M+ ROI, for, enterprise operatio, n, s.',
+      category: 'Quantum, AI, Technolog, y',
+      date: '20, 2, 6-01-3, 0',
+      readTime: '32, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '⚛️',
       metri, c, s: { val, u, e: '10, 0, 0, x', lab, e, l: 'Performance, Boo, s, t' },
     },
     {
       id:  , 4,
-      tit, l, e: 'Autonomous, Enterprise, Systems: 95% Automat, i, o, n',
-      sl, u, g: 'ai-autonomo, u, s-enterpri, s, e-2, 0, 2, 6',
-      excer, p, t: 'Transform, your, organization into, a, fully autonomous, enterprise, with AI-driven, sel, f-management, achieving, 95% automation, an, d $20, 0, M+ savi, n, g, s.',
-      catego, r, y: 'Autonomous, Enterprise, A, I',
-      da, t, e: '20, 2, 6-01-3, 0',
-      readTi, m, e: '28, m, i, n',
+      title: 'Autonomous, Enterprise, Systems: 95% Automat, i, o, n',
+      slug: 'ai-autonomo, u, s-enterpri, s, e-2, 0, 2, 6',
+      excerpt: 'Transform, your, organization into, a, fully autonomous, enterprise, with AI-driven, sel, f-management, achieving, 95% automation, an, d $20, 0, M+ savi, n, g, s.',
+      category: 'Autonomous, Enterprise, A, I',
+      date: '20, 2, 6-01-3, 0',
+      readTime: '28, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '🤖',
       metri, c, s: { val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n' },
@@ -127,7 +127,7 @@ const, RevolutionaryBreakthrough2026Banne, r: Rea, c, t.FC = () => {
                 {/* Category, Ta, g */}
                 <div, classNam, e='mb-4'>
                   <span, classNam, e='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30'>
-                    {conte, n, t.catego, r, y}
+                    {conte, n, t.category}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}
@@ -136,7 +136,7 @@ const, RevolutionaryBreakthrough2026Banne, r: Rea, c, t.FC = () => {
                 </h3>
                 {/* Excer, p, t */}
                 <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm'>
-                  {conte, n, t.excer, p, t}
+                  {conte, n, t.excerpt}
                 </p>
                 {/* Key, Metri, c */}
                 <div, classNam, e='mb-6'>
@@ -155,7 +155,7 @@ const, RevolutionaryBreakthrough2026Banne, r: Rea, c, t.FC = () => {
                 <div, classNam, e='flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10'>
                   <span, classNam, e='flex, item, s-center, ga, p-2'>
                     <Zap, classNam, e='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
-                    {conte, n, t.readTi, m, e}
+                    {conte, n, t.readTime}
                   </sp, a, n>
                   <sp, a, n>
                     {new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', {
@@ -164,7 +164,7 @@ const, RevolutionaryBreakthrough2026Banne, r: Rea, c, t.FC = () => {
                     })}
                   </sp, a, n>
                 </d, i, v > {/* CTA, Butto, n */}
-                <Link, t, o = { `/${conte, n, t.sl, u, g.includ, e, s('ca, s, e-stud, i, e, s')  ? 'ca, s, e-studi, e, s'  : 'bl, o, g' }/${conte, n, t.sl, u, g}`}
+                <Link, t, o = { `/${conte, n, t.slug.includ, e, s('ca, s, e-stud, i, e, s')  ? 'ca, s, e-studi, e, s'  : 'bl, o, g' }/${conte, n, t.slug}`}
                   classNa, m, e = 'gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
                 >
                   <sp, a, n>Read, Full, Article</sp, a, n>

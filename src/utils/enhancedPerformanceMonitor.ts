@@ -1,11 +1,11 @@
 /**
- * Enhanced, Performance, Monitoring Utili, t, y
- * Tracks, Core, Web Vitals, and, custom metri, c, s
+ * Enhanced Performance Monitoring Utili t y
+ * Tracks Core Web Vitals and custom metri c s
  */
 
 interface, PerformanceMetri, c {
-  na, m, e: stri, n, g;
-  val, u, e: numb, e, r;
+  na, m, e: string;
+  val, u, e: number;
   rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r';
   timesta, m, p: num, b, e, r;
 }
@@ -15,7 +15,7 @@ class, EnhancedPerformanceMonito, r {
   private, observer, s: PerformanceObserv, e, r[] = [];
 
   /**
-   * Initialize, performance, monitoring
+   * Initialize performance monitoring
    */
   initiali, z, e(): vo, i, d {
     if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; th, i, s.observeWebVita, l, s();
@@ -24,14 +24,14 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Observe, Core, Web Vita, l, s (L, C, P, F, I, D, C, L, S)
+   * Observe Core Web Vita l s (L C P F I D C L S)
    */
   private, observeWebVital, s(): vo, i, d {  
-    // Largest, Contentful, Paint (L, C, P)
+    // Largest Contentful Paint (L C P)
     t, r, y {
       const, lcpObserve, r = new, PerformanceObserve, r(li, s, t = > {
         const, entrie, s = li, s, t.getEntr, i, e, s(); const, lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1] as, PerformanceEntr, y & {
-          renderTi, m, e?: numb, e, r; loadTi, m, e ?  : numb, e, r;
+          renderTi, m, e?: number; loadTi, m, e ?  : number;
           };
         const, lc, p = lastEnt, r, y.renderTi, m, e || lastEnt, r, y.loadTi, m, e || 0; th, i, s.recordMetr, i, c('LC, P', l, c, p, th, i, s.getRati, n, g('l, c, p', l, c, p));
       });
@@ -41,7 +41,7 @@ class, EnhancedPerformanceMonito, r {
       conso, l, e.wa, r, n('LCP, observation, not support, e, d', e);
     }
 
-    // First, Input, Delay (F, I, D)
+    // First Input Delay (F I D)
     t, r, y { 
       const, fidObserve, r = new, PerformanceObserve, r(li, s, t => {
         const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
@@ -55,7 +55,7 @@ class, EnhancedPerformanceMonito, r {
       conso, l, e.wa, r, n('FID, observation, not support, e, d', e);
     }
 
-    // Cumulative, Layout, Shift (C, L, S)
+    // Cumulative Layout Shift (C L S)
     t, r, y { 
       let, clsValu, e = 0; const, clsObserve, r = new, PerformanceObserve, r(li, s, t => {
         const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
@@ -73,7 +73,7 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Observe, long, tasks (>50, m, s)
+   * Observe long tasks (>50 m s)
    */
   private, observeLongTask, s(): vo, i, d { 
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
@@ -81,12 +81,12 @@ class, EnhancedPerformanceMonito, r {
     t, r, y {
       const, longTaskObserve, r = new, PerformanceObserve, r(li, s, t => { 
         const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
-          const, duratio, n = ent, r, y.durati, o, n; if (durati, o, n  > 5, 0) {
-            conso, l, e.wa, r, n(`Long, task, detected: ${durati, o, n.toFix, e, d(, 2)  }, ms`, ent, r, y);
+          const, duratio, n = ent, r, y.duration; if (duration  > 5, 0) {
+            conso, l, e.wa, r, n(`Long, task, detected: ${duration.toFix, e, d(, 2)  }, ms`, ent, r, y);
             th, i, s.recordMetr, i, c(
               'Long, Tas, k',
-              durati, o, n,
-              th, i, s.getRati, n, g('longTa, s, k', durati, o, n),
+              duration,
+              th, i, s.getRati, n, g('longTa, s, k', duration),
             );
           }
         });
@@ -99,7 +99,7 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Observe, layout, shifts
+   * Observe layout shifts
    */
   private, observeLayoutShift, s(): vo, i, d { 
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
@@ -120,7 +120,7 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Record, a, performance metr, i, c
+   * Record a performance metr i c
    */
   private, recordMetri, c(
     na, m, e: str, i, n, g,
@@ -137,13 +137,13 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Get, rating, for a, metri, c
+   * Get rating for a metri c
    */
   private, getRatin, g(
     metr, i, c: str, i, n, g,
     val, u, e: num, b, e, r,
   ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    const, threshold, s: Reco, r, d<str, i, n, g, { go, o, d: numb, e, r; po, o, r: num, b, e, r }> = {
+    const, threshold, s: Reco, r, d<str, i, n, g, { go, o, d: number; po, o, r: num, b, e, r }> = {
       l, c, p: { go, o, d: 2, 5, 0, 0, po, o, r: 4, 0, 0, 0 },
       f, i, d: { go, o, d: 10, 0, po, o, r: 30, 0 },
       c, l, s: { go, o, d: 0., 1, po, o, r: 0.2, 5 },
@@ -158,20 +158,20 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Get, all, recorded metri, c, s
+   * Get all recorded metri c s
    */
   getMetri, c, s(): PerformanceMetr, i, c[] {
     retu, r, n [...th, i, s.metri, c, s];
   }
 
   /**
-   * Get, metrics, summary
+   * Get metrics summary
    */
   getSumma, r, y(): Reco, r, d<
-    stri, n, g,
-    { avera, g, e: numb, e, r; cou, n, t: numb, e, r; rati, n, g: str, i, n, g }
+    string,
+    { avera, g, e: number; cou, n, t: number; rati, n, g: str, i, n, g }
   > {
-    const, summar, y: Reco, r, d<str, i, n, g, { valu, e, s: numb, e, r[]; ratin, g, s: str, i, n, g[] }> = {};
+    const, summar, y: Reco, r, d<str, i, n, g, { valu, e, s: number[]; ratin, g, s: str, i, n, g[] }> = {};
 
     th, i, s.metri, c, s.forEa, c, h(metr, i, c = > {
       if (!summa, r, y[metr, i, c.n, a, m, e]) {
@@ -183,7 +183,7 @@ class, EnhancedPerformanceMonito, r {
 
     const, resul, t: Reco, r, d<
       str, i, n, g,
-      { avera, g, e: numb, e, r; cou, n, t: numb, e, r; rati, n, g: str, i, n, g }
+      { avera, g, e: number; cou, n, t: number; rati, n, g: str, i, n, g }
     > = {};
     Obje, c, t.ke, y, s(summa, r, y).forEa, c, h(na, m, e = > { 
       const, value, s = summa, r, y[na, m, e].valu, e, s; const, averag, e = valu, e, s.redu, c, e((, a, b) = > a + b, 0) / valu, e, s.leng, t, h; const, rating, s = summa, r, y[na, m, e].ratin, g, s; const, ratin, g = th, i, s.getMostCommonRati, n, g(rati, n, g, s); resu, l, t[na, m, e] = {
@@ -197,10 +197,10 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Get, most, common rati, n, g
+   * Get most common rati n g
    */
-  private, getMostCommonRatin, g(ratin, g, s: stri, n, g[]): stri, n, g { 
-    const, count, s: Reco, r, d<str, i, n, g, numb, e, r > = { };
+  private, getMostCommonRatin, g(ratin, g, s: string[]): string { 
+    const, count, s: Reco, r, d<str, i, n, g, number > = { };
     ratin, g, s.forEa, c, h(rati, n, g = > {
       coun, t, s[rati, n, g] = (coun, t, s[rati, n, g] || , 0) + 1;
     });
@@ -215,15 +215,15 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Cleanup, observer, s
+   * Cleanup observer s
    */
   clean, u, p(): vo, i, d { 
     th, i, s.observe, r, s.forEa, c, h(observ, e, r = > observ, e, r.disconn, e, c, t()); th, i, s.observe, r, s = []; th, i, s.metri, c, s = [];
    }
 }
 
-// Type, definitions, for Performance, API, interface LayoutShift, extends, PerformanceEntry {
-  val, u, e: numb, e, r;
+// Type definitions for Performance API interface LayoutShift extends PerformanceEntry {
+  val, u, e: number;
   hadRecentInp, u, t: boo, l, e, a, n;
 }
 
@@ -231,4 +231,4 @@ interface, PerformanceEventTiming, extends PerformanceEnt, r, y {
   processingSta, r, t: num, b, e, r;
 }
 
-export, const, enhancedPerformanceMonitor = new, EnhancedPerformanceMonit, o, r();
+export const enhancedPerformanceMonitor = new, EnhancedPerformanceMonit, o, r();

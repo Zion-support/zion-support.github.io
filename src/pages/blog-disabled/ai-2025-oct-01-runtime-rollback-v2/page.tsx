@@ -6,12 +6,12 @@ export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   retu, r, n (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
-        <tit, l, e>AI, Runtime, Rollback v2 — Inst, a, n, t, K, P, I‑Linked, Recover, y</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
+        <title>AI, Runtime, Rollback v2 — Inst, a, n, t, K, P, I‑Linked, Recover, y</title>
+        <meta, nam, e = 'description'
           conte, n, t='AI, Runtime, Rollback v2 - Inst, a, n, t, K, P, I-Linked, Recovery, for AI, system, s'
         />
         <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-v2'
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-runti m e-rollba c k-v2'
         />
       </Helm, e, t>
 
