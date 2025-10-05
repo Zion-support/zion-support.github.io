@@ -17,17 +17,16 @@ const October2025UltimateEnterpriseBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-bold text-sm mb-6 animate-bounce shadow-2xl">
-             />
+
             <span>OCTOBER 2025 - JUST PUBLISHED</span>
-             />
+
           </div>
           
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               Ultimate Enterprise AI
             </span>
-            <br />
-            <span className="text-white">Revolution 2025</span>
+            <br <span className="text-white">Revolution 2025</span>
           </h2>
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto font-medium">
@@ -44,7 +43,7 @@ const October2025UltimateEnterpriseBanner = () => {
             <div className="flex items-start gap-4 mb-6">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-                   />
+
                 </div>
               </div>
               <div className="flex-1">
@@ -89,7 +88,7 @@ const October2025UltimateEnterpriseBanner = () => {
             <div className="space-y-2 mb-6">
               {multiCloudContent.highlights.slice(0, 4).map((highlight, index) => (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
-                   />
+
                   <span className="text-sm leading-relaxed">{highlight}</span>
                 </div>
               ))}
@@ -101,7 +100,7 @@ const October2025UltimateEnterpriseBanner = () => {
               className="flex items-center justify-center gap-2 w-full py-4 px-6 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 group"
             >
               <span className="text-lg">{multiCloudContent.cta.text}</span>
-               />
+
             </Link>
           </div>
 
@@ -110,8 +109,7 @@ const October2025UltimateEnterpriseBanner = () => {
             <div className="flex items-start gap-4 mb-6">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-                  <MessageSquare className="w-9 h-9 text-white" />
-                </div>
+                  <MessageSquare className="w-9 h-9 text-white"</div>
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-3">
@@ -155,7 +153,7 @@ const October2025UltimateEnterpriseBanner = () => {
             <div className="space-y-2 mb-6">
               {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) => (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
-                   />
+
                   <span className="text-sm leading-relaxed">{highlight}</span>
                 </div>
               ))}
@@ -167,7 +165,7 @@ const October2025UltimateEnterpriseBanner = () => {
               className="flex items-center justify-center gap-2 w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 group"
             >
               <span className="text-lg">{conversationalAIContent.cta.text}</span>
-               />
+
             </Link>
           </div>
         </div>
@@ -177,28 +175,28 @@ const October2025UltimateEnterpriseBanner = () => {
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="flex items-center justify-center mb-3">
-                 />
+
               </div>
               <div className="text-3xl font-extrabold text-white mb-2">340%+</div>
               <div className="text-sm text-gray-300 font-medium">Combined ROI</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="flex items-center justify-center mb-3">
-                 />
+
               </div>
               <div className="text-3xl font-extrabold text-white mb-2">$262M+</div>
               <div className="text-sm text-gray-300 font-medium">Total Savings</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="flex items-center justify-center mb-3">
-                 />
+
               </div>
               <div className="text-3xl font-extrabold text-white mb-2">5.1x</div>
               <div className="text-sm text-gray-300 font-medium">Avg Efficiency</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="flex items-center justify-center mb-3">
-                 />
+
               </div>
               <div className="text-3xl font-extrabold text-white mb-2">Fortune 100</div>
               <div className="text-sm text-gray-300 font-medium">Proven Results</div>

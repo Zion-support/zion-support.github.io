@@ -11,7 +11,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '18 min',
       trending: true,
-      icon:  />,
+      icon: '>,'
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'QUANTUM AI',
       stats: '10,000x Speed Boost'
@@ -25,7 +25,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '22 min',
       trending: true,
-      icon:  />,
+      icon: '>,'
       gradient: 'from-purple-500 to-pink-500',
       badge: 'SELF-EVOLVING',
       stats: '99.7% Auto-Improvement'
@@ -39,7 +39,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '15 min',
       trending: true,
-      icon:  />,
+      icon: '>,'
       gradient: 'from-green-500 to-emerald-500',
       badge: 'PREDICTIVE',
       stats: '99.9% Accuracy'
@@ -53,7 +53,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '12 min',
       trending: true,
-      icon:  />,
+      icon: '>,'
       gradient: 'from-orange-500 to-red-500',
       badge: 'IMMERSIVE',
       stats: '100% Integration'
@@ -67,7 +67,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '14 min',
       trending: true,
-      icon:  />,
+      icon: '>,'
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'QUANTUM-SECURE',
       stats: 'Unbreakable Security'
@@ -81,7 +81,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '20 min',
       trending: true,
-      icon:  />,
+      icon: '>,'
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'META-COGNITIVE',
       stats: 'Autonomous Orchestration'
@@ -101,11 +101,11 @@ const FutureTechShowcase2026: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-8 animate-fade-in">
-             />
+
             <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
               🚀 6 REVOLUTIONARY FUTURE TECH BREAKTHROUGHS • January 20, 2026
             </span>
-             />
+
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
@@ -121,8 +121,13 @@ const FutureTechShowcase2026: React.FC = () => {
         {/* Future Tech Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {futureTechArticles.map((article, index) => (
+<<<<<<< HEAD
             <div 
               key={article.id}
+=======
+            <div
+key={article.id}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -138,8 +143,7 @@ const FutureTechShowcase2026: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {article.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-                         />
-                        
+
                       </div>
                     )}
                     <span className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${article.gradient} text-white text-xs font-semibold border border-white/30`}>
@@ -177,7 +181,7 @@ const FutureTechShowcase2026: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                     />
+
                     {article.readTime}
                   </span>
                   <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
@@ -189,7 +193,7 @@ const FutureTechShowcase2026: React.FC = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${article.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Explore Technology</span>
-                   />
+
                 </a>
               </div>
             </div>
@@ -232,7 +236,7 @@ const FutureTechShowcase2026: React.FC = () => {
                   href="/blog"
                   className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
-                   />
+
                   <span>Explore All Technologies</span>
                 </a>
                 <a
@@ -240,7 +244,7 @@ const FutureTechShowcase2026: React.FC = () => {
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Get Early Access</span>
-                   />
+
                 </a>
               </div>
             </div>

@@ -15,9 +15,9 @@ const October2025CuttingEdgeAIBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-400/30 rounded-full px-6 py-2 mb-6">
-             />
+
             <span className="text-indigo-300 font-semibold text-sm uppercase tracking-wider">New Release • October 2025</span>
-             />
+
           </div>
           
           <h2 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
@@ -39,8 +39,7 @@ const October2025CuttingEdgeAIBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">
-                <Scale className="w-8 h-8 text-emerald-300" />
-              </div>
+                <Scale className="w-8 h-8 text-emerald-300"</div>
               <div className="flex-1">
                 <span className="text-xs text-emerald-300 font-semibold uppercase tracking-wide">AI Governance</span>
               </div>
@@ -58,7 +57,7 @@ const October2025CuttingEdgeAIBanner = () => {
               <div className="flex items-center gap-2 text-emerald-300 text-sm">
                 <span>18 min read</span>
               </div>
-               />
+
             </div>
           </Link>
 
@@ -69,7 +68,7 @@ const October2025CuttingEdgeAIBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-violet-500/20 rounded-xl group-hover:bg-violet-500/30 transition-colors">
-                 />
+
               </div>
               <div className="flex-1">
                 <span className="text-xs text-violet-300 font-semibold uppercase tracking-wide">AI Architecture</span>
@@ -88,7 +87,7 @@ const October2025CuttingEdgeAIBanner = () => {
               <div className="flex items-center gap-2 text-violet-300 text-sm">
                 <span>22 min read</span>
               </div>
-               />
+
             </div>
           </Link>
 
@@ -99,8 +98,7 @@ const October2025CuttingEdgeAIBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-cyan-500/20 rounded-xl group-hover:bg-cyan-500/30 transition-colors">
-                <Repeat className="w-8 h-8 text-cyan-300" />
-              </div>
+                <Repeat className="w-8 h-8 text-cyan-300"</div>
               <div className="flex-1">
                 <span className="text-xs text-cyan-300 font-semibold uppercase tracking-wide">AI Operations</span>
               </div>
@@ -118,7 +116,7 @@ const October2025CuttingEdgeAIBanner = () => {
               <div className="flex items-center gap-2 text-cyan-300 text-sm">
                 <span>20 min read</span>
               </div>
-               />
+
             </div>
           </Link>
 
@@ -129,7 +127,7 @@ const October2025CuttingEdgeAIBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-amber-500/20 rounded-xl group-hover:bg-amber-500/30 transition-colors">
-                 />
+
               </div>
               <div className="flex-1">
                 <span className="text-xs text-amber-300 font-semibold uppercase tracking-wide">AI Infrastructure</span>
@@ -148,7 +146,7 @@ const October2025CuttingEdgeAIBanner = () => {
               <div className="flex items-center gap-2 text-amber-300 text-sm">
                 <span>19 min read</span>
               </div>
-               />
+
             </div>
           </Link>
         </div>
@@ -160,7 +158,7 @@ const October2025CuttingEdgeAIBanner = () => {
             className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 text-white font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <span>Read All Articles</span>
-             />
+
           </Link>
           
           <p className="text-purple-200/70 text-sm mt-4">

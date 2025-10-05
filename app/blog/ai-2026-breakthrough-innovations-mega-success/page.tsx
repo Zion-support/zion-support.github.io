@@ -1,11 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
-import Target from 'lucide-react';
-import Users from 'lucide-react';
+// import { ArrowRight, TrendingUp, Brain, Zap, Target, Users } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story | Zion Tech Group',

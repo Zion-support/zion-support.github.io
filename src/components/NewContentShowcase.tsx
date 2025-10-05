@@ -26,7 +26,7 @@ const NewContentShowcase: React.FC = () => {
           {/* Articles Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-               />
+
               <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
             </div>
             <div className="space-y-4">
@@ -42,8 +42,7 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">{article.readTime}</span>
                     <span className="text-indigo-600 font-semibold flex items-center gap-1">
-                      Read More  />
-                    </span>
+                      Read More</span>
                   </div>
                 </Link>
               ))}
@@ -54,7 +53,7 @@ const NewContentShowcase: React.FC = () => {
                 className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800"
               >
                 View All Articles
-                 />
+
               </Link>
             </div>
           </div>
@@ -62,7 +61,7 @@ const NewContentShowcase: React.FC = () => {
           {/* Services Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-               />
+
               <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
             </div>
             <div className="space-y-4">
@@ -81,8 +80,7 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-700 font-semibold">{service.pricing}</span>
                     <span className="text-purple-600 font-semibold flex items-center gap-1">
-                      Learn More  />
-                    </span>
+                      Learn More</span>
                   </div>
                 </Link>
               ))}
@@ -93,7 +91,7 @@ const NewContentShowcase: React.FC = () => {
                 className="inline-flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800"
               >
                 View All Services
-                 />
+
               </Link>
             </div>
           </div>

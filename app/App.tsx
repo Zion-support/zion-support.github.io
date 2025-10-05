@@ -21,7 +21,6 @@ const App: React.FC = () => {
     // Initialize global error handling
     console.log('App initialized');
 
-    console.log('Performance monitoring initialized');
     console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 

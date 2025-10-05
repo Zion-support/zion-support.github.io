@@ -58,7 +58,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6"
           >
-             />
+
             January 15, 2026 - Revolutionary Breakthroughs
           </motion.div>
           
@@ -95,8 +95,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             >
               <div className="flex items-start space-x-4">
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>
-                  <breakthrough.icon className="w-6 h-6 text-white" />
-                </div>
+                  <breakthrough.icon className="w-6 h-6 text-white"</div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                     {breakthrough.title}
@@ -165,7 +164,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore All Content
-                 />
+
               </a>
               <a
                 href="/services"

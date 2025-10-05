@@ -1,11 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import ArrowRight from 'lucide-react';
-import Cpu from 'lucide-react';
-import Shield from 'lucide-react';
-import Zap from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
+// import { ArrowRight, Cpu, Shield, Zap, TrendingUp, Brain } from 'lucide-react';
 
 const February2026AutonomousInfrastructureBanner: React.FC = () => {
   return (

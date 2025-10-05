@@ -48,7 +48,7 @@ const October2025NewContentBanner2 = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 px-6 py-2 rounded-full border border-purple-500/30 mb-6">
-             />
+
             <span className="text-purple-300 font-semibold">FRESH INSIGHTS | October 2025</span>
           </div>
           
@@ -79,8 +79,7 @@ const October2025NewContentBanner2 = () => {
 
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${article.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-8 h-8 text-white" />
-                </div>
+                  <Icon className="w-8 h-8 text-white"</div>
 
                 {/* Content */}
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
@@ -93,7 +92,7 @@ const October2025NewContentBanner2 = () => {
                 {/* Read More Link */}
                 <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-4 transition-all">
                   <span>Read Article</span>
-                   />
+
                 </div>
 
                 {/* Hover Gradient Effect */}
@@ -110,7 +109,7 @@ const October2025NewContentBanner2 = () => {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105"
           >
             <span>Explore All AI Insights</span>
-             />
+
           </Link>
         </div>
       </div>

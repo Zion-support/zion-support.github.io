@@ -11,7 +11,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'All Industries',
       roi: '300%',
       savings: '$2M+',
-      icon:  />,
+      icon: '>,'
       gradient: 'from-blue-500 to-cyan-500',
       badge: 'BEST SELLER',
       features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']
@@ -25,7 +25,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Finance, Healthcare, Government',
       roi: '250%',
       savings: '$5M+',
-      icon:  />,
+      icon: '>,'
       gradient: 'from-purple-500 to-indigo-500',
       badge: 'ENTERPRISE',
       features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']
@@ -39,7 +39,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Technology, Retail, Manufacturing',
       roi: '400%',
       savings: '$3M+',
-      icon:  />,
+      icon: '>,'
       gradient: 'from-green-500 to-emerald-500',
       badge: 'CLOUD-FIRST',
       features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']
@@ -53,7 +53,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Retail, Finance, Healthcare',
       roi: '350%',
       savings: '$4M+',
-      icon:  />,
+      icon: '>,'
       gradient: 'from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']
@@ -67,7 +67,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'All Industries',
       roi: '500%',
       savings: '$10M+',
-      icon:  />,
+      icon: '>,'
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'TRANSFORMATION',
       features: ['Strategy Consulting', 'Implementation', 'Change Management']
@@ -81,7 +81,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Finance, Healthcare, Government',
       roi: '200%',
       savings: '$1.5M+',
-      icon:  />,
+      icon: '>,'
       gradient: 'from-pink-500 to-purple-500',
       badge: 'GOVERNANCE',
       features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']
@@ -89,10 +89,10 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
   ];
 
   const successMetrics = [
-    { value: '500+', label: 'Enterprise Clients', icon:  /> },
-    { value: '$2B+', label: 'Cost Savings Generated', icon:  /> },
-    { value: '98%', label: 'Client Satisfaction', icon:  /> },
-    { value: '24/7', label: 'Enterprise Support', icon:  /> }
+    { value: '500+', label: 'Enterprise Clients', icon: '> },'
+    { value: '$2B+', label: 'Cost Savings Generated', icon: '> },'
+    { value: '98%', label: 'Client Satisfaction', icon: '> },'
+    { value: '24/7', label: 'Enterprise Support', icon: '> }'
   ];
 
   return (
@@ -108,11 +108,11 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 mb-8 animate-fade-in">
-             />
+
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
               🏢 ENTERPRISE SOLUTIONS SHOWCASE • 2026
             </span>
-             />
+
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">
@@ -145,8 +145,13 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
         {/* Enterprise Solutions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {enterpriseSolutions.map((solution, index) => (
+<<<<<<< HEAD
             <div 
               key={solution.id}
+=======
+            <div
+key={solution.id}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -214,7 +219,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Explore Solution</span>
-                   />
+
                 </a>
               </div>
             </div>
@@ -237,7 +242,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2"
                 >
-                   />
+
                   <span>Schedule Enterprise Demo</span>
                 </a>
                 <a
@@ -245,7 +250,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                   className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>View Success Stories</span>
-                   />
+
                 </a>
               </div>
             </div>

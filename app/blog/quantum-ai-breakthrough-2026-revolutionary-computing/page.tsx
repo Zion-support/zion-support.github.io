@@ -1,13 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import ArrowRight from 'lucide-react';
-import Atom from 'lucide-react';
-import Zap from 'lucide-react';
-import Shield from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Target from 'lucide-react';
-import CheckCircle from 'lucide-react';
+// import { ArrowRight, Atom, Zap, Shield, Brain, TrendingUp, Target, CheckCircle } from 'lucide-react';
 
 export default function QuantumAIBreakthrough2026() {
   return (
@@ -67,7 +59,7 @@ export default function QuantumAIBreakthrough2026() {
             ].map((stat, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="text-5xl mb-3">{stat.icon}</div>
-                <div  bg-clip-text text-transparent mb-2`}>
+                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
                   {stat.value}
                 </div>
                 <div className="text-gray-400 text-sm font-medium">
