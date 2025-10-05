@@ -129,14 +129,16 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <div className="text-left">{currentContent.metrics.roi}</div>
                 <div className="text-left">ROI</div>
               </div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.savings}</div>
                 <div className="text-left">Annual Savings</div>
               </div>
-              <div className="text-left"></div>
+              </div>
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.accuracy}</div>
                 <div className="text-left">Accuracy</div>
               </div>
+            </div>
               <div className="text-left"></div>
                 <div className="text-left">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>
                 <div className="text-left">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>

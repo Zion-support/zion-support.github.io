@@ -161,6 +161,7 @@ const September30NewContent2025Banner: React.FC = () => {
               </div>
             </div>
             ))}
+          </div>
         </div>
 
         {/* Second Row */}
@@ -220,6 +221,7 @@ const September30NewContent2025Banner: React.FC = () => {
               </div>
             </div>
             ))}
+          </div>
         </div>
 
         {/* Call-to-Action Section */}
@@ -267,6 +269,7 @@ const September30NewContent2025Banner: React.FC = () => {
               </div>
             </div>
             ))}
+          </div>
         </div>
     </div>
   );
