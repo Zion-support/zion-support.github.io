@@ -12,6 +12,7 @@ const Team = lazy(() => import('./pages/Team'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 
+<<<<<<< HEAD
 const AppRouter: React.FC = () => {
   return (
     <Router>
@@ -25,6 +26,28 @@ const AppRouter: React.FC = () => {
           <Route path='/team' element={<Team />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/terms' element={<Terms />} />
+=======
+// Loading component
+const Loading = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  </div>
+);
+
+const AppRouter: React.FC = () => {
+  return (
+    <Router>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-0af9
         </Routes>
       </Suspense>
     </Router>

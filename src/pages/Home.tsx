@@ -1,226 +1,110 @@
-impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
-import, React, from 'rea, c, t';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const, Hom, e: Rea, c, t.FC = () => { 
-  retu, r, n (
+const Home: React.FC = () => {
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>
-          Zion, Tech, Group - Leading, A, I & IT, Solution, s | Transform, Your, Business
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Zion, Tech, Group delivers, cuttin, g-edge, AI, and IT, solutions, that transform, businesse, s. Expert, consulting, services with, proven, results.'
-        />
-        <meta, nam, e='keywor, d, s'
-          conte, n, t='AI, soluti, o, n, s, IT, consultin, g, cybersecuri, t, y, machine, learnin, g, cloud, infrastructur, e, digital, transformatio, n'
-        />
-      </Helm, e, t>
-
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-white, t, o-te, a, l-50' > {/* Hero, Sectio, n */ }
-        <section, classNam, e='relative, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, y-20'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            <div, classNam, e='te, x, t-cent, e, r'>
-              <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-bl, u, e-100, tex, t-bl, u, e-800, tex, t-sm, fon, t-medium, m, b-8'>
-                <span, classNam, e='w-4 h-4, m, r-2'>✨</sp, a, n>
-                Trusted, by, 500+ companies, worldwid, e
-                <span, classNam, e='w-4 h-4, m, l-2'>🚀</sp, a, n>
-              </d, i, v>
-              <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6'>
-                Leading, A, I & Technology, Solution, s
+      <Helmet>
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                AI Enterprise Transformation
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                  300% ROI Guaranteed
+                </span>
               </h1>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
-                Transform, your, business with, cuttin, g-edge, AI, micro SaaS, and, enterprise IT, solution, s. Build, fas, t, e, r, scale, smarte, r, and, achieve, unprecedented resul, t, s.
+              <p className="text-xl md:text-2xl mb-8 text-gray-200">
+                Transform your enterprise with AI-powered solutions. Achieve 300%
+                ROI, 70% cost reduction, and 90% efficiency gains.
               </p>
-              <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-                <Link, t, o='/servic, e, s'
-                  classNa, m, e='bg-bl, u, e-600, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s'
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
                 >
-                  Explore, Service, s
-                </Li, n, k>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='border, borde, r-bl, u, e-600, tex, t-bl, u, e-600, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-50, transitio, n-colo, r, s'
+                  Get Started Today
+                </Link>
+                <Link
+                  to="/services"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
                 >
-                  Get, Starte, d
-                </Li, n, k>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+                  View Services
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* Featured, Servi, c, e, s */}
-        <section, classNam, e = 'py-20, b, g-whi, t, e'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            <div, classNam, e='te, x, t-center, m, b-16'>
-              <h2, classNam, e='te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-                Our, Core, Services
+        {/* Features Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">
+                Why Choose Zion Tech Group?
               </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o'>
-                Comprehensive, solutions, designed to, accelerate, your digital, transformatio, n
-              </p>
-            </d, i, v>
-            <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
-              <div, classNam, e='bg-white, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-30, 0, p-6, border, border-gr, a, y-200, hove, r:bord, e, r-bl, u, e-3, 0, 0'>
-                <div, classNam, e='te, x, t-center, m, b-6'>
-                  <div, classNam, e='w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
-                    <span, classNam, e='w-8 h-8, tex, t-bl, u, e-6, 0, 0'>⚡</sp, a, n>
-                  </d, i, v>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3'>
-                    AI, Service, s & Solutio, n, s
-                  </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
-                    Advanced, artificial, intelligence solutions, including, machine
-                    lear, n, i, n, g, deep, learnin, g, and, AI, automation.
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">300% ROI Guaranteed</h3>
+                  <p className="text-gray-600">
+                    Our AI solutions deliver measurable returns on investment with proven results.
                   </p>
-                  <div, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-4'>
-                    Starting, a, t $, 5,0, 0, 0
-                  </d, i, v>
-                </d, i, v>
-                <ul, classNam, e = 'spa, c, e-y-3, m, b-6'>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <span, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0'>✔️</sp, a, n>
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>
-                      Machine, Learning, Models
-                    </sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <span, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0'>✔️</sp, a, n>
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Deep, Learning, Systems</sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <span, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0'>✔️</sp, a, n>
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>AI, Automatio, n</sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <span, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0'>✔️</sp, a, n>
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Predictive, Analytic, s</sp, a, n>
-                  </li>
-                </ul>
-                <Link, t, o='/servic, e, s/ai-servic, e, s'
-                  classNa, m, e='bloc, k, w-full, tex, t-center, p, y-3, p, x-4, rounde, d-lg, fon, t-semibold, b, g-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s'
-                >
-                  Learn, Mor, e
-                </Li, n, k>
-              </d, i, v>
-
-              <div, classNam, e='bg-white, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-30, 0, p-6, border, border-bl, u, e-300, rin, g-2, rin, g-bl, u, e-100, relativ, e'>
-                <div, classNam, e='absolu, t, e -t, o, p-3, lef, t-1/2, transfor, m -transla, t, e-x-1/2'>
-                  <span, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d'>
-                    Most, Popula, r
-                  </sp, a, n>
-                </d, i, v>
-                <div, classNam, e='te, x, t-center, m, b-6'>
-                  <div, classNam, e='w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
-                    <span, classNam, e='w-8 h-8, tex, t-purp, l, e-6, 0, 0'>🚀</sp, a, n>
-                  </d, i, v>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3'>
-                    Micro, SaaS, Solutions
-                  </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
-                    Scalable, softwar, e-as-a-service, applications, designed for, rapid, deployment and, growt, h.
+                </div>
+                <div className="text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">70% Cost Reduction</h3>
+                  <p className="text-gray-600">
+                    Streamline operations and reduce costs through intelligent automation.
                   </p>
-                  <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-4'>
-                    Startin, g, a, t $, 3,0, 0, 0
-                  </d, i, v>
-                </d, i, v>
-                <ul, classNam, e = 'spa, c, e-y-3, m, b-6'>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Rapid, Developmen, t</sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Scalable, Architectur, e</sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Clo, u, d-Native, Desig, n</sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>A, P, I-First, Approac, h</sp, a, n>
-                  </li>
-                </ul>
-                <Link, t, o='/servic, e, s/mic, r, o-sa, a, s'
-                  classNa, m, e='bloc, k, w-full, tex, t-center, p, y-3, p, x-4, rounde, d-lg, fon, t-semibold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-colo, r, s'
-                >
-                  Learn, Mor, e
-                </Li, n, k>
-              </d, i, v>
-
-              <div, classNam, e='bg-white, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-30, 0, p-6, border, border-gr, a, y-200, hove, r:bord, e, r-bl, u, e-3, 0, 0'>
-                <div, classNam, e='te, x, t-center, m, b-6'>
-                  <div, classNam, e='w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
-                    <span, classNam, e='w-8 h-8, tex, t-gre, e, n-6, 0, 0'>🛡️</sp, a, n>
-                  </d, i, v>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3'>
-                    IT, Service, s & Solutio, n, s
-                  </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
-                    Comprehensive, IT, infrastructu, r, e, cloud, migratio, n, and, DevOps, services.
+                </div>
+                <div className="text-center">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">90% Efficiency Gains</h3>
+                  <p className="text-gray-600">
+                    Boost productivity and efficiency with cutting-edge AI technology.
                   </p>
-                  <div, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-4'>
-                    Starting, a, t $, 2,5, 0, 0
-                  </d, i, v>
-                </d, i, v>
-                <ul, classNam, e = 'spa, c, e-y-3, m, b-6'>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Cloud, Migratio, n</sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>DevO, p, s & S, R, E</sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>
-                      Infrastructure, Managemen, t
-                    </sp, a, n>
-                  </li>
-                  <li, classNam, e='flex, item, s-center, ga, p-3'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
-                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Securi, t, y & Complian, c, e</sp, a, n>
-                  </li>
-                </ul>
-                <Link, t, o='/servic, e, s/it-servic, e, s'
-                  classNa, m, e='bloc, k, w-full, tex, t-center, p, y-3, p, x-4, rounde, d-lg, fon, t-semibold, b, g-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s'
-                >
-                  Learn, Mor, e
-                </Li, n, k>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, b, g-bl, u, e-6, 0, 0'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r'>
-            <h2, classNam, e='te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
-              Ready, to, Transform Your, Busines, s?
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Transform Your Enterprise?
             </h2>
-            <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
-              Join, hundreds, of enterprises, already, leveraging our, AI, and
-              technology, solution, s.
+            <p className="text-xl mb-8">
+              Join hundreds of companies already achieving 300% ROI with our AI
+              solutions.
             </p>
-            <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-              <Link, t, o='/conta, c, t'
-                classNa, m, e='bg-white, tex, t-bl, u, e-600, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-              >
-                Start, Your, Project
-              </Li, n, k>
-              <Link, t, o='/abo, u, t'
-                classNa, m, e='border, borde, r-white, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s'
-              >
-                Learn, Mor, e
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-      </d, i, v>
+            <Link
+              to="/contact"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block"
+            >
+              Start Your Transformation
+            </Link>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
 
-export, default, Home;
+export default Home;
