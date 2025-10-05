@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
@@ -22,13 +21,13 @@ const LatestInsights: React.FC = () => {
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-            <ArrowRight className="w-4 h-4" />
+
           </Link>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {latestInsights.slice(0, 3).map((item) => (
-            <div
+            <div>
               key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
@@ -36,7 +35,7 @@ const LatestInsights: React.FC = () => {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
                   {isNew(item.date) && (
-                    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
+                    
                   )}
                 </div>
                 <div className="flex items-center gap-2">
@@ -57,7 +56,7 @@ const LatestInsights: React.FC = () => {
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
-                <ArrowRight className="w-4 h-4" />
+
               </Link>
             </div>
           ))}
@@ -69,7 +68,7 @@ const LatestInsights: React.FC = () => {
             className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-            <ArrowRight className="w-4 h-4" />
+
           </Link>
         </div>
       </div>

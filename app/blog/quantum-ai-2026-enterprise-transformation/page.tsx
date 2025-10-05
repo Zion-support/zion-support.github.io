@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import QuantumAI2026EnterpriseTransformation from '../../../blog/quantum-ai-2026-enterprise-transformation';
 

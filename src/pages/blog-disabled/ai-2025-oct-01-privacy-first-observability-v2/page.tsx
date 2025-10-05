@@ -9,22 +9,16 @@ export default function BlogPost(): React.JSX.Element {
         <title>Privacy‑First Observability v2 — User‑Centric Traces, Zero‑PII</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2
+          content="Privacy-First Observability v2 - User-Centric Traces, Zero-PII for AI systems"
         />
-      </Helmet>
-
-      <div className=" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Privacy‑First Observability v2
         </h1>
-        <p>
-  href="https: //ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2"
-        />
-      </p>
+        <p className="text-zion-slate-light mb-8">User‑Centric Traces, Zero‑PII</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
             This is a placeholder for the blog post content. The original content had syntax errors

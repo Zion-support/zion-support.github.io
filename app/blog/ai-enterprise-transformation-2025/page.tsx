@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
 	title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint | Zion Tech Group',

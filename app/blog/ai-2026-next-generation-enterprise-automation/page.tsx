@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Shield, TrendingUp, Users, Target, CheckCircle } from 'lucide-react';
+// import { ArrowRight, Brain, Zap, Shield, TrendingUp, Users, Target, CheckCircle } from 'lucide-react';
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (

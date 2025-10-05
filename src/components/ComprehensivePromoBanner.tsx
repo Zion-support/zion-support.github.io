@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap } from 'lucide-react';
 import { newArticles2025 } from '../content/new-articles-2025';
 import { newServices2026 } from '../content/new-services-2026';
 
@@ -35,7 +34,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
             className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors flex items-center gap-2"
           >
             Explore Now
-            <ArrowRight className="w-5 h-5" />
+
           </Link>
         </div>
       </div>
@@ -47,7 +46,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
       <div className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}>
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-8">
           <div className="flex items-center gap-3 mb-4">
-            <Sparkles className="w-8 h-8 text-yellow-300" />
+
             <h2 className="text-3xl font-bold text-white">Latest Innovations</h2>
           </div>
           <p className="text-purple-100 text-lg">
@@ -61,8 +60,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
               <p className="text-gray-600 mb-4">{article.description}</p>
               <Link to={article.link} className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2">
-                Read More <ArrowRight className="w-4 h-4" />
-              </Link>
+                Read More</Link>
             </div>
           ))}
         </div>
@@ -76,7 +74,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
-            <Zap className="w-5 h-5 mr-2" />
+
             <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -91,7 +89,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-yellow-300" />
+
               Latest Articles
             </h3>
             <div className="space-y-3">
@@ -111,7 +109,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Zap className="w-6 h-6 text-green-300" />
+
               New Services
             </h3>
             <div className="space-y-3">
@@ -136,7 +134,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
             className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition-all hover:scale-105"
           >
             Explore All Content
-            <ArrowRight className="w-6 h-6" />
+
           </Link>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, TrendingUp, ArrowRight, Sparkles, Lock, Activity, BarChart3 } from 'lucide-react';
 
 const October2025NewPremiumContentBanner: React.FC = () => {
   return (
@@ -15,9 +14,9 @@ const October2025NewPremiumContentBanner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-            <Sparkles className="w-4 h-4" />
+
             <span>🚀 JUST PUBLISHED - OCTOBER 2025 PREMIUM CONTENT 🚀</span>
-            <Sparkles className="w-4 h-4" />
+
           </div>
           <h2 className="text-5xl font-extrabold text-white mb-4 leading-tight">
             Revolutionary AI Platforms
@@ -37,10 +36,9 @@ const October2025NewPremiumContentBanner: React.FC = () => {
           <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <Activity className="w-8 h-8 text-white" />
-              </div>
+                <Activity className="w-8 h-8 text-white"</div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
-                <span className="text-green-300 text-xs font-bold">NEW</span>
+                
               </div>
             </div>
             
@@ -54,19 +52,19 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
-                <Zap className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-cyan-300">99.99% uptime</strong> with intelligent self-healing</span>
               </div>
               <div className="flex items-start gap-2">
-                <Zap className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-cyan-300">92% faster</strong> incident response time</span>
               </div>
               <div className="flex items-start gap-2">
-                <Zap className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-cyan-300">$340M+</strong> annual value creation</span>
               </div>
               <div className="flex items-start gap-2">
-                <Zap className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-cyan-300">87% cost savings</strong> in operations</span>
               </div>
             </div>
@@ -75,18 +73,16 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/ai-autonomous-devops-platform-2025-october"
               className="flex items-center gap-2 text-cyan-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article <ArrowRight className="w-5 h-5" />
-            </Link>
+              Read Full Article</Link>
           </div>
 
           {/* Card 2: Quantum-Safe Security */}
           <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <Lock className="w-8 h-8 text-white" />
-              </div>
+                <Lock className="w-8 h-8 text-white"</div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
-                <span className="text-green-300 text-xs font-bold">NEW</span>
+                
               </div>
             </div>
             
@@ -100,19 +96,19 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
-                <Shield className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-purple-300">99.99% threat prevention</strong> rate</span>
               </div>
               <div className="flex items-start gap-2">
-                <Shield className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white text-sm"><strong className="text-purple-300">Zero</strong> cryptographic vulnerabilities</span>
+
+                <span className="text-white text-sm"> cryptographic vulnerabilities</span>
               </div>
               <div className="flex items-start gap-2">
-                <Shield className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-purple-300">$247M+</strong> in avoided breach costs</span>
               </div>
               <div className="flex items-start gap-2">
-                <Shield className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-purple-300">94% faster</strong> threat response</span>
               </div>
             </div>
@@ -121,18 +117,16 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/quantum-safe-ai-security-framework-2025-october"
               className="flex items-center gap-2 text-purple-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article <ArrowRight className="w-5 h-5" />
-            </Link>
+              Read Full Article</Link>
           </div>
 
           {/* Card 3: Cognitive Business Intelligence */}
           <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-green-500/30 hover:border-green-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <BarChart3 className="w-8 h-8 text-white" />
-              </div>
+                <BarChart3 className="w-8 h-8 text-white"</div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
-                <span className="text-green-300 text-xs font-bold">NEW</span>
+                
               </div>
             </div>
             
@@ -146,19 +140,19 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
-                <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-green-300">87% faster</strong> decision making</span>
               </div>
               <div className="flex items-start gap-2">
-                <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-green-300">340% ROI</strong> in first year</span>
               </div>
               <div className="flex items-start gap-2">
-                <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-green-300">$427M+</strong> incremental revenue</span>
               </div>
               <div className="flex items-start gap-2">
-                <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+
                 <span className="text-white text-sm"><strong className="text-green-300">95%+</strong> prediction accuracy</span>
               </div>
             </div>
@@ -167,8 +161,7 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/real-time-cognitive-business-intelligence-2025-october"
               className="flex items-center gap-2 text-green-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article <ArrowRight className="w-5 h-5" />
-            </Link>
+              Read Full Article</Link>
           </div>
         </div>
 
@@ -185,14 +178,12 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2"
             >
-              Schedule Free Consultation <ArrowRight className="w-5 h-5" />
-            </Link>
+              Schedule Free Consultation</Link>
             <Link 
               to="/blog"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-400 inline-flex items-center gap-2"
             >
-              Explore All Articles <ArrowRight className="w-5 h-5" />
-            </Link>
+              Explore All Articles</Link>
           </div>
         </div>
       </div>

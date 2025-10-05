@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
+// import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',

@@ -3,17 +3,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/SEOOptimizer';
+import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Pages
 import HomePage from './page';
 
 // Utils
-import { logError } from '../utils/errorHandling';
-import { measurePerformance } from '../utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -23,10 +21,6 @@ const App: React.FC = () => {
     // Initialize global error handling
     console.log('App initialized');
 
-    // Initialize performance monitoring
-    measurePerformance();
-
-    console.log('Performance monitoring initialized');
     console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 

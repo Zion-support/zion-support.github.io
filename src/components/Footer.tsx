@@ -12,27 +12,26 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div>
-            <h4 className='text-md font-semibold mb-4'>Services</h4>
+            
             <ul className='space-y-2 text-gray-300'>
               <li>AI Solutions</li>
               <li>IT Infrastructure</li>
               <li>Cloud Services</li>
-              <li>Consulting</li>
+              
             </ul>
           </div>
           <div>
-            <h4 className='text-md font-semibold mb-4'>Company</h4>
+            
             <ul className='space-y-2 text-gray-300'>
               <li>About Us</li>
-              <li>Careers</li>
-              <li>Contact</li>
+
             </ul>
           </div>
           <div>
-            <h4 className='text-md font-semibold mb-4'>Contact</h4>
+            
             <p className='text-gray-300'>
               Email: info@ziontechgroup.com
-              <br />
+              <br
               Phone: +1 (302) 464-0950
             </p>
           </div>

@@ -34,20 +34,19 @@ export default function January2027NewContentShowcaseBanner() {
             
             <div className="grid grid-cols-2 gap-3 mb-6">
               <div className="bg-green-500/20 rounded-lg p-3 text-center">
-                <div className="text-lg font-bold text-green-400">1000x</div>
-                <div className="text-xs text-green-300">Efficiency</div>
+
               </div>
               <div className="bg-emerald-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-emerald-400">&lt;1μs</div>
-                <div className="text-xs text-emerald-300">Latency</div>
+                
               </div>
               <div className="bg-cyan-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-cyan-400">$2.3B</div>
-                <div className="text-xs text-cyan-300">Savings</div>
+                
               </div>
               <div className="bg-blue-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-blue-400">99.99%</div>
-                <div className="text-xs text-blue-300">Reliability</div>
+                
               </div>
             </div>
             
@@ -80,19 +79,18 @@ export default function January2027NewContentShowcaseBanner() {
             <div className="grid grid-cols-2 gap-3 mb-6">
               <div className="bg-purple-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-purple-400">$847B</div>
-                <div className="text-xs text-purple-300">Protected</div>
+                
               </div>
               <div className="bg-indigo-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-indigo-400">99.97%</div>
-                <div className="text-xs text-indigo-300">Prevention</div>
+                
               </div>
               <div className="bg-blue-500/20 rounded-lg p-3 text-center">
-                <div className="text-lg font-bold text-blue-400">NIST</div>
-                <div className="text-xs text-blue-300">Approved</div>
+
               </div>
               <div className="bg-cyan-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-cyan-400">3-5yr</div>
-                <div className="text-xs text-cyan-300">Timeline</div>
+                
               </div>
             </div>
             
@@ -124,20 +122,19 @@ export default function January2027NewContentShowcaseBanner() {
             
             <div className="grid grid-cols-2 gap-3 mb-6">
               <div className="bg-blue-500/20 rounded-lg p-3 text-center">
-                <div className="text-lg font-bold text-blue-400">320</div>
-                <div className="text-xs text-blue-300">Facilities</div>
+
               </div>
               <div className="bg-cyan-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-cyan-400">78%</div>
-                <div className="text-xs text-cyan-300">Reduction</div>
+                
               </div>
               <div className="bg-green-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-green-400">99.8%</div>
-                <div className="text-xs text-green-300">Quality</div>
+                
               </div>
               <div className="bg-emerald-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-emerald-400">$2.3B</div>
-                <div className="text-xs text-emerald-300">Savings</div>
+                
               </div>
             </div>
             
@@ -200,7 +197,7 @@ export default function January2027NewContentShowcaseBanner() {
               className="bg-gradient-to-r from-red-500/20 to-orange-500/20 hover:from-red-500/30 hover:to-orange-500/30 rounded-xl p-4 border border-red-500/30 hover:border-red-500/50 transition-all duration-300 text-center group"
             >
               <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">💬</div>
-              <div className="font-bold text-white">Consultation</div>
+              
               <div className="text-xs text-gray-300">Free Assessment</div>
             </a>
           </div>

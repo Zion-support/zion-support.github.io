@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 
 export const metadata = {
   title: 'Privacy‑Safe Feature Flags 2026 | Zion Tech Group',

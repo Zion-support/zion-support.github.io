@@ -28,6 +28,10 @@
     }
   },
   "include": ["src", "app"],
+<<<<<<< HEAD
   "exclude": ["src/pages/blog-disabled/**/*"],
+=======
+  "exclude": ["src/pages/blog-disabled/**/*", "app/blog", "app/components", "blog", "components"],
+>>>>>>> cursor/fix-errors-and-merge-to-main-f679
   "references": [{ "path": "./tsconfig.node.json" }]
 }

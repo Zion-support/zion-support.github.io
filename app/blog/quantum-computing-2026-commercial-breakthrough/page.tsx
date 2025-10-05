@@ -1,7 +1,6 @@
-import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
+// import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation | Zion Tech Group',

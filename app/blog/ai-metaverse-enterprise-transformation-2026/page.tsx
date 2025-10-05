@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { Clock, ArrowRight, Globe, Users, Zap, Target } from 'lucide-react';
+// import { Clock, ArrowRight, Globe, Users, Zap, Target } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Metaverse Enterprise Transformation 2026: The Future of Virtual Business Operations',

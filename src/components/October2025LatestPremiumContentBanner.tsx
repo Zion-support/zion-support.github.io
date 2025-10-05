@@ -1,4 +1,3 @@
-import { ArrowRight, Shield, Brain, Workflow, TrendingUp, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const October2025LatestPremiumContentBanner = () => {
@@ -55,7 +54,7 @@ const October2025LatestPremiumContentBanner = () => {
                 className="group bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm border border-purple-400/30 rounded-lg p-4 hover:border-purple-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-start gap-3 mb-2">
-                  <Shield className="w-6 h-6 text-purple-300 flex-shrink-0 mt-1" />
+
                   <div>
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-purple-200 transition-colors">
                       🛡️ Autonomous Data Governance Revolution
@@ -64,7 +63,7 @@ const October2025LatestPremiumContentBanner = () => {
                       99.98% compliance accuracy, $4.2B risk mitigation, 94% faster compliance, 2,847% ROI
                     </p>
                     <div className="flex items-center gap-2 text-xs">
-                      <CheckCircle className="w-3 h-3 text-green-400" />
+
                       <span className="text-purple-300">Self-Regulating Systems</span>
                     </div>
                   </div>
@@ -76,7 +75,7 @@ const October2025LatestPremiumContentBanner = () => {
                 className="group bg-gradient-to-br from-red-600/30 to-orange-600/30 backdrop-blur-sm border border-red-400/30 rounded-lg p-4 hover:border-red-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-start gap-3 mb-2">
-                  <Brain className="w-6 h-6 text-red-300 flex-shrink-0 mt-1" />
+
                   <div>
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-red-200 transition-colors">
                       🧠 Neural Fraud Detection Revolution
@@ -85,7 +84,7 @@ const October2025LatestPremiumContentBanner = () => {
                       99.96% detection accuracy, $8.7B losses prevented, sub-50ms response, 3,247% ROI
                     </p>
                     <div className="flex items-center gap-2 text-xs">
-                      <CheckCircle className="w-3 h-3 text-green-400" />
+
                       <span className="text-red-300">Real-Time Protection</span>
                     </div>
                   </div>
@@ -97,8 +96,7 @@ const October2025LatestPremiumContentBanner = () => {
                 className="group bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 hover:border-blue-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-start gap-3 mb-2">
-                  <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
-                  <div>
+                  <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" <div>
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-blue-200 transition-colors">
                       ⚡ Cognitive Workflow Orchestration
                     </h3>
@@ -106,7 +104,7 @@ const October2025LatestPremiumContentBanner = () => {
                       98.7% automation rate, $6.3B value creation, 89% faster execution, 3,742% ROI
                     </p>
                     <div className="flex items-center gap-2 text-xs">
-                      <CheckCircle className="w-3 h-3 text-green-400" />
+
                       <span className="text-blue-300">Intelligent Automation</span>
                     </div>
                   </div>
@@ -117,15 +115,15 @@ const October2025LatestPremiumContentBanner = () => {
             {/* Key Benefits */}
             <div className="flex flex-wrap gap-3">
               <div className="flex items-center gap-2 text-sm text-purple-100">
-                <TrendingUp className="w-4 h-4 text-green-400" />
+
                 <span>Enterprise-Proven Results</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-purple-100">
-                <CheckCircle className="w-4 h-4 text-green-400" />
+
                 <span>Production-Ready Systems</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-purple-100">
-                <Shield className="w-4 h-4 text-green-400" />
+
                 <span>Fortune 500 Trusted</span>
               </div>
             </div>
@@ -137,7 +135,7 @@ const October2025LatestPremiumContentBanner = () => {
               className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold rounded-lg hover:from-purple-600 hover:to-indigo-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 whitespace-nowrap"
             >
               <span className="mr-2">Explore All 3 Breakthroughs</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
             </Link>
             
             <Link

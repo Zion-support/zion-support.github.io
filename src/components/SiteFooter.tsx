@@ -20,7 +20,7 @@ const SiteFooter: React.FC = () => {
           </div>
 
           <div>
-            <h3 className='text-white font-semibold mb-3'>Services</h3>
+            
             <ul className='space-y-2'>
               <li>
                 <Link to='/services' className='hover:text-white'>
@@ -46,7 +46,7 @@ const SiteFooter: React.FC = () => {
           </div>
 
           <div>
-            <h3 className='text-white font-semibold mb-3'>Solutions</h3>
+            
             <ul className='space-y-2'>
               <li>
                 <Link to='/solutions' className='hover:text-white'>
@@ -72,7 +72,7 @@ const SiteFooter: React.FC = () => {
           </div>
 
           <div>
-            <h3 className='text-white font-semibold mb-3'>Company</h3>
+            
             <ul className='space-y-2'>
               <li>
                 <Link to='/about' className='hover:text-white'>

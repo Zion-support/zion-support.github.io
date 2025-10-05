@@ -121,7 +121,7 @@ export default function October2025NewAIBreakthroughsBanner() {
               <div className="text-gray-400 text-sm uppercase tracking-wider">Average Accuracy</div>
             </div>
             <div>
-              <div className="text-5xl font-black text-pink-400 mb-2">1000x</div>
+              
               <div className="text-gray-400 text-sm uppercase tracking-wider">Performance Gain</div>
             </div>
             <div>

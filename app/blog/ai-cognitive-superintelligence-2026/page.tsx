@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { Clock, ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
+// import { Clock, ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Cognitive Superintelligence 2026: The Next Frontier of Human-AI Collaboration',

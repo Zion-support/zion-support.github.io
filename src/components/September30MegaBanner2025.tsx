@@ -1,4 +1,3 @@
-import { ArrowRight, Brain, Lightbulb, Rocket, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -102,9 +101,8 @@ const September30MegaBanner2025 = () => {
             className="inline-flex items-center gap-3 mb-8"
           >
             <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-2xl animate-pulse">
-              <Sparkles className="w-6 h-6 text-white animate-spin" style={{ animationDuration: "3s" }} />
-              <span className="text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>
-              <Rocket className="w-6 h-6 text-white animate-bounce" />
+               style={{ animationDuration: "3s" }} <span className="text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>
+
             </div>
           </motion.div>
 
@@ -168,7 +166,7 @@ const September30MegaBanner2025 = () => {
                   {/* Read More Arrow */}
                   <div className="flex items-center gap-2 text-white font-bold text-sm group-hover:gap-4 transition-all">
                     <span>Explore Now</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+
                   </div>
                 </div>
               </Link>
@@ -180,7 +178,7 @@ const September30MegaBanner2025 = () => {
         <div className="bg-white/15 backdrop-blur-xl rounded-2xl p-8 mb-10 border-2 border-white/30 shadow-2xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-black text-cyan-300 mb-2 animate-pulse">8</div>
+              
               <div className="text-sm text-blue-200 font-semibold uppercase tracking-wide">NEW Breakthroughs</div>
             </div>
             <div>
@@ -202,7 +200,7 @@ const September30MegaBanner2025 = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
             <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center flex-shrink-0">
-              <Zap className="w-6 h-6 text-cyan-200" />
+
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Production-Ready Today</h4>
@@ -212,7 +210,7 @@ const September30MegaBanner2025 = () => {
           
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
             <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center flex-shrink-0">
-              <Brain className="w-6 h-6 text-purple-200" />
+
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Breakthrough Performance</h4>
@@ -222,7 +220,7 @@ const September30MegaBanner2025 = () => {
           
           <div className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
             <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center flex-shrink-0">
-              <TrendingUp className="w-6 h-6 text-green-200" />
+
             </div>
             <div>
               <h4 className="font-black text-white mb-2 text-lg">Measurable ROI</h4>
@@ -237,17 +235,16 @@ const September30MegaBanner2025 = () => {
             to="/blog"
             className="group bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 hover:from-cyan-400 hover:via-blue-400 hover:to-purple-400 text-white px-12 py-5 rounded-full font-black text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4"
           >
-            <Rocket className="w-7 h-7 group-hover:rotate-12 transition-transform" />
+
             <span>Explore All 8 Breakthroughs</span>
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+
           </Link>
           
           <Link
             to="/contact"
             className="group border-3 border-white hover:bg-white text-white hover:text-indigo-900 px-12 py-5 rounded-full font-black text-xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4 shadow-xl hover:shadow-2xl"
           >
-            <Lightbulb className="w-7 h-7 group-hover:animate-pulse" />
-            <span>Schedule AI Strategy Call</span>
+            <Lightbulb className="w-7 h-7 group-hover:animate-pulse" <span>Schedule AI Strategy Call</span>
           </Link>
         </div>
 

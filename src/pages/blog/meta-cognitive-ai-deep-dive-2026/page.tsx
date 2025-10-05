@@ -1,37 +1,34 @@
-// @ts-nocheck
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function MetaCognitiveAIDeepDive2026(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Meta-Cognitive AI Deep Dive 2026 — AI that thinks about thinking</title>
-        <meta
-          name="description"
-          content="A practical guide to meta-cognitive AI: introspective loops, verifier stacks, budgeted actions, and KPI-linked scorecards for production safety."
+        <title>Meta Cognitive Ai Deep Dive 2026</title>
+        <meta 
+          name="description" 
+          content="Learn about meta cognitive ai deep dive 2026 and how it can benefit your enterprise." 
         />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026"
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/meta-cognitive-ai-deep-dive-2026" 
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Meta-Cognitive AI Deep Dive 2026</h1>
-        <p className="text-zion-slate-light mb-8">AI that thinks about thinking</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Meta Cognitive Ai Deep Dive 2026</h1>
+        <p className="text-zion-slate-light mb-8">Learn about meta cognitive ai deep dive 2026 and how it can benefit your enterprise.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Meta-cognitive AI systems self-reflect, plan, and verify before acting. This deep dive outlines
-            production patterns that combine verifier stacks, introspective loops, and KPI-linked guardrails.
+            This comprehensive guide covers meta cognitive ai deep dive 2026 and provides practical insights for enterprise implementation.
           </p>
-          <p>
-            You will learn how to set budgeted action limits, wire live canaries to rollback automatically,
-            and generate signed attestations for auditable outcomes across critical workflows.
-          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
 }
-
