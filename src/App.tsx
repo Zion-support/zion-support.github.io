@@ -7,6 +7,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import SEO from './components/SEO';
 import Loading from './components/Loading';
+<<<<<<< HEAD
+=======
+import performanceOptimizer from './utils/performance-optimizer';
+import errorHandler from './utils/advanced-error-handler';
+import securityEnhancer from './utils/security-enhancer';
+import seoOptimizer from './utils/seo-optimizer';
+>>>>>>> origin/fix-merge-conflicts-and-errors
 import './index.css';
 
 // Lazy load pages for better performance
@@ -26,6 +33,7 @@ function App() {
 <<<<<<< HEAD
       try {
         // Initialize performance monitoring
+<<<<<<< HEAD
         // performanceOptimizer.startPerformanceMonitoring();
         
         // Initialize security enhancements
@@ -36,16 +44,37 @@ function App() {
         
         // Set up error reporting
         // errorHandler.setReportingEnabled(true);
+=======
+        performanceOptimizer.startPerformanceMonitoring();
+        
+        // Initialize security enhancements
+        securityEnhancer.setupSecurityMonitoring();
+        
+        // Initialize SEO tracking
+        seoOptimizer.trackPageView();
+        
+        // Set up error reporting
+        errorHandler.setReportingEnabled(true);
+>>>>>>> origin/fix-merge-conflicts-and-errors
         
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
+<<<<<<< HEAD
         // errorHandler.handleError({
         //   type: 'Initialization Error',
         //   message: 'Failed to initialize optimization systems',
         //   error: error.message,
         //   timestamp: new Date().toISOString()
         // });
+=======
+        errorHandler.handleError({
+          type: 'Initialization Error',
+          message: 'Failed to initialize optimization systems',
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+>>>>>>> origin/fix-merge-conflicts-and-errors
       }
     };
 
@@ -54,6 +83,7 @@ function App() {
 
     // Cleanup on unmount
     return () => {
+<<<<<<< HEAD
       // performanceOptimizer.cleanup();
     };
 =======
@@ -80,6 +110,11 @@ function App() {
     initializeOptimizations();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
   }, []);
+=======
+      performanceOptimizer.cleanup();
+    };
+    }, []);
+>>>>>>> origin/fix-merge-conflicts-and-errors
 
   return (
     <ErrorBoundary>
@@ -114,8 +149,10 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
 export default App;
+<<<<<<< HEAD
 =======
 export default App;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
+=======
+>>>>>>> origin/fix-merge-conflicts-and-errors
