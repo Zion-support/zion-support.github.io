@@ -1,5 +1,5 @@
 import Link from 'next/link';
-// export const metadata = {
+export const metadata = {
   title: 'AI Space Technology Success 2026: $50M ROI Case Study',
   description: 'See how a leading space organization achieved $50M ROI with AI space technology, 99.9% mission success, and autonomous operations.',
   keywords: 'AI space technology case study, space AI success, autonomous satellites, space operations ROI',
