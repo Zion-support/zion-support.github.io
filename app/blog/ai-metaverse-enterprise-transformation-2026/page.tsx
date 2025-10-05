@@ -1,6 +1,12 @@
-import React from 'react';
 import Link from 'next/link';
-import { Clock, ArrowRight, Globe, Users, Zap, Target } from 'lucide-react';
+import { ArrowRight,Clock,Globe,Target,Users,Zap } from "lucide-react";
+
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import Globe from 'lucide-react/dist/esm/icons/globe';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import { Target, Users, Clock, Zap, User, Globe } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Metaverse Enterprise Transformation 2026: The Future of Virtual Business Operations',
@@ -26,17 +32,18 @@ export default function AIMetaverseEnterpriseTransformation2026() {
         </h1>
         <div className="flex items-center gap-6 text-gray-600 mb-8">
           <div className="flex items-center gap-2">
-            <Clock className="w-5 h-5" />
+            <Clock />
             <span>28 min read</span>
           </div>
           <div className="flex items-center gap-2">
-            <Globe className="w-5 h-5" />
+            <Globe />
             <span>Metaverse</span>
           </div>
           <div className="flex items-center gap-2">
-            <Users className="w-5 h-5" />
+            <Users />
             <span>Enterprise</span>
           </div>
+        </div>
       </div>
 
       {/* Hero Image */}
@@ -46,12 +53,14 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
               <div className="w-24 h-24 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                <Globe className="w-12 h-12" />
+                <Globe />
               </div>
               <h2 className="text-3xl font-bold mb-4">Metaverse Enterprise</h2>
               <p className="text-xl opacity-90">The Future of Business Operations</p>
             </div>
+          </div>
         </div>
+      </div>
 
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
@@ -69,31 +78,25 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="text-3xl font-bold text-blue-600 mb-2">$400M</div>
           <div className="text-gray-600 font-medium">Market Value</div>
           <div className="text-sm text-gray-500">Enterprise Metaverse</div>
+        </div>
         <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl border border-purple-100">
           <div className="text-3xl font-bold text-purple-600 mb-2">75%</div>
           <div className="text-gray-600 font-medium">Productivity Gain</div>
           <div className="text-sm text-gray-500">Virtual Collaboration</div>
+        </div>
         <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
           <div className="text-3xl font-bold text-green-600 mb-2">90%</div>
           <div className="text-gray-600 font-medium">Cost Reduction</div>
           <div className="text-sm text-gray-500">Training & Meetings</div>
+        </div>
         <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border border-orange-100">
           <div className="text-3xl font-bold text-orange-600 mb-2">60%</div>
           <div className="text-gray-600 font-medium">Faster Onboarding</div>
           <div className="text-sm text-gray-500">New Employees</div>
+        </div>
       </div>
 
       {/* Main Content */}
-      <div className="prose prose-lg max-w-none">"
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">The AI Metaverse Revolution</h2>"
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">"
-          The convergence of AI and metaverse technologies is creating unprecedented opportunities for enterprise transformation. AI-powered virtual environments enable organizations to transcend physical limitations, create immersive experiences, and unlock new levels of collaboration and innovation.
-        </p>
-
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Core Technologies</h3>"
-        <div className="bg-gray-50 p-6 rounded-xl mb-8">"
-          <h4 className="text-xl font-semibold text-gray-900 mb-4">1. AI-Powered Virtual Environments</h4>"
-          <p className="text-gray-700 mb-4">"
       <div className="prose prose-lg max-w-none">
         <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">The AI Metaverse Revolution</h2>
         
@@ -139,19 +142,13 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           </ul>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Transformative Applications</h3>"
-        <div className="grid md:grid-cols-2 gap-8 mb-12">"
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">"
-            <div className="flex items-center gap-3 mb-4">"
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"
-                <Users className="w-6 h-6 text-blue-600" />"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Transformative Applications</h3>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Users className="w-6 h-6 text-blue-600" />
+                <Users />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Virtual Workspaces</h4>
             </div>
@@ -161,11 +158,12 @@ export default function AIMetaverseEnterpriseTransformation2026() {
             <div className="text-sm text-gray-600">
               <strong>Impact:</strong> 75% increase in collaboration effectiveness, 50% reduction in travel costs
             </div>
+          </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-purple-600" />
+                <Zap />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">AI-Powered Training</h4>
             </div>
@@ -175,11 +173,12 @@ export default function AIMetaverseEnterpriseTransformation2026() {
             <div className="text-sm text-gray-600">
               <strong>Impact:</strong> 60% faster skill acquisition, 90% cost reduction in training
             </div>
+          </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <Target className="w-6 h-6 text-green-600" />
+                <Target />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Virtual Events & Conferences</h4>
             </div>
@@ -189,11 +188,12 @@ export default function AIMetaverseEnterpriseTransformation2026() {
             <div className="text-sm text-gray-600">
               <strong>Impact:</strong> 10x larger audience reach, 80% cost savings on venue and travel
             </div>
+          </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                <Globe className="w-6 h-6 text-orange-600" />
+                <Globe />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Customer Experience</h4>
             </div>
@@ -203,15 +203,9 @@ export default function AIMetaverseEnterpriseTransformation2026() {
             <div className="text-sm text-gray-600">
               <strong>Impact:</strong> 40% increase in customer engagement, 30% higher conversion rates
             </div>
+          </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Implementation Strategy</h3>"
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl mb-8">"
-          <h4 className="text-xl font-semibold text-gray-900 mb-6">Phase 1: Foundation (Months 1-4)</h4>"
-          <div className="grid md:grid-cols-3 gap-6">"
-            <div className="bg-white p-4 rounded-lg">"
-              <h5 className="font-semibold text-gray-900 mb-2">Infrastructure Setup</h5>"
-              <p className="text-sm text-gray-600">Deploy VR/AR hardware and software platforms</p>"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Implementation Strategy</h3>
 
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl mb-8">
@@ -229,6 +223,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
               <h5 className="font-semibold text-gray-900 mb-2">Pilot Programs</h5>
               <p className="text-sm text-gray-600">Launch small-scale pilot implementations</p>
             </div>
+          </div>
         </div>
 
         <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl mb-8">
@@ -246,6 +241,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
               <h5 className="font-semibold text-gray-900 mb-2">Data Integration</h5>
               <p className="text-sm text-gray-600">Connect virtual environments to business data</p>
             </div>
+          </div>
         </div>
 
         <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl mb-8">
@@ -263,12 +259,9 @@ export default function AIMetaverseEnterpriseTransformation2026() {
               <h5 className="font-semibold text-gray-900 mb-2">Optimization</h5>
               <p className="text-sm text-gray-600">Optimize based on usage data and feedback</p>
             </div>
+          </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Success Stories</h3>"
-        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl mb-8">"
-          <h4 className="text-xl font-semibold text-gray-900 mb-4">Global Manufacturing Company</h4>"
-          <p className="text-gray-700 mb-4">"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Success Stories</h3>
 
         <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl mb-8">
@@ -280,16 +273,18 @@ export default function AIMetaverseEnterpriseTransformation2026() {
             <div className="text-center">
               <div className="text-2xl font-bold text-indigo-600">50%</div>
               <div className="text-sm text-gray-600">Cost Reduction</div>
+            </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-indigo-600">40%</div>
               <div className="text-sm text-gray-600">Training Improvement</div>
+            </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-indigo-600">$2M</div>
               <div className="text-sm text-gray-600">Annual Savings</div>
+            </div>
           </div>
+        </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Future Outlook</h3>"
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Future Outlook</h3>
 
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -304,8 +299,6 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <li><strong>New Business Models:</strong> Entirely new ways of delivering products and services in virtual environments</li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Getting Started</h3>"
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Getting Started</h3>
 
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -320,15 +313,18 @@ export default function AIMetaverseEnterpriseTransformation2026() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+            >
               Schedule Consultation
             </Link>
             <Link
               href="/services/ai-metaverse-enterprise"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center">
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
+            >
               Learn More
             </Link>
           </div>
+        </div>
       </div>
 
       {/* Related Content */}
@@ -366,14 +362,7 @@ export default function AIMetaverseEnterpriseTransformation2026() {
             </div>
           </Link>
         </div>
+      </div>
     </div>
   );
 }
-</Globe>
-</Target>
-</Zap>
-</Users>
-</Globe>
-</Users>
-</Globe>
-</Clock></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

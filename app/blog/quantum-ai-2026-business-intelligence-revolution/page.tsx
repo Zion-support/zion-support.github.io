@@ -1,6 +1,12 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
+import { ArrowLeft,Calendar,Clock,Tag,User } from "lucide-react";
+
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import User from 'lucide-react/dist/esm/icons/user';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import { ArrowLeft, Clock, Calendar, User, Tag } from 'lucide-react';
+
 
 export const metadata = {
   title: 'Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group',
@@ -15,9 +21,10 @@ export default function QuantumAIBusinessIntelligence() {
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
           <Link 
-            href="/[^"]*"
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            href="/" 
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+          >
+            <ArrowLeft />
             Back to Home
           </Link>
         </div>
@@ -29,17 +36,18 @@ export default function QuantumAIBusinessIntelligence() {
         <div className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              <Calendar />
               <span>January 20, 2026</span>
             </div>
             <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
+              <User />
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              <Clock />
               <span>15 min read</span>
             </div>
+          </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Quantum AI 2026: The Business Intelligence Revolution - Transforming Data into Strategic Advantage
@@ -52,11 +60,12 @@ export default function QuantumAIBusinessIntelligence() {
           <div className="flex flex-wrap gap-2">
             {['Quantum AI', 'Business Intelligence', 'Data Analytics', '2026 Innovation', 'Strategic Intelligence'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag className="w-3 h-3" />
+                <Tag />
                 {tag}
               </span>
             ))}
           </div>
+        </div>
 
         {/* Featured Image/Banner */}
         <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700 text-white rounded-2xl p-8 mb-12">
@@ -66,6 +75,7 @@ export default function QuantumAIBusinessIntelligence() {
               The convergence of quantum computing and artificial intelligence has reached a critical inflection point, creating unprecedented opportunities for strategic decision-making and competitive advantage.
             </p>
           </div>
+        </div>
 
         {/* Article Content */}
         <div className="prose prose-lg max-w-none">
@@ -100,13 +110,17 @@ export default function QuantumAIBusinessIntelligence() {
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-700">90%</div>
                 <div className="text-green-600 text-sm">Improvement in market prediction accuracy</div>
+              </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-700">75%</div>
                 <div className="text-green-600 text-sm">Reduction in investment risk</div>
+              </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-700">60%</div>
                 <div className="text-green-600 text-sm">Increase in profitable trading opportunities</div>
+              </div>
             </div>
+          </div>
 
           <h3>2. Quantum Customer Intelligence</h3>
           <p>
@@ -148,16 +162,21 @@ export default function QuantumAIBusinessIntelligence() {
               <div className="text-center">
                 <div className="text-2xl font-bold text-orange-800">85%</div>
                 <div className="text-orange-600 text-sm">Improvement in forecast accuracy</div>
+              </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-orange-800">$15M</div>
                 <div className="text-orange-600 text-sm">Reduction in inventory costs</div>
+              </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-orange-800">95%</div>
                 <div className="text-orange-600 text-sm">Reduction in stockouts</div>
+              </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-orange-800">40%</div>
                 <div className="text-orange-600 text-sm">Improvement in profit margins</div>
+              </div>
             </div>
+          </div>
 
           <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-6 mb-8">
             <h3 className="text-indigo-800 font-bold mb-4">🏦 Financial Services: Quantum Risk Analysis</h3>
@@ -176,16 +195,21 @@ export default function QuantumAIBusinessIntelligence() {
               <div className="text-center">
                 <div className="text-2xl font-bold text-indigo-800">70%</div>
                 <div className="text-indigo-600 text-sm">Improvement in risk prediction</div>
+              </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-indigo-800">50%</div>
                 <div className="text-indigo-600 text-sm">Reduction in false positives</div>
+              </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-indigo-800">$25M</div>
                 <div className="text-indigo-600 text-sm">Prevented potential losses</div>
+              </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-indigo-800">35%</div>
                 <div className="text-indigo-600 text-sm">Increase in portfolio returns</div>
+              </div>
             </div>
+          </div>
 
           <h2>Implementation Strategy for Quantum AI BI</h2>
           
@@ -216,6 +240,7 @@ export default function QuantumAIBusinessIntelligence() {
                 <li>• Refine quantum algorithms based on business needs</li>
               </ul>
             </div>
+          </div>
 
           <h2>Competitive Advantages of Quantum AI BI</h2>
           
@@ -225,13 +250,17 @@ export default function QuantumAIBusinessIntelligence() {
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">1000x</div>
                 <div className="text-indigo-100">Processing speed improvement</div>
+              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">Real-time</div>
                 <div className="text-indigo-100">Complex query processing</div>
+              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">Unlimited</div>
                 <div className="text-indigo-100">Scalability across organizations</div>
+              </div>
             </div>
+          </div>
 
           <h2>ROI and Business Impact</h2>
           
@@ -241,16 +270,21 @@ export default function QuantumAIBusinessIntelligence() {
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">1000x</div>
                 <div className="text-green-100">Improvement in complex analytics</div>
+              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">60-80%</div>
                 <div className="text-green-100">Improvement in prediction accuracy</div>
+              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">40-60%</div>
                 <div className="text-green-100">Reduction in computational costs</div>
+              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">3-5x</div>
                 <div className="text-green-100">Improvement in strategic decisions</div>
+              </div>
             </div>
+          </div>
 
           <h2>Conclusion</h2>
           <p>
@@ -270,21 +304,20 @@ export default function QuantumAIBusinessIntelligence() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/guides/quantum-ai-implementation-roadmap-2026"
-                className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors">
+                className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
+              >
                 Get Quantum AI Roadmap
               </Link>
               <Link 
                 href="/case-studies/fortune-500-quantum-bi-transformation"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-600 transition-colors">
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-600 transition-colors"
+              >
                 View Success Stories
               </Link>
             </div>
+          </div>
         </div>
       </article>
+    </div>
   );
 }
-</Tag>
-</Clock>
-</User>
-</Calendar>
-</ArrowLeft></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

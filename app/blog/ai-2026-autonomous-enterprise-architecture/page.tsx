@@ -1,6 +1,5 @@
-import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026: Autonomous Enterprise Architecture Revolution | Zion Tech Group',
@@ -75,12 +74,14 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               business priorities, and optimization goals.
             </p>
           </div>
+        </div>
 
         {/* Main Content */}
-<div className="max-w-4xl mx-auto">"
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 md:p-12">"
-            <h2 className="text-3xl font-bold text-white mb-8">The Autonomous Architecture Revolution</h2>"
-            <div className="space-y-6 text-gray-300 leading-relaxed">"origin/cursor/fix-errors-and-merge-to-main-0638
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 md:p-12">
+            <h2 className="text-3xl font-bold text-white mb-8">The Autonomous Architecture Revolution</h2>
+            
+            <div className="space-y-6 text-gray-300 leading-relaxed">
               <p>
                 In 2026, enterprise architecture is undergoing a fundamental transformation. Traditional 
                 static architectures are being replaced by dynamic, self-optimizing systems that adapt 
@@ -117,24 +118,29 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
                 solutions that revolutionize your business operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="/[^"]*"
-                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center">
+                <ArrowRight 
+                  href="/contact" 
+                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center"
+                >
                   Get Started Today
-                </Link>
-                <Link 
-                  href="/[^"]*"
-                  className="px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center">
+                </ArrowRight>
+                <ArrowRight 
+                  href="/services/ai-enterprise-solutions" 
+                  className="px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center"
+                >
                   Learn More
-                </Link>
+                </ArrowRight>
               </div>
+            </div>
           </div>
+        </div>
 
         {/* Related Content */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Related Content</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-autonomous-operations" className="group">
+            <ArrowRight href="/blog/ai-2026-autonomous-operations" className="group">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   Autonomous Operations 2026
                 </h3>
@@ -142,9 +148,10 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
                   Explore how autonomous operations are transforming enterprise workflows.
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
 
-            <Link href="/blog/ai-2026-predictive-infrastructure" className="group">
+            <ArrowRight href="/blog/ai-2026-predictive-infrastructure" className="group">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   Predictive Infrastructure
                 </h3>
@@ -152,9 +159,10 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
                   Learn about AI-powered infrastructure prediction and optimization.
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
 
-            <Link href="/blog/ai-2026-self-healing-systems" className="group">
+            <ArrowRight href="/blog/ai-2026-self-healing-systems" className="group">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   Self-Healing Systems
                 </h3>
@@ -162,24 +170,23 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
                   Discover the future of self-healing enterprise systems.
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
+        </div>
 
         {/* Back to Blog */}
         <div className="text-center mt-16">
-          <Link 
-            href="/[^"]*"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300">
+          <ArrowRight 
+            href="/blog" 
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300"
+          >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             Back to Blog
-          </Link>
+          </ArrowRight>
         </div>
+      </div>
     </div>
   );
 }
-</path>
-</path>
-</path>
-</path></div></div>

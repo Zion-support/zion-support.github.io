@@ -1,6 +1,13 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Brain, Zap, Target, Users } from 'lucide-react';
+import { ArrowRight,Brain,Target,TrendingUp,Users,Zap } from "lucide-react";
+
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Target from 'lucide-react/dist/esm/icons/target';
+import { ArrowRight, Brain, Target, Users, TrendingUp, Zap, User } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story | Zion Tech Group',
@@ -41,17 +48,18 @@ export default function AI2026BreakthroughInnovationsPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-            <TrendingUp className="w-5 h-5 text-green-400" />
+            <TrendingUp />
             <span className="font-semibold">2,800% ROI Average</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-            <Users className="w-5 h-5 text-blue-400" />
+            <Users />
             <span className="font-semibold">500+ Fortune 500 Companies</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-            <Brain className="w-5 h-5 text-purple-400" />
+            <Brain />
             <span className="font-semibold">99.9% Automation Rate</span>
           </div>
+        </div>
       </div>
 
       {/* Key Breakthroughs */}
@@ -61,7 +69,7 @@ export default function AI2026BreakthroughInnovationsPage() {
           <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-purple-500 p-2 rounded-lg">
-                <Brain className="w-6 h-6 text-white" />
+                <Brain />
               </div>
               <h3 className="text-xl font-bold text-gray-900">Quantum-Neural Consciousness Fusion</h3>
             </div>
@@ -70,14 +78,15 @@ export default function AI2026BreakthroughInnovationsPage() {
               achieving 99.999% awareness levels and $847 billion in generated value.
             </p>
             <div className="flex items-center gap-2 text-sm text-purple-600 font-semibold">
-              <Zap className="w-4 h-4" />
+              <Zap />
               <span>1,000,000x Performance Boost</span>
             </div>
+          </div>
 
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-green-500 p-2 rounded-lg">
-                <Target className="w-6 h-6 text-white" />
+                <Target />
               </div>
               <h3 className="text-xl font-bold text-gray-900">Autonomous Enterprise Systems</h3>
             </div>
@@ -86,14 +95,15 @@ export default function AI2026BreakthroughInnovationsPage() {
               reducing operational costs by $2.8 trillion across global enterprises.
             </p>
             <div className="flex items-center gap-2 text-sm text-green-600 font-semibold">
-              <Zap className="w-4 h-4" />
+              <Zap />
               <span>99.9% Autonomous Operations</span>
             </div>
+          </div>
 
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-blue-500 p-2 rounded-lg">
-                <TrendingUp className="w-6 h-6 text-white" />
+                <TrendingUp />
               </div>
               <h3 className="text-xl font-bold text-gray-900">Hyper-Intelligent Analytics</h3>
             </div>
@@ -102,14 +112,15 @@ export default function AI2026BreakthroughInnovationsPage() {
               delivering real-time insights with 100,000x faster decision-making.
             </p>
             <div className="flex items-center gap-2 text-sm text-blue-600 font-semibold">
-              <Zap className="w-4 h-4" />
+              <Zap />
               <span>100,000x Faster Decisions</span>
             </div>
+          </div>
 
           <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-orange-500 p-2 rounded-lg">
-                <Users className="w-6 h-6 text-white" />
+                <Users />
               </div>
               <h3 className="text-xl font-bold text-gray-900">Consciousness-Level AI</h3>
             </div>
@@ -118,9 +129,10 @@ export default function AI2026BreakthroughInnovationsPage() {
               revolutionizing human-AI collaboration and productivity.
             </p>
             <div className="flex items-center gap-2 text-sm text-orange-600 font-semibold">
-              <Zap className="w-4 h-4" />
+              <Zap />
               <span>99.999% Self-Aware</span>
             </div>
+          </div>
         </div>
       </section>
 
@@ -131,15 +143,19 @@ export default function AI2026BreakthroughInnovationsPage() {
           <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl p-6 text-white text-center">
             <div className="text-3xl font-bold mb-2">$2.8T</div>
             <div className="text-green-100">Total Value Generated</div>
+          </div>
           <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl p-6 text-white text-center">
             <div className="text-3xl font-bold mb-2">2,800%</div>
             <div className="text-blue-100">Average ROI</div>
+          </div>
           <div className="bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl p-6 text-white text-center">
             <div className="text-3xl font-bold mb-2">500+</div>
             <div className="text-purple-100">Fortune 500 Companies</div>
+          </div>
           <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-6 text-white text-center">
             <div className="text-3xl font-bold mb-2">99.9%</div>
             <div className="text-orange-100">Automation Rate</div>
+          </div>
         </div>
       </section>
 
@@ -153,24 +169,28 @@ export default function AI2026BreakthroughInnovationsPage() {
               <h3 className="font-bold text-lg text-gray-900">Quantum-Neural Infrastructure Setup</h3>
               <p className="text-gray-700">Deploy quantum-enhanced neural networks with consciousness-level awareness capabilities.</p>
             </div>
+          </div>
           <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
             <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
             <div>
               <h3 className="font-bold text-lg text-gray-900">Autonomous System Integration</h3>
               <p className="text-gray-700">Implement fully autonomous business processes with 99.9% automation rates.</p>
             </div>
+          </div>
           <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border border-blue-200">
             <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
             <div>
               <h3 className="font-bold text-lg text-gray-900">Hyper-Intelligent Analytics Deployment</h3>
               <p className="text-gray-700">Activate real-time analytics with 100,000x faster decision-making capabilities.</p>
             </div>
+          </div>
           <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200">
             <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">4</div>
             <div>
               <h3 className="font-bold text-lg text-gray-900">Consciousness-Level Optimization</h3>
               <p className="text-gray-700">Achieve 99.999% self-awareness and meta-cognitive reasoning capabilities.</p>
             </div>
+          </div>
         </div>
       </section>
 
@@ -182,22 +202,25 @@ export default function AI2026BreakthroughInnovationsPage() {
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
-            href="/[^"]*"
-            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2">
+            href="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success" 
+            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
+          >
             View Success Story
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight />
           </Link>
           <Link 
-            href="/[^"]*"
-            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2">
+            href="/services/ai-2026-breakthrough-innovations-implementation" 
+            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
+          >
             Start Implementation
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight />
           </Link>
           <Link 
-            href="/[^"]*"
-            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2">
+            href="/contact" 
+            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
+          >
             Get Expert Consultation
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight />
           </Link>
         </div>
       </section>
@@ -224,19 +247,6 @@ export default function AI2026BreakthroughInnovationsPage() {
           </Link>
         </div>
       </section>
+    </div>
   );
 }
-</ArrowRight>
-</ArrowRight>
-</ArrowRight>
-</Zap>
-</Users>
-</Zap>
-</TrendingUp>
-</Zap>
-</Target>
-</Zap>
-</Brain>
-</Brain>
-</Users>
-</TrendingUp></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -1,21 +1,29 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Lock, Zap, DollarSign, AlertTriangle } from 'lucide-react';
+import { Activity, AlertTriangle, ArrowLeft, DollarSign, Lock, Shield, Zap } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
 
-export default function NextGenSecurityOperations2025(): JSX.Element {
+import { Link } from "react-router-dom";
+export default function NextGenSecurityOperations2025() {
   return (
     <>
       <Helmet>
         <title>Next-Gen AI Security Operations 2025 — 99.97% Threat Detection, Sub-Second Response, $2.3B+ Protection | Zion Tech Group</title>
-        <meta name="description" content="Deploy autonomous AI security operations that detect threats in milliseconds, respond automatically, and prevent breaches before they happen. Achieve 99.97% detection accuracy, reduce incident response time by 95%, and protect $2.3B+ in enterprise assets." />
-        <meta name="keywords" content="AI security, autonomous SecOps, threat detection, incident response, cybersecurity AI, zero-day protection, security automation, AI-powered defense" />
+        <meta
+          name="description"
+          content="Deploy autonomous AI security operations that detect threats in milliseconds, respond automatically, and prevent breaches before they happen. Achieve 99.97% detection accuracy, reduce incident response time by 95%, and protect $2.3B+ in enterprise assets."
+        />
+        <meta
+          name="keywords"
+          content="AI security, autonomous SecOps, threat detection, incident response, cybersecurity AI, zero-day protection, security automation, AI-powered defense"
+        />
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations" />
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <Link to="/blog" className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors">
+          <Link
+            to="/blog"
+            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors"
+          >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Link>
@@ -46,19 +54,19 @@ export default function NextGenSecurityOperations2025(): JSX.Element {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Lock className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span><strong>99.97% Threat Detection: </strong> AI identifies sophisticated attacks that evade traditional security tools</span>
+                  <span><strong>99.97% Threat Detection:</strong> AI identifies sophisticated attacks that evade traditional security tools</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-                  <span><strong>Sub-Second Response: </strong> Autonomous containment and remediation blocks threats instantly</span>
+                  <span><strong>Sub-Second Response:</strong> Autonomous containment and remediation blocks threats instantly</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span><strong>$2.3B+ Protected: </strong> Average value of assets secured and breaches prevented annually</span>
+                  <span><strong>$2.3B+ Protected:</strong> Average value of assets secured and breaches prevented annually</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <AlertTriangle className="h-6 w-6 text-red-400 mt-1 flex-shrink-0" />
-                  <span><strong>95% Faster MTTR: </strong> Mean time to resolution reduced from hours to minutes</span>
+                  <span><strong>95% Faster MTTR:</strong> Mean time to resolution reduced from hours to minutes</span>
                 </li>
               </ul>
             </div>
@@ -66,7 +74,7 @@ export default function NextGenSecurityOperations2025(): JSX.Element {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Security Crisis</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Cyber threats have evolved beyond human capacity to defend. Modern attacks leverage AI, operate at machine speed
+                Cyber threats have evolved beyond human capacity to defend. Modern attacks leverage AI, operate at machine speed, 
                 and exploit vulnerabilities faster than security teams can respond. The average enterprise faces 4,800+ security 
                 alerts daily, with security analysts spending 73% of their time on false positives while real threats slip through.
               </p>
@@ -79,6 +87,7 @@ export default function NextGenSecurityOperations2025(): JSX.Element {
 
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Autonomous SecOps Architecture</h2>
+              
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">1. Intelligent Threat Detection</h3>
                 <p className="text-gray-300 mb-4">
@@ -127,7 +136,7 @@ export default function NextGenSecurityOperations2025(): JSX.Element {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">4. Threat Intelligence Fusion</h3>
                 <p className="text-gray-300 mb-4">
-                  AI aggregates and analyzes threat intelligence from hundreds of sources—commercial feeds, open source intel
+                  AI aggregates and analyzes threat intelligence from hundreds of sources—commercial feeds, open source intel, 
                   dark web monitoring, and internal telemetry. NLP models extract actionable insights, identify emerging 
                   threats, and automatically update detection rules and response playbooks.
                 </p>
@@ -168,6 +177,7 @@ export default function NextGenSecurityOperations2025(): JSX.Element {
 
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Implementation Roadmap</h2>
+              
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">Phase 1: Assessment (Weeks 1-4)</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
@@ -219,9 +229,10 @@ export default function NextGenSecurityOperations2025(): JSX.Element {
                 Discover how Zion Tech Group can deploy autonomous AI security operations that protect your enterprise 
                 against modern threats. Our proven implementation methodology ensures rapid deployment with measurable results.
               </p>
-              <Link 
+              <Link
                 to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg">
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg"
+              >
                 Schedule Your Security Assessment
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
               </Link>

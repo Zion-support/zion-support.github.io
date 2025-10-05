@@ -1,6 +1,12 @@
-import React from 'react';
 import Link from 'next/link';
-import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight,Clock,Target,TrendingUp,Zap } from "lucide-react";
+
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import Bot from 'lucide-react/dist/esm/icons/bot';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Target from 'lucide-react/dist/esm/icons/target';
+import { Target, TrendingUp, Clock, Zap, Bot } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',
@@ -26,17 +32,18 @@ export default function AIAutonomousRobotics2026() {
         </h1>
         <div className="flex items-center gap-6 text-gray-600 mb-8">
           <div className="flex items-center gap-2">
-            <Clock className="w-5 h-5" />
+            <Clock />
             <span>32 min read</span>
           </div>
           <div className="flex items-center gap-2">
-            <Bot className="w-5 h-5" />
+            <Bot />
             <span>Robotics</span>
           </div>
           <div className="flex items-center gap-2">
-            <TrendingUp className="w-5 h-5" />
+            <TrendingUp />
             <span>Automation</span>
           </div>
+        </div>
       </div>
 
       {/* Hero Image */}
@@ -46,12 +53,14 @@ export default function AIAutonomousRobotics2026() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
               <div className="w-24 h-24 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                <Bot className="w-12 h-12" />
+                <Bot />
               </div>
               <h2 className="text-3xl font-bold mb-4">Autonomous Robotics</h2>
               <p className="text-xl opacity-90">The Future of Intelligent Automation</p>
             </div>
+          </div>
         </div>
+      </div>
 
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
@@ -69,31 +78,25 @@ export default function AIAutonomousRobotics2026() {
           <div className="text-3xl font-bold text-green-600 mb-2">$1.2T</div>
           <div className="text-gray-600 font-medium">Market Value</div>
           <div className="text-sm text-gray-500">Autonomous Robotics</div>
+        </div>
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100">
           <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
           <div className="text-gray-600 font-medium">Efficiency Gain</div>
           <div className="text-sm text-gray-500">Manufacturing</div>
+        </div>
         <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl border border-purple-100">
           <div className="text-3xl font-bold text-purple-600 mb-2">70%</div>
           <div className="text-gray-600 font-medium">Cost Reduction</div>
           <div className="text-sm text-gray-500">Operations</div>
+        </div>
         <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border border-orange-100">
           <div className="text-3xl font-bold text-orange-600 mb-2">95%</div>
           <div className="text-gray-600 font-medium">Accuracy Rate</div>
           <div className="text-sm text-gray-500">Complex Tasks</div>
+        </div>
       </div>
 
       {/* Main Content */}
-      <div className="prose prose-lg max-w-none">"
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">The Autonomous Robotics Revolution</h2>"
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">"
-          AI autonomous robotics represents the convergence of artificial intelligence, machine learning, and advanced robotics technologies. These systems can perceive their environment, make intelligent decisions, and execute complex tasks with minimal human intervention, opening up unprecedented possibilities for automation and efficiency.
-        </p>
-
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Core Technologies</h3>"
-        <div className="bg-gray-50 p-6 rounded-xl mb-8">"
-          <h4 className="text-xl font-semibold text-gray-900 mb-4">1. Advanced Perception Systems</h4>"
-          <p className="text-gray-700 mb-4">"
       <div className="prose prose-lg max-w-none">
         <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">The Autonomous Robotics Revolution</h2>
         
@@ -142,19 +145,13 @@ export default function AIAutonomousRobotics2026() {
           </ul>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Industry Applications</h3>"
-        <div className="grid md:grid-cols-2 gap-8 mb-12">"
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">"
-            <div className="flex items-center gap-3 mb-4">"
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">"
-                <Bot className="w-6 h-6 text-green-600" />"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Industry Applications</h3>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <Bot className="w-6 h-6 text-green-600" />
+                <Bot />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Manufacturing & Assembly</h4>
             </div>
@@ -164,11 +161,12 @@ export default function AIAutonomousRobotics2026() {
             <div className="text-sm text-gray-600">
               <strong>Impact:</strong> 85% efficiency gain, 70% cost reduction, 99.9% uptime
             </div>
+          </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-blue-600" />
+                <Zap />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Logistics & Warehousing</h4>
             </div>
@@ -178,11 +176,12 @@ export default function AIAutonomousRobotics2026() {
             <div className="text-sm text-gray-600">
               <strong>Impact:</strong> 60% faster order fulfillment, 50% space optimization
             </div>
+          </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <Target className="w-6 h-6 text-purple-600" />
+                <Target />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Healthcare & Surgery</h4>
             </div>
@@ -192,11 +191,12 @@ export default function AIAutonomousRobotics2026() {
             <div className="text-sm text-gray-600">
               <strong>Impact:</strong> 40% faster recovery, 90% precision improvement
             </div>
+          </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-orange-600" />
+                <TrendingUp />
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Agriculture & Food</h4>
             </div>
@@ -206,15 +206,9 @@ export default function AIAutonomousRobotics2026() {
             <div className="text-sm text-gray-600">
               <strong>Impact:</strong> 30% yield increase, 80% labor cost reduction
             </div>
+          </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Implementation Framework</h3>"
-        <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl mb-8">"
-          <h4 className="text-xl font-semibold text-gray-900 mb-6">Phase 1: Assessment & Planning (Months 1-3)</h4>"
-          <div className="grid md:grid-cols-3 gap-6">"
-            <div className="bg-white p-4 rounded-lg">"
-              <h5 className="font-semibold text-gray-900 mb-2">Process Analysis</h5>"
-              <p className="text-sm text-gray-600">Identify automation opportunities and requirements</p>"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Implementation Framework</h3>
 
         <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl mb-8">
@@ -232,6 +226,7 @@ export default function AIAutonomousRobotics2026() {
               <h5 className="font-semibold text-gray-900 mb-2">ROI Planning</h5>
               <p className="text-sm text-gray-600">Develop business case and implementation timeline</p>
             </div>
+          </div>
         </div>
 
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl mb-8">
@@ -249,6 +244,7 @@ export default function AIAutonomousRobotics2026() {
               <h5 className="font-semibold text-gray-900 mb-2">Safety Testing</h5>
               <p className="text-sm text-gray-600">Comprehensive safety and performance validation</p>
             </div>
+          </div>
         </div>
 
         <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl mb-8">
@@ -266,12 +262,9 @@ export default function AIAutonomousRobotics2026() {
               <h5 className="font-semibold text-gray-900 mb-2">Continuous Improvement</h5>
               <p className="text-sm text-gray-600">Monitor performance and optimize operations</p>
             </div>
+          </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Success Stories</h3>"
-        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl mb-8">"
-          <h4 className="text-xl font-semibold text-gray-900 mb-4">Global Automotive Manufacturer</h4>"
-          <p className="text-gray-700 mb-4">"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Success Stories</h3>
 
         <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl mb-8">
@@ -283,16 +276,18 @@ export default function AIAutonomousRobotics2026() {
             <div className="text-center">
               <div className="text-2xl font-bold text-indigo-600">85%</div>
               <div className="text-sm text-gray-600">Efficiency Gain</div>
+            </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-indigo-600">90%</div>
               <div className="text-sm text-gray-600">Defect Reduction</div>
+            </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-indigo-600">$50M</div>
               <div className="text-sm text-gray-600">Annual Savings</div>
+            </div>
           </div>
+        </div>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Future Trends</h3>"
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Future Trends</h3>
 
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -308,8 +303,6 @@ export default function AIAutonomousRobotics2026() {
           <li><strong>Quantum-Enhanced AI:</strong> Quantum computing accelerating robotic decision-making</li>
         </ul>
 
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Getting Started</h3>"
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">"
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Getting Started</h3>
 
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -324,15 +317,18 @@ export default function AIAutonomousRobotics2026() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
+              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+            >
               Schedule Consultation
             </Link>
             <Link
               href="/services/ai-autonomous-robotics"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center">
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
+            >
               Learn More
             </Link>
           </div>
+        </div>
       </div>
 
       {/* Related Content */}
@@ -370,14 +366,7 @@ export default function AIAutonomousRobotics2026() {
             </div>
           </Link>
         </div>
+      </div>
     </div>
   );
 }
-</TrendingUp>
-</Target>
-</Zap>
-</Bot>
-</Bot>
-</TrendingUp>
-</Bot>
-</Clock></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

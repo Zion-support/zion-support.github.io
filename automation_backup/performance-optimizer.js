@@ -1,2 +1,1 @@
-    optimizer.stop();
-    process.exit(0)})}
+optimizer.stop(); process.exit(0)})}

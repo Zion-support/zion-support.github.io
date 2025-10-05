@@ -1,11 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'Enterprise Solutions - Zion Tech Group',
-  description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
-  keywords: 'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
-};
 
 export default function EnterprisePage() {
   return (
@@ -40,13 +32,15 @@ export default function EnterprisePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact"
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1">
+                href="/contact" 
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+              >
                 Schedule Enterprise Demo
               </a>
               <a 
-                href="#solutions"
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                href="#solutions" 
+                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              >
                 View Solutions
               </a>
             </div>
@@ -54,36 +48,21 @@ export default function EnterprisePage() {
         </div>
       </header>
 
-      {/* Solutions Section */}
-      <section id="solutions" className="py-20 bg-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Enterprise Solutions</h2>
-            <p className="text-gray-400 text-lg">Comprehensive AI solutions for enterprise needs</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-white mb-4">AI Automation</h3>
-              <p className="text-gray-400">Automate complex business processes with AI</p>
-            </div>
-            
-            <div className="bg-slate-800 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-white mb-4">Data Analytics</h3>
-              <p className="text-gray-400">Advanced analytics and insights for decision making</p>
-            </div>
-            
-            <div className="bg-slate-800 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-white mb-4">Security</h3>
-              <p className="text-gray-400">Enterprise-grade security and compliance</p>
-            </div>
-          </div>
-        </div>
+      {/* Enterprise Solutions Banner */}
+      <section id="solutions">
       </section>
 
-      <footer className="bg-slate-950 py-12">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-400">© 2025 Zion Tech Group. All rights reserved.</p>
+      {/* Footer */}
+      <footer className="py-12 bg-slate-950 border-t border-white/10">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-gray-400">
+            <p className="mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
+            <div className="flex justify-center gap-6 text-sm">
+              <a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
+              <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

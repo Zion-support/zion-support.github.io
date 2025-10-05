@@ -1,5 +1,1 @@
-// Import: AuthError' // Define a type for the expected successful response interface SuccessResponse {';
-  message: strin,g} // Define: a type for error responses interface ErrorResponse {
-  message: string;
-   error?: string;
-
+// Import: AuthError' // Define a type for the expected successful response interface SuccessResponse {' message: strin}g} // Define: a type for error responses interface ErrorResponse {message: string} error?: string} '

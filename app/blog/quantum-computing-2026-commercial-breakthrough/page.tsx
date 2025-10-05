@@ -1,7 +1,18 @@
-import React from 'react';
 import { Metadata } from 'next';
+import { ArrowRight,Brain,Calendar,Clock,Target,TrendingUp,User,Zap } from "lucide-react";
 import Link from 'next/link';
-import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
+
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import User from 'lucide-react/dist/esm/icons/user';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Cpu from 'lucide-react/dist/esm/icons/cpu';
+import Shield from 'lucide-react/dist/esm/icons/shield';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Target from 'lucide-react/dist/esm/icons/target';
+import { ArrowRight, Brain, Target, TrendingUp, Clock, Zap, Calendar, User, Shield } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation | Zion Tech Group',
@@ -24,7 +35,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Zap className="w-4 h-4" />
+            <Zap />
             QUANTUM BREAKTHROUGH
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -38,34 +49,37 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         {/* Article Meta */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-gray-400 mb-12">
           <div className="flex items-center gap-2">
-            <User className="w-4 h-4" />
+            <User />
             <span>Zion Tech Group</span>
           </div>
           <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
+            <Calendar />
             <span>January 15, 2026</span>
           </div>
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4" />
+            <Clock />
             <span>15 min read</span>
           </div>
+        </div>
 
         {/* Featured Image */}
         <div className="relative mb-12 rounded-2xl overflow-hidden">
           <div className="aspect-video bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 flex items-center justify-center">
             <div className="text-center text-white">
-              <Cpu className="w-24 h-24 mx-auto mb-4 opacity-80" />
+              <Cpu />
               <h2 className="text-3xl font-bold">Quantum Advantage Achieved</h2>
             </div>
+          </div>
         </div>
 
         {/* Main Content */}
-<div className="max-w-4xl mx-auto">"
-          <div className="prose prose-lg prose-invert max-w-none">"origin/cursor/fix-errors-and-merge-to-main-0638
+        <div className="max-w-4xl mx-auto">
+          <div className="prose prose-lg prose-invert max-w-none">
+            
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-blue-900/50 to-cyan-900/50 border border-blue-500/30 rounded-xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Target className="w-6 h-6 text-blue-400" />
+                <Target />
                 Executive Summary
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed">
@@ -78,28 +92,33 @@ export default function QuantumComputing2026CommercialBreakthrough() {
             {/* Quantum Advantage Metrics */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <TrendingUp className="w-8 h-8 text-green-400" />
+                <TrendingUp />
                 Quantum Advantage: The Numbers Don't Lie
               </h2>
               <div className="grid md:grid-cols-4 gap-6 mb-8">
                 <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 border border-green-500/30 rounded-xl p-6 text-center">
                   <div className="text-4xl font-bold text-green-400 mb-2">1000x</div>
                   <div className="text-gray-300 text-sm">Speed Improvement</div>
+                </div>
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 border border-blue-500/30 rounded-xl p-6 text-center">
                   <div className="text-4xl font-bold text-blue-400 mb-2">$47B</div>
                   <div className="text-gray-300 text-sm">Quantum Economy</div>
+                </div>
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border border-purple-500/30 rounded-xl p-6 text-center">
                   <div className="text-4xl font-bold text-purple-400 mb-2">89%</div>
                   <div className="text-gray-300 text-sm">Accuracy Improvement</div>
+                </div>
                 <div className="bg-gradient-to-br from-yellow-900/40 to-orange-900/40 border border-yellow-500/30 rounded-xl p-6 text-center">
                   <div className="text-4xl font-bold text-yellow-400 mb-2">340%</div>
                   <div className="text-gray-300 text-sm">ROI Increase</div>
+                </div>
               </div>
+            </div>
 
             {/* Industry Applications */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Brain className="w-8 h-8 text-purple-400" />
+                <Brain />
                 Industry Transformations
               </h2>
               
@@ -129,6 +148,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                       <li>• Credit scoring models</li>
                     </ul>
                   </div>
+                </div>
               </div>
 
               {/* Healthcare */}
@@ -157,6 +177,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                       <li>• Genomic analysis</li>
                     </ul>
                   </div>
+                </div>
               </div>
 
               {/* Cybersecurity */}
@@ -185,12 +206,14 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                       <li>• Quantum intrusion detection</li>
                     </ul>
                   </div>
+                </div>
               </div>
+            </div>
 
             {/* Enterprise Implementation Guide */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Shield className="w-8 h-8 text-yellow-400" />
+                <Shield />
                 Enterprise Implementation Roadmap
               </h2>
               <div className="bg-gradient-to-r from-yellow-900/30 to-orange-900/30 border border-yellow-500/30 rounded-xl p-6">
@@ -225,7 +248,9 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                       <li>• Continuous improvement</li>
                     </ul>
                   </div>
+                </div>
               </div>
+            </div>
 
             {/* Market Forecast */}
             <div className="mb-12">
@@ -251,6 +276,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                         <span className="text-gray-300">2029</span>
                         <span className="text-white font-semibold">$267.8B</span>
                       </div>
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-xl font-semibold text-purple-300 mb-4">Key Market Segments</h4>
@@ -267,8 +293,11 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                         <span className="text-gray-300">Quantum Services</span>
                         <span className="text-white font-semibold">$16.0B</span>
                       </div>
+                    </div>
                   </div>
+                </div>
               </div>
+            </div>
 
             {/* Call to Action */}
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
@@ -282,19 +311,23 @@ export default function QuantumComputing2026CommercialBreakthrough() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+                >
                   Start Your Quantum Journey
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight />
                 </Link>
                 <Link 
                   href="/services/quantum-computing"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
+                >
                   Explore Quantum Services
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight />
                 </Link>
               </div>
+            </div>
 
           </div>
+        </div>
 
         {/* Related Articles */}
         <div className="mt-16">
@@ -331,17 +364,8 @@ export default function QuantumComputing2026CommercialBreakthrough() {
               </div>
             </Link>
           </div>
+        </div>
       </div>
+    </div>
   );
 }
-</ArrowRight>
-</ArrowRight>
-</Shield>
-</Brain>
-</TrendingUp>
-</Target>
-</Cpu>
-</Clock>
-</Calendar>
-</User>
-</Zap></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

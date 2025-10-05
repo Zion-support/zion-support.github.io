@@ -1,2 +1,36 @@
- import: { Helmet } from 'react-helmet-async' import {  Headphones, FileText, Search, BarChart3, Play, Download, Share2, Zap, CheckCircle, Star, Users, Clock, Target, TrendingUp, Shield, Globe, Smartphone, Database, Cloud, Lock } from 'lucide-react'  export default function PodcastTranscriptionInsights() { return ( <> <Helmet> <title>AI Podcast Transcription & Insights Platform | Zion Tech Group</title> <meta name="description" content="Transform your podcasts into searchable, SEO-optimized content with our AI-powered transcription and insights platform. Get transcripts, chapters, show notes, and more." / / / / / / />"'" <meta name="keywords" content="podcast transcription, AI transcription, podcast insights, SEO optimization, content creation, audio analysis" / / / / / / />"'" <link rel="canonical" href="https: """"",;",;";
- import: { Helmet } from 'react-helmet-async' import {  Headphones, FileText, Search, BarChart3, Play, Download, Share2, Zap, CheckCircle, Star, Users, Clock, Target, TrendingUp, Shield, Globe, Smartphone, Database, Cloud, Lock } from 'lucide-react'  export default function PodcastTranscriptionInsights() { return ( <> <Helmet> <title>AI Podcast Transcription & Insights Platform | Zion Tech Group</title> <meta name='description' content='Transform your podcasts into searchable, SEO-optimized content with our AI-powered transcription and insights platform. Get transcripts, chapters, show notes, and more.' / / / / / / />''' <meta name='keywords' content='podcast transcription, AI transcription, podcast insights, SEO optimization, content creation, audio analysis' / / / / / / />''' <link rel='canonical' href='https: '''";";";";,
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Podcast Transcription Insights | Zion Tech Group',
+  description: 'Professional Podcast Transcription Insights services from Zion Tech Group.',
+  keywords: 'Podcast Transcription Insights, services, technology, enterprise',
+  openGraph: {
+    title: 'Podcast Transcription Insights',
+    description: 'Professional Podcast Transcription Insights services from Zion Tech Group.',
+    type: 'website'}
+  },
+};
+export default function podcasttranscriptioninsights() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Podcast Transcription Insights
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Professional Technology Services
+            </p>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              Our Podcast Transcription Insights services are designed to help
+              your business achieve its goals through innovative technology
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Podcast Transcription Insights | Zion Tech Group',' description: 'Professional Podcast Transcription Insights services from Zion Tech Group.',' keywords: 'Podcast Transcription Insights, services, technology, enterprise', openGraph: {' title: 'Podcast Transcription Insights',' description: 'Professional Podcast Transcription Insights services from Zion Tech Group.',' type: 'website'} }, }; export default function podcasttranscriptioninsights() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Podcast Transcription Insights</h1> <p className="text-xl text-gray-600 mb-6" >Professional Technology Services</p> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > Our Podcast Transcription Insights services are designed to help your business achieve its goals through innovative technology solutions. </p> </div> </div> </div> </div> )} }'
