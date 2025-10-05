@@ -1,25 +1,36 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-interface, LoadingProp, s { 
-  si, z, e?: 'sm' | 'md' | 'lg';
-  te, x, t ?  : stri, n, g;
- }
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+}
 
-const, Loadin, g: Rea, c, t.FC<LoadingPro, p, s> = ({
-  si, z, e = ', m, d',
-  te, x, t = 'Load, i, n, g...',
+const Loading: React.FC<LoadingProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  className = ''
 }) => {
-  const, sizeClasse, s = {
-    sm: 'w-4 , h-, 4',
-    md: 'w-8 h-, 8',
-    lg: 'w-1, 2, h-1, 2',
-  }; retu, r, n (
-    <div, classNam, e = 'flex, fle, x-col, item, s-center, justif, y-cente, r, p-8'>
-      <div, classNam, e = { `${sizeClass, e, s[s, i, z, e] }, anima, t, e-spin, rounde, d-full, borde, r-2, borde, r-gr, a, y-300, borde, r-t-bl, u, e-6, 0, 0`}
-       />
-      {  te, x, t  && <p, classNam, e = 'mt-4, tex, t-sm, tex, t-gr, a, y-6, 0, 0' > {te, x, t  }</p>}
-    </di, v>
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  };
+
+  return (
+    <div className={`flex items-center justify-center ${className}`}>
+      <div className="flex flex-col items-center space-y-2">
+        <div
+          className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}
+        />
+        {text && (
+          <p className="text-sm text-gray-600 animate-pulse">
+            {text}
+          </p>
+        )}
+      </div>
+    </div>
   );
 };
 
-export, default, Loading;
+export default Loading;

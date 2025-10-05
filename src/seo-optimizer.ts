@@ -1,31 +1,175 @@
-// SEO, Optimization, Script
-export, const, optimizeSEO = () => {
-  // Add, structured, data
-  const, structuredDat, a = {
-    '@conte, x, t': 'htt, p, s: //sche, m, a.o, r, g',
-    '@ty, p, e': 'Organizati, o, n',
-    na, m, e: 'Zion, Tech, Grou, p',
-    descripti, o, n: 'Advanced, AI, and IT, Solutio, n, s',
-    u, r, l: 'htt, p, s://zi, o, n.ap, p',
-    lo, g, o: 'htt, p, s://zi, o, n.a, p, p/lo, g, o.pn, g',
-    same, A, s: [
-      'htt, p, s://twitt, e, r.c, o, m/ziont, e, c, h',
-      'htt, p, s: //linked, i, n.c, o, m/compa, n, y/zi, o, n-t, e, c, h',
-    ],
-  }; const, scrip, t = docume, n, t.createEleme, n, t('scr, i, p, t'); scri, p, t.ty, p, e = 'applicati, o, n/ld+js, o, n'; scri, p, t.textConte, n, t = JS, O, N.stringi, f, y(structuredD, a, t, a); docume, n, t.he, a, d.appendChi, l, d(scri, p, t);
+<<<<<<< HEAD
+// SEO Optimization Script
+export const seoOptimizer = {
+  trackPageView: () => {
+    // Track page views for SEO
+    console.log('SEO tracking initialized');
+    
+    // Add structured data
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Advanced AI and IT Solutions"
+    };
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  }
+};
+=======
+// SEO optimization utilities
+export class SEOOptimizer {
+  private static instance: SEOOptimizer;
+  private isInitialized = false;
 
-  // Optimize, meta, tags
-  const, metaDescriptio, n = docume, n, t.querySelect, o, r('me, t, a[na, m, e="descript, i, o, n"]'); if (metaDescripti, o, n) {
-    metaDescripti, o, n.setAttribu, t, e(
-      'conte, n, t',
-      'Zion, Tech, Group - Advanced, AI, and IT, Solution, s. Transform, your, business with, cuttin, g-edge, artificial, intelligence and, technology, solutions.',
-    );
+  static getInstance(): SEOOptimizer {
+    if (!SEOOptimizer.instance) {
+      SEOOptimizer.instance = new SEOOptimizer();
+    }
+    return SEOOptimizer.instance;
   }
 
-  // Add, canonical, URL
-  const, canonica, l = docume, n, t.createEleme, n, t('l, i, n, k'); canonic, a, l.r, e, l = 'canonic, a, l'; canonic, a, l.hr, e, f = wind, o, w.locati, o, n.hr, e, f; docume, n, t.he, a, d.appendChi, l, d(canoni, c, a, l);
-};
+  init(): void {
+    if (this.isInitialized) {
+      return;
+    }
 
-// Au, t, o-run, on, page load, i, f (typeof, windo, w !== 'undefin, e, d') {
-  docume, n, t.addEventListen, e, r('DOMContentLoad, e, d', optimizeS, E, O);
+    this.setupMetaTags();
+    this.setupStructuredData();
+    this.setupSitemap();
+    this.setupRobotsTxt();
+    
+    this.isInitialized = true;
+    console.log('SEO optimizer initialized');
+  }
+
+  private setupMetaTags(): void {
+    // Set up basic meta tags
+    this.setMetaTag('description', 'Zion Tech Group - Advanced AI and IT Solutions');
+    this.setMetaTag('keywords', 'AI, IT solutions, enterprise, digital transformation');
+    this.setMetaTag('author', 'Zion Tech Group');
+    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
+  }
+
+  private setMetaTag(name: string, content: string): void {
+    let meta = document.querySelector(`meta[name="${name}"]`);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  }
+
+  private setupStructuredData(): void {
+    // Set up structured data for better SEO
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup"
+      ]
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+  }
+
+  private setupSitemap(): void {
+    // Generate sitemap
+    const sitemap = this.generateSitemap();
+    console.log('Sitemap generated:', sitemap);
+  }
+
+  private generateSitemap(): string[] {
+    return [
+      '/',
+      '/about',
+      '/services',
+      '/blog',
+      '/contact',
+      '/team',
+      '/privacy',
+      '/terms'
+    ];
+  }
+
+  private setupRobotsTxt(): void {
+    // Set up robots.txt content
+    const robotsContent = `User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Sitemap: https://ziontechgroup.com/sitemap.xml`;
+    
+    console.log('Robots.txt content:', robotsContent);
+  }
+
+  trackPageView(): void {
+    // Track page views for analytics
+    const pageData = {
+      url: window.location.href,
+      title: document.title,
+      timestamp: new Date().toISOString()
+    };
+    
+    console.log('Page view tracked:', pageData);
+    
+    // Send to analytics service
+    this.sendToAnalytics(pageData);
+  }
+
+  private sendToAnalytics(data: { url: string; title: string; timestamp: string }): void {
+    // Send data to analytics service
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'page_view', {
+        page_title: data.title,
+        page_location: data.url
+      });
+    }
+  }
+
+  updateTitle(title: string): void {
+    document.title = `${title} | Zion Tech Group`;
+  }
+
+  updateDescription(description: string): void {
+    this.setMetaTag('description', description);
+  }
+
+  updateKeywords(keywords: string): void {
+    this.setMetaTag('keywords', keywords);
+  }
+
+  cleanup(): void {
+    this.isInitialized = false;
+    console.log('SEO optimizer cleaned up');
+  }
 }
+
+export default SEOOptimizer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-0af9
