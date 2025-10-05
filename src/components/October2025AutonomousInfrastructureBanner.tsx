@@ -196,8 +196,6 @@ const October2025AutonomousInfrastructureBanner = () => {
               <Cpu className="w-8 h-8" />
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
-              <Cpu className="w-8 h-8" />
-            </div>
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>
             <div className="text-sm text-cyan-100">
               18-min read: Complete architecture, ML models, Python code examples, implementation roadmap
