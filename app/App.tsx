@@ -20,13 +20,13 @@ import '../index.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    console.Log('App initialized');
+    console.log('App initialized');
 
     // Initialize performance monitoring
     performanceOptimizer.startRender('App');
 
-    console.Log('Performance monitoring initialized');
-    console.Log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+    console.log('Performance monitoring initialized');
+    console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (

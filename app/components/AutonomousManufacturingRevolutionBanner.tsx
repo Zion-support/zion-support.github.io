@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingUp, Zap, Factory, Cogs } from 'lucide-react';
+import { ArrowRight, TrendingUp, Zap, Factory, Settings } from 'lucide-react';;
 import React from 'react';
 
 

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Log, Zap, TrendingUp, Shield, Users, BarChart3, Cog } from 'lucide-react';
+import { FileText, Zap, TrendingUp, Shield, Users, BarChart3, Settings } from 'lucide-react';;
 
 
 
