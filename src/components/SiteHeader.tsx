@@ -13,11 +13,7 @@ const SiteHeader: React.FC = () => {
         <div className="h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <span className="text-2xl">🚀</span>
-<<<<<<< HEAD
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-=======
-            <span className="text-xl font-bold text-gray-900">ZionTechGroup</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-f69a
           </Link>
           
           <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
