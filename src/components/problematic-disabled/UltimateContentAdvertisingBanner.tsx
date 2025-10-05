@@ -8,19 +8,19 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
       description: "Meta-cognitive AI, quantum-neural networks, and autonomous operations",
       highlight: "1000x Performance"
     },
-    {",
+    {
       icon: "💰",
       title: "Proven Cost Savings",
       description: "Fortune 500 case studies showing $500M+ in annual savings",
       highlight: "$500M+ Savings"
     },
-    {",
+    {
       icon: "🛡️",
       title: "Military-Grade Security",
       description: "Zero-trust architecture with 99.99% threat detection",
       highlight: "99.99% Security"
     },
-    {",
+    {
       icon: "🤖",
       title: "Autonomous Operations",
       description: "98% automation rates with self-healing systems",
