@@ -1,5 +1,6 @@
 import Link from 'next/link';
-// export default function NewContent2027RevolutionaryBanner() {
+
+export default function NewContent2027RevolutionaryBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="max-w-6xl mx-auto px-4">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-// export default function FreshContent2027ShowcaseBanner() {
+
+export default function FreshContent2027ShowcaseBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 rounded-2xl p-8 mb-12">
       {/* Background Pattern */}
