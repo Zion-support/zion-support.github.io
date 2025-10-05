@@ -11,12 +11,11 @@ const RouterWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 );
 
 describe('UnifiedPromotionalBanner', () => {
-  const defaultProps: UnifiedPromotionalBannerProps = {
-    title: 'Test Banner Title',
+  const defaultProps: UnifiedPromotionalBannerProps = { title: 'Test Banner Title',
     description: 'Test banner description',
     ctaText: 'Click Here',
     ctaLink: '/test-link'
-  };
+   };
 
   describe('Core Functionality', () => {
     it('renders with required props', () => {

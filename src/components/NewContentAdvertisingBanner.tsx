@@ -24,7 +24,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '25K+',
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
-      icon: '🚀'
+      icon: '🚀',
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
@@ -36,7 +36,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '19K+',
       badge: 'FEATURED',
       gradient: 'from-teal-500 to-cyan-500',
-      icon: '🚀'
+      icon: '🚀',
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
     },
     {
@@ -48,7 +48,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
-      icon: '🚀'
+      icon: '🚀',
       link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
@@ -60,7 +60,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '41K+',
       badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
-      icon: '🚀'
+      icon: '🚀',
       link: '/blog/edge-2026-private-feature-flags'
     },
     {
@@ -72,7 +72,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
-      icon: '🚀'
+      icon: '🚀',
       link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
@@ -80,7 +80,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
   const achievements = [
     { value: '500K+', label: 'Monthly Readers', icon: '🚀','
     { value: '98%', label: 'Customer Satisfaction', icon: '🚀','
-    { value: '200+', label: 'Expert Articles', icon: '🚀','
+    { value: '200+', label: 'Expert Articles', icon: '🚀',',
     { value: '50+', label: 'Industry Awards', icon: '🚀''
   ];
 

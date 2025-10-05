@@ -11,7 +11,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '180K+',
       badge: 'BREAKTHROUGH',
       gradient: 'from-emerald-500 to-teal-500',
-      icon: '🚀'
+      icon: '🚀',
       link: '/blog/ai-2026-feb-autonomous-neural-networks',
       description: 'Self-evolving neural architectures achieving 99.97% accuracy in autonomous decision-making'
     },
@@ -24,7 +24,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '156K+',
       badge: 'FEATURED',
       gradient: 'from-blue-500 to-cyan-500',
-      icon: '🚀'
+      icon: '🚀',
       link: '/blog/edge-2026-feb-quantum-computing',
       description: 'Ultra-low latency quantum processing delivering sub-millisecond response times'
     },
@@ -37,7 +37,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '203K+',
       badge: 'REVOLUTIONARY',
       gradient: 'from-purple-500 to-pink-500',
-      icon: '🚀'
+      icon: '🚀',
       link: '/blog/ai-2026-feb-meta-cognitive-systems',
       description: 'AI that thinks about thinking - achieving true self-awareness and autonomous learning'
     }

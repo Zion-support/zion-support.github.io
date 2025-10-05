@@ -6,7 +6,7 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "TechCorp International",
       industry: "Technology",
-      icon: '🚀'
+      icon: '🚀',
       result: "300% Revenue Growth",
       description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
       metrics: [
@@ -19,7 +19,7 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
-      icon: '🚀'
+      icon: '🚀',
       result: "85% Downtime Reduction",
       description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",
       metrics: [
@@ -32,7 +32,7 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "FinanceFirst Bank",
       industry: "Financial Services",
-      icon: '🚀'
+      icon: '🚀',
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
       metrics: [

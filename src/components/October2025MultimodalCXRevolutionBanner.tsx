@@ -21,7 +21,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Multimodal AI Customer Experience Platform
-            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               $340M Value Created | 287% ROI | 94% Customer Satisfaction
             </span>
           </h2>

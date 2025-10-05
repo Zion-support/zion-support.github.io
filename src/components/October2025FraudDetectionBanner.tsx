@@ -21,7 +21,7 @@ const October2025FraudDetectionBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             AI-Powered Real-Time Fraud Detection
-            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
+            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
               $847B in Assets Protected | 99.7% Accuracy | Sub-50ms Detection
             </span>
           </h2>
