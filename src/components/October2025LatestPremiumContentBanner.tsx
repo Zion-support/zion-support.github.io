@@ -112,11 +112,16 @@ const October2025LatestPremiumContentBanner = () => {
               >
                 <div className="flex items-start gap-3 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" <div>
 =======
                   <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                   <div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+                  <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
+                  <div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-blue-200 transition-colors">
                       ⚡ Cognitive Workflow Orchestration
                     </h3>

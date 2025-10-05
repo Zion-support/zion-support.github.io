@@ -147,6 +147,7 @@ key={index}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
 <<<<<<< HEAD
+<<<<<<< HEAD
               { value: '2.5M+', label: 'Global Readers', icon: '🚀 color'
               { value: '$15B+', label: 'Value Created', icon: '🚀 color'
               { value: '99.9%', label: 'Content Accuracy', icon: '🚀 color',
@@ -157,6 +158,12 @@ key={index}
               { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
               { value: '150+', label: 'Countries Reached', icon: <Globe className="w-8 h-8" />, color: 'text-emerald-400' }
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+              { value: '2.5M+', label: 'Global Readers', icon: '🚀', color: 'text-blue-400' },
+              { value: '$15B+', label: 'Value Created', icon: '🚀', color: 'text-green-400' },
+              { value: '99.9%', label: 'Content Accuracy', icon: '🚀', color: 'text-purple-400' },
+              { value: '150+', label: 'Countries Reached', icon: '🚀', color: 'text-pink-400' }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>

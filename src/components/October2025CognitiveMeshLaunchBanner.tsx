@@ -49,13 +49,16 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
 
           <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics">
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">
-              <Network className="w-5 h-5 text-green-300" aria-hidden="true" <span className="text-white font-semibold">3,500+ AI Agents</span>
+              <Network className="w-5 h-5 text-green-300" aria-hidden="true" />
+              <span className="text-white font-semibold">3,500+ AI Agents</span>
             </li>
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">
-               aria-hidden="true" <span className="text-white font-semibold">99.99% Uptime</span>
+              <Activity className="w-5 h-5 text-blue-300" aria-hidden="true" />
+              <span className="text-white font-semibold">99.99% Uptime</span>
             </li>
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">
-               aria-hidden="true" <span className="text-white font-semibold">Sub-3ms Latency</span>
+              <Zap className="w-5 h-5 text-yellow-300" aria-hidden="true" />
+              <span className="text-white font-semibold">Sub-3ms Latency</span>
             </li>
           </ul>
         </div>
@@ -133,7 +136,8 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-blue-500/30 rounded-lg" aria-hidden="true">
-                <Network className="w-6 h-6 text-white" aria-hidden="true"</div>
+                <Network className="w-6 h-6 text-white" aria-hidden="true" />
+              </div>
               <div>
                 <p className="text-sm text-blue-300 font-semibold">TECHNICAL DEEP DIVE</p>
                 <p className="text-xs text-white/60">Blog Post</p>
