@@ -2,27 +2,27 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const October2025TechBannerNew = () => {
   const newArticles = [
-    {",
+    {
       title: "Next-Gen Autonomous Systems",
-      description: "The 2025 Enterprise Revolution",",
+      description: "The 2025 Enterprise Revolution",
       slug: "ai-2025-oct-17-next-gen-autonomous-systems",
-      icon: Brain,",
+      icon: Brain,
       color: "from-purple-500 to-pink-500",
       highlight: "NEW"
     },
-    {",
+    {
       title: "Generative AI Code Generation",
-      description: "Transforming Software Development",",
+      description: "Transforming Software Development",
       slug: "ai-2025-oct-17-generative-ai-code-generation",
-      icon: Code2,",
+      icon: Code2,
       color: "from-blue-500 to-cyan-500",
       highlight: "HOT"
     },
-    {",
+    {
       title: "Real-Time Personalization Engines",
-      description: "Revolutionizing Customer Experience",",
+      description: "Revolutionizing Customer Experience",
       slug: "ai-2025-oct-17-real-time-personalization-engines",
-      icon: Zap,",
+      icon: Zap,
       color: "from-orange-500 to-red-500",
       highlight: "TRENDING"
     }
@@ -77,9 +77,11 @@ const October2025TechBannerNew = () => {
                 <div className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 h-full border border-white/20 hover:border-white/40 transition-all duration-300" > {/* Highlight Badge */}
                   <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${article.color}`}>
                     {article.highlight}
-                  </div > {/* Icon */}
+                  </div>
+                  {/* Icon */}
                   <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <article.icon className="w-7 h-7 text-white"</div>
+                    <article.icon className="w-7 h-7 text-white" />
+                  </div>
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                     {article.title}
@@ -121,7 +123,7 @@ const October2025TechBannerNew = () => {
       </div>
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) =  > (
+        {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-purple-400/30 rounded-full"
@@ -135,9 +137,10 @@ const October2025TechBannerNew = () => {
             }}
             transition={{
               duration: 3 + Math.random() * 2,
-              repeat: Infinity,",
-      delay: Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
             }}
+          />
         ))}
       </div>
     </motion.div>

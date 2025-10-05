@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 export default function October2025NewContentAdvertisingBanner() {
   return (
-    <section className="relative py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 overflow-hidden" > {/* Animated Background Elements */}
+    <section className="relative py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 overflow-hidden">
+      {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40" <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"</div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40"></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           {/* Attention-Grabbing Header */}
@@ -45,19 +49,22 @@ export default function October2025NewContentAdvertisingBanner() {
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-cyan-300">Autonomous Mesh Intelligence</h3>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                  <h3 className="text-xl font-bold text-cyan-300">Autonomous Mesh Intelligence</h3>
                 </div>
                 <p className="text-gray-300">Self-organizing distributed AI networks with unprecedented scalability</p>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-purple-300">Quantum-Neural Hybrid</h3>
+                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                  <h3 className="text-xl font-bold text-purple-300">Quantum-Neural Hybrid</h3>
                 </div>
                 <p className="text-gray-300">Revolutionary computing breakthrough for drug discovery and optimization</p>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-green-300">Neural-Symbolic Reasoning</h3>
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <h3 className="text-xl font-bold text-green-300">Neural-Symbolic Reasoning</h3>
                 </div>
                 <p className="text-gray-300">Explainable AI with human-like logical reasoning capabilities</p>
               </div>

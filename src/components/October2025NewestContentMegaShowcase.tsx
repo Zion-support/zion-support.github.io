@@ -103,8 +103,9 @@ export default function October2025NewestContentMegaShowcase() {
                 <span>Read Complete Guide</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </div>
-              </div > {/* Hover Glow Effect */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`}</Link>
+              {/* Hover Glow Effect */}
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`}></div>
+            </Link>
           ))}
         </div>
         {/* Bottom CTA */}

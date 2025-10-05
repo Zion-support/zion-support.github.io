@@ -48,32 +48,32 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-2">
-              <CurrencyDollarIcon className="w-8 h-8 text-yellow-300" /> />
-                <iv className="text-4xl font-extrabold text-yellow-300">$4.2B</div>
+              <CurrencyDollarIcon className="w-8 h-8 text-yellow-300" />
+              <div className="text-4xl font-extrabold text-yellow-300">$4.2B</div>
             </div>
             <div className="text-emerald-100 text-sm font-medium">Annual Value Creation</div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-teal-400/30 hover:border-teal-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-2">
-              <ChartBarIcon className="w-8 h-8 text-green-300" /> />
-                <iv className="text-4xl font-extrabold text-green-300">2,847%</div>
+              <ChartBarIcon className="w-8 h-8 text-green-300" />
+              <div className="text-4xl font-extrabold text-green-300">2,847%</div>
             </div>
             <div className="text-teal-100 text-sm font-medium">ROI in 18 Months</div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-2">
-              <CheckCircleIcon className="w-8 h-8 text-cyan-300" /> />
-                <iv className="text-4xl font-extrabold text-cyan-300">98.7%</div>
+              <CheckCircleIcon className="w-8 h-8 text-cyan-300" />
+              <div className="text-4xl font-extrabold text-cyan-300">98.7%</div>
             </div>
             <div className="text-cyan-100 text-sm font-medium">On-Time Delivery Rate</div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-2">
-              <TruckIcon className="w-8 h-8 text-emerald-300" /> />
-                <iv className="text-4xl font-extrabold text-emerald-300">87%</div>
+              <TruckIcon className="w-8 h-8 text-emerald-300" />
+              <div className="text-4xl font-extrabold text-emerald-300">87%</div>
             </div>
             <div className="text-emerald-100 text-sm font-medium">Cost Reduction</div>
           </div>
@@ -84,68 +84,68 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
           <h3 className="text-3xl font-bold text-white mb-6 text-center flex items-center justify-center gap-3">
             <SparklesIcon className="w-8 h-8 text-yellow-300 animate-pulse" />
             Revolutionary AI-Powered Capabilities
-            <SparklesIcon className="w-8 h-8 text-yellow-300 animate-pulse" /> />
-              </
-          
+            <SparklesIcon className="w-8 h-8 text-yellow-300 animate-pulse" />
+          </h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/20 hover:border-emerald-400/50 transition-all">
               <div className="flex items-center gap-3 mb-3">
-                <ChartBarIcon className="w-6 h-6 text-emerald-400" /> />
-                <4 className="text-xl font-bold text-white">Predictive Intelligence</h4>
+                <ChartBarIcon className="w-6 h-6 text-emerald-400" />
+                <h4 className="text-xl font-bold text-white">Predictive Intelligence</h4>
               </div>
               <ul className="space-y-2 text-emerald-100">
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> />
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                   <span><strong>94% Forecast Accuracy</strong> across 2.7M SKUs</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> />
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                   <span><strong>23-Day Disruption Warning</strong> for proactive response</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> />
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                   <span><strong>Real-Time Market Intelligence</strong> beats competitors</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <ClockIcon className="w-6 h-6 text-cyan-400" /> />
-                <4 className="text-xl font-bold text-white">Autonomous Operations</h4>
-              </div>
+                <div className="flex items-center gap-3 mb-3">
+                  <ClockIcon className="w-6 h-6 text-cyan-400" />
+                  <h4 className="text-xl font-bold text-white">Autonomous Operations</h4>
+                </div>
               <ul className="space-y-2 text-cyan-100">
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> />
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                   <span><strong>2.4M Daily Decisions</strong> fully automated</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>89% Warehouse Automation</strong> with 12,400+ robots</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>89% Warehouse Automation</strong> with 12,400+ robots</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>Self-Optimizing Routes</strong> reducing costs 87%</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>Self-Optimizing Routes</strong> reducing costs 87%</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-teal-400/20 hover:border-teal-400/50 transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <GlobeAltIcon className="w-6 h-6 text-teal-400" <h4 className="text-xl font-bold text-white">Complete Visibility</h4>
-              </div>
+                <div className="flex items-center gap-3 mb-3">
+                  <GlobeAltIcon className="w-6 h-6 text-teal-400" />
+                  <h4 className="text-xl font-bold text-white">Complete Visibility</h4>
+                </div>
               <ul className="space-y-2 text-teal-100">
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>100% End-to-End Visibility</strong> across supply chain</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>100% End-to-End Visibility</strong> across supply chain</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>47,000 IoT Devices</strong> for real-time monitoring</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>47,000 IoT Devices</strong> for real-time monitoring</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>Blockchain Tracking</strong> complete transparency</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>Blockchain Tracking</strong> complete transparency</span>
                 </li>
               </ul>
             </div>
@@ -156,8 +156,9 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
         <div className="bg-gradient-to-br from-yellow-900/40 to-orange-900/40 backdrop-blur-sm rounded-2xl p-8 mb-10 border-2 border-yellow-400/50">
           <div className="flex items-center gap-3 mb-4">
             <div className="bg-yellow-500/20 rounded-full p-3">
-              <TruckIcon className="w-8 h-8 text-yellow-300"</div> />
-                <iv>
+              <TruckIcon className="w-8 h-8 text-yellow-300" />
+            </div>
+            <div>
               <div className="text-yellow-300 text-sm font-semibold uppercase tracking-wider">Case Study Spotlight</div>
               <h3 className="text-3xl font-bold text-white">Fortune 100 Retail Transformation</h3>
             </div>
@@ -189,17 +190,17 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
             <div>
               <h4 className="text-xl font-bold text-green-200 mb-3">The Results</h4>
               <ul className="space-y-2 text-green-100">
+                  <li className="flex items-start gap-2">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>$4.2B Annual Value Creation</strong></span>
+                  </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>$4.2B Annual Value Creation</strong></span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>98.7% On-Time Delivery</strong> (industry leader)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>98.7% On-Time Delivery</strong> (industry leader)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>2% Waste Rate</strong> (89% reduction)</span>
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>2% Waste Rate</strong> (89% reduction)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />

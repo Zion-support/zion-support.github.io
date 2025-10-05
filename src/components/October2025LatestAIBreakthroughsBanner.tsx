@@ -61,8 +61,6 @@ export default function October2025LatestAIBreakthroughsBanner() {
               <div className="p-3 bg-indigo-500/20 rounded-lg">
                 <Search className="h-6 w-6 text-indigo-400" />
               </div>
-                <Search className="h-6 w-6 text-indigo-400" />
-              </div>
               <span className="px-3 py-1 bg-indigo-500/30 text-indigo-300 rounded-full text-xs font-bold">
                 Cognitive AI
               </span>
