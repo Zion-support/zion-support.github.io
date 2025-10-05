@@ -136,20 +136,7 @@ const AdvancedDashboard: React.FC = () => {
       },
       accessibility: {
         // Get accessibility stats from manager
-<<<<<<< HEAD
         features: "Active", // Fallback value
-      },
-      security: {
-        // Get security stats from manager
-        status: "Active", // Fallback value
-      },
-      ux: {
-        // Get UX stats from manager
-        status: "Active", // Fallback value
-=======
-        features: enhancedAccessibility
-          ? "Active"
-          : "Inactive",
       },
       security: {
         // Get security stats from manager
@@ -158,7 +145,6 @@ const AdvancedDashboard: React.FC = () => {
       ux: {
         // Get UX stats from manager
         status: "Active",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c37a
       },
     });
   };
