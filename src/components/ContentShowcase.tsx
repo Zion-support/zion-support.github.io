@@ -23,57 +23,6 @@ const ContentShowcase: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8 text-center">
-          Featured Content
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {contentItems.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-lg border hover:shadow-xl transition-shadow"
-            >
-=======
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8 text-center">Featured Content</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {contentItems.map((item, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg border hover:shadow-xl transition-shadow">
->>>>>>> cursor/fix-errors-and-merge-to-main-9427
-              <div className="mb-4">
-                <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
-                  {item.category}
-                </span>
-              </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold mb-3">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {item.description}
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">
-                  {item.readTime}
-                </span>
-                <a
-                  href="/blog"
-                  className="text-blue-600 hover:text-blue-800 font-semibold"
-                >
-                  Read More →
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29bd
     <div className="py-12 px-4">
       <h2 className="text-3xl font-bold mb-8 text-center">Featured Content</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -94,23 +43,6 @@ const ContentShowcase: React.FC = () => {
             </div>
           </div>
         ))}
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-2368
-=======
-              <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-              <p className="text-gray-600 mb-4">{item.description}</p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">{item.readTime}</span>
-                <a href="/blog" className="text-blue-600 hover:text-blue-800 font-semibold">
-                  Read More →
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9427
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29bd
       </div>
     </div>
   );
