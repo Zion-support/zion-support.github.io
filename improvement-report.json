@@ -1,6 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-05T11:47:25.964Z",
+  "timestamp": "2025-10-05T13:18:08.744Z",
   "duration": 5,
   "improvements": [
     "✅ Enhanced package.json with new optimization scripts",
@@ -19,22 +18,5 @@
       "seo": 0,
       "accessibility": 0
     }
-=======
-  "timestamp": "2025-10-05T11:08:56.300Z",
-  "project": "Zion Tech Group Website",
-  "results": {
-    "healthCheck": true,
-    "linting": true,
-    "typeChecking": false,
-    "build": true,
-    "tests": true,
-    "optimizations": "warning"
-  },
-  "summary": {
-    "totalChecks": 6,
-    "passed": 4,
-    "failed": 1,
-    "warnings": 1
->>>>>>> 297cd5093a4334c73fbbc60d17002134ef3086c0
   }
 }

@@ -3,7 +3,7 @@
     {
       "branch": "cursor/fix-errors-and-merge-to-main-214f",
       "success": true,
-      "method": "theirs"
+      "method": "direct"
     },
     {
       "branch": "cursor/fix-errors-and-merge-to-main-25ca",
@@ -17,11 +17,6 @@
     },
     {
       "branch": "cursor/fix-errors-and-merge-to-main-2bbe",
-      "success": true,
-      "method": "direct"
-    },
-    {
-      "branch": "cursor/fix-errors-and-merge-to-main-3bb0",
       "success": true,
       "method": "direct"
     },
@@ -126,18 +121,24 @@
       "method": "direct"
     }
   ],
-  "failed": [],
+  "failed": [
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-3bb0",
+      "success": false,
+      "method": "failed"
+    }
+  ],
   "summary": {
     "total": 25,
-    "successful": 25,
-    "failed": 0,
+    "successful": 24,
+    "failed": 1,
     "methods": {
       "direct": 24,
-      "theirs": 1,
+      "theirs": 0,
       "ours": 0,
       "manual": 0,
-      "failed": 0
+      "failed": 1
     }
   },
-  "timestamp": "2025-10-05T11:11:59.852Z"
+  "timestamp": "2025-10-05T12:07:35.273Z"
 }

@@ -1,9 +1,1 @@
-import React from 'react';
-
-export default function CaseStudies(): React.JSX.Element {
-  return (
-    <main style={{ padding: '2rem' }}>
-      <h1>Case Studies</h1>
-    </main>
-  );
-}
+import React from ' react ' ; export default function CaseStudies( ): Rea c t.J S X.Eleme n t { retu r n ( < main styl e = { { paddi n g: ' 2r e m ' } } > < h1 > Case Studie s < / h1 > < / ma i n > ); } $ $ 

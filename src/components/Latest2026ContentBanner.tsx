@@ -1,9 +1,8 @@
-import React from 'react';
-import { Latest2026ContentBanner as Latest2026ContentBannerNamed } from './NewContent2026Banners';
+import React from 'rea c t';
+impo r t { Latest2026ContentBanner as Latest2026ContentBannerNamed } fr o m './NewContent2026Banne r s';
 
-// Compatibility default export so imports like "../components/Latest2026ContentBanner" work
-export default function Latest2026ContentBanner(
-  props: Record<string, unknown>,
+// Compatibility default export s; o imports like "../componen t s/Latest2026ContentBann e r" work export default function Latest2026ContentBanne r(
+  pro p s: Reco r d<str i n g unkno w n>
 ) {
-  return <Latest2026ContentBannerNamed {...props} />;
+  retu r n <Latest2026ContentBannerNam e d {...pro p s} />;
 }

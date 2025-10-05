@@ -1,16 +1,1 @@
-import React from 'react';
-
-const BreakthroughContent2026Banner: React.FC = () => {
-  return (
-    <div className='container mx-auto px-6 mt-6'>
-      <div className='rounded-2xl border border-indigo-200 bg-indigo-50 p-6 text-indigo-800'>
-        <div className='text-sm font-semibold mb-1'>Featured 2026 Content</div>
-        <div className='text-lg font-bold'>
-          Explore our latest 2026 breakthroughs
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default BreakthroughContent2026Banner;
+import React from ' react ' ; const BreakthroughContent2026Banner: React.FC = ( ) = > { retu r n ( < div classNam e = ' container m x - auto p x - 6 m t - 6 ' > < div classNam e = ' round e d - 2xl border border - indi g o - 200 b g - indi g o - 5 0 p - 6 tex t - indi g o - 8 0 0 ' > < div classNam e = ' te x t - sm fon t - semibold m b - 1 ' > Featured 2026 Content < / d i v > < div classNam e = ' te x t - lg fon t - bo l d ' > Explore our latest 2026 breakthrough s < / d i v > < / d i v > < / d i v > ); }; export default BreakthroughContent2026Banner; $ $ 
