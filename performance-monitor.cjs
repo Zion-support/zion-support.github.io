@@ -44,7 +44,7 @@ console.log('📄 Counting generated pages...');
 try {
   const pagesDir = '.next/server/app';
   if (fs.existsSync(pagesDir)) {
-const pages = fs.readdirSync(pagesDir, { recursive: true });
+    const pages = fs.readdirSync(pagesDir, { recursive: true })
       .filter(file => file.endsWith('.html'));
     metrics.pageCount = pages.length;
   }
