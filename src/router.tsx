@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './components/Loading';
@@ -12,15 +11,17 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Team = lazy(() => import('./pages/Team'));
+<<<<<<< HEAD
 =======
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0290
 
 const AppRouter: React.FC = () => {
   return (
     <Router>
-<<<<<<< HEAD
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,11 +32,14 @@ const AppRouter: React.FC = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/team" element={<Team />} />
+<<<<<<< HEAD
 =======
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<div>Home</div>} />
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0290
         </Routes>
       </Suspense>
     </Router>

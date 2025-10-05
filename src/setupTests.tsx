@@ -26,15 +26,15 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
-<<<<<<< HEAD
-=======
-
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0290
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
@@ -50,7 +50,14 @@ jest.mock('react-router-dom', () => ({
 }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+// Mock lucide-react icons
+const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
+
+jest.mock('lucide-react', () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-0290
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -269,6 +276,25 @@ jest.mock('react-router-dom', () => ({
   };
 });
 
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock fetch
+global.fetch = jest.fn();
+
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
@@ -300,4 +326,7 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0290
