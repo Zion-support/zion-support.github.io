@@ -1,15 +1,8 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary';
 import SEO from './components/SEO';
 import Loading from './components/Loading';
-=======
-import { AppErrorBoundary } from '../components/AppErrorBoundary';
-import SEO from './components/SEO';
-import { PageLoader } from '../components/LoadingComponents';
-import { useAccessibility } from '../hooks/useAccessibility';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fea2
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));

@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-// @ts-nocheck
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-const Page = () => {
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function EnterpriseAIPlatforms2025(): React.JSX.Element {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</title>
-<<<<<<< HEAD
-        <meta
-          name="description"
-          content="Blueprint for building enterprise AI platforms: SLAs, guardrails, cost controls, and measurable ROI."
-        />
-=======
-        <meta name="description" content="Blueprint for building enterprise AI platforms: SLAs, guardrails, cost controls, and measurable ROI." />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />
       </Helmet>
 
@@ -55,15 +34,6 @@ export default function EnterpriseAIPlatforms2025(): React.JSX.Element {
               harming UX.
             </p>
 
-<<<<<<< HEAD
-=======
-            <h2 className="text-2xl font-semibold">Adoption Guide</h2>
-            <p className="text-zion-slate-light">
-              Start with a single critical flow, wire in KPIs, define budgets, and ship a canary runbook. Expand coverage as
-              telemetry validates stability. Automate rollback after two consecutive score violations.
-            </p>
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
             <div className="mt-8">
               <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
             </div>
@@ -72,11 +42,3 @@ export default function EnterpriseAIPlatforms2025(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default Page;
-
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9

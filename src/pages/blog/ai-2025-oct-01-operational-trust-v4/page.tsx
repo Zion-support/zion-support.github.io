@@ -7,19 +7,6 @@ export default function OperationalTrustV4(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Operational Trust Scorecards v4 — SLIs → KPIs with Budgets</title>
-<<<<<<< HEAD
-        <meta
-          name="description"
-          content="Live canaries, budgeted actions, and attested rollback wired to product KPIs."
-        />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4"
-        />
-=======
-        <meta name="description" content="Live canaries, budgeted actions, and attested rollback wired to product KPIs." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -42,9 +29,4 @@ export default function OperationalTrustV4(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9

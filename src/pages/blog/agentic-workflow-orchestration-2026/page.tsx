@@ -6,7 +6,6 @@ export default function AgenticWorkflowOrchestration2026(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Agentic Workflow Orchestration 2026 — Budgets, Canaries, Rollback</title>
-<<<<<<< HEAD
         <meta
           name="description"
           content="Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity."
@@ -15,10 +14,6 @@ export default function AgenticWorkflowOrchestration2026(): React.JSX.Element {
           rel="canonical"
           href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026"
         />
-=======
-        <meta name="description" content="Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -42,9 +37,4 @@ export default function AgenticWorkflowOrchestration2026(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9

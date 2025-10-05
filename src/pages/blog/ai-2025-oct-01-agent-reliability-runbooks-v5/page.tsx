@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-// @ts-nocheck
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-const Page = () => {
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function AgentReliabilityRunbooksV5(): React.JSX.Element {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
-<<<<<<< HEAD
-        <meta
-          name="description"
-          content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback."
-        />
-=======
-        <meta name="description" content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback." />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" />
       </Helmet>
 
@@ -58,11 +37,3 @@ export default function AgentReliabilityRunbooksV5(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default Page;
-
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9

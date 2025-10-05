@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-// @ts-nocheck
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-const Page = () => {
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function OperationalTrustV3(): React.JSX.Element {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>AI 2025: Operational Trust Scorecards v3</title>
-<<<<<<< HEAD
-        <meta
-          name="description"
-          content="SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook for operational trust."
-        />
-=======
-        <meta name="description" content="SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook for operational trust." />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v3" />
       </Helmet>
 
@@ -36,11 +15,6 @@ export default function OperationalTrustV3(): React.JSX.Element {
           </p>
 
           <div className="space-y-6">
-<<<<<<< HEAD
-            <h2 className="text-2xl font-semibold">What’s New in v3</h2>
-=======
-            <h2 className="text-2xl font-semibold">What's New in v3</h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
             <ul className="list-disc pl-6 text-zion-slate-light">
               <li>Opinionated SLIs mapped to KPIs with budget thresholds.</li>
               <li>Prebuilt CI policy tests and on‑call friendly dashboards.</li>
@@ -61,11 +35,3 @@ export default function OperationalTrustV3(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default Page;
-
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9

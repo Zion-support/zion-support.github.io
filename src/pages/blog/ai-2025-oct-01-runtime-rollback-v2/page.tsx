@@ -6,19 +6,6 @@ export default function RuntimeRollbackV2(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>AI Runtime Rollback v2 — Instant, KPI‑Linked Recovery</title>
-<<<<<<< HEAD
-        <meta
-          name="description"
-          content="Blueprint for instant rollback triggered by KPI‑linked canaries and policy tests."
-        />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-runtime-rollback-v2"
-        />
-=======
-        <meta name="description" content="Blueprint for instant rollback triggered by KPI‑linked canaries and policy tests." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-runtime-rollback-v2" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -38,9 +25,4 @@ export default function RuntimeRollbackV2(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9

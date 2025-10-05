@@ -25,12 +25,7 @@
       "@/config/*": ["src/config/*"]
     }
   },
-<<<<<<< HEAD
   "include": ["src", "app"],
   "exclude": ["src/pages/blog-disabled/**/*"],
-=======
-  "include": ["src"],
-  "exclude": ["app/blog", "app/components", "blog", "components"],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fea2
   "references": [{ "path": "./tsconfig.node.json" }]
 }
