@@ -15,8 +15,4 @@ const AnalyticsMonitor = React.memo(function AnalyticsMonitor({
   );
 });
 
-<<<<<<< HEAD
 export default AnalyticsMonitor;
-=======
-export default AnalyticsMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-2368

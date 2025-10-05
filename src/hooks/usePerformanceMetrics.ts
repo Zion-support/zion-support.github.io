@@ -40,7 +40,8 @@ export function usePerformanceMetrics() {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        const inputEntry = entry as any;
+        setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
       });
     }).observe({ entryTypes: ['first-input'] });
 
@@ -49,8 +50,9 @@ export function usePerformanceMetrics() {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+        const layoutEntry = entry as any;
+        if (!layoutEntry.hadRecentInput) {
+          clsValue += layoutEntry.value;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -61,7 +63,8 @@ export function usePerformanceMetrics() {
       const entries = list.getEntries();
       const ttfbEntry = entries.find(entry => entry.name.includes('document'));
       if (ttfbEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart }));
+        const navEntry = ttfbEntry as any;
+        setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
       }
     }).observe({ entryTypes: ['navigation'] });
 
