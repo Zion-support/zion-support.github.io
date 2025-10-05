@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;
@@ -220,4 +221,15 @@ const AnalyticsDashboard: React.FC = () => {
   );
 };
 
+=======
+const AnalyticsDashboard: React.FC = () => {
+  return (
+    <div className="analytics-dashboard">
+      <h2>Analytics Dashboard</h2>
+      <p>Analytics data will be displayed here.</p>
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 export default AnalyticsDashboard;

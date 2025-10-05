@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 const Latest2026ContentBanner: React.FC = () => {
   return (
@@ -10,9 +11,28 @@ const Latest2026ContentBanner: React.FC = () => {
         <p className="text-lg mb-6">
           This component is being restored. Please check back later for full functionality.
         </p>
+=======
+import { Link } from 'react-router-dom';
+
+const Latest2026ContentBanner: React.FC = () => {
+  return (
+    <div className="latest-2026-content-banner">
+      <div className="banner-content">
+        <h2>Latest 2026 Content</h2>
+        <p>
+          Discover the newest content and innovations for 2026.
+        </p>
+        <Link to="/blog/latest-2026">
+          Explore Latest Content
+        </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Latest2026ContentBanner;
+=======
+export default Latest2026ContentBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9

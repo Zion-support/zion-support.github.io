@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const AdvertisingBanner: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className='bg-gradient-to-r from-purple-900/40 to-blue-900/40 border-y border-purple-500/20 py-16'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-12'>
@@ -178,6 +179,17 @@ const AdvertisingBanner: React.FC = () => {
             ))}
           </div>
         </div>
+=======
+    <div className="advertising-banner">
+      <div className="banner-content">
+        <h3>Latest AI Insights</h3>
+        <p>
+          Discover the latest trends in AI and enterprise solutions.
+        </p>
+        <Link to='/blog/ai-2025-oct-01-vector-database-optimization-enterprise'>
+          Read More
+        </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
       </div>
     </div>
   );

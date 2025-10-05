@@ -2,6 +2,7 @@ import React from 'react';
 
 const ContentValueTestimonials: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className='bg-gradient-to-r from-emerald-900/40 to-teal-900/40 border-y border-emerald-500/20 py-16'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-12'>
@@ -169,6 +170,11 @@ const ContentValueTestimonials: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+    <div className="content-value-testimonials">
+      <h2>Content Value Testimonials</h2>
+      <p>Customer testimonials about our content value.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
     </div>
   );
 };
