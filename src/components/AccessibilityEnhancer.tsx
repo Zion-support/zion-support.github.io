@@ -1,92 +1,67 @@
 import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-}) => {
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add accessibility enhancements
-    const addSkipLinks = () => {
+    const enhanceAccessibility = () => {
+      // Add skip to content link
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link';
-      skipLink.style.cssText = `
-        position: absolute;
-  top: -40px;
-        left: 6px;
-  background: #000;
-        color: #fff;
-  padding: 8px;
-        text-decoration: none;
-        z-index: 1000;
-        transition: top 0.3s;
-      `;
-
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
-
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
-      });
-
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
-    };
 
-    // Add ARIA labels to interactive elements
-    const enhanceInteractiveElements = () => {
+      // Add focus indicators
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
+        }
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        .focus\\:not-sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: inherit;
+          margin: inherit;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Add ARIA labels to interactive elements
       const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(button => {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
+      buttons.forEach((button, index) => {
+        if (!button.getAttribute('aria-label')) {
+          button.setAttribute('aria-label', `Button ${index + 1}`);
         }
       });
 
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(link => {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
-        }
-      });
+      // Add main content landmark
+      const mainContent = document.querySelector('main') || document.querySelector('#main-content');
+      if (mainContent) {
+        mainContent.setAttribute('role', 'main');
+        mainContent.id = 'main-content';
+      }
     };
 
-    // Add focus management
-    const enhanceFocusManagement = () => {
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      });
-
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-navigation');
-      });
-    };
-
-    addSkipLinks();
-    enhanceInteractiveElements();
-    enhanceFocusManagement();
-
-    // Re-run enhancements when DOM changes
-    const observer = new MutationObserver(() => {
-      enhanceInteractiveElements();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
-    return () => {
-      observer.disconnect();
-    };
+    enhanceAccessibility();
   }, []);
 
-  return <>{children}</>;
+  return null;
 };
 
 export default AccessibilityEnhancer;

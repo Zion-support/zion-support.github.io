@@ -7,6 +7,9 @@ import performanceOptimizer from './utils/performance-optimizer';
 import errorHandler from './utils/advanced-error-handler';
 import securityEnhancer from './utils/security-enhancer';
 import seoOptimizer from './utils/seo-optimizer';
+import cacheSystem from './utils/advanced-caching';
+import analyticsOptimizer from './utils/analytics-optimizer';
+import SystemMonitor from './components/SystemMonitor';
 import "./index.css";
 
 // Lazy load pages for better performance
@@ -35,6 +38,12 @@ function App() {
         
         // Set up error reporting
         errorHandler.setReportingEnabled(true);
+        
+        // Initialize advanced caching
+        cacheSystem.loadFromStorage();
+        
+        // Initialize analytics optimization
+        analyticsOptimizer.trackPageView();
         
         console.log('All optimization systems initialized successfully');
       } catch (error) {
@@ -74,6 +83,7 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
+      <SystemMonitor />
     </ErrorBoundary>
   );
 }
