@@ -50,18 +50,22 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03e2
 });
 
 // Mock performance API
-Object.defineProperty(window'performance', {
+Object.defineProperty(window, 'performance', {
   writable: true,
   value: {
     now: jest.fn(() => Date.now()),
     mark: jest.fn(),
     measure: jest.fn(),
     getEntriesByType: jest.fn(() => []),
-    getEntriesByName: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => [])
+  }
+});
+
+// Mock react-error-boundary
+jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
@@ -293,7 +297,8 @@ jest.mock('lucide-react', () => {
     Timer: () => mockIcon('timer-icon'),
     TimerOff: () => mockIcon('timer-off-icon'),
     Stopwatch: () => mockIcon('stopwatch-icon'),
-    Hourglass: () => mockIcon('hourglass-icon'),
+    Hourglass: () => mockIcon('hourglass-icon')
+  };
 });
 
 // Mock console methods to reduce noise in tests
@@ -309,6 +314,7 @@ beforeAll(() => {
         ))
     ) {
       return;
+    }
     originalConsoleError.call(console, ...args);
   };
   console.warn = (...args: unknown[]) => {
@@ -317,8 +323,12 @@ beforeAll(() => {
         args[0].includes('componentWillMount'))
     ) {
       return;
+    }
     originalConsoleWarn.call(console, ...args);
   };
 });
 
 afterAll(() => {
+  console.error = originalConsoleError;
+  console.warn = originalConsoleWarn;
+});
