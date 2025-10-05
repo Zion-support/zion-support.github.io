@@ -3,36 +3,6 @@ import React{ lazySuspenseuseStateuseEffect } from 'react';
 // Define available banners with their import paths
 const bannerComponents = {
   'january2026-revolutionary': lazy(
-    () => import('./January2026RevolutionaryBanner')
-  )
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026'))
-  'ai-trends-insights-2026': lazy(() => import('./AITrendsInsightsBanner2026'))
-  'breakthrough-content-2026': lazy(() => import('./BreakthroughContent2026Banner'))
-  'cognitive-orchestration-mega': lazy(() => import('./CognitiveOrchestrationMegaBanner'))
-  'comprehensive-promo': lazy(() => import('./ComprehensivePromoBanner'))
-  'content-promotion': lazy(() => import('./ContentPromotionBanner'))
-  'december2025-revolutionary-breakthrough': lazy(() => import('./December2025RevolutionaryBreakthroughContentBanner'))
-  'december2025-revolutionary-content': lazy(() => import('./December2025RevolutionaryContentShowcase'))
-  'enhanced-content-showcase-2026': lazy(() => import('./EnhancedContentShowcase2026'))
-  'enhanced-promotional': lazy(() => import('./EnhancedPromotionalBanner'))
-  'enterprise-ai-fall-2025': lazy(() => import('./EnterpriseAIFall2025Banner'))
-  'enterprise-solutions-showcase-2026': lazy(() => import('./EnterpriseSolutionsShowcase2026'))
-  'featured-content-2025': lazy(() => import('./FeaturedContentBanner2025'))
-  'february2026-content-showcase': lazy(() => import('./February2026ContentShowcaseBanner'))
-  'future-tech-showcase-2026': lazy(() => import('./FutureTechShowcase2026'))
-  'global-ai-transformation-hub': lazy(() => import('./GlobalAITransformationHub'))
-  'january2025-breakthrough-content': lazy(() => import('./January2025BreakthroughContentBanner'))
-  'january2025-content-showcase': lazy(() => import('./January2025ContentShowcaseBanner'))
-  'january2025-enterprise-success': lazy(() => import('./January2025EnterpriseSuccessBanner'))
-  'january2026-content-showcase': lazy(() => import('./January2026ContentShowcaseBanner'))
-  'january2026-new-content-showcase': lazy(() => import('./January2026NewContentShowcaseBanner'))
-  'january2026-revolutionary-ai': lazy(() => import('./January2026RevolutionaryAIBanner'))
-  'january2026-revolutionary-breakthroughs': lazy(() => import('./January2026RevolutionaryBreakthroughsBanner'))
-  'january2026-revolutionary-content': lazy(() => import('./January2026RevolutionaryContentBanner'))
-  'january2027-content-advertising': lazy(() => import('./January2027ContentAdvertisingBanner'))
-  'january2027-new-content-showcase': lazy(() => import('./January2027NewContentShowcaseBanner'))
-  'latest2026-content': lazy(() => import('./Latest2026ContentBanner'))
-  'latest-content': lazy(() => import('./LatestContentBanner'))
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -61,13 +31,6 @@ const LoadingFallback = () => (
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   banners = [
-    'october2025-new-breakthrough'
-    'october2025-tech-breakthrough'
-    'october2025-next-gen-ai'
-  ]
-  interval = 8000
-  autoRotate = false// Disabled by default to reduce unnecessary re-renders
-  maxBanners = 3
 }) => {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [visibleBannerssetVisibleBanners] = useState<BannerKey[]>([]);

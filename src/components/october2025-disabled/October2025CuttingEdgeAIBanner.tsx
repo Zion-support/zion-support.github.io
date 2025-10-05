@@ -30,18 +30,7 @@ constOctober2025CuttingEdgeAIBanner = () => {
           <Linkto = "/blog/ai-2025-october-agentic-governance-frameworks"
             className="groupbg-gradient-to-brfrom-emerald-800/40to-teal-900/40backdrop-blur-smborderborder-emerald-400/30rounded-2xlp-6hover: scale-105transition-allduration-300hover:shadow-2xlhover:shadow-emerald-500/50"
           >
-            <divclassName="flexitems-centergap-3mb-4">
-              <divclassName="p-3bg-emerald-500/20rounded-xlgroup-hover:bg-emerald-500/30transition-colors">
-                <ScaleclassName="w-8 h-8text-emerald-300" />
-              </div>
-                <ScaleclassName="w-8 h-8text-emerald-300" />
-              </div>
-              <divclassName="flex-1">
-                <spanclassName="text-xstext-emerald-300font-semibolduppercasetracking-wide">AIGovernance</span>
-              </div>
-            </div>
-            <h3className="text-lgfont-boldtext-whitemb-3group-hover:text-emerald-200transition-colors">
-              AgenticGovernanceFrameworks
+>>>>>>> ca845918a191049d26eb75f526c9918cbf578354
             </h3>
             <pclassName="text-teal-200/80text-smmb-4line-clamp-3">
               Buildtrustin autonomousAIwith 99.9% complianceaccuracyand real-timeriskassessment.
@@ -82,18 +71,7 @@ constOctober2025CuttingEdgeAIBanner = () => {
           <Linkto = "/blog/ai-2025-october-continuous-learning-systems"
             className="groupbg-gradient-to-brfrom-cyan-800/40to-blue-900/40backdrop-blur-smborderborder-cyan-400/30rounded-2xlp-6hover: scale-105transition-allduration-300hover:shadow-2xlhover:shadow-cyan-500/50"
           >
-            <divclassName="flexitems-centergap-3mb-4">
-              <divclassName="p-3bg-cyan-500/20rounded-xlgroup-hover:bg-cyan-500/30transition-colors">
-                <RepeatclassName="w-8 h-8text-cyan-300" />
-              </div>
-                <RepeatclassName="w-8 h-8text-cyan-300" />
-              </div>
-              <divclassName="flex-1">
-                <spanclassName="text-xstext-cyan-300font-semibolduppercasetracking-wide">AIOperations</span>
-              </div>
-            </div>
-            <h3className="text-lgfont-boldtext-whitemb-3group-hover:text-cyan-200transition-colors">
-              ContinuousLearningSystems
+>>>>>>> ca845918a191049d26eb75f526c9918cbf578354
             </h3>
             <pclassName="text-blue-200/80text-smmb-4line-clamp-3">
               Deployself-improvingAIwith 99.8% uptimeand94% accuracyimprovementover time.

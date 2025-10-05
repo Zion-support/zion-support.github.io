@@ -1,20 +1,11 @@
-// PerformanceMonitoringScript
-constperformanceObserver = newPerformanceObserver(list => { 
-  for (constentryof list.getEntries()) {
-    if (entry.entryType = == 'navigation') {
-      console.log('PageLoadTime:'entry.loadEventEnd - entry.loadEventStart);
-     }if (entry.entryType = == 'paint') {
-      console.log('PaintTime:'entry.startTime);
+    }
+  },
+
+  cleanup: () => {
+    // Cleanup performance monitoring
+    console.log('Performance monitoring cleaned up');
+  }
     }
   }
-});
 
-performanceObserver.observe({ entryTypes: ['navigation''paint'] });
-
-// WebVitalsimport { getCLSgetFIDgetFCPgetLCPgetTTFB } from 'web-vitals';
-
-getCLS(console.log);
-getFID(console.log);
-getFCP(console.log);
-getLCP(console.log);
-getTTFB(console.log);
+>>>>>>> ca845918a191049d26eb75f526c9918cbf578354

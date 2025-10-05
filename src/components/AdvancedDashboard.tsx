@@ -1,9 +1,6 @@
 import React{ useStateuseEffect } from "react";
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
-// import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
-// import { AdvancedSecurityManager } from '../utils/advancedSecurityManager';
-// import EnhancedUXManager from '../utils/enhancedUXManager';
 
 interface PerformanceData {
   memoryUsage: number;
@@ -132,8 +129,6 @@ const AdvancedDashboard: React.FC = () => {
             performance as Performance & {
               memory?: { jsHeapSizeLimit?: number };
             }
-          ).memory?.jsHeapSizeLimit || 0
-      }
     });
   };
 

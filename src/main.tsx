@@ -30,7 +30,6 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
 );
 
 reportWebVitals();
