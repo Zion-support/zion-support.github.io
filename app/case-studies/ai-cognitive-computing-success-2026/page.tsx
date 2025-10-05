@@ -1,14 +1,6 @@
 import Link from 'next/link';
+import { ArrowLeft, Bookmark, Calendar, Clock, DollarSign, Share2, Target, TrendingUp, User } from 'lucide-react';
 
-import ArrowLeft from 'lucide-react';
-import Bookmark from 'lucide-react';
-import Calendar from 'lucide-react';
-import Clock from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Share2 from 'lucide-react';
-import Target from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import User from 'lucide-react';
 
 
 

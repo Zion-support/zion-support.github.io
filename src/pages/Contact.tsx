@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 
 
 

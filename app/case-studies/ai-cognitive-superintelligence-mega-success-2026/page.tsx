@@ -1,4 +1,4 @@
-import { Link } from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Cognitive Superintelligence Mega Success 2026: $750M ROI Case Study',
@@ -422,4 +422,3 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
     </div>
   );
 }
->>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

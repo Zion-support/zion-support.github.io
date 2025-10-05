@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Brain, Code, Cloud, Server, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, Smartphone, Globe } from "lucide-react";
 import { Helmet } from 'react-helmet-async'
+import { Brain, Code, Cloud, Server, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, Smartphone, Globe } from 'lucide-react';
 
 
 

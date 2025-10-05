@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Server, Zap, Shield, TrendingUp } from 'lucide-react';
 
 import { Link } from "react-router-dom";
+import { ArrowLeft, Server, Zap, Shield, TrendingUp } from 'lucide-react';
 export default function AutonomousInfrastructureHealing2025() {
   return (
     <>

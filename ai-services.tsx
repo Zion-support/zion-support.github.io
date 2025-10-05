@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { MessageSquare, FileText, Users, CheckCircle } from "lucide-react";
 import { Helmet } from 'react-helmet-async'
+import { MessageSquare, FileText, Users, CheckCircle } from 'lucide-react';
 
 
 

@@ -1,4 +1,4 @@
-import { Link } from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations Implementation | Zion Tech Group',
@@ -318,4 +318,3 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
     </div>
   );
 }
->>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39
