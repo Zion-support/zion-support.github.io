@@ -1,8 +1,6 @@
 class SecurityEnhancer {
   private static instance: SecurityEnhancer;
-  private isInitialized: boolean = false;
-
-  private constructor() {}
+  private isInitialized = false;
 
   static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
@@ -40,11 +38,6 @@ class SecurityEnhancer {
     meta.httpEquiv = 'X-Content-Type-Options';
     meta.content = 'nosniff';
     document.head.appendChild(meta);
-  }
-
-  cleanup(): void {
-    this.isInitialized = false;
-    console.log('Security enhancer cleaned up');
   }
 }
 
