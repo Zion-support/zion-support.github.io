@@ -21,15 +21,7 @@ interface AccessibilityMetrics {
 export class EnhancedAccessibility {
   private config: AccessibilityConfig;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  constructor(config?: Partial<AccessibilityConfig>) {
-=======
   constructor(config: Partial<AccessibilityConfig> = {}) {
->>>>>>> cursor/fix-errors-and-merge-to-main-87dd
-=======
-  constructor(config: Partial<AccessibilityConfig> = {}) {
->>>>>>> cursor/fix-errors-and-merge-to-main-4095
     this.config = {
       enableAnnouncements: true,
       enableFormLabels: true,
@@ -204,15 +196,7 @@ export class EnhancedAccessibility {
 
     // Basic voice control setup
     document.addEventListener('keydown', (e) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      if (e.key === 'Control' && e.shiftKey) {
-=======
       if (e.key === 'v' && e.ctrlKey) {
->>>>>>> cursor/fix-errors-and-merge-to-main-87dd
-=======
-      if (e.key === 'v' && e.ctrlKey) {
->>>>>>> cursor/fix-errors-and-merge-to-main-4095
         this.activateVoiceControl();
       }
     });
@@ -232,18 +216,6 @@ export class EnhancedAccessibility {
     });
   }
 
-  private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])',
-    ].join(', ');
-
-    return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
-  }
 
   private checkColorContrast(): void {
     // Basic color contrast check
