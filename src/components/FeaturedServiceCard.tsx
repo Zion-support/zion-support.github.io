@@ -1,75 +1,83 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
-  const, service, s = [
+const FeaturedServiceCard: React.FC = () => {
+  const services = [
     {
-      ic, o, n: '🧠',
-      title: 'AI, Servic, e, s',
-      description: 'Leverage, artificial, intelligence to, automate, processes and, gain, insight, s',
-      featur, e, s: [
-        'Machine, Learni, n, g',
-        'N, L, P',
-        'Computer, Visio, n',
-        'Predictive, Analytic, s',
+      icon: '🧠',
+      title: 'AI Services',
+      description: 'Leverage artificial intelligence to automate processes and gain insights',
+      features: [
+        'Machine Learning',
+        'NLP',
+        'Computer Vision',
+        'Predictive Analytics',
       ],
-      li, n, k: '/servic, e, s/ai-servi, c, e, s',
+      link: '/services/ai-services',
     },
     {
-      ic, o, n: '🚀',
-      title: 'Micro, Sa, a, S',
-      description: 'Scalable, software, solutions that, address, specific business, nee, d, s',
-      featur, e, s: [
-        'Custom, Ap, p, s',
-        'API, Developmen, t',
-        'Database, Solution, s',
-        'Integrati, o, n',
+      icon: '🚀',
+      title: 'Micro SaaS',
+      description: 'Scalable software solutions that address specific business needs',
+      features: [
+        'Custom Apps',
+        'API Development',
+        'Database Solutions',
+        'Integration',
       ],
-      li, n, k: '/servic, e, s/mic, r, o-s, a, a, s',
+      link: '/services/micro-saas',
     },
     {
-      ic, o, n: '💻',
-      title: 'IT, Servic, e, s',
-      description: 'Comprehensive, IT, solutions to, modernize, your infrastruct, u, r, e',
-      featur, e, s: ['Cloud, Migrati, o, n', 'DevO, p, s', 'Cybersecuri, t, y', 'System, Admi, n'],
-      li, n, k: '/servic, e, s/it-servi, c, e, s',
+      icon: '💻',
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions to modernize your infrastructure',
+      features: ['Cloud Migration', 'DevOps', 'Cybersecurity', 'System Admin'],
+      link: '/services/it-services',
     },
-  ]; retu, r, n (
-    <div, classNam, e = 'py-16, b, g-gr, a, y-50'>
-      <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-        <div, classNam, e='te, x, t-center, m, b-12'>
-          <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Our, Featured, Services
+  ];
+
+  return (
+    <div className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Featured Services
           </h2>
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-6, 0, 0'>
-            Comprehensive, solutions, for modern, businesse, s
+          <p className="text-xl text-gray-600">
+            Comprehensive solutions for modern businesses
           </p>
-        </d, i, v>
-        <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-3, ga, p-8'>
-          { servic, e, s.m, a, p((ser, v, i, c, e, ind, e, x) = > (
-            <div, ke, y = { in, d, e, x  }, classNa, m, e = 'bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, hover: shad, o, w-xl, transitio, n-shad, o, w'
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-lg border hover:shadow-xl transition-shadow"
             >
-              <div, classNam, e='te, x, t-5xl, m, b-4'>{servi, c, e.ic, o, n}</d, i, v>
-              <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, m, b-4'>{servi, c, e.title}</h3>
-              <p, classNam, e='te, x, t-gr, a, y-600, m, b-6'>{servi, c, e.description}</p>
-              <ul, classNam, e='spa, c, e-y-2, m, b-6'>
-                { servi, c, e.featur, e, s.m, a, p((feat, u, r, e, featureInd, e, x) = > (
-                  <li, ke, y = { featureIn, d, e, x  }, classNa, m, e = 'flex, item, s-center, tex, t-gr, a, y-6, 0, 0'
+              <div className="text-5xl mb-4">{service.icon}</div>
+              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+              <p className="text-gray-600 mb-6">{service.description}</p>
+              <ul className="space-y-2 mb-6">
+                {service.features.map((feature, featureIndex) => (
+                  <li
+                    key={featureIndex}
+                    className="flex items-center text-gray-600"
                   >
-                    <span, classNam, e='te, x, t-gre, e, n-500, m, r-2'>✓</sp, a, n>
-                    {featu, r, e}
-                  </l, i>
+                    <span className="text-green-500 mr-2">✓</span>
+                    {feature}
+                  </li>
                 ))}
               </ul>
-              <a, hre, f = { servi, c, e.l, i, n, k }, classNa, m, e = 'w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-semibold, tex, t-center, bloc, k'
+              <a
+                href={service.link}
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center block"
               >
-                Learn, Mor, e
+                Learn More
               </a>
-            </d, i, v>
+            </div>
           ))}
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export, default, FeaturedServiceCard;
+export default FeaturedServiceCard;

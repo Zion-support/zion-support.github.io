@@ -3,52 +3,42 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string | null;
 }
 
 class AdvancedErrorBoundary extends Component<Props, State> {
+  private retryCount = 0;
+  private maxRetries = 3;
+
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
+    };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('AdvancedErrorBoundary caught an error:', error, errorInfo);
+    
     this.setState({
       error,
       errorInfo
@@ -58,44 +48,113 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+    this.reportError(error, errorInfo);
   }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport = {
+      errorId: this.state.errorId,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      retryCount: this.retryCount
+    };
+
+    if (typeof window !== 'undefined' && 'fetch' in window) {
+      fetch('/api/errors', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorReport)
+      }).catch(console.error);
+    }
+  };
+
+  private handleRetry = () => {
+    if (this.retryCount < this.maxRetries) {
+      this.retryCount++;
+      this.setState({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        errorId: null
+      });
+    }
+  };
+
+  private handleReload = () => {
+    window.location.reload();
+  };
 
   render() {
     if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div className="error-boundary p-6 bg-red-50 border border-red-200 rounded-lg">
-            <h2 className="text-lg font-semibold text-red-800 mb-2">
-              Something went wrong
-            </h2>
-            <details className="text-sm text-red-700">
-              <summary className="cursor-pointer mb-2">Error details</summary>
-              {this.state.error && this.state.error.toString()}
-              <br />
-              {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
-            </detai, l, s>
-          </d, i, v>
-      errorInfo
-    });
-  }
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
 
-  render() { 
-    if (this.state.hasError) {
       return (
-        this.props.fallback || (
-          <div className="error-boundary">
-            <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap' }}>
-              {this.state.error && this.state.error.toString()}
-              <br />
-              {this.state.errorInfo?.componentStack}
-            </details>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md w-full space-y-8">
+            <div className="text-center">
+              <div className="mx-auto h-12 w-12 text-red-500">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+                Oops! Something went wrong
+              </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                We're sorry, but something unexpected happened. Our team has been notified.
+              </p>
+              {this.state.errorId && (
+                <p className="mt-1 text-xs text-gray-500">
+                  Error ID: {this.state.errorId}
+                </p>
+              )}
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex space-x-4">
+                {this.retryCount < this.maxRetries && (
+                  <button
+                    onClick={this.handleRetry}
+                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    Try Again ({this.maxRetries - this.retryCount} attempts left)
+                  </button>
+                )}
+                <button
+                  onClick={this.handleReload}
+                  className="group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Reload Page
+                </button>
+              </div>
+            </div>
+
+            {this.props.showDetails && this.state.error && (
+              <details className="mt-8">
+                <summary className="cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900">
+                  Technical Details
+                </summary>
+                <div className="mt-2 p-4 bg-gray-100 rounded-md">
+                  <pre className="text-xs text-gray-600 whitespace-pre-wrap overflow-auto">
+                    {this.state.error.message}
+                    {'\n\n'}
+                    {this.state.error.stack}
+                    {'\n\n'}
+                    {this.state.errorInfo?.componentStack}
+                  </pre>
+                </div>
+              </details>
+            )}
           </div>
-        )
+        </div>
       );
     }
 
@@ -103,9 +162,4 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-    return this.props.children;
-  }
-}
-
-export default AdvancedErrorBoundary;
 export default AdvancedErrorBoundary;

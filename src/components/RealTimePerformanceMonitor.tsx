@@ -1,252 +1,274 @@
-import, Reac, t, { useSta, t, e, useEffe, c, t, useCallba, c, k } fr, o, m "rea, c, t";
+import React, { useState, useEffect, useCallback } from "react";
 
-interface, PerformanceMetric, s {
-  f, p, s: number;
-  memoryUsa, g, e: number;
-  renderTi, m, e: number;
-  networkLaten, c, y: number;
-  errorCou, n, t: number;
-  timesta, m, p: num, b, e, r;
+interface PerformanceMetrics {
+  fps: number;
+  memoryUsage: number;
+  renderTime: number;
+  networkLatency: number;
+  errorCount: number;
+  timestamp: number;
 }
 
-interface, RealTimePerformanceMonitorProp, s { 
-  isVisib, l, e: boolean;
-  onClo, s, e: () = > v, o, i, d;
- }
+interface RealTimePerformanceMonitorProps {
+  isVisible: boolean;
+  onClose: () => void;
+}
 
-const, RealTimePerformanceMonito, r: Rea, c, t.FC<RealTimePerformanceMonitorPro, p, s> = ({
-  isVisi, b, l, e,
-  onClo, s, e,
-}) => { 
-  con, s, t [metri, c, s, setMetri, c, s] = useSta, t, e<PerformanceMetri, c, s > ({
-    f, p, s:  , 0,
-    memoryUsa, g, e:  , 0,
-    renderTi, m, e:  , 0,
-    networkLaten, c, y:  , 0,
-    errorCou, n, t:  , 0,
-    timesta, m, p: Da, t, e.no, w(),
-   });
+const RealTimePerformanceMonitor: React.FC<RealTimePerformanceMonitorProps> = ({
+  isVisible,
+  onClose,
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 0,
+    memoryUsage: 0,
+    renderTime: 0,
+    networkLatency: 0,
+    errorCount: 0,
+    timestamp: Date.now(),
+  });
 
-  con, s, t [isMonitori, n, g, setIsMonitori, n, g] = useSta, t, e(fal, s, e);
-  con, s, t [histo, r, y, setHisto, r, y] = useSta, t, e<PerformanceMetri, c, s[]>([]);
-  con, s, t [maxHistoryLeng, t, h] = useSta, t, e(1, 0, 0);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [history, setHistory] = useState<PerformanceMetrics[]>([]);
+  const [maxHistoryLength] = useState(100);
 
-  const, calculateFP, S = (): number = > {  
-    return, delt, a  > 0  ? Ma, t, h.rou, n, d(10, 0, 0 / de, l, t, a)  : 0;
+  const calculateFPS = (): number => {
+    return 60; // Placeholder - would need actual frame timing
+  };
+
+  const updateMetrics = useCallback(() => {
+    if (!isMonitoring) return;
+    const newMetrics: PerformanceMetrics = {
+      fps: calculateFPS(),
+      memoryUsage: getMemoryUsage(),
+      renderTime: getRenderTime(),
+      networkLatency: getNetworkLatency(),
+      errorCount: getErrorCount(),
+      timestamp: Date.now(),
     };
-
-  const, updateMetric, s = useCallb, a, c, k(() => {
-    if (!isMonitori, n, g) retu, r, n; const, newMetric, s: PerformanceMetri, c, s = {
-      f, p, s: calculat, e, F, P, S(),
-      memoryUsa, g, e: getMemoryUs, a, g, e(),
-      renderTi, m, e: getRenderT, i, m, e(),
-      networkLaten, c, y: getNetworkLate, n, c, y(),
-      errorCou, n, t: getErrorCo, u, n, t(),
-      timesta, m, p: Da, t, e.no, w(),
-    }; setMetri, c, s(newMetri, c, s);
-    setHisto, r, y((pr, e, v) => {
-      const, update, d = [...p, r, e, v, newMetri, c, s]; return, update, d.sli, c, e(-maxHistoryLeng, t, h);
+    setMetrics(newMetrics);
+    setHistory((prev) => {
+      const updated = [...prev, newMetrics];
+      return updated.slice(-maxHistoryLength);
     });
-  }, [isMonitori, n, g, maxHistoryLeng, t, h, calculateF, P, S]);
+  }, [isMonitoring, maxHistoryLength]);
 
-  const, getMemoryUsag, e = (): number = > { 
+  const getMemoryUsage = (): number => {
     if (
-      typeof, windo, w === "undefin, e, d" ||
+      typeof window === "undefined" ||
       !(
-        window, as, unknown as {
-          performan, c, e?: { memo, r, y?: { usedJSHeapSi, z, e ?  : num, b, e, r  } };
+        window as unknown as {
+          performance?: { memory?: { usedJSHeapSize?: number } };
         }
-      ).performan, c, e?.memo, r, y
+      ).performance?.memory
     )
-      retur, n, 0;
+      return 0;
 
-    const, memor, y = (
-      window, as, unknown as {
-        performan, c, e: { memo, r, y: { usedJSHeapSi, z, e: nu, m, b, e, r } };
+    const memory = (
+      window as unknown as {
+        performance: { memory: { usedJSHeapSize: number } };
       }
-    ).performan, c, e.memo, r, y;
-    return, Mat, h.rou, n, d(memo, r, y.usedJSHeapSi, z, e / 10, 2, 4 / 10, 2, 4); // MB
+    ).performance.memory;
+    return Math.round(memory.usedJSHeapSize / 1024 / 1024); // MB
   };
 
-  const, getRenderTim, e = (): number = > {  
-    if (typeof, windo, w === "undefin, e, d" || !wind, o, w.performa, n, c, e) retur, n, 0; const, entrie, s = performan, c, e.getEntriesByTy, p, e("meas, u, r, e"); const, renderEntr, y = entri, e, s.fi, n, d((en, t, r, y) = > ent, r, y.na, m, e = == "rend, e, r-t, i, m, e"); return, renderEntr, y  ? Ma, t, h.rou, n, d(renderEnt, r, y.duration)  : 0;
-    };
-
-  const, getNetworkLatenc, y = (): number = > {
-    if (typeof, windo, w === "undefin, e, d" || !wind, o, w.performa, n, c, e) retur, n, 0; const, entrie, s = performan, c, e.getEntriesByTy, p, e("navigat, i, o, n"); if (entri, e, s.leng, t, h = == , 0) retur, n, 0; const, na, v = entri, e, s[0] as, PerformanceNavigationTimin, g; return, Mat, h.rou, n, d(n, a, v.responseE, n, d - n, a, v.requestSt, a, r, t);
+  const getRenderTime = (): number => {
+    if (typeof window === "undefined" || !window.performance) return 0;
+    const entries = performance.getEntriesByType("measure");
+    const renderEntry = entries.find((entry) => entry.name === "render-time");
+    return renderEntry ? Math.round(renderEntry.duration) : 0;
   };
 
-  const, getErrorCoun, t = (): number = > {
+  const getNetworkLatency = (): number => {
+    if (typeof window === "undefined" || !window.performance) return 0;
+    const entries = performance.getEntriesByType("navigation");
+    if (entries.length === 0) return 0;
+    const nav = entries[0] as PerformanceNavigationTiming;
+    return Math.round(nav.responseEnd - nav.requestStart);
+  };
+
+  const getErrorCount = (): number => {
     // This would typically come from an error tracking service
-    return, Mat, h.flo, o, r(Ma, t, h.ran, d, o, m() * 5); // Placehold e r
+    return Math.floor(Math.random() * 5); // Placeholder
   };
 
-  useEffe, c, t(() => { 
-    if (!isVisib, l, e) retu, r, n;
+  useEffect(() => {
+    if (!isVisible) return;
 
-    const, interva, l = setInterv, a, l(updateMetr, i, c, s, 10, 0, 0); retu, r, n () = > clearInterv, a, l(interv, a, l);
-   }, [isVisib, l, e, updateMetri, c, s]);
+    const interval = setInterval(updateMetrics, 1000);
+    return () => clearInterval(interval);
+  }, [isVisible, updateMetrics]);
 
-  const, startMonitorin, g = () => {
-    setIsMonitori, n, g(tr, u, e); updateMetri, c, s();
+  const startMonitoring = () => {
+    setIsMonitoring(true);
+    updateMetrics();
   };
 
-  const, stopMonitorin, g = () => {
-    setIsMonitori, n, g(fal, s, e);
+  const stopMonitoring = () => {
+    setIsMonitoring(false);
   };
 
-  const, clearHistor, y = () => {
-    setHisto, r, y([]);
+  const clearHistory = () => {
+    setHistory([]);
   };
 
-  const, getStatusColo, r = (
-    val, u, e: nu, m, b, e, r,
-    threshol, d, s: { go, o, d: number; warni, n, g: num, b, e, r },
-  ): string = > {
-    if (val, u, e <= threshol, d, s.g, o, o, d) retu, r, n "te, x, t-gre, e, n-6, 0, 0"; if (val, u, e <= threshol, d, s.warni, n, g) retu, r, n "te, x, t-yell, o, w-6, 0, 0";
-    retu, r, n "te, x, t-r, e, d-6, 0, 0";
+  const getStatusColor = (
+    value: number,
+    thresholds: { good: number; warning: number },
+  ): string => {
+    if (value <= thresholds.good) return "text-green-600";
+    if (value <= thresholds.warning) return "text-yellow-600";
+    return "text-red-600";
   };
 
-  const, getStatusB, g = (
-    val, u, e: nu, m, b, e, r,
-    threshol, d, s: { go, o, d: number; warni, n, g: num, b, e, r },
-  ): string = > {
-    if (val, u, e <= threshol, d, s.g, o, o, d) retu, r, n "bg-gre, e, n-1, 0, 0"; if (val, u, e <= threshol, d, s.warni, n, g) retu, r, n "bg-yell, o, w-1, 0, 0";
-    retu, r, n "bg-r, e, d-1, 0, 0";
+  const getStatusBg = (
+    value: number,
+    thresholds: { good: number; warning: number },
+  ): string => {
+    if (value <= thresholds.good) return "bg-green-100";
+    if (value <= thresholds.warning) return "bg-yellow-100";
+    return "bg-red-100";
   };
 
-  if (!isVisib, l, e) return, nul, l;
+  if (!isVisible) return null;
 
-  retu, r, n (
-    <div, classNam, e = "fixed, inse, t-0 z-50, b, g-black, b, g-opaci, t, y-50, flex, items-center, justif, y-cente, r, p-4">
-      <div, classNam, e="bg-white, rounde, d-lg, shado, w-xl, ma, x-w-6x, l, w-full, ma, x-h-[90, v, h] overfl, o, w-hidd, e, n">
-        <div, classNam, e="flex, item, s-center, justif, y-betwee, n, p-6, borde, r-b, borde, r-gr, a, y-2, 0, 0">
-          <h2, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">
-            Re, a, l-Time, Performance, Monitor
+  return (
+    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-hidden">
+        <div className="flex items-center justify-between p-6 border-b border-gray-200">
+          <h2 className="text-2xl font-bold text-gray-900">
+            Real-Time Performance Monitor
           </h2>
-          <div, classNam, e="flex, item, s-center, spac, e-x-4">
-            <div, classNam, e="flex, item, s-center, spac, e-x-2">
-              <button, onClic, k = {  isMonitori, n, g  ? stopMonitori, n, g : startMonito, r, i, n, g  }, classNa, m, e = { `px-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-medium, transitio, n-colo, r, s ${
-                  isMonitori, n, g
-                     ? "bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0"
-                    : "bg-gre, e, n-600, tex, t-white, hove, r : bg-gre, e, n-7, 0, 0"
-                 }`}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={isMonitoring ? stopMonitoring : startMonitoring}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  isMonitoring
+                    ? "bg-red-600 text-white hover:bg-red-700"
+                    : "bg-green-600 text-white hover:bg-green-700"
+                }`}
               >
-                { isMonitori, n, g  ? "St, o, p"  : "Sta, r, t" } Monitori, n, g
-              </butt, o, n>
-              <button, onClic, k = { clearHist, o, r, y }, classNa, m, e = "px-4, p, y-2, b, g-gr, a, y-600, tex, t-white, rounde, d-lg, tex, t-sm, fon, t-medium, hove, r: bg-gr, a, y-700, transitio, n-colo, r, s"
+                {isMonitoring ? "Stop" : "Start"} Monitoring
+              </button>
+              <button
+                onClick={clearHistory}
+                className="px-4 py-2 bg-gray-600 text-white rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors"
               >
-                Clear, Histor, y
-              </butt, o, n>
-            </d, i, v>
-            <button, onClic, k = { onC, l, o, s, e }, classNa, m, e = "te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-600, transitio, n-colo, r, s"
+                Clear History
+              </button>
+            </div>
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <svg, classNam, e="h-6 w-6"
-                fi, l, l="no, n, e"
-                viewB, o, x="0, 0, 24 24"
-                stro, k, e="currentCol, o, r"
+              <svg className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <path, strokeLineca, p="rou, n, d"
-                  strokeLinejo, i, n="rou, n, d"
-                  strokeWi, d, t, h = { , 2 }, d = "M6, 18L18, 6M6 6l12, 1, 2"
+                <path strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2} d="M6 18L18 6M6 6l12 12"
                 />
-              </s, v, g>
-            </butt, o, n>
-          </d, i, v>
-        </d, i, v>
+              </svg>
+            </button>
+          </div>
+        </div>
 
-        <div, classNam, e="p-6, overflo, w-y-auto, ma, x-h-[ca, l, c(90, v, h-12, 0, p, x)]">
-          {/* Current, Metric, s */}
-          <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-5, ga, p-4, m, b-8" > <div, classNam, e={`p-4, rounde, d-lg ${getStatus, B, g(metri, c, s.f, p, s, { go, o, d: 5, 0, warni, n, g: 3, 0 })}`}
-            >
-              <div, classNam, e = "te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">F, P, S</d, i, v > <div, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getStatusCol, o, r(metri, c, s.fp, s, { go, o, d: 5, 0, warni, n, g: 3, 0 })}`}
-              >
-                {metri, c, s.f, p, s}
-              </d, i, v>
-              <div, classNam, e = "te, x, t-xs, tex, t-gr, a, y-5, 0, 0">Frames, per, second</d, i, v>
-            </d, i, v > <div, classNam, e={`p-4, rounde, d-lg ${getStatus, B, g(metri, c, s.memoryUs, a, g, e, { go, o, d: 5, 0, warni, n, g: 10, 0 })}`}
-            >
-              <div, classNam, e = "te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">Memo, r, y</d, i, v > <div, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getStatusCol, o, r(metri, c, s.memoryUs, a, g, e, { go, o, d: 5, 0, warni, n, g: 10, 0 })}`}
-              >
-                {metri, c, s.memoryUsa, g, e}MB
-              </d, i, v>
-              <div, classNam, e = "te, x, t-xs, tex, t-gr, a, y-5, 0, 0">JS, Heap, Size</d, i, v>
-            </d, i, v > <div, classNam, e={`p-4, rounde, d-lg ${getStatus, B, g(metri, c, s.renderT, i, m, e, { go, o, d: 1, 6, warni, n, g: 3, 3 })}`}
-            >
-              <div, classNam, e = "te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">
-                Render, Tim, e
-              </d, i, v > <div, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getStatusCol, o, r(metri, c, s.renderT, i, m, e, { go, o, d: 1, 6, warni, n, g: 3, 3 })}`}
-              >
-                {metri, c, s.renderTi, m, e}ms
-              </d, i, v>
-              <div, classNam, e = "te, x, t-xs, tex, t-gr, a, y-5, 0, 0">Frame, render, time</d, i, v>
-            </d, i, v > <div, classNam, e={`p-4, rounde, d-lg ${getStatus, B, g(metri, c, s.networkLate, n, c, y, { go, o, d: 10, 0, warni, n, g: 30, 0 })}`}
-            >
-              <div, classNam, e = "te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">Netwo, r, k</d, i, v > <div, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getStatusCol, o, r(metri, c, s.networkLate, n, c, y, { go, o, d: 10, 0, warni, n, g: 30, 0 })}`}
-              >
-                {metri, c, s.networkLaten, c, y}ms
-              </d, i, v>
-              <div, classNam, e = "te, x, t-xs, tex, t-gr, a, y-5, 0, 0">Response, tim, e</d, i, v>
-            </d, i, v > <div, classNam, e={`p-4, rounde, d-lg ${getStatus, B, g(metri, c, s.errorCo, u, n, t, { go, o, d:  , 0, warni, n, g:  , 2 })}`}
-            >
-              <div, classNam, e = "te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">Erro, r, s</d, i, v > <div, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getStatusCol, o, r(metri, c, s.errorCo, u, n, t, { go, o, d:  , 0, warni, n, g:  , 2 })}`}
-              >
-                {metri, c, s.errorCou, n, t}
-              </d, i, v>
-              <div, classNam, e = "te, x, t-xs, tex, t-gr, a, y-5, 0, 0">Current, error, s</d, i, v>
-            </d, i, v>
-          </d, i, v>
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+          {/* Current Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+            <div className={`p-4 rounded-lg ${getStatusBg(metrics.fps, { good: 50, warning: 30 })}`}>
+              <div className="text-sm font-medium text-gray-600">FPS</div>
+              <div className={`text-2xl font-bold ${getStatusColor(metrics.fps, { good: 50, warning: 30 })}`}>
+                {metrics.fps}
+              </div>
+              <div className="text-xs text-gray-500">Frames per second</div>
+            </div>
+            <div className={`p-4 rounded-lg ${getStatusBg(metrics.memoryUsage, { good: 50, warning: 100 })}`}>
+              <div className="text-sm font-medium text-gray-600">Memory</div>
+              <div className={`text-2xl font-bold ${getStatusColor(metrics.memoryUsage, { good: 50, warning: 100 })}`}>
+                {metrics.memoryUsage}MB
+              </div>
+              <div className="text-xs text-gray-500">JS Heap Size</div>
+            </div>
+            <div className={`p-4 rounded-lg ${getStatusBg(metrics.renderTime, { good: 16, warning: 33 })}`}>
+              <div className="text-sm font-medium text-gray-600">
+                Render Time
+              </div>
+              <div className={`text-2xl font-bold ${getStatusColor(metrics.renderTime, { good: 16, warning: 33 })}`}>
+                {metrics.renderTime}ms
+              </div>
+              <div className="text-xs text-gray-500">Frame render time</div>
+            </div>
+            <div className={`p-4 rounded-lg ${getStatusBg(metrics.networkLatency, { good: 100, warning: 300 })}`}>
+              <div className="text-sm font-medium text-gray-600">Network</div>
+              <div className={`text-2xl font-bold ${getStatusColor(metrics.networkLatency, { good: 100, warning: 300 })}`}>
+                {metrics.networkLatency}ms
+              </div>
+              <div className="text-xs text-gray-500">Response time</div>
+            </div>
+            <div className={`p-4 rounded-lg ${getStatusBg(metrics.errorCount, { good: 0, warning: 2 })}`}>
+              <div className="text-sm font-medium text-gray-600">Errors</div>
+              <div className={`text-2xl font-bold ${getStatusColor(metrics.errorCount, { good: 0, warning: 2 })}`}>
+                {metrics.errorCount}
+              </div>
+              <div className="text-xs text-gray-500">Current errors</div>
+            </div>
+          </div>
 
-          {/* Performance, Char, t */}
-          {  histo, r, y.leng, t, h > 0  && (
-            <div, classNam, e="mb-8">
-              <h3, classNam, e="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">
-                Performance, Histor, y
+          {/* Performance Chart */}
+          {history.length > 0 && (
+            <div className="mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                Performance History
               </h3>
-              <div, classNam, e="bg-gr, a, y-5, 0, p-4, rounde, d-lg">
-                <div, classNam, e="h-64, flex, items-end, spac, e-x-1">
-                  {histo, r, y.sli, c, e(-5, 0).m, a, p((metr, i, c, ind, e, x) = > (
-                    <div, ke, y = { in, d, e, x   }, classNa, m, e = "flex, fle, x-col, item, s-center, spac, e-y-1"
-                     > <div, classNam, e="w-2, b, g-bl, u, e-500, rounde, d-t"
-                        sty, l, e={{
-                          heig, h, t: `${Ma, t, h.m, i, n((metr, i, c.f, p, s / 6, 0) * 10, 0, 1, 0, 0)}%`,
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="h-64 flex items-end space-x-1">
+                  {history.slice(-50).map((metric, index) => (
+                    <div key={index} className="flex flex-col items-center space-y-1">
+                      <div className="w-2 bg-blue-500 rounded-t"
+                        style={{
+                          height: `${Math.min((metric.fps / 60) * 100, 100)}%`,
                         }}
-                        title = {`F, P, S: ${metr, i, c.f, p, s}`}
-                      / > <div, classNam, e = "w-2, b, g-r, e, d-500, rounde, d-t"
-                        sty, l, e={{
-                          heig, h, t: `${Ma, t, h.m, i, n((metr, i, c.memoryUsa, g, e / 20, 0) * 10, 0, 1, 0, 0)}%`,
+                        title={`FPS: ${metric.fps}`}
+                      />
+                      <div className="w-2 bg-red-500 rounded-t"
+                        style={{
+                          height: `${Math.min((metric.memoryUsage / 200) * 100, 100)}%`,
                         }}
-                        title = { `Memo, r, y: ${metr, i, c.memoryU, s, a, g, e }, MB`}
-                      / />
+                        title={`Memory: ${metric.memoryUsage} MB`}
+                      />
+                    </div>
                   ))}
-                </d, i, v>
-                <div, classNam, e = "flex, justif, y-between, tex, t-xs, tex, t-gr, a, y-500, m, t-2">
-                  <sp, a, n>Bl, u, e: F, P, S</sp, a, n>
-                  <sp, a, n>R, e, d: Memo, r, y (M, B)</sp, a, n>
-                </d, i, v>
-              </d, i, v>
-            </di, v>
+                </div>
+                <div className="flex justify-between text-xs text-gray-500 mt-2">
+                  <span>Blue: FPS</span>
+                  <span>Red: Memory (MB)</span>
+                </div>
+              </div>
+            </div>
           )}
 
-          {/* Performance, Tip, s */}
-          <div, classNam, e = "bg-bl, u, e-5, 0, p-4, rounde, d-lg">
-            <h3, classNam, e="te, x, t-lg, fon, t-semibold, tex, t-bl, u, e-900, m, b-2">
-              Performance, Tip, s
+          {/* Performance Tips */}
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold text-blue-900 mb-2">
+              Performance Tips
             </h3>
-            <ul, classNam, e="te, x, t-sm, tex, t-bl, u, e-800, spac, e-y-1">
-              <li>• Keep, FPS, above 30, for, smooth user, experienc, e</li>
-              <li>• Monitor, memory, usage to, prevent, memory lea, k, s</li>
-              <li>• Render, time, should be, under, 16ms for, 60fp, s</li>
+            <ul className="text-sm text-blue-800 space-y-1">
+              <li>• Keep FPS above 30 for smooth user experience</li>
+              <li>• Monitor memory usage to prevent memory leaks</li>
+              <li>• Render time should be under 16ms for 60fps</li>
               <li>
-                • Network, latency, under 100ms, provides, good responsivene, s, s
+                • Network latency under 100ms provides good responsiveness
               </li>
-              <li>• Minimize, JavaScript, errors for, better, stability</li>
+              <li>• Minimize JavaScript errors for better stability</li>
             </ul>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </di, v>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export, default, RealTimePerformanceMonitor;
+export default RealTimePerformanceMonitor;

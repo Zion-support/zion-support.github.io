@@ -2,43 +2,53 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
-  // Add banner components here as needed
+  'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
+  'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026')),
+  'breakthrough-content': lazy(() => import('./December2025RevolutionaryBreakthroughContentBanner')),
+  'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),
+  'january2026-content-showcase': lazy(() => import('./January2026ContentShowcaseBanner')),
+  'january2026-new-content': lazy(() => import('./January2026NewContentShowcaseBanner')),
+  'january2026-revolutionary-ai': lazy(() => import('./January2026RevolutionaryAIBanner')),
+  'january2026-revolutionary-content': lazy(() => import('./January2026RevolutionaryContentBanner')),
+  'january2026-revolutionary-breakthroughs': lazy(() => import('./January2026RevolutionaryBreakthroughsBanner')),
+  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
+  'latest-2026-content': lazy(() => import('./Latest2026ContentBanner')),
+  'breakthrough-content-2026': lazy(() => import('./BreakthroughContent2026Banner')),
+  'enterprise-ai-fall-2025': lazy(() => import('./EnterpriseAIFall2025Banner')),
+  'november-2025-game-changers': lazy(() => import('./November2025GameChangersBanner')),
+  'march-2026-innovation': lazy(() => import('./March2026InnovationSpotlightBanner')),
+  'february-2026-content': lazy(() => import('./February2026ContentShowcaseBanner')),
+  'january-2027-content': lazy(() => import('./January2027ContentAdvertisingBanner')),
+  'january-2027-new-content': lazy(() => import('./January2027NewContentShowcaseBanner')),
 };
 
-export type BannerKey = keyof typeof bannerComponents;
+type BannerKey = keyof typeof bannerComponents;
 
 interface BannerRotationManagerProps {
-  /** Array of banner keys to display in rotation */
   banners?: BannerKey[];
-  /** Rotation interval in milliseconds (default: 8000) */
-  interval?: number;
-  /** Whether to auto-rotate banners (default: true) */
-  autoRotate?: boolean;
-  /** Maximum number of banners to show (default: 3) */
   maxBanners?: number;
+  rotationInterval?: number;
+  className?: string;
 }
 
-const LoadingFallback = () => (
-  <div className='bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30 animate-pulse'>
-    <div className='h-32 bg-white/10 rounded'></div>
-  </div>
-);
-
 /**
- * Banner Rotation Manager Component
- *
-  banners = [],
-  maxBanners = 3,
-  interval = 5000,
-  autoRotate = true,
-  className = ''
- * Manages banner display with lazy loading, rotation, and performance optimization
+ * BannerRotationManager - Manages the rotation and display of promotional banners
+ * 
+ * Features:
+ * - Lazy loads banner components for better performance
+ * - Rotates banners at specified intervals
+ * - Limits the number of visible banners
+ * - Provides fallback loading states
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
-  banners = [],
-  interval = 8000,
-  autoRotate = true,
-  maxBanners = 3
+  banners = [
+    'ai-innovation',
+    'ai-trends',
+    'breakthrough-content',
+  ],
+  maxBanners = 3,
+  rotationInterval = 10000,
+  className = ''
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
@@ -49,57 +59,45 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     setVisibleBanners(selected);
   }, [banners, maxBanners]);
 
-  // Auto-rotation logic
+  // Rotate banners at specified interval
   useEffect(() => {
-    if (!autoRotate || visibleBanners.length <= 1) return;
+    if (visibleBanners.length <= 1) return;
 
-    const timer = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
-      }, interval);
-    }, interval);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % visibleBanners.length);
+    }, rotationInterval);
 
-    return () => clearInterval(timer);
-  }, [autoRotate, interval, visibleBanners.length]);
+    return () => clearInterval(interval);
+  }, [visibleBanners.length, rotationInterval]);
 
-  if (visibleBanners.length === 0) return null;
-
-  // For non-rotating, show all banners
-  if (!autoRotate) {
-    return (
-      <div className='space-y-6'>
-        {visibleBanners.map(bannerKey => {
-          const BannerComponent = bannerComponents[bannerKey];
-          return (
-            <Suspense key={bannerKey} fallback={<LoadingFallback />}>
-              <BannerComponent />
-            </Suspense>
-          );
-        })}
-      </div>
-    );
+  if (visibleBanners.length === 0) {
+    return null;
   }
 
-  // For rotating, show current banner with controls
-  const currentBannerKey = visibleBanners[currentIndex];
-  const CurrentBanner = bannerComponents[currentBannerKey];
+  const currentBanner = visibleBanners[currentIndex];
+  const BannerComponent = bannerComponents[currentBanner];
 
   return (
-    <div className='relative'>
-      <Suspense fallback={<LoadingFallback />}>
-        <CurrentBanner />
+    <div className={`banner-rotation-manager ${className}`}>
+      <Suspense fallback={
+        <div className="flex items-center justify-center py-16">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        </div>
+      }>
+        <BannerComponent />
       </Suspense>
-
-      {/* Rotation controls (if multiple banners) */}
+      
+      {/* Banner indicators */}
       {visibleBanners.length > 1 && (
-        <div className='flex justify-center gap-2 mt-4'>
+        <div className="flex justify-center mt-4 space-x-2">
           {visibleBanners.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentIndex
-                  ? 'bg-purple-400 w-8'
-                  : 'bg-white/30 hover:bg-white/50'
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentIndex 
+                  ? 'bg-blue-600' 
+                  : 'bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Go to banner ${index + 1}`}
             />

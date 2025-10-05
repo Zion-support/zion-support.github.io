@@ -1,163 +1,85 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-const ContentShowcase: React.FC = () => {
-  return (
-    <div className="content-showcase">
-      <h2>Content Showcase</h2>
-      <p>Discover our featured content and resources.</p>
-      <div className="showcase-grid">
-        <div className="showcase-item">
-          <h3>Featured Article</h3>
-          <p>Read about our latest insights and innovations.</p>
-          <Link to="/blog/featured-article">
-            Read More →
-          </Link>
-        </div>
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  link: string;
-}
-
-interface ContentShowcaseProps {
-  items?: ContentItem[];
-  className?: string;
-}
-
-const ContentShowcase: React.FC<ContentShowcaseProps> = ({
-  items = [],
-  className = ''
-}) => {
-  const defaultItems: ContentItem[] = [
-    {
-      id: '1',
-      title: 'AI Innovation',
-      description: 'Latest developments in artificial intelligence technology.',
-      link: '/blog/ai-innovation'
-    },
-    {
-      id: '2',
-      title: 'Tech Solutions',
-      description: 'Comprehensive technology solutions for modern businesses.',
-      link: '/blog/tech-solutions'
-    }
-  ];
-
-  const displayItems = items.length > 0 ? items : defaultItems;
-
-  return (
-    <div className={`content-showcase ${className}`}>
-      <h2 className="text-2xl font-bold mb-6">Featured Content</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {displayItems.map((item) => (
-          <div key={item.id} className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-            <p className="text-gray-600 mb-4">{item.description}</p>
-            <a
-              href={item.link}
-              className="text-blue-600 hover:text-blue-800 font-medium"
-            >
-              Read More →
-            </a>
-          </div>
-        ))}
-import React from 'react';
 
 interface ContentItem {
   id: number;
   title: string;
   description: string;
-  link: string;
   category: string;
-  date: string;
   readTime: string;
-  featured?: boolean;
+  image: string;
 }
 
 const ContentShowcase: React.FC = () => {
   const contentItems: ContentItem[] = [
     {
       id: 1,
-      title: 'AI-Powered Business Solutions',
-      description: 'Discover how artificial intelligence is transforming modern business operations and driving unprecedented growth.',
-      link: '/blog/ai-business-solutions',
-      category: 'AI & Technology',
-      date: '2025-01-30',
-      readTime: '8 min',
-      featured: true
+      title: "AI-Powered Enterprise Solutions",
+      description: "Discover how our AI solutions are transforming enterprise operations and driving unprecedented growth.",
+      category: "AI Solutions",
+      readTime: "5 min read",
+      image: "/api/placeholder/400/250"
     },
     {
       id: 2,
-      title: 'Enterprise Automation Strategies',
-      description: 'Learn about advanced automation techniques that can streamline your business processes and increase efficiency.',
-      link: '/blog/enterprise-automation',
-      category: 'Business Strategy',
-      date: '2025-01-29',
-      readTime: '12 min'
+      title: "Quantum Computing Breakthroughs",
+      description: "Explore the latest advances in quantum computing and their applications in modern business.",
+      category: "Technology",
+      readTime: "7 min read",
+      image: "/api/placeholder/400/250"
     },
     {
       id: 3,
-      title: 'Cloud Infrastructure Best Practices',
-      description: 'Explore the latest trends in cloud computing and how to build scalable, secure infrastructure.',
-      link: '/blog/cloud-infrastructure',
-      category: 'Cloud Computing',
-      date: '2025-01-28',
-      readTime: '10 min'
+      title: "Autonomous Systems Revolution",
+      description: "Learn about self-managing systems that are revolutionizing how businesses operate.",
+      category: "Automation",
+      readTime: "6 min read",
+      image: "/api/placeholder/400/250"
     }
   ];
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-16 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Latest Content & Insights
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Featured Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay updated with the latest trends, technologies, and best practices
-            in AI, automation, and enterprise solutions.
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Explore our latest insights, case studies, and technical deep-dives
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {contentItems.map((item) => (
             <div
               key={item.id}
-              className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ${
-                item.featured ? 'ring-2 ring-blue-500' : ''
-              }`}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
+              <div className="aspect-w-16 aspect-h-9">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
               <div className="p-6">
-                {item.featured && (
-                  <div className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">
-                    Featured
-                  </div>
-                )}
-                
-                <div className="mb-2">
-                  <span className="text-sm text-blue-600 font-medium">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
                     {item.category}
                   </span>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    {item.readTime}
+                  </span>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {item.title}
                 </h3>
-                
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {item.description}
                 </p>
-                
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>{item.date}</span>
-                  <span>{item.readTime} read</span>
-                </div>
-                
                 <a
-                  href={item.link}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
+                  href="#"
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
                 >
                   Read More →
                 </a>
@@ -170,5 +92,4 @@ const ContentShowcase: React.FC = () => {
   );
 };
 
-export default ContentShowcase;
 export default ContentShowcase;

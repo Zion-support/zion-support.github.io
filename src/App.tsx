@@ -1,12 +1,11 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
-import SEO from './components/SEO';
-import Loading from './components/Loading';
-import AnalyticsDashboard from './components/AnalyticsDashboard';
-import PerformanceMonitor from './utils/performance-monitor';
-import SEOOptimizer from './utils/seo-optimizer';
-import ErrorHandler from './utils/error-handler';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedSEO from './components/EnhancedSEO';
+import { LoadingPage } from './components/EnhancedLoading';
+import performanceOptimizer from './utils/performance-optimizer';
+import SystemMonitor from './components/SystemMonitor';
+import performanceMonitor from './utils/advanced-performance-monitor';
 import './index.css';
 
 // Lazy load pages for better performance
@@ -20,33 +19,32 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
-  const [showAnalytics, setShowAnalytics] = useState(false);
-
   useEffect(() => {
     // Initialize all optimization systems
     const initializeOptimizations = () => {
       try {
         // Initialize performance monitoring
-        const performanceMonitor = PerformanceMonitor.getInstance();
-        performanceMonitor.init();
+        performanceOptimizer.startPerformanceMonitoring();
+        performanceMonitor.startMonitoring();
         
-        // Initialize SEO optimization
-        const seoOptimizer = SEOOptimizer.getInstance();
-        seoOptimizer.init();
+        // Initialize security enhancements
+        // securityEnhancer.setupSecurityMonitoring();
         
-        // Initialize error handling
-        const errorHandler = ErrorHandler.getInstance();
-        errorHandler.init();
+        // Initialize SEO tracking
+        // seoOptimizer.trackPageView();
+        
+        // Set up error reporting
+        // errorHandler.setReportingEnabled(true);
         
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
-        const errorHandler = ErrorHandler.getInstance();
-        errorHandler.handleError({
-          type: 'javascript',
-          message: 'Failed to initialize optimization systems',
-          error: error as Error
-        });
+        // errorHandler.handleError({
+        //   type: 'Initialization Error' 
+        //   message: 'Failed to initialize optimization systems' 
+        //   error: error.message 
+        //   timestamp: new Date().toISOString()
+        // });
       }
     };
 
@@ -55,18 +53,16 @@ function App() {
 
     // Cleanup on unmount
     return () => {
-      console.log('Cleaning up optimization systems');
-      PerformanceMonitor.getInstance().cleanup();
-      SEOOptimizer.getInstance().cleanup();
-      ErrorHandler.getInstance().cleanup();
+      performanceOptimizer.cleanup();
+      performanceMonitor.stopMonitoring();
     };
   }, []);
 
   return (
-    <ErrorBoundary>
-      <SEO />
+    <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+      <EnhancedSEO />
       <Router>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<LoadingPage />}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -79,24 +75,8 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
-      
-      {/* Analytics Toggle Button */}
-      <button
-        onClick={() => setShowAnalytics(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-40 transition-colors"
-        title="Open Analytics Dashboard"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      </button>
-
-      {/* Analytics Dashboard */}
-      <AnalyticsDashboard
-        isVisible={showAnalytics}
-        onClose={() => setShowAnalytics(false)}
-      />
-    </ErrorBoundary>
+      <SystemMonitor />
+    </EnhancedErrorBoundary>
   );
 }
 

@@ -1,44 +1,53 @@
-import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
+import React, { useState } from 'react';
 
-interface, Prop, s { 
+interface Props {
   title?: string;
   subtitle?: string;
-  classNa, m, e ?  : string;
- }
+  className?: string;
+}
 
-export, default, function EnhancedNewsletterSign, u, p({ title = 'Stay, Updat, e, d', subtitle = 'Get, the, latest insights, on, AI and, technology, trend, s.', classNa, m, e = '' }: Pr, o, p, s): Rea, c, t.J, S, X.Eleme, n, t { 
-  con, s, t [ema, i, l, setEma, i, l] = useSta, t, e(''); con, s, t [isSubscrib, e, d, setIsSubscrib, e, d] = useSta, t, e(fal, s, e);
+export default function EnhancedNewsletterSignup({ 
+  title = 'Stay Updated', 
+  subtitle = 'Get the latest insights on AI and technology trends.', 
+  className = '' 
+}: Props): React.JSX.Element {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const, handleSubmi, t = (e: Rea, c, t.FormEv, e, n, t) = > {
-    e.preventDefau, l, t(); setIsSubscrib, e, d(tr, u, e);
-    setEm, a, i, l('');
-   };
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubscribed(true);
+    setEmail('');
+  };
 
-  if (isSubscrib, e, d) {
-    retu, r, n (
-      <div, classNam, e = {`bg-gre, e, n-100, border, border-gre, e, n-400, tex, t-gre, e, n-700, p, x-4, p, y-3, rounde, d ${classNa, m, e}`}>
-        Thank, you, for subscribing, to, our newslett, e, r!
-      </di, v  > );
+  if (isSubscribed) {
+    return (
+      <div className={`bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded ${className}`}>
+        Thank you for subscribing to our newsletter!
+      </div>
+    );
   }
 
-  retu, r, n (
-    <form, onSubmi, t = { handleSub, m, i, t }, classNa, m, e = {`bg-gr, a, y-10, 0, p-6, rounde, d-lg ${classNa, m, e}`} ar, i, a-lab, e, l="Newsletter, signu, p">
-      <h3, classNam, e="te, x, t-lg, fon, t-semibold, m, b-2">{title}</h3>
-      <p, classNam, e="te, x, t-gr, a, y-600, m, b-4">{subtitle}</p>
-      <div, classNam, e="flex, ga, p-2">
-        <input, typ, e="ema, i, l"
-          val, u, e = { em, a, i, l }, onChan, g, e={  (, e) = > setEma, i, l(e.targ, e, t.val, u, e)  } placehold, e, r = "Enter, your, email"
-          classNa, m, e="fl, e, x-1, p, x-3, p, y-2, border, border-gr, a, y-300, rounde, d-md, focu, s: outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-bl, u, e-5, 0, 0"
-
-          requir, e, d
+  return (
+    <form onSubmit={handleSubmit} className={`bg-gray-100 p-6 rounded-lg ${className}`} aria-label="Newsletter signup">
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{subtitle}</p>
+      <div className="flex gap-2">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
         />
-
-        <button, typ, e="subm, i, t"
-          classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
         >
-          Subscri, b, e
-        </butt, o, n>
-      </d, i, v>
-    </fo, r, m>
+          Subscribe
+        </button>
+      </div>
+    </form>
   );
 }
