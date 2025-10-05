@@ -7,6 +7,27 @@ interface PerformanceMetrics {
   fcp?: number;
   ttfb?: number;
   inp?: number;
+  loadTime?: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  cumulativeLayoutShift?: number;
+  firstInputDelay?: number;
+  memoryUsage?: number;
+}
+
+interface PerformanceThresholds {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  memoryUsage: number;
+}
+
+interface Alert {
+  id: string;
+  message: string;
+  resolved: boolean;
 }
 
 interface PerformanceThresholds {
