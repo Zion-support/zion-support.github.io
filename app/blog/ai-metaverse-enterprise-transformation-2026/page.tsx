@@ -1,11 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight,Clock,Globe,Target,Users,Zap } from "lucide-react";
-
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import Globe from 'lucide-react/dist/esm/icons/globe';
-import Users from 'lucide-react/dist/esm/icons/users';
-import Zap from 'lucide-react/dist/esm/icons/zap';
-import { Target, Users, Clock, Zap, User, Globe } from 'lucide-react';
+import { Target, Users, Clock, Zap, Globe } from 'lucide-react';
 
 
 export const metadata = {

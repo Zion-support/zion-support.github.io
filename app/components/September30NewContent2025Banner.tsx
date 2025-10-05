@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight,Rocket,Tag,TrendingUp,Zap } from "lucide-react";
+import { ArrowRight, Rocket, TrendingUp, Zap } from "lucide-react";
 
 
 const September30NewContent2025Banner: React.FC = () => {

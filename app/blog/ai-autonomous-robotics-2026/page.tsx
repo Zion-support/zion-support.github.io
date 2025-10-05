@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight,Clock,Target,TrendingUp,Zap } from "lucide-react";
+import { Clock, Target, TrendingUp, Zap } from "lucide-react";
 
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import Bot from 'lucide-react/dist/esm/icons/bot';

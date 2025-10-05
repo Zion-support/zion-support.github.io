@@ -1,12 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight,Calendar,Clock,TrendingUp,Users,Zap } from "lucide-react";
-
-import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
-import Calendar from 'lucide-react/dist/esm/icons/calendar';
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
-import Users from 'lucide-react/dist/esm/icons/users';
-import { ArrowRight, Users, TrendingUp, Clock, Zap, Calendar, User } from 'lucide-react';
+import { ArrowRight, Users, TrendingUp, Clock, Zap, Calendar } from 'lucide-react';
 
 
 export const metadata = {
