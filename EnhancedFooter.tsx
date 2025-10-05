@@ -1,10 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react'
+=======
+<<<<<<< HEAD
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react'
+=======
+import {Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
+>>>>>>> cursor/fix-errors-and-merge-to-main-2368
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-2368
     { name: 'Cloud Services', href: '/services/cloud-services' },
     { name: 'Blockchain Solutions', href: '/services/blockchain' },
     { name: 'Data Analytics', href: '/services/data-analytics' },
@@ -12,6 +24,18 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Mobile Development', href: '/services/mobile-development' },
     { name: 'IoT Platforms', href: '/services/iot-platforms' },
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
+<<<<<<< HEAD
+=======
+=======
+    {name: 'Cloud Services', href: '/services/cloud-services' },
+    {name: 'Blockchain Solutions', href: '/services/blockchain' },
+    {name: 'Data Analytics', href: '/services/data-analytics' },
+    {name: 'Web Development', href: '/services/web-development' },
+    {name: 'Mobile Development', href: '/services/mobile-development' },
+    {name: 'IoT Platforms', href: '/services/iot-platforms' },
+    {name: 'Cybersecurity', href: '/services/cybersecurity' },
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
+>>>>>>> cursor/fix-errors-and-merge-to-main-2368
   ];
   const products = [
     { name: 'AI Solutions', href: '/products/ai-solutions' },

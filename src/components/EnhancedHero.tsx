@@ -13,4 +13,8 @@ const EnhancedHero = React.memo(function EnhancedHero({ className = '' }: Enhanc
   );
 });
 
+<<<<<<< HEAD
 export default EnhancedHero;
+=======
+export default EnhancedHero;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2368

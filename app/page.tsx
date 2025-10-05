@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 
 // Lazy load heavy components

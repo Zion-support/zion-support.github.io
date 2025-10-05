@@ -15,4 +15,8 @@ const MobileNavigation = React.memo(function MobileNavigation({
   );
 });
 
+<<<<<<< HEAD
 export default MobileNavigation;
+=======
+export default MobileNavigation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2368
