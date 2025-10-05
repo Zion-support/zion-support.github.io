@@ -14,7 +14,6 @@ const bannerComponents = {
   // 'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),
   // 'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),
   'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),
-=======
   'october2025-tech-breakthrough': lazy(
     () => import('./October2025TechBreakthroughBanner'),
   ),
@@ -42,10 +41,9 @@ const bannerComponents = {
   ),
   'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),
   'january2026-revolutionary': lazy(
-    () => import('./January2026RevolutionaryBanner'),
-  ),
->>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
+      () => import('./January2026RevolutionaryBanner'),
+    ),
+    'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
 };
 
 export type BannerKey = keyof typeof bannerComponents;

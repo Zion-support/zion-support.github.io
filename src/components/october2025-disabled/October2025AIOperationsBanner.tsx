@@ -65,10 +65,6 @@ const October2025AIOperationsBanner = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${article.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
                 {/* Content */}
                 <div className="relative z-10">
-<<<<<<< HEAD:src/components/october2025-disabled/October2025AIOperationsBanner.tsx
-                  {/* Icon */}
-=======
->>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b:src/components/October2025AIOperationsBanner.tsx
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
