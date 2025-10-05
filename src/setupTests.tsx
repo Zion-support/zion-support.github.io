@@ -32,7 +32,6 @@ jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
->>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
