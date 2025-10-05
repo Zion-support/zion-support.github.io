@@ -18,11 +18,19 @@ class SecurityEnhancer {
     }
 
     this.setupCSP();
+<<<<<<< HEAD
+    this.setupSecurityHeaders();
+    this.enableHTTPSRedirect();
+    
+    this.isInitialized = true;
+    console.log('Security enhancer initialized');
+=======
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
     this.setupSecurityHeaders();
     
     this.isInitialized = true;
+<<<<<<< HEAD
     console.log('Security enhancer initialized');
   }
 
@@ -72,6 +80,9 @@ class SecurityEnhancer {
     this.setupCSP();
     this.isInitialized = true;
     console.log('Security enhancer initialized');
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
   }
 
   private setupCSP(): void {
@@ -81,10 +92,40 @@ class SecurityEnhancer {
     document.head.appendChild(meta);
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
   cleanup(): void {
     this.isInitialized = false;
     console.log('Security enhancer cleaned up');
+=======
+<<<<<<< HEAD
+  private setupSecurityHeaders(): void {
+    // Set up additional security headers
+    console.log('Security headers configured');
+  }
+
+  private enableHTTPSRedirect(): void {
+    // Enable HTTPS redirect
+    console.log('HTTPS redirect enabled');
+  }
+
+  cleanup(): void {
+    this.isInitialized = false;
+    console.log('Security enhancer cleaned up');
+=======
+  private setupHTTPSRedirect(): void {
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  }
+
+  private setupXSSProtection(): void {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
+>>>>>>> origin/main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
   }
 }
 

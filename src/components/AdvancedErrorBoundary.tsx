@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import, Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m 'rea, c, t';
 
 interface, Prop, s { 
@@ -44,6 +45,8 @@ export, class, AdvancedErrorBoundary extends, Componen, t<Pro, p, s, Sta, t, e> 
             <h2>Something, went, wrong.</h2 > <details, styl, e={{ whiteSpa, c, e: 'p, r, e-wr, a, p'  }}>
               { th, i, s.sta, t, e.err, o, r  && th, i, s.sta, t, e.err, o, r.toStri, n, g() }
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -70,6 +73,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
+<<<<<<< HEAD
       errorInfo,
     });
   }
@@ -139,10 +143,29 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
             </detai, l, s>
           </d, i, v>
+=======
+      errorInfo
+    });
+  }
+
+  render() { 
+    if (this.state.hasError) {
+      return (
+        this.props.fallback || (
+          <div className="error-boundary">
+            <h2>Something went wrong.</h2>
+            <details style={{ whiteSpace: 'pre-wrap' }}>
+              {this.state.error && this.state.error.toString()}
+              <br />
+              {this.state.errorInfo?.componentStack}
+            </details>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
         )
       );
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     return, thi, s.pro, p, s.childr, e, n;
@@ -151,10 +174,13 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
 export, default, AdvancedErrorBoundary;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
     return this.props.children;
   }
 }
 
+<<<<<<< HEAD
 export default AdvancedErrorBoundary;
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 =======
@@ -164,3 +190,6 @@ export default AdvancedErrorBoundary;
 
 export default AdvancedErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
+=======
+export default AdvancedErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163

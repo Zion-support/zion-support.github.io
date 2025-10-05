@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './components/Loading';
@@ -12,15 +18,29 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Team = lazy(() => import('./pages/Team'));
+<<<<<<< HEAD
 =======
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 
 const AppRouter: React.FC = () => {
   return (
     <Router>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<div>Home Page</div>} />
+          <Route path="/about" element={<div>About Page</div>} />
+          <Route path="/services" element={<div>Services Page</div>} />
+          <Route path="/contact" element={<div>Contact Page</div>} />
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -34,12 +54,16 @@ const AppRouter: React.FC = () => {
 <<<<<<< HEAD
 =======
           <Route path="/team" element={<Team />} />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
 =======
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<div>Home Page</div>} />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
         </Routes>
       </Suspense>
     </Router>
