@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // SEO optimization utilities
 export class SEOOptimizer {
   private static instance: SEOOptimizer;
@@ -152,4 +150,3 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
 }
 
 export default SEOOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-5d1b
