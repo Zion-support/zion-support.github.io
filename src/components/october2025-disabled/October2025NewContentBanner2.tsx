@@ -6,7 +6,7 @@ const October2025NewContentBanner2 = () => {
       description: "Discover how AI is reducing data center energy consumption by 40% while improving performance",
       icon: Leaf,",
       slug: "ai-2025-oct-01-ai-powered-sustainable-data-centers",
-      gradient: "from-green-500 to-emerald-600",",
+      gradient: "from-green-500 to-emerald-600",
       badge: "Green AI"
     },
     {",
@@ -14,7 +14,7 @@ const October2025NewContentBanner2 = () => {
       description: "94% accuracy in real-time market volatility forecasting with AI-powered risk systems",
       icon: DollarSign,",
       slug: "ai-2025-oct-01-ai-financial-risk-prediction-systems",
-      gradient: "from-blue-500 to-cyan-600",",
+      gradient: "from-blue-500 to-cyan-600",
       badge: "FinTech"
     },
     {",
@@ -22,7 +22,7 @@ const October2025NewContentBanner2 = () => {
       description: "Transform communication with 98% accuracy voice AI across 95+ languages",
       icon: Mic,",
       slug: "ai-2025-oct-01-voice-ai-revolution-enterprise",
-      gradient: "from-purple-500 to-pink-600",",
+      gradient: "from-purple-500 to-pink-600",
       badge: "Voice AI"
     },
     {",
@@ -30,7 +30,7 @@ const October2025NewContentBanner2 = () => {
       description: "Next-generation RPA with self-learning bots delivering 10x ROI",
       icon: Bot,",
       slug: "ai-2025-oct-01-robotics-process-automation-next-gen",
-      gradient: "from-orange-500 to-red-600",",
+      gradient: "from-orange-500 to-red-600",
       badge: "Automation"
     }
   ];

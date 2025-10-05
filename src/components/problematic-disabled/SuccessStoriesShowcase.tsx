@@ -8,7 +8,7 @@ const SuccessStoriesShowcase: React.FC = () => {
       icon: '🚀',
       icon: <TrendingUp className="w-8 h-8" />,
       result: "300% Revenue Growth",
-      description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",",
+      description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
       metrics: [
         "98% prediction accuracy",
         "60% cost reduction",
@@ -22,7 +22,7 @@ const SuccessStoriesShowcase: React.FC = () => {
       icon: '🚀',
       icon: <Target className="w-8 h-8" />,
       result: "85% Downtime Reduction",
-      description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",",
+      description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",
       metrics: [
         "$2M annual savings",
         "40% lower maintenance costs",
@@ -36,7 +36,7 @@ const SuccessStoriesShowcase: React.FC = () => {
       icon: '🚀',
       icon: <Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
-      description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",",
+      description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
       metrics: [
         "$5M fraud prevented",
         "Sub-100ms detection",

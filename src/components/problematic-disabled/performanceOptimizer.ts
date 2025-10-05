@@ -329,6 +329,8 @@ export const usePerformanceOptimizer = () => {
 
   return { metrics, score, optimizer: performanceOptimizer };
 };
+
+/**
  * Performance Optimization Utility
  *
  * Provides tools for optimizing application performance including:
