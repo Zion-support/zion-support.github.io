@@ -1,16 +1,16 @@
 {
-  "timestamp": "2025-10-03T15:48:21.327Z",
+  "timestamp": "2025-10-05T11:45:37.267Z",
   "analysis": {
     "ariaLabels": {
-      "found": 1,
+      "found": 17,
       "missing": []
     },
     "semanticHTML": {
-      "found": 105,
+      "found": 164,
       "missing": []
     },
     "keyboardNavigation": {
-      "found": 0,
+      "found": 3,
       "missing": []
     },
     "colorContrast": {
@@ -18,11 +18,11 @@
       "missing": []
     },
     "altTexts": {
-      "found": 0,
+      "found": 1,
       "missing": []
     },
     "focusManagement": {
-      "found": 42,
+      "found": 158,
       "missing": []
     }
   },
