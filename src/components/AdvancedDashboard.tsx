@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
@@ -10,6 +11,8 @@ import { securityAuditor } from '../utils/securityAuditor';
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d46
 
 interface DashboardData {
   analytics: {
@@ -46,8 +49,11 @@ const AdvancedDashboard: React.FC = () => {
   const updateData = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d46
     // Mock data for demonstration
     const mockData: DashboardData = {
       analytics: {
@@ -66,6 +72,7 @@ const AdvancedDashboard: React.FC = () => {
     };
     
     setData(mockData);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Mock analytics data for now
@@ -153,6 +160,8 @@ const AdvancedDashboard: React.FC = () => {
     if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
     return `${(ms / 60000).toFixed(1)}m`;
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d46
   };
 
 =======
@@ -187,6 +196,7 @@ const AdvancedDashboard: React.FC = () => {
             </svg>
           </button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,6 +346,8 @@ const AdvancedDashboard: React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d46
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gray-50 p-4 rounded-lg">
