@@ -1,5 +1,5 @@
+import { ArrowRight, Award, Brain, CheckCircle, Target, TrendingUp, Users, Zap } from 'lucide-react';
 import React from 'react';
-import { Brain, Users, Zap, TrendingUp, CheckCircle, ArrowRight, Award, Target } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
