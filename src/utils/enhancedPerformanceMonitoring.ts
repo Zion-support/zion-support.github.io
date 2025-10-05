@@ -39,15 +39,6 @@ class EnhancedPerformanceMonitor {
   }
 
   private initializeObservers(): void {
-<<<<<<< HEAD
-    // Observe navigation timing
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-=======
-    if (typeof window === 'undefined') return;
-
-    // Observe navigation timing
-    if ('PerformanceObserver' in window) {
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
       try {
         const navObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -68,11 +59,6 @@ class EnhancedPerformanceMonitor {
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-<<<<<<< HEAD
-      timeToInteractive: entry.domInteractive - entry.fetchStart,
-=======
-      timeToInteractive: entry.domInteractive - entry.navigationStart,
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
       timestamp: Date.now()
     };
 
@@ -103,11 +89,6 @@ class EnhancedPerformanceMonitor {
 
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
-<<<<<<< HEAD
-      if (value && value > threshold) {
-=======
-      if (typeof value === 'number' && value > threshold) {
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
         this.addAlert({
           type: value > threshold * 1.5 ? 'error' : 'warning',
           message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
@@ -150,13 +131,6 @@ class EnhancedPerformanceMonitor {
     return [...this.metrics];
   }
 
-<<<<<<< HEAD
-  public getMonitoringStatus(): boolean {
-    return this.isMonitoring;
-  }
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
   public getAlerts(): PerformanceAlert[] {
     return [...this.alerts];
   }
@@ -187,8 +161,3 @@ export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 // Auto-start monitoring in browser environment
 if (typeof window !== 'undefined') {
   enhancedPerformanceMonitor.startMonitoring();
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f679

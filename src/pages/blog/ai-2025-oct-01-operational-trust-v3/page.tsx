@@ -1,19 +1,12 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function BlogPage(): React.JSX.Element {
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-<<<<<<< HEAD
         <title>AI 2025: Operational Trust Scorecards v3</title>
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v3" />
-=======
-        <title>Ai 2025 Oct 01 Operational Trust V3</title>
         <meta 
           name="description" 
           content="Learn about ai 2025 oct 01 operational trust v3 and how it can benefit your enterprise." 
@@ -22,7 +15,6 @@ export default function BlogPage(): React.JSX.Element {
           rel="canonical" 
           href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v3" 
         />
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -32,7 +24,6 @@ export default function BlogPage(): React.JSX.Element {
           <p>
             This comprehensive guide covers ai 2025 oct 01 operational trust v3 and provides practical insights for enterprise implementation.
           </p>
-<<<<<<< HEAD
 
           <div className="space-y-6">
             <ul className="list-disc pl-6 text-zion-slate-light">
@@ -46,21 +37,12 @@ export default function BlogPage(): React.JSX.Element {
               Wire SLIs to KPI movements, gate changes with PR policy checks and live canaries, and enforce budgets that
               trigger deterministic rollback when thresholds are violated.
             </p>
-
-            <div className="mt-8">
-              <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
-            </div>
           </div>
-=======
         </div>
         <div className="mt-8">
           <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
