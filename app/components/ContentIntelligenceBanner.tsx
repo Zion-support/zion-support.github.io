@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { BookOpen } from 'lucide-react';
+
+
 
 /**
  * Content Intelligence Revolution Banner

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Calculator } from 'lucide-react';
+
+
 
 export default function AIROICalculator() {
   const [annualRevenue, setAnnualRevenue] = useState(1000000);

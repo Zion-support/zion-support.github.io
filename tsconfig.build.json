@@ -2,13 +2,13 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "skipLibCheck": true,
-    "noImplicitAny": false,
-    "strict": false
+    "noEmit": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
   "exclude": [
     "src/pages/blog-disabled/**/*",
-    "app/blog",
-    "app/components",
     "blog",
     "components",
     "src/components/**/*",

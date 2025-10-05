@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
+
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [

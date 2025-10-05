@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
+
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [

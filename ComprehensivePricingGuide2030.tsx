@@ -1,6 +1,6 @@
+import { ArrowRight, Brain, CheckCircle, Cpu, Mail, MapPin, Phone, Rocket, Server, TrendingUp, Zap } from 'lucide-react';
 import React, { useState, useMemo } from 'react'
 
-import { CheckCircle, Zap, TrendingUp, Brain, Server, ArrowRight, Mail, Phone, MapPin, Rocket, Cpu } from "lucide-react";
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 

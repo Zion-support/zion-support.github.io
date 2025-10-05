@@ -1,6 +1,13 @@
 import Link from 'next/link';
-// @ts-ignore
-import { ArrowRight, Award, TrendingUp, Brain, Target, DollarSign, Users } from 'lucide-react';
+import { ArrowRight, TrendingUp, Brain, Target, Users, DollarSign, Award } from 'lucide-react';
+
+
+
+
+
+
+
+
 
 export const metadata = {
   title: 'AI Synthetic Consciousness: $10B ROI Success Story - Fortune 500 Transformation',

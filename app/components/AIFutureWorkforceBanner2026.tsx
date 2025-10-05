@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Users } from 'lucide-react';
+
+
 
 export default function AIFutureWorkforceBanner2026() {
   return (

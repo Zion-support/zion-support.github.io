@@ -1,6 +1,6 @@
 import Link from 'next/link';
-// @ts-ignore
-import { ArrowLeft, Calendar, Clock, User, DollarSign, TrendingUp } from 'lucide-react';
+
+
 
 export const metadata = {
   title: 'AI Cognitive Computing Success 2026: $25M Value Creation Case Study | Zion Tech Group',
