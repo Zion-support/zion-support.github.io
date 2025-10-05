@@ -1,6 +1,43 @@
 import '@testing-library/jest-dom';
+import React from 'react';
 
-// Mock window.matchMedia
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+if (typeof global.TextEncoder === 'undefined') {
+  const { TextEncoder, TextDecoder } = require('util');
+  global.TextEncoder = TextEncoder;
+  global.TextDecoder = TextDecoder;
+}
+
+// Mock import.meta.env for Jest
+Object.defineProperty(global, 'import', {
+  value: {
+    meta: {
+      env: {
+        DEV: true,
+        PROD: false,
+        MODE: 'test',
+      },
+    },
+  },
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as unknown as typeof IntersectionObserver;
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as unknown as typeof ResizeObserver;
+
+// Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -292,7 +329,6 @@ beforeAll(() => {
 });
 
 afterAll(() => {
-  // Cleanup after all tests
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
