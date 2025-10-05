@@ -26,7 +26,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
         
         {/* Hero Section */}
         <div className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle at 30% 50%,rgba(139,92,246,0.2),transparent 50%)]" />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
