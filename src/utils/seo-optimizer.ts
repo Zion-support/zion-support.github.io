@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Advanced SEO Optimization System
  * Handles meta tags, structured data, sitemap generation, and SEO analytics
@@ -272,37 +271,4 @@ class SEOOptimizer {
     return `
 SEO Analytics Report:
 ====================
-=======
->>>>>>> origin/cursor/ad-creation-and-management-ac48
-Total Pages Tracked: ${totalPages}
-Total Page Views: ${totalPageViews}
-
-Page Performance:
-${Array.from(analytics.entries()).map(([page, data]) => 
-  `- ${page}: ${data.pageViews} views (Last updated: ${data.lastUpdated})`
-).join('\n')}
-
-Current Page: ${this.currentPage}
-Last Updated: ${new Date().toISOString()}
-    `.trim();
-  }
-
-  cleanup(): void {
-    this.isInitialized = false;
-    this.analytics.clear();
-    console.log('SEO optimizer cleaned up');
-  }
-}
-
-<<<<<<< HEAD
 export default SEOOptimizer;
-=======
-export default SEOOptimizer;
-const seoOptimizer = {
-  trackPageView: () => {
-    console.log('Page view tracked');
-  }
-};
-
-export default seoOptimizer;
->>>>>>> origin/cursor/ad-creation-and-management-ac48

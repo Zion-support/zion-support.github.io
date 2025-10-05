@@ -40,7 +40,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 4
   },
   {
-<<<<<<< HEAD
     id: '9, 7',
     title: 'Cloud, Cost, Optimization v6: Quality, Tie, r, s, Coales, c, e, Disti, l, l',
     slug: 'gen, a, i-co, s, t-optimizati, o, n-v6-20, 2, 5-10-0, 3',
@@ -508,18 +507,3 @@ export const BLOG_POSTS: BlogPost[] = [
     published, A, t: '20, 2, 5-10-0, 3',
     readTime: 1, 0,
   },
-=======
-    id: '3',
-    title: 'The Future of IT Infrastructure',
-    slug: 'future-it-infrastructure',
-    excerpt: 'Exploring the latest trends in IT infrastructure and cloud computing.',
-    content: 'Modern IT infrastructure is evolving rapidly with cloud-native technologies, microservices, and edge computing.',
-    featuredImage: '/images/blog/it-infrastructure.jpg',
-    category: 'Infrastructure',
-    tags: ['Cloud', 'Microservices', 'Edge Computing'],
-    author: 'Zion Tech Team',
-    publishedAt: '2025-10-01',
-    readTime: 6
-  }
-];
->>>>>>> origin/cursor/ad-creation-and-management-ac48

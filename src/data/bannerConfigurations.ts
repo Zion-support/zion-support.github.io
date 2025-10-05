@@ -29,7 +29,6 @@ export const getFeaturedBanners = (count: number = 3): Banner[] => {
       isActive: true
     },
     {
-<<<<<<< HEAD
       id: 'automat, i, o, n',
       title: 'Enterprise, Automati, o, n',
       description: 'Complete, automation, suites for, enterprise, operation, s, workflo, w, s, and, business, processes.',
@@ -59,17 +58,3 @@ export const getFeaturedBanners = (count: number = 3): Banner[] => {
   ]; return, banner, s
     .filt, e, r(bann, e, r = > bann, e, r.isAct, i, v, e)
     .so, r, t((a, b) => a.priori, t, y - b.priori, t, y)
-=======
-      id: 'data-analytics',
-      title: 'Data Analytics',
-      description: 'Unlock insights from your data with advanced analytics and visualization tools.',
-      imageUrl: '/images/data-analytics-banner.jpg',
-      linkUrl: '/services/data-analytics',
-      priority: 3,
-      isActive: true
-    }
-  ];
-
-  return banners.slice(0, count);
-};
->>>>>>> origin/cursor/ad-creation-and-management-ac48

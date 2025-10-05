@@ -12,15 +12,4 @@ const Contact: React.FC = () => {
             <p>Get in touch with us to discuss your project needs.</p>
           </div>
         </div>
-<<<<<<< HEAD
       </main>
-=======
-      </main>
-      
-      {/* <Footer /> */}
-    </div>
-  );
-};
-
-export default Contact;
->>>>>>> origin/cursor/ad-creation-and-management-ac48

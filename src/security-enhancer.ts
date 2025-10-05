@@ -15,7 +15,6 @@ class SecurityEnhancer {
     if (this.isInitialized) {
       return;
     }
-<<<<<<< HEAD
     this.setupCSP();
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
@@ -42,27 +41,3 @@ class SecurityEnhancer {
   private setupSecurityHeaders(): void {
     // Additional security headers setup
     console.log('Security headers configured');
-=======
-
-    this.setupSecurityHeaders();
-    this.isInitialized = true;
-    console.log('Security enhancer initialized');
-  }
-
-  private setupSecurityHeaders(): void {
-    if (typeof document !== 'undefined') {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'Content-Security-Policy';
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
-      document.head.appendChild(meta);
-    }
-  }
-
-  cleanup(): void {
-    this.isInitialized = false;
-    console.log('Security enhancer cleaned up');
-  }
-}
-
-export default SecurityEnhancer;
->>>>>>> origin/cursor/ad-creation-and-management-ac48
