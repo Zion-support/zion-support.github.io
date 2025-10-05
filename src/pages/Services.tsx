@@ -2,21 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Rocket, 
-  Shield, 
-  Cloud, 
-  Code, 
-  Database, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  TrendingUp,
-  Zap
-} from 'lucide-react';
 
+import { Brain, Rocket, Shield, Cloud, Code, Database, CheckCircle, ArrowRight, Star, Users, TrendingUp, Zap } from 'lucide-react';
 const Services: React.FC = () => {
   const services = [
     {

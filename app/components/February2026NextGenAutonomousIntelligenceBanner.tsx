@@ -1,12 +1,7 @@
 
 import React from 'react';
-import ArrowRight from 'lucide-react';
-import Zap from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Users from 'lucide-react';
-import Shield from 'lucide-react';
 
+import { ArrowRight, Zap, Brain, TrendingUp, Users, Shield } from 'lucide-react';
 export default function February2026NextGenAutonomousIntelligenceBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 border border-purple-500/30 rounded-2xl p-8 mb-8 shadow-2xl">

@@ -1,12 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-import Factory from 'lucide-react';
-import Cogs from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import ArrowRight from 'lucide-react';
-import Zap from 'lucide-react';
 
+import { Factory, Cogs, TrendingUp, ArrowRight, Zap } from 'lucide-react';
 const AutonomousManufacturingRevolutionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-orange-900 via-red-900 to-yellow-900">

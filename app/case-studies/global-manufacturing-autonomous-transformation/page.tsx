@@ -1,16 +1,9 @@
 import Link from 'next/link';
 
-import TrendingUp from 'lucide-react';
-import CheckCircle from 'lucide-react';
-import Target from 'lucide-react';
-import Clock from 'lucide-react';
-import Users from 'lucide-react';
-import BarChart3 from 'lucide-react';
-import Award from 'lucide-react';
-import Zap from 'lucide-react';
-
 import { Metadata } from 'next';
 
+
+import { TrendingUp, CheckCircle, Target, Clock, Users, BarChart3, Award, Zap } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Global Manufacturing Leader Achieves 85% Process Automation with AI | Zion Tech Group',
   description: 'See how a Fortune 500 manufacturing corporation achieved 85% process automation, 60% cost reduction, and $75M annual savings with AI-powered autonomous business processes.',

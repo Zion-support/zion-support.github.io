@@ -1,12 +1,7 @@
 
 import React from 'react';
-import ArrowRight from 'lucide-react';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
-import Target from 'lucide-react';
-import Shield from 'lucide-react';
-import Star from 'lucide-react';
 
+import { ArrowRight, Brain, Zap, Target, Shield, Star } from 'lucide-react';
 export default function March2026QuantumConsciousnessBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border border-indigo-500/30 rounded-2xl p-8 mb-8 shadow-2xl">

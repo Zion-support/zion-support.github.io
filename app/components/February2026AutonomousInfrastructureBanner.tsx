@@ -1,12 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-import ArrowRight from 'lucide-react';
-import Shield from 'lucide-react';
-import Zap from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
 
+import { ArrowRight, Shield, Zap, TrendingUp, Brain } from 'lucide-react';
 const February2026AutonomousInfrastructureBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">

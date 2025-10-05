@@ -1,12 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-import ArrowRight from 'lucide-react';
-import Zap from 'lucide-react';
-import Cpu from 'lucide-react';
-import Shield from 'lucide-react';
-import TrendingUp from 'lucide-react';
 
+import { ArrowRight, Zap, Cpu, Shield, TrendingUp } from 'lucide-react';
 const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">

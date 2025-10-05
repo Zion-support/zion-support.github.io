@@ -1,10 +1,7 @@
 import Link from 'next/link';
 
-import ArrowRight from 'lucide-react';
-import Zap from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
 
+import { ArrowRight, Zap, Brain, TrendingUp } from 'lucide-react';
 export default function RevolutionaryContent2026Banner() {
   return (
     <div className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-16">

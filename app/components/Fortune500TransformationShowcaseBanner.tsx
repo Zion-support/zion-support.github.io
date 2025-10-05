@@ -1,12 +1,7 @@
 
 import React from 'react';
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Users from 'lucide-react';
-import Award from 'lucide-react';
-import CheckCircle from 'lucide-react';
-import Star from 'lucide-react';
 
+import { ArrowRight, TrendingUp, Users, Award, CheckCircle, Star } from 'lucide-react';
 export default function Fortune500TransformationShowcaseBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border border-emerald-500/30 rounded-2xl p-8 mb-8 shadow-2xl">

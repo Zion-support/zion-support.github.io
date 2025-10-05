@@ -1,11 +1,7 @@
 import Link from 'next/link';
 
-import ArrowRight from 'lucide-react';
-import Lock from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';
 
+import { ArrowRight, Lock, Brain, TrendingUp, Zap } from 'lucide-react';
 export default function NewContent2026PromotionalBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">

@@ -1,10 +1,7 @@
 import Link from 'next/link';
 
-import Sparkles from 'lucide-react';
-import Shield from 'lucide-react';
-import Bot from 'lucide-react';
-import ShoppingBag from 'lucide-react';
 
+import { Sparkles, Shield, Bot, ShoppingBag } from 'lucide-react';
 export default function FeaturedOctober2026Content() {
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">

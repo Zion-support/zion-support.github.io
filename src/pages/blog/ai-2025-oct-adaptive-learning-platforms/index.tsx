@@ -1,8 +1,9 @@
-import { ArrowLeft, GraduationCap, Target, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "../../../components/Header";
 
+
+import { ArrowLeft, GraduationCap, Target, CheckCircle } from 'lucide-react';
 const AdaptiveLearningPlatforms = () => {
   return (
     <>

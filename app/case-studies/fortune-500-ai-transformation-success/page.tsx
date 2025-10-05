@@ -1,10 +1,7 @@
 import Link from 'next/link';
 
-import Calendar from 'lucide-react';
-import User from 'lucide-react';
-import Clock from 'lucide-react';
-import Tag from 'lucide-react';
 
+import { Calendar, User, Clock, Tag } from 'lucide-react';
 export const metadata = {
   title: 'Fortune 500 AI Transformation Success: $52M+ Savings & 156% ROI - Zion Tech Group',
   description: 'Discover how a Fortune 500 manufacturing company achieved $50M+ in annual savings through comprehensive AI transformation. Learn the strategies, challenges, and results.',
