@@ -1,36 +1,39 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
   description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ 
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of advanced AI and IT solutions for enterprise clients"
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
+  keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
+  image = '/og-image.jpg',
+  url = 'https://zion.app',
+  type = 'website'
 }) => {
   return (
-<<<<<<< HEAD
-    <>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-    </>
-=======
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          S E O
-        </h2>
-        <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
-        </p>
-      </div>
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
+    </Helmet>
   );
 };
 

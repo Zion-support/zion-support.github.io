@@ -1,21 +1,26 @@
 import React from 'react';
 
-const Loading: React.FC = () => {
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+}
+
+const Loading: React.FC<LoadingProps> = ({ 
+  size = 'md', 
+  text = 'Loading...' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
   return (
-<<<<<<< HEAD
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-=======
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          Loading
-        </h2>
-        <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
-        </p>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
+    <div className="flex flex-col items-center justify-center p-8">
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
+      {text && (
+        <p className="mt-4 text-gray-600 text-sm">{text}</p>
+      )}
     </div>
   );
 };
