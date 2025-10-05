@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -7,10 +7,41 @@ interface PerformanceMetrics {
   fcp?: number;
   ttfb?: number;
   inp?: number;
+  loadTime?: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  cumulativeLayoutShift?: number;
+  firstInputDelay?: number;
+  memoryUsage?: number;
+}
+
+interface PerformanceThresholds {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  memoryUsage: number;
+}
+
+interface Alert {
+  id: string;
+  message: string;
+  resolved: boolean;
 }
 
 export const AdvancedPerformanceMonitor: React.FC = () => {
-<<<<<<< HEAD
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isVisible, setIsVisible] = useState(false);
+  const [alerts, setAlerts] = useState<Alert[]>([]);
+  const [thresholds, setThresholds] = useState<PerformanceThresholds>({
+    loadTime: 3000,
+    firstContentfulPaint: 1800,
+    largestContentfulPaint: 2500,
+    cumulativeLayoutShift: 0.1,
+    firstInputDelay: 100,
+    memoryUsage: 50 * 1024 * 1024, // 50MB
+  });
 
   // Resolve alert
   const resolveAlert = useCallback((alertId: string) => {
@@ -70,10 +101,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
     return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
   }, []);
-=======
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
->>>>>>> 297cd5093a4334c73fbbc60d17002134ef3086c0
 
   useEffect(() => {
     // Only run in development

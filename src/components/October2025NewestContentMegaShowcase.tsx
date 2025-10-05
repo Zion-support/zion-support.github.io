@@ -1,34 +1,30 @@
 import { Link } from "react-router-dom";
 export default function October2025NewestContentMegaShowcase() {
   const newContent = [
-    {",
-      icon: <Network className="w-8 h-8" />,",
     {
       icon: <Network className="w-8 h-8" />,
       title: "Autonomous Mesh Intelligence Platform",
-      description: "Self-organizing distributed AI networks with 99.997% uptime",",
+      description: "Self-organizing distributed AI networks with 99.997% uptime",
       value: "$8.4B",
-      metric: "2,847% ROI",",
+      metric: "2,847% ROI",
       link: "/blog/ai-2025-october-autonomous-mesh-intelligence-platform",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: '🚀',
       icon: <Atom className="w-8 h-8" />,
       title: "Quantum-Neural Hybrid Systems",
-      description: "100,000x performance improvements for drug discovery and optimization",",
+      description: "100,000x performance improvements for drug discovery and optimization",
       value: "$12.7B",
-      metric: "44,800% ROI",",
+      metric: "44,800% ROI",
       link: "/blog/ai-2025-october-quantum-neural-hybrid-systems",
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: '🚀',
       icon: <Brain className="w-8 h-8" />,
       title: "Neural-Symbolic Reasoning Systems",
-      description: "97% accuracy with 100% explainable AI decision-making",",
+      description: "97% accuracy with 100% explainable AI decision-making",
       value: "$5.7B",
-      metric: "58,360% ROI",",
+      metric: "58,360% ROI",
       link: "/blog/ai-2025-october-neural-symbolic-reasoning-systems",
       gradient: "from-green-500 to-emerald-500"
     }
