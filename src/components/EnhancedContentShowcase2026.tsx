@@ -203,8 +203,7 @@ export default function EnhancedContentShowcase2026() {
               onChange={(e) => setSortBy(e.target.value)}
               className="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="featured">Featured</option>
-              <option value="newest">Newest</option>
+
             </select>
           </div>
         </div>

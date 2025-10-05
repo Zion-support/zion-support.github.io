@@ -114,7 +114,7 @@ const MainContent: React.FC = () => {
               </div>
               <div className='text-center p-6'>
                 <div className='text-4xl mb-4'>🔄</div>
-                <h3 className='text-xl font-bold mb-3'>Automation</h3>
+                
                 <p className='text-gray-600'>
                   Complete automation suites for enterprise operations and
                   workflows.

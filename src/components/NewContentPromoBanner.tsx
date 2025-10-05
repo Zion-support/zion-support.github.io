@@ -1,17 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Sparkles, 
-  ArrowRight, 
-  X, 
-  BookOpen, 
-  TrendingUp, 
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Star
-} from 'lucide-react';
 
 interface NewContentPromoBannerProps {
   variant?: 'info' | 'premium' | 'success' | 'warning';
@@ -133,9 +121,9 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-3">
-              <Sparkles className="w-6 h-6 animate-pulse" />
+               />
               <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
-              <Star className="w-5 h-5 animate-spin" />
+               />
             </div>
             
             <h3 className="text-xl font-bold mb-2">
@@ -178,16 +166,16 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                 to="/blog"
                 className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                <BookOpen className="w-4 h-4" />
+                 />
                 Read All Articles
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                 />
               </Link>
               
               <Link
                 to="/case-studies"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                <TrendingUp className="w-4 h-4" />
+                 />
                 View Case Studies
               </Link>
 
@@ -195,7 +183,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                 to="/services"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                <Shield className="w-4 h-4" />
+                 />
                 Explore Services
               </Link>
             </div>
@@ -203,11 +191,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
             {/* Stats */}
             <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
               <div className="flex items-center gap-1">
-                <span className="font-semibold">13</span>
+                
                 <span>New Articles</span>
               </div>
               <div className="flex items-center gap-1">
-                <span className="font-semibold">3</span>
+                
                 <span>New Case Studies</span>
               </div>
               <div className="flex items-center gap-1">

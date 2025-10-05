@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, Star, Users, Award, TrendingUp } from 'lucide-react';
 
 const February2026ContentShowcaseBanner = () => {
   const featuredContent = [
@@ -12,7 +11,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '180K+',
       badge: 'BREAKTHROUGH',
       gradient: 'from-emerald-500 to-teal-500',
-      icon: <Brain className="w-6 h-6" />,
+      icon:  />,
       link: '/blog/ai-2026-feb-autonomous-neural-networks',
       description: 'Self-evolving neural architectures achieving 99.97% accuracy in autonomous decision-making'
     },
@@ -25,7 +24,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '156K+',
       badge: 'FEATURED',
       gradient: 'from-blue-500 to-cyan-500',
-      icon: <Zap className="w-6 h-6" />,
+      icon:  />,
       link: '/blog/edge-2026-feb-quantum-computing',
       description: 'Ultra-low latency quantum processing delivering sub-millisecond response times'
     },
@@ -38,7 +37,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '203K+',
       badge: 'REVOLUTIONARY',
       gradient: 'from-purple-500 to-pink-500',
-      icon: <Sparkles className="w-6 h-6" />,
+      icon:  />,
       link: '/blog/ai-2026-feb-meta-cognitive-systems',
       description: 'AI that thinks about thinking - achieving true self-awareness and autonomous learning'
     }
@@ -57,11 +56,11 @@ const February2026ContentShowcaseBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border border-emerald-500/30 mb-8">
-            <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
+             />
             <span className="text-emerald-400 font-bold text-lg tracking-wider uppercase">
               🌟 FEBRUARY 2026: REVOLUTIONARY CONTENT SHOWCASE
             </span>
-            <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+             />
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -76,10 +75,10 @@ const February2026ContentShowcaseBanner = () => {
           {/* Achievement Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
-              { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" />, color: 'text-emerald-400' },
-              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
-              { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" />, color: 'text-purple-400' },
-              { value: '50+', label: 'Industry Awards', icon: <TrendingUp className="w-8 h-8" />, color: 'text-pink-400' }
+              { value: '500K+', label: 'Monthly Readers', icon:  />, color: 'text-emerald-400' },
+              { value: '99.9%', label: 'Content Accuracy', icon:  />, color: 'text-blue-400' },
+              { value: '200+', label: 'Expert Articles', icon:  />, color: 'text-purple-400' },
+              { value: '50+', label: 'Industry Awards', icon:  />, color: 'text-pink-400' }
             ].map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className={`${achievement.color} mb-2 flex justify-center`}>
@@ -138,11 +137,11 @@ const February2026ContentShowcaseBanner = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-emerald-400" />
+                     />
                     {content.readTime}
                   </span>
                   <span className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                     />
                     {content.rating}
                   </span>
                 </div>
@@ -150,7 +149,7 @@ const February2026ContentShowcaseBanner = () => {
                 {/* Reader Count */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 text-gray-400">
-                    <Users className="w-4 h-4" />
+                     />
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
@@ -161,7 +160,7 @@ const February2026ContentShowcaseBanner = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                   />
                 </a>
               </div>
             </div>
@@ -172,7 +171,7 @@ const February2026ContentShowcaseBanner = () => {
         <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-3xl p-8 md:p-12 border border-emerald-500/20 mb-16">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
+               />
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
                 EXCLUSIVE FEBRUARY OFFER
               </span>
@@ -197,7 +196,7 @@ const February2026ContentShowcaseBanner = () => {
                   href="/subscribe"
                   className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2"
                 >
-                  <Sparkles className="w-5 h-5" />
+                   />
                   <span>Get Premium Access</span>
                 </a>
                 <a
@@ -205,7 +204,7 @@ const February2026ContentShowcaseBanner = () => {
                   className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Contact Sales</span>
-                  <ArrowRight className="w-5 h-5" />
+                   />
                 </a>
               </div>
             </div>
@@ -230,8 +229,8 @@ const February2026ContentShowcaseBanner = () => {
                   className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300"
                 />
                 <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2">
-                  <span>Subscribe</span>
-                  <ArrowRight className="w-5 h-5" />
+                  
+                   />
                 </button>
               </div>
               <p className="text-xs text-gray-500 mt-4">

@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { X, Image, Code, Database, Settings, Zap, Wifi } from 'lucide-react';
 
 interface PerformanceOptimizerProps {
   isVisible: boolean;

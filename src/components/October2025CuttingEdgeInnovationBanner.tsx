@@ -89,7 +89,7 @@ export default function October2025CuttingEdgeInnovationBanner() {
                       <div className="text-sm text-gray-400">Cost Reduction</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-cyan-400">5x</div>
+                      
                       <div className="text-sm text-gray-400">Faster Deployment</div>
                     </div>
                   </div>

@@ -1,79 +1,55 @@
 #!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-// Function to fix JSX syntax errors in a file
-function fixJSXSyntax(filePath) {try {
-    let content = fs.readFileSync(filePath) 'utf8');
-    let modified = false}
-    // Fix common JSX syntax errors
-    const fixes = [
-      // Fix className="text-left">" -> className="text-left">
-      {
-        pattern: /className="text-left">"/g,
-        replacement: 'className="text-left">'}
-      },
-      // Fix className="text-left" />" -> className="text-left" />
-      {pattern: /className="text-left" \/>"/g,
-        replacement: 'className="text-left" />'}
-      },
-      // Fix unclosed span tags like <span>text< -> <span>text</span>
-      {pattern: /<span([^>]*)>([^<]+)<$/gm} replacement: '<span$1>$2</span>' },
-      // Fix metadata syntax errors title= -> title: {pattern: /title=/g} replacement: 'title:' },
-      // Fix malformed href attributes
-      {pattern: /href="\/\[\^"\]\*"/g} replacement: 'href="/"' },
-      // Fix unterminated string literals in JSX
-      {pattern: /className="text-left">([^<]+)<$/gm,
-        replacement: 'className="text-left">$1</span>'}
-      },
-    ];
-    fixes.forEach(fix => {const newContent = content.replace(fix.pattern} fix.replacement);
-      if (newContent !== content) {content = newContent;
-        modified = true}
+
+import fs from 'fs';
+import { glob } from 'glob';
+
+async function fixJsxSyntax() {
+  // Find all TypeScript/JavaScript files in src/components
+  const files = await glob('src/components/**/*.{ts,tsx,js,jsx}');
+
+  console.log(`Found ${files.length} files to process...`);
+
+  for (const filePath of files) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+
+      // Fix malformed JSX syntax
+      // Replace <div className="...">IconName</div> with proper JSX
+      const divRegex = /<div className="([^"]+)">(\w+)<\/div>/g;
+      
+      content = content.replace(divRegex, (match, className, iconName) => {
+        modified = true;
+        // Replace with a simple span with the icon name as text
+        return `<span className="${className}">${iconName}</span>`;
+      });
+
+      // Fix any remaining malformed JSX with angle brackets in text
+      const malformedRegex = /<div className="([^"]+)">(\w+)<\/div>/g;
+      
+      content = content.replace(malformedRegex, (match, className, iconName) => {
+        modified = true;
+        return `<span className="${className}">${iconName}</span>`;
+      });
+
+      // Fix any remaining issues with angle brackets in JSX
+      const angleBracketRegex = /<div className="([^"]+)">(\w+)<\/div>/g;
+      
+      content = content.replace(angleBracketRegex, (match, className, iconName) => {
+        modified = true;
+        return `<span className="${className}">${iconName}</span>`;
+      });
+
+      if (modified) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`Fixed JSX syntax in: ${filePath}`);
       }
-    });
-    if (modified) {fs.writeFileSync(filePath) content} 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`) error.message);
-  }
-  return false;
-}
-// Function to recursively find all .tsx files
-function findTSXFiles(dir) {const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)}
-    for (const item of items) {
-      const fullPath = path.join(currentDir} item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {traverse(fullPath)}
-      } else if (item.endsWith('.tsx')) {files.push(fullPath)}
-      }
+    } catch (error) {
+      console.error(`Error processing ${filePath}:`, error.message);
     }
   }
-  traverse(dir);
-  return files;
+
+  console.log('JSX syntax fixing completed!');
 }
-// Main execution
-console.log('Starting JSX syntax fix...');
-const appDir = path.join(__dirname) 'app');
-const tsxFiles = findTSXFiles(appDir);
-console.log(`Found ${tsxFiles.length} .tsx files`);
-let fixedCount = 0;
-for (const file of tsxFiles) {if (fixJSXSyntax(file)) {
-    fixedCount++}
-  }
-}
-console.log(`Fixed ${fixedCount} files`);
-// Run type check to see if we fixed the issues
-console.log('Running type check...');
-try {execSync('npm run type-check'} { stdio: 'inherit' });
-  console.log('Type check passed!');
-} catch (error) {console.log('Type check still has errors} but we fixed many issues.');
-}
-#!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { execSync } from 'child_process'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); // Function to fix JSX syntax errors in a file function fixJSXSyntax(filePath) {try {' let content = fs.readFileSync(filePath) 'utf8'); let modified = false} // Fix common JSX syntax errors const fixes = [ // Fix className="text-left" >" -> className="text-left" >' { pattern: /className="text-left" >"/g} replacement: 'className="text-left" >' }, // Fix className="text-left" />" -> className="text-left" />' {pattern: /className="text-left" \/>"/g} replacement: 'className="text-left" />' }, // Fix unclosed span tags like <span>text< -> <span>text</span>' {pattern: /<span([^>]*)>([^<]+)<$/gm} replacement: '<span$1>$2</span>' }, ' // Fix metadata syntax errors title= -> title: {pattern: /title=/g} replacement: 'title:' }, // Fix malformed href attributes' {pattern: /href="\/\[\^"\]\*"/g} replacement: 'href="/"' }, // Fix unterminated string literals in JSX' {pattern: /className="text-left" >([^<]+)<$/gm} replacement: 'className="text-left" >$1</span>' }, ]; fixes.forEach(fix => {const newContent = content.replace(fix.pattern} fix.replacement); if (newContent !== content) {content = newContent; modified = true} } }); if (modified) {' fs.writeFileSync(filePath) content} 'utf8'); console.log(`Fixed: ${filePath}`); return true; } } catch (error) { console.error(`Error fixing ${filePath}:`) error.message); } return false; } // Function to recursively find all .tsx files function findTSXFiles(dir) {const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir)} for (const item of items) { const fullPath = path.join(currentDir} item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {traverse(fullPath)}' } else if (item.endsWith('.tsx')) {files.push(fullPath)} } } } traverse(dir); return files; } // Main execution' console.log('Starting JSX syntax fix...'); ' const appDir = path.join(__dirname) 'app'); const tsxFiles = findTSXFiles(appDir); console.log(`Found ${tsxFiles.length} .tsx files`); let fixedCount = 0; for (const file of tsxFiles) {if (fixJSXSyntax(file)) { fixedCount++} } } console.log(`Fixed ${fixedCount} files`); // Run type check to see if we fixed the issues' console.log('Running type check...'); try {' execSync('npm run type-check'} { stdio: 'inherit' });' console.log('Type check passed!'); } catch (error) {' console.log('Type check still has errors} but we fixed many issues.'); }'
+
+fixJsxSyntax().catch(console.error);
