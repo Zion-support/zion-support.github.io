@@ -303,23 +303,24 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
         <div className="mt-8 pt-6 border-t border-emerald-400/30">
           <div className="flex flex-wrap items-center justify-center gap-6 text-emerald-200 text-sm">
             <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> />
-                <trong>15+</strong> Fortune 500 Clients</span>
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>15+</strong> Fortune 500 Clients</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> />
-                <trong>$20B+</strong> Total Value Created</span>
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>$20B+</strong> Total Value Created</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> />
-                <trong>99.97%</strong> Platform Uptime</span>
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>99.97%</strong> Platform Uptime</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> Security Breaches</span>
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>0</strong> Security Breaches</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> />
-                <trong>SOC 2 Type II</strong> Certified</span>
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>SOC 2 Type II</strong> Certified</span>
             </div>
           </div>
         </div>
