@@ -5,10 +5,10 @@ const AITrendsInsightsBanner2026: React.FC = () => {
     <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">
-          AI Trends Insights Banner 2026
+          A I Trends Insights Banner2026
         </h2>
         <p className="text-lg mb-6">
-          Discover the latest AI trends and insights for 2026.
+          This component is being restored. Please check back later for full functionality.
         </p>
       </div>
     </div>
