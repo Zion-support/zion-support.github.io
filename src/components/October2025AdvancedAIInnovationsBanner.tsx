@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Database, ArrowRight, Cpu, Brain, Zap } from 'lucide-react';
 const October2025AdvancedAIInnovationsBanner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16 px-6 rounded-3xl mb-12" > {/* Animated background elements */}
@@ -62,8 +63,6 @@ const October2025AdvancedAIInnovationsBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition-colors">
-                <Database className="w-8 h-8 text-purple-300" />
-              </div>
                 <Database className="w-8 h-8 text-purple-300" />
               </div>
               <div className="flex-1">

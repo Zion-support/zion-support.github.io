@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Shield, Workflow, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
 const October2025LatestPremiumContentBanner = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-y border-purple-500/30 py-6 px-4 sm:px-6 lg:px-8 shadow-2xl relative overflow-hidden" > {/* Animated background effects */}
@@ -87,8 +88,6 @@ const October2025LatestPremiumContentBanner = () => {
                 className="group bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 hover:border-blue-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-start gap-3 mb-2">
-                  <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
-                  <div>
                   <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-blue-200 transition-colors">

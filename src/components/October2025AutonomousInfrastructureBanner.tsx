@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Cpu, ArrowRight, Database, Zap, Shield, Clock } from 'lucide-react';
 const October2025AutonomousInfrastructureBanner = () => {
   return (
     <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden" > {/* Animated background effects */}
@@ -196,8 +197,6 @@ const October2025AutonomousInfrastructureBanner = () => {
               <Cpu className="w-8 h-8" />
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
-              <Cpu className="w-8 h-8" />
-            </div>
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>
             <div className="text-sm text-cyan-100">
               18-min read: Complete architecture, ML models, Python code examples, implementation roadmap
@@ -281,4 +280,5 @@ const October2025AutonomousInfrastructureBanner = () => {
     </div>
   );
 };
+
 export default October2025AutonomousInfrastructureBanner;
