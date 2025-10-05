@@ -1,1 +1,354 @@
-import Reac t { useSta t e useEffect } from ' react ' ; interface AIPerformanceDashboardProps { isVisib l e: boole a n; onClo s e: ( ) = > v o i d; } interface PerformanceMetrics { errorRa t e: numb e r; avgResolutionTi m e: numb e r; criticalErrorsTod a y: numb e r; userImpactSco r e: num b e r; } interface AIInsights { predictedHighRiskActio n s: string [ ]; recommendedImprovemen t s: string [ ]; errorTren d s: Arr a y < { catego r y: string; tre n d: ' increasi n g ' | ' decreasi n g ' | ' sta b l e ' ; } > ; } interface ErrorReport { id: string; severi t y: string; messa g e: string; lastOccurren c e: string | Da t e; occurrenceCou n t: numb e r; conte x t: { compone n t ? : string; acti o n ? : str i n g; }; aiPredictedImpa c t ? : numb e r; resolutionSuggestio n s ? : string [ ]; } const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ( { isVisi b l e onClo s e } ) = > { const [ metricssetMetrics ] = useSta t e < PerformanceMetri c s | nu l l > ( nu l l ); const [ insightssetInsights ] = useSta t e < AIInsigh t s | nu l l > ( nu l l ); const [ errorssetErrors ] = useSta t e < ErrorRepo r t [ ] > ( [ ] ); useEffect ( ( ) = > { if ( isVisib l e ) { const loadPerformanceData = as y n c ( ) = > { try { / / Simulate API calls for performance data const mockMetrics: PerformanceMetrics = { errorRa t e: Ma t h.ran d o m ( ) * 5 avgResolutionTi m e: Ma t h.rand o m ( ) * 30 + 1 0 criticalErrorsTod a y: Ma t h.flo o r ( Ma t h.rand o m ( ) * 1 0 ) userImpactSco r e: Ma t h.flo o r ( Ma t h.rand o m ( ) * 40 + 6 0 ) }; const mockInsights: AIInsights = { predictedHighRiskActio n s: [ ' High memory usage detected in user authentication f l o w ' ' Potential race condition in data synchronization ' ' Slow database queries affecting user experience ' ] .sli c e ( 0 Ma t h.flo o r ( Ma t h.rand o m ( ) * 3 ) ) recommendedImprovemen t s: [ ' Implement caching for frequently accessed dat a ' ' Add error boundaries to prevent cascading failur e s ' ' Optimize database indexes for better query performan c e ' ' Consider implementing circuit breaker patter n ' ] errorTren d s: [ { catego r y: ' authenticat i o n ' tre n d: ' decreas i n g ' } { catego r y: ' datab a s e ' tre n d: ' sta b l e ' } { catego r y: ' u i ' tre n d: ' increas i n g ' } ] }; const mockErrors: ErrorReport[] = [ { id: ' 1 ' severi t y: ' h i g h ' messa g e: ' Failed to load user profile dat a ' lastOccurren c e: new Dat e ( Da t e.n o w ( ) - Ma t h.rand o m ( ) * 3600 0 0 0 ) occurrenceCou n t: Ma t h.flo o r ( Ma t h.rand o m ( ) * 50 + 1 0 ) conte x t: { compone n t: ' UserProf i l e ' acti o n: ' l o a d ' } aiPredictedImpa c t: Ma t h.rand o m ( ) * 0.8 + 0. 2 resolutionSuggestio n s: [ ' Check database connection p o o l ' ' Implement retry mechanism with exponential backoff ' ' Add fallback to cached dat a ' ] } { id: ' 2 ' severi t y: ' med i u m ' messa g e: ' Slow response time in search functionalit y ' lastOccurren c e: new Dat e ( Da t e.n o w ( ) - Ma t h.rand o m ( ) * 1800 0 0 0 ) occurrenceCou n t: Ma t h.flo o r ( Ma t h.rand o m ( ) * 20 + 5 ) conte x t: { compone n t: ' Search B a r ' acti o n: ' qu e r y ' } aiPredictedImpa c t: Ma t h.rand o m ( ) * 0.6 + 0. 1 resolutionSuggestio n s: [ ' Implement search result cach i n g ' ' Add debouncing to search inpu t ' ' Consider using Elasticsearch for better performance ' ] } ] .sli c e ( 0 Ma t h.flo o r ( Ma t h.rand o m ( ) * 2 ) + 1 ); / / Simulate async data loading await new Promi s e ( resol v e = > setTimeo u t ( reso l v e 10 0 0 ) ); / / Update state with mock data setMetrics ( mockMetri c s ); setInsigh t s ( mockInsigh t s ); setError s ( mockError s ); console.log( ' Performance data loaded successful l y ' ); } catch ( error ) { console.error( ' Failed to fetch dashboard dat a: ' error ); } }; loadPerformanceDa t a ( ); const interval = setInterv a l ( loadPerformanceD a t a 300 0 0 ); / / Update every 30 seconds return ( ) = > clearInterv a l ( interv a l ); } } [ isVisib l e ] ); if ( ! isVisib l e ) return nul l; const getSeverityColor = ( severi t y: str i n g ) = > { swit c h ( severi t y ) { ca s e ' critic a l ' : retu r n ' te x t - r e d - 600 b g - r e d - 1 0 0 ' ; ca s e ' hi g h ' : retu r n ' te x t - oran g e - 600 b g - oran g e - 1 0 0 ' ; ca s e ' medi u m ' : retu r n ' te x t - yell o w - 600 b g - yell o w - 1 0 0 ' ; ca s e ' l o w ' : retu r n ' te x t - bl u e - 600 b g - bl u e - 1 0 0 ' ; defau l t: retu r n ' te x t - gr a y - 600 b g - gr a y - 10 0 ' ; } }; const getTrendIcon = ( tre n d: str i n g ) = > { swit c h ( tre n d ) { ca s e ' increasi n g ' : retu r n ' 📈 ' ; ca s e ' decreasi n g ' : retu r n ' 📉 ' ; ca s e ' stab l e ' : retu r n ' ➡️ ' ; defau l t: ret u r n ' ❓ ' ; } }; retu r n ( < div classNam e = ' fixed inse t - 0 b g - black b g - opaci t y - 50 flex items - center justif y - cente r z - 50 ' > < div classNam e = ' bg - white rounde d - lg shado w - xl ma x - w - 6x l w - full ma x - h - [ 90 v h ] overfl o w - y - aut o m - 4 ' > < div classNam e = ' p - 6 ' > < div classNam e = ' flex justif y - between item s - center m b - 6 ' > < h2 classNam e = ' te x t - 2xl fon t - bold tex t - gr a y - 8 0 0 ' > 🤖 AI Performance Dashboard < / h2 > < button onClic k = { onCl o s e } classNa m e = ' te x t - gr a y - 500 hove r: te x t - gr a y - 700 tex t - 2 x l ' > × < / butt o n > < / d i v > { / * Performance Metr i c s * / } { metri c s ? ( < div classNam e = ' grid gri d - co l s - 1 m d: gr i d - co l s - 2 l g: gr i d - co l s - 4 ga p - 4 m b - 8 ' > < div classNam e = ' bg - gradie n t - to - r fro m - bl u e - 500 t o - bl u e - 600 tex t - whit e p - 4 rounde d - lg ' > < h3 classNam e = ' te x t - sm fon t - medium opacit y - 90 ' > Error Rat e ( per ho u r ) < / h3 > < p classNam e = ' te x t - 2xl fon t - bo l d ' > { metri c s.errorRa t e.toFi x e d ( 2 ) } < / p > < / d i v > < div classNam e = ' bg - gradie n t - to - r fro m - r e d - 500 t o - r e d - 600 tex t - whit e p - 4 rounde d - lg ' > < h3 classNam e = ' te x t - sm fon t - medium opacit y - 90 ' > Critical Errors Today < / h3 > < p classNam e = ' te x t - 2xl fon t - bo l d ' > { metri c s.criticalErrorsTod a y } < / p > < / d i v > < div classNam e = ' bg - gradie n t - to - r fro m - yell o w - 500 t o - yell o w - 600 tex t - whit e p - 4 rounde d - lg ' > < h3 classNam e = ' te x t - sm fon t - medium opacit y - 90 ' > User Impact Score < / h3 > < p classNam e = ' te x t - 2xl fon t - bo l d ' > { metri c s.userImpactSco r e } / 1 0 0 < / p > < / d i v > < div classNam e = ' bg - gradie n t - to - r fro m - gre e n - 500 t o - gre e n - 600 tex t - whit e p - 4 rounde d - lg ' > < h3 classNam e = ' te x t - sm fon t - medium opacit y - 90 ' > Avg Resolution Time < / h3 > < p classNam e = ' te x t - 2xl fon t - bo l d ' > { Ma t h.rou n d ( metri c s.avgResolutionT i m e ) } m i n < / p > < / d i v > < / d i v > ): ( < div classNam e = ' spa c e - y - 6 ' > < div classNam e = ' bg - gr a y - 5 0 p - 8 rounde d - lg tex t - cent e r ' > < div classNam e = ' anima t e - spin rounde d - ful l h - 1 2 w - 12 borde r - b - 2 borde r - bl u e - 600 m x - auto m b - 4 ' / > < p classNam e = ' te x t - gr a y - 6 0 0 ' > Loading performance metrics... < / p > < / d i v > < / di v > ) } { / * AI Insight s * / } { insigh t s & & ( < div classNam e = ' grid gri d - co l s - 1 l g: gr i d - co l s - 2 ga p - 6 m b - 8 ' > < div classNam e = ' bg - gr a y - 5 0 p - 4 rounde d - lg ' > < h3 classNam e = ' te x t - lg fon t - semibold m b - 3 tex t - gr a y - 8 0 0 ' > 🎯 Hi g h - Risk Action s < / h3 > < div classNam e = ' spa c e - y - 2 ' > { insigh t s.predictedHighRiskActio n s.leng t h > 0 ? ( insigh t s.predictedHighRiskActio n s.m a p ( ( acti o n: st r i n g ind e x: numb e r ) = > ( < div ke y = { i n d e x } classNa m e = ' bg - r e d - 100 tex t - r e d - 800 p x - 3 p y - 2 rounded text - sm ' > ⚠️ { acti o n } < / di v > ) ) ): ( < div classNam e = ' te x t - gre e n - 6 0 0 ' > ✅ No hig h - risk actions detected < / di v > ) } < / d i v > < / d i v > < div classNam e = ' bg - gr a y - 5 0 p - 4 rounde d - lg ' > < h3 classNam e = ' te x t - lg fon t - semibold m b - 3 tex t - gr a y - 8 0 0 ' > 💡 AI Recommendation s < / h3 > < div classNam e = ' spa c e - y - 2 ' > { insigh t s.recommendedImprovemen t s.m a p ( ( improveme n t: st r i n g ind e x: numb e r ) = > ( < div ke y = { i n d e x } classNa m e = ' bg - bl u e - 100 tex t - bl u e - 800 p x - 3 p y - 2 rounded text - sm ' > 💡 { improveme n t } < / di v > ) ) } < / d i v > < / d i v > < / d i v > ) } { / * Error Trend s * / } { insigh t s ? .errorTren d s & & ( < div classNam e = ' bg - gr a y - 5 0 p - 4 rounde d - lg m b - 8 ' > < h3 classNam e = ' te x t - lg fon t - semibold m b - 3 tex t - gr a y - 8 0 0 ' > 📊 Error Trend s ( 7 da y s ) < / h3 > < div classNam e = ' grid gri d - co l s - 1 m d: gr i d - co l s - 3 ga p - 4 ' > { insigh t s.errorTren d s.m a p ( ( t r e n d ind e x: numb e r ) = > ( < div ke y = { i n d e x } classNa m e = ' bg - whit e p - 3 rounded border ' > < div classNam e = ' flex item s - center justif y - betwe e n ' > < span classNam e = ' fo n t - medium capitaliz e ' > { Stri n g ( tre n d.categ o r y ) } < / sp a n > < span classNam e = ' te x t - lg ' > { getTrendIc o n ( Stri n g ( tre n d.tr e n d ) ) } < / sp a n > < / d i v > < div classNam e = { ` te x t - sm m t - 1 $ { tre n d.tre n d = = = ' increasi n g ' ? ' te x t - r e d - 6 0 0 ' : tre n d.tre n d = = = ' decreasi n g ' ? ' te x t - gre e n - 6 0 0 ' : ' te x t - gr a y - 6 0 0 ' } ` } > { Stri n g ( tre n d.tr e n d ) } < / d i v > < / d i v > ) ) } < / d i v > < / d i v > ) } { / * Recent Error s * / } < div classNam e = ' bg - gr a y - 5 0 p - 4 rounde d - lg ' > < h3 classNam e = ' te x t - lg fon t - semibold m b - 3 tex t - gr a y - 8 0 0 ' > 🚨 Recent Error s < / h3 > < div classNam e = ' spa c e - y - 3 ma x - h - 96 overflo w - y - au t o ' > { erro r s.leng t h > 0 ? ( erro r s.m a p ( ( er r o r ind e x ) = > ( < div ke y = { in d e x } classNa m e = ' bg - whit e p - 4 rounded border ' > < div classNam e = ' flex item s - start justif y - between m b - 2 ' > < div classNam e = ' fl e x - 1 ' > < div classNam e = ' flex item s - center ga p - 2 m b - 1 ' > < span classNam e = { ` px - 2 p y - 1 rounded text - xs fon t - medi u m $ { getSeverityCol o r ( error.sever i t y ) } ` } > { error.severi t y } < / sp a n > < span classNam e = ' te x t - xs tex t - gr a y - 5 0 0 ' > { new Dat e ( typeof erro r.lastOccurren c e = = = ' string ' ? error.lastOccurren c e: error.lastOccurr e n c e ) .toLocaleStri n g ( ) } < / sp a n > < / d i v > < h4 classNam e = ' fo n t - medium tex t - gr a y - 800 m b - 1 ' > { error.messa g e } < / h4 > < div classNam e = ' te x t - sm tex t - gr a y - 6 0 0 ' > Component: { error.conte x t.compone n t | | ' Unk n o w n ' } | Acti o n: { error.conte x t.acti o n | | ' Unkn o w n ' } | " Cou n t: { ' ' } { Stri n g ( error.occurrenceCou n t ) } < / d i v > { error.aiPredictedImpa c t & & ( < div classNam e = ' te x t - sm tex t - bl u e - 600 m t - 1 ' > 🤖 AI Impact Score: { ' ' } { Ma t h.rou n d ( error.aiPredictedImpa c t * 10 0 ) } % < / d i v > ) } < / d i v > < / d i v > { error.resolutionSuggestio n s & & error.resolutionSuggestio n s.leng t h > 0 & & ( < div classNam e = ' mt - 3 p - 3 b g - gre e n - 50 rounde d ' > < h5 classNam e = ' te x t - sm fon t - medium tex t - gre e n - 800 m b - 2 ' > 💡 AI Suggestion s: < / h5 > < ul classNam e = ' te x t - sm tex t - gre e n - 700 spac e - y - 1 ' > { error.resolutionSuggestio n s.m a p ( ( suggesti o n: st r i n g i d x: numb e r ) = > ( < li ke y = { i d x } classNa m e = ' flex item s - start ga p - 2 ' > < span classNam e = ' te x t - gre e n - 6 0 0 ' > • < / sp a n > { suggesti o n } < / l i > ) ) } < / ul > < / d i v > ) } < / d i v > ) ) ): ( < div classNam e = ' te x t - center tex t - gr a y - 500 p y - 8 ' > ✨ No errors detected ! Your application is running smoothl y. < / di v > ) } < / d i v > < / d i v > < / d i v > < / d i v > < / d i v > ); }; export default AIPerformanceDashboard; $ $ 
+importReact{ useStateuseEffect } from 'react';
+
+interfaceAIPerformanceDashboardProps { 
+  isVisible: boolean;
+  onClose: () = > void;
+ }
+
+interfacePerformanceMetrics {
+  errorRate: number;
+  avgResolutionTime: number;
+  criticalErrorsToday: number;
+  userImpactScore: number;
+}
+
+interfaceAIInsights {
+  predictedHighRiskActions: string[];
+  recommendedImprovements: string[];
+  errorTrends: Array<{
+    category: string;
+    trend: 'increasing' | 'decreasing' | 'stable';
+  }>;
+}
+
+interfaceErrorReport { 
+  id: string;
+  severity: string;
+  message: string;
+  lastOccurrence: string | Date;
+  occurrenceCount: number;
+  context: {
+    component?: string;
+    action ?  : string;
+   };
+  aiPredictedImpact?: number;
+  resolutionSuggestions?: string[];
+}
+
+constAIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({
+  isVisible
+  onClose
+}) => { 
+  const [metricssetMetrics] = useState<PerformanceMetrics | null>(null);
+  const [insightssetInsights] = useState<AIInsights | null>(null);
+  const [errorssetErrors] = useState<ErrorReport[]>([]);
+
+  useEffect(() => {
+    if (isVisible) {
+      constloadPerformanceData = async () = > {
+        try {
+          // SimulateAPIcalls forperformancedata
+          constmockMetrics: PerformanceMetrics = {
+            errorRate: Math.random() * 5
+            avgResolutionTime: Math.random() * 30 + 10
+            criticalErrorsToday: Math.floor(Math.random() * 10)
+            userImpactScore: Math.floor(Math.random() * 40 + 60)
+           }; constmockInsights: AIInsights = {
+            predictedHighRiskActions: [
+              'Highmemoryusage detectedinuser authenticationflow'
+              'Potentialracecondition indatasynchronization'
+              'Slowdatabasequeries affectinguserexperience'
+            ].slice(0Math.floor(Math.random() * 3))
+            recommendedImprovements: [
+              'Implementcachingfor frequentlyaccesseddata'
+              'Adderrorboundaries topreventcascading failures'
+              'Optimizedatabaseindexes forbetterquery performance'
+              'Considerimplementingcircuit breakerpattern'
+            ]
+            errorTrends: [
+              { category: 'authentication'trend: 'decreasing' }
+              { category: 'database'trend: 'stable' }
+              { category: 'ui'trend: 'increasing' }
+            ]
+          }; constmockErrors: ErrorReport[] = [
+            {
+              id: '1'
+              severity: 'high'
+              message: 'Failedtoload userprofiledata'
+              lastOccurrence: newDate(Date.now() - Math.random() * 3600000)
+              occurrenceCount: Math.floor(Math.random() * 50 + 10)
+              context: { component: 'UserProfile'action: 'load' }
+              aiPredictedImpact: Math.random() * 0.8 + 0.2
+              resolutionSuggestions: [
+                'Checkdatabaseconnection pool'
+                'Implementretrymechanism withexponentialbackoff'
+                'Addfallbackto cacheddata'
+              ]
+            }
+            {
+              id: '2'
+              severity: 'medium'
+              message: 'Slowresponsetime insearchfunctionality'
+              lastOccurrence: newDate(Date.now() - Math.random() * 1800000)
+              occurrenceCount: Math.floor(Math.random() * 20 + 5)
+              context: { component: 'SearchBar'action: 'query' }
+              aiPredictedImpact: Math.random() * 0.6 + 0.1
+              resolutionSuggestions: [
+                'Implementsearchresult caching'
+                'Adddebouncingto searchinput'
+                'ConsiderusingElasticsearch forbetterperformance'
+              ]
+            }
+          ].slice(0Math.floor(Math.random() * 2) + 1);
+
+          // Simulateasyncdata loadingawaitnew Promise(resolve = > setTimeout(resolve1000));
+
+          // Updatestatewith mockdatasetMetrics(mockMetrics);
+          setInsights(mockInsights);
+          setErrors(mockErrors);
+
+          console.log('Performancedataloaded successfully');
+        } catch (error) {
+          console.error('Failedtofetch dashboarddata:'error);
+        }
+      };
+
+      loadPerformanceData();
+      constinterval = setInterval(loadPerformanceData30000); // Updateevery30 secondsreturn () => clearInterval(interval);
+    }
+  }[isVisible]);
+
+  if (!isVisible) returnnull;
+
+  constgetSeverityColor = (severity: string) => {
+    switch (severity) {
+      case 'critical':
+        return 'text-red-600bg-red-100'; case 'high':
+        return 'text-orange-600bg-orange-100';
+      case 'medium':
+        return 'text-yellow-600bg-yellow-100';
+      case 'low':
+        return 'text-blue-600bg-blue-100';
+      default:
+        return 'text-gray-600bg-gray-100';
+    }
+  };
+
+  constgetTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'increasing':
+        return '📈'; case 'decreasing':
+        return '📉';
+      case 'stable':
+        return '➡️';
+      default:
+        return '❓';
+    }
+  };
+
+  return (
+    <divclassName = 'fixedinset-0bg-blackbg-opacity-50flexitems-centerjustify-centerz-50'>
+      <divclassName='bg-whiterounded-lgshadow-xlmax-w-6xlw-fullmax-h-[90vh] overflow-y-autom-4'>
+        <divclassName='p-6'>
+          <divclassName='flexjustify-betweenitems-centermb-6'>
+            <h2className='text-2xlfont-boldtext-gray-800'>
+              🤖 AIPerformanceDashboard
+            </h2>
+            <buttononClick = { onClose }className = 'text-gray-500hover: text-gray-700text-2xl'
+            >
+              ×
+            </button>
+          </div>
+
+          {/* PerformanceMetrics */}
+          {  metrics  ? (
+            <divclassName = 'gridgrid-cols-1md: grid-cols-2lg : grid-cols-4gap-4mb-8'>
+              <divclassName='bg-gradient-to-rfrom-blue-500to-blue-600text-whitep-4rounded-lg'>
+                <h3className='text-smfont-mediumopacity-90'>
+                  ErrorRate (perhour)
+                </h3>
+                <pclassName = 'text-2xlfont-bold' > {metrics.errorRate.toFixed(2)  }
+                </p>
+              </div>
+              <divclassName = 'bg-gradient-to-rfrom-red-500to-red-600text-whitep-4rounded-lg'>
+                <h3className='text-smfont-mediumopacity-90'>
+                  CriticalErrorsToday
+                </h3>
+                <pclassName='text-2xlfont-bold'>
+                  {metrics.criticalErrorsToday}
+                </p>
+              </div>
+              <divclassName='bg-gradient-to-rfrom-yellow-500to-yellow-600text-whitep-4rounded-lg'>
+                <h3className='text-smfont-mediumopacity-90'>
+                  UserImpactScore
+                </h3>
+                <pclassName='text-2xlfont-bold'>
+                  {metrics.userImpactScore}/100
+                </p>
+              </div>
+              <divclassName='bg-gradient-to-rfrom-green-500to-green-600text-whitep-4rounded-lg'>
+                <h3className='text-smfont-mediumopacity-90'>
+                  AvgResolutionTime
+                </h3>
+                <pclassName='text-2xlfont-bold'>
+                  {Math.round(metrics.avgResolutionTime)}min
+                </p>
+              </div>
+            </div>
+          ) : (
+            <divclassName = 'space-y-6'>
+              <divclassName='bg-gray-50p-8rounded-lgtext-center'>
+                <divclassName='animate-spinrounded-fullh-12w-12border-b-2border-blue-600mx-automb-4' />
+                <pclassName='text-gray-600'>Loadingperformancemetrics...</p>
+              </div>
+            </div>
+          )}
+
+          {/* AIInsights */}
+          {   insights  && (
+            <divclassName = 'gridgrid-cols-1lg: grid-cols-2gap-6mb-8'>
+              <divclassName='bg-gray-50p-4rounded-lg'>
+                <h3className='text-lgfont-semiboldmb-3text-gray-800'>
+                  🎯 High-RiskActions
+                </h3>
+                <divclassName='space-y-2'>
+                  {insights.predictedHighRiskActions.length > 0  ? (
+                    insights.predictedHighRiskActions.map(
+                      (action: stringindex : number) = > (
+                        <divkey = { index    }className = 'bg-red-100text-red-800px-3py-2roundedtext-sm'
+                        >
+                          ⚠️ {action}
+                        </div>
+                      )
+                    )
+                  ) : (
+                    <divclassName = 'text-green-600'>
+                      ✅ Nohigh-riskactionsdetected
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <divclassName = 'bg-gray-50p-4rounded-lg'>
+                <h3className='text-lgfont-semiboldmb-3text-gray-800'>
+                  💡 AIRecommendations
+                </h3>
+                <divclassName='space-y-2'>
+                  { insights.recommendedImprovements.map(
+                    (improvement: stringindex: number) = > (
+                      <divkey = { index  }className = 'bg-blue-100text-blue-800px-3py-2roundedtext-sm'
+                      >
+                        💡 {improvement}
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* ErrorTrends */}
+          {   insights ? .errorTrends  && (
+            <divclassName = 'bg-gray-50p-4rounded-lgmb-8'>
+              <h3className='text-lgfont-semiboldmb-3text-gray-800'>
+                📊 ErrorTrends (7days)
+              </h3>
+              <divclassName = 'gridgrid-cols-1md: grid-cols-3gap-4'>
+                {insights.errorTrends.map((trendindex : number) = > (
+                  <divkey = { index    }className = 'bg-whitep-3roundedborder'>
+                    <divclassName='flexitems-centerjustify-between'>
+                      <spanclassName='font-mediumcapitalize'>
+                        {String(trend.category)}
+                      </span>
+                      <spanclassName = 'text-lg'>
+                        {getTrendIcon(String(trend.trend))}
+                      </span>
+                    </div>
+                    <divclassName = { `text-smmt-1 ${
+                        trend.trend === 'increasing'
+                          ? 'text-red-600'
+                          : trend.trend === 'decreasing'
+                             ? 'text-green-600'
+                             : 'text-gray-600'
+                       }`}
+                    >
+                      {String(trend.trend)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* RecentErrors */}
+          <divclassName = 'bg-gray-50p-4rounded-lg'>
+            <h3className='text-lgfont-semiboldmb-3text-gray-800'>
+              🚨 RecentErrors
+            </h3>
+            <divclassName='space-y-3max-h-96overflow-y-auto'>
+              { errors.length > 0 ? (
+                errors.map((errorindex) = > (
+                  <divkey = { index  }className = 'bg-whitep-4roundedborder'>
+                    <divclassName='flexitems-startjustify-betweenmb-2'>
+                      <divclassName='flex-1'>
+                        <divclassName='flexitems-centergap-2mb-1' > <spanclassName={`px-2py-1roundedtext-xsfont-medium ${getSeverityColor(error.severity)}`}
+                          >
+                            {error.severity}
+                          </span>
+                          <spanclassName = 'text-xstext-gray-500'>
+                            { newDate(
+                              typeoferror.lastOccurrence === 'string'
+                                 ? error.lastOccurrence : error.lastOccurrence
+                            ).toLocaleString() }
+                          </span>
+                        </div>
+                        <h4className = 'font-mediumtext-gray-800mb-1'>
+                          {error.message}
+                        </h4>
+                        <divclassName='text-smtext-gray-600'>
+                          Component: {error.context.component || 'Unknown'} |
+                          Action: {error.context.action || 'Unknown'} |"Count:{' '}
+                          {String(error.occurrenceCount)}
+                        </div>
+                        {  error.aiPredictedImpact  && (
+                          <divclassName = 'text-smtext-blue-600mt-1' > 🤖 AIImpactScore:{' '  }
+                            {Math.round(error.aiPredictedImpact * 100)}%
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {  error.resolutionSuggestions &&
+                      error.resolutionSuggestions.length > 0  && (
+                        <divclassName = 'mt-3 p-3bg-green-50rounded'>
+                          <h5className='text-smfont-mediumtext-green-800mb-2'>
+                            💡 AISuggestions: </h5>
+                          <ulclassName='text-smtext-green-700space-y-1'>
+                            {error.resolutionSuggestions.map(
+                              (suggestion: stringidx: number) = > (
+                                <likey = { idx   }className = 'flexitems-startgap-2'
+                                >
+                                  <spanclassName='text-green-600'>•</span>
+                                  {suggestion}
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      )}
+                  </div>
+                ))
+              ) : (
+                <divclassName = 'text-centertext-gray-500py-8'>
+                  ✨ Noerrorsdetected! Yourapplicationis runningsmoothly.
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+exportdefaultAIPerformanceDashboard;

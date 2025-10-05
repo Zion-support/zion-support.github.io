@@ -1,11 +1,3 @@
-// Accessibility enhancement utilities
-export class AccessibilityEnhancer {
-  private static instance: AccessibilityEnhancer;
-  private isInitialized = false;
-
-  static getInstance(): AccessibilityEnhancer {
-    if (!AccessibilityEnhancer.instance) {
-      AccessibilityEnhancer.instance = new AccessibilityEnhancer();
     }
     return AccessibilityEnhancer.instance;
   }

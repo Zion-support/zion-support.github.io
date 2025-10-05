@@ -1,109 +1,113 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains." />
-      </Helmet>
+    <div className="min-h-screen bg-gray-900">
+      <Header />
       
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                AI Enterprise Transformation
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                  300% ROI Guaranteed
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-200">
-                Transform your enterprise with AI-powered solutions. Achieve 300%
-                ROI, 70% cost reduction, and 90% efficiency gains.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
-                >
-                  Get Started Today
-                </Link>
-                <Link
-                  to="/services"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
-                >
-                  View Services
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">
-                Why Choose Zion Tech Group?
-              </h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">300% ROI Guaranteed</h3>
-                  <p className="text-gray-600">
-                    Our AI solutions deliver measurable returns on investment with proven results.
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">70% Cost Reduction</h3>
-                  <p className="text-gray-600">
-                    Streamline operations and reduce costs through intelligent automation.
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">90% Efficiency Gains</h3>
-                  <p className="text-gray-600">
-                    Boost productivity and efficiency with cutting-edge AI technology.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Ready to Transform Your Enterprise?
-            </h2>
-            <p className="text-xl mb-8">
-              Join hundreds of companies already achieving 300% ROI with our AI
-              solutions.
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Advanced AI & IT Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge artificial intelligence and innovative technology solutions.
             </p>
-            <Link
-              to="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block"
-            >
-              Start Your Transformation
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/services"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
+              >
+                Explore Services
+              </Link>
+              <Link
+                to="/contact"
+                className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We deliver innovative solutions that drive real business value and competitive advantage.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">AI Innovation</h3>
+              <p className="text-gray-300">
+                Cutting-edge artificial intelligence solutions that transform how you do business.
+              </p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Performance</h3>
+              <p className="text-gray-300">
+                Optimized solutions that deliver exceptional performance and reliability.
+              </p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Security</h3>
+              <p className="text-gray-300">
+                Enterprise-grade security measures to protect your data and operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our AI and IT solutions can drive your success.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-300 inline-block"
+          >
+            Start Your Journey
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 

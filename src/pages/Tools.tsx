@@ -1,1 +1,6 @@
-import React from ' react ' ; export default function Tools( ): Rea c t.J S X.Eleme n t { retu r n ( < main styl e = { { paddi n g: ' 2r e m ' } } > < h1 > Too l s < / h1 > < / ma i n > ); } $ $ 
+import React from 'react';
+
+      <h1>Tools</h1>
+    </main>
+  );
+}

@@ -1,40 +1,65 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Team: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the expert team behind Zion Tech Group's AI and IT solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our Team
-              </h1>
-              <p className="text-xl md:text-2xl">
-                Meet the experts behind our innovative solutions.
-              </p>
-            </div>
-          </div>
-        </section>
+  const teamMembers = [
+    {
+      name: 'John Smith',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in technology and business strategy.',
+      image: '👨‍💼'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      bio: 'Expert in AI and machine learning with a passion for innovation.',
+      image: '👩‍💻'
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Lead Developer',
+      bio: 'Full-stack developer specializing in scalable cloud solutions.',
+      image: '👨‍🔧'
+    },
+    {
+      name: 'Emily Davis',
+      role: 'Head of Design',
+      bio: 'Creative director focused on user experience and interface design.',
+      image: '👩‍🎨'
+    }
+  ];
 
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8">Coming Soon</h2>
-              <p className="text-lg text-gray-600">
-                We're working on introducing our team members. Check back soon!
-              </p>
-            </div>
+  return (
+    <div className="min-h-screen bg-gray-900">
+      <Header />
+      
+      <main className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our Team
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Meet the talented individuals who make Zion Tech Group a leader in technology innovation.
+            </p>
           </div>
-        </section>
-      </div>
-    </>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="text-center">
+                <div className="text-6xl mb-4">{member.image}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-blue-400 mb-3">{member.role}</p>
+                <p className="text-gray-300 text-sm">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 
