@@ -11,6 +11,7 @@ const LoadingSpinner: React.FC = () => (
 
 // Error fallback component
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ErrorFallback: React.FC<{
   error: Error;
   resetErrorBoundary: () = > void;
@@ -20,6 +21,11 @@ const ErrorFallback: React.FC<{ error: Error;
   resetErrorBoundary: () => void;
  }> = ({ error, resetErrorBoundary }) => (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+const ErrorFallback: React.FC<{ error: Error;
+  resetErrorBoundary: () => void;
+ }> = ({ error, resetErrorBoundary }) => (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='max-w-md mx-auto text-center p-6'>
       <div className='text-red-600 text-6xl mb-4'>⚠️</div>
@@ -147,6 +153,7 @@ const OptimizedApp: React.FC = () => {
       }}
     >
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Suspense fallback={<LoadingSpinner / > }>
         <MainContent</Suspense>
 =======
@@ -154,6 +161,11 @@ const OptimizedApp: React.FC = () => {
         <MainContent />
       </Suspense>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+      <Suspense fallback={<LoadingSpinner />}>
+        <MainContent />
+      </Suspense>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
     </ErrorBoundary>
   );
 };

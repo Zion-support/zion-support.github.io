@@ -180,9 +180,15 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {content.map((item, index) => (
               <div
                 key={item.id}
+<<<<<<< HEAD
                 className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
                   currentSlide === index
                     ? 'bg-white/20 border border-white/30'
+=======
+                className={`p-3 rounded-lg cursor-pointer transition-all duration-300 ${
+                  currentSlide === index
+                    ? 'bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/50'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
                     : 'bg-white/5 hover:bg-white/10 border border-transparent'
                 }`}
                 onClick={() => setCurrentSlide(index)}
@@ -214,7 +220,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 currentSlide === index
+<<<<<<< HEAD
                   ? 'bg-white scale-125'
+=======
+                  ? 'bg-gradient-to-r from-purple-500 to-blue-500'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
                   : 'bg-white/30 hover:bg-white/50'
               }`}
               aria-label={`Go to slide ${index + 1}`}

@@ -1,11 +1,20 @@
 import Link from 'next/link';
 
+<<<<<<< HEAD
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
 import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
 import Brain from 'lucide-react/dist/esm/icons/rain';
 import Zap from 'lucide-react/dist/esm/icons/ap';
 import Target from 'lucide-react/dist/esm/icons/arget';
 import Users from 'lucide-react/dist/esm/icons/sers';
+=======
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Target from 'lucide-react/dist/esm/icons/target';
+import Users from 'lucide-react/dist/esm/icons/users';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story | Zion Tech Group',

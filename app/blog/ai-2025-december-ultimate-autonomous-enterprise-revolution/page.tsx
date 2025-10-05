@@ -1,12 +1,21 @@
 import Link from 'next/link';
 
+<<<<<<< HEAD
 import ArrowLeft from 'lucide-react/dist/esm/icons/arrowleft';
+=======
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import User from 'lucide-react/dist/esm/icons/user';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import Tag from 'lucide-react/dist/esm/icons/tag';
+<<<<<<< HEAD
 import TrendingUp from 'lucide-react/dist/esm/icons/trendingup';
 import DollarSign from 'lucide-react/dist/esm/icons/dollarsign';
+=======
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import DollarSign from 'lucide-react/dist/esm/icons/dollar-sign';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 import Users from 'lucide-react/dist/esm/icons/users';
 import Target from 'lucide-react/dist/esm/icons/target';
 import Brain from 'lucide-react/dist/esm/icons/brain';

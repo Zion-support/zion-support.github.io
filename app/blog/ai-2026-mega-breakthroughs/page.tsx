@@ -1,11 +1,20 @@
 import Link from 'next/link';
 
+<<<<<<< HEAD
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
 import Zap from 'lucide-react/dist/esm/icons/ap';
 import Brain from 'lucide-react/dist/esm/icons/rain';
 import Shield from 'lucide-react/dist/esm/icons/hield';
 import Rocket from 'lucide-react/dist/esm/icons/ocket';
 import Target from 'lucide-react/dist/esm/icons/arget';
+=======
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Shield from 'lucide-react/dist/esm/icons/shield';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+import Target from 'lucide-react/dist/esm/icons/target';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 
 export const metadata = {
   title: 'AI 2026 Mega Breakthroughs: The Revolutionary Technologies Reshaping Enterprise',

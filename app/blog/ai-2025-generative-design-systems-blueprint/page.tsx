@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 import Calendar from 'lucide-react/dist/esm/icons/alendar';
 import User from 'lucide-react/dist/esm/icons/ser';
 import Clock from 'lucide-react/dist/esm/icons/lock';
 import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
+=======
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import User from 'lucide-react/dist/esm/icons/user';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (

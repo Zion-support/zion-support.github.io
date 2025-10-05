@@ -108,8 +108,11 @@ className={`
 
         {/* Title */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h2 className={` > font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
         <h2 className={`
           font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
@@ -194,7 +197,10 @@ className={`
             {ctaText}
             <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`} />
           </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 
           {featuredItems.length  > showCount && (
             <Link

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // import Link from 'next/link';
+=======
+import Link from 'next/link';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import Clock from 'lucide-react/dist/esm/icons/clock';

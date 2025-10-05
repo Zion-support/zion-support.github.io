@@ -7,10 +7,14 @@ const SuccessStoriesShowcase: React.FC = () => {
       company: "TechCorp International",
       industry: "Technology",
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: ' > ,'
 =======
       icon: '🚀',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
       result: "300% Revenue Growth",
       description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",",
       metrics: [
@@ -24,10 +28,14 @@ const SuccessStoriesShowcase: React.FC = () => {
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: ' > ,'
 =======
       icon: '🚀',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
       result: "85% Downtime Reduction",
       description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",",
       metrics: [
@@ -41,10 +49,14 @@ const SuccessStoriesShowcase: React.FC = () => {
       company: "FinanceFirst Bank",
       industry: "Financial Services",
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: ' > ,'
 =======
       icon: '🚀',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",",
       metrics: [

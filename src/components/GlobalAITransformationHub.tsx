@@ -8,10 +8,14 @@ const GlobalAITransformationHub = () => {
       description: 'Complete business process automation with 95% efficiency gains',
       value: '$2.3B',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: ' > ,'
 =======
       icon: '🚀',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
     },
@@ -20,10 +24,14 @@ const GlobalAITransformationHub = () => {
       description: 'Revolutionary AI consciousness integration with infinite scalability',
       value: '$500B',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: ' > ,'
 =======
       icon: '🚀',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
     },
@@ -32,10 +40,14 @@ const GlobalAITransformationHub = () => {
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
       value: '$150B',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: ' > ,'
 =======
       icon: '🚀',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
     },
@@ -44,10 +56,14 @@ const GlobalAITransformationHub = () => {
       description: 'Advanced AI-powered security with 99.7% threat prevention',
       value: '$87B',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: ' > ,'
 =======
       icon: '🚀',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-458d
+=======
+      icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
       color: 'from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }

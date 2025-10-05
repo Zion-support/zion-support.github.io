@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+<<<<<<< HEAD
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
 import Brain from 'lucide-react/dist/esm/icons/rain';
 import Zap from 'lucide-react/dist/esm/icons/ap';
@@ -8,6 +9,16 @@ import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
 import Users from 'lucide-react/dist/esm/icons/sers';
 import Target from 'lucide-react/dist/esm/icons/arget';
 import CheckCircle from 'lucide-react/dist/esm/icons/heckcircle';
+=======
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Shield from 'lucide-react/dist/esm/icons/shield';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Target from 'lucide-react/dist/esm/icons/target';
+import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (

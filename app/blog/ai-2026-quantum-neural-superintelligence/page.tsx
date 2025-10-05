@@ -1,11 +1,20 @@
 import Link from 'next/link';
 
+<<<<<<< HEAD
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
 import Zap from 'lucide-react/dist/esm/icons/ap';
 import Brain from 'lucide-react/dist/esm/icons/rain';
 import Cpu from 'lucide-react/dist/esm/icons/pu';
 import Target from 'lucide-react/dist/esm/icons/arget';
 import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+=======
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Cpu from 'lucide-react/dist/esm/icons/cpu';
+import Target from 'lucide-react/dist/esm/icons/target';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
 
 export const metadata = {
   title: 'AI 2026: Quantum Neural Superintelligence - The Next Evolution of Artificial Intelligence',
