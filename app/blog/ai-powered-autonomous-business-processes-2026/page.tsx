@@ -1,7 +1,5 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
-=======
+
 import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
 import Clock from 'lucide-react/dist/esm/icons/lock';
 import User from 'lucide-react/dist/esm/icons/ser';
@@ -12,7 +10,7 @@ import CheckCircle from 'lucide-react/dist/esm/icons/heckcircle';
 import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
 import Brain from 'lucide-react/dist/esm/icons/rain';
 import Zap from 'lucide-react/dist/esm/icons/ap';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

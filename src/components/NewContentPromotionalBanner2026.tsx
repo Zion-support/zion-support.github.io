@@ -61,13 +61,10 @@ const NewContentPromotionalBanner2026 = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {newContent.map((content, index) => (
-<<<<<<< HEAD
-            <div 
-              key={index}
-=======
+
             <div
 key={index}
->>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
+
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
@@ -133,10 +130,10 @@ key={index}
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '2.5M+', label: 'Global Readers', icon: '>, color'
-              { value: '$15B+', label: 'Value Created', icon: '>, color'
-              { value: '99.9%', label: 'Content Accuracy', icon: '>, color'
-              { value: '150+', label: 'Countries Reached', icon: '>, color'
+              { value: '2.5M+', label: 'Global Readers', icon: '🚀 color'
+              { value: '$15B+', label: 'Value Created', icon: '🚀 color'
+              { value: '99.9%', label: 'Content Accuracy', icon: '🚀 color'
+              { value: '150+', label: 'Countries Reached', icon: '🚀 color'
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>

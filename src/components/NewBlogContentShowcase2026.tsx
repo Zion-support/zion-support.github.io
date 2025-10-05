@@ -15,7 +15,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: '>,'
+      icon: '🚀'
       gradient: 'from-blue-500 to-purple-500',
       badge: 'FEATURED',
       tags: ['AI', 'Revolution', 'Enterprise', 'Guide']
@@ -33,7 +33,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: '>,'
+      icon: '🚀'
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'TRENDING',
       tags: ['Quantum', 'Computing', 'AI', 'Breakthrough']
@@ -51,7 +51,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: '>,'
+      icon: '🚀'
       gradient: 'from-green-500 to-emerald-500',
       badge: 'POPULAR',
       tags: ['Enterprise', 'Implementation', 'AI', 'Success']
@@ -69,7 +69,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.7,
       trending: false,
       featured: false,
-      icon: '>,'
+      icon: '🚀'
       gradient: 'from-purple-500 to-pink-500',
       badge: 'INNOVATION',
       tags: ['Self-Evolving', 'AI', 'Innovation', 'Future']
@@ -87,7 +87,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: '>,'
+      icon: '🚀'
       gradient: 'from-orange-500 to-red-500',
       badge: 'ANALYTICS',
       tags: ['Predictive', 'Analytics', 'Forecasting', 'AI']
@@ -105,7 +105,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: false,
       featured: true,
-      icon: '>,'
+      icon: '🚀'
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'ETHICS',
       tags: ['AI Ethics', 'Governance', 'Responsible AI', 'Compliance']
@@ -113,10 +113,10 @@ const NewBlogContentShowcase2026: React.FC = () => {
   ];
 
   const blogStats = [
-    { value: '500+', label: 'Published Articles', icon: '> },'
-    { value: '2M+', label: 'Monthly Readers', icon: '> },'
-    { value: '4.8', label: 'Average Rating', icon: '> },'
-    { value: '150+', label: 'Expert Authors', icon: '> }'
+    { value: '500+', label: 'Published Articles', icon: '🚀','
+    { value: '2M+', label: 'Monthly Readers', icon: '🚀','
+    { value: '4.8', label: 'Average Rating', icon: '🚀','
+    { value: '150+', label: 'Expert Authors', icon: '🚀''
   ];
 
   return (
@@ -169,13 +169,10 @@ const NewBlogContentShowcase2026: React.FC = () => {
         {/* Featured Blog Posts */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {blogPosts.map((post, index) => (
-<<<<<<< HEAD
-            <div 
-              key={post.id}
-=======
+
             <div
 key={post.id}
->>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
+
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >

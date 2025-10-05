@@ -1,13 +1,10 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { ArrowRight, Zap, Brain, Cpu, Sparkles } from 'lucide-react';
-=======
+
 import ArrowRight from 'lucide-react';
 import Zap from 'lucide-react';
 import Brain from 'lucide-react';
 import Cpu from 'lucide-react';
 import Sparkles from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export default function Revolutionary2026ContentBanner() {
   return (

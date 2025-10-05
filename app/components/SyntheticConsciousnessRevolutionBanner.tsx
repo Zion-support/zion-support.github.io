@@ -1,13 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { Brain, Zap, TrendingUp, ArrowRight } from 'lucide-react';
-=======
+
 import Brain from 'lucide-react';
 import Zap from 'lucide-react';
 import TrendingUp from 'lucide-react';
 import ArrowRight from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
   return (
