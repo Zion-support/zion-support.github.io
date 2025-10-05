@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -58,7 +58,7 @@ const Team: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

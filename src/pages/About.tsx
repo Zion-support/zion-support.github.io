@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 const About: React.FC = () => {
   return (
@@ -43,7 +43,7 @@ const About: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
