@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowRight, Satellite } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 
 export const metadata = {

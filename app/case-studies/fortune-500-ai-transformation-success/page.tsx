@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, Map, User } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, User } from 'lucide-react';
 
 
 

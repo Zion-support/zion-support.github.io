@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowRight, Bot, User } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 
 export const metadata = {

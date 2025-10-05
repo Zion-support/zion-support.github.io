@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Bot, Brain, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
 import ArrowRight from 'next/link';
 

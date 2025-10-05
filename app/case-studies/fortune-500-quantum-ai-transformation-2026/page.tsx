@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowRight, CheckCircle, Cog, DollarSign, Share, TrendingUp, User, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle, DollarSign, TrendingUp, Users } from 'lucide-react';
 
 
 

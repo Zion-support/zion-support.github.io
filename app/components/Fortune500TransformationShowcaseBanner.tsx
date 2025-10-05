@@ -1,5 +1,5 @@
 
-import { ArrowRight, Award, CheckCircle, TrendingUp, User, Users } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle, TrendingUp, Users } from 'lucide-react';
 
 import React from 'react';
 
