@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function November2026SyntheticConsciousnessBanner() {
   return (
@@ -78,24 +78,21 @@ export default function November2026SyntheticConsciousnessBanner() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-november-synthetic-consciousness-breakthrough" 
+            <a href="/blog/ai-2026-november-synthetic-consciousness-breakthrough" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Read Breakthrough Details
-            </Link>
-            <Link 
-              href="/case-studies/ai-2026-november-synthetic-consciousness-100-billion-success" 
+            </a>
+            <a href="/case-studies/ai-2026-november-synthetic-consciousness-100-billion-success" 
               className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               View $100B Success Story
-            </Link>
-            <Link 
-              href="/contact" 
+            </a>
+            <a href="/contact" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Schedule Demo
-            </Link>
+            </a>
           </div>
 
           {/* Success Story Preview */}
@@ -137,12 +134,11 @@ export default function November2026SyntheticConsciousnessBanner() {
               Join the conscious AI revolution. Transform your business with synthetic consciousness systems 
               that think, feel, and make decisions with genuine understanding.
             </p>
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white px-12 py-4 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Start Your Conscious AI Journey
-            </Link>
+            </a>
           </div>
         </div>
       </div>

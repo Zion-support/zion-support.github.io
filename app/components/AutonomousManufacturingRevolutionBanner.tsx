@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 
-import Link from 'next/link';
 
 const AutonomousManufacturingRevolutionBanner: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const AutonomousManufacturingRevolutionBanner: React.FC = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-600/20 border border-orange-400/30">
-                <Factory className="w-5 h-5 text-orange-300 mr-2" />
+                🏢
                 <span className="text-orange-200 text-sm font-medium">Autonomous Manufacturing</span>
               </div>
               
@@ -36,25 +36,25 @@ const AutonomousManufacturingRevolutionBanner: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-orange-600/30 rounded-lg flex items-center justify-center">
-                  <Cogs className="w-4 h-4 text-orange-300" />
+                  ⚙️
                 </div>
                 <span className="text-gray-300">Self-Managing Production</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-red-600/30 rounded-lg flex items-center justify-center">
-                  <TrendingUp className="w-4 h-4 text-red-300" />
+                  📈
                 </div>
                 <span className="text-gray-300">Predictive Maintenance</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-yellow-600/30 rounded-lg flex items-center justify-center">
-                  <Factory className="w-4 h-4 text-yellow-300" />
+                  🏢
                 </div>
                 <span className="text-gray-300">Autonomous Quality Control</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-orange-600/30 rounded-lg flex items-center justify-center">
-                  <Zap className="w-4 h-4 text-orange-300" />
+                  ⚡
                 </div>
                 <span className="text-gray-300">Supply Chain Optimization</span>
               </div>
@@ -62,20 +62,18 @@ const AutonomousManufacturingRevolutionBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2026-autonomous-enterprise-operations"
+              <a href="/blog/ai-2026-autonomous-enterprise-operations"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
               >
-                <Factory className="w-5 h-5 mr-2" />
+                🏢
                 Explore Autonomous Operations
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                href="/case-studies/ai-2026-autonomous-manufacturing-revolution-127-billion-success"
+                →
+              </a>
+              <a href="/case-studies/ai-2026-autonomous-manufacturing-revolution-127-billion-success"
                 className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-orange-400 text-orange-200 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300"
               >
                 $127B Success Story
-              </Link>
+              </a>
             </div>
           </div>
 

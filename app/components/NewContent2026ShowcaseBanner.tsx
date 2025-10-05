@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,7 +13,7 @@ export default function NewContent2026ShowcaseBanner() {
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2" />
+            ⭐
             EXCLUSIVE 2026 CONTENT
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -28,7 +28,7 @@ export default function NewContent2026ShowcaseBanner() {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Featured Article 1 */}
-          <Link href="/blog/ai-future-workforce-2026" className="group">
+          <a href="/blog/ai-future-workforce-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -55,13 +55,13 @@ export default function NewContent2026ShowcaseBanner() {
                     <div className="text-xs text-white/70">Productivity Gain</div>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                →
               </div>
             </div>
-          </Link>
+          </a>
 
           {/* Featured Article 2 */}
-          <Link href="/blog/ai-cybersecurity-2026" className="group">
+          <a href="/blog/ai-cybersecurity-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-red-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -88,13 +88,13 @@ export default function NewContent2026ShowcaseBanner() {
                     <div className="text-xs text-white/70">Cost Reduction</div>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                →
               </div>
             </div>
-          </Link>
+          </a>
 
           {/* Featured Case Study */}
-          <Link href="/case-studies/ai-finance-automation-success-2026" className="group">
+          <a href="/case-studies/ai-finance-automation-success-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -121,10 +121,10 @@ export default function NewContent2026ShowcaseBanner() {
                     <div className="text-xs text-white/70">Automation</div>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                →
               </div>
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* Stats Section */}
@@ -158,20 +158,18 @@ export default function NewContent2026ShowcaseBanner() {
               practical implementations, and proven business results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/blog"
+              <a href="/blog"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
-                <TrendingUp className="w-5 h-5 mr-2" />
+                📈
                 Explore All Content
-              </Link>
-              <Link
-                href="/case-studies"
+              </a>
+              <a href="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
               >
-                <Users className="w-5 h-5 mr-2" />
+                👤
                 View Case Studies
-              </Link>
+              </a>
             </div>
           </div>
         </div>

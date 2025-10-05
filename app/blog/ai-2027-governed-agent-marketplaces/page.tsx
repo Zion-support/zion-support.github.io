@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Governed Agent Marketplaces (2027): Budgets, Attestations, Rollback',
@@ -20,11 +20,11 @@ export default function Page() {
 				<li>Operations: eval canaries, drift detection, incident playbooks</li>
 			</ul>
 			<p>
-				See also <Link href="/blog/ai-2027-autonomous-governance-blueprint">Autonomous Governance 2027</Link>{' '}
-				and <Link href="/blog/ai-2026-agent-ops-observability">Agent Ops Observability 2026</Link>.
+				See also <a href="/blog/ai-2027-autonomous-governance-blueprint">Autonomous Governance 2027</a>{' '}
+				and <a href="/blog/ai-2026-agent-ops-observability">Agent Ops Observability 2026</a>.
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <a href="/blog">Blog</a>.
 			</p>
 		</main>
 	);

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027 Transcendent Meta-Intelligence $1.8T Success Story - Zion Tech Group',
@@ -394,24 +394,21 @@ export default function AI2027TranscendentMetaIntelligenceSuccessStory() {
             Learn how to implement AI 2027 Transcendent Meta-Intelligence in your organization and achieve unprecedented value creation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/ai-2027-transcendent-meta-intelligence-breakthrough"
+            <a href="/blog/ai-2027-transcendent-meta-intelligence-breakthrough"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read Technical Guide
-            </Link>
-            <Link 
-              href="/services/ai-2027-transcendent-meta-intelligence-solutions"
+            </a>
+            <a href="/services/ai-2027-transcendent-meta-intelligence-solutions"
               className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors border border-white"
             >
               Start Implementation
-            </Link>
-            <Link 
-              href="/contact"
+            </a>
+            <a href="/contact"
               className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors border border-white"
             >
               Contact Our Experts
-            </Link>
+            </a>
           </div>
         </div>
       </section>

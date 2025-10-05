@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Fortune500SuperintelligentAutomationSuccess() {
   return (
@@ -30,7 +30,7 @@ export default function Fortune500SuperintelligentAutomationSuccess() {
             { value: '300%', label: 'Efficiency Gain', icon: '📈', color: 'from-cyan-400 to-cyan-600' }
           ].map((result, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center">
-              <div className="text-4xl mb-3">{result.icon}</div>
+              <div className="text-4xl mb-3">{result}</div>
               <div className="text-3xl font-extrabold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent mb-2">
                 {result.value}
               </div>
@@ -258,18 +258,16 @@ export default function Fortune500SuperintelligentAutomationSuccess() {
             Join leading organizations achieving breakthrough results and competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Get Free Assessment
-            </Link>
-            <Link 
-              href="/blog/ai-2026-superintelligent-automation-breakthrough" 
+            </a>
+            <a href="/blog/ai-2026-superintelligent-automation-breakthrough" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Learn About Technology
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -277,18 +275,18 @@ export default function Fortune500SuperintelligentAutomationSuccess() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold mb-6 text-white">Related Success Stories</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+            <a href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <h4 className="text-lg font-bold mb-2 group-hover:text-purple-400 transition-colors">Consciousness Fusion Success</h4>
               <p className="text-gray-400 text-sm">How a Fortune 500 company achieved $2.5B ROI through revolutionary AI consciousness fusion breakthrough.</p>
-            </Link>
-            <Link href="/case-studies/quantum-ai-enterprise-transformation" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+            </a>
+            <a href="/case-studies/quantum-ai-enterprise-transformation" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
               <h4 className="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">Quantum AI Transformation</h4>
               <p className="text-gray-400 text-sm">Enterprise transformation through quantum-enhanced AI systems achieving 1000x performance improvements.</p>
-            </Link>
-            <Link href="/case-studies/autonomous-enterprise-operations-success" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
+            </a>
+            <a href="/case-studies/autonomous-enterprise-operations-success" className="group block bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
               <h4 className="text-lg font-bold mb-2 group-hover:text-green-400 transition-colors">Autonomous Operations Success</h4>
               <p className="text-gray-400 text-sm">Complete enterprise automation achieving 99.9% operational efficiency and 24/7 autonomous operations.</p>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

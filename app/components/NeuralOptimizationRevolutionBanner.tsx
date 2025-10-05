@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NeuralOptimizationRevolutionBanner() {
   return (
@@ -66,24 +66,22 @@ export default function NeuralOptimizationRevolutionBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/blog/ai-2026-neural-optimization-revolution"
+            <a href="/blog/ai-2026-neural-optimization-revolution"
               className="group bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
             >
               <span className="flex items-center gap-2">
                 Discover the Technology
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </span>
-            </Link>
-            <Link 
-              href="/case-studies/ai-2026-neural-optimization-success-story"
+            </a>
+            <a href="/case-studies/ai-2026-neural-optimization-success-story"
               className="group bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300"
             >
               <span className="flex items-center gap-2">
                 View Success Story
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </span>
-            </Link>
+            </a>
           </div>
           <p className="text-purple-300 text-sm mt-4">
             Join the revolution: Transform your AI infrastructure today

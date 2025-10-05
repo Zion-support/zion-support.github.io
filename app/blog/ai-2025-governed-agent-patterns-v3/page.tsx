@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
@@ -24,7 +24,7 @@ export default function Page() {
         </ul>
         <p>
           See related operational runbooks in the{' '}
-          <Link href="/blog" className="text-blue-600 hover:underline">Blog</Link>.
+          <a href="/blog" className="text-blue-600 hover:underline">Blog</a>.
         </p>
       </section>
     </main>

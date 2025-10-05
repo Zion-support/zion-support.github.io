@@ -1,6 +1,3 @@
-import ServicesAdvertisingPromo from '../../components/ServicesAdvertisingPromo';
-import AIAdvertisingBanner from '../../components/AIAdvertisingBanner';
-
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-slate-950">

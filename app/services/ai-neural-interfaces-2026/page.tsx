@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Neural Interfaces 2026 Service | Direct Brain-Computer Integration | Zion Tech Group',
@@ -16,9 +16,9 @@ export default function AINeuralInterfacesService() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <a href="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Services
-        </Link>
+        </a>
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
             🧠 BREAKTHROUGH SERVICE
@@ -226,12 +226,11 @@ export default function AINeuralInterfacesService() {
               >
                 📧 Schedule Demo
               </a>
-              <Link
-                href="/case-studies/ai-neural-interface-success-2026"
+              <a href="/case-studies/ai-neural-interface-success-2026"
                 className="block w-full text-purple-600 text-center py-2 font-semibold hover:underline"
               >
                 View Success Stories →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -304,18 +303,16 @@ export default function AINeuralInterfacesService() {
           business results and operational excellence.
         </p>
         <div className="flex gap-4">
-          <Link
-            href="/services"
+          <a href="/services"
             className="text-purple-600 hover:text-purple-800 font-semibold"
           >
             View All Services →
-          </Link>
-          <Link
-            href="/case-studies"
+          </a>
+          <a href="/case-studies"
             className="text-blue-600 hover:text-blue-800 font-semibold"
           >
             View Success Stories →
-          </Link>
+          </a>
         </div>
       </div>
     </div>

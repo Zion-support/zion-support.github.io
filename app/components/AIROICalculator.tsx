@@ -16,7 +16,7 @@ export default function AIROICalculator() {
     <div className="bg-white rounded-2xl shadow-xl p-8">
       <div className="text-center mb-8">
         <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-          <Calculator className="w-8 h-8 text-white" />
+          🧮
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">AI ROI Calculator</h3>
         <p className="text-gray-600">Calculate your potential return on investment with AI transformation</p>
@@ -64,7 +64,7 @@ export default function AIROICalculator() {
         <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
-              <TrendingUp className="w-5 h-5 text-white" />
+              📈
             </div>
             <h4 className="font-semibold text-gray-900">Potential ROI</h4>
           </div>
@@ -79,7 +79,7 @@ export default function AIROICalculator() {
         <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-              <DollarSign className="w-5 h-5 text-white" />
+              💰
             </div>
             <h4 className="font-semibold text-gray-900">Annual Savings</h4>
           </div>
@@ -94,7 +94,7 @@ export default function AIROICalculator() {
         <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+              ⚡
             </div>
             <h4 className="font-semibold text-gray-900">Payback Period</h4>
           </div>

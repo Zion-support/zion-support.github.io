@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'January 2026 Quantum Neural Optimization Breakthrough | Zion Tech Group',
@@ -201,18 +201,16 @@ result = optimizer.optimize(
                   Don't let your competitors gain this revolutionary quantum neural optimization advantage.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    href="/contact" 
+                  <a href="/contact" 
                     className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
                     Contact Quantum AI Specialists
-                  </Link>
-                  <Link 
-                    href="/services" 
+                  </a>
+                  <a href="/services" 
                     className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                   >
                     View Services
-                  </Link>
+                  </a>
                 </div>
               </div>
             </section>
@@ -223,18 +221,16 @@ result = optimizer.optimize(
         {/* Navigation */}
         <div className="max-w-4xl mx-auto mt-12">
           <div className="flex justify-between">
-            <Link 
-              href="/blog/ai-2026-january-autonomous-enterprise-operations-revolution" 
+            <a href="/blog/ai-2026-january-autonomous-enterprise-operations-revolution" 
               className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
               ← Previous Article
-            </Link>
-            <Link 
-              href="/blog/ai-2026-january-autonomous-business-intelligence-revolution" 
+            </a>
+            <a href="/blog/ai-2026-january-autonomous-business-intelligence-revolution" 
               className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
               Next Article →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

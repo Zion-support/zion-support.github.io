@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -352,12 +352,11 @@ export default function AIQuantumNeuralNetworks2026() {
             processing speeds and accuracy with cutting-edge quantum AI technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
+            <a href="/services"
               className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore Quantum AI Services
-            </Link>
+            </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors"

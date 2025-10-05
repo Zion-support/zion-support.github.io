@@ -336,7 +336,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
                 <div className="text-2xl font-bold text-cyan-400 mb-2">{phase.phase}</div>
                 <div className="text-purple-400 text-sm font-semibold mb-4">{phase.timeline}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{phase.focus}</h3>
-                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{phase.description}</p>
+                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{phase}</p>
                 <div className="space-y-2">
                   {phase.outcomes.map((outcome, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">

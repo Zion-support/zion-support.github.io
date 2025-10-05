@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027 Advanced Neural Superintelligence $2.8T Success Story - Zion Tech Group',
@@ -305,12 +305,11 @@ export default function AI2027AdvancedNeuralSuperintelligence28TrillionSuccess()
         </div>
 
         <div className="text-center mb-8">
-          <Link 
-            href="/contact" 
+          <a href="/contact" 
             className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 inline-block"
           >
             🚀 Start Your $2.8T Transformation Today
-          </Link>
+          </a>
         </div>
 
         <div className="bg-gray-100 p-6 rounded-lg">

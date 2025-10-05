@@ -37,9 +37,9 @@ export default function InteractiveAI2026Calculator() {
     const sizeMultiplier = sizeMultipliers[companySize] || 1.0;
 
     // Calculate improvements
-    const efficiencyGain = currentEfficiency * industry.efficiency * sizeMultiplier;
-    const costSavings = currentCosts * industry.costReduction * sizeMultiplier;
-    const revenueIncrease = currentCosts * industry.revenue * sizeMultiplier;
+    const efficiencyGain = currentEfficiency * industry * sizeMultiplier;
+    const costSavings = currentCosts * industry * sizeMultiplier;
+    const revenueIncrease = currentCosts * industry * sizeMultiplier;
     
     // Total benefits
     const totalBenefits = costSavings + revenueIncrease;
@@ -180,7 +180,7 @@ export default function InteractiveAI2026Calculator() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-blue-50 p-4 rounded-lg text-center">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
-                      {results.efficiencyGain}%
+                      {resultsGain}%
                     </div>
                     <div className="text-sm text-gray-600">Efficiency Gain</div>
                   </div>
@@ -202,7 +202,7 @@ export default function InteractiveAI2026Calculator() {
                   <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
                     <span className="font-semibold text-gray-700">Revenue Increase</span>
                     <span className="text-xl font-bold text-blue-600">
-                      ${results.revenueIncrease.toLocaleString()}
+                      ${resultsIncrease.toLocaleString()}
                     </span>
                   </div>
                   <div className="flex justify-between items-center p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border-2 border-green-200">

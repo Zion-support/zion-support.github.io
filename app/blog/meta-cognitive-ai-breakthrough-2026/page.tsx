@@ -50,8 +50,8 @@ export default function MetaCognitiveAIBreakthrough2026() {
                 { value: '98%', label: 'Learning Efficiency', icon: '🧠', color: 'text-green-400' }
               ].map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <div className="text-4xl mb-3">{stat.icon}</div>
-                  <div `}>
+                  <div className="text-4xl mb-3">{stat}</div>
+                  <div className={`text-3xl font-bold ${stat.color}`}>
                     {stat.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">
@@ -259,7 +259,7 @@ export default function MetaCognitiveAIBreakthrough2026() {
                         {phase.duration}
                       </span>
                     </div>
-                    <p className="text-gray-300 leading-relaxed mb-4">{phase.description}</p>
+                    <p className="text-gray-300 leading-relaxed mb-4">{phase}</p>
                     <div className="flex flex-wrap gap-2">
                       {phase.deliverables.map((deliverable, idx) => (
                         <span key={idx} className="bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full text-sm">
@@ -332,12 +332,12 @@ export default function MetaCognitiveAIBreakthrough2026() {
                 href={content.href}
                 className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="text-4xl mb-4">{content.icon}</div>
+                <div className="text-4xl mb-4">{content}</div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
-                  {content.title}
+                  {content}
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  {content.description}
+                  {content}
                 </p>
                 <span className="text-purple-400 font-semibold text-sm group-hover:text-purple-300 transition-colors duration-300">
                   Read More →

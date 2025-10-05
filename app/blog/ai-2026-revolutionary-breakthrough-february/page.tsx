@@ -49,7 +49,7 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
                 { value: '95%', label: 'Decision Accuracy', icon: '🧠', color: 'from-green-500 to-emerald-500' }
               ].map((stat, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                  <div className="text-5xl mb-3">{stat.icon}</div>
+                  <div className="text-5xl mb-3">{stat}</div>
                   <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
                     {stat.value}
                   </div>
@@ -256,9 +256,9 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
                 ].map((phase, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                     <div className="text-sm font-bold text-indigo-400 mb-2">{phase.phase}</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-3">{phase}</h3>
                     <div className="text-sm text-purple-400 mb-3">⏱️ {phase.duration}</div>
-                    <p className="text-gray-300 text-sm leading-relaxed">{phase.description}</p>
+                    <p className="text-gray-300 text-sm leading-relaxed">{phase}</p>
                   </div>
                 ))}
               </div>

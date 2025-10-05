@@ -1,16 +1,6 @@
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import User from 'lucide-react/dist/esm/icons/ser';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Shield from 'lucide-react/dist/esm/icons/hield';
-import Globe from 'lucide-react/dist/esm/icons/lobe';
-import Target from 'lucide-react/dist/esm/icons/arget';
 
 export const metadata: Metadata = {
   title: 'AI 2026: The Future AI Landscape - Mega Trends & Revolutionary Breakthroughs | Zion Tech Group',
@@ -33,7 +23,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <TrendingUp />
+            📈
             MEGA TRENDS 2026
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -47,15 +37,15 @@ export default function AI2026FutureLandscapeMegaTrends() {
         {/* Article Meta */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-gray-400 mb-12">
           <div className="flex items-center gap-2">
-            <User />
+            👤
             <span>Zion Tech Group</span>
           </div>
           <div className="flex items-center gap-2">
-            <Calendar />
+            📅
             <span>January 15, 2026</span>
           </div>
           <div className="flex items-center gap-2">
-            <Clock />
+            🕐
             <span>12 min read</span>
           </div>
         </div>
@@ -64,7 +54,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
         <div className="relative mb-12 rounded-2xl overflow-hidden">
           <div className="aspect-video bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 flex items-center justify-center">
             <div className="text-center text-white">
-              <Brain />
+              🧠
               <h2 className="text-3xl font-bold">The AI Revolution Accelerates</h2>
             </div>
           </div>
@@ -77,7 +67,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-blue-500/30 rounded-xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Target />
+                🎯
                 Executive Summary
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed">
@@ -90,7 +80,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
             {/* Mega Trend 1 */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Brain />
+                🧠
                 1. Quantum Consciousness Breakthrough
               </h2>
               <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6 mb-6">
@@ -126,7 +116,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
             {/* Mega Trend 2 */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Zap />
+                ⚡
                 2. Autonomous Enterprise Systems
               </h2>
               <div className="bg-gradient-to-r from-yellow-900/30 to-orange-900/30 border border-yellow-500/30 rounded-xl p-6 mb-6">
@@ -156,7 +146,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
             {/* Mega Trend 3 */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Shield />
+                🛡️
                 3. Neural Superintelligence Platforms
               </h2>
               <div className="bg-gradient-to-r from-green-900/30 to-teal-900/30 border border-green-500/30 rounded-xl p-6 mb-6">
@@ -193,7 +183,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
             {/* Global Impact */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Globe />
+                🌍
                 Global Impact & Market Transformation
               </h2>
               <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-xl p-6">
@@ -268,20 +258,18 @@ export default function AI2026FutureLandscapeMegaTrends() {
                 these breakthrough technologies and achieve unprecedented results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
+                <a href="/contact"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   Get Started Today
-                  <ArrowRight />
-                </Link>
-                <Link 
-                  href="/services"
+                  →
+                </a>
+                <a href="/services"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors flex items-center justify-center gap-2"
                 >
                   Explore Our Services
-                  <ArrowRight />
-                </Link>
+                  →
+                </a>
               </div>
             </div>
 
@@ -292,7 +280,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Related Articles</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="group">
+            <a href="/blog/ai-2026-quantum-consciousness-breakthrough" className="group">
               <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   Quantum Consciousness Breakthrough
@@ -301,8 +289,8 @@ export default function AI2026FutureLandscapeMegaTrends() {
                   How quantum consciousness is revolutionizing AI decision-making and ethical reasoning
                 </p>
               </div>
-            </Link>
-            <Link href="/blog/ai-2026-autonomous-enterprise-revolution" className="group">
+            </a>
+            <a href="/blog/ai-2026-autonomous-enterprise-revolution" className="group">
               <div className="bg-gradient-to-r from-yellow-900/50 to-orange-900/50 border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-300 transition-colors">
                   Autonomous Enterprise Revolution
@@ -311,8 +299,8 @@ export default function AI2026FutureLandscapeMegaTrends() {
                   Complete business automation achieving unprecedented efficiency and ROI
                 </p>
               </div>
-            </Link>
-            <Link href="/blog/ai-2026-neural-superintelligence" className="group">
+            </a>
+            <a href="/blog/ai-2026-neural-superintelligence" className="group">
               <div className="bg-gradient-to-r from-green-900/50 to-teal-900/50 border border-green-500/30 rounded-xl p-6 hover:border-green-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
                   Neural Superintelligence Platform
@@ -321,7 +309,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
                   Beyond human intelligence: The next frontier of AI capabilities
                 </p>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

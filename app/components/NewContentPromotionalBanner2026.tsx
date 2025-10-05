@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 
@@ -54,11 +55,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border-2 border-cyan-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
+            ✨
             <span className="text-cyan-400 font-extrabold text-lg tracking-wider uppercase">
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
-            <Sparkles className="w-6 h-6 text-fuchsia-400 animate-pulse" />
+            ✨
           </div>
 
           <h2 className="text-6xl md:text-7xl font-extrabold mb-8 leading-tight">
@@ -78,15 +79,15 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
           <div className="flex items-center justify-center gap-8 text-lg text-gray-300">
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-orange-400" />
+              📈
               <span className="font-semibold">10,000+ Readers</span>
             </div>
             <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-yellow-400" />
+              ⚡
               <span className="font-semibold">3 New Articles</span>
             </div>
             <div className="flex items-center gap-2">
-              <Target className="w-5 h-5 text-green-400" />
+              🎯
               <span className="font-semibold">Proven Results</span>
             </div>
           </div>
@@ -96,7 +97,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
             <div 
-              key={content.id}
+              key={content}
               className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -107,7 +108,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 {/* Icon & Badge */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-7xl group-hover:scale-110 transition-transform duration-300">
-                    {content.icon}
+                    {content}
                   </div>
                   <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
                     {content.badge}
@@ -117,13 +118,13 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 {/* Category */}
                 <div className="mb-4">
                   <span className={`px-3 py-1 rounded-full bg-white/10 text-gray-900 text-sm font-semibold border border-white/20`}>
-                    {content.category}
+                    {content}
                   </span>
                 </div>
 
                 {/* Title */}
                 <h3 className={`text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-fuchsia-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
-                  {content.title}
+                  {content}
                 </h3>
 
                 {/* Excerpt */}
@@ -132,13 +133,12 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </p>
 
                 {/* CTA Button */}
-                <Link
-                  href={`/blog/${content.slug}`}
+                <a href={`/blog/${content}`}
                   className={`inline-flex items-center gap-3 bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
                   <span className="text-lg">Read Full Article</span>
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                </Link>
+                  →
+                </a>
               </div>
 
               {/* Corner accent */}
@@ -151,11 +151,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         <div className="relative">
           <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-fuchsia-500/10 backdrop-blur-xl rounded-3xl border-2 border-white/20 p-12 text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Rocket className="w-8 h-8 text-cyan-400" />
+              🚀
               <h3 className="text-4xl font-extrabold text-white">
                 Ready to Transform Your Enterprise?
               </h3>
-              <Shield className="w-8 h-8 text-fuchsia-400" />
+              🛡️
             </div>
             
             <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -165,21 +165,19 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link
-                href="/contact"
+              <a href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
               >
-                <Sparkles className="w-6 h-6" />
+                ✨
                 <span>Start Your AI Journey</span>
-              </Link>
+              </a>
               
-              <Link
-                href="/blog"
+              <a href="/blog"
                 className="border-2 border-fuchsia-400 text-fuchsia-400 hover:bg-fuchsia-400 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
               >
                 <span>Explore All Content</span>
-                <ArrowRight className="w-6 h-6" />
-              </Link>
+                →
+              </a>
             </div>
 
             {/* Stats */}

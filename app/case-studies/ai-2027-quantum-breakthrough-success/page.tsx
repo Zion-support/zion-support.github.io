@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Quantum Breakthrough Success: $1.2B ROI Case Study',
@@ -63,7 +63,7 @@ export default function AI2027QuantumBreakthroughSuccess() {
                 { value: '18mo', label: 'Payback Period', icon: '⏱️', color: 'text-purple-400' }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                  <div className="text-5xl mb-3">{metric.icon}</div>
+                  <div className="text-5xl mb-3">{metric}</div>
                   <div className={`text-4xl font-extrabold ${metric.color} mb-2`}>
                     {metric.value}
                   </div>
@@ -452,18 +452,16 @@ export default function AI2027QuantumBreakthroughSuccess() {
                 Start your quantum AI journey today and achieve breakthrough performance improvements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact" 
+                <a href="/contact" 
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Start Your Quantum AI Journey
-                </Link>
-                <Link 
-                  href="/blog/ai-2027-quantum-revolution" 
+                </a>
+                <a href="/blog/ai-2027-quantum-revolution" 
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Read Implementation Guide
-                </Link>
+                </a>
               </div>
             </div>
           </div>

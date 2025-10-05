@@ -18,7 +18,7 @@ export default function ContentHub() {
       <ul className="list-disc pl-6 space-y-2">
         {featured.map(item => (
           <li key={item.url}>
-            <a href={item.url} className="text-blue-600 underline">{item.title}</a>
+            <a href={item.url} className="text-blue-600 underline">{item}</a>
           </li>
         ))}
       </ul>

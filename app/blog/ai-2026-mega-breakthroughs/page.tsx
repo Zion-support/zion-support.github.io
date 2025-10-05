@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Shield from 'lucide-react/dist/esm/icons/hield';
-import Rocket from 'lucide-react/dist/esm/icons/ocket';
-import Target from 'lucide-react/dist/esm/icons/arget';
+
+
+
+
+
+
 
 export const metadata = {
   title: 'AI 2026 Mega Breakthroughs: The Revolutionary Technologies Reshaping Enterprise',
@@ -19,7 +19,7 @@ export default function AI2026MegaBreakthroughs() {
       {/* Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          <Rocket />
+          🚀
           BREAKTHROUGH 2026
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -40,7 +40,7 @@ export default function AI2026MegaBreakthroughs() {
       {/* Hero Image Placeholder */}
       <div className="w-full h-64 md:h-96 bg-gradient-to-br from-purple-100 via-blue-100 to-teal-100 rounded-2xl mb-12 flex items-center justify-center">
         <div className="text-center">
-          <Brain />
+          🧠
           <h3 className="text-2xl font-bold text-gray-800">AI 2026 Mega Breakthroughs</h3>
           <p className="text-gray-600">Revolutionary technologies transforming enterprise</p>
         </div>
@@ -64,7 +64,7 @@ export default function AI2026MegaBreakthroughs() {
         <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Zap />
+              ⚡
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Quantum-Enhanced AI</h3>
           </div>
@@ -85,7 +85,7 @@ export default function AI2026MegaBreakthroughs() {
         <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border border-green-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-              <Brain />
+              🧠
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Neural Interfaces</h3>
           </div>
@@ -106,7 +106,7 @@ export default function AI2026MegaBreakthroughs() {
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-              <Shield />
+              🛡️
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Autonomous Enterprise</h3>
           </div>
@@ -127,7 +127,7 @@ export default function AI2026MegaBreakthroughs() {
         <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border border-orange-200">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center">
-              <Target />
+              🎯
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Synthetic Data Revolution</h3>
           </div>
@@ -259,12 +259,11 @@ export default function AI2026MegaBreakthroughs() {
           Don't let your competitors gain the advantage. Start implementing these breakthrough technologies today.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/case-studies/ai-2026-mega-transformation-success"
+          <a href="/case-studies/ai-2026-mega-transformation-success"
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             View Success Stories
-          </Link>
+          </a>
           <a
             href="tel:+13024640950"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
@@ -278,7 +277,7 @@ export default function AI2026MegaBreakthroughs() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Breakthrough Content</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-quantum-optimization-2026" className="group">
+          <a href="/blog/ai-quantum-optimization-2026" className="group">
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                 Quantum AI Optimization: 1000x Performance Gains
@@ -287,8 +286,8 @@ export default function AI2026MegaBreakthroughs() {
                 Deep dive into quantum-enhanced AI and how it's revolutionizing enterprise performance.
               </p>
             </div>
-          </Link>
-          <Link href="/case-studies/ai-neural-interface-success-2026" className="group">
+          </a>
+          <a href="/case-studies/ai-neural-interface-success-2026" className="group">
             <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg border border-green-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-green-600 mb-2">
                 300% Productivity Case Study: Neural Interfaces
@@ -297,7 +296,7 @@ export default function AI2026MegaBreakthroughs() {
                 Real-world success story of neural interface implementation in enterprise environments.
               </p>
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

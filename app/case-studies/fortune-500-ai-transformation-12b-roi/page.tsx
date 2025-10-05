@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 
 
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI Transformation: $12.4B ROI Case Study | Zion Tech Group',
@@ -24,7 +24,7 @@ export default function Fortune500AITransformation12BROI() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Award className="w-4 h-4" />
+            🏆
             SUCCESS STORY
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -39,15 +39,15 @@ export default function Fortune500AITransformation12BROI() {
         {/* Article Meta */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-gray-400 mb-12">
           <div className="flex items-center gap-2">
-            <User className="w-4 h-4" />
+            👤
             <span>Zion Tech Group</span>
           </div>
           <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
+            📅
             <span>January 15, 2026</span>
           </div>
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4" />
+            🕐
             <span>18 min read</span>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function Fortune500AITransformation12BROI() {
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 border border-green-500/30 rounded-xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Target className="w-6 h-6 text-green-400" />
+                🎯
                 Executive Summary
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed">
@@ -108,7 +108,7 @@ export default function Fortune500AITransformation12BROI() {
             {/* Transformation Strategy */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Zap className="w-8 h-8 text-yellow-400" />
+                ⚡
                 AI Transformation Strategy
               </h2>
               
@@ -241,7 +241,7 @@ export default function Fortune500AITransformation12BROI() {
             {/* Results Summary */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <TrendingUp className="w-8 h-8 text-green-400" />
+                📈
                 Transformation Results
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
@@ -299,19 +299,19 @@ export default function Fortune500AITransformation12BROI() {
                     <h4 className="text-lg font-semibold text-yellow-300 mb-3">Strategic Elements</h4>
                     <ul className="text-gray-300 space-y-2">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        ✅
                         <span>Executive leadership commitment and vision</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        ✅
                         <span>Comprehensive change management strategy</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        ✅
                         <span>Phased implementation approach</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        ✅
                         <span>Continuous measurement and optimization</span>
                       </li>
                     </ul>
@@ -320,19 +320,19 @@ export default function Fortune500AITransformation12BROI() {
                     <h4 className="text-lg font-semibold text-yellow-300 mb-3">Technical Elements</h4>
                     <ul className="text-gray-300 space-y-2">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        ✅
                         <span>Robust data infrastructure and governance</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        ✅
                         <span>Scalable cloud-native architecture</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        ✅
                         <span>Advanced security and compliance</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        ✅
                         <span>Integrated AI/ML platform ecosystem</span>
                       </li>
                     </ul>
@@ -351,20 +351,18 @@ export default function Fortune500AITransformation12BROI() {
                 through strategic AI implementation and autonomous systems deployment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
+                <a href="/contact"
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   Start Your Transformation
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link 
-                  href="/services"
+                  →
+                </a>
+                <a href="/services"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors flex items-center justify-center gap-2"
                 >
                   Explore Our Services
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                  →
+                </a>
               </div>
             </div>
 
@@ -375,7 +373,7 @@ export default function Fortune500AITransformation12BROI() {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Related Case Studies</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/case-studies/healthcare-ai-transformation-8b-roi" className="group">
+            <a href="/case-studies/healthcare-ai-transformation-8b-roi" className="group">
               <div className="bg-gradient-to-r from-blue-900/50 to-cyan-900/50 border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   Healthcare AI Transformation: $8.2B ROI
@@ -384,8 +382,8 @@ export default function Fortune500AITransformation12BROI() {
                   How a major healthcare system achieved $8.2B ROI through AI-powered patient care and operational optimization
                 </p>
               </div>
-            </Link>
-            <Link href="/case-studies/fintech-quantum-computing-6b-roi" className="group">
+            </a>
+            <a href="/case-studies/fintech-quantum-computing-6b-roi" className="group">
               <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   FinTech Quantum Computing: $6.7B ROI
@@ -394,8 +392,8 @@ export default function Fortune500AITransformation12BROI() {
                   Revolutionary quantum computing implementation in financial services achieving unprecedented trading performance
                 </p>
               </div>
-            </Link>
-            <Link href="/case-studies/retail-neural-superintelligence-9b-roi" className="group">
+            </a>
+            <a href="/case-studies/retail-neural-superintelligence-9b-roi" className="group">
               <div className="bg-gradient-to-r from-green-900/50 to-teal-900/50 border border-green-500/30 rounded-xl p-6 hover:border-green-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
                   Retail Neural Superintelligence: $9.1B ROI
@@ -404,7 +402,7 @@ export default function Fortune500AITransformation12BROI() {
                   Global retail chain transformation through neural superintelligence and autonomous customer experience
                 </p>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

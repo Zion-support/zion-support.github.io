@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -222,7 +222,7 @@ export default function CaseStudiesPage() {
               <span className="text-gray-600 text-sm">18 months</span>
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              {caseStudies[0].title}
+              {caseStudies[0]}
             </h2>
             <p className="text-xl text-gray-600 mb-6 max-w-3xl">
               {caseStudies[0].excerpt}
@@ -234,15 +234,14 @@ export default function CaseStudiesPage() {
                 </span>
               ))}
             </div>
-            <Link
-              href={`/case-studies/${caseStudies[0].slug}`}
+            <a href={`/case-studies/${caseStudies[0]}`}
               className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Read Full Case Study
               <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -255,7 +254,7 @@ export default function CaseStudiesPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.slice(1).map((study) => (
-              <article key={study.slug} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <article key={study} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
                   <div className="text-white text-center">
                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -272,7 +271,7 @@ export default function CaseStudiesPage() {
                     <span className="text-gray-500 text-sm">{study.company}</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {study.title}
+                    {study}
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {study.excerpt}
@@ -286,12 +285,11 @@ export default function CaseStudiesPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 text-sm">Success Story</span>
-                    <Link
-                      href={`/case-studies/${study.slug}`}
+                    <a href={`/case-studies/${study}`}
                       className="text-green-600 font-semibold hover:text-green-700 transition-colors"
                     >
                       Read More →
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -343,12 +341,11 @@ export default function CaseStudiesPage() {
             Join hundreds of successful companies that have transformed their operations with our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
+            <a href="/services"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Our Solutions
-            </Link>
+            </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"

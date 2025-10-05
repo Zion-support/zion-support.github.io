@@ -145,11 +145,11 @@ export default function FederatedLearningBreakthrough2026() {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="text-6xl mb-4">{feature.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{feature.description}</p>
+                <div className="text-6xl mb-4">{feature}</div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature}</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed">{feature}</p>
                 <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (
+                  {feature.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-300">
                       <span className="text-blue-400">✓</span>
                       {item}
@@ -194,8 +194,8 @@ export default function FederatedLearningBreakthrough2026() {
                 }
               ].map((useCase, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                  <h3 className="text-2xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-400 mb-4">{useCase.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-3">{useCase}</h3>
+                  <p className="text-gray-400 mb-4">{useCase}</p>
                   <ul className="space-y-1">
                     {useCase.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
@@ -219,7 +219,7 @@ export default function FederatedLearningBreakthrough2026() {
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">{benefit.icon}</span>
+                      <span className="text-2xl">{benefit}</span>
                       <span className="text-gray-300">{benefit.benefit}</span>
                     </div>
                     <span className="text-blue-400 font-bold">{benefit.value}</span>
@@ -267,9 +267,9 @@ export default function FederatedLearningBreakthrough2026() {
               }
             ].map((component, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center">
-                <div className="text-5xl mb-4">{component.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{component.title}</h3>
-                <p className="text-gray-400 text-sm">{component.description}</p>
+                <div className="text-5xl mb-4">{component}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{component}</h3>
+                <p className="text-gray-400 text-sm">{component}</p>
               </div>
             ))}
           </div>

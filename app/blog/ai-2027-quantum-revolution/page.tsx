@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Quantum Revolution: Breakthrough Technologies & Implementation Guide',
@@ -60,7 +60,7 @@ export default function AI2027QuantumRevolution() {
                 { value: '$500M+', label: 'Average ROI Achieved', icon: '💰' }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                  <div className="text-5xl mb-3">{metric.icon}</div>
+                  <div className="text-5xl mb-3">{metric}</div>
                   <div className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
                     {metric.value}
                   </div>
@@ -321,18 +321,16 @@ export default function AI2027QuantumRevolution() {
                 Start your quantum AI journey today and achieve breakthrough performance improvements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact" 
+                <a href="/contact" 
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Start Quantum AI Transformation
-                </Link>
-                <Link 
-                  href="/case-studies" 
+                </a>
+                <a href="/case-studies" 
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -348,7 +346,7 @@ export default function AI2027QuantumRevolution() {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <Link href="/blog/ai-2027-autonomous-enterprise" className="group">
+              <a href="/blog/ai-2027-autonomous-enterprise" className="group">
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤖</div>
                   <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
@@ -361,9 +359,9 @@ export default function AI2027QuantumRevolution() {
                     Explore Now →
                   </span>
                 </div>
-              </Link>
+              </a>
 
-              <Link href="/blog/ai-2027-neuromorphic-intelligence" className="group">
+              <a href="/blog/ai-2027-neuromorphic-intelligence" className="group">
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧠</div>
                   <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors">
@@ -376,7 +374,7 @@ export default function AI2027QuantumRevolution() {
                     Learn More →
                   </span>
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

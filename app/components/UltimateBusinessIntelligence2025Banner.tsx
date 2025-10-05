@@ -1,7 +1,7 @@
 'use client';
 
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -115,10 +115,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
-                {currentContent.title}
+                {currentContent}
               </h2>
               <p className="text-lg text-white/90 leading-relaxed">
-                {currentContent.description}
+                {currentContent}
               </p>
             </div>
 
@@ -129,7 +129,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <div className="text-sm text-white/80">ROI</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-2xl font-bold text-green-400">{currentContent.metrics.savings}</div>
+                <div className="text-2xl font-bold text-green-400">{currentContent.metrics}</div>
                 <div className="text-sm text-white/80">Annual Savings</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -144,18 +144,16 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href={currentContent.url}
+              <a href={currentContent.url}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 text-center"
               >
                 Read {currentContent.type}
-              </Link>
-              <Link
-                href="/contact"
+              </a>
+              <a href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
               >
                 Get Consultation
-              </Link>
+              </a>
             </div>
 
             {/* Content Type Badge */}
@@ -166,7 +164,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <span className="text-white/70 text-sm">
                 {currentContent.readingTime}
               </span>
-              {currentContent.featured && (
+              {currentContent && (
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
                   FEATURED
                 </span>
@@ -179,13 +177,17 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <h3 className="text-xl font-bold mb-4">Featured Content</h3>
             {content.map((item, index) => (
               <div
-                key={item.id}
-                `}
+                key={item}
+                className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
+                  currentSlide === index 
+                    ? 'bg-white/20 border border-white/30' 
+                    : 'bg-white/5 hover:bg-white/10 border border-transparent'
+                }`}
                 onClick={() => setCurrentSlide(index)}
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <h4 className="font-semibold text-sm mb-2 line-clamp-2">{item.title}</h4>
+                    <h4 className="font-semibold text-sm mb-2 line-clamp-2">{item}</h4>
                     <div className="flex items-center space-x-2 text-xs text-white/70">
                       <span>{item.type}</span>
                       <span>•</span>
@@ -208,7 +210,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              `}
+              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                currentSlide === index 
+                  ? 'bg-yellow-400 scale-125' 
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

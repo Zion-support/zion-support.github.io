@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Agent Release Guardrails 2026: Budgets, Approvals, and Instant Rollback',
@@ -41,8 +41,8 @@ export default function Page() {
 
       <section className="py-12 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/blog" className="text-fuchsia-700 font-semibold hover:text-fuchsia-800">← Back to Blog</Link>
-          <Link href="/blog/edge-consentless-experiments-2026-q4" className="text-purple-700 font-semibold hover:text-purple-800">Next: Consentless Experiments →</Link>
+          <a href="/blog" className="text-fuchsia-700 font-semibold hover:text-fuchsia-800">← Back to Blog</a>
+          <a href="/blog/edge-consentless-experiments-2026-q4" className="text-purple-700 font-semibold hover:text-purple-800">Next: Consentless Experiments →</a>
         </div>
       </section>
     </main>

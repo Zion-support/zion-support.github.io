@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,22 +15,22 @@ export default function AICognitiveComputingSuccess2026() {
       <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center gap-2 text-green-200 mb-4">
-            <Link href="/case-studies" className="flex items-center gap-1 hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4" />
+            <a href="/case-studies" className="flex items-center gap-1 hover:text-white transition-colors">
+              ←
               Back to Case Studies
-            </Link>
+            </a>
           </div>
           <div className="flex items-center gap-4 text-sm text-green-200 mb-6">
             <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              📅
               January 30, 2026
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              🕐
               18 min read
             </div>
             <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
+              👤
               Zion Tech Group
             </div>
           </div>
@@ -169,15 +169,15 @@ export default function AICognitiveComputingSuccess2026() {
               <h4 className="text-xl font-semibold text-green-900 mb-4">Financial Impact</h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
-                  <DollarSign className="w-5 h-5 text-green-600" />
+                  💰
                   <span className="text-gray-700"><strong>$25M</strong> total value creation</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <TrendingUp className="w-5 h-5 text-green-600" />
+                  📈
                   <span className="text-gray-700"><strong>300%</strong> ROI in first year</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Target className="w-5 h-5 text-green-600" />
+                  🎯
                   <span className="text-gray-700"><strong>40%</strong> increase in investment returns</span>
                 </li>
               </ul>
@@ -187,15 +187,15 @@ export default function AICognitiveComputingSuccess2026() {
               <h4 className="text-xl font-semibold text-blue-900 mb-4">Operational Excellence</h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-blue-600" />
+                  🕐
                   <span className="text-gray-700"><strong>75%</strong> reduction in analysis time</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Target className="w-5 h-5 text-blue-600" />
+                  🎯
                   <span className="text-gray-700"><strong>98%</strong> decision accuracy</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <TrendingUp className="w-5 h-5 text-blue-600" />
+                  📈
                   <span className="text-gray-700"><strong>90%</strong> improvement in customer satisfaction</span>
                 </li>
               </ul>
@@ -281,18 +281,16 @@ export default function AICognitiveComputingSuccess2026() {
               Transform your organization with AI cognitive computing. Our expert team can help you implement similar systems that deliver measurable business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/services/ai-cognitive-computing"
+              <a href="/services/ai-cognitive-computing"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
               >
                 Explore Cognitive AI Services
-              </Link>
-              <Link
-                href="/contact"
+              </a>
+              <a href="/contact"
                 className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -300,11 +298,11 @@ export default function AICognitiveComputingSuccess2026() {
         {/* Article Actions */}
         <div className="flex flex-wrap gap-4 pt-8 border-t border-gray-200">
           <button className="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
-            <Share2 className="w-4 h-4" />
+            🔗
             Share Case Study
           </button>
           <button className="flex items-center gap-2 bg-gray-50 text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
-            <Bookmark className="w-4 h-4" />
+            🔖
             Save for Later
           </button>
         </div>
@@ -315,7 +313,7 @@ export default function AICognitiveComputingSuccess2026() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Case Studies</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
+            <a href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   Autonomous Enterprise Success Case Study
@@ -325,9 +323,9 @@ export default function AICognitiveComputingSuccess2026() {
                 </p>
                 <div className="text-blue-600 font-semibold">Read More →</div>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/case-studies/ai-quantum-optimization-2026" className="group">
+            <a href="/case-studies/ai-quantum-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Quantum Optimization Success
@@ -337,9 +335,9 @@ export default function AICognitiveComputingSuccess2026() {
                 </p>
                 <div className="text-blue-600 font-semibold">Read More →</div>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
+            <a href="/case-studies/ai-sustainability-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Sustainability Transformation
@@ -349,7 +347,7 @@ export default function AICognitiveComputingSuccess2026() {
                 </p>
                 <div className="text-blue-600 font-semibold">Read More →</div>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

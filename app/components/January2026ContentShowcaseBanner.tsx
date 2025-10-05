@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026ContentShowcaseBanner() {
   return (
@@ -49,15 +49,14 @@ export default function January2026ContentShowcaseBanner() {
                 <div className="text-xs text-blue-200">Failure Prediction</div>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-2026-january-autonomous-enterprise-operations-revolution"
+            <a href="/blog/ai-2026-january-autonomous-enterprise-operations-revolution"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
             >
               Read Full Article
               <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           {/* Quantum Neural Optimization */}
@@ -86,15 +85,14 @@ export default function January2026ContentShowcaseBanner() {
                 <div className="text-xs text-purple-200">Accuracy</div>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-2026-january-quantum-neural-optimization-breakthrough"
+            <a href="/blog/ai-2026-january-quantum-neural-optimization-breakthrough"
               className="inline-flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors"
             >
               Explore Breakthrough
               <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           {/* Autonomous Business Intelligence */}
@@ -123,15 +121,14 @@ export default function January2026ContentShowcaseBanner() {
                 <div className="text-xs text-green-200">ROI</div>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-2026-january-autonomous-business-intelligence-revolution"
+            <a href="/blog/ai-2026-january-autonomous-business-intelligence-revolution"
               className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium transition-colors"
             >
               Read Full Article
               <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -146,18 +143,16 @@ export default function January2026ContentShowcaseBanner() {
               reduce costs, and accelerate growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
+              <a href="/contact"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Consultation
-              </Link>
-              <Link 
-                href="/services"
+              </a>
+              <a href="/services"
                 className="bg-transparent border-2 border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 View All Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

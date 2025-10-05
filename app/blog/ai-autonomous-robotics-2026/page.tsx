@@ -1,11 +1,4 @@
-import Link from 'next/link';
-
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import Bot from 'lucide-react/dist/esm/icons/ot';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Target from 'lucide-react/dist/esm/icons/arget';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',
@@ -31,15 +24,15 @@ export default function AIAutonomousRobotics2026() {
         </h1>
         <div className="flex items-center gap-6 text-gray-600 mb-8">
           <div className="flex items-center gap-2">
-            <Clock />
+            🕐
             <span>32 min read</span>
           </div>
           <div className="flex items-center gap-2">
-            <Bot />
+            🤖
             <span>Robotics</span>
           </div>
           <div className="flex items-center gap-2">
-            <TrendingUp />
+            📈
             <span>Automation</span>
           </div>
         </div>
@@ -52,7 +45,7 @@ export default function AIAutonomousRobotics2026() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
               <div className="w-24 h-24 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                <Bot />
+                🤖
               </div>
               <h2 className="text-3xl font-bold mb-4">Autonomous Robotics</h2>
               <p className="text-xl opacity-90">The Future of Intelligent Automation</p>
@@ -150,7 +143,7 @@ export default function AIAutonomousRobotics2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <Bot />
+                🤖
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Manufacturing & Assembly</h4>
             </div>
@@ -165,7 +158,7 @@ export default function AIAutonomousRobotics2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Zap />
+                ⚡
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Logistics & Warehousing</h4>
             </div>
@@ -180,7 +173,7 @@ export default function AIAutonomousRobotics2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <Target />
+                🎯
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Healthcare & Surgery</h4>
             </div>
@@ -195,7 +188,7 @@ export default function AIAutonomousRobotics2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                <TrendingUp />
+                📈
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Agriculture & Food</h4>
             </div>
@@ -314,18 +307,16 @@ export default function AIAutonomousRobotics2026() {
             Discover how AI autonomous robotics can revolutionize your business operations, increase efficiency, and unlock new possibilities for growth and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
+            <a href="/contact"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Schedule Consultation
-            </Link>
-            <Link
-              href="/services/ai-autonomous-robotics"
+            </a>
+            <a href="/services/ai-autonomous-robotics"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
             >
               Learn More
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -334,7 +325,7 @@ export default function AIAutonomousRobotics2026() {
       <div className="mt-16 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Content</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link href="/blog/ai-cognitive-superintelligence-2026" className="group">
+          <a href="/blog/ai-cognitive-superintelligence-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Cognitive Superintelligence 2026
@@ -343,8 +334,8 @@ export default function AIAutonomousRobotics2026() {
                 Explore the revolutionary advances in AI cognitive superintelligence and human-AI collaboration.
               </p>
             </div>
-          </Link>
-          <Link href="/blog/ai-metaverse-enterprise-transformation-2026" className="group">
+          </a>
+          <a href="/blog/ai-metaverse-enterprise-transformation-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Metaverse Enterprise 2026
@@ -353,8 +344,8 @@ export default function AIAutonomousRobotics2026() {
                 Discover how AI-powered metaverse technologies are revolutionizing enterprise operations.
               </p>
             </div>
-          </Link>
-          <Link href="/case-studies/ai-autonomous-robotics-mega-success-2026" className="group">
+          </a>
+          <a href="/case-studies/ai-autonomous-robotics-mega-success-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 $300M Robotics Success Story
@@ -363,7 +354,7 @@ export default function AIAutonomousRobotics2026() {
                 See how a Fortune 500 company achieved massive ROI with AI autonomous robotics.
               </p>
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2027RevolutionaryBanner() {
   return (
@@ -21,7 +21,7 @@ export default function NewContent2027RevolutionaryBanner() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Advanced Autonomous Systems */}
-          <Link href="/blog/ai-2027-advanced-autonomous-systems" className="group">
+          <a href="/blog/ai-2027-advanced-autonomous-systems" className="group">
             <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 border-2 border-blue-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -60,10 +60,10 @@ export default function NewContent2027RevolutionaryBanner() {
                 Read Complete Guide →
               </div>
             </div>
-          </Link>
+          </a>
 
           {/* Quantum-Enhanced Machine Learning */}
-          <Link href="/blog/ai-2027-quantum-enhanced-machine-learning" className="group">
+          <a href="/blog/ai-2027-quantum-enhanced-machine-learning" className="group">
             <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 border-2 border-purple-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center">
@@ -102,10 +102,10 @@ export default function NewContent2027RevolutionaryBanner() {
                 Read Complete Guide →
               </div>
             </div>
-          </Link>
+          </a>
 
           {/* Neuromorphic Computing */}
-          <Link href="/blog/ai-2027-neuromorphic-computing-enterprise" className="group">
+          <a href="/blog/ai-2027-neuromorphic-computing-enterprise" className="group">
             <div className="bg-white text-gray-900 rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 border-2 border-green-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
@@ -144,7 +144,7 @@ export default function NewContent2027RevolutionaryBanner() {
                 Read Complete Guide →
               </div>
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* Success Story Highlight */}
@@ -181,18 +181,17 @@ export default function NewContent2027RevolutionaryBanner() {
           </div>
           
           <div className="text-center">
-            <Link
-              href="/case-studies/ai-2027-revolutionary-transformation-mega-success"
+            <a href="/case-studies/ai-2027-revolutionary-transformation-mega-success"
               className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Read Complete Success Story →
-            </Link>
+            </a>
           </div>
         </div>
 
         {/* Service Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Link href="/services/ai-2027-advanced-autonomous-systems" className="group">
+          <a href="/services/ai-2027-advanced-autonomous-systems" className="group">
             <div className="bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🤖</span>
@@ -202,9 +201,9 @@ export default function NewContent2027RevolutionaryBanner() {
                 Self-governing AI architectures with 99.99% uptime and 95% process automation.
               </p>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/services/ai-quantum-computing" className="group">
+          <a href="/services/ai-quantum-computing" className="group">
             <div className="bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">⚛️</span>
@@ -214,9 +213,9 @@ export default function NewContent2027RevolutionaryBanner() {
                 Quantum-enhanced machine learning with 1000x performance improvements.
               </p>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/services/neuromorphic-ai" className="group">
+          <a href="/services/neuromorphic-ai" className="group">
             <div className="bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl p-6 transition-colors">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">🧠</span>
@@ -226,7 +225,7 @@ export default function NewContent2027RevolutionaryBanner() {
                 Brain-inspired computing with 90% energy reduction and real-time learning.
               </p>
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* CTA */}
@@ -236,12 +235,11 @@ export default function NewContent2027RevolutionaryBanner() {
             Join the Fortune 100 companies already achieving breakthrough results with revolutionary AI technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
+            <a href="/services"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore Our AI Services
-            </Link>
+            </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"

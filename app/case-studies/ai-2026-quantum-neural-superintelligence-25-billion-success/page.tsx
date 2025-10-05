@@ -1,15 +1,4 @@
-import Link from 'next/link';
-import { ArrowRight, TrendingUp, Brain, Zap, Target, Users, DollarSign, Award } from 'lucide-react';
-
-
-
-
-
-
-
-
-
-
+import { Link } from 'react-router-dom';
 // @ts-ignore
 
 // @ts-ignore
@@ -28,7 +17,7 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-green-600/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Award className="w-4 h-4" />
+              🏆
               $25 Billion Success Story
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -40,20 +29,18 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
               with Zion Tech Group's revolutionary quantum neural superintelligence platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/blog/ai-2026-quantum-neural-superintelligence"
+              <a href="/blog/ai-2026-quantum-neural-superintelligence"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
               >
                 Read Technical Details
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link 
-                href="/services/quantum-ai-development"
+                →
+              </a>
+              <a href="/services/quantum-ai-development"
                 className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
               >
                 Start Your Quantum Journey
-                <TrendingUp className="w-5 h-5" />
-              </Link>
+                📈
+              </a>
             </div>
           </div>
         </div>
@@ -145,7 +132,7 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-2xl border border-indigo-500/30">
               <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-white" />
+                ⚡
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Neural Networks</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -155,7 +142,7 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
             </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
+                🧠
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Superintelligent Reasoning</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -165,7 +152,7 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
             </div>
             <div className="bg-gradient-to-br from-pink-600/20 to-indigo-600/20 p-8 rounded-2xl border border-pink-500/30">
               <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-white" />
+                🎯
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Optimization</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -231,7 +218,7 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
                 <div className="bg-gradient-to-r from-green-600/20 to-indigo-600/20 p-6 rounded-xl border border-green-500/30">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-                      <DollarSign className="w-6 h-6 text-white" />
+                      💰
                     </div>
                     <div>
                       <div className="text-3xl font-bold text-white">$25.7B</div>
@@ -242,7 +229,7 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
                 <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 p-6 rounded-xl border border-indigo-500/30">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center">
-                      <TrendingUp className="w-6 h-6 text-white" />
+                      📈
                     </div>
                     <div>
                       <div className="text-3xl font-bold text-white">10^15x</div>
@@ -253,7 +240,7 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
                 <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-xl border border-purple-500/30">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-                      <Users className="w-6 h-6 text-white" />
+                      👤
                     </div>
                     <div>
                       <div className="text-3xl font-bold text-white">500,000+</div>
@@ -393,20 +380,18 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
             Join the quantum revolution and unlock infinite possibilities for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
+            <a href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Quantum Transformation
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              href="/services/quantum-ai-development"
+              →
+            </a>
+            <a href="/services/quantum-ai-development"
               className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
             >
               Explore Quantum Solutions
-              <TrendingUp className="w-5 h-5" />
-            </Link>
+              📈
+            </a>
           </div>
         </div>
       </div>

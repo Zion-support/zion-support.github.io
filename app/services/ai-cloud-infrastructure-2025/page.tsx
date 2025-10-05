@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -19,9 +19,9 @@ export default function AICloudInfrastructure2025Page() {
         {/* Header */}
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <Link href="/services" className="text-cyan-600 hover:text-cyan-700 font-semibold mb-4 inline-block">
+            <a href="/services" className="text-cyan-600 hover:text-cyan-700 font-semibold mb-4 inline-block">
               ← Back to Services
-            </Link>
+            </a>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               AI Cloud Infrastructure 2025
             </h1>
@@ -295,7 +295,7 @@ export default function AICloudInfrastructure2025Page() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Cloud Services</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/services/ai-2026-enterprise-transformation" className="group">
+              <a href="/services/ai-2026-enterprise-transformation" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
                     AI Enterprise Transformation
@@ -305,8 +305,8 @@ export default function AICloudInfrastructure2025Page() {
                   </p>
                   <div className="text-cyan-600 font-semibold">Learn More →</div>
                 </div>
-              </Link>
-              <Link href="/services/ai-cybersecurity-2025" className="group">
+              </a>
+              <a href="/services/ai-cybersecurity-2025" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
                     AI Cybersecurity Solutions
@@ -316,8 +316,8 @@ export default function AICloudInfrastructure2025Page() {
                   </p>
                   <div className="text-cyan-600 font-semibold">Learn More →</div>
                 </div>
-              </Link>
-              <Link href="/services/devops-automation" className="group">
+              </a>
+              <a href="/services/devops-automation" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
                     DevOps Automation
@@ -327,7 +327,7 @@ export default function AICloudInfrastructure2025Page() {
                   </p>
                   <div className="text-cyan-600 font-semibold">Learn More →</div>
                 </div>
-              </Link>
+              </a>
             </div>
           </section>
         </div>

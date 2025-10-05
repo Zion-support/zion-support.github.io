@@ -258,9 +258,9 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300">
-                  <div className="text-6xl mb-4">{feature.icon}</div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">{feature.description}</p>
+                  <div className="text-6xl mb-4">{feature}</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{feature}</h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed">{feature}</p>
                   <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                     {feature.metrics}
                   </div>
@@ -292,7 +292,7 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                 { value: '500+', label: 'Fortune 500 Clients', icon: '🏢', color: 'text-cyan-400' }
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center">
-                  <div className="text-6xl mb-4">{metric.icon}</div>
+                  <div className="text-6xl mb-4">{metric}</div>
                   <div className="text-4xl font-bold text-white mb-2">
                     {metric.value}
                   </div>

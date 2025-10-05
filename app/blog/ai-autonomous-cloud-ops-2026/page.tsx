@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
@@ -190,12 +190,11 @@ export default function AIAutonomousCloudOps2026() {
               revolutionize your infrastructure management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/services/ai-autonomous-cloud-ops"
+              <a href="/services/ai-autonomous-cloud-ops"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Explore Our Services
-              </Link>
+              </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
@@ -208,7 +207,7 @@ export default function AIAutonomousCloudOps2026() {
           <div className="border-t pt-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Articles</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/blog/ai-operational-excellence-2026" className="group">
+              <a href="/blog/ai-operational-excellence-2026" className="group">
                 <div className="border rounded-lg p-4 hover:shadow-lg transition-shadow">
                   <h3 className="font-bold text-gray-900 group-hover:text-blue-600 mb-2">
                     AI Operational Excellence 2026
@@ -217,8 +216,8 @@ export default function AIAutonomousCloudOps2026() {
                     Complete enterprise implementation guide for AI-driven operations.
                   </p>
                 </div>
-              </Link>
-              <Link href="/blog/ai-agent-observability-2026" className="group">
+              </a>
+              <a href="/blog/ai-agent-observability-2026" className="group">
                 <div className="border rounded-lg p-4 hover:shadow-lg transition-shadow">
                   <h3 className="font-bold text-gray-900 group-hover:text-blue-600 mb-2">
                     AI Agent Observability 2026
@@ -227,7 +226,7 @@ export default function AIAutonomousCloudOps2026() {
                     Comprehensive monitoring and debugging guide for AI agents.
                   </p>
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

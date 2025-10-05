@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 // AI Autonomous Manufacturing 2026 Banner
 export const AIAutonomousManufacturing2026Banner = () => (
@@ -37,18 +37,16 @@ export const AIAutonomousManufacturing2026Banner = () => (
       </div>
       
       <div className="text-center">
-        <Link
-          href="/blog/ai-autonomous-manufacturing-2026"
+        <a href="/blog/ai-autonomous-manufacturing-2026"
           className="inline-block bg-white text-green-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition-colors shadow-xl mr-4"
         >
           Read Complete Guide →
-        </Link>
-        <Link
-          href="/case-studies"
+        </a>
+        <a href="/case-studies"
           className="inline-block border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-colors"
         >
           View Success Stories →
-        </Link>
+        </a>
       </div>
     </div>
   </section>
@@ -91,18 +89,16 @@ export const AIFinancialServicesRevolution2026Banner = () => (
       </div>
       
       <div className="text-center">
-        <Link
-          href="/blog/ai-financial-services-revolution-2026"
+        <a href="/blog/ai-financial-services-revolution-2026"
           className="inline-block bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl mr-4"
         >
           Read Complete Guide →
-        </Link>
-        <Link
-          href="/services"
+        </a>
+        <a href="/services"
           className="inline-block border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
         >
           Explore AI Services →
-        </Link>
+        </a>
       </div>
     </div>
   </section>
@@ -145,18 +141,16 @@ export const AIHealthcareDiagnosticBreakthrough2026Banner = () => (
       </div>
       
       <div className="text-center">
-        <Link
-          href="/case-studies/ai-healthcare-diagnostic-breakthrough-2026"
+        <a href="/case-studies/ai-healthcare-diagnostic-breakthrough-2026"
           className="inline-block bg-white text-red-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-red-50 transition-colors shadow-xl mr-4"
         >
           Read Success Story →
-        </Link>
-        <Link
-          href="/services/ai-healthcare-solutions"
+        </a>
+        <a href="/services/ai-healthcare-solutions"
           className="inline-block border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-600 transition-colors"
         >
           Healthcare AI Solutions →
-        </Link>
+        </a>
       </div>
     </div>
   </section>
@@ -184,7 +178,7 @@ export const MegaContentShowcase2026Banner = () => (
       <div className="grid md:grid-cols-3 gap-8 mb-12">
         
         {/* Manufacturing AI */}
-        <Link href="/blog/ai-autonomous-manufacturing-2026" className="group">
+        <a href="/blog/ai-autonomous-manufacturing-2026" className="group">
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
             <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-6 text-white">
               <div className="flex items-center gap-2 mb-3">
@@ -222,10 +216,10 @@ export const MegaContentShowcase2026Banner = () => (
               </div>
             </div>
           </div>
-        </Link>
+        </a>
 
         {/* Financial Services AI */}
-        <Link href="/blog/ai-financial-services-revolution-2026" className="group">
+        <a href="/blog/ai-financial-services-revolution-2026" className="group">
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
               <div className="flex items-center gap-2 mb-3">
@@ -263,10 +257,10 @@ export const MegaContentShowcase2026Banner = () => (
               </div>
             </div>
           </div>
-        </Link>
+        </a>
 
         {/* Healthcare AI */}
-        <Link href="/case-studies/ai-healthcare-diagnostic-breakthrough-2026" className="group">
+        <a href="/case-studies/ai-healthcare-diagnostic-breakthrough-2026" className="group">
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-red-300">
             <div className="bg-gradient-to-r from-red-600 to-pink-600 p-6 text-white">
               <div className="flex items-center gap-2 mb-3">
@@ -304,7 +298,7 @@ export const MegaContentShowcase2026Banner = () => (
               </div>
             </div>
           </div>
-        </Link>
+        </a>
 
       </div>
 
@@ -385,12 +379,11 @@ export const Ultimate2026ContentShowcaseBanner = () => (
                 <div className="text-xs text-gray-600">ROI</div>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-autonomous-manufacturing-2026"
+            <a href="/blog/ai-autonomous-manufacturing-2026"
               className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-4 rounded-xl font-bold hover:from-green-700 hover:to-emerald-700 transition-colors text-lg shadow-lg"
             >
               Read Complete Guide →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -428,12 +421,11 @@ export const Ultimate2026ContentShowcaseBanner = () => (
                 <div className="text-xs text-gray-600">ROI</div>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-financial-services-revolution-2026"
+            <a href="/blog/ai-financial-services-revolution-2026"
               className="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-4 rounded-xl font-bold hover:from-blue-700 hover:to-indigo-700 transition-colors text-lg shadow-lg"
             >
               Read Complete Guide →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -471,12 +463,11 @@ export const Ultimate2026ContentShowcaseBanner = () => (
                 <div className="text-xs text-gray-600">Saved</div>
               </div>
             </div>
-            <Link 
-              href="/case-studies/ai-healthcare-diagnostic-breakthrough-2026"
+            <a href="/case-studies/ai-healthcare-diagnostic-breakthrough-2026"
               className="block w-full bg-gradient-to-r from-red-600 to-pink-600 text-white text-center py-4 rounded-xl font-bold hover:from-red-700 hover:to-pink-700 transition-colors text-lg shadow-lg"
             >
               Read Success Story →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -489,12 +480,11 @@ export const Ultimate2026ContentShowcaseBanner = () => (
           Essential reading for enterprise leaders planning their 2026 AI transformation strategy
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/blog" 
+          <a href="/blog" 
             className="inline-block bg-white text-indigo-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
           >
             View All Articles & Insights →
-          </Link>
+          </a>
           <a
             href="tel:+13024640950"
             className="inline-block border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all hover:scale-105"

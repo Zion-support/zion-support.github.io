@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026ContentShowcaseBanner() {
   return (
@@ -19,7 +19,7 @@ export default function AI2026ContentShowcaseBanner() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <Link href="/blog/ai-2026-predictions" className="group">
+          <a href="/blog/ai-2026-predictions" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
@@ -38,9 +38,9 @@ export default function AI2026ContentShowcaseBanner() {
                 Read Predictions →
               </div>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/case-studies/ai-transformation-2026" className="group">
+          <a href="/case-studies/ai-transformation-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
@@ -59,9 +59,9 @@ export default function AI2026ContentShowcaseBanner() {
                 View Case Studies →
               </div>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/services/ai-2026-roadmap" className="group">
+          <a href="/services/ai-2026-roadmap" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
@@ -80,23 +80,21 @@ export default function AI2026ContentShowcaseBanner() {
                 Get Roadmap →
               </div>
             </div>
-          </Link>
+          </a>
         </div>
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog"
+            <a href="/blog"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore All 2026 Content
-            </Link>
-            <Link
-              href="/services"
+            </a>
+            <a href="/services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               Start Your AI Journey
-            </Link>
+            </a>
           </div>
           <p className="text-sm opacity-75 mt-4">
             Join 25,000+ professionals already transforming with AI

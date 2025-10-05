@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Autonomous Enterprise Operations 2027: Complete Business Automation - Zion Tech Group',
@@ -36,18 +36,16 @@ export default function AutonomousEnterpriseOperations2027() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               Start Your Automation Journey
-            </Link>
-            <Link 
-              href="/services/enterprise-automation" 
+            </a>
+            <a href="/services/enterprise-automation" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               View Automation Services
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -267,18 +265,16 @@ export default function AutonomousEnterpriseOperations2027() {
               transition to fully autonomous business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <a href="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
               >
                 Schedule Free Assessment
-              </Link>
-              <Link 
-                href="/services/enterprise-automation" 
+              </a>
+              <a href="/services/enterprise-automation" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Automation Services
-              </Link>
+              </a>
             </div>
           </div>
         </article>
@@ -287,7 +283,7 @@ export default function AutonomousEnterpriseOperations2027() {
         <div className="mt-16">
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Related Solutions</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2027-transcendent-intelligence-breakthrough" className="group">
+            <a href="/blog/ai-2027-transcendent-intelligence-breakthrough" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
@@ -297,9 +293,9 @@ export default function AutonomousEnterpriseOperations2027() {
                   Revolutionary AI systems with quantum-enhanced cognitive capabilities and autonomous consciousness.
                 </p>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/blog/ai-enterprise-automation-2026-mega-guide" className="group">
+            <a href="/blog/ai-enterprise-automation-2026-mega-guide" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -309,9 +305,9 @@ export default function AutonomousEnterpriseOperations2027() {
                   Complete guide to achieving 98% automation rates with meta-cognitive AI systems.
                 </p>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/services/enterprise-ai-solutions" className="group">
+            <a href="/services/enterprise-ai-solutions" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-4xl mb-4">🏢</div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
@@ -321,7 +317,7 @@ export default function AutonomousEnterpriseOperations2027() {
                   Comprehensive AI solutions designed specifically for large enterprise operations.
                 </p>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -201,9 +201,9 @@ export default function Fortune500AI2027TranscendentIntelligenceInfiniteSuccess(
                 }
               ].map((solution, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
-                  <div className="text-6xl mb-4">{solution.icon}</div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">{solution.description}</p>
+                  <div className="text-6xl mb-4">{solution}</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{solution}</h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed">{solution}</p>
                   <div className="text-4xl font-extrabold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
                     {solution.metrics}
                   </div>
@@ -240,7 +240,7 @@ export default function Fortune500AI2027TranscendentIntelligenceInfiniteSuccess(
                 { value: '∞', label: 'Universal Optimization', icon: '🎯', color: 'text-indigo-400' }
               ].map((result, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 text-center">
-                  <div className="text-6xl mb-4">{result.icon}</div>
+                  <div className="text-6xl mb-4">{result}</div>
                   <div className={`text-5xl font-extrabold ${result.color} mb-2`}>
                     {result.value}
                   </div>

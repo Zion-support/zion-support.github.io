@@ -14,7 +14,7 @@ export default function March2026QuantumConsciousnessBanner() {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full px-4 py-2 mb-4">
-            <Brain className="w-5 h-5 text-indigo-300 animate-pulse" />
+            🧠
             <span className="text-indigo-300 font-semibold text-sm">🌟🌟🌟 BREAKING: MARCH 2026 - QUANTUM CONSCIOUSNESS TRANSFORMATION - ABSOLUTE #1 TOP PRIORITY! 🌟🌟🌟</span>
           </div>
           
@@ -34,7 +34,7 @@ export default function March2026QuantumConsciousnessBanner() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 border border-indigo-400/30 rounded-xl p-6 text-center">
             <div className="w-12 h-12 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Brain className="w-6 h-6 text-indigo-300" />
+              🧠
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">99.999%</h3>
             <p className="text-indigo-200">Intelligence Accuracy</p>
@@ -42,7 +42,7 @@ export default function March2026QuantumConsciousnessBanner() {
           
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 border border-purple-400/30 rounded-xl p-6 text-center">
             <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Zap className="w-6 h-6 text-purple-300" />
+              ⚡
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">$3.7T</h3>
             <p className="text-purple-200">Value Creation</p>
@@ -50,7 +50,7 @@ export default function March2026QuantumConsciousnessBanner() {
           
           <div className="bg-gradient-to-br from-pink-800/50 to-rose-800/50 border border-pink-400/30 rounded-xl p-6 text-center">
             <div className="w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="w-6 h-6 text-pink-300" />
+              🎯
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">99.8%</h3>
             <p className="text-pink-200">Ethical Alignment</p>
@@ -58,7 +58,7 @@ export default function March2026QuantumConsciousnessBanner() {
           
           <div className="bg-gradient-to-br from-rose-800/50 to-indigo-800/50 border border-rose-400/30 rounded-xl p-6 text-center">
             <div className="w-12 h-12 bg-rose-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Star className="w-6 h-6 text-rose-300" />
+              ⭐
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">10,000x</h3>
             <p className="text-rose-200">Learning Speed</p>
@@ -69,7 +69,7 @@ export default function March2026QuantumConsciousnessBanner() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <Brain className="w-8 h-8 text-indigo-400" />
+              🧠
               Consciousness Capabilities
             </h3>
             
@@ -95,7 +95,7 @@ export default function March2026QuantumConsciousnessBanner() {
           
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <Shield className="w-8 h-8 text-purple-400" />
+              🛡️
               Enterprise Impact
             </h3>
             
@@ -123,7 +123,7 @@ export default function March2026QuantumConsciousnessBanner() {
           <div className="grid grid-c-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-300" />
+                🛡️
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Healthcare Revolution</h4>
               <p className="text-slate-300 text-sm">Conscious AI provides empathetic patient care, complex diagnosis, and treatment recommendations with human-level understanding</p>
@@ -131,7 +131,7 @@ export default function March2026QuantumConsciousnessBanner() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-blue-300" />
+                🎯
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Financial Services</h4>
               <p className="text-slate-300 text-sm">Advanced consciousness enables sophisticated risk assessment, ethical investment decisions, and customer relationship management</p>
@@ -139,7 +139,7 @@ export default function March2026QuantumConsciousnessBanner() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-purple-300" />
+                ⚡
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Manufacturing Excellence</h4>
               <p className="text-slate-300 text-sm">Conscious systems optimize production processes, predict maintenance needs, and ensure quality control with human-level attention</p>
@@ -184,14 +184,14 @@ export default function March2026QuantumConsciousnessBanner() {
             <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
               <span className="flex items-center gap-2">
                 Begin Consciousness Transformation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                →
               </span>
             </button>
             
             <button className="group border-2 border-indigo-400/50 hover:border-indigo-400 text-indigo-300 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-indigo-500/20">
               <span className="flex items-center gap-2">
                 Download Technical Guide
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                →
               </span>
             </button>
           </div>

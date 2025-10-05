@@ -35,15 +35,15 @@ export default function RevolutionaryBreakthroughs2025() {
           <div className="max-w-5xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-6 flex-wrap">
               <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-yellow-400/30">
-                <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
+                ✨
                 <span className="text-sm font-bold text-yellow-300">REVOLUTIONARY BREAKTHROUGHS</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-400/20 to-blue-500/20 backdrop-blur-sm rounded-full border border-green-400/30">
-                <TrendingUp className="w-4 h-4 text-green-400" />
+                📈
                 <span className="text-sm font-bold text-green-300">6 BREAKTHROUGH TECHNOLOGIES</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-400/20 to-pink-500/20 backdrop-blur-sm rounded-full border border-purple-400/30">
-                <Star className="w-4 h-4 text-purple-400" />
+                ⭐
                 <span className="text-sm font-bold text-purple-300">LIMITED EARLY ACCESS</span>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function RevolutionaryBreakthroughs2025() {
 
             <div className="flex items-center justify-center gap-8 text-sm text-gray-400 mb-12">
               <span className="flex items-center gap-2">
-                <Brain className="w-4 h-4 text-blue-400" />
+                🧠
                 AI Innovation
               </span>
               <span>📅 January 28, 2025</span>
@@ -73,7 +73,7 @@ export default function RevolutionaryBreakthroughs2025() {
                 href="#breakthrough-technologies" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 flex items-center justify-center gap-2"
               >
-                <Sparkles className="w-5 h-5" />
+                ✨
                 Explore Breakthroughs
               </a>
               <a 
@@ -81,7 +81,7 @@ export default function RevolutionaryBreakthroughs2025() {
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span>Get Implementation Guide</span>
-                <ArrowRight className="w-5 h-5" />
+                →
               </a>
             </div>
           </div>
@@ -102,27 +102,27 @@ export default function RevolutionaryBreakthroughs2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {revolutionaryBreakthroughs2025.map((breakthrough) => {
-              const IconComponent = getIconComponent(breakthrough.icon);
+              const IconComponent = getIconComponent(breakthrough);
               return (
                 <div
-                  key={breakthrough.id}
+                  key={breakthrough}
                   className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
                 >
                   {/* Card Header */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="text-5xl group-hover:scale-110 transition-transform duration-300">
-                      {breakthrough.icon}
+                      {breakthrough}
                     </div>
                     <div className="flex flex-col gap-2">
-                      {breakthrough.trending && (
+                      {breakthrough && (
                         <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-                          <TrendingUp className="w-3 h-3" />
+                          📈
                           <span>TRENDING</span>
                         </div>
                       )}
-                      {breakthrough.featured && (
+                      {breakthrough && (
                         <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-bold shadow-lg">
-                          <Star className="w-3 h-3" />
+                          ⭐
                           <span>FEATURED</span>
                         </div>
                       )}
@@ -135,40 +135,40 @@ export default function RevolutionaryBreakthroughs2025() {
                   {/* Category */}
                   <div className="mb-4">
                     <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-pink-400 text-xs font-semibold border border-pink-500/30">
-                      {breakthrough.category}
+                      {breakthrough}
                     </span>
                   </div>
 
                   {/* Title */}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
-                    {breakthrough.title}
+                    {breakthrough}
                   </h3>
 
                   {/* Description */}
                   <p className="text-gray-400 mb-6 leading-relaxed">
-                    {breakthrough.description}
+                    {breakthrough}
                   </p>
 
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-white/5 rounded-xl p-3 text-center">
-                      <div className="text-lg font-bold text-green-400">{breakthrough.impact}</div>
+                      <div className="text-lg font-bold text-green-400">{breakthrough}</div>
                       <div className="text-xs text-gray-400">Impact</div>
                     </div>
                     <div className="bg-white/5 rounded-xl p-3 text-center">
-                      <div className="text-lg font-bold text-blue-400">{breakthrough.savings}</div>
+                      <div className="text-lg font-bold text-blue-400">{breakthrough}</div>
                       <div className="text-xs text-gray-400">Savings</div>
                     </div>
                   </div>
 
                   {/* CTA Button */}
                   <a
-                    href={`/blog/${breakthrough.slug}`}
+                    href={`/blog/${breakthrough}`}
                     className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                   >
-                    <IconComponent className="w-4 h-4" />
+                    <IconComponent />
                     <span>Explore Breakthrough</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    →
                   </a>
                 </div>
               );
@@ -191,36 +191,36 @@ export default function RevolutionaryBreakthroughs2025() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {breakthroughServices2025.map((service) => {
-              const IconComponent = getIconComponent(service.icon);
+              const IconComponent = getIconComponent(service);
               return (
                 <div
-                  key={service.id}
+                  key={service}
                   className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
                 >
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
+                    {service}
                   </div>
                   
                   <div className="mb-4">
                     <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30">
-                      {service.category}
+                      {service}
                     </span>
                   </div>
 
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                    {service.title}
+                    {service}
                   </h3>
 
                   <p className="text-gray-400 mb-6 leading-relaxed">
-                    {service.description}
+                    {service}
                   </p>
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
+                      {service.map((feature, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          ✅
                           {feature}
                         </li>
                       ))}
@@ -232,7 +232,7 @@ export default function RevolutionaryBreakthroughs2025() {
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                          ⭐
                           {benefit}
                         </li>
                       ))}
@@ -248,9 +248,9 @@ export default function RevolutionaryBreakthroughs2025() {
                     href="/contact"
                     className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                   >
-                    <IconComponent className="w-4 h-4" />
+                    <IconComponent />
                     <span>Get Started</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    →
                   </a>
                 </div>
               );
@@ -274,12 +274,12 @@ export default function RevolutionaryBreakthroughs2025() {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {latestCaseStudies2025.map((caseStudy) => (
               <div
-                key={caseStudy.id}
+                key={caseStudy}
                 className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
-                    {caseStudy.icon}
+                    {caseStudy}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
@@ -291,17 +291,17 @@ export default function RevolutionaryBreakthroughs2025() {
                       </span>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
-                      {caseStudy.title}
+                      {caseStudy}
                     </h3>
                     <p className="text-gray-400 mb-4 leading-relaxed">
-                      {caseStudy.description}
+                      {caseStudy}
                     </p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-white/5 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-green-400">{caseStudy.savings}</div>
+                    <div className="text-2xl font-bold text-green-400">{caseStudy}</div>
                     <div className="text-xs text-gray-400">Annual Savings</div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center">
@@ -315,7 +315,7 @@ export default function RevolutionaryBreakthroughs2025() {
                   <ul className="space-y-2">
                     {caseStudy.highlights.map((highlight, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        ✅
                         {highlight}
                       </li>
                     ))}
@@ -323,11 +323,11 @@ export default function RevolutionaryBreakthroughs2025() {
                 </div>
 
                 <a
-                  href={`/case-studies/${caseStudy.slug}`}
+                  href={`/case-studies/${caseStudy}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
                 >
                   <span>View Full Case Study</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  →
                 </a>
               </div>
             ))}
@@ -353,7 +353,7 @@ export default function RevolutionaryBreakthroughs2025() {
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
                   >
-                    <Sparkles className="w-5 h-5" />
+                    ✨
                     <span>Get Early Access</span>
                   </a>
                   <a
@@ -361,7 +361,7 @@ export default function RevolutionaryBreakthroughs2025() {
                     className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <span>Schedule Consultation</span>
-                    <ArrowRight className="w-5 h-5" />
+                    →
                   </a>
                 </div>
               </div>

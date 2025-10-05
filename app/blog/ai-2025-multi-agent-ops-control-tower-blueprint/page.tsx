@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import User from 'lucide-react/dist/esm/icons/ser';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
+
 
 export default function MultiAgentOpsControlTowerBlueprintPage() {
   return (
@@ -19,9 +16,9 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
               Operationalize AI agents with observability, approvals, runbooks, and fail‑safes.
             </p>
             <div className="flex flex-wrap justify-center items-center space-x-6 text-sm text-gray-200 mb-8">
-              <div className="flex items-center"><Calendar /> September 30, 2025</div>
-              <div className="flex items-center"><User /> Zion Tech Group</div>
-              <div className="flex items-center"><Clock /> 7 min read</div>
+              <div className="flex items-center">📅 September 30, 2025</div>
+              <div className="flex items-center">👤 Zion Tech Group</div>
+              <div className="flex items-center">🕐 7 min read</div>
             </div>
           </div>
         </div>
@@ -45,16 +42,16 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
           <h3 className="text-2xl font-bold mb-3">Stand Up Your Agent Ops</h3>
           <p className="opacity-90 mb-6">We implement control towers tailored to your governance needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/services" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Explore Services</Link>
-            <Link to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">Talk to Experts</Link>
+            <a to="/services" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Explore Services</a>
+            <a to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">Talk to Experts</a>
           </div>
         </div>
       </article>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link to="/" className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
-          <ArrowLeft /> Back to Home
-        </Link>
+        <a href="/" className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+          ← Back to Home
+        </a>
       </div>
     </div>
   );

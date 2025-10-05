@@ -1,11 +1,5 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import User from 'lucide-react/dist/esm/icons/ser';
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import Share2 from 'lucide-react/dist/esm/icons/hare2';
-import Bookmark from 'lucide-react/dist/esm/icons/ookmark';
 
 export const metadata = {
   title: 'AI Cognitive Computing Breakthrough 2026: Human-Level Reasoning Revolution | Zion Tech Group',
@@ -20,22 +14,22 @@ export default function AICognitiveComputingBreakthrough2026() {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center gap-2 text-blue-200 mb-4">
-            <Link href="/blog" className="flex items-center gap-1 hover:text-white transition-colors">
-              <ArrowLeft />
+            <a href="/blog" className="flex items-center gap-1 hover:text-white transition-colors">
+              ←
               Back to Blog
-            </Link>
+            </a>
           </div>
           <div className="flex items-center gap-4 text-sm text-blue-200 mb-6">
             <div className="flex items-center gap-1">
-              <Calendar />
+              📅
               January 30, 2026
             </div>
             <div className="flex items-center gap-1">
-              <Clock />
+              🕐
               32 min read
             </div>
             <div className="flex items-center gap-1">
-              <User />
+              👤
               Zion Tech Group
             </div>
           </div>
@@ -230,18 +224,16 @@ export default function AICognitiveComputingBreakthrough2026() {
               Ready to harness the power of human-level AI reasoning? Our expert team can help you implement cognitive computing systems that deliver measurable business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/services/ai-cognitive-computing"
+              <a href="/services/ai-cognitive-computing"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
               >
                 Explore Cognitive AI Services
-              </Link>
-              <Link
-                href="/contact"
+              </a>
+              <a href="/contact"
                 className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -249,11 +241,11 @@ export default function AICognitiveComputingBreakthrough2026() {
         {/* Article Actions */}
         <div className="flex flex-wrap gap-4 pt-8 border-t border-gray-200">
           <button className="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
-            <Share2 />
+            🔗
             Share Article
           </button>
           <button className="flex items-center gap-2 bg-gray-50 text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
-            <Bookmark />
+            🔖
             Save for Later
           </button>
         </div>
@@ -264,7 +256,7 @@ export default function AICognitiveComputingBreakthrough2026() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Articles</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/blog/ai-autonomous-enterprise-systems-2026" className="group">
+            <a href="/blog/ai-autonomous-enterprise-systems-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Autonomous Enterprise Systems 2026
@@ -274,9 +266,9 @@ export default function AICognitiveComputingBreakthrough2026() {
                 </p>
                 <div className="text-blue-600 font-semibold">Read More →</div>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/blog/ai-quantum-computing-2026" className="group">
+            <a href="/blog/ai-quantum-computing-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Quantum Computing 2026
@@ -286,9 +278,9 @@ export default function AICognitiveComputingBreakthrough2026() {
                 </p>
                 <div className="text-blue-600 font-semibold">Read More →</div>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/case-studies/ai-cognitive-computing-success-2026" className="group">
+            <a href="/case-studies/ai-cognitive-computing-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   Cognitive Computing Success Case Study
@@ -298,7 +290,7 @@ export default function AICognitiveComputingBreakthrough2026() {
                 </p>
                 <div className="text-blue-600 font-semibold">Read More →</div>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

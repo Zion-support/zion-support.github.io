@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function September2025FreshContentBanner() {
   return (
@@ -51,12 +51,11 @@ export default function September2025FreshContentBanner() {
                 <span>99.99% distributed uptime</span>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-2025-september-edge-ai-revolution"
+            <a href="/blog/ai-2025-september-edge-ai-revolution"
               className="inline-flex items-center text-sm font-bold text-white bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all"
             >
               Read Full Article →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform hover:shadow-2xl">
@@ -82,12 +81,11 @@ export default function September2025FreshContentBanner() {
                 <span>Self-learning agents</span>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-2025-september-autonomous-agents-enterprise"
+            <a href="/blog/ai-2025-september-autonomous-agents-enterprise"
               className="inline-flex items-center text-sm font-bold text-white bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all"
             >
               Discover Agents →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform hover:shadow-2xl">
@@ -113,12 +111,11 @@ export default function September2025FreshContentBanner() {
                 <span>Risk mitigation frameworks</span>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-2025-september-responsible-ai-frameworks"
+            <a href="/blog/ai-2025-september-responsible-ai-frameworks"
               className="inline-flex items-center text-sm font-bold text-white bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all"
             >
               Learn Framework →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -177,18 +174,16 @@ export default function September2025FreshContentBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link
-              href="/services"
+            <a href="/services"
               className="bg-white text-indigo-600 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-50 transition-all duration-300 hover:scale-105 shadow-2xl"
             >
               🚀 Explore AI Services
-            </Link>
-            <Link
-              href="/blog"
+            </a>
+            <a href="/blog"
               className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
             >
               📚 Read All Articles
-            </Link>
+            </a>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 shadow-2xl"

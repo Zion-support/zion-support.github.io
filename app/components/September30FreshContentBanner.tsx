@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function September30FreshContentBanner() {
   return (
@@ -34,12 +34,11 @@ export default function September30FreshContentBanner() {
             <p className="text-white/90 mb-4 text-sm">
               Bridging logic and learning for 300% accuracy improvements. Explainable AI with 100% transparency.
             </p>
-            <Link 
-              href="/blog/ai-neural-symbolic-reasoning-2026"
+            <a href="/blog/ai-neural-symbolic-reasoning-2026"
               className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
             >
               Read Article →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -48,12 +47,11 @@ export default function September30FreshContentBanner() {
             <p className="text-white/90 mb-4 text-sm">
               Unified intelligence across vision, language & audio. 400% improvement in contextual understanding.
             </p>
-            <Link 
-              href="/blog/ai-multimodal-fusion-systems-2026"
+            <a href="/blog/ai-multimodal-fusion-systems-2026"
               className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
             >
               Discover More →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -62,12 +60,11 @@ export default function September30FreshContentBanner() {
             <p className="text-white/90 mb-4 text-sm">
               Never-ending adaptation without forgetting. 500% improvement in model adaptability.
             </p>
-            <Link 
-              href="/blog/ai-continual-learning-systems-2026"
+            <a href="/blog/ai-continual-learning-systems-2026"
               className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -109,18 +106,16 @@ export default function September30FreshContentBanner() {
 
         <div className="text-center mt-10">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
+            <a href="/services"
               className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-50 transition-all duration-300 hover:scale-105 shadow-xl"
             >
               Explore AI Services
-            </Link>
-            <Link
-              href="/blog"
+            </a>
+            <a href="/blog"
               className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
             >
               Read All Articles
-            </Link>
+            </a>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 shadow-xl"

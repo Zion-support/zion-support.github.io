@@ -1,13 +1,4 @@
-import Link from 'next/link';
-import { ArrowRight, TrendingUp, Users, DollarSign, Award, Clock } from 'lucide-react';
-
-
-
-
-
-
-
-
+import { Link } from 'react-router-dom';
 // @ts-ignore
 
 // @ts-ignore
@@ -23,7 +14,7 @@ export default function AIMegaTransformationSuccess() {
       {/* Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          <Award className="w-4 h-4" />
+          🏆
           MEGA SUCCESS STORY
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -44,22 +35,22 @@ export default function AIMegaTransformationSuccess() {
       {/* Hero Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
         <div className="text-center bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
-          <DollarSign className="w-8 h-8 text-green-600 mx-auto mb-2" />
+          💰
           <div className="text-3xl font-bold text-green-600 mb-1">$50M</div>
           <div className="text-sm text-gray-600">Additional Revenue</div>
         </div>
         <div className="text-center bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
-          <TrendingUp className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+          📈
           <div className="text-3xl font-bold text-blue-600 mb-1">340%</div>
           <div className="text-sm text-gray-600">ROI Increase</div>
         </div>
         <div className="text-center bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
-          <Clock className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+          🕐
           <div className="text-3xl font-bold text-purple-600 mb-1">18</div>
           <div className="text-sm text-gray-600">Months</div>
         </div>
         <div className="text-center bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200">
-          <Users className="w-8 h-8 text-orange-600 mx-auto mb-2" />
+          👤
           <div className="text-3xl font-bold text-orange-600 mb-1">15K</div>
           <div className="text-sm text-gray-600">Employees Impacted</div>
         </div>
@@ -359,13 +350,12 @@ export default function AIMegaTransformationSuccess() {
           measurable business impact.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
+          <a href="/contact"
             className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
           >
             Start Your Transformation
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+            →
+          </a>
           <a
             href="tel:+13024640950"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
@@ -379,7 +369,7 @@ export default function AIMegaTransformationSuccess() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Success Stories</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
+          <a href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                 Autonomous Enterprise: $25M ROI Success
@@ -388,8 +378,8 @@ export default function AIMegaTransformationSuccess() {
                 How another Fortune 500 company achieved autonomous operations with AI.
               </p>
             </div>
-          </Link>
-          <Link href="/case-studies/ai-manufacturing-excellence-2026" className="group">
+          </a>
+          <a href="/case-studies/ai-manufacturing-excellence-2026" className="group">
             <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg border border-blue-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                 Manufacturing Excellence: 40% Cost Reduction
@@ -398,7 +388,7 @@ export default function AIMegaTransformationSuccess() {
                 AI-powered manufacturing transformation delivering significant cost savings.
               </p>
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

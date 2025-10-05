@@ -39,14 +39,14 @@ const ContentShowcase: React.FC = () => {
             >
               <div className='h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center'>
                 <span className='text-white text-2xl font-bold'>
-                  {item.category}
+                  {item}
                 </span>
               </div>
               <div className='p-6'>
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>
-                  {item.title}
+                  {item}
                 </h3>
-                <p className='text-gray-600 mb-4'>{item.description}</p>
+                <p className='text-gray-600 mb-4'>{item}</p>
                 <button className='w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300'>
                   Learn More
                 </button>

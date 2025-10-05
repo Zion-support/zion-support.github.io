@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Edge Experiments 2025 — Zero‑PII Global A/B at <100ms',
@@ -65,8 +65,8 @@ export default function EdgeExperiments2025() {
 
         <div className="border-t border-gray-200 pt-8 mt-12">
           <div className="flex flex-wrap gap-3">
-            <Link href="/content-hub" className="bg-cyan-600 text-white px-5 py-3 rounded-lg hover:bg-cyan-700 transition-colors">Visit Content Hub</Link>
-            <Link href="/services/ai-data-analytics" className="border border-gray-300 text-gray-700 px-5 py-3 rounded-lg hover:bg-gray-50 transition-colors">Analytics Services</Link>
+            <a href="/content-hub" className="bg-cyan-600 text-white px-5 py-3 rounded-lg hover:bg-cyan-700 transition-colors">Visit Content Hub</a>
+            <a href="/services/ai-data-analytics" className="border border-gray-300 text-gray-700 px-5 py-3 rounded-lg hover:bg-gray-50 transition-colors">Analytics Services</a>
           </div>
         </div>
       </article>

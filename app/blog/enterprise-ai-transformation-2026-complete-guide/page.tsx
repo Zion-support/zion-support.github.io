@@ -97,11 +97,11 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               }
             ].map((phase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 transition-all duration-300">
-                <div className="text-6xl mb-6">{phase.icon}</div>
+                <div className="text-6xl mb-6">{phase}</div>
                 <div className="text-2xl font-bold text-emerald-400 mb-2">{phase.phase}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{phase.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{phase}</h3>
                 <div className="text-blue-400 text-sm font-semibold mb-4">{phase.duration}</div>
-                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{phase.description}</p>
+                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{phase}</p>
                 <div className="space-y-2">
                   {phase.outcomes.map((outcome, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
@@ -143,11 +143,11 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               }
             ].map((phase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                <div className="text-6xl mb-6">{phase.icon}</div>
+                <div className="text-6xl mb-6">{phase}</div>
                 <div className="text-2xl font-bold text-blue-400 mb-2">{phase.phase}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{phase.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{phase}</h3>
                 <div className="text-purple-400 text-sm font-semibold mb-4">{phase.duration}</div>
-                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{phase.description}</p>
+                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{phase}</p>
                 <div className="space-y-2">
                   {phase.outcomes.map((outcome, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
@@ -189,11 +189,11 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               }
             ].map((phase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-                <div className="text-6xl mb-6">{phase.icon}</div>
+                <div className="text-6xl mb-6">{phase}</div>
                 <div className="text-2xl font-bold text-purple-400 mb-2">{phase.phase}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{phase.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{phase}</h3>
                 <div className="text-pink-400 text-sm font-semibold mb-4">{phase.duration}</div>
-                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{phase.description}</p>
+                <p className="text-gray-400 mb-6 text-sm leading-relaxed">{phase}</p>
                 <div className="space-y-2">
                   {phase.outcomes.map((outcome, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
@@ -228,8 +228,8 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               { value: '18mo', label: 'Average Payback Period', icon: '⏱️', color: 'text-orange-400' }
             ].map((metric, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
-                <div className="text-6xl mb-4">{metric.icon}</div>
-                <div `}>
+                <div className="text-6xl mb-4">{metric}</div>
+                <div className={`text-4xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent`}>
                   {metric.value}
                 </div>
                 <div className="text-gray-400 text-sm font-medium">

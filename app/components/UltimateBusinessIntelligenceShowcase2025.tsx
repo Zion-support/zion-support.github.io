@@ -1,7 +1,7 @@
 'use client';
 
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import Link from 'next/link';
 
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -62,14 +62,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
   const filters = [
     { id: 'all', label: 'All Content', count: content.length },
-    { id: 'blog', label: 'Blog Posts', count: content.filter(item => item.category === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: content.filter(item => item.category === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: content.filter(item => item.category === 'resource').length }
+    { id: 'blog', label: 'Blog Posts', count: content.filter(item => item === 'blog').length },
+    { id: 'case-study', label: 'Case Studies', count: content.filter(item => item === 'case-study').length },
+    { id: 'resource', label: 'Resources', count: content.filter(item => item === 'resource').length }
   ];
 
   const filteredContent = activeFilter === 'all' 
     ? content 
-    : content.filter(item => item.category === activeFilter);
+    : content.filter(item => item === activeFilter);
 
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -113,9 +113,13 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           {filters.map((filter) => (
             <button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              `}
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
+                activeFilter === filter
+                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
             >
               {filter.label} ({filter.count})
             </button>
@@ -126,16 +130,16 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item) => (
             <div
-              key={item.id}
+              key={item}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               {/* Content Type Badge */}
               <div className="p-4 pb-0">
                 <div className="flex items-center justify-between mb-3">
-                  <span `}>
+                  <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {item.type}
                   </span>
-                  {item.featured && (
+                  {item && (
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
                       FEATURED
                     </span>
@@ -146,10 +150,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* Content */}
               <div className="p-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  {item.title}
+                  {item}
                 </h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.description}
+                  {item}
                 </p>
 
                 {/* Metrics */}
@@ -159,7 +163,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     <div className="text-xs text-gray-600">ROI</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-3 text-center">
-                    <div className="text-lg font-bold text-blue-600">{item.metrics.savings}</div>
+                    <div className="text-lg font-bold text-blue-600">{item.metrics}</div>
                     <div className="text-xs text-gray-600">Savings</div>
                   </div>
                 </div>
@@ -178,12 +182,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
                 {/* Action Buttons */}
                 <div className="space-y-3">
-                  <Link
-                    href={item.url}
+                  <a href={item.url}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center block"
                   >
                     Read {item.type}
-                  </Link>
+                  </a>
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <span>{item.readingTime}</span>
                     <span>•</span>
@@ -205,18 +208,16 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               Join Fortune 500 companies transforming their business intelligence with AI-powered analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <a href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Free Consultation
-              </Link>
-              <Link
-                href="/resources"
+              </a>
+              <a href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Download Guide
-              </Link>
+              </a>
             </div>
           </div>
         </div>

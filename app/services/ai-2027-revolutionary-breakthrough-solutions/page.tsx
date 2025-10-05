@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027 Revolutionary Breakthrough Solutions | Zion Tech Group',
@@ -177,12 +177,11 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
                 <span className="text-gray-700">ROI: 300% within 12 months</span>
               </li>
             </ul>
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
             >
               Get Started
-            </Link>
+            </a>
           </div>
 
           <div className="border-2 border-purple-300 rounded-2xl p-8 hover:border-purple-400 transition-colors relative">
@@ -218,12 +217,11 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
                 <span className="text-gray-700">ROI: 600% within 12 months</span>
               </li>
             </ul>
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block"
             >
               Transform Now
-            </Link>
+            </a>
           </div>
 
           <div className="border-2 border-yellow-300 rounded-2xl p-8 hover:border-yellow-400 transition-colors">
@@ -254,12 +252,11 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
                 <span className="text-gray-700">ROI: 1000% within 12 months</span>
               </li>
             </ul>
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="w-full bg-yellow-600 text-white py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors text-center block"
             >
               Lead the Revolution
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -380,18 +377,16 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
             Our AI 2027 revolutionary breakthrough solutions are available now for immediate deployment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="bg-red-600 text-white px-12 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors"
             >
               Secure Your Position
-            </Link>
-            <Link 
-              href="/case-studies/ai-2027-revolutionary-breakthrough-success" 
+            </a>
+            <a href="/case-studies/ai-2027-revolutionary-breakthrough-success" 
               className="border-2 border-red-600 text-red-600 px-12 py-4 rounded-lg font-bold text-lg hover:bg-red-600 hover:text-white transition-colors"
             >
               View Success Stories
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -400,7 +395,7 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
       <div className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Revolutionary Services</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Link href="/services/ai-2027-quantum-enterprise-solutions" className="group">
+          <a href="/services/ai-2027-quantum-enterprise-solutions" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">⚛️</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
@@ -410,9 +405,9 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
                 Quantum-powered AI systems for enterprise-scale transformations.
               </p>
             </div>
-          </Link>
+          </a>
           
-          <Link href="/services/ai-2027-breakthrough-solutions" className="group">
+          <a href="/services/ai-2027-breakthrough-solutions" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">🚀</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
@@ -422,9 +417,9 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
                 Complete suite of revolutionary AI technologies and services.
               </p>
             </div>
-          </Link>
+          </a>
           
-          <Link href="/services/ai-autonomous-operations-2026" className="group">
+          <a href="/services/ai-autonomous-operations-2026" className="group">
             <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">🤖</div>
               <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
@@ -434,7 +429,7 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
                 Next-generation autonomous systems for enterprise operations.
               </p>
             </div>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

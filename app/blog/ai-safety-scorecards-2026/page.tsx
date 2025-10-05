@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Safety Scorecards (2026): Guardrails wired to KPIs',
@@ -21,7 +21,7 @@ export default function Page() {
         <li>Rollback playbooks tied to error budgets</li>
       </ul>
       <p>
-        Continue exploring our governance series in the <Link href="/blog">blog</Link>.
+        Continue exploring our governance series in the <a href="/blog">blog</a>.
       </p>
     </main>
   );

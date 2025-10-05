@@ -1,5 +1,3 @@
-import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
-
 export default function EnterprisePage() {
   return (
     <div className="min-h-screen bg-slate-950">

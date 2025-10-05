@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI April 2026 Mega Breakthrough Solutions - 99.9% Autonomous Enterprise Operations | Zion Tech Group',
@@ -107,18 +107,16 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/contact" 
+              <a href="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 text-center"
               >
                 Get Started Today
-              </Link>
-              <Link 
-                href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" 
+              </a>
+              <a href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" 
                 className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
               >
                 View Success Stories
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -159,12 +157,11 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
               <div className="text-sm text-gray-400">One-time implementation</div>
             </div>
             
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
             >
               Start Transformation
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -211,12 +208,11 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
                 </li>
               </ul>
               
-              <Link 
-                href="/contact" 
+              <a href="/contact" 
                 className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
               >
                 Choose Enterprise
-              </Link>
+              </a>
             </div>
 
             {/* Advanced Tier */}
@@ -261,12 +257,11 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
                 </li>
               </ul>
               
-              <Link 
-                href="/contact" 
+              <a href="/contact" 
                 className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
               >
                 Choose Advanced
-              </Link>
+              </a>
             </div>
 
             {/* Ultimate Tier */}
@@ -305,12 +300,11 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
                 </li>
               </ul>
               
-              <Link 
-                href="/contact" 
+              <a href="/contact" 
                 className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
               >
                 Choose Ultimate
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -373,18 +367,16 @@ export default function AI2026AprilMegaBreakthroughSolutions() {
             We guarantee a minimum $15.2B ROI within 12 months or we'll refund your entire investment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <a href="/contact" 
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
-            </Link>
-            <Link 
-              href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" 
+            </a>
+            <a href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories
-            </Link>
+            </a>
           </div>
         </section>
       </div>

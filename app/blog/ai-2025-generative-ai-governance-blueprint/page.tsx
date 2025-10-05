@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Generative AI Governance Blueprint 2025 | Zion Tech Group',
@@ -55,17 +55,17 @@ export default function GenAIGovernanceBlueprint2025Page() {
 
           <p>
             See also: {' '}
-            <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-cyan-300 hover:text-cyan-200">
+            <a href="/blog/ai-2027-cost-optimization-playbook" className="text-cyan-300 hover:text-cyan-200">
               AI 2027 Cost Optimization Playbook
-            </Link>
+            </a>
             .
           </p>
         </div>
 
         <div className="mt-12">
-          <Link href="/blog" className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50">
+          <a href="/blog" className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50">
             ← Back to Blog
-          </Link>
+          </a>
         </div>
       </main>
     </div>

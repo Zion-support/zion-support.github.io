@@ -45,11 +45,11 @@ const InteractiveContentShowcase2026: React.FC = () => {
               key={index}
               className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1'
             >
-              <div className='text-4xl mb-4'>{feature.icon}</div>
+              <div className='text-4xl mb-4'>{feature}</div>
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                {feature.title}
+                {feature}
               </h3>
-              <p className='text-gray-600 text-sm'>{feature.description}</p>
+              <p className='text-gray-600 text-sm'>{feature}</p>
             </div>
           ))}
         </div>

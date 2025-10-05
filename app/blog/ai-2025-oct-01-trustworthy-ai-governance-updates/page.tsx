@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Trustworthy AI Governance Updates — October 2025',
@@ -27,7 +27,7 @@ export default function Page() {
 			</section>
 
 			<div className="mt-10">
-				<Link href="/blog" className="text-emerald-600 font-semibold hover:text-emerald-700">← Back to Blog</Link>
+				<a href="/blog" className="text-emerald-600 font-semibold hover:text-emerald-700">← Back to Blog</a>
 			</div>
 		</main>
 	);

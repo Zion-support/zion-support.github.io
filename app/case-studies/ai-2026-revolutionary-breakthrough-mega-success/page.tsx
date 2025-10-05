@@ -36,7 +36,7 @@ export default function AI2026RevolutionaryBreakthroughMegaSuccess() {
               { value: '18mo', label: 'ROI Payback Period', icon: '⏱️' }
             ].map((result, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300 text-center">
-                <div className="text-4xl mb-3">{result.icon}</div>
+                <div className="text-4xl mb-3">{result}</div>
                 <div className="text-3xl font-extrabold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent mb-2">
                   {result.value}
                 </div>

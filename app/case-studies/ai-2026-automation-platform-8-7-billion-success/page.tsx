@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2026 Automation Platform $8.7B Success Case Study | Zion Tech Group',
@@ -264,25 +264,25 @@ export default function AI2026AutomationPlatform87BillionSuccess() {
 
         <h2 className="text-2xl font-bold mt-8 mb-4">🔗 Related Content</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link href="/blog/ai-2026-next-generation-automation-platform" className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+          <a href="/blog/ai-2026-next-generation-automation-platform" className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="font-semibold">🤖 Next-Generation Automation Platform</h3>
             <p className="text-sm opacity-90">Technical deep dive and innovation details</p>
-          </Link>
+          </a>
           
-          <Link href="/blog/ai-2026-revolutionary-edge-computing-breakthrough" className="block p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+          <a href="/blog/ai-2026-revolutionary-edge-computing-breakthrough" className="block p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="font-semibold">🚀 Revolutionary Edge Computing</h3>
             <p className="text-sm opacity-90">Complementary breakthrough technology</p>
-          </Link>
+          </a>
           
-          <Link href="/services/ai-automation-platform" className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+          <a href="/services/ai-automation-platform" className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="font-semibold">🛠️ Automation Platform Services</h3>
             <p className="text-sm opacity-90">Implementation and support services</p>
-          </Link>
+          </a>
           
-          <Link href="/contact" className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+          <a href="/contact" className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="font-semibold">📞 Contact Our Experts</h3>
             <p className="text-sm opacity-90">Discuss your automation needs</p>
-          </Link>
+          </a>
         </div>
 
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 rounded-lg mt-8">
@@ -292,12 +292,12 @@ export default function AI2026AutomationPlatform87BillionSuccess() {
             Contact us today to learn how we can deliver similar results for your organization.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <a href="/contact" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Start Your Automation Journey
-            </Link>
-            <Link href="/services/ai-automation-platform" className="bg-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 transition-colors">
+            </a>
+            <a href="/services/ai-automation-platform" className="bg-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 transition-colors">
               View Our Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

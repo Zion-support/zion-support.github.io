@@ -145,11 +145,11 @@ export default function AutonomousEnterpriseOperations2026() {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="text-6xl mb-4">{feature.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{feature.description}</p>
+                <div className="text-6xl mb-4">{feature}</div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature}</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed">{feature}</p>
                 <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (
+                  {feature.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-300">
                       <span className="text-green-400">✓</span>
                       {item}
@@ -194,8 +194,8 @@ export default function AutonomousEnterpriseOperations2026() {
                 }
               ].map((application, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                  <h3 className="text-2xl font-bold text-white mb-3">{application.title}</h3>
-                  <p className="text-gray-400 mb-4">{application.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-3">{application}</h3>
+                  <p className="text-gray-400 mb-4">{application}</p>
                   <ul className="space-y-1">
                     {application.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
@@ -219,7 +219,7 @@ export default function AutonomousEnterpriseOperations2026() {
                 ].map((metric, index) => (
                   <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">{metric.icon}</span>
+                      <span className="text-2xl">{metric}</span>
                       <span className="text-gray-300">{metric.metric}</span>
                     </div>
                     <span className="text-green-400 font-bold">{metric.value}</span>
@@ -272,8 +272,8 @@ export default function AutonomousEnterpriseOperations2026() {
                   <span className="text-green-400 font-bold text-sm">{phase.phase}</span>
                   <span className="text-gray-400 text-sm">{phase.duration}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{phase.title}</h3>
-                <p className="text-gray-400 mb-6">{phase.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{phase}</h3>
+                <p className="text-gray-400 mb-6">{phase}</p>
                 <ul className="space-y-2 text-left">
                   {phase.deliverables.map((deliverable, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">

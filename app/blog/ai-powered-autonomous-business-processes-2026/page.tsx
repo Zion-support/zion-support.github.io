@@ -1,15 +1,5 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import User from 'lucide-react/dist/esm/icons/ser';
-import Tag from 'lucide-react/dist/esm/icons/ag';
-import Share2 from 'lucide-react/dist/esm/icons/hare2';
-import BookOpen from 'lucide-react/dist/esm/icons/ookopen';
-import CheckCircle from 'lucide-react/dist/esm/icons/heckcircle';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Zap from 'lucide-react/dist/esm/icons/ap';
 
 import { Metadata } from 'next';
 
@@ -32,22 +22,22 @@ export default function AutonomousBusinessProcessesBlog() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
-            <ArrowLeft />
+          <a href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
+            ←
             Back to Blog
-          </Link>
+          </a>
           
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center">
-              <Clock />
+              🕐
               January 15, 2026
             </div>
             <div className="flex items-center">
-              <User />
+              👤
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Tag />
+              🏷️
               AI Innovation
             </div>
           </div>
@@ -66,11 +56,11 @@ export default function AutonomousBusinessProcessesBlog() {
           
           <div className="flex items-center gap-4">
             <button className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              <Share2 />
+              🔗
               Share
             </button>
             <div className="text-sm text-gray-500">
-              <BookOpen />
+              📖
               12 min read
             </div>
           </div>
@@ -107,7 +97,7 @@ export default function AutonomousBusinessProcessesBlog() {
           {/* The Autonomous Business Ecosystem */}
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-              <Brain />
+              🧠
               The Autonomous Business Ecosystem
             </h2>
             
@@ -117,19 +107,19 @@ export default function AutonomousBusinessProcessesBlog() {
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
-                <CheckCircle />
+                ✅
                 <span className="text-gray-700"><strong>Self-analyze</strong> business processes for inefficiencies</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle />
+                ✅
                 <span className="text-gray-700"><strong>Self-optimize</strong> workflows based on real-time performance data</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle />
+                ✅
                 <span className="text-gray-700"><strong>Self-heal</strong> from disruptions and adapt to changing conditions</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle />
+                ✅
                 <span className="text-gray-700"><strong>Self-evolve</strong> through continuous learning and improvement</span>
               </li>
             </ul>
@@ -140,19 +130,19 @@ export default function AutonomousBusinessProcessesBlog() {
             </p>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <CheckCircle />
+                ✅
                 <span className="text-gray-700"><strong>Multi-agent systems</strong> that collaborate seamlessly</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle />
+                ✅
                 <span className="text-gray-700"><strong>Predictive analytics</strong> for proactive process management</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle />
+                ✅
                 <span className="text-gray-700"><strong>Dynamic resource allocation</strong> based on demand patterns</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle />
+                ✅
                 <span className="text-gray-700"><strong>Autonomous decision-making</strong> within defined parameters</span>
               </li>
             </ul>
@@ -161,7 +151,7 @@ export default function AutonomousBusinessProcessesBlog() {
           {/* Real-World Implementation Examples */}
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-              <TrendingUp />
+              📈
               Real-World Implementation Examples
             </h2>
             
@@ -173,19 +163,19 @@ export default function AutonomousBusinessProcessesBlog() {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle />
+                    ✅
                     <span className="text-gray-700 text-sm">Analyze applicant data in real-time</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle />
+                    ✅
                     <span className="text-gray-700 text-sm">Make credit decisions within seconds</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle />
+                    ✅
                     <span className="text-gray-700 text-sm">Automatically adjust risk parameters</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle />
+                    ✅
                     <span className="text-gray-700 text-sm">Reduce processing time by 85%</span>
                   </li>
                 </ul>
@@ -198,19 +188,19 @@ export default function AutonomousBusinessProcessesBlog() {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle />
+                    ✅
                     <span className="text-gray-700 text-sm">Predicts demand fluctuations with 95% accuracy</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle />
+                    ✅
                     <span className="text-gray-700 text-sm">Automatically adjusts inventory levels</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle />
+                    ✅
                     <span className="text-gray-700 text-sm">Optimizes logistics routes in real-time</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle />
+                    ✅
                     <span className="text-gray-700 text-sm">Reduces costs by an average of 30%</span>
                   </li>
                 </ul>
@@ -221,7 +211,7 @@ export default function AutonomousBusinessProcessesBlog() {
           {/* The Technology Stack */}
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
-              <Zap />
+              ⚡
               The Technology Stack
             </h2>
             
@@ -326,19 +316,19 @@ export default function AutonomousBusinessProcessesBlog() {
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">Strategic Advantages</h4>
                   <ul className="space-y-2">
                     <li className="flex items-start">
-                      <CheckCircle />
+                      ✅
                       <span className="text-gray-700">Enhanced scalability for business growth</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle />
+                      ✅
                       <span className="text-gray-700">Improved compliance through consistent execution</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle />
+                      ✅
                       <span className="text-gray-700">Faster innovation cycles with automated testing</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle />
+                      ✅
                       <span className="text-gray-700">Competitive differentiation through superior efficiency</span>
                     </li>
                   </ul>
@@ -384,20 +374,18 @@ export default function AutonomousBusinessProcessesBlog() {
                 Discover how autonomous business processes can revolutionize your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
+                <a href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-colors"
                 >
                   Schedule Consultation
-                  <ArrowLeft />
-                </Link>
-                <Link 
-                  href="/guides/autonomous-business-processes-implementation-guide-2026"
+                  ←
+                </a>
+                <a href="/guides/autonomous-business-processes-implementation-guide-2026"
                   className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
                 >
                   Get Implementation Guide
-                  <BookOpen />
-                </Link>
+                  📖
+                </a>
               </div>
             </div>
           </section>
@@ -410,27 +398,27 @@ export default function AutonomousBusinessProcessesBlog() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Content</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Link href="/case-studies/global-manufacturing-autonomous-transformation" className="group">
+            <a href="/case-studies/global-manufacturing-autonomous-transformation" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Global Manufacturing Transformation</h3>
                 <p className="text-gray-600 mb-4">See how a Fortune 500 manufacturer achieved 85% process automation with our solution.</p>
                 <div className="flex items-center text-blue-600 group-hover:text-blue-700">
                   <span className="mr-2">Read case study</span>
-                  <ArrowLeft />
+                  ←
                 </div>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
+            <a href="/guides/autonomous-business-processes-implementation-guide-2026" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Implementation Guide</h3>
                 <p className="text-gray-600 mb-4">Complete step-by-step guide to implementing autonomous business processes.</p>
                 <div className="flex items-center text-blue-600 group-hover:text-blue-700">
                   <span className="mr-2">Get the guide</span>
-                  <ArrowLeft />
+                  ←
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

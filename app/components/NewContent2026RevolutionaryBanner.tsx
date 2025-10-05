@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 
 
@@ -11,11 +11,11 @@ export default function NewContent2026RevolutionaryBanner() {
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
-                <Star className="w-4 h-4 text-yellow-300" />
+                ⭐
                 REVOLUTIONARY 2026 CONTENT
               </div>
               <div className="flex items-center gap-2 bg-green-500/20 px-3 py-1 rounded-full text-sm font-semibold text-green-300">
-                <TrendingUp className="w-4 h-4" />
+                📈
                 BREAKTHROUGH SUCCESS
               </div>
             </div>
@@ -28,52 +28,48 @@ export default function NewContent2026RevolutionaryBanner() {
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-                <Brain className="w-5 h-5 text-purple-300" />
+                🧠
                 <span className="font-semibold">Synthetic Consciousness</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-                <Zap className="w-5 h-5 text-indigo-300" />
+                ⚡
                 <span className="font-semibold">Quantum Superintelligence</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-                <TrendingUp className="w-5 h-5 text-green-300" />
+                📈
                 <span className="font-semibold">$35B Combined ROI</span>
               </div>
             </div>
           </div>
           <div className="flex flex-col gap-4 min-w-fit">
-            <Link 
-              href="/blog/ai-2026-synthetic-consciousness-breakthrough"
+            <a href="/blog/ai-2026-synthetic-consciousness-breakthrough"
               className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 border border-white/30"
             >
-              <Brain className="w-5 h-5" />
+              🧠
               Synthetic Consciousness
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link 
-              href="/blog/ai-2026-quantum-neural-superintelligence"
+              →
+            </a>
+            <a href="/blog/ai-2026-quantum-neural-superintelligence"
               className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 border border-white/30"
             >
-              <Zap className="w-5 h-5" />
+              ⚡
               Quantum Superintelligence
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link 
-              href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
+              →
+            </a>
+            <a href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
-              <TrendingUp className="w-5 h-5" />
+              📈
               $10B Success Story
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link 
-              href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
+              →
+            </a>
+            <a href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
-              <Star className="w-5 h-5" />
+              ⭐
               $25B Success Story
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              →
+            </a>
           </div>
         </div>
       </div>

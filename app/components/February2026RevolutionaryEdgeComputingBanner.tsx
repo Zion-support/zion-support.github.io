@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 
@@ -11,7 +12,7 @@ const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-sm font-medium mb-6">
-            <Zap className="w-4 h-4 mr-2" />
+            ⚡
             February 2026 Revolutionary Breakthrough
           </div>
 
@@ -32,7 +33,7 @@ const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
           {/* Key Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Cpu className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+              💻
               <h3 className="text-lg font-semibold mb-2">Quantum-Enhanced Processing</h3>
               <p className="text-blue-100 text-sm">
                 1000x faster processing with sub-millisecond latency for real-time operations
@@ -40,7 +41,7 @@ const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Shield className="w-8 h-8 text-green-400 mx-auto mb-3" />
+              🛡️
               <h3 className="text-lg font-semibold mb-2">Autonomous Infrastructure</h3>
               <p className="text-blue-100 text-sm">
                 Self-healing systems with 99.9% uptime and 85% operational cost reduction
@@ -48,7 +49,7 @@ const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <TrendingUp className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+              📈
               <h3 className="text-lg font-semibold mb-2">Predictive Analytics</h3>
               <p className="text-blue-100 text-sm">
                 99.7% accuracy in predictive maintenance and real-time optimization
@@ -58,27 +59,24 @@ const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Link 
-              href="/blog/ai-2026-february-revolutionary-edge-computing-breakthrough"
+            <a href="/blog/ai-2026-february-revolutionary-edge-computing-breakthrough"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read the Full Article
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+              →
+            </a>
             
-            <Link 
-              href="/case-studies/ai-2026-february-global-tech-edge-computing-transformation-12-billion-success"
+            <a href="/case-studies/ai-2026-february-global-tech-edge-computing-transformation-12-billion-success"
               className="inline-flex items-center px-8 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 transition-all duration-300"
             >
               View Success Story
-            </Link>
+            </a>
             
-            <Link 
-              href="/services/ai-2026-february-revolutionary-edge-computing-consulting"
+            <a href="/services/ai-2026-february-revolutionary-edge-computing-consulting"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Get Consulting Services
-            </Link>
+            </a>
           </div>
 
           {/* Success Metrics */}

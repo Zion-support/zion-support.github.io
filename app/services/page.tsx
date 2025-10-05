@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -177,16 +177,16 @@ export default function ServicesPage() {
                 className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200 hover:border-blue-300 group"
               >
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                  {service}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {service.title}
+                  {service}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
+                  {service}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -195,15 +195,14 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href={service.href}
+                <a href={service.href}
                   className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline"
                 >
                   <span>Learn More</span>
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </Link>
+                </a>
               </div>
             ))}
           </div>

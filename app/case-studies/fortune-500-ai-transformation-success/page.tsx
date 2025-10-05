@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,13 +14,12 @@ export default function Fortune500AITransformationSuccess() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link 
-            href="/" 
+          <a href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            ←
             Back to Home
-          </Link>
+          </a>
         </div>
       </header>
 
@@ -30,15 +29,15 @@ export default function Fortune500AITransformationSuccess() {
         <div className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              📅
               <span>January 18, 2026</span>
             </div>
             <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
+              👤
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              🕐
               <span>18 min read</span>
             </div>
           </div>
@@ -54,7 +53,7 @@ export default function Fortune500AITransformationSuccess() {
           <div className="flex flex-wrap gap-2">
             {['AI Transformation', 'Fortune 500', 'Enterprise Automation', 'Digital Transformation', 'ROI Success'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag className="w-3 h-3" />
+                🏷️
                 {tag}
               </span>
             ))}
@@ -403,18 +402,16 @@ export default function Fortune500AITransformationSuccess() {
               Get our comprehensive implementation roadmap and expert guidance to achieve similar results for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/guides/ai-2026-implementation-roadmap"
+              <a href="/guides/ai-2026-implementation-roadmap"
                 className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Implementation Guide
-              </Link>
-              <Link 
-                href="/tools/ai-roi-calculator"
+              </a>
+              <a href="/tools/ai-roi-calculator"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-orange-600 transition-colors"
               >
                 Calculate Your ROI
-              </Link>
+              </a>
             </div>
           </div>
         </div>
