@@ -27,7 +27,6 @@ class SecurityEnhancer {
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
     this.isInitialized = true;
-3fb7cf14b9173a1bdbc082628affe937e859467f
   }
 
   private setupCSP(): void {
@@ -53,7 +52,6 @@ class SecurityEnhancer {
   private setupSecurityHeaders(): void {
     // Additional security headers setup
     console.log('Security headers configured');
-3fb7cf14b9173a1bdbc082628affe937e859467f
   }
 
   cleanup(): void {
