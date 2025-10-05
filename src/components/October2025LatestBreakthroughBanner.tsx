@@ -1,4 +1,3 @@
-import { ArrowRight, Zap, Database, Bot, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { octoberLatestBreakthroughContent } from "../content/october-2025-latest-breakthrough-content";
 
@@ -15,7 +14,7 @@ const October2025LatestBreakthroughBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-            <Zap className="w-5 h-5 text-yellow-400 animate-pulse" />
+             />
             <span className="text-white font-semibold text-sm">
               NEW BREAKTHROUGH CONTENT · OCTOBER 2025
             </span>
@@ -71,7 +70,7 @@ const October2025LatestBreakthroughBanner = () => {
                 <ul className="space-y-2 mb-4">
                   {content.highlights.slice(0, 2).map((highlight, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-blue-200">
-                      <TrendingUp className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
+                       />
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -79,7 +78,7 @@ const October2025LatestBreakthroughBanner = () => {
 
                 <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover:gap-4 transition-all">
                   Read Full Article
-                  <ArrowRight className="w-4 h-4" />
+                   />
                 </div>
               </Link>
             );
@@ -101,7 +100,7 @@ const October2025LatestBreakthroughBanner = () => {
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors"
             >
               Schedule Free Consultation
-              <ArrowRight className="w-5 h-5" />
+               />
             </Link>
             <Link
               to="/blog"

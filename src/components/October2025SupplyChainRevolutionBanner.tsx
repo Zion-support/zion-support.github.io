@@ -1,15 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Truck as TruckIcon, 
-  BarChart3 as ChartBarIcon, 
-  DollarSign as CurrencyDollarIcon, 
-  CheckCircle as CheckCircleIcon, 
-  ArrowRight as ArrowRightIcon,
-  Sparkles as SparklesIcon,
-  Clock as ClockIcon,
-  Globe as GlobeAltIcon
-} from 'lucide-react';
 
 const October2025SupplyChainRevolutionBanner: React.FC = () => {
   return (
@@ -321,7 +311,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircleIcon className="w-5 h-5 text-green-400" />
-              <span><strong>Zero</strong> Security Breaches</span>
+              <span> Security Breaches</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircleIcon className="w-5 h-5 text-green-400" />

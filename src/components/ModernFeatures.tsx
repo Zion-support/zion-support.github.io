@@ -1,35 +1,34 @@
 import React from 'react';
-import { Zap, Shield, TrendingUp, Users, Globe, Award } from 'lucide-react';
 
 const ModernFeatures: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-10 h-10" />,
+      icon:  />,
       title: "Lightning Fast",
       description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
     },
     {
-      icon: <Shield className="w-10 h-10" />,
+      icon:  />,
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2, GDPR compliance, and continuous monitoring."
     },
     {
-      icon: <TrendingUp className="w-10 h-10" />,
+      icon:  />,
       title: "Proven Results",
       description: "Average 300% ROI within 6 months across all client implementations."
     },
     {
-      icon: <Users className="w-10 h-10" />,
+      icon:  />,
       title: "Expert Support",
       description: "Dedicated team of AI specialists providing 24/7 support and guidance."
     },
     {
-      icon: <Globe className="w-10 h-10" />,
+      icon:  />,
       title: "Global Scale",
       description: "Infrastructure spanning 50+ countries for low-latency worldwide access."
     },
     {
-      icon: <Award className="w-10 h-10" />,
+      icon:  />,
       title: "Award Winning",
       description: "Recognized industry leader with 15+ awards for innovation and excellence."
     }

@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Network, TrendingUp, Zap, ArrowRight, CheckCircle, Rocket, Star } from 'lucide-react';
 
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner
@@ -36,11 +35,11 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             role="status"
             aria-label="New product launch announcement"
           >
-            <Rocket className="w-5 h-5 text-yellow-300 animate-bounce" aria-hidden="true" />
+             aria-hidden="true" />
             <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025
             </span>
-            <Star className="w-5 h-5 text-yellow-300 animate-pulse" aria-hidden="true" />
+             aria-hidden="true" />
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-up">
@@ -57,11 +56,11 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
               <span className="text-white font-semibold">3,500+ AI Agents</span>
             </li>
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">
-              <TrendingUp className="w-5 h-5 text-blue-300" aria-hidden="true" />
+               aria-hidden="true" />
               <span className="text-white font-semibold">99.99% Uptime</span>
             </li>
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">
-              <Zap className="w-5 h-5 text-yellow-300" aria-hidden="true" />
+               aria-hidden="true" />
               <span className="text-white font-semibold">Sub-3ms Latency</span>
             </li>
           </ul>
@@ -101,7 +100,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
           </h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 list-none">
             <li className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-300 flex-shrink-0 mt-1" aria-hidden="true" />
+               aria-hidden="true" />
               <div>
                 <h3 className="font-semibold text-white mb-1">Distributed Intelligence</h3>
                 <p className="text-sm text-white/80">Edge-to-cloud AI processing with sub-millisecond latency</p>
@@ -109,7 +108,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </li>
 
             <li className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-300 flex-shrink-0 mt-1" aria-hidden="true" />
+               aria-hidden="true" />
               <div>
                 <h3 className="font-semibold text-white mb-1">Autonomous Orchestration</h3>
                 <p className="text-sm text-white/80">Self-healing infrastructure with dynamic load balancing</p>
@@ -117,7 +116,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </li>
 
             <li className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-300 flex-shrink-0 mt-1" aria-hidden="true" />
+               aria-hidden="true" />
               <div>
                 <h3 className="font-semibold text-white mb-1">Cognitive Coordination</h3>
                 <p className="text-sm text-white/80">Multi-agent collaboration and emergent intelligence</p>
@@ -125,7 +124,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </li>
 
             <li className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-300 flex-shrink-0 mt-1" aria-hidden="true" />
+               aria-hidden="true" />
               <div>
                 <h3 className="font-semibold text-white mb-1">Adaptive Scaling</h3>
                 <p className="text-sm text-white/80">Elastic capacity with 85%+ resource utilization</p>
@@ -160,7 +159,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </p>
             <span className="flex items-center gap-2 text-blue-300 font-semibold">
               <span>Read Article</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+               aria-hidden="true" />
             </span>
           </Link>
 
@@ -172,7 +171,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-green-500/30 rounded-lg" aria-hidden="true">
-                <TrendingUp className="w-6 h-6 text-white" aria-hidden="true" />
+                 aria-hidden="true" />
               </div>
               <div>
                 <p className="text-sm text-green-300 font-semibold">SUCCESS STORY</p>
@@ -188,7 +187,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </p>
             <span className="flex items-center gap-2 text-green-300 font-semibold">
               <span>View Case Study</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+               aria-hidden="true" />
             </span>
           </Link>
 
@@ -200,7 +199,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/30 rounded-lg" aria-hidden="true">
-                <Zap className="w-6 h-6 text-white" aria-hidden="true" />
+                 aria-hidden="true" />
               </div>
               <div>
                 <p className="text-sm text-purple-300 font-semibold">ENTERPRISE SOLUTION</p>
@@ -216,7 +215,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </p>
             <span className="flex items-center gap-2 text-purple-300 font-semibold">
               <span>Explore Services</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+               aria-hidden="true" />
             </span>
           </Link>
         </nav>
@@ -229,9 +228,9 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
-              <Rocket className="w-5 h-5" aria-hidden="true" />
+               aria-hidden="true" />
               Schedule Free Consultation
-              <ArrowRight className="w-5 h-5" aria-hidden="true" />
+               aria-hidden="true" />
             </Link>
             
             <Link
