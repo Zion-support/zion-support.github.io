@@ -74,7 +74,14 @@ global.console = {
   warn: jest.fn(),
   error: jest.fn(),
 };
-=======
+
+// Mock lucide-react icons
+jest.mock('lucide-react', () => {
+  const mockIcon = (testId: string) => {
+    const { createElement } = require('react');
+    return createElement('div', { 'data-testid': testId });
+  };
+
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
