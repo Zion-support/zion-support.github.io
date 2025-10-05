@@ -1,22 +1,6 @@
 
 import React from 'react';
-<<<<<<< HEAD
 
-import { ArrowRight, TrendingUp, Users, Award, CheckCircle, Star } from 'lucide-react';
-
-;
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Users from 'lucide-react';
-import Award from 'lucide-react';
-import CheckCircle from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 export default function Fortune500TransformationShowcaseBanner() {
   return (
