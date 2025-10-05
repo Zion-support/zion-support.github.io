@@ -43,18 +43,12 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src/**/*",
-    "app/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build",
-    "src/pages/blog-disabled/**/*",
-    "app/blog",
-    "blog",
-    "components",
-    "src/components/**/*"
+    "build"
   ],
   "references": [
     {
