@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import React from 'react';
 
 export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
   return (

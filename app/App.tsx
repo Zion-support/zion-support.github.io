@@ -4,15 +4,14 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import ErrorBoundary from '../src/components/ErrorBoundary';
-import SEOOptimizer from '../src/components/EnhancedSEOHead';
+import SEOOptimizer from '../src/components/SEOOptimizer';
 import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
-import PerformanceDashboard from '../src/components/AIPerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 
 // Pages
 import HomePage from './page';
 
 // Utils
-import performanceOptimizer from '../utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -22,51 +21,45 @@ const App: React.FC = () => {
     // Initialize global error handling
     console.log('App initialized');
 
-    // Initialize performance monitoring
-    performanceOptimizer.getPerformanceSummary();
-
-    console.log('Performance monitoring initialized');
     console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <SEOOptimizer
-          title="Zion Tech Group - Revolutionary AI and IT Solutions"
-          description="Transform your enterprise with Zion Tech Group's revolutionary AI solutions."
-        />
-        <AccessibilityEnhancer>
-          <Router>
-            <div className='App'>
-              {/* Skip to main content link for accessibility */}
-              <a
-                href='#main-content'
-                className='skip-link'
-                onClick={e => {
-                  e.preventDefault();
-                  const main =
-                    document.querySelector('main') ||
-                    document.querySelector('#main-content');
-                  if (main) {
-                    main.focus();
-                    main.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                Skip to main content
-              </a>
+        <SEOOptimizer>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className='App'>
+                {/* Skip to main content link for accessibility */}
+                <a
+                  href='#main-content'
+                  className='skip-link'
+                  onClick={e => {
+                    e.preventDefault();
+                    const main =
+                      document.querySelector('main') ||
+                      document.querySelector('#main-content');
+                    if (main) {
+                      main.focus();
+                      main.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skip to main content
+                </a>
 
-              <Routes>
-                <Route path='/' element={<HomePage />} />
-                {/* Add more routes as needed */}
-              </Routes>
+                <Routes>
+                  <Route path='/' element={<HomePage />} />
+                  {/* Add more routes as needed */}
+                </Routes>
 
-              {/* Performance Dashboard */}
-              <PerformanceDashboard isVisible={false} onClose={() => {}} />
-            </div>
-          </Router>
-        </AccessibilityEnhancer>
+                {/* Performance Dashboard */}
+                <PerformanceDashboard />
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </SEOOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
   );

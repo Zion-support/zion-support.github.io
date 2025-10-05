@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, TrendingUp, DollarSign, Users, Target, Award, Brain } from 'lucide-react';
+// import { ArrowRight, Zap, TrendingUp, DollarSign, Users, Target, Award, Brain } from 'lucide-react';
 
 export const metadata = {
   title: 'Quantum Neural Superintelligence: $25B ROI Success - Revolutionary AI Transformation',

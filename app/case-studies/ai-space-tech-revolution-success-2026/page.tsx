@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { Rocket, Satellite, Globe, Star, Zap, Award } from 'lucide-react';
+// import { Rocket, Satellite, Globe, Star, Zap, Award } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Space Tech Revolution: $100M Mission Success Case Study',

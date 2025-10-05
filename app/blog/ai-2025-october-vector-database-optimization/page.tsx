@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'Enterprise Vector Database Optimization — October 2025',

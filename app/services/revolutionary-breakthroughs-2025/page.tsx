@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from 'lucide-react';
+// import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from 'lucide-react';
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: any[] = [];
 let breakthroughServices2025: any[] = [];
