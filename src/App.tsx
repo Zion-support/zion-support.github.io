@@ -1,7 +1,7 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppErrorBoundary } from './components/AppErrorBoundary';
-import { SEO } from './components/SEO';
+import SEO from './components/SEO';
 import { PageLoader } from './components/LoadingComponents';
 import { useAccessibility } from './hooks/useAccessibility';
 

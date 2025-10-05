@@ -12,11 +12,11 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    inp: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null
+    cls: undefined,
+    inp: undefined,
+    fcp: undefined,
+    lcp: undefined,
+    ttfb: undefined
   });
 
   const [isVisible, setIsVisible] = useState(false);
