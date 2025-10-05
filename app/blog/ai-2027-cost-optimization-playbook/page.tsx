@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { dollarsign } from 'lucide-react';
 
-import DollarSign from 'lucide-react/dist/esm/icons/ollarsign';
+
+
 
 export const metadata = {
   title: 'AI 2027 Cost Optimization Playbook | Zion Tech Group',

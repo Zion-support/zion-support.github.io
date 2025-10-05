@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 
 const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
