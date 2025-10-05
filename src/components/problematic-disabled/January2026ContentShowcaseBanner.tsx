@@ -1,104 +1,39 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/problematic-disabled/January2026ContentShowcaseBanner.tsx
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ab0f:src/components/January2026ContentShowcaseBanner.tsx
 const January2026ContentShowcaseBanner: React.FC = () => {
-  const latestArticles = [
-    {
-      id: 1,
-      title:
-        'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
-      slug: 'ai-2026-autonomous-agent-factories',
-      excerpt:
-        'Discover how autonomous agent factories are revolutionizing enterprise automation in 2026. Learn about self-replicating AI systems, agent orchestration, and achieving 95% automation rates with breakthrough agent factory architectures.',
-      category: 'Autonomous AI Systems',
-      date: '2025-01-30',
-      readTime: '15 min',
-      trending: true,
-      icon: '🤖',
-      featured: true,
-      gradient: 'from-cyan-500 to-blue-600',
-    },
-    {
-      id: 2,
-      title:
-        'AI 2026: Quantum Neural Optimization - Revolutionary AI Performance Breakthrough',
-      slug: 'ai-2026-quantum-neural-optimization',
-      excerpt:
-        'Explore quantum neural optimization in 2026: breakthrough AI performance gains, quantum-enhanced neural networks, and achieving 1000x faster training with quantum computing integration.',
-      category: 'Quantum AI',
-      date: '2025-01-30',
-      readTime: '18 min',
-      trending: true,
-      icon: '⚛️',
-      featured: true,
-      gradient: 'from-purple-500 to-cyan-600',
-    },
-    {
-      id: 3,
-      title:
-        'AI 2026: Meta-Cognitive Reasoning - The Next Frontier of Artificial Intelligence',
-      slug: 'ai-2026-meta-cognitive-reasoning',
-      excerpt:
-        'Explore meta-cognitive reasoning in AI 2026: self-aware AI systems, cognitive architecture breakthroughs, and achieving human-level reasoning through advanced meta-cognition frameworks.',
-      category: 'Cognitive AI',
-      date: '2025-01-30',
-      readTime: '20 min',
-      trending: true,
-      icon: '🧠',
-      featured: true,
-      gradient: 'from-indigo-500 to-purple-600',
-    },
-  ];
   return (
-    <div className='py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden'>
-      {/* Animated background effects */}
-      <div className='absolute inset-0 overflow-hidden opacity-30'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
-          style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className='absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
-          style={{ animationDelay: '4s' }}
-        ></div>
-      </div>
-      <div className='container mx-auto px-6 relative z-10'>
-        {/* Header Section */}
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-8 animate-fade-in'>
-            <Sparkles className='w-5 h-5 text-purple-400 animate-pulse' />
-            <span className='text-purple-400 font-bold text-sm tracking-wider uppercase'>
-              🚀 3 REVOLUTIONARY AI 2026 BREAKTHROUGHS PUBLISHED • January 30,
-              2025
-            </span>
-            <Sparkles className='w-5 h-5 text-cyan-400 animate-pulse' />
-          </div>
-          <h2 className='text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent animate-fade-in'>
-            AI 2026: The Future is Here
+    <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            January 2026 Content Showcase
           </h2>
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-            Discover the three most revolutionary AI breakthroughs of 2026:
-            Autonomous Agent Factories, Quantum Neural Optimization, and
-            Meta-Cognitive Reasoning. These cutting-edge technologies are
-            already transforming Fortune 500 companies worldwide.
+          <p className="text-lg text-gray-300 mb-6">
+            Discover the latest innovations and breakthroughs in AI technology
           </p>
-          {/* Stats */}
-          <div className='grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>
-            <div className='bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10'>
-              <div className='text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-2'>
-                95%
-              </div>
-              <div className='text-gray-400 text-sm font-medium'>
-                Automation Rate Achieved
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-3">Advanced AI</h3>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• 94% reasoning accuracy improvement</li>
+                <li>• Self-monitoring capabilities</li>
+                <li>• Adaptive strategy selection</li>
+                <li>• Meta-learning optimization</li>
+              </ul>
             </div>
-            <div className='bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10'>
-              <div className='text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-2'>
-                1000x
-              </div>
-              <div className='text-gray-400 text-sm font-medium'>
-                Faster AI Training
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-3">Performance</h3>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• 60% faster processing</li>
+                <li>• 50% memory reduction</li>
+                <li>• Real-time optimization</li>
+                <li>• Scalable architecture</li>
+              </ul>
             </div>
+<<<<<<< HEAD:src/components/problematic-disabled/January2026ContentShowcaseBanner.tsx
             <div className='bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10'>
               <div className='text-3xl font-extrabold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2'>
                 94%
@@ -302,6 +237,16 @@ const January2026ContentShowcaseBanner: React.FC = () => {
               <div className='text-gray-400 text-sm font-medium'>
                 System Reliability & Uptime
               </div>
+=======
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-3">Innovation</h3>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>• Next-gen algorithms</li>
+                <li>• Quantum-ready design</li>
+                <li>• Edge computing support</li>
+                <li>• Future-proof technology</li>
+              </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ab0f:src/components/January2026ContentShowcaseBanner.tsx
             </div>
           </div>
         </div>
@@ -309,4 +254,9 @@ const January2026ContentShowcaseBanner: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD:src/components/problematic-disabled/January2026ContentShowcaseBanner.tsx
 export default January2026ContentShowcaseBanner;
+=======
+
+export default January2026ContentShowcaseBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ab0f:src/components/January2026ContentShowcaseBanner.tsx
