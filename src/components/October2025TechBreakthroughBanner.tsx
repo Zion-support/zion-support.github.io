@@ -5,9 +5,9 @@ const October2025TechBreakthroughBanner = () => {
     <div className="relative bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,219,255,0.3),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(79,209,197,0.3),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle at 50% 50%,rgba(120,219,255,0.3),transparent 50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle at 80% 20%,rgba(79,209,197,0.3),transparent 50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle at 20% 80%,rgba(99,102,241,0.3),transparent 50%)]"></div>
       </div>
 
       {/* Animated Grid */}
