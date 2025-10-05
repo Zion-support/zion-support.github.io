@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   keywords: 'AI success story, $100B ROI, Fortune 100, autonomous systems, 99.99% automation, enterprise transformation',
   openGraph: {
     title: 'AI 2026 Ultimate Autonomous Revolution - $100 Billion Success Story',
-    description: 'Fortune 100 companies achieved $100 billion ROI through 99.99% autonomous AI systems.',
-    type: 'article',
-  },
+  description: 'Fortune 100 companies achieved $100 billion ROI through 99.99% autonomous AI systems.',
+  type: 'article'
+  }
 };
 
 export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {

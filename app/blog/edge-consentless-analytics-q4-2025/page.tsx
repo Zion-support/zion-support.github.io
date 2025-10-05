@@ -7,26 +7,26 @@ export const metadata = {
 
 export default function ConsentlessEdgeAnalyticsQ42025Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-3xl mx-auto px-6 py-16">
-        <div className="mb-8">
+    <div>
+      <main>
+        <div>
           <Link href="/blog" className="text-cyan-300 hover:text-cyan-200">← Back to Blog</Link>
         </div>
-        <header className="mb-6">
-          <div className="flex items-center gap-3 text-sm text-white/60 mb-3">
-            <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Analytics</span>
+        <header>
+          <div>
+            <span>Analytics</span>
             <span>September 30, 2025</span>
             <span>6 min read</span>
           </div>
-          <h1 className="text-4xl font-extrabold leading-tight">Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms</h1>
-          <p className="text-white/70 mt-3">
+          <h1>Consentless Edge Analytics Q4 2025: Private Metrics Under 100ms</h1>
+          <p>
             Measure what matters without collecting PII. Use scoped IDs, on‑device aggregation, and DP to stay compliant globally.
           </p>
         </header>
-        <article className="prose prose-invert prose-slate max-w-none">
+        <article>
           <h2>Privacy by Design</h2>
           <p>
-            Replace user identifiers with scoped, expiring IDs. Aggregate metrics on device and add differential privacy noise before egress.
+            Replace User identifiers with scoped, expiring IDs. Aggregate metrics on device and add differential privacy noise before egress.
           </p>
           <h2>Architecture</h2>
           <ul>
@@ -42,7 +42,7 @@ export default function ConsentlessEdgeAnalyticsQ42025Page() {
             <li>Accurate product insights at scale</li>
           </ul>
         </article>
-        <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">
+        <footer>
           <p>
             Continue exploring: {' '}
             <Link href="/blog/ai-operational-trust-q4-2025" className="text-emerald-300 hover:text-emerald-200">AI Operational Trust</Link>

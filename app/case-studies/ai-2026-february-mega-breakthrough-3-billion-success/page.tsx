@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'AI 2026 February Mega Breakthrough: $3B Success Story - Fortune 100 Transformation',
   description: 'Discover how a Fortune 100 manufacturing company achieved $3B ROI through our February 2026 revolutionary AI breakthrough with 99.9% autonomous operations.',
-  keywords: 'AI success story, $3B ROI, Fortune 100, February 2026 breakthrough, autonomous operations, enterprise transformation',
+  keywords: 'AI success story, $3B ROI, Fortune 100, February 2026 breakthrough, autonomous operations, enterprise transformation'
 };
 
 export default function AI2026FebruaryMegaBreakthrough3BillionSuccessPage() {

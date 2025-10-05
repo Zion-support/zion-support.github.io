@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'AI consciousness, quantum AI, neural fusion, 2027 breakthrough, meta-cognitive reasoning, quantum computing',
   openGraph: {
     title: 'AI 2027: Consciousness Fusion Breakthrough - Revolutionary 100,000x Performance Gains',
-    description: 'Discover the revolutionary AI consciousness fusion breakthrough achieving 100,000x performance improvements through quantum-enhanced neural architectures and meta-cognitive reasoning systems.',
-    type: 'article',
-    publishedTime: '2027-01-15T00:00:00.000Z',
-  },
+  description: 'Discover the revolutionary AI consciousness fusion breakthrough achieving 100,000x performance improvements through quantum-enhanced neural architectures and meta-cognitive reasoning systems.',
+  type: 'article',
+  publishedTime: '2027-01-15T00:00:00.000Z'
+  }
 };
 
 export default function AIConsciousnessFusion2027() {

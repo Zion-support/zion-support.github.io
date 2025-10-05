@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: 'AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails',
-  description: 'Practical cost governance: route by quality tier, enforce budgets, and prevent overruns with policy tests.',
+  description: 'Practical cost governance: route by quality tier, enforce budgets, and prevent overruns with policy tests.'
 };
 
 export default function Page() {

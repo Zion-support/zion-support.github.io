@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'meta-cognitive AI, AI reasoning, cognitive AI, self-aware AI, AI decision making, cognitive reasoning',
   openGraph: {
     title: 'Meta-Cognitive Reasoning: AI That Thinks About Thinking',
-    description: 'Discover the breakthrough in AI reasoning capabilities with meta-cognitive systems.',
-    type: 'article',
-    publishedTime: '2026-01-25T00:00:00.000Z',
-  },
+  description: 'Discover the breakthrough in AI reasoning capabilities with meta-cognitive systems.',
+  type: 'article',
+  publishedTime: '2026-01-25T00:00:00.000Z'
+  }
 };
 
 export default function MetaCognitiveReasoning() {

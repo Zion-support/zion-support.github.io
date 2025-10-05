@@ -7,25 +7,27 @@ export const metadata = {
     'Tie AI cost, latency, and quality to business value with end-to-end tracing from model tokens to customer outcomes.',
   openGraph: {
     title: 'AI Value Stream Analytics 2026',
-    description:
-      'End-to-end tracing that connects model spend to user value with actionable scorecards.',
-    url: 'https://ziontechgroup.com/blog/ai-value-stream-analytics-2026',
-    images: [{ url: '/og/ai-value-stream-analytics-2026.jpg', width: 1200, height: 630 }],
-  },
+  description:
+      'End-to-end tracing that connects model spend to User value with actionable scorecards.',
+  url: 'https://ziontechgroup.com/blog/ai-value-stream-analytics-2026',
+  images: [{ url: '/og/ai-value-stream-analytics-2026.jpg',
+  width: 1200,
+  height: 630 }]
+  }
 };
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-3xl mx-auto px-4 py-12">
-        <div className="mb-8 text-sm text-blue-700">September 30, 2025 • 9 min read</div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">AI Value Stream Analytics 2026</h1>
-        <p className="text-xl text-gray-700 mb-8">
-          Connect the dots from tokens and dollars to user outcomes. Instrument your AI stack to track reliability,
+    <div>
+      <div>
+        <div>September 30, 2025 • 9 min read</div>
+        <h1>AI Value Stream Analytics 2026</h1>
+        <p>
+          Connect the dots from tokens and dollars to User outcomes. Instrument your AI stack to track reliability,
           latency, cost, and quality—and tie those to business value per scenario.
         </p>
 
-        <div className="prose prose-lg max-w-none">
+        <div>
           <h2>Metrics That Matter</h2>
           <ul>
             <li>Cost per successful task and cost per customer session</li>
@@ -48,9 +50,9 @@ export default function Page() {
           </ol>
         </div>
 
-        <div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">
-          <h3 className="text-xl font-semibold mb-2">Next up</h3>
-          <ul className="list-disc pl-6 text-blue-700">
+        <div>
+          <h3>Next up</h3>
+          <ul>
             <li>
               <Link href="/content-hub">Explore the Content Hub</Link>
             </li>

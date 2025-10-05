@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'AI superintelligence success, meta-cognitive AI ROI, $10B transformation, Fortune 500 AI success, superintelligence case study',
   openGraph: {
     title: 'AI 2029 Meta-Cognitive Superintelligence Mega Success - $10B ROI Achievement',
-    description: 'How a Fortune 500 company achieved $10B ROI through revolutionary AI meta-cognitive superintelligence breakthrough implementation.',
-    type: 'article',
-    publishedTime: '2029-03-15T00:00:00.000Z',
-  },
+  description: 'How a Fortune 500 company achieved $10B ROI through revolutionary AI meta-cognitive superintelligence breakthrough implementation.',
+  type: 'article',
+  publishedTime: '2029-03-15T00:00:00.000Z'
+  }
 };
 
 export default function AIMetaCognitiveSuperintelligenceMegaSuccess() {

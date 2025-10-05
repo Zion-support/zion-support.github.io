@@ -2,30 +2,30 @@ import Link from 'next/link';
 
 export const metadata = {
 	title: 'Trustless Evaluation Blueprint (2026) | Zion Tech Group',
-	description:
+  description:
 		'Implement verifiable, tamper‑evident AI evaluations with signed datasets, attestations, and reproducible scoring.',
-	openGraph: {
+  openGraph: {
 		title: 'Trustless Evaluation Blueprint (2026)',
-		description:
+  description:
 			'How to build signed, reproducible, and policy‑aligned evals for reliable AI at scale.',
-		type: 'article'
+  type: 'article'
 	}
 };
 
 export default function TrustlessEvaluationBlueprint2026Page() {
 	return (
-		<div className="min-h-screen bg-slate-950 text-white">
-			<main className="max-w-3xl mx-auto px-6 py-16">
-				<header className="mb-10">
-					<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-400/20 text-purple-300 text-xs font-semibold">
+		<div>
+			<main>
+				<header>
+					<div>
 						New • 2026
 					</div>
-					<h1 className="text-4xl font-extrabold mt-4 mb-3">Trustless Evaluation Blueprint (2026)</h1>
-					<p className="text-slate-300">Verifiable evals with signed datasets, deterministic scoring, and transparent provenance.</p>
-					<div className="mt-3 text-slate-400 text-sm">16 min read • Category: Reliability & Governance</div>
+					<h1>Trustless Evaluation Blueprint (2026)</h1>
+					<p>Verifiable evals with signed datasets, deterministic scoring, and transparent provenance.</p>
+					<div>16 min read • Category: Reliability & Governance</div>
 				</header>
 
-				<div className="prose prose-invert prose-slate max-w-none">
+				<div>
 					<p>
 						This blueprint provides a practical approach to make AI evaluations tamper‑evident and reproducible across
 						teams and environments. It covers dataset signing, containerized runners, deterministic scoring, and end‑to‑end
@@ -43,7 +43,7 @@ export default function TrustlessEvaluationBlueprint2026Page() {
 					<h2>Reference Architecture</h2>
 					<p>
 						Design the pipeline as: data intake → dataset signer → runner orchestrator → metric calculators →
-						attestation generator → registry. Each stage emits structured logs and a signed manifest.
+						attestation generator → registry. Each stage emits structured Logs and a signed manifest.
 					</p>
 
 					<h3>Dataset & Prompt Signing</h3>
@@ -54,7 +54,7 @@ export default function TrustlessEvaluationBlueprint2026Page() {
 
 					<h3>Deterministic Scoring</h3>
 					<p>
-						Pin model versions, seeds, temperature, and decoding settings. Prefer exact‑match or rule‑based scoring for
+						Pin model versions, seeds, temperature, and decoding Cog. Prefer exact‑match or rule‑based scoring for
 						critical tasks; reserve LLM‑as‑a‑grader only when accompanied by rubric checks and spot audits.
 					</p>
 
@@ -85,7 +85,7 @@ export default function TrustlessEvaluationBlueprint2026Page() {
 					</p>
 				</div>
 
-				<div className="mt-12">
+				<div>
 					<Link href="/blog" className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50">
 						← Back to Blog
 					</Link>

@@ -7,18 +7,18 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation',
-    description: 'Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance.',
-    url: 'https://ziontechgroup.com/blog/ai-2026-mega-trends-predictions',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
-    publishedTime: '2026-01-25T00:00:00.000Z',
+  description: 'Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance.',
+  url: 'https://ziontechgroup.com/blog/ai-2026-mega-trends-predictions',
+  siteName: 'Zion Tech Group',
+  locale: 'en_US',
+  type: 'article',
+  publishedTime: '2026-01-25T00:00:00.000Z'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation',
-    description: 'Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance.',
-  },
+  title: 'AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation',
+  description: 'Explore the revolutionary AI trends shaping 2026: Autonomous Operations, Quantum-Neural Networks, and Enterprise AI Governance.'
+  }
 };
 
 export default function AITrends2026Page() {

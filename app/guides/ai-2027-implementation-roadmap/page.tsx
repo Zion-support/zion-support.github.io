@@ -7,10 +7,10 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group AI Implementation Team' }],
   openGraph: {
     title: 'AI 2027 Implementation Roadmap - Complete Guide',
-    description: 'Complete step-by-step roadmap for implementing AI 2027 Advanced Neural Superintelligence in your enterprise.',
-    url: 'https://ziontechgroup.com/guides/ai-2027-implementation-roadmap',
-    type: 'article',
-  },
+  description: 'Complete step-by-step roadmap for implementing AI 2027 Advanced Neural Superintelligence in your enterprise.',
+  url: 'https://ziontechgroup.com/guides/ai-2027-implementation-roadmap',
+  type: 'article'
+  }
 };
 
 export default function AI2027ImplementationRoadmap() {

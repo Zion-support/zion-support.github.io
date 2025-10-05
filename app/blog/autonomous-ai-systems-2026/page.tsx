@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'autonomous AI, enterprise automation, AI agents, self-healing systems, intelligent operations',
   openGraph: {
     title: 'Autonomous AI Systems: The Future of Enterprise Operations',
-    description: 'Learn how autonomous AI systems are transforming enterprise operations and decision-making.',
-    type: 'article',
-    publishedTime: '2025-01-30T00:00:00.000Z',
-  },
+  description: 'Learn how autonomous AI systems are transforming enterprise operations and decision-making.',
+  type: 'article',
+  publishedTime: '2025-01-30T00:00:00.000Z'
+  }
 };
 
 export default function AutonomousAISystems2026() {
@@ -94,7 +94,8 @@ export default function AutonomousAISystems2026() {
             <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-xl p-6 mb-8">
               <h4 className="text-xl font-bold text-white mb-3">Success Story: Global Retail Chain</h4>
               <p className="text-gray-300 mb-4">
-                A major retail chain implemented our autonomous AI system across 500+ stores, achieving:
+                A major retail chain implemented our autonomous AI system across 500+ stores,
+  achieving:
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• 95% reduction in system downtime</li>

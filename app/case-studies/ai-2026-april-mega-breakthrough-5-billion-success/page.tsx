@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI success story, Fortune 500, $5 billion value, meta-cognitive AI, quantum-neural fusion, enterprise transformation',
   openGraph: {
     title: 'AI 2026 April Mega Breakthrough: $5 Billion Success Story - Fortune 500 Transformation',
-    description: 'Discover how a Fortune 500 company achieved $5 billion in value with our April 2026 AI breakthroughs.',
-    type: 'article',
-    publishedTime: '2026-04-01T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Discover how a Fortune 500 company achieved $5 billion in value with our April 2026 AI breakthroughs.',
+  type: 'article',
+  publishedTime: '2026-04-01T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2026AprilMegaBreakthrough5BillionSuccess() {

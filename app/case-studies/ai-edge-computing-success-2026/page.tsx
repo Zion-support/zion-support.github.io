@@ -7,12 +7,12 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI Edge Computing Success Story: $50M Savings & Sub-10ms Performance',
-    description: 'Discover how a Fortune 500 manufacturer achieved $50M annual savings, 99.99% uptime, and sub-10ms response times with AI edge computing transformation.',
-    url: 'https://ziontechgroup.com/case-studies/ai-edge-computing-success-2026',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
-  },
+  description: 'Discover how a Fortune 500 manufacturer achieved $50M annual savings, 99.99% uptime, and sub-10ms response times with AI edge computing transformation.',
+  url: 'https://ziontechgroup.com/case-studies/ai-edge-computing-success-2026',
+  siteName: 'Zion Tech Group',
+  locale: 'en_US',
+  type: 'article'
+  }
 };
 
 export default function AIEdgeComputingSuccess2026() {

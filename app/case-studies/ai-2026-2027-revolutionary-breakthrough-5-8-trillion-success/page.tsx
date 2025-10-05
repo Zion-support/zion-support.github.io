@@ -8,17 +8,17 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026-2027 Revolutionary Breakthrough: $5.8T Success Story',
-    description: 'Discover how Fortune 500 companies achieved $5.8T in ROI through revolutionary AI breakthroughs: Quantum Neural Superintelligence, Transcendent Meta-Intelligence, and Universal Consciousness.',
-    url: 'https://ziontechgroup.com/case-studies/ai-2026-2027-revolutionary-breakthrough-5-8-trillion-success',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
+  description: 'Discover how Fortune 500 companies achieved $5.8T in ROI through revolutionary AI breakthroughs: Quantum Neural Superintelligence, Transcendent Meta-Intelligence, and Universal Consciousness.',
+  url: 'https://ziontechgroup.com/case-studies/ai-2026-2027-revolutionary-breakthrough-5-8-trillion-success',
+  siteName: 'Zion Tech Group',
+  locale: 'en_US',
+  type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2026-2027 Revolutionary Breakthrough: $5.8T Success Story',
-    description: 'Discover how Fortune 500 companies achieved $5.8T in ROI through revolutionary AI breakthroughs: Quantum Neural Superintelligence, Transcendent Meta-Intelligence, and Universal Consciousness.',
-  },
+  title: 'AI 2026-2027 Revolutionary Breakthrough: $5.8T Success Story',
+  description: 'Discover how Fortune 500 companies achieved $5.8T in ROI through revolutionary AI breakthroughs: Quantum Neural Superintelligence, Transcendent Meta-Intelligence, and Universal Consciousness.'
+  }
 };
 
 export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {

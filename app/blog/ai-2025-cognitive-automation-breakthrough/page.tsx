@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'cognitive automation, AI breakthrough, decision automation, cognitive AI, enterprise automation, AI accuracy',
   openGraph: {
     title: 'AI 2025: Cognitive Automation Breakthrough',
-    description: 'Revolutionary cognitive automation systems delivering 95% accuracy, 87% faster decisions, and $95B success stories.',
-    type: 'article',
-    publishedTime: '2025-01-20T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Revolutionary cognitive automation systems delivering 95% accuracy, 87% faster decisions, and $95B success stories.',
+  type: 'article',
+  publishedTime: '2025-01-20T00:00:00Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2025CognitiveAutomationBreakthrough() {

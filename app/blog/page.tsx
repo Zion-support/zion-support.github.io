@@ -3,167 +3,167 @@
 const posts = [
   {
     title: 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
-    description:
+  description:
       'A practical roadmap to fund, govern, and ship AI with KPI‑linked scorecards and guardrails‑as‑code.',
-    href: '/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
-    date: '2025-10-04',
-    tags: ['Roadmap', 'Scorecards', 'Guardrails'],
-    featured: true,
+  href: '/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
+  date: '2025-10-04',
+  Tags: ['Roadmap', 'Scorecards', 'Guardrails'],
+  featured: true
   },
   {
     title: 'AI 2026: Quantum-Neural Fusion Revolutionary Breakthrough',
-    description:
+  description:
       'Explore the groundbreaking convergence of quantum computing and neural networks that\'s revolutionizing enterprise AI in 2026.',
-    href: '/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
-    date: '2026-01-15',
-    tags: ['Quantum Computing', 'Neural Networks', 'AI Fusion', 'Enterprise AI'],
-    featured: true,
+  href: '/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
+  date: '2026-01-15',
+  Tags: ['Quantum Computing', 'Neural Networks', 'AI Fusion', 'Enterprise AI'],
+  featured: true
   },
   {
     title: 'AI 2026: Synthetic Consciousness Enterprise Transformation',
-    description:
+  description:
       'Discover how synthetic consciousness AI is revolutionizing enterprise operations with self-aware systems and autonomous decision-making.',
-    href: '/blog/ai-2026-synthetic-consciousness-enterprise-transformation',
-    date: '2026-01-20',
-    tags: ['Synthetic Consciousness', 'Self-Aware AI', 'Enterprise Transformation', 'AI Ethics'],
-    featured: true,
+  href: '/blog/ai-2026-synthetic-consciousness-enterprise-transformation',
+  date: '2026-01-20',
+  Tags: ['Synthetic Consciousness', 'Self-Aware AI', 'Enterprise Transformation', 'AI Ethics'],
+  featured: true
   },
   {
     title: 'AI 2026: Autonomous Enterprise Operations Revolution',
-    description:
+  description:
       'Learn how autonomous AI systems are revolutionizing enterprise operations with self-managing, self-optimizing, and self-healing capabilities.',
-    href: '/blog/ai-2026-autonomous-enterprise-operations-revolution',
-    date: '2026-01-25',
-    tags: ['Autonomous Operations', 'Enterprise AI', 'Self-Managing Systems', 'Business Automation'],
-    featured: true,
+  href: '/blog/ai-2026-autonomous-enterprise-operations-revolution',
+  date: '2026-01-25',
+  Tags: ['Autonomous Operations', 'Enterprise AI', 'Self-Managing Systems', 'Business Automation'],
+  featured: true
   },
   {
     title: 'GenAI Security in 2025: Practical Controls That Actually Work',
-    description:
+  description:
       'A pragmatic security blueprint for production GenAI: controls, gateways, and evals.',
-    href: '/blog/genai-security-2025',
-    date: '2025-09-11',
-    tags: ['AI', 'Security', 'Governance'],
+  href: '/blog/genai-security-2025',
+  date: '2025-09-11',
+  Tags: ['AI', 'Security', 'Governance']
   },
   {
     title: 'Secure RAG Architecture in 2025: Safety, Scale, and Speed',
-    description:
+  description:
       'A pragmatic blueprint for multi-tenant, eval-driven RAG with strong isolation and uptime.',
-    href: '/blog/secure-rag-architecture-2025',
-    date: '2025-09-11',
-    tags: ['RAG', 'Security', 'Architecture'],
+  href: '/blog/secure-rag-architecture-2025',
+  date: '2025-09-11',
+  Tags: ['RAG', 'Security', 'Architecture']
   },
   {
     title: 'AI Product Roadmaps That Actually Ship',
-    description:
+  description:
       'Milestones, guardrails, and evals that keep AI features shipping on time with quality.',
-    href: '/blog/ai-product-roadmaps-that-ship',
-    date: '2025-09-11',
-    tags: ['Product', 'AI', 'Strategy'],
+  href: '/blog/ai-product-roadmaps-that-ship',
+  date: '2025-09-11',
+  Tags: ['Product', 'AI', 'Strategy']
   },
   {
     title: 'Edge AI in Manufacturing 2025: Faster Decisions, Lower Costs',
-    description:
+  description:
       'Move inference to the edge for sub-100ms decisions, resilience, and bandwidth savings.',
-    href: '/blog/edge-ai-in-manufacturing-2025',
-    date: '2025-09-11',
-    tags: ['Edge AI', 'Manufacturing', 'IoT'],
+  href: '/blog/edge-ai-in-manufacturing-2025',
+  date: '2025-09-11',
+  Tags: ['Edge AI', 'Manufacturing', 'IoT']
   },
   {
     title: 'GenAI Evals in Production: What Actually Works',
-    description:
+  description:
       'Build continuous eval loops with golden tasks, HITL audits, and drift-aware sampling.',
-    href: '/blog/genai-evals-in-production',
-    date: '2025-09-11',
-    tags: ['GenAI', 'Evals', 'Quality'],
+  href: '/blog/genai-evals-in-production',
+  date: '2025-09-11',
+  Tags: ['GenAI', 'Evals', 'Quality']
   },
   {
     title: 'Startup Micro SaaS Playbook: From Idea to $10k MRR',
-    description:
+  description:
       'A pragmatic blueprint to launch and grow a Micro SaaS with capital efficiency.',
-    href: '/blog/startup-micro-saas-playbook',
-    date: '2025-09-11',
-    tags: ['Startup', 'SaaS', 'Growth'],
+  href: '/blog/startup-micro-saas-playbook',
+  date: '2025-09-11',
+  Tags: ['Startup', 'SaaS', 'Growth']
   },
   {
     title: 'AI Governance Operating Model: From Policy to Practice',
-    description:
+  description:
       'Translate policy into day-to-day decisions with risk tiering, evals, and reviews.',
-    href: '/blog/ai-governance-operating-model',
-    date: '2025-09-11',
-    tags: ['AI', 'Governance', 'Risk'],
+  href: '/blog/ai-governance-operating-model',
+  date: '2025-09-11',
+  Tags: ['AI', 'Governance', 'Risk']
   },
   {
     title: 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
-    description:
+  description:
       'Run ML and GenAI on serverless with predictable cost and strong reliability.',
-    href: '/blog/serverless-for-ml-2025',
-    date: '2025-09-11',
-    tags: ['Serverless', 'ML', 'Cloud'],
+  href: '/blog/serverless-for-ml-2025',
+  date: '2025-09-11',
+  Tags: ['Serverless', 'ML', 'Cloud']
   },
   {
     title: 'Practical AI Agents for Small Businesses',
-    description:
+  description:
       'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
-    href: '/blog/ai-agents-for-smbs',
-    date: '2025-09-11',
-    tags: ['AI', 'Automation', 'Agents'],
+  href: '/blog/ai-agents-for-smbs',
+  date: '2025-09-11',
+  Tags: ['AI', 'Automation', 'Agents']
   },
   {
     title: 'Production-Grade AI Agents: Observability and Safety',
-    description:
+  description:
       'How to harden agents for production with logging, evals, safety and cost controls.',
-    href: '/blog/production-grade-ai-agents',
-    date: '2025-09-11',
-    tags: ['AI', 'Agents', 'MLOps'],
+  href: '/blog/production-grade-ai-agents',
+  date: '2025-09-11',
+  Tags: ['AI', 'Agents', 'MLOps']
   },
   {
     title: 'Cloud Cost Optimization in 2025: Proven Playbook',
-    description:
+  description:
       'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
-    href: '/blog/cloud-cost-optimization-2025',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'DevOps'],
+  href: '/blog/cloud-cost-optimization-2025',
+  date: '2025-09-11',
+  Tags: ['Cloud', 'FinOps', 'DevOps']
   },
   {
     title: 'Cloud FinOps Automation: 30% Savings With Guardrails',
-    description:
+  description:
       'Automation-first FinOps: waste sweeps, rightsizing approvals, commitments, and guardrails.',
-    href: '/blog/cloud-finops-automation',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'Automation'],
+  href: '/blog/cloud-finops-automation',
+  date: '2025-09-11',
+  Tags: ['Cloud', 'FinOps', 'Automation']
   },
   {
     title: 'AI-Powered Customer Support Playbooks',
-    description:
+  description:
       'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
-    href: '/blog/ai-customer-support-playbooks',
-    date: '2025-09-11',
-    tags: ['AI', 'CX', 'Automation'],
+  href: '/blog/ai-customer-support-playbooks',
+  date: '2025-09-11',
+  Tags: ['AI', 'CX', 'Automation']
   },
   {
     title: 'AI Infrastructure Cost Controls That Actually Work',
-    description:
+  description:
       'A pragmatic framework to reduce inference costs while maintaining performance and velocity.',
-    href: '/blog/ai-infra-cost-controls',
-    date: '2025-09-11',
-    tags: ['Cloud', 'FinOps', 'AI'],
+  href: '/blog/ai-infra-cost-controls',
+  date: '2025-09-11',
+  Tags: ['Cloud', 'FinOps', 'AI']
   },
   {
     title: 'Enterprise RAG Blueprint: From Pilot to Production',
-    description:
+  description:
       'Step-by-step architecture and rollout plan for RAG in regulated, multi-tenant environments.',
-    href: '/blog/enterprise-rag-blueprint',
-    date: '2025-09-11',
-    tags: ['RAG', 'LLM', 'Architecture'],
+  href: '/blog/enterprise-rag-blueprint',
+  date: '2025-09-11',
+  Tags: ['RAG', 'LLM', 'Architecture']
   },
   {
     title: 'The Modern Data Stack in 2025: Pragmatic Guide',
-    description:
+  description:
       'Ingestion, lakehouse, transformations, metrics and activation that actually work at scale.',
-    href: '/blog/modern-data-stack-2025',
-    date: '2025-09-11',
-    tags: ['Data', 'Analytics', 'Engineering'],
+  href: '/blog/modern-data-stack-2025',
+  date: '2025-09-11',
+  Tags: ['Data', 'Analytics', 'Engineering']
   },
 ];
 
@@ -192,9 +192,9 @@ export default function BlogIndexPage() {
                 {post.description}
               </p>
               <div className='mt-4 flex gap-2 flex-wrap'>
-                {post.tags.map((tag) => (
-                  <span key={tag} className='bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm'>
-                    {tag}
+                {post.Tags.map((Tag) => (
+                  <span key={Tag} className='bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm'>
+                    {Tag}
                   </span>
                 ))}
               </div>

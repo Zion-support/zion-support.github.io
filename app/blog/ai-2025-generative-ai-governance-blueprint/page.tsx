@@ -6,8 +6,8 @@ export const metadata = {
     'Executive blueprint for governing generative AI: risk controls, policy gates, evals, and value scorecards to scale safely.',
   openGraph: {
     title: 'Generative AI Governance Blueprint 2025',
-    description: 'Guardrails, red-teaming, and continuous evaluations to manage risk and ROI.',
-    type: 'article'
+  description: 'Guardrails, red-teaming, and continuous evaluations to manage risk and ROI.',
+  type: 'article'
   }
 };
 

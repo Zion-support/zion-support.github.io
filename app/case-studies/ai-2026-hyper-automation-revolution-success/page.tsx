@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Case Study: $3.2B ROI with AI 2026 Hyper-Automation Revolution - Zion Tech Group',
   description: 'How a Fortune 500 company achieved $3.2B ROI and 99.5% autonomous operations using Zion Tech Group\'s revolutionary hyper-automation platform.',
-  keywords: 'hyper-automation case study, AI ROI, enterprise automation success, autonomous operations, AI transformation',
+  keywords: 'hyper-automation case study, AI ROI, enterprise automation success, autonomous operations, AI transformation'
 };
 
 export default function AI2026HyperAutomationRevolutionSuccess() {

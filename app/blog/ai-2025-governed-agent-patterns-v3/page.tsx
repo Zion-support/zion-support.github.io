@@ -3,17 +3,17 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
-  description: 'Production patterns for safe autonomy: budgeted actions, PR policy tests, and one-click recovery.',
+  description: 'Production patterns for safe autonomy: budgeted actions, PR policy tests, and one-click recovery.'
 };
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <section className="max-w-3xl mx-auto px-6 py-12 prose prose-lg">
+    <main>
+      <section>
         <h1>Governed Agent Patterns v3 (2025)</h1>
         <p>
           Safely ship autonomous agents using budgets, capability sandboxes, and KPI-linked canaries.
-          This guide details patterns that keep velocity high while protecting users and KPIs.
+          This guide details patterns that keep velocity high while protecting Users and KPIs.
         </p>
         <h2>Included patterns</h2>
         <ul>

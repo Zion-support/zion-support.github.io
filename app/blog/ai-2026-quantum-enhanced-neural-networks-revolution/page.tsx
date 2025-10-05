@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, quantum neural networks, quantum computing, artificial intelligence, quantum consciousness, neural networks, breakthrough, enterprise AI',
   openGraph: {
     title: 'AI 2026 Quantum-Enhanced Neural Networks Revolution',
-    description: 'Revolutionary quantum-enhanced neural networks achieving 500,000x performance through quantum consciousness processing.',
-    type: 'article',
-  },
+  description: 'Revolutionary quantum-enhanced neural networks achieving 500,000x performance through quantum consciousness processing.',
+  type: 'article'
+  }
 };
 
 export default function QuantumEnhancedNeuralNetworksRevolution() {

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'AI 2026 March Ultimate Autonomous Revolution - Zion Tech Group',
   description: 'Discover the groundbreaking March 2026 AI breakthrough achieving 99.99% autonomous enterprise operations, self-healing systems, and $150B transformation potential.',
-  keywords: 'AI autonomous systems, enterprise automation, self-healing systems, March 2026, Zion Tech Group',
+  keywords: 'AI autonomous systems, enterprise automation, self-healing systems, March 2026, Zion Tech Group'
 };
 
 export default function AI2026MarchUltimateAutonomousRevolution() {

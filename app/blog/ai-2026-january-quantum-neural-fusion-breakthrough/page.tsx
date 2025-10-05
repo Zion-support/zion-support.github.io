@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'Quantum AI, Neural Networks, Enterprise AI, Breakthrough Technology, 2026',
   openGraph: {
     title: 'AI 2026: Quantum-Neural Fusion Breakthrough',
-    description: 'Revolutionary quantum-neural fusion technology delivering 500x faster processing, 99.97% accuracy, and consciousness-level decision making.',
-    type: 'article',
-    publishedTime: '2026-01-15',
-    authors: ['Zion Tech Group Research Team'],
-  },
+  description: 'Revolutionary quantum-neural fusion technology delivering 500x faster processing, 99.97% accuracy, and consciousness-level decision making.',
+  type: 'article',
+  publishedTime: '2026-01-15',
+  authors: ['Zion Tech Group Research Team']
+  }
 };
 
 export default function QuantumNeuralFusionBreakthroughPage() {

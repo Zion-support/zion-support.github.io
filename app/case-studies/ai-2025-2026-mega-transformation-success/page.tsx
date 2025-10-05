@@ -6,9 +6,9 @@ export const metadata = {
   keywords: 'AI transformation success, Fortune 500 ROI, quantum AI, autonomous operations, enterprise AI case study',
   openGraph: {
     title: 'AI 2025-2026 Mega Transformation Success: $3.2B ROI Breakthrough',
-    description: 'Discover how a Fortune 500 company achieved $3.2B ROI through revolutionary AI transformation.',
-    type: 'article',
-  },
+  description: 'Discover how a Fortune 500 company achieved $3.2B ROI through revolutionary AI transformation.',
+  type: 'article'
+  }
 };
 
 export default function AIMegaTransformationSuccess20252026() {

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: ['autonomous operations', 'enterprise AI', 'self-healing infrastructure', 'predictive analytics', 'AI automation'],
   openGraph: {
     title: 'January 2026 Autonomous Enterprise Operations Revolution',
-    description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
+  type: 'article',
+  publishedTime: '2026-01-15T00:00:00Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function January2026AutonomousEnterpriseOperationsRevolution() {

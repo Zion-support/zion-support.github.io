@@ -4,24 +4,24 @@ const ContentShowcase: React.FC = () => {
   const contentItems = [
     {
       title: 'AI-Powered Manufacturing',
-      description:
+  description:
         'Revolutionize your production line with intelligent automation and predictive maintenance.',
-      image: '/api/placeholder/400/300',
-      category: 'Manufacturing',
+  image: '/api/placeholder/400/300',
+  category: 'Manufacturing'
     },
     {
       title: 'Enterprise AI Strategy',
-      description:
+  description:
         'Comprehensive AI implementation roadmap tailored to your business needs.',
-      image: '/api/placeholder/400/300',
-      category: 'Strategy',
+  image: '/api/placeholder/400/300',
+  category: 'Strategy'
     },
     {
       title: 'Autonomous Operations',
-      description:
+  description:
         'Self-managing systems that optimize performance and reduce operational costs.',
-      image: '/api/placeholder/400/300',
-      category: 'Operations',
+  image: '/api/placeholder/400/300',
+  category: 'Operations'
     },
   ];
 

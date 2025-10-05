@@ -3,19 +3,19 @@ import Link from 'next/link';
 
 export default function RuntimeGuardrailsBlueprint2025() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <article className="max-w-4xl mx-auto px-6 py-16">
-        <header className="mb-8">
-          <p className="text-sm text-gray-400">September 30, 2025 • 11 min read</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+    <main>
+      <article>
+        <header>
+          <p>September 30, 2025 • 11 min read</p>
+          <h1>
             Runtime Guardrails Blueprint — Budgets, Gates, Instant Rollback
           </h1>
-          <p className="mt-4 text-gray-300 text-lg">
+          <p>
             Executable policy tests, KPI‑linked canaries, and budgeted actions for safe autonomy in production.
           </p>
         </header>
 
-        <section className="prose prose-invert prose-emerald max-w-none">
+        <section>
           <h2>Why Runtime Guardrails</h2>
           <p>
             As autonomy increases, safety must keep pace. Ship guardrails that enforce policy, track costs, and
@@ -40,9 +40,9 @@ export default function RuntimeGuardrailsBlueprint2025() {
 
         <hr />
 
-        <aside className="bg-emerald-500/10 border border-emerald-400/20 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-emerald-300 mb-2">Related</h3>
-          <ul className="list-disc pl-6 text-gray-300 space-y-1">
+        <aside>
+          <h3>Related</h3>
+          <ul>
             <li>
               <Link href="/blog/ai-2026-safe-autonomy-scorecards" className="text-emerald-300 hover:text-emerald-200">
                 AI 2026 Safe Autonomy Scorecards

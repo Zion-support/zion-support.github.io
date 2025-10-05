@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'Fortune 500, AI Success Story, Transcendent Intelligence, Enterprise AI, $50B Value, AI ROI, Business Transformation',
   openGraph: {
     title: 'Fortune 500 AI 2027 Success: $50B Value with Transcendent Intelligence',
-    description: 'How a Fortune 500 company achieved $50 billion in value with our AI solutions',
-    type: 'article',
-    publishedTime: '2027-01-25T00:00:00.000Z',
-    authors: ['Zion Tech Group Case Study Team'],
-  },
+  description: 'How a Fortune 500 company achieved $50 billion in value with our AI solutions',
+  type: 'article',
+  publishedTime: '2027-01-25T00:00:00.000Z',
+  authors: ['Zion Tech Group Case Study Team']
+  }
 };
 
 export default function Fortune500AI2027Success() {

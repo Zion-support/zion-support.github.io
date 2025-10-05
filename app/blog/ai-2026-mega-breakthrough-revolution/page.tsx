@@ -173,10 +173,22 @@ export default function AI2026MegaBreakthroughRevolution() {
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             {[
-              { value: '$50M+', label: 'Average Annual Savings', icon: '💰', color: 'text-green-400' },
-              { value: '95%', label: 'Decision Accuracy Rate', icon: '🎯', color: 'text-purple-400' },
-              { value: '1000x', label: 'Processing Speed Boost', icon: '⚡', color: 'text-blue-400' },
-              { value: '98%', label: 'Automation Rate', icon: '🤖', color: 'text-orange-400' }
+              { value: '$50M+',
+  label: 'Average Annual Savings',
+  icon: '💰',
+  color: 'text-green-400' },
+              { value: '95%',
+  label: 'Decision Accuracy Rate',
+  icon: '🎯',
+  color: 'text-purple-400' },
+              { value: '1000x',
+  label: 'Processing Speed Boost',
+  icon: '⚡',
+  color: 'text-blue-400' },
+              { value: '98%',
+  label: 'Automation Rate',
+  icon: '🤖',
+  color: 'text-orange-400' }
             ].map((metric, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
                 <div className="text-6xl mb-4">{metric.icon}</div>
@@ -228,10 +240,22 @@ export default function AI2026MegaBreakthroughRevolution() {
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { phase: 'Phase 1', title: 'Assessment & Planning', duration: 'Month 1-2', description: 'Comprehensive AI readiness assessment and strategic planning' },
-              { phase: 'Phase 2', title: 'Meta-Cognitive AI', duration: 'Month 3-5', description: 'Implement meta-cognitive AI for advanced decision making' },
-              { phase: 'Phase 3', title: 'Quantum-Neural Networks', duration: 'Month 6-8', description: 'Deploy quantum-enhanced neural networks for processing' },
-              { phase: 'Phase 4', title: 'Autonomous Operations', duration: 'Month 9-12', description: 'Achieve full autonomous operations and optimization' }
+              { phase: 'Phase 1',
+  title: 'Assessment & Planning',
+  duration: 'Month 1-2',
+  description: 'Comprehensive AI readiness assessment and strategic planning' },
+              { phase: 'Phase 2',
+  title: 'Meta-Cognitive AI',
+  duration: 'Month 3-5',
+  description: 'Implement meta-cognitive AI for advanced decision making' },
+              { phase: 'Phase 3',
+  title: 'Quantum-Neural Networks',
+  duration: 'Month 6-8',
+  description: 'Deploy quantum-enhanced neural networks for processing' },
+              { phase: 'Phase 4',
+  title: 'Autonomous Operations',
+  duration: 'Month 9-12',
+  description: 'Achieve full autonomous operations and optimization' }
             ].map((phase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
                 <div className="text-2xl font-bold text-cyan-400 mb-2">{phase.phase}</div>

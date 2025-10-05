@@ -6,9 +6,9 @@ export const metadata = {
   keywords: 'quantum AI, quantum machine learning, quantum computing, AI 2027, quantum algorithms, enterprise AI',
   openGraph: {
     title: 'AI 2027: Quantum-Enhanced Machine Learning Breakthrough - Enterprise Implementation Guide',
-    description: 'Revolutionary quantum-enhanced machine learning technologies delivering 1000x performance improvements and breakthrough capabilities.',
-    type: 'article',
-  },
+  description: 'Revolutionary quantum-enhanced machine learning technologies delivering 1000x performance improvements and breakthrough capabilities.',
+  type: 'article'
+  }
 };
 
 export default function AI2027QuantumEnhancedMachineLearning() {

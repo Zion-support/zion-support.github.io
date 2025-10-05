@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI 2027, quantum neural networks, consensus AI, distributed superintelligence, quantum entanglement, collective consciousness',
   openGraph: {
     title: 'AI 2027: Quantum-Neural Consensus Revolution',
-    description: 'Distributed superintelligence network achieving collective consciousness through quantum entanglement.',
-    type: 'article',
-    publishedTime: '2027-01-20T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Distributed superintelligence network achieving collective consciousness through quantum entanglement.',
+  type: 'article',
+  publishedTime: '2027-01-20T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function QuantumNeuralConsensus2027() {

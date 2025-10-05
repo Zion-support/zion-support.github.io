@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, Autonomous Intelligence, Business Automation, Enterprise AI, Revolutionary Breakthrough',
   openGraph: {
     title: 'AI 2026 July Revolutionary Breakthrough: Next-Generation Autonomous Intelligence',
-    description: 'The most significant AI advancement of 2026 - Next-Generation Autonomous Intelligence that transforms enterprise operations.',
-    type: 'article',
-  },
+  description: 'The most significant AI advancement of 2026 - Next-Generation Autonomous Intelligence that transforms enterprise operations.',
+  type: 'article'
+  }
 };
 
 export default function AI2026JulyRevolutionaryBreakthrough() {

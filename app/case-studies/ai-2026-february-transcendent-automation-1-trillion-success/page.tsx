@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'February 2026: $1 Trillion Success Story - Transcendent Automation Revolution | Zion Tech Group',
   description: 'How a Fortune 50 global technology consortium achieved $1 trillion ROI through the Transcendent Automation Revolution, achieving beyond-human intelligence and infinite business value.',
-  keywords: 'Case Study, Success Story, AI, Transcendent Automation, $1 Trillion, Fortune 50, ROI, Beyond Human Intelligence',
+  keywords: 'Case Study, Success Story, AI, Transcendent Automation, $1 Trillion, Fortune 50, ROI, Beyond Human Intelligence'
 };
 
 export default function February2026TranscendentAutomation1TrillionSuccessPage() {

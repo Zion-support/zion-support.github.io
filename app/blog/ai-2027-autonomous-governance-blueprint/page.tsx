@@ -5,11 +5,14 @@ export const metadata = {
   description: 'Policy → controls → telemetry → review. Ship autonomous agents safely with measurable guardrails and auditability.',
   openGraph: {
     title: 'AI 2027 Autonomous Governance Blueprint',
-    description: 'Design and operate autonomous systems with policy guardrails, approvals, and observability.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-2027-autonomous-governance-blueprint',
-    images: [
-      { url: '/og-autonomous-governance-2027.jpg', width: 1200, height: 630, alt: 'Autonomous Governance 2027' }
+  description: 'Design and operate autonomous systems with policy guardrails, approvals, and observability.',
+  type: 'article',
+  url: 'https://ziontechgroup.com/blog/ai-2027-autonomous-governance-blueprint',
+  images: [
+      { url: '/og-autonomous-governance-2027.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'Autonomous Governance 2027' }
     ]
   }
 };
