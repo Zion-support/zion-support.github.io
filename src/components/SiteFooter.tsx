@@ -1,124 +1,122 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import, React, from 'rea, c, t';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
-const SiteFooter: React.FC = () => {
-  return (
-    <footer className='bg-gray-900 text-gray-300 mt-16'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-          <div>
-            <div className='flex items-center gap-2 mb-4'>
-              <span className='text-2xl'>🚀</span>
-              <span className='text-xl font-bold text-white'>
-                Zion Tech Group
-              </span>
-            </div>
-            <p className='text-gray-400'>
-              Enterprise-grade AI micro SaaS and IT solutions. Transform your
-              business with cutting-edge technology.
+const, SiteFoote, r: Rea, c, t.FC = () => { 
+  retu, r, n (
+    <footer, classNam, e = 'bg-gr, a, y-900, tex, t-gr, a, y-300, m, t-16'>
+      <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8, p, y-12'>
+        <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-4, ga, p-8'>
+          <d, i, v>
+            <div, classNam, e='flex, item, s-center, ga, p-2, m, b-4'>
+              <span, classNam, e='te, x, t-2, x, l'>🚀</sp, a, n>
+              <span, classNam, e='te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>
+                Zion, Tech, Group
+              </sp, a, n>
+            </d, i, v>
+            <p, classNam, e='te, x, t-gr, a, y-4, 0, 0'>
+              Enterpri, s, e-grade, AI, micro SaaS, and, IT solutio, n, s. Transform, your, business with, cuttin, g-edge, technolog, y.
             </p>
-          </div>
+          </d, i, v>
 
-          <div>
-            <ul className='space-y-2'>
+          <d, i, v>
+            <ul, classNam, e='spa, c, e-y-2'>
               <li>
-                <Link to='/services' className='hover:text-white'>
-                  All Services
-                </Link>
+                <Link, t, o='/servic, e, s' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  All, Service, s
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/it-services' className='hover:text-white'>
-                  IT Services
-                </Link>
+                <Link, t, o='/it-servic, e, s' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  IT, Service, s
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/micro-saas' className='hover:text-white'>
-                  Micro SaaS
-                </Link>
+                <Link, t, o='/mic, r, o-sa, a, s' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Micro, Saa, S
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/services/consulting' className='hover:text-white'>
-                  Consulting
-                </Link>
+                <Link, t, o='/servic, e, s/consulti, n, g' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Consulti, n, g
+                </Li, n, k>
               </li>
             </ul>
-          </div>
+          </d, i, v>
 
-          <div>
-            <ul className='space-y-2'>
+          <d, i, v>
+            <ul, classNam, e='spa, c, e-y-2'>
               <li>
-                <Link to='/solutions' className='hover:text-white'>
-                  All Solutions
-                </Link>
+                <Link, t, o='/solutio, n, s' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  All, Solution, s
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/solutions/enterprise' className='hover:text-white'>
-                  Enterprise
-                </Link>
+                <Link, t, o='/solutio, n, s/enterpri, s, e' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Enterpri, s, e
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/solutions/smb' className='hover:text-white'>
-                  SMB
-                </Link>
+                <Link, t, o='/solutio, n, s/s, m, b' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  S, M, B
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/solutions/startup' className='hover:text-white'>
-                  Startup
-                </Link>
+                <Link, t, o='/solutio, n, s/start, u, p' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Start, u, p
+                </Li, n, k>
               </li>
             </ul>
-          </div>
+          </d, i, v>
 
-          <div>
-            <ul className='space-y-2'>
+          <d, i, v>
+            <ul, classNam, e='spa, c, e-y-2'>
               <li>
-                <Link to='/about' className='hover:text-white'>
-                  About
-                </Link>
+                <Link, t, o='/abo, u, t' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Abo, u, t
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/contact' className='hover:text-white'>
-                  Contact
-                </Link>
+                <Link, t, o='/conta, c, t' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Conta, c, t
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/careers' className='hover:text-white'>
-                  Careers
-                </Link>
+                <Link, t, o='/caree, r, s' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Caree, r, s
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/news' className='hover:text-white'>
-                  News
-                </Link>
+                <Link, t, o='/ne, w, s' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Ne, w, s
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/faq' className='hover:text-white'>
-                  FAQ
-                </Link>
+                <Link, t, o='/f, a, q' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  F, A, Q
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/privacy' className='hover:text-white'>
-                  Privacy
-                </Link>
+                <Link, t, o='/priva, c, y' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Priva, c, y
+                </Li, n, k>
               </li>
               <li>
-                <Link to='/terms' className='hover:text-white'>
-                  Terms
-                </Link>
+                <Link, t, o='/ter, m, s' classNa, m, e='hov, e, r:te, x, t-whi, t, e'>
+                  Ter, m, s
+                </Li, n, k>
               </li>
             </ul>
-          </div>
-        </div>
+          </d, i, v>
+        </d, i, v>
 
-        <div className='border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400 text-center'>
-          <p>
-            {' '}
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+        <div, classNam, e='bord, e, r-t, borde, r-gr, a, y-800, m, t-8, p, t-8, tex, t-sm, tex, t-gr, a, y-400, tex, t-cen, t, e, r'>
+          <, p > {' ' }
+            © {new, Dat, e().getFullYe, a, r()} Zion, Tech, Group. All, rights, reserved.
           </p>
-        </div>
-      </div>
-    </footer>
+        </d, i, v>
+      </d, i, v>
+    </foot, e, r>
   );
 };
 
-export default SiteFooter;
+export, default, SiteFooter;

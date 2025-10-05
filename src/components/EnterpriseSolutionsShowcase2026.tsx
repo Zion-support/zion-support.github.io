@@ -1,291 +1,266 @@
-import React from 'react';
-const EnterpriseSolutionsShowcase2026: React.FC = () => {
-  const enterpriseSolutions = [
+import, React, from 'rea, c, t';
+const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => { 
+  const, enterpriseSolution, s = [
     {
-      id: 1,
-      title: 'AI-Powered Enterprise Automation',
-      slug: 'ai-enterprise-automation-2026',
-      excerpt:
-        'Transform your enterprise with comprehensive AI automation achieving 95% process efficiency. From workflow optimization to intelligent decision-making systems.',
-      category: 'Enterprise Automation',
-      industry: 'All Industries',
-      roi: '300%',
-      savings: '$2M+',
-      icon: <Bot className='w-8 h-8' />,
-      gradient: 'from-blue-500 to-cyan-500',
-      badge: 'BEST SELLER',
-      features: [
-        'Workflow Automation',
-        'Intelligent Routing',
-        'Process Optimization',
+      i, d: , 1,
+      tit, l, e: 'AI-Powered, Enterprise, Automatio, n',
+      sl, u, g: 'ai-enterpri, s, e-automati, o, n-2, 0, 2, 6',
+      excer, p, t: 'Transform, your, enterprise with, comprehensive, AI automation, achieving, 95% process, efficienc, y. From, workflow, optimization to, intelligent, decision-making, syste, m, s.',
+      catego, r, y: 'Enterprise, Automati, o, n',
+      indust, r, y: 'All, Industri, e, s',
+      r, o, i: '30, 0%',
+      savin, g, s: '$2, M+',
+      ic, o, n: <Bot, classNam, e = 'w-8 , h-, 8' / > ,
+      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
+      bad, g, e: 'BEST, SELL, E, R',
+      featur, e, s: [
+        'Workflow, Automati, o, n',
+        'Intelligent, Routin, g',
+        'Process, Optimizatio, n',
       ],
-    },
-    {
-      id: 2,
-      title: 'Quantum-Enhanced Security Platform',
-      slug: 'quantum-security-platform-2026',
-      excerpt:
-        'Ultimate enterprise security with quantum-encrypted communications and zero-trust architectures. Protect your organization from advanced cyber threats.',
-      category: 'Cybersecurity',
-      industry: 'Finance, Healthcare, Government',
-      roi: '250%',
-      savings: '$5M+',
-      icon: <Shield className='w-8 h-8' />,
-      gradient: 'from-purple-500 to-indigo-500',
-      badge: 'ENTERPRISE',
-      features: [
-        'Quantum Encryption',
-        'Zero-Trust Architecture',
-        'Threat Detection',
+     },
+    { 
+      id:  , 2,
+      tit, l, e: 'Quant, u, m-Enhanced, Security, Platfor, m',
+      sl, u, g: 'quant, u, m-securi, t, y-platfo, r, m-2, 0, 2, 6',
+      excer, p, t: 'Ultimate, enterprise, security with, quantu, m-encrypted, communications, and ze, r, o-trust, architecture, s. Protect, your, organization from, advanced, cyber thre, a, t, s.',
+      catego, r, y: 'Cybersecur, i, t, y',
+      indust, r, y: 'Fina, n, c, e, Healthca, r, e, Governme, n, t',
+      r, o, i: '25, 0%',
+      savin, g, s: '$5, M+',
+      ic, o, n: <Shield, classNam, e = 'w-8 , h-, 8' / > ,
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-50, 0',
+      bad, g, e: 'ENTERPR, I, S, E',
+      featur, e, s: [
+        'Quantum, Encrypti, o, n',
+        'Ze, r, o-Trust, Architectur, e',
+        'Threat, Detectio, n',
       ],
-    },
-    {
-      id: 3,
-      title: 'Cloud-Native AI Infrastructure',
-      slug: 'cloud-native-ai-infrastructure-2026',
-      excerpt:
-        'Scalable, secure, and cost-effective AI infrastructure built for enterprise scale. Deploy and manage AI models across multi-cloud environments.',
-      category: 'Cloud Infrastructure',
-      industry: 'Technology, Retail, Manufacturing',
-      roi: '400%',
-      savings: '$3M+',
-      icon: <Cloud className='w-8 h-8' />,
-      gradient: 'from-green-500 to-emerald-500',
-      badge: 'CLOUD-FIRST',
-      features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization'],
-    },
-    {
-      id: 4,
-      title: 'Predictive Analytics Intelligence',
-      slug: 'predictive-analytics-intelligence-2026',
-      excerpt:
-        'Advanced predictive analytics that forecast business trends, customer behavior, and operational risks with 99.9% accuracy.',
-      category: 'Business Intelligence',
-      industry: 'Retail, Finance, Healthcare',
-      roi: '350%',
-      savings: '$4M+',
-      icon: <Target className='w-8 h-8' />,
-      gradient: 'from-orange-500 to-red-500',
-      badge: 'PREDICTIVE',
-      features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights'],
-    },
-    {
-      id: 5,
-      title: 'Digital Transformation Suite',
-      slug: 'digital-transformation-suite-2026',
-      excerpt:
-        'Complete digital transformation solution covering strategy, implementation, and optimization. Modernize your enterprise for the AI era.',
-      category: 'Digital Transformation',
-      industry: 'All Industries',
-      roi: '500%',
-      savings: '$10M+',
-      icon: <Building className='w-8 h-8' />,
-      gradient: 'from-teal-500 to-cyan-500',
-      badge: 'TRANSFORMATION',
-      features: ['Strategy Consulting', 'Implementation', 'Change Management'],
-    },
-    {
-      id: 6,
-      title: 'Enterprise AI Governance',
-      slug: 'enterprise-ai-governance-2026',
-      excerpt:
-        'Comprehensive AI governance framework ensuring ethical AI deployment, compliance, and risk management across your organization.',
-      category: 'AI Governance',
-      industry: 'Finance, Healthcare, Government',
-      roi: '200%',
-      savings: '$1.5M+',
-      icon: <Users className='w-8 h-8' />,
-      gradient: 'from-pink-500 to-purple-500',
-      badge: 'GOVERNANCE',
-      features: ['Ethical AI', 'Compliance Management', 'Risk Assessment'],
-    },
-  ];
-  const successMetrics = [
-    {
-      value: '500+',
-      label: 'Enterprise Clients',
-      icon: <Building className='w-8 h-8' />,
-    },
-    {
-      value: '$2B+',
-      label: 'Cost Savings Generated',
-      icon: <DollarSign className='w-8 h-8' />,
-    },
-    {
-      value: '98%',
-      label: 'Client Satisfaction',
-      icon: <Award className='w-8 h-8' />,
-    },
-    {
-      value: '24/7',
-      label: 'Enterprise Support',
-      icon: <Users className='w-8 h-8' />,
-    },
-  ];
-  return (
-    <div className='py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden'>
-      {/* Animated background effects */}
-      <div className='absolute inset-0 overflow-hidden opacity-20'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
-          style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className='absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
-          style={{ animationDelay: '4s' }}
-        ></div>
-      </div>
-      <div className='container mx-auto px-6 relative z-10'>
-        {/* Header Section */}
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 mb-8 animate-fade-in'>
-            <Sparkles className='w-5 h-5 text-blue-400 animate-pulse' />
-            <span className='text-blue-400 font-bold text-sm tracking-wider uppercase'>
-              🏢 ENTERPRISE SOLUTIONS SHOWCASE • 2026
-            </span>
-            <Sparkles className='w-5 h-5 text-indigo-400 animate-pulse' />
-          </div>
-          <h2 className='text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in'>
-            Enterprise Solutions Showcase 2026
+     },
+    { 
+      id:  , 3,
+      tit, l, e: 'Clo, u, d-Native, AI, Infrastructur, e',
+      sl, u, g: 'clo, u, d-nati, v, e-ai-infrastructu, r, e-2, 0, 2, 6',
+      excer, p, t: 'Scala, b, l, e, secu, r, e, and, cos, t-effective, AI, infrastructure built, for, enterprise sca, l, e. Deploy, and, manage AI, models, across mul, t, i-cloud, environment, s.',
+      catego, r, y: 'Cloud, Infrastructu, r, e',
+      indust, r, y: 'Technol, o, g, y, Reta, i, l, Manufacturi, n, g',
+      r, o, i: '40, 0%',
+      savin, g, s: '$3, M+',
+      ic, o, n: <Cloud, classNam, e = 'w-8 , h-, 8' / > ,
+      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0',
+      bad, g, e: 'CLO, U, D-FI, R, S, T',
+      featur, e, s: ['Mul, t, i-Cloud, Deployme, n, t', 'Au, t, o-Scali, n, g', 'Cost, Optimizatio, n'],
+     },
+    { 
+      id:  , 4,
+      tit, l, e: 'Predictive, Analytics, Intelligenc, e',
+      sl, u, g: 'predicti, v, e-analyti, c, s-intelligen, c, e-2, 0, 2, 6',
+      excer, p, t: 'Advanced, predictive, analytics that, forecast, business tre, n, d, s, customer, behavio, r, and, operational, risks with, 9, 9.9% accura, c, y.',
+      catego, r, y: 'Business, Intelligen, c, e',
+      indust, r, y: 'Ret, a, i, l, Finan, c, e, Healthca, r, e',
+      r, o, i: '35, 0%',
+      savin, g, s: '$4, M+',
+      ic, o, n: <Target, classNam, e = 'w-8 , h-, 8' / > ,
+      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
+      bad, g, e: 'PREDICT, I, V, E',
+      featur, e, s: ['Trend, Forecasti, n, g', 'Risk, Analysi, s', 'Customer, Insight, s'],
+     },
+    { 
+      id:  , 5,
+      tit, l, e: 'Digital, Transformation, Suit, e',
+      sl, u, g: 'digit, a, l-transformati, o, n-sui, t, e-2, 0, 2, 6',
+      excer, p, t: 'Complete, digital, transformation solution, covering, strateg, y, implementati, o, n, and, optimizatio, n. Modernize, your, enterprise for, the, AI e, r, a.',
+      catego, r, y: 'Digital, Transformati, o, n',
+      indust, r, y: 'All, Industri, e, s',
+      r, o, i: '50, 0%',
+      savin, g, s: '$10, M+',
+      ic, o, n: <Building, classNam, e = 'w-8 , h-, 8' / > ,
+      gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-50, 0',
+      bad, g, e: 'TRANSFORMAT, I, O, N',
+      featur, e, s: ['Strategy, Consulti, n, g', 'Implementati, o, n', 'Change, Managemen, t'],
+     },
+    { 
+      id:  , 6,
+      tit, l, e: 'Enterprise, AI, Governanc, e',
+      sl, u, g: 'enterpri, s, e-ai-governan, c, e-2, 0, 2, 6',
+      excer, p, t: 'Comprehensive, AI, governance framework, ensuring, ethical AI, deployme, n, t, complian, c, e, and, risk, management across, your, organization.',
+      catego, r, y: 'AI, Governan, c, e',
+      indust, r, y: 'Fina, n, c, e, Healthca, r, e, Governme, n, t',
+      r, o, i: '20, 0%',
+      savin, g, s: '$1.5, M+',
+      ic, o, n: <Users, classNam, e = 'w-8 , h-, 8' / > ,
+      gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-purp, l, e-50, 0',
+      bad, g, e: 'GOVERNA, N, C, E',
+      featur, e, s: ['Ethica, l, A, I', 'Compliance, Managemen, t', 'Risk, Assessmen, t'],
+     },
+  ]; const, successMetric, s = [
+    { 
+      val, u, e: '5, 0, 0+',
+      lab, e, l: 'Enterprise, Clien, t, s',
+      ic, o, n: <Building, classNam, e = 'w-8 , h-, 8' / > ,
+     },
+    { 
+      val, u, e: '$2, B+',
+      lab, e, l: 'Cost, Savings, Generate, d',
+      ic, o, n: <DollarSign, classNam, e = 'w-8 , h-, 8' / > ,
+     },
+    { 
+      val, u, e: '9, 8%',
+      lab, e, l: 'Client, Satisfacti, o, n',
+      ic, o, n: <Award, classNam, e = 'w-8 , h-, 8' / > ,
+     },
+    { 
+      val, u, e: '24/, 7',
+      lab, e, l: 'Enterprise, Suppo, r, t',
+      ic, o, n: <Users, classNam, e = 'w-8 , h-, 8' / > ,
+     },
+  ]; retu, r, n (
+    <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n'>
+      {/* Animated, background, effects */}
+      <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
+        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
+        <div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
+          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+         />
+        <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
+          sty, l, e={{ animationDel, a, y: ', 4, s' }}
+         />
+      </d, i, v>
+      <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
+        {/* Header, Sectio, n */}
+        <div, classNam, e='te, x, t-center, m, b-16'>
+          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-indi, g, o-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in'>
+            <Sparkles, classNam, e='w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e' />
+            <span, classNam, e='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
+              🏢 ENTERPRISE, SOLUTIONS, SHOWCASE • 20, 2, 6
+            </sp, a, n>
+            <Sparkles, classNam, e='w-5 h-5, tex, t-indi, g, o-400, animat, e-pul, s, e' />
+          </d, i, v>
+          <h2, classNam, e='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
+            Enterprise, Solutions, Showcase 20, 2, 6
           </h2>
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-            Transform your enterprise with our comprehensive suite of AI-powered
-            solutions. From automation to security, we deliver measurable
-            results that drive business growth and operational excellence.
+          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>
+            Transform, your, enterprise with, our, comprehensive suite, of, AI-powered, solution, s. From, automation, to secu, r, i, t, y, we, deliver, measurable
+            results, that, drive business, growth, and operational, excellenc, e.
           </p>
-          {/* Success Metrics */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
-            {successMetrics.map((metric, index) => (
-              <div key={index} className='text-center'>
-                <div className='text-blue-400 mb-2 flex justify-center'>
-                  {metric.icon}
-                </div>
-                <div className='text-3xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-1'>
-                  {metric.value}
-                </div>
-                <div className='text-gray-400 text-sm font-medium'>
-                  {metric.label}
-                </div>
-              </div>
+          {/* Success, Metric, s */}
+          <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o'>
+            { successMetri, c, s.m, a, p((me, t, r, i, c, ind, e, x) = > (
+              <div, ke, y = { in, d, e, x  }, classNa, m, e = 'te, x, t-cent, e, r'>
+                <div, classNam, e='te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r'>
+                  {metr, i, c.ic, o, n}
+                </d, i, v>
+                <div, classNam, e='te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-indi, g, o-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1'>
+                  {metr, i, c.val, u, e}
+                </d, i, v>
+                <div, classNam, e='te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m'>
+                  {metr, i, c.lab, e, l}
+                </d, i, v>
+              </di, v>
             ))}
-          </div>
-        </div>
-        {/* Enterprise Solutions Grid */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          {enterpriseSolutions.map((solution, index) => (
-            <div
-              key={solution.id}
-              className='group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20'
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card glow effect */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}
-              ></div>
-              <div className='relative p-8'>
-                {/* Icon & Badge */}
-                <div className='flex items-start justify-between mb-6'>
-                  <div className='text-blue-400 group-hover:scale-110 transition-transform duration-300'>
-                    {solution.icon}
-                  </div>
-                  <div
-                    className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${solution.gradient} text-white text-xs font-bold border border-white/30`}
+          </d, i, v>
+        </d, i, v>
+        {/* Enterprise, Solutions, Grid */}
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
+          { enterpriseSolutio, n, s.m, a, p((solu, t, i, o, n, ind, e, x) = > (
+            <div, ke, y = { soluti, o, n.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20'
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+             > {/* Card, glow, effect */}
+              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${soluti, o, n.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}
+               />
+              <div, classNam, e = 'relativ, e, p-8'>
+                {/* Ic, o, n & Bad, g, e */}
+                <div, classNam, e='flex, item, s-start, justif, y-between, m, b-6'>
+                  <div, classNam, e='te, x, t-bl, u, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0'>
+                    {soluti, o, n.ic, o, n}
+                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${soluti, o, n.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}
                   >
-                    {solution.badge}
-                  </div>
-                </div>
-                {/* Category & Industry */}
-                <div className='mb-4 space-y-2'>
-                  <span className='inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30'>
-                    {solution.category}
-                  </span>
-                  <div className='text-xs text-gray-500'>
-                    ", Industries: {solution.industry}
-                  </div>
-                </div>
-                {/* Title */}
-                <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight'>
-                  {solution.title}
+                    {soluti, o, n.bad, g, e}
+                  </d, i, v>
+                </d, i, v>
+                {/* Catego, r, y & Indust, r, y */}
+                <div, classNam, e = 'mb-4, spac, e-y-2'>
+                  <span, classNam, e='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-indi, g, o-5, 0, 0/20, tex, t-bl, u, e-400, tex, t-xs, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
+                    {soluti, o, n.catego, r, y}
+                  </sp, a, n>
+                  <div, classNam, e='te, x, t-xs, tex, t-gr, a, y-50, 0'>
+                    ", Industri, e, s: {soluti, o, n.indus, t, r, y}
+                  </d, i, v>
+                </d, i, v>
+                {/* Tit, l, e */}
+                <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>
+                  {soluti, o, n.t, i, t, l, e}
                 </h3>
-                {/* Excerpt */}
-                <p className='text-gray-400 mb-6 leading-relaxed text-sm'>
-                  {solution.excerpt}
+                {/* Excer, p, t */}
+                <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm'>
+                  {soluti, o, n.excer, p, t}
                 </p>
-                {/* ROI & Savings */}
-                <div className='grid grid-cols-2 gap-4 mb-6'>
-                  <div className='text-center p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>
-                    <div className='text-green-400 font-bold text-lg'>
-                      {solution.roi}
-                    </div>
-                  </div>
-                  <div className='text-center p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30'>
-                    <div className='text-blue-400 font-bold text-lg'>
-                      {solution.savings}
-                    </div>
-                  </div>
-                </div>
-                {/* Features */}
-                <div className='mb-6'>
-                  <div className='text-gray-400 text-xs mb-2'>
-                    Key Features:
-                  </div>
-                  <div className='flex flex-wrap gap-1'>
-                    {solution.features.map((feature, idx) => (
-                      <span
-                        key={idx}
-                        className='px-2 py-1 rounded bg-white/10 text-gray-300 text-xs'
+                {/* R, O, I & Savin, g, s */}
+                <div, classNam, e='grid, gri, d-co, l, s-2, ga, p-4, m, b-6'>
+                  <div, classNam, e='te, x, t-cente, r, p-3, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30'>
+                    <div, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, tex, t-lg'>
+                      {soluti, o, n.r, o, i}
+                    </d, i, v>
+                  </d, i, v>
+                  <div, classNam, e='te, x, t-cente, r, p-3, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30'>
+                    <div, classNam, e='te, x, t-bl, u, e-400, fon, t-bold, tex, t-lg'>
+                      {soluti, o, n.savin, g, s}
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+                {/* Featur, e, s */}
+                <div, classNam, e='mb-6'>
+                  <div, classNam, e='te, x, t-gr, a, y-400, tex, t-xs, m, b-2'>
+                    Key, Feature, s: </d, i, v>
+                  <div, classNam, e='flex, fle, x-wrap, ga, p-1'>
+                    { soluti, o, n.featur, e, s.m, a, p((fea, t, u, r, e, i, d, x) = > (
+                      <span, ke, y = { id, x  }, classNa, m, e = 'px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs'
                       >
-                        {feature}
-                      </span>
+                        {featu, r, e}
+                      </s, p, a, n>
                     ))}
-                  </div>
-                </div>
-                {/* CTA Button */}
-                <a
-                  href={`/solutions/${solution.slug}`}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}
+                  </d, i, v>
+                </d, i, v > {/* CTA, Butto, n */}
+                <a, hre, f = {`/solutio, n, s/${soluti, o, n.sl, u, g}`}
+                  classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${soluti, o, n.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
                 >
-                  <span>Explore Solution</span>
-                  <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300' />
+                  <sp, a, n>Explore, Solutio, n</sp, a, n>
+                  <ArrowRight, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
                 </a>
-              </div>
-            </div>
+              </d, i, v>
+            </d, i, v>
           ))}
-        </div>
-        {/* Enterprise CTA Section */}
-        <div className='text-center mt-20'>
-          <div className='inline-block p-1 rounded-2xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500'>
-            <div className='bg-slate-900 rounded-xl px-12 py-10'>
-              <h3 className='text-3xl font-bold text-white mb-4'>
-                Ready to Transform Your Enterprise?
+        </d, i, v>
+        {/* Enterprise, CTA, Section */}
+        <div, classNam, e = 'te, x, t-center, m, t-20'>
+          <div, classNam, e='inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-indi, g, o-500, t, o-purp, l, e-5, 0, 0'>
+            <div, classNam, e='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'>
+              <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
+                Ready, to, Transform Your, Enterpris, e?
               </h3>
-              <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
-                Join 500+ leading organizations that trust our enterprise
-                solutions to drive innovation, reduce costs, and achieve
-                unprecedented operational efficiency.
+              <p, classNam, e='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
+                Join, 50, 0+ leading, organizations, that trust, our, enterprise
+                solutions, to, drive innovat, i, o, n, reduce, cost, s, and, achieve, unprecedented operational, efficienc, y.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <a
-                  href='/contact'
-                  className='bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2'
+              <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+                <a, hre, f='/conta, c, t'
+                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 >
-                  <Building className='w-5 h-5' />
-                  <span>Schedule Enterprise Demo</span>
+                  <Building, classNam, e='w-5 h-5' />
+                  <sp, a, n>Schedule, Enterprise, Demo</sp, a, n>
                 </a>
-                <a
-                  href='/case-studies'
-                  className='border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'
+                <a, hre, f='/ca, s, e-studi, e, s'
+                  classNa, m, e='bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'
                 >
-                  <span>View Success Stories</span>
-                  <ArrowRight className='w-5 h-5' />
+                  <sp, a, n>View, Success, Stories</sp, a, n>
+                  <ArrowRight, classNam, e='w-5 h-5' />
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-export default EnterpriseSolutionsShowcase2026;
+export, default, EnterpriseSolutionsShowcase2026;

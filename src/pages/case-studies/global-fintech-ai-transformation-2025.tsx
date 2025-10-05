@@ -1,518 +1,490 @@
-import {
-  ArrowLeft,
-  CheckCircle,
-  DollarSign,
-  Shield,
-  Target,
-  TrendingUp,
-  Zap,
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import Header from '../../components/Header';
+impo, r, t {
+  ArrowLe, f, t,
+  CheckCirc, l, e,
+  DollarSi, g, n,
+  Shie, l, d,
+  Targ, e, t,
+  Trending, U, p,
+  Z, a, p,
+} fr, o, m 'luci, d, e-rea, c, t';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import, Header, from '../../componen, t, s/Head, e, r';
 
-const GlobalFinTechAITransformation = () => {
-  return (
+const, GlobalFinTechAITransformatio, n = () => { 
+  retu, r, n (
     <>
-      <Helmet>
-        <title>
-          Global FinTech AI Transformation: $127M Annual Value Creation | Zion
-          Tech Group
-        </title>
-        <meta
-          name='description'
-          content='Fortune 500 digital banking platform achieves $127M annual value through AI transformation. 94.7% fraud detection, 15.2x ROI, 10x customer growth enabled.'
+      <Helm, e, t>
+        <tit, l, e>
+          Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group
+        </tit, l, e>
+        <meta, nam, e = 'descripti, o, n'
+          conte, n, t='Fortune, 500, digital banking, platform, achieves $127M, annual, value through, AI, transformation. 94.7% fraud, detect, i, o, n, 15.2x, RO, I, 10x, customer, growth enabl, e, d.'
         />
-        <meta
-          name='keywords'
-          content='fintech AI, digital banking, fraud detection, AI transformation case study, financial services AI'
+        <meta, nam, e = 'keywor, d, s'
+          conte, n, t='fintec, h, A, I, digital, bankin, g, fraud, detectio, n, AI, transformation, case stu, d, y, financial, services, AI'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>
-        <Header />
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
+        <Head, e, r />
 
-        <article className='container mx-auto px-6 py-20'>
-          <Link
-            to='/case-studies'
-            className='inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors'
+        <article, classNam, e='container, m, x-auto, p, x-6, p, y-20'>
+          <Link, t, o='/ca, s, e-studi, e, s'
+            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
-            Back to Case Studies
-          </Link>
+            <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
+            Back, to, Case Studi, e, s
+          </Li, n, k>
 
-          <div className='max-w-5xl mx-auto mb-16'>
-            <div className='flex items-center gap-4 mb-6 flex-wrap'>
-              <span className='px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30'>
-                ✅ Completed • October 2025
-              </span>
-              <span className='px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30'>
-                🏦 FinTech & Digital Banking
-              </span>
-              <span className='text-zion-slate-light'>18-month engagement</span>
-            </div>
+          <div, classNam, e='m, a, x-w-5xl, m, x-auto, m, b-16'>
+            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
+              <span, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-gre, e, n-5, 0, 0/30'>
+                ✅ Complet, e, d • October, 202, 5
+              </sp, a, n>
+              <span, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
+                🏦 FinTe, c, h & Digital, Bankin, g
+              </sp, a, n>
+              <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
+            </d, i, v>
 
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-              Global FinTech AI Transformation:
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2'>
-                $127M Annual Value Creation
-              </span>
+            <h1, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+              Global, FinTech, AI Transformati, o, n:
+              <span, classNam, e='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2'>
+                $127M, Annual, Value Creati, o, n
+              </sp, a, n>
             </h1>
 
-            <p className='text-xl text-zion-slate-light leading-relaxed mb-8'>
-              How a Fortune 500 digital banking platform leveraged AI to
-              transform operations, achieving $127M in annual value, 94% fraud
-              detection accuracy, and 10x customer growth through intelligent
-              automation and predictive analytics.
-            </p>
-
-            {/* Key Metrics Banner */}
-            <div className='grid md:grid-cols-4 gap-6'>
-              <div className='bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center'>
-                <div className='text-4xl font-bold text-green-400 mb-2'>
-                  $127M
-                </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Annual Value Created
-                </div>
-              </div>
-              <div className='bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center'>
-                <div className='text-4xl font-bold text-blue-400 mb-2'>
+            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
+              How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent
+              automation, and, predictive analyti, c, s.
+            </p > {/* Key, Metrics, Banner */ }
+            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
+              <div, classNam, e='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
+                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+                  $12, 7, M
+                </d, i, v>
+                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Annual, Value, Created
+                </d, i, v>
+              </d, i, v>
+              <div, classNam, e='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-cent, e, r'>
+                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
                   15.2x
-                </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Return on Investment
-                </div>
-              </div>
-              <div className='bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center'>
-                <div className='text-4xl font-bold text-purple-400 mb-2'>
+                </d, i, v>
+                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Return, on, Investment
+                </d, i, v>
+              </d, i, v>
+              <div, classNam, e='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r'>
+                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
                   94.7%
-                </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Fraud Detection Accuracy
-                </div>
-              </div>
-              <div className='bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center'>
-                <div className='text-4xl font-bold text-cyan-400 mb-2'>10x</div>
-                <div className='text-sm text-zion-slate-light'>
-                  Customer Growth Enabled
-                </div>
-              </div>
-            </div>
-          </div>
+                </d, i, v>
+                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Fraud, Detection, Accuracy
+                </d, i, v>
+              </d, i, v>
+              <div, classNam, e='bg-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30, tex, t-cent, e, r'>
+                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>1, 0, x</d, i, v>
+                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  Customer, Growth, Enabled
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
 
-          <div className='max-w-5xl mx-auto space-y-12 text-zion-slate-light'>
-            {/* Client Profile */}
-            <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                🏢 Client Profile
+          <div, classNam, e='m, a, x-w-5xl, m, x-auto, spac, e-y-12, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+            {/* Client, Prof, i, l, e */}
+            <secti, o, n>
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+                🏢 Client, Profil, e
               </h2>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30'>
-                <div className='grid md:grid-cols-2 gap-8'>
-                  <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
-                      Company Overview
+              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
+                  <d, i, v>
+                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                      Company, Overvie, w
                     </h3>
-                    <ul className='space-y-2'>
+                    <ul, classNam, e='spa, c, e-y-2'>
                       <li>
-                        <strong className='text-zion-cyan'>Industry:</strong>{' '}
-                        Financial Technology / Digital Banking
+                        <strong, classNam, e='te, x, t-zi, o, n-cy, a, n'>Indust, r, y:</st, r, o, n, g>{' '}
+                        Financial, Technolog, y / Digital, Bankin, g
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Size:</strong>{' '}
-                        Fortune 500
+                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Si, z, e: </st, r, o, n, g>{' '}
+                        Fortune, 50, 0
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Customers:</strong>{' '}
-                        12M+ active users
+                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Custome, r, s: </st, r, o, n, g>{' '}
+                        1, 2, M+ active, user, s
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Assets:</strong>{' '}
-                        $120B+ managed
+                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Asse, t, s: </st, r, o, n, g>{' '}
+                        $12, 0, B+ manag, e, d
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Markets:</strong> 45
-                        countries
+                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Marke, t, s: </stro, n, g> 45, countrie, s
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Revenue:</strong>{' '}
-                        $2.4B annually
+                        <strong, classNam, e='te, x, t-zi, o, n-cy, a, n'>Reven, u, e:</st, r, o, n, g>{' '}
+                        $2.4B, annuall, y
                       </li>
                     </ul>
-                  </div>
-                  <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
-                      Business Challenges
+                  </d, i, v>
+                  <d, i, v>
+                    <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                      Business, Challenge, s
                     </h3>
-                    <ul className='space-y-2'>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400'>❌</span>
-                        <span>8.2% fraud rate costing $24M annually</span>
+                    <ul, classNam, e='spa, c, e-y-2'>
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <span, classNam, e='te, x, t-r, e, d-4, 0, 0'>❌</sp, a, n>
+                        <sp, a, n>8.2% fraud, rate, costing $24M, annuall, y</sp, a, n>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400'>❌</span>
-                        <span>72-hour credit decision turnaround</span>
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <span, classNam, e='te, x, t-r, e, d-4, 0, 0'>❌</sp, a, n>
+                        <sp, a, n>72-hour, credit, decision turnarou, n, d</sp, a, n>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400'>❌</span>
-                        <span>28% customer churn rate</span>
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <span, classNam, e='te, x, t-r, e, d-4, 0, 0'>❌</sp, a, n>
+                        <sp, a, n>28% customer, churn, rate</sp, a, n>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400'>❌</span>
-                        <span>450 FTE in manual processes</span>
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <span, classNam, e='te, x, t-r, e, d-4, 0, 0'>❌</sp, a, n>
+                        <sp, a, n>450, FTE, in manual, processe, s</sp, a, n>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400'>❌</span>
-                        <span>Limited scalability for growth</span>
+                      <li, classNam, e='flex, item, s-start, ga, p-2'>
+                        <span, classNam, e='te, x, t-r, e, d-4, 0, 0'>❌</sp, a, n>
+                        <sp, a, n>Limited, scalability, for grow, t, h</sp, a, n>
                       </li>
                     </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </secti, o, n>
 
-            {/* Solution Overview */}
-            <section>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                <Target className='w-8 h-8 text-blue-400' />
-                AI Transformation Initiatives
+            {/* Solution, Overvie, w */}
+            <secti, o, n>
+              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                <Target, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
+                AI, Transformation, Initiatives
               </h2>
-              <div className='grid md:grid-cols-2 gap-6'>
+              <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                 {[
                   {
-                    title: 'Real-Time Fraud Detection Platform',
-                    icon: '🛡️',
-                    results: [
-                      '94.7% detection accuracy',
-                      '$22.1M annual savings',
-                      '<50ms detection latency',
-                      '92% fraud loss reduction',
+                    tit, l, e: 'Re, a, l-Time, Fraud, Detection Plat, f, o, r, m',
+                    ic, o, n: '🛡️',
+                    resul, t, s: [
+                      '94.7% detection, accura, c, y',
+                      '$22.1M, annual, savings',
+                      '<50ms, detection, latency',
+                      '92% fraud, loss, reduction',
                     ],
                   },
                   {
-                    title: 'Intelligent Credit Decisioning Engine',
-                    icon: '⚡',
-                    results: [
-                      '2-minute decisions',
-                      '56% approval rate (up from 42%)',
-                      '$28M incremental revenue',
-                      '18% default rate (down from 23%)',
+                    tit, l, e: 'Intelligent, Credit, Decisioning Eng, i, n, e',
+                    ic, o, n: '⚡',
+                    resul, t, s: [
+                      '2-minute, decisio, n, s',
+                      '56% approval, rat, e (up, from, 42%)',
+                      '$28M, incremental, revenue',
+                      '18% default, rat, e (down, from, 23%)',
                     ],
                   },
                   {
-                    title: 'Hyper-Personalization Platform',
-                    icon: '🎯',
-                    results: [
-                      '18.4% conversion rate',
-                      '8% churn rate (down from 28%)',
-                      '87 NPS (up from 62)',
-                      '$45M incremental revenue',
+                    tit, l, e: 'Hyp, e, r-Personalization, Platfo, r, m',
+                    ic, o, n: '🎯',
+                    resul, t, s: [
+                      '18.4% conversion, ra, t, e',
+                      '8% churn, rat, e (down, from, 28%)',
+                      '87, NP, S (up, from, 62)',
+                      '$45M, incremental, revenue',
                     ],
                   },
                   {
-                    title: 'Cognitive Process Automation',
-                    icon: '🤖',
-                    results: [
-                      '92% automation rate',
-                      '450 FTE redeployed',
-                      '$38M annual savings',
-                      '95% faster processing',
+                    tit, l, e: 'Cognitive, Process, Automatio, n',
+                    ic, o, n: '🤖',
+                    resul, t, s: [
+                      '92% automation, ra, t, e',
+                      '450, FTE, redeployed',
+                      '$38M, annual, savings',
+                      '95% faster, processin, g',
                     ],
                   },
                   {
-                    title: 'Predictive Customer Analytics',
-                    icon: '📊',
-                    results: [
-                      '94% churn prediction accuracy',
-                      '42% LTV increase',
-                      '$32M retained revenue',
-                      '3.2 products per customer',
+                    tit, l, e: 'Predictive, Customer, Analytic, s',
+                    ic, o, n: '📊',
+                    resul, t, s: [
+                      '94% churn, prediction, accurac, y',
+                      '42% LTV, increas, e',
+                      '$32M, retained, revenue',
+                      '3.2, products, per custom, e, r',
                     ],
                   },
                   {
-                    title: 'AI-Powered Compliance Monitoring',
-                    icon: '📋',
-                    results: [
-                      '100% automated reporting',
-                      'Zero regulatory fines',
-                      '$8.4M cost reduction',
-                      '100% policy compliance',
+                    tit, l, e: 'AI-Powered, Compliance, Monitorin, g',
+                    ic, o, n: '📋',
+                    resul, t, s: [
+                      '1, 0, 0% automated, reporti, n, g',
+                      'Zero, regulatory, fines',
+                      '$8.4M, cost, reduction',
+                      '1, 0, 0% policy, complianc, e',
                     ],
                   },
-                ].map((initiative, index) => (
-                  <div
-                    key={index}
-                    className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all'
+                ].m, a, p((initiati, v, e, ind, e, x) => (
+                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                   >
-                    <div className='flex items-start gap-3 mb-4'>
-                      <div className='text-3xl'>{initiative.icon}</div>
-                      <h3 className='text-xl font-bold text-white'>
-                        {initiative.title}
+                    <div, classNam, e='flex, item, s-start, ga, p-3, m, b-4'>
+                      <div, classNam, e='te, x, t-3, x, l'>{initiati, v, e.ic, o, n}</d, i, v>
+                      <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>
+                        {initiati, v, e.tit, l, e}
                       </h3>
-                    </div>
-                    <ul className='space-y-2'>
-                      {initiative.results.map((result, rIndex) => (
-                        <li key={rIndex} className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                          <span className='text-sm'>{result}</span>
-                        </li>
+                    </d, i, v>
+                    <ul, classNam, e='spa, c, e-y-2'>
+                      { initiati, v, e.resul, t, s.m, a, p((res, u, l, t, rInd, e, x) = > (
+                        <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <span, classNam, e='te, x, t-sm'>{resu, l, t}</sp, a, n>
+                        </l, i>
                       ))}
                     </ul>
-                  </div>
+                  </d, i, v>
                 ))}
-              </div>
-            </section>
+              </d, i, v>
+            </secti, o, n>
 
-            {/* Implementation Journey */}
-            <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                📅 Implementation Journey
+            {/* Implementation, Journe, y */}
+            <secti, o, n>
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+                📅 Implementation, Journe, y
               </h2>
-              <div className='space-y-6'>
+              <div, classNam, e='spa, c, e-y-6'>
                 {[
                   {
-                    phase: 'Phase 1: Foundation',
-                    duration: 'Months 1-6',
-                    focus:
-                      'AI strategy, data platform modernization, ML infrastructure, quick wins',
-                    results: [
-                      'Infrastructure deployed',
-                      'Data platform operational',
-                      'First models in production',
-                      '$4.2M in early value',
+                    pha, s, e: 'Phas, e, 1: Founda, t, i, o, n',
+                    durati, o, n: 'Month, s, 1-, 6',
+                    foc, u, s: 'AI, strate, g, y, data, platform, modernization, ML, infrastructur, e, quick, win, s',
+                    resul, t, s: [
+                      'Infrastructure, deploy, e, d',
+                      'Data, platform, operational',
+                      'First, models, in producti, o, n',
+                      '$4.2M, in, early val, u, e',
                     ],
                   },
                   {
-                    phase: 'Phase 2: Scaling',
-                    duration: 'Months 7-12',
-                    focus:
-                      'Core AI capabilities deployment, enterprise-wide integration, process automation scaling',
-                    results: [
-                      'All major initiatives deployed',
-                      '$78M in value delivered',
-                      '85% process automation',
-                      'Organization transformed',
+                    pha, s, e: 'Phas, e, 2: Scal, i, n, g',
+                    durati, o, n: 'Month, s, 7-1, 2',
+                    foc, u, s: 'Core, AI, capabilities deploym, e, n, t, enterpri, s, e-wide, integratio, n, process, automation, scaling',
+                    resul, t, s: [
+                      'All, major, initiatives deplo, y, e, d',
+                      '$78M, in, value deliver, e, d',
+                      '85% process, automatio, n',
+                      'Organization, transforme, d',
                     ],
                   },
                   {
-                    phase: 'Phase 3: Optimization',
-                    duration: 'Months 13-18',
-                    focus:
-                      'Advanced features, continuous learning, compliance automation, performance optimization',
-                    results: [
-                      '$127M annual run rate',
-                      '15.2x ROI achieved',
-                      'Industry-leading capabilities',
-                      'Self-sustaining AI program',
+                    pha, s, e: 'Phas, e, 3: Optimizat, i, o, n',
+                    durati, o, n: 'Months, 1, 3-1, 8',
+                    foc, u, s: 'Advanced, featur, e, s, continuous, learnin, g, compliance, automatio, n, performance, optimizatio, n',
+                    resul, t, s: [
+                      '$127M, annual, run r, a, t, e',
+                      '15.2x, ROI, achieved',
+                      'Indust, r, y-leading, capabilitie, s',
+                      'Se, l, f-sustaining, AI, program',
                     ],
                   },
-                ].map((phase, index) => (
-                  <div
-                    key={index}
-                    className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30'
+                ].m, a, p((pha, s, e, ind, e, x) => (
+                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   >
-                    <div className='flex flex-wrap items-center justify-between gap-4 mb-4'>
-                      <h3 className='text-2xl font-bold text-white'>
-                        {phase.phase}
+                    <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
+                      <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
+                        {pha, s, e.pha, s, e}
                       </h3>
-                      <span className='px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold'>
-                        {phase.duration}
-                      </span>
-                    </div>
-                    <p className='text-zion-slate-light mb-4'>
-                      <strong>Focus:</strong> {phase.focus}
+                      <span, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                        {pha, s, e.durati, o, n}
+                      </sp, a, n>
+                    </d, i, v>
+                    <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
+                      <stro, n, g>Foc, u, s: </stro, n, g> {pha, s, e.f, o, c, u, s}
                     </p>
-                    <div>
-                      <h4 className='text-white font-semibold mb-2'>
-                        Results:
-                      </h4>
-                      <ul className='grid md:grid-cols-2 gap-2'>
-                        {phase.results.map((result, rIndex) => (
-                          <li key={rIndex} className='flex items-start gap-2'>
-                            <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                            <span>{result}</span>
-                          </li>
+                    <d, i, v>
+                      <h4, classNam, e = 'te, x, t-white, fon, t-semibold, m, b-2'>
+                        Resul, t, s: </h4>
+                      <ul, classNam, e='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
+                        { pha, s, e.resul, t, s.m, a, p((re, s, u, l, t, rInd, e, x) = > (
+                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                            <sp, a, n>{resu, l, t}</sp, a, n>
+                          </l, i>
                         ))}
                       </ul>
-                    </div>
-                  </div>
+                    </d, i, v>
+                  </d, i, v>
                 ))}
-              </div>
-            </section>
+              </d, i, v>
+            </secti, o, n>
 
-            {/* Results & Business Impact */}
-            <section>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                <TrendingUp className='w-8 h-8 text-green-400' />
-                Results & Business Impact
+            {/* Resul, t, s & Business, Impac, t */}
+            <secti, o, n>
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                <TrendingUp, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
+                Resul, t, s & Business, Impac, t
               </h2>
-              <div className='grid md:grid-cols-2 gap-6'>
-                <div className='bg-gradient-to-br from-green-900/40 to-blue-900/40 rounded-xl p-6 border border-green-500/30'>
-                  <h3 className='text-xl font-bold text-white mb-4 flex items-center gap-2'>
-                    <DollarSign className='w-6 h-6 text-green-400' />
-                    Financial Impact
+              <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30'>
+                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
+                    <DollarSign, classNam, e='w-6 h-6, tex, t-gre, e, n-4, 0, 0' />
+                    Financial, Impac, t
                   </h3>
-                  <ul className='space-y-3'>
-                    <li className='flex justify-between items-center'>
-                      <span>Total Annual Value:</span>
-                      <span className='text-green-400 font-bold text-xl'>
-                        $127M
-                      </span>
+                  <ul, classNam, e='spa, c, e-y-3'>
+                    <li, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
+                      <sp, a, n>Total, Annual, Value:</sp, a, n>
+                      <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, tex, t-xl'>
+                        $12, 7, M
+                      </sp, a, n>
                     </li>
-                    <li className='flex justify-between items-center'>
-                      <span>Cost Savings:</span>
-                      <span className='text-green-400 font-bold'>$65M</span>
+                    <li, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
+                      <sp, a, n>Cost, Saving, s:</sp, a, n>
+                      <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bo, l, d'>$6, 5, M</sp, a, n>
                     </li>
-                    <li className='flex justify-between items-center'>
-                      <span>Revenue Growth:</span>
-                      <span className='text-green-400 font-bold'>$62M</span>
+                    <li, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
+                      <sp, a, n>Revenue, Growt, h:</sp, a, n>
+                      <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bo, l, d'>$6, 2, M</sp, a, n>
                     </li>
-                    <li className='flex justify-between items-center'>
-                      <span>Total Investment:</span>
-                      <span className='text-blue-400 font-bold'>$42M</span>
+                    <li, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
+                      <sp, a, n>Total, Investmen, t:</sp, a, n>
+                      <span, classNam, e='te, x, t-bl, u, e-400, fon, t-bo, l, d'>$4, 2, M</sp, a, n>
                     </li>
-                    <li className='flex justify-between items-center pt-3 border-t border-white/20'>
-                      <span className='font-bold'>ROI:</span>
-                      <span className='text-purple-400 font-bold text-2xl'>
+                    <li, classNam, e='flex, justif, y-between, item, s-center, p, t-3, borde, r-t, borde, r-whi, t, e/20'>
+                      <span, classNam, e='fo, n, t-bo, l, d'>R, O, I:</sp, a, n>
+                      <span, classNam, e='te, x, t-purp, l, e-400, fon, t-bold, tex, t-2, x, l'>
                         15.2x
-                      </span>
+                      </sp, a, n>
                     </li>
                   </ul>
-                </div>
+                </d, i, v>
 
-                <div className='bg-gradient-to-br from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30'>
-                  <h3 className='text-xl font-bold text-white mb-4 flex items-center gap-2'>
-                    <Shield className='w-6 h-6 text-blue-400' />
-                    Operational Excellence
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30'>
+                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
+                    <Shield, classNam, e='w-6 h-6, tex, t-bl, u, e-4, 0, 0' />
+                    Operational, Excellenc, e
                   </h3>
-                  <ul className='space-y-3'>
-                    <li className='flex items-start gap-2'>
-                      <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                      <span>
-                        <strong>Fraud Detection:</strong> 94.7% accuracy, 92%
-                        loss reduction
-                      </span>
+                  <ul, classNam, e='spa, c, e-y-3'>
+                    <li, classNam, e='flex, item, s-start, ga, p-2'>
+                      <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <sp, a, n>
+                        <stro, n, g>Fraud, Detectio, n:</stro, n, g> 94.7% accu, r, a, c, y, 92%
+                        loss, reductio, n
+                      </sp, a, n>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                      <span>
-                        <strong>Credit Decisions:</strong> 2-minute approvals vs
-                        72 hours
-                      </span>
+                    <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+                      <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <sp, a, n>
+                        <stro, n, g>Credit, Decision, s: </stro, n, g> 2-minute, approvals, vs
+                        72, hour, s
+                      </sp, a, n>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                      <span>
-                        <strong>Automation:</strong> 92% rate, 450 FTE
-                        redeployed
-                      </span>
+                    <li, classNam, e='flex, item, s-start, ga, p-2'>
+                      <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <sp, a, n>
+                        <stro, n, g>Automati, o, n:</stro, n, g> 92% ra, t, e, 450, FTE, redeployed
+                      </sp, a, n>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                      <span>
-                        <strong>Customer Experience:</strong> 87 NPS, 8% churn
-                      </span>
+                    <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+                      <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <sp, a, n>
+                        <stro, n, g>Customer, Experienc, e: </stro, n, g> 8, 7, N, P, S, 8% chu, r, n
+                      </sp, a, n>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                      <span>
-                        <strong>Scalability:</strong> Ready for 10x customer
-                        growth
-                      </span>
+                    <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+                      <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <sp, a, n>
+                        <stro, n, g>Scalabili, t, y: </stro, n, g> Ready, for, 10x customer, growt, h
+                      </sp, a, n>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </section>
+                </d, i, v>
+              </d, i, v>
+            </secti, o, n>
 
-            {/* Client Testimonials */}
-            <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                💬 Client Testimonials
+            {/* Client, Testimoni, a, l, s */}
+            <secti, o, n>
+              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+                💬 Client, Testimonial, s
               </h2>
-              <div className='space-y-6'>
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30'>
-                  <p className='text-lg text-zion-slate-light italic mb-4'>
-                    "Our partnership with Zion Tech Group has been
-                    transformational. They didn't just implement AI
-                    technology—they helped us reimagine our entire business
-                    model. The $127M in annual value is significant, but the
-                    strategic positioning and capabilities we've built are
-                    invaluable. We're now leading the industry in AI-powered
-                    banking."
+              <div, classNam, e='spa, c, e-y-6'>
+                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  <p, classNam, e='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
+                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are
+                    invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
                   </p>
-                  <div className='flex items-center gap-3'>
-                    <div className='w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center'>
-                      <span className='text-white font-bold text-xl'>CT</span>
-                    </div>
-                    <div>
-                      <div className='text-white font-semibold'>
-                        Chief Technology Officer
-                      </div>
-                      <div className='text-zion-slate-light text-sm'>
-                        Client Company
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <div, classNam, e = 'flex, item, s-center, ga, p-3'>
+                    <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, flex, items-center, justif, y-cent, e, r'>
+                      <span, classNam, e='te, x, t-white, fon, t-bold, tex, t-xl'>CT</sp, a, n>
+                    </d, i, v>
+                    <d, i, v>
+                      <div, classNam, e='te, x, t-white, fon, t-semibo, l, d'>
+                        Chief, Technology, Officer
+                      </d, i, v>
+                      <div, classNam, e='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
+                        Client, Compan, y
+                      </d, i, v>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
 
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30'>
-                  <p className='text-lg text-zion-slate-light italic mb-4'>
-                    "The fraud detection platform alone paid for the entire
-                    initiative. Going from 8% fraud rates to less than 1% was
-                    game-changing. Our customers are happier, our losses are
-                    down 92%, and our team can focus on strategic work instead
-                    of chasing fraud."
+                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  <p, classNam, e='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
+                    "The, fraud, detection platform, alone, paid for, the, entire
+                    initiati, v, e. Going, from, 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are
+                    down, 9, 2%, and, our, team can, focus, on strategic, work, instead
+                    of, chasing, fraud."
                   </p>
-                  <div className='flex items-center gap-3'>
-                    <div className='w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center'>
-                      <span className='text-white font-bold text-xl'>RM</span>
-                    </div>
-                    <div>
-                      <div className='text-white font-semibold'>
-                        Head of Risk Management
-                      </div>
-                      <div className='text-zion-slate-light text-sm'>
-                        Client Company
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+                  <div, classNam, e = 'flex, item, s-center, ga, p-3'>
+                    <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-oran, g, e-500, flex, items-center, justif, y-cent, e, r'>
+                      <span, classNam, e='te, x, t-white, fon, t-bold, tex, t-xl'>RM</sp, a, n>
+                    </d, i, v>
+                    <d, i, v>
+                      <div, classNam, e='te, x, t-white, fon, t-semibo, l, d'>
+                        Head, of, Risk Manageme, n, t
+                      </d, i, v>
+                      <div, classNam, e='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
+                        Client, Compan, y
+                      </d, i, v>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </secti, o, n>
 
-            {/* CTA Section */}
-            <section className='bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-blue-500/50'>
-              <div className='text-center'>
-                <h2 className='text-3xl font-bold text-white mb-4'>
-                  Ready to Transform Your Organization with AI?
+            {/* CTA, Sectio, n */}
+            <section, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-bl, u, e-5, 0, 0/50'>
+              <div, classNam, e='te, x, t-cent, e, r'>
+                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
+                  Ready, to, Transform Your, Organization, with AI?
                 </h2>
-                <p className='text-xl text-zion-slate-light mb-6'>
-                  Schedule a consultation to discuss how we can help you achieve
-                  similar results.
+                <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-6'>
+                  Schedule, a, consultation to, discuss, how we, can, help you, achieve, similar resul, t, s.
                 </p>
-                <div className='flex flex-wrap gap-4 justify-center'>
-                  <Link
-                    to='/contact'
-                    className='inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105'
+                <div, classNam, e='flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r'>
+                  <Link, t, o='/conta, c, t'
+                    classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-600, hove, r:to-purp, l, e-600, transitio, n-all, transform, hover:sca, l, e-1, 0, 5'
                   >
-                    Schedule Consultation
-                    <Zap className='w-5 h-5' />
-                  </Link>
-                  <Link
-                    to='/services'
-                    className='inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all'
+                    Schedule, Consultatio, n
+                    <Zap, classNam, e='w-5 h-5' />
+                  </Li, n, k>
+                  <Link, t, o='/servic, e, s'
+                    classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-bl, u, e-5, 0, 0/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
                   >
-                    View Our Services
-                  </Link>
-                </div>
-              </div>
-            </section>
-          </div>
-        </article>
-      </div>
+                    View, Our, Services
+                  </Li, n, k>
+                </d, i, v>
+              </d, i, v>
+            </secti, o, n>
+          </d, i, v>
+        </artic, l, e>
+      </d, i, v>
     </>
   );
 };
 
-export default GlobalFinTechAITransformation;
+export, default, GlobalFinTechAITransformation;

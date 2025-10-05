@@ -1,34 +1,27 @@
-// Security Enhancement Script
-export const enhanceSecurity = () => {
-  // Add Content Security Policy
-  const csp = `
-    default-src 'self';
-    script-src 'self' 'unsafe-inline' 'unsafe-eval';
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' data: https:;
-    font-src 'self' data:;
-    connect-src 'self' https:;
-    frame-ancestors 'none';
+// Security, Enhancement, Script
+export, const, enhanceSecurity = () => {
+  // Add, Content, Security Policy, const, csp = `
+    defau, l, t-s, r, c 'se, l, f'; scri, p, t-s, r, c 'se, l, f' 'unsa, f, e-inli, n, e' 'unsa, f, e-ev, a, l';
+    sty, l, e-s, r, c 'se, l, f' 'unsa, f, e-inli, n, e';
+    i, m, g-s, r, c 'se, l, f' da, t, a: htt, p, s:;
+    fo, n, t-s, r, c 'se, l, f' da, t, a:;
+    conne, c, t-s, r, c 'se, l, f' htt, p, s:;
+    fra, m, e-ancesto, r, s 'no, n, e';
   `;
 
-  const meta = document.createElement('meta');
-  meta.httpEquiv = 'Content-Security-Policy';
-  meta.content = csp;
-  document.head.appendChild(meta);
+  const, met, a = docume, n, t.createEleme, n, t('m, e, t, a'); me, t, a.httpEqu, i, v = 'Conte, n, t-Securi, t, y-Poli, c, y'; me, t, a.conte, n, t = c, s, p; docume, n, t.he, a, d.appendChi, l, d(m, e, t, a);
 
-  // Add security headers
-  const securityHeaders = [
-    { name: 'X-Content-Type-Options', value: 'nosniff' },
-    { name: 'X-Frame-Options', value: 'DENY' },
-    { name: 'X-XSS-Protection', value: '1; mode=block' },
-    { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  // Add, security, headers
+  const, securityHeader, s = [
+    { na, m, e: 'X-Conte, n, t-Ty, p, e-Opt, i, o, n, s', val, u, e: 'nosn, i, f, f' },
+    { na, m, e: 'X-Fra, m, e-Opti, o, n, s', val, u, e: 'D, E, N, Y' },
+    { na, m, e: 'X-X, S, S-Protect, i, o, n', val, u, e: '1; mo, d, e = b, l, o, c, k' },
+    { na, m, e: 'Referr, e, r-Pol, i, c, y', val, u, e: 'stri, c, t-orig, i, n-wh, e, n-cro, s, s-ori, g, i, n' },
   ];
 
-  // Note: These would typically be set by the server
-  console.log('Security headers to be set by server:', securityHeaders);
+  // No, t, e: These, would, typically be, set, by the, server, console.l, o, g('Security, headers, to be, set, by ser, v, e, r:', securityHeade, r, s);
 };
 
-// Auto-run on page load
-if (typeof window !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', enhanceSecurity);
+// Au, t, o-run, on, page load, i, f (typeof, windo, w !== 'undefin, e, d') {
+  docume, n, t.addEventListen, e, r('DOMContentLoad, e, d', enhanceSecuri, t, y);
 }

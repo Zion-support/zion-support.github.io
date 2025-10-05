@@ -1,626 +1,606 @@
-import {
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  DollarSign,
-  Rocket,
-  Shield,
-  TrendingUp,
-  Users,
-  Zap,
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+impo, r, t {
+  ArrowRig, h, t,
+  CheckCirc, l, e,
+  Clo, c, k,
+  DollarSi, g, n,
+  Rock, e, t,
+  Shie, l, d,
+  Trending, U, p,
+  Use, r, s,
+  Z, a, p,
+} fr, o, m 'luci, d, e-rea, c, t';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
-const AutonomousBusinessOperations = () => {
-  return (
+const, AutonomousBusinessOperation, s = () => { 
+  retu, r, n (
     <>
-      <Helmet>
-        <title>
-          Autonomous Business Operations Platform | 85% Cost Reduction in 90
-          Days | Zion Tech Group
-        </title>
-        <meta
-          name='description'
-          content='Transform your enterprise with AI-powered autonomous operations. Deploy 40+ self-managing workflows in 90 days. $500M+ value creation. 300-500% ROI. Get started with a free consultation.'
+      <Helm, e, t>
+        <tit, l, e>
+          Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group
+        </tit, l, e>
+        <meta, nam, e = 'descripti, o, n'
+          conte, n, t='Transform, your, enterprise with, A, I-powered, autonomous, operations. Deploy, 4, 0+ se, l, f-managing, workflows, in 90, day, s. $50, 0, M+ value, creatio, n. 3, 0, 0-5, 0, 0% R, O, I. Get, started, with a, free, consultation.'
         />
-        <meta
-          name='keywords'
-          content='autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee'
+        <meta, nam, e='keywor, d, s'
+          conte, n, t='autonomous, business, operation, s, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/services/autonomous-business-operations'
+        <link, re, l = 'canonic, a, l'
+          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/autonomo, u, s-busine, s, s-operatio, n, s'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900'>
-        {/* Hero Section */}
-        <section className='relative py-24 overflow-hidden'>
-          <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20'></div>
+      <div, classNam, e='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
+        <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
+          <div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' />
 
-          {/* Animated background elements */}
-          <div className='absolute inset-0 overflow-hidden opacity-30'>
-            <div className='absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float'></div>
-            <div
-              className='absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-float'
-              style={{ animationDelay: '2s' }}
-            ></div>
-          </div>
+          {/* Animated, background, elements */}
+          <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-30'>
+            <div, classNam, e='absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, animat, e-flo, a, t' />
+            <div, classNam, e='absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, animat, e-flo, a, t'
+              sty, l, e={{ animationDel, a, y: ', 2, s' }}
+             />
+          </d, i, v>
 
-          <div className='container mx-auto px-6 relative z-10'>
-            {/* Limited Time Banner */}
-            <div className='flex justify-center mb-8'>
-              <div className='inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse'>
-                <Rocket className='w-5 h-5 mr-2' />
-                🔥 LIMITED OFFER: 50% OFF THROUGH DECEMBER 2025
-              </div>
-            </div>
+          <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
+            {/* Limited, Time, Banner */}
+            <div, classNam, e='flex, justif, y-center, m, b-8'>
+              <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'>
+                <Rocket, classNam, e='w-5 h-5, m, r-2' />
+                🔥 LIMITED, OFFE, R: 50% OFF, THROUGH, DECEMBER 20, 2, 5
+              </d, i, v>
+            </d, i, v>
 
-            <div className='max-w-5xl mx-auto text-center'>
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
-                Autonomous Business Operations Platform
+            <div, classNam, e='m, a, x-w-5xl, m, x-auto, tex, t-cent, e, r'>
+              <h1, classNam, e='te, x, t-5xl, m, d:te, x, t-7xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+                Autonomous, Business, Operations Platfo, r, m
               </h1>
-              <p className='text-2xl md:text-3xl text-blue-200 mb-8 font-semibold'>
-                Transform Your Enterprise in 90 Days with Self-Managing AI
-                Systems
+              <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, m, b-8, fon, t-semibo, l, d'>
+                Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems
               </p>
-              <p className='text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed'>
-                Deploy 40+ autonomous workflows that eliminate manual processes,
-                reduce costs by 85%, and create $500M+ in annual value.
-                Guaranteed ROI or your money back.
+              <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-100, m, b-12, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'>
+                Deploy, 4, 0+ autonomous, workflows, that eliminate, manual, process, e, s,
+                reduce, costs, by 85%, and, creat, e $50, 0, M+ in, annual, value.
+                Guaranteed, ROI, or your, money, back.
               </p>
 
-              {/* Key Metrics */}
-              <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
-                <div className='bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50'>
-                  <div className='text-5xl font-bold text-green-300 mb-2'>
+              {/* Key, Metric, s */}
+              <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'>
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/30, t, o-emera, l, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-gre, e, n-4, 0, 0/50'>
+                  <div, classNam, e='te, x, t-5xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2'>
                     85%
-                  </div>
-                  <div className='text-green-100 font-semibold'>
-                    Cost Reduction
-                  </div>
-                </div>
-                <div className='bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-blue-400/50'>
-                  <div className='text-5xl font-bold text-blue-300 mb-2'>
+                  </d, i, v>
+                  <div, classNam, e='te, x, t-gre, e, n-100, fon, t-semibo, l, d'>
+                    Cost, Reductio, n
+                  </d, i, v>
+                </d, i, v>
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/30, t, o-cy, a, n-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-bl, u, e-4, 0, 0/50'>
+                  <div, classNam, e='te, x, t-5xl, fon, t-bold, tex, t-bl, u, e-300, m, b-2'>
                     90
-                  </div>
-                  <div className='text-blue-100 font-semibold'>
-                    Days to Launch
-                  </div>
-                </div>
-                <div className='bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-purple-400/50'>
-                  <div className='text-5xl font-bold text-purple-300 mb-2'>
-                    $500M+
-                  </div>
-                  <div className='text-purple-100 font-semibold'>
-                    Annual Value
-                  </div>
-                </div>
-                <div className='bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-orange-400/50'>
-                  <div className='text-5xl font-bold text-orange-300 mb-2'>
+                  </d, i, v>
+                  <div, classNam, e='te, x, t-bl, u, e-100, fon, t-semibo, l, d'>
+                    Days, to, Launch
+                  </d, i, v>
+                </d, i, v>
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-pi, n, k-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-purp, l, e-4, 0, 0/50'>
+                  <div, classNam, e='te, x, t-5xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2'>
+                    $50, 0, M+
+                  </d, i, v>
+                  <div, classNam, e='te, x, t-purp, l, e-100, fon, t-semibo, l, d'>
+                    Annual, Valu, e
+                  </d, i, v>
+                </d, i, v>
+                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/30, t, o-r, e, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-oran, g, e-4, 0, 0/50'>
+                  <div, classNam, e='te, x, t-5xl, fon, t-bold, tex, t-oran, g, e-300, m, b-2'>
                     99.7%
-                  </div>
-                  <div className='text-orange-100 font-semibold'>
-                    Accuracy Rate
-                  </div>
-                </div>
-              </div>
+                  </d, i, v>
+                  <div, classNam, e='te, x, t-oran, g, e-100, fon, t-semibo, l, d'>
+                    Accuracy, Rat, e
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
 
-              {/* CTA Buttons */}
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105'
+              {/* CTA, Butt, o, n, s */}
+              <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+                <Link, t, o='/conta, c, t'
+                  classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, hove, r:fr, o, m-gre, e, n-600, hove, r:to-emera, l, d-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5'
                 >
-                  <Rocket className='w-6 h-6' />
-                  Start Free Consultation
-                  <ArrowRight className='w-5 h-5' />
-                </Link>
-                <Link
-                  to='/case-studies/fortune-100-autonomous-operations-transformation-2025'
-                  className='inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all'
+                  <Rocket, classNam, e='w-6 h-6' />
+                  Start, Free, Consultation
+                  <ArrowRight, classNam, e='w-5 h-5' />
+                </Li, n, k>
+                <Link, t, o='/ca, s, e-studi, e, s/fortu, n, e-1, 0, 0-autonomo, u, s-operatio, n, s-transformati, o, n-20, 2, 5'
+                  classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, borde, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-a, l, l'
                 >
-                  View $650M Case Study
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+                  Vi, e, w $650M, Case, Study
+                </Li, n, k>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* Trust Indicators */}
-        <section className='py-12 bg-black/20'>
-          <div className='container mx-auto px-6'>
-            <div className='flex flex-wrap justify-center items-center gap-8 text-blue-200'>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span className='font-semibold'>50+ Fortune 500 Clients</span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span className='font-semibold'>$5B+ Value Created</span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span className='font-semibold'>SOC 2 Type II Certified</span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span className='font-semibold'>99.97% Uptime SLA</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Trust, Indicat, o, r, s */}
+        <section, classNam, e = 'py-12, b, g-bla, c, k/20'>
+          <div, classNam, e='container, m, x-auto, p, x-6'>
+            <div, classNam, e='flex, fle, x-wrap, justif, y-center, item, s-center, ga, p-8, tex, t-bl, u, e-2, 0, 0'>
+              <div, classNam, e='flex, item, s-center, ga, p-2'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>50+ Fortune, 500, Clients</sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>$5B+ Value, Create, d</sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>SOC, 2, Type II, Certifie, d</sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>99.97% Uptime, SL, A</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* What You Get */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              What's Included in Your Platform
+        {/* What, You, Get */}
+        <section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+          <div, classNam, e='te, x, t-center, m, b-16'>
+            <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
+              Wh, a, t's, Included, in Your, Platfor, m
             </h2>
-            <p className='text-xl text-blue-200 max-w-3xl mx-auto'>
-              A complete enterprise-grade autonomous operations solution,
-              deployed and optimized for your business
+            <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o'>
+              A, complete, enterprise-grade, autonomous, operations solu, t, i, o, n,
+              deployed, and, optimized for, your, business
             </p>
-          </div>
+          </d, i, v>
 
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {/* Feature 1 */}
-            <div className='bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover:border-blue-400/80 transition-all hover:scale-105'>
-              <div className='bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30'>
-                <Zap className='w-8 h-8 text-blue-300' />
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                40+ Autonomous Workflows
+          <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
+            {/* Feat, u, r, e , 1 */}
+            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, hove, r: bord, e, r-bl, u, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+              <div, classNam, e='bg-bl, u, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-bl, u, e-4, 0, 0/30'>
+                <Zap, classNam, e='w-8 h-8, tex, t-bl, u, e-3, 0, 0' />
+              </d, i, v>
+              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+                40+ Autonomous, Workflow, s
               </h3>
-              <p className='text-blue-100 mb-4'>
-                Pre-built workflows for finance, HR, operations, sales, support,
-                and compliance. Fully customizable to your needs.
+              <p, classNam, e='te, x, t-bl, u, e-100, m, b-4'>
+                P, r, e-built, workflows, for fin, a, n, c, e, HR, operatio, n, s, sal, e, s, suppo, r, t,
+                and, complianc, e. Fully, customizable, to your, need, s.
               </p>
-              <ul className='space-y-2 text-blue-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Invoice processing & payment automation</span>
+              <ul, classNam, e = 'spa, c, e-y-2, tex, t-bl, u, e-200, tex, t-sm'>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Invoice, processin, g & payment, automatio, n</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Employee onboarding & offboarding</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Employee, onboardin, g & offboardi, n, g</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Customer support triage & routing</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Customer, support, triage & routi, n, g</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Sales lead qualification & nurturing</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Sales, lead, qualification & nurturi, n, g</sp, a, n>
                 </li>
               </ul>
-            </div>
+            </d, i, v>
 
-            {/* Feature 2 */}
-            <div className='bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover:border-purple-400/80 transition-all hover:scale-105'>
-              <div className='bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30'>
-                <TrendingUp className='w-8 h-8 text-purple-300' />
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                AI Decision Engine
+            {/* Featur, e, 2 */}
+            <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, hove, r: bord, e, r-purp, l, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+              <div, classNam, e='bg-purp, l, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-purp, l, e-4, 0, 0/30'>
+                <TrendingUp, classNam, e='w-8 h-8, tex, t-purp, l, e-3, 0, 0' />
+              </d, i, v>
+              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+                AI, Decision, Engine
               </h3>
-              <p className='text-purple-100 mb-4'>
-                Real-time decision-making with 99.7% accuracy. Learns from every
-                interaction and continuously improves.
+              <p, classNam, e='te, x, t-purp, l, e-100, m, b-4'>
+                Re, a, l-time, decisio, n-making, with, 99.7% accura, c, y. Learns, from, every
+                interaction, and, continuously improv, e, s.
               </p>
-              <ul className='space-y-2 text-purple-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-purple-400 mt-1 flex-shrink-0' />
-                  <span>&lt;100ms inference latency</span>
+              <ul, classNam, e='spa, c, e-y-2, tex, t-purp, l, e-200, tex, t-sm'>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>&lt; 100ms, inference, latency</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-purple-400 mt-1 flex-shrink-0' />
-                  <span>Multi-model ensemble for complex decisions</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Mul, t, i-model, ensemble, for complex, decision, s</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-purple-400 mt-1 flex-shrink-0' />
-                  <span>Explainable AI for compliance</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Explainable, AI, for complian, c, e</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-purple-400 mt-1 flex-shrink-0' />
-                  <span>Automatic model retraining</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Automatic, model, retraining</sp, a, n>
                 </li>
               </ul>
-            </div>
+            </d, i, v>
 
-            {/* Feature 3 */}
-            <div className='bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover:border-green-400/80 transition-all hover:scale-105'>
-              <div className='bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30'>
-                <Shield className='w-8 h-8 text-green-300' />
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Enterprise Security
+            {/* Feat, u, r, e , 3 */}
+            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, hove, r: bord, e, r-gre, e, n-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+              <div, classNam, e='bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-4, 0, 0/30'>
+                <Shield, classNam, e='w-8 h-8, tex, t-gre, e, n-3, 0, 0' />
+              </d, i, v>
+              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+                Enterprise, Securit, y
               </h3>
-              <p className='text-green-100 mb-4'>
-                Zero Trust architecture with SOC 2 Type II compliance. Your data
-                stays secure and compliant.
+              <p, classNam, e='te, x, t-gre, e, n-100, m, b-4'>
+                Zero, Trust, architecture with, SOC, 2 Type, II, compliance. Your, data, stays secure, and, compliant.
               </p>
-              <ul className='space-y-2 text-green-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400 mt-1 flex-shrink-0' />
-                  <span>End-to-end encryption</span>
+              <ul, classNam, e='spa, c, e-y-2, tex, t-gre, e, n-200, tex, t-sm'>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>E, n, d-to-end, encryptio, n</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Multi-factor authentication</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Mul, t, i-factor, authenticatio, n</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Role-based access controls</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Ro, l, e-based, access, controls</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Full audit trail & compliance reporting</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Full, audit, trail & compliance, reportin, g</sp, a, n>
                 </li>
               </ul>
-            </div>
+            </d, i, v>
 
-            {/* Feature 4 */}
-            <div className='bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover:border-orange-400/80 transition-all hover:scale-105'>
-              <div className='bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30'>
-                <Users className='w-8 h-8 text-orange-300' />
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Expert Implementation Team
+            {/* Feat, u, r, e , 4 */}
+            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-oran, g, e-4, 0, 0/50, hove, r: bord, e, r-oran, g, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+              <div, classNam, e='bg-oran, g, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-oran, g, e-4, 0, 0/30'>
+                <Users, classNam, e='w-8 h-8, tex, t-oran, g, e-3, 0, 0' />
+              </d, i, v>
+              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+                Expert, Implementation, Team
               </h3>
-              <p className='text-orange-100 mb-4'>
-                Dedicated team of AI engineers, data scientists, and consultants
-                to ensure successful deployment.
+              <p, classNam, e='te, x, t-oran, g, e-100, m, b-4'>
+                Dedicated, team, of AI, engine, e, r, s, data, scientist, s, and, consultants, to ensure, successful, deployment.
               </p>
-              <ul className='space-y-2 text-orange-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-orange-400 mt-1 flex-shrink-0' />
-                  <span>90-day deployment timeline</span>
+              <ul, classNam, e = 'spa, c, e-y-2, tex, t-oran, g, e-200, tex, t-sm'>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-oran, g, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>90-day, deployment, timeline</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-orange-400 mt-1 flex-shrink-0' />
-                  <span>Custom workflow development</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-oran, g, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Custom, workflow, development</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-orange-400 mt-1 flex-shrink-0' />
-                  <span>Change management & training</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-oran, g, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Change, managemen, t & traini, n, g</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-orange-400 mt-1 flex-shrink-0' />
-                  <span>24/7 dedicated support</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-oran, g, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>24/7, dedicated, support</sp, a, n>
                 </li>
               </ul>
-            </div>
+            </d, i, v>
 
-            {/* Feature 5 */}
-            <div className='bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover:border-cyan-400/80 transition-all hover:scale-105'>
-              <div className='bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30'>
-                <Clock className='w-8 h-8 text-cyan-300' />
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Real-Time Observability
+            {/* Featur, e, 5 */}
+            <div, classNam, e='bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-4, 0, 0/50, hove, r: bord, e, r-cy, a, n-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+              <div, classNam, e='bg-cy, a, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-cy, a, n-4, 0, 0/30'>
+                <Clock, classNam, e='w-8 h-8, tex, t-cy, a, n-3, 0, 0' />
+              </d, i, v>
+              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+                Re, a, l-Time, Observabilit, y
               </h3>
-              <p className='text-cyan-100 mb-4'>
-                Complete visibility into all operations with real-time
-                dashboards, alerts, and analytics.
+              <p, classNam, e='te, x, t-cy, a, n-100, m, b-4'>
+                Complete, visibility, into all, operations, with re, a, l-time, dashboa, r, d, s, aler, t, s, and, analytic, s.
               </p>
-              <ul className='space-y-2 text-cyan-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />
-                  <span>Live KPI dashboards</span>
+              <ul, classNam, e = 'spa, c, e-y-2, tex, t-cy, a, n-200, tex, t-sm'>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Live, KPI, dashboards</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />
-                  <span>Anomaly detection & alerting</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Anomaly, detectio, n & alerti, n, g</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />
-                  <span>Performance analytics</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Performance, analytic, s</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />
-                  <span>ROI tracking & reporting</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>ROI, trackin, g & reporti, n, g</sp, a, n>
                 </li>
               </ul>
-            </div>
+            </d, i, v>
 
-            {/* Feature 6 */}
-            <div className='bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover:border-indigo-400/80 transition-all hover:scale-105'>
-              <div className='bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30'>
-                <DollarSign className='w-8 h-8 text-indigo-300' />
-              </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                ROI Guarantee
+            {/* Featur, e, 6 */}
+            <div, classNam, e='bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-indi, g, o-4, 0, 0/50, hove, r: bord, e, r-indi, g, o-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+              <div, classNam, e='bg-indi, g, o-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-indi, g, o-4, 0, 0/30'>
+                <DollarSign, classNam, e='w-8 h-8, tex, t-indi, g, o-3, 0, 0' />
+              </d, i, v>
+              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+                ROI, Guarante, e
               </h3>
-              <p className='text-indigo-100 mb-4'>
-                We're so confident in our platform that we guarantee 300% ROI
-                within 18 months, or your money back.
+              <p, classNam, e='te, x, t-indi, g, o-100, m, b-4'>
+                We're, so, confident in, our, platform that, we, guarantee 3, 0, 0% ROI, within, 18 mo, n, t, h, s, or, your, money ba, c, k.
               </p>
-              <ul className='space-y-2 text-indigo-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-indigo-400 mt-1 flex-shrink-0' />
-                  <span>Detailed ROI modeling upfront</span>
+              <ul, classNam, e = 'spa, c, e-y-2, tex, t-indi, g, o-200, tex, t-sm'>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Detailed, ROI, modeling upfro, n, t</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-indigo-400 mt-1 flex-shrink-0' />
-                  <span>Continuous value tracking</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Continuous, value, tracking</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-indigo-400 mt-1 flex-shrink-0' />
-                  <span>Performance-based pricing options</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Performan, c, e-based, pricing, options</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-indigo-400 mt-1 flex-shrink-0' />
-                  <span>Money-back guarantee</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Mon, e, y-back, guarante, e</sp, a, n>
                 </li>
               </ul>
-            </div>
-          </div>
-        </section>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* Implementation Timeline */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              90-Day Implementation Timeline
+        {/* Implementation, Timelin, e */}
+        <section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+          <div, classNam, e='te, x, t-center, m, b-16'>
+            <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
+              90-Day, Implementation, Timeline
             </h2>
-            <p className='text-xl text-blue-200'>
-              From contract to production in just three months
+            <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-2, 0, 0'>
+              From, contract, to production, in, just three, month, s
             </p>
-          </div>
+          </d, i, v>
 
-          <div className='space-y-8'>
-            {/* Phase 1 */}
-            <div className='bg-gradient-to-r from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50'>
-              <div className='flex items-start gap-6'>
-                <div className='bg-blue-500 text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0'>
+          <div, classNam, e='spa, c, e-y-8'>
+            {/* Ph, a, s, e , 1 */}
+            <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50'>
+              <div, classNam, e='flex, item, s-start, ga, p-6'>
+                <div, classNam, e='bg-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-2x, l, w-1, 6, h-16, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
                   1
-                </div>
-                <div className='flex-1'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    Discovery & Assessment (Days 1-30)
+                </d, i, v>
+                <div, classNam, e='fl, e, x-1'>
+                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
+                    Discove, r, y & Assessme, n, t (Day, s, 1-3, 0)
                   </h3>
-                  <p className='text-blue-100 mb-4'>
-                    Process mapping, data assessment, and ROI modeling with your
-                    team
+                  <p, classNam, e = 'te, x, t-bl, u, e-100, m, b-4'>
+                    Process, mappi, n, g, data, assessmen, t, and, ROI, modeling with, your, team
                   </p>
-                  <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                    <div className='flex items-center gap-2 text-blue-200'>
-                      <CheckCircle className='w-4 h-4 text-blue-400' />
-                      <span>Process workshops</span>
-                    </div>
-                    <div className='flex items-center gap-2 text-blue-200'>
-                      <CheckCircle className='w-4 h-4 text-blue-400' />
-                      <span>Data quality audit</span>
-                    </div>
-                    <div className='flex items-center gap-2 text-blue-200'>
-                      <CheckCircle className='w-4 h-4 text-blue-400' />
-                      <span>Custom ROI model</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
+                      <sp, a, n>Process, workshop, s</sp, a, n>
+                    </d, i, v>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
+                      <sp, a, n>Data, quality, audit</sp, a, n>
+                    </d, i, v>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
+                      <sp, a, n>Custom, ROI, model</sp, a, n>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
 
-            {/* Phase 2 */}
-            <div className='bg-gradient-to-r from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50'>
-              <div className='flex items-start gap-6'>
-                <div className='bg-purple-500 text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0'>
+            {/* Ph, a, s, e , 2 */}
+            <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50'>
+              <div, classNam, e='flex, item, s-start, ga, p-6'>
+                <div, classNam, e='bg-purp, l, e-500, tex, t-white, fon, t-bold, tex, t-2x, l, w-1, 6, h-16, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
                   2
-                </div>
-                <div className='flex-1'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    Platform Build (Days 31-60)
+                </d, i, v>
+                <div, classNam, e='fl, e, x-1'>
+                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
+                    Platform, Buil, d (Days, 3, 1-6, 0)
                   </h3>
-                  <p className='text-purple-100 mb-4'>
-                    Infrastructure deployment, model training, and system
-                    integration
+                  <p, classNam, e = 'te, x, t-purp, l, e-100, m, b-4'>
+                    Infrastructure, deployme, n, t, model, trainin, g, and, system, integration
                   </p>
-                  <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                    <div className='flex items-center gap-2 text-purple-200'>
-                      <CheckCircle className='w-4 h-4 text-purple-400' />
-                      <span>Cloud infrastructure</span>
-                    </div>
-                    <div className='flex items-center gap-2 text-purple-200'>
-                      <CheckCircle className='w-4 h-4 text-purple-400' />
-                      <span>AI model training</span>
-                    </div>
-                    <div className='flex items-center gap-2 text-purple-200'>
-                      <CheckCircle className='w-4 h-4 text-purple-400' />
-                      <span>API integrations</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-purp, l, e-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
+                      <sp, a, n>Cloud, infrastructur, e</sp, a, n>
+                    </d, i, v>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-purp, l, e-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
+                      <sp, a, n>AI, model, training</sp, a, n>
+                    </d, i, v>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-purp, l, e-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
+                      <sp, a, n>API, integration, s</sp, a, n>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
 
-            {/* Phase 3 */}
-            <div className='bg-gradient-to-r from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50'>
-              <div className='flex items-start gap-6'>
-                <div className='bg-green-500 text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0'>
+            {/* Ph, a, s, e , 3 */}
+            <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/50'>
+              <div, classNam, e='flex, item, s-start, ga, p-6'>
+                <div, classNam, e='bg-gre, e, n-500, tex, t-white, fon, t-bold, tex, t-2x, l, w-1, 6, h-16, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
                   3
-                </div>
-                <div className='flex-1'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    Launch & Scale (Days 61-90)
+                </d, i, v>
+                <div, classNam, e='fl, e, x-1'>
+                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
+                    Laun, c, h & Sca, l, e (Days, 6, 1-9, 0)
                   </h3>
-                  <p className='text-green-100 mb-4'>
-                    Pilot deployment, validation, and full-scale rollout
+                  <p, classNam, e = 'te, x, t-gre, e, n-100, m, b-4'>
+                    Pilot, deployme, n, t, validati, o, n, and, ful, l-scale, rollou, t
                   </p>
-                  <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                    <div className='flex items-center gap-2 text-green-200'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>Pilot workflows</span>
-                    </div>
-                    <div className='flex items-center gap-2 text-green-200'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>User training</span>
-                    </div>
-                    <div className='flex items-center gap-2 text-green-200'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>Full production launch</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+                  <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <sp, a, n>Pilot, workflow, s</sp, a, n>
+                    </d, i, v>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <sp, a, n>User, trainin, g</sp, a, n>
+                    </d, i, v>
+                    <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
+                      <sp, a, n>Full, production, launch</sp, a, n>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* Pricing Section */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              Investment & ROI
+        {/* Pricing, Sect, i, o, n */}
+        <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+          <div, classNam, e='te, x, t-center, m, b-16'>
+            <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
+              Investme, n, t & R, O, I
             </h2>
-            <p className='text-xl text-blue-200'>
-              Transparent pricing with guaranteed returns
+            <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-2, 0, 0'>
+              Transparent, pricing, with guaranteed, return, s
             </p>
-          </div>
+          </d, i, v>
 
-          <div className='grid md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
-            {/* Investment */}
-            <div className='bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50'>
-              <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-                Total Investment
+          <div, classNam, e='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, ma, x-w-4xl, m, x-au, t, o'>
+            {/* Invest, m, e, n, t */}
+            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50'>
+              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
+                Total, Investmen, t
               </h3>
-              <div className='text-center mb-6'>
-                <div className='text-5xl font-bold text-white mb-2'>
-                  $10-25M
-                </div>
-                <div className='text-blue-200'>3-Year Total Cost</div>
-              </div>
-              <ul className='space-y-3 text-blue-100'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Platform licensing</span>
+              <div, classNam, e='te, x, t-center, m, b-6'>
+                <div, classNam, e='te, x, t-5xl, fon, t-bold, tex, t-white, m, b-2'>
+                  $10-2, 5, M
+                </d, i, v>
+                <div, classNam, e='te, x, t-bl, u, e-2, 0, 0'>3-Year, Total, Cost</d, i, v>
+              </d, i, v>
+              <ul, classNam, e='spa, c, e-y-3, tex, t-bl, u, e-1, 0, 0'>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Platform, licensin, g</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Implementation services</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Implementation, service, s</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Training & change management</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Traini, n, g & change, managemen, t</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Ongoing support & optimization</span>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Ongoing, suppor, t & optimizati, o, n</sp, a, n>
                 </li>
               </ul>
-            </div>
+            </d, i, v>
 
-            {/* Return */}
-            <div className='bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50'>
-              <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-                Expected Returns
+            {/* Retu, r, n */}
+            <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/50'>
+              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
+                Expected, Return, s
               </h3>
-              <div className='text-center mb-6'>
-                <div className='text-5xl font-bold text-white mb-2'>
-                  $90-330M
-                </div>
-                <div className='text-green-200'>3-Year Value Creation</div>
-              </div>
-              <ul className='space-y-3 text-green-100'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Cost savings (labor, errors, infrastructure)</span>
+              <div, classNam, e='te, x, t-center, m, b-6'>
+                <div, classNam, e='te, x, t-5xl, fon, t-bold, tex, t-white, m, b-2'>
+                  $90-33, 0, M
+                </d, i, v>
+                <div, classNam, e='te, x, t-gre, e, n-2, 0, 0'>3-Year, Value, Creation</d, i, v>
+              </d, i, v>
+              <ul, classNam, e='spa, c, e-y-3, tex, t-gre, e, n-1, 0, 0'>
+                <li, classNam, e='flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Cost, saving, s (la, b, o, r, erro, r, s, infrastructu, r, e)</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Revenue acceleration (faster cycles)</span>
+                <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Revenue, acceleratio, n (faster, cycl, e, s)</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Risk reduction (compliance, fraud)</span>
+                <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Risk, reductio, n (complia, n, c, e, fra, u, d)</sp, a, n>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Customer retention & satisfaction</span>
+                <li, classNam, e = 'flex, item, s-start, ga, p-2'>
+                  <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
+                  <sp, a, n>Customer, retentio, n & satisfacti, o, n</sp, a, n>
                 </li>
               </ul>
-            </div>
-          </div>
+            </d, i, v>
+          </d, i, v>
 
-          <div className='mt-12 text-center'>
-            <div className='inline-block bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-2 border-yellow-400/50 rounded-2xl p-8'>
-              <div className='text-3xl font-bold text-yellow-300 mb-2'>
-                300-1,200% Net ROI
-              </div>
-              <div className='text-yellow-100 text-lg'>
-                Guaranteed or your money back
-              </div>
-            </div>
-          </div>
-        </section>
+          <div, classNam, e='mt-12, tex, t-cent, e, r'>
+            <div, classNam, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-2x, l, p-8'>
+              <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-300, m, b-2'>
+                3, 0, 0-, 1,2, 0, 0% Net, RO, I
+              </d, i, v>
+              <div, classNam, e = 'te, x, t-yell, o, w-100, tex, t-lg'>
+                Guaranteed, or, your money, bac, k
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* Success Story CTA */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center'>
-            <h2 className='text-4xl font-bold text-white mb-4'>
-              See It In Action: $650M Success Story
+        {/* Success, Story, CTA */}
+        <section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+          <div, classNam, e='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
+            <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
+              See, It, In Acti, o, n: $650M, Success, Story
             </h2>
-            <p className='text-xl text-green-100 mb-8 max-w-2xl mx-auto'>
-              Read how a Fortune 100 financial services company transformed
-              their operations and created $650M in annual value in just 12
-              months.
+            <p, classNam, e='te, x, t-xl, tex, t-gre, e, n-100, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
+              Read, how, a Fortune, 100, financial services, company, transformed
+              their, operations, and creat, e, d $650M, in, annual value, in, just 12, month, s.
             </p>
-            <Link
-              to='/case-studies/fortune-100-autonomous-operations-transformation-2025'
-              className='inline-flex items-center gap-2 bg-white text-green-600 hover:bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl'
+            <Link, t, o='/ca, s, e-studi, e, s/fortu, n, e-1, 0, 0-autonomo, u, s-operatio, n, s-transformati, o, n-20, 2, 5'
+              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-gre, e, n-600, hove, r:bg-gre, e, n-50, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-xl, hove, r:shad, o, w-2, x, l'
             >
-              Read Complete Case Study
-              <ArrowRight className='w-5 h-5' />
-            </Link>
-          </div>
-        </section>
+              Read, Complete, Case Stu, d, y
+              <ArrowRight, classNam, e='w-5 h-5' />
+            </Li, n, k>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* Final CTA */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-              Ready to Transform Your Business?
+        {/* Fina, l, C, T, A */}
+        <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+          <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
+            <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
+              Ready, to, Transform Your, Busines, s?
             </h2>
-            <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-              Get started with a free 90-minute strategy consultation and custom
-              ROI analysis.
+            <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
+              Get, started, with a, free, 90-minute, strategy, consultation and, custom, ROI analys, i, s.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-              <Link
-                to='/contact'
-                className='inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl'
+            <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-8'>
+              <Link, t, o='/conta, c, t'
+                classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, tex, t-bl, u, e-600, hove, r:bg-bl, u, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-xl, hove, r:shad, o, w-2, x, l'
               >
-                <Rocket className='w-5 h-5' />
-                Schedule Free Consultation
-                <ArrowRight className='w-5 h-5' />
-              </Link>
-              <Link
-                to='/blog/ai-autonomous-business-operations-revolution-2025'
-                className='inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition-all'
+                <Rocket, classNam, e='w-5 h-5' />
+                Schedule, Free, Consultation
+                <ArrowRight, classNam, e='w-5 h-5' />
+              </Li, n, k>
+              <Link, t, o='/bl, o, g/ai-autonomo, u, s-busine, s, s-operatio, n, s-revoluti, o, n-20, 2, 5'
+                classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, borde, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-a, l, l'
               >
-                Read Complete Guide
-              </Link>
-            </div>
+                Read, Complete, Guide
+              </Li, n, k>
+            </d, i, v>
 
-            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-xl mx-auto'>
-              <p className='text-white font-bold text-lg mb-2'>
-                🎁 Limited Time Offer
+            <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, ma, x-w-xl, m, x-au, t, o'>
+              <p, classNam, e='te, x, t-white, fon, t-bold, tex, t-lg, m, b-2'>
+                🎁 Limited, Time, Offer
               </p>
-              <p className='text-blue-100 mb-2'>
-                <strong>50% OFF</strong> implementation services through
-                December 2025
+              <p, classNam, e='te, x, t-bl, u, e-100, m, b-2'>
+                <stro, n, g>50% O, F, F</stro, n, g> implementation, services, through
+                December, 202, 5
               </p>
-              <p className='text-blue-200 text-sm'>
-                + FREE 30-day proof of concept + FREE ROI analysis
+              <p, classNam, e='te, x, t-bl, u, e-200, tex, t-sm'>
+                + FREE, 3, 0-day, proof, of conce, p, t + FREE, ROI, analysis
               </p>
-            </div>
-          </div>
-        </section>
-      </div>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+      </d, i, v>
     </>
   );
 };
 
-export default AutonomousBusinessOperations;
+export, default, AutonomousBusinessOperations;

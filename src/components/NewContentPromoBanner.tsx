@@ -1,203 +1,191 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-interface NewContentPromoBannerProps {
-  variant?: 'info' | 'premium' | 'success' | 'warning';
-  className?: string;
-}
-const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({ 
-  variant = 'premium', 
-  className = '' 
+import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+interface, NewContentPromoBannerProp, s { 
+  varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
+  classNa, m, e ?  : stri, n, g;
+ }
+const, NewContentPromoBanne, r: Rea, c, t.FC<NewContentPromoBannerPro, p, s> = ({ 
+  varia, n, t = 'pre, m, i, u, m', 
+  classNa, m, e = '' 
 }) => {
-  const [isDismissed, setIsDismissed] = useState(false);
-  const variants = {
-    info: 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-blue-400/30',
-    premium: 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-purple-400/30',
-    success: 'bg-gradient-to-r from-green-500 to-emerald-500 text-white border-green-400/30',
-    warning: 'bg-gradient-to-r from-orange-500 to-red-500 text-white border-orange-400/30'
-  };
-  const featuredContent = [
+  con, s, t [isDismiss, e, d, setIsDismiss, e, d] = useSta, t, e(fal, s, e); const, variant, s = {
+    in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, tex, t-white, borde, r-bl, u, e-4, 0, 0/, 3, 0',
+    premi, u, m: 'bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, borde, r-purp, l, e-4, 0, 0/3, 0',
+    succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, borde, r-gre, e, n-4, 0, 0/3, 0',
+    warni, n, g: 'bg-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, borde, r-oran, g, e-4, 0, 0/3, 0'
+  }; const, featuredConten, t = [
     {
-      title: "AI Safety Budgets 2026",
-      description: "Guardrails wired to KPIs, approvals, rollbacks",
-      icon: Shield,
-      link: "/blog/ai-safety-budgets-2026",
-      category: "AI Strategy"
+      tit, l, e: "AI, Safety, Budgets 20, 2, 6",
+      descripti, o, n: "Guardrails, wired, to K, P, I, s, approva, l, s, rollbac, k, s",
+      ic, o, n: Shi, e, l, d,
+      li, n, k: "/bl, o, g/ai-safe, t, y-budge, t, s-2, 0, 2, 6",
+      catego, r, y: "AI, Strate, g, y"
     },
     {
-      title: "Edge Privacy for ML 2026",
-      description: "On‑device filters and scoped identifiers",
-      icon: Cloud,
-      link: "/blog/edge-privacy-ml-2026",
-      category: "Edge"
+      tit, l, e: "Edge, Privacy, for ML, 20, 2, 6",
+      descripti, o, n: "On‑device, filters, and scoped, identifie, r, s",
+      ic, o, n: Cl, o, u, d,
+      li, n, k: "/bl, o, g/ed, g, e-priva, c, y-ml-2, 0, 2, 6",
+      catego, r, y: "E, d, g, e"
     },
     {
-      title: "Agent Evals in Prod 2026",
-      description: "Online checks that predict outcomes",
-      icon: TrendingUp,
-      link: "/blog/agent-evals-in-prod-2026",
-      category: "GenAI"
+      tit, l, e: "Agent, Evals, in Prod, 20, 2, 6",
+      descripti, o, n: "Online, checks, that predict, outcom, e, s",
+      ic, o, n: Trendin, g, U, p,
+      li, n, k: "/bl, o, g/age, n, t-eva, l, s-in-pr, o, d-2, 0, 2, 6",
+      catego, r, y: "Ge, n, A, I"
     },
     {
-      title: "Cost‑Aware Inference 2026",
-      description: "Warm pools and quality tiers under SLAs",
-      icon: Zap,
-      link: "/blog/ai-cost-aware-inference-2026",
-      category: "GenAI"
+      tit, l, e: "Co, s, t‑Aware, Inference, 202, 6",
+      descripti, o, n: "Warm, pools, and quality, tiers, under S, L, A, s",
+      ic, o, n: Za, p,
+      li, n, k: "/bl, o, g/ai-co, s, t-awa, r, e-inferen, c, e-2, 0, 2, 6",
+      catego, r, y: "Ge, n, A, I"
     },
     {
-      title: "Platform Golden Paths 2026",
-      description: "Paved roads that move KPIs",
-      icon: TrendingUp,
-      link: "/blog/platform-golden-paths-kpis-2026",
-      category: "Platform"
+      tit, l, e: "Platform, Golden, Paths 2, 0, 2, 6",
+      descripti, o, n: "Paved, roads, that move, KP, I, s",
+      ic, o, n: Trendin, g, U, p,
+      li, n, k: "/bl, o, g/platfo, r, m-gold, e, n-pat, h, s-kp, i, s-2, 0, 2, 6",
+      catego, r, y: "Platf, o, r, m"
     },
     {
-      title: "Quality‑Tiered GenAI Routing 2026",
-      description: "Control cost with tiers, caches, and eval signals",
-      icon: Zap,
-      link: "/blog/genai-routing-under-budgets-2026",
-      category: "GenAI"
+      tit, l, e: "Quali, t, y‑Tiered, GenAI, Routing 2, 0, 2, 6",
+      descripti, o, n: "Control, cost, with ti, e, r, s, cach, e, s, and, eval, signals",
+      ic, o, n: Za, p,
+      li, n, k: "/bl, o, g/gen, a, i-routi, n, g-und, e, r-budge, t, s-2, 0, 2, 6",
+      catego, r, y: "Ge, n, A, I"
     },
     {
-      title: "On‑Device Agents 2026",
-      description: "Offline‑capable tools, private caches, safe fallbacks",
-      icon: Cloud,
-      link: "/blog/on-device-agents-offline-tools-2026",
-      category: "Edge"
+      tit, l, e: "On‑Device, Agents, 202, 6",
+      descripti, o, n: "Offli, n, e‑capable, too, l, s, private, cache, s, safe, fallback, s",
+      ic, o, n: Cl, o, u, d,
+      li, n, k: "/bl, o, g/on-devi, c, e-agen, t, s-offli, n, e-too, l, s-2, 0, 2, 6",
+      catego, r, y: "E, d, g, e"
     },
     {
-      title: "Zero‑Trust Observability 2026",
-      description: "Signed traces and least‑privilege telemetry",
-      icon: Shield,
-      link: "/blog/zero-trust-observability-2026",
-      category: "Security"
+      tit, l, e: "Ze, r, o‑Trust, Observability, 202, 6",
+      descripti, o, n: "Signed, traces, and lea, s, t‑privilege, telemet, r, y",
+      ic, o, n: Shi, e, l, d,
+      li, n, k: "/bl, o, g/ze, r, o-tru, s, t-observabili, t, y-2, 0, 2, 6",
+      catego, r, y: "Secur, i, t, y"
     },
     {
-      title: "AI Incident Response Playbooks",
-      description: "Contain incidents in under 60 seconds",
-      icon: TrendingUp,
-      link: "/blog/ai-incident-response-playbooks-2025",
-      category: "Security"
+      tit, l, e: "AI, Incident, Response Playbo, o, k, s",
+      descripti, o, n: "Contain, incidents, in under, 60, second, s",
+      ic, o, n: Trendin, g, U, p,
+      li, n, k: "/bl, o, g/ai-incide, n, t-respon, s, e-playboo, k, s-2, 0, 2, 5",
+      catego, r, y: "Secur, i, t, y"
     },
     {
-      title: "Agentic Workflows Blueprint 2026",
-      description: "Compose multi‑tool agents with safe tools and policy tests in CI",
-      icon: TrendingUp,
-      link: "/blog/agentic-workflows-blueprint-2026",
-      category: "GenAI"
+      tit, l, e: "Agentic, Workflows, Blueprint 2, 0, 2, 6",
+      descripti, o, n: "Compose, mult, i‑tool, agents, with safe, tools, and policy, tests, in C, I",
+      ic, o, n: Trendin, g, U, p,
+      li, n, k: "/bl, o, g/agent, i, c-workflo, w, s-bluepri, n, t-2, 0, 2, 6",
+      catego, r, y: "Ge, n, A, I"
     },
     {
-      title: "Edge LLM Caching",
-      description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
-      icon: Zap,
-      link: "/blog/edge-llm-caching-blueprint-2025",
-      category: "Architecture"
+      tit, l, e: "Edge, LLM, Cachin, g",
+      descripti, o, n: "S, u, b‑100ms, prompts, via tiere, d, K, V, signed, config, s, freshness, window, s",
+      ic, o, n: Za, p,
+      li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-2, 0, 2, 5",
+      catego, r, y: "Architect, u, r, e"
     },
     {
-      title: "AI Operational Scorecards 2026",
-      description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
-      icon: Brain,
-      link: "/blog/ai-operational-scorecards-2026",
-      category: "AI Strategy"
+      tit, l, e: "AI, Operational, Scorecards 2, 0, 2, 6",
+      descripti, o, n: "Guardrails, wired, to KPIs, with, PR che, c, k, s, canari, e, s, and, SLO, s",
+      ic, o, n: Br, a, i, n,
+      li, n, k: "/bl, o, g/ai-operation, a, l-scorecar, d, s-2, 0, 2, 6",
+      catego, r, y: "AI, Strate, g, y"
     }
-  ];
-  if (isDismissed) return null;
-  return (
-    <div className={`${variants[variant]} ${className} relative overflow-hidden`}>
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping"></div>
-      </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-6">
-        <div className="flex items-center justify-between">
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-3">
-              <Sparkles className="w-6 h-6 animate-pulse" />
-              <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
-              <Star className="w-5 h-5 animate-spin" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">
-              Just Published: New Guides for 2026
+  ]; if (isDismiss, e, d) return, nul, l;
+  retu, r, n (
+    <div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
+      {/* Animated, background, elements */}
+      <div, classNam, e="absolute, inse, t-0, opacit, y-10">
+        <div, classNam, e="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" />
+        <div, classNam, e="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-1, 6, h-16, b, g-white, rounde, d-full, animat, e-pi, n, g" />
+      </d, i, v>
+      <div, classNam, e="relativ, e, z-10, ma, x-w-7xl, m, x-auto, p, x-6, p, y-6">
+        <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
+          <div, classNam, e="fl, e, x-1">
+            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
+              <Sparkles, classNam, e="w-6 h-6, animat, e-pul, s, e" />
+              <span, classNam, e="te, x, t-lg, fon, t-bo, l, d">🚀 NEW, CONTENT, ALERT</sp, a, n>
+              <Star, classNam, e="w-5 h-5, animat, e-sp, i, n" />
+            </d, i, v>
+            <h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-2">
+              Just, Publishe, d: New, Guides, for 20, 2, 6
             </h3>
-            <p className="text-white/90 mb-4 text-sm">
-              Discover fresh insights on on‑device agents, GenAI cost controls, secure tool marketplaces,
-              and privacy‑first observability.
+            <p, classNam, e="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">
+              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
+              and, privac, y‑first, observabilit, y.
             </p>
-            {/* Featured content grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-              {featuredContent.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <Link
-                    key={index}
-                    to={item.link}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+            {/* Featured, content, grid */}
+            <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
+              { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
+                const, Ico, n = it, e, m.ic, o, n; retu, r, n (
+                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
                   >
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon className="w-4 h-4 text-white/80" />
-                      <span className="text-xs font-medium text-white/80">{item.category}</span>
-                    </div>
-                    <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
-                      {item.title}
+                    <div, classNam, e="flex, item, s-center, ga, p-2, m, b-2">
+                      <Icon, classNam, e="w-4 h-4, tex, t-whi, t, e/80" />
+                      <span, classNam, e="te, x, t-xs, fon, t-medium, tex, t-whi, t, e/80">{it, e, m.cate, g, o, r, y}</sp, a, n>
+                    </d, i, v>
+                    <h4, classNam, e = "fo, n, t-semibold, tex, t-white, tex, t-sm, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">
+                      {it, e, m.t, i, t, l, e}
                     </h4>
-                    <p className="text-xs text-white/70 mt-1 line-clamp-2">
-                      {item.description}
+                    <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
+                      {it, e, m.descripti, o, n}
                     </p>
-                  </Link>
+                  </L, i, n, k>
                 );
               })}
-            </div>
-            {/* Action buttons */}
-            <div className="flex flex-wrap gap-3">
-              <Link
-                to="/blog"
-                className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+            </d, i, v>
+            {/* Action, button, s */}
+            <div, classNam, e = "flex, fle, x-wrap, ga, p-3">
+              <Link, t, o="/bl, o, g"
+                classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
-                <BookOpen className="w-4 h-4" />
-                Read All Articles
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/case-studies"
-                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+                <BookOpen, classNam, e="w-4 h-4" />
+                Read, All, Articles
+                <ArrowRight, classNam, e="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+              </Li, n, k>
+              <Link, t, o="/ca, s, e-studi, e, s"
+                classNa, m, e="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
-                <TrendingUp className="w-4 h-4" />
-                View Case Studies
-              </Link>
-              <Link
-                to="/services"
-                className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+                <TrendingUp, classNam, e="w-4 h-4" />
+                View, Case, Studies
+              </Li, n, k>
+              <Link, t, o="/servic, e, s"
+                classNa, m, e="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
-                <Shield className="w-4 h-4" />
-                Explore Services
-              </Link>
-            </div>
-            {/* Stats */}
-            <div className="flex items-center gap-6 mt-4 text-sm text-white/80">
-              <div className="flex items-center gap-1">
-                <span>New Articles</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span>New Case Studies</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="font-semibold">50+</span>
-                <span>Expert Insights</span>
-              </div>
-            </div>
-          </div>
-          {/* Dismiss button */}
-          <button
-            onClick={() => setIsDismissed(true)}
-            className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
+                <Shield, classNam, e="w-4 h-4" />
+                Explore, Service, s
+              </Li, n, k>
+            </d, i, v>
+            {/* S, t, a, t, s */}
+            <div, classNam, e = "flex, item, s-center, ga, p-6, m, t-4, tex, t-sm, tex, t-whi, t, e/80">
+              <div, classNam, e="flex, item, s-center, ga, p-1">
+                <sp, a, n>New, Article, s</sp, a, n>
+              </d, i, v>
+              <div, classNam, e="flex, item, s-center, ga, p-1">
+                <sp, a, n>New, Case, Studies</sp, a, n>
+              </d, i, v>
+              <div, classNam, e="flex, item, s-center, ga, p-1">
+                <span, classNam, e="fo, n, t-semibo, l, d">50+</sp, a, n>
+                <sp, a, n>Expert, Insight, s</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+          {/* Dismiss, butto, n */}
+          <button, onCli, c, k = {  () = > setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
           >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-      </div>
-    </div>
+            <X, classNam, e="w-5 h-5" />
+          </butt, o, n>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-export default React.memo(NewContentPromoBanner);
+export, default, React.me, m, o(NewContentPromoBann, e, r);

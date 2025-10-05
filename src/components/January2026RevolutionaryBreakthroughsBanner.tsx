@@ -1,180 +1,167 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
-  const breakthroughs = [
+import, React, from 'rea, c, t';
+impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
+const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
+  const, breakthrough, s = [
     {
-      icon: Brain,
-      title: "Synthetic Consciousness AI",
-      description: "Revolutionary AI achieving genuine consciousness and emotional intelligence",
-      stats: "$500B Enterprise Value",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-500/10"
+      ic, o, n: B, r, a, i, n,
+      tit, l, e: "Synthetic, Consciousness, A, I",
+      descripti, o, n: "Revolutionary, AI, achieving genuine, consciousness, and emotional, intelligen, c, e",
+      sta, t, s: "$500B, Enterprise, Valu, e",
+      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0",
+      bgCol, o, r: "bg-purp, l, e-5, 0, 0/1, 0"
     },
     {
-      icon: Zap,
-      title: "Quantum Edge Computing",
-      description: "Sub-millisecond processing with 200-250x speed improvements",
-      stats: "200x Faster",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "bg-blue-500/10"
+      ic, o, n: Za, p,
+      tit, l, e: "Quantum, Edge, Computin, g",
+      descripti, o, n: "S, u, b-millisecond, processing, with 2, 0, 0-250x, speed, improvement, s",
+      sta, t, s: "200x, Fast, e, r",
+      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0",
+      bgCol, o, r: "bg-bl, u, e-5, 0, 0/1, 0"
     },
     {
-      icon: Network,
-      title: "Autonomous Enterprise Mesh",
-      description: "Self-organizing AI networks achieving 99.7% operational efficiency",
-      stats: "99.7% Efficiency",
-      color: "from-green-500 to-emerald-500",
-      bgColor: "bg-green-500/10"
+      ic, o, n: Netw, o, r, k,
+      tit, l, e: "Autonomous, Enterprise, Mes, h",
+      descripti, o, n: "Se, l, f-organizing, AI, networks achieving, 9, 9.7% operational, efficien, c, y",
+      sta, t, s: "99.7% Efficie, n, c, y",
+      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0",
+      bgCol, o, r: "bg-gre, e, n-5, 0, 0/1, 0"
     },
     {
-      icon: Shield,
-      title: "Quantum-Safe Security",
-      description: "Unbreakable protection systems with 99.99% threat prevention",
-      stats: "$2.8B Protected",
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-orange-500/10"
+      ic, o, n: Shi, e, l, d,
+      tit, l, e: "Quant, u, m-Safe, Securi, t, y",
+      descripti, o, n: "Unbreakable, protection, systems with, 9, 9.99% threat, preventi, o, n",
+      sta, t, s: "$2.8B, Protect, e, d",
+      col, o, r: "fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0",
+      bgCol, o, r: "bg-oran, g, e-5, 0, 0/1, 0"
     }
-  ];
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 text-white"
+  ]; retu, r, n (
+    <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+      anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+      transiti, o, n = {{ durati, o, n: , 0., 8 }}
+      classNa, m, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, rounde, d-2x, l, p-8, tex, t-whi, t, e"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
-      </div>
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6"
+      {/* Background, Effect, s */}
+      <div, classNam, e="absolute, inse, t-0, opacit, y-20">
+        <div, classNam, e="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-whi, t, e/5, t, o-transpare, n, t" />
+      </d, i, v>
+      <div, classNam, e="relativ, e, z-10">
+        {/* Head, e, r */}
+        <div, classNam, e="te, x, t-center, m, b-12">
+          <moti, o, n.div, initia, l={{ sca, l, e: , 0., 9 }}
+            anima, t, e = {{ sc, a, l, e:  , 1 }}
+            transiti, o, n = {{ del, a, y: , 0., 2, durati, o, n: 0., 6 }}
+            classNa, m, e = "inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-6"
           >
-            <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
-            January 15, 2026 - Revolutionary Breakthroughs
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6"
+            <Sparkles, classNam, e="w-4 h-4, m, r-2, tex, t-yell, o, w-4, 0, 0" />
+            Januar, y, 1, 5, 20, 2, 6 - Revolutionary, Breakthrough, s
+          </moti, o, n.d, i, v>
+          <moti, o, n.h2, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+            anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+            transiti, o, n = {{ del, a, y: , 0., 3, durati, o, n: 0., 6 }}
+            classNa, m, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-white, vi, a-purp, l, e-200, t, o-bl, u, e-200, b, g-cl, i, p-text, tex, t-transparent, m, b-6"
           >
-            AI Revolution 2026
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            AI, Revolution, 2026
+          </moti, o, n.h2>
+          <moti, o, n.p, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
+            anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+            transiti, o, n = {{ del, a, y: , 0., 4, durati, o, n: 0., 6 }}
+            classNa, m, e = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"
           >
-            Witness the most profound technological breakthroughs in human history. 
-            From synthetic consciousness to quantum edge computing, these innovations 
-            are reshaping the future of enterprise AI and human-computer interaction.
-          </motion.p>
-        </div>
-        {/* Breakthroughs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {breakthroughs.map((breakthrough, index) => (
-            <motion.div
-              key={breakthrough.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-              className={`${breakthrough.bgColor} backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105`}
+            Witness, the, most profound, technological, breakthroughs in, human, history. 
+            From, synthetic, consciousness to, quantum, edge comput, i, n, g, these, innovations, are reshaping, the, future of, enterprise, AI and, huma, n-computer, interactio, n.
+          </moti, o, n.p>
+        </d, i, v>
+        {/* Breakthroughs, Gri, d */}
+        <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">
+          { breakthroug, h, s.m, a, p((breakthr, o, u, g, h, ind, e, x) = > (
+            <moti, o, n.div, ke, y = { breakthrou, g, h.ti, t, l, e  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
+              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+              transiti, o, n = {{ del, a, y: 0.5 + ind, e, x * , 0., 1, durati, o, n: 0., 6 }}
+              classNa, m, e = { `${breakthrou, g, h.bgCo, l, o, r }, backdr, o, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/20, transitio, n-all, duratio, n-300, group, hover:transform, hove, r:sca, l, e-10, 5`}
             >
-              <div className="flex items-start space-x-4">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>
-                  <breakthrough.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                    {breakthrough.title}
+              <div, classNam, e = "flex, item, s-start, spac, e-x-4" > <div, classNam, e={`p-3, rounde, d-xl, b, g-gradie, n, t-to-r ${breakthrou, g, h.col, o, r}`}>
+                  <breakthrou, g, h.icon, classNam, e="w-6 h-6, tex, t-whi, t, e" />
+                </d, i, v>
+                <div, classNam, e="fl, e, x-1">
+                  <h3, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">
+                    {breakthrou, g, h.t, i, t, l, e}
                   </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {breakthrough.description}
+                  <p, classNam, e = "te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">
+                    {breakthrou, g, h.descripti, o, n}
                   </p>
-                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full">
-                    <span className="text-sm font-semibold text-purple-300">
-                      {breakthrough.stats}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+                  <div, classNam, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-fu, l, l">
+                    <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0">
+                      {breakthrou, g, h.sta, t, s}
+                    </sp, a, n>
+                  </d, i, v>
+                </d, i, v>
+              </d, i, v>
+            </moti, o, n.di, v>
           ))}
-        </div>
-        {/* Key Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+        </d, i, v>
+        {/* Key, Stat, s */}
+        <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+          anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+          transiti, o, n = {{ del, a, y: , 0., 9, durati, o, n: 0., 6 }}
+          classNa, m, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12"
         >
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+          <div, classNam, e="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/10">
+            <div, classNam, e="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
               99.7%
-            </div>
-            <div className="text-sm text-gray-300">Operational Efficiency</div>
-          </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-              200x
-            </div>
-            <div className="text-sm text-gray-300">Speed Improvement</div>
-          </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
-              $500B
-            </div>
-            <div className="text-sm text-gray-300">Enterprise Value</div>
-          </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">
+            </d, i, v>
+            <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Operational, Efficienc, y</d, i, v>
+          </d, i, v>
+          <div, classNam, e="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/10">
+            <div, classNam, e="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
+              20, 0, x
+            </d, i, v>
+            <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Speed, Improvemen, t</d, i, v>
+          </d, i, v>
+          <div, classNam, e="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/10">
+            <div, classNam, e="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
+              $50, 0, B
+            </d, i, v>
+            <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Enterprise, Valu, e</d, i, v>
+          </d, i, v>
+          <div, classNam, e="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/10">
+            <div, classNam, e="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-oran, g, e-400, t, o-r, e, d-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
               95%
-            </div>
-            <div className="text-sm text-gray-300">Automation Rate</div>
-          </div>
-        </motion.div>
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.6 }}
-          className="text-center"
+            </d, i, v>
+            <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Automation, Rat, e</d, i, v>
+          </d, i, v>
+        </moti, o, n.d, i, v>
+        {/* C, T, A */}
+        <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+          anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+          transiti, o, n = {{ del, a, y: , 1., 0, durati, o, n: 0., 6 }}
+          classNa, m, e = "te, x, t-cent, e, r"
         >
-          <div className="space-y-4">
-            <p className="text-lg text-gray-300 mb-6">
-              Ready to transform your enterprise with revolutionary AI?
+          <div, classNam, e="spa, c, e-y-4">
+            <p, classNam, e="te, x, t-lg, tex, t-gr, a, y-300, m, b-6">
+              Ready, to, transform your, enterprise, with revolutionary, A, I?
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/blog"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            <div, classNam, e="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+              <a, hre, f="/bl, o, g"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl"
               >
-                Explore All Content
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Explore, All, Content
+                <ArrowRight, classNam, e="ml-2 w-5 h-5" />
               </a>
-              <a
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
+              <a, hre, f="/servic, e, s"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, hove, r:bord, e, r-whi, t, e/30, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0"
               >
-                View Services
+                View, Service, s
               </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-      {/* Floating Particles */}
-      <div className="absolute top-20 left-20 w-4 h-4 bg-purple-400/30 rounded-full animate-pulse"></div>
-      <div className="absolute top-40 right-32 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-32 w-3 h-3 bg-green-400/30 rounded-full animate-pulse delay-2000"></div>
-      <div className="absolute bottom-40 right-20 w-5 h-5 bg-orange-400/30 rounded-full animate-pulse delay-500"></div>
-    </motion.div>
+            </d, i, v>
+          </d, i, v>
+        </moti, o, n.d, i, v>
+      </d, i, v>
+      {/* Floating, Partic, l, e, s */}
+      <div, classNam, e = "absolute, to, p-20, lef, t-2, 0, w-4 h-4, b, g-purp, l, e-4, 0, 0/30, rounde, d-full, animat, e-pul, s, e" />
+      <div, classNam, e="absolute, to, p-40, righ, t-3, 2, w-6 h-6, b, g-bl, u, e-4, 0, 0/30, rounde, d-full, animat, e-pulse, dela, y-10, 0, 0" />
+      <div, classNam, e="absolute, botto, m-20, lef, t-3, 2, w-3 h-3, b, g-gre, e, n-4, 0, 0/30, rounde, d-full, animat, e-pulse, dela, y-20, 0, 0" />
+      <div, classNam, e="absolute, botto, m-40, righ, t-2, 0, w-5 h-5, b, g-oran, g, e-4, 0, 0/30, rounde, d-full, animat, e-pulse, dela, y-5, 0, 0" />
+    </moti, o, n.di, v>
   );
 };
-export default January2026RevolutionaryBreakthroughsBanner;
+export, default, January2026RevolutionaryBreakthroughsBanner;
