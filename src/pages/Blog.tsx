@@ -15,13 +15,8 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
 
       {/* <Footer /> */}
-=======
-      
-      <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-ca9d
     </div>
   );
 };
