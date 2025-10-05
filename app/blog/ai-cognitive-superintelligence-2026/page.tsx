@@ -7,6 +7,8 @@ import Brain from 'lucide-react/dist/esm/icons/brain';
 import Zap from 'lucide-react/dist/esm/icons/zap';
 import Target from 'lucide-react/dist/esm/icons/target';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';>>>>>>> origin/merge-pr-25212
+import { Brain, Target, TrendingUp, Clock, Zap } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Cognitive Superintelligence 2026: The Next Frontier of Human-AI Collaboration',

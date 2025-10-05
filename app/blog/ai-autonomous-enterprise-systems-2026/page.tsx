@@ -7,6 +7,8 @@ import User from 'lucide-react/dist/esm/icons/user';
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import Share2 from 'lucide-react/dist/esm/icons/share-2';
 import Bookmark from 'lucide-react/dist/esm/icons/bookmark';>>>>>>> origin/merge-pr-25212
+import { ArrowLeft, Clock, Calendar, User, Share2, Bookmark } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Autonomous Enterprise Systems 2026: Self-Improving Intelligence Revolution | Zion Tech Group',

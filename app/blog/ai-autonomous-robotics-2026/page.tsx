@@ -7,6 +7,8 @@ import Bot from 'lucide-react/dist/esm/icons/bot';
 import Zap from 'lucide-react/dist/esm/icons/zap';
 import Target from 'lucide-react/dist/esm/icons/target';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';>>>>>>> origin/merge-pr-25212
+import { Target, TrendingUp, Clock, Zap, Bot } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',

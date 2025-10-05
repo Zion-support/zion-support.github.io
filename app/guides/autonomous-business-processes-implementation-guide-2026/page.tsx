@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
 import { Metadata } from 'next';
+import { ArrowLeft, Target, TrendingUp, Clock, Zap, CheckCircle, BookOpen } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'Complete Guide to Implementing Autonomous Business Processes in 2026 | Zion Tech Group',

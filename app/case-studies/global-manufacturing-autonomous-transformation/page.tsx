@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
 import { Metadata } from 'next';
+import { ArrowLeft, Target, Users, Award, TrendingUp, Clock, Zap, CheckCircle, User, BarChart3 } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'Global Manufacturing Leader Achieves 85% Process Automation with AI | Zion Tech Group',

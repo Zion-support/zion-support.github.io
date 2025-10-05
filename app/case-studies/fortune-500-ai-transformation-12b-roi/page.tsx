@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 
 import Link from 'next/link';
+import { ArrowRight, Target, Award, TrendingUp, Clock, Zap, CheckCircle, Calendar, User } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI Transformation: $12.4B ROI Case Study | Zion Tech Group',
