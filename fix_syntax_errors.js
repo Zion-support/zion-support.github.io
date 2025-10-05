@@ -29,12 +29,10 @@ function fixMergeConflicts(content) {
   let keepLines = true;
   
   for (const line of lines) {
-    if (line.includes('<<<<<<< HEAD')) {
-      inConflict = true;
+    if (line.includes('      inConflict = true;
       keepLines = true;
       continue;
-    } else if (line.includes('=======')) {
-      keepLines = false;
+    } else if (line.includes('      keepLines = false;
       continue;
     } else if (line.includes('>>>>>>>')) {
       inConflict = false;

@@ -11,8 +11,16 @@
     "Global job discovery"
   ],
   "testimonials": [
-    { "author": "Priya S.", "role": "Hiring Manager", "quote": "Filled a critical role in 48 hours using Zion mobile." },
-    { "author": "Carlos M.", "role": "AI Engineer", "quote": "Found remote gigs fast. The resume builder is a win." }
+    {
+      "author": "Priya S.",
+      "role": "Hiring Manager",
+      "quote": "Filled a critical role in 48 hours using Zion mobile."
+    },
+    {
+      "author": "Carlos M.",
+      "role": "AI Engineer",
+      "quote": "Found remote gigs fast. The resume builder is a win."
+    }
   ],
   "screenshots": [
     "/screenshots/phone-1.png",
@@ -33,7 +41,11 @@
     "keywords": ["AI freelancer app", "hire tech", "find IT jobs"]
   },
   "changelog": [
-    { "version": "1.0.0", "dateISO": "2025-08-08", "notes": "Initial public launch." }
+    {
+      "version": "1.0.0",
+      "dateISO": "2025-08-08",
+      "notes": "Initial public launch."
+    }
   ],
   "updatedAtISO": "2025-08-08T17:05:31.161Z"
 }

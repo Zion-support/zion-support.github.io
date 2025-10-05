@@ -1,4 +1,1 @@
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
-// Assets to cache on install
+const CACHE_NAME = 'zion-tech-group-v1'' const STATIC_CACHE = 'static-v1'' const DYNAMIC_CACHE = 'dynamic-v1' // Assets to cache on install '

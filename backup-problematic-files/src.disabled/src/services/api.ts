@@ -1,7 +1,1 @@
-    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"}
-  async get() {;
-    try {;
-      const response = await fetch("${this.baseUrl}/api")}
-      return await response.json()}
-    } catch (error) {;
-      console.error("Error fetching "data": ", error)}
+this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"} async get() {; try {} const response = await fetch("${this.baseUrl}/api")} return await response.json()} } catch (error) {; console.error("Error fetching "data": "} error)}

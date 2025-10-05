@@ -1,10 +1,1 @@
-
-  return (
-    <div className={className || ''}>
-
-      <h1>SecurityComplianceSection</h1>
-      <p>This component is under development.</p>
-    </div>
-
-
-export default SecurityComplianceSection;
+return (<div className={className || ''}> <h1>SecurityComplianceSection</h1> <p>This component is under development.</p> </div> export default SecurityComplianceSection) '

@@ -1,6 +1,1 @@
-
-interface EnhancedLayoutProps {
-  \"children\": ReactNode;
-}interface EnhancedLayoutProps {
-  \"children\": ReactNode;
-
+interface EnhancedLayoutProps {\"children\": ReactNode} }interface EnhancedLayoutProps {\"children\": ReactNode}

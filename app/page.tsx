@@ -1,78 +1,143 @@
-import React from 'react';
+import { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 
+// Lazy load heavy components
+const UnifiedContentPromotion = lazy(
+  () => import('./components/UnifiedContentPromotion'),
+);
+const InteractiveAIROICalculator = lazy(
+  () => import('./components/InteractiveAIROICalculator'),
+);
+const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(
+  () => import('./components/InteractiveContentShowcase2026'),
+);
 
-const HomePage = React.memo(function HomePage() {
+// Loading component for Suspense fallback
+const LoadingFallback = ({ height = 'h-32' }: { height?: string }) => (
+  <div className={`animate-pulse bg-gray-200 ${height} rounded`}></div>
+);
+
+export default function HomePage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    description:
+      'Leading provider of AI-powered enterprise solutions and digital transformation services',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+      addressLocality: 'Wilmington',
+      addressRegion: 'DE',
+    },
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
+    ],
+    offers: {
+      '@type': 'Offer',
+      description: 'AI Enterprise Transformation Services',
+      price: '300% ROI Guaranteed',
+      priceCurrency: 'USD',
+    },
+  };
+
   return (
-    <div>
-      
+    <div className='min-h-screen bg-white'>
+      {/* Structured Data */}
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Hero Section */}
-      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-white to-teal-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
-              {' '}AI-Powered Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-            and enterprise IT solutions that drive growth, efficiency, and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              to="/services"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-            >
-              Explore Our Services
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600">500+</div>
-              <div className="text-gray-600">Projects Delivered</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">99.9%</div>
-              <div className="text-gray-600">Uptime Guarantee</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">24/7</div>
-              <div className="text-gray-600">Expert Support</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">$2M+</div>
-              <div className="text-gray-600">Cost Savings</div>
+      <section className='relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <h1 className='text-5xl md:text-6xl font-bold mb-6 leading-tight'>
+              AI Enterprise Transformation
+              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>
+                300% ROI Guaranteed
+              </span>
+            </h1>
+            <p className='text-xl md:text-2xl mb-8 text-gray-200'>
+              Transform your enterprise with AI-powered solutions. Achieve 300%
+              ROI, 70% cost reduction, and 90% efficiency gains.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                to='/contact'
+                className='bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to='/services'
+                className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300'
+              >
+                View Services
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured New Content Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-bold mb-4">
-              <span className="text-2xl mr-2">✨</span>
-              JUST PUBLISHED — October 2025
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Latest AI Transformation Success Stories
+      {/* Main Content */}
+      <main className='container mx-auto px-4 py-16'>
+        {/* Unified Content Promotion */}
+        <Suspense fallback={<LoadingFallback height='h-32' />}>
+          <UnifiedContentPromotion />
+        </Suspense>
+
+        {/* Interactive AI ROI Calculator */}
+        <section className='my-16'>
+          <Suspense fallback={<LoadingFallback height='h-64' />}>
+            <InteractiveAIROICalculator />
+          </Suspense>
+        </section>
+
+        {/* Content Showcase */}
+        <section className='my-16'>
+          <Suspense fallback={<LoadingFallback height='h-48' />}>
+            <ContentShowcase />
+          </Suspense>
+        </section>
+
+        {/* Interactive Content Showcase 2026 */}
+        <section className='my-16'>
+          <Suspense fallback={<LoadingFallback height='h-48' />}>
+            <InteractiveContentShowcase2026 />
+          </Suspense>
+        </section>
+
+        {/* CTA Section */}
+        <section className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 rounded-2xl text-center'>
+          <div className='max-w-3xl mx-auto px-4'>
+            <h2 className='text-4xl font-bold mb-6'>
+              Ready to Transform Your Enterprise?
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Real-world implementations delivering millions in savings and unprecedented accuracy
+            <p className='text-xl mb-8'>
+              Join hundreds of companies already achieving 300% ROI with our AI
+              solutions.
             </p>
+            <Link
+              to='/contact'
+              className='bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-block'
+            >
+              Start Your Transformation
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   );
-});
-
-export default HomePage;
+}

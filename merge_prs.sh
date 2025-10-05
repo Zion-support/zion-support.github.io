@@ -1,47 +1,51 @@
 #!/bin/bash
 
-# Script to merge open PRs into main branch
+# Script to merge all open PRs into main branch
 set -e
 
 echo "Starting PR merge process..."
 
-# GitHub API configuration
-GITHUB_TOKEN="ghs_tukMr3CyP2oHSXPRFscExJmUauEJUi4HAU1a"
-REPO="Zion-Holdings/zion.app"
-BASE_URL="https://api.github.com/repos/$REPO"
+# List of PR branches to merge (from the JSON data)
+PR_BRANCHES=(
+    "origin/cursor/build-and-deploy-with-vite-and-netlify-8b37"
+    "origin/cursor/fix-errors-and-merge-to-main-fcbd"
+    "origin/cursor/fix-errors-and-merge-to-main-e6e1"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e"
+)
 
-# Function to merge a PR
-merge_pr() {
-    local pr_number=$1
-    echo "Merging PR #$pr_number..."
+# Ensure we're on main branch
+git checkout main
+
+# Pull latest changes
+git pull origin main
+
+echo "Merging PRs..."
+
+for branch in "${PR_BRANCHES[@]}"; do
+    echo "Attempting to merge $branch..."
     
-    # Check if PR can be merged
-    response=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-        "$BASE_URL/pulls/$pr_number")
-    
-    mergeable=$(echo "$response" | grep '"mergeable"' | cut -d':' -f2 | tr -d ' ,')
-    draft=$(echo "$response" | grep '"draft"' | cut -d':' -f2 | tr -d ' ,')
-    
-    echo "PR #$pr_number - mergeable: $mergeable, draft: $draft"
-    
-    if [ "$mergeable" = "true" ] && [ "$draft" = "false" ]; then
-        # Merge the PR
-        merge_response=$(curl -s -X PUT \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d '{"merge_method": "squash"}' \
-            "$BASE_URL/pulls/$pr_number/merge")
-        
-        echo "Merge response for PR #$pr_number: $merge_response"
+    # Check if merge would have conflicts
+    if git merge --no-commit --no-ff "$branch" 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        git commit -m "Merge $branch into main"
     else
-        echo "PR #$pr_number cannot be merged or is still a draft"
+        echo "❌ Merge conflict detected in $branch"
+        git merge --abort 2>/dev/null || true
+        
+        # Try to resolve conflicts automatically
+        echo "Attempting to resolve conflicts for $branch..."
+        if git merge "$branch" 2>/dev/null; then
+            echo "✅ Conflicts resolved for $branch"
+        else
+            echo "❌ Could not resolve conflicts for $branch automatically"
+            # Continue with next branch
+        fi
     fi
-}
+done
 
-# Merge PR #25061
-merge_pr 25061
+echo "All PRs processed. Pushing changes..."
+git push origin main
 
-# Merge PR #25062  
-merge_pr 25062
-
-echo "PR merge process completed"
+echo "✅ PR merge process completed!"

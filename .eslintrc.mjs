@@ -25,6 +25,10 @@ export default {
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': ['warn', { 
+      ignoreRestArgs: true,
+      fixToUnknown: false 
+    }],
     'no-unused-vars': 'off',
     'no-console': 'warn',
     'no-undef': 'off' },

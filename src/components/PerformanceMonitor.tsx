@@ -1,108 +1,104 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
-  }
-}
+import { Activity } from 'lucide-react';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  inp: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  inp?: number;
 }
 
-interface PerformanceMonitorProps {
-  reportToAnalytics?: boolean;
-  logToConsole?: boolean;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  reportToAnalytics = true,
-  logToConsole = false
-}) => {
+const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    inp: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null
+    cls: undefined,
+    inp: undefined,
+    fcp: undefined,
+    lcp: undefined,
+    ttfb: undefined,
   });
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    const sendToAnalytics = (metric: { name: string; id: string; value: number }) => {
-      if (logToConsole) {
-        console.log('Performance Metric:', metric);
-      }
+    // Dynamically import web-vitals to avoid build issues
+    import('web-vitals')
+      .then(webVitals => {
+        const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
 
-      if (reportToAnalytics && typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
+        // Measure Core Web Vitals
+        onCLS((metric: { value: number }) => {
+          setMetrics((prev: PerformanceMetrics) => ({
+            ...prev,
+            cls: metric.value,
+          }));
         });
-      }
-    };
 
-    // Measure Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics);
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
+        onFCP((metric: { value: number }) => {
+          setMetrics((prev: PerformanceMetrics) => ({
+            ...prev,
+            fcp: metric.value,
+          }));
+        });
 
-    // Store metrics in state for debugging
-    onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
-    onINP((metric) => setMetrics(prev => ({ ...prev, inp: metric.value })));
-    onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
-    onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
-    onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+        onLCP((metric: { value: number }) => {
+          setMetrics((prev: PerformanceMetrics) => ({
+            ...prev,
+            lcp: metric.value,
+          }));
+        });
 
-    // Monitor resource loading performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
-            const domContentLoaded = navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart;
-            
-            if (logToConsole) {
-              console.log('Navigation Performance:', {
-                loadTime,
-                domContentLoaded,
-                totalTime: navEntry.loadEventEnd - navEntry.fetchStart
-              });
-            }
-          }
+        onTTFB((metric: { value: number }) => {
+          setMetrics((prev: PerformanceMetrics) => ({
+            ...prev,
+            ttfb: metric.value,
+          }));
+        });
+
+        // Try to use onINP if available (for newer versions)
+        if (webVitals.onINP) {
+          webVitals.onINP((metric: { value: number }) => {
+            setMetrics((prev: PerformanceMetrics) => ({
+              ...prev,
+              inp: metric.value,
+            }));
+          });
         }
+      })
+      .catch(error => {
+        console.warn('Failed to load web-vitals:', error);
       });
+  }, []);
 
-      observer.observe({ entryTypes: ['navigation'] });
-
-      return () => observer.disconnect();
-    }
-  }, [reportToAnalytics, logToConsole]);
-
-  // Development mode: show performance metrics
-  if (process.env.NODE_ENV === 'development' && logToConsole) {
+  if (!isVisible) {
     return (
-      <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs font-mono z-50">
-        <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
-        <div>INP: {metrics.inp?.toFixed(1) || 'N/A'}ms</div>
-        <div>FCP: {metrics.fcp?.toFixed(1) || 'N/A'}ms</div>
-        <div>LCP: {metrics.lcp?.toFixed(1) || 'N/A'}ms</div>
-        <div>TTFB: {metrics.ttfb?.toFixed(1) || 'N/A'}ms</div>
-      </div>
+      <button
+        onClick={() => setIsVisible(true)}
+        className='fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50'
+        title='Open Performance Monitor'
+      >
+        <Activity className='h-5 w-5' />
+      </button>
     );
   }
 
-  return null;
+  return (
+    <div className='fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50'>
+      <div className='font-bold mb-2'>Performance Metrics</div>
+      <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
+      <div>INP: {metrics.inp?.toFixed(2) || 'N/A'}ms</div>
+      <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
+      <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
+      <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
+      <button
+        onClick={() => setIsVisible(false)}
+        className='mt-2 text-xs text-gray-400 hover:text-white'
+      >
+        Close
+      </button>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

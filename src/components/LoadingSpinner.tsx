@@ -1,73 +1,45 @@
 import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'blue' | 'white' | 'gray' | 'green' | 'purple';
+  size?: 'small' | 'medium' | 'large';
+  color?: 'blue' | 'white' | 'gray';
   text?: string;
-  className?: string;
   fullScreen?: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'blue',
-  text,
-  className = '',
-  fullScreen = false
+  size = 'medium',
+  text = 'Loading...',
 }) => {
   const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16'
+    small: 'w-8 h-8',
+    medium: 'w-12 h-12',
+    large: 'w-16 h-16',
   };
 
-  const colorClasses = {
-    blue: 'border-blue-600',
-    white: 'border-white',
-    gray: 'border-gray-600',
-    green: 'border-green-600',
-    purple: 'border-purple-600'
-  };
-
-  const textColorClasses = {
-    blue: 'text-blue-600',
-    white: 'text-white',
-    gray: 'text-gray-600',
-    green: 'text-green-600',
-    purple: 'text-purple-600'
-  };
-
-  const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div
-        className={`animate-spin rounded-full border-2 border-gray-200 ${sizeClasses[size]} ${colorClasses[color]}`}
-        style={{
-          borderTopColor: 'transparent',
-          borderRightColor: 'transparent'
-        }}
-        role="status"
-        aria-label="Loading"
-      >
-        <span className="sr-only">Loading...</span>
+  return (
+    <div className='flex flex-col items-center justify-center min-h-[200px] px-4'>
+      <div className={`${sizeClasses[size]} animate-spin`}>
+        <svg className='w-full h-full' viewBox='0 0 24 24'>
+          <circle
+            className='opacity-25'
+            cx='12'
+            cy='12'
+            r='10'
+            stroke='currentColor'
+            strokeWidth='4'
+            fill='none'
+          />
+          <path
+            className='opacity-75'
+            fill='currentColor'
+            d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 2.13 5.824 3 7.938l3-2.647z'
+          />
+        </svg>
       </div>
-      {text && (
-        <p className={`mt-2 text-sm ${textColorClasses[color]}`}>
-          {text}
-        </p>
-      )}
+      {text && <p className='mt-4 text-gray-600 text-sm font-medium'>{text}</p>}
     </div>
   );
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
-        {spinner}
-      </div>
-    );
-  }
-
-  return spinner;
 };
 
 export default LoadingSpinner;

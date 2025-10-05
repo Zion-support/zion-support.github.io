@@ -1,10 +1,10 @@
 // eslint.config.js
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
+import js from '@eslint/js';
+import globals from 'globals';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   // Global ignores
@@ -56,9 +56,6 @@ export default [
       '**/data.disabled/**',
       '**/automation_backup/**',
       '**/broken_files_backup/**',
-      '**/corrupted-files-backup/**',
-      '**/corrupted_backup/**',
-      '**/corrupted_files_backup/**',
       '**/vite.config-backup.*',
       '**/test-simple.*',
       '**/*.disabled.*',
@@ -71,124 +68,48 @@ export default [
       '**/*.broken/**',
       '**/*.corrupted/**',
       '**/*.temp/**',
+      '**/corrupted_backup/**',
+      'src/corrupted_backup/**',
       'tests/**',
       'scripts/**',
       'pages/**',
       // Temporarily ignore known heavy TSX pages with pending fixes
       'src/pages/**',
       'src/components/Revolutionary2026ContentMegaBanner.tsx',
-      'app/components/NewContentPromotionalBanner2026.tsx',
-      'app/components/NewestContent2025Banner.tsx',
-      'app/components/UltimateBusinessIntelligence2025Banner.tsx',
-      'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
-      'app/components/September30NewContent2025Banner.tsx',
-      'app/not-found.tsx',
-      'app/page-minimal.tsx',
-      'app/page-optimized.tsx',
-      'app/services-advertising/**',
-      'app/not-found.tsx',
-      'app/contact/page.tsx',
       'store/**',
       'jest.setup.js',
       '*.config.js',
       '*.config.ts',
-      // Additional ignores for problematic files
-      '__tests__/**',
-      '_app_disabled/**',
-      '_conflicted_disabled/**',
-      '_pages_api_disabled/**',
-      '_pages_disabled/**',
-      'admin-api-disabled/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'api.disabled.temp/**',
-      'api-backup/**',
-      'apps.backup/**',
-      'ai-optimization-backups/**',
-      'automation_logs/**',
-      'all-automations-reports/**',
-      'accessibility-reports/**',
-      'backup-banner-components/**',
-      'blog/**',
-      'app/blog/**',
-      'app/blog/**/*',
-      'app/services/**',
-      'app/guides/**',
-      'app/contact/**',
-      'app/enterprise/**',
-      'app/blog/**',
-      'app/components/NewContentPromotionalBanner2026.tsx',
-      'app/components/NewestContent2025Banner.tsx',
-      'app/components/September30NewContent2025Banner.tsx',
-      'app/components/UltimateBusinessIntelligence2025Banner.tsx',
-      'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
-      'components/AutonomousEnterpriseBreakthroughBanner.tsx',
-      'components/ConsensusIntelligenceBreakthroughBanner.tsx',
-      'components/FeaturedServiceCard.tsx',
-      'content/**',
-      'contracts/**',
-      'apps/**',
-      'api/**',
-      'src/**',
-      'advanced-*.js',
-      'aggressive-*.js',
-      'app-*.js',
-      'app-*.cjs',
-      'automated-*.cjs',
-      'automation-runner.js',
-      'basic-test.js',
-      'blockchain-solutions.tsx',
-      'additional-services.tsx',
-      'ai-services.tsx',
-      'ModernNavigation.tsx',
-      '.storybook/**',
-      '..bfg-report/**',
-      '.automation-cache/**',
-      '.cspell.json',
-      '+.base.ref+',
-      // Additional problematic directories and files
-      'analyze-*.js',
-      'build-*.js',
-      'cache-*.js',
-      'case-studies/**',
-      'check-*.js',
-      'clean-*.js',
-      'cleanup-*.cjs',
-      'code-*.js',
-      'commit-*.js',
-      'complete-*.cjs',
-      'components-disabled/**',
-      'clean-build/**',
-      'cache/**',
-      '*.js',
-      '*.cjs',
-      '!src/**',
-      '!app/**',
-      '!package.json',
-      '!package-lock.json',
-      '!tsconfig.json',
-      '!vite.config.ts',
-      '!tailwind.config.js',
-      '!postcss.config.js'
-    ]
+    ],
   },
-
   // Base JavaScript configuration (limit to app source only)
   {
-    files: ["app/**/*.{js,cjs,mjs}"],
+    files: ['src/**/*.{js,cjs,mjs}', '**/*.{js,jsx}'],
     languageOptions: {
       globals: { ...globals.node },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
     ...js.configs.recommended,
   },
-
   // Simplified TypeScript configuration (non type-aware)
   {
+    files: [
+      'src/**/*.{ts,tsx}',
+      'pages/**/*.{ts,tsx}',
+      'app/**/*.{ts,tsx}',
+      '**/*.{ts,tsx}',
+    ],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
@@ -196,15 +117,15 @@ export default [
       globals: { ...globals.browser },
     },
     plugins: {
-      "@typescript-eslint": tseslint,
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      '@typescript-eslint': tseslint,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
       ...(reactHooks.configs.recommended?.rules || {}),
-      "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
+      'react-refresh/only-export-components': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
 ];
