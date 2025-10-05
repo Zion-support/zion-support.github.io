@@ -26,15 +26,12 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
-<<<<<<< HEAD
-=======
 
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
->>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
@@ -49,36 +46,9 @@ jest.mock('react-router-dom', () => ({
   useLocation: () => ({ pathname: '/' }),
 }));
 
-<<<<<<< HEAD
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock fetch
-global.fetch = jest.fn();
-
-// Mock console methods to reduce noise in tests
-global.console = {
-  ...console,
-  log: jest.fn(),
-  debug: jest.fn(),
-  info: jest.fn(),
-  warn: jest.fn(),
-  error: jest.fn(),
-};
-=======
+// Mock lucide-react icons
+jest.mock('lucide-react', () => {
+  const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -297,6 +267,25 @@ global.console = {
   };
 });
 
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock fetch
+global.fetch = jest.fn();
+
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
@@ -328,4 +317,3 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
->>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../../components/Header';
+import '@testing-library/jest-dom';
 
 const renderWithRouter = (component: React.ReactElement) => {
   return render(
@@ -11,12 +11,6 @@ const renderWithRouter = (component: React.ReactElement) => {
     </BrowserRouter>
   );
 };
-=======
-import '@testing-library/jest-dom';
-
-// Mock Header component for testing
-const Header = () => <div data-testid="header">Header Component</div>;
->>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
 
 describe('Header', () => {
   it('renders without crashing', () => {
