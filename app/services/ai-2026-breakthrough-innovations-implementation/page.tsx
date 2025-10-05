@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import {ArrowRight} from 'lucide-react';
-import {CheckCircle} from 'lucide-react';
-import {Brain} from 'lucide-react';
-import {Zap} from 'lucide-react';
-import {Target} from 'lucide-react';
-import {Users} from 'lucide-react';
-import {DollarSign} from 'lucide-react';
-import {TrendingUp} from 'lucide-react';
-=======
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { Link } from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations Implementation | Zion Tech Group',
