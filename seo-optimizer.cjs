@@ -41,7 +41,7 @@ const seoOptimizations = {
 function generateSitemap() {
   console.log('🗺️  Generating sitemap...');
   
-const pages = [;
+const pages = [
     '/',
     '/services/ai-services',
     '/services/it-services',
