@@ -40,8 +40,7 @@ const October2025AIOperationsBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 mb-4">
-            <Activity className="w-4 h-4 text-blue-400 animate-pulse" />
-            <span className="text-blue-300 text-sm font-semibold">
+            <Activity className="w-4 h-4 text-blue-400 animate-pulse" <span className="text-blue-300 text-sm font-semibold">
               OCTOBER 2025 - BREAKTHROUGH AI OPERATIONS
             </span>
           </div>
@@ -70,8 +69,7 @@ const October2025AIOperationsBanner = () => {
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
+                    <Icon className="w-6 h-6 text-white"</div>
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
@@ -93,7 +91,7 @@ const October2025AIOperationsBanner = () => {
                   {/* CTA */}
                   <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                     <span className="text-sm font-semibold mr-2">Read Full Guide</span>
-                     />
+
                   </div>
                 </div>
               </Link>
@@ -109,7 +107,7 @@ const October2025AIOperationsBanner = () => {
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl hover:from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group"
             >
               <span>Explore All AI Insights</span>
-               />
+
             </Link>
             <Link
               to="/contact"

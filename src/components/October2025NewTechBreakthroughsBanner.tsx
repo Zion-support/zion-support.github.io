@@ -13,11 +13,11 @@ export default function October2025NewTechBreakthroughsBanner() {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 rounded-full border border-purple-400/30 mb-4">
-             />
+
             <span className="text-purple-200 font-semibold text-sm uppercase tracking-wider">
               Just Published: October 2, 2025
             </span>
-             />
+
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -43,7 +43,7 @@ export default function October2025NewTechBreakthroughsBanner() {
             
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-blue-500/20 rounded-xl">
-                 />
+
               </div>
               <div>
                 <div className="text-xs text-blue-300 uppercase font-semibold">DevOps AI</div>
@@ -61,17 +61,17 @@ export default function October2025NewTechBreakthroughsBanner() {
 
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">487 deploys/day</span>
                 <span className="text-blue-300">vs 23 previously</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">96% incident reduction</span>
                 <span className="text-blue-300">MTTR: 4 min</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">$47M saved annually</span>
                 <span className="text-blue-300">67% cost reduction</span>
               </div>
@@ -79,7 +79,7 @@ export default function October2025NewTechBreakthroughsBanner() {
 
             <div className="flex items-center text-blue-300 group-hover:text-blue-200 font-semibold">
               Read Full Guide
-               />
+
             </div>
           </Link>
 
@@ -96,7 +96,7 @@ export default function October2025NewTechBreakthroughsBanner() {
             
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl">
-                 />
+
               </div>
               <div>
                 <div className="text-xs text-purple-300 uppercase font-semibold">Blockchain-AI</div>
@@ -114,17 +114,17 @@ export default function October2025NewTechBreakthroughsBanner() {
 
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">99.9% accuracy</span>
                 <span className="text-purple-300">AI-verified contracts</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">$127M saved</span>
                 <span className="text-purple-300">Annual enterprise value</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">96% fraud reduction</span>
                 <span className="text-purple-300">Supply chain security</span>
               </div>
@@ -132,7 +132,7 @@ export default function October2025NewTechBreakthroughsBanner() {
 
             <div className="flex items-center text-purple-300 group-hover:text-purple-200 font-semibold">
               Explore Integration
-               />
+
             </div>
           </Link>
 
@@ -149,7 +149,7 @@ export default function October2025NewTechBreakthroughsBanner() {
             
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-green-500/20 rounded-xl">
-                 />
+
               </div>
               <div>
                 <div className="text-xs text-green-300 uppercase font-semibold">Green AI</div>
@@ -167,17 +167,17 @@ export default function October2025NewTechBreakthroughsBanner() {
 
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">89% energy reduction</span>
                 <span className="text-green-300">Massive efficiency gains</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">2.4M tons CO2 saved</span>
                 <span className="text-green-300">Climate impact</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                 />
+
                 <span className="text-green-400 font-semibold">$284M savings</span>
                 <span className="text-green-300">Annual cost reduction</span>
               </div>
@@ -185,7 +185,7 @@ export default function October2025NewTechBreakthroughsBanner() {
 
             <div className="flex items-center text-green-300 group-hover:text-green-200 font-semibold">
               Learn Green AI
-               />
+
             </div>
           </Link>
         </div>
@@ -196,9 +196,9 @@ export default function October2025NewTechBreakthroughsBanner() {
             to="/blog"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30"
           >
-             />
+
             Explore All Latest Breakthroughs
-             />
+
           </Link>
         </div>
       </div>

@@ -7,11 +7,11 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="flex items-center justify-center gap-3 mb-6">
-             />
+
             <span className="text-lg md:text-xl font-bold text-cyan-400 uppercase tracking-wider">
               🚀 JUST RELEASED OCTOBER 1, 2025: Revolutionary Technology Guides
             </span>
-             />
+
           </div>
 
           {/* Main Content */}
@@ -32,7 +32,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-cyan-500/20 p-3 rounded-lg">
-                   />
+
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-cyan-400">AI at the Edge with 5G</h3>
@@ -60,7 +60,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
               >
                 Read Edge AI Guide
-                 />
+
               </Link>
             </div>
 
@@ -68,7 +68,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
             <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-purple-500/20 p-3 rounded-lg">
-                   />
+
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-purple-400">Quantum-Safe Cryptography</h3>
@@ -96,7 +96,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
                 className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
               >
                 Read Quantum Security Guide
-                 />
+
               </Link>
             </div>
           </div>
@@ -127,14 +127,14 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
               to="/blog"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
             >
-               />
+
               Explore All Guides
             </Link>
             <Link
               to="/contact"
               className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
             >
-               />
+
               Get Expert Consultation
             </Link>
           </div>

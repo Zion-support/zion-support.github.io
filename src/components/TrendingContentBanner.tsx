@@ -115,7 +115,7 @@ const TrendingContentBanner: React.FC = () => {
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-3">
             <div className="flex items-center gap-2">
-               />
+
               <span className="text-sm font-semibold text-zion-cyan">TRENDING NOW</span>
             </div>
             <div className={`px-2 py-1 rounded-full text-xs font-bold ${getBadgeColor(currentItem.badge)} animate-bounce`}>
@@ -125,8 +125,7 @@ const TrendingContentBanner: React.FC = () => {
 
           <div className="flex items-start gap-4">
             <div className="bg-zion-blue/20 p-3 rounded-lg group-hover:bg-zion-blue/30 transition-colors">
-              <Icon className="w-6 h-6 text-zion-cyan group-hover:scale-110 transition-transform" />
-            </div>
+              <Icon className="w-6 h-6 text-zion-cyan group-hover:scale-110 transition-transform"</div>
             
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
@@ -145,15 +144,14 @@ const TrendingContentBanner: React.FC = () => {
 
               <div className="flex items-center gap-4 text-xs text-zion-slate-light">
                 <div className="flex items-center gap-1">
-                  <Eye className="w-3 h-3" />
-                  <span>{currentItem.views} views</span>
+                  <Eye className="w-3 h-3" <span>{currentItem.views} views</span>
                 </div>
                 <div className="flex items-center gap-1">
-                   />
+
                   <span>{currentItem.readTime} read</span>
                 </div>
                 <div className="flex items-center gap-1">
-                   />
+
                   <span>4.9/5</span>
                 </div>
               </div>
@@ -166,9 +164,9 @@ const TrendingContentBanner: React.FC = () => {
             to={currentItem.link}
             className="bg-zion-cyan text-white hover:bg-zion-blue-light px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 group/btn"
           >
-             />
+
             Read Now
-             />
+
           </Link>
 
           {/* Navigation dots */}
@@ -182,7 +180,7 @@ const TrendingContentBanner: React.FC = () => {
                     ? 'bg-zion-cyan scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
-              />
+
             ))}
           </div>
         </div>
@@ -193,7 +191,7 @@ const TrendingContentBanner: React.FC = () => {
         <div 
           className="bg-gradient-to-r from-zion-cyan to-zion-blue-light h-1 rounded-full transition-all duration-100 ease-linear"
           style={{ width: `${((currentIndex + 1) / trendingItems.length) * 100}%` }}
-        />
+
       </div>
     </div>
   );

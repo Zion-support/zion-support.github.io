@@ -155,7 +155,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
                       <div className="text-xs text-gray-400">{item.metrics}</div>
                     )}
                   </div>
-                   />
+
                 </div>
               </Link>
             ))}
@@ -176,8 +176,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
             `}
           >
             {ctaText}
-            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`} />
-          </Link>
+            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`}</Link>
 
           {featuredItems.length > showCount && (
             <Link

@@ -46,12 +46,12 @@ const LatestArticlesShowcase: React.FC = () => {
                 
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center text-gray-500">
-                     />
+
                     {article.readTime}
                   </div>
                   <div className="text-indigo-600 font-semibold group-hover:gap-2 flex items-center transition-all">
                     Read More
-                     />
+
                   </div>
                 </div>
                 
@@ -76,7 +76,7 @@ const LatestArticlesShowcase: React.FC = () => {
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
           >
             View All Articles
-             />
+
           </Link>
         </div>
       </div>

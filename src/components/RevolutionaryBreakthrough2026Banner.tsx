@@ -66,11 +66,11 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-fade-in">
-             />
+
             <span className="text-purple-400 font-bold text-lg tracking-wider uppercase">
               🔥 REVOLUTIONARY BREAKTHROUGH • January 30, 2026
             </span>
-             />
+
           </div>
 
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">
@@ -123,8 +123,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-                         />
-                        
+
                       </div>
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
@@ -167,7 +166,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                     />
+
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
@@ -179,7 +178,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>
-                   />
+
                 </Link>
               </div>
             </div>
@@ -202,7 +201,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
-                   />
+
                   <span>Start Your AI Transformation</span>
                 </a>
                 <a
@@ -210,7 +209,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Call +1 302 464 0950</span>
-                   />
+
                 </a>
               </div>
             </div>

@@ -21,7 +21,7 @@ const LatestInsights: React.FC = () => {
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-             />
+
           </Link>
         </div>
 
@@ -56,7 +56,7 @@ const LatestInsights: React.FC = () => {
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
-                 />
+
               </Link>
             </div>
           ))}
@@ -68,7 +68,7 @@ const LatestInsights: React.FC = () => {
             className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-             />
+
           </Link>
         </div>
       </div>
