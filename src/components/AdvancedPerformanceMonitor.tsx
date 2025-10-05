@@ -1,89 +1,84 @@
-import React, { useEffect, useState } from 'react';
+import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m 'rea, c, t';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
-}
+interface, PerformanceMetric, s { 
+  l, c, p?: numb, e, r;
+  f, i, d?: numb, e, r;
+  c, l, s?: numb, e, r;
+  f, c, p?: numb, e, r;
+  tt, f, b?: numb, e, r;
+  i, n, p ?  : numb, e, r;
+ }
 
-export const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
+export, const, AdvancedPerformanceMonitor: Rea, c, t.FC = () => { 
+  con, s, t [metr, i, c, s, setMetri, c, s] = useSta, t, e<PerformanceMetri, c, s > ({ }); con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(fal, s, e);
 
-  useEffect(() => {
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') return;
+  useEffe, c, t(() => { 
+    // Only, run, in development, i, f (proce, s, s.e, n, v.NODE_E, N, V !== 'developme, n, t') retu, r, n;
 
-    const observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({
-            ...prev,
-            fid: (entry as any).processingStart - entry.startTime,
-          }));
-        } else if (
-          entry.entryType === 'layout-shift' &&
-          !(entry as any).hadRecentInput
-        ) {
-          setMetrics(prev => ({
-            ...prev,
-            cls: (prev.cls || 0) + (entry as any).value,
-          }));
+    const, observe, r = new, PerformanceObserve, r(li, s, t => {
+      const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
+        if (ent, r, y.entryTy, p, e === 'large, s, t-contentf, u, l-pa, i, n, t') {
+          setMetri, c, s(pr, e, v = > ({ ...p, r, e, v, l, c, p: ent, r, y.startT, i, m, e  }));
+        } else, i, f (ent, r, y.entryTy, p, e = == 'fir, s, t-in, p, u, t') { 
+          setMetri, c, s(pr, e, v = > ({
+            ...p, r, e, v,
+            f, i, d: (entry, as, any).processingSta, r, t - ent, r, y.startT, i, m, e,
+           }));
+        } else, i, f (
+          ent, r, y.entryTy, p, e = == 'layo, u, t-shi, f, t' &&
+          !(entry, as, an, y).hadRecentInp, u, t
+        ) { 
+          setMetri, c, s(pr, e, v = > ({
+            ...p, r, e, v,
+            c, l, s: (pr, e, v.c, l, s || 0) + (entry, as, any).va, l, u, e,
+           }));
         }
       });
     });
 
-    observer.observe({
-      entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'],
+    observ, e, r.obser, v, e({
+      entryTyp, e, s: ['large, s, t-contentf, u, l-pa, i, n, t', 'fir, s, t-inp, u, t', 'layo, u, t-shi, f, t'],
     });
 
-    // Toggle visibility with Ctrl+Shift+P
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
-      }
+    // Toggle, visibility, with Ct, r, l+Shi, f, t+P, const, handleKeyPress = (e: KeyboardEv, e, n, t) => {  
+      if (e.ctrlK, e, y && e.shiftK, e, y  && e.k, e, y = == ', P') {
+        setIsVisib, l, e(pr, e, v = > !pr, e, v);
+        }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
+    wind, o, w.addEventListen, e, r('keydo, w, n', handleKeyPre, s, s);
 
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('keydown', handleKeyPress);
+    retu, r, n () => {
+      observ, e, r.disconne, c, t();
+      wind, o, w.removeEventListen, e, r('keydo, w, n', handleKeyPre, s, s);
     };
   }, []);
 
-  if (!isVisible) return null;
+  if (!isVisib, l, e) return, nul, l;
 
-  return (
-    <div
-      style={{
-        position: 'fixed',
-        top: '10px',
-        right: '10px',
-        background: 'rgba(0, 0, 0, 0.8)',
-        color: 'white',
-        padding: '10px',
-        borderRadius: '5px',
-        fontSize: '12px',
-        zIndex: 9999,
-        fontFamily: 'monospace',
+  retu, r, n (
+    <div, styl, e = {{
+        positi, o, n: 'f, i, x, e, d',
+        t, o, p: '1, 0, p, x',
+        rig, h, t: '1, 0, p, x',
+        backgrou, n, d: 'rg, b, a(, 0, 0, 0, 0.8)',
+        col, o, r: 'wh, i, t, e',
+        paddi, n, g: '1, 0, p, x',
+        borderRadi, u, s: '5p, x',
+        fontSi, z, e: '1, 2, p, x',
+        zInd, e, x: 9, 9, 9, 9,
+        fontFami, l, y: 'monosp, a, c, e',
       }}
     >
-      <h4>Performance Metrics</h4>
-      <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-      <div style={{ marginTop: '10px', fontSize: '10px' }}>
-        Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
+      <h4>Performance, Metric, s</h4>
+      <d, i, v>L, C, P: { metri, c, s.l, c, p  ? metri, c, s.l, c, p.toFix, e, d(2) + 'ms'  : 'N/, A' }</d, i, v>
+      <d, i, v>F, I, D: { metri, c, s.f, i, d  ? metri, c, s.f, i, d.toFix, e, d(2) + 'ms'  : 'N/, A' }</d, i, v>
+      <d, i, v>C, L, S: { metri, c, s.c, l, s  ? metri, c, s.c, l, s.toFix, e, d(3)  : 'N/, A' }</d, i, v>
+      <div, styl, e = {{ marginT, o, p: '10, p, x', fontSi, z, e: '1, 0, p, x' }}>
+        Press, Ctr, l+Shi, f, t+P, to, toggle
+      </d, i, v>
+    </d, i, v>
   );
 };
 
-export default AdvancedPerformanceMonitor;
+export, default, AdvancedPerformanceMonitor;

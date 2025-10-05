@@ -1,44 +1,38 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import, React, from 'rea, c, t';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-export default function BlogPage(): React.JSX.Element {
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
-      <Helmet>
-        <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
-        <meta
-          name='description'
-          content='Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant.'
+export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
+  retu, r, n (
+    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
+      <Helm, e, t>
+        <tit, l, e>Enterprise, RAG, Security v2 — Au, t, h-Aw, a, r, e, Fre, s, h, Sign, e, d</tit, l, e>
+        <meta, nam, e = 'descripti, o, n'
+          conte, n, t='Au, t, h-scoped, retriev, a, l, freshness, window, s, prompt, firewall, s, and, signed, outputs that, keep, answers correct, and, compliant.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2'
+        <link, re, l = 'canonic, a, l'
+          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-enterpri, s, e-r, a, g-securi, t, y-v2'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Enterprise RAG Security v2
+      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+          Enterprise, RAG, Security v2
         </h1>
-        <p className='text-zion-slate-light mb-8'>Auth-Aware, Fresh, Signed</p>
-        <div className='prose prose-invert max-w-3xl'>
+        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>Au, t, h-A, w, a, r, e, Fre, s, h, Sign, e, d</p>
+        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>
-            Upgrade enterprise RAG safety with auth-aware retrieval, freshness
-            windows, prompt firewalls, and signed outputs. Prevent data leaks
-            and stale answers while maintaining performance guarantees.
+            Upgrade, enterprise, RAG safety, with, auth-aware, retriev, a, l, freshness, window, s, prompt, firewall, s, and, signed, outputs. Prevent, data, leaks
+            and, stale, answers while, maintaining, performance guarante, e, s.
           </p>
           <p>
-            This guide covers retrieval scoping by user and tenant, freshness
-            and staleness windows, cache invalidation signals, and output
-            signing with verifiers that run in CI and production.
+            This, guide, covers retrieval, scoping, by user, and, tenant, freshness, and, staleness windo, w, s, cache, invalidation, signals, and, output, signing with, verifiers, that run, in, CI and, productio, n.
           </p>
-        </div>
-        <div className='mt-8'>
-          <a href='/blog' className='text-cyan-300 hover:underline'>
-            ← Back to Blog
+        </d, i, v>
+        <div, classNam, e = 'mt-8'>
+          <a, hre, f='/bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
+            ← Back, to, Blog
           </a>
-        </div>
-      </div>
-    </div>
-  );
-}
+        </d, i, v>
+      </d, i, v>
+    </d, i, v > );
+ }
