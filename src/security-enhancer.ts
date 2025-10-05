@@ -1,8 +1,6 @@
 class SecurityEnhancer {
   private static instance: SecurityEnhancer;
-  private isInitialized: boolean = false;
-
-  private constructor() {}
+  private isInitialized = false;
 
   static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
@@ -15,19 +13,11 @@ class SecurityEnhancer {
     if (this.isInitialized) {
       return;
     }
-    this.setupCSP();
-    this.setupHTTPSRedirect();
-    this.setupXSSProtection();
-    this.setupSecurityHeaders();
-    
-    this.isInitialized = true;
-    console.log('Security enhancer initialized');
 
     this.setupCSP();
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
     this.isInitialized = true;
-3fb7cf14b9173a1bdbc082628affe937e859467f
   }
 
   private setupCSP(): void {
@@ -48,17 +38,6 @@ class SecurityEnhancer {
     meta.httpEquiv = 'X-Content-Type-Options';
     meta.content = 'nosniff';
     document.head.appendChild(meta);
-  }
-
-  private setupSecurityHeaders(): void {
-    // Additional security headers setup
-    console.log('Security headers configured');
-3fb7cf14b9173a1bdbc082628affe937e859467f
-  }
-
-  cleanup(): void {
-    this.isInitialized = false;
-    console.log('Security enhancer cleaned up');
   }
 }
 
