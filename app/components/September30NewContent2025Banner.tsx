@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [

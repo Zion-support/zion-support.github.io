@@ -1,12 +1,5 @@
-import ArrowRight from 'next/link';
-import { ArrowRight, Bot, Shield } from 'lucide-react';
-
-
-
-
-
-
-
+import Link from 'next/link';
+import { Sparkles, Shield, Bot, ShoppingBag } from 'lucide-react';
 
 ;
 ;

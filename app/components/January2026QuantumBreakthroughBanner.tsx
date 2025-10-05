@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { ArrowRight, TrendingUp, Brain, Zap, Star } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export default function January2026QuantumBreakthroughBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">

@@ -1,13 +1,18 @@
 import { CheckCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
+=======
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-
-
-
-
 
 ;
 

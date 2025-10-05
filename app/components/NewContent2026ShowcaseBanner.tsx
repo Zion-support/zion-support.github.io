@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowRight, TrendingUp, Users } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { ArrowRight, Users, TrendingUp, Star } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export default function NewContent2026ShowcaseBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white relative overflow-hidden">

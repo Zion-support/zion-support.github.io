@@ -1,5 +1,15 @@
 import { ArrowRight, Award, Brain, CheckCircle, Lightbulb, Sparkles, TrendingUp } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

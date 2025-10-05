@@ -1,14 +1,19 @@
 import { ArrowRight, Calendar, Clock, Search, Tag, User } from 'lucide-react';
 import React from 'react';
 
+<<<<<<< HEAD
+=======
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { User } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Tag } from 'lucide-react';
+import { Search } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-
-
-
 
 ;
 

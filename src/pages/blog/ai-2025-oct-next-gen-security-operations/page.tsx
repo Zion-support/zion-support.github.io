@@ -1,5 +1,15 @@
 import { Activity, AlertTriangle, ArrowLeft, DollarSign, Lock, Shield, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+=======
+import { ArrowLeft } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Activity } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Link } from "react-router-dom";
 export default function NextGenSecurityOperations2025() {

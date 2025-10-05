@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowLeft, ArrowRight, BookOpen, CheckCircle, Clock, Target, TrendingUp, Zap } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { ArrowLeft, Clock, TrendingUp, Target, CheckCircle, Zap, BookOpen } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

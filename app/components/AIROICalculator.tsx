@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Calculator, DollarSign, TrendingUp, Zap } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { DollarSign, TrendingUp, Zap } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export default function AIROICalculator() {
   const [annualRevenue, setAnnualRevenue] = useState(1000000);
   const [currentEfficiency, setCurrentEfficiency] = useState(70);

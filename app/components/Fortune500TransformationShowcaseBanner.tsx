@@ -2,8 +2,11 @@
 import { ArrowRight, Award, CheckCircle, TrendingUp, Users } from 'lucide-react';
 
 import React from 'react';
+<<<<<<< HEAD
 
 import { ArrowRight, Users, TrendingUp, CheckCircle, Award, Star } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 export default function Fortune500TransformationShowcaseBanner() {
   return (

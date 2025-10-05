@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Users } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { ArrowRight, Users, TrendingUp, Brain } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export default function AIFutureWorkforceBanner2026() {
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">

@@ -1,15 +1,21 @@
 
 
-
-
-
-
-
-
 ;
 import { ArrowRight, CheckCircle, Globe, Rocket, Shield, Star, Target, Users, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
+<<<<<<< HEAD
+=======
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Link } from "react-router-dom";
 import { lazy, Suspense } from "react";

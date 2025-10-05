@@ -1,5 +1,12 @@
 import { ArrowLeft, CheckCircle, GraduationCap, Target } from 'lucide-react';
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import { ArrowLeft } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from "react-helmet-async";
 import Header from "../../../components/Header";

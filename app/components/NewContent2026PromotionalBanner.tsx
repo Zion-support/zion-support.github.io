@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { ArrowRight, TrendingUp, Brain, Zap } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export default function NewContent2026PromotionalBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">

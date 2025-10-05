@@ -1,5 +1,16 @@
 import { ArrowRight, Award, Brain, CheckCircle, Target, TrendingUp, Users, Zap } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Brain } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Target } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

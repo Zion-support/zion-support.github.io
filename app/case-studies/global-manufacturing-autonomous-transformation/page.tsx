@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowLeft, ArrowRight, Award, BarChart3, CheckCircle, Clock, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { ArrowLeft, Clock, Users, TrendingUp, Target, CheckCircle, Zap, Award, BarChart3 } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

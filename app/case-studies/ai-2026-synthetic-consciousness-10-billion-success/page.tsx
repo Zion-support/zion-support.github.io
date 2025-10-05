@@ -7,14 +7,10 @@ import Users from 'lucide-react/dist/esm/icons/users';
 import DollarSign from 'lucide-react/dist/esm/icons/dollar-sign';
 import Award from 'lucide-react/dist/esm/icons/award';
 
+<<<<<<< HEAD
 
-
-
-
-
-
-
-
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export const metadata = {
   title: 'AI Synthetic Consciousness: $10B ROI Success Story - Fortune 500 Transformation',
   description: 'Discover how a Fortune 500 company achieved $10 billion in ROI through Zion Tech Group\'s synthetic consciousness AI implementation. Real results from real transformation.',

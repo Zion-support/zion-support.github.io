@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, TrendingUp, CheckCircle, Brain, Star } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: unknown[] = [];

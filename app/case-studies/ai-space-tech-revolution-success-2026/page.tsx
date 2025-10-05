@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowRight, DollarSign, Globe, Rocket, Satellite, Zap } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { DollarSign, Rocket, Satellite, Zap, Globe } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export const metadata = {
   title: 'AI Space Tech Revolution: $100M Mission Success Case Study',
   description: 'Discover how AI-powered space technology enabled a $100M mission success. Learn about autonomous spacecraft, AI navigation, and the future of space exploration.',

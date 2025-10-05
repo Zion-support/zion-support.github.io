@@ -1,9 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Brain, Shield, TrendingUp, Zap } from 'lucide-react';
 
 import ArrowRight from 'next/link';
 
 import { ArrowRight, TrendingUp, Brain, Zap } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 const February2026AutonomousInfrastructureBanner: React.FC = () => {
   return (

@@ -1,5 +1,8 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowLeft, Bookmark, Calendar, Clock, User } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 export const metadata = {
   title: 'Fortune 500 AI Transformation Success: $52M+ Savings & 156% ROI - Zion Tech Group',

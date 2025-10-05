@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+=======
+import { Link } from "react-router-dom";
+import { FileText } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 import { FileText } from 'lucide-react';
 import { Link } from "react-router-dom";
-
 
 ;
 

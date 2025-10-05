@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowRight, CheckCircle, Clock, DollarSign, Target, User } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { Clock, User, DollarSign, Target, CheckCircle } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export const metadata = {
   title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
   description: 'Discover how a Fortune 500 manufacturing giant achieved $2.3B cost savings, 99.97% uptime, and complete operational autonomy through AI enterprise automation in just 6 months.',

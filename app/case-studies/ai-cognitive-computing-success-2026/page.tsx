@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, DollarSign, TrendingUp, Target, Share, Bookmark } from 'lucide-react';
 
+<<<<<<< HEAD
 
-
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export const metadata = {
   title: 'AI Cognitive Computing Success 2026: $25M Value Creation Case Study | Zion Tech Group',
   description: 'See how a Fortune 500 company achieved $25M value creation with AI cognitive computing systems that deliver human-level reasoning and decision-making capabilities.',

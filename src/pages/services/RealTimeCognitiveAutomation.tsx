@@ -1,13 +1,19 @@
 
 
-
-
-
-
 ;
 import { ArrowLeft, Brain, CheckCircle, DollarSign, Rocket, TrendingUp, Zap } from 'lucide-react';
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
+=======
+import { ArrowLeft } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";

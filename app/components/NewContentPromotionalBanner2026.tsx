@@ -1,9 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
 
 import ArrowRight from 'next/link';
 
 import { ArrowRight, TrendingUp, Target, Rocket, Zap } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [

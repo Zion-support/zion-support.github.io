@@ -1,5 +1,13 @@
 import { ArrowLeft, Server, Shield, TrendingUp, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+=======
+import { ArrowLeft } from 'lucide-react';
+import { Server } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Link } from "react-router-dom";
 export default function AutonomousInfrastructureHealing2025() {

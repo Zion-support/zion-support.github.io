@@ -1,10 +1,12 @@
 import ArrowRight from 'next/link';
 import { ArrowRight, Award, BookOpen, CheckCircle, Globe, TrendingUp, Zap } from 'lucide-react';
 
-
+<<<<<<< HEAD
 
 import { TrendingUp, CheckCircle, Zap, Globe, Award, BookOpen } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 /**
  * Content Intelligence Revolution Banner
  * Promotes the latest autonomous content intelligence blog post and case study

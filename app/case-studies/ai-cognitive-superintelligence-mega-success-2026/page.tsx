@@ -3,9 +3,12 @@ import Clock from 'lucide-react/dist/esm/icons/clock';
 import Brain from 'lucide-react/dist/esm/icons/brain';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 
+<<<<<<< HEAD
 
 import { Clock, TrendingUp, Brain } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 export const metadata = {
   title: 'AI Cognitive Superintelligence Mega Success 2026: $750M ROI Case Study',
   description: 'Discover how a Fortune 500 company achieved $750M ROI with AI cognitive superintelligence implementation. Learn about the strategies, challenges, and results.',
