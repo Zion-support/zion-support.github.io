@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
 import { enhancedAccessibility } from '../utils/enhancedAccessibility';
 // import { securityAuditor } from '../utils/securityAuditor';
 // import EnhancedUXManager from '../utils/enhancedUXManager';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ab0f
 
 interface DashboardData {
   analytics: {
@@ -38,7 +35,6 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-<<<<<<< HEAD
     // Mock analytics data for now
     const events: Array<{ name: string; timestamp?: number }> = [];
     const cacheStats = { hits: 0, misses: 0, size: 0 };
@@ -122,7 +118,6 @@ const AdvancedDashboard: React.FC = () => {
     if (ms < 1000) return `${ms}ms`;
     if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
     return `${(ms / 60000).toFixed(1)}m`;
-=======
     // Mock data for demonstration
     const mockData: DashboardData = {
       analytics: {
@@ -141,7 +136,6 @@ const AdvancedDashboard: React.FC = () => {
     };
     
     setData(mockData);
->>>>>>> cursor/fix-errors-and-merge-to-main-ab0f
   };
 
   if (!isOpen) {
@@ -168,7 +162,6 @@ const AdvancedDashboard: React.FC = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
         {/* Tabs */}
         <div className="bg-gray-100 border-b">
           <div className="flex space-x-1 p-2">
@@ -192,7 +185,6 @@ const AdvancedDashboard: React.FC = () => {
                 {tab.label}
               </button>
             ))}
-=======
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Analytics</h3>
@@ -203,10 +195,8 @@ const AdvancedDashboard: React.FC = () => {
                 <p>Bounce Rate: {(data.analytics.bounceRate * 100).toFixed(1)}%</p>
               </div>
             )}
->>>>>>> cursor/fix-errors-and-merge-to-main-ab0f
           </div>
 
-<<<<<<< HEAD
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
           {activeTab === "overview" && data && (
@@ -226,14 +216,12 @@ const AdvancedDashboard: React.FC = () => {
                   <div>Page Views: {data.analytics?.pageViews || 0}</div>
                   <div>Events: {data.analytics?.events?.length || 0}</div>
                 </div>
-=======
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Performance</h3>
             {data && (
               <div className="space-y-2">
                 <p>Load Time: {data.performance.loadTime.toFixed(0)}ms</p>
                 <p>Response Time: {data.performance.responseTime.toFixed(0)}ms</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-ab0f
               </div>
             )}
           </div>
