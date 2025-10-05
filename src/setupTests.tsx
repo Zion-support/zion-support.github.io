@@ -26,6 +26,7 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
+
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
@@ -46,9 +47,13 @@ jest.mock('react-router-dom', () => ({
 }));
 
 // Mock lucide-react icons
+jest.mock('lucide-react', () => {
+  const mockIcon = (name: string) => `mock-${name}`;
 const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
 
 jest.mock('lucide-react', () => {
+cursor/fix-errors-and-merge-to-main-10c9
+3fb7cf14b9173a1bdbc082628affe937e859467f
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -317,3 +322,7 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
+});
+});
+cursor/fix-errors-and-merge-to-main-10c9
+3fb7cf14b9173a1bdbc082628affe937e859467f
