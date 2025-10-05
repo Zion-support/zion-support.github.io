@@ -8,7 +8,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "Autonomous Systems",
       link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",
       gradient: "from-cyan-500 to-blue-600",
-      icon: '>,'
+      icon: '🚀'
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
     {
@@ -17,7 +17,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "LLM Engineering",
       link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",
       gradient: "from-purple-500 to-pink-600",
-      icon: '>,'
+      icon: '🚀'
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
     {
@@ -26,7 +26,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "ML at Scale",
       link: "/blog/ai-2025-oct-real-time-personalization-at-scale",
       gradient: "from-orange-500 to-red-600",
-      icon: '>,'
+      icon: '🚀'
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];
@@ -97,7 +97,9 @@ const October2025CuttingEdgeContentBanner = () => {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {article.metrics.map((metric, idx) => (
                     <span
-                      key={idx}
+
+key={idx}
+
                       className="text-xs px-2 py-1 rounded-md bg-slate-700/50 text-gray-300 border border-slate-600/50"
                     >
                       {metric}

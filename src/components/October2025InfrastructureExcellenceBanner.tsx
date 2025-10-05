@@ -84,8 +84,8 @@ const October2025InfrastructureExcellenceBanner = () => {
                   {/* Metrics */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {article.metrics.map((metric, idx) => (
-                      <span>
-                        key={idx}
+                      <span
+key={idx}
                         className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/5 text-xs font-medium text-gray-300 border border-white/10"
                       >
                         {metric}

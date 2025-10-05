@@ -12,7 +12,7 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: '>,'
+      icon: '🚀'
       title: "Quantum-Neural Hybrid Systems",
       description: "100,000x performance improvements for drug discovery and optimization",
       value: "$12.7B",
@@ -21,7 +21,7 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: '>,'
+      icon: '🚀'
       title: "Neural-Symbolic Reasoning Systems",
       description: "97% accuracy with 100% explainable AI decision-making",
       value: "$5.7B",

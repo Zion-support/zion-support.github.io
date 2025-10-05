@@ -106,8 +106,8 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {breakthroughContent.map((content, index) => (
-            <div>
-              key={content.id}
+            <div
+key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
