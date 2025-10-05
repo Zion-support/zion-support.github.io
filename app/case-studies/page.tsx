@@ -267,7 +267,7 @@ export default function CaseStudiesPage() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className={`bg-${study.color}-100 text-${study.color}-800 px-2 py-1 rounded-full text-xs font-medium`}>
+                    <span -100 text-${study.color}-800 px-2 py-1 rounded-full text-xs font-medium`}>
                       {study.industry}
                     </span>
                     <span className="text-gray-500 text-sm">{study.company}</span>
