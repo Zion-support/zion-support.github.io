@@ -1,15 +1,15 @@
 import Link from 'next/link';
 // export const metadata = {
-  title: 'AI 2026 Revolutionary Autonomous Enterprise Success - $2.8B ROI Case Study - Zion Tech Group',
-  description: 'Case study: How Fortune 500 companies achieved $2.8B ROI with AI 2026 Revolutionary Autonomous Enterprise Systems, delivering 99.7% automation efficiency.',
-  keywords: 'AI case study, autonomous enterprise success, $2.8B ROI, Fortune 500, automation breakthrough, enterprise transformation',
-  openGraph: {
-    title: 'AI 2026 Revolutionary Autonomous Enterprise Success - $2.8B ROI Case Study - Zion Tech Group',
-    description: 'Case study: How Fortune 500 companies achieved $2.8B ROI with AI 2026 Revolutionary Autonomous Enterprise Systems, delivering 99.7% automation efficiency.',
-    url: 'https://ziontechgroup.com/case-studies/ai-2026-revolutionary-autonomous-enterprise-success',
-    type: 'article',
-  },
-};
+//   title: 'AI 2026 Revolutionary Autonomous Enterprise Success - $2.8B ROI Case Study - Zion Tech Group',
+//   description: 'Case study: How Fortune 500 companies achieved $2.8B ROI with AI 2026 Revolutionary Autonomous Enterprise Systems, delivering 99.7% automation efficiency.',
+//   keywords: 'AI case study, autonomous enterprise success, $2.8B ROI, Fortune 500, automation breakthrough, enterprise transformation',
+//   openGraph: {
+//     title: 'AI 2026 Revolutionary Autonomous Enterprise Success - $2.8B ROI Case Study - Zion Tech Group',
+//     description: 'Case study: How Fortune 500 companies achieved $2.8B ROI with AI 2026 Revolutionary Autonomous Enterprise Systems, delivering 99.7% automation efficiency.',
+//     url: 'https://ziontechgroup.com/case-studies/ai-2026-revolutionary-autonomous-enterprise-success',
+//     type: 'article',
+//   },
+// };
 
 export default function AI2026RevolutionaryAutonomousEnterpriseSuccess() {
   return (
