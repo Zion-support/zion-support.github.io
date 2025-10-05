@@ -1,41 +1,62 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Header from '../components/Header';
+// import Footer from '../components/Footer';
 
 const Blog: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, technology trends, and enterprise solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Blog
-              </h1>
-              <p className="text-xl md:text-2xl">
-                Insights, trends, and expert perspectives on AI and technology.
-              </p>
-            </div>
-          </div>
-        </section>
+  const posts = [
+    {
+      title: 'The Future of AI in Business',
+      excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',
+      date: '2024-01-15',
+      readTime: '5 min read'
+    },
+    {
+      title: 'Cloud Computing Best Practices',
+      excerpt: 'Essential strategies for successful cloud migration and management.',
+      date: '2024-01-10',
+      readTime: '7 min read'
+    },
+    {
+      title: 'Cybersecurity Trends 2024',
+      excerpt: 'Latest developments in cybersecurity and how to protect your organization.',
+      date: '2024-01-05',
+      readTime: '6 min read'
+    }
+  ];
 
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8">Coming Soon</h2>
-              <p className="text-lg text-gray-600">
-                We're working on bringing you the latest insights and expert content.
-                Check back soon for updates!
-              </p>
-            </div>
+  return (
+    <div className="min-h-screen bg-gray-900">
+      <Header />
+      
+      <main className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Blog
+            </h1>
+            <p className="text-xl text-gray-300">
+              Insights and updates from the world of technology and innovation.
+            </p>
           </div>
-        </section>
-      </div>
-    </>
+          
+          <div className="space-y-8">
+            {posts.map((post, index) => (
+              <article key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                <h2 className="text-2xl font-semibold text-white mb-3">{post.title}</h2>
+                <p className="text-gray-300 mb-4">{post.excerpt}</p>
+                <div className="flex items-center text-sm text-gray-400">
+                  <span>{post.date}</span>
+                  <span className="mx-2">•</span>
+                  <span>{post.readTime}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      {/* <Footer /> */}
+    </div>
   );
 };
 

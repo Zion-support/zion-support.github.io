@@ -1,41 +1,95 @@
-import, React, from 'rea, c, t';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const, Foote, r: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <footer, classNam, e = 'bg-gr, a, y-800, tex, t-whi, t, e'>
-      <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8, p, y-12'>
-        <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-4, ga, p-8'>
-          <d, i, v>
-            <h3, classNam, e='te, x, t-lg, fon, t-semibold, m, b-4'>Zion, Tech, Group</h3>
-            <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-              Advanced, AI, and IT, Solutions, for modern, businesse, s.
+const Footer: React.FC = () => {
+  return (
+<<<<<<< HEAD
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400">
+              Advanced AI and IT Solutions for Enterprise
             </p>
-          </d, i, v>
-          <d, i, v>
-            <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
-              <li>AI, Solution, s</li>
-              <li>IT, Infrastructur, e</li>
-              <li>Cloud, Service, s</li>
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/services" className="text-gray-400 hover:text-white">AI Solutions</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white">IT Consulting</Link></li>
             </ul>
-          </d, i, v>
-          <d, i, v>
-            <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
-              <li>About, U, s</li>
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
             </ul>
-          </d, i, v>
-          <d, i, v>
-            <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-              Ema, i, l: in, f, o@ziontechgro, u, p.c, o, m
-              <br />
-              Pho, n, e: +1 (30, 2) 4, 6, 4-09, 5, 0
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2">
+              <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
+              <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link></li>
+            </ul>
+          </div>
+        </div>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+=======
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Leading the future of AI and IT solutions with innovative technology 
+              that transforms businesses and drives success.
             </p>
-          </d, i, v>
-        </d, i, v>
-        <div, classNam, e = 'bord, e, r-t, borde, r-gr, a, y-700, m, t-8, p, t-8, tex, t-center, tex, t-gr, a, y-3, 0, 0'>
-          <p>&co, p, y; 2025, Zion, Tech Gro, u, p. All, rights, reserved.</p>
-        </d, i, v>
-      </d, i, v>
-    </fo, o, t, e, r > );
- };
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                LinkedIn
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                Twitter
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                GitHub
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">IT Consulting</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-300">
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0290
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-export, default, Footer;
+export default Footer;

@@ -1,8 +1,18 @@
-import React from 'rea c t';
-impo r t { Latest2026ContentBanner as Latest2026ContentBannerNamed } fr o m './NewContent2026Banne r s';
+import React from 'react';
 
-// Compatibility default export s; o imports like "../componen t s/Latest2026ContentBann e r" work export default function Latest2026ContentBanne r(
-  pro p s: Reco r d<str i n g unkno w n>
-) {
-  retu r n <Latest2026ContentBannerNam e d {...pro p s} />;
-}
+const Latest2026ContentBanner: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">
+          Latest2026 Content Banner
+        </h2>
+        <p className="text-lg mb-6">
+          This component is being restored. Please check back later for full functionality.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Latest2026ContentBanner;

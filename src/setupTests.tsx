@@ -1,43 +1,6 @@
 import '@testing-library/jest-dom';
-import React from 'react';
 
-// Polyfill TextEncoder and TextDecoder for Node.js environment
-if (typeof global.TextEncoder === 'undefined') {
-  const { TextEncoder, TextDecoder } = require('util');
-  global.TextEncoder = TextEncoder;
-  global.TextDecoder = TextDecoder;
-}
-
-// Mock import.meta.env for Jest
-Object.defineProperty(global, 'import', {
-  value: {
-    meta: {
-      env: {
-        DEV: true,
-        PROD: false,
-        MODE: 'test',
-      },
-    },
-  },
-});
-
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as unknown as typeof IntersectionObserver;
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as unknown as typeof ResizeObserver;
-
-// Mock matchMedia
+// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -64,21 +27,8 @@ Object.defineProperty(window, 'performance', {
   },
 });
 
-// Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-} as unknown as typeof PerformanceObserver;
-
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
-  ErrorBoundary: ({ children }: { children: React.ReactNode }) => {
-    return children;
-  },
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
@@ -89,13 +39,22 @@ jest.mock('react-helmet-async', () => ({
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }));
 
-// Mock lucide-react icons
-jest.mock('lucide-react', () => {
-  const mockIcon = (testId: string) => {
-    const { createElement } = require('react');
-    return createElement('div', { 'data-testid': testId });
-  };
+// Mock react-router-dom
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({ pathname: '/' }),
+}));
 
+// Mock lucide-react icons
+<<<<<<< HEAD
+jest.mock('lucide-react', () => {
+  const mockIcon = (name: string) => `mock-${name}`;
+=======
+const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
+
+jest.mock('lucide-react', () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-10c9
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -159,7 +118,6 @@ jest.mock('lucide-react', () => {
     Pause: () => mockIcon('pause-icon'),
     SkipForward: () => mockIcon('skip-forward-icon'),
     SkipBack: () => mockIcon('skip-back-icon'),
-    Volume2: () => mockIcon('volume2-icon'),
     VolumeX: () => mockIcon('volume-x-icon'),
     Maximize: () => mockIcon('maximize-icon'),
     Minimize: () => mockIcon('minimize-icon'),
@@ -266,7 +224,6 @@ jest.mock('lucide-react', () => {
     Route: () => mockIcon('route-icon'),
     Flag: () => mockIcon('flag-icon'),
     Building: () => mockIcon('building-icon'),
-    Building2: () => mockIcon('building2-icon'),
     Factory: () => mockIcon('factory-icon'),
     Warehouse: () => mockIcon('warehouse-icon'),
     Store: () => mockIcon('store-icon'),
@@ -277,7 +234,6 @@ jest.mock('lucide-react', () => {
     Museum: () => mockIcon('museum-icon'),
     Theater: () => mockIcon('theater-icon'),
     Cinema: () => mockIcon('cinema-icon'),
-    Music2: () => mockIcon('music2-icon'),
     Headphones: () => mockIcon('headphones-icon'),
     Mic: () => mockIcon('mic-icon'),
     MicOff: () => mockIcon('mic-off-icon'),
@@ -290,14 +246,6 @@ jest.mock('lucide-react', () => {
     VideoOff: () => mockIcon('video-off-icon'),
     Webcam: () => mockIcon('webcam-icon'),
     WebcamOff: () => mockIcon('webcam-off-icon'),
-    Gamepad2: () => mockIcon('gamepad2-icon'),
-    Joystick: () => mockIcon('joystick-icon'),
-    Dice1: () => mockIcon('dice1-icon'),
-    Dice2: () => mockIcon('dice2-icon'),
-    Dice3: () => mockIcon('dice3-icon'),
-    Dice4: () => mockIcon('dice4-icon'),
-    Dice5: () => mockIcon('dice5-icon'),
-    Dice6: () => mockIcon('dice6-icon'),
     Puzzle: () => mockIcon('puzzle-icon'),
     PuzzlePiece: () => mockIcon('puzzle-piece-icon'),
     Chess: () => mockIcon('chess-icon'),
@@ -309,7 +257,6 @@ jest.mock('lucide-react', () => {
     ChessPawn: () => mockIcon('chess-pawn-icon'),
     Cards: () => mockIcon('cards-icon'),
     Spade: () => mockIcon('spade-icon'),
-    Heart2: () => mockIcon('heart2-icon'),
     Diamond: () => mockIcon('diamond-icon'),
     Club: () => mockIcon('club-icon'),
     Crown: () => mockIcon('crown-icon'),
@@ -319,15 +266,31 @@ jest.mock('lucide-react', () => {
     Earrings: () => mockIcon('earrings-icon'),
     Bracelet: () => mockIcon('bracelet-icon'),
     Watch: () => mockIcon('watch-icon'),
-    Clock2: () => mockIcon('clock2-icon'),
     Timer: () => mockIcon('timer-icon'),
     TimerOff: () => mockIcon('timer-off-icon'),
     Stopwatch: () => mockIcon('stopwatch-icon'),
     Hourglass: () => mockIcon('hourglass-icon'),
-    Calendar2: () => mockIcon('calendar2-icon'),
-    AlertTriangle: () => mockIcon('alert-triangle-icon'),
   };
 });
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock fetch
+global.fetch = jest.fn();
 
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
@@ -359,4 +322,8 @@ beforeAll(() => {
 afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-10c9

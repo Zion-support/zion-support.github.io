@@ -30,21 +30,6 @@ interface Alert {
   resolved: boolean;
 }
 
-interface PerformanceThresholds {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  memoryUsage: number;
-}
-
-interface Alert {
-  id: string;
-  message: string;
-  resolved: boolean;
-}
-
 export const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
@@ -55,15 +40,15 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     largestContentfulPaint: 2500,
     cumulativeLayoutShift: 0.1,
     firstInputDelay: 100,
-    memoryUsage: 50 * 1024 * 1024, // 50MB
+    memoryUsage: 50 * 1024 * 1024 // 50MB
   });
 
   // Resolve alert
   const resolveAlert = useCallback((alertId: string) => {
     setAlerts((prev) =>
       prev.map((alert) =>
-        alert.id === alertId ? { ...alert, resolved: true } : alert,
-      ),
+        alert.id === alertId ? { ...alert, resolved: true } : alert
+      )
     );
   }, []);
 
@@ -72,7 +57,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     (newThresholds: Partial<PerformanceThresholds>) => {
       setThresholds((prev) => ({ ...prev, ...newThresholds }));
     },
-    [],
+    []
   );
 
   // Calculate performance score
@@ -109,7 +94,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const formatBytes = useCallback((bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-    return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+    if (bytes < 1024 * 1024 * 1024) return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+    return `${(bytes / (1024 * 1024 * 1024)).toFixed(1)} GB`;
   }, []);
 
   useEffect(() => {
@@ -124,7 +110,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         } else if (entry.entryType === 'first-input') {
           setMetrics(prev => ({
             ...prev,
-            fid: (entry as any).processingStart - entry.startTime,
+            fid: (entry as any).processingStart - entry.startTime
           }));
         } else if (
           entry.entryType === 'layout-shift' &&
@@ -132,14 +118,14 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         ) {
           setMetrics(prev => ({
             ...prev,
-            cls: (prev.cls || 0) + (entry as any).value,
+            cls: (prev.cls || 0) + (entry as any).value
           }));
         }
       });
     });
 
     observer.observe({
-      entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'],
+      entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift']
     });
 
     // Toggle visibility with Ctrl+Shift+P
@@ -159,6 +145,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   if (!isVisible) return null;
 
+  const grade = getPerformanceGrade(performanceScore);
+
   return (
     <div
       style={{
@@ -171,13 +159,14 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         borderRadius: '5px',
         fontSize: '12px',
         zIndex: 9999,
-        fontFamily: 'monospace',
+        fontFamily: 'monospace'
       }}
     >
-      <h4>Performance Metrics</h4>
-      <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
+      <h4 style={{ margin: '0 0 10px 0', fontSize: '14px' }}>Performance Metrics</h4>
+      <div>LCP: {metrics.lcp ? formatTime(metrics.lcp) : 'N/A'}</div>
+      <div>FID: {metrics.fid ? formatTime(metrics.fid) : 'N/A'}</div>
       <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+      <div>Score: <span className={grade.color}>{performanceScore}/100 ({grade.grade})</span></div>
       <div style={{ marginTop: '10px', fontSize: '10px' }}>
         Press Ctrl+Shift+P to toggle
       </div>

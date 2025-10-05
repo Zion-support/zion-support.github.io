@@ -63,6 +63,8 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </li>
           </ul>
         </div>
+<<<<<<< HEAD
+=======
 
         {/* Key Benefits Grid */}
         <div className="grid md:grid-cols-4 gap-6 mb-10" role="list" aria-label="Platform benefits and achievements">
@@ -122,10 +124,27 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
                aria-hidden="true" <div>
                 <h3 className="font-semibold text-white mb-1">Adaptive Scaling</h3>
                 <p className="text-sm text-white/80">Elastic capacity with 85%+ resource utilization</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-4daf
               </div>
             </li>
           </ul>
         </section>
+<<<<<<< HEAD
+               aria-hidden="true"</span>
+          </Link>
+        </nav>
+            <Link to="/blog"
+               className="inline-flex items-centerjustify-centergap-2bg-transparenthover:bg-white/10text-whiteborder-2border-whitepx-8py-4rounded-xlfont-boldtext-lgtransition-allduration-300"
+              aria-label="Learnmoreabout CognitiveMeshtechnology"
+            >
+              <Network className="w-5 h-5" aria-hidden="true" />
+              LearnMore
+            </Link>
+          </div>
+          <p className="text-white/80text-smmt-6max-w-2xlmx-auto">
+            ✨ <strong>LimitedTimeOffer:</strong> Get50% offimplementationfees forOctober2025 sign-ups. 
+            Free2-weekassessmentincluded. Nocommitmentrequired.
+=======
 
         {/* Content Cards */}
         <nav className="grid md:grid-cols-3 gap-6 mb-10" aria-label="Featured content links">
@@ -143,7 +162,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
                 <p className="text-sm text-blue-300 font-semibold">TECHNICAL DEEP DIVE</p>
                 <p className="text-xs text-white/60">Blog Post</p>
               </div>
-            </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-200 transition-colors">
               Cognitive Mesh Orchestration: The Future of Distributed AI
             </h3>
@@ -169,7 +187,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
                 <p className="text-sm text-green-300 font-semibold">SUCCESS STORY</p>
                 <p className="text-xs text-white/60">Case Study</p>
               </div>
-            </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-green-200 transition-colors">
               Global FinTech: $12 Billion Value Creation in 18 Months
             </h3>
@@ -195,7 +212,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
                 <p className="text-sm text-purple-300 font-semibold">ENTERPRISE SOLUTION</p>
                 <p className="text-xs text-white/60">Service Offering</p>
               </div>
-            </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-200 transition-colors">
               Cognitive Mesh Platform Services
             </h3>
@@ -209,38 +225,48 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
           </Link>
         </nav>
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-4daf
         {/* Call to Action */}
-        <div className="text-center" role="region" aria-label="Call to action">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
+        <div  className="text-center" role="region" aria-label="Call to action">
+          <div  className="inline-flex flex-col sm:flex-row gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"
+               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
-              <Calendar className="w-5 h-5" aria-hidden="true" />
+<<<<<<< HEAD
+              <Calendar  className="w-5 h-5" aria-hidden="true" />
+=======
+<<<<<<< HEAD:src/components/October2025CognitiveMeshLaunchBanner.tsx
+              <ArrowRight className="w-5 h-5" aria-hidden="true" />
+=======
+>>>>>>> origin/main:src/components/october2025-disabled/October2025CognitiveMeshLaunchBanner.tsx
+>>>>>>> cursor/fix-errors-and-merge-to-main-4daf
               Schedule Free Consultation
             </Link>
-            
             <Link
               to="/blog"
-              className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
+               className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
               aria-label="Learn more about Cognitive Mesh technology"
             >
-              <Network className="w-5 h-5" aria-hidden="true" />
+              <Network  className="w-5 h-5" aria-hidden="true" />
               Learn More
             </Link>
           </div>
-
-          <p className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
+          <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
             ✨ <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
             Free 2-week assessment included. No commitment required.
           </p>
         </div>
-      </div>
     </section>
   );
 });
+<<<<<<< HEAD
+=======
 
 October2025CognitiveMeshLaunchBanner.displayName = 'October2025CognitiveMeshLaunchBanner';
 
 export default October2025CognitiveMeshLaunchBanner;
+
+</div></div></div></div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-4daf
