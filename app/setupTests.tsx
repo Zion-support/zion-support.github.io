@@ -30,7 +30,7 @@ global.IntersectionObserver = class MockIntersectionObserver implements Intersec
   observe() {}
   unobserve() {}
   takeRecords(): IntersectionObserverEntry[] { return []; }
-} as any;
+} as IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
