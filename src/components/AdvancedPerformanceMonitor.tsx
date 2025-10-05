@@ -10,6 +10,7 @@ interface PerformanceMetrics {
 }
 
 export const AdvancedPerformanceMonitor: React.FC = () => {
+<<<<<<< HEAD
 
   // Resolve alert
   const resolveAlert = useCallback((alertId: string) => {
@@ -69,6 +70,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
     return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
   }, []);
+=======
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isVisible, setIsVisible] = useState(false);
+>>>>>>> 297cd5093a4334c73fbbc60d17002134ef3086c0
 
   useEffect(() => {
     // Only run in development
