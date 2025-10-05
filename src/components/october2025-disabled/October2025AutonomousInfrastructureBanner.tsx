@@ -61,8 +61,6 @@ const October2025AutonomousInfrastructureBanner = () => {
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">
                 <Activity className="w-6 h-6 text-cyan-400" />
               </div>
-                <Activity className="w-6 h-6 text-cyan-400" />
-              </div>
               <div>
                 <div className="font-semibold text-white mb-1">Predictive Incident Prevention</div>
                 <div className="text-sm text-gray-300">

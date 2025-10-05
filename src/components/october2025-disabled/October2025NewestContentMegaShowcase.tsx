@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 export default function October2025NewestContentMegaShowcase() {
   const newContent = [
-    {",
-      icon: <Network className="w-8 h-8" />,",
     {
       icon: <Network className="w-8 h-8" />,
       title: "Autonomous Mesh Intelligence Platform",
@@ -13,7 +11,6 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: '🚀',
       icon: <Atom className="w-8 h-8" />,
       title: "Quantum-Neural Hybrid Systems",
       description: "100,000x performance improvements for drug discovery and optimization",
@@ -23,7 +20,6 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: '🚀',
       icon: <Brain className="w-8 h-8" />,
       title: "Neural-Symbolic Reasoning Systems",
       description: "97% accuracy with 100% explainable AI decision-making",
