@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { TrendingUp } from 'lucide-react';
 const SuccessStoriesShowcase: React.FC = () => {
   const stories = [
     {
       company: "TechCorp International",
       industry: "Technology",
-      icon: '🚀',
       icon: <TrendingUp className="w-8 h-8" />,
       result: "300% Revenue Growth",
         description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
